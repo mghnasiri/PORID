@@ -171,6 +171,9 @@ function updateTabUI() {
 function renderView() {
   const tab = state.activeTab;
 
+  // Remove skeleton grid class so modules can create their own grid
+  contentEl.classList.remove('card-grid');
+
   // Scroll to top on tab change
   window.scrollTo({ top: 0, behavior: 'smooth' });
 
