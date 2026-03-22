@@ -67,6 +67,7 @@ export function renderFilterBar(options = {}) {
       <div class="filter-bar__spacer"></div>
       ${sourceSelect}
       ${sortSelect}
+      <button class="tag filter-clear" id="filterClear" style="display:none;" aria-label="Clear all filters">&#10005; Clear</button>
     </div>
   `;
 }

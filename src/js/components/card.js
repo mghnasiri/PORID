@@ -6,6 +6,19 @@ import { relativeTime, formatDate, daysUntil } from '../utils/date.js';
 import { isWatchlisted } from '../utils/storage.js';
 
 /**
+ * Maps source names to CSS modifier classes for color-coded badges.
+ */
+function sourceClass(source) {
+  const s = (source || '').toLowerCase();
+  if (s.includes('arxiv')) return 'tag--source tag--source-arxiv';
+  if (s.includes('ejor')) return 'tag--source tag--source-ejor';
+  if (s.includes('operations research')) return 'tag--source tag--source-or';
+  if (s.includes('informs') || s.includes('interfaces')) return 'tag--source tag--source-informs';
+  if (s.includes('transportation') || s.includes('manufacturing')) return 'tag--source tag--source-ts';
+  return 'tag--source';
+}
+
+/**
  * Renders tag pills HTML from an array of tag strings.
  */
 function renderTags(tags) {
@@ -95,11 +108,11 @@ export function renderCard(item) {
   // Source badge for publications
   const sourceBadge =
     item.type === 'publication' && item.source
-      ? `<span class="tag">${item.source}</span>`
+      ? `<span class="tag ${sourceClass(item.source)}">${item.source}</span>`
       : '';
 
   return `
-    <article class="card" data-id="${item.id}" data-type="${item.type}">
+    <article class="card" tabindex="0" data-id="${item.id}" data-type="${item.type}">
       <div class="card__header">
         <h3 class="card__title">${title}</h3>
         ${dateHtml}

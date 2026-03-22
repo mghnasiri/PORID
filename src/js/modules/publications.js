@@ -11,6 +11,17 @@ import { applyFilters } from '../components/filters.js';
 
 let viewMode = 'grid'; // 'grid' | 'list'
 
+/** Maps source names to CSS modifier classes for color-coded badges. */
+function sourceClass(source) {
+  const s = (source || '').toLowerCase();
+  if (s.includes('arxiv')) return 'tag--source tag--source-arxiv';
+  if (s.includes('ejor')) return 'tag--source tag--source-ejor';
+  if (s.includes('operations research')) return 'tag--source tag--source-or';
+  if (s.includes('informs') || s.includes('interfaces')) return 'tag--source tag--source-informs';
+  if (s.includes('transportation') || s.includes('manufacturing')) return 'tag--source tag--source-ts';
+  return 'tag--source';
+}
+
 /**
  * Truncates authors list: max 3 + "et al."
  */
@@ -45,7 +56,7 @@ function renderGridCard(item) {
       <p class="card__subtitle">${formatAuthors(item.authors)}</p>
       <p class="card__body">${snippet(item.abstract, 200)}</p>
       <div class="card__tags">
-        <span class="tag tag--source">${item.source}</span>
+        <span class="tag ${sourceClass(item.source)}">${item.source}</span>
         ${(item.tags || []).map((t) => `<span class="tag">${t}</span>`).join('')}
       </div>
       <div class="card__actions">

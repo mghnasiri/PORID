@@ -88,12 +88,29 @@ async function loadAllData() {
   }
 
   updateStats();
+  updateLastUpdated();
   initSearch(state.data);
 }
 
 // ---------------------------------------------------------------------------
 // Stats
 // ---------------------------------------------------------------------------
+
+function animateCounter(el, target) {
+  const duration = 800;
+  const start = parseInt(el.textContent) || 0;
+  if (start === target) return;
+  const startTime = performance.now();
+
+  function tick(now) {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+    el.textContent = Math.round(start + (target - start) * eased);
+    if (progress < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
 
 function updateStats() {
   const allItems = getAllItems();
@@ -102,8 +119,18 @@ function updateStats() {
     (i) => (i.date || '').slice(0, 10) === today
   ).length;
 
-  statNewEl.textContent = newToday;
-  statTotalEl.textContent = allItems.length;
+  animateCounter(statNewEl, newToday);
+  animateCounter(statTotalEl, allItems.length);
+}
+
+function updateLastUpdated() {
+  const allItems = getAllItems();
+  const dates = allItems.map((i) => i.date).filter(Boolean).sort().reverse();
+  const el = document.getElementById('statUpdated');
+  if (el && dates.length) {
+    const d = new Date(dates[0] + 'T00:00:00');
+    el.textContent = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  }
 }
 
 function getAllItems() {
@@ -144,10 +171,14 @@ function updateTabUI() {
 function renderView() {
   const tab = state.activeTab;
 
+  // Scroll to top on tab change
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
   // --- Watchlist: no filter bar, dedicated module ---
   if (tab === 'watchlist') {
     filterContainer.textContent = '';
     renderWatchlist(contentEl);
+    animateCards();
     return;
   }
 
@@ -155,6 +186,8 @@ function renderView() {
   if (tab === 'digest') {
     filterContainer.textContent = '';
     renderDigest(contentEl);
+    // digest is async — animateCards called after DOM settles
+    requestAnimationFrame(() => animateCards());
     return;
   }
 
@@ -180,6 +213,8 @@ function renderView() {
   if (renderer) {
     renderer(contentEl, data, filters);
   }
+
+  animateCards();
 }
 
 function extractTags(items) {
@@ -210,14 +245,39 @@ function wireFilterEvents() {
         }
       }
 
+      updateClearBtn();
       renderView();
     });
   });
 
   const sourceSelect = document.getElementById('filterSource');
   const sortSelect = document.getElementById('filterSort');
-  if (sourceSelect) sourceSelect.addEventListener('change', () => renderView());
+  if (sourceSelect) sourceSelect.addEventListener('change', () => { updateClearBtn(); renderView(); });
   if (sortSelect) sortSelect.addEventListener('change', () => renderView());
+
+  // Clear filters button
+  const clearBtn = document.getElementById('filterClear');
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-tag').forEach((t) => t.classList.remove('active'));
+      document.querySelector('.filter-tag[data-tag="all"]')?.classList.add('active');
+      if (sourceSelect) sourceSelect.value = 'All Sources';
+      if (sortSelect) sortSelect.value = 'newest';
+      updateClearBtn();
+      renderView();
+    });
+  }
+
+  updateClearBtn();
+}
+
+function updateClearBtn() {
+  const clearBtn = document.getElementById('filterClear');
+  if (!clearBtn) return;
+  const activeTags = document.querySelectorAll('.filter-tag.active:not([data-tag="all"])');
+  const sourceEl = document.getElementById('filterSource');
+  const hasFilters = activeTags.length > 0 || (sourceEl && sourceEl.value !== 'All Sources');
+  clearBtn.style.display = hasFilters ? 'inline-flex' : 'none';
 }
 
 // ---------------------------------------------------------------------------
@@ -367,17 +427,125 @@ function wireWatchlistListener() {
 }
 
 // ---------------------------------------------------------------------------
+// Card Entry Animation
+// ---------------------------------------------------------------------------
+
+function animateCards() {
+  const cards = contentEl.querySelectorAll('.card, .list-row, .digest-day, .digest-preview__card');
+  cards.forEach((card, i) => {
+    card.setAttribute('data-animate', '');
+    card.style.animationDelay = `${i * 0.06}s`;
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Skeleton Loading
+// ---------------------------------------------------------------------------
+
+function showSkeletons(count = 6) {
+  const skeleton = `<article class="skeleton">
+      <div class="skeleton__line skeleton__line--title"></div>
+      <div class="skeleton__line skeleton__line--subtitle"></div>
+      <div class="skeleton__line skeleton__line--body"></div>
+      <div class="skeleton__line skeleton__line--body"></div>
+      <div class="skeleton__line skeleton__line--tags"></div>
+    </article>`;
+  contentEl.innerHTML = skeleton.repeat(count);
+  contentEl.classList.add('card-grid');
+}
+
+// ---------------------------------------------------------------------------
+// Hamburger Menu (mobile)
+// ---------------------------------------------------------------------------
+
+function wireHamburger() {
+  const btn = document.getElementById('navHamburger');
+  const tabs = document.querySelector('.nav__tabs');
+  if (!btn || !tabs) return;
+
+  btn.addEventListener('click', () => {
+    const isOpen = tabs.classList.toggle('nav__tabs--open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  // Close menu when a tab is clicked
+  tabs.addEventListener('click', (e) => {
+    if (e.target.classList.contains('nav__tab')) {
+      tabs.classList.remove('nav__tabs--open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Scroll-Triggered Navbar
+// ---------------------------------------------------------------------------
+
+function wireNavScroll() {
+  const nav = document.querySelector('.nav');
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        nav.classList.toggle('nav--scrolled', window.scrollY > 20);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Scroll-to-Top Button
+// ---------------------------------------------------------------------------
+
+function wireScrollTop() {
+  const btn = document.getElementById('scrollTop');
+  if (!btn) return;
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+  });
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Keyboard Arrow Nav Between Cards
+// ---------------------------------------------------------------------------
+
+function wireCardKeyNav() {
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    const cards = [...contentEl.querySelectorAll('.card[tabindex]')];
+    if (!cards.length) return;
+    const current = cards.indexOf(document.activeElement);
+    if (current === -1) return;
+    e.preventDefault();
+    const next = e.key === 'ArrowRight'
+      ? Math.min(current + 1, cards.length - 1)
+      : Math.max(current - 1, 0);
+    cards[next].focus();
+  });
+}
+
+// ---------------------------------------------------------------------------
 // Init
 // ---------------------------------------------------------------------------
 
 async function init() {
   wireTheme();
   wireTabs();
+  wireHamburger();
   wireSearch();
   wireCardEvents();
   wireDetailModal();
   wireWatchlistListener();
+  wireNavScroll();
+  wireScrollTop();
+  wireCardKeyNav();
 
+  showSkeletons();
   await loadAllData();
 
   state.activeTab = getHashTab();

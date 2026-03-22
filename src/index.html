@@ -6,6 +6,15 @@
   <title>PORID — Personal OR Intelligence Dashboard</title>
   <meta name="description" content="Personal OR Intelligence Dashboard for tracking publications, software, conferences, and opportunities.">
 
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%8A%3C/text%3E%3C/svg%3E">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="PORID — Personal OR Intelligence Dashboard">
+  <meta property="og:description" content="Track OR publications, software releases, conferences, and academic opportunities.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mghnasiri.github.io/PORID/">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +31,12 @@
   <!-- ====== Navigation ====== -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <a href="https://mghnasiri.github.io/" class="nav__brand">M.G. Nasiri</a>
+
+    <button class="nav__hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+      <span class="nav__hamburger-line"></span>
+      <span class="nav__hamburger-line"></span>
+      <span class="nav__hamburger-line"></span>
+    </button>
 
     <ul class="nav__tabs" role="tablist">
       <li class="nav__tab active" role="tab" aria-selected="true" data-tab="publications">Publications</li>
@@ -55,6 +70,11 @@
     <div class="stats-banner__item">
       <span class="stats-banner__value" id="statTotal">0</span>
       <span>total tracked</span>
+    </div>
+    <div class="stats-banner__sep"></div>
+    <div class="stats-banner__item">
+      <span class="stats-banner__value" id="statUpdated">&mdash;</span>
+      <span>last updated</span>
     </div>
   </div>
 
@@ -104,7 +124,18 @@
   </div>
 
   <!-- ====== Footer ====== -->
+  <!-- ====== Scroll to Top ====== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">&uarr;</button>
+
+  <!-- ====== Footer ====== -->
   <footer class="footer">
+    <div class="footer__links">
+      <a href="https://github.com/mghnasiri" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+      <span class="footer__sep">&middot;</span>
+      <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener" aria-label="Google Scholar">Scholar</a>
+      <span class="footer__sep">&middot;</span>
+      <a href="https://mghnasiri.github.io/" target="_blank" rel="noopener" aria-label="Portfolio">Portfolio</a>
+    </div>
     &copy; 2025 Mohammad G. Nasiri &middot; PORID v1.0
   </footer>
 
