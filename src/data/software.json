@@ -1,62 +1,80 @@
 [
   {
-    "id": "sw-001",
+    "id": "gh-google-or-tools-9.15",
     "name": "Google OR-Tools",
-    "version": "9.10",
-    "date": "2025-03-15",
-    "changelog": "Added support for multi-objective optimization in CP-SAT solver. Improved routing library performance by 20% on large-scale VRPTW instances. New Python 3.12 wheel builds.",
-    "url": "https://github.com/google/or-tools/releases/tag/v9.10",
-    "tags": ["solver", "vehicle-routing"],
+    "version": "9.15",
+    "date": "2026-01-12",
+    "changelog": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in MathOpt. It will automatically load the XPressMP shared library on your computer\r\n\r\n## Routing\r\n\r\n* Improved routing performance and search event support (at optimal).\r\n* Improved Doxygen documentation.\r\n* Reworked routing samples (#4590).\r\n* Exported filters update and other improvements from main.\r\n\r\n## CP-SAT\r\n\r\n* Improvements to the `no_overlap_2d` constraint (presolve, propagation, and cuts).\r\n* Detect, store and use precedences in presolve, propagation, and cuts.\r\n* Extensive work on LRAT proof production and checking.\r\n* Improve linear1 and linear2 encodings and processing.\r\n* Support for set variables and constraints (experimental).\r\n* Extend support for enforcement literals to more constraints.\r\n* Optimize Python layer, speed up proto generation, and improve typing support (#4733).…",
+    "url": "https://github.com/google/or-tools/releases/tag/v9.15",
+    "tags": [
+      "solver",
+      "general-or"
+    ],
     "type": "software"
   },
   {
-    "id": "sw-002",
-    "name": "Gurobi Optimizer",
-    "version": "11.0.2",
-    "date": "2025-03-10",
-    "changelog": "Performance improvements in concurrent MIP solver. New nonlinear objective support for quadratic programs. Enhanced Python API with type hints and async solve support.",
-    "url": "https://www.gurobi.com/downloads/gurobi-optimizer-release-notes/",
-    "tags": ["solver", "integer-programming"],
+    "id": "gh-coin-or-Cbc-releases/2.10.13",
+    "name": "COIN-OR Cbc",
+    "version": "releases/2.10.13",
+    "date": "2026-03-11",
+    "changelog": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings by @svigerske in https://github.com/coin-or/Cbc/pull/580\r\n* disable another unused-but-set variable by @svigerske in https://github.com/coin-or/Cbc/pull/581\r\n* Drop COIN_HAS_NTY from public header CbcModel.hpp by @jschueller in https://github.com/coin-or/Cbc/pull/593\r\n* Fix compiler warning and compilation with CBC_QUIET defined by @svigerske in https://github.com/coin-or/Cbc/pull/594\r\n* Add vs2022 for stable 2.10 by @jhmgoossens in https://github.com/coin-or/Cbc/pull/601\r\n* remove or disable unused-but-set variables by @svigerske in https://github.com/coin-or/Cbc/pull/606\r\n* Update windows ci splitting msvs to separate workflow [stable/2.10] by @jhmgoossens in https://github.com/coin-or/Cbc/pull/647\r\n* Update config.guess, rerun autotools, update gitignore by @svigerske in https://github…",
+    "url": "https://github.com/coin-or/Cbc/releases/tag/releases/2.10.13",
+    "tags": [
+      "solver",
+      "general-or"
+    ],
     "type": "software"
   },
   {
-    "id": "sw-003",
-    "name": "PyVRP",
-    "version": "0.9.0",
-    "date": "2025-03-05",
-    "changelog": "Added electric vehicle routing variant with nonlinear charging. New multi-depot support. Improved ALNS destroy operators for pickup-and-delivery problems. Breaking: revised Solution API.",
-    "url": "https://github.com/PyVRP/PyVRP/releases/tag/v0.9.0",
-    "tags": ["vehicle-routing", "metaheuristics"],
+    "id": "gh-jump-dev-JuMP.jl-1.30.0",
+    "name": "JuMP.jl",
+    "version": "1.30.0",
+    "date": "2026-03-03",
+    "changelog": "## JuMP v1.30.0\n\n[Diff since v1.29.4](https://github.com/jump-dev/JuMP.jl/compare/v1.29.4...v1.30.0)\n\n\n**Merged pull requests:**\n- Fix errors found by JET (#4108) (@odow)\n- [docs] clarify dual unbounded ray in Benders decomposition tutorial (#4109) (@odow)\n- [docs] use allow_local = false in Benders decomposition tutorial (#4111) (@odow)\n- Add cuPDLPx (#4112) (@blegat)\n- [docs] work-around a bug in Clarabel@0.11 (#4114) (@odow)\n- [docs] add round_and_repair_heuristic in tolerances tutorial (#4115) (@odow)\n- [docs] add a tutorial on progressive hedging (#4117) (@odow)\n- Add SDPLRPlus (#4118) (@blegat)\n- Refactor to use ParallelTestRunner in the tests (#4119) (@odow)\n- Add dependabot (#4120) (@odow)\n- Drop support for Julia v1.6 and make v1.10 the new minimum (#4121) (@odow)\n- [docs] pin LinearOperators.jl to work around bug in v2.13.0 (#4122) (@odow)\n- [docs] Update LinearOperatorCollection compat (#4123) (@nHackel)\n- [docs] build the HTML and LaTeX docs in parallel (#4124) (@odow)\n- Pr…",
+    "url": "https://github.com/jump-dev/JuMP.jl/releases/tag/v1.30.0",
+    "tags": [
+      "solver",
+      "general-or"
+    ],
     "type": "software"
   },
   {
-    "id": "sw-004",
-    "name": "SCIP Optimization Suite",
-    "version": "9.1",
-    "date": "2025-02-28",
-    "changelog": "New GNN-based branching callback interface. Improved symmetry detection for constraint programming. PySCIPOpt now supports callback-based lazy constraints natively.",
-    "url": "https://www.scipopt.org/index.php#download",
-    "tags": ["solver", "integer-programming"],
+    "id": "gh-pyomo-pyomo-6.10.0",
+    "name": "Pyomo",
+    "version": "6.10.0",
+    "date": "2026-02-20",
+    "changelog": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, and solution loader\r\n  - `cuopt` direct solver interface\r\n  - v2: Ongoing solver interface refactor\r\n- ...and of course numerous minor bug fixes and performance enhancements\r\n\r\n## Changes in this release\r\n\r\n- General\r\n  - Remove support for Python 3.9 (#3760)\r\n  - Typo corrections (#3779, #3831)\r\n  - Remove external `ply` dependency (#3840)\r\n  - Apply 2026 `black` formatting updates (#3820)\r\n  - Update copyright to 2026 (#3846)\r\n  - Improvements to `Config` classes, tests, and docs (#3790)\r\n  - Improve efficiency of nested `StreamIndenter` objects (#3813)\r\n- Core\r\n  - Remove sorting from `tabular_writer` (#3804)\r\n  - Enhance static typing (#3803)\r\n  - Update `SuffixFinder` to look in context for external data objects (#3844)\r\n- Documentation\r\n  - Add support for Sphinx 9.1 (#3815, #3818)\r\n…",
+    "url": "https://github.com/Pyomo/pyomo/releases/tag/6.10.0",
+    "tags": [
+      "solver",
+      "general-or"
+    ],
     "type": "software"
   },
   {
-    "id": "sw-005",
-    "name": "SimPy",
-    "version": "4.2.0",
-    "date": "2025-02-20",
-    "changelog": "Added priority resource with preemption policies. New real-time simulation mode for digital twin applications. Improved logging and event tracing for healthcare simulation models.",
-    "url": "https://github.com/simpy/simpy/releases/tag/v4.2.0",
-    "tags": ["simulation", "healthcare-or"],
+    "id": "gh-scipy-scipy-1.17.1",
+    "name": "SciPy",
+    "version": "1.17.1",
+    "date": "2026-02-23",
+    "changelog": "SciPy 1.17.1 Release Notes\r\n====================\r\n\r\nSciPy `1.17.1` is a bug-fix release with no new features compared to `1.17.0`.\r\n\r\n\r\nAuthors\r\n=======\r\n* Name (commits)\r\n* Evgeni Burovski (5)\r\n* Lucas Colley (1)\r\n* Christoph Gohlke (1)\r\n* Ralf Gommers (6)\r\n* Matt Haberland (5)\r\n* Matthias Koeppe (1)\r\n* Nick ODell (1)\r\n* Ilhan Polat (10)\r\n* Tyler Reddy (44)\r\n* Martin Schuck (3)\r\n* Dan Schult (3)\r\n* stratakis (1) +\r\n* ਗਗਨਦੀਪ ਸਿੰਘ (Gagandeep Singh) (1)\r\n\r\nA total of 13 people contributed to this release.\r\nPeople with a \"+\" by their names contributed a patch for the first time.\r\nThis list of names is automatically generated, and may not be fully complete.\r\n\r\nComplete issue list, PR list, and release asset hashes are available in the associated [`README.txt`](https://github.com/scipy/scipy/releases/download/v1.17.1/README.txt).",
+    "url": "https://github.com/scipy/scipy/releases/tag/v1.17.1",
+    "tags": [
+      "solver",
+      "general-or"
+    ],
     "type": "software"
   },
   {
-    "id": "sw-006",
-    "name": "CPLEX Studio",
-    "version": "22.1.2",
-    "date": "2025-02-15",
-    "changelog": "Benders decomposition engine now supports user-defined optimality cuts. New OPL connector for Python dataframes. Warm-start improvements for successive MIP solves in rolling-horizon scheduling.",
-    "url": "https://www.ibm.com/products/ilog-cplex-optimization-studio",
-    "tags": ["solver", "scheduling"],
+    "id": "gh-cvxpy-cvxpy-1.8.1",
+    "name": "CVXPY",
+    "version": "1.8.1",
+    "date": "2026-02-03",
+    "changelog": "| PR | Title | Type |                                                                                                                                                                       \r\n  |---|---|---|                                                                                                                                                                               \r\n  | #3093 | Fix IndexError with transformed parameters in parametric reshape | Bug fix |                                                                                                      \r\n  | #3094 | Add KNITRO solver installation instructions to documentation | Docs |                                                                                                             \r\n  | #3099 | Remove Google Analytics from documentation | Docs |                                                                                                                               \r\n  | #3113 | Use balanced tree for PowConeN…",
+    "url": "https://github.com/cvxpy/cvxpy/releases/tag/v1.8.1",
+    "tags": [
+      "solver",
+      "general-or"
+    ],
     "type": "software"
   }
 ]

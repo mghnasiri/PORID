@@ -1,146 +1,160 @@
 [
   {
-    "id": "pub-001",
-    "title": "A Branch-and-Price Algorithm for Large-Scale Vehicle Routing with Time Windows",
-    "authors": ["Chen, L.", "Desaulniers, G.", "Irnich, S."],
-    "abstract": "We develop a novel branch-and-price framework for solving the vehicle routing problem with time windows (VRPTW) on instances with up to 1,000 customers. Our approach combines a labeling algorithm for pricing with tailored branching rules that exploit the structure of feasible routes. Computational experiments on extended Solomon and Gehring–Homberger benchmarks demonstrate that the method closes the optimality gap on 47 previously unsolved instances.",
-    "date": "2025-03-20",
+    "id": "crossref-10.1287-opre.2023.0556",
+    "title": "No-Regret Bayesian Recommendation to Homogeneous Users",
+    "authors": [
+      "Feng, Y.",
+      "Tang, W.",
+      "Xu, H."
+    ],
+    "abstract": "No-Regret Bayesian Recommendation to Homogeneous Users\n                  We introduce and study the online Bayesian recommendation problem for a recommender system platform. The platform has the privilege to privately observe a utility-relevant state of a product at each round and uses this information to make online recommendations to a stream of myopic users. This paradigm is common in a wide range of scenarios in the current internet economy. The platform commits to an online recommendation policy that utilizes its information advantage on the product state to persuade self-interested users to follow the recommendation. Because the platform does not know users’ preferences or beliefs in advance, we study the platform’s online learning problem of designing an adaptive recommendation policy to persuade users while gradually learning users’ preferences and beliefs en route. Specifically, we aim to design online learning policies with no Stackelberg regret for the platform, that is, against the optimal benchmark policy in hindsight under the assumption that users will correspondingly adapt their responses to the benchmark policy. Our first result is an online policy that achieves double logarithmic regret dependence on the number of rounds. We also present an information-theoretic lower bound showing that no adaptive online policy can achieve regret with better dependency on the number of rounds. Finally, by formulating the platform’s problem as optimizing a linear program with membership oracle access, we present our second online recommendation policy that achieves regret with polynomial dependence on the number of states but logarithmic dependence on the number of rounds.",
+    "date": "2026-03-20",
     "source": "Operations Research",
-    "url": "https://pubsonline.informs.org/doi/10.1287/opre.2025.0142",
-    "tags": ["vehicle-routing", "integer-programming"],
+    "url": "https://doi.org/10.1287/opre.2023.0556",
+    "tags": [
+      "stochastic"
+    ],
     "type": "publication",
-    "doi": "10.1287/opre.2025.0142"
+    "doi": "10.1287/opre.2023.0556"
   },
   {
-    "id": "pub-002",
-    "title": "Reinforcement Learning for Adaptive Operating Room Scheduling Under Uncertainty",
-    "authors": ["Martinez, A.", "Begen, M. A.", "Nasiri, M. G."],
-    "abstract": "Operating room scheduling under stochastic surgery durations remains a challenging combinatorial problem. We propose a deep reinforcement learning agent that learns scheduling policies directly from simulated surgical environments. The agent adapts in real time to cancellations and duration overruns, reducing patient wait times by 18% and overtime costs by 23% compared to deterministic baselines on data from a 600-bed teaching hospital.",
-    "date": "2025-03-18",
-    "source": "EJOR",
-    "url": "https://doi.org/10.1016/j.ejor.2025.03.041",
-    "tags": ["scheduling", "ml-for-or", "healthcare-or", "stochastic"],
-    "type": "publication",
-    "doi": "10.1016/j.ejor.2025.03.041"
-  },
-  {
-    "id": "pub-003",
-    "title": "Stochastic Integer Programming for Pandemic Vaccine Distribution Networks",
-    "authors": ["Patel, R.", "Bertsimas, D."],
-    "abstract": "We formulate a two-stage stochastic integer program for allocating COVID-era vaccine supplies across a hierarchical distribution network. The model captures demand uncertainty, cold-chain logistics constraints, and equity objectives across heterogeneous populations. A sample average approximation scheme with Benders decomposition solves national-scale instances within 2% of optimality in under 30 minutes, yielding distribution plans that improve coverage equity by 31%.",
-    "date": "2025-03-15",
+    "id": "crossref-10.1287-opre.2023.0513",
+    "title": "Pricing Shared Rides",
+    "authors": [
+      "Yan, C.",
+      "Yan, J.",
+      "Shen, Y."
+    ],
+    "abstract": "Pricing Based on Matching Outcomes Improves Shared Rides Operations\n                  Shared rides aspire to mitigate congestion and promote more sustainable urban transportation, but many platforms struggle to maintain a healthy and profitable shared rides product. Why have shared rides struggled, and how can platforms design a successful product? In “Pricing Shared Rides,” Chiwei Yan, Julia Yan, and Yifan Shen discuss the drawbacks of platforms’ existing pricing policies and show that a common approach to pricing suppresses demand and may even drive the platform out of the market. They then propose adjusting the price according to the extent she is matched with another rider—which proves to benefit both platform and riders alike in increased profitability and reduced payments. These benefits are especially pronounced in regimes with high cost and low demand, expanding shared rides access to areas where they have historically been most challenging to sustain.",
+    "date": "2026-03-16",
     "source": "Operations Research",
-    "url": "https://pubsonline.informs.org/doi/10.1287/opre.2025.0098",
-    "tags": ["integer-programming", "stochastic", "healthcare-or"],
+    "url": "https://doi.org/10.1287/opre.2023.0513",
+    "tags": [
+      "general-or"
+    ],
     "type": "publication",
-    "doi": "10.1287/opre.2025.0098"
+    "doi": "10.1287/opre.2023.0513"
   },
   {
-    "id": "pub-004",
-    "title": "Graph Neural Networks for Accelerating Mixed-Integer Programming Solvers",
-    "authors": ["Wang, Y.", "Khalil, E. B.", "Dilkina, B."],
-    "abstract": "We train graph neural networks (GNNs) on bipartite variable-constraint representations of mixed-integer programs to predict strong branching decisions. The learned policy is embedded as a callback in SCIP, reducing the number of branch-and-bound nodes by 35% on average across MIPLIB 2024 instances. Transfer experiments show the GNN generalizes from small training instances to significantly larger test problems with minimal performance degradation.",
-    "date": "2025-03-12",
-    "source": "arXiv",
-    "url": "https://arxiv.org/abs/2503.09012",
-    "tags": ["integer-programming", "ml-for-or"],
+    "id": "crossref-10.1287-trsc.2024.0581",
+    "title": "Deep Learning for Data-Driven Districting-and-Routing",
+    "authors": [
+      "Ferraz, A.",
+      "Ahmed, C.",
+      "Cappart, Q.",
+      "Vidal, T."
+    ],
+    "abstract": "Districting-and-routing is a strategic problem aiming to aggregate basic geographical units (e.g., zip codes) into delivery districts. Its goal is to minimize the expected long-term routing cost of performing deliveries in each district separately. Solving this stochastic problem poses critical challenges because repeatedly evaluating routing costs on a set of scenarios while searching for optimal districts takes considerable time. Consequently, solution approaches usually replace the true cost estimation with continuous cost approximation formulas extending the work of Beardwood-Halton-Hammersley and Daganzo. These formulas commit errors that can be magnified during the optimization step. To reconcile speed and solution quality, we introduce a supervised learning and optimization methodology leveraging a graph neural network for delivery cost estimation. This network is trained to imitate known costs generated on a limited subset of training districts. It is used within an iterated local search procedure to produce high-quality districting plans. Our computational experiments, conducted on five metropolitan areas in the United Kingdom, demonstrate that the graph neural network predicts long-term district cost operations more accurately and that optimizing over this oracle permits large economic gains (10.12% on average) over baseline methods that use continuous approximation formulas or shallow neural networks. Finally, we observe that having compact districts alone does not guarantee high-quality solutions and that other learnable geometrical features of the districts play an essential role.\n                  Supplemental Material: The online appendix is available at https://doi.org/10.1287/trsc.2024.0581 .",
+    "date": "2026-03-18",
+    "source": "Transportation Science",
+    "url": "https://doi.org/10.1287/trsc.2024.0581",
+    "tags": [
+      "stochastic",
+      "ml-for-or",
+      "metaheuristics"
+    ],
     "type": "publication",
-    "doi": "10.48550/arXiv.2503.09012"
+    "doi": "10.1287/trsc.2024.0581"
   },
   {
-    "id": "pub-005",
-    "title": "A Hybrid Genetic Algorithm with Adaptive Large Neighborhood Search for the Pickup and Delivery Problem",
-    "authors": ["Vidal, T.", "Crainic, T. G.", "Gendreau, M."],
-    "abstract": "We present a hybrid metaheuristic that embeds adaptive large neighborhood search (ALNS) operators within a genetic algorithm framework for the pickup and delivery problem with time windows. The population management scheme maintains diversity through a biased fitness function combining cost and structural distance. On standard Ropke–Pisinger benchmarks, the algorithm finds 14 new best-known solutions and matches state-of-the-art results on 89% of remaining instances.",
-    "date": "2025-03-10",
-    "source": "EJOR",
-    "url": "https://doi.org/10.1016/j.ejor.2025.02.018",
-    "tags": ["vehicle-routing", "metaheuristics"],
+    "id": "crossref-10.1287-trsc.2025.0318",
+    "title": "Liner Fleet Deployment and Speed Optimization Under Emission Reduction Technologies",
+    "authors": [
+      "Zhuge, D.",
+      "Wu, J.",
+      "Zhen, L.",
+      "Wang, S.",
+      "Wang, Y."
+    ],
+    "abstract": "Maritime shipping faces stringent exhaust emission requirements because of sulfur emission regulations and the European Union Emissions Trading System (EU ETS), driving shipping companies to adopt a range of emission reduction technologies, such as scrubbers, liquefied natural gas (LNG) propulsion systems, and methanol propulsion systems. Given that many shipping companies operate fleets equipped with multiple emission reduction technologies, this study investigates an integrated fleet deployment and speed optimization problem for a shipping company operating three or more types of ships (traditional ships, scrubber-equipped ships, and LNG- or methanol-powered ships) under sulfur emission regulations and the EU ETS carbon emission regulation. A mixed-integer nonlinear programming (MINLP) model is proposed to address this optimization problem. Because of their differing regulatory mechanisms, sulfur and carbon emission regulations affect fleet deployment (i.e., the types and number of ships deployed across all routes) and speed optimization in distinct ways. As the number of ship types increases, the number of feasible fleet deployment plans grows sharply, whereas the inclusion of different ship types further complicates speed optimization, increasing the overall problem complexity. To tackle this challenge, the study performs mathematical derivations and analyses to reveal model properties and construct valid inequalities, significantly narrowing the feasible solution space. The MINLP model is first linearized according to its characteristics. Leveraging the model properties, a Benders decomposition algorithm with a tailored cut pool is developed to solve the linearized model, which serves as the foundation for a highly efficient exact algorithm for the original MINLP model. Numerical experiments show that the proposed exact algorithm achieves a nearly 90-fold reduction in computation time compared with the CPLEX-based algorithm.\n                  Funding: This work was supported by the National Natural Science Foundation of China [Grants 72025103, 72571167, 72201163, 72394360, 72394362, 72361137001, and 72371221], the Project of Science and Technology Commission of Shanghai Municipality China [Grant 23JC1402200], and HKSAR RGC [Grant TRS T32-707/22-N].\n                  Supplemental Material: The online appendix is available at https://doi.org/10.1287/trsc.2025.0318 .",
+    "date": "2026-03-18",
+    "source": "Transportation Science",
+    "url": "https://doi.org/10.1287/trsc.2025.0318",
+    "tags": [
+      "vehicle-routing",
+      "integer-programming"
+    ],
     "type": "publication",
-    "doi": "10.1016/j.ejor.2025.02.018"
+    "doi": "10.1287/trsc.2025.0318"
   },
   {
-    "id": "pub-006",
-    "title": "Distributionally Robust Nurse Rostering with Preference Learning",
-    "authors": ["Kim, S.", "Luedtke, J."],
-    "abstract": "Nurse rostering must balance staffing coverage, regulatory constraints, and individual scheduling preferences. We introduce a distributionally robust optimization model where preference weights are learned from historical swap request data using an inverse optimization approach. The Wasserstein ambiguity set guards against mis-specified preference models. A column generation algorithm solves month-long planning horizons for departments of 120 nurses, yielding rosters that reduce voluntary swap requests by 42%.",
-    "date": "2025-03-07",
-    "source": "INFORMS",
-    "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2025.0217",
-    "tags": ["scheduling", "healthcare-or", "stochastic"],
+    "id": "crossref-10.1287-ijoc.2024.0751",
+    "title": "Function-on-Function Gaussian Process with Application in Robust Parameter Design",
+    "authors": [
+      "Huang, J.",
+      "Xu, H.",
+      "Gao, Y.",
+      "Zhang, C."
+    ],
+    "abstract": "As data sensing technology advances, functional data have become increasingly popular in complex systems. Function-on-function regression models, where both input and output variables are functional data, have attracted increasing attention in research. However, all the existing models have limitations that cannot qualify prediction uncertainty. To fill this gap, we propose a novel function-on-function Gaussian process (FFGP). It employs a detachable structure based on the operator-valued kernel to represent the covariance between functional inputs and output. Compared with existing Gaussian process models, FFGP can model functional data directly in the continuous space, and a scalar-valued operator-covariance is defined to qualify the output uncertainty. We further apply FFGP to robust parameter design by proposing an expected loss function to measure the functional output bias and uncertainty given a functional input. Then, an effective and scalable functional gradient descent algorithm (FRGD) is proposed to identify the optimal functional input that minimizes the loss function. Some theoretical properties of FFGP and its corresponding robust parameter optimization via FRGD are discussed.\n                  History: Accepted by Ram Ramesh, Area Editor for Data Science and Machine Learning.\n                  Funding: This work was supported by the National Natural Science Foundation of China [Grant 72271138] and Tsinghua-NUS Joint Funding [Grant 20243080039].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2024.0751 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2024.0751 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+    "date": "2026-03-20",
+    "source": "Manufacturing & Service Operations Management",
+    "url": "https://doi.org/10.1287/ijoc.2024.0751",
+    "tags": [
+      "stochastic",
+      "ml-for-or"
+    ],
     "type": "publication",
-    "doi": "10.1287/mnsc.2025.0217"
+    "doi": "10.1287/ijoc.2024.0751"
   },
   {
-    "id": "pub-007",
-    "title": "Electric Vehicle Fleet Routing with Nonlinear Charging and Battery Degradation",
-    "authors": ["Pelletier, S.", "Jabali, O.", "Laporte, G."],
-    "abstract": "We study the green vehicle routing problem for electric fleets incorporating realistic nonlinear charging curves and long-term battery degradation effects. A piecewise-linear approximation of the charging function is embedded within an adaptive large neighborhood search heuristic. Results on real-world logistics data from a European parcel carrier show that accounting for degradation reduces total cost of ownership by 8% over a five-year horizon while maintaining service level agreements.",
-    "date": "2025-03-04",
-    "source": "arXiv",
-    "url": "https://arxiv.org/abs/2503.02741",
-    "tags": ["vehicle-routing", "metaheuristics"],
+    "id": "crossref-10.1287-ijoc.2024.0710",
+    "title": "Enabling Ultrafast Online Order Fulfillment: Efficient Inventory Management for In-Store Microfulfillment Centers",
+    "authors": [
+      "Jia, Q.",
+      "Jiang, Z.",
+      "Menon, S."
+    ],
+    "abstract": "The emergence of in-store microfulfillment centers (ISMFCs) is transforming omnichannel retailing by facilitating the rapid fulfillment of orders placed online. Effective management, particularly of the complex decisions related to the dynamic selection of products to place in the ISMFC and the determination of inventory levels of each product selected therein, can go a long way in maximizing the benefits of ISMFCs. In this paper, we first formulate the ISMFC inventory decision problem as a Markov Decision Process. We then leverage intuition from this representation and introduce a threshold policy based on the optimal multiperiod marginal profit-to-volume ratio to efficiently manage stochastic demand and make forward-looking decisions. We establish the quality of the proposed approach using two sets of computational experiments. Because key benchmark approaches do not scale well, we restrict the first set of experiments to simulated data involving three products. In the second set of experiments—based on a retail data set with 3,498 products—we benchmark the threshold policy against scalable methods, employing model parameters obtained partly from data estimation and partly from observed data values. The results from these experiments demonstrate that our approach outperforms state-of-the-art benchmarks, identifying near-optimal solutions in a few seconds. The scalability and effectiveness of the threshold policy underscores its practical viability and highlights the substantial economic gains achievable in managing ISMFC operations.\n                  History: Accepted by Ram Ramesh, Area Editor for Data Science and Machine Learning.\n                  Funding: Q. Jia was supported by the National Natural Science Foundation of China [Grants 72394373 and 72231004].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2024.0710 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2024.0710 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+    "date": "2026-03-19",
+    "source": "Manufacturing & Service Operations Management",
+    "url": "https://doi.org/10.1287/ijoc.2024.0710",
+    "tags": [
+      "stochastic",
+      "ml-for-or",
+      "supply-chain"
+    ],
     "type": "publication",
-    "doi": "10.48550/arXiv.2503.02741"
+    "doi": "10.1287/ijoc.2024.0710"
   },
   {
-    "id": "pub-008",
-    "title": "Online Appointment Scheduling with No-Show Predictions: A Robust Approach",
-    "authors": ["Liu, X.", "Gupta, D."],
-    "abstract": "Patient no-shows cause significant revenue loss and inefficiency in outpatient clinics. We develop a robust online scheduling policy that leverages machine learning predictions of no-show probabilities to overbook appointment slots adaptively. The policy provides worst-case guarantees under a budgeted uncertainty set while exploiting prediction accuracy when forecasts are reliable. A clinical pilot at two ambulatory care centers demonstrates a 15% increase in realized throughput with no increase in patient waiting time.",
-    "date": "2025-02-28",
-    "source": "Operations Research",
-    "url": "https://pubsonline.informs.org/doi/10.1287/opre.2025.0065",
-    "tags": ["scheduling", "healthcare-or", "ml-for-or"],
+    "id": "crossref-10.1287-ijoc.2023.0521.cd",
+    "title": "Code and Data Repository for A Novel Personalized Federated Learning Method for Privacy-Preserving Smart Mobile Health Monitoring",
+    "authors": [
+      "Chai, Y.",
+      "Liu, H.",
+      "Liu, X.",
+      "Wang, L.",
+      "Liu, Y.",
+      "Wang, J."
+    ],
+    "abstract": "The software and data in this repository are a snapshot of the software and data that were used in the research reported on in the paper A Novel Personalized Federated Learning Method for Privacy-Preserving Smart Mobile Health Monitoring by Yidong Chai, Haoxin Liu, Xiao Liu, Liuan Wang, Yi Liu, Junqu Wang.",
+    "date": "2026-03-19",
+    "source": "Manufacturing & Service Operations Management",
+    "url": "https://doi.org/10.1287/ijoc.2023.0521.cd",
+    "tags": [
+      "general-or"
+    ],
     "type": "publication",
-    "doi": "10.1287/opre.2025.0065"
+    "doi": "10.1287/ijoc.2023.0521.cd"
   },
   {
-    "id": "pub-009",
-    "title": "Quantum-Inspired Algorithms for Combinatorial Optimization: A Computational Study",
-    "authors": ["Farhi, E.", "Montanaro, A.", "Zhou, L."],
-    "abstract": "We benchmark quantum-inspired tensor network algorithms against state-of-the-art classical solvers on a suite of combinatorial optimization problems including Max-Cut, graph coloring, and quadratic assignment. On structured instances up to 5,000 variables, the tensor network approach finds solutions within 1.5% of best known in 10x less wall-clock time than simulated annealing. However, on random unstructured instances, classical methods retain a significant advantage, suggesting that structure exploitation is key to quantum-inspired speedups.",
-    "date": "2025-02-25",
-    "source": "arXiv",
-    "url": "https://arxiv.org/abs/2502.18234",
-    "tags": ["metaheuristics", "integer-programming"],
+    "id": "crossref-10.1287-ijoc.2024.0794",
+    "title": "When Multimodal Interactions Impair Prediction: A Novel Regularized Deep Learning Strategy",
+    "authors": [
+      "Chen, G.",
+      "Xiao, S.",
+      "Zhang, C.",
+      "Zhao, H."
+    ],
+    "abstract": "Multimodal data are proliferating and hence flourishing data-driven business decision making, exemplified by short video attractiveness prediction (SVAP), multimodal review sentiment classification (MRSC), and multimodal data-based default risk prediction (DRP). However, when data of various modalities (e.g., text, graph, image, and video) are used jointly, they may mutually interact, adversely affecting prediction performance. To unravel and resolve the opaque conflicts in multimodal data, we formally conceptualize multimodal interactions and provide analytical insights for mitigating negative interactions at the feature, modality, and modality-wise instance levels. To better realize the predictive power of multimodal data, we propose a novel deep learning strategy named NIRMD (for negative interaction-regularized multimodal deep learning), which allows positive (negative) multimodal interactions to be effectively encouraged (mitigated) in a learnable nonlinear representation space. Empirical evaluation in three case studies involving SVAP, MRSC, and DRP, respectively, shows that the prediction performance of state-of-the-art multimodal deep learning methods can be enhanced by incorporating NIRMD. Exploratory (i.e., ablation, feature contribution, and case) analyses render evidence of NIRMD’s effectiveness in mitigating negative multimodal interactions.\n                  History: Accepted by Ram Ramesh, Area Editor for Data Science &amp; Machine Learning.\n                  Funding: G. Chen was supported by the National Natural Science Foundation of China [Grants 72522010, 72301239, and 72394371]. S. Xiao was supported by the National Natural Science Foundation of China [Grants 72301194, 72495133, and 72472058]. C. Zhang was supported by the National Natural Science Foundation of China [Grants 72271059 and 72571071].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2024.0794 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2024.0794 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+    "date": "2026-03-17",
+    "source": "Manufacturing & Service Operations Management",
+    "url": "https://doi.org/10.1287/ijoc.2024.0794",
+    "tags": [
+      "ml-for-or"
+    ],
     "type": "publication",
-    "doi": "10.48550/arXiv.2502.18234"
-  },
-  {
-    "id": "pub-010",
-    "title": "Fair Resource Allocation in Emergency Departments: A Multi-Objective Optimization Framework",
-    "authors": ["Azadeh, S. S.", "Savelsbergh, M."],
-    "abstract": "Emergency department crowding disproportionately affects vulnerable populations. We propose a multi-objective mixed-integer program that jointly optimizes throughput, equity, and staff workload balance. An epsilon-constraint method generates the Pareto frontier, enabling hospital administrators to navigate trade-offs explicitly. Simulation experiments calibrated on two urban EDs show that Pareto-optimal staffing plans reduce length-of-stay disparities between demographic groups by 27% with less than 3% throughput loss.",
-    "date": "2025-02-20",
-    "source": "EJOR",
-    "url": "https://doi.org/10.1016/j.ejor.2025.01.032",
-    "tags": ["healthcare-or", "integer-programming", "scheduling"],
-    "type": "publication",
-    "doi": "10.1016/j.ejor.2025.01.032"
-  },
-  {
-    "id": "pub-011",
-    "title": "A Column Generation Approach for Integrated Crew and Vehicle Scheduling in Public Transit",
-    "authors": ["Desrosiers, J.", "Lübbecke, M.", "Borndörfer, R."],
-    "abstract": "Crew and vehicle scheduling in public transit are traditionally solved sequentially, leading to suboptimal integrated solutions. We develop a unified Dantzig–Wolfe decomposition where vehicle blocks and crew duties are generated simultaneously via coupled pricing subproblems. The master problem coordinates resources through linking constraints that enforce consistency. On real timetable data from a German transit agency, the integrated approach reduces operational costs by 5.2% compared to the sequential benchmark.",
-    "date": "2025-02-15",
-    "source": "INFORMS",
-    "url": "https://pubsonline.informs.org/doi/10.1287/trsc.2025.0031",
-    "tags": ["scheduling", "integer-programming", "vehicle-routing"],
-    "type": "publication",
-    "doi": "10.1287/trsc.2025.0031"
-  },
-  {
-    "id": "pub-012",
-    "title": "Predict-Then-Optimize for Stochastic Inventory Management with Deep Learning Demand Forecasts",
-    "authors": ["Elmachtoub, A. N.", "Grigas, P.", "Zhang, H."],
-    "abstract": "Standard two-stage approaches to data-driven inventory management first fit a demand forecast model and then optimize ordering decisions. We develop an end-to-end predict-then-optimize framework using a surrogate loss function derived from the newsvendor cost structure. A deep learning architecture captures nonlinear demand patterns from high-dimensional feature vectors. Experiments on retail data from a Fortune 500 company show 12% cost reduction versus separate estimation and optimization pipelines.",
-    "date": "2025-02-10",
-    "source": "Operations Research",
-    "url": "https://pubsonline.informs.org/doi/10.1287/opre.2025.0044",
-    "tags": ["stochastic", "ml-for-or"],
-    "type": "publication",
-    "doi": "10.1287/opre.2025.0044"
+    "doi": "10.1287/ijoc.2024.0794"
   }
 ]
