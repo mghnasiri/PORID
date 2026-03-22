@@ -434,7 +434,7 @@ function animateCards() {
   const cards = contentEl.querySelectorAll('.card, .list-row, .digest-day, .digest-preview__card');
   cards.forEach((card, i) => {
     card.setAttribute('data-animate', '');
-    card.style.animationDelay = `${i * 0.06}s`;
+    card.style.animationDelay = `${i * 0.05}s`;
   });
 }
 

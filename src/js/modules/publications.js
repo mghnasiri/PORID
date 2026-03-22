@@ -48,7 +48,7 @@ function renderGridCard(item) {
   const starSymbol = starred ? '&#9733;' : '&#9734;';
 
   return `
-    <article class="card" data-id="${item.id}" data-type="publication">
+    <article class="card" tabindex="0" data-id="${item.id}" data-type="publication">
       <div class="card__header">
         <h3 class="card__title">${item.title}</h3>
         <span class="card__date" title="${formatDate(item.date)}">${relativeTime(item.date)}</span>
