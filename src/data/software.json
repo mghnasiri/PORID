@@ -1,0 +1,62 @@
+[
+  {
+    "id": "sw-001",
+    "name": "Google OR-Tools",
+    "version": "9.10",
+    "date": "2025-03-15",
+    "changelog": "Added support for multi-objective optimization in CP-SAT solver. Improved routing library performance by 20% on large-scale VRPTW instances. New Python 3.12 wheel builds.",
+    "url": "https://github.com/google/or-tools/releases/tag/v9.10",
+    "tags": ["solver", "vehicle-routing"],
+    "type": "software"
+  },
+  {
+    "id": "sw-002",
+    "name": "Gurobi Optimizer",
+    "version": "11.0.2",
+    "date": "2025-03-10",
+    "changelog": "Performance improvements in concurrent MIP solver. New nonlinear objective support for quadratic programs. Enhanced Python API with type hints and async solve support.",
+    "url": "https://www.gurobi.com/downloads/gurobi-optimizer-release-notes/",
+    "tags": ["solver", "integer-programming"],
+    "type": "software"
+  },
+  {
+    "id": "sw-003",
+    "name": "PyVRP",
+    "version": "0.9.0",
+    "date": "2025-03-05",
+    "changelog": "Added electric vehicle routing variant with nonlinear charging. New multi-depot support. Improved ALNS destroy operators for pickup-and-delivery problems. Breaking: revised Solution API.",
+    "url": "https://github.com/PyVRP/PyVRP/releases/tag/v0.9.0",
+    "tags": ["vehicle-routing", "metaheuristics"],
+    "type": "software"
+  },
+  {
+    "id": "sw-004",
+    "name": "SCIP Optimization Suite",
+    "version": "9.1",
+    "date": "2025-02-28",
+    "changelog": "New GNN-based branching callback interface. Improved symmetry detection for constraint programming. PySCIPOpt now supports callback-based lazy constraints natively.",
+    "url": "https://www.scipopt.org/index.php#download",
+    "tags": ["solver", "integer-programming"],
+    "type": "software"
+  },
+  {
+    "id": "sw-005",
+    "name": "SimPy",
+    "version": "4.2.0",
+    "date": "2025-02-20",
+    "changelog": "Added priority resource with preemption policies. New real-time simulation mode for digital twin applications. Improved logging and event tracing for healthcare simulation models.",
+    "url": "https://github.com/simpy/simpy/releases/tag/v4.2.0",
+    "tags": ["simulation", "healthcare-or"],
+    "type": "software"
+  },
+  {
+    "id": "sw-006",
+    "name": "CPLEX Studio",
+    "version": "22.1.2",
+    "date": "2025-02-15",
+    "changelog": "Benders decomposition engine now supports user-defined optimality cuts. New OPL connector for Python dataframes. Warm-start improvements for successive MIP solves in rolling-horizon scheduling.",
+    "url": "https://www.ibm.com/products/ilog-cplex-optimization-studio",
+    "tags": ["solver", "scheduling"],
+    "type": "software"
+  }
+]

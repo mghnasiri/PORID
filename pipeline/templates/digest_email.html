@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PORID Daily Digest — {{ date }}</title>
+</head>
+<body style="margin:0;padding:0;background-color:#0A192F;font-family:'Helvetica Neue',Arial,sans-serif;color:#CCD6F6;-webkit-font-smoothing:antialiased;">
+
+  <!-- Wrapper table for email clients -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#0A192F;">
+    <tr>
+      <td align="center" style="padding:24px 16px;">
+
+        <!-- Main container -->
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;width:100%;background-color:#112240;border:1px solid rgba(197,160,89,0.3);border-radius:8px;overflow:hidden;">
+
+          <!-- Header -->
+          <tr>
+            <td style="padding:28px 32px 20px;border-bottom:2px solid rgba(197,160,89,0.4);text-align:center;">
+              <h1 style="margin:0 0 6px;font-size:24px;font-weight:600;color:#C5A059;letter-spacing:2px;text-transform:uppercase;font-family:Georgia,'Times New Roman',serif;">
+                PORID Daily Digest
+              </h1>
+              <p style="margin:0;font-size:14px;color:#8892B0;">
+                {{ date }} &middot; {{ stats.total }} item{{ 's' if stats.total != 1 else '' }}
+              </p>
+            </td>
+          </tr>
+
+          {% if publications %}
+          <!-- New Publications -->
+          <tr>
+            <td style="padding:24px 32px 8px;">
+              <h2 style="margin:0 0 16px;font-size:16px;font-weight:600;color:#C5A059;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid rgba(197,160,89,0.2);padding-bottom:8px;">
+                &#128218; New Publications ({{ stats.publications }})
+              </h2>
+            </td>
+          </tr>
+          {% for pub in publications %}
+          <tr>
+            <td style="padding:4px 32px 16px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-left:3px solid #C5A059;padding-left:12px;">
+                <tr>
+                  <td>
+                    <a href="{{ pub.url }}" style="color:#CCD6F6;text-decoration:none;font-size:15px;font-weight:600;font-family:Georgia,'Times New Roman',serif;line-height:1.4;">
+                      {{ pub.title }}
+                    </a>
+                    {% if pub.authors %}
+                    <p style="margin:4px 0 0;font-size:12px;color:#8892B0;line-height:1.4;">
+                      {{ pub.authors[:3] | join(', ') }}{% if pub.authors | length > 3 %} et al.{% endif %}
+                    </p>
+                    {% endif %}
+                    <p style="margin:4px 0 0;font-size:11px;color:#8892B0;">
+                      <span style="color:#C5A059;">{{ pub.source }}</span>
+                      &middot; {{ pub.date }}
+                      {% for tag in pub.tags[:3] %}
+                      &middot; <span style="color:#C5A059;opacity:0.7;">{{ tag }}</span>
+                      {% endfor %}
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          {% endfor %}
+          {% endif %}
+
+          {% if software %}
+          <!-- Software Updates -->
+          <tr>
+            <td style="padding:24px 32px 8px;">
+              <h2 style="margin:0 0 16px;font-size:16px;font-weight:600;color:#C5A059;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid rgba(197,160,89,0.2);padding-bottom:8px;">
+                &#128230; Software Updates ({{ stats.software }})
+              </h2>
+            </td>
+          </tr>
+          {% for sw in software %}
+          <tr>
+            <td style="padding:4px 32px 16px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-left:3px solid #C5A059;padding-left:12px;">
+                <tr>
+                  <td>
+                    <a href="{{ sw.url }}" style="color:#CCD6F6;text-decoration:none;font-size:15px;font-weight:600;">
+                      {{ sw.name }}
+                    </a>
+                    <span style="display:inline-block;background:#C5A059;color:#0A192F;font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;margin-left:6px;">
+                      v{{ sw.version }}
+                    </span>
+                    <p style="margin:4px 0 0;font-size:12px;color:#8892B0;line-height:1.4;">
+                      {{ sw.changelog[:120] }}{% if sw.changelog | length > 120 %}&hellip;{% endif %}
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          {% endfor %}
+          {% endif %}
+
+          {% if conferences or opportunities %}
+          <!-- Upcoming Deadlines -->
+          <tr>
+            <td style="padding:24px 32px 8px;">
+              <h2 style="margin:0 0 16px;font-size:16px;font-weight:600;color:#C5A059;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid rgba(197,160,89,0.2);padding-bottom:8px;">
+                &#9200; Upcoming Deadlines ({{ stats.conferences + stats.opportunities }})
+              </h2>
+            </td>
+          </tr>
+          {% for conf in conferences %}
+          <tr>
+            <td style="padding:4px 32px 12px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-left:3px solid #C5A059;padding-left:12px;">
+                <tr>
+                  <td>
+                    <a href="{{ conf.url }}" style="color:#CCD6F6;text-decoration:none;font-size:14px;font-weight:600;">
+                      {{ conf.name }}
+                    </a>
+                    <p style="margin:4px 0 0;font-size:12px;color:#8892B0;">
+                      &#128205; {{ conf.location }} &middot; {{ conf.dates }}
+                    </p>
+                    {% if conf.cfp_deadline %}
+                    <p style="margin:2px 0 0;font-size:12px;color:#C5A059;font-weight:500;">
+                      CFP Deadline: {{ conf.cfp_deadline }}
+                    </p>
+                    {% endif %}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          {% endfor %}
+          {% for opp in opportunities %}
+          <tr>
+            <td style="padding:4px 32px 12px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-left:3px solid #C5A059;padding-left:12px;">
+                <tr>
+                  <td>
+                    <a href="{{ opp.url }}" style="color:#CCD6F6;text-decoration:none;font-size:14px;font-weight:600;">
+                      {{ opp.title }}
+                    </a>
+                    <p style="margin:4px 0 0;font-size:12px;color:#8892B0;">
+                      {% if opp.institution %}&#127979; {{ opp.institution }} &middot; {% endif %}
+                      {% if opp.deadline %}Deadline: <span style="color:#C5A059;">{{ opp.deadline }}</span>{% endif %}
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          {% endfor %}
+          {% endif %}
+
+          {% if not publications and not software and not conferences and not opportunities %}
+          <!-- No items -->
+          <tr>
+            <td style="padding:40px 32px;text-align:center;">
+              <p style="font-size:14px;color:#8892B0;">No new items for today's digest.</p>
+            </td>
+          </tr>
+          {% endif %}
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding:20px 32px;border-top:1px solid rgba(197,160,89,0.2);text-align:center;">
+              <p style="margin:0;font-size:11px;color:#8892B0;letter-spacing:0.5px;">
+                Generated by <span style="color:#C5A059;">PORID</span> &middot;
+                <a href="https://mghnasiri.github.io/PORID" style="color:#C5A059;text-decoration:none;">mghnasiri.github.io/PORID</a>
+              </p>
+            </td>
+          </tr>
+
+        </table>
+        <!-- /Main container -->
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

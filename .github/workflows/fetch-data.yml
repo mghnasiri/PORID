@@ -1,0 +1,43 @@
+name: Daily Data Fetch
+
+on:
+  schedule:
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Run data pipeline
+        run: python pipeline/run_pipeline.py
+
+      - name: Build daily digest
+        run: python pipeline/build_digest.py
+
+      - name: Send digest email
+        run: python pipeline/send_email.py
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        continue-on-error: true
+
+      - name: Copy data to src for deployment
+        run: |
+          cp -f data/*.json src/data/ 2>/dev/null || true
+          cp -f data/digest-*.json src/data/ 2>/dev/null || true
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: daily data fetch [skip ci]"
+          file_pattern: "data/*.json src/data/*.json"
