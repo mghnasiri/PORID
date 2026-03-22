@@ -2,8 +2,12 @@
 """
 Fetch recent journal articles via the Crossref REST API.
 
-Queries by ISSN for each configured journal and returns items
-in the standard PORID schema.
+Queries by print ISSN for each configured journal and returns items
+in the standard PORID schema. Uses the Crossref "polite pool" via
+the ``mailto`` query parameter and a custom ``User-Agent`` header.
+
+CRITICAL: Always use print ISSNs (not eISSNs) — some eISSNs return 404.
+CRITICAL: Always include mailto= in URL params to enter the polite pool.
 
 Usage:
     python fetch_crossref.py              # uses config.yaml defaults
@@ -13,10 +17,10 @@ Usage:
 from __future__ import annotations
 
 import json
+import re
 import sys
 import time
 import argparse
-import re
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Optional
@@ -25,7 +29,8 @@ import requests
 import yaml
 
 CROSSREF_API_URL = "https://api.crossref.org/journals/{issn}/works"
-RATE_LIMIT_SECONDS = 1  # polite pool is generous; 1s is safe
+USER_AGENT = "PORID/1.0 (https://mghnasiri.github.io/PORID; mailto:mg.nasiri@ulaval.ca)"
+RATE_LIMIT_SECONDS = 1
 
 
 def load_config(config_path: str = "config.yaml") -> dict:
@@ -39,37 +44,33 @@ def fetch_journal(
     issn: str,
     journal_name: str,
     days: int = 7,
-    max_results: int = 50,
-    email: str = "porid-pipeline@example.com",
+    max_results: int = 25,
+    mailto: str = "mg.nasiri@ulaval.ca",
 ) -> list[dict]:
     """
     Fetch recent works from a single journal by ISSN.
 
     Args:
-        issn: The journal's ISSN (e.g., '0030-364X').
+        issn: The journal's print ISSN (e.g., '0030-364X').
         journal_name: Human-readable journal name for the source field.
-        days: How many days back to search.
+        days: How many days back to search via ``from-index-date``.
         max_results: Maximum number of results.
-        email: Contact email for Crossref polite pool.
+        mailto: Contact email for Crossref polite pool.
 
     Returns:
         List of article dicts in the standard PORID schema.
     """
     from_date = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
-    until_date = datetime.now().strftime("%Y-%m-%d")
 
+    url = CROSSREF_API_URL.format(issn=issn)
     params = {
-        "filter": f"from-pub-date:{from_date},until-pub-date:{until_date}",
+        "filter": f"from-index-date:{from_date}",
         "rows": max_results,
         "sort": "published",
         "order": "desc",
+        "mailto": mailto,
     }
-
-    headers = {
-        "User-Agent": f"PORID/1.0 (mailto:{email})",
-    }
-
-    url = CROSSREF_API_URL.format(issn=issn)
+    headers = {"User-Agent": USER_AGENT}
 
     try:
         resp = requests.get(url, params=params, headers=headers, timeout=30)
@@ -100,8 +101,9 @@ def fetch_journal(
             "abstract": abstract,
             "date": pub_date,
             "source": journal_name,
+            "source_detail": journal_name,
             "url": work_url,
-            "tags": [],  # will be filled by classify.py
+            "tags": [],
             "type": "publication",
             "doi": doi,
         })
@@ -109,24 +111,22 @@ def fetch_journal(
     return items
 
 
-def fetch_all_journals(
-    journals: list[dict],
-    days: int = 7,
-    max_results: int = 50,
-    email: str = "porid-pipeline@example.com",
-) -> list[dict]:
+def fetch_all_journals(config: dict) -> list[dict]:
     """
     Fetch articles from all configured journals.
 
     Args:
-        journals: List of dicts with 'issn' and 'name' keys.
-        days: Lookback window in days.
-        max_results: Max results per journal.
-        email: Contact email for Crossref polite pool.
+        config: Full pipeline configuration dict.
 
     Returns:
         Combined list of article dicts.
     """
+    cr_cfg = config.get("crossref", {})
+    journals = cr_cfg.get("journals", [])
+    days = cr_cfg.get("lookback_days", 7)
+    max_results = cr_cfg.get("max_results_per_journal", 25)
+    mailto = cr_cfg.get("mailto", "mg.nasiri@ulaval.ca")
+
     all_items: list[dict] = []
 
     for i, journal in enumerate(journals):
@@ -134,17 +134,20 @@ def fetch_all_journals(
         name = journal["name"]
         print(f"  Fetching Crossref: {name} ({issn})", file=sys.stderr)
 
-        items = fetch_journal(
-            issn, name, days=days, max_results=max_results, email=email
-        )
-        all_items.extend(items)
-        print(f"    → {len(items)} articles", file=sys.stderr)
+        try:
+            items = fetch_journal(issn, name, days=days, max_results=max_results, mailto=mailto)
+            all_items.extend(items)
+            print(f"    → {len(items)} articles", file=sys.stderr)
+        except Exception as e:
+            print(f"    ✗ Error: {e}", file=sys.stderr)
 
         if i < len(journals) - 1:
             time.sleep(RATE_LIMIT_SECONDS)
 
     return all_items
 
+
+# ── Helpers ───────────────────────────────────────────────────────────
 
 def _join_text(parts: list) -> str:
     """Join a Crossref title array (usually single element) into one string."""
@@ -167,7 +170,6 @@ def _clean_abstract(raw: str) -> str:
     """Strip JATS XML tags from Crossref abstracts."""
     if not raw:
         return ""
-    # Remove XML/HTML tags
     clean = re.sub(r"<[^>]+>", "", raw)
     return clean.strip()
 
@@ -194,17 +196,17 @@ def _extract_date(work: dict) -> str:
 def main() -> None:
     """CLI entry point: fetch Crossref articles and print JSON to stdout."""
     parser = argparse.ArgumentParser(description="Fetch recent journal articles via Crossref")
-    parser.add_argument("--days", type=int, default=7, help="Lookback window in days")
+    parser.add_argument("--days", type=int, default=None, help="Override lookback window")
     parser.add_argument("--config", default="config.yaml", help="Path to config file")
     args = parser.parse_args()
 
     config = load_config(args.config)
-    journals = config.get("crossref_issns", [])
-    max_items = config.get("max_items_per_source", 50)
-    email = config.get("email_recipient", "porid-pipeline@example.com")
 
-    print(f"Fetching Crossref articles (last {args.days} days)...", file=sys.stderr)
-    items = fetch_all_journals(journals, days=args.days, max_results=max_items, email=email)
+    if args.days is not None:
+        config.setdefault("crossref", {})["lookback_days"] = args.days
+
+    print(f"Fetching Crossref articles...", file=sys.stderr)
+    items = fetch_all_journals(config)
     print(f"Total: {len(items)} articles fetched.", file=sys.stderr)
 
     json.dump(items, sys.stdout, indent=2, ensure_ascii=False)

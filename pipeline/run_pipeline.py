@@ -5,6 +5,8 @@ PORID Pipeline Orchestrator.
 Runs all fetchers in sequence, classifies items, deduplicates,
 and writes output to data/*.json files for the frontend.
 
+Sources: arXiv, Crossref, OpenAlex, Semantic Scholar, GitHub, conferences, opportunities.
+
 Usage:
     python run_pipeline.py
     python run_pipeline.py --config config.yaml --output-dir ../data
@@ -22,9 +24,11 @@ from pathlib import Path
 import yaml
 
 # Local module imports
-from fetch_arxiv import fetch_all_categories
-from fetch_crossref import fetch_all_journals
-from fetch_software import fetch_all_repos
+from fetch_arxiv import fetch_all_categories as fetch_arxiv
+from fetch_crossref import fetch_all_journals as fetch_crossref
+from fetch_openalex import fetch_all_concepts as fetch_openalex
+from fetch_semantic_scholar import fetch_all_queries as fetch_semantic_scholar
+from fetch_software import fetch_all_repos as fetch_software
 from fetch_conferences import fetch_conferences
 from fetch_opportunities import fetch_all_feeds
 from classify import classify_items
@@ -59,7 +63,6 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     """
     config = load_config(config_path)
     tag_keywords = config.get("tags", {})
-    max_items = config.get("max_items_per_source", 50)
     out = Path(__file__).parent / output_dir
 
     publications: list[dict] = []
@@ -71,13 +74,12 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
 
     # ── 1. arXiv ──────────────────────────────────────────────────────
     print("=" * 60)
-    print("[1/5] Fetching arXiv papers...")
+    print("[1/7] Fetching arXiv papers...")
     print("=" * 60)
     try:
-        categories = config.get("arxiv_categories", [])
-        arxiv_items = fetch_all_categories(categories, days=3, max_results=max_items)
+        arxiv_items = fetch_arxiv(config)
         publications.extend(arxiv_items)
-        sources_checked += len(categories)
+        sources_checked += len(config.get("arxiv", {}).get("categories", []))
         print(f"  ✓ {len(arxiv_items)} papers from arXiv\n")
     except Exception as e:
         errors.append(f"arXiv: {e}")
@@ -86,37 +88,62 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
 
     # ── 2. Crossref ───────────────────────────────────────────────────
     print("=" * 60)
-    print("[2/5] Fetching Crossref journal articles...")
+    print("[2/7] Fetching Crossref journal articles...")
     print("=" * 60)
     try:
-        journals = config.get("crossref_issns", [])
-        email = config.get("email_recipient", "porid@example.com")
-        crossref_items = fetch_all_journals(journals, days=7, max_results=max_items, email=email)
+        crossref_items = fetch_crossref(config)
         publications.extend(crossref_items)
-        sources_checked += len(journals)
+        sources_checked += len(config.get("crossref", {}).get("journals", []))
         print(f"  ✓ {len(crossref_items)} articles from Crossref\n")
     except Exception as e:
         errors.append(f"Crossref: {e}")
         print(f"  ✗ Crossref failed: {e}\n", file=sys.stderr)
         traceback.print_exc(file=sys.stderr)
 
-    # ── 3. GitHub Software Releases ───────────────────────────────────
+    # ── 3. OpenAlex ───────────────────────────────────────────────────
     print("=" * 60)
-    print("[3/5] Fetching GitHub releases...")
+    print("[3/7] Fetching OpenAlex publications...")
     print("=" * 60)
     try:
-        repos = config.get("github_repos", [])
-        software = fetch_all_repos(repos)
-        sources_checked += len(repos)
+        openalex_items = fetch_openalex(config)
+        publications.extend(openalex_items)
+        sources_checked += len(config.get("openalex", {}).get("concepts", []))
+        print(f"  ✓ {len(openalex_items)} publications from OpenAlex\n")
+    except Exception as e:
+        errors.append(f"OpenAlex: {e}")
+        print(f"  ✗ OpenAlex failed: {e}\n", file=sys.stderr)
+        traceback.print_exc(file=sys.stderr)
+
+    # ── 4. Semantic Scholar ───────────────────────────────────────────
+    print("=" * 60)
+    print("[4/7] Fetching Semantic Scholar papers...")
+    print("=" * 60)
+    try:
+        s2_items = fetch_semantic_scholar(config)
+        publications.extend(s2_items)
+        sources_checked += len(config.get("semantic_scholar", {}).get("queries", []))
+        print(f"  ✓ {len(s2_items)} papers from Semantic Scholar\n")
+    except Exception as e:
+        errors.append(f"Semantic Scholar: {e}")
+        print(f"  ✗ Semantic Scholar failed: {e}\n", file=sys.stderr)
+        traceback.print_exc(file=sys.stderr)
+
+    # ── 5. GitHub Software Releases ───────────────────────────────────
+    print("=" * 60)
+    print("[5/7] Fetching GitHub releases...")
+    print("=" * 60)
+    try:
+        software = fetch_software(config)
+        sources_checked += len(config.get("github", {}).get("repos", []))
         print(f"  ✓ {len(software)} releases from GitHub\n")
     except Exception as e:
         errors.append(f"GitHub: {e}")
         print(f"  ✗ GitHub failed: {e}\n", file=sys.stderr)
         traceback.print_exc(file=sys.stderr)
 
-    # ── 4. Conferences ────────────────────────────────────────────────
+    # ── 6. Conferences ────────────────────────────────────────────────
     print("=" * 60)
-    print("[4/5] Fetching conference data...")
+    print("[6/7] Fetching conference data...")
     print("=" * 60)
     try:
         conferences = fetch_conferences(config)
@@ -127,9 +154,9 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
         print(f"  ✗ Conferences failed: {e}\n", file=sys.stderr)
         traceback.print_exc(file=sys.stderr)
 
-    # ── 5. Opportunities ──────────────────────────────────────────────
+    # ── 7. Opportunities ──────────────────────────────────────────────
     print("=" * 60)
-    print("[5/5] Fetching opportunity feeds...")
+    print("[7/7] Fetching opportunity feeds...")
     print("=" * 60)
     try:
         opportunities = fetch_all_feeds()

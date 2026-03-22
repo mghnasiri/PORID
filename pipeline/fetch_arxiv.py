@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """
-Fetch recent arXiv papers by category via the arXiv Atom API.
+Fetch recent arXiv papers using the official ``arxiv`` Python library.
+
+Uses ``arxiv.Client`` with built-in rate-limiting and retry logic
+rather than raw HTTP requests to the Atom API.
 
 Usage:
     python fetch_arxiv.py              # uses config.yaml defaults
@@ -11,22 +14,13 @@ from __future__ import annotations
 
 import json
 import sys
-import time
 import argparse
-import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional
 
-import requests
+import arxiv
 import yaml
-
-# arXiv Atom namespace
-ATOM_NS = "{http://www.w3.org/2005/Atom}"
-ARXIV_NS = "{http://arxiv.org/schemas/atom}"
-
-ARXIV_API_URL = "http://export.arxiv.org/api/query"
-RATE_LIMIT_SECONDS = 3
 
 
 def load_config(config_path: str = "config.yaml") -> dict:
@@ -37,6 +31,7 @@ def load_config(config_path: str = "config.yaml") -> dict:
 
 
 def fetch_category(
+    client: arxiv.Client,
     category: str,
     days: int = 3,
     max_results: int = 50,
@@ -45,132 +40,119 @@ def fetch_category(
     Fetch recent papers from a single arXiv category.
 
     Args:
+        client: Pre-configured arxiv.Client instance.
         category: arXiv category string, e.g. 'math.OC'.
-        days: How many days back to search.
+        days: How many days back to include.
         max_results: Maximum number of results per category.
 
     Returns:
         List of paper dicts in the standard PORID schema.
     """
-    params = {
-        "search_query": f"cat:{category}",
-        "sortBy": "submittedDate",
-        "sortOrder": "descending",
-        "start": 0,
-        "max_results": max_results,
-    }
-
-    resp = requests.get(ARXIV_API_URL, params=params, timeout=30)
-    resp.raise_for_status()
-
-    root = ET.fromstring(resp.text)
     cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+
+    search = arxiv.Search(
+        query=f"cat:{category}",
+        max_results=max_results,
+        sort_by=arxiv.SortCriterion.SubmittedDate,
+        sort_order=arxiv.SortOrder.Descending,
+    )
+
     items: list[dict] = []
 
-    for entry in root.findall(f"{ATOM_NS}entry"):
-        published_str = _text(entry, f"{ATOM_NS}published")
-        if not published_str:
+    for result in client.results(search):
+        # The arxiv library returns timezone-aware datetimes
+        if result.published < cutoff:
+            # Results are sorted newest first — once we pass the cutoff
+            # we can stop, but sometimes ordering is imperfect, so we
+            # continue for a few more to catch stragglers.
             continue
 
-        published = datetime.fromisoformat(published_str.replace("Z", "+00:00"))
-        if published < cutoff:
-            continue
+        arxiv_id = result.get_short_id()            # e.g. "2503.09012v1"
+        base_id = arxiv_id.split("v")[0]             # e.g. "2503.09012"
 
-        arxiv_id = _text(entry, f"{ATOM_NS}id", "")
-        # Extract just the ID portion (e.g., "2503.09012v1")
-        short_id = arxiv_id.split("/abs/")[-1] if "/abs/" in arxiv_id else arxiv_id
+        title = result.title.replace("\n", " ").strip()
+        abstract = result.summary.replace("\n", " ").strip()
+        authors = [a.name for a in result.authors]
 
-        title = _text(entry, f"{ATOM_NS}title", "").replace("\n", " ").strip()
-        abstract = _text(entry, f"{ATOM_NS}summary", "").replace("\n", " ").strip()
+        # Primary category from the result
+        primary_cat = result.primary_category or category
 
-        authors = [
-            name.text.strip()
-            for author in entry.findall(f"{ATOM_NS}author")
-            if (name := author.find(f"{ATOM_NS}name")) is not None and name.text
-        ]
-
-        # Extract DOI if present
-        doi = _text(entry, f"{ARXIV_NS}doi", "")
-
-        # Primary category
-        primary_cat = ""
-        primary_el = entry.find(f"{ARXIV_NS}primary_category")
-        if primary_el is not None:
-            primary_cat = primary_el.get("term", "")
+        # DOI: use the official one if present, else the arxiv DOI
+        doi = result.doi or f"10.48550/arXiv.{base_id}"
 
         items.append({
-            "id": f"arxiv-{short_id}",
+            "id": f"arxiv-{base_id}",
             "title": title,
             "authors": authors,
             "abstract": abstract,
-            "date": published.strftime("%Y-%m-%d"),
+            "date": result.published.strftime("%Y-%m-%d"),
             "source": "arXiv",
-            "url": f"https://arxiv.org/abs/{short_id}",
+            "source_detail": primary_cat,
+            "url": result.entry_id,
             "tags": [primary_cat] if primary_cat else [],
             "type": "publication",
-            "doi": doi if doi else f"10.48550/arXiv.{short_id.split('v')[0]}",
+            "doi": doi,
+            "arxiv_id": arxiv_id,
         })
 
     return items
 
 
-def fetch_all_categories(
-    categories: list[str],
-    days: int = 3,
-    max_results: int = 50,
-) -> list[dict]:
+def fetch_all_categories(config: dict) -> list[dict]:
     """
     Fetch papers from all configured arXiv categories.
 
-    Respects rate limits with a 3-second delay between requests.
+    The arxiv.Client handles rate limiting internally via
+    ``delay_seconds`` and ``num_retries``.
 
     Args:
-        categories: List of arXiv category strings.
-        days: Lookback window in days.
-        max_results: Max results per category.
+        config: Full pipeline configuration dict.
 
     Returns:
-        Combined list of paper dicts.
+        Combined list of paper dicts from all categories.
     """
+    arxiv_cfg = config.get("arxiv", {})
+    categories = arxiv_cfg.get("categories", ["math.OC"])
+    max_results = arxiv_cfg.get("max_results_per_category", 50)
+    lookback = arxiv_cfg.get("lookback_days", 3)
+    delay = arxiv_cfg.get("delay_seconds", 3)
+
+    client = arxiv.Client(
+        page_size=100,
+        delay_seconds=delay,
+        num_retries=3,
+    )
+
     all_items: list[dict] = []
 
-    for i, cat in enumerate(categories):
+    for cat in categories:
         print(f"  Fetching arXiv category: {cat}", file=sys.stderr)
         try:
-            items = fetch_category(cat, days=days, max_results=max_results)
+            items = fetch_category(client, cat, days=lookback, max_results=max_results)
             all_items.extend(items)
             print(f"    → {len(items)} papers", file=sys.stderr)
-        except requests.RequestException as e:
+        except Exception as e:
             print(f"    ✗ Error fetching {cat}: {e}", file=sys.stderr)
 
-        # Rate limit: wait between requests (skip after last)
-        if i < len(categories) - 1:
-            time.sleep(RATE_LIMIT_SECONDS)
-
     return all_items
-
-
-def _text(element: ET.Element, tag: str, default: Optional[str] = None) -> str:
-    """Safely extract text from an XML element by tag."""
-    el = element.find(tag)
-    if el is not None and el.text:
-        return el.text
-    return default if default is not None else ""
 
 
 def main() -> None:
     """CLI entry point: fetch arXiv papers and print JSON to stdout."""
     parser = argparse.ArgumentParser(description="Fetch recent arXiv papers")
-    parser.add_argument("--days", type=int, default=3, help="Lookback window in days")
+    parser.add_argument("--days", type=int, default=None, help="Override lookback window")
     parser.add_argument("--config", default="config.yaml", help="Path to config file")
     args = parser.parse_args()
 
     config = load_config(args.config)
-    categories = config.get("arxiv_categories", ["math.OC"])
-    max_items = config.get("max_items_per_source", 50)
 
-    print(f"Fetching arXiv papers (last {args.days} days)...", file=sys.stderr)
-    items = fetch_all_categories(categories, days=args.days, max_results=max_items)
+    if args.days is not None:
+        config.setdefault("arxiv", {})["lookback_days"] = args.days
+
+    lookback = config.get("arxiv", {}).get("lookback_days", 3)
+    print(f"Fetching arXiv papers (last {lookback} days)...", file=sys.stderr)
+
+    items = fetch_all_categories(config)
     print(f"Total: {len(items)} papers fetched.", file=sys.stderr)
 
     json.dump(items, sys.stdout, indent=2, ensure_ascii=False)

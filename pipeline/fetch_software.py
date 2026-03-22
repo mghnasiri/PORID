@@ -23,7 +23,7 @@ from typing import Optional
 import requests
 import yaml
 
-GITHUB_API_URL = "https://api.github.com/repos/{repo}/releases/latest"
+GITHUB_API_URL = "https://api.github.com/repos/{owner}/{repo}/releases/latest"
 RATE_LIMIT_SECONDS = 1
 
 
@@ -50,27 +50,29 @@ def get_github_headers() -> dict[str, str]:
     return headers
 
 
-def fetch_latest_release(repo: str) -> Optional[dict]:
+def fetch_latest_release(owner: str, repo: str, display_name: str = "") -> Optional[dict]:
     """
     Fetch the latest release for a single GitHub repository.
 
     Args:
-        repo: Repository in 'owner/name' format, e.g. 'google/or-tools'.
+        owner: Repository owner (e.g., 'google').
+        repo: Repository name (e.g., 'or-tools').
+        display_name: Human-readable name (e.g., 'OR-Tools').
 
     Returns:
         Dict in PORID software schema, or None if no release found.
     """
-    url = GITHUB_API_URL.format(repo=repo)
+    url = GITHUB_API_URL.format(owner=owner, repo=repo)
     headers = get_github_headers()
 
     try:
         resp = requests.get(url, headers=headers, timeout=15)
         if resp.status_code == 404:
-            print(f"    ✗ No releases found for {repo}", file=sys.stderr)
+            print(f"    ✗ No releases found for {owner}/{repo}", file=sys.stderr)
             return None
         resp.raise_for_status()
     except requests.RequestException as e:
-        print(f"    ✗ Error fetching {repo}: {e}", file=sys.stderr)
+        print(f"    ✗ Error fetching {owner}/{repo}: {e}", file=sys.stderr)
         return None
 
     release = resp.json()
@@ -79,7 +81,7 @@ def fetch_latest_release(repo: str) -> Optional[dict]:
     published = release.get("published_at", "")
     body = release.get("body", "") or ""
     html_url = release.get("html_url", "")
-    name = release.get("name", "") or repo.split("/")[-1]
+    name = display_name or release.get("name", "") or repo
 
     # Parse date
     date_str = ""
@@ -93,59 +95,50 @@ def fetch_latest_release(repo: str) -> Optional[dict]:
     # Truncate changelog for storage
     changelog = body.strip()
     if len(changelog) > 1000:
-        changelog = changelog[:1000] + "…"
+        changelog = changelog[:1000] + "\u2026"
 
     return {
-        "id": f"gh-{repo.replace('/', '-')}-{tag}",
-        "name": _pretty_name(repo),
+        "id": f"gh-{owner}-{repo}-{tag}",
+        "name": name,
         "version": tag,
         "date": date_str,
         "changelog": changelog,
-        "url": html_url or f"https://github.com/{repo}/releases",
-        "tags": ["solver"],  # default tag; classify.py can refine
+        "url": html_url or f"https://github.com/{owner}/{repo}/releases",
+        "tags": ["solver"],
         "type": "software",
     }
 
 
-def fetch_all_repos(repos: list[str]) -> list[dict]:
+def fetch_all_repos(config: dict) -> list[dict]:
     """
     Fetch latest release for all configured repositories.
 
     Args:
-        repos: List of 'owner/name' strings.
+        config: Full pipeline configuration dict.
 
     Returns:
         List of software item dicts.
     """
+    gh_cfg = config.get("github", {})
+    repos = gh_cfg.get("repos", [])
+
     items: list[dict] = []
 
-    for i, repo in enumerate(repos):
-        print(f"  Fetching GitHub: {repo}", file=sys.stderr)
-        item = fetch_latest_release(repo)
+    for i, repo_entry in enumerate(repos):
+        owner = repo_entry["owner"]
+        repo = repo_entry["repo"]
+        name = repo_entry.get("name", repo)
+
+        print(f"  Fetching GitHub: {owner}/{repo}", file=sys.stderr)
+        item = fetch_latest_release(owner, repo, display_name=name)
         if item:
             items.append(item)
-            print(f"    → v{item['version']} ({item['date']})", file=sys.stderr)
+            print(f"    \u2192 v{item['version']} ({item['date']})", file=sys.stderr)
 
         if i < len(repos) - 1:
             time.sleep(RATE_LIMIT_SECONDS)
 
     return items
-
-
-def _pretty_name(repo: str) -> str:
-    """Convert 'owner/repo-name' to a human-readable name."""
-    name = repo.split("/")[-1]
-    # Common capitalizations
-    overrides = {
-        "or-tools": "Google OR-Tools",
-        "Cbc": "COIN-OR Cbc",
-        "JuMP.jl": "JuMP.jl",
-        "pyomo": "Pyomo",
-        "scipy": "SciPy",
-        "cvxpy": "CVXPY",
-        "gurobipy": "Gurobi Python",
-    }
-    return overrides.get(name, name)
 
 
 def main() -> None:
@@ -155,10 +148,10 @@ def main() -> None:
     args = parser.parse_args()
 
     config = load_config(args.config)
-    repos = config.get("github_repos", [])
+    repos = config.get("github", {}).get("repos", [])
 
     print(f"Fetching GitHub releases for {len(repos)} repos...", file=sys.stderr)
-    items = fetch_all_repos(repos)
+    items = fetch_all_repos(config)
     print(f"Total: {len(items)} releases fetched.", file=sys.stderr)
 
     json.dump(items, sys.stdout, indent=2, ensure_ascii=False)

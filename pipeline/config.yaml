@@ -1,216 +1,356 @@
 # ============================================================
-# PORID Pipeline Configuration
+# PORID Pipeline Configuration — Verified March 2026
 # ============================================================
 
 # --- arXiv ---
-arxiv_categories:
-  - math.OC          # Optimization and Control
-  - cs.AI            # Artificial Intelligence
-  - cs.DS            # Data Structures and Algorithms
-  - stat.ML          # Machine Learning
+arxiv:
+  categories:
+    - math.OC      # Core: Optimization & Control
+    - cs.AI        # AI for OR
+    - cs.DS        # Data Structures & Algorithms
+    - stat.ML      # Statistical ML
+    - cs.LG        # ML (CS) — neural combinatorial optimization
+    - eess.SY      # Systems & Control
+    - cs.DM        # Discrete Mathematics
+  rss_feeds:
+    - https://rss.arxiv.org/rss/math.OC
+    - https://rss.arxiv.org/rss/cs.AI
+    - https://rss.arxiv.org/rss/cs.DS
+    - https://rss.arxiv.org/rss/stat.ML
+    - https://rss.arxiv.org/rss/cs.LG
+    - https://rss.arxiv.org/rss/eess.SY
+    - https://rss.arxiv.org/rss/cs.DM
+  max_results_per_category: 50
+  lookback_days: 3
+  delay_seconds: 3
 
-# --- Crossref (journal ISSNs) ---
-crossref_issns:
-  - issn: "0030-364X"
-    name: "Operations Research"
-  - issn: "0377-2217"
-    name: "European Journal of Operational Research"
-  - issn: "0041-1655"
-    name: "Transportation Science"
-  - issn: "1526-5528"
-    name: "Manufacturing & Service Operations Management"
-  - issn: "0092-2102"
-    name: "INFORMS Journal on Applied Analytics"
+# --- Crossref ---
+crossref:
+  mailto: "mg.nasiri@ulaval.ca"
+  lookback_days: 7
+  max_results_per_journal: 25
+  journals:
+    # INFORMS
+    - issn: "0030-364X"
+      name: "Operations Research"
+    - issn: "0025-1909"
+      name: "Management Science"
+    - issn: "0041-1655"
+      name: "Transportation Science"
+    - issn: "1091-9856"
+      name: "INFORMS Journal on Computing"
+    - issn: "1937-5956"
+      name: "M&SOM"
+    # Elsevier
+    - issn: "0377-2217"
+      name: "EJOR"
+    - issn: "0305-0548"
+      name: "Computers & Operations Research"
+    # WARNING: Use ONLY print ISSN 0305-0548 for this journal.
+    # The eISSN 1873-765X returns 404 on Crossref API.
+    - issn: "0925-5273"
+      name: "Int. J. Production Economics"
+    - issn: "0272-6963"
+      name: "Journal of Operations Management"
+    # Springer
+    - issn: "0254-5330"
+      name: "Annals of Operations Research"
+    - issn: "1381-1231"
+      name: "Journal of Heuristics"
+    - issn: "0171-6468"
+      name: "OR Spectrum"
+    - issn: "0025-5610"
+      name: "Mathematical Programming"
+    - issn: "1862-4472"
+      name: "Optimization Letters"
+    - issn: "1389-4420"
+      name: "Optimization and Engineering"
+    - issn: "1572-5286"
+      name: "4OR"
+    # Taylor & Francis
+    - issn: "0160-5682"
+      name: "Journal of the Operational Research Society"
+    - issn: "0740-817X"
+      name: "IISE Transactions"
+    - issn: "0233-1934"
+      name: "Optimization"
+    # Healthcare
+    - issn: "0168-8510"
+      name: "Health Policy"
+
+# --- OpenAlex ---
+openalex:
+  mailto: "mg.nasiri@ulaval.ca"
+  concepts:
+    - id: "C124101348"
+      name: "Operations Research"
+    - id: "C136764020"
+      name: "Mathematical Optimization"
+    - id: "C33923547"
+      name: "Linear Programming"
+    - id: "C2776232828"
+      name: "Combinatorial Optimization"
+    - id: "C154945302"
+      name: "Scheduling"
+  lookback_days: 7
+  max_results: 100
+
+# --- Semantic Scholar ---
+semantic_scholar:
+  queries:
+    - "operations research optimization"
+    - "combinatorial optimization heuristic"
+    - "healthcare scheduling rostering"
+    - "vehicle routing problem"
+    - "integer programming branch and bound"
+    - "robust optimization uncertainty"
+  fields_of_study:
+    - Mathematics
+    - Computer Science
+    - Engineering
+  lookback_days: 7
+  max_results_per_query: 20
 
 # --- GitHub repos (software releases) ---
-github_repos:
-  - google/or-tools
-  - coin-or/Cbc
-  - jump-dev/JuMP.jl
-  - pyomo/pyomo
-  - scipy/scipy
-  - cvxpy/cvxpy
-  - Gurobi/gurobipy
+github:
+  repos:
+    - owner: google
+      repo: or-tools
+      name: "OR-Tools"
+    - owner: HiGHS-dev
+      repo: HiGHS
+      name: "HiGHS"
+    - owner: coin-or
+      repo: Cbc
+      name: "CBC"
+    - owner: coin-or
+      repo: Clp
+      name: "CLP"
+    - owner: jump-dev
+      repo: JuMP.jl
+      name: "JuMP"
+    - owner: Pyomo
+      repo: pyomo
+      name: "Pyomo"
+    - owner: scipy
+      repo: scipy
+      name: "SciPy"
+    - owner: cvxpy
+      repo: cvxpy
+      name: "CVXPY"
+    - owner: SCIP-Interfaces
+      repo: PySCIPOpt
+      name: "PySCIPOpt"
+    - owner: ds4dm
+      repo: Ecole
+      name: "Ecole"
+    - owner: ampl
+      repo: amplpy
+      name: "AMPLPY"
+    - owner: metaheuristics-network
+      repo: mealpy
+      name: "MEALPY"
+    - owner: DEAP
+      repo: deap
+      name: "DEAP"
 
 # --- Conferences ---
 conferences:
-  - name: "INFORMS Annual Meeting 2025"
-    dates: "Oct 19–22, 2025"
-    location: "Seattle, WA"
-    cfp_deadline: "2025-05-15"
-    url: "https://www.informs.org/Meetings-Conferences/INFORMS-Annual-Meeting"
-    tags: ["conference"]
-
-  - name: "EURO 2025 — 33rd European Conference on Operational Research"
-    dates: "Jun 22–25, 2025"
-    location: "Copenhagen, Denmark"
-    cfp_deadline: "2025-03-28"
-    url: "https://euro2025cph.dk/"
-    tags: ["conference"]
-
-  - name: "CPAIOR 2025 — Integration of CP, AI, and OR"
-    dates: "Aug 25–28, 2025"
-    location: "Montreal, QC, Canada"
-    cfp_deadline: "2025-04-10"
-    url: "https://sites.google.com/view/cpaior2025"
-    tags: ["conference", "integer-programming"]
-
-  - name: "MSOM 2025 — Manufacturing & Service Operations Management"
-    dates: "Jul 7–8, 2025"
-    location: "Minneapolis, MN"
-    cfp_deadline: "2025-04-01"
-    url: "https://connect.informs.org/msom/events/msom-conference"
-    tags: ["conference", "scheduling"]
-
-  - name: "VeRoLog 2025 — Vehicle Routing and Logistics Optimization"
-    dates: "Jun 8–11, 2025"
-    location: "Lisbon, Portugal"
-    cfp_deadline: "2025-03-25"
-    url: "https://verolog2025.fc.ul.pt/"
-    tags: ["conference", "vehicle-routing"]
-
-  - name: "ISMP 2025 — International Symposium on Mathematical Programming"
-    dates: "Jul 20–25, 2025"
-    location: "Atlanta, GA"
-    cfp_deadline: "2025-04-15"
-    url: "https://ismp2025.isye.gatech.edu/"
-    tags: ["conference", "integer-programming"]
-
-  - name: "CORS/INFORMS International 2025"
-    dates: "Jun 15–18, 2025"
-    location: "Montreal, QC, Canada"
-    cfp_deadline: "2025-03-30"
+  - name: "INFORMS Annual Meeting 2026"
+    dates: "October 2026"
+    location: "TBA"
+    cfp_deadline: "TBA"
+    url: "https://www.informs.org/Meetings-Conferences"
+  - name: "EURO 2026"
+    dates: "June-July 2026"
+    location: "TBA"
+    url: "https://www.euro-online.org/"
+  - name: "CPAIOR 2026"
+    dates: "June 2026"
+    location: "TBA"
+    url: "https://cpaior.org/"
+  - name: "CORS 2026"
+    dates: "June 2026"
+    location: "TBA"
     url: "https://www.cors.ca/"
-    tags: ["conference"]
-
-  - name: "Winter Simulation Conference 2025"
-    dates: "Dec 14–17, 2025"
-    location: "Orlando, FL"
-    cfp_deadline: "2025-06-01"
+  - name: "CP 2026"
+    dates: "August-September 2026"
+    location: "TBA"
+    url: "https://www.a4cp.org/"
+  - name: "Winter Simulation Conference 2026"
+    dates: "December 2026"
+    location: "TBA"
     url: "https://www.wintersim.org/"
-    tags: ["conference", "simulation"]
-
-  - name: "POMS 2025 — Production and Operations Management Society"
-    dates: "May 2–5, 2025"
-    location: "Atlanta, GA"
-    cfp_deadline: "2025-02-15"
+  - name: "ROADEF 2027"
+    dates: "February 2027"
+    location: "TBA"
+    url: "https://www.roadef.org/"
+  - name: "POMS 2026"
+    dates: "April-May 2026"
+    location: "TBA"
     url: "https://www.pomsmeetings.org/"
-    tags: ["conference", "scheduling"]
-
-  - name: "MIP Workshop 2025"
-    dates: "May 19–22, 2025"
-    location: "Davis, CA"
-    cfp_deadline: "2025-03-01"
+  - name: "MIP Workshop 2026"
+    dates: "May-June 2026"
+    location: "TBA"
     url: "https://www.mixedinteger.org/"
-    tags: ["conference", "integer-programming"]
+  - name: "ISMP 2027"
+    dates: "July 2027"
+    location: "TBA"
+    url: "https://www.mathopt.org/?nav=ismp"
+  - name: "META 2026"
+    dates: "TBA"
+    location: "TBA"
+    url: "http://www.metaheuristics.org/"
+
+# --- Opportunities ---
+opportunities:
+  rss:
+    - url: "https://www.higheredjobs.com/rss/indexFeed.cfm?keyword=operations+research"
+      name: "HigherEdJobs"
+  scrape:
+    - url: "https://www.operationsacademia.org/jobs"
+      name: "OperationsAcademia.org"
+      method: "html_table"
 
 # --- Tag classification keywords ---
-# Each tag maps to a list of keywords scanned in title + abstract.
 tags:
-  scheduling:
-    - scheduling
-    - timetabling
-    - rostering
-    - operating room
-    - appointment
-    - job shop
-    - flow shop
-    - makespan
-  vehicle-routing:
-    - vehicle routing
-    - vrp
-    - vrptw
-    - traveling salesman
-    - tsp
-    - pickup and delivery
-    - fleet
-    - last mile
-    - logistics
+  linear-programming:
+    - "linear programming"
+    - "LP relaxation"
+    - "simplex method"
+    - "interior point"
+    - "linear optimization"
+    - "dual simplex"
   integer-programming:
-    - integer programming
-    - mixed-integer
-    - branch and bound
-    - branch and cut
-    - branch and price
-    - cutting plane
-    - polyhedral
-    - mip
-    - milp
-    - ilp
-    - combinatorial optimization
-  stochastic:
-    - stochastic
-    - robust optimization
-    - chance-constrained
-    - two-stage
-    - multi-stage
-    - recourse
-    - scenario
-    - distributionally robust
-    - uncertainty
-  ml-for-or:
-    - machine learning
-    - reinforcement learning
-    - deep learning
-    - neural network
-    - graph neural
-    - predict-then-optimize
-    - learning to optimize
-    - data-driven
-    - gnn
-  healthcare-or:
-    - healthcare
-    - hospital
-    - surgery
-    - patient
-    - nurse
-    - clinical
-    - emergency department
-    - ambulance
-    - organ
-    - transplant
-    - pandemic
-    - vaccine
-    - epidem
+    - "integer programming"
+    - "mixed-integer"
+    - "MIP"
+    - "MILP"
+    - "branch and bound"
+    - "branch and cut"
+    - "cutting plane"
+    - "Gomory"
+    - "branch and price"
   metaheuristics:
-    - metaheuristic
-    - genetic algorithm
-    - simulated annealing
-    - tabu search
-    - ant colony
-    - particle swarm
-    - local search
-    - neighborhood search
-    - evolutionary
-    - alns
-    - adaptive large neighborhood
-  simulation:
-    - simulation
-    - discrete event
-    - agent-based
-    - monte carlo
-    - digital twin
-  supply-chain:
-    - supply chain
-    - inventory
-    - warehouse
-    - procurement
-    - demand forecast
-    - bullwhip
-    - newsvendor
+    - "genetic algorithm"
+    - "simulated annealing"
+    - "tabu search"
+    - "metaheuristic"
+    - "evolutionary"
+    - "particle swarm"
+    - "ant colony"
+    - "iterated local search"
+    - "variable neighborhood"
+    - "GRASP"
+    - "memetic"
   network-optimization:
-    - network flow
-    - shortest path
-    - minimum cost
-    - maximum flow
-    - network design
-    - facility location
-    - hub location
-    - p-median
+    - "network flow"
+    - "shortest path"
+    - "max flow"
+    - "min cost flow"
+    - "minimum spanning tree"
+    - "graph optimization"
+    - "network design"
+  scheduling:
+    - "scheduling"
+    - "makespan"
+    - "job shop"
+    - "flow shop"
+    - "rostering"
+    - "timetabling"
+    - "parallel machine"
+    - "project scheduling"
+    - "RCPSP"
+  vehicle-routing:
+    - "vehicle routing"
+    - "VRP"
+    - "CVRP"
+    - "VRPTW"
+    - "TSP"
+    - "traveling salesman"
+    - "pickup and delivery"
+    - "arc routing"
+  stochastic:
+    - "stochastic programming"
+    - "robust optimization"
+    - "chance constraint"
+    - "distributionally robust"
+    - "DRO"
+    - "two-stage"
+    - "recourse"
+    - "scenario"
+    - "sample average approximation"
+    - "SAA"
+  ml-for-or:
+    - "machine learning"
+    - "deep learning"
+    - "reinforcement learning"
+    - "neural network"
+    - "graph neural"
+    - "learn to optimize"
+    - "predict then optimize"
+    - "neural combinatorial"
+  healthcare-or:
+    - "healthcare"
+    - "hospital"
+    - "emergency department"
+    - "nurse"
+    - "patient"
+    - "clinical"
+    - "ambulance"
+    - "operating room"
+    - "bed management"
+    - "surgery scheduling"
+    - "health service"
+  supply-chain:
+    - "supply chain"
+    - "inventory"
+    - "lot sizing"
+    - "warehouse"
+    - "logistics"
+    - "procurement"
+    - "demand planning"
+  facility-location:
+    - "facility location"
+    - "p-median"
+    - "hub location"
+    - "set covering"
+    - "warehouse location"
+    - "site selection"
+  multi-objective:
+    - "multi-objective"
+    - "Pareto"
+    - "bi-objective"
+    - "epsilon-constraint"
+    - "NSGA"
+    - "weighted sum"
+    - "lexicographic"
+  decomposition:
+    - "decomposition"
+    - "Benders"
+    - "Lagrangian"
+    - "Dantzig-Wolfe"
+    - "column generation"
+    - "row generation"
+  constraint-programming:
+    - "constraint programming"
+    - "CP-SAT"
+    - "constraint satisfaction"
+    - "global constraint"
+    - "propagation"
+  game-theory:
+    - "game theory"
+    - "Nash equilibrium"
+    - "Stackelberg"
+    - "mechanism design"
+    - "auction"
+    - "cooperative game"
 
 # --- Email digest ---
-email_recipient: "your-email@example.com"
-digest_time: "07:00"
-
-# --- Limits ---
-max_items_per_source: 50
+email:
+  recipient: "mg.nasiri@ulaval.ca"
+  smtp_server: "smtp.gmail.com"
+  smtp_port: 587
+  subject_prefix: "PORID Digest"
+  top_publications: 10
+  deadline_horizon_days: 30

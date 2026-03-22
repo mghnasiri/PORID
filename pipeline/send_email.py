@@ -133,10 +133,11 @@ def main() -> None:
         html_content = f.read()
 
     subject = f"PORID Digest \u2014 {date_str} \u00B7 {total_items} new item{'s' if total_items != 1 else ''}"
-    recipient = config.get("email_recipient", "")
+    email_cfg = config.get("email", {})
+    recipient = email_cfg.get("recipient", config.get("email_recipient", ""))
 
     if not recipient or recipient == "your-email@example.com":
-        print("  ✗ No recipient configured in config.yaml (email_recipient).", file=sys.stderr)
+        print("  ✗ No recipient configured in config.yaml (email.recipient).", file=sys.stderr)
         print("    Set a real email address to enable digest delivery.", file=sys.stderr)
         sys.exit(1)
 
