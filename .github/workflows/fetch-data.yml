@@ -7,10 +7,14 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
 
     steps:
       - uses: actions/checkout@v4
@@ -41,6 +45,22 @@ jobs:
           cp -f data/digest-*.json src/data/ 2>/dev/null || true
 
       - uses: stefanzweifel/git-auto-commit-action@v5
+        id: auto-commit
         with:
-          commit_message: "chore: daily data fetch [skip ci]"
+          commit_message: "chore: daily data fetch"
           file_pattern: "data/*.json src/data/*.json"
+
+      # Deploy to GitHub Pages directly (don't rely on deploy.yml trigger)
+      - name: Prepare site
+        if: steps.auto-commit.outputs.changes_detected == 'true'
+        run: |
+          mkdir -p _site
+          cp -r src/* _site/
+          cp -r data _site/data
+
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.auto-commit.outputs.changes_detected == 'true'
+
+      - name: Deploy to GitHub Pages
+        if: steps.auto-commit.outputs.changes_detected == 'true'
+        uses: actions/deploy-pages@v4
