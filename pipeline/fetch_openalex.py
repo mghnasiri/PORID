@@ -106,6 +106,17 @@ def fetch_concept(
         if not title:
             continue
 
+        # --- Data quality filters ---
+        # Skip numeric-only titles (e.g., HST proposal IDs "18087")
+        if title.strip().isdigit():
+            continue
+        # Skip titles shorter than 10 chars (likely garbage)
+        if len(title.strip()) < 10:
+            continue
+        # Skip future dates (bad metadata)
+        if work.get("publication_date", "") > datetime.now().strftime("%Y-%m-%d"):
+            continue
+
         # Authors
         authors = []
         for authorship in work.get("authorships", []):

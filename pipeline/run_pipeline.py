@@ -188,6 +188,13 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     publications = deduplicate(publications)
     print(f"  {pub_before} → {len(publications)} publications\n")
 
+    # ── Filter out future-dated items (bad metadata) ────────────────
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    pub_pre = len(publications)
+    publications = [p for p in publications if p.get("date", "") <= today or not p.get("date")]
+    if len(publications) < pub_pre:
+        print(f"  Filtered {pub_pre - len(publications)} future-dated publications", file=sys.stderr)
+
     # ── Sort ──────────────────────────────────────────────────────────
     publications.sort(key=lambda x: x.get("date", ""), reverse=True)
     software.sort(key=lambda x: x.get("date", ""), reverse=True)
