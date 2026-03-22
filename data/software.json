@@ -1,20 +1,20 @@
 [
   {
     "id": "gh-google-or-tools-9.15",
-    "name": "Google OR-Tools",
+    "name": "OR-Tools",
     "version": "9.15",
     "date": "2026-01-12",
     "changelog": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in MathOpt. It will automatically load the XPressMP shared library on your computer\r\n\r\n## Routing\r\n\r\n* Improved routing performance and search event support (at optimal).\r\n* Improved Doxygen documentation.\r\n* Reworked routing samples (#4590).\r\n* Exported filters update and other improvements from main.\r\n\r\n## CP-SAT\r\n\r\n* Improvements to the `no_overlap_2d` constraint (presolve, propagation, and cuts).\r\n* Detect, store and use precedences in presolve, propagation, and cuts.\r\n* Extensive work on LRAT proof production and checking.\r\n* Improve linear1 and linear2 encodings and processing.\r\n* Support for set variables and constraints (experimental).\r\n* Extend support for enforcement literals to more constraints.\r\n* Optimize Python layer, speed up proto generation, and improve typing support (#4733).…",
     "url": "https://github.com/google/or-tools/releases/tag/v9.15",
     "tags": [
       "solver",
-      "general-or"
+      "constraint-programming"
     ],
     "type": "software"
   },
   {
     "id": "gh-coin-or-Cbc-releases/2.10.13",
-    "name": "COIN-OR Cbc",
+    "name": "CBC",
     "version": "releases/2.10.13",
     "date": "2026-03-11",
     "changelog": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings by @svigerske in https://github.com/coin-or/Cbc/pull/580\r\n* disable another unused-but-set variable by @svigerske in https://github.com/coin-or/Cbc/pull/581\r\n* Drop COIN_HAS_NTY from public header CbcModel.hpp by @jschueller in https://github.com/coin-or/Cbc/pull/593\r\n* Fix compiler warning and compilation with CBC_QUIET defined by @svigerske in https://github.com/coin-or/Cbc/pull/594\r\n* Add vs2022 for stable 2.10 by @jhmgoossens in https://github.com/coin-or/Cbc/pull/601\r\n* remove or disable unused-but-set variables by @svigerske in https://github.com/coin-or/Cbc/pull/606\r\n* Update windows ci splitting msvs to separate workflow [stable/2.10] by @jhmgoossens in https://github.com/coin-or/Cbc/pull/647\r\n* Update config.guess, rerun autotools, update gitignore by @svigerske in https://github…",
@@ -26,12 +26,12 @@
     "type": "software"
   },
   {
-    "id": "gh-jump-dev-JuMP.jl-1.30.0",
-    "name": "JuMP.jl",
-    "version": "1.30.0",
-    "date": "2026-03-03",
-    "changelog": "## JuMP v1.30.0\n\n[Diff since v1.29.4](https://github.com/jump-dev/JuMP.jl/compare/v1.29.4...v1.30.0)\n\n\n**Merged pull requests:**\n- Fix errors found by JET (#4108) (@odow)\n- [docs] clarify dual unbounded ray in Benders decomposition tutorial (#4109) (@odow)\n- [docs] use allow_local = false in Benders decomposition tutorial (#4111) (@odow)\n- Add cuPDLPx (#4112) (@blegat)\n- [docs] work-around a bug in Clarabel@0.11 (#4114) (@odow)\n- [docs] add round_and_repair_heuristic in tolerances tutorial (#4115) (@odow)\n- [docs] add a tutorial on progressive hedging (#4117) (@odow)\n- Add SDPLRPlus (#4118) (@blegat)\n- Refactor to use ParallelTestRunner in the tests (#4119) (@odow)\n- Add dependabot (#4120) (@odow)\n- Drop support for Julia v1.6 and make v1.10 the new minimum (#4121) (@odow)\n- [docs] pin LinearOperators.jl to work around bug in v2.13.0 (#4122) (@odow)\n- [docs] Update LinearOperatorCollection compat (#4123) (@nHackel)\n- [docs] build the HTML and LaTeX docs in parallel (#4124) (@odow)\n- Pr…",
-    "url": "https://github.com/jump-dev/JuMP.jl/releases/tag/v1.30.0",
+    "id": "gh-coin-or-Clp-releases/1.17.11",
+    "name": "CLP",
+    "version": "releases/1.17.11",
+    "date": "2026-03-11",
+    "changelog": "## What's Changed\r\n* Fix some compiler warnings by @svigerske in https://github.com/coin-or/Clp/pull/236\r\n* Fix clang warnings by @svigerske in https://github.com/coin-or/Clp/pull/259\r\n* fix more clang warnings by @svigerske in https://github.com/coin-or/Clp/pull/260\r\n* Add vs2022 for stable 1.17 by @jhmgoossens in https://github.com/coin-or/Clp/pull/268\r\n* remove or disable more set-but-unused variables by @svigerske in https://github.com/coin-or/Clp/pull/273\r\n* Add macos-14, always upload artifact [stable/1.17] by @jhmgoossens in https://github.com/coin-or/Clp/pull/293\r\n* Update windows ci splitting msvs to separate workflow [stable/1.17] by @jhmgoossens in https://github.com/coin-or/Clp/pull/295\r\n* Update config.guess, rerun autotools, update .gitignore by @svigerske in https://github.com/coin-or/Clp/pull/296\r\n* Fix possible buffer overflow in `ClpSimplexOther` by @Mart-Bogdan in https://github.com/coin-or/Clp/pull/279\r\n* Fix windows-ci for stable to build MSVC with dynamically link…",
+    "url": "https://github.com/coin-or/Clp/releases/tag/releases/1.17.11",
     "tags": [
       "solver",
       "general-or"
@@ -39,7 +39,20 @@
     "type": "software"
   },
   {
-    "id": "gh-pyomo-pyomo-6.10.0",
+    "id": "gh-jump-dev-JuMP.jl-1.30.0",
+    "name": "JuMP",
+    "version": "1.30.0",
+    "date": "2026-03-03",
+    "changelog": "## JuMP v1.30.0\n\n[Diff since v1.29.4](https://github.com/jump-dev/JuMP.jl/compare/v1.29.4...v1.30.0)\n\n\n**Merged pull requests:**\n- Fix errors found by JET (#4108) (@odow)\n- [docs] clarify dual unbounded ray in Benders decomposition tutorial (#4109) (@odow)\n- [docs] use allow_local = false in Benders decomposition tutorial (#4111) (@odow)\n- Add cuPDLPx (#4112) (@blegat)\n- [docs] work-around a bug in Clarabel@0.11 (#4114) (@odow)\n- [docs] add round_and_repair_heuristic in tolerances tutorial (#4115) (@odow)\n- [docs] add a tutorial on progressive hedging (#4117) (@odow)\n- Add SDPLRPlus (#4118) (@blegat)\n- Refactor to use ParallelTestRunner in the tests (#4119) (@odow)\n- Add dependabot (#4120) (@odow)\n- Drop support for Julia v1.6 and make v1.10 the new minimum (#4121) (@odow)\n- [docs] pin LinearOperators.jl to work around bug in v2.13.0 (#4122) (@odow)\n- [docs] Update LinearOperatorCollection compat (#4123) (@nHackel)\n- [docs] build the HTML and LaTeX docs in parallel (#4124) (@odow)\n- Pr…",
+    "url": "https://github.com/jump-dev/JuMP.jl/releases/tag/v1.30.0",
+    "tags": [
+      "solver",
+      "decomposition"
+    ],
+    "type": "software"
+  },
+  {
+    "id": "gh-Pyomo-pyomo-6.10.0",
     "name": "Pyomo",
     "version": "6.10.0",
     "date": "2026-02-20",
@@ -71,6 +84,45 @@
     "date": "2026-02-03",
     "changelog": "| PR | Title | Type |                                                                                                                                                                       \r\n  |---|---|---|                                                                                                                                                                               \r\n  | #3093 | Fix IndexError with transformed parameters in parametric reshape | Bug fix |                                                                                                      \r\n  | #3094 | Add KNITRO solver installation instructions to documentation | Docs |                                                                                                             \r\n  | #3099 | Remove Google Analytics from documentation | Docs |                                                                                                                               \r\n  | #3113 | Use balanced tree for PowConeN…",
     "url": "https://github.com/cvxpy/cvxpy/releases/tag/v1.8.1",
+    "tags": [
+      "solver",
+      "general-or"
+    ],
+    "type": "software"
+  },
+  {
+    "id": "gh-SCIP-Interfaces-PySCIPOpt-6.1.0",
+    "name": "PySCIPOpt",
+    "version": "6.1.0",
+    "date": "2026-02-05",
+    "changelog": "This was a very active month. Thank you to @Zeroto521 for all your work on improving PySCIPOpt's performance, and thank you, @jonathanberthias, for the introduction and continued support of type stubs. Thank you to all the others who helped during this time, either with PRs or by reporting bugs.\r\nSeveral of the repo's oldest issues have been addressed (for the curious, #1150, #993, #1161, #1151, #1132).\r\nPySCIPOpt is entering a new phase, with more people contributing and becoming active participants in the repo. Makes me very happy; it's a sign of a vibrant community. This does increase the maintenance effort, so if you would like to help in that regard, please contact me by email (joao.goncalves.dionisio@gmail.com). \r\n\r\n## What's Changed\r\n* Raise error when fundamental callback is not implemented by @Joao-Dionisio in https://github.com/scipopt/PySCIPOpt/pull/1123\r\n* Restore Linux ARM64 wheel builds (manylinux_2_28_aarch64) by @Joao-Dionisio in https://github.com/scipopt/PySCIPOpt/pul…",
+    "url": "https://github.com/scipopt/PySCIPOpt/releases/tag/v6.1.0",
+    "tags": [
+      "solver",
+      "general-or"
+    ],
+    "type": "software"
+  },
+  {
+    "id": "gh-ds4dm-Ecole-0.8.1",
+    "name": "Ecole",
+    "version": "0.8.1",
+    "date": "2022-07-15",
+    "changelog": "Minor bugfix, missing c++ import https://github.com/ds4dm/ecole/commit/7472a00d691f78ecdd39536b8ad39963d1837e0c",
+    "url": "https://github.com/ds4dm/ecole/releases/tag/v0.8.1",
+    "tags": [
+      "solver",
+      "general-or"
+    ],
+    "type": "software"
+  },
+  {
+    "id": "gh-ampl-amplpy-0.14.0",
+    "name": "AMPLPY",
+    "version": "0.14.0",
+    "date": "2024-05-23",
+    "changelog": "# Recent changes:\r\n\r\n## 0.14.0 - 2024-05-21\r\n- Allow assigning values to indexed sets from a dictionary with the lists of members\r\n  for every index.\r\n- Add AMPL.get_iis() to return dictionaries with variables and constraints in IIS.\r\n- Add AMPL.get_solution() to return a dictionary with the solution.\r\n\r\n## 0.13.3 - 2024-02-20\r\n- Fix issues with AMPL.solve(verbose=False) when the solver argument was not set.\r\n\r\n## 0.13.2 - 2024-01-05\r\n- OutputHandler: Flush standard output after every message.\r\n\r\n## 0.13.1 - 2023-12-29\r\n- Upgrade libampl to 2.3.7-20231229.\r\n- Upgrade ampltools to 0.7.3 adding amplpy.bundle command.\r\n- Fix issue with environment variables on Windows in a generic way.\r\n- Add return_output and solvername_options arguments to AMPL.solve\r\n  - You can now do `ampl.solve(solver=\"gurobi\", gurobi_options=\"outlev=1\")`.\r\n\r\n## 0.13.0 - 2023-12-26\r\n- [Breaking] amplpy.modules now have priority in the PATH.\r\n- Fix ampl_libpath issue on Windows.",
+    "url": "https://github.com/ampl/amplpy/releases/tag/v0.14.0",
     "tags": [
       "solver",
       "general-or"
