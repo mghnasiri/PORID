@@ -29,7 +29,7 @@ import requests
 import yaml
 
 CROSSREF_API_URL = "https://api.crossref.org/journals/{issn}/works"
-USER_AGENT = "PORID/1.0 (https://mghnasiri.github.io/PORID; mailto:mg.nasiri@ulaval.ca)"
+USER_AGENT = "PORID/1.0 (https://mghnasiri.github.io/PORID; mailto:mgh.nasiri@gmail.com)"
 RATE_LIMIT_SECONDS = 1
 
 
@@ -45,7 +45,7 @@ def fetch_journal(
     journal_name: str,
     days: int = 7,
     max_results: int = 25,
-    mailto: str = "mg.nasiri@ulaval.ca",
+    mailto: str = "mgh.nasiri@gmail.com",
 ) -> list[dict]:
     """
     Fetch recent works from a single journal by ISSN.
@@ -125,7 +125,7 @@ def fetch_all_journals(config: dict) -> list[dict]:
     journals = cr_cfg.get("journals", [])
     days = cr_cfg.get("lookback_days", 7)
     max_results = cr_cfg.get("max_results_per_journal", 25)
-    mailto = cr_cfg.get("mailto", "mg.nasiri@ulaval.ca")
+    mailto = cr_cfg.get("mailto", "mgh.nasiri@gmail.com")
 
     all_items: list[dict] = []
 

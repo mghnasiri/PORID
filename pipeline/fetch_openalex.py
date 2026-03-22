@@ -63,7 +63,7 @@ def fetch_concept(
     concept_name: str,
     days: int = 7,
     max_results: int = 100,
-    mailto: str = "mg.nasiri@ulaval.ca",
+    mailto: str = "mgh.nasiri@gmail.com",
 ) -> list[dict]:
     """
     Fetch recent works for a single OpenAlex concept.
@@ -166,7 +166,7 @@ def fetch_all_concepts(config: dict) -> list[dict]:
     concepts = oa_cfg.get("concepts", [])
     days = oa_cfg.get("lookback_days", 7)
     max_results = oa_cfg.get("max_results", 100)
-    mailto = oa_cfg.get("mailto", "mg.nasiri@ulaval.ca")
+    mailto = oa_cfg.get("mailto", "mgh.nasiri@gmail.com")
 
     all_items: list[dict] = []
 
