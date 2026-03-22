@@ -159,9 +159,9 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     print("[7/7] Fetching opportunity feeds...")
     print("=" * 60)
     try:
-        opportunities = fetch_all_feeds()
+        opportunities = fetch_all_feeds(config)
         sources_checked += 1
-        print(f"  ✓ {len(opportunities)} opportunities from RSS\n")
+        print(f"  ✓ {len(opportunities)} opportunities from feeds\n")
     except Exception as e:
         errors.append(f"Opportunities: {e}")
         print(f"  ✗ Opportunities failed: {e}\n", file=sys.stderr)

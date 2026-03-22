@@ -109,12 +109,19 @@ def classify_items(
     return items
 
 
+# Alias for backward compatibility with spec
+classify_all = classify_items
+
+
 def main() -> None:
     """
-    CLI entry point: read items from stdin, classify, write to stdout.
+    CLI entry point.
+
+    If stdin has data, classify it. Otherwise, run a demo.
 
     Usage:
         python fetch_arxiv.py | python classify.py > classified.json
+        python classify.py  # demo mode
     """
     config = load_config()
     tag_keywords = config.get("tags", {})
@@ -122,22 +129,46 @@ def main() -> None:
     if not tag_keywords:
         print("Warning: no tag keywords found in config.yaml", file=sys.stderr)
 
-    items = json.load(sys.stdin)
-    print(f"Classifying {len(items)} items...", file=sys.stderr)
+    if '--demo' in sys.argv:
+        _run_demo(tag_keywords)
+        return
 
-    classified = classify_items(items, tag_keywords)
+    if sys.stdin.isatty():
+        _run_demo(tag_keywords)
+        return
 
-    # Summary
-    tag_counts: dict[str, int] = {}
-    for item in classified:
-        for tag in item.get("tags", []):
-            tag_counts[tag] = tag_counts.get(tag, 0) + 1
+    if True:  # pipe mode
+        items = json.load(sys.stdin)
+        print(f"Classifying {len(items)} items...", file=sys.stderr)
 
-    for tag, count in sorted(tag_counts.items(), key=lambda x: -x[1]):
-        print(f"  {tag}: {count}", file=sys.stderr)
+        classified = classify_items(items, tag_keywords)
 
-    json.dump(classified, sys.stdout, indent=2, ensure_ascii=False)
-    print()
+        # Summary
+        tag_counts: dict[str, int] = {}
+        for item in classified:
+            for tag in item.get("tags", []):
+                tag_counts[tag] = tag_counts.get(tag, 0) + 1
+
+        for tag, count in sorted(tag_counts.items(), key=lambda x: -x[1]):
+            print(f"  {tag}: {count}", file=sys.stderr)
+
+        json.dump(classified, sys.stdout, indent=2, ensure_ascii=False)
+        print()
+
+
+def _run_demo(tag_keywords: dict[str, list[str]]) -> None:
+    """Run demo classification on sample items."""
+    print("Demo mode — classifying sample items:\n")
+    samples = [
+        {"title": "A genetic algorithm for vehicle routing", "abstract": "We propose a metaheuristic approach..."},
+        {"title": "Branch and cut for mixed-integer scheduling", "abstract": "We solve a MILP formulation of the job shop problem."},
+        {"title": "Deep reinforcement learning for combinatorial optimization", "abstract": "Neural network policy for TSP."},
+        {"title": "Nurse rostering in emergency departments", "abstract": "Healthcare scheduling using robust optimization."},
+    ]
+    for item in samples:
+        tags = classify(item, tag_keywords)
+        print(f"  {item['title'][:60]}")
+        print(f"    → {tags}\n")
 
 
 if __name__ == "__main__":

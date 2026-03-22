@@ -49,9 +49,9 @@ def fetch_conferences(config: dict) -> list[dict]:
             "location": conf.get("location", ""),
             "cfp_deadline": conf.get("cfp_deadline", ""),
             "url": conf.get("url", ""),
+            "source": "config",
             "tags": conf.get("tags", ["conference"]),
             "type": "conference",
-            "_source": "config",  # flag: not scraped live
         })
 
     return items

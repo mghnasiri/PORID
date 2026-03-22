@@ -92,10 +92,13 @@ def fetch_latest_release(owner: str, repo: str, display_name: str = "") -> Optio
         except ValueError:
             date_str = published[:10]
 
-    # Truncate changelog for storage
+    # Truncate changelog for storage (500 chars max)
     changelog = body.strip()
-    if len(changelog) > 1000:
-        changelog = changelog[:1000] + "\u2026"
+    if len(changelog) > 500:
+        changelog = changelog[:500] + "\u2026"
+
+    # Determine tag: solver vs library
+    tag_label = _classify_software_tag(repo, display_name)
 
     return {
         "id": f"gh-{owner}-{repo}-{tag}",
@@ -104,9 +107,38 @@ def fetch_latest_release(owner: str, repo: str, display_name: str = "") -> Optio
         "date": date_str,
         "changelog": changelog,
         "url": html_url or f"https://github.com/{owner}/{repo}/releases",
-        "tags": ["solver"],
+        "source": "GitHub",
+        "tags": [tag_label],
         "type": "software",
     }
+
+
+# Known solver repos (lowercase repo name or display name)
+_SOLVER_NAMES = {"or-tools", "highs", "cbc", "clp", "scip", "pyscipopt", "cplex", "gurobi"}
+
+
+def _classify_software_tag(repo: str, display_name: str) -> str:
+    """
+    Determine whether a repo is a 'solver' or 'library'.
+
+    Repos whose name (or display name) contains 'solver' or matches
+    a known solver list are tagged 'solver'; everything else is 'library'.
+
+    Args:
+        repo: Repository name (e.g., 'or-tools').
+        display_name: Human-readable name (e.g., 'OR-Tools').
+
+    Returns:
+        Either 'solver' or 'library'.
+    """
+    repo_lower = repo.lower()
+    name_lower = display_name.lower()
+    if "solver" in repo_lower or "solver" in name_lower:
+        return "solver"
+    # Check against known solver names (exact repo name match)
+    if repo_lower in _SOLVER_NAMES or name_lower in _SOLVER_NAMES:
+        return "solver"
+    return "library"
 
 
 def fetch_all_repos(config: dict) -> list[dict]:
