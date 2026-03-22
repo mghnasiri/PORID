@@ -70,7 +70,7 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     conferences: list[dict] = []
     opportunities: list[dict] = []
     errors: list[str] = []
-    sources_checked = 0
+    sources_checked: list[str] = []
 
     # ── 1. arXiv ──────────────────────────────────────────────────────
     print("=" * 60)
@@ -79,7 +79,7 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     try:
         arxiv_items = fetch_arxiv(config)
         publications.extend(arxiv_items)
-        sources_checked += len(config.get("arxiv", {}).get("categories", []))
+        sources_checked.append("arXiv")
         print(f"  ✓ {len(arxiv_items)} papers from arXiv\n")
     except Exception as e:
         errors.append(f"arXiv: {e}")
@@ -93,7 +93,7 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     try:
         crossref_items = fetch_crossref(config)
         publications.extend(crossref_items)
-        sources_checked += len(config.get("crossref", {}).get("journals", []))
+        sources_checked.append("Crossref")
         print(f"  ✓ {len(crossref_items)} articles from Crossref\n")
     except Exception as e:
         errors.append(f"Crossref: {e}")
@@ -107,7 +107,7 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     try:
         openalex_items = fetch_openalex(config)
         publications.extend(openalex_items)
-        sources_checked += len(config.get("openalex", {}).get("concepts", []))
+        sources_checked.append("OpenAlex")
         print(f"  ✓ {len(openalex_items)} publications from OpenAlex\n")
     except Exception as e:
         errors.append(f"OpenAlex: {e}")
@@ -121,7 +121,7 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     try:
         s2_items = fetch_semantic_scholar(config)
         publications.extend(s2_items)
-        sources_checked += len(config.get("semantic_scholar", {}).get("queries", []))
+        sources_checked.append("Semantic Scholar")
         print(f"  ✓ {len(s2_items)} papers from Semantic Scholar\n")
     except Exception as e:
         errors.append(f"Semantic Scholar: {e}")
@@ -134,7 +134,7 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     print("=" * 60)
     try:
         software = fetch_software(config)
-        sources_checked += len(config.get("github", {}).get("repos", []))
+        sources_checked.append("GitHub")
         print(f"  ✓ {len(software)} releases from GitHub\n")
     except Exception as e:
         errors.append(f"GitHub: {e}")
@@ -147,7 +147,7 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     print("=" * 60)
     try:
         conferences = fetch_conferences(config)
-        sources_checked += 1
+        sources_checked.append("Conferences")
         print(f"  ✓ {len(conferences)} conferences from config\n")
     except Exception as e:
         errors.append(f"Conferences: {e}")
@@ -160,7 +160,7 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     print("=" * 60)
     try:
         opportunities = fetch_all_feeds(config)
-        sources_checked += 1
+        sources_checked.extend(["HigherEdJobs", "OperationsAcademia"])
         print(f"  ✓ {len(opportunities)} opportunities from feeds\n")
     except Exception as e:
         errors.append(f"Opportunities: {e}")
@@ -187,6 +187,12 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     pub_before = len(publications)
     publications = deduplicate(publications)
     print(f"  {pub_before} → {len(publications)} publications\n")
+
+    # ── Sort ──────────────────────────────────────────────────────────
+    publications.sort(key=lambda x: x.get("date", ""), reverse=True)
+    software.sort(key=lambda x: x.get("date", ""), reverse=True)
+    conferences.sort(key=lambda x: x.get("cfp_deadline", "9999"))
+    opportunities.sort(key=lambda x: x.get("date", ""), reverse=True)
 
     # ── Write output ──────────────────────────────────────────────────
     print("=" * 60)
@@ -226,20 +232,11 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
         write_json(metadata, src_data / "metadata.json")
 
     # ── Summary ───────────────────────────────────────────────────────
-    print("\n" + "=" * 60)
-    print("PIPELINE COMPLETE")
-    print("=" * 60)
-    print(f"  Publications:  {len(publications)}")
-    print(f"  Software:      {len(software)}")
-    print(f"  Conferences:   {len(conferences)}")
-    print(f"  Opportunities: {len(opportunities)}")
-    print(f"  Total items:   {metadata['total']}")
-    print(f"  Sources:       {sources_checked}")
+    print(f"\nPORID Pipeline Complete: {len(publications)} publications, "
+          f"{len(software)} software, {len(conferences)} conferences, "
+          f"{len(opportunities)} opportunities")
     if errors:
-        print(f"  Errors:        {len(errors)}")
-        for err in errors:
-            print(f"    - {err}")
-    print(f"  Timestamp:     {metadata['last_fetch']}")
+        print(f"Sources with errors: {errors}")
     print()
 
     return metadata

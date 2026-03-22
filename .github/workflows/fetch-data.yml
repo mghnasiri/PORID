@@ -28,6 +28,9 @@ jobs:
 
       - name: Run data pipeline
         run: python pipeline/run_pipeline.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          S2_API_KEY: ${{ secrets.S2_API_KEY }}
 
       - name: Build daily digest
         run: python pipeline/build_digest.py

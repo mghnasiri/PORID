@@ -113,11 +113,13 @@ def select_digest_items(
         "generated_at": now.isoformat(),
         "publications": digest_pubs,
         "software": digest_sw,
+        "deadlines": digest_confs + digest_opps,
         "conferences": digest_confs,
         "opportunities": digest_opps,
         "stats": {
             "publications": len(digest_pubs),
             "software": len(digest_sw),
+            "deadlines": len(digest_confs) + len(digest_opps),
             "conferences": len(digest_confs),
             "opportunities": len(digest_opps),
             "total": total,
