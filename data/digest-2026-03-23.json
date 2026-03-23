@@ -1,0 +1,113 @@
+{
+  "date": "2026-03-23",
+  "generated_at": "2026-03-23T08:07:21.280000+00:00",
+  "publications": [
+    {
+      "id": "s2-6580a5c8d643",
+      "title": "Tackling nonlinearities in microgrid codesign through linear programming approaches",
+      "authors": [
+        "Camille Bergougnoux",
+        "B. Sareni",
+        "S. Suárez",
+        "X. Roboam",
+        "Katia Besnard"
+      ],
+      "abstract": "\n \n A microgrid system is composed of several components such as producers or storages, destined to age depending on how they are used, through the energy management system (EMS) which can be ruled by optimization. According to the modeling granularity and frequency of updating components data, aging consideration introduces nonlinearities. The characteristics of certain case studies – such as increased energy demand or uncertainties in renewable production – may require long-term simulations. In some cases, specific constraints necessitate the use of a mixed-integer linear programming (MILP) formulation. As a result, computational times can become very long, hindering for search of the solutions. This study aims to build an optimization framework that addreses these various challenges, focusing Toulouse airport study case.\n \n \n \n This paper investigates a microgrid codesign optimization approach hybridizing linear programming (LP) and MILP for optimizing both sizing and EMS decision variables. This approach, built to find a compromise between computational calculation time and precision on technical-economic considerations, takes account of nonlinearities related to the battery capacity degradation and overruns of subscribed power.\n \n \n \n Our case study deals with an airport microgrid, simulated over 22 years old, using photovoltaic and wind turbine energy productions to be become an autonomous platform. This method is effective and robust, integrating battery replacement costs, which may increase the net present cost by up to 20%. The obtained results show the feasibility of achieving up to 60% energy autonomy.\n \n \n \n This contribution introduces an original way of managing nonlinearities in LP optimization models, including both quotient-type and product-type (bilinear) relationships between decision variables, converting an optimization variable into an input data known in advance.\n",
+      "date": "2026-03-23",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1108/compel-11-2025-0526",
+      "tags": [
+        "linear-programming",
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1108/compel-11-2025-0526",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s11590-026-02290-0",
+      "title": "Nonnegative low-rank matrix recovery can have spurious local minima",
+      "authors": [
+        "Zhang, R."
+      ],
+      "abstract": "",
+      "date": "2026-03-23",
+      "source": "Optimization Letters",
+      "source_detail": "Optimization Letters",
+      "url": "https://doi.org/10.1007/s11590-026-02290-0",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11590-026-02290-0",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s00291-026-00854-1",
+      "title": "Age-based equitable health resource allocation and the fair innings argument",
+      "authors": [
+        "Gutjahr, W."
+      ],
+      "abstract": "",
+      "date": "2026-03-22",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00854-1",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00854-1"
+    },
+    {
+      "id": "s2-32838b274248",
+      "title": "Mission-Critical Enterprise Systems... What's a Mission? And What's Critical?: Processor and technology requirements for enterprise computing",
+      "authors": [
+        "H. Hunter"
+      ],
+      "abstract": "Behind the scenes, mainframes (IBM Z) and IBM Power Systems fuel banking, manufacturing, healthcare, insurance, transportation, and many other critical industries. While we each touch multiple silicon-based systems daily, enterprise systems are the ones you never see, but always rely on. In this talk, we'll look inside these systems, discuss the silicon technology, microarchitecture, and system elements which come together to deliver eight nines of system-level resiliency (99.999999% uptime). We'll explore the changes in workloads on these systems, and discuss how new drivers like AI for fraud detection, AI for insurance claims processing, and AI-driven system operations are changing enterprise requirements. Bio: Hillery is the General Manager for IBM Power and serves as IBM Infrastructure CTO. In this role, she is focused on setting the global strategy for both Power and Infrastructure Platform in addition to driving cross-functional innovation and growth across IBM's Infrastructure portfolio which includes IBM zSystems, Power, Storage, TLS and IBM Cloud. In her previous roles as the GM, Industry Clouds and CTO of IBM Cloud, she led the business and technical strategy for IBM's industry-contextualized cloud offerings and was responsible for technical strategy for IBM's public cloud. Prior to this role, she served as Director of Accelerated Cognitive Infrastructure in IBM Research, leading a team doing cross-stack (hardware through software) optimization of AI workloads. Her technical interests have always been interdisciplinary, spanning from silicon technology through system software, and she has served in technical and leadership roles in memory technology, Systems for AI and other areas. Hillery was appointed as an IBM Fellow in 2017, and she is a BS, MS and PhD graduate of the University of Illinois at Urbana-Champaign, where she also received the 2024 Alumni Award for Distinguished Service.",
+      "date": "2026-03-22",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.1145/3779212.3795613",
+      "tags": [
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.1145/3779212.3795613",
+      "arxiv_id": "",
+      "citation_count": 0
+    }
+  ],
+  "software": [
+    {
+      "id": "gh-cvxpy-cvxpy-1.8.2",
+      "name": "CVXPY",
+      "version": "1.8.2",
+      "date": "2026-03-22",
+      "changelog": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 term for indefinite P (#3150)\n- Fix backward() setting param.gradient to float 0.0 instead of zero ndarray (#3159)\n- Fix Dgp2Dcp.param_backward KeyError when log-param not in dparams (#3164)\n- Fix reshape._infer_shape() for N-D shapes with -1 (#3165)\n- Reject sparse/diag variables with pos/neg attribu…",
+      "url": "https://github.com/cvxpy/cvxpy/releases/tag/v1.8.2",
+      "source": "GitHub",
+      "tags": [
+        "library",
+        "general-or"
+      ],
+      "type": "software",
+      "score": 20.0
+    }
+  ],
+  "deadlines": [],
+  "conferences": [],
+  "opportunities": [],
+  "stats": {
+    "publications": 4,
+    "software": 1,
+    "deadlines": 0,
+    "conferences": 0,
+    "opportunities": 0,
+    "total": 5
+  }
+}

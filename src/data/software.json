@@ -1,5 +1,20 @@
 [
   {
+    "id": "gh-cvxpy-cvxpy-1.8.2",
+    "name": "CVXPY",
+    "version": "1.8.2",
+    "date": "2026-03-22",
+    "changelog": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 term for indefinite P (#3150)\n- Fix backward() setting param.gradient to float 0.0 instead of zero ndarray (#3159)\n- Fix Dgp2Dcp.param_backward KeyError when log-param not in dparams (#3164)\n- Fix reshape._infer_shape() for N-D shapes with -1 (#3165)\n- Reject sparse/diag variables with pos/neg attribu…",
+    "url": "https://github.com/cvxpy/cvxpy/releases/tag/v1.8.2",
+    "source": "GitHub",
+    "tags": [
+      "library",
+      "general-or"
+    ],
+    "type": "software",
+    "score": 20.0
+  },
+  {
     "id": "gh-coin-or-Cbc-releases/2.10.13",
     "name": "CBC",
     "version": "releases/2.10.13",
@@ -107,34 +122,6 @@
     "source": "GitHub",
     "tags": [
       "solver",
-      "general-or"
-    ],
-    "type": "software"
-  },
-  {
-    "id": "gh-ampl-amplpy-0.14.0",
-    "name": "AMPLPY",
-    "version": "0.14.0",
-    "date": "2024-05-23",
-    "changelog": "# Recent changes:\r\n\r\n## 0.14.0 - 2024-05-21\r\n- Allow assigning values to indexed sets from a dictionary with the lists of members\r\n  for every index.\r\n- Add AMPL.get_iis() to return dictionaries with variables and constraints in IIS.\r\n- Add AMPL.get_solution() to return a dictionary with the solution.\r\n\r\n## 0.13.3 - 2024-02-20\r\n- Fix issues with AMPL.solve(verbose=False) when the solver argument was not set.\r\n\r\n## 0.13.2 - 2024-01-05\r\n- OutputHandler: Flush standard output after every message.\r\n…",
-    "url": "https://github.com/ampl/amplpy/releases/tag/v0.14.0",
-    "source": "GitHub",
-    "tags": [
-      "library",
-      "general-or"
-    ],
-    "type": "software"
-  },
-  {
-    "id": "gh-ds4dm-Ecole-0.8.1",
-    "name": "Ecole",
-    "version": "0.8.1",
-    "date": "2022-07-15",
-    "changelog": "Minor bugfix, missing c++ import https://github.com/ds4dm/ecole/commit/7472a00d691f78ecdd39536b8ad39963d1837e0c",
-    "url": "https://github.com/ds4dm/ecole/releases/tag/v0.8.1",
-    "source": "GitHub",
-    "tags": [
-      "library",
       "general-or"
     ],
     "type": "software"
