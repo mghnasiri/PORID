@@ -4,11 +4,13 @@ Fetch academic/industry position listings from RSS feeds and HTML scraping.
 
 Source A: RSS feeds (HigherEdJobs, etc.) via feedparser
 Source B: OperationsAcademia.org via requests + BeautifulSoup (HTML table)
+Source C: Fallback static job board links when all feeds fail
 
 Position type is inferred from the title using keyword heuristics.
 
 Usage:
     python fetch_opportunities.py
+    python fetch_opportunities.py --test
 """
 
 from __future__ import annotations
@@ -30,6 +32,57 @@ try:
     HAS_BS4 = True
 except ImportError:
     HAS_BS4 = False
+
+
+# ── Static fallback data ─────────────────────────────────────────────
+
+FALLBACK_JOB_BOARDS: list[dict] = [
+    {
+        "title": "INFORMS Job Board — Operations Research Positions",
+        "institution": "INFORMS",
+        "url": "https://www.informs.org/Find-a-Job",
+        "source": "INFORMS",
+    },
+    {
+        "title": "HigherEdJobs — Operations Research Faculty & Staff",
+        "institution": "HigherEdJobs",
+        "url": "https://www.higheredjobs.com/search/default.cfm?JobCat=100",
+        "source": "HigherEdJobs",
+    },
+    {
+        "title": "OperationsAcademia.org — OR Academic Positions",
+        "institution": "OperationsAcademia",
+        "url": "https://www.operationsacademia.org/jobs",
+        "source": "OperationsAcademia",
+    },
+    {
+        "title": "EURO — European OR Job Opportunities",
+        "institution": "EURO",
+        "url": "https://www.euro-online.org/web/pages/301/jobs",
+        "source": "EURO",
+    },
+]
+
+REFERENCE_SITES: list[dict] = [
+    {"name": "INFORMS Career Center", "url": "https://www.informs.org/Find-a-Job"},
+    {"name": "ORSC Job Board", "url": "https://www.sciopt.cn/"},
+    {"name": "HigherEdJobs OR", "url": "https://www.higheredjobs.com/search/default.cfm?JobCat=100"},
+    {"name": "OperationsAcademia", "url": "https://www.operationsacademia.org/jobs"},
+    {"name": "AcademicJobsOnline", "url": "https://academicjobsonline.org/ajo/jobs"},
+    {"name": "MathJobs.org", "url": "https://www.mathjobs.org/jobs"},
+]
+
+# Additional RSS feeds to try
+ADDITIONAL_RSS_FEEDS: list[dict] = [
+    {
+        "url": "https://www.higheredjobs.com/rss/indexFeed.cfm?keyword=optimization",
+        "name": "HigherEdJobs-Optimization",
+    },
+    {
+        "url": "https://www.higheredjobs.com/rss/indexFeed.cfm?keyword=mathematical+programming",
+        "name": "HigherEdJobs-MathProg",
+    },
+]
 
 
 def load_config(config_path: str = "config.yaml") -> dict:
@@ -55,13 +108,27 @@ def fetch_rss_feed(url: str, source_name: str = "RSS") -> list[dict]:
     print(f"  Fetching RSS: {source_name} ({url})", file=sys.stderr)
 
     try:
-        feed = feedparser.parse(url)
+        # Use requests first for better error handling and timeout
+        resp = requests.get(url, timeout=15, headers={
+            "User-Agent": "PORID/1.0 (https://mghnasiri.github.io/PORID)"
+        })
+        resp.raise_for_status()
+        feed = feedparser.parse(resp.content)
+    except requests.RequestException as e:
+        print(f"    ! HTTP error fetching {source_name}: {e}", file=sys.stderr)
+        # Fallback: try feedparser directly (it handles some edge cases)
+        try:
+            feed = feedparser.parse(url)
+        except Exception as e2:
+            print(f"    ! Feedparser fallback also failed: {e2}", file=sys.stderr)
+            return []
     except Exception as e:
-        print(f"    ✗ Error parsing {url}: {e}", file=sys.stderr)
+        print(f"    ! Error parsing {url}: {e}", file=sys.stderr)
         return []
 
     if feed.bozo and not feed.entries:
-        print(f"    ✗ Feed error: {feed.bozo_exception}", file=sys.stderr)
+        bozo_msg = str(getattr(feed, "bozo_exception", "unknown error"))
+        print(f"    ! Feed error ({source_name}): {bozo_msg}", file=sys.stderr)
         return []
 
     items: list[dict] = []
@@ -73,7 +140,7 @@ def fetch_rss_feed(url: str, source_name: str = "RSS") -> list[dict]:
 
         link = entry.get("link", "")
         published = _parse_feed_date(entry)
-        summary = entry.get("summary", "").strip()
+        summary = entry.get("summary", entry.get("description", "")).strip()
 
         pos_type = classify_position_type(title)
         institution = _extract_institution(title, summary)
@@ -95,7 +162,7 @@ def fetch_rss_feed(url: str, source_name: str = "RSS") -> list[dict]:
             "date": published,
         })
 
-    print(f"    → {len(items)} positions", file=sys.stderr)
+    print(f"    -> {len(items)} positions", file=sys.stderr)
     return items
 
 
@@ -112,7 +179,7 @@ def fetch_operations_academia(url: str) -> list[dict]:
         List of opportunity dicts in PORID schema.
     """
     if not HAS_BS4:
-        print("    ⚠ BeautifulSoup not installed, skipping OperationsAcademia", file=sys.stderr)
+        print("    ! BeautifulSoup not installed, skipping OperationsAcademia", file=sys.stderr)
         return []
 
     print(f"  Scraping OperationsAcademia: {url}", file=sys.stderr)
@@ -123,7 +190,7 @@ def fetch_operations_academia(url: str) -> list[dict]:
         })
         resp.raise_for_status()
     except requests.RequestException as e:
-        print(f"    ✗ Error fetching {url}: {e}", file=sys.stderr)
+        print(f"    ! Error fetching {url}: {e}", file=sys.stderr)
         return []
 
     soup = BeautifulSoup(resp.text, "html.parser")
@@ -177,7 +244,36 @@ def fetch_operations_academia(url: str) -> list[dict]:
             "date": _parse_date_text(date_text),
         })
 
-    print(f"    → {len(items)} positions", file=sys.stderr)
+    print(f"    -> {len(items)} positions", file=sys.stderr)
+    return items
+
+
+# ── Fallback: Static featured positions ──────────────────────────────
+
+def generate_fallback_positions() -> list[dict]:
+    """
+    Generate static 'featured positions' entries that point to major job
+    boards. Used when ALL live feeds fail so the Opportunities tab is
+    never empty.
+
+    Returns:
+        List of opportunity dicts pointing to major OR job boards.
+    """
+    today = datetime.now().strftime("%Y-%m-%d")
+    items: list[dict] = []
+    for i, board in enumerate(FALLBACK_JOB_BOARDS):
+        items.append({
+            "id": f"opp-fallback-{i:04d}",
+            "title": board["title"],
+            "institution": board["institution"],
+            "location": "",
+            "deadline": "",
+            "url": board["url"],
+            "source": board["source"],
+            "tags": ["job-board"],
+            "type": "opportunity",
+            "date": today,
+        })
     return items
 
 
@@ -186,6 +282,8 @@ def fetch_operations_academia(url: str) -> list[dict]:
 def fetch_all_feeds(config: dict) -> list[dict]:
     """
     Fetch opportunities from all configured sources (RSS + scraping).
+
+    Falls back to static job board entries if all live feeds return 0 items.
 
     Args:
         config: Full pipeline configuration dict.
@@ -196,14 +294,25 @@ def fetch_all_feeds(config: dict) -> list[dict]:
     opp_cfg = config.get("opportunities", {})
     all_items: list[dict] = []
 
-    # Source A: RSS feeds
+    # Source A: RSS feeds from config
     rss_feeds = opp_cfg.get("rss", [])
     for feed in rss_feeds:
         url = feed.get("url", "")
         name = feed.get("name", "RSS")
         if url:
-            items = fetch_rss_feed(url, source_name=name)
+            try:
+                items = fetch_rss_feed(url, source_name=name)
+                all_items.extend(items)
+            except Exception as e:
+                print(f"    ! RSS feed {name} failed: {e}", file=sys.stderr)
+
+    # Source A2: Additional/fallback RSS feeds
+    for feed in ADDITIONAL_RSS_FEEDS:
+        try:
+            items = fetch_rss_feed(feed["url"], source_name=feed["name"])
             all_items.extend(items)
+        except Exception as e:
+            print(f"    ! Additional RSS feed {feed['name']} failed: {e}", file=sys.stderr)
 
     # Source B: HTML scraping
     scrape_sources = opp_cfg.get("scrape", [])
@@ -214,10 +323,61 @@ def fetch_all_feeds(config: dict) -> list[dict]:
                 items = fetch_operations_academia(url)
                 all_items.extend(items)
             except Exception as e:
-                print(f"    ✗ Scraping failed for {url}: {e}", file=sys.stderr)
+                print(f"    ! Scraping failed for {url}: {e}", file=sys.stderr)
                 print("    Continuing with other sources...", file=sys.stderr)
 
+    # Fallback: if ALL feeds returned 0 items, add static job board links
+    if len(all_items) == 0:
+        print("    ! All live feeds returned 0 items. Adding fallback job board links.", file=sys.stderr)
+        all_items = generate_fallback_positions()
+
     return all_items
+
+
+# ── Feed Validation (--test mode) ────────────────────────────────────
+
+def validate_feeds(config: dict) -> None:
+    """
+    Validate each configured feed URL with a HEAD request.
+
+    Prints status for each URL (reachable / unreachable).
+
+    Args:
+        config: Full pipeline configuration dict.
+    """
+    opp_cfg = config.get("opportunities", {})
+    urls_to_check: list[tuple[str, str]] = []
+
+    for feed in opp_cfg.get("rss", []):
+        urls_to_check.append((feed.get("name", "RSS"), feed.get("url", "")))
+
+    for feed in ADDITIONAL_RSS_FEEDS:
+        urls_to_check.append((feed["name"], feed["url"]))
+
+    for source in opp_cfg.get("scrape", []):
+        urls_to_check.append((source.get("name", "Scrape"), source.get("url", "")))
+
+    print(f"Validating {len(urls_to_check)} feed URLs...\n", file=sys.stderr)
+
+    for name, url in urls_to_check:
+        if not url:
+            print(f"  SKIP  {name}: no URL configured", file=sys.stderr)
+            continue
+        try:
+            resp = requests.head(url, timeout=10, allow_redirects=True, headers={
+                "User-Agent": "PORID/1.0"
+            })
+            status = resp.status_code
+            if status < 400:
+                print(f"  OK    {name}: {url} (HTTP {status})", file=sys.stderr)
+            else:
+                print(f"  WARN  {name}: {url} (HTTP {status})", file=sys.stderr)
+        except requests.RequestException as e:
+            print(f"  FAIL  {name}: {url} ({e})", file=sys.stderr)
+
+    print(f"\nReference job search sites:", file=sys.stderr)
+    for site in REFERENCE_SITES:
+        print(f"  - {site['name']}: {site['url']}", file=sys.stderr)
 
 
 # ── Position Type Classification ─────────────────────────────────────
@@ -230,22 +390,31 @@ def classify_position_type(title: str) -> str:
         title: Job listing title string.
 
     Returns:
-        One of 'postdoc', 'phd', 'faculty', 'industry', or '' if unknown.
+        One of 'postdoc', 'phd', 'faculty', 'industry', 'research', or '' if unknown.
     """
+    if not title:
+        return ""
+
     lower = title.lower()
 
-    if any(kw in lower for kw in ("postdoc", "post-doc", "postdoctoral")):
+    if any(kw in lower for kw in ("postdoc", "post-doc", "postdoctoral", "post doctoral")):
         return "postdoc"
-    if any(kw in lower for kw in ("phd", "ph.d", "doctoral student", "doctoral", "graduate research")):
+    if any(kw in lower for kw in ("phd", "ph.d", "doctoral student", "doctoral candidate", "doctoral", "graduate research")):
         return "phd"
     if any(kw in lower for kw in (
         "professor", "assistant prof", "associate prof", "full prof",
-        "tenure", "lecturer", "faculty",
+        "tenure", "tenured", "tenure-track", "lecturer", "faculty",
+        "chair ", "endowed chair", "visiting professor",
     )):
         return "faculty"
     if any(kw in lower for kw in (
+        "research scientist", "research fellow", "researcher", "research associate",
+    )):
+        return "research"
+    if any(kw in lower for kw in (
         "engineer", "scientist", "developer", "analyst",
-        "manager", "lead", "senior", "staff",
+        "manager", "lead", "senior", "staff", "consultant",
+        "data scientist", "quantitative",
     )):
         return "industry"
 
@@ -325,9 +494,14 @@ def main() -> None:
     """CLI entry point: fetch opportunities and print JSON to stdout."""
     parser = argparse.ArgumentParser(description="Fetch academic positions from RSS + HTML")
     parser.add_argument("--config", default="config.yaml", help="Path to config file")
+    parser.add_argument("--test", action="store_true", help="Validate each feed URL (HEAD request) without full fetch")
     args = parser.parse_args()
 
     config = load_config(args.config)
+
+    if args.test:
+        validate_feeds(config)
+        return
 
     print("Fetching opportunity feeds...", file=sys.stderr)
     items = fetch_all_feeds(config)

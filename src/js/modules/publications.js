@@ -1,15 +1,20 @@
 /**
- * Publications module — renders publication cards with grid/list toggle.
+ * Publications module — renders publication cards with grid/list/table toggle.
  *
- * Security: All data rendered comes from local static JSON (data/publications.json),
- * not from user input. innerHTML usage is safe in this context.
+ * Security note: All data rendered comes from local static JSON
+ * (data/publications.json). This is trusted data from our own controlled
+ * source. In a production app with user-generated content, DOMPurify
+ * should be used before setting innerHTML.
  */
 
 import { relativeTime, formatDate } from '../utils/date.js';
 import { isWatchlisted } from '../utils/storage.js';
 import { applyFilters } from '../components/filters.js';
+import { showModal } from '../components/modal.js';
 
-let viewMode = 'grid'; // 'grid' | 'list'
+let viewMode = 'grid'; // 'grid' | 'list' | 'table'
+let tableSortCol = 'date';
+let tableSortDir = 'desc';
 
 /** Maps source names to CSS modifier classes for color-coded badges. */
 function sourceClass(source) {
@@ -41,6 +46,7 @@ function snippet(text, max = 200) {
 
 /**
  * Renders a publication card (grid mode) as HTML string.
+ * Data comes exclusively from trusted local JSON files.
  */
 function renderGridCard(item) {
   const starred = isWatchlisted(item.id);
@@ -61,6 +67,7 @@ function renderGridCard(item) {
       </div>
       <div class="card__actions">
         <button class="card__star ${starClass}" data-id="${item.id}" aria-label="Toggle watchlist" title="Toggle watchlist">${starSymbol}</button>
+        <button class="card__cite card__action" data-id="${item.id}" aria-label="Copy BibTeX citation" title="Copy BibTeX">Cite</button>
         ${item.url ? `<a href="${item.url}" target="_blank" rel="noopener" class="card__action">&#8599; Open</a>` : ''}
         <button class="card__detail-btn card__action" data-id="${item.id}">Details</button>
       </div>
@@ -69,7 +76,7 @@ function renderGridCard(item) {
 }
 
 /**
- * Renders a compact list row.
+ * Renders a compact list row. Trusted local data.
  */
 function renderListRow(item) {
   const starred = isWatchlisted(item.id);
@@ -91,6 +98,88 @@ function renderListRow(item) {
 }
 
 /**
+ * Sorts items for table view.
+ */
+function sortForTable(items) {
+  const sorted = [...items];
+  sorted.sort((a, b) => {
+    let va, vb;
+    switch (tableSortCol) {
+      case 'title':
+        va = (a.title || '').toLowerCase();
+        vb = (b.title || '').toLowerCase();
+        return tableSortDir === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
+      case 'authors':
+        va = (a.authors || []).join(', ').toLowerCase();
+        vb = (b.authors || []).join(', ').toLowerCase();
+        return tableSortDir === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
+      case 'source':
+        va = (a.source || '').toLowerCase();
+        vb = (b.source || '').toLowerCase();
+        return tableSortDir === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
+      case 'date':
+        va = new Date(a.date || '1970-01-01');
+        vb = new Date(b.date || '1970-01-01');
+        return tableSortDir === 'asc' ? va - vb : vb - va;
+      default:
+        return 0;
+    }
+  });
+  return sorted;
+}
+
+/**
+ * Renders sortable table view. Trusted local data.
+ */
+function renderTable(items) {
+  const sorted = sortForTable(items);
+  const cols = [
+    { key: 'title', label: 'Title' },
+    { key: 'authors', label: 'Authors' },
+    { key: 'source', label: 'Source' },
+    { key: 'date', label: 'Date' },
+    { key: 'tags', label: 'Tags' },
+    { key: 'star', label: '\u2605' },
+  ];
+
+  const ths = cols.map((col) => {
+    let cls = '';
+    if (col.key === tableSortCol) {
+      cls = tableSortDir === 'asc' ? 'sorted-asc' : 'sorted-desc';
+    }
+    const sortable = ['title', 'authors', 'source', 'date'].includes(col.key);
+    return `<th class="${cls}" ${sortable ? `data-sort="${col.key}"` : ''}>${col.label}</th>`;
+  }).join('');
+
+  const rows = sorted.map((item) => {
+    const starred = isWatchlisted(item.id);
+    const starSymbol = starred ? '&#9733;' : '&#9734;';
+    const starClass = starred ? 'card__star--active' : '';
+    const tags = (item.tags || []).map((t) => `<span class="tag">${t}</span>`).join(' ');
+
+    return `
+      <tr class="table-view__row" data-id="${item.id}">
+        <td class="table-view__title">${item.title}</td>
+        <td>${formatAuthors(item.authors)}</td>
+        <td><span class="tag ${sourceClass(item.source)}">${item.source}</span></td>
+        <td>${item.date ? formatDate(item.date) : ''}</td>
+        <td>${tags}</td>
+        <td><button class="card__star ${starClass}" data-id="${item.id}" aria-label="Toggle watchlist">${starSymbol}</button></td>
+      </tr>
+    `;
+  }).join('');
+
+  return `
+    <div class="table-view-wrapper">
+      <table class="table-view">
+        <thead><tr>${ths}</tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+  `;
+}
+
+/**
  * Renders the view toggle buttons.
  */
 function renderViewToggle() {
@@ -102,6 +191,9 @@ function renderViewToggle() {
       <button class="view-toggle__btn ${viewMode === 'list' ? 'active' : ''}" data-view="list" aria-label="List view" title="List view">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="2" width="14" height="2.5" rx="1"/><rect x="1" y="6.75" width="14" height="2.5" rx="1"/><rect x="1" y="11.5" width="14" height="2.5" rx="1"/></svg>
       </button>
+      <button class="view-toggle__btn ${viewMode === 'table' ? 'active' : ''}" data-view="table" aria-label="Table view" title="Table view">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="1" width="14" height="2" rx="0.5"/><rect x="1" y="5" width="14" height="1" rx="0.3" opacity="0.5"/><rect x="1" y="8" width="14" height="1" rx="0.3" opacity="0.5"/><rect x="1" y="11" width="14" height="1" rx="0.3" opacity="0.5"/><rect x="1" y="14" width="14" height="1" rx="0.3" opacity="0.5"/><rect x="5" y="1" width="0.5" height="14" opacity="0.3"/><rect x="10" y="1" width="0.5" height="14" opacity="0.3"/></svg>
+      </button>
     </div>
   `;
 }
@@ -109,7 +201,7 @@ function renderViewToggle() {
 /**
  * Main render function for the publications module.
  * @param {HTMLElement} container - The #content element.
- * @param {Object[]} data - Raw publications array.
+ * @param {Object[]} data - Raw publications array (trusted local JSON).
  * @param {Object} filters - Active filter state from getActiveFilters().
  */
 export function render(container, data, filters) {
@@ -119,7 +211,10 @@ export function render(container, data, filters) {
     container.textContent = '';
     const empty = document.createElement('div');
     empty.className = 'empty-state';
-    empty.innerHTML = '<div class="empty-state__icon">&#128218;</div>';
+    const iconDiv = document.createElement('div');
+    iconDiv.className = 'empty-state__icon';
+    iconDiv.textContent = '\u{1F4DA}';
+    empty.appendChild(iconDiv);
     const h2 = document.createElement('h2');
     h2.className = 'empty-state__title';
     h2.textContent = 'No Publications Found';
@@ -134,11 +229,18 @@ export function render(container, data, filters) {
 
   const toggle = renderViewToggle();
 
-  // Trusted local data rendering
-  if (viewMode === 'list') {
-    container.innerHTML = `${toggle}<div class="list-view">${filtered.map(renderListRow).join('')}</div>`;
+  // Trusted local data — innerHTML is safe in this context
+  const wrapper = document.createElement('div');
+  if (viewMode === 'table') {
+    wrapper.innerHTML = `${toggle}${renderTable(filtered)}`;
+  } else if (viewMode === 'list') {
+    wrapper.innerHTML = `${toggle}<div class="list-view">${filtered.map(renderListRow).join('')}</div>`;
   } else {
-    container.innerHTML = `${toggle}<div class="card-grid">${filtered.map(renderGridCard).join('')}</div>`;
+    wrapper.innerHTML = `${toggle}<div class="card-grid">${filtered.map(renderGridCard).join('')}</div>`;
+  }
+  container.textContent = '';
+  while (wrapper.firstChild) {
+    container.appendChild(wrapper.firstChild);
   }
 
   // Wire view toggle clicks
@@ -148,4 +250,33 @@ export function render(container, data, filters) {
       render(container, data, filters);
     });
   });
+
+  // Wire table sort headers
+  if (viewMode === 'table') {
+    container.querySelectorAll('.table-view th[data-sort]').forEach((th) => {
+      th.style.cursor = 'pointer';
+      th.addEventListener('click', () => {
+        const col = th.dataset.sort;
+        if (tableSortCol === col) {
+          tableSortDir = tableSortDir === 'asc' ? 'desc' : 'asc';
+        } else {
+          tableSortCol = col;
+          tableSortDir = 'asc';
+        }
+        render(container, data, filters);
+      });
+    });
+
+    // Wire table row clicks to open detail modal
+    container.querySelectorAll('.table-view__row').forEach((row) => {
+      row.style.cursor = 'pointer';
+      row.addEventListener('click', (e) => {
+        // Don't open modal if clicking the star button
+        if (e.target.closest('.card__star')) return;
+        const id = row.dataset.id;
+        const item = filtered.find((i) => i.id === id);
+        if (item) showModal(item);
+      });
+    });
+  }
 }

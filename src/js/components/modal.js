@@ -9,6 +9,7 @@
 
 import { formatDate, daysUntil } from '../utils/date.js';
 import { isWatchlisted, addToWatchlist, removeFromWatchlist } from '../utils/storage.js';
+import { generateBibTeX, copyToClipboard } from '../utils/citation.js';
 
 let currentItem = null;
 
@@ -150,6 +151,20 @@ function buildModalContent(item, container) {
     window.dispatchEvent(new CustomEvent('porid:watchlist-changed'));
   });
   actions.appendChild(watchBtn);
+
+  if (item.type === 'publication') {
+    const bibtexBtn = document.createElement('button');
+    bibtexBtn.className = 'modal-detail__link';
+    bibtexBtn.textContent = 'Copy BibTeX';
+    bibtexBtn.addEventListener('click', () => {
+      const bib = generateBibTeX(item);
+      copyToClipboard(bib).then(() => {
+        bibtexBtn.textContent = 'Copied!';
+        setTimeout(() => { bibtexBtn.textContent = 'Copy BibTeX'; }, 2000);
+      });
+    });
+    actions.appendChild(bibtexBtn);
+  }
 
   if (item.url) {
     const link = document.createElement('a');

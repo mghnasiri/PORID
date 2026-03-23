@@ -6,6 +6,9 @@ Scans title + abstract (lowercased) for keyword matches defined in
 config.yaml and returns all matching tags. Defaults to ["general-or"]
 if no tags match.
 
+Also provides relevance scoring (0-100) based on tag matches, recency,
+and metadata completeness.
+
 Usage:
     # As a module:
     from classify import classify
@@ -20,6 +23,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional
 
@@ -85,6 +89,64 @@ def classify(item: dict, tag_keywords: dict[str, list[str]]) -> list[str]:
     return matched_tags if matched_tags else ["general-or"]
 
 
+def score_item(item: dict, tag_keywords: dict[str, list[str]]) -> float:
+    """
+    Compute a relevance score (0-100) for a pipeline item.
+
+    Scoring breakdown:
+    - Base score: 10
+    - +5 per matching tag (max +40)
+    - +20 if published in last 24 hours, +10 if last 3 days, +5 if last 7 days
+    - +10 if has DOI (indicates peer-reviewed)
+    - +5 if has abstract (more complete metadata)
+    - Final score is clamped to 0-100 range.
+
+    Args:
+        item: A PORID item dict.
+        tag_keywords: Tag keyword configuration from config.
+
+    Returns:
+        Float score in the range 0.0 to 100.0.
+    """
+    score: float = 10.0
+
+    # Tag matching bonus: +5 per tag, max +40
+    tags = item.get("tags", [])
+    # Count tags that are actual classification tags (not meta like "general-or")
+    real_tags = [t for t in tags if t in tag_keywords]
+    tag_bonus = min(len(real_tags) * 5.0, 40.0)
+    score += tag_bonus
+
+    # Recency bonus
+    item_date_str = item.get("date", "")
+    if item_date_str:
+        try:
+            now = datetime.now(timezone.utc)
+            item_date = datetime.strptime(item_date_str[:10], "%Y-%m-%d").replace(tzinfo=timezone.utc)
+            age = now - item_date
+            if age <= timedelta(hours=24):
+                score += 20.0
+            elif age <= timedelta(days=3):
+                score += 10.0
+            elif age <= timedelta(days=7):
+                score += 5.0
+        except (ValueError, TypeError):
+            pass
+
+    # DOI bonus: indicates peer-reviewed
+    doi = item.get("doi", "")
+    if doi:
+        score += 10.0
+
+    # Abstract completeness bonus
+    abstract = item.get("abstract", "")
+    if abstract and len(abstract.strip()) > 20:
+        score += 5.0
+
+    # Clamp to 0-100
+    return max(0.0, min(100.0, score))
+
+
 def classify_items(
     items: list[dict],
     tag_keywords: dict[str, list[str]],
@@ -92,12 +154,14 @@ def classify_items(
     """
     Classify a list of items, merging inferred tags with existing ones.
 
+    Also computes a relevance score for each item (stored in item["score"]).
+
     Args:
         items: List of PORID item dicts.
         tag_keywords: Tag keyword configuration.
 
     Returns:
-        The same list with 'tags' fields updated in place.
+        The same list with 'tags' and 'score' fields updated in place.
     """
     for item in items:
         inferred = classify(item, tag_keywords)
@@ -105,6 +169,9 @@ def classify_items(
         # Merge: keep existing tags, add new inferred ones
         merged = list(dict.fromkeys(existing + inferred))  # preserve order, dedupe
         item["tags"] = merged
+
+        # Compute relevance score (backward compatible - score is optional)
+        item["score"] = score_item(item, tag_keywords)
 
     return items
 
@@ -160,15 +227,16 @@ def _run_demo(tag_keywords: dict[str, list[str]]) -> None:
     """Run demo classification on sample items."""
     print("Demo mode — classifying sample items:\n")
     samples = [
-        {"title": "A genetic algorithm for vehicle routing", "abstract": "We propose a metaheuristic approach..."},
-        {"title": "Branch and cut for mixed-integer scheduling", "abstract": "We solve a MILP formulation of the job shop problem."},
-        {"title": "Deep reinforcement learning for combinatorial optimization", "abstract": "Neural network policy for TSP."},
-        {"title": "Nurse rostering in emergency departments", "abstract": "Healthcare scheduling using robust optimization."},
+        {"title": "A genetic algorithm for vehicle routing", "abstract": "We propose a metaheuristic approach...", "date": datetime.now(timezone.utc).strftime("%Y-%m-%d"), "doi": "10.1234/test"},
+        {"title": "Branch and cut for mixed-integer scheduling", "abstract": "We solve a MILP formulation of the job shop problem.", "date": "2026-03-20"},
+        {"title": "Deep reinforcement learning for combinatorial optimization", "abstract": "Neural network policy for TSP.", "date": "2026-03-15"},
+        {"title": "Nurse rostering in emergency departments", "abstract": "Healthcare scheduling using robust optimization.", "date": "2026-01-01"},
     ]
     for item in samples:
         tags = classify(item, tag_keywords)
+        sc = score_item(item, tag_keywords)
         print(f"  {item['title'][:60]}")
-        print(f"    → {tags}\n")
+        print(f"    -> tags: {tags}, score: {sc:.0f}\n")
 
 
 if __name__ == "__main__":

@@ -3,11 +3,86 @@
  *
  * Security: Watchlist items originate from our own local JSON data files,
  * stored in localStorage by the user's explicit star action. The renderCard
- * function renders this trusted data.
+ * function renders this trusted data. All innerHTML usage renders only
+ * data from our controlled local JSON sources.
  */
 
 import { getWatchlist, removeFromWatchlist, exportWatchlist } from '../utils/storage.js';
 import { renderCard } from '../components/card.js';
+import { generateBibTeX } from '../utils/citation.js';
+
+const NOTES_KEY = 'porid-watchlist-notes';
+
+function getNotes() {
+  try {
+    const raw = localStorage.getItem(NOTES_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
+  }
+}
+
+function setNote(id, text) {
+  const notes = getNotes();
+  if (text.trim()) {
+    notes[id] = text;
+  } else {
+    delete notes[id];
+  }
+  localStorage.setItem(NOTES_KEY, JSON.stringify(notes));
+}
+
+function getNote(id) {
+  return getNotes()[id] || '';
+}
+
+/**
+ * Export all publication-type watchlisted items as a .bib file.
+ */
+function exportBibTeX(items) {
+  const pubs = items.filter((i) => i.type === 'publication');
+  if (pubs.length === 0) return;
+  const content = pubs.map(generateBibTeX).join('\n\n');
+  const blob = new Blob([content], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `porid-watchlist-${new Date().toISOString().slice(0, 10)}.bib`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+/**
+ * Export all watchlisted items as a CSV file.
+ */
+function exportCSV(items) {
+  if (items.length === 0) return;
+  const headers = ['id', 'type', 'title', 'authors', 'source', 'date', 'url', 'tags'];
+  const rows = items.map((item) => {
+    return [
+      item.id || '',
+      item.type || '',
+      (item.title || item.name || '').replace(/"/g, '""'),
+      (item.authors || []).join('; '),
+      item.source || '',
+      item.date || '',
+      item.url || '',
+      (item.tags || []).join('; '),
+    ].map((v) => `"${v}"`).join(',');
+  });
+  const content = [headers.join(','), ...rows].join('\n');
+  const blob = new Blob([content], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `porid-watchlist-${new Date().toISOString().slice(0, 10)}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
 
 /**
  * Renders the watchlist view.
@@ -48,10 +123,20 @@ export function render(container) {
   count.className = 'watchlist-toolbar__count';
   count.textContent = `${items.length} saved item${items.length !== 1 ? 's' : ''}`;
 
-  const exportBtn = document.createElement('button');
-  exportBtn.className = 'watchlist-toolbar__btn';
-  exportBtn.textContent = '\u2913 Export JSON';
-  exportBtn.addEventListener('click', () => exportWatchlist());
+  const exportJsonBtn = document.createElement('button');
+  exportJsonBtn.className = 'watchlist-toolbar__btn';
+  exportJsonBtn.textContent = '\u2913 Export JSON';
+  exportJsonBtn.addEventListener('click', () => exportWatchlist());
+
+  const exportBibBtn = document.createElement('button');
+  exportBibBtn.className = 'watchlist-toolbar__btn';
+  exportBibBtn.textContent = '\u2913 Export BibTeX';
+  exportBibBtn.addEventListener('click', () => exportBibTeX(items));
+
+  const exportCsvBtn = document.createElement('button');
+  exportCsvBtn.className = 'watchlist-toolbar__btn';
+  exportCsvBtn.textContent = '\u2913 Export CSV';
+  exportCsvBtn.addEventListener('click', () => exportCSV(items));
 
   const clearBtn = document.createElement('button');
   clearBtn.className = 'watchlist-toolbar__btn watchlist-toolbar__btn--danger';
@@ -66,13 +151,42 @@ export function render(container) {
   });
 
   toolbar.appendChild(count);
-  toolbar.appendChild(exportBtn);
+  toolbar.appendChild(exportJsonBtn);
+  toolbar.appendChild(exportBibBtn);
+  toolbar.appendChild(exportCsvBtn);
   toolbar.appendChild(clearBtn);
 
-  // Trusted data from localStorage (originally from our own JSON files)
+  // Build grid with cards + note areas using DOM methods
   const grid = document.createElement('div');
   grid.className = 'card-grid';
-  grid.innerHTML = items.map(renderCard).join(''); // renderCard uses trusted data
+
+  items.forEach((item) => {
+    // Card wrapper
+    const wrapper = document.createElement('div');
+    wrapper.className = 'watchlist-card-wrapper';
+    // renderCard returns trusted HTML from local JSON data
+    const cardDiv = document.createElement('div');
+    cardDiv.innerHTML = renderCard(item);
+    while (cardDiv.firstChild) {
+      wrapper.appendChild(cardDiv.firstChild);
+    }
+
+    // Note area
+    const noteDiv = document.createElement('div');
+    noteDiv.className = 'watchlist-note';
+
+    const textarea = document.createElement('textarea');
+    textarea.className = 'watchlist-note__input';
+    textarea.placeholder = 'Add a note...';
+    textarea.rows = 2;
+    textarea.value = getNote(item.id);
+    textarea.addEventListener('change', () => setNote(item.id, textarea.value));
+    textarea.addEventListener('blur', () => setNote(item.id, textarea.value));
+
+    noteDiv.appendChild(textarea);
+    wrapper.appendChild(noteDiv);
+    grid.appendChild(wrapper);
+  });
 
   container.textContent = '';
   container.appendChild(toolbar);

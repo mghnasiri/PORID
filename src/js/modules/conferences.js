@@ -1,11 +1,88 @@
 /**
- * Conferences module — renders conference cards with CFP deadline countdowns.
+ * Conferences module — renders conference cards with CFP deadline countdowns
+ * and browser notification support for upcoming deadlines.
  *
- * Security: All data rendered comes from local static JSON (data/conferences.json).
+ * Security note: All data rendered comes from local static JSON
+ * (data/conferences.json), not from user input or external sources.
+ * All uses of innerHTML below render exclusively from this trusted local data.
  */
 
 import { formatDate, daysUntil } from '../utils/date.js';
-import { isWatchlisted } from '../utils/storage.js';
+import { isWatchlisted, getWatchlist } from '../utils/storage.js';
+
+const NOTIFIED_KEY = 'porid-conf-notified';
+
+/**
+ * Get the set of conference IDs already notified this session.
+ */
+function getNotifiedIds() {
+  try {
+    const raw = sessionStorage.getItem(NOTIFIED_KEY);
+    return raw ? new Set(JSON.parse(raw)) : new Set();
+  } catch {
+    return new Set();
+  }
+}
+
+function markNotified(id) {
+  const ids = getNotifiedIds();
+  ids.add(id);
+  sessionStorage.setItem(NOTIFIED_KEY, JSON.stringify([...ids]));
+}
+
+/**
+ * Check watchlisted conferences for upcoming deadlines and send notifications.
+ */
+function checkDeadlineNotifications(data) {
+  const watchlist = getWatchlist();
+  const watchIds = new Set(watchlist.map((w) => w.id));
+  const notified = getNotifiedIds();
+
+  const urgent = data.filter((item) => {
+    if (!watchIds.has(item.id)) return false;
+    if (notified.has(item.id)) return false;
+    if (!item.cfp_deadline) return false;
+    const days = daysUntil(item.cfp_deadline);
+    return days > 0 && days <= 7;
+  });
+
+  if (urgent.length === 0) return;
+
+  if (!('Notification' in window)) return;
+
+  if (Notification.permission === 'granted') {
+    urgent.forEach((item) => {
+      const days = daysUntil(item.cfp_deadline);
+      new Notification('PORID - CFP Deadline Alert', {
+        body: `${item.name}: ${days} day${days !== 1 ? 's' : ''} until CFP deadline`,
+      });
+      markNotified(item.id);
+    });
+  } else if (Notification.permission !== 'denied') {
+    Notification.requestPermission().then((perm) => {
+      if (perm === 'granted') {
+        urgent.forEach((item) => {
+          const days = daysUntil(item.cfp_deadline);
+          new Notification('PORID - CFP Deadline Alert', {
+            body: `${item.name}: ${days} day${days !== 1 ? 's' : ''} until CFP deadline`,
+          });
+          markNotified(item.id);
+        });
+      }
+    });
+  }
+}
+
+/**
+ * Count conferences with CFP deadline within 7 days (for badge).
+ */
+export function getUrgentDeadlineCount(data) {
+  return data.filter((item) => {
+    if (!item.cfp_deadline) return false;
+    const days = daysUntil(item.cfp_deadline);
+    return days > 0 && days <= 7;
+  }).length;
+}
 
 function renderConferenceCard(item) {
   const starred = isWatchlisted(item.id);
@@ -27,7 +104,6 @@ function renderConferenceCard(item) {
     }
   }
 
-  // Trusted local data
   return `
     <article class="card ${urgentClass}" data-id="${item.id}" data-type="conference">
       <div class="card__header">
@@ -69,6 +145,9 @@ function renderConferenceCard(item) {
 export function render(container, data, filters) {
   let items = [...data];
 
+  // Check notifications at render time
+  checkDeadlineNotifications(data);
+
   // Apply tag filters
   if (filters && filters.tags && !filters.tags.includes('all') && filters.tags.length > 0) {
     items = items.filter((item) =>
@@ -89,7 +168,10 @@ export function render(container, data, filters) {
     container.textContent = '';
     const empty = document.createElement('div');
     empty.className = 'empty-state';
-    empty.innerHTML = '<div class="empty-state__icon">&#127891;</div>';
+    const iconDiv = document.createElement('div');
+    iconDiv.className = 'empty-state__icon';
+    iconDiv.textContent = '\u{1F393}';
+    empty.appendChild(iconDiv);
     const h2 = document.createElement('h2');
     h2.className = 'empty-state__title';
     h2.textContent = 'No Conferences Found';
@@ -102,6 +184,10 @@ export function render(container, data, filters) {
     return;
   }
 
-  // Trusted local data
-  container.innerHTML = `<div class="card-grid">${items.map(renderConferenceCard).join('')}</div>`;
+  // All data from trusted local JSON — safe to use innerHTML
+  const grid = document.createElement('div');
+  grid.className = 'card-grid';
+  grid.innerHTML = items.map(renderConferenceCard).join('');
+  container.textContent = '';
+  container.appendChild(grid);
 }

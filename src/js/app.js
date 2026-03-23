@@ -4,24 +4,28 @@
  * Thin orchestrator: loads data, routes hash changes to module render()
  * functions, wires global UI (theme, search modal, card event delegation).
  *
- * Security: innerHTML usage throughout the app renders content exclusively
- * from our own local static JSON files, not from user input or external
- * sources. In a production app with user-generated content, use DOMPurify.
+ * Security note: All uses of innerHTML throughout the app render content
+ * exclusively from our own local static JSON files (data/*.json), not
+ * from user input or external sources. In a production app with
+ * user-generated content, use DOMPurify.
  */
 
 // --- Module imports ---
 import { render as renderPublications } from './modules/publications.js';
 import { render as renderSoftware } from './modules/software.js';
-import { render as renderConferences } from './modules/conferences.js';
+import { render as renderConferences, getUrgentDeadlineCount } from './modules/conferences.js';
 import { render as renderOpportunities } from './modules/opportunities.js';
 import { render as renderWatchlist } from './modules/watchlist.js';
 import { render as renderDigest } from './modules/digest.js';
+import { render as renderTrends } from './modules/trends.js';
 import { initSearch, wireSearchInput } from './modules/search.js';
 
 // --- Component / utility imports ---
 import { renderFilterBar, getActiveFilters } from './components/filters.js';
 import { showModal, hideModal } from './components/modal.js';
 import { getWatchlist, addToWatchlist, removeFromWatchlist, isWatchlisted } from './utils/storage.js';
+import { generateBibTeX, copyToClipboard } from './utils/citation.js';
+import { getPreferences, setPreference } from './utils/preferences.js';
 
 // ---------------------------------------------------------------------------
 // State
@@ -37,7 +41,7 @@ const state = {
   activeTab: 'publications',
 };
 
-const TABS = ['publications', 'software', 'conferences', 'opportunities', 'watchlist', 'digest'];
+const TABS = ['publications', 'software', 'conferences', 'opportunities', 'watchlist', 'digest', 'trends'];
 
 const DATA_FILES = {
   publications: './data/publications.json',
@@ -90,6 +94,7 @@ async function loadAllData() {
   updateStats();
   updateLastUpdated();
   initSearch(state.data);
+  updateDeadlineBadge();
 }
 
 // ---------------------------------------------------------------------------
@@ -138,12 +143,29 @@ function getAllItems() {
 }
 
 // ---------------------------------------------------------------------------
+// Deadline Badge
+// ---------------------------------------------------------------------------
+
+function updateDeadlineBadge() {
+  const badge = document.getElementById('deadlineBadge');
+  if (!badge) return;
+  const count = getUrgentDeadlineCount(state.data.conferences || []);
+  if (count > 0) {
+    badge.textContent = count;
+    badge.style.display = 'inline-flex';
+  } else {
+    badge.textContent = '';
+    badge.style.display = 'none';
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Routing
 // ---------------------------------------------------------------------------
 
 function getHashTab() {
   const hash = window.location.hash.replace('#', '');
-  return TABS.includes(hash) ? hash : 'publications';
+  return TABS.includes(hash) ? hash : (getPreferences().defaultTab || 'publications');
 }
 
 function navigate(tab) {
@@ -189,7 +211,14 @@ function renderView() {
   if (tab === 'digest') {
     filterContainer.textContent = '';
     renderDigest(contentEl);
-    // digest is async — animateCards called after DOM settles
+    requestAnimationFrame(() => animateCards());
+    return;
+  }
+
+  // --- Trends: no filter bar, dedicated module ---
+  if (tab === 'trends') {
+    filterContainer.textContent = '';
+    renderTrends(contentEl, state.data);
     requestAnimationFrame(() => animateCards());
     return;
   }
@@ -204,8 +233,13 @@ function renderView() {
     showDeadlineSort: tab === 'conferences' || tab === 'opportunities',
   };
 
-  // Render filter bar (trusted template)
-  filterContainer.innerHTML = renderFilterBar(filterOpts);
+  // Render filter bar — trusted template from our own code
+  const filterBarEl = document.createElement('div');
+  filterBarEl.innerHTML = renderFilterBar(filterOpts);
+  filterContainer.textContent = '';
+  while (filterBarEl.firstChild) {
+    filterContainer.appendChild(filterBarEl.firstChild);
+  }
   wireFilterEvents();
 
   // Read current filter state
@@ -305,6 +339,25 @@ function wireCardEvents() {
       return;
     }
 
+    // Cite button — copy BibTeX
+    const citeBtn = e.target.closest('.card__cite');
+    if (citeBtn) {
+      const id = citeBtn.dataset.id;
+      const item = findItemById(id);
+      if (!item) return;
+      const bib = generateBibTeX(item);
+      copyToClipboard(bib).then(() => {
+        const origText = citeBtn.textContent;
+        citeBtn.textContent = 'Copied!';
+        citeBtn.classList.add('card__cite-feedback');
+        setTimeout(() => {
+          citeBtn.textContent = origText;
+          citeBtn.classList.remove('card__cite-feedback');
+        }, 1500);
+      });
+      return;
+    }
+
     // Detail button
     const detailBtn = e.target.closest('.card__detail-btn');
     if (detailBtn) {
@@ -362,6 +415,7 @@ function wireSearch() {
     if (e.key === 'Escape') {
       closeSearchFn();
       hideModal();
+      hideHelpModal();
     }
   });
 
@@ -374,25 +428,54 @@ function wireSearch() {
 }
 
 // ---------------------------------------------------------------------------
-// Theme Toggle
+// Theme Toggle — 3-way: dark > light > system > dark
 // ---------------------------------------------------------------------------
 
 function wireTheme() {
   const toggle = document.getElementById('themeToggle');
   const root = document.documentElement;
 
+  const ICONS = { dark: '\u263D', light: '\u2600', system: '\u25D1' };
+  const CYCLE = ['dark', 'light', 'system'];
+
+  function applyTheme(mode) {
+    if (mode === 'system') {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      root.dataset.theme = prefersDark ? 'dark' : 'light';
+    } else {
+      root.dataset.theme = mode;
+    }
+    toggle.textContent = ICONS[mode] || ICONS.dark;
+  }
+
   toggle.addEventListener('click', () => {
-    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
-    root.dataset.theme = next;
-    toggle.textContent = next === 'dark' ? '\u263D' : '\u2600';
+    const saved = localStorage.getItem('porid-theme') || 'dark';
+    const idx = CYCLE.indexOf(saved);
+    const next = CYCLE[(idx + 1) % CYCLE.length];
     localStorage.setItem('porid-theme', next);
+    setPreference('theme', next);
+    applyTheme(next);
   });
 
-  const saved = localStorage.getItem('porid-theme');
-  if (saved) {
-    root.dataset.theme = saved;
-    toggle.textContent = saved === 'dark' ? '\u263D' : '\u2600';
+  // On first load: use stored preference, or detect system
+  let saved = localStorage.getItem('porid-theme');
+  if (!saved) {
+    const prefs = getPreferences();
+    if (prefs.theme && prefs.theme !== 'system') {
+      saved = prefs.theme;
+    } else {
+      saved = 'system';
+      localStorage.setItem('porid-theme', 'system');
+    }
   }
+  applyTheme(saved);
+
+  // Listen for system preference changes when in system mode
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    if (localStorage.getItem('porid-theme') === 'system') {
+      applyTheme('system');
+    }
+  });
 }
 
 // ---------------------------------------------------------------------------
@@ -420,6 +503,65 @@ function wireDetailModal() {
 }
 
 // ---------------------------------------------------------------------------
+// Help Modal (keyboard shortcut cheat sheet)
+// ---------------------------------------------------------------------------
+
+function wireHelpModal() {
+  const modal = document.getElementById('helpModal');
+  if (!modal) return;
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) hideHelpModal();
+  });
+
+  const closeBtn = modal.querySelector('.help-modal__close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', hideHelpModal);
+  }
+}
+
+function showHelpModal() {
+  const modal = document.getElementById('helpModal');
+  if (!modal) return;
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+}
+
+function hideHelpModal() {
+  const modal = document.getElementById('helpModal');
+  if (!modal) return;
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+}
+
+// ---------------------------------------------------------------------------
+// Keyboard Shortcuts
+// ---------------------------------------------------------------------------
+
+function wireKeyboardShortcuts() {
+  document.addEventListener('keydown', (e) => {
+    // Don't trigger shortcuts when typing in inputs
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+    // "?" — show help modal
+    if (e.key === '?') {
+      e.preventDefault();
+      showHelpModal();
+      return;
+    }
+
+    // Number keys 1-7 to switch tabs
+    const num = parseInt(e.key);
+    if (num >= 1 && num <= TABS.length) {
+      e.preventDefault();
+      navigate(TABS[num - 1]);
+      return;
+    }
+  });
+}
+
+// ---------------------------------------------------------------------------
 // Watchlist Change Listener
 // ---------------------------------------------------------------------------
 
@@ -434,7 +576,7 @@ function wireWatchlistListener() {
 // ---------------------------------------------------------------------------
 
 function animateCards() {
-  const cards = contentEl.querySelectorAll('.card, .list-row, .digest-day, .digest-preview__card');
+  const cards = contentEl.querySelectorAll('.card, .list-row, .digest-day, .digest-preview__card, .trends-stat-card, .trends-chart, .trends-list');
   cards.forEach((card, i) => {
     card.setAttribute('data-animate', '');
     card.style.animationDelay = `${i * 0.05}s`;
@@ -442,18 +584,24 @@ function animateCards() {
 }
 
 // ---------------------------------------------------------------------------
-// Skeleton Loading
+// Skeleton Loading — trusted HTML template
 // ---------------------------------------------------------------------------
 
 function showSkeletons(count = 6) {
-  const skeleton = `<article class="skeleton">
-      <div class="skeleton__line skeleton__line--title"></div>
-      <div class="skeleton__line skeleton__line--subtitle"></div>
-      <div class="skeleton__line skeleton__line--body"></div>
-      <div class="skeleton__line skeleton__line--body"></div>
-      <div class="skeleton__line skeleton__line--tags"></div>
-    </article>`;
-  contentEl.innerHTML = skeleton.repeat(count);
+  const fragment = document.createDocumentFragment();
+  for (let i = 0; i < count; i++) {
+    const article = document.createElement('article');
+    article.className = 'skeleton';
+    const lines = ['title', 'subtitle', 'body', 'body', 'tags'];
+    lines.forEach((type) => {
+      const line = document.createElement('div');
+      line.className = `skeleton__line skeleton__line--${type}`;
+      article.appendChild(line);
+    });
+    fragment.appendChild(article);
+  }
+  contentEl.textContent = '';
+  contentEl.appendChild(fragment);
   contentEl.classList.add('card-grid');
 }
 
@@ -543,6 +691,8 @@ async function init() {
   wireSearch();
   wireCardEvents();
   wireDetailModal();
+  wireHelpModal();
+  wireKeyboardShortcuts();
   wireWatchlistListener();
   wireNavScroll();
   wireScrollTop();

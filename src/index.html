@@ -41,10 +41,11 @@
     <ul class="nav__tabs" role="tablist">
       <li class="nav__tab active" role="tab" aria-selected="true" data-tab="publications">Publications</li>
       <li class="nav__tab" role="tab" aria-selected="false" data-tab="software">Software</li>
-      <li class="nav__tab" role="tab" aria-selected="false" data-tab="conferences">Conferences</li>
+      <li class="nav__tab" role="tab" aria-selected="false" data-tab="conferences">Conferences <span class="nav__badge" id="deadlineBadge"></span></li>
       <li class="nav__tab" role="tab" aria-selected="false" data-tab="opportunities">Opportunities</li>
       <li class="nav__tab" role="tab" aria-selected="false" data-tab="watchlist">Watchlist</li>
       <li class="nav__tab" role="tab" aria-selected="false" data-tab="digest">Digest</li>
+      <li class="nav__tab" role="tab" aria-selected="false" data-tab="trends">Trends</li>
     </ul>
 
     <div class="nav__spacer"></div>
@@ -54,7 +55,10 @@
         <span>Search</span>
         <kbd>&#8984;K</kbd>
       </button>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+      <button class="nav__prefs" id="prefsBtn" aria-label="Preferences" title="Preferences">
+        &#9881;
+      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light/system mode">
         &#9789;
       </button>
     </div>
@@ -120,6 +124,35 @@
   <!-- ====== Detail Modal ====== -->
   <div class="search-modal" id="detailModal" role="dialog" aria-label="Item details" aria-hidden="true">
     <div class="search-modal__box modal-detail-box" id="detailModalContent">
+    </div>
+  </div>
+
+  <!-- ====== Help Modal (Keyboard Shortcuts) ====== -->
+  <div class="search-modal help-modal" id="helpModal" role="dialog" aria-label="Keyboard shortcuts" aria-hidden="true">
+    <div class="search-modal__box help-modal__box">
+      <div class="help-modal__header">
+        <h2 class="help-modal__title">Keyboard Shortcuts</h2>
+        <button class="modal-detail__close help-modal__close" aria-label="Close">&times;</button>
+      </div>
+      <div class="help-modal__content">
+        <div class="help-modal__group">
+          <h3>Navigation</h3>
+          <div class="help-modal__row"><kbd>1</kbd><span>Publications</span></div>
+          <div class="help-modal__row"><kbd>2</kbd><span>Software</span></div>
+          <div class="help-modal__row"><kbd>3</kbd><span>Conferences</span></div>
+          <div class="help-modal__row"><kbd>4</kbd><span>Opportunities</span></div>
+          <div class="help-modal__row"><kbd>5</kbd><span>Watchlist</span></div>
+          <div class="help-modal__row"><kbd>6</kbd><span>Digest</span></div>
+          <div class="help-modal__row"><kbd>7</kbd><span>Trends</span></div>
+        </div>
+        <div class="help-modal__group">
+          <h3>Actions</h3>
+          <div class="help-modal__row"><kbd>&#8984;K</kbd><span>Open search</span></div>
+          <div class="help-modal__row"><kbd>?</kbd><span>Show this help</span></div>
+          <div class="help-modal__row"><kbd>ESC</kbd><span>Close modal / search</span></div>
+          <div class="help-modal__row"><kbd>&#8592; &#8594;</kbd><span>Navigate between cards</span></div>
+        </div>
+      </div>
     </div>
   </div>
 

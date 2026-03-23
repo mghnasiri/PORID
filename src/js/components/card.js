@@ -4,6 +4,7 @@
 
 import { relativeTime, formatDate, daysUntil } from '../utils/date.js';
 import { isWatchlisted } from '../utils/storage.js';
+import { generateBibTeX, copyToClipboard } from '../utils/citation.js';
 
 /**
  * Maps source names to CSS modifier classes for color-coded badges.
@@ -126,6 +127,7 @@ export function renderCard(item) {
         <button class="card__star ${starClass}" data-id="${item.id}" aria-label="${starLabel}" title="${starLabel}">
           ${starred ? '&#9733;' : '&#9734;'}
         </button>
+        ${item.type === 'publication' ? `<button class="card__cite card__action" data-id="${item.id}" aria-label="Copy BibTeX citation" title="Copy BibTeX">Cite</button>` : ''}
         ${item.url ? `<a href="${item.url}" target="_blank" rel="noopener" class="card__action" aria-label="Open external link">&#8599; Open</a>` : ''}
         <button class="card__detail-btn card__action" data-id="${item.id}">Details</button>
       </div>
