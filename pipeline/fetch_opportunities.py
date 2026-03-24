@@ -289,12 +289,25 @@ def fetch_nsf_awards_for_opps() -> list[dict]:
     """Fetch NSF awards and include them as funding opportunities."""
     try:
         from fetch_nsf import fetch_nsf_awards
-        return fetch_nsf_awards(lookback_days=180, max_per_query=10)
+        return fetch_nsf_awards(lookback_days=365, max_per_query=25)
     except ImportError:
         print("    ! fetch_nsf module not available", file=sys.stderr)
         return []
     except Exception as e:
         print(f"    ! NSF fetch failed: {e}", file=sys.stderr)
+        return []
+
+
+def fetch_cordis_for_opps() -> list[dict]:
+    """Fetch EU-funded projects from CORDIS/OpenAIRE."""
+    try:
+        from fetch_cordis import fetch_openaire_projects
+        return fetch_openaire_projects(max_per_query=15)
+    except ImportError:
+        print("    ! fetch_cordis module not available", file=sys.stderr)
+        return []
+    except Exception as e:
+        print(f"    ! CORDIS fetch failed: {e}", file=sys.stderr)
         return []
 
 
@@ -334,7 +347,17 @@ def fetch_all_feeds(config: dict) -> list[dict]:
     except Exception as e:
         print(f"    ! NSF failed: {e}", file=sys.stderr)
 
-    # Source 2: RSS feeds from config
+    # Source 2: CORDIS/OpenAIRE EU-funded projects (free, no auth)
+    print("  Fetching CORDIS/OpenAIRE projects...", file=sys.stderr)
+    try:
+        cordis_items = fetch_cordis_for_opps()
+        if cordis_items:
+            print(f"    -> {len(cordis_items)} EU funded projects", file=sys.stderr)
+            all_items.extend(cordis_items)
+    except Exception as e:
+        print(f"    ! CORDIS failed: {e}", file=sys.stderr)
+
+    # Source 3: RSS feeds from config
     rss_feeds = opp_cfg.get("rss", [])
     for feed in rss_feeds:
         url = feed.get("url", "")

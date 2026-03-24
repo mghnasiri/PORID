@@ -31,6 +31,9 @@ GITHUB_SOLVERS = [
     {"id": "cbc", "repo": "coin-or/Cbc"},
     {"id": "pyomo", "repo": "Pyomo/pyomo"},
     {"id": "jump", "repo": "jump-dev/JuMP.jl"},
+    {"id": "cvxpy", "repo": "cvxpy/cvxpy"},
+    {"id": "ipopt", "repo": "coin-or/Ipopt"},
+    {"id": "optaplanner", "repo": "TimefoldAI/timefold-solver"},
 ]
 
 PYPI_PACKAGES = [
@@ -39,6 +42,9 @@ PYPI_PACKAGES = [
     {"id": "or-tools", "package": "ortools"},
     {"id": "pyomo", "package": "pyomo"},
     {"id": "scip", "package": "pyscipopt"},
+    {"id": "cvxpy", "package": "cvxpy"},
+    {"id": "mosek", "package": "Mosek"},
+    {"id": "cplex", "package": "cplex"},
 ]
 
 GITHUB_API = "https://api.github.com/repos/{repo}/releases/latest"

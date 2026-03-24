@@ -66,6 +66,8 @@ jobs:
           cp -f data/*.ics src/data/ 2>/dev/null || true
           cp -f data/digest-*.json src/data/ 2>/dev/null || true
           cp -f data/brief-*.json src/data/ 2>/dev/null || true
+          mkdir -p src/data/briefs 2>/dev/null || true
+          cp -f data/briefs/*.json src/data/briefs/ 2>/dev/null || true
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         id: auto-commit

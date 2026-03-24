@@ -24,7 +24,8 @@ import requests
 
 NSF_API = "https://api.nsf.gov/services/v1/awards.json"
 
-# OR-relevant search queries
+# OR-relevant search queries — broad enough to catch relevant awards,
+# specific enough to avoid noise from other fields
 SEARCH_QUERIES = [
     "operations research",
     "integer programming",
@@ -36,6 +37,11 @@ SEARCH_QUERIES = [
     "stochastic optimization",
     "supply chain optimization",
     "network optimization",
+    "mathematical programming",
+    "discrete optimization",
+    "convex optimization",
+    "nonlinear programming",
+    "constraint satisfaction",
 ]
 
 PRINT_FIELDS = (
