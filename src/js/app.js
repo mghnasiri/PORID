@@ -10,6 +10,11 @@
  * user-generated content, use DOMPurify.
  */
 
+// --- New hub view imports ---
+import { render as renderPulse } from './modules/pulse.js';
+import { render as renderRadar } from './modules/radar.js';
+import { render as renderToolkit } from './modules/toolkit.js';
+
 // --- Module imports ---
 import { render as renderPublications } from './modules/publications.js';
 import { render as renderSoftware } from './modules/software.js';
@@ -48,10 +53,16 @@ const state = {
     resources: [],
     special_issues: [],
   },
-  activeTab: 'publications',
+  activeTab: 'pulse',
+  extraData: {
+    trends: null,
+    brief: null,
+    solvers: null,
+    benchmarks: null,
+  },
 };
 
-const TABS = ['publications', 'software', 'conferences', 'opportunities', 'seminars', 'watchlist', 'digest', 'datasets', 'trends', 'funding', 'awards', 'resources', 'changelog'];
+const TABS = ['pulse', 'radar', 'toolkit', 'publications', 'software', 'conferences', 'opportunities', 'seminars', 'watchlist', 'digest', 'datasets', 'trends', 'funding', 'awards', 'resources', 'changelog'];
 
 const DATA_FILES = {
   publications: './data/publications.json',
@@ -111,6 +122,33 @@ async function loadAllData() {
   updateStats();
   initSearch(state.data);
   updateDeadlineBadge();
+
+  // Load optional hub data (trends, solvers, benchmarks)
+  const optionalFiles = {
+    trends: './data/trends.json',
+    solvers: './data/solvers.json',
+    benchmarks: './data/benchmarks.json',
+  };
+  const optResults = await Promise.all(
+    Object.entries(optionalFiles).map(([key, url]) =>
+      fetchJSON(url).then(d => [key, d]).catch(() => [key, null])
+    )
+  );
+  for (const [key, data] of optResults) {
+    state.extraData[key] = data;
+  }
+
+  // Load latest weekly brief
+  const now = new Date();
+  for (let i = 0; i < 14; i++) {
+    const d = new Date(now);
+    d.setDate(d.getDate() - i);
+    const ds = d.toISOString().slice(0, 10);
+    try {
+      const resp = await fetch(`./data/brief-${ds}.json`);
+      if (resp.ok) { state.extraData.brief = await resp.json(); break; }
+    } catch { /* continue */ }
+  }
 
   // Fetch metadata for freshness indicator
   try {
@@ -271,8 +309,14 @@ function updateDeadlineBadge() {
 // ---------------------------------------------------------------------------
 
 function getHashTab() {
+  const raw = window.location.hash.replace('#', '').split('?')[0].split('/')[0];
+  return TABS.includes(raw) ? raw : (getPreferences().defaultTab || 'pulse');
+}
+
+function getHashSub() {
   const raw = window.location.hash.replace('#', '').split('?')[0];
-  return TABS.includes(raw) ? raw : (getPreferences().defaultTab || 'publications');
+  const parts = raw.split('/');
+  return parts[1] || '';
 }
 
 /**
@@ -314,12 +358,43 @@ function updateTabUI() {
 
 function renderView() {
   const tab = state.activeTab;
+  const sub = getHashSub();
 
   // Remove skeleton grid class so modules can create their own grid
   contentEl.classList.remove('card-grid');
 
   // Scroll to top on tab change
   window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // --- Hub views: Pulse, Radar, Toolkit ---
+  if (tab === 'pulse') {
+    filterContainer.textContent = '';
+    renderPulse(contentEl, state.data, {
+      trends: state.extraData.trends,
+      brief: state.extraData.brief,
+    });
+    animateCards();
+    return;
+  }
+
+  if (tab === 'radar') {
+    filterContainer.textContent = '';
+    renderRadar(contentEl, state.data, sub);
+    animateCards();
+    return;
+  }
+
+  if (tab === 'toolkit') {
+    filterContainer.textContent = '';
+    const toolkitData = {
+      ...state.data,
+      solvers: state.extraData.solvers,
+      benchmarks: state.extraData.benchmarks,
+    };
+    renderToolkit(contentEl, toolkitData, sub);
+    animateCards();
+    return;
+  }
 
   // --- Watchlist: no filter bar, dedicated module ---
   if (tab === 'watchlist') {
@@ -947,7 +1022,7 @@ function wireFilterExport() {
 // ---------------------------------------------------------------------------
 
 function animateCards() {
-  const cards = contentEl.querySelectorAll('.card, .list-row, .digest-day, .digest-preview__card, .trends-stat-card, .trends-chart, .trends-list');
+  const cards = contentEl.querySelectorAll('.card, .list-row, .digest-day, .digest-preview__card, .trends-stat-card, .trends-chart, .trends-list, .pulse__card, .pulse__metric, .radar-item, .toolkit-section, .benchmark-item, .software-item, .solver-row');
   cards.forEach((card, i) => {
     card.setAttribute('data-animate', '');
     card.style.animationDelay = `${i * 0.05}s`;

@@ -32,6 +32,17 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           S2_API_KEY: ${{ secrets.S2_API_KEY }}
 
+      - name: Compute trends
+        run: python pipeline/compute_trends.py
+
+      - name: Fetch solver data
+        run: python pipeline/fetch_solvers.py
+        continue-on-error: true
+
+      - name: Build weekly brief
+        run: python pipeline/build_brief.py
+        continue-on-error: true
+
       - name: Build daily digest
         run: python pipeline/build_digest.py
 
@@ -54,6 +65,7 @@ jobs:
           cp -f data/*.xml src/data/ 2>/dev/null || true
           cp -f data/*.ics src/data/ 2>/dev/null || true
           cp -f data/digest-*.json src/data/ 2>/dev/null || true
+          cp -f data/brief-*.json src/data/ 2>/dev/null || true
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         id: auto-commit

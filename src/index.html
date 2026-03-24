@@ -29,6 +29,9 @@
   <!-- Fuse.js -->
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0" defer></script>
 
+  <!-- D3.js (visualizations) -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7" async></script>
+
   <!-- SEO Structured Data -->
   <script type="application/ld+json">
   {
@@ -53,7 +56,7 @@
 
   <!-- ====== Navigation ====== -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
-    <a href="https://mghnasiri.github.io/" class="nav__brand">M.G. Nasiri</a>
+    <a href="#pulse" class="nav__brand">PORID</a>
 
     <button class="nav__hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
       <span class="nav__hamburger-line"></span>
@@ -62,21 +65,18 @@
     </button>
 
     <ul class="nav__tabs" role="tablist">
-      <li class="nav__tab active" role="tab" aria-selected="true" data-tab="publications">Publications</li>
-      <li class="nav__tab" role="tab" aria-selected="false" data-tab="software">Software</li>
-      <li class="nav__tab" role="tab" aria-selected="false" data-tab="conferences">Conferences <span class="nav__badge" id="deadlineBadge"></span></li>
-      <li class="nav__tab" role="tab" aria-selected="false" data-tab="opportunities">Opportunities</li>
-      <li class="nav__tab" role="tab" aria-selected="false" data-tab="seminars">Seminars</li>
-      <li class="nav__tab" role="tab" aria-selected="false" data-tab="watchlist">Watchlist</li>
-      <li class="nav__tab" role="tab" aria-selected="false" data-tab="digest">Digest</li>
+      <li class="nav__tab active" role="tab" aria-selected="true" data-tab="pulse">Pulse</li>
+      <li class="nav__tab" role="tab" aria-selected="false" data-tab="radar">Radar</li>
+      <li class="nav__tab" role="tab" aria-selected="false" data-tab="toolkit">Toolkit</li>
       <li class="nav__more">
         <span class="nav__more-trigger">More &#9662;</span>
         <ul class="nav__more-menu">
+          <li class="nav__tab" role="tab" aria-selected="false" data-tab="publications">Publications</li>
+          <li class="nav__tab" role="tab" aria-selected="false" data-tab="software">Software</li>
+          <li class="nav__tab" role="tab" aria-selected="false" data-tab="conferences">Conferences</li>
+          <li class="nav__tab" role="tab" aria-selected="false" data-tab="opportunities">Opportunities</li>
+          <li class="nav__tab" role="tab" aria-selected="false" data-tab="watchlist">Watchlist</li>
           <li class="nav__tab" role="tab" aria-selected="false" data-tab="trends">Trends</li>
-          <li class="nav__tab" role="tab" aria-selected="false" data-tab="datasets">Datasets</li>
-          <li class="nav__tab" role="tab" aria-selected="false" data-tab="resources">Resources</li>
-          <li class="nav__tab" role="tab" aria-selected="false" data-tab="funding">Funding</li>
-          <li class="nav__tab" role="tab" aria-selected="false" data-tab="awards">Awards</li>
         </ul>
       </li>
     </ul>

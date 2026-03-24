@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About PORID — OR Intelligence Hub</title>
+  <meta name="description" content="About PORID: an open-source intelligence hub for the Operations Research community.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%230A192F' stroke='%23C5A059' stroke-width='4'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%23C5A059'/%3E%3Ccircle cx='50' cy='50' r='20' fill='none' stroke='%23C5A059' stroke-width='2' opacity='0.6'/%3E%3Ccircle cx='50' cy='50' r='32' fill='none' stroke='%23C5A059' stroke-width='1.5' opacity='0.3'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html#pulse" class="nav__brand">PORID</a>
+    <div class="nav__spacer"></div>
+    <div class="nav__actions">
+      <a href="index.html#pulse" class="card__action" style="color: var(--color-accent);">Back to Dashboard</a>
+    </div>
+  </nav>
+
+  <main class="main">
+    <div class="about">
+      <div class="about__hero">
+        <h1 class="about__title">About PORID</h1>
+        <p class="about__subtitle">Personal OR Intelligence Dashboard</p>
+      </div>
+
+      <div class="about__section">
+        <h2>What is PORID?</h2>
+        <p>
+          PORID is an open-source intelligence hub for the Operations Research community.
+          It automatically aggregates and tracks publications, solver releases, funding opportunities,
+          conference deadlines, and benchmark datasets relevant to OR researchers.
+        </p>
+        <p>
+          The dashboard is designed for PhD students, postdocs, and faculty who want to
+          stay current with the field without manually checking dozens of sources.
+        </p>
+      </div>
+
+      <div class="about__section">
+        <h2>Data Sources</h2>
+        <div class="about__sources">
+          <div class="about__source">
+            <strong>Publications</strong>
+            <p>arXiv (math.OC, cs.AI, cs.DS, stat.ML), Crossref (Operations Research, EJOR, Transportation Science, MSOM, INFORMS)</p>
+          </div>
+          <div class="about__source">
+            <strong>Software</strong>
+            <p>GitHub Releases API (OR-Tools, CBC, JuMP, Pyomo, SciPy, CVXPY, Gurobi)</p>
+          </div>
+          <div class="about__source">
+            <strong>Solvers</strong>
+            <p>GitHub Releases + PyPI APIs for open-source solvers, manually maintained for commercial solvers</p>
+          </div>
+          <div class="about__source">
+            <strong>Opportunities</strong>
+            <p>RSS feeds + manual curation for high-value funding calls and positions</p>
+          </div>
+          <div class="about__source">
+            <strong>Benchmarks</strong>
+            <p>Manually curated directory of standard OR benchmark datasets (MIPLIB, CVRPLIB, PSPLIB, TSPLIB, etc.)</p>
+          </div>
+        </div>
+        <p class="about__update-info">Data is updated daily via GitHub Actions at 07:00 UTC.</p>
+      </div>
+
+      <div class="about__section">
+        <h2>Architecture</h2>
+        <p>
+          PORID is a fully static site hosted on GitHub Pages with zero infrastructure cost.
+          The data pipeline runs daily via GitHub Actions, fetching from APIs and writing JSON files.
+          The frontend is vanilla JavaScript with ES6 modules &mdash; no build step, no frameworks.
+        </p>
+        <div class="about__architecture">
+          <pre class="about__code">
+Pipeline (Python)          Frontend (Vanilla JS)
+  arXiv API                  Pulse  - Landing + trends
+  Crossref API        -->    Radar  - Opportunities
+  GitHub API        JSON     Toolkit - Solvers + benchmarks
+  PyPI API                   Archive - Papers, software
+  RSS feeds                  Search  - Fuse.js (Cmd+K)
+          </pre>
+        </div>
+      </div>
+
+      <div class="about__section">
+        <h2>Contribute</h2>
+        <p>PORID is open source. You can:</p>
+        <ul class="about__list">
+          <li>Suggest a solver or benchmark to track</li>
+          <li>Report a broken link or data issue</li>
+          <li>Request a new data source</li>
+          <li>Submit a pull request</li>
+        </ul>
+        <p>
+          <a href="https://github.com/mghnasiri/PORID" target="_blank" rel="noopener">
+            View on GitHub &rarr;
+          </a>
+        </p>
+      </div>
+
+      <div class="about__section">
+        <h2>Author</h2>
+        <p>
+          Created by <a href="https://mghnasiri.github.io/" target="_blank" rel="noopener">M.G. Nasiri</a>,
+          a researcher in Operations Research.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__links">
+      <a href="https://github.com/mghnasiri/PORID" target="_blank" rel="noopener">GitHub</a>
+      <span class="footer__sep">&middot;</span>
+      <a href="https://mghnasiri.github.io/" target="_blank" rel="noopener">Portfolio</a>
+    </div>
+    &copy; 2025 Mohammad G. Nasiri &middot; PORID v2.0
+  </footer>
+
+</body>
+</html>
