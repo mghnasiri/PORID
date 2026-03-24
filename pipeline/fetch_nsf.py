@@ -115,6 +115,11 @@ def fetch_nsf_awards(lookback_days: int = 365, max_per_query: int = 25) -> list[
                     except (ValueError, TypeError):
                         funding_str = str(amount)
 
+                # Use today's date for the 'date' field so NSF awards
+                # don't get stale-dropped by the 90-day pipeline filter.
+                # The award start date is stored in a separate field.
+                today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
                 all_items.append({
                     "id": f"nsf-{award_id}",
                     "title": f"NSF Award: {title}",
@@ -123,8 +128,9 @@ def fetch_nsf_awards(lookback_days: int = 365, max_per_query: int = 25) -> list[
                     "institution": institution,
                     "location": "USA",
                     "url": f"https://www.nsf.gov/awardsearch/showAward?AWD_ID={award_id}",
-                    "deadline": "",
-                    "date": start,
+                    "deadline": end,
+                    "date": today,
+                    "award_start": start,
                     "source": "NSF",
                     "tags": ["funding", "nsf"],
                     "description": abstract,
