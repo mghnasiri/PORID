@@ -24,6 +24,7 @@ import requests
 import yaml
 
 GITHUB_API_URL = "https://api.github.com/repos/{owner}/{repo}/releases/latest"
+GITHUB_REPO_URL = "https://api.github.com/repos/{owner}/{repo}"
 RATE_LIMIT_SECONDS = 1
 
 
@@ -77,6 +78,22 @@ def fetch_latest_release(owner: str, repo: str, display_name: str = "") -> Optio
 
     release = resp.json()
 
+    # Fetch repo metadata for stars, forks, license
+    stars = 0
+    forks = 0
+    license_id = ""
+    repo_url = GITHUB_REPO_URL.format(owner=owner, repo=repo)
+    try:
+        repo_resp = requests.get(repo_url, headers=headers, timeout=15)
+        if repo_resp.status_code == 200:
+            repo_data = repo_resp.json()
+            stars = repo_data.get("stargazers_count", 0)
+            forks = repo_data.get("forks_count", 0)
+            license_info = repo_data.get("license") or {}
+            license_id = license_info.get("spdx_id", "") or ""
+    except requests.RequestException:
+        pass  # Non-critical: proceed without repo metadata
+
     tag = release.get("tag_name", "").lstrip("vV")
     published = release.get("published_at", "")
     body = release.get("body", "") or ""
@@ -100,7 +117,7 @@ def fetch_latest_release(owner: str, repo: str, display_name: str = "") -> Optio
     # Determine tag: solver vs library
     tag_label = _classify_software_tag(repo, display_name)
 
-    return {
+    item = {
         "id": f"gh-{owner}-{repo}-{tag}",
         "name": name,
         "version": tag,
@@ -110,7 +127,12 @@ def fetch_latest_release(owner: str, repo: str, display_name: str = "") -> Optio
         "source": "GitHub",
         "tags": [tag_label],
         "type": "software",
+        "stars": stars,
+        "forks": forks,
     }
+    if license_id:
+        item["license"] = license_id
+    return item
 
 
 # Known solver repos (lowercase repo name or display name)

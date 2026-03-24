@@ -138,11 +138,50 @@ function renderConferenceCard(item) {
 }
 
 /**
- * @param {HTMLElement} container
- * @param {Object[]} data
- * @param {Object} filters
+ * Render an award/prize card. Trusted local data from awards.json.
  */
-export function render(container, data, filters) {
+function renderAwardCard(item) {
+  const deadlineDays = item.deadline ? daysUntil(item.deadline) : null;
+  let deadlineHtml = '';
+  if (deadlineDays !== null && deadlineDays > 0) {
+    const urgencyClass = deadlineDays <= 30 ? 'cfp-badge--urgent' : '';
+    deadlineHtml = `<span class="cfp-badge ${urgencyClass}">${deadlineDays} days to deadline</span>`;
+  } else if (deadlineDays !== null && deadlineDays <= 0) {
+    deadlineHtml = '<span class="cfp-badge cfp-badge--passed">Deadline Passed</span>';
+  }
+
+  return `
+    <article class="card" data-type="award">
+      <div class="card__header">
+        <h3 class="card__title">${item.name}</h3>
+        ${deadlineHtml}
+      </div>
+      <div class="conf-meta">
+        <div class="conf-meta__row">
+          <span class="conf-meta__icon">&#127942;</span>
+          <span>${item.organization}</span>
+        </div>
+        ${item.deadline ? `
+        <div class="conf-meta__row">
+          <span class="conf-meta__icon">&#9200;</span>
+          <span>Deadline: ${formatDate(item.deadline)}</span>
+        </div>` : ''}
+      </div>
+      <p class="card__body">${item.description}</p>
+      <div class="card__actions">
+        ${item.url ? `<a href="${item.url}" target="_blank" rel="noopener" class="card__action">&#8599; Details</a>` : ''}
+      </div>
+    </article>
+  `;
+}
+
+/**
+ * @param {HTMLElement} container
+ * @param {Object[]} data - Conferences data
+ * @param {Object} filters
+ * @param {Object[]} [awards] - Awards data to render below conferences
+ */
+export function render(container, data, filters, awards) {
   let items = [...data];
 
   // Check notifications at render time
@@ -164,8 +203,9 @@ export function render(container, data, filters) {
     return wa - wb;
   });
 
-  if (items.length === 0) {
-    container.textContent = '';
+  container.textContent = '';
+
+  if (items.length === 0 && (!awards || awards.length === 0)) {
     const empty = document.createElement('div');
     empty.className = 'empty-state';
     const iconDiv = document.createElement('div');
@@ -184,10 +224,41 @@ export function render(container, data, filters) {
     return;
   }
 
-  // All data from trusted local JSON — safe to use innerHTML
-  const grid = document.createElement('div');
-  grid.className = 'card-grid';
-  grid.innerHTML = items.map(renderConferenceCard).join('');
-  container.textContent = '';
-  container.appendChild(grid);
+  // Conferences grid — all data from trusted local JSON
+  if (items.length > 0) {
+    const confGrid = document.createElement('div');
+    confGrid.className = 'card-grid';
+    // Trusted local data — innerHTML safe
+    confGrid.innerHTML = items.map(renderConferenceCard).join('');
+    container.appendChild(confGrid);
+  }
+
+  // Awards section below conferences — trusted local data from awards.json
+  if (awards && awards.length > 0) {
+    const section = document.createElement('div');
+    section.className = 'awards-section';
+    const sortedAwards = [...awards].sort((a, b) => {
+      const da = a.deadline ? new Date(a.deadline) : new Date('9999-12-31');
+      const db = b.deadline ? new Date(b.deadline) : new Date('9999-12-31');
+      return da - db;
+    });
+
+    const heading = document.createElement('h3');
+    heading.className = 'awards-section__title';
+    heading.textContent = 'Awards & Prizes';
+    section.appendChild(heading);
+
+    const subtitle = document.createElement('p');
+    subtitle.className = 'awards-section__subtitle';
+    subtitle.textContent = 'Major OR awards and nomination deadlines';
+    section.appendChild(subtitle);
+
+    const awardsGrid = document.createElement('div');
+    awardsGrid.className = 'card-grid';
+    // Trusted local data — innerHTML safe
+    awardsGrid.innerHTML = sortedAwards.map(renderAwardCard).join('');
+    section.appendChild(awardsGrid);
+
+    container.appendChild(section);
+  }
 }

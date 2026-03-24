@@ -7,6 +7,59 @@
  * not from user input or external sources.
  */
 
+const STOPWORDS = new Set([
+  'the', 'a', 'an', 'of', 'for', 'in', 'on', 'with', 'and', 'to', 'by',
+  'from', 'is', 'are', 'that', 'this', 'we', 'our', 'its', 'or', 'as',
+  'at', 'be', 'it', 'not', 'but', 'was', 'has', 'have', 'been', 'can',
+  'will', 'their', 'which', 'one', 'two', 'new', 'using', 'based', 'via',
+  'under', 'over', 'between', 'through', 'into', 'than', 'more', 'all',
+  'each', 'both', 'such', 'also', 'about', 'up', 'do', 'no', 'if', 'how',
+  'when', 'where', 'what', 'so', 'only', 'very', 'some', 'any', 'these',
+  'those', 'other', 'then', 'there', 'here', 'they', 'them', 'he', 'she',
+]);
+
+/**
+ * Build a "Hot Topics" word cloud from recent publication titles.
+ */
+function buildHotTopics(publications) {
+  const sevenDaysAgo = new Date();
+  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+  const cutoff = sevenDaysAgo.toISOString().slice(0, 10);
+
+  const recent = publications.filter((p) => (p.date || '') >= cutoff);
+  if (recent.length === 0) return '';
+
+  // Extract and count words
+  const wordCounts = new Map();
+  recent.forEach((p) => {
+    const title = (p.title || '').toLowerCase();
+    const words = title.split(/[^a-z0-9-]+/).filter((w) => w.length > 2 && !STOPWORDS.has(w));
+    words.forEach((w) => wordCounts.set(w, (wordCounts.get(w) || 0) + 1));
+  });
+
+  // Top 20 words
+  const sorted = [...wordCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 20);
+  if (sorted.length === 0) return '';
+
+  const maxCount = sorted[0][1];
+  const minCount = sorted[sorted.length - 1][1];
+  const range = maxCount - minCount || 1;
+
+  const pills = sorted.map(([word, count]) => {
+    const scale = (count - minCount) / range;
+    const fontSize = (0.7 + scale * 1.3).toFixed(2);
+    const opacity = (0.5 + scale * 0.5).toFixed(2);
+    return `<span class="hot-topic-word" style="font-size:${fontSize}rem;opacity:${opacity}" title="${word}: ${count} mentions">${word}</span>`;
+  }).join(' ');
+
+  return `
+    <div class="trends-chart">
+      <h3 class="trends-chart__title">Hot Topics (Last 7 Days)</h3>
+      <div class="hot-topics-cloud">${pills}</div>
+    </div>
+  `;
+}
+
 /**
  * Count occurrences in an array of strings.
  * @returns {Map<string, number>}
@@ -186,6 +239,8 @@ export function render(container, data) {
       </div>
 
       ${buildSparkline(pubs)}
+
+      ${buildHotTopics(pubs)}
 
       <div class="trends-grid">
         ${buildBarChart(tagEntries, 'Publications by Tag')}

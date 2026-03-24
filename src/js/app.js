@@ -52,6 +52,8 @@ const DATA_FILES = {
   opportunities: './data/opportunities.json',
   datasets: './data/datasets.json',
   seminars: './data/seminars.json',
+  awards: './data/awards.json',
+  blogs: './data/blogs.json',
 };
 
 // Module render function map
@@ -96,9 +98,16 @@ async function loadAllData() {
   }
 
   updateStats();
-  updateLastUpdated();
   initSearch(state.data);
   updateDeadlineBadge();
+
+  // Fetch metadata for freshness indicator
+  try {
+    const meta = await fetchJSON('./data/metadata.json');
+    updateFreshnessIndicator(meta);
+  } catch {
+    updateLastUpdated();
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -140,6 +149,86 @@ function updateLastUpdated() {
     const d = new Date(dates[0] + 'T00:00:00');
     el.textContent = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
   }
+}
+
+function updateFreshnessIndicator(meta) {
+  const el = document.getElementById('statUpdated');
+  if (!el || !meta || !meta.last_fetch) {
+    updateLastUpdated();
+    return;
+  }
+
+  const fetchTime = new Date(meta.last_fetch);
+  const now = new Date();
+  const hoursAgo = (now - fetchTime) / (1000 * 60 * 60);
+
+  // Relative time string
+  let timeStr;
+  if (hoursAgo < 1) {
+    const mins = Math.round(hoursAgo * 60);
+    timeStr = `${mins}m ago`;
+  } else if (hoursAgo < 24) {
+    timeStr = `${Math.round(hoursAgo)}h ago`;
+  } else {
+    const days = Math.round(hoursAgo / 24);
+    timeStr = `${days}d ago`;
+  }
+
+  el.textContent = timeStr;
+
+  // Color coding based on age
+  el.classList.remove('freshness-ok', 'freshness-warn', 'freshness-stale');
+  if (hoursAgo > 48) {
+    el.classList.add('freshness-stale');
+    el.title = 'Data is stale (over 48h ago)';
+  } else if (hoursAgo > 24) {
+    el.classList.add('freshness-warn');
+    el.title = 'Data may be outdated (over 24h ago)';
+  } else {
+    el.classList.add('freshness-ok');
+    el.title = 'Data is fresh';
+  }
+
+  // Per-source status in footer
+  updateSourceStatus(meta);
+}
+
+function updateSourceStatus(meta) {
+  const footer = document.querySelector('.footer');
+  if (!footer) return;
+
+  // Remove existing source status if any
+  const existing = footer.querySelector('.footer__sources');
+  if (existing) existing.remove();
+
+  const sources = meta.sources_checked || [];
+  const errors = meta.errors || [];
+
+  if (sources.length === 0 && errors.length === 0) return;
+
+  const div = document.createElement('div');
+  div.className = 'footer__sources';
+
+  // Build with DOM methods for safety (trusted data, but being thorough)
+  const okCount = sources.length - errors.length;
+  if (okCount > 0) {
+    const okSpan = document.createElement('span');
+    okSpan.className = 'footer__sources-ok';
+    okSpan.textContent = `${okCount} sources OK`;
+    div.appendChild(okSpan);
+  }
+  if (errors.length > 0) {
+    if (div.childNodes.length > 0) {
+      div.appendChild(document.createTextNode(' \u00B7 '));
+    }
+    const errSpan = document.createElement('span');
+    errSpan.className = 'footer__sources-err';
+    const errNames = errors.map((e) => (typeof e === 'string' ? e : e.source || e.message || 'unknown'));
+    errSpan.textContent = `${errors.length} failed: ${errNames.join(', ')}`;
+    div.appendChild(errSpan);
+  }
+
+  footer.appendChild(div);
 }
 
 function getAllItems() {
@@ -242,10 +331,10 @@ function renderView() {
     return;
   }
 
-  // --- Datasets: no filter bar, dedicated module ---
+  // --- Resources (Datasets + Blogs): no filter bar, dedicated module ---
   if (tab === 'datasets') {
     filterContainer.textContent = '';
-    renderDatasets(contentEl, state.data.datasets || []);
+    renderDatasets(contentEl, state.data.datasets || [], state.data.blogs || []);
     requestAnimationFrame(() => animateCards());
     return;
   }
@@ -284,7 +373,11 @@ function renderView() {
   // Delegate to module renderer
   const renderer = MODULE_RENDERERS[tab];
   if (renderer) {
-    renderer(contentEl, data, filters);
+    if (tab === 'conferences') {
+      renderer(contentEl, data, filters, state.data.awards || []);
+    } else {
+      renderer(contentEl, data, filters);
+    }
   }
 
   animateCards();
@@ -321,6 +414,23 @@ function applyHashFilters() {
     });
     if (!document.querySelectorAll('.filter-tag.active').length) {
       document.querySelector('.filter-tag[data-tag="all"]')?.classList.add('active');
+    }
+  } else {
+    // If no hash filters, apply focus tags from onboarding preferences
+    const prefs = getPreferences();
+    if (prefs.focusTags && prefs.focusTags.length > 0) {
+      const filterTags = document.querySelectorAll('.filter-tag');
+      let anyMatched = false;
+      filterTags.forEach((el) => {
+        if (el.dataset.tag === 'all') return;
+        if (prefs.focusTags.includes(el.dataset.tag)) {
+          el.classList.add('active');
+          anyMatched = true;
+        }
+      });
+      if (anyMatched) {
+        document.querySelector('.filter-tag[data-tag="all"]')?.classList.remove('active');
+      }
     }
   }
   if (params.source) {
@@ -359,8 +469,10 @@ function wireFilterEvents() {
 
   const sourceSelect = document.getElementById('filterSource');
   const sortSelect = document.getElementById('filterSort');
+  const readStatusSelect = document.getElementById('filterReadStatus');
   if (sourceSelect) sourceSelect.addEventListener('change', () => { updateClearBtn(); syncFiltersToHash(); renderView(); });
   if (sortSelect) sortSelect.addEventListener('change', () => { syncFiltersToHash(); renderView(); });
+  if (readStatusSelect) readStatusSelect.addEventListener('change', () => { updateClearBtn(); syncFiltersToHash(); renderView(); });
 
   const dateFrom = document.getElementById('filterDateFrom');
   const dateTo = document.getElementById('filterDateTo');
@@ -804,6 +916,94 @@ async function init() {
   renderView();
 
   window.addEventListener('hashchange', onHashChange);
+
+  // First-visit welcome modal with onboarding interest tags
+  if (!localStorage.getItem('porid-welcomed')) {
+    const welcomeModal = document.getElementById('welcomeModal');
+    if (welcomeModal) {
+      welcomeModal.style.display = '';
+
+      // Wire onboarding tag toggle
+      const tagsContainer = document.getElementById('onboardingTags');
+      if (tagsContainer) {
+        tagsContainer.addEventListener('click', (e) => {
+          const btn = e.target.closest('.onboarding-tag');
+          if (btn) btn.classList.toggle('selected');
+        });
+      }
+
+      document.getElementById('welcomeDismiss').addEventListener('click', () => {
+        // Save selected interest tags before closing
+        if (tagsContainer) {
+          const selected = Array.from(tagsContainer.querySelectorAll('.onboarding-tag.selected'))
+            .map((el) => el.dataset.tag);
+          if (selected.length > 0) {
+            localStorage.setItem('porid-focus-tags', JSON.stringify(selected));
+          }
+        }
+        welcomeModal.style.display = 'none';
+        localStorage.setItem('porid-welcomed', 'true');
+        // Re-render to apply focus tags
+        renderView();
+      });
+    }
+  }
+
+  // Changelog modal wiring
+  wireChangelog();
+}
+
+// ---------------------------------------------------------------------------
+// Changelog
+// ---------------------------------------------------------------------------
+
+let changelogData = null;
+
+async function wireChangelog() {
+  const link = document.getElementById('changelogLink');
+  const modal = document.getElementById('changelogModal');
+  const closeBtn = modal ? modal.querySelector('.changelog-modal__close') : null;
+  const contentDiv = document.getElementById('changelogContent');
+  if (!link || !modal || !contentDiv) return;
+
+  link.addEventListener('click', async (e) => {
+    e.preventDefault();
+    if (!changelogData) {
+      try {
+        changelogData = await fetchJSON('./data/changelog.json');
+      } catch {
+        changelogData = [];
+      }
+    }
+    // Render changelog — trusted local data
+    contentDiv.innerHTML = changelogData.map((v) => `
+      <div class="changelog-version">
+        <div class="changelog-version__header">
+          <span class="changelog-version__tag">v${v.version}</span>
+          <span class="changelog-version__date">${v.date}</span>
+        </div>
+        <ul class="changelog-version__list">
+          ${v.changes.map((c) => `<li>${c}</li>`).join('')}
+        </ul>
+      </div>
+    `).join('');
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+    });
+  }
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+  });
 }
 
 init();

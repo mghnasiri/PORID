@@ -2,6 +2,8 @@
  * Filter bar component — renders filter controls and applies filters to data arrays.
  */
 
+import { getReadStatus } from '../utils/storage.js';
+
 const ALL_TAGS = [
   'scheduling',
   'vehicle-routing',
@@ -23,6 +25,7 @@ const SOURCES = ['All Sources', 'arXiv', 'EJOR', 'Operations Research', 'INFORMS
 const SORT_OPTIONS = [
   { value: 'newest', label: 'Newest First' },
   { value: 'oldest', label: 'Oldest First' },
+  { value: 'cited', label: 'Most Cited' },
   { value: 'deadline', label: 'Deadline Soonest' },
 ];
 
@@ -60,6 +63,15 @@ export function renderFilterBar(options = {}) {
     </select>
   `;
 
+  const readStatusSelect = `
+    <select class="filter-select" id="filterReadStatus" aria-label="Reading status filter">
+      <option value="all">All Status</option>
+      <option value="new">Unread</option>
+      <option value="reading">Reading</option>
+      <option value="read">Read</option>
+    </select>
+  `;
+
   return `
     <div class="filter-bar" role="toolbar" aria-label="Filters">
       <button class="tag filter-tag active" data-tag="all">All</button>
@@ -71,6 +83,7 @@ export function renderFilterBar(options = {}) {
       <input type="date" class="filter-date" id="filterDateTo" aria-label="To date" title="To date">
       ${sourceSelect}
       ${sortSelect}
+      ${readStatusSelect}
       <button class="tag filter-clear" id="filterClear" style="display:none;" aria-label="Clear all filters">&#10005; Clear</button>
     </div>
   `;
@@ -97,6 +110,9 @@ export function getActiveFilters() {
   const fromEl = document.getElementById('filterDateFrom');
   const toEl = document.getElementById('filterDateTo');
 
+  const readStatusEl = document.getElementById('filterReadStatus');
+  const readStatus = readStatusEl ? readStatusEl.value : 'all';
+
   return {
     tags: activeTags,
     source,
@@ -104,6 +120,7 @@ export function getActiveFilters() {
     logic,
     dateFrom: fromEl ? fromEl.value : '',
     dateTo: toEl ? toEl.value : '',
+    readStatus,
   };
 }
 
@@ -137,6 +154,11 @@ export function applyFilters(items, filters) {
     result = result.filter((item) => item.source === filters.source);
   }
 
+  // Reading status filtering
+  if (filters.readStatus && filters.readStatus !== 'all') {
+    result = result.filter((item) => getReadStatus(item.id) === filters.readStatus);
+  }
+
   // Sorting
   result.sort((a, b) => {
     if (filters.sort === 'newest') {
@@ -144,6 +166,9 @@ export function applyFilters(items, filters) {
     }
     if (filters.sort === 'oldest') {
       return new Date(getDateKey(a)) - new Date(getDateKey(b));
+    }
+    if (filters.sort === 'cited') {
+      return (b.citation_count || 0) - (a.citation_count || 0);
     }
     if (filters.sort === 'deadline') {
       const da = a.cfp_deadline || a.deadline || a.date || '9999-12-31';

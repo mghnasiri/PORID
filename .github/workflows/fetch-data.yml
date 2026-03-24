@@ -45,17 +45,21 @@ jobs:
       - name: Build RSS feed
         run: python pipeline/build_rss.py
 
+      - name: Build iCal feed
+        run: python pipeline/build_ical.py
+
       - name: Copy data to src for deployment
         run: |
           cp -f data/*.json src/data/ 2>/dev/null || true
           cp -f data/*.xml src/data/ 2>/dev/null || true
+          cp -f data/*.ics src/data/ 2>/dev/null || true
           cp -f data/digest-*.json src/data/ 2>/dev/null || true
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         id: auto-commit
         with:
           commit_message: "chore: daily data fetch"
-          file_pattern: "data/*.json data/*.xml src/data/*.json src/data/*.xml"
+          file_pattern: "data/*.json data/*.xml data/*.ics src/data/*.json src/data/*.xml src/data/*.ics"
 
       # Deploy to GitHub Pages directly (don't rely on deploy.yml trigger)
       - name: Prepare site

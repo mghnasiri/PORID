@@ -13,6 +13,12 @@ function changelogSnippet(text, max = 100) {
   return text.length > max ? text.slice(0, max) + '\u2026' : text;
 }
 
+function formatCount(n) {
+  if (!n && n !== 0) return '0';
+  if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+  return String(n);
+}
+
 function renderSoftwareCard(item) {
   const starred = isWatchlisted(item.id);
   const starClass = starred ? 'card__star--active' : '';
@@ -25,12 +31,14 @@ function renderSoftwareCard(item) {
         <div>
           <h3 class="card__title">${item.name}</h3>
           <span class="version-badge">v${item.version}</span>
+          ${(item.stars || item.forks) ? `<span class="card__repo-stats">\u2B50 ${formatCount(item.stars)} \u00B7 \uD83C\uDF74 ${formatCount(item.forks)}</span>` : ''}
         </div>
         <span class="card__date" title="${formatDate(item.date)}">${relativeTime(item.date)}</span>
       </div>
       <p class="card__body">${changelogSnippet(item.changelog, 100)}</p>
       <div class="card__tags">
         ${(item.tags || []).map((t) => `<span class="tag">${t}</span>`).join('')}
+        ${item.license ? `<span class="tag tag--license">${item.license}</span>` : ''}
       </div>
       <div class="card__actions">
         <button class="card__star ${starClass}" data-id="${item.id}" aria-label="Toggle watchlist">${starSymbol}</button>

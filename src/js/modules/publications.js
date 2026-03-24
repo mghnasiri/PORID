@@ -11,6 +11,7 @@ import { relativeTime, formatDate } from '../utils/date.js';
 import { isWatchlisted, getReadStatus } from '../utils/storage.js';
 import { applyFilters } from '../components/filters.js';
 import { showModal } from '../components/modal.js';
+import { generateBibTeX } from '../utils/citation.js';
 
 let viewMode = 'grid'; // 'grid' | 'list' | 'table'
 let tableSortCol = 'date';
@@ -74,6 +75,7 @@ function renderGridCard(item) {
         </button>
         <button class="card__cite card__action" data-id="${item.id}" aria-label="Copy BibTeX citation" title="Copy BibTeX">Cite</button>
         ${item.url ? `<a href="${item.url}" target="_blank" rel="noopener" class="card__action">&#8599; Open</a>` : ''}
+        ${item.url && item.url.includes('arxiv.org/abs/') ? `<a href="${item.url.replace('/abs/', '/pdf/') + '.pdf'}" target="_blank" rel="noopener" class="card__action" title="Download PDF">PDF</a>` : ''}
         <button class="card__detail-btn card__action" data-id="${item.id}">Details</button>
       </div>
     </article>
@@ -97,6 +99,7 @@ function renderListRow(item) {
       </div>
       <span class="tag tag--source list-row__source">${item.source}</span>
       <span class="list-row__date">${relativeTime(item.date)}</span>
+      ${item.url && item.url.includes('arxiv.org/abs/') ? `<a href="${item.url.replace('/abs/', '/pdf/') + '.pdf'}" target="_blank" rel="noopener" class="card__action" title="Download PDF">PDF</a>` : ''}
       <button class="card__detail-btn card__action" data-id="${item.id}">Details</button>
     </div>
   `;
@@ -164,7 +167,7 @@ function renderTable(items) {
 
     return `
       <tr class="table-view__row" data-id="${item.id}">
-        <td class="table-view__title">${item.title}</td>
+        <td class="table-view__title">${item.title}${item.url && item.url.includes('arxiv.org/abs/') ? ` <a href="${item.url.replace('/abs/', '/pdf/') + '.pdf'}" target="_blank" rel="noopener" class="card__action" title="Download PDF">PDF</a>` : ''}</td>
         <td>${formatAuthors(item.authors)}</td>
         <td><span class="tag ${sourceClass(item.source)}">${item.source}</span></td>
         <td>${item.date ? formatDate(item.date) : ''}</td>
@@ -189,7 +192,7 @@ function renderTable(items) {
  */
 function renderViewToggle() {
   return `
-    <div class="view-toggle">
+    <div class="view-toggle" style="display:flex;align-items:center;gap:var(--space-sm);width:100%">
       <button class="view-toggle__btn ${viewMode === 'grid' ? 'active' : ''}" data-view="grid" aria-label="Grid view" title="Grid view">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>
       </button>
@@ -199,8 +202,54 @@ function renderViewToggle() {
       <button class="view-toggle__btn ${viewMode === 'table' ? 'active' : ''}" data-view="table" aria-label="Table view" title="Table view">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="1" width="14" height="2" rx="0.5"/><rect x="1" y="5" width="14" height="1" rx="0.3" opacity="0.5"/><rect x="1" y="8" width="14" height="1" rx="0.3" opacity="0.5"/><rect x="1" y="11" width="14" height="1" rx="0.3" opacity="0.5"/><rect x="1" y="14" width="14" height="1" rx="0.3" opacity="0.5"/><rect x="5" y="1" width="0.5" height="14" opacity="0.3"/><rect x="10" y="1" width="0.5" height="14" opacity="0.3"/></svg>
       </button>
+      <select class="filter-select" id="exportBtn" style="margin-left:auto">
+        <option value="">Export...</option>
+        <option value="bibtex">BibTeX (.bib)</option>
+        <option value="csv">CSV (.csv)</option>
+        <option value="json">JSON (.json)</option>
+      </select>
     </div>
   `;
+}
+
+/**
+ * Triggers a file download via Blob URL.
+ */
+function downloadFile(content, filename, mimeType) {
+  const blob = new Blob([content], { type: mimeType });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+/**
+ * Exports filtered items in the specified format.
+ */
+function exportItems(items, format) {
+  const dateStr = new Date().toISOString().slice(0, 10);
+  if (format === 'bibtex') {
+    const bib = items.map((item) => generateBibTeX(item)).join('\n\n');
+    downloadFile(bib, `porid-publications-${dateStr}.bib`, 'application/x-bibtex');
+  } else if (format === 'csv') {
+    const headers = ['title', 'authors', 'date', 'source', 'url', 'doi', 'tags'];
+    const rows = items.map((item) =>
+      headers.map((h) => {
+        let val = item[h];
+        if (Array.isArray(val)) val = val.join('; ');
+        val = String(val || '').replace(/"/g, '""');
+        return `"${val}"`;
+      }).join(',')
+    );
+    const csv = [headers.join(','), ...rows].join('\n');
+    downloadFile(csv, `porid-publications-${dateStr}.csv`, 'text/csv');
+  } else if (format === 'json') {
+    downloadFile(JSON.stringify(items, null, 2), `porid-publications-${dateStr}.json`, 'application/json');
+  }
 }
 
 /**
@@ -255,6 +304,18 @@ export function render(container, data, filters) {
       render(container, data, filters);
     });
   });
+
+  // Wire export dropdown
+  const exportSelect = container.querySelector('#exportBtn');
+  if (exportSelect) {
+    exportSelect.addEventListener('change', () => {
+      const format = exportSelect.value;
+      if (format) {
+        exportItems(filtered, format);
+        exportSelect.value = '';
+      }
+    });
+  }
 
   // Wire table sort headers
   if (viewMode === 'table') {

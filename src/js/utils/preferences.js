@@ -21,7 +21,20 @@ export function getPreferences() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     const stored = raw ? JSON.parse(raw) : {};
-    return { ...DEFAULTS, ...stored };
+    const prefs = { ...DEFAULTS, ...stored };
+
+    // Merge focus tags from onboarding if present
+    try {
+      const focusRaw = localStorage.getItem('porid-focus-tags');
+      if (focusRaw) {
+        const focusTags = JSON.parse(focusRaw);
+        if (Array.isArray(focusTags) && focusTags.length > 0) {
+          prefs.focusTags = focusTags;
+        }
+      }
+    } catch { /* ignore parse errors */ }
+
+    return prefs;
   } catch {
     return { ...DEFAULTS };
   }

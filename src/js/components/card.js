@@ -106,6 +106,10 @@ export function renderCard(item) {
   const dateHtml = getDateDisplay(item);
   const tagsHtml = renderTags(item.tags || []);
 
+  // Check if item is from the last 7 days
+  const isNewThisWeek = item.date && (Date.now() - new Date(item.date + 'T00:00:00').getTime()) < 7 * 24 * 60 * 60 * 1000;
+  const newBadge = isNewThisWeek ? '<span class="card__new-badge">NEW</span>' : '';
+
   // Source badge for publications
   const sourceBadge =
     item.type === 'publication' && item.source
@@ -116,6 +120,7 @@ export function renderCard(item) {
     <article class="card" tabindex="0" data-id="${item.id}" data-type="${item.type}">
       <div class="card__header">
         <h3 class="card__title">${title}</h3>
+        ${newBadge}
         ${dateHtml}
       </div>
       ${subtitle ? `<p class="card__subtitle">${subtitle}</p>` : ''}
