@@ -8,7 +8,7 @@
  */
 
 import { relativeTime, formatDate } from '../utils/date.js';
-import { isWatchlisted } from '../utils/storage.js';
+import { isWatchlisted, getReadStatus } from '../utils/storage.js';
 import { applyFilters } from '../components/filters.js';
 import { showModal } from '../components/modal.js';
 
@@ -57,7 +57,9 @@ function renderGridCard(item) {
     <article class="card" tabindex="0" data-id="${item.id}" data-type="publication">
       <div class="card__header">
         <h3 class="card__title">${item.title}</h3>
-        <span class="card__date" title="${formatDate(item.date)}">${relativeTime(item.date)}</span>
+        <span class="card__date" title="${formatDate(item.date)}">
+          ${item.citation_count > 0 ? `<span class="card__citations">${item.citation_count} cited</span> · ` : ''}${relativeTime(item.date)}
+        </span>
       </div>
       <p class="card__subtitle">${formatAuthors(item.authors)}</p>
       <p class="card__body">${snippet(item.abstract, 200)}</p>
@@ -67,6 +69,9 @@ function renderGridCard(item) {
       </div>
       <div class="card__actions">
         <button class="card__star ${starClass}" data-id="${item.id}" aria-label="Toggle watchlist" title="Toggle watchlist">${starSymbol}</button>
+        <button class="card__read-status card__action" data-id="${item.id}" data-status="${getReadStatus(item.id)}" title="Reading status: ${getReadStatus(item.id)}">
+          <span class="read-dot read-dot--${getReadStatus(item.id)}"></span>
+        </button>
         <button class="card__cite card__action" data-id="${item.id}" aria-label="Copy BibTeX citation" title="Copy BibTeX">Cite</button>
         ${item.url ? `<a href="${item.url}" target="_blank" rel="noopener" class="card__action">&#8599; Open</a>` : ''}
         <button class="card__detail-btn card__action" data-id="${item.id}">Details</button>

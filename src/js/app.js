@@ -18,12 +18,14 @@ import { render as renderOpportunities } from './modules/opportunities.js';
 import { render as renderWatchlist } from './modules/watchlist.js';
 import { render as renderDigest } from './modules/digest.js';
 import { render as renderTrends } from './modules/trends.js';
+import { render as renderDatasets } from './modules/datasets.js';
+import { render as renderSeminars } from './modules/seminars.js';
 import { initSearch, wireSearchInput } from './modules/search.js';
 
 // --- Component / utility imports ---
 import { renderFilterBar, getActiveFilters } from './components/filters.js';
 import { showModal, hideModal } from './components/modal.js';
-import { getWatchlist, addToWatchlist, removeFromWatchlist, isWatchlisted } from './utils/storage.js';
+import { getWatchlist, addToWatchlist, removeFromWatchlist, isWatchlisted, cycleReadStatus } from './utils/storage.js';
 import { generateBibTeX, copyToClipboard } from './utils/citation.js';
 import { getPreferences, setPreference } from './utils/preferences.js';
 
@@ -41,13 +43,15 @@ const state = {
   activeTab: 'publications',
 };
 
-const TABS = ['publications', 'software', 'conferences', 'opportunities', 'watchlist', 'digest', 'trends'];
+const TABS = ['publications', 'software', 'conferences', 'opportunities', 'seminars', 'watchlist', 'digest', 'datasets', 'trends'];
 
 const DATA_FILES = {
   publications: './data/publications.json',
   software: './data/software.json',
   conferences: './data/conferences.json',
   opportunities: './data/opportunities.json',
+  datasets: './data/datasets.json',
+  seminars: './data/seminars.json',
 };
 
 // Module render function map
@@ -164,8 +168,23 @@ function updateDeadlineBadge() {
 // ---------------------------------------------------------------------------
 
 function getHashTab() {
-  const hash = window.location.hash.replace('#', '');
-  return TABS.includes(hash) ? hash : (getPreferences().defaultTab || 'publications');
+  const raw = window.location.hash.replace('#', '').split('?')[0];
+  return TABS.includes(raw) ? raw : (getPreferences().defaultTab || 'publications');
+}
+
+/**
+ * Parse URL hash parameters: #publications?tags=a,b&sort=newest
+ */
+function getHashParams() {
+  const hash = window.location.hash;
+  const qIdx = hash.indexOf('?');
+  if (qIdx < 0) return {};
+  const params = {};
+  hash.slice(qIdx + 1).split('&').forEach((pair) => {
+    const [k, v] = pair.split('=').map(decodeURIComponent);
+    if (k && v) params[k] = v;
+  });
+  return params;
 }
 
 function navigate(tab) {
@@ -215,6 +234,22 @@ function renderView() {
     return;
   }
 
+  // --- Seminars: no filter bar, dedicated module ---
+  if (tab === 'seminars') {
+    filterContainer.textContent = '';
+    renderSeminars(contentEl, state.data.seminars || []);
+    requestAnimationFrame(() => animateCards());
+    return;
+  }
+
+  // --- Datasets: no filter bar, dedicated module ---
+  if (tab === 'datasets') {
+    filterContainer.textContent = '';
+    renderDatasets(contentEl, state.data.datasets || []);
+    requestAnimationFrame(() => animateCards());
+    return;
+  }
+
   // --- Trends: no filter bar, dedicated module ---
   if (tab === 'trends') {
     filterContainer.textContent = '';
@@ -241,6 +276,7 @@ function renderView() {
     filterContainer.appendChild(filterBarEl.firstChild);
   }
   wireFilterEvents();
+  applyHashFilters();
 
   // Read current filter state
   const filters = getActiveFilters();
@@ -264,6 +300,39 @@ function extractTags(items) {
 // Filter Event Wiring
 // ---------------------------------------------------------------------------
 
+function syncFiltersToHash() {
+  const filters = getActiveFilters();
+  const tab = state.activeTab;
+  const parts = [];
+  if (filters.tags && filters.tags.length) parts.push(`tags=${encodeURIComponent(filters.tags.join(','))}`);
+  if (filters.source && filters.source !== 'All Sources') parts.push(`source=${encodeURIComponent(filters.source)}`);
+  if (filters.sort && filters.sort !== 'newest') parts.push(`sort=${encodeURIComponent(filters.sort)}`);
+  const qs = parts.length ? '?' + parts.join('&') : '';
+  history.replaceState(null, '', `#${tab}${qs}`);
+}
+
+function applyHashFilters() {
+  const params = getHashParams();
+  if (params.tags) {
+    const tags = params.tags.split(',');
+    document.querySelectorAll('.filter-tag').forEach((el) => {
+      if (el.dataset.tag === 'all') { el.classList.remove('active'); return; }
+      el.classList.toggle('active', tags.includes(el.dataset.tag));
+    });
+    if (!document.querySelectorAll('.filter-tag.active').length) {
+      document.querySelector('.filter-tag[data-tag="all"]')?.classList.add('active');
+    }
+  }
+  if (params.source) {
+    const sel = document.getElementById('filterSource');
+    if (sel) sel.value = params.source;
+  }
+  if (params.sort) {
+    const sel = document.getElementById('filterSort');
+    if (sel) sel.value = params.sort;
+  }
+}
+
 function wireFilterEvents() {
   document.querySelectorAll('.filter-tag').forEach((tag) => {
     tag.addEventListener('click', () => {
@@ -283,14 +352,31 @@ function wireFilterEvents() {
       }
 
       updateClearBtn();
+      syncFiltersToHash();
       renderView();
     });
   });
 
   const sourceSelect = document.getElementById('filterSource');
   const sortSelect = document.getElementById('filterSort');
-  if (sourceSelect) sourceSelect.addEventListener('change', () => { updateClearBtn(); renderView(); });
-  if (sortSelect) sortSelect.addEventListener('change', () => renderView());
+  if (sourceSelect) sourceSelect.addEventListener('change', () => { updateClearBtn(); syncFiltersToHash(); renderView(); });
+  if (sortSelect) sortSelect.addEventListener('change', () => { syncFiltersToHash(); renderView(); });
+
+  const dateFrom = document.getElementById('filterDateFrom');
+  const dateTo = document.getElementById('filterDateTo');
+  if (dateFrom) dateFrom.addEventListener('change', () => { updateClearBtn(); syncFiltersToHash(); renderView(); });
+  if (dateTo) dateTo.addEventListener('change', () => { updateClearBtn(); syncFiltersToHash(); renderView(); });
+
+  // AND/OR toggle
+  const logicBtn = document.getElementById('filterLogic');
+  if (logicBtn) {
+    logicBtn.addEventListener('click', () => {
+      logicBtn.textContent = logicBtn.textContent.trim() === 'OR' ? 'AND' : 'OR';
+      logicBtn.classList.toggle('active', logicBtn.textContent.trim() === 'AND');
+      syncFiltersToHash();
+      renderView();
+    });
+  }
 
   // Clear filters button
   const clearBtn = document.getElementById('filterClear');
@@ -355,6 +441,18 @@ function wireCardEvents() {
           citeBtn.classList.remove('card__cite-feedback');
         }, 1500);
       });
+      return;
+    }
+
+    // Reading status toggle
+    const readBtn = e.target.closest('.card__read-status');
+    if (readBtn) {
+      const id = readBtn.dataset.id;
+      const next = cycleReadStatus(id);
+      readBtn.dataset.status = next;
+      readBtn.title = `Reading status: ${next}`;
+      const dot = readBtn.querySelector('.read-dot');
+      if (dot) { dot.className = `read-dot read-dot--${next}`; }
       return;
     }
 

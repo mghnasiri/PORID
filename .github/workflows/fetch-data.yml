@@ -42,16 +42,20 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
         continue-on-error: true
 
+      - name: Build RSS feed
+        run: python pipeline/build_rss.py
+
       - name: Copy data to src for deployment
         run: |
           cp -f data/*.json src/data/ 2>/dev/null || true
+          cp -f data/*.xml src/data/ 2>/dev/null || true
           cp -f data/digest-*.json src/data/ 2>/dev/null || true
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         id: auto-commit
         with:
           commit_message: "chore: daily data fetch"
-          file_pattern: "data/*.json src/data/*.json"
+          file_pattern: "data/*.json data/*.xml src/data/*.json src/data/*.xml"
 
       # Deploy to GitHub Pages directly (don't rely on deploy.yml trigger)
       - name: Prepare site

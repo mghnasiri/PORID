@@ -372,6 +372,21 @@ a:hover { opacity: 0.85; }
 
 .filter-clear:hover { background: rgba(220, 80, 80, 0.1); }
 
+.filter-date {
+  height: 28px; padding: 0 8px;
+  background: transparent; border: var(--border-card); border-radius: 14px;
+  color: var(--color-text-muted); font-family: var(--font-body); font-size: 0.7rem;
+  cursor: pointer; flex-shrink: 0;
+}
+.filter-date::-webkit-calendar-picker-indicator { filter: invert(0.6); cursor: pointer; }
+.filter-date-sep { color: var(--color-text-faint); font-size: 0.75rem; flex-shrink: 0; }
+
+.filter-logic {
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 1px;
+  border: var(--border-card); color: var(--color-text-faint); cursor: pointer;
+}
+.filter-logic.active { background: var(--color-accent-dim); color: var(--color-accent); border-color: var(--color-accent); }
+
 /* ── View Toggle ───────────────────────────────────────────────── */
 
 .view-toggle { display: inline-flex; gap: 2px; margin-bottom: var(--space-md); }
@@ -447,6 +462,19 @@ a:hover { opacity: 0.85; }
 }
 
 .card__date { font-size: 0.75rem; color: var(--color-text-faint); white-space: nowrap; flex-shrink: 0; }
+
+.card__citations { color: var(--color-accent); font-weight: 500; font-size: 0.7rem; }
+
+.read-dot {
+  display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+  border: 1px solid var(--color-text-faint); background: transparent;
+  transition: all var(--transition-fast);
+}
+.read-dot--new { background: transparent; }
+.read-dot--reading { background: #C5A059; border-color: #C5A059; }
+.read-dot--read { background: #4ECDC4; border-color: #4ECDC4; }
+
+.card__read-status { padding: 4px; cursor: pointer; }
 
 .card__subtitle {
   font-size: 0.8rem; color: var(--color-text-muted);
@@ -751,6 +779,15 @@ a:hover { opacity: 0.85; }
 .skeleton__line--subtitle{ width: 50%; height: 10px; }
 .skeleton__line--body    { width: 90%; }
 .skeleton__line--tags    { width: 40%; height: 10px; margin-top: var(--space-md); }
+
+/* ── Datasets ──────────────────────────────────────────────────── */
+
+.datasets-container { padding: var(--space-lg); }
+.datasets__title { font-family: var(--font-title); font-size: 1.8rem; font-weight: 600; color: var(--color-text); text-align: center; margin-bottom: var(--space-xs); }
+.datasets__subtitle { font-size: 0.85rem; color: var(--color-text-muted); text-align: center; margin-bottom: var(--space-xl); }
+.datasets-category { margin-bottom: var(--space-xl); }
+.datasets-category__name { font-family: var(--font-title); font-size: 1.2rem; font-weight: 600; color: var(--color-accent); margin-bottom: var(--space-md); padding-bottom: var(--space-xs); border-bottom: var(--border-subtle); }
+.datasets__instances { font-size: 0.7rem; color: var(--color-accent); font-weight: 500; white-space: nowrap; }
 
 /* ── Digest ────────────────────────────────────────────────────── */
 

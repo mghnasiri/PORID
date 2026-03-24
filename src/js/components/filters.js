@@ -64,7 +64,11 @@ export function renderFilterBar(options = {}) {
     <div class="filter-bar" role="toolbar" aria-label="Filters">
       <button class="tag filter-tag active" data-tag="all">All</button>
       ${tagPills}
+      <button class="tag filter-logic" id="filterLogic" title="Toggle AND/OR matching" aria-label="Toggle AND/OR filter logic">OR</button>
       <div class="filter-bar__spacer"></div>
+      <input type="date" class="filter-date" id="filterDateFrom" aria-label="From date" title="From date">
+      <span class="filter-date-sep">–</span>
+      <input type="date" class="filter-date" id="filterDateTo" aria-label="To date" title="To date">
       ${sourceSelect}
       ${sortSelect}
       <button class="tag filter-clear" id="filterClear" style="display:none;" aria-label="Clear all filters">&#10005; Clear</button>
@@ -87,10 +91,19 @@ export function getActiveFilters() {
   const sortEl = document.getElementById('filterSort');
   const sort = sortEl ? sortEl.value : 'newest';
 
+  const logicEl = document.getElementById('filterLogic');
+  const logic = logicEl && logicEl.textContent.trim() === 'AND' ? 'and' : 'or';
+
+  const fromEl = document.getElementById('filterDateFrom');
+  const toEl = document.getElementById('filterDateTo');
+
   return {
     tags: activeTags,
     source,
     sort,
+    logic,
+    dateFrom: fromEl ? fromEl.value : '',
+    dateTo: toEl ? toEl.value : '',
   };
 }
 
@@ -105,9 +118,18 @@ export function applyFilters(items, filters) {
 
   // Tag filtering (skip if "all" is selected)
   if (!filters.tags.includes('all') && filters.tags.length > 0) {
+    const matcher = filters.logic === 'and' ? 'every' : 'some';
     result = result.filter((item) =>
-      (item.tags || []).some((t) => filters.tags.includes(t))
+      filters.tags[matcher]((t) => (item.tags || []).includes(t))
     );
+  }
+
+  // Date range filtering
+  if (filters.dateFrom) {
+    result = result.filter((item) => (getDateKey(item) || '') >= filters.dateFrom);
+  }
+  if (filters.dateTo) {
+    result = result.filter((item) => (getDateKey(item) || '') <= filters.dateTo);
   }
 
   // Source filtering

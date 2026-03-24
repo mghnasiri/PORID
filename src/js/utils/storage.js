@@ -65,3 +65,42 @@ export function exportWatchlist() {
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 }
+
+// ---------------------------------------------------------------------------
+// Reading Status (per item, stored in localStorage)
+// ---------------------------------------------------------------------------
+
+const STATUS_KEY = 'porid-read-status';
+const STATUSES = ['new', 'reading', 'read'];
+
+/**
+ * Get reading status for an item.
+ * @param {string} id
+ * @returns {'new'|'reading'|'read'}
+ */
+export function getReadStatus(id) {
+  try {
+    const data = JSON.parse(localStorage.getItem(STATUS_KEY) || '{}');
+    return data[id] || 'new';
+  } catch { return 'new'; }
+}
+
+/**
+ * Cycle reading status: new → reading → read → new.
+ * @param {string} id
+ * @returns {'new'|'reading'|'read'} The new status
+ */
+export function cycleReadStatus(id) {
+  try {
+    const data = JSON.parse(localStorage.getItem(STATUS_KEY) || '{}');
+    const current = data[id] || 'new';
+    const next = STATUSES[(STATUSES.indexOf(current) + 1) % STATUSES.length];
+    if (next === 'new') {
+      delete data[id];
+    } else {
+      data[id] = next;
+    }
+    localStorage.setItem(STATUS_KEY, JSON.stringify(data));
+    return next;
+  } catch { return 'new'; }
+}

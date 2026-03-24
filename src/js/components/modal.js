@@ -34,6 +34,7 @@ function buildMeta(item) {
     if (item.authors) rows.push(['Authors', item.authors.join(', ')]);
     if (item.source) rows.push(['Source', item.source]);
     if (item.doi) rows.push(['DOI', item.doi]);
+    if (item.citation_count > 0) rows.push(['Citations', `${item.citation_count}`]);
     if (item.date) rows.push(['Published', formatDate(item.date)]);
   }
 
@@ -133,6 +134,35 @@ function buildModalContent(item, container) {
     });
     container.appendChild(tagsDiv);
   }
+
+  // -- Notes --
+  const noteKey = `porid-note-${item.id}`;
+  const noteSection = document.createElement('div');
+  noteSection.className = 'modal-detail__notes';
+
+  const noteLabel = document.createElement('label');
+  noteLabel.className = 'modal-meta__label';
+  noteLabel.textContent = 'Your Notes';
+  noteLabel.style.marginBottom = '4px';
+  noteLabel.style.display = 'block';
+
+  const noteArea = document.createElement('textarea');
+  noteArea.className = 'watchlist-note__input';
+  noteArea.placeholder = 'Add a private note about this item...';
+  noteArea.rows = 3;
+  noteArea.value = localStorage.getItem(noteKey) || '';
+  noteArea.addEventListener('input', () => {
+    const val = noteArea.value.trim();
+    if (val) {
+      localStorage.setItem(noteKey, val);
+    } else {
+      localStorage.removeItem(noteKey);
+    }
+  });
+
+  noteSection.appendChild(noteLabel);
+  noteSection.appendChild(noteArea);
+  container.appendChild(noteSection);
 
   // -- Actions --
   const actions = document.createElement('div');
