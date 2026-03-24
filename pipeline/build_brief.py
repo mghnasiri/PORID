@@ -38,8 +38,8 @@ def write_json(data: dict, path: Path) -> None:
         f.write("\n")
 
 
-def build_trends_section(trends: dict | None) -> dict | None:
-    """Build trends section from trends.json."""
+def build_trends_section(trends: dict | None, publications: list | None = None) -> dict | None:
+    """Build trends section from trends.json and publications.json."""
     if not trends or not trends.get("subdomains"):
         return None
 
@@ -49,26 +49,37 @@ def build_trends_section(trends: dict | None) -> dict | None:
 
     total_current = sum(s["current_quarter_count"] for s in subdomains)
 
-    # Generate headline
-    headline = f"{total_current} papers tracked this quarter"
+    # Count papers from the last 7 days
+    papers_this_week = 0
+    if publications:
+        cutoff = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%d")
+        papers_this_week = sum(1 for p in publications if (p.get("date", "") or "") >= cutoff)
+
+    # Generate headline — focus on the most interesting trend
+    headline = f"{papers_this_week} new papers this week across {len(subdomains)} subdomains"
     if accelerating:
         top = accelerating[0]
         pct = round(top["velocity"] * 100)
-        headline = f"{top['display_name']} surges with {top['current_quarter_count']} papers (+{pct}%)"
+        if pct > 0 and pct < 500:  # Filter unrealistic velocity
+            headline = f"{top['display_name']} leads with {top['current_quarter_count']} papers (+{pct}% vs last quarter)"
+        else:
+            headline = f"{papers_this_week} new papers this week; {top['display_name']} most active ({top['current_quarter_count']} this quarter)"
 
     return {
         "headline": headline,
         "accelerating": [
             {"tag": s["display_name"], "count": s["current_quarter_count"],
              "velocity": f"+{round(s['velocity'] * 100)}%"}
-            for s in accelerating[:3]
+            for s in accelerating[:5]
         ],
         "declining": [
             {"tag": s["display_name"], "count": s["current_quarter_count"],
              "velocity": f"{round(s['velocity'] * 100)}%"}
             for s in declining[:3]
         ],
-        "new_this_week": total_current,
+        "papers_this_week": papers_this_week,
+        "papers_this_quarter": total_current,
+        "total_subdomains": len(subdomains),
     }
 
 
@@ -103,10 +114,30 @@ def build_opportunities_section(opportunities: list, conferences: list) -> dict 
             f"{closing_count} deadline{'s' if closing_count != 1 else ''} closing this week"
         )
 
+    # Count opportunities by type
+    total_opps = len(opportunities or [])
+    by_source = {}
+    for opp in (opportunities or []):
+        src = opp.get("source", "other")
+        by_source[src] = by_source.get(src, 0) + 1
+
+    # Funding highlights (top NSF awards by amount)
+    funding_highlights = []
+    for opp in (opportunities or []):
+        if opp.get("funding_amount") and opp.get("source") == "NSF":
+            funding_highlights.append({
+                "title": opp.get("title", "")[:80],
+                "amount": opp.get("funding_amount", ""),
+                "institution": opp.get("institution", ""),
+            })
+    funding_highlights.sort(key=lambda x: x.get("amount", ""), reverse=True)
+
     return {
-        "headline": ", ".join(headline_parts) if headline_parts else "No imminent deadlines",
+        "headline": ", ".join(headline_parts) if headline_parts else f"{total_opps} active opportunities tracked",
         "closing_soon": closing_soon[:5],
-        "newly_added": [],
+        "total_opportunities": total_opps,
+        "by_source": by_source,
+        "funding_highlights": funding_highlights[:3],
     }
 
 
@@ -195,6 +226,7 @@ def main() -> None:
 
     # Load data
     trends = load_json(data_dir / "trends.json")
+    publications = load_json(data_dir / "publications.json") or []
     opportunities = load_json(data_dir / "opportunities.json") or []
     conferences = load_json(data_dir / "conferences.json") or []
     solvers = load_json(data_dir / "solvers.json")
@@ -210,7 +242,7 @@ def main() -> None:
         "sections": {},
     }
 
-    trends_section = build_trends_section(trends)
+    trends_section = build_trends_section(trends, publications)
     if trends_section:
         brief["sections"]["trends"] = trends_section
 

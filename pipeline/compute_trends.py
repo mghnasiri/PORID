@@ -53,8 +53,46 @@ def classify_velocity(v: float) -> str:
         return "stable"
 
 
+# Proper display names for OR subdomain tags
+TAG_DISPLAY_NAMES: dict[str, str] = {
+    "linear-programming": "Linear Programming",
+    "integer-programming": "Integer Programming",
+    "metaheuristics": "Metaheuristics",
+    "network-optimization": "Network Optimization",
+    "scheduling": "Scheduling",
+    "vehicle-routing": "Vehicle Routing",
+    "stochastic": "Stochastic Optimization",
+    "ml-for-or": "ML for Optimization",
+    "healthcare-or": "Healthcare OR",
+    "supply-chain": "Supply Chain",
+    "facility-location": "Facility Location",
+    "multi-objective": "Multi-Objective Optimization",
+    "decomposition": "Decomposition Methods",
+    "constraint-programming": "Constraint Programming",
+    "game-theory": "Game Theory",
+    "survey": "Surveys & Reviews",
+    "general-or": "General OR",
+    # arXiv category codes
+    "math.OC": "Mathematical Optimization",
+    "cs.AI": "Artificial Intelligence",
+    "cs.DS": "Data Structures & Algorithms",
+    "stat.ML": "Statistical ML",
+    "cs.LG": "Machine Learning",
+    "eess.SY": "Systems & Control",
+    "cs.DM": "Discrete Mathematics",
+}
+
+# Tags to exclude from trend analysis (too generic or just a catch-all)
+EXCLUDED_TAGS: set[str] = {
+    "general-or",       # Catch-all tag, adds noise
+    "survey",           # Meta-category, not a subdomain
+}
+
+
 def format_tag_display(tag: str) -> str:
-    """Convert tag slug to display name."""
+    """Convert tag slug to human-readable display name."""
+    if tag in TAG_DISPLAY_NAMES:
+        return TAG_DISPLAY_NAMES[tag]
     return tag.replace("-", " ").replace("_", " ").title()
 
 
@@ -127,6 +165,10 @@ def compute_trends(publications: list[dict], window_days: int = 90, min_papers: 
     # Build output
     subdomains = []
     for tag, stats in tag_stats.items():
+        # Skip excluded tags (too generic or catch-all)
+        if tag in EXCLUDED_TAGS:
+            continue
+
         total = len(stats["all"])
         if total < min_papers:
             continue
