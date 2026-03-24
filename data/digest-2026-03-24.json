@@ -1,6 +1,6 @@
 {
   "date": "2026-03-24",
-  "generated_at": "2026-03-24T16:29:34.061880+00:00",
+  "generated_at": "2026-03-24T22:48:40.398963+00:00",
   "publications": [
     {
       "id": "s2-6580a5c8d643",
@@ -176,6 +176,28 @@
       "score": 50.0
     },
     {
+      "id": "crossref-10.1287-ijoc.2024.0796",
+      "title": "Fast Multinomial Logistic Regression with Group Sparsity",
+      "authors": [
+        "Fu, S.",
+        "Li, S.",
+        "Yu, K.",
+        "Chen, P.",
+        "Ye, Z."
+      ],
+      "abstract": "Multinomial logistic regression (MLR) is a prevalent method for modeling categorical outcomes, but it often encounters issues with parameter nonidentifiability. To combat this, various models, such as reference-based MLR (RMLR), constraint-based MLR (CMLR), and simplex-based MLR (SMLR), have been proposed. When dealing with high-dimensional groupwise covariates, the application of group Least Absolute Shrinkage and Selection Operator-penalized MLRs becomes essential. However, group RMLR presents challenges due to its subjective reference selection, whereas group CMLR is computationally intensive. We introduce the group SMLR (GSMLR) in this paper, emphasizing its efficient parameterization and computational advantages. GSMLR not only eliminates the need for reference selection seen in group RMLR, but also matches the results of group CMLR. We provide a definitive oracle error bound for GSMLR estimators and further optimize its performance with a rapid algorithm that combines groupwise coordinate descent strategy with enhanced safe screening rules. Our numerical results demonstrate that GSMLR excels in both prediction accuracy and computational efficiency, making it a valuable tool for high-dimensional data analysis and decision support in complex domains such as operations management and financial risk assessment.\n                  History: Accepted by Ram Ramesh, Area Editor for Data Science and Machine Learning.\n                  Funding: Financial support from the National Natural Science Foundation of China [Grants 72401253 and 12501369], the Singapore Ministry of Education Academic Research Fund Tier 2 [Grants A-8001052-00-00 and A-8002472-00-00], and the Shenzhen Wukong Investment Management Co. Ltd. is gratefully acknowledged.\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2024.0796 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2024.0796 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-03-24",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2024.0796",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2024.0796",
+      "score": 50.0
+    },
+    {
       "id": "arxiv-2603.22113",
       "title": "Optimization-based strategic planning for geographical healthcare accessibility in developing countries: a literature review",
       "authors": [
@@ -218,30 +240,6 @@
       "type": "publication",
       "doi": "10.48550/arXiv.2603.21913",
       "arxiv_id": "2603.21913v1",
-      "score": 45.0
-    },
-    {
-      "id": "arxiv-2603.21834",
-      "title": "A hybrid wavelet-based physics-informed neural network for portfolio management",
-      "authors": [
-        "Bahadur Yadav",
-        "Mahaprasad Mohanty",
-        "Ratikanta Behera",
-        "Sanjay Kumar Mohanty"
-      ],
-      "abstract": "In this paper, we present a Hybrid Wavelet-based Physics-Informed Neural Networks (HW-PINNs) framework for portfolio management that provides a promising alternative to Physics-Informed Neural Networks (PINNs). Here, we first discuss the generalized framework of the Merton jump diffusion model and the associated HW-PINNs, followed by the one-dimensional case of a European option. Our work adapts the HW-PINN framework to the Merton jump-diffusion model for a European option, using a simplified direct coefficient optimization strategy, a mathematically corrected log-space formulation, and an efficient FFT -based computation of the integro-differential operator. Through numerical experiments across realistic market scenarios, we show that our proposed model achieves high accuracy and robustness, with a mean relative error of 0.27\\% in low jump intensity scenarios compared to high-fidelity benchmarks. Our results validate that the implementation of this specific HW-PINN framework is a computationally efficient and reliable tool for pricing derivatives in markets with high jump risk. In addition, we further discuss risk analysis using Value at Risk (VaR) and Conditional Value at Risk (CVaR), which provide insights into downside risk across different market scenarios.",
-      "date": "2026-03-23",
-      "source": "arXiv",
-      "source_detail": "math.OC",
-      "url": "http://arxiv.org/abs/2603.21834v1",
-      "tags": [
-        "math.OC",
-        "stochastic",
-        "ml-for-or"
-      ],
-      "type": "publication",
-      "doi": "10.48550/arXiv.2603.21834",
-      "arxiv_id": "2603.21834v1",
       "score": 45.0
     }
   ],
@@ -294,6 +292,27 @@
       "type": "conference",
       "format": "in-person",
       "score": 10.0
+    },
+    {
+      "id": "cordis-101153187",
+      "title": "[HORIZON-MSCA-2023-PF-01] NeurExCo: Synergizing Neural Network Theory and Combinatorial Optimization via Extension Complexity",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101153187",
+      "deadline": "2026-03-31",
+      "date": "2026-03-24",
+      "project_start": "2024-04-01",
+      "project_end": "2026-03-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "ml-for-or"
+      ],
+      "description": "Artificial intelligence is changing our lives. Artificial neural networks are present and entering various fields of modern technology such as medicine, engineering, education and many more. Even a small-scale theoretical understanding of why and how neural networks succeed in practice can have a considerable impact on the future development of such technologies.\n\n            In contrast, combinatorial optimization is a well-established discipline at the intersection of mathematics and computer ",
+      "score": 35.0
     }
   ],
   "conferences": [
@@ -330,13 +349,35 @@
       "score": 10.0
     }
   ],
-  "opportunities": [],
+  "opportunities": [
+    {
+      "id": "cordis-101153187",
+      "title": "[HORIZON-MSCA-2023-PF-01] NeurExCo: Synergizing Neural Network Theory and Combinatorial Optimization via Extension Complexity",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101153187",
+      "deadline": "2026-03-31",
+      "date": "2026-03-24",
+      "project_start": "2024-04-01",
+      "project_end": "2026-03-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "ml-for-or"
+      ],
+      "description": "Artificial intelligence is changing our lives. Artificial neural networks are present and entering various fields of modern technology such as medicine, engineering, education and many more. Even a small-scale theoretical understanding of why and how neural networks succeed in practice can have a considerable impact on the future development of such technologies.\n\n            In contrast, combinatorial optimization is a well-established discipline at the intersection of mathematics and computer ",
+      "score": 35.0
+    }
+  ],
   "stats": {
     "publications": 10,
     "software": 1,
-    "deadlines": 2,
+    "deadlines": 3,
     "conferences": 2,
-    "opportunities": 0,
-    "total": 13
+    "opportunities": 1,
+    "total": 14
   }
 }

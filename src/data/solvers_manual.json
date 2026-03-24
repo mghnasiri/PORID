@@ -311,6 +311,86 @@
       "description": "General Algebraic Modeling System for large-scale optimization",
       "update_source": "manual",
       "tags": ["commercial", "modeling"]
+    },
+    {
+      "id": "cvxpy",
+      "name": "CVXPY",
+      "vendor": "Stanford University",
+      "website": "https://www.cvxpy.org",
+      "current_version": "1.5.0",
+      "release_date": "2024-09-01",
+      "license": {
+        "type": "Apache 2.0",
+        "academic_free": true
+      },
+      "open_source": true,
+      "problem_types": ["LP", "QP", "SOCP", "SDP", "MIP"],
+      "language_bindings": ["Python"],
+      "github": "cvxpy/cvxpy",
+      "pypi_package": "cvxpy",
+      "description": "Python-embedded modeling language for convex optimization, widely used in ML and finance",
+      "update_source": "github_api",
+      "tags": ["open-source", "modeling", "convex", "python"]
+    },
+    {
+      "id": "knitro",
+      "name": "Artelys Knitro",
+      "vendor": "Artelys",
+      "website": "https://www.artelys.com/solvers/knitro/",
+      "current_version": "14.1",
+      "release_date": "2024-10-01",
+      "license": {
+        "type": "commercial",
+        "academic_free": true,
+        "academic_note": "Free academic license"
+      },
+      "open_source": false,
+      "problem_types": ["LP", "QP", "MINLP"],
+      "language_bindings": ["Python", "C", "C++", "Java", ".NET", "MATLAB", "R", "Julia"],
+      "github": null,
+      "pypi_package": "knitro",
+      "description": "Leading nonlinear optimization solver, strong on MINLP and NLP",
+      "update_source": "manual",
+      "tags": ["commercial", "nonlinear", "minlp"]
+    },
+    {
+      "id": "ipopt",
+      "name": "Ipopt",
+      "vendor": "COIN-OR Foundation",
+      "website": "https://coin-or.github.io/Ipopt/",
+      "current_version": "3.14.14",
+      "release_date": "2024-04-01",
+      "license": {
+        "type": "EPL-2.0",
+        "academic_free": true
+      },
+      "open_source": true,
+      "problem_types": ["LP", "QP", "MINLP"],
+      "language_bindings": ["C", "C++", "Python", "Julia", "MATLAB", "R"],
+      "github": "coin-or/Ipopt",
+      "pypi_package": "ipopt",
+      "description": "Interior Point Optimizer for large-scale nonlinear programming",
+      "update_source": "github_api",
+      "tags": ["open-source", "nonlinear", "coin-or"]
+    },
+    {
+      "id": "optaplanner",
+      "name": "Timefold (ex-OptaPlanner)",
+      "vendor": "Timefold",
+      "website": "https://timefold.ai",
+      "current_version": "1.8.0",
+      "release_date": "2024-10-01",
+      "license": {
+        "type": "Apache 2.0",
+        "academic_free": true
+      },
+      "open_source": true,
+      "problem_types": ["CP", "VRP"],
+      "language_bindings": ["Java", "Python", "Kotlin"],
+      "github": "TimefoldAI/timefold-solver",
+      "description": "AI constraint solver for planning and scheduling, fork of OptaPlanner",
+      "update_source": "github_api",
+      "tags": ["open-source", "scheduling", "routing", "constraint"]
     }
   ]
 }
