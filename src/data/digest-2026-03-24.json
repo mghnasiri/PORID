@@ -1,0 +1,343 @@
+{
+  "date": "2026-03-24",
+  "generated_at": "2026-03-24T08:01:40.777158+00:00",
+  "publications": [
+    {
+      "id": "s2-6580a5c8d643",
+      "title": "Tackling nonlinearities in microgrid codesign through linear programming approaches",
+      "authors": [
+        "Camille Bergougnoux",
+        "B. Sareni",
+        "S. Suárez",
+        "X. Roboam",
+        "Katia Besnard"
+      ],
+      "abstract": "\n \n A microgrid system is composed of several components such as producers or storages, destined to age depending on how they are used, through the energy management system (EMS) which can be ruled by optimization. According to the modeling granularity and frequency of updating components data, aging consideration introduces nonlinearities. The characteristics of certain case studies – such as increased energy demand or uncertainties in renewable production – may require long-term simulations. In some cases, specific constraints necessitate the use of a mixed-integer linear programming (MILP) formulation. As a result, computational times can become very long, hindering for search of the solutions. This study aims to build an optimization framework that addreses these various challenges, focusing Toulouse airport study case.\n \n \n \n This paper investigates a microgrid codesign optimization approach hybridizing linear programming (LP) and MILP for optimizing both sizing and EMS decision variables. This approach, built to find a compromise between computational calculation time and precision on technical-economic considerations, takes account of nonlinearities related to the battery capacity degradation and overruns of subscribed power.\n \n \n \n Our case study deals with an airport microgrid, simulated over 22 years old, using photovoltaic and wind turbine energy productions to be become an autonomous platform. This method is effective and robust, integrating battery replacement costs, which may increase the net present cost by up to 20%. The obtained results show the feasibility of achieving up to 60% energy autonomy.\n \n \n \n This contribution introduces an original way of managing nonlinearities in LP optimization models, including both quotient-type and product-type (bilinear) relationships between decision variables, converting an optimization variable into an input data known in advance.\n",
+      "date": "2026-03-23",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1108/compel-11-2025-0526",
+      "tags": [
+        "linear-programming",
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1108/compel-11-2025-0526",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2603.21988",
+      "title": "TREX: Trajectory Explanations for Multi-Objective Reinforcement Learning",
+      "authors": [
+        "Dilina Rajapakse",
+        "Juan C. Rosero",
+        "Ivana Dusparic"
+      ],
+      "abstract": "Reinforcement Learning (RL) has demonstrated its ability to solve complex decision-making problems in a variety of domains, by optimizing reward signals obtained through interaction with an environment. However, many real-world scenarios involve multiple, potentially conflicting objectives that cannot be easily represented by a single scalar reward. Multi-Objective Reinforcement Learning (MORL) addresses this limitation by enabling agents to optimize several objectives simultaneously, explicitly reasoning about trade-offs between them. However, the ``black box\" nature of the RL models makes the decision process behind chosen objective trade-offs unclear. Current Explainable Reinforcement Learning (XRL) methods are typically designed for single scalar rewards and do not account for explanations with respect to distinct objectives or user preferences. To address this gap, in this paper we propose TREX, a Trajectory based Explainability framework to explain Multi-objective Reinforcement Learning policies, based on trajectory attribution.   TREX generates trajectories directly from the learned expert policy, across different user preferences and clusters them into semantically meaningful temporal segments. We quantify the influence of these behavioural segments on the Pareto trade-off by training complementary policies that exclude specific clusters, measuring the resulting relative deviation on the observed rewards and actions compared to the original expert policy. Experiments on multi-objective MuJoCo environments - HalfCheetah, Ant and Swimmer, demonstrate the framework's ability to isolate and quantify the specific behavioural patterns.",
+      "date": "2026-03-23",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2603.21988v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.21988",
+      "arxiv_id": "2603.21988v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2603.21877",
+      "title": "P^2O: Joint Policy and Prompt Optimization",
+      "authors": [
+        "Xinyu Lu",
+        "Kaiqi Zhang",
+        "Jinglin Yang",
+        "Boxi Cao",
+        "Yaojie Lu",
+        "Hongyu Lin",
+        "Min He",
+        "Xianpei Han",
+        "Le Sun"
+      ],
+      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has emerged as a powerful paradigm for enhancing the reasoning capabilities of Large Language Models (LLMs). However, vanilla RLVR suffers from inefficient exploration, particularly when confronting \"hard samples\" that yield nearzero success rates. In such scenarios, the reliance on sparse outcome rewards typically results in zero-advantage estimates, effectively starving the model of supervision signals despite the high informational value of these instances. To address this, we propose P^2O, a novel framework that synergizes Prompt Optimization with Policy Optimization. P^2O identifies hard samples during training iterations and leverages the GeneticPareto (GEPA) prompt optimization algorithm to evolve prompt templates that guide the model toward discovering successful trajectories. Crucially, unlike traditional prompt engineering methods that rely on input augmentation, P^2O distills the reasoning gains induced by these optimized prompts directly into the model parameters. This mechanism provides denser positive supervision signals for hard samples and accelerates convergence. Extensive experiments demonstrate that P^2O not only achieves superior performance on in-distribution datasets but also exhibits strong generalization, yielding substantial improvements on out-of-distribution benchmarks (+4.7% avg.).",
+      "date": "2026-03-23",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2603.21877v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.21877",
+      "arxiv_id": "2603.21877v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2603.22210",
+      "title": "Route-Phasing-Split-Encoded Genetic Algorithm for Multi-Satellite On-Orbit Servicing Mission Planning",
+      "authors": [
+        "Shridhar Velhal",
+        "Avijit Banerjee",
+        "George Nikolakopoulos"
+      ],
+      "abstract": "This article addresses multi-servicer on-orbit servicing mission planning in geosynchronous Earth orbit, where routing decisions are tightly coupled with time-dependent orbital phasing and strict propellant and mission-duration constraints. We propose a Route-Phasing-Split Genetic Algorithm (RPS-GA) that simultaneously optimizes target sequencing, discrete phasing rotation decisions (i.e., the number of phasing revolutions/waiting cycles), and route partitioning across multiple servicing spacecrafts (SSCs). An RPS triplet chromosome encodes route order, phasing rotations, and route splits in a unified structure, enabling split-aware recombination without disrupting feasible multi-servicer route blocks. Feasibility is enforced through a constraint-aware fitness function that ranks feasible solutions based on total $ΔV$, while penalizing propellant and mission duration violations, using aggregate and imbalance penalties. This formulation discourages the concentration of violations on a single servicing spacecraft (SSC). Once a feasible best solution is identified, it is preserved as feasible in subsequent generations, thereby enhancing convergence stability. The framework incorporates split-aware crossover, mutation and a regret-based Large Neighborhood Search for local intensification. Experiments on representative GEO servicing scenarios demonstrate that RPS-GA produces feasible multi-servicer plans with substantially improved fuel efficiency, reducing total $ΔV$ by $24.5\\%$, (from $1956.36 \\ m/s$ to $ 1476.32\\ m/s $) compared with a state-of-the-art LNS-AGA baseline.",
+      "date": "2026-03-23",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2603.22210v1",
+      "tags": [
+        "eess.SY",
+        "metaheuristics",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.22210",
+      "arxiv_id": "2603.22210v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2603.21810",
+      "title": "Partial Attention in Deep Reinforcement Learning for Safe Multi-Agent Control",
+      "authors": [
+        "Turki Bin Mohaya",
+        "Peter Seiler"
+      ],
+      "abstract": "Attention mechanisms excel at learning sequential patterns by discriminating data based on relevance and importance. This provides state-of-the-art performance in advanced generative artificial intelligence models. This paper applies this concept of an attention mechanism for multi-agent safe control. We specifically consider the design of a neural network to control autonomous vehicles in a highway merging scenario. The environment is modeled as a Decentralized Partially Observable Markov Decision Process (Dec-POMDP). Within a QMIX framework, we include partial attention for each autonomous vehicle, thus allowing each ego vehicle to focus on the most relevant neighboring vehicles. Moreover, we propose a comprehensive reward signal that considers the global objectives of the environment (e.g., safety and vehicle flow) and the individual interests of each agent. Simulations are conducted in the Simulation of Urban Mobility (SUMO). The results show better performance compared to other driving algorithms in terms of safety, driving speed, and reward.",
+      "date": "2026-03-23",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2603.21810v1",
+      "tags": [
+        "eess.SY",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.21810",
+      "arxiv_id": "2603.21810v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2603.21545",
+      "title": "Auction-Based Task Allocation with Energy-Conscientious Trajectory Optimization for AMR Fleets",
+      "authors": [
+        "Jiachen Li",
+        "Soovadeep Bakshi",
+        "Jian Chu",
+        "Shihao Li",
+        "Dongmei Chen"
+      ],
+      "abstract": "This paper presents a hierarchical two-stage framework for multi-robot task allocation and trajectory optimization in asymmetric task spaces: (1) a sequential auction allocates tasks using closed-form bid functions, and (2) each robot independently solves an optimal control problem for energy-minimal trajectories with a physics-based battery model, followed by a collision avoidance refinement step using pairwise proximity penalties. Event-triggered warm-start rescheduling with bounded trigger frequency handles robot faults, priority arrivals, and energy deviations. Across 505 scenarios with 2-20 robots and up to 100 tasks on three factory layouts, both energy- and distance-based auction variants achieve 11.8% average energy savings over nearest-task allocation, with rescheduling latency under 10 ms. The central finding is that bid-metric performance is regime-dependent: in uniform workspaces, distance bids outperform energy bids by 3.5% (p < 0.05, Wilcoxon) because a 15.7% closed-form approximation error degrades bid ranking accuracy to 87%; however, when workspace friction heterogeneity is sufficient (r < 0.85 energy-distance correlation), a zone-aware energy bid outperforms distance bids by 2-2.4%. These results provide practitioner guidance: use distance bids in near-uniform terrain and energy-aware bids when friction variation is significant.",
+      "date": "2026-03-23",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2603.21545v1",
+      "tags": [
+        "cs.RO",
+        "scheduling",
+        "stochastic",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.21545",
+      "arxiv_id": "2603.21545v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2603.22113",
+      "title": "Optimization-based strategic planning for geographical healthcare accessibility in developing countries: a literature review",
+      "authors": [
+        "Laura Davila-Pena",
+        "Maria Paola Scaparra",
+        "Dick den Hertog"
+      ],
+      "abstract": "Access to healthcare facilities is a critical issue in developing countries, where limited resources and significant challenges hinder progress toward universal health coverage, one of the targets pursued by the United Nations. As a result, the Operations Research (OR) community has become increasingly active in addressing this issue, employing various techniques, particularly optimization. However, making long-term strategic decisions remains challenging, as these often require substantial investments and directly affect large populations. Moreover, much of the existing literature is predominantly theoretical. This paper reviews studies published over the past two decades that use optimization techniques to inform strategic planning decisions aimed at improving health accessibility and specifically contain a case study conducted in a developing country. The review explores the nature of the problems tackled, considering factors such as the level of care, service delivery channels, objectives, criteria, or potential hierarchy, uncertainty, and multi-period settings. Additionally, we discuss the modeling approaches, solution methodologies, and the extent of practical implementation. The goal of this survey is not only to summarize existing work but also to provide a roadmap for future research, offering valuable insights for OR practitioners in the field.",
+      "date": "2026-03-23",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2603.22113v1",
+      "tags": [
+        "math.OC",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.22113",
+      "arxiv_id": "2603.22113v1",
+      "score": 45.0
+    },
+    {
+      "id": "arxiv-2603.21913",
+      "title": "Collision-Free Velocity Scheduling for Multi-Agent Systems on Predefined Routes via Inexact-Projection ADMM",
+      "authors": [
+        "Seungyeop Lee",
+        "Jong-Han Kim"
+      ],
+      "abstract": "In structured multi-agent transportation systems, agents often must follow predefined routes, making spatial rerouting undesirable or impossible. This paper addresses route-constrained multi-agent coordination by optimizing waypoint passage times while preserving each agent's assigned waypoint order and nominal route assignment. A differentiable surrogate trajectory model maps waypoint timings to smooth position profiles and captures first-order tracking lag, enabling pairwise safety to be encoded through distance-based penalties evaluated on a dense temporal grid spanning the mission horizon. The resulting nonlinear and nonconvex velocity-scheduling problem is solved using an inexact-projection Alternating Direction Method of Multipliers (ADMM) algorithm that combines structured timing updates with gradient-based collision-correction steps and avoids explicit integer sequencing variables. Numerical experiments on random-crossing, bottleneck, and graph-based network scenarios show that the proposed method computes feasible and time-efficient schedules across a range of congestion levels and yields shorter mission completion times than a representative hierarchical baseline in the tested bottleneck cases.",
+      "date": "2026-03-23",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2603.21913v1",
+      "tags": [
+        "cs.RO",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.21913",
+      "arxiv_id": "2603.21913v1",
+      "score": 45.0
+    },
+    {
+      "id": "arxiv-2603.21834",
+      "title": "A hybrid wavelet-based physics-informed neural network for portfolio management",
+      "authors": [
+        "Bahadur Yadav",
+        "Mahaprasad Mohanty",
+        "Ratikanta Behera",
+        "Sanjay Kumar Mohanty"
+      ],
+      "abstract": "In this paper, we present a Hybrid Wavelet-based Physics-Informed Neural Networks (HW-PINNs) framework for portfolio management that provides a promising alternative to Physics-Informed Neural Networks (PINNs). Here, we first discuss the generalized framework of the Merton jump diffusion model and the associated HW-PINNs, followed by the one-dimensional case of a European option. Our work adapts the HW-PINN framework to the Merton jump-diffusion model for a European option, using a simplified direct coefficient optimization strategy, a mathematically corrected log-space formulation, and an efficient FFT -based computation of the integro-differential operator. Through numerical experiments across realistic market scenarios, we show that our proposed model achieves high accuracy and robustness, with a mean relative error of 0.27\\% in low jump intensity scenarios compared to high-fidelity benchmarks. Our results validate that the implementation of this specific HW-PINN framework is a computationally efficient and reliable tool for pricing derivatives in markets with high jump risk. In addition, we further discuss risk analysis using Value at Risk (VaR) and Conditional Value at Risk (CVaR), which provide insights into downside risk across different market scenarios.",
+      "date": "2026-03-23",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2603.21834v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.21834",
+      "arxiv_id": "2603.21834v1",
+      "score": 45.0
+    },
+    {
+      "id": "arxiv-2603.22214",
+      "title": "Evaluating the Reliability and Fidelity of Automated Judgment Systems of Large Language Models",
+      "authors": [
+        "Tom Biskupski",
+        "Stephan Kleber"
+      ],
+      "abstract": "A Large Language Model (LLM) as judge evaluates the quality of victim Machine Learning (ML) models, specifically LLMs, by analyzing their outputs. An LLM as judge is the combination of one model and one specifically engineered judge prompt that contains the criteria for the analysis. The resulting automation of the analysis scales up the complex evaluation of the victim models' free-form text outputs by faster and more consistent judgments compared to human reviewers. Thus, quality and security assessments of LLMs can cover a wide range of the victim models' use cases. Being a comparably new technique, LLMs as judges lack a thorough investigation for their reliability and agreement to human judgment.   Our work evaluates the applicability of LLMs as automated quality assessors of victim LLMs. We test the efficacy of 37 differently sized conversational LLMs in combination with 5 different judge prompts, the concept of a second-level judge, and 5 models fine-tuned for the task as assessors. As assessment objective, we curate datasets for eight different categories of judgment tasks and the corresponding ground-truth labels based on human assessments. Our empirical results show a high correlation of LLMs as judges with human assessments, when combined with a suitable prompt, in particular for GPT-4o, several open-source models with $\\geqslant$ 32B parameters, and a few smaller models like Qwen2.5 14B.",
+      "date": "2026-03-23",
+      "source": "arXiv",
+      "source_detail": "cs.CR",
+      "url": "http://arxiv.org/abs/2603.22214v1",
+      "tags": [
+        "cs.CR",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.22214",
+      "arxiv_id": "2603.22214v1",
+      "score": 45.0
+    }
+  ],
+  "software": [
+    {
+      "id": "gh-cvxpy-cvxpy-1.8.2",
+      "name": "CVXPY",
+      "version": "1.8.2",
+      "date": "2026-03-22",
+      "changelog": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 term for indefinite P (#3150)\n- Fix backward() setting param.gradient to float 0.0 instead of zero ndarray (#3159)\n- Fix Dgp2Dcp.param_backward KeyError when log-param not in dparams (#3164)\n- Fix reshape._infer_shape() for N-D shapes with -1 (#3165)\n- Reject sparse/diag variables with pos/neg attribu…",
+      "url": "https://github.com/cvxpy/cvxpy/releases/tag/v1.8.2",
+      "source": "GitHub",
+      "tags": [
+        "library",
+        "general-or"
+      ],
+      "type": "software",
+      "score": 20.0
+    }
+  ],
+  "deadlines": [
+    {
+      "id": "conf-002",
+      "name": "EURO 2026",
+      "dates": "June 28 - July 1, 2026",
+      "location": "Trondheim, Norway",
+      "cfp_deadline": "2026-03-31",
+      "url": "https://www.euro-online.org/",
+      "source": "config",
+      "tags": [
+        "conference",
+        "general-or"
+      ],
+      "type": "conference",
+      "format": "in-person",
+      "score": 10.0
+    },
+    {
+      "id": "conf-005",
+      "name": "CP 2026",
+      "dates": "August 31 - September 4, 2026",
+      "location": "Lund, Sweden",
+      "cfp_deadline": "2026-04-15",
+      "url": "https://www.a4cp.org/",
+      "source": "config",
+      "tags": [
+        "conference",
+        "general-or"
+      ],
+      "type": "conference",
+      "format": "in-person",
+      "score": 10.0
+    }
+  ],
+  "conferences": [
+    {
+      "id": "conf-002",
+      "name": "EURO 2026",
+      "dates": "June 28 - July 1, 2026",
+      "location": "Trondheim, Norway",
+      "cfp_deadline": "2026-03-31",
+      "url": "https://www.euro-online.org/",
+      "source": "config",
+      "tags": [
+        "conference",
+        "general-or"
+      ],
+      "type": "conference",
+      "format": "in-person",
+      "score": 10.0
+    },
+    {
+      "id": "conf-005",
+      "name": "CP 2026",
+      "dates": "August 31 - September 4, 2026",
+      "location": "Lund, Sweden",
+      "cfp_deadline": "2026-04-15",
+      "url": "https://www.a4cp.org/",
+      "source": "config",
+      "tags": [
+        "conference",
+        "general-or"
+      ],
+      "type": "conference",
+      "format": "in-person",
+      "score": 10.0
+    }
+  ],
+  "opportunities": [],
+  "stats": {
+    "publications": 10,
+    "software": 1,
+    "deadlines": 2,
+    "conferences": 2,
+    "opportunities": 0,
+    "total": 13
+  }
+}
