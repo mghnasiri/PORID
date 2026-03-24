@@ -21,6 +21,9 @@ import { render as renderTrends } from './modules/trends.js';
 import { render as renderDatasets } from './modules/datasets.js';
 import { render as renderSeminars } from './modules/seminars.js';
 import { render as renderChangelog } from './modules/changelog.js';
+import { render as renderFunding } from './modules/funding.js';
+import { render as renderAwards } from './modules/awards.js';
+import { render as renderResources } from './modules/resources.js';
 import { initSearch, wireSearchInput } from './modules/search.js';
 
 // --- Component / utility imports ---
@@ -40,11 +43,15 @@ const state = {
     software: [],
     conferences: [],
     opportunities: [],
+    funding: [],
+    awards: [],
+    resources: [],
+    special_issues: [],
   },
   activeTab: 'publications',
 };
 
-const TABS = ['publications', 'software', 'conferences', 'opportunities', 'seminars', 'watchlist', 'digest', 'datasets', 'trends', 'changelog'];
+const TABS = ['publications', 'software', 'conferences', 'opportunities', 'seminars', 'watchlist', 'digest', 'datasets', 'trends', 'funding', 'awards', 'resources', 'changelog'];
 
 const DATA_FILES = {
   publications: './data/publications.json',
@@ -55,6 +62,9 @@ const DATA_FILES = {
   seminars: './data/seminars.json',
   awards: './data/awards.json',
   blogs: './data/blogs.json',
+  funding: './data/funding.json',
+  resources: './data/resources.json',
+  special_issues: './data/special_issues.json',
 };
 
 // Module render function map
@@ -351,6 +361,30 @@ function renderView() {
     return;
   }
 
+  // --- Funding: no filter bar, dedicated module ---
+  if (tab === 'funding') {
+    filterContainer.textContent = '';
+    renderFunding(contentEl, state.data.funding || [], {});
+    requestAnimationFrame(() => animateCards());
+    return;
+  }
+
+  // --- Awards: no filter bar, dedicated module ---
+  if (tab === 'awards') {
+    filterContainer.textContent = '';
+    renderAwards(contentEl, state.data.awards || [], {});
+    requestAnimationFrame(() => animateCards());
+    return;
+  }
+
+  // --- Resources: no filter bar, dedicated module ---
+  if (tab === 'resources') {
+    filterContainer.textContent = '';
+    renderResources(contentEl, state.data.resources || [], {});
+    requestAnimationFrame(() => animateCards());
+    return;
+  }
+
   // --- Changelog: no filter bar, dedicated module ---
   if (tab === 'changelog') {
     filterContainer.textContent = '';
@@ -386,7 +420,7 @@ function renderView() {
   const renderer = MODULE_RENDERERS[tab];
   if (renderer) {
     if (tab === 'conferences') {
-      renderer(contentEl, data, filters, state.data.awards || []);
+      renderer(contentEl, data, filters, state.data.awards || [], state.data.special_issues || []);
     } else {
       renderer(contentEl, data, filters);
     }

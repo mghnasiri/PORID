@@ -182,12 +182,50 @@ function renderAwardCard(item) {
 }
 
 /**
+ * Render a special issue card. Trusted local data from special_issues.json.
+ */
+function renderSpecialIssueCard(item) {
+  const deadlineDays = item.deadline ? daysUntil(item.deadline) : null;
+  let deadlineHtml = '';
+  if (deadlineDays !== null && deadlineDays > 0) {
+    const urgencyClass = deadlineDays <= 30 ? 'cfp-badge--urgent' : '';
+    deadlineHtml = `<span class="cfp-badge ${urgencyClass}">${deadlineDays} days left</span>`;
+  } else if (deadlineDays !== null && deadlineDays <= 0) {
+    deadlineHtml = '<span class="cfp-badge cfp-badge--passed">Deadline Passed</span>';
+  }
+
+  const topicTags = (item.topics || []).map((t) => `<span class="tag">${t}</span>`).join('');
+
+  return `
+    <article class="card card--special-issue" data-type="special_issue">
+      <div class="card__header">
+        <span class="journal-badge">${item.journal}</span>
+        <h3 class="card__title">${item.name}</h3>
+        ${deadlineHtml}
+      </div>
+      <div class="conf-meta">
+        ${item.deadline ? `
+        <div class="conf-meta__row">
+          <span class="conf-meta__icon">&#9200;</span>
+          <span>Submission Deadline: ${formatDate(item.deadline)}</span>
+        </div>` : ''}
+      </div>
+      <div class="card__tags">${topicTags}</div>
+      <div class="card__actions">
+        ${item.url ? `<a href="${item.url}" target="_blank" rel="noopener" class="card__action">&#8599; Journal Page</a>` : ''}
+      </div>
+    </article>
+  `;
+}
+
+/**
  * @param {HTMLElement} container
  * @param {Object[]} data - Conferences data
  * @param {Object} filters
  * @param {Object[]} [awards] - Awards data to render below conferences
+ * @param {Object[]} [specialIssues] - Special issues data
  */
-export function render(container, data, filters, awards) {
+export function render(container, data, filters, awards, specialIssues) {
   let items = [...data];
 
   // Check notifications at render time
@@ -230,6 +268,17 @@ export function render(container, data, filters, awards) {
     return;
   }
 
+  // Calendar subscribe button
+  const calBtn = document.createElement('div');
+  calBtn.className = 'conf-cal-subscribe';
+  const calLink = document.createElement('a');
+  calLink.href = './data/conferences.ics';
+  calLink.className = 'card__action card__action--cal';
+  calLink.textContent = '\uD83D\uDCC5 Subscribe to Calendar';
+  calLink.title = 'Download iCal feed for all OR conferences';
+  calBtn.appendChild(calLink);
+  container.appendChild(calBtn);
+
   // Conferences grid — all data from trusted local JSON
   if (items.length > 0) {
     const confGrid = document.createElement('div');
@@ -266,5 +315,44 @@ export function render(container, data, filters, awards) {
     section.appendChild(awardsGrid);
 
     container.appendChild(section);
+  }
+
+  // Special Issues section below awards — trusted local data from special_issues.json
+  if (specialIssues && specialIssues.length > 0) {
+    const siSection = document.createElement('div');
+    siSection.className = 'special-issues-section';
+    const sortedSI = [...specialIssues].sort((a, b) => {
+      const da = a.deadline ? new Date(a.deadline) : new Date('9999-12-31');
+      const db = b.deadline ? new Date(b.deadline) : new Date('9999-12-31');
+      return da - db;
+    });
+
+    // Apply tag filters to special issues too
+    let filteredSI = sortedSI;
+    if (filters && filters.tags && !filters.tags.includes('all') && filters.tags.length > 0) {
+      filteredSI = sortedSI.filter((item) =>
+        (item.topics || []).some((t) => filters.tags.includes(t))
+      );
+    }
+
+    if (filteredSI.length > 0) {
+      const siHeading = document.createElement('h3');
+      siHeading.className = 'special-issues-section__title';
+      siHeading.textContent = 'Special Issues';
+      siSection.appendChild(siHeading);
+
+      const siSubtitle = document.createElement('p');
+      siSubtitle.className = 'special-issues-section__subtitle';
+      siSubtitle.textContent = 'Open calls for papers in OR journals';
+      siSection.appendChild(siSubtitle);
+
+      const siGrid = document.createElement('div');
+      siGrid.className = 'card-grid';
+      // Trusted local data — innerHTML safe
+      siGrid.innerHTML = filteredSI.map(renderSpecialIssueCard).join('');
+      siSection.appendChild(siGrid);
+
+      container.appendChild(siSection);
+    }
   }
 }

@@ -18,6 +18,7 @@ const ALL_TAGS = [
   'postdoc',
   'faculty',
   'industry',
+  'survey',
 ];
 
 const SOURCES = ['All Sources', 'arXiv', 'EJOR', 'Operations Research', 'INFORMS'];

@@ -1705,3 +1705,279 @@ a:hover { opacity: 0.85; }
   text-align: center;
   margin-bottom: var(--space-xl);
 }
+
+/* ── "More" Dropdown Nav ──────────────────────────────────────── */
+
+.nav__more {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav__more-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: var(--space-xs) var(--space-sm);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), background var(--transition-fast);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.nav__more-trigger:hover {
+  color: var(--color-accent);
+  background: var(--color-accent-glow);
+}
+
+.nav__more-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 200;
+  min-width: 160px;
+  background: var(--color-bg-elevated);
+  border: var(--border-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-xs) 0;
+  list-style: none;
+  margin: 0;
+}
+
+.nav__more:hover .nav__more-menu,
+.nav__more:focus-within .nav__more-menu {
+  display: block;
+}
+
+.nav__more-menu .nav__tab {
+  display: block;
+  padding: var(--space-xs) var(--space-md);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.nav__more-menu .nav__tab:hover {
+  background: var(--color-accent-glow);
+}
+
+/* Highlight More trigger when a sub-tab is active */
+.nav__more:has(.nav__tab.active) .nav__more-trigger {
+  color: var(--color-accent);
+}
+
+/* ── Funding Card Accent (#7) ─────────────────────────────────── */
+
+.card--funding {
+  border-left: 3px solid #2ECC71;
+}
+
+.agency-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #0A192F;
+  background: #2ECC71;
+  border-radius: 3px;
+  padding: 1px 6px;
+  flex-shrink: 0;
+}
+
+.funding-amount {
+  font-weight: 600;
+  color: #2ECC71;
+}
+
+.card__action--funding {
+  color: #2ECC71 !important;
+}
+
+.card__action--funding:hover {
+  color: #27AE60 !important;
+}
+
+/* ── Award Card Accent (#9) ───────────────────────────────────── */
+
+.card--award {
+  border-left: 3px solid #9B59B6;
+}
+
+.org-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #0A192F;
+  background: #9B59B6;
+  border-radius: 3px;
+  padding: 1px 6px;
+  flex-shrink: 0;
+}
+
+/* ── Resource Card Styles (#10) ───────────────────────────────── */
+
+.card--resource {
+  border-left: 3px solid var(--color-accent);
+}
+
+.resource-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.resource-category-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-muted);
+  background: var(--color-accent-glow);
+  border: 1px solid var(--color-accent-dim);
+  border-radius: 10px;
+  padding: 1px 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.resources-container,
+.funding-container,
+.awards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+.resources-category {
+  margin-bottom: var(--space-xl);
+}
+
+.resources-category__name {
+  font-family: var(--font-title);
+  font-size: 1.15rem;
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+}
+
+.section-title {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: var(--space-xs);
+}
+
+.section-subtitle {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+/* ── Special Issues Section (#12) ─────────────────────────────── */
+
+.special-issues-section {
+  margin-top: var(--space-xl);
+}
+
+.special-issues-section__title {
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  color: var(--color-accent);
+  margin-bottom: var(--space-sm);
+}
+
+.special-issues-section__subtitle {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-md);
+}
+
+.card--special-issue {
+  border-left: 3px solid #E67E22;
+}
+
+.journal-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #0A192F;
+  background: #E67E22;
+  border-radius: 3px;
+  padding: 1px 6px;
+  flex-shrink: 0;
+}
+
+/* ── Calendar Subscribe Button (#16) ──────────────────────────── */
+
+.conf-cal-subscribe {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--space-md);
+}
+
+.card__action--cal {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--color-accent-glow);
+  border: 1px solid var(--color-accent-dim);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-accent) !important;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.card__action--cal:hover {
+  background: var(--color-accent-dim);
+}
+
+/* ── Rolling Badge ────────────────────────────────────────────── */
+
+.cfp-badge--rolling {
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-text-faint);
+  background: none;
+}
+
+/* ── Mobile: More dropdown becomes inline ─────────────────────── */
+
+@media (max-width: 768px) {
+  .nav__more-menu {
+    position: static;
+    display: block;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+  .nav__more {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav__more-trigger {
+    display: none;
+  }
+  .nav__more-menu .nav__tab {
+    padding: var(--space-xs) var(--space-sm);
+  }
+}
