@@ -73,16 +73,9 @@ REFERENCE_SITES: list[dict] = [
 ]
 
 # Additional RSS feeds to try
-ADDITIONAL_RSS_FEEDS: list[dict] = [
-    {
-        "url": "https://www.higheredjobs.com/rss/indexFeed.cfm?keyword=optimization",
-        "name": "HigherEdJobs-Optimization",
-    },
-    {
-        "url": "https://www.higheredjobs.com/rss/indexFeed.cfm?keyword=mathematical+programming",
-        "name": "HigherEdJobs-MathProg",
-    },
-]
+# Note: HigherEdJobs, Jobs.ac.uk, and MathJobs RSS feeds are all dead as of 2026.
+# We rely on NSF API + manual curation + scraping instead.
+ADDITIONAL_RSS_FEEDS: list[dict] = []
 
 
 def load_config(config_path: str = "config.yaml") -> dict:
@@ -279,11 +272,42 @@ def generate_fallback_positions() -> list[dict]:
 
 # ── Combined Fetcher ─────────────────────────────────────────────────
 
+def load_manual_opportunities() -> list[dict]:
+    """Load manually curated opportunities from data/opportunities_manual.json."""
+    path = Path(__file__).parent / "../data/opportunities_manual.json"
+    if not path.exists():
+        return []
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data if isinstance(data, list) else []
+    except (json.JSONDecodeError, IOError):
+        return []
+
+
+def fetch_nsf_awards_for_opps() -> list[dict]:
+    """Fetch NSF awards and include them as funding opportunities."""
+    try:
+        from fetch_nsf import fetch_nsf_awards
+        return fetch_nsf_awards(lookback_days=180, max_per_query=10)
+    except ImportError:
+        print("    ! fetch_nsf module not available", file=sys.stderr)
+        return []
+    except Exception as e:
+        print(f"    ! NSF fetch failed: {e}", file=sys.stderr)
+        return []
+
+
 def fetch_all_feeds(config: dict) -> list[dict]:
     """
-    Fetch opportunities from all configured sources (RSS + scraping).
+    Fetch opportunities from all configured sources.
 
-    Falls back to static job board entries if all live feeds return 0 items.
+    Sources (in order):
+    1. Manual curation file (data/opportunities_manual.json)
+    2. NSF Awards API
+    3. RSS feeds (HigherEdJobs, etc.)
+    4. HTML scraping (OperationsAcademia.org)
+    5. Fallback job board links (only if everything else returns 0)
 
     Args:
         config: Full pipeline configuration dict.
@@ -294,7 +318,23 @@ def fetch_all_feeds(config: dict) -> list[dict]:
     opp_cfg = config.get("opportunities", {})
     all_items: list[dict] = []
 
-    # Source A: RSS feeds from config
+    # Source 0: Manual curation (high-value items like MSCA, ERC)
+    manual = load_manual_opportunities()
+    if manual:
+        print(f"    -> {len(manual)} manually curated opportunities", file=sys.stderr)
+        all_items.extend(manual)
+
+    # Source 1: NSF Awards API (free, no auth)
+    print("  Fetching NSF awards...", file=sys.stderr)
+    try:
+        nsf_items = fetch_nsf_awards_for_opps()
+        if nsf_items:
+            print(f"    -> {len(nsf_items)} NSF awards", file=sys.stderr)
+            all_items.extend(nsf_items)
+    except Exception as e:
+        print(f"    ! NSF failed: {e}", file=sys.stderr)
+
+    # Source 2: RSS feeds from config
     rss_feeds = opp_cfg.get("rss", [])
     for feed in rss_feeds:
         url = feed.get("url", "")
@@ -306,7 +346,7 @@ def fetch_all_feeds(config: dict) -> list[dict]:
             except Exception as e:
                 print(f"    ! RSS feed {name} failed: {e}", file=sys.stderr)
 
-    # Source A2: Additional/fallback RSS feeds
+    # Source 2b: Additional RSS feeds
     for feed in ADDITIONAL_RSS_FEEDS:
         try:
             items = fetch_rss_feed(feed["url"], source_name=feed["name"])
@@ -314,7 +354,7 @@ def fetch_all_feeds(config: dict) -> list[dict]:
         except Exception as e:
             print(f"    ! Additional RSS feed {feed['name']} failed: {e}", file=sys.stderr)
 
-    # Source B: HTML scraping
+    # Source 3: HTML scraping
     scrape_sources = opp_cfg.get("scrape", [])
     for source in scrape_sources:
         url = source.get("url", "")
@@ -324,11 +364,10 @@ def fetch_all_feeds(config: dict) -> list[dict]:
                 all_items.extend(items)
             except Exception as e:
                 print(f"    ! Scraping failed for {url}: {e}", file=sys.stderr)
-                print("    Continuing with other sources...", file=sys.stderr)
 
     # Fallback: if ALL feeds returned 0 items, add static job board links
     if len(all_items) == 0:
-        print("    ! All live feeds returned 0 items. Adding fallback job board links.", file=sys.stderr)
+        print("    ! All sources returned 0 items. Adding fallback job board links.", file=sys.stderr)
         all_items = generate_fallback_positions()
 
     return all_items

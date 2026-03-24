@@ -282,14 +282,21 @@ conferences:
     format: "in-person"
 
 # --- Opportunities ---
+# Sources: NSF API (auto), manual curation, HTML scraping
+# Note: Most academic job RSS feeds (HigherEdJobs, Jobs.ac.uk, MathJobs) are dead as of 2026.
+# Primary sources now: NSF Awards API (free, no auth) + manual curation file.
 opportunities:
-  rss:
-    - url: "https://www.higheredjobs.com/rss/indexFeed.cfm?keyword=operations+research"
-      name: "HigherEdJobs"
+  rss: []  # All tested RSS feeds are dead/broken
   scrape:
     - url: "https://www.operationsacademia.org/jobs"
       name: "OperationsAcademia.org"
       method: "html_table"
+  # NSF Awards: fetched automatically via fetch_nsf.py (free, no auth, ~20 awards)
+  # Manual curation: data/opportunities_manual.json (MSCA, ERC, high-value items)
+  nsf:
+    enabled: true
+    lookback_days: 365
+    max_per_query: 25
 
 # --- Tag classification keywords ---
 tags:

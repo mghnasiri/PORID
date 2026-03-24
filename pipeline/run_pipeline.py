@@ -443,6 +443,36 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     if src_data.exists():
         write_json(metadata, src_data / "metadata.json")
 
+    # ── Post-processing: Trends, Solvers, Brief ─────────────────────
+    print("=" * 60)
+    print("Running post-processing (trends, solvers, brief)...")
+    print("=" * 60)
+
+    # Compute trends from publications
+    try:
+        from compute_trends import compute_trends as _compute_trends, write_json as _write_trends
+        trends = _compute_trends(publications)
+        _write_trends(trends, out / "trends.json")
+        if src_data.exists():
+            _write_trends(trends, src_data / "trends.json")
+        print(f"  Trends: {len(trends.get('subdomains', []))} subdomains analyzed")
+    except Exception as e:
+        print(f"  ! Trends failed: {e}", file=sys.stderr)
+
+    # Fetch solver data
+    try:
+        from fetch_solvers import main as _fetch_solvers_main
+        _fetch_solvers_main()
+    except Exception as e:
+        print(f"  ! Solvers failed: {e}", file=sys.stderr)
+
+    # Build weekly brief
+    try:
+        from build_brief import main as _build_brief_main
+        _build_brief_main()
+    except Exception as e:
+        print(f"  ! Brief failed: {e}", file=sys.stderr)
+
     # ── Summary ───────────────────────────────────────────────────────
     print(f"\nPORID Pipeline Complete: {len(publications)} publications, "
           f"{len(software)} software, {len(conferences)} conferences, "
