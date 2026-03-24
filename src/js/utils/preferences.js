@@ -5,7 +5,7 @@
 const STORAGE_KEY = 'porid-preferences';
 
 const DEFAULTS = {
-  defaultTab: 'publications',
+  defaultTab: 'pulse',
   sortOrder: 'newest',
   viewMode: 'grid',
   focusTags: [],        // Tags to highlight/prioritize
