@@ -26,6 +26,10 @@ function renderOpportunityCard(item) {
   const starClass = starred ? 'card__star--active' : '';
   const starSymbol = starred ? '&#9733;' : '&#9734;';
 
+  // Check if item is new (within last 7 days)
+  const isNewThisWeek = item.date && (Date.now() - new Date(item.date + 'T00:00:00').getTime()) < 7 * 24 * 60 * 60 * 1000;
+  const newBadge = isNewThisWeek ? '<span class="new-badge">NEW</span>' : '';
+
   const posType = getPositionType(item.tags);
   const typeBadge = posType
     ? `<span class="type-badge type-badge--${posType}">${TYPE_LABELS[posType]}</span>`
@@ -48,6 +52,7 @@ function renderOpportunityCard(item) {
     <article class="card" data-id="${item.id}" data-type="opportunity">
       <div class="card__header">
         <h3 class="card__title">${item.title}</h3>
+        ${newBadge}
         ${deadlineHtml}
       </div>
       <div class="conf-meta">

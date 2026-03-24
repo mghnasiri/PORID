@@ -1543,3 +1543,165 @@ a:hover { opacity: 0.85; }
 }
 
 .footer__version-link:hover { color: var(--color-accent); }
+
+/* ── Highly-Cited Paper (#51) ─────────────────────────────────── */
+
+.card--cited {
+  border-top: 2px solid var(--color-accent);
+  box-shadow: var(--shadow-card), 0 -2px 12px rgba(197, 160, 89, 0.15);
+}
+
+.citation-badge {
+  display: inline-flex; align-items: center;
+  font-size: 0.6rem; font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--color-accent);
+  background: var(--color-accent-glow);
+  border: 1px solid var(--color-accent-dim);
+  border-radius: 10px;
+  padding: 1px 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Software Stats Row (#64-65) ──────────────────────────────── */
+
+.software-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.license-badge {
+  display: inline-flex; align-items: center;
+  font-size: 0.6rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px;
+  color: var(--color-bg);
+  background: var(--color-accent);
+  border-radius: 3px;
+  padding: 1px 6px;
+}
+
+/* ── Breaking Changes Badge (#67) ─────────────────────────────── */
+
+.breaking-badge {
+  display: inline-flex; align-items: center;
+  font-size: 0.6rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  color: #E74C3C;
+  background: rgba(231, 76, 60, 0.1);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  border-radius: 3px;
+  padding: 1px 6px;
+  margin-left: var(--space-xs);
+}
+
+/* ── NEW Badge for Opportunities (#86) ────────────────────────── */
+
+.new-badge {
+  display: inline-flex; align-items: center;
+  font-size: 0.55rem; font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #0A192F;
+  background: var(--color-accent);
+  padding: 1px 6px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ── Format Badge for Conferences (#27) ───────────────────────── */
+
+.format-badge {
+  display: inline-flex; align-items: center;
+  font-size: 0.6rem; font-weight: 600;
+  text-transform: capitalize; letter-spacing: 0.5px;
+  color: var(--color-text-muted);
+  background: var(--color-accent-glow);
+  border: 1px solid var(--color-accent-dim);
+  border-radius: 10px;
+  padding: 1px 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── PDF Link on Card (#47) ───────────────────────────────────── */
+
+.card__pdf {
+  font-weight: 600;
+  color: #E74C3C !important;
+}
+
+.card__pdf:hover {
+  color: #C0392B !important;
+}
+
+/* ── Report Issue Flag (#115) ─────────────────────────────────── */
+
+.card__report {
+  font-size: 0.7rem;
+  opacity: 0.4;
+  transition: opacity var(--transition-fast);
+}
+
+.card__report:hover {
+  opacity: 1;
+}
+
+/* ── Happening This Week Banner (#23) ─────────────────────────── */
+
+.week-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--color-accent-glow);
+  border-bottom: 1px solid var(--color-accent-dim);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  text-align: center;
+}
+
+.week-banner__close {
+  background: none;
+  border: none;
+  color: var(--color-text-faint);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  transition: color var(--transition-fast);
+}
+
+.week-banner__close:hover {
+  color: var(--color-text);
+}
+
+/* ── Changelog Page (#117) ────────────────────────────────────── */
+
+.changelog-page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.changelog-page__title {
+  font-family: var(--font-title);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: var(--space-xs);
+}
+
+.changelog-page__subtitle {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}

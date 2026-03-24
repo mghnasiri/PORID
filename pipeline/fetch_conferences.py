@@ -42,7 +42,7 @@ def fetch_conferences(config: dict) -> list[dict]:
     items: list[dict] = []
 
     for i, conf in enumerate(raw, start=1):
-        items.append({
+        item: dict = {
             "id": f"conf-{i:03d}",
             "name": conf.get("name", "Unnamed Conference"),
             "dates": conf.get("dates", ""),
@@ -52,7 +52,10 @@ def fetch_conferences(config: dict) -> list[dict]:
             "source": "config",
             "tags": conf.get("tags", ["conference"]),
             "type": "conference",
-        })
+        }
+        if conf.get("format"):
+            item["format"] = conf["format"]
+        items.append(item)
 
     return items
 

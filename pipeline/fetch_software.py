@@ -111,6 +111,11 @@ def fetch_latest_release(owner: str, repo: str, display_name: str = "") -> Optio
 
     # Truncate changelog for storage (500 chars max)
     changelog = body.strip()
+
+    # Scan for breaking changes keywords
+    breaking_keywords = ["breaking", "BREAKING", "deprecated", "removed", "incompatible"]
+    has_breaking_changes = any(kw.lower() in changelog.lower() for kw in breaking_keywords)
+
     if len(changelog) > 500:
         changelog = changelog[:500] + "\u2026"
 
@@ -129,6 +134,7 @@ def fetch_latest_release(owner: str, repo: str, display_name: str = "") -> Optio
         "type": "software",
         "stars": stars,
         "forks": forks,
+        "has_breaking_changes": has_breaking_changes,
     }
     if license_id:
         item["license"] = license_id

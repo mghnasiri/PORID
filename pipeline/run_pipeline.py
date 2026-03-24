@@ -33,6 +33,7 @@ from fetch_arxiv import fetch_all_categories as fetch_arxiv
 from fetch_crossref import fetch_all_journals as fetch_crossref
 from fetch_openalex import fetch_all_concepts as fetch_openalex
 from fetch_semantic_scholar import fetch_all_queries as fetch_semantic_scholar
+from fetch_optim_online import fetch_optim_online
 from fetch_software import fetch_all_repos as fetch_software
 from fetch_conferences import fetch_conferences
 from fetch_opportunities import fetch_all_feeds
@@ -275,6 +276,20 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     except Exception as e:
         errors.append(f"Semantic Scholar: {e}")
         print(f"  ! Semantic Scholar failed: {e}\n", file=sys.stderr)
+        traceback.print_exc(file=sys.stderr)
+
+    # ── 4b. Optimization Online ─────────────────────────────────────
+    print("=" * 60)
+    print("[4b/7] Fetching Optimization Online...")
+    print("=" * 60)
+    try:
+        optim_items = fetch_optim_online()
+        publications.extend(optim_items)
+        sources_checked.append("Optimization Online")
+        print(f"  -> {len(optim_items)} items from Optimization Online\n")
+    except Exception as e:
+        errors.append(f"Optimization Online: {e}")
+        print(f"  ! Optimization Online failed: {e}\n", file=sys.stderr)
         traceback.print_exc(file=sys.stderr)
 
     # ── 5. GitHub Software Releases ───────────────────────────────────

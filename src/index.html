@@ -29,6 +29,23 @@
   <!-- Fuse.js -->
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0" defer></script>
 
+  <!-- SEO Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "PORID",
+    "description": "Personal OR Intelligence Dashboard — track publications, software, conferences, and opportunities in Operations Research",
+    "url": "https://mghnasiri.github.io/PORID/",
+    "applicationCategory": "Research Tool",
+    "author": {
+      "@type": "Person",
+      "name": "Mohammad G. Nasiri",
+      "url": "https://mghnasiri.github.io/"
+    }
+  }
+  </script>
+
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -168,13 +185,13 @@
   <div class="welcome-modal" id="welcomeModal" style="display:none">
     <div class="welcome-modal__box">
       <h2 class="welcome-modal__title">Welcome to PORID</h2>
-      <p class="welcome-modal__text">Personal OR Intelligence Dashboard — your daily research companion for Operations Research publications, software, conferences, and opportunities.</p>
+      <p class="welcome-modal__text">Your personal OR intelligence dashboard. Track publications, software, conferences, and opportunities across Operations Research.</p>
       <ul class="welcome-modal__features">
-        <li>📄 1000+ publications from arXiv, Crossref, OpenAlex, Semantic Scholar</li>
-        <li>🔧 Software releases from 13+ OR tools</li>
-        <li>📅 Conference deadlines with countdown alerts</li>
-        <li>⌘K Full-text fuzzy search across everything</li>
-        <li>⭐ Personal watchlist with BibTeX export</li>
+        <li>&#128196; 1000+ publications from arXiv, Crossref, OpenAlex, Semantic Scholar, Optimization Online</li>
+        <li>&#128295; Software releases from 14+ OR tools with stars, forks &amp; breaking change alerts</li>
+        <li>&#128197; Conference deadlines with countdown alerts &amp; format badges</li>
+        <li>&#128269; Full-text fuzzy search (&#8984;K) with export to BibTeX, CSV, JSON</li>
+        <li>&#11088; Personal watchlist with notes &amp; reading status tracking</li>
       </ul>
       <div class="onboarding-interests">
         <h3>Pick your interests</h3>
@@ -217,6 +234,10 @@
       <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener" aria-label="Google Scholar">Scholar</a>
       <span class="footer__sep">&middot;</span>
       <a href="https://mghnasiri.github.io/" target="_blank" rel="noopener" aria-label="Portfolio">Portfolio</a>
+      <span class="footer__sep">&middot;</span>
+      <a href="#changelog" aria-label="What's New">What's New</a>
+      <span class="footer__sep">&middot;</span>
+      <a href="https://github.com/mghnasiri/PORID/issues/new" target="_blank" rel="noopener" aria-label="Report Issue">Report Issue</a>
     </div>
     &copy; 2025 Mohammad G. Nasiri &middot; <a href="#" id="changelogLink" class="footer__version-link">PORID v2.1</a>
   </footer>

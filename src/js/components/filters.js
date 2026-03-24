@@ -72,6 +72,15 @@ export function renderFilterBar(options = {}) {
     </select>
   `;
 
+  const exportSelect = `
+    <select class="filter-select" id="filterExport" aria-label="Export filtered results">
+      <option value="">Export...</option>
+      <option value="bibtex">Export BibTeX</option>
+      <option value="csv">Export CSV</option>
+      <option value="json">Export JSON</option>
+    </select>
+  `;
+
   return `
     <div class="filter-bar" role="toolbar" aria-label="Filters">
       <button class="tag filter-tag active" data-tag="all">All</button>
@@ -84,6 +93,7 @@ export function renderFilterBar(options = {}) {
       ${sourceSelect}
       ${sortSelect}
       ${readStatusSelect}
+      ${exportSelect}
       <button class="tag filter-clear" id="filterClear" style="display:none;" aria-label="Clear all filters">&#10005; Clear</button>
     </div>
   `;

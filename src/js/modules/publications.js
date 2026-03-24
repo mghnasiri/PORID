@@ -53,11 +53,14 @@ function renderGridCard(item) {
   const starred = isWatchlisted(item.id);
   const starClass = starred ? 'card__star--active' : '';
   const starSymbol = starred ? '&#9733;' : '&#9734;';
+  const citedClass = item.citation_count > 50 ? ' card--cited' : '';
+  const citationBadge = item.citation_count > 50 ? `<span class="citation-badge">\uD83D\uDD25 ${item.citation_count} cited</span>` : '';
 
   return `
-    <article class="card" tabindex="0" data-id="${item.id}" data-type="publication">
+    <article class="card${citedClass}" tabindex="0" data-id="${item.id}" data-type="publication">
       <div class="card__header">
         <h3 class="card__title">${item.title}</h3>
+        ${citationBadge}
         <span class="card__date" title="${formatDate(item.date)}">
           ${item.citation_count > 0 ? `<span class="card__citations">${item.citation_count} cited</span> · ` : ''}${relativeTime(item.date)}
         </span>

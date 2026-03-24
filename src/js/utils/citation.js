@@ -55,6 +55,42 @@ export function copyToClipboard(text) {
   return Promise.resolve(fallbackCopy(text));
 }
 
+/**
+ * Generate CSV content from a list of items.
+ * @param {Object[]} items - Array of data items
+ * @returns {string} CSV formatted string
+ */
+export function generateCSV(items) {
+  const headers = ['title', 'authors', 'source', 'date', 'tags', 'url', 'doi'];
+  const rows = items.map((item) =>
+    headers.map((h) => {
+      let val = item[h];
+      if (Array.isArray(val)) val = val.join('; ');
+      val = String(val || '').replace(/"/g, '""');
+      return `"${val}"`;
+    }).join(',')
+  );
+  return [headers.join(','), ...rows].join('\n');
+}
+
+/**
+ * Trigger a file download via Blob URL.
+ * @param {string} content - File content
+ * @param {string} filename - Download filename
+ * @param {string} mimeType - MIME type
+ */
+export function downloadFile(content, filename, mimeType) {
+  const blob = new Blob([content], { type: mimeType });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
 function fallbackCopy(text) {
   const textarea = document.createElement('textarea');
   textarea.value = text;

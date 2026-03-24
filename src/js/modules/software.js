@@ -24,6 +24,8 @@ function renderSoftwareCard(item) {
   const starClass = starred ? 'card__star--active' : '';
   const starSymbol = starred ? '&#9733;' : '&#9734;';
 
+  const breakingBadge = item.has_breaking_changes ? '<span class="breaking-badge">\u26A0 BREAKING</span>' : '';
+
   // Trusted local data
   return `
     <article class="card card--software" data-id="${item.id}" data-type="software">
@@ -31,14 +33,18 @@ function renderSoftwareCard(item) {
         <div>
           <h3 class="card__title">${item.name}</h3>
           <span class="version-badge">v${item.version}</span>
-          ${(item.stars || item.forks) ? `<span class="card__repo-stats">\u2B50 ${formatCount(item.stars)} \u00B7 \uD83C\uDF74 ${formatCount(item.forks)}</span>` : ''}
+          ${breakingBadge}
         </div>
         <span class="card__date" title="${formatDate(item.date)}">${relativeTime(item.date)}</span>
+      </div>
+      <div class="software-stats">
+        ${item.stars ? `<span>\u2B50 ${formatCount(item.stars)}</span>` : ''}
+        ${item.forks ? `<span>\uD83D\uDD00 ${formatCount(item.forks)}</span>` : ''}
+        ${item.license ? `<span class="license-badge">${item.license}</span>` : ''}
       </div>
       <p class="card__body">${changelogSnippet(item.changelog, 100)}</p>
       <div class="card__tags">
         ${(item.tags || []).map((t) => `<span class="tag">${t}</span>`).join('')}
-        ${item.license ? `<span class="tag tag--license">${item.license}</span>` : ''}
       </div>
       <div class="card__actions">
         <button class="card__star ${starClass}" data-id="${item.id}" aria-label="Toggle watchlist">${starSymbol}</button>

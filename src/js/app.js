@@ -20,13 +20,14 @@ import { render as renderDigest } from './modules/digest.js';
 import { render as renderTrends } from './modules/trends.js';
 import { render as renderDatasets } from './modules/datasets.js';
 import { render as renderSeminars } from './modules/seminars.js';
+import { render as renderChangelog } from './modules/changelog.js';
 import { initSearch, wireSearchInput } from './modules/search.js';
 
 // --- Component / utility imports ---
 import { renderFilterBar, getActiveFilters } from './components/filters.js';
 import { showModal, hideModal } from './components/modal.js';
 import { getWatchlist, addToWatchlist, removeFromWatchlist, isWatchlisted, cycleReadStatus } from './utils/storage.js';
-import { generateBibTeX, copyToClipboard } from './utils/citation.js';
+import { generateBibTeX, copyToClipboard, generateCSV, downloadFile } from './utils/citation.js';
 import { getPreferences, setPreference } from './utils/preferences.js';
 
 // ---------------------------------------------------------------------------
@@ -43,7 +44,7 @@ const state = {
   activeTab: 'publications',
 };
 
-const TABS = ['publications', 'software', 'conferences', 'opportunities', 'seminars', 'watchlist', 'digest', 'datasets', 'trends'];
+const TABS = ['publications', 'software', 'conferences', 'opportunities', 'seminars', 'watchlist', 'digest', 'datasets', 'trends', 'changelog'];
 
 const DATA_FILES = {
   publications: './data/publications.json',
@@ -108,6 +109,9 @@ async function loadAllData() {
   } catch {
     updateLastUpdated();
   }
+
+  // Happening this week banner
+  showWeekBanner();
 }
 
 // ---------------------------------------------------------------------------
@@ -343,6 +347,14 @@ function renderView() {
   if (tab === 'trends') {
     filterContainer.textContent = '';
     renderTrends(contentEl, state.data);
+    requestAnimationFrame(() => animateCards());
+    return;
+  }
+
+  // --- Changelog: no filter bar, dedicated module ---
+  if (tab === 'changelog') {
+    filterContainer.textContent = '';
+    renderChangelog(contentEl);
     requestAnimationFrame(() => animateCards());
     return;
   }
@@ -782,6 +794,121 @@ function wireWatchlistListener() {
 }
 
 // ---------------------------------------------------------------------------
+// Happening This Week Banner
+// ---------------------------------------------------------------------------
+
+function showWeekBanner() {
+  if (sessionStorage.getItem('porid-week-banner-dismissed')) return;
+
+  const conferences = state.data.conferences || [];
+  const now = new Date();
+  const weekStart = new Date(now);
+  weekStart.setDate(now.getDate() - now.getDay()); // Sunday
+  const weekEnd = new Date(weekStart);
+  weekEnd.setDate(weekStart.getDate() + 6);
+
+  // Check for conferences happening this week by parsing dates like "June 28 - July 1, 2026"
+  const thisWeekConfs = conferences.filter((conf) => {
+    if (!conf.dates) return false;
+    // Try to parse the start date from the dates string
+    const dateStr = conf.dates;
+    // Match patterns like "June 28 - July 1, 2026" or "October 18-21, 2026"
+    const match = dateStr.match(/^(\w+)\s+(\d+)/);
+    if (!match) return false;
+    const month = match[1];
+    const day = parseInt(match[2]);
+    // Extract year from end of string
+    const yearMatch = dateStr.match(/(\d{4})/);
+    if (!yearMatch) return false;
+    const year = parseInt(yearMatch[1]);
+    const confDate = new Date(`${month} ${day}, ${year}`);
+    if (isNaN(confDate.getTime())) return false;
+    // Also check end date if range
+    const endMatch = dateStr.match(/[-\u2013]\s*(?:(\w+)\s+)?(\d+),?\s*(\d{4})?/);
+    let confEnd = confDate;
+    if (endMatch) {
+      const endMonth = endMatch[1] || month;
+      const endDay = parseInt(endMatch[2]);
+      const endYear = endMatch[3] ? parseInt(endMatch[3]) : year;
+      confEnd = new Date(`${endMonth} ${endDay}, ${endYear}`);
+      if (isNaN(confEnd.getTime())) confEnd = confDate;
+    }
+    // Check if conference overlaps with this week
+    return confDate <= weekEnd && confEnd >= weekStart;
+  });
+
+  if (thisWeekConfs.length === 0) return;
+
+  const names = thisWeekConfs.map((c) => c.name).join(', ');
+  const banner = document.createElement('div');
+  banner.className = 'week-banner';
+
+  const text = document.createElement('span');
+  text.textContent = `\uD83D\uDCC5 Happening this week: ${names}`;
+  banner.appendChild(text);
+
+  const closeBtn = document.createElement('button');
+  closeBtn.className = 'week-banner__close';
+  closeBtn.textContent = '\u00D7';
+  closeBtn.setAttribute('aria-label', 'Dismiss banner');
+  closeBtn.addEventListener('click', () => {
+    banner.remove();
+    sessionStorage.setItem('porid-week-banner-dismissed', 'true');
+  });
+  banner.appendChild(closeBtn);
+
+  const statsBanner = document.querySelector('.stats-banner');
+  if (statsBanner && statsBanner.parentNode) {
+    statsBanner.parentNode.insertBefore(banner, statsBanner.nextSibling);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Filter Export Wiring (event delegation on filterBarContainer)
+// ---------------------------------------------------------------------------
+
+function wireFilterExport() {
+  filterContainer.addEventListener('change', (e) => {
+    const exportSelect = e.target.closest('#filterExport');
+    if (!exportSelect) return;
+    const format = exportSelect.value;
+    if (!format) return;
+
+    const tab = state.activeTab;
+    const data = state.data[tab] || [];
+    const filters = getActiveFilters();
+
+    // Apply current filters to get visible items
+    const { applyFilters } = { applyFilters: (items, f) => {
+      let result = [...items];
+      if (!f.tags.includes('all') && f.tags.length > 0) {
+        const matcher = f.logic === 'and' ? 'every' : 'some';
+        result = result.filter((item) => f.tags[matcher]((t) => (item.tags || []).includes(t)));
+      }
+      if (f.source && f.source !== 'All Sources') {
+        result = result.filter((item) => item.source === f.source);
+      }
+      return result;
+    }};
+
+    const filtered = applyFilters(data, filters);
+    const dateStr = new Date().toISOString().slice(0, 10);
+
+    if (format === 'bibtex') {
+      const bib = filtered.map((item) => generateBibTeX(item)).join('\n\n');
+      downloadFile(bib, `porid-${tab}-${dateStr}.bib`, 'application/x-bibtex');
+    } else if (format === 'csv') {
+      const csv = generateCSV(filtered);
+      downloadFile(csv, `porid-${tab}-${dateStr}.csv`, 'text/csv');
+    } else if (format === 'json') {
+      downloadFile(JSON.stringify(filtered, null, 2), `porid-${tab}-${dateStr}.json`, 'application/json');
+    }
+
+    exportSelect.value = '';
+  });
+}
+
+// ---------------------------------------------------------------------------
 // Card Entry Animation
 // ---------------------------------------------------------------------------
 
@@ -900,6 +1027,7 @@ async function init() {
   wireHamburger();
   wireSearch();
   wireCardEvents();
+  wireFilterExport();
   wireDetailModal();
   wireHelpModal();
   wireKeyboardShortcuts();

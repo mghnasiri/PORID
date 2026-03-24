@@ -134,7 +134,9 @@ export function renderCard(item) {
         </button>
         ${item.type === 'publication' ? `<button class="card__cite card__action" data-id="${item.id}" aria-label="Copy BibTeX citation" title="Copy BibTeX">Cite</button>` : ''}
         ${item.url ? `<a href="${item.url}" target="_blank" rel="noopener" class="card__action" aria-label="Open external link">&#8599; Open</a>` : ''}
+        ${item.url && item.url.includes('arxiv.org/abs/') ? `<a href="${item.url.replace('/abs/', '/pdf/') + '.pdf'}" target="_blank" rel="noopener" class="card__action card__pdf" title="Download PDF">PDF</a>` : ''}
         <button class="card__detail-btn card__action" data-id="${item.id}">Details</button>
+        <a href="https://github.com/mghnasiri/PORID/issues/new?title=${encodeURIComponent('Issue: ' + title)}&body=${encodeURIComponent('Item URL: ' + (item.url || 'N/A'))}" target="_blank" rel="noopener" class="card__action card__report" title="Report issue">&#128681;</a>
       </div>
     </article>
   `;

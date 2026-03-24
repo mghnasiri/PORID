@@ -104,10 +104,16 @@ function renderConferenceCard(item) {
     }
   }
 
+  // Format badge: in-person, online, hybrid
+  const FORMAT_ICONS = { 'in-person': '\uD83C\uDFE2', 'online': '\uD83D\uDCE1', 'hybrid': '\uD83D\uDD04' };
+  const formatIcon = FORMAT_ICONS[item.format] || '';
+  const formatBadge = item.format ? `<span class="format-badge">${formatIcon} ${item.format}</span>` : '';
+
   return `
     <article class="card ${urgentClass}" data-id="${item.id}" data-type="conference">
       <div class="card__header">
         <h3 class="card__title">${item.name}</h3>
+        ${formatBadge}
         ${deadlineHtml}
       </div>
       <div class="conf-meta">
