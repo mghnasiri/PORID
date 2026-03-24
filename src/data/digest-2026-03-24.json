@@ -1,6 +1,6 @@
 {
   "date": "2026-03-24",
-  "generated_at": "2026-03-24T08:01:40.777158+00:00",
+  "generated_at": "2026-03-24T15:58:42.596192+00:00",
   "publications": [
     {
       "id": "s2-6580a5c8d643",
@@ -25,6 +25,27 @@
       "doi": "10.1108/compel-11-2025-0526",
       "arxiv_id": "",
       "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261438365",
+      "title": "EXPRESS: The Online Election Campaign Planning Problem: Optimizing Election Campaign Strategies with Inaccurate Information",
+      "authors": [
+        "Shiri, D.",
+        "Shahmanzari, M.",
+        "Tanrisever, F."
+      ],
+      "abstract": "Effective management of election campaigns involves dynamic decision-making under uncertainty. Traditional approaches rely heavily on pre-planned strategies that often fail to adapt to real-time changes in voter sentiment and external factors. This paper introduces the Online Election Campaign Planning Problem (OECPP) to optimize the scheduling of campaign activities in the context of U.S. presidential elections. OECPP incorporates sequentially updated predictions that represent assessments of the impact of campaign activities over the course of the campaign. Since these predictions evolve in response to new information and their accuracy cannot be fully assessed without perfect information, we develop deterministic and randomized online algorithms for OECPP that can operate effectively under unreliable and evolving predictions.\n                  We evaluate the performance of our algorithms using the competitive ratio (CR), a metric particularly useful when probabilistic modeling is impractical. We begin by establishing a tight upper bound on the CR of the online algorithms for the OECPP under unreliable reward predictions. We then introduce a sequential setup-based CR metric to capture the value of reoptimization as new predictions arrive, and we design deterministic and randomized algorithms that are optimal under this metric. Using data from U.S. presidential elections, we show that randomized online algorithms can significantly outperform their deterministic counterparts in terms of empirical CR. We also find that the effectiveness of randomized algorithms is driven by two factors: the selection of prediction samples for generating activity scenarios and the randomization cut-off, which determines the scenarios to be randomized. The benefit of randomization is nonmonotonic, and the best empirical CR is achieved by selectively adding prediction samples to the randomization set.",
+      "date": "2026-03-24",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261438365",
+      "tags": [
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261438365",
       "score": 55.0
     },
     {
@@ -221,28 +242,6 @@
       "type": "publication",
       "doi": "10.48550/arXiv.2603.21834",
       "arxiv_id": "2603.21834v1",
-      "score": 45.0
-    },
-    {
-      "id": "arxiv-2603.22214",
-      "title": "Evaluating the Reliability and Fidelity of Automated Judgment Systems of Large Language Models",
-      "authors": [
-        "Tom Biskupski",
-        "Stephan Kleber"
-      ],
-      "abstract": "A Large Language Model (LLM) as judge evaluates the quality of victim Machine Learning (ML) models, specifically LLMs, by analyzing their outputs. An LLM as judge is the combination of one model and one specifically engineered judge prompt that contains the criteria for the analysis. The resulting automation of the analysis scales up the complex evaluation of the victim models' free-form text outputs by faster and more consistent judgments compared to human reviewers. Thus, quality and security assessments of LLMs can cover a wide range of the victim models' use cases. Being a comparably new technique, LLMs as judges lack a thorough investigation for their reliability and agreement to human judgment.   Our work evaluates the applicability of LLMs as automated quality assessors of victim LLMs. We test the efficacy of 37 differently sized conversational LLMs in combination with 5 different judge prompts, the concept of a second-level judge, and 5 models fine-tuned for the task as assessors. As assessment objective, we curate datasets for eight different categories of judgment tasks and the corresponding ground-truth labels based on human assessments. Our empirical results show a high correlation of LLMs as judges with human assessments, when combined with a suitable prompt, in particular for GPT-4o, several open-source models with $\\geqslant$ 32B parameters, and a few smaller models like Qwen2.5 14B.",
-      "date": "2026-03-23",
-      "source": "arXiv",
-      "source_detail": "cs.CR",
-      "url": "http://arxiv.org/abs/2603.22214v1",
-      "tags": [
-        "cs.CR",
-        "ml-for-or",
-        "survey"
-      ],
-      "type": "publication",
-      "doi": "10.48550/arXiv.2603.22214",
-      "arxiv_id": "2603.22214v1",
       "score": 45.0
     }
   ],
