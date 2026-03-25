@@ -1272,34 +1272,70 @@ a:hover { opacity: 0.85; }
 /* ── Print Stylesheet ─────────────────────────────────────────── */
 
 @media print {
-  .nav, .filter-bar, .search-modal, .help-modal, .scroll-top,
-  .stats-banner, #filterBarContainer, .card__actions, .view-toggle,
-  .watchlist-toolbar, .footer { display: none !important; }
+  /* ── Hide non-printable UI ──────────────────────────────────── */
+  .nav, .footer, .filter-bar, .search-modal, .help-modal,
+  .welcome-modal, .scroll-top, .stats-banner, .theme-toggle,
+  .search-trigger, .nav__prefs, #filterBarContainer,
+  .card__actions, .view-toggle, .watchlist-toolbar,
+  #detailModal, #changelogModal, #helpModal { display: none !important; }
 
-  body {
-    padding-top: 0; background: #fff; color: #000;
-    font-size: 11pt;
+  /* ── Page setup (A4) ────────────────────────────────────────── */
+  @page {
+    size: A4;
+    margin: 18mm 15mm 18mm 15mm;
   }
 
+  /* ── Base reset ─────────────────────────────────────────────── */
+  html, body {
+    padding: 0; margin: 0;
+    background: #fff !important; color: #000 !important;
+    font-size: 11pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .main { padding: 0; margin: 0; max-width: 100%; }
+
+  /* ── Cards & data rows ──────────────────────────────────────── */
   .card, .list-row, .table-view td, .trends-container {
     background: #fff !important; color: #000 !important;
-    border-color: #ccc !important;
+    border: 1px solid #ddd !important;
     box-shadow: none !important;
     break-inside: avoid;
   }
 
   .card-grid {
-    grid-template-columns: 1fr !important;
+    display: block !important;
+  }
+  .card-grid > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 12pt;
   }
 
+  /* ── Typography ─────────────────────────────────────────────── */
   .card__title, .list-row__title, .table-view__title {
     color: #000 !important;
   }
 
-  .tag { border-color: #999 !important; color: #333 !important; background: transparent !important; }
+  .tag {
+    border-color: #999 !important;
+    color: #333 !important;
+    background: transparent !important;
+  }
 
+  /* ── Links: show URLs ───────────────────────────────────────── */
+  a { color: #000 !important; text-decoration: underline; }
   a::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666; }
-  a[href^="#"]::after, a[href^="javascript"]::after { content: ""; }
+  a[href^="#"]::after,
+  a[href^="javascript"]::after,
+  a[href^="data:"]::after { content: ""; }
+
+  /* ── Remove decorative styles ───────────────────────────────── */
+  *, *::before, *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 }
 
 /* =========================================================================
@@ -2227,4 +2263,73 @@ a:hover { opacity: 0.85; }
   .radar-item__actions { align-self: flex-end; }
   .solver-table { font-size: 0.7rem; }
   .solver-table th, .solver-table td { padding: 0.5rem; }
+}
+
+/* -----------------------------------------------------------------------
+   Error Boundary — fallback UI for failed data fetches (PR-04)
+   ----------------------------------------------------------------------- */
+
+.load-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-xl) var(--space-lg);
+  margin: var(--space-lg) auto;
+  max-width: 480px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md, 12px);
+  background: var(--color-surface);
+}
+
+.load-error__icon {
+  font-size: 2rem;
+  opacity: 0.45;
+}
+
+.load-error__heading {
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-faint);
+}
+
+.load-error__detail {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--color-text-faint);
+  opacity: 0.75;
+}
+
+/* -----------------------------------------------------------------------
+   Load-more button for paginated card rendering (PR-06)
+   ----------------------------------------------------------------------- */
+
+.load-more-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-md) 0;
+}
+
+.load-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0.5rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md, 12px);
+  cursor: pointer;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.load-more-btn:hover {
+  background: var(--color-bg);
+  border-color: var(--color-accent);
 }

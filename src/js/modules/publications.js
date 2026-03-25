@@ -18,6 +18,10 @@ let viewMode = 'grid'; // 'grid' | 'list' | 'table'
 let tableSortCol = 'date';
 let tableSortDir = 'desc';
 
+/** Pagination state — limits initial render to PAGE_SIZE cards. */
+const PAGE_SIZE = 50;
+let currentPage = 1;
+
 /** Maps source names to CSS modifier classes for color-coded badges. */
 function sourceClass(source) {
   const s = (source || '').toLowerCase();
@@ -263,6 +267,16 @@ function exportItems(items, format) {
  * @param {Object} filters - Active filter state from getActiveFilters().
  */
 export function render(container, data, filters) {
+  // Reset page when filters change (caller re-invokes render on filter change)
+  currentPage = 1;
+  renderPage(container, data, filters);
+}
+
+/**
+ * Internal renderer that respects pagination state.
+ * Grid and list views are paginated (PAGE_SIZE per page); table view shows all.
+ */
+function renderPage(container, data, filters) {
   const filtered = applyFilters(data, filters);
 
   if (filtered.length === 0) {
@@ -272,25 +286,59 @@ export function render(container, data, filters) {
 
   const toggle = renderViewToggle();
 
+  // Determine the visible slice for grid/list (table always shows all)
+  const isTableMode = viewMode === 'table';
+  const visibleCount = isTableMode ? filtered.length : currentPage * PAGE_SIZE;
+  const visible = isTableMode ? filtered : filtered.slice(0, visibleCount);
+  const hasMore = !isTableMode && visibleCount < filtered.length;
+  const remaining = filtered.length - visibleCount;
+
+  // Build "Load more" button via DOM methods
+  const loadMoreFrag = document.createDocumentFragment();
+  if (hasMore) {
+    const loadMoreDiv = document.createElement('div');
+    loadMoreDiv.className = 'load-more-wrapper';
+    const loadMoreBtn = document.createElement('button');
+    loadMoreBtn.className = 'load-more-btn';
+    loadMoreBtn.id = 'pubLoadMore';
+    loadMoreBtn.textContent = `Show ${Math.min(PAGE_SIZE, remaining)} more (${remaining} remaining)`;
+    loadMoreDiv.appendChild(loadMoreBtn);
+    loadMoreFrag.appendChild(loadMoreDiv);
+  }
+
   // Trusted local data — innerHTML is safe in this context
   const wrapper = document.createElement('div');
-  if (viewMode === 'table') {
+  if (isTableMode) {
     wrapper.innerHTML = `${toggle}${renderTable(filtered)}`;
   } else if (viewMode === 'list') {
-    wrapper.innerHTML = `${toggle}<div class="list-view">${filtered.map(renderListRow).join('')}</div>`;
+    wrapper.innerHTML = `${toggle}<div class="list-view">${visible.map(renderListRow).join('')}</div>`;
   } else {
-    wrapper.innerHTML = `${toggle}<div class="card-grid">${filtered.map(renderGridCard).join('')}</div>`;
+    wrapper.innerHTML = `${toggle}<div class="card-grid">${visible.map(renderGridCard).join('')}</div>`;
   }
   container.textContent = '';
   while (wrapper.firstChild) {
     container.appendChild(wrapper.firstChild);
+  }
+  // Append load-more button after content (built with DOM methods)
+  if (hasMore) {
+    container.appendChild(loadMoreFrag);
+  }
+
+  // Wire "Load more" button
+  const loadMoreEl = container.querySelector('#pubLoadMore');
+  if (loadMoreEl) {
+    loadMoreEl.addEventListener('click', () => {
+      currentPage += 1;
+      renderPage(container, data, filters);
+    });
   }
 
   // Wire view toggle clicks
   container.querySelectorAll('.view-toggle__btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       viewMode = btn.dataset.view;
-      render(container, data, filters);
+      currentPage = 1;
+      renderPage(container, data, filters);
     });
   });
 
@@ -307,7 +355,7 @@ export function render(container, data, filters) {
   }
 
   // Wire table sort headers
-  if (viewMode === 'table') {
+  if (isTableMode) {
     container.querySelectorAll('.table-view th[data-sort]').forEach((th) => {
       th.style.cursor = 'pointer';
       th.addEventListener('click', () => {
@@ -318,7 +366,7 @@ export function render(container, data, filters) {
           tableSortCol = col;
           tableSortDir = 'asc';
         }
-        render(container, data, filters);
+        renderPage(container, data, filters);
       });
     });
 

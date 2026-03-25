@@ -15,6 +15,9 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mghnasiri.github.io/PORID/">
 
+  <!-- Canonical URL (updated dynamically by app.js) -->
+  <link rel="canonical" href="https://mghnasiri.github.io/PORID/">
+
   <!-- Resource hints for CDN -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -33,8 +36,7 @@
   <!-- Fuse.js -->
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0" defer></script>
 
-  <!-- D3.js (visualizations) -->
-  <script src="https://cdn.jsdelivr.net/npm/d3@7" async></script>
+  <!-- D3.js loaded lazily by radar-chart.js when needed -->
 
   <!-- SEO Structured Data -->
   <script type="application/ld+json">
@@ -102,6 +104,18 @@
         "url": "https://mghnasiri.github.io/PORID/#opportunities",
         "keywords": ["funding", "PhD positions", "postdoc", "faculty", "operations research jobs"]
       }
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList Structured Data (updated dynamically by app.js) -->
+  <script type="application/ld+json" id="breadcrumb-ld">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mghnasiri.github.io/PORID/" },
+      { "@type": "ListItem", "position": 2, "name": "OR Intelligence Hub", "item": "https://mghnasiri.github.io/PORID/#pulse" }
     ]
   }
   </script>
@@ -303,6 +317,8 @@
       <a href="#changelog" aria-label="What's New">What's New</a>
       <span class="footer__sep">&middot;</span>
       <a href="https://github.com/mghnasiri/PORID/issues/new" target="_blank" rel="noopener" aria-label="Report Issue">Report Issue</a>
+      <span class="footer__sep">&middot;</span>
+      <a href="methodology.html" aria-label="Methodology">Methodology</a>
     </div>
     &copy; 2025 Mohammad G. Nasiri &middot; <a href="#" id="changelogLink" class="footer__version-link">PORID v2.1</a>
   </footer>

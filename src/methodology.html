@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Methodology — PORID</title>
+  <meta name="description" content="How PORID collects, classifies, deduplicates, and scores Operations Research data.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%230A192F' stroke='%23C5A059' stroke-width='4'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%23C5A059'/%3E%3Ccircle cx='50' cy='50' r='20' fill='none' stroke='%23C5A059' stroke-width='2' opacity='0.6'/%3E%3Ccircle cx='50' cy='50' r='32' fill='none' stroke='%23C5A059' stroke-width='1.5' opacity='0.3'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html#pulse" class="nav__brand">PORID</a>
+    <div class="nav__spacer"></div>
+    <div class="nav__actions">
+      <a href="about.html" class="card__action" style="color: var(--color-accent);">About</a>
+      <a href="index.html#pulse" class="card__action" style="color: var(--color-accent);">Back to Dashboard</a>
+    </div>
+  </nav>
+
+  <main class="main">
+    <div class="about">
+      <div class="about__hero">
+        <h1 class="about__title">Methodology</h1>
+        <p class="about__subtitle">How PORID collects, processes, and presents OR intelligence</p>
+      </div>
+
+      <!-- 1. Data Collection -->
+      <div class="about__section">
+        <h2>1. Data Collection</h2>
+        <p>
+          PORID aggregates data from 10 sources via a Python pipeline that runs daily at
+          <strong>07:00 UTC</strong> through GitHub Actions. Each source is fetched by a
+          dedicated module with its own rate-limiting and error handling.
+        </p>
+        <div class="about__sources">
+          <div class="about__source-card">
+            <div class="about__source-header">
+              <strong>Publications</strong>
+              <span class="about__source-count">5 APIs</span>
+            </div>
+            <p>
+              <strong>arXiv</strong> (math.OC, cs.AI, cs.DS) &mdash; 7-day lookback via OAI-PMH.<br>
+              <strong>Crossref</strong> &mdash; 28 OR journals, 14-day lookback window.<br>
+              <strong>OpenAlex</strong> &mdash; concept-based queries for OR topics.<br>
+              <strong>Semantic Scholar</strong> &mdash; keyword search across their full corpus.<br>
+              <strong>Optimization Online</strong> &mdash; RSS feed parsing.
+            </p>
+          </div>
+          <div class="about__source-card">
+            <div class="about__source-header">
+              <strong>Software</strong>
+              <span class="about__source-count">2 APIs</span>
+            </div>
+            <p>
+              <strong>GitHub Releases API</strong> &mdash; tracks 19 open-source solver repositories
+              (OR-Tools, CBC, HiGHS, SCIP, GLPK, JuMP, Pyomo, CVXPY, and more).<br>
+              <strong>PyPI JSON API</strong> &mdash; download statistics and release metadata for
+              8 Python OR packages.
+            </p>
+          </div>
+          <div class="about__source-card">
+            <div class="about__source-header">
+              <strong>Conferences</strong>
+              <span class="about__source-count">1 source</span>
+            </div>
+            <p>
+              <strong>WikiCFP</strong> RSS feeds plus manually curated entries in
+              <code>config.yaml</code>. Tracks call-for-papers deadlines, venues, and formats.
+            </p>
+          </div>
+          <div class="about__source-card">
+            <div class="about__source-header">
+              <strong>Funding &amp; Opportunities</strong>
+              <span class="about__source-count">2 sources</span>
+            </div>
+            <p>
+              <strong>NSF Awards API</strong> &mdash; active awards in OR, combinatorial optimization,
+              and mathematical programming.<br>
+              <strong>OpenAIRE / CORDIS</strong> &mdash; EU-funded Horizon Europe and Horizon 2020
+              projects in optimization.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Classification -->
+      <div class="about__section">
+        <h2>2. Classification</h2>
+        <p>
+          Every item passes through a tag classifier that scans its title and abstract (lowercased)
+          for keyword matches. The taxonomy covers <strong>16 OR subdomains</strong>:
+        </p>
+        <div class="about__architecture">
+          <pre class="about__code">
+linear-programming       integer-programming      metaheuristics
+network-optimization     scheduling               vehicle-routing
+stochastic               ml-for-or                healthcare-or
+supply-chain             facility-location         multi-objective
+decomposition            constraint-programming    game-theory
+survey
+          </pre>
+        </div>
+        <p>
+          Each subdomain has 5&ndash;15 keywords defined in <code>config.yaml</code>. Short keywords
+          (4 characters or fewer) use word-boundary matching to prevent false positives. Longer
+          keywords use substring matching. Items with no keyword hits receive a
+          <code>general-or</code> fallback tag.
+        </p>
+      </div>
+
+      <!-- 3. Deduplication -->
+      <div class="about__section">
+        <h2>3. Deduplication</h2>
+        <p>
+          Because PORID pulls from overlapping sources, deduplication runs in two passes:
+        </p>
+        <ul class="about__list">
+          <li>
+            <strong>Pass 1 &mdash; DOI exact match:</strong> items sharing the same DOI are
+            deduplicated (first seen wins).
+          </li>
+          <li>
+            <strong>Pass 2 &mdash; Title Jaccard similarity:</strong> titles are normalized
+            (lowercased, punctuation stripped, stop words under 3 characters removed), then
+            compared as word sets. Pairs with Jaccard similarity above <strong>0.85</strong>
+            are treated as duplicates (first seen wins).
+          </li>
+        </ul>
+        <p>
+          An additional ID-based merge prevents re-adding items already present in the stored
+          dataset from prior pipeline runs.
+        </p>
+      </div>
+
+      <!-- 4. Quality Scoring -->
+      <div class="about__section">
+        <h2>4. Quality Scoring</h2>
+        <p>
+          Each item receives a relevance score (0&ndash;100) used for default sorting and the
+          Pulse view. The score is computed as follows:
+        </p>
+        <ul class="about__list">
+          <li><strong>Base score:</strong> 10 points</li>
+          <li><strong>Tag matches:</strong> +5 per matched subdomain tag (max +40)</li>
+          <li><strong>Freshness:</strong> +20 if published in last 24 hours, +10 if last 3 days, +5 if last 7 days</li>
+          <li><strong>DOI present:</strong> +10 (indicates peer-reviewed or formally published)</li>
+          <li><strong>Abstract length:</strong> +5 if abstract exceeds 20 characters</li>
+        </ul>
+        <p>
+          Items with future dates (bad metadata) are filtered out entirely. Validation also drops
+          items missing required fields (id, title, type, date).
+        </p>
+      </div>
+
+      <!-- 5. Archival -->
+      <div class="about__section">
+        <h2>5. Archival Policy</h2>
+        <p>
+          Items older than <strong>90 days</strong> are automatically dropped from the active
+          dataset during each pipeline run. Dropped items are not discarded; they are appended
+          to monthly archive files at <code>data/archive/YYYY-MM.json</code>.
+        </p>
+        <p>
+          This keeps the dashboard fast and focused on recent developments while preserving
+          historical data for analysis. The incremental changelog retains the last 90 entries.
+        </p>
+      </div>
+
+      <!-- 6. Transparency -->
+      <div class="about__section">
+        <h2>6. Transparency &amp; Open Source</h2>
+        <p>
+          PORID is fully open source. The entire pipeline, configuration, and frontend code are
+          available on GitHub:
+        </p>
+        <ul class="about__list">
+          <li>
+            <a href="https://github.com/mghnasiri/PORID" target="_blank" rel="noopener">
+              github.com/mghnasiri/PORID &rarr;
+            </a>
+            &mdash; source code, pipeline scripts, and configuration
+          </li>
+          <li>
+            <a href="https://github.com/mghnasiri/PORID/actions" target="_blank" rel="noopener">
+              GitHub Actions logs &rarr;
+            </a>
+            &mdash; every pipeline run is logged and auditable
+          </li>
+          <li>
+            <a href="https://github.com/mghnasiri/PORID/blob/main/pipeline/config.yaml" target="_blank" rel="noopener">
+              config.yaml &rarr;
+            </a>
+            &mdash; full list of sources, journals, keywords, and solver repos
+          </li>
+        </ul>
+        <p>
+          Found an error? Use the <strong>Report</strong> button on any card to open a pre-filled
+          GitHub Issue, or visit the
+          <a href="https://github.com/mghnasiri/PORID/issues" target="_blank" rel="noopener">issues page</a>
+          directly.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__links">
+      <a href="https://github.com/mghnasiri/PORID" target="_blank" rel="noopener">GitHub</a>
+      <span class="footer__sep">&middot;</span>
+      <a href="about.html">About</a>
+      <span class="footer__sep">&middot;</span>
+      <a href="https://mghnasiri.github.io/" target="_blank" rel="noopener">Portfolio</a>
+    </div>
+    &copy; 2025 Mohammad G. Nasiri &middot; PORID v2.1
+  </footer>
+
+</body>
+</html>

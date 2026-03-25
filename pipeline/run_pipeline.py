@@ -39,12 +39,16 @@ from fetch_conferences import fetch_conferences
 from fetch_opportunities import fetch_all_feeds
 from classify import classify_items
 from deduplicate import deduplicate
+from validate import validate_items
 
 
 # ── Constants ────────────────────────────────────────────────────────
 
 STALE_DAYS: int = 90
 """Items older than this many days are dropped and archived."""
+
+CHANGELOG_MAX_ENTRIES: int = 90
+"""Keep at most this many entries in the incremental changelog."""
 
 
 def load_config(config_path: str = "config.yaml") -> dict:
@@ -344,6 +348,21 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     conferences = [i for i in all_items if i.get("type") == "conference"]
     opportunities = [i for i in all_items if i.get("type") == "opportunity"]
 
+    # ── Validate data quality ────────────────────────────────────────
+    print("\n" + "=" * 60)
+    print("Validating data quality...")
+    print("=" * 60)
+    total_invalid = 0
+    publications, inv = validate_items(publications)
+    total_invalid += len(inv)
+    software, inv = validate_items(software)
+    total_invalid += len(inv)
+    conferences, inv = validate_items(conferences)
+    total_invalid += len(inv)
+    opportunities, inv = validate_items(opportunities)
+    total_invalid += len(inv)
+    print(f"  Total items dropped by validation: {total_invalid}")
+
     # ── Deduplicate publications ──────────────────────────────────────
     print("\n" + "=" * 60)
     print("Deduplicating publications...")
@@ -442,6 +461,28 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     write_json(metadata, out / "metadata.json")
     if src_data.exists():
         write_json(metadata, src_data / "metadata.json")
+
+    # ── Incremental changelog ────────────────────────────────────────
+    changelog_path = out / "changelog.json"
+    changelog = read_json(changelog_path)
+
+    changelog_entry = {
+        "date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+        "publications_added": pubs_added,
+        "opportunities_added": opps_added,
+        "software_added": sw_added,
+        "total_dropped": total_dropped,
+        "sources_checked": sources_checked,
+        "errors": errors,
+    }
+    changelog.insert(0, changelog_entry)
+
+    # Keep only the most recent entries
+    changelog = changelog[:CHANGELOG_MAX_ENTRIES]
+    write_json(changelog, changelog_path)
+    if src_data.exists():
+        write_json(changelog, src_data / "changelog.json")
+    print(f"  Changelog updated ({len(changelog)} entries)")
 
     # ── Note: Trends, Solvers, Brief ─────────────────────────────────
     # These are run as separate steps in the GitHub Actions workflow:

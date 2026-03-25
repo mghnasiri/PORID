@@ -8,13 +8,26 @@
  */
 
 /**
+ * Lazily loads D3.js on first use. Returns the d3 global.
+ * @returns {Promise<Object>} The d3 library object
+ */
+async function loadD3() {
+  if (!window.d3) {
+    await import('https://cdn.jsdelivr.net/npm/d3@7/+esm');
+  }
+  return window.d3;
+}
+
+/**
  * Renders the topic velocity radar chart into the given container.
  * @param {HTMLElement} container - DOM element to render into
  * @param {Object} trendsData - Parsed trends.json data
  */
-export function renderRadarChart(container, trendsData) {
-  if (typeof d3 === 'undefined') {
-    console.warn('D3.js not loaded — radar chart disabled.');
+export async function renderRadarChart(container, trendsData) {
+  try {
+    await loadD3();
+  } catch (err) {
+    console.warn('Failed to load D3.js — radar chart disabled.', err);
     return;
   }
 

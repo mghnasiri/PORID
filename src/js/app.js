@@ -60,6 +60,10 @@ const state = {
     solvers: null,
     benchmarks: null,
   },
+  /** Tracks which data modules failed to load. Maps module key to true. */
+  loadErrors: {},
+  /** Metadata from metadata.json (last_fetch, etc.) */
+  metadata: null,
 };
 
 const TABS = ['pulse', 'radar', 'toolkit', 'publications', 'software', 'conferences', 'opportunities', 'seminars', 'watchlist', 'digest', 'datasets', 'trends', 'funding', 'awards', 'resources', 'changelog'];
@@ -96,6 +100,25 @@ const statNewEl = document.getElementById('statNew');
 const statTotalEl = document.getElementById('statTotal');
 
 // ---------------------------------------------------------------------------
+// Debounce Utility
+// ---------------------------------------------------------------------------
+
+/**
+ * Returns a debounced version of `fn` that waits `delay` ms after the last
+ * invocation before executing. Prevents jank during rapid filter changes.
+ */
+function debounce(fn, delay = 200) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
+
+/** Debounced renderView — used for filter-driven re-renders (200ms). */
+const debouncedRenderView = debounce(() => renderView(), 200);
+
+// ---------------------------------------------------------------------------
 // Data Loading
 // ---------------------------------------------------------------------------
 
@@ -110,13 +133,14 @@ async function loadAllData() {
   const results = await Promise.all(
     entries.map(([key, url]) =>
       fetchJSON(url)
-        .then((data) => [key, data])
-        .catch(() => [key, []])
+        .then((data) => [key, data, false])
+        .catch(() => [key, [], true])
     )
   );
 
-  for (const [key, data] of results) {
+  for (const [key, data, failed] of results) {
     state.data[key] = data;
+    if (failed) state.loadErrors[key] = true;
   }
 
   updateStats();
@@ -147,6 +171,7 @@ async function loadAllData() {
   // Fetch metadata for freshness indicator
   try {
     const meta = await fetchJSON('./data/metadata.json');
+    state.metadata = meta;
     updateFreshnessIndicator(meta);
   } catch {
     updateLastUpdated();
@@ -328,6 +353,59 @@ function getHashParams() {
   return params;
 }
 
+// ---------------------------------------------------------------------------
+// CS-05  Module-level meta tags & canonical URL
+// ---------------------------------------------------------------------------
+
+const VIEW_META = {
+  pulse:         { title: 'PORID \u2014 OR Intelligence Hub',            desc: 'Real-time pulse of Operations Research: trending papers, solver news, upcoming deadlines.' },
+  publications:  { title: 'PORID \u2014 OR Publications Tracker',        desc: 'Track the latest Operations Research publications from arXiv, Crossref, OpenAlex, and more.' },
+  software:      { title: 'PORID \u2014 OR Software Releases',           desc: 'Monitor version releases for optimization solvers including Gurobi, CPLEX, SCIP, HiGHS, and OR-Tools.' },
+  conferences:   { title: 'PORID \u2014 OR Conference Deadlines',        desc: 'Upcoming Operations Research conferences, workshops, and symposia with submission deadlines.' },
+  opportunities: { title: 'PORID \u2014 OR Funding & Positions',         desc: 'PhD positions, postdoc openings, faculty jobs, and funding calls in Operations Research.' },
+  toolkit:       { title: 'PORID \u2014 Solver Observatory & Benchmarks', desc: 'Solver performance dashboards, benchmark datasets, and optimization tool comparisons.' },
+  radar:         { title: 'PORID \u2014 OR Opportunity Radar',           desc: 'Personalized radar of Operations Research opportunities matching your research interests.' },
+};
+
+const BASE_URL = 'https://mghnasiri.github.io/PORID/';
+
+function updatePageMeta(view) {
+  const meta = VIEW_META[view] || VIEW_META.pulse;
+
+  // Title
+  document.title = meta.title;
+
+  // Meta description
+  const descTag = document.querySelector('meta[name="description"]');
+  if (descTag) descTag.setAttribute('content', meta.desc);
+
+  // OG tags
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.setAttribute('content', meta.title);
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc) ogDesc.setAttribute('content', meta.desc);
+
+  // Canonical URL
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) {
+    canonical.setAttribute('href', view === 'pulse' ? BASE_URL : `${BASE_URL}#${view}`);
+  }
+
+  // BreadcrumbList JSON-LD (CS-06)
+  const bcScript = document.getElementById('breadcrumb-ld');
+  if (bcScript) {
+    const breadcrumbName = meta.title.replace('PORID \u2014 ', '');
+    bcScript.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
+        { '@type': 'ListItem', position: 2, name: breadcrumbName, item: view === 'pulse' ? BASE_URL : `${BASE_URL}#${view}` },
+      ],
+    });
+  }
+}
+
 function navigate(tab) {
   window.location.hash = tab;
 }
@@ -335,6 +413,7 @@ function navigate(tab) {
 function onHashChange() {
   state.activeTab = getHashTab();
   updateTabUI();
+  updatePageMeta(state.activeTab);
   renderView();
 }
 
@@ -344,6 +423,46 @@ function updateTabUI() {
     el.classList.toggle('active', isActive);
     el.setAttribute('aria-selected', isActive ? 'true' : 'false');
   });
+}
+
+// ---------------------------------------------------------------------------
+// Error Boundary — visible fallback for failed data fetches
+// ---------------------------------------------------------------------------
+
+/**
+ * Renders an informative error message when a data module failed to load.
+ * Uses muted styling to be visible but not alarming.
+ * @param {HTMLElement} container
+ * @param {string} moduleName - Human-readable module name.
+ */
+function renderLoadError(container, moduleName) {
+  const lastUpdated = state.metadata && state.metadata.last_fetch
+    ? new Date(state.metadata.last_fetch).toLocaleDateString('en-US', {
+        month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit',
+      })
+    : 'unknown';
+
+  const el = document.createElement('div');
+  el.className = 'load-error';
+  el.setAttribute('role', 'status');
+
+  const icon = document.createElement('span');
+  icon.className = 'load-error__icon';
+  icon.textContent = '\u26A0';
+  el.appendChild(icon);
+
+  const heading = document.createElement('p');
+  heading.className = 'load-error__heading';
+  heading.textContent = `Could not load ${moduleName} data.`;
+  el.appendChild(heading);
+
+  const detail = document.createElement('p');
+  detail.className = 'load-error__detail';
+  detail.textContent = `The data may be temporarily unavailable. Last updated: ${lastUpdated}.`;
+  el.appendChild(detail);
+
+  container.textContent = '';
+  container.appendChild(el);
 }
 
 // ---------------------------------------------------------------------------
@@ -409,6 +528,7 @@ function renderView() {
   // --- Seminars: no filter bar, dedicated module ---
   if (tab === 'seminars') {
     filterContainer.textContent = '';
+    if (state.loadErrors.seminars) { renderLoadError(contentEl, 'Seminars'); return; }
     renderSeminars(contentEl, state.data.seminars || []);
     requestAnimationFrame(() => animateCards());
     return;
@@ -417,6 +537,7 @@ function renderView() {
   // --- Resources (Datasets + Blogs): no filter bar, dedicated module ---
   if (tab === 'datasets') {
     filterContainer.textContent = '';
+    if (state.loadErrors.datasets) { renderLoadError(contentEl, 'Datasets'); return; }
     renderDatasets(contentEl, state.data.datasets || [], state.data.blogs || []);
     requestAnimationFrame(() => animateCards());
     return;
@@ -433,6 +554,7 @@ function renderView() {
   // --- Funding: no filter bar, dedicated module ---
   if (tab === 'funding') {
     filterContainer.textContent = '';
+    if (state.loadErrors.funding) { renderLoadError(contentEl, 'Funding'); return; }
     renderFunding(contentEl, state.data.funding || [], {});
     requestAnimationFrame(() => animateCards());
     return;
@@ -441,6 +563,7 @@ function renderView() {
   // --- Awards: no filter bar, dedicated module ---
   if (tab === 'awards') {
     filterContainer.textContent = '';
+    if (state.loadErrors.awards) { renderLoadError(contentEl, 'Awards'); return; }
     renderAwards(contentEl, state.data.awards || [], {});
     requestAnimationFrame(() => animateCards());
     return;
@@ -449,6 +572,7 @@ function renderView() {
   // --- Resources: no filter bar, dedicated module ---
   if (tab === 'resources') {
     filterContainer.textContent = '';
+    if (state.loadErrors.resources) { renderLoadError(contentEl, 'Resources'); return; }
     renderResources(contentEl, state.data.resources || [], {});
     requestAnimationFrame(() => animateCards());
     return;
@@ -464,6 +588,14 @@ function renderView() {
 
   // --- Data modules: publications, software, conferences, opportunities ---
   const data = state.data[tab] || [];
+
+  // Show error boundary if this module's data failed to load
+  if (state.loadErrors[tab]) {
+    filterContainer.textContent = '';
+    const label = tab.charAt(0).toUpperCase() + tab.slice(1);
+    renderLoadError(contentEl, label);
+    return;
+  }
 
   // Build filter bar options per module
   const filterOpts = {
@@ -601,21 +733,21 @@ function wireFilterEvents() {
 
       updateClearBtn();
       syncFiltersToHash();
-      renderView();
+      debouncedRenderView();
     });
   });
 
   const sourceSelect = document.getElementById('filterSource');
   const sortSelect = document.getElementById('filterSort');
   const readStatusSelect = document.getElementById('filterReadStatus');
-  if (sourceSelect) sourceSelect.addEventListener('change', () => { updateClearBtn(); syncFiltersToHash(); renderView(); });
-  if (sortSelect) sortSelect.addEventListener('change', () => { syncFiltersToHash(); renderView(); });
-  if (readStatusSelect) readStatusSelect.addEventListener('change', () => { updateClearBtn(); syncFiltersToHash(); renderView(); });
+  if (sourceSelect) sourceSelect.addEventListener('change', () => { updateClearBtn(); syncFiltersToHash(); debouncedRenderView(); });
+  if (sortSelect) sortSelect.addEventListener('change', () => { syncFiltersToHash(); debouncedRenderView(); });
+  if (readStatusSelect) readStatusSelect.addEventListener('change', () => { updateClearBtn(); syncFiltersToHash(); debouncedRenderView(); });
 
   const dateFrom = document.getElementById('filterDateFrom');
   const dateTo = document.getElementById('filterDateTo');
-  if (dateFrom) dateFrom.addEventListener('change', () => { updateClearBtn(); syncFiltersToHash(); renderView(); });
-  if (dateTo) dateTo.addEventListener('change', () => { updateClearBtn(); syncFiltersToHash(); renderView(); });
+  if (dateFrom) dateFrom.addEventListener('change', () => { updateClearBtn(); syncFiltersToHash(); debouncedRenderView(); });
+  if (dateTo) dateTo.addEventListener('change', () => { updateClearBtn(); syncFiltersToHash(); debouncedRenderView(); });
 
   // AND/OR toggle
   const logicBtn = document.getElementById('filterLogic');
@@ -624,7 +756,7 @@ function wireFilterEvents() {
       logicBtn.textContent = logicBtn.textContent.trim() === 'OR' ? 'AND' : 'OR';
       logicBtn.classList.toggle('active', logicBtn.textContent.trim() === 'AND');
       syncFiltersToHash();
-      renderView();
+      debouncedRenderView();
     });
   }
 
@@ -643,7 +775,7 @@ function wireFilterEvents() {
       if (dateTo) dateTo.value = '';
       updateClearBtn();
       syncFiltersToHash();
-      renderView();
+      debouncedRenderView();
     });
   }
 
@@ -1259,6 +1391,7 @@ async function init() {
 
   state.activeTab = getHashTab();
   updateTabUI();
+  updatePageMeta(state.activeTab);
   renderView();
 
   window.addEventListener('hashchange', onHashChange);
