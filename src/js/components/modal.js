@@ -8,7 +8,7 @@
  */
 
 import { formatDate, daysUntil } from '../utils/date.js';
-import { isWatchlisted, addToWatchlist, removeFromWatchlist } from '../utils/storage.js';
+import { isWatchlisted, addToWatchlist, removeFromWatchlist, addRecentView } from '../utils/storage.js';
 import { generateBibTeX, copyToClipboard } from '../utils/citation.js';
 
 let currentItem = null;
@@ -215,6 +215,9 @@ function buildModalContent(item, container) {
  */
 export function showModal(item) {
   currentItem = item;
+
+  // ER-05: Track this item as recently viewed
+  addRecentView(item);
 
   const modal = document.getElementById('detailModal');
   const content = document.getElementById('detailModalContent');

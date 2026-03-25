@@ -156,3 +156,75 @@ export function setNote(id, text) {
 export function hasNote(id) {
   return !!getAllNotes()[id];
 }
+
+// ---------------------------------------------------------------------------
+// ER-04: Last Visit Timestamp
+// ---------------------------------------------------------------------------
+
+const LAST_VISIT_KEY = 'porid-last-visit';
+
+/**
+ * Retrieves the user's last visit timestamp from localStorage.
+ * @returns {string|null} ISO timestamp string, or null if first visit.
+ */
+export function getLastVisit() {
+  try {
+    return localStorage.getItem(LAST_VISIT_KEY) || null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Sets the last visit timestamp to the current time.
+ */
+export function setLastVisit() {
+  try {
+    localStorage.setItem(LAST_VISIT_KEY, new Date().toISOString());
+  } catch { /* storage unavailable */ }
+}
+
+// ---------------------------------------------------------------------------
+// ER-05: Recently Viewed Items (FIFO queue, max 15)
+// ---------------------------------------------------------------------------
+
+const RECENT_VIEWS_KEY = 'porid-recent-views';
+const RECENT_VIEWS_MAX = 15;
+
+/**
+ * Retrieves the recently viewed items queue.
+ * @returns {Array<{id: string, title: string, type: string, timestamp: string}>}
+ */
+export function getRecentViews() {
+  try {
+    const raw = localStorage.getItem(RECENT_VIEWS_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Adds an item to the recently viewed queue.
+ * Moves existing entries for the same id to the front.
+ * @param {{id: string, title: string, type: string}} item
+ */
+export function addRecentView(item) {
+  try {
+    let list = getRecentViews();
+    // Remove existing entry for this id (so it moves to front)
+    list = list.filter((entry) => entry.id !== item.id);
+    // Push new entry to the front
+    list.unshift({
+      id: item.id,
+      title: item.title || item.name || 'Untitled',
+      type: item.type || 'unknown',
+      timestamp: new Date().toISOString(),
+    });
+    // Cap at max
+    if (list.length > RECENT_VIEWS_MAX) {
+      list = list.slice(0, RECENT_VIEWS_MAX);
+    }
+    localStorage.setItem(RECENT_VIEWS_KEY, JSON.stringify(list));
+  } catch { /* storage unavailable */ }
+}

@@ -240,54 +240,92 @@
       </div>
       <div class="help-modal__content">
         <div class="help-modal__group">
-          <h3>Navigation</h3>
-          <div class="help-modal__row"><kbd>1</kbd><span>Publications</span></div>
-          <div class="help-modal__row"><kbd>2</kbd><span>Software</span></div>
-          <div class="help-modal__row"><kbd>3</kbd><span>Conferences</span></div>
-          <div class="help-modal__row"><kbd>4</kbd><span>Opportunities</span></div>
-          <div class="help-modal__row"><kbd>5</kbd><span>Watchlist</span></div>
-          <div class="help-modal__row"><kbd>6</kbd><span>Digest</span></div>
-          <div class="help-modal__row"><kbd>7</kbd><span>Trends</span></div>
+          <h3>General</h3>
+          <div class="help-modal__row"><kbd>?</kbd><span>Show this help</span></div>
+          <div class="help-modal__row"><kbd>/</kbd> <span>or</span> <kbd>&#8984;K</kbd><span>Open search</span></div>
+          <div class="help-modal__row"><kbd>W</kbd><span>Toggle watchlist for focused card</span></div>
+          <div class="help-modal__row"><kbd>ESC</kbd><span>Close modal / search</span></div>
         </div>
         <div class="help-modal__group">
-          <h3>Actions</h3>
-          <div class="help-modal__row"><kbd>&#8984;K</kbd><span>Open search</span></div>
-          <div class="help-modal__row"><kbd>?</kbd><span>Show this help</span></div>
-          <div class="help-modal__row"><kbd>ESC</kbd><span>Close modal / search</span></div>
-          <div class="help-modal__row"><kbd>&#8592; &#8594;</kbd><span>Navigate between cards</span></div>
+          <h3>Navigation</h3>
+          <div class="help-modal__row"><kbd>J</kbd> / <kbd>K</kbd><span>Next / previous item</span></div>
+          <div class="help-modal__row"><kbd>&#8592;</kbd> <kbd>&#8594;</kbd><span>Navigate between cards</span></div>
+          <div class="help-modal__row"><kbd>1</kbd>&ndash;<kbd>7</kbd><span>Jump to tab (Publications&hellip;Trends)</span></div>
+        </div>
+        <div class="help-modal__group">
+          <h3>Tabs</h3>
+          <div class="help-modal__row"><kbd>1</kbd><span>Pulse</span></div>
+          <div class="help-modal__row"><kbd>2</kbd><span>Radar</span></div>
+          <div class="help-modal__row"><kbd>3</kbd><span>Toolkit</span></div>
+          <div class="help-modal__row"><kbd>4</kbd><span>Publications</span></div>
+          <div class="help-modal__row"><kbd>5</kbd><span>Software</span></div>
+          <div class="help-modal__row"><kbd>6</kbd><span>Conferences</span></div>
+          <div class="help-modal__row"><kbd>7</kbd><span>Opportunities</span></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ====== Welcome Modal ====== -->
-  <div class="welcome-modal" id="welcomeModal" style="display:none">
-    <div class="welcome-modal__box">
-      <h2 class="welcome-modal__title">Welcome to PORID</h2>
-      <p class="welcome-modal__text">Your personal OR intelligence dashboard. Track publications, software, conferences, and opportunities across Operations Research.</p>
-      <ul class="welcome-modal__features">
-        <li>&#128196; 1000+ publications from arXiv, Crossref, OpenAlex, Semantic Scholar, Optimization Online</li>
-        <li>&#128295; Software releases from 14+ OR tools with stars, forks &amp; breaking change alerts</li>
-        <li>&#128197; Conference deadlines with countdown alerts &amp; format badges</li>
-        <li>&#128269; Full-text fuzzy search (&#8984;K) with export to BibTeX, CSV, JSON</li>
-        <li>&#11088; Personal watchlist with notes &amp; reading status tracking</li>
-      </ul>
-      <div class="onboarding-interests">
-        <h3>Pick your interests</h3>
-        <div class="onboarding-tags" id="onboardingTags">
-          <button class="onboarding-tag" data-tag="scheduling">scheduling</button>
-          <button class="onboarding-tag" data-tag="vehicle-routing">vehicle-routing</button>
-          <button class="onboarding-tag" data-tag="integer-programming">integer-programming</button>
-          <button class="onboarding-tag" data-tag="stochastic">stochastic</button>
-          <button class="onboarding-tag" data-tag="ml-for-or">ml-for-or</button>
-          <button class="onboarding-tag" data-tag="healthcare-or">healthcare-or</button>
-          <button class="onboarding-tag" data-tag="metaheuristics">metaheuristics</button>
-          <button class="onboarding-tag" data-tag="supply-chain">supply-chain</button>
-          <button class="onboarding-tag" data-tag="decomposition">decomposition</button>
-          <button class="onboarding-tag" data-tag="constraint-programming">constraint-programming</button>
+  <!-- ====== Onboarding Modal (3-step) ====== -->
+  <div class="onboarding-modal" id="onboardingModal" style="display:none" role="dialog" aria-label="Welcome tour">
+    <div class="onboarding-modal__box">
+      <!-- Step indicators -->
+      <div class="onboarding-modal__steps">
+        <span class="onboarding-modal__dot active" data-step="0"></span>
+        <span class="onboarding-modal__dot" data-step="1"></span>
+        <span class="onboarding-modal__dot" data-step="2"></span>
+      </div>
+
+      <!-- Step 1: Welcome -->
+      <div class="onboarding-modal__page active" data-page="0">
+        <h2 class="onboarding-modal__title">Welcome to PORID</h2>
+        <p class="onboarding-modal__subtitle">Your OR Intelligence Hub</p>
+        <p class="onboarding-modal__text">Track the latest publications, software releases, conferences, and funding opportunities across Operations Research &mdash; all in one place.</p>
+      </div>
+
+      <!-- Step 2: Feature overview -->
+      <div class="onboarding-modal__page" data-page="1">
+        <h2 class="onboarding-modal__title">What you can do</h2>
+        <ul class="onboarding-modal__features">
+          <li><strong>Star papers</strong> &mdash; build a personal watchlist with notes &amp; reading status</li>
+          <li><strong>Set alerts</strong> &mdash; get notified when opportunities match your interests</li>
+          <li><strong>Track solvers</strong> &mdash; monitor releases from Gurobi, CPLEX, SCIP, HiGHS &amp; more</li>
+          <li><strong>Export citations</strong> &mdash; BibTeX, RIS, CSV, JSON with one click</li>
+        </ul>
+        <div class="onboarding-interests">
+          <h3>Pick your interests</h3>
+          <div class="onboarding-tags" id="onboardingTags">
+            <button class="onboarding-tag" data-tag="scheduling">scheduling</button>
+            <button class="onboarding-tag" data-tag="vehicle-routing">vehicle-routing</button>
+            <button class="onboarding-tag" data-tag="integer-programming">integer-programming</button>
+            <button class="onboarding-tag" data-tag="stochastic">stochastic</button>
+            <button class="onboarding-tag" data-tag="ml-for-or">ml-for-or</button>
+            <button class="onboarding-tag" data-tag="healthcare-or">healthcare-or</button>
+            <button class="onboarding-tag" data-tag="metaheuristics">metaheuristics</button>
+            <button class="onboarding-tag" data-tag="supply-chain">supply-chain</button>
+            <button class="onboarding-tag" data-tag="decomposition">decomposition</button>
+            <button class="onboarding-tag" data-tag="constraint-programming">constraint-programming</button>
+          </div>
         </div>
       </div>
-      <button class="welcome-modal__dismiss" id="welcomeDismiss">Get Started</button>
+
+      <!-- Step 3: Power-user tips -->
+      <div class="onboarding-modal__page" data-page="2">
+        <h2 class="onboarding-modal__title">Power-user tips</h2>
+        <div class="onboarding-modal__tips">
+          <div class="onboarding-modal__tip"><kbd>?</kbd><span>Keyboard shortcut cheat sheet</span></div>
+          <div class="onboarding-modal__tip"><kbd>W</kbd><span>Toggle watchlist on any card</span></div>
+          <div class="onboarding-modal__tip"><kbd>/</kbd><span>Quick-open search from anywhere</span></div>
+          <div class="onboarding-modal__tip"><kbd>J</kbd> / <kbd>K</kbd><span>Navigate items up &amp; down</span></div>
+        </div>
+        <p class="onboarding-modal__text" style="margin-top:var(--space-md)">You can re-open this tour anytime from the <strong>Tour</strong> link in the footer.</p>
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="onboarding-modal__nav">
+        <button class="onboarding-modal__skip" id="onboardingSkip">Skip</button>
+        <button class="onboarding-modal__next" id="onboardingNext">Next</button>
+      </div>
     </div>
   </div>
 
@@ -300,6 +338,16 @@
       </div>
       <div class="changelog-modal__content" id="changelogContent"></div>
     </div>
+  </div>
+
+  <!-- ====== ER-05: Recently Viewed Floating Button & Panel ====== -->
+  <button class="recent-views-btn" id="recentViewsBtn" aria-label="Recently viewed items" title="Recently Viewed">&#128337;</button>
+  <div class="recent-views-panel" id="recentViewsPanel" aria-hidden="true">
+    <div class="recent-views-panel__header">
+      <h3 class="recent-views-panel__title">Recently Viewed</h3>
+      <button class="recent-views-panel__close" id="recentViewsClose" aria-label="Close">&times;</button>
+    </div>
+    <div class="recent-views-panel__list" id="recentViewsList"></div>
   </div>
 
   <!-- ====== Scroll to Top ====== -->
@@ -319,6 +367,8 @@
       <a href="https://github.com/mghnasiri/PORID/issues/new" target="_blank" rel="noopener" aria-label="Report Issue">Report Issue</a>
       <span class="footer__sep">&middot;</span>
       <a href="methodology.html" aria-label="Methodology">Methodology</a>
+      <span class="footer__sep">&middot;</span>
+      <a href="#" id="tourLink" aria-label="Take the tour">Tour</a>
     </div>
     &copy; 2025 Mohammad G. Nasiri &middot; <a href="#" id="changelogLink" class="footer__version-link">PORID v2.1</a>
   </footer>

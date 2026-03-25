@@ -34,7 +34,7 @@ import { initSearch, wireSearchInput } from './modules/search.js';
 // --- Component / utility imports ---
 import { renderFilterBar, getActiveFilters, applyFilters, getViewPresets, saveViewPreset, deleteViewPreset, renderPresetBar } from './components/filters.js';
 import { showModal, hideModal } from './components/modal.js';
-import { getWatchlist, addToWatchlist, removeFromWatchlist, isWatchlisted, cycleReadStatus, getNote, setNote, hasNote } from './utils/storage.js';
+import { getWatchlist, addToWatchlist, removeFromWatchlist, isWatchlisted, cycleReadStatus, getNote, setNote, hasNote, getLastVisit, setLastVisit, getRecentViews } from './utils/storage.js';
 import { generateBibTeX, generateRIS, deduplicateByDOI, copyToClipboard, generateCSV, downloadFile } from './utils/citation.js';
 import { getPreferences, setPreference } from './utils/preferences.js';
 import { checkOpportunityAlerts, getAlertMatchCount } from './modules/opportunity-alerts.js';
@@ -157,6 +157,8 @@ async function loadAllData() {
   initSearch(state.data);
   updateDeadlineBadge();
   updateOpportunityAlertBadge();
+  updateNewSinceLastVisitBadges(); // ER-04
+  updateRecentViewsBadge();        // ER-05
 
   // Load optional hub data (trends, solvers, benchmarks)
   const optionalFiles = {
@@ -356,6 +358,181 @@ function updateOpportunityAlertBadge() {
   } else if (badge) {
     badge.style.display = 'none';
   }
+}
+
+// ---------------------------------------------------------------------------
+// ER-04: "What's New Since Last Visit" Badge Counts
+// ---------------------------------------------------------------------------
+
+function updateNewSinceLastVisitBadges() {
+  const lastVisit = getLastVisit();
+  // Update the timestamp to now for next visit
+  setLastVisit();
+
+  // If first visit, no badges to show
+  if (!lastVisit) return;
+
+  const lastDate = new Date(lastVisit);
+
+  // Count new items per category since last visit
+  const categories = {
+    publications: state.data.publications || [],
+    conferences: state.data.conferences || [],
+    opportunities: state.data.opportunities || [],
+  };
+
+  const tabMapping = {
+    publications: 'publications',
+    conferences: 'conferences',
+    opportunities: 'opportunities',
+  };
+
+  for (const [category, items] of Object.entries(categories)) {
+    const newCount = items.filter((item) => {
+      const itemDate = item.date || item.cfp_deadline || item.deadline;
+      if (!itemDate) return false;
+      return new Date(itemDate) > lastDate;
+    }).length;
+
+    if (newCount > 0) {
+      const tabKey = tabMapping[category];
+      const tab = document.querySelector(`.nav__tab[data-tab="${tabKey}"]`);
+      if (!tab) continue;
+
+      // Remove existing new-since badge if any
+      const existing = tab.querySelector('.new-since-badge');
+      if (existing) existing.remove();
+
+      const badge = document.createElement('span');
+      badge.className = 'new-since-badge';
+      badge.textContent = `+${newCount}`;
+      badge.title = `${newCount} new since your last visit`;
+      tab.appendChild(badge);
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// ER-05: Recently Viewed Items Panel
+// ---------------------------------------------------------------------------
+
+function wireRecentViewsPanel() {
+  const btn = document.getElementById('recentViewsBtn');
+  const panel = document.getElementById('recentViewsPanel');
+  const closeBtn = document.getElementById('recentViewsClose');
+  if (!btn || !panel) return;
+
+  btn.addEventListener('click', () => {
+    const isOpen = panel.classList.toggle('open');
+    if (isOpen) {
+      renderRecentViewsList();
+    }
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      panel.classList.remove('open');
+    });
+  }
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && panel.classList.contains('open')) {
+      panel.classList.remove('open');
+    }
+  });
+
+  // Close when clicking outside the panel
+  document.addEventListener('click', (e) => {
+    if (panel.classList.contains('open') && !panel.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+      panel.classList.remove('open');
+    }
+  });
+}
+
+function renderRecentViewsList() {
+  const listEl = document.getElementById('recentViewsList');
+  if (!listEl) return;
+
+  const recent = getRecentViews();
+
+  if (recent.length === 0) {
+    listEl.innerHTML = '';
+    const empty = document.createElement('div');
+    empty.className = 'recent-views__empty';
+    empty.textContent = 'No recently viewed items yet. Click on any item to see its details.';
+    listEl.appendChild(empty);
+    return;
+  }
+
+  listEl.innerHTML = '';
+  recent.forEach((entry) => {
+    const row = document.createElement('div');
+    row.className = 'recent-views__item';
+    row.tabIndex = 0;
+
+    const typeBadge = document.createElement('span');
+    typeBadge.className = `recent-views__type recent-views__type--${entry.type}`;
+    typeBadge.textContent = entry.type;
+
+    const title = document.createElement('span');
+    title.className = 'recent-views__title';
+    title.textContent = entry.title;
+
+    const time = document.createElement('span');
+    time.className = 'recent-views__time';
+    time.textContent = formatRelativeTime(entry.timestamp);
+
+    row.appendChild(typeBadge);
+    row.appendChild(title);
+    row.appendChild(time);
+
+    // Click to re-open the item
+    row.addEventListener('click', () => {
+      const item = findItemById(entry.id);
+      if (item) {
+        showModal(item);
+        document.getElementById('recentViewsPanel').classList.remove('open');
+      }
+    });
+
+    listEl.appendChild(row);
+  });
+
+  // Update the badge count on the button
+  updateRecentViewsBadge();
+}
+
+function updateRecentViewsBadge() {
+  const btn = document.getElementById('recentViewsBtn');
+  if (!btn) return;
+  const count = getRecentViews().length;
+  let badge = btn.querySelector('.recent-views__count');
+  if (count > 0) {
+    if (!badge) {
+      badge = document.createElement('span');
+      badge.className = 'recent-views__count';
+      btn.appendChild(badge);
+    }
+    badge.textContent = count;
+  } else if (badge) {
+    badge.remove();
+  }
+}
+
+function formatRelativeTime(isoString) {
+  const now = new Date();
+  const then = new Date(isoString);
+  const diffMs = now - then;
+  const diffMin = Math.floor(diffMs / 60000);
+  const diffHr = Math.floor(diffMs / 3600000);
+  const diffDay = Math.floor(diffMs / 86400000);
+
+  if (diffMin < 1) return 'just now';
+  if (diffMin < 60) return `${diffMin}m ago`;
+  if (diffHr < 24) return `${diffHr}h ago`;
+  if (diffDay < 7) return `${diffDay}d ago`;
+  return then.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 }
 
 // ---------------------------------------------------------------------------
@@ -1305,6 +1482,36 @@ function wireKeyboardShortcuts() {
       return;
     }
 
+    // "/" — open search (alternative to Cmd+K)
+    if (e.key === '/') {
+      e.preventDefault();
+      const searchModal = document.getElementById('searchModal');
+      const searchInput = document.getElementById('searchInput');
+      if (searchModal && searchInput) {
+        searchModal.classList.add('open');
+        searchModal.setAttribute('aria-hidden', 'false');
+        searchInput.focus();
+      }
+      return;
+    }
+
+    // "j" / "k" — next / previous item
+    if (e.key === 'j' || e.key === 'k') {
+      const cards = [...contentEl.querySelectorAll('.card[tabindex], .card[data-id]')];
+      if (!cards.length) return;
+      e.preventDefault();
+      const current = cards.indexOf(document.activeElement);
+      let next;
+      if (e.key === 'j') {
+        next = current < 0 ? 0 : Math.min(current + 1, cards.length - 1);
+      } else {
+        next = current < 0 ? 0 : Math.max(current - 1, 0);
+      }
+      cards[next].focus();
+      cards[next].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      return;
+    }
+
     // "w" — toggle watchlist for focused/hovered card
     if (e.key === 'w') {
       const cardId = getFocusedOrHoveredCardId();
@@ -1590,6 +1797,7 @@ async function init() {
   wireNavScroll();
   wireScrollTop();
   wireCardKeyNav();
+  wireRecentViewsPanel(); // ER-05
 
   showSkeletons();
   await loadAllData();
@@ -1601,40 +1809,91 @@ async function init() {
 
   window.addEventListener('hashchange', onHashChange);
 
-  // First-visit welcome modal with onboarding interest tags
-  if (!localStorage.getItem('porid-welcomed')) {
-    const welcomeModal = document.getElementById('welcomeModal');
-    if (welcomeModal) {
-      welcomeModal.style.display = '';
+  // First-visit onboarding flow (ER-08)
+  if (!localStorage.getItem('porid-onboarded')) {
+    showOnboarding();
+  }
 
-      // Wire onboarding tag toggle
-      const tagsContainer = document.getElementById('onboardingTags');
-      if (tagsContainer) {
-        tagsContainer.addEventListener('click', (e) => {
-          const btn = e.target.closest('.onboarding-tag');
-          if (btn) btn.classList.toggle('selected');
-        });
-      }
-
-      document.getElementById('welcomeDismiss').addEventListener('click', () => {
-        // Save selected interest tags before closing
-        if (tagsContainer) {
-          const selected = Array.from(tagsContainer.querySelectorAll('.onboarding-tag.selected'))
-            .map((el) => el.dataset.tag);
-          if (selected.length > 0) {
-            localStorage.setItem('porid-focus-tags', JSON.stringify(selected));
-          }
-        }
-        welcomeModal.style.display = 'none';
-        localStorage.setItem('porid-welcomed', 'true');
-        // Re-render to apply focus tags
-        renderView();
-      });
-    }
+  // Tour link in footer — re-trigger onboarding
+  const tourLink = document.getElementById('tourLink');
+  if (tourLink) {
+    tourLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      showOnboarding();
+    });
   }
 
   // Changelog modal wiring
   wireChangelog();
+}
+
+// ---------------------------------------------------------------------------
+// Onboarding Flow (ER-08) — 3-step welcome modal
+// ---------------------------------------------------------------------------
+
+function showOnboarding() {
+  const modal = document.getElementById('onboardingModal');
+  if (!modal) return;
+
+  let step = 0;
+  const pages = modal.querySelectorAll('.onboarding-modal__page');
+  const dots = modal.querySelectorAll('.onboarding-modal__dot');
+  const nextBtn = modal.querySelector('#onboardingNext');
+  const skipBtn = modal.querySelector('#onboardingSkip');
+  const totalSteps = pages.length;
+
+  function goToStep(s) {
+    step = s;
+    pages.forEach((p, i) => p.classList.toggle('active', i === step));
+    dots.forEach((d, i) => d.classList.toggle('active', i === step));
+    nextBtn.textContent = step === totalSteps - 1 ? 'Get Started' : 'Next';
+  }
+
+  // Wire onboarding tag toggle
+  const tagsContainer = modal.querySelector('#onboardingTags');
+  if (tagsContainer) {
+    tagsContainer.addEventListener('click', (e) => {
+      const btn = e.target.closest('.onboarding-tag');
+      if (btn) btn.classList.toggle('selected');
+    });
+  }
+
+  function completeOnboarding() {
+    // Save selected interest tags before closing
+    if (tagsContainer) {
+      const selected = Array.from(tagsContainer.querySelectorAll('.onboarding-tag.selected'))
+        .map((el) => el.dataset.tag);
+      if (selected.length > 0) {
+        localStorage.setItem('porid-focus-tags', JSON.stringify(selected));
+      }
+    }
+    modal.style.display = 'none';
+    localStorage.setItem('porid-onboarded', 'true');
+    // Also set the old key for backward compat
+    localStorage.setItem('porid-welcomed', 'true');
+    renderView();
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (step < totalSteps - 1) {
+      goToStep(step + 1);
+    } else {
+      completeOnboarding();
+    }
+  });
+
+  skipBtn.addEventListener('click', () => {
+    completeOnboarding();
+  });
+
+  // Close on backdrop click
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) completeOnboarding();
+  });
+
+  // Show the modal
+  goToStep(0);
+  modal.style.display = '';
 }
 
 // ---------------------------------------------------------------------------

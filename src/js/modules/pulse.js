@@ -200,6 +200,16 @@ export function render(container, allData, extra = {}) {
   });
   pulse.appendChild(cards);
 
+  // ── VD-01: Sparkline Grid for All Subdomains ────────────────
+  if (trends && trends.subdomains && trends.subdomains.length > 0) {
+    pulse.appendChild(buildSparklineGrid(trends.subdomains));
+  }
+
+  // ── VD-04: Tag Cloud from Trending Keywords ─────────────────
+  if (trends && trends.subdomains && trends.subdomains.length > 0) {
+    pulse.appendChild(buildTagCloud(trends.subdomains));
+  }
+
   container.appendChild(pulse);
 
   // Render D3 radar chart if trends data available
@@ -212,6 +222,128 @@ export function render(container, allData, extra = {}) {
       });
     }
   }
+}
+
+/**
+ * VD-01: Builds a sparkline grid showing mini bar charts for each subdomain.
+ * @param {Array} subdomains - trends.subdomains array
+ * @returns {HTMLElement}
+ */
+function buildSparklineGrid(subdomains) {
+  const section = document.createElement('section');
+  section.className = 'sparkline-grid';
+
+  const heading = document.createElement('h2');
+  heading.className = 'sparkline-grid__title';
+  heading.textContent = 'Subdomain Activity';
+  section.appendChild(heading);
+
+  const grid = document.createElement('div');
+  grid.className = 'sparkline-grid__container';
+
+  subdomains.forEach(sd => {
+    const cell = document.createElement('div');
+    cell.className = 'sparkline-cell';
+
+    // Header row: name + velocity arrow
+    const header = document.createElement('div');
+    header.className = 'sparkline-cell__header';
+    const nameEl = document.createElement('span');
+    nameEl.className = 'sparkline-cell__name';
+    nameEl.textContent = sd.display_name || sd.tag;
+    header.appendChild(nameEl);
+
+    const arrow = document.createElement('span');
+    const vel = sd.velocity_label || '';
+    if (vel === 'accelerating') {
+      arrow.className = 'sparkline-cell__arrow sparkline-cell__arrow--up';
+      arrow.textContent = '\u25B2';
+    } else if (vel === 'decelerating') {
+      arrow.className = 'sparkline-cell__arrow sparkline-cell__arrow--down';
+      arrow.textContent = '\u25BC';
+    } else {
+      arrow.className = 'sparkline-cell__arrow sparkline-cell__arrow--flat';
+      arrow.textContent = '\u2013';
+    }
+    header.appendChild(arrow);
+    cell.appendChild(header);
+
+    // Sparkline bars
+    const sparkline = sd.sparkline || [];
+    const maxVal = Math.max(...sparkline, 1);
+    const barsContainer = document.createElement('div');
+    barsContainer.className = 'sparkline-cell__bars';
+    sparkline.forEach((val, i) => {
+      const bar = document.createElement('div');
+      bar.className = 'sparkline-cell__bar';
+      const heightPct = Math.round((val / maxVal) * 100);
+      bar.style.height = heightPct + '%';
+      if (i === sparkline.length - 1) {
+        bar.classList.add('sparkline-cell__bar--current');
+      }
+      barsContainer.appendChild(bar);
+    });
+    cell.appendChild(barsContainer);
+
+    // Count
+    const countEl = document.createElement('span');
+    countEl.className = 'sparkline-cell__count';
+    countEl.textContent = String(sd.current_quarter_count || 0);
+    cell.appendChild(countEl);
+
+    grid.appendChild(cell);
+  });
+
+  section.appendChild(grid);
+  return section;
+}
+
+/**
+ * VD-04: Builds a tag cloud from top_keywords across all subdomains.
+ * Font size mapped to 5 tiers based on keyword frequency.
+ * Clicking navigates to #publications with that keyword as search.
+ * @param {Array} subdomains - trends.subdomains array
+ * @returns {HTMLElement}
+ */
+function buildTagCloud(subdomains) {
+  // Collect keyword frequencies
+  const freq = {};
+  subdomains.forEach(sd => {
+    (sd.top_keywords || []).forEach(kw => {
+      freq[kw] = (freq[kw] || 0) + 1;
+    });
+  });
+
+  const entries = Object.entries(freq).sort((a, b) => b[1] - a[1]);
+  if (entries.length === 0) return document.createElement('div');
+
+  const maxFreq = entries[0][1];
+  const minFreq = entries[entries.length - 1][1];
+  const range = maxFreq - minFreq || 1;
+
+  const section = document.createElement('section');
+  section.className = 'tag-cloud';
+
+  const heading = document.createElement('h2');
+  heading.className = 'tag-cloud__title';
+  heading.textContent = 'Trending Keywords';
+  section.appendChild(heading);
+
+  const cloud = document.createElement('div');
+  cloud.className = 'tag-cloud__container';
+
+  entries.forEach(([keyword, count]) => {
+    const tier = Math.min(4, Math.floor(((count - minFreq) / range) * 4.99));
+    const a = document.createElement('a');
+    a.href = '#publications?q=' + encodeURIComponent(keyword);
+    a.className = 'tag-cloud__tag tag-cloud__tag--t' + tier;
+    a.textContent = keyword;
+    a.title = keyword + ' (' + count + ')';
+    cloud.appendChild(a);
+  });
+
+  section.appendChild(cloud);
+  return section;
 }
 
 function buildBriefDOM(brief, container) {

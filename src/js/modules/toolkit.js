@@ -307,6 +307,20 @@ function buildSolverWizard(solversData, container, onFilter) {
   container.appendChild(wizard);
 }
 
+/** VD-08: compute release recency tier for a solver */
+function releaseActivityTier(releaseDate) {
+  if (!releaseDate) return { tier: 'unknown', label: 'Unknown', color: 'gray' };
+  const now = new Date();
+  const rel = new Date(releaseDate);
+  const months = (now - rel) / (1000 * 60 * 60 * 24 * 30);
+  if (months <= 3) return { tier: 'active', label: 'Active (< 3 mo)', color: 'green' };
+  if (months <= 6) return { tier: 'moderate', label: 'Moderate (3-6 mo)', color: 'yellow' };
+  return { tier: 'stale', label: 'Stale (> 6 mo)', color: 'red' };
+}
+
+/** VD-02: Canonical problem type columns for the heatmap */
+const HEATMAP_PROBLEM_TYPES = ['LP', 'MIP', 'QP', 'SOCP', 'SDP', 'MINLP', 'CP', 'VRP'];
+
 function buildSolvers(solversData, container) {
   if (!solversData || !solversData.solvers || solversData.solvers.length === 0) {
     const empty = document.createElement('div');
@@ -349,16 +363,117 @@ function buildSolvers(solversData, container) {
     });
   });
 
+  /* ── VD-05: Comparison bar (hidden until 2-4 solvers checked) ── */
+  const compareBar = document.createElement('div');
+  compareBar.className = 'solver-compare-bar';
+  compareBar.style.display = 'none';
+  const compareInfo = document.createElement('span');
+  compareInfo.className = 'solver-compare-bar__info';
+  compareBar.appendChild(compareInfo);
+  const compareBtn = document.createElement('button');
+  compareBtn.className = 'solver-compare-bar__btn';
+  compareBtn.textContent = 'Compare Selected';
+  compareBar.appendChild(compareBtn);
+  container.appendChild(compareBar);
+
+  const selectedSolverIds = new Set();
+
+  function updateCompareBar() {
+    const count = selectedSolverIds.size;
+    if (count >= 2 && count <= 4) {
+      compareBar.style.display = 'flex';
+      compareInfo.textContent = `${count} solvers selected`;
+    } else {
+      compareBar.style.display = 'none';
+    }
+  }
+
+  /* ── VD-05: Comparison panel ── */
+  const comparePanel = document.createElement('div');
+  comparePanel.className = 'solver-compare-panel';
+  comparePanel.style.display = 'none';
+  container.appendChild(comparePanel);
+
+  function openComparePanel() {
+    const selected = solversData.solvers.filter(s => selectedSolverIds.has(s.id));
+    if (selected.length < 2) return;
+    comparePanel.textContent = '';
+    comparePanel.style.display = 'block';
+
+    const panelHeader = document.createElement('div');
+    panelHeader.className = 'solver-compare-panel__header';
+    const panelTitle = document.createElement('h3');
+    panelTitle.textContent = 'Side-by-Side Comparison';
+    panelHeader.appendChild(panelTitle);
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'solver-compare-panel__close';
+    closeBtn.textContent = '\u2715';
+    closeBtn.addEventListener('click', () => { comparePanel.style.display = 'none'; });
+    panelHeader.appendChild(closeBtn);
+    comparePanel.appendChild(panelHeader);
+
+    const cTable = document.createElement('table');
+    cTable.className = 'solver-compare-table';
+    const cThead = document.createElement('thead');
+    const cHeaderRow = document.createElement('tr');
+    const cornerTh = document.createElement('th');
+    cornerTh.textContent = 'Feature';
+    cHeaderRow.appendChild(cornerTh);
+    selected.forEach(s => {
+      const th = document.createElement('th');
+      th.textContent = s.name;
+      cHeaderRow.appendChild(th);
+    });
+    cThead.appendChild(cHeaderRow);
+    cTable.appendChild(cThead);
+
+    const cTbody = document.createElement('tbody');
+    const featureRows = [
+      { label: 'Version', fn: s => `v${s.current_version}` },
+      { label: 'Release Date', fn: s => s.release_date ? formatDate(s.release_date) : 'N/A' },
+      { label: 'License', fn: s => {
+        if (s.open_source) return s.license?.type || 'Open Source';
+        return s.license?.academic_free ? `${s.license.type} (Acad. Free)` : s.license?.type || 'Commercial';
+      }},
+      { label: 'Problem Types', fn: s => (s.problem_types || []).join(', ') || 'N/A' },
+      { label: 'Languages', fn: s => (s.language_bindings || []).join(', ') || 'N/A' },
+      { label: 'GitHub Stars', fn: s => s.github_stars != null && s.github_stars >= 0 ? s.github_stars.toLocaleString() : 'N/A' },
+      { label: 'PyPI Downloads/mo', fn: s => s.pypi_monthly_downloads != null && s.pypi_monthly_downloads >= 0 ? s.pypi_monthly_downloads.toLocaleString() : 'N/A' },
+      { label: 'Activity', fn: s => releaseActivityTier(s.release_date).label },
+    ];
+    featureRows.forEach(({ label, fn }) => {
+      const row = document.createElement('tr');
+      const th = document.createElement('td');
+      th.className = 'solver-compare-table__label';
+      th.textContent = label;
+      row.appendChild(th);
+      selected.forEach(s => {
+        const td = document.createElement('td');
+        td.textContent = fn(s);
+        row.appendChild(td);
+      });
+      cTbody.appendChild(row);
+    });
+    cTable.appendChild(cTbody);
+    comparePanel.appendChild(cTable);
+  }
+
+  compareBtn.addEventListener('click', openComparePanel);
+
   const wrap = document.createElement('div');
   wrap.className = 'solver-table-wrap';
 
   const table = document.createElement('table');
   table.className = 'solver-table';
 
-  // thead
+  // thead — added Compare checkbox column and Activity column (VD-05, VD-08)
   const thead = document.createElement('thead');
   const headerRow = document.createElement('tr');
-  ['Solver', 'Version', 'License', 'Problem Types', 'Languages', 'Links'].forEach(h => {
+  const thCheck = document.createElement('th');
+  thCheck.className = 'solver-th-check';
+  thCheck.title = 'Select solvers to compare';
+  headerRow.appendChild(thCheck);
+  ['Solver', 'Version', 'Activity', 'License', 'Problem Types', 'Languages', 'Links'].forEach(h => {
     const th = document.createElement('th');
     th.textContent = h;
     headerRow.appendChild(th);
@@ -373,6 +488,25 @@ function buildSolvers(solversData, container) {
     const tr = document.createElement('tr');
     tr.className = 'solver-row';
     tr.dataset.solverId = s.id;
+
+    // VD-05: Checkbox cell
+    const tdCheck = document.createElement('td');
+    tdCheck.className = 'solver-row__check';
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.className = 'solver-compare-cb';
+    checkbox.title = `Select ${s.name} for comparison`;
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        if (selectedSolverIds.size >= 4) { checkbox.checked = false; return; }
+        selectedSolverIds.add(s.id);
+      } else {
+        selectedSolverIds.delete(s.id);
+      }
+      updateCompareBar();
+    });
+    tdCheck.appendChild(checkbox);
+    tr.appendChild(tdCheck);
 
     // Name
     const tdName = document.createElement('td');
@@ -402,6 +536,20 @@ function buildSolvers(solversData, container) {
       tdVer.appendChild(dateSpan);
     }
     tr.appendChild(tdVer);
+
+    // VD-08: Activity indicator
+    const tdActivity = document.createElement('td');
+    tdActivity.className = 'solver-row__activity';
+    const activity = releaseActivityTier(s.release_date);
+    const actBar = document.createElement('span');
+    actBar.className = `solver-activity-bar solver-activity-bar--${activity.color}`;
+    actBar.title = activity.label;
+    tdActivity.appendChild(actBar);
+    const actLabel = document.createElement('span');
+    actLabel.className = 'solver-activity-label';
+    actLabel.textContent = activity.tier === 'active' ? 'Active' : activity.tier === 'moderate' ? 'Moderate' : activity.tier === 'stale' ? 'Stale' : '?';
+    tdActivity.appendChild(actLabel);
+    tr.appendChild(tdActivity);
 
     // License
     const tdLic = document.createElement('td');
@@ -490,6 +638,216 @@ function buildSolvers(solversData, container) {
   }
 
   container.appendChild(wrap);
+
+  // VD-03: Solver Release Timeline (swimlane view, last 2 years)
+  buildSolverTimeline(solversData, container);
+
+  // VD-02: Coverage Heatmap
+  buildCoverageHeatmap(solversData, container);
+}
+
+/**
+ * VD-02: Build a coverage heatmap grid -- rows = solvers, columns = problem types.
+ * Cells are colored green (supported) or gray (unsupported). Column headers are
+ * sortable: clicking a header reorders solvers so those supporting that type appear first.
+ */
+function buildCoverageHeatmap(solversData, container) {
+  const solvers = solversData.solvers;
+  const section = document.createElement('div');
+  section.className = 'solver-heatmap-section';
+
+  const heading = document.createElement('h3');
+  heading.className = 'solver-heatmap__title';
+  heading.textContent = 'Problem Type Coverage';
+  section.appendChild(heading);
+
+  const desc = document.createElement('p');
+  desc.className = 'solver-heatmap__desc';
+  desc.textContent = 'Click a column header to sort solvers by support for that problem type.';
+  section.appendChild(desc);
+
+  const tableWrap = document.createElement('div');
+  tableWrap.className = 'solver-heatmap-wrap';
+
+  let sortCol = null;
+  let sortAsc = false;
+
+  function renderHeatmap() {
+    tableWrap.textContent = '';
+
+    let sorted = [...solvers];
+    if (sortCol) {
+      sorted.sort((a, b) => {
+        const aHas = (a.problem_types || []).includes(sortCol) ? 1 : 0;
+        const bHas = (b.problem_types || []).includes(sortCol) ? 1 : 0;
+        return sortAsc ? aHas - bHas : bHas - aHas;
+      });
+    }
+
+    const table = document.createElement('table');
+    table.className = 'solver-heatmap';
+
+    const thead = document.createElement('thead');
+    const hRow = document.createElement('tr');
+    const cornerTh = document.createElement('th');
+    cornerTh.textContent = 'Solver';
+    hRow.appendChild(cornerTh);
+    HEATMAP_PROBLEM_TYPES.forEach(pt => {
+      const th = document.createElement('th');
+      th.className = 'solver-heatmap__col-header';
+      th.textContent = pt;
+      th.title = `Sort by ${pt} support`;
+      if (sortCol === pt) th.classList.add('solver-heatmap__col-header--active');
+      th.addEventListener('click', () => {
+        if (sortCol === pt) { sortAsc = !sortAsc; } else { sortCol = pt; sortAsc = false; }
+        renderHeatmap();
+      });
+      hRow.appendChild(th);
+    });
+    thead.appendChild(hRow);
+    table.appendChild(thead);
+
+    const tbody = document.createElement('tbody');
+    sorted.forEach(s => {
+      const row = document.createElement('tr');
+      const tdName = document.createElement('td');
+      tdName.className = 'solver-heatmap__solver-name';
+      tdName.textContent = s.name;
+      row.appendChild(tdName);
+      HEATMAP_PROBLEM_TYPES.forEach(pt => {
+        const td = document.createElement('td');
+        const supported = (s.problem_types || []).includes(pt);
+        td.className = supported ? 'solver-heatmap__cell solver-heatmap__cell--yes' : 'solver-heatmap__cell solver-heatmap__cell--no';
+        td.title = supported ? `${s.name}: supports ${pt}` : `${s.name}: no ${pt}`;
+        row.appendChild(td);
+      });
+      tbody.appendChild(row);
+    });
+    table.appendChild(tbody);
+    tableWrap.appendChild(table);
+  }
+
+  renderHeatmap();
+  section.appendChild(tableWrap);
+  container.appendChild(section);
+}
+
+/**
+ * VD-03: Solver Release Timeline
+ * Horizontal swimlane timeline showing release dates over last 2 years.
+ * Each solver gets a row; dots are positioned by date.
+ * Green = open source, gold = commercial.
+ */
+function buildSolverTimeline(solversData, container) {
+  const solvers = solversData.solvers;
+  if (!solvers || solvers.length === 0) return;
+
+  const now = new Date();
+  const twoYearsAgo = new Date(now);
+  twoYearsAgo.setFullYear(twoYearsAgo.getFullYear() - 2);
+
+  const timelineStart = twoYearsAgo.getTime();
+  const timelineEnd = now.getTime();
+  const timelineRange = timelineEnd - timelineStart;
+
+  // Filter solvers that have a release_date within the 2-year window
+  const solversWithDates = solvers.filter(s => {
+    if (!s.release_date) return false;
+    const d = new Date(s.release_date).getTime();
+    return d >= timelineStart && d <= timelineEnd;
+  });
+
+  if (solversWithDates.length === 0) return;
+
+  // Sort by release date (most recent first)
+  solversWithDates.sort((a, b) => new Date(b.release_date) - new Date(a.release_date));
+
+  const section = document.createElement('div');
+  section.className = 'solver-timeline';
+
+  const heading = document.createElement('h3');
+  heading.className = 'solver-timeline__title';
+  heading.textContent = 'Release Timeline (Last 2 Years)';
+  section.appendChild(heading);
+
+  // Axis labels
+  const axis = document.createElement('div');
+  axis.className = 'solver-timeline__axis';
+
+  // Generate quarterly tick marks
+  const tickDate = new Date(twoYearsAgo);
+  tickDate.setDate(1);
+  tickDate.setMonth(Math.ceil(tickDate.getMonth() / 3) * 3); // Align to quarter
+  while (tickDate <= now) {
+    const pct = ((tickDate.getTime() - timelineStart) / timelineRange) * 100;
+    if (pct >= 0 && pct <= 100) {
+      const tick = document.createElement('span');
+      tick.className = 'solver-timeline__tick';
+      tick.style.left = pct + '%';
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                       'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      tick.textContent = months[tickDate.getMonth()] + ' ' +
+                         String(tickDate.getFullYear()).slice(2);
+      axis.appendChild(tick);
+    }
+    tickDate.setMonth(tickDate.getMonth() + 3);
+  }
+  section.appendChild(axis);
+
+  // Swimlanes
+  const lanes = document.createElement('div');
+  lanes.className = 'solver-timeline__lanes';
+
+  solversWithDates.forEach(s => {
+    const lane = document.createElement('div');
+    lane.className = 'solver-timeline__lane';
+
+    const label = document.createElement('span');
+    label.className = 'solver-timeline__label';
+    label.textContent = s.name.length > 20 ? s.name.slice(0, 18) + '\u2026' : s.name;
+    lane.appendChild(label);
+
+    const track = document.createElement('div');
+    track.className = 'solver-timeline__track';
+
+    const releaseTime = new Date(s.release_date).getTime();
+    const pct = ((releaseTime - timelineStart) / timelineRange) * 100;
+
+    const dot = document.createElement('span');
+    dot.className = s.open_source
+      ? 'solver-timeline__dot solver-timeline__dot--open'
+      : 'solver-timeline__dot solver-timeline__dot--comm';
+    dot.style.left = Math.min(Math.max(pct, 1), 99) + '%';
+    dot.title = s.name + ' v' + s.current_version +
+                ' (' + s.release_date + ')';
+
+    // Tooltip on hover
+    const tip = document.createElement('span');
+    tip.className = 'solver-timeline__tip';
+    tip.textContent = 'v' + s.current_version + ' \u2022 ' + s.release_date;
+    dot.appendChild(tip);
+
+    track.appendChild(dot);
+    lane.appendChild(track);
+    lanes.appendChild(lane);
+  });
+
+  section.appendChild(lanes);
+
+  // Legend
+  const legend = document.createElement('div');
+  legend.className = 'solver-timeline__legend';
+  const openLeg = document.createElement('span');
+  openLeg.className = 'solver-timeline__legend-item';
+  openLeg.innerHTML = '<span class="solver-timeline__dot solver-timeline__dot--open" style="position:static;display:inline-block"></span> Open Source';
+  legend.appendChild(openLeg);
+  const commLeg = document.createElement('span');
+  commLeg.className = 'solver-timeline__legend-item';
+  commLeg.innerHTML = '<span class="solver-timeline__dot solver-timeline__dot--comm" style="position:static;display:inline-block"></span> Commercial';
+  legend.appendChild(commLeg);
+  section.appendChild(legend);
+
+  container.appendChild(section);
 }
 
 /** Category ID to filter-label mapping for benchmark type filters. */
