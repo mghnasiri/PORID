@@ -1,0 +1,315 @@
+{
+  "date": "2026-03-25",
+  "generated_at": "2026-03-25T03:22:37.812960+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1177-10591478261438365",
+      "title": "EXPRESS: The Online Election Campaign Planning Problem: Optimizing Election Campaign Strategies with Inaccurate Information",
+      "authors": [
+        "Shiri, D.",
+        "Shahmanzari, M.",
+        "Tanrisever, F."
+      ],
+      "abstract": "Effective management of election campaigns involves dynamic decision-making under uncertainty. Traditional approaches rely heavily on pre-planned strategies that often fail to adapt to real-time changes in voter sentiment and external factors. This paper introduces the Online Election Campaign Planning Problem (OECPP) to optimize the scheduling of campaign activities in the context of U.S. presidential elections. OECPP incorporates sequentially updated predictions that represent assessments of the impact of campaign activities over the course of the campaign. Since these predictions evolve in response to new information and their accuracy cannot be fully assessed without perfect information, we develop deterministic and randomized online algorithms for OECPP that can operate effectively under unreliable and evolving predictions.\n                  We evaluate the performance of our algorithms using the competitive ratio (CR), a metric particularly useful when probabilistic modeling is impractical. We begin by establishing a tight upper bound on the CR of the online algorithms for the OECPP under unreliable reward predictions. We then introduce a sequential setup-based CR metric to capture the value of reoptimization as new predictions arrive, and we design deterministic and randomized algorithms that are optimal under this metric. Using data from U.S. presidential elections, we show that randomized online algorithms can significantly outperform their deterministic counterparts in terms of empirical CR. We also find that the effectiveness of randomized algorithms is driven by two factors: the selection of prediction samples for generating activity scenarios and the randomization cut-off, which determines the scenarios to be randomized. The benefit of randomization is nonmonotonic, and the best empirical CR is achieved by selectively adding prediction samples to the randomization set.",
+      "date": "2026-03-24",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261438365",
+      "tags": [
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261438365",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2603.23085",
+      "title": "MedCausalX: Adaptive Causal Reasoning with Self-Reflection for Trustworthy Medical Vision-Language Models",
+      "authors": [
+        "Jianxin Lin",
+        "Chunzheng Zhu",
+        "Peter J. Kneuertz",
+        "Yunfei Bai",
+        "Yuan Xue"
+      ],
+      "abstract": "Vision-Language Models (VLMs) have enabled interpretable medical diagnosis by integrating visual perception with linguistic reasoning. Yet, existing medical chain-of-thought (CoT) models lack explicit mechanisms to represent and enforce causal reasoning, leaving them vulnerable to spurious correlations and limiting their clinical reliability. We pinpoint three core challenges in medical CoT reasoning: how to adaptively trigger causal correction, construct high-quality causal-spurious contrastive samples, and maintain causal consistency across reasoning trajectories. To address these challenges, we propose MedCausalX, an end-to-end framework explicitly models causal reasoning chains in medical VLMs. We first introduce the CRMed dataset providing fine-grained anatomical annotations, structured causal reasoning chains, and counterfactual variants that guide the learning of causal relationships beyond superficial correlations. Building upon CRMed, MedCausalX employs a two-stage adaptive reflection architecture equipped with $\\langle$causal$\\rangle$ and $\\langle$verify$\\rangle$ tokens, enabling the model to autonomously determine when and how to perform causal analysis and verification. Finally, a trajectory-level causal correction objective optimized through error-attributed reinforcement learning refines the reasoning chain, allowing the model to distinguish genuine causal dependencies from shortcut associations. Extensive experiments on multiple benchmarks show that MedCausalX consistently outperforms state-of-the-art methods, improving diagnostic consistency by +5.4 points, reducing hallucination by over 10 points, and attaining top spatial grounding IoU, thereby setting a new standard for causally grounded medical reasoning.",
+      "date": "2026-03-24",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2603.23085v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.23085",
+      "arxiv_id": "2603.23085v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2024.0796",
+      "title": "Fast Multinomial Logistic Regression with Group Sparsity",
+      "authors": [
+        "Fu, S.",
+        "Li, S.",
+        "Yu, K.",
+        "Chen, P.",
+        "Ye, Z."
+      ],
+      "abstract": "Multinomial logistic regression (MLR) is a prevalent method for modeling categorical outcomes, but it often encounters issues with parameter nonidentifiability. To combat this, various models, such as reference-based MLR (RMLR), constraint-based MLR (CMLR), and simplex-based MLR (SMLR), have been proposed. When dealing with high-dimensional groupwise covariates, the application of group Least Absolute Shrinkage and Selection Operator-penalized MLRs becomes essential. However, group RMLR presents challenges due to its subjective reference selection, whereas group CMLR is computationally intensive. We introduce the group SMLR (GSMLR) in this paper, emphasizing its efficient parameterization and computational advantages. GSMLR not only eliminates the need for reference selection seen in group RMLR, but also matches the results of group CMLR. We provide a definitive oracle error bound for GSMLR estimators and further optimize its performance with a rapid algorithm that combines groupwise coordinate descent strategy with enhanced safe screening rules. Our numerical results demonstrate that GSMLR excels in both prediction accuracy and computational efficiency, making it a valuable tool for high-dimensional data analysis and decision support in complex domains such as operations management and financial risk assessment.\n                  History: Accepted by Ram Ramesh, Area Editor for Data Science and Machine Learning.\n                  Funding: Financial support from the National Natural Science Foundation of China [Grants 72401253 and 12501369], the Singapore Ministry of Education Academic Research Fund Tier 2 [Grants A-8001052-00-00 and A-8002472-00-00], and the Shenzhen Wukong Investment Management Co. Ltd. is gratefully acknowledged.\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2024.0796 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2024.0796 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-03-24",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2024.0796",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2024.0796",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2603.23249",
+      "title": "A Learning Method with Gap-Aware Generation for Heterogeneous DAG Scheduling",
+      "authors": [
+        "Ruisong Zhou",
+        "Haijun Zou",
+        "Li Zhou",
+        "Chumin Sun",
+        "Zaiwen Wen"
+      ],
+      "abstract": "Efficient scheduling of directed acyclic graphs (DAGs) in heterogeneous environments is challenging due to resource capacities and dependencies. In practice, the need for adaptability across environments with varying resource pools and task types, alongside rapid schedule generation, complicates these challenges. We propose WeCAN, an end-to-end reinforcement learning framework for heterogeneous DAG scheduling that addresses task--pool compatibility coefficients and generation-induced optimality gaps. It adopts a two-stage single-pass design: a single forward pass produces task--pool scores and global parameters, followed by a generation map that constructs schedules without repeated network calls. Its weighted cross-attention encoder models task--pool interactions gated by compatibility coefficients, and is size-agnostic to environment fluctuations. Moreover, widely used list-scheduling maps can incur generation-induced optimality gaps from restricted reachability. We introduce an order-space analysis that characterizes the reachable set of generation maps via feasible schedule orders, explains the mechanism behind generation-induced gaps, and yields sufficient conditions for gap elimination. Guided by these conditions, we design a skip-extended realization with an analytically parameterized decreasing skip rule, which enlarges the reachable order set while preserving single-pass efficiency. Experiments on computation graphs and real-world TPC-H DAGs demonstrate improved makespan over strong baselines, with inference time comparable to classical heuristics and faster than multi-round neural schedulers.",
+      "date": "2026-03-24",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2603.23249v1",
+      "tags": [
+        "cs.LG",
+        "scheduling",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.23249",
+      "arxiv_id": "2603.23249v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2603.23042",
+      "title": "Minimizing Material Waste in Additive Manufacturing through Online Reel Assignment",
+      "authors": [
+        "Ilayda Celenk",
+        "Willem van Jaarsveld",
+        "Ivo J. B. F. Adan",
+        "Alp Akcay"
+      ],
+      "abstract": "We study a variant of the online bin packing problem that arises in filament-based 3D printing systems operating in make-to-order settings, where only a limited number of filament reels of finite capacity can be handled at once. Components are assigned to reels upon arrival and insufficient reels are discarded to be replaced with new ones, resulting in material waste. To minimize the long-run average discarded filament through an online assignment policy, we formulate this problem as an infinite-horizon average-cost Markov Decision Process and analyze the structure of policies under stochastic, sequential demand. We first show that under a random allocation policy, the system decomposes into a collection of identical single-reel processes, allowing us to derive a closed-form expression for the average waste and enabling a tractable baseline analysis. Building on this decomposition, we construct a theoretically grounded index policy that assigns each reel a score reflecting the marginal cost of assignment and prove that it constitutes a one-step policy improvement over random allocation. We embed the index-based structure within a Deep Reinforcement Learning framework using approximate policy iteration. The resulting method achieves near-optimal performance across a range of simulated and real-world scenarios. Our results demonstrate that Reinforcement Learning policy significantly reduces material waste while maintaining real-time feasibility and interpretability.",
+      "date": "2026-03-24",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2603.23042v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.23042",
+      "arxiv_id": "2603.23042v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2603.23196",
+      "title": "Gaussian mixtures and non-parametric likelihoods through the lens of statistical mechanics",
+      "authors": [
+        "Subhroshekhar Ghosh",
+        "Adityanand Guntuboyina",
+        "Satyaki Mukherjee",
+        "Hoang-Son Tran"
+      ],
+      "abstract": "In this work, we investigate Gaussian Mixture Models ({\\it abbrv} GMM) and the related problem of non parametric maximum likelihood estimation ({\\it abbrv} NPMLE) from the perspective of statistical mechanics. In particular, we establish stability guarantees for the NPMLE procedure that extend well beyond the state of the art. Crucially, we obtain guarantees on the Kullback-Leibler divergence between NPMLE estimators and the ground truth, a type of result which has been known to be challenging in the literature on this problem.   In particular, we provide high probability upper bounds on the KL divergence between the NPMLE and the true density that are of the order of $\\min\\big\\{\\frac{(\\log n)^{d+2}}{n} , \\frac{\\log n}{\\sqrt n}\\big\\}$, which cover a wide range of scenarios for the comparative sizes of $n$ and $d$. We obtain similar guarantees for approximate solutions to the NPMLE problem, addressing realistic situations wherein optimization algorithms need to be stopped in finite time, allowing access only to approximations to the true NPMLE. A technical cornerstone of our approach is an analysis of the function class complexity of logarithms of gaussian mixture densities, which is able to handle their unboundedness, and could be of wider interest.   We also establish correspondences between stability phenomena in the NPMLE problem and concepts from chaos and multiple valleys in random energy landscapes of statistical mechanics models. We believe that these correspondences may be useful for a wide variety of random optimization problems in statistics and machine learning, especially the connections to the the technical ingredients of concentration phenomena and Langevin dynamics for these models.",
+      "date": "2026-03-24",
+      "source": "arXiv",
+      "source_detail": "math.ST",
+      "url": "http://arxiv.org/abs/2603.23196v1",
+      "tags": [
+        "math.ST",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.23196",
+      "arxiv_id": "2603.23196v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2603.23136",
+      "title": "HGNet: Scalable Foundation Model for Automated Knowledge Graph Generation from Scientific Literature",
+      "authors": [
+        "Devvrat Joshi",
+        "Islem Rekik"
+      ],
+      "abstract": "Automated knowledge graph (KG) construction is essential for navigating the rapidly expanding body of scientific literature. However, existing approaches struggle to recognize long multi-word entities, often fail to generalize across domains, and typically overlook the hierarchical nature of scientific knowledge. While general-purpose large language models (LLMs) offer adaptability, they are computationally expensive and yield inconsistent accuracy on specialized tasks. As a result, current KGs are shallow and inconsistent, limiting their utility for exploration and synthesis. We propose a two-stage framework for scalable, zero-shot scientific KG construction. The first stage, Z-NERD, introduces (i) Orthogonal Semantic Decomposition (OSD), which promotes domain-agnostic entity recognition by isolating semantic \"turns\" in text, and (ii) a Multi-Scale TCQK attention mechanism that captures coherent multi-word entities through n-gram-aware attention heads. The second stage, HGNet, performs relation extraction with hierarchy-aware message passing, explicitly modeling parent, child, and peer relations. To enforce global consistency, we introduce two complementary objectives: a Differentiable Hierarchy Loss to discourage cycles and shortcut edges, and a Continuum Abstraction Field (CAF) Loss that embeds abstraction levels along a learnable axis in Euclidean space. This is the first approach to formalize hierarchical abstraction as a continuous property within standard Euclidean embeddings, offering a simpler alternative to hyperbolic methods. We release SPHERE (https://github.com/basiralab/SPHERE), a multi-domain benchmark for hierarchical relation extraction. Our framework establishes a new state of the art on SciERC, SciER, and SPHERE, improving NER by 8.08% and RE by 5.99% on out-of-distribution tests. In zero-shot settings, gains reach 10.76% for NER and 26.2% for RE.",
+      "date": "2026-03-24",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2603.23136v1",
+      "tags": [
+        "cs.CL",
+        "stochastic",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.23136",
+      "arxiv_id": "2603.23136v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2603.23043",
+      "title": "Assessing the Robustness of Climate Foundation Models under No-Analog Distribution Shifts",
+      "authors": [
+        "Maria Conchita Agana Navarro",
+        "Geng Li",
+        "Theo Wolf",
+        "Maria Perez-Ortiz"
+      ],
+      "abstract": "The accelerating pace of climate change introduces profound non-stationarities that challenge the ability of Machine Learning based climate emulators to generalize beyond their training distributions. While these emulators offer computationally efficient alternatives to traditional Earth System Models, their reliability remains a potential bottleneck under \"no-analog\" future climate states, which we define here as regimes where external forcing drives the system into conditions outside the empirical range of the historical training data. A fundamental challenge in evaluating this reliability is data contamination; because many models are trained on simulations that already encompass future scenarios, true out-of-distribution (OOD) performance is often masked. To address this, we benchmark the OOD robustness of three state-of-the-art architectures: U-Net, ConvLSTM, and the ClimaX foundation model specifically restricted to a historical-only training regime (1850-2014). We evaluate these models using two complementary strategies: (i) temporal extrapolation to the recent climate (2015-2023) and (ii) cross-scenario forcing shifts across divergent emission pathways. Our analysis within this experimental setup reveals an accuracy vs. stability trade-off: while the ClimaX foundation model achieves the lowest absolute error, it exhibits higher relative performance changes under distribution shifts, with precipitation errors increasing by up to 8.44% under extreme forcing scenarios. These findings suggest that when restricted to historical training dynamics, even high-capacity foundation models are sensitive to external forcing trajectories. Our results underscore the necessity of scenario-aware training and rigorous OOD evaluation protocols to ensure the robustness of climate emulators under a changing climate.",
+      "date": "2026-03-24",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2603.23043v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.23043",
+      "arxiv_id": "2603.23043v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2603.23401",
+      "title": "Self-Supervised Graph Neural Networks for Optimal Substation Reconfiguration",
+      "authors": [
+        "Antoine Martinez",
+        "Balthazar Donon",
+        "Louis Wehenkel",
+        "a Efthymios Karangelos"
+      ],
+      "abstract": "Changing the transmission system topology is an efficient and costless lever to reduce congestion or increase exchange capacities. The problem of finding the optimal switch states within substations is called Optimal Substation Reconfiguration (OSR), and may be framed as a Mixed Integer Linear Program (MILP). Current state-of-the-art optimization techniques come with prohibitive computing times, making them impractical for real-time decision-making. Meanwhile, deep learning offers a promising perspective with drastically smaller computing times, at the price of an expensive training phase and the absence of optimality guarantees. In this work, we frame OSR as an Amortized Optimization problem, where a Graph Neural Network (GNN) model -- our data being graphs -- is trained in a self-supervised way to improve the objective function. We apply our approach to the maximization of the exchange capacity between two areas of a small-scale 12-substations system. Once trained, our GNN model improves the exchange capacity by 10.2% on average compared to the all connected configuration, while a classical MILP solver reaches an average improvement of 15.2% with orders-of-magnitude larger computing times.",
+      "date": "2026-03-24",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2603.23401v1",
+      "tags": [
+        "eess.SY",
+        "integer-programming",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.23401",
+      "arxiv_id": "2603.23401v1",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2023.03896",
+      "title": "Will the Truth Free Us from Misinformation?",
+      "authors": [
+        "Godes, D."
+      ],
+      "abstract": "We study the impact of truthful revelation mechanisms, like fact checking, on the incentives for media outlets to produce misinformation. The existing literature suggests that such interventions will always reduce this incentive. In this paper, we consider a context in which consumers benefit both, and to varying degrees, from the truth contained in news reports and from sharing, discussing, and reacting to news stories that, independent of their truthful content, reinforce and enhance their social identity. In such a setting, we find that truthful revelation will not always decrease, and may in fact increase, the incentives for biased reporting. We identify two distinct mechanisms behind this effect. First, we show that truthful revelation may improve the ability of a biased media outlet to signal its type to consumers. Second, we find that heterogeneous preferences for misinformation endow the outlet with a demand function that may imply an increase or decrease in the incentives to produce biased news due to the stochasticity implied by the fact checking process. Finally, we provide two empirical examples that offer results that are consistent with the idea that media outlets are unlikely to reduce, and may increase, bias when they expect the truth to be revealed imminently.\n                  This paper was accepted by Raphael Thomadsen, marketing.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2023.03896 .",
+      "date": "2026-03-24",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2023.03896",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2023.03896",
+      "score": 45.0
+    }
+  ],
+  "software": [
+    {
+      "id": "gh-cvxpy-cvxpy-1.8.2",
+      "name": "CVXPY",
+      "version": "1.8.2",
+      "date": "2026-03-22",
+      "changelog": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 term for indefinite P (#3150)\n- Fix backward() setting param.gradient to float 0.0 instead of zero ndarray (#3159)\n- Fix Dgp2Dcp.param_backward KeyError when log-param not in dparams (#3164)\n- Fix reshape._infer_shape() for N-D shapes with -1 (#3165)\n- Reject sparse/diag variables with pos/neg attribu…",
+      "url": "https://github.com/cvxpy/cvxpy/releases/tag/v1.8.2",
+      "source": "GitHub",
+      "tags": [
+        "library",
+        "general-or"
+      ],
+      "type": "software",
+      "score": 20.0
+    }
+  ],
+  "deadlines": [
+    {
+      "id": "cordis-101153187",
+      "title": "[HORIZON-MSCA-2023-PF-01] NeurExCo: Synergizing Neural Network Theory and Combinatorial Optimization via Extension Complexity",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101153187",
+      "deadline": "2026-03-31",
+      "date": "2026-03-24",
+      "project_start": "2024-04-01",
+      "project_end": "2026-03-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "ml-for-or"
+      ],
+      "description": "Artificial intelligence is changing our lives. Artificial neural networks are present and entering various fields of modern technology such as medicine, engineering, education and many more. Even a small-scale theoretical understanding of why and how neural networks succeed in practice can have a considerable impact on the future development of such technologies.\n\n            In contrast, combinatorial optimization is a well-established discipline at the intersection of mathematics and computer ",
+      "score": 35.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "cordis-101153187",
+      "title": "[HORIZON-MSCA-2023-PF-01] NeurExCo: Synergizing Neural Network Theory and Combinatorial Optimization via Extension Complexity",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101153187",
+      "deadline": "2026-03-31",
+      "date": "2026-03-24",
+      "project_start": "2024-04-01",
+      "project_end": "2026-03-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "ml-for-or"
+      ],
+      "description": "Artificial intelligence is changing our lives. Artificial neural networks are present and entering various fields of modern technology such as medicine, engineering, education and many more. Even a small-scale theoretical understanding of why and how neural networks succeed in practice can have a considerable impact on the future development of such technologies.\n\n            In contrast, combinatorial optimization is a well-established discipline at the intersection of mathematics and computer ",
+      "score": 35.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 1,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 12
+  }
+}
