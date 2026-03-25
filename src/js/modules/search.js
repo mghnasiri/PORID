@@ -189,6 +189,22 @@ function renderSearchResults(query, onCloseSearch) {
   });
 }
 
+/** MW-09: Tracked highlighted index for keyboard navigation */
+let highlightedIndex = -1;
+
+/**
+ * Updates the visual highlight on search results based on highlightedIndex.
+ */
+function updateHighlight() {
+  const results = document.querySelectorAll('.search-result');
+  results.forEach((el, i) => {
+    el.classList.toggle('search-result--highlighted', i === highlightedIndex);
+  });
+  // Scroll highlighted into view
+  const active = results[highlightedIndex];
+  if (active) active.scrollIntoView({ block: 'nearest' });
+}
+
 /**
  * Wires the search input to live-render results in the Cmd+K modal.
  * @param {Function} onCloseSearch - Callback to close the search modal.
@@ -198,6 +214,26 @@ export function wireSearchInput(onCloseSearch) {
   if (!searchInput) return;
 
   searchInput.addEventListener('input', (e) => {
+    highlightedIndex = -1;
     renderSearchResults(e.target.value.trim(), onCloseSearch);
+  });
+
+  // MW-09: Keyboard navigation (Arrow Up/Down/Enter)
+  searchInput.addEventListener('keydown', (e) => {
+    const results = document.querySelectorAll('.search-result');
+    if (!results.length) return;
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      highlightedIndex = Math.min(highlightedIndex + 1, results.length - 1);
+      updateHighlight();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      highlightedIndex = Math.max(highlightedIndex - 1, 0);
+      updateHighlight();
+    } else if (e.key === 'Enter' && highlightedIndex >= 0) {
+      e.preventDefault();
+      results[highlightedIndex]?.click();
+    }
   });
 }

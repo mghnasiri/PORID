@@ -690,7 +690,33 @@ textarea:focus-visible,
   overflow: hidden; margin: 0;
 }
 
-.card__date { font-size: 0.75rem; color: var(--color-text-faint); white-space: nowrap; flex-shrink: 0; }
+.card__date { font-size: 0.75rem; color: var(--color-text-faint); white-space: nowrap; flex-shrink: 0; position: relative; }
+
+/* MW-03: Deadline urgency color ramp */
+.card__date--green  { color: #2ECC71; }
+.card__date--amber  { color: #F39C12; }
+.card__date--red    { color: #E74C3C; font-weight: 600; }
+.card__date--passed { color: var(--color-text-faint); text-decoration: line-through; opacity: 0.7; }
+
+/* MW-07: Tooltip on relative dates */
+[data-tooltip] { cursor: default; }
+[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  color: var(--color-text);
+  background: var(--color-bg-elevated);
+  border: var(--border-subtle);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  z-index: 10;
+  pointer-events: none;
+}
 
 .card__citations { color: var(--color-accent); font-weight: 500; font-size: 0.7rem; }
 
@@ -956,7 +982,8 @@ textarea:focus-visible,
   transition: all var(--transition-fast);
 }
 
-.search-result:hover { background: var(--color-accent-glow); border-left-color: var(--color-accent); }
+.search-result:hover,
+.search-result--highlighted { background: var(--color-accent-glow); border-left-color: var(--color-accent); }
 
 .search-result__title { font-size: 0.875rem; font-weight: 500; color: var(--color-text); margin-bottom: 2px; }
 .search-result__meta { font-size: 0.75rem; color: var(--color-text-muted); }
@@ -4111,4 +4138,92 @@ textarea:focus-visible,
   flex-shrink: 0;
   font-size: 0.7rem;
   color: var(--color-text-faint, var(--color-text-muted));
+}
+
+/* ── DF-03: Statistics Summary Bar ──────────────────────────── */
+
+.stats-summary-bar {
+  margin: 0;
+  padding: var(--space-xs) 0;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.01em;
+}
+
+/* ── DF-08: System Presets ──────────────────────────────────── */
+
+.preset-pill--system {
+  border-color: var(--color-text-faint);
+  background: rgba(136, 146, 176, 0.08);
+  color: var(--color-text-muted);
+}
+
+.preset-pill--system:hover {
+  background: rgba(136, 146, 176, 0.18);
+  color: var(--color-text);
+}
+
+/* ── SC-02: Share Dropdown ──────────────────────────────────── */
+
+.card__share-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.card__share-dropdown {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 130px;
+  background: var(--color-bg-elevated);
+  border: var(--border-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  z-index: 20;
+  overflow: hidden;
+}
+
+.card__share-option {
+  display: block;
+  padding: 8px 14px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--color-text);
+  text-decoration: none;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  white-space: nowrap;
+}
+
+.card__share-option:hover {
+  background: var(--color-accent-glow);
+  color: var(--color-accent);
+}
+
+/* MW-06: Clickable tag pills inside cards */
+.card__tags .tag { cursor: pointer; transition: background var(--transition-fast), border-color var(--transition-fast); }
+.card__tags .tag:hover { background: var(--color-accent-dim); border-color: var(--color-accent); }
+
+/* MW-08: Tab count badges */
+.nav__tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 600;
+  min-width: 18px;
+  height: 16px;
+  padding: 0 4px;
+  margin-left: 4px;
+  border-radius: 8px;
+  background: var(--color-accent-dim);
+  color: var(--color-accent);
+  vertical-align: middle;
+  line-height: 1;
 }

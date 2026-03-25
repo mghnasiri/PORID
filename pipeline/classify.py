@@ -173,7 +173,8 @@ def score_item(item: dict, tag_keywords: dict[str, list[str]]) -> float:
     - +5 per matching tag (max +40)
     - +20 if published in last 24 hours, +10 if last 3 days, +5 if last 7 days
     - +10 if has DOI (indicates peer-reviewed)
-    - +5 if has abstract (more complete metadata)
+    - Abstract quality: +10 if >200 chars, +5 if 50-200 chars, +2 if <50 chars
+    - Citation count: +20 if >50, +10 if 10-50, +5 if 1-10
     - Final score is clamped to 0-100 range.
 
     Args:
@@ -213,10 +214,30 @@ def score_item(item: dict, tag_keywords: dict[str, list[str]]) -> float:
     if doi:
         score += 10.0
 
-    # Abstract completeness bonus
+    # Abstract quality bonus (graduated by length)
     abstract = item.get("abstract", "")
-    if abstract and len(abstract.strip()) > 20:
-        score += 5.0
+    if abstract:
+        abs_len = len(abstract.strip())
+        if abs_len > 200:
+            score += 10.0
+        elif abs_len >= 50:
+            score += 5.0
+        elif abs_len > 0:
+            score += 2.0
+
+    # Citation count bonus
+    citation_count = item.get("citation_count")
+    if citation_count is not None:
+        try:
+            cc = int(citation_count)
+            if cc > 50:
+                score += 20.0
+            elif cc >= 10:
+                score += 10.0
+            elif cc >= 1:
+                score += 5.0
+        except (ValueError, TypeError):
+            pass
 
     # Clamp to 0-100
     return max(0.0, min(100.0, score))

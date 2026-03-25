@@ -290,6 +290,29 @@ function exportItems(items, format) {
 }
 
 /**
+ * DF-03: Builds a summary statistics bar showing counts for the current view.
+ * @param {Object[]} filtered - The filtered items array.
+ * @param {Object[]} allData - The full unfiltered data array.
+ * @returns {string} HTML string for the summary bar.
+ */
+function buildSummaryBar(filtered, allData) {
+  const total = allData.length;
+  const showing = filtered.length;
+
+  // Count items from the last 7 days
+  const weekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
+  const newThisWeek = filtered.filter(item => {
+    if (!item.date) return false;
+    return new Date(item.date + 'T00:00:00').getTime() > weekAgo;
+  }).length;
+
+  // Count unique sources
+  const sources = new Set(filtered.map(item => item.source).filter(Boolean));
+
+  return `<p class="stats-summary-bar">Showing ${showing} of ${total} publications \u00b7 ${newThisWeek} new this week \u00b7 ${sources.size} source${sources.size !== 1 ? 's' : ''}</p>`;
+}
+
+/**
  * Main render function for the publications module.
  * @param {HTMLElement} container - The #content element.
  * @param {Object[]} data - Raw publications array (trusted local JSON).
@@ -315,6 +338,9 @@ function renderPage(container, data, filters) {
 
   const toggle = renderViewToggle(filtered);
 
+  // DF-03: Per-view statistics summary bar
+  const summaryBar = buildSummaryBar(filtered, data);
+
   // Determine the visible slice for grid/list (table always shows all)
   const isTableMode = viewMode === 'table';
   const visibleCount = isTableMode ? filtered.length : currentPage * PAGE_SIZE;
@@ -338,11 +364,11 @@ function renderPage(container, data, filters) {
   // Trusted local data — innerHTML is safe in this context
   const wrapper = document.createElement('div');
   if (isTableMode) {
-    wrapper.innerHTML = `${toggle}${renderTable(filtered)}`;
+    wrapper.innerHTML = `${toggle}${summaryBar}${renderTable(filtered)}`;
   } else if (viewMode === 'list') {
-    wrapper.innerHTML = `${toggle}<div class="list-view">${visible.map(renderListRow).join('')}</div>`;
+    wrapper.innerHTML = `${toggle}${summaryBar}<div class="list-view">${visible.map(renderListRow).join('')}</div>`;
   } else {
-    wrapper.innerHTML = `${toggle}<div class="card-grid">${visible.map(renderGridCard).join('')}</div>`;
+    wrapper.innerHTML = `${toggle}${summaryBar}<div class="card-grid">${visible.map(renderGridCard).join('')}</div>`;
   }
   container.textContent = '';
   while (wrapper.firstChild) {

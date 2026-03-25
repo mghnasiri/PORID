@@ -32,7 +32,7 @@ import { render as renderResources } from './modules/resources.js';
 import { initSearch, wireSearchInput } from './modules/search.js';
 
 // --- Component / utility imports ---
-import { renderFilterBar, getActiveFilters, applyFilters, getViewPresets, saveViewPreset, deleteViewPreset, renderPresetBar } from './components/filters.js';
+import { renderFilterBar, getActiveFilters, applyFilters, getViewPresets, saveViewPreset, deleteViewPreset, renderPresetBar, getSystemPresets } from './components/filters.js';
 import { showModal, hideModal } from './components/modal.js';
 import { getWatchlist, addToWatchlist, removeFromWatchlist, isWatchlisted, cycleReadStatus, getNote, setNote, hasNote, getLastVisit, setLastVisit, getRecentViews } from './utils/storage.js';
 import { generateBibTeX, generateRIS, deduplicateByDOI, copyToClipboard, generateCSV, downloadFile } from './utils/citation.js';
@@ -159,6 +159,7 @@ async function loadAllData() {
   updateOpportunityAlertBadge();
   updateNewSinceLastVisitBadges(); // ER-04
   updateRecentViewsBadge();        // ER-05
+  updateTabCountBadges();          // MW-08
 
   // Load optional hub data (trends, solvers, benchmarks)
   const optionalFiles = {
@@ -409,6 +410,36 @@ function updateNewSinceLastVisitBadges() {
       badge.title = `${newCount} new since your last visit`;
       tab.appendChild(badge);
     }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// MW-08: Tab Count Badges — inject item counts into nav tab labels
+// ---------------------------------------------------------------------------
+
+function updateTabCountBadges() {
+  const counts = {
+    publications: (state.data.publications || []).length,
+    software: (state.data.software || []).length,
+    conferences: (state.data.conferences || []).length,
+    opportunities: (state.data.opportunities || []).length,
+    funding: (state.data.funding || []).length,
+    awards: (state.data.awards || []).length,
+    resources: (state.data.resources || []).length,
+  };
+
+  for (const [tabKey, count] of Object.entries(counts)) {
+    if (!count) continue;
+    const tab = document.querySelector(`.nav__tab[data-tab="${tabKey}"]`);
+    if (!tab) continue;
+    // Avoid duplicates
+    let badge = tab.querySelector('.nav__tab-count');
+    if (!badge) {
+      badge = document.createElement('span');
+      badge.className = 'nav__tab-count';
+      tab.appendChild(badge);
+    }
+    badge.textContent = count;
   }
 }
 
@@ -1075,8 +1106,20 @@ function wirePresetEvents() {
     });
   }
 
+  // DF-08: System preset pills — click to load (no delete)
+  document.querySelectorAll('.preset-pill--system').forEach((pill) => {
+    pill.addEventListener('click', () => {
+      const index = parseInt(pill.dataset.systemPresetIndex);
+      const systemPresets = getSystemPresets();
+      const preset = systemPresets[index];
+      if (!preset) return;
+      applyPresetFilters(preset.filters);
+      showToast(`Loaded "${preset.name}"`);
+    });
+  });
+
   // Preset pills — click to load, delete button
-  document.querySelectorAll('.preset-pill').forEach((pill) => {
+  document.querySelectorAll('.preset-pill:not(.preset-pill--system)').forEach((pill) => {
     pill.addEventListener('click', (e) => {
       if (e.target.closest('.preset-pill__delete')) return;
       const index = parseInt(pill.dataset.presetIndex);
@@ -1217,6 +1260,50 @@ function wireCardEvents() {
       const id = detailBtn.dataset.id;
       const item = findItemById(id);
       if (item) showModal(item);
+      return;
+    }
+
+    // SC-02: Share button — toggle dropdown
+    const shareBtn = e.target.closest('.card__share-btn');
+    if (shareBtn) {
+      const dropdown = shareBtn.nextElementSibling;
+      if (dropdown) {
+        document.querySelectorAll('.card__share-dropdown').forEach(d => {
+          if (d !== dropdown) d.style.display = 'none';
+        });
+        dropdown.style.display = dropdown.style.display === 'none' ? 'flex' : 'none';
+      }
+      return;
+    }
+
+    // SC-02: Copy link share option
+    const copyBtn = e.target.closest('.card__share-copy');
+    if (copyBtn) {
+      const url = copyBtn.dataset.url;
+      const title = copyBtn.dataset.title;
+      const text = url ? url : title;
+      navigator.clipboard.writeText(text).then(() => {
+        copyBtn.textContent = 'Copied!';
+        setTimeout(() => { copyBtn.textContent = 'Copy Link'; }, 1500);
+      }).catch(() => {
+        copyBtn.textContent = 'Failed';
+        setTimeout(() => { copyBtn.textContent = 'Copy Link'; }, 1500);
+      });
+      return;
+    }
+
+    // MW-06: Tag click activates filter
+    const tagEl = e.target.closest('.card__tags .tag');
+    if (tagEl && !tagEl.classList.contains('tag--source') && !tagEl.classList.contains('tag--tier')) {
+      const tagText = tagEl.textContent.trim();
+      const filterTag = document.querySelector(`.filter-tag[data-tag="${tagText}"]`);
+      if (filterTag && !filterTag.classList.contains('active')) {
+        document.querySelector('.filter-tag[data-tag="all"]')?.classList.remove('active');
+        filterTag.classList.add('active');
+        updateClearBtn();
+        syncFiltersToHash();
+        debouncedRenderView();
+      }
     }
   });
 
@@ -1244,6 +1331,15 @@ function wireCardEvents() {
       }
     }
   }, true);
+
+  // SC-02: Close share dropdowns on outside click
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.card__share-wrapper')) {
+      document.querySelectorAll('.card__share-dropdown').forEach(d => {
+        d.style.display = 'none';
+      });
+    }
+  });
 }
 
 function findItemById(id) {

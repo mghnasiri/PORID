@@ -49,22 +49,35 @@ function getSubtitle(item) {
 /**
  * Builds the date / deadline display.
  */
+/**
+ * Returns a CSS urgency class based on days remaining.
+ * green >14d, amber 7-14d, red <7d, gray passed.
+ */
+function urgencyClass(days) {
+  if (days <= 0) return 'card__date--passed';
+  if (days < 7)  return 'card__date--red';
+  if (days <= 14) return 'card__date--amber';
+  return 'card__date--green';
+}
+
 function getDateDisplay(item) {
   if (item.type === 'conference' && item.cfp_deadline) {
     const days = daysUntil(item.cfp_deadline);
     const label = days > 0 ? `CFP in ${days}d` : 'CFP passed';
-    return `<span class="card__date" title="Deadline: ${formatDate(item.cfp_deadline)}">${label}</span>`;
+    const cls = urgencyClass(days);
+    return `<span class="card__date ${cls}" data-tooltip="${formatDate(item.cfp_deadline)}" title="Deadline: ${formatDate(item.cfp_deadline)}">${label}</span>`;
   }
 
   if (item.type === 'opportunity' && item.deadline) {
     const days = daysUntil(item.deadline);
     const label = days > 0 ? `${days}d left` : 'Deadline passed';
-    return `<span class="card__date" title="Deadline: ${formatDate(item.deadline)}">${label}</span>`;
+    const cls = urgencyClass(days);
+    return `<span class="card__date ${cls}" data-tooltip="${formatDate(item.deadline)}" title="Deadline: ${formatDate(item.deadline)}">${label}</span>`;
   }
 
   const dateStr = item.date;
   if (!dateStr) return '';
-  return `<span class="card__date" title="${formatDate(dateStr)}">${relativeTime(dateStr)}</span>`;
+  return `<span class="card__date" data-tooltip="${formatDate(dateStr)}" title="${formatDate(dateStr)}">${relativeTime(dateStr)}</span>`;
 }
 
 /**
@@ -164,6 +177,14 @@ export function renderCard(item) {
         ${item.url && item.url.includes('arxiv.org/abs/') ? `<a href="${item.url.replace('/abs/', '/pdf/') + '.pdf'}" target="_blank" rel="noopener" class="card__action card__pdf" title="Download PDF">PDF</a>` : ''}
         <button class="card__detail-btn card__action" data-id="${item.id}">Details</button>
         <a href="https://github.com/mghnasiri/PORID/issues/new?title=${encodeURIComponent('Data correction: ' + title)}&body=${encodeURIComponent('Item ID: ' + item.id + '\nType: ' + item.type + '\n\nWhat needs correction:\n')}&labels=data-correction" target="_blank" rel="noopener" class="card__action card__report" title="Report data correction">&#9873;</a>
+        <div class="card__share-wrapper">
+          <button class="card__action card__share-btn" aria-label="Share" title="Share">&#8599; Share</button>
+          <div class="card__share-dropdown" style="display:none;">
+            <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(item.url || '')}" target="_blank" rel="noopener" class="card__share-option">X / Twitter</a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(item.url || '')}" target="_blank" rel="noopener" class="card__share-option">LinkedIn</a>
+            <button class="card__share-option card__share-copy" data-url="${item.url || ''}" data-title="${title}">Copy Link</button>
+          </div>
+        </div>
       </div>
       <div class="card__note-area" data-id="${item.id}" style="display:none;">
         <textarea class="card__note-input" data-id="${item.id}" placeholder="Add a note..." rows="2">${itemHasNote ? '' : ''}</textarea>

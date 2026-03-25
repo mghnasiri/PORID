@@ -214,6 +214,88 @@ function getDateKey(item) {
 }
 
 // ---------------------------------------------------------------------------
+// System Presets (DF-08: built-in read-only filter presets)
+// ---------------------------------------------------------------------------
+
+/**
+ * Returns system-defined preset filters that ship with the site.
+ * These cannot be deleted by the user.
+ */
+export function getSystemPresets() {
+  const today = new Date();
+  const weekAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
+  const weekAgoStr = weekAgo.toISOString().slice(0, 10);
+
+  return [
+    {
+      name: 'New This Week',
+      system: true,
+      filters: {
+        tags: ['all'],
+        source: 'All Sources',
+        sort: 'newest',
+        logic: 'or',
+        dateFrom: weekAgoStr,
+        dateTo: '',
+        readStatus: 'all',
+      },
+    },
+    {
+      name: 'Most Cited',
+      system: true,
+      filters: {
+        tags: ['all'],
+        source: 'All Sources',
+        sort: 'cited',
+        logic: 'or',
+        dateFrom: '',
+        dateTo: '',
+        readStatus: 'all',
+      },
+    },
+    {
+      name: 'ML for OR',
+      system: true,
+      filters: {
+        tags: ['ml-for-or'],
+        source: 'All Sources',
+        sort: 'newest',
+        logic: 'or',
+        dateFrom: '',
+        dateTo: '',
+        readStatus: 'all',
+      },
+    },
+    {
+      name: 'Upcoming Deadlines',
+      system: true,
+      filters: {
+        tags: ['all'],
+        source: 'All Sources',
+        sort: 'deadline',
+        logic: 'or',
+        dateFrom: '',
+        dateTo: '',
+        readStatus: 'all',
+      },
+    },
+    {
+      name: 'Unread Papers',
+      system: true,
+      filters: {
+        tags: ['all'],
+        source: 'All Sources',
+        sort: 'newest',
+        logic: 'or',
+        dateFrom: '',
+        dateTo: '',
+        readStatus: 'new',
+      },
+    },
+  ];
+}
+
+// ---------------------------------------------------------------------------
 // View Presets (FE-07: saved filter combinations)
 // ---------------------------------------------------------------------------
 
@@ -259,16 +341,25 @@ export function deleteViewPreset(index) {
 
 /**
  * Renders the preset pills bar HTML.
+ * Includes system presets (read-only, no delete button) before user-saved presets.
  * @returns {string}
  */
 export function renderPresetBar() {
-  const presets = getViewPresets();
-  if (presets.length === 0) return '';
-  const pills = presets.map((p, i) =>
+  const systemPresets = getSystemPresets();
+  const userPresets = getViewPresets();
+
+  const systemPills = systemPresets.map((p, i) =>
+    `<span class="preset-pill preset-pill--system" data-system-preset-index="${i}" title="${p.name}">` +
+      `${p.name}` +
+    `</span>`
+  ).join('');
+
+  const userPills = userPresets.map((p, i) =>
     `<span class="preset-pill" data-preset-index="${i}" title="Load preset: ${p.name}">` +
       `${p.name}` +
       `<button class="preset-pill__delete" data-preset-delete="${i}" aria-label="Delete preset ${p.name}" title="Delete">&times;</button>` +
     `</span>`
   ).join('');
-  return `<div class="preset-bar">${pills}</div>`;
+
+  return `<div class="preset-bar">${systemPills}${userPills}</div>`;
 }

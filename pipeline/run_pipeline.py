@@ -21,6 +21,7 @@ from __future__ import annotations
 import json
 import sys
 import argparse
+import time
 import traceback
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
@@ -189,6 +190,63 @@ def archive_dropped_items(dropped: list[dict], output_dir: Path) -> None:
     print(f"  Archived {len(dropped)} stale items to {archive_path}")
 
 
+def read_json_dict(path: Path) -> dict:
+    """Read a JSON object file, returning empty dict if missing or invalid."""
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            return data if isinstance(data, dict) else {}
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+YIELD_HISTORY_RUNS: int = 7
+"""Number of recent runs to keep in source yield history."""
+
+YIELD_DEGRADED_THRESHOLD: float = 0.20
+"""Flag a source as degraded if it yields less than this fraction of its rolling average."""
+
+
+def check_source_yield(
+    source_counts: dict[str, int],
+    metadata_path: Path,
+) -> tuple[dict[str, list[int]], list[str]]:
+    """
+    Compare per-source item counts against a rolling average.
+
+    Reads existing yield history from metadata.json, appends current counts,
+    trims to the last YIELD_HISTORY_RUNS entries, and flags any source whose
+    current yield is less than YIELD_DEGRADED_THRESHOLD of its average.
+
+    Args:
+        source_counts: Dict mapping source name to item count for this run.
+        metadata_path: Path to the metadata.json file.
+
+    Returns:
+        Tuple of (updated yield history dict, list of degraded source names).
+    """
+    existing_meta = read_json_dict(metadata_path)
+    yield_history: dict[str, list[int]] = existing_meta.get("source_yield_history", {})
+
+    degraded: list[str] = []
+
+    for source, count in source_counts.items():
+        history = yield_history.get(source, [])
+        # Compute rolling average from previous runs (exclude current)
+        if history:
+            avg = sum(history) / len(history)
+            if avg > 0 and count < avg * YIELD_DEGRADED_THRESHOLD:
+                degraded.append(source)
+                print(f"  WARNING: Source '{source}' yielded {count} items "
+                      f"(rolling avg: {avg:.0f}) -- DEGRADED", file=sys.stderr)
+
+        # Append current count and trim to last N runs
+        history.append(count)
+        yield_history[source] = history[-YIELD_HISTORY_RUNS:]
+
+    return yield_history, degraded
+
+
 def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") -> dict:
     """
     Execute the full pipeline: fetch -> classify -> deduplicate -> write.
@@ -227,9 +285,13 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
         "opportunities": len(existing_opps),
     }
 
+    # ── Pipeline timing ─────────────────────────────────────────────
+    timings: dict[str, float] = {}
+
     # ── Parallel fetching ────────────────────────────────────────────
     # All sources are independent and can be fetched concurrently.
     # We use ThreadPoolExecutor since fetchers are I/O-bound (HTTP).
+    t_fetch_start = time.perf_counter()
 
     fetch_tasks = {
         "arXiv":               lambda: fetch_arxiv(config),
@@ -276,8 +338,10 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     conferences = results.get("Conferences", [])
     opportunities = results.get("Opportunities", [])
     print()
+    timings["fetch"] = time.perf_counter() - t_fetch_start
 
     # ── Classify ──────────────────────────────────────────────────────
+    t_classify_start = time.perf_counter()
     print("=" * 60)
     print("Classifying items...")
     print("=" * 60)
@@ -289,8 +353,10 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     software = [i for i in all_items if i.get("type") == "software"]
     conferences = [i for i in all_items if i.get("type") == "conference"]
     opportunities = [i for i in all_items if i.get("type") == "opportunity"]
+    timings["classify"] = time.perf_counter() - t_classify_start
 
     # ── Validate data quality ────────────────────────────────────────
+    t_validate_start = time.perf_counter()
     print("\n" + "=" * 60)
     print("Validating data quality...")
     print("=" * 60)
@@ -304,8 +370,10 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     opportunities, inv = validate_items(opportunities)
     total_invalid += len(inv)
     print(f"  Total items dropped by validation: {total_invalid}")
+    timings["validate"] = time.perf_counter() - t_validate_start
 
     # ── Deduplicate publications ──────────────────────────────────────
+    t_dedup_start = time.perf_counter()
     print("\n" + "=" * 60)
     print("Deduplicating publications...")
     print("=" * 60)
@@ -319,8 +387,10 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     publications = [p for p in publications if p.get("date", "") <= today or not p.get("date")]
     if len(publications) < pub_pre:
         print(f"  Filtered {pub_pre - len(publications)} future-dated publications", file=sys.stderr)
+    timings["dedup"] = time.perf_counter() - t_dedup_start
 
     # ── Incremental merge with existing data ─────────────────────────
+    t_merge_start = time.perf_counter()
     print("=" * 60)
     print("Merging with existing data...")
     print("=" * 60)
@@ -354,6 +424,21 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     print(f"  Merged: {existing_counts['software']} existing + {sw_added} new = {len(software)} total software ({len(dropped_sw)} dropped as stale)")
     print(f"  Conferences: {len(conferences)} (replaced from config)")
     print(f"  Merged: {existing_counts['opportunities']} existing + {opps_added} new = {len(opportunities)} total opportunities ({len(dropped_opps)} dropped as stale)")
+    timings["merge"] = time.perf_counter() - t_merge_start
+
+    # ── Source yield monitor ─────────────────────────────────────────
+    print("\n" + "=" * 60)
+    print("Checking source yields...")
+    print("=" * 60)
+    source_counts: dict[str, int] = {
+        name: len(items) for name, items in results.items()
+    }
+    metadata_path = out / "metadata.json"
+    source_yield_history, degraded_sources = check_source_yield(
+        source_counts, metadata_path
+    )
+    if not degraded_sources:
+        print("  All sources within normal yield range.")
 
     # ── Sort ──────────────────────────────────────────────────────────
     publications.sort(key=lambda x: x.get("date", ""), reverse=True)
@@ -362,6 +447,7 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     opportunities.sort(key=lambda x: x.get("date", ""), reverse=True)
 
     # ── Write output ──────────────────────────────────────────────────
+    t_write_start = time.perf_counter()
     print("=" * 60)
     print("Writing output files...")
     print("=" * 60)
@@ -379,6 +465,17 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
         write_json(conferences, src_data / "conferences.json")
         write_json(opportunities, src_data / "opportunities.json")
         print("  Also wrote to src/data/")
+
+    timings["write"] = time.perf_counter() - t_write_start
+
+    # Print timing report
+    print("\n" + "=" * 60)
+    print("Pipeline timing report:")
+    print("=" * 60)
+    for phase, elapsed in timings.items():
+        print(f"  {phase:12s}: {elapsed:6.2f}s")
+    total_time = sum(timings.values())
+    print(f"  {'TOTAL':12s}: {total_time:6.2f}s")
 
     # ── Metadata ──────────────────────────────────────────────────────
     metadata = {
@@ -398,6 +495,9 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
             "opportunities_added": opps_added,
             "total_dropped_stale": total_dropped,
         },
+        "timings": {k: round(v, 3) for k, v in timings.items()},
+        "source_yield_history": source_yield_history,
+        "degraded_sources": degraded_sources,
     }
 
     write_json(metadata, out / "metadata.json")
