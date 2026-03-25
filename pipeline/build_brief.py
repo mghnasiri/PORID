@@ -264,10 +264,16 @@ def main() -> None:
     write_json(brief, output_path)
     print(f"  ✓ Brief written to {output_path}")
 
+    # Write brief-latest.json so the frontend can fetch a single file
+    latest_path = data_dir / "brief-latest.json"
+    write_json(brief, latest_path)
+    print(f"  ✓ Latest brief written to {latest_path}")
+
     # Also write to src/data/
     src_data = base / "../src/data"
     if src_data.exists():
         write_json(brief, src_data / f"brief-{date_str}.json")
+        write_json(brief, src_data / "brief-latest.json")
         print(f"  ✓ Also written to src/data/")
 
     print()

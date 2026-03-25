@@ -138,17 +138,11 @@ async function loadAllData() {
     state.extraData[key] = data;
   }
 
-  // Load latest weekly brief
-  const now = new Date();
-  for (let i = 0; i < 14; i++) {
-    const d = new Date(now);
-    d.setDate(d.getDate() - i);
-    const ds = d.toISOString().slice(0, 10);
-    try {
-      const resp = await fetch(`./data/brief-${ds}.json`);
-      if (resp.ok) { state.extraData.brief = await resp.json(); break; }
-    } catch { /* continue */ }
-  }
+  // Load latest weekly brief (single request via manifest index)
+  try {
+    const briefResp = await fetch('./data/brief-latest.json');
+    if (briefResp.ok) { state.extraData.brief = await briefResp.json(); }
+  } catch { /* brief unavailable */ }
 
   // Fetch metadata for freshness indicator
   try {
@@ -521,6 +515,10 @@ function syncFiltersToHash() {
   if (filters.tags && filters.tags.length) parts.push(`tags=${encodeURIComponent(filters.tags.join(','))}`);
   if (filters.source && filters.source !== 'All Sources') parts.push(`source=${encodeURIComponent(filters.source)}`);
   if (filters.sort && filters.sort !== 'newest') parts.push(`sort=${encodeURIComponent(filters.sort)}`);
+  if (filters.logic && filters.logic === 'and') parts.push('logic=and');
+  if (filters.dateFrom) parts.push(`dateFrom=${encodeURIComponent(filters.dateFrom)}`);
+  if (filters.dateTo) parts.push(`dateTo=${encodeURIComponent(filters.dateTo)}`);
+  if (filters.readStatus && filters.readStatus !== 'all') parts.push(`readStatus=${encodeURIComponent(filters.readStatus)}`);
   const qs = parts.length ? '?' + parts.join('&') : '';
   history.replaceState(null, '', `#${tab}${qs}`);
 }
@@ -561,6 +559,25 @@ function applyHashFilters() {
   if (params.sort) {
     const sel = document.getElementById('filterSort');
     if (sel) sel.value = params.sort;
+  }
+  if (params.logic === 'and') {
+    const logicEl = document.getElementById('filterLogic');
+    if (logicEl) {
+      logicEl.textContent = 'AND';
+      logicEl.classList.add('active');
+    }
+  }
+  if (params.dateFrom) {
+    const el = document.getElementById('filterDateFrom');
+    if (el) el.value = params.dateFrom;
+  }
+  if (params.dateTo) {
+    const el = document.getElementById('filterDateTo');
+    if (el) el.value = params.dateTo;
+  }
+  if (params.readStatus) {
+    const el = document.getElementById('filterReadStatus');
+    if (el) el.value = params.readStatus;
   }
 }
 
@@ -619,7 +636,13 @@ function wireFilterEvents() {
       document.querySelector('.filter-tag[data-tag="all"]')?.classList.add('active');
       if (sourceSelect) sourceSelect.value = 'All Sources';
       if (sortSelect) sortSelect.value = 'newest';
+      if (readStatusSelect) readStatusSelect.value = 'all';
+      const logicBtn = document.getElementById('filterLogic');
+      if (logicBtn) { logicBtn.textContent = 'OR'; logicBtn.classList.remove('active'); }
+      if (dateFrom) dateFrom.value = '';
+      if (dateTo) dateTo.value = '';
       updateClearBtn();
+      syncFiltersToHash();
       renderView();
     });
   }
@@ -632,7 +655,14 @@ function updateClearBtn() {
   if (!clearBtn) return;
   const activeTags = document.querySelectorAll('.filter-tag.active:not([data-tag="all"])');
   const sourceEl = document.getElementById('filterSource');
-  const hasFilters = activeTags.length > 0 || (sourceEl && sourceEl.value !== 'All Sources');
+  const dateFromEl = document.getElementById('filterDateFrom');
+  const dateToEl = document.getElementById('filterDateTo');
+  const readStatusEl = document.getElementById('filterReadStatus');
+  const hasFilters = activeTags.length > 0
+    || (sourceEl && sourceEl.value !== 'All Sources')
+    || (dateFromEl && dateFromEl.value)
+    || (dateToEl && dateToEl.value)
+    || (readStatusEl && readStatusEl.value !== 'all');
   clearBtn.style.display = hasFilters ? 'inline-flex' : 'none';
 }
 
@@ -866,8 +896,67 @@ function hideHelpModal() {
 }
 
 // ---------------------------------------------------------------------------
+// Toast Notification
+// ---------------------------------------------------------------------------
+
+function showToast(message) {
+  // Remove any existing toast
+  const existing = document.querySelector('.porid-toast');
+  if (existing) existing.remove();
+
+  const toast = document.createElement('div');
+  toast.className = 'porid-toast';
+  toast.textContent = message;
+  toast.setAttribute('role', 'status');
+  toast.setAttribute('aria-live', 'polite');
+
+  // Inline styles so it works without extra CSS rules
+  Object.assign(toast.style, {
+    position: 'fixed',
+    bottom: '2rem',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    background: 'var(--color-accent, #6366f1)',
+    color: '#fff',
+    padding: '0.6rem 1.4rem',
+    borderRadius: '0.5rem',
+    fontSize: '0.9rem',
+    fontWeight: '500',
+    zIndex: '9999',
+    opacity: '0',
+    transition: 'opacity 0.25s ease',
+    pointerEvents: 'none',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.25)',
+  });
+
+  document.body.appendChild(toast);
+  // Trigger reflow then fade in
+  requestAnimationFrame(() => { toast.style.opacity = '1'; });
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    setTimeout(() => toast.remove(), 300);
+  }, 1800);
+}
+
+// ---------------------------------------------------------------------------
 // Keyboard Shortcuts
 // ---------------------------------------------------------------------------
+
+/**
+ * Finds the card element that is currently focused or hovered.
+ * Returns the card's data-id, or null.
+ */
+function getFocusedOrHoveredCardId() {
+  // Check focused element first
+  const focused = document.activeElement?.closest('.card[data-id]');
+  if (focused) return focused.dataset.id;
+
+  // Check hovered card
+  const hovered = contentEl.querySelector('.card:hover');
+  if (hovered) return hovered.dataset.id || null;
+
+  return null;
+}
 
 function wireKeyboardShortcuts() {
   document.addEventListener('keydown', (e) => {
@@ -879,6 +968,26 @@ function wireKeyboardShortcuts() {
     if (e.key === '?') {
       e.preventDefault();
       showHelpModal();
+      return;
+    }
+
+    // "w" — toggle watchlist for focused/hovered card
+    if (e.key === 'w') {
+      const cardId = getFocusedOrHoveredCardId();
+      if (!cardId) return;
+      e.preventDefault();
+
+      if (isWatchlisted(cardId)) {
+        removeFromWatchlist(cardId);
+        showToast('Removed from watchlist');
+      } else {
+        const item = findItemById(cardId);
+        if (item) {
+          addToWatchlist(item);
+          showToast('Added to watchlist');
+        }
+      }
+      renderView();
       return;
     }
 

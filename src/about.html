@@ -12,6 +12,56 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- FAQPage Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is PORID?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PORID (Personal OR Intelligence Dashboard) is an open-source intelligence hub for the Operations Research community. It automatically aggregates and tracks publications, solver releases, funding opportunities, conference deadlines, and benchmark datasets relevant to OR researchers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often is PORID data updated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Data is updated daily via a GitHub Actions pipeline that runs at 07:00 UTC. The pipeline fetches new entries from arXiv, Crossref, OpenAlex, Semantic Scholar, GitHub Releases, PyPI, and curated RSS feeds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What solvers does PORID track?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PORID tracks both open-source and commercial optimization solvers including OR-Tools, CBC, HiGHS, SCIP, GLPK, Gurobi, CPLEX, JuMP, Pyomo, CVXPY, SciPy, and others. Release data for open-source solvers comes from GitHub Releases and PyPI APIs, while commercial solver updates are manually maintained."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I cite PORID?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can cite PORID by referencing the GitHub repository: M.G. Nasiri, 'PORID — Personal OR Intelligence Dashboard,' GitHub, https://github.com/mghnasiri/PORID. A formal citation record (e.g., Zenodo DOI) may be added in a future release."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I contribute corrections to PORID?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can report data issues, broken links, or suggest new sources by opening an issue on the PORID GitHub repository at https://github.com/mghnasiri/PORID/issues. Pull requests for code fixes or new features are also welcome."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -45,27 +95,99 @@
 
       <div class="about__section">
         <h2>Data Sources</h2>
+        <p>PORID aggregates data from 10 sources across publications, funding, conferences, and software. Each card below is a direct anchor you can link to.</p>
         <div class="about__sources">
-          <div class="about__source">
-            <strong>Publications</strong>
-            <p>arXiv (math.OC, cs.AI, cs.DS, stat.ML), Crossref (Operations Research, EJOR, Transportation Science, MSOM, INFORMS)</p>
+
+          <div class="about__source-card" id="source-arxiv">
+            <div class="about__source-header">
+              <strong>arXiv</strong>
+              <span class="about__source-count">~315 papers/run</span>
+            </div>
+            <a href="https://arxiv.org/" target="_blank" rel="noopener">arxiv.org &rarr;</a>
+            <p>Preprints from math.OC, cs.AI, and cs.DS categories relevant to optimization and operations research.</p>
           </div>
-          <div class="about__source">
-            <strong>Software</strong>
-            <p>GitHub Releases API (OR-Tools, CBC, JuMP, Pyomo, SciPy, CVXPY, Gurobi)</p>
+
+          <div class="about__source-card" id="source-crossref">
+            <div class="about__source-header">
+              <strong>Crossref</strong>
+              <span class="about__source-count">~252 papers/run</span>
+            </div>
+            <a href="https://www.crossref.org/" target="_blank" rel="noopener">crossref.org &rarr;</a>
+            <p>Published articles from 28 OR journals including Operations Research, EJOR, Transportation Science, and MSOM.</p>
           </div>
-          <div class="about__source">
-            <strong>Solvers</strong>
-            <p>GitHub Releases + PyPI APIs for open-source solvers, manually maintained for commercial solvers</p>
+
+          <div class="about__source-card" id="source-openalex">
+            <div class="about__source-header">
+              <strong>OpenAlex</strong>
+              <span class="about__source-count">~155 papers/run</span>
+            </div>
+            <a href="https://openalex.org/" target="_blank" rel="noopener">openalex.org &rarr;</a>
+            <p>Scholarly works matched to Operations Research concepts via the OpenAlex knowledge graph.</p>
           </div>
-          <div class="about__source">
-            <strong>Opportunities</strong>
-            <p>RSS feeds + manual curation for high-value funding calls and positions</p>
+
+          <div class="about__source-card" id="source-semantic-scholar">
+            <div class="about__source-header">
+              <strong>Semantic Scholar</strong>
+              <span class="about__source-count">~375 papers/run</span>
+            </div>
+            <a href="https://www.semanticscholar.org/" target="_blank" rel="noopener">semanticscholar.org &rarr;</a>
+            <p>OR keyword search across Semantic Scholar's corpus for broad coverage of optimization literature.</p>
           </div>
-          <div class="about__source">
-            <strong>Benchmarks</strong>
-            <p>Manually curated directory of standard OR benchmark datasets (MIPLIB, CVRPLIB, PSPLIB, TSPLIB, etc.)</p>
+
+          <div class="about__source-card" id="source-optimization-online">
+            <div class="about__source-header">
+              <strong>Optimization Online</strong>
+              <span class="about__source-count">~10 papers/run</span>
+            </div>
+            <a href="https://optimization-online.org/" target="_blank" rel="noopener">optimization-online.org &rarr;</a>
+            <p>Latest optimization preprints via the Optimization Online RSS feed.</p>
           </div>
+
+          <div class="about__source-card" id="source-nsf">
+            <div class="about__source-header">
+              <strong>NSF Awards API</strong>
+              <span class="about__source-count">~84 awards</span>
+            </div>
+            <a href="https://www.nsf.gov/" target="_blank" rel="noopener">nsf.gov &rarr;</a>
+            <p>Active NSF-funded awards related to operations research, combinatorial optimization, and mathematical programming.</p>
+          </div>
+
+          <div class="about__source-card" id="source-openaire">
+            <div class="about__source-header">
+              <strong>OpenAIRE / CORDIS</strong>
+              <span class="about__source-count">~27 projects</span>
+            </div>
+            <a href="https://explore.openaire.eu/" target="_blank" rel="noopener">explore.openaire.eu &rarr;</a>
+            <p>EU-funded Horizon Europe and Horizon 2020 projects in operations research and optimization.</p>
+          </div>
+
+          <div class="about__source-card" id="source-wikicfp">
+            <div class="about__source-header">
+              <strong>WikiCFP</strong>
+              <span class="about__source-count">~35 conferences</span>
+            </div>
+            <a href="http://www.wikicfp.com/" target="_blank" rel="noopener">wikicfp.com &rarr;</a>
+            <p>Upcoming call-for-papers and conference deadlines tracked via WikiCFP RSS feeds.</p>
+          </div>
+
+          <div class="about__source-card" id="source-github">
+            <div class="about__source-header">
+              <strong>GitHub Releases</strong>
+              <span class="about__source-count">19 solvers</span>
+            </div>
+            <a href="https://github.com/" target="_blank" rel="noopener">github.com &rarr;</a>
+            <p>Version tracking for open-source OR solvers including OR-Tools, CBC, HiGHS, SCIP, JuMP, Pyomo, and CVXPY.</p>
+          </div>
+
+          <div class="about__source-card" id="source-pypi">
+            <div class="about__source-header">
+              <strong>PyPI</strong>
+              <span class="about__source-count">8 packages</span>
+            </div>
+            <a href="https://pypi.org/" target="_blank" rel="noopener">pypi.org &rarr;</a>
+            <p>Download statistics and release info for Python OR packages via the PyPI JSON API.</p>
+          </div>
+
         </div>
         <p class="about__update-info">Data is updated daily via GitHub Actions at 07:00 UTC.</p>
       </div>

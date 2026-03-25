@@ -8,6 +8,7 @@
  */
 
 import { formatDate, daysUntil } from '../utils/date.js';
+import { renderEmptyState } from '../components/empty-state.js';
 
 /**
  * Render a single funding card. Trusted local data.
@@ -91,21 +92,7 @@ export function render(container, data, filters) {
   container.textContent = '';
 
   if (items.length === 0) {
-    const empty = document.createElement('div');
-    empty.className = 'empty-state';
-    const iconDiv = document.createElement('div');
-    iconDiv.className = 'empty-state__icon';
-    iconDiv.textContent = '\uD83D\uDCB0';
-    empty.appendChild(iconDiv);
-    const h2 = document.createElement('h2');
-    h2.className = 'empty-state__title';
-    h2.textContent = 'No Funding Opportunities Found';
-    const p = document.createElement('p');
-    p.className = 'empty-state__text';
-    p.textContent = 'Check back soon for new grants and funding calls.';
-    empty.appendChild(h2);
-    empty.appendChild(p);
-    container.appendChild(empty);
+    renderEmptyState(container, { module: 'funding', filters, totalCount: data.length });
     return;
   }
 

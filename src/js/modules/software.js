@@ -7,6 +7,7 @@
 import { relativeTime, formatDate } from '../utils/date.js';
 import { isWatchlisted } from '../utils/storage.js';
 import { applyFilters } from '../components/filters.js';
+import { renderEmptyState } from '../components/empty-state.js';
 
 function changelogSnippet(text, max = 100) {
   if (!text) return '';
@@ -64,19 +65,7 @@ export function render(container, data, filters) {
   const filtered = applyFilters(data, filters);
 
   if (filtered.length === 0) {
-    container.textContent = '';
-    const empty = document.createElement('div');
-    empty.className = 'empty-state';
-    empty.innerHTML = '<div class="empty-state__icon">&#128230;</div>';
-    const h2 = document.createElement('h2');
-    h2.className = 'empty-state__title';
-    h2.textContent = 'No Software Releases Found';
-    const p = document.createElement('p');
-    p.className = 'empty-state__text';
-    p.textContent = 'Try adjusting your filters.';
-    empty.appendChild(h2);
-    empty.appendChild(p);
-    container.appendChild(empty);
+    renderEmptyState(container, { module: 'software', filters, totalCount: data.length });
     return;
   }
 

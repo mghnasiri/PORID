@@ -6,6 +6,8 @@
  * All uses of innerHTML below render exclusively from this trusted local data.
  */
 
+import { renderEmptyState } from '../components/empty-state.js';
+
 const CATEGORY_ICONS = {
   blog: '\uD83D\uDCDD',
   newsletter: '\uD83D\uDCF0',
@@ -61,21 +63,7 @@ export function render(container, data, filters) {
   container.textContent = '';
 
   if (items.length === 0) {
-    const empty = document.createElement('div');
-    empty.className = 'empty-state';
-    const iconDiv = document.createElement('div');
-    iconDiv.className = 'empty-state__icon';
-    iconDiv.textContent = '\uD83D\uDCDA';
-    empty.appendChild(iconDiv);
-    const h2 = document.createElement('h2');
-    h2.className = 'empty-state__title';
-    h2.textContent = 'No Resources Found';
-    const p = document.createElement('p');
-    p.className = 'empty-state__text';
-    p.textContent = 'Try adjusting your filters.';
-    empty.appendChild(h2);
-    empty.appendChild(p);
-    container.appendChild(empty);
+    renderEmptyState(container, { module: 'resources', filters, totalCount: data.length });
     return;
   }
 

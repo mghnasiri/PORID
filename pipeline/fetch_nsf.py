@@ -22,6 +22,8 @@ from pathlib import Path
 
 import requests
 
+from utils import fetch_with_retry
+
 NSF_API = "https://api.nsf.gov/services/v1/awards.json"
 
 # OR-relevant search queries — broad enough to catch relevant awards,
@@ -83,7 +85,9 @@ def fetch_nsf_awards(lookback_days: int = 365, max_per_query: int = 25) -> list[
         }
 
         try:
-            resp = requests.get(NSF_API, params=params, headers=HEADERS, timeout=20)
+            resp = fetch_with_retry(NSF_API, params=params, headers=HEADERS, timeout=20)
+            if resp is None:
+                continue
             if resp.status_code != 200:
                 print(f"      ! HTTP {resp.status_code}", file=sys.stderr)
                 continue

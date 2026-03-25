@@ -26,6 +26,8 @@ from pathlib import Path
 
 import requests
 
+from utils import fetch_with_retry
+
 # ── CORDIS project search API ────────────────────────────────────────
 # The public search endpoint at cordis.europa.eu supports JSON responses.
 CORDIS_SEARCH_API = "https://cordis.europa.eu/search/en"
@@ -91,7 +93,9 @@ def fetch_openaire_projects(
         }
 
         try:
-            resp = requests.get(OPENAIRE_API, params=params, headers=HEADERS, timeout=20)
+            resp = fetch_with_retry(OPENAIRE_API, params=params, headers=HEADERS, timeout=20)
+            if resp is None:
+                continue
             if resp.status_code != 200:
                 print(f"      ! HTTP {resp.status_code}", file=sys.stderr)
                 continue
@@ -217,12 +221,14 @@ def fetch_cordis_search(max_results: int = 50) -> list[dict]:
         }
 
         try:
-            resp = requests.get(
+            resp = fetch_with_retry(
                 CORDIS_SEARCH_API,
                 params=params,
                 headers={**HEADERS, "Accept": "text/html"},
                 timeout=15,
             )
+            if resp is None:
+                continue
             if resp.status_code != 200:
                 print(f"      ! HTTP {resp.status_code}", file=sys.stderr)
                 continue

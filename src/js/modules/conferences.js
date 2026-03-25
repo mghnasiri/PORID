@@ -9,6 +9,7 @@
 
 import { formatDate, daysUntil } from '../utils/date.js';
 import { isWatchlisted, getWatchlist } from '../utils/storage.js';
+import { renderEmptyState } from '../components/empty-state.js';
 
 const NOTIFIED_KEY = 'porid-conf-notified';
 
@@ -250,21 +251,7 @@ export function render(container, data, filters, awards, specialIssues) {
   container.textContent = '';
 
   if (items.length === 0 && (!awards || awards.length === 0)) {
-    const empty = document.createElement('div');
-    empty.className = 'empty-state';
-    const iconDiv = document.createElement('div');
-    iconDiv.className = 'empty-state__icon';
-    iconDiv.textContent = '\u{1F393}';
-    empty.appendChild(iconDiv);
-    const h2 = document.createElement('h2');
-    h2.className = 'empty-state__title';
-    h2.textContent = 'No Conferences Found';
-    const p = document.createElement('p');
-    p.className = 'empty-state__text';
-    p.textContent = 'Try adjusting your filters.';
-    empty.appendChild(h2);
-    empty.appendChild(p);
-    container.appendChild(empty);
+    renderEmptyState(container, { module: 'conferences', filters, totalCount: data.length });
     return;
   }
 

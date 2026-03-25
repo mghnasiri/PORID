@@ -6,6 +6,7 @@
 
 import { formatDate, daysUntil } from '../utils/date.js';
 import { isWatchlisted } from '../utils/storage.js';
+import { renderEmptyState } from '../components/empty-state.js';
 
 const TYPE_LABELS = {
   postdoc: 'Postdoc',
@@ -108,19 +109,7 @@ export function render(container, data, filters) {
   });
 
   if (items.length === 0) {
-    container.textContent = '';
-    const empty = document.createElement('div');
-    empty.className = 'empty-state';
-    empty.innerHTML = '<div class="empty-state__icon">&#128188;</div>';
-    const h2 = document.createElement('h2');
-    h2.className = 'empty-state__title';
-    h2.textContent = 'No Opportunities Found';
-    const p = document.createElement('p');
-    p.className = 'empty-state__text';
-    p.textContent = 'Try adjusting your filters.';
-    empty.appendChild(h2);
-    empty.appendChild(p);
-    container.appendChild(empty);
+    renderEmptyState(container, { module: 'opportunities', filters, totalCount: data.length });
     return;
   }
 

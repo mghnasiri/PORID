@@ -8,6 +8,7 @@
  */
 
 import { formatDate, daysUntil } from '../utils/date.js';
+import { renderEmptyState } from '../components/empty-state.js';
 
 /**
  * Render a single award card. Trusted local data.
@@ -81,21 +82,7 @@ export function render(container, data, filters) {
   container.textContent = '';
 
   if (items.length === 0) {
-    const empty = document.createElement('div');
-    empty.className = 'empty-state';
-    const iconDiv = document.createElement('div');
-    iconDiv.className = 'empty-state__icon';
-    iconDiv.textContent = '\uD83C\uDFC6';
-    empty.appendChild(iconDiv);
-    const h2 = document.createElement('h2');
-    h2.className = 'empty-state__title';
-    h2.textContent = 'No Awards Found';
-    const p = document.createElement('p');
-    p.className = 'empty-state__text';
-    p.textContent = 'Check back for upcoming award deadlines.';
-    empty.appendChild(h2);
-    empty.appendChild(p);
-    container.appendChild(empty);
+    renderEmptyState(container, { module: 'awards', filters, totalCount: data.length });
     return;
   }
 

@@ -10,6 +10,7 @@
 import { relativeTime, formatDate } from '../utils/date.js';
 import { isWatchlisted, getReadStatus } from '../utils/storage.js';
 import { applyFilters } from '../components/filters.js';
+import { renderEmptyState } from '../components/empty-state.js';
 import { showModal } from '../components/modal.js';
 import { generateBibTeX } from '../utils/citation.js';
 
@@ -265,22 +266,7 @@ export function render(container, data, filters) {
   const filtered = applyFilters(data, filters);
 
   if (filtered.length === 0) {
-    container.textContent = '';
-    const empty = document.createElement('div');
-    empty.className = 'empty-state';
-    const iconDiv = document.createElement('div');
-    iconDiv.className = 'empty-state__icon';
-    iconDiv.textContent = '\u{1F4DA}';
-    empty.appendChild(iconDiv);
-    const h2 = document.createElement('h2');
-    h2.className = 'empty-state__title';
-    h2.textContent = 'No Publications Found';
-    const p = document.createElement('p');
-    p.className = 'empty-state__text';
-    p.textContent = 'Try adjusting your filters or search terms.';
-    empty.appendChild(h2);
-    empty.appendChild(p);
-    container.appendChild(empty);
+    renderEmptyState(container, { module: 'publications', filters, totalCount: data.length });
     return;
   }
 

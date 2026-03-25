@@ -110,6 +110,10 @@ export function renderCard(item) {
   const isNewThisWeek = item.date && (Date.now() - new Date(item.date + 'T00:00:00').getTime()) < 7 * 24 * 60 * 60 * 1000;
   const newBadge = isNewThisWeek ? '<span class="card__new-badge">NEW</span>' : '';
 
+  // Check if item is from the last 24 hours for pulse glow animation
+  const isNew24h = item.date && (Date.now() - new Date(item.date + 'T00:00:00').getTime()) < 24 * 60 * 60 * 1000;
+  const newClass = isNew24h ? ' card-new' : '';
+
   // Source badge for publications
   const sourceBadge =
     item.type === 'publication' && item.source
@@ -117,7 +121,7 @@ export function renderCard(item) {
       : '';
 
   return `
-    <article class="card" tabindex="0" data-id="${item.id}" data-type="${item.type}">
+    <article class="card${newClass}" tabindex="0" data-id="${item.id}" data-type="${item.type}">
       <div class="card__header">
         <h3 class="card__title">${title}</h3>
         ${newBadge}

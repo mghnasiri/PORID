@@ -15,6 +15,10 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mghnasiri.github.io/PORID/">
 
+  <!-- Resource hints for CDN -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,6 +50,59 @@
       "name": "Mohammad G. Nasiri",
       "url": "https://mghnasiri.github.io/"
     }
+  }
+  </script>
+
+  <!-- DataCatalog Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DataCatalog",
+    "name": "PORID",
+    "description": "A curated intelligence catalog for Operations Research, aggregating publications, solvers, conferences, benchmarks, and funding opportunities.",
+    "url": "https://mghnasiri.github.io/PORID/",
+    "creator": {
+      "@type": "Person",
+      "name": "Mohammad G. Nasiri",
+      "url": "https://mghnasiri.github.io/"
+    },
+    "dataset": [
+      {
+        "@type": "Dataset",
+        "name": "OR Publications",
+        "description": "Recent publications in Operations Research from arXiv, Crossref, OpenAlex, Semantic Scholar, and Optimization Online.",
+        "url": "https://mghnasiri.github.io/PORID/#publications",
+        "keywords": ["operations research", "optimization", "mathematical programming", "arXiv", "publications"]
+      },
+      {
+        "@type": "Dataset",
+        "name": "OR Conferences",
+        "description": "Upcoming conferences, workshops, and symposia in Operations Research with submission deadlines and format details.",
+        "url": "https://mghnasiri.github.io/PORID/#conferences",
+        "keywords": ["conferences", "operations research", "INFORMS", "deadlines", "call for papers"]
+      },
+      {
+        "@type": "Dataset",
+        "name": "OR Solvers",
+        "description": "Release tracking for open-source and commercial optimization solvers including version history and changelog highlights.",
+        "url": "https://mghnasiri.github.io/PORID/#software",
+        "keywords": ["solvers", "optimization software", "Gurobi", "CPLEX", "OR-Tools", "SCIP", "HiGHS"]
+      },
+      {
+        "@type": "Dataset",
+        "name": "OR Benchmarks",
+        "description": "Curated directory of standard benchmark datasets for Operations Research including MIPLIB, TSPLIB, CVRPLIB, and PSPLIB.",
+        "url": "https://mghnasiri.github.io/PORID/#toolkit",
+        "keywords": ["benchmarks", "MIPLIB", "TSPLIB", "CVRPLIB", "optimization benchmarks"]
+      },
+      {
+        "@type": "Dataset",
+        "name": "OR Opportunities",
+        "description": "Funding calls, PhD positions, postdoc openings, and faculty positions in Operations Research and related fields.",
+        "url": "https://mghnasiri.github.io/PORID/#opportunities",
+        "keywords": ["funding", "PhD positions", "postdoc", "faculty", "operations research jobs"]
+      }
+    ]
   }
   </script>
 
