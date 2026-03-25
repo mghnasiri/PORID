@@ -605,6 +605,49 @@ function buildSolvers(solversData, container) {
     tr.appendChild(tdLinks);
 
     tbody.appendChild(tr);
+
+    // R4-13: Solver Changelog Timeline — expandable row for recent_changes
+    if (s.recent_changes) {
+      const changelogTr = document.createElement('tr');
+      changelogTr.className = 'solver-changelog-row';
+      changelogTr.dataset.solverId = s.id;
+      const changelogTd = document.createElement('td');
+      changelogTd.colSpan = 8;
+      changelogTd.className = 'solver-changelog-cell';
+
+      const details = document.createElement('details');
+      details.className = 'solver-changelog';
+      const summary = document.createElement('summary');
+      summary.className = 'solver-changelog__summary';
+      summary.textContent = 'Changelog';
+      details.appendChild(summary);
+
+      const timeline = document.createElement('div');
+      timeline.className = 'solver-changelog__timeline';
+
+      const entry = document.createElement('div');
+      entry.className = 'solver-changelog__entry';
+      const versionBadge = document.createElement('span');
+      versionBadge.className = 'solver-changelog__version';
+      versionBadge.textContent = `v${s.current_version}`;
+      entry.appendChild(versionBadge);
+      if (s.release_date) {
+        const dateSpan = document.createElement('span');
+        dateSpan.className = 'solver-changelog__date';
+        dateSpan.textContent = formatDate(s.release_date);
+        entry.appendChild(dateSpan);
+      }
+      const changeText = document.createElement('span');
+      changeText.className = 'solver-changelog__text';
+      changeText.textContent = s.recent_changes;
+      entry.appendChild(changeText);
+
+      timeline.appendChild(entry);
+      details.appendChild(timeline);
+      changelogTd.appendChild(details);
+      changelogTr.appendChild(changelogTd);
+      tbody.appendChild(changelogTr);
+    }
   });
 
   table.appendChild(tbody);

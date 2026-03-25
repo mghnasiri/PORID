@@ -12,6 +12,10 @@ let fuseIndex = null;
 let allDataRef = [];
 let activeTypeFilter = 'all';
 
+/* R4-20: DOI / arXiv paste-detection patterns */
+const DOI_RE = /\b10\.\d{4,9}\/[^\s]+/i;
+const ARXIV_RE = /\b(\d{4}\.\d{4,5})(v\d+)?\b/;
+
 const TYPE_FILTERS = [
   { key: 'all', label: 'All' },
   { key: 'publication', label: 'Publications' },
@@ -96,6 +100,119 @@ function buildTypeTabs(onCloseSearch) {
   return tabsDiv;
 }
 
+
+// ---------------------------------------------------------------------------
+// R4-17: Command palette go-to commands
+// ---------------------------------------------------------------------------
+
+const GOTO_COMMANDS = {
+  pulse: 'pulse',
+  radar: 'radar',
+  toolkit: 'toolkit',
+  solvers: 'toolkit',
+  benchmarks: 'toolkit',
+  publications: 'publications',
+  papers: 'publications',
+  software: 'software',
+  conferences: 'conferences',
+  opportunities: 'opportunities',
+  jobs: 'opportunities',
+  watchlist: 'watchlist',
+  trends: 'trends',
+  digest: 'digest',
+  datasets: 'datasets',
+  seminars: 'seminars',
+  funding: 'funding',
+  awards: 'awards',
+  resources: 'resources',
+  changelog: 'changelog',
+};
+
+const GOTO_LABELS = {
+  pulse: 'Pulse',
+  radar: 'Opportunity Radar',
+  toolkit: 'Solver Observatory',
+  publications: 'Publications',
+  software: 'Software Releases',
+  conferences: 'Conferences',
+  opportunities: 'Opportunities',
+  watchlist: 'Watchlist',
+  trends: 'Trends',
+  digest: 'Digest',
+  datasets: 'Datasets & Blogs',
+  seminars: 'Seminars',
+  funding: 'Funding',
+  awards: 'Awards',
+  resources: 'Resources',
+  changelog: 'Changelog',
+};
+
+/**
+ * Checks if query is a go-to command (starts with ">" or "go:").
+ * Returns matching sections or null if not a command.
+ */
+function matchGoToCommand(query) {
+  let cmd = null;
+  if (query.startsWith('>')) {
+    cmd = query.slice(1).trim().toLowerCase();
+  } else if (query.toLowerCase().startsWith('go:')) {
+    cmd = query.slice(3).trim().toLowerCase();
+  }
+  if (!cmd) return null;
+
+  // Find matching sections
+  const matches = [];
+  for (const [key, tab] of Object.entries(GOTO_COMMANDS)) {
+    if (key.startsWith(cmd) || key.includes(cmd)) {
+      // Deduplicate by target tab
+      if (!matches.find((m) => m.tab === tab)) {
+        matches.push({ key, tab, label: GOTO_LABELS[tab] || tab });
+      }
+    }
+  }
+  return matches;
+}
+
+/**
+ * Renders go-to command results as navigation items.
+ */
+function renderGoToResults(matches, resultsContainer, onCloseSearch) {
+  const header = document.createElement('div');
+  header.className = 'search-modal__empty';
+  header.textContent = 'Go to section:';
+  resultsContainer.appendChild(header);
+
+  matches.forEach((match) => {
+    const row = document.createElement('div');
+    row.className = 'search-result search-result--goto';
+
+    const icon = document.createElement('span');
+    icon.className = 'search-result__goto-icon';
+    icon.textContent = '\u2192';
+
+    const title = document.createElement('div');
+    title.className = 'search-result__title';
+    title.textContent = match.label;
+
+    const meta = document.createElement('div');
+    meta.className = 'search-result__meta';
+    meta.textContent = 'Navigate to #' + match.tab;
+
+    row.appendChild(icon);
+    const textWrap = document.createElement('div');
+    textWrap.appendChild(title);
+    textWrap.appendChild(meta);
+    row.appendChild(textWrap);
+
+    row.addEventListener('click', () => {
+      if (onCloseSearch) onCloseSearch();
+      window.location.hash = match.tab;
+    });
+
+    resultsContainer.appendChild(row);
+  });
+}
+
 /**
  * Renders search results as mini-cards into the search modal results container.
  * Uses DOM methods for safe rendering.
@@ -107,6 +224,15 @@ function renderSearchResults(query, onCloseSearch) {
   if (!resultsContainer) return;
 
   resultsContainer.textContent = '';
+
+  // R4-17: Check for go-to commands before normal search
+  if (query) {
+    const goToMatches = matchGoToCommand(query);
+    if (goToMatches && goToMatches.length > 0) {
+      renderGoToResults(goToMatches, resultsContainer, onCloseSearch);
+      return;
+    }
+  }
 
   // Add type filter tabs
   resultsContainer.appendChild(buildTypeTabs(onCloseSearch));
@@ -206,6 +332,73 @@ function updateHighlight() {
 }
 
 /**
+ * R4-20: Handle pasted DOI / arXiv identifiers.
+ * If the pasted text matches, search the index. If found, open the item;
+ * otherwise show a "Not in index" message with an external link.
+ */
+function handleIdPaste(text, onCloseSearch) {
+  const doiMatch = text.match(DOI_RE);
+  const arxivMatch = text.match(ARXIV_RE);
+  if (!doiMatch && !arxivMatch) return false;
+
+  const id = doiMatch ? doiMatch[0] : arxivMatch[0];
+  const isArxiv = !doiMatch;
+
+  // Mark the input visually
+  const input = document.getElementById('searchInput');
+  if (input) input.classList.add('search-modal__input--id-detected');
+
+  // Try to find in data by DOI field or arXiv id in the URL/id fields
+  const found = allDataRef.find((item) => {
+    const haystack = [item.doi, item.arxiv_id, item.url, item.id, item.title]
+      .filter(Boolean)
+      .join(' ')
+      .toLowerCase();
+    return haystack.includes(id.toLowerCase());
+  });
+
+  const resultsContainer = document.querySelector('.search-modal__results');
+  if (!resultsContainer) return true;
+  resultsContainer.textContent = '';
+
+  if (found) {
+    const row = document.createElement('div');
+    row.className = 'search-result search-result--id-match';
+    const title = document.createElement('div');
+    title.className = 'search-result__title';
+    title.textContent = found.title || found.name || 'Untitled';
+    const meta = document.createElement('div');
+    meta.className = 'search-result__meta';
+    meta.textContent = `Found by ${isArxiv ? 'arXiv' : 'DOI'}: ${id}`;
+    row.appendChild(title);
+    row.appendChild(meta);
+    row.addEventListener('click', () => {
+      if (onCloseSearch) onCloseSearch();
+      showModal(found);
+    });
+    resultsContainer.appendChild(row);
+  } else {
+    const msg = document.createElement('div');
+    msg.className = 'search-modal__empty search-modal__not-indexed';
+    const extUrl = isArxiv
+      ? `https://arxiv.org/abs/${id}`
+      : `https://doi.org/${id}`;
+    const label = isArxiv ? 'arXiv' : 'DOI.org';
+    const txt = document.createTextNode('Not in index \u2014 view on ');
+    const link = document.createElement('a');
+    link.href = extUrl;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = label;
+    link.className = 'search-modal__ext-link';
+    msg.appendChild(txt);
+    msg.appendChild(link);
+    resultsContainer.appendChild(msg);
+  }
+  return true;
+}
+
+/**
  * Wires the search input to live-render results in the Cmd+K modal.
  * @param {Function} onCloseSearch - Callback to close the search modal.
  */
@@ -213,7 +406,18 @@ export function wireSearchInput(onCloseSearch) {
   const searchInput = document.getElementById('searchInput');
   if (!searchInput) return;
 
+  /* R4-20: Paste listener for DOI / arXiv detection */
+  searchInput.addEventListener('paste', (e) => {
+    const pasted = (e.clipboardData || window.clipboardData).getData('text');
+    if (pasted && handleIdPaste(pasted.trim(), onCloseSearch)) {
+      e.preventDefault();
+      searchInput.value = pasted.trim();
+    }
+  });
+
+  /* Remove ID-detected highlight on normal typing */
   searchInput.addEventListener('input', (e) => {
+    searchInput.classList.remove('search-modal__input--id-detected');
     highlightedIndex = -1;
     renderSearchResults(e.target.value.trim(), onCloseSearch);
   });

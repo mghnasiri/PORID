@@ -561,6 +561,29 @@ function buildBriefDOM(brief, container) {
       div.appendChild(details);
     }
 
+    // R4-14: Trend Narrative Summaries
+    if (tData.trend_narratives && tData.trend_narratives.length > 0) {
+      const narrativeSection = document.createElement('div');
+      narrativeSection.className = 'brief__narratives';
+      const nh = document.createElement('h4');
+      nh.textContent = 'Subdomain Narratives';
+      narrativeSection.appendChild(nh);
+      tData.trend_narratives.slice(0, 8).forEach(n => {
+        const item = document.createElement('div');
+        item.className = 'brief__narrative-item';
+        const tag = document.createElement('strong');
+        tag.className = 'brief__narrative-tag';
+        tag.textContent = n.tag;
+        item.appendChild(tag);
+        const text = document.createElement('p');
+        text.className = 'brief__narrative-text';
+        text.textContent = n.narrative;
+        item.appendChild(text);
+        narrativeSection.appendChild(item);
+      });
+      div.appendChild(narrativeSection);
+    }
+
     section.appendChild(iconEl);
     section.appendChild(div);
     body.appendChild(section);

@@ -190,6 +190,28 @@
 
         </div>
         <p class="about__update-info">Data is updated daily via GitHub Actions at 07:00 UTC.</p>
+        <button id="exportOpml" class="watchlist-toolbar__btn" style="margin-top:12px;">&#8681; Export OPML</button>
+        <script type="module">
+          import { generateOPML, downloadFile } from './js/utils/citation.js';
+          document.getElementById('exportOpml').addEventListener('click', () => {
+            const sources = [
+              { title: 'arXiv – math.OC', xmlUrl: 'https://rss.arxiv.org/rss/math.OC', htmlUrl: 'https://arxiv.org/list/math.OC/recent', type: 'rss' },
+              { title: 'arXiv – cs.AI', xmlUrl: 'https://rss.arxiv.org/rss/cs.AI', htmlUrl: 'https://arxiv.org/list/cs.AI/recent', type: 'rss' },
+              { title: 'arXiv – cs.DS', xmlUrl: 'https://rss.arxiv.org/rss/cs.DS', htmlUrl: 'https://arxiv.org/list/cs.DS/recent', type: 'rss' },
+              { title: 'Crossref – OR Journals', htmlUrl: 'https://www.crossref.org/', type: 'rss' },
+              { title: 'OpenAlex', htmlUrl: 'https://openalex.org/', type: 'rss' },
+              { title: 'Semantic Scholar', htmlUrl: 'https://www.semanticscholar.org/', type: 'rss' },
+              { title: 'Optimization Online', xmlUrl: 'https://optimization-online.org/?feed=rss2', htmlUrl: 'https://optimization-online.org/', type: 'rss' },
+              { title: 'WikiCFP', htmlUrl: 'http://www.wikicfp.com/', type: 'rss' },
+              { title: 'NSF Awards', htmlUrl: 'https://www.nsf.gov/', type: 'rss' },
+              { title: 'OpenAIRE / CORDIS', htmlUrl: 'https://explore.openaire.eu/', type: 'rss' },
+              { title: 'GitHub Releases – OR Solvers', htmlUrl: 'https://github.com/', type: 'rss' },
+              { title: 'PyPI – OR Packages', htmlUrl: 'https://pypi.org/', type: 'rss' },
+            ];
+            const opml = generateOPML(sources);
+            downloadFile(opml, 'porid-sources.opml', 'text/x-opml');
+          });
+        </script>
       </div>
 
       <div class="about__section">

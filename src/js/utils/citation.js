@@ -128,6 +128,91 @@ export function downloadFile(content, filename, mimeType) {
   URL.revokeObjectURL(url);
 }
 
+/**
+ * R4-01: Generate OPML XML string listing tracked data sources as outline entries.
+ * @param {Object[]} sources - Array of { title, xmlUrl?, htmlUrl?, type? }
+ * @returns {string} OPML XML string
+ */
+export function generateOPML(sources) {
+  const dateStr = new Date().toUTCString();
+  const outlines = sources.map((s) => {
+    const attrs = [`text="${escXml(s.title)}"`];
+    if (s.xmlUrl) attrs.push(`xmlUrl="${escXml(s.xmlUrl)}"`);
+    if (s.htmlUrl) attrs.push(`htmlUrl="${escXml(s.htmlUrl)}"`);
+    if (s.type) attrs.push(`type="${escXml(s.type)}"`);
+    return `      <outline ${attrs.join(' ')}/>`;
+  }).join('\n');
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>PORID Data Sources</title>
+    <dateCreated>${dateStr}</dateCreated>
+  </head>
+  <body>
+    <outline text="PORID Tracked Sources">
+${outlines}
+    </outline>
+  </body>
+</opml>`;
+}
+
+/**
+ * R4-02: Generate Zotero-compatible RDF/XML from items.
+ * @param {Object[]} items - Publication items
+ * @returns {string} RDF/XML string
+ */
+export function generateZoteroRDF(items) {
+  const entries = items.map((item) => {
+    const year = item.date ? item.date.slice(0, 4) : '';
+    const creators = (item.authors || []).map(a =>
+      `      <dc:creator>${escXml(a)}</dc:creator>`
+    ).join('\n');
+    const doi = item.doi ? `      <dc:identifier>DOI: ${escXml(item.doi)}</dc:identifier>` : '';
+    return `    <z:item z:itemType="journalArticle">
+      <dc:title>${escXml(item.title || '')}</dc:title>
+${creators}
+      <dc:date>${escXml(year)}</dc:date>
+${doi}
+    </z:item>`;
+  }).join('\n');
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:z="http://www.zotero.org/namespaces/export#">
+${entries}
+</rdf:RDF>`;
+}
+
+/**
+ * R4-03: Generate Netscape Bookmark File HTML from items.
+ * @param {Object[]} items - Items with title, url, date
+ * @returns {string} Bookmark HTML string
+ */
+export function generateBookmarkHTML(items) {
+  const entries = items.map((item) => {
+    const ts = item.date ? Math.floor(new Date(item.date + 'T00:00:00').getTime() / 1000) : '';
+    const url = item.url || '';
+    const title = item.title || item.name || 'Untitled';
+    return `        <DT><A HREF="${url}" ADD_DATE="${ts}">${escXml(title)}</A>`;
+  }).join('\n');
+  return `<!DOCTYPE NETSCAPE-Bookmark-file-1>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>PORID Bookmarks</TITLE>
+<H1>PORID Bookmarks</H1>
+<DL><p>
+    <DT><H3>PORID Reading List</H3>
+    <DL><p>
+${entries}
+    </DL><p>
+</DL><p>`;
+}
+
+/** Escape XML special characters. */
+function escXml(str) {
+  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
 function fallbackCopy(text) {
   const textarea = document.createElement('textarea');
   textarea.value = text;

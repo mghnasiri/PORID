@@ -34,7 +34,10 @@ function renderTags(tags) {
 function getSubtitle(item) {
   switch (item.type) {
     case 'publication':
-      return item.authors ? item.authors.join(', ') : '';
+      // R4-11: Author names rendered as clickable links for profile popover
+      return item.authors
+        ? item.authors.map(a => `<span class="card__author" data-author="${a.replace(/"/g, '&quot;')}" tabindex="0">${a}</span>`).join(', ')
+        : '';
     case 'software':
       return `v${item.version}`;
     case 'conference':
@@ -148,6 +151,11 @@ export function renderCard(item) {
   const isNew24h = item.date && (Date.now() - new Date(item.date + 'T00:00:00').getTime()) < 24 * 60 * 60 * 1000;
   const newClass = isNew24h ? ' card-new' : '';
 
+  // R4-15: Correction badge — green checkmark for verified/corrected data
+  const correctionBadge = item.corrected
+    ? '<span class="card__corrected-badge" title="Verified data">&#10003;</span>'
+    : '';
+
   // Source badge for publications
   const sourceBadge =
     item.type === 'publication' && item.source
@@ -156,8 +164,11 @@ export function renderCard(item) {
 
   return `
     <article class="card${newClass}" tabindex="0" data-id="${item.id}" data-type="${item.type}">
+      <label class="card__select-checkbox" style="display:none;">
+        <input type="checkbox" class="card__select-cb" data-id="${item.id}" aria-label="Select ${title.replace(/"/g, '&quot;')}">
+      </label>
       <div class="card__header">
-        <h3 class="card__title">${title}</h3>
+        <h3 class="card__title">${title}${correctionBadge}</h3>
         ${newBadge}
         ${readingTimeHtml}
         ${dateHtml}

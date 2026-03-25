@@ -65,6 +65,40 @@ def build_trends_section(trends: dict | None, publications: list | None = None) 
         else:
             headline = f"{papers_this_week} new papers this week; {top['display_name']} most active ({top['current_quarter_count']} this quarter)"
 
+    # R4-14: Build trend narrative summaries per subdomain
+    trend_narratives = []
+    # Find the fastest growth rate among all subdomains
+    max_velocity = max((s["velocity"] for s in subdomains if s["velocity_label"] == "accelerating"), default=0)
+    for s in subdomains:
+        name = s["display_name"]
+        count = s["current_quarter_count"]
+        prev = s["previous_quarter_count"]
+        vel = s["velocity"]
+        pct = round(vel * 100)
+        kws = s.get("top_keywords", [])[:3]
+
+        sentences = []
+        if prev > 0:
+            direction = "up" if vel > 0 else "down"
+            sentences.append(
+                f"{name} saw {count} papers this quarter, {direction} {abs(pct)}% from last quarter."
+            )
+        else:
+            sentences.append(
+                f"{name} saw {count} papers this quarter."
+            )
+
+        if kws:
+            sentences.append(f"Top keywords: {', '.join(kws)}.")
+
+        if vel > 0 and vel == max_velocity and len(accelerating) > 1:
+            sentences.append("This is the fastest growth rate among all tracked subdomains.")
+
+        trend_narratives.append({
+            "tag": name,
+            "narrative": " ".join(sentences),
+        })
+
     return {
         "headline": headline,
         "accelerating": [
@@ -77,6 +111,7 @@ def build_trends_section(trends: dict | None, publications: list | None = None) 
              "velocity": f"{round(s['velocity'] * 100)}%"}
             for s in declining[:3]
         ],
+        "trend_narratives": trend_narratives,
         "papers_this_week": papers_this_week,
         "papers_this_quarter": total_current,
         "total_subdomains": len(subdomains),

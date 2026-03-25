@@ -243,6 +243,19 @@
     </div>
   </div>
 
+  <!-- ====== R4-07: Floating Table of Contents ====== -->
+  <button class="toc-toggle" id="tocToggle" aria-label="Table of Contents" title="Table of Contents">TOC</button>
+  <aside class="toc-panel" id="tocPanel" aria-label="Table of Contents" aria-hidden="true">
+    <div class="toc-panel__header">
+      <span class="toc-panel__title">On this page</span>
+      <button class="toc-panel__close" id="tocClose" aria-label="Close table of contents">&times;</button>
+    </div>
+    <nav class="toc-panel__nav">
+      <ul class="toc-panel__list" id="tocList"></ul>
+    </nav>
+  </aside>
+  <div class="toc-backdrop" id="tocBackdrop"></div>
+
   <!-- ====== Detail Modal ====== -->
   <div class="search-modal" id="detailModal" role="dialog" aria-label="Item details" aria-hidden="true">
     <div class="search-modal__box modal-detail-box" id="detailModalContent">
@@ -268,7 +281,7 @@
           <h3>Navigation</h3>
           <div class="help-modal__row"><kbd>J</kbd> / <kbd>K</kbd><span>Next / previous item</span></div>
           <div class="help-modal__row"><kbd>&#8592;</kbd> <kbd>&#8594;</kbd><span>Navigate between cards</span></div>
-          <div class="help-modal__row"><kbd>1</kbd>&ndash;<kbd>7</kbd><span>Jump to tab (Publications&hellip;Trends)</span></div>
+          <div class="help-modal__row"><kbd>1</kbd>&ndash;<kbd>9</kbd><span>Jump to tab by number</span></div>
         </div>
         <div class="help-modal__group">
           <h3>Tabs</h3>
@@ -279,6 +292,13 @@
           <div class="help-modal__row"><kbd>5</kbd><span>Software</span></div>
           <div class="help-modal__row"><kbd>6</kbd><span>Conferences</span></div>
           <div class="help-modal__row"><kbd>7</kbd><span>Opportunities</span></div>
+          <div class="help-modal__row"><kbd>8</kbd><span>Seminars</span></div>
+          <div class="help-modal__row"><kbd>9</kbd><span>Watchlist</span></div>
+        </div>
+        <div class="help-modal__group">
+          <h3>Command Palette</h3>
+          <div class="help-modal__row"><kbd>&#8984;K</kbd><span>then type <code>&gt;pulse</code></span><span>Go to section</span></div>
+          <div class="help-modal__row"><kbd>&#8984;K</kbd><span>then type <code>go:solvers</code></span><span>Go to section</span></div>
         </div>
       </div>
     </div>

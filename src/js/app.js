@@ -730,6 +730,7 @@ function renderView() {
       brief: state.extraData.brief,
     });
     animateCards();
+    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
@@ -737,6 +738,7 @@ function renderView() {
     filterContainer.textContent = '';
     renderRadar(contentEl, state.data, sub);
     animateCards();
+    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
@@ -765,6 +767,7 @@ function renderView() {
     filterContainer.textContent = '';
     renderDigest(contentEl);
     requestAnimationFrame(() => animateCards());
+    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
@@ -774,6 +777,7 @@ function renderView() {
     if (state.loadErrors.seminars) { renderLoadError(contentEl, 'Seminars'); return; }
     renderSeminars(contentEl, state.data.seminars || []);
     requestAnimationFrame(() => animateCards());
+    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
@@ -783,6 +787,7 @@ function renderView() {
     if (state.loadErrors.datasets) { renderLoadError(contentEl, 'Datasets'); return; }
     renderDatasets(contentEl, state.data.datasets || [], state.data.blogs || []);
     requestAnimationFrame(() => animateCards());
+    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
@@ -791,6 +796,7 @@ function renderView() {
     filterContainer.textContent = '';
     renderTrends(contentEl, state.data);
     requestAnimationFrame(() => animateCards());
+    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
@@ -800,6 +806,7 @@ function renderView() {
     if (state.loadErrors.funding) { renderLoadError(contentEl, 'Funding'); return; }
     renderFunding(contentEl, state.data.funding || [], {});
     requestAnimationFrame(() => animateCards());
+    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
@@ -809,6 +816,7 @@ function renderView() {
     if (state.loadErrors.awards) { renderLoadError(contentEl, 'Awards'); return; }
     renderAwards(contentEl, state.data.awards || [], {});
     requestAnimationFrame(() => animateCards());
+    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
@@ -818,6 +826,7 @@ function renderView() {
     if (state.loadErrors.resources) { renderLoadError(contentEl, 'Resources'); return; }
     renderResources(contentEl, state.data.resources || [], {});
     requestAnimationFrame(() => animateCards());
+    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
@@ -826,6 +835,7 @@ function renderView() {
     filterContainer.textContent = '';
     renderChangelog(contentEl);
     requestAnimationFrame(() => animateCards());
+    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
@@ -881,6 +891,9 @@ function renderView() {
   if (cardCount > 0) {
     announceToScreenReader(`${tab} view loaded, showing ${cardCount} items`);
   }
+
+  // R4-09: Append "See also" cross-links at the bottom of each section
+  appendSeeAlsoLinks(tab);
 }
 
 function extractTags(items) {
@@ -892,6 +905,9 @@ function extractTags(items) {
 // ---------------------------------------------------------------------------
 // Filter Event Wiring
 // ---------------------------------------------------------------------------
+
+// R4-10: Track whether we are currently restoring state from popstate
+let _isRestoringState = false;
 
 function syncFiltersToHash() {
   const filters = getActiveFilters();
@@ -905,7 +921,13 @@ function syncFiltersToHash() {
   if (filters.dateTo) parts.push(`dateTo=${encodeURIComponent(filters.dateTo)}`);
   if (filters.readStatus && filters.readStatus !== 'all') parts.push(`readStatus=${encodeURIComponent(filters.readStatus)}`);
   const qs = parts.length ? '?' + parts.join('&') : '';
-  history.replaceState(null, '', `#${tab}${qs}`);
+  const url = `#${tab}${qs}`;
+  // R4-10: Use pushState so browser back button works for filter changes
+  if (_isRestoringState) {
+    history.replaceState({ tab, filters }, '', url);
+  } else {
+    history.pushState({ tab, filters }, '', url);
+  }
 }
 
 function applyHashFilters() {
@@ -1182,6 +1204,49 @@ function applyPresetFilters(filters) {
 }
 
 // ---------------------------------------------------------------------------
+// R4-10: Restore filter state from popstate (browser back/forward)
+// ---------------------------------------------------------------------------
+
+function restoreFilterState(filters) {
+  if (!filters) return;
+
+  // Restore tag filters
+  document.querySelectorAll('.filter-tag').forEach((el) => el.classList.remove('active'));
+  if (filters.tags && filters.tags.length > 0) {
+    filters.tags.forEach((t) => {
+      const el = document.querySelector(`.filter-tag[data-tag="${t}"]`);
+      if (el) el.classList.add('active');
+    });
+  } else {
+    const allTag = document.querySelector('.filter-tag[data-tag="all"]');
+    if (allTag) allTag.classList.add('active');
+  }
+
+  const sourceEl = document.getElementById('filterSource');
+  if (sourceEl) sourceEl.value = filters.source || 'All Sources';
+
+  const sortEl = document.getElementById('filterSort');
+  if (sortEl) sortEl.value = filters.sort || 'newest';
+
+  const logicEl = document.getElementById('filterLogic');
+  if (logicEl) {
+    logicEl.textContent = filters.logic === 'and' ? 'AND' : 'OR';
+    logicEl.classList.toggle('active', filters.logic === 'and');
+  }
+
+  const dateFromEl = document.getElementById('filterDateFrom');
+  const dateToEl = document.getElementById('filterDateTo');
+  if (dateFromEl) dateFromEl.value = filters.dateFrom || '';
+  if (dateToEl) dateToEl.value = filters.dateTo || '';
+
+  const readStatusEl = document.getElementById('filterReadStatus');
+  if (readStatusEl) readStatusEl.value = filters.readStatus || 'all';
+
+  updateClearBtn();
+  debouncedRenderView();
+}
+
+// ---------------------------------------------------------------------------
 // Card Event Delegation (global — survives re-renders)
 // ---------------------------------------------------------------------------
 
@@ -1289,6 +1354,13 @@ function wireCardEvents() {
         copyBtn.textContent = 'Failed';
         setTimeout(() => { copyBtn.textContent = 'Copy Link'; }, 1500);
       });
+      return;
+    }
+
+    // R4-11: Author profile mini-card popover
+    const authorEl = e.target.closest('.card__author');
+    if (authorEl) {
+      showAuthorPopover(authorEl, authorEl.dataset.author);
       return;
     }
 
@@ -1818,9 +1890,9 @@ function wireKeyboardShortcuts() {
       return;
     }
 
-    // Number keys 1-7 to switch tabs
+    // R4-08: Number keys 1-9 to quick-jump to corresponding nav tab
     const num = parseInt(e.key);
-    if (num >= 1 && num <= TABS.length) {
+    if (num >= 1 && num <= 9 && num <= TABS.length) {
       e.preventDefault();
       navigate(TABS[num - 1]);
       return;
@@ -1965,6 +2037,43 @@ function animateCards() {
   cards.forEach((card, i) => {
     card.setAttribute('data-animate', '');
     card.style.animationDelay = `${i * 0.05}s`;
+    /* R4-25: Staggered entrance for .card elements (20ms per card) */
+    if (card.classList.contains('card')) {
+      card.setAttribute('data-entrance', '');
+      card.style.animationDelay = `${i * 20}ms`;
+    }
+  });
+  // R4-06: add anchor links to section headings after render
+  requestAnimationFrame(() => addSectionAnchorLinks());
+}
+
+/**
+ * R4-06: Add anchor links (pilcrow) next to section headings.
+ */
+function addSectionAnchorLinks() {
+  const headings = contentEl.querySelectorAll('h2[id], h3[id], .section-heading[id]');
+  headings.forEach((heading) => {
+    if (heading.querySelector('.anchor-link')) return;
+    const btn = document.createElement('button');
+    btn.className = 'anchor-link';
+    btn.textContent = '\u00B6';
+    btn.title = 'Copy link to this section';
+    btn.setAttribute('aria-label', 'Copy section link');
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const url = `${location.origin}${location.pathname}#${state.activeTab}?section=${heading.id}`;
+      copyToClipboard(url).then(() => {
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.textContent = 'Link copied!';
+        toast.setAttribute('role', 'status');
+        document.body.appendChild(toast);
+        setTimeout(() => toast.classList.add('toast--visible'), 10);
+        setTimeout(() => { toast.classList.remove('toast--visible'); setTimeout(() => toast.remove(), 300); }, 2000);
+      });
+    });
+    heading.style.position = 'relative';
+    heading.appendChild(btn);
   });
 }
 
@@ -2065,6 +2174,184 @@ function wireCardKeyNav() {
   });
 }
 
+
+// ---------------------------------------------------------------------------
+// R4-07: Floating Table of Contents
+// ---------------------------------------------------------------------------
+
+let tocObserver = null;
+
+function wireTOC() {
+  const toggleBtn = document.getElementById('tocToggle');
+  const panel = document.getElementById('tocPanel');
+  const closeBtn = document.getElementById('tocClose');
+  const backdrop = document.getElementById('tocBackdrop');
+  if (!toggleBtn || !panel) return;
+
+  function openTOC() {
+    buildTOCList();
+    panel.classList.add('toc-panel--open');
+    panel.setAttribute('aria-hidden', 'false');
+    if (backdrop) backdrop.classList.add('toc-backdrop--visible');
+    toggleBtn.classList.add('toc-toggle--active');
+  }
+
+  function closeTOC() {
+    panel.classList.remove('toc-panel--open');
+    panel.setAttribute('aria-hidden', 'true');
+    if (backdrop) backdrop.classList.remove('toc-backdrop--visible');
+    toggleBtn.classList.remove('toc-toggle--active');
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    panel.classList.contains('toc-panel--open') ? closeTOC() : openTOC();
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeTOC);
+  if (backdrop) backdrop.addEventListener('click', closeTOC);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && panel.classList.contains('toc-panel--open')) {
+      closeTOC();
+    }
+  });
+}
+
+function buildTOCList() {
+  const list = document.getElementById('tocList');
+  if (!list) return;
+  list.textContent = '';
+
+  // Clean up previous observer
+  if (tocObserver) { tocObserver.disconnect(); tocObserver = null; }
+
+  // Scan for h2 and h3 headings in the content area
+  const headings = contentEl.querySelectorAll('h2, h3');
+  if (headings.length === 0) {
+    const li = document.createElement('li');
+    li.className = 'toc-panel__item toc-panel__item--empty';
+    li.textContent = 'No sections on this page.';
+    list.appendChild(li);
+    return;
+  }
+
+  headings.forEach((heading, idx) => {
+    if (!heading.id) {
+      heading.id = 'toc-heading-' + idx;
+    }
+
+    const li = document.createElement('li');
+    li.className = 'toc-panel__item' + (heading.tagName === 'H3' ? ' toc-panel__item--sub' : '');
+
+    const link = document.createElement('a');
+    link.className = 'toc-panel__link';
+    link.href = '#' + heading.id;
+    link.textContent = heading.textContent.trim();
+    link.dataset.headingId = heading.id;
+
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // On mobile, close the TOC drawer after clicking
+      if (window.innerWidth < 768) {
+        const p = document.getElementById('tocPanel');
+        const bd = document.getElementById('tocBackdrop');
+        const tb = document.getElementById('tocToggle');
+        if (p) { p.classList.remove('toc-panel--open'); p.setAttribute('aria-hidden', 'true'); }
+        if (bd) bd.classList.remove('toc-backdrop--visible');
+        if (tb) tb.classList.remove('toc-toggle--active');
+      }
+    });
+
+    li.appendChild(link);
+    list.appendChild(li);
+  });
+
+  // IntersectionObserver to highlight the current section
+  tocObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const link = list.querySelector('[data-heading-id="' + entry.target.id + '"]');
+        if (link) {
+          link.classList.toggle('toc-panel__link--active', entry.isIntersecting);
+        }
+      });
+    },
+    { rootMargin: '-10% 0px -70% 0px', threshold: 0 }
+  );
+
+  headings.forEach((heading) => tocObserver.observe(heading));
+}
+
+// ---------------------------------------------------------------------------
+// R4-09: Related Sections Cross-Links ("See Also")
+// ---------------------------------------------------------------------------
+
+const SECTION_RELATIONS = {
+  pulse: ['publications', 'trends', 'conferences'],
+  publications: ['trends', 'software', 'conferences'],
+  software: ['publications', 'toolkit', 'datasets'],
+  conferences: ['opportunities', 'publications', 'seminars'],
+  opportunities: ['funding', 'conferences', 'awards'],
+  toolkit: ['software', 'publications', 'datasets'],
+  radar: ['opportunities', 'publications', 'conferences'],
+  trends: ['publications', 'pulse', 'software'],
+  watchlist: ['publications', 'software', 'conferences'],
+  digest: ['pulse', 'publications', 'trends'],
+  datasets: ['software', 'toolkit', 'publications'],
+  seminars: ['conferences', 'publications', 'trends'],
+  funding: ['opportunities', 'awards', 'conferences'],
+  awards: ['funding', 'opportunities', 'conferences'],
+  resources: ['datasets', 'software', 'toolkit'],
+  changelog: ['pulse', 'publications', 'software'],
+};
+
+const TAB_LABELS = {
+  pulse: 'Pulse',
+  radar: 'Opportunity Radar',
+  toolkit: 'Solver Observatory',
+  publications: 'Publications',
+  software: 'Software Releases',
+  conferences: 'Conferences',
+  opportunities: 'Opportunities',
+  watchlist: 'Watchlist',
+  trends: 'Trends',
+  digest: 'Digest',
+  datasets: 'Datasets & Blogs',
+  seminars: 'Seminars',
+  funding: 'Funding',
+  awards: 'Awards',
+  resources: 'Resources',
+  changelog: 'Changelog',
+};
+
+function appendSeeAlsoLinks(tab) {
+  const related = SECTION_RELATIONS[tab];
+  if (!related || related.length === 0) return;
+
+  const container = document.createElement('div');
+  container.className = 'see-also';
+
+  const label = document.createElement('span');
+  label.className = 'see-also__label';
+  label.textContent = 'See also:';
+  container.appendChild(label);
+
+  related.slice(0, 3).forEach((relTab) => {
+    const link = document.createElement('a');
+    link.className = 'see-also__link';
+    link.href = '#' + relTab;
+    link.textContent = TAB_LABELS[relTab] || relTab;
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      navigate(relTab);
+    });
+    container.appendChild(link);
+  });
+
+  contentEl.appendChild(container);
+}
+
 // ---------------------------------------------------------------------------
 // Init
 // ---------------------------------------------------------------------------
@@ -2086,6 +2373,7 @@ async function init() {
   wireScrollTop();
   wireCardKeyNav();
   wireRecentViewsPanel(); // ER-05
+  wireTOC();              // R4-07
 
   showSkeletons();
   await loadAllData();
@@ -2096,6 +2384,24 @@ async function init() {
   renderView();
 
   window.addEventListener('hashchange', onHashChange);
+
+  // R4-10: Restore filter state on browser back/forward
+  window.addEventListener('popstate', (e) => {
+    if (e.state && e.state.filters) {
+      _isRestoringState = true;
+      state.activeTab = e.state.tab || getHashTab();
+      updateTabUI();
+      updatePageMeta(state.activeTab);
+      renderView();
+      // After renderView has built the filter bar, apply the saved filter state
+      requestAnimationFrame(() => {
+        restoreFilterState(e.state.filters);
+        _isRestoringState = false;
+      });
+    } else {
+      onHashChange();
+    }
+  });
 
   // First-visit onboarding flow (ER-08)
   if (!localStorage.getItem('porid-onboarded')) {
@@ -2243,3 +2549,255 @@ async function wireChangelog() {
 }
 
 init();
+
+// ---------------------------------------------------------------------------
+// R4-11: Author Profile Mini-Card Popover
+// ---------------------------------------------------------------------------
+
+function showAuthorPopover(anchorEl, authorName) {
+  // Remove existing popover
+  const existing = document.querySelector('.author-popover');
+  if (existing) existing.remove();
+
+  const pubs = state.data.publications || [];
+  const authorPubs = pubs.filter(p =>
+    (p.authors || []).some(a => a === authorName)
+  );
+
+  // Collect tag counts
+  const tagCounts = {};
+  authorPubs.forEach(p => {
+    (p.tags || []).forEach(t => {
+      tagCounts[t] = (tagCounts[t] || 0) + 1;
+    });
+  });
+  const topTags = Object.entries(tagCounts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 5)
+    .map(([t]) => t);
+
+  // Build popover DOM
+  const popover = document.createElement('div');
+  popover.className = 'author-popover';
+
+  const nameEl = document.createElement('div');
+  nameEl.className = 'author-popover__name';
+  nameEl.textContent = authorName;
+  popover.appendChild(nameEl);
+
+  const countEl = document.createElement('div');
+  countEl.className = 'author-popover__count';
+  countEl.textContent = `${authorPubs.length} paper${authorPubs.length !== 1 ? 's' : ''} in dataset`;
+  popover.appendChild(countEl);
+
+  if (topTags.length > 0) {
+    const tagsEl = document.createElement('div');
+    tagsEl.className = 'author-popover__tags';
+    const label = document.createElement('span');
+    label.className = 'author-popover__tags-label';
+    label.textContent = 'Common tags: ';
+    tagsEl.appendChild(label);
+    topTags.forEach(t => {
+      const tag = document.createElement('span');
+      tag.className = 'tag';
+      tag.textContent = t;
+      tagsEl.appendChild(tag);
+    });
+    popover.appendChild(tagsEl);
+  }
+
+  // Other papers list (up to 5, excluding current)
+  const card = anchorEl.closest('.card');
+  const currentId = card ? card.dataset.id : '';
+  const otherPubs = authorPubs.filter(p => p.id !== currentId).slice(0, 5);
+  if (otherPubs.length > 0) {
+    const listLabel = document.createElement('div');
+    listLabel.className = 'author-popover__list-label';
+    listLabel.textContent = 'Other papers:';
+    popover.appendChild(listLabel);
+
+    const list = document.createElement('ul');
+    list.className = 'author-popover__list';
+    otherPubs.forEach(p => {
+      const li = document.createElement('li');
+      li.className = 'author-popover__list-item';
+      li.textContent = (p.title || 'Untitled').slice(0, 80) + ((p.title || '').length > 80 ? '...' : '');
+      li.tabIndex = 0;
+      li.addEventListener('click', () => {
+        showModal(p);
+        popover.remove();
+      });
+      list.appendChild(li);
+    });
+    popover.appendChild(list);
+  }
+
+  // Position near anchor
+  document.body.appendChild(popover);
+  const rect = anchorEl.getBoundingClientRect();
+  popover.style.top = `${rect.bottom + window.scrollY + 4}px`;
+  popover.style.left = `${rect.left + window.scrollX}px`;
+
+  // Ensure it stays within viewport
+  requestAnimationFrame(() => {
+    const pr = popover.getBoundingClientRect();
+    if (pr.right > window.innerWidth - 16) {
+      popover.style.left = `${window.innerWidth - pr.width - 16}px`;
+    }
+    if (pr.bottom > window.innerHeight - 16) {
+      popover.style.top = `${rect.top + window.scrollY - pr.height - 4}px`;
+    }
+  });
+
+  // Close on outside click
+  function onDocClick(ev) {
+    if (!popover.contains(ev.target) && ev.target !== anchorEl) {
+      popover.remove();
+      document.removeEventListener('click', onDocClick, true);
+    }
+  }
+  setTimeout(() => document.addEventListener('click', onDocClick, true), 0);
+}
+
+// ---------------------------------------------------------------------------
+// R4-18: Batch Operations on Selected Items
+// ---------------------------------------------------------------------------
+
+const batchState = {
+  active: false,
+  selectedIds: new Set(),
+};
+
+function buildBatchActionBar() {
+  const existing = document.getElementById('batchActionBar');
+  if (existing) existing.remove();
+
+  const bar = document.createElement('div');
+  bar.id = 'batchActionBar';
+  bar.className = 'batch-action-bar';
+  bar.style.display = 'none';
+
+  const info = document.createElement('span');
+  info.className = 'batch-action-bar__info';
+  info.id = 'batchInfo';
+  info.textContent = '0 selected';
+  bar.appendChild(info);
+
+  const addWlBtn = document.createElement('button');
+  addWlBtn.className = 'batch-action-bar__btn';
+  addWlBtn.textContent = 'Add to Watchlist';
+  addWlBtn.addEventListener('click', () => {
+    batchState.selectedIds.forEach(id => {
+      const item = findItemById(id);
+      if (item && !isWatchlisted(id)) addToWatchlist(item);
+    });
+    showToast(`${batchState.selectedIds.size} items added to watchlist`);
+    clearBatchSelection();
+  });
+  bar.appendChild(addWlBtn);
+
+  const exportBtn = document.createElement('button');
+  exportBtn.className = 'batch-action-bar__btn';
+  exportBtn.textContent = 'Export BibTeX';
+  exportBtn.addEventListener('click', () => {
+    const items = [];
+    batchState.selectedIds.forEach(id => {
+      const item = findItemById(id);
+      if (item) items.push(item);
+    });
+    if (items.length === 0) return;
+    const bibtex = items.map(i => generateBibTeX(i)).join('\n\n');
+    downloadFile(bibtex, 'porid-selected.bib', 'application/x-bibtex');
+    showToast(`Exported ${items.length} citations`);
+  });
+  bar.appendChild(exportBtn);
+
+  const clearBtn = document.createElement('button');
+  clearBtn.className = 'batch-action-bar__btn batch-action-bar__btn--clear';
+  clearBtn.textContent = 'Clear';
+  clearBtn.addEventListener('click', clearBatchSelection);
+  bar.appendChild(clearBtn);
+
+  document.body.appendChild(bar);
+}
+
+function toggleBatchMode(active) {
+  batchState.active = active;
+  batchState.selectedIds.clear();
+
+  document.querySelectorAll('.card__select-checkbox').forEach(el => {
+    el.style.display = active ? '' : 'none';
+    const cb = el.querySelector('.card__select-cb');
+    if (cb) cb.checked = false;
+  });
+
+  const bar = document.getElementById('batchActionBar');
+  if (bar) bar.style.display = active ? 'flex' : 'none';
+
+  updateBatchInfo();
+
+  const btn = document.getElementById('batchSelectToggle');
+  if (btn) btn.classList.toggle('active', active);
+}
+
+function updateBatchInfo() {
+  const info = document.getElementById('batchInfo');
+  if (info) info.textContent = `${batchState.selectedIds.size} selected`;
+}
+
+function clearBatchSelection() {
+  batchState.selectedIds.clear();
+  document.querySelectorAll('.card__select-cb').forEach(cb => { cb.checked = false; });
+  updateBatchInfo();
+}
+
+function wireBatchEvents() {
+  buildBatchActionBar();
+
+  contentEl.addEventListener('change', (e) => {
+    const cb = e.target.closest('.card__select-cb');
+    if (!cb) return;
+    const id = cb.dataset.id;
+    if (cb.checked) {
+      batchState.selectedIds.add(id);
+    } else {
+      batchState.selectedIds.delete(id);
+    }
+    updateBatchInfo();
+  });
+}
+
+function injectBatchToggle() {
+  const filterBar = document.querySelector('.filter-bar');
+  if (!filterBar || document.getElementById('batchSelectToggle')) return;
+  const btn = document.createElement('button');
+  btn.className = 'tag filter-tag filter-batch-toggle';
+  btn.id = 'batchSelectToggle';
+  btn.textContent = '\u2610 Select';
+  btn.title = 'Toggle selection mode for batch operations';
+  btn.addEventListener('click', () => {
+    toggleBatchMode(!batchState.active);
+  });
+  const spacer = filterBar.querySelector('.filter-bar__spacer');
+  if (spacer) {
+    filterBar.insertBefore(btn, spacer);
+  } else {
+    filterBar.appendChild(btn);
+  }
+}
+
+// Wire batch events after init
+wireBatchEvents();
+
+// Observe filter bar to inject batch toggle when it renders
+const _batchObserver = new MutationObserver(() => {
+  if (filterContainer.querySelector('.filter-bar') && !document.getElementById('batchSelectToggle')) {
+    injectBatchToggle();
+    if (batchState.active) {
+      document.querySelectorAll('.card__select-checkbox').forEach(el => {
+        el.style.display = '';
+      });
+    }
+  }
+});
+_batchObserver.observe(filterContainer, { childList: true, subtree: true });

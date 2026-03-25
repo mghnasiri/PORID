@@ -7,9 +7,9 @@
  * data from our controlled local JSON sources.
  */
 
-import { getWatchlist, removeFromWatchlist, exportWatchlist } from '../utils/storage.js';
+import { getWatchlist, removeFromWatchlist, exportWatchlist, addToWatchlist } from '../utils/storage.js';
 import { renderCard } from '../components/card.js';
-import { generateBibTeX, generateRIS, deduplicateByDOI, downloadFile } from '../utils/citation.js';
+import { generateBibTeX, generateRIS, deduplicateByDOI, downloadFile, generateZoteroRDF, generateBookmarkHTML } from '../utils/citation.js';
 
 const NOTES_KEY = 'porid-watchlist-notes';
 
@@ -189,6 +189,74 @@ function exportMarkdown(items) {
 }
 
 /**
+ * R4-02: Export watchlisted items as Zotero RDF.
+ */
+function exportZotero(items) {
+  const pubs = items.filter((i) => i.type === 'publication');
+  if (pubs.length === 0) return;
+  const content = generateZoteroRDF(pubs);
+  downloadFile(content, `porid-watchlist-${new Date().toISOString().slice(0, 10)}.rdf`, 'application/rdf+xml');
+}
+
+/**
+ * R4-03: Export watchlisted items as Netscape Bookmark HTML.
+ */
+function exportBookmarks(items) {
+  if (items.length === 0) return;
+  const content = generateBookmarkHTML(items);
+  downloadFile(content, `porid-bookmarks-${new Date().toISOString().slice(0, 10)}.html`, 'text/html');
+}
+
+/**
+ * R4-05: Import items from a JSON-LD / JSON file into the watchlist.
+ * Validates that each item has id, title, and url. Merges into existing watchlist.
+ * @param {HTMLElement} container - For re-rendering after import
+ */
+function importFromJSON(container) {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = '.json,application/json,application/ld+json';
+  input.addEventListener('change', () => {
+    const file = input.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        let data = JSON.parse(reader.result);
+        // Support both array and { @graph: [...] } JSON-LD
+        if (!Array.isArray(data)) data = data['@graph'] || data.items || [];
+        const existing = new Set(getWatchlist().map(i => i.id));
+        let imported = 0;
+        data.forEach(item => {
+          if (!item.id || !item.title || !item.url) return;
+          if (existing.has(item.id)) return;
+          addToWatchlist(item);
+          imported++;
+        });
+        showImportToast(imported);
+        render(container);
+        window.dispatchEvent(new CustomEvent('porid:watchlist-changed'));
+      } catch {
+        showImportToast(-1); // error
+      }
+    };
+    reader.readAsText(file);
+  });
+  input.click();
+}
+
+function showImportToast(count) {
+  const msg = count < 0 ? 'Import failed: invalid JSON' : `Imported ${count} item${count !== 1 ? 's' : ''} to watchlist`;
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.textContent = msg;
+  toast.setAttribute('role', 'status');
+  document.body.appendChild(toast);
+  setTimeout(() => toast.classList.add('toast--visible'), 10);
+  setTimeout(() => { toast.classList.remove('toast--visible'); setTimeout(() => toast.remove(), 300); }, 2500);
+}
+
+/**
  * Renders the watchlist view.
  * @param {HTMLElement} container
  */
@@ -271,6 +339,24 @@ export function render(container) {
   exportMdBtn.textContent = '\u2913 Export Markdown';
   exportMdBtn.addEventListener('click', () => exportMarkdown(getExportItems()));
 
+  // R4-02: Export Zotero RDF button
+  const exportZoteroBtn = document.createElement('button');
+  exportZoteroBtn.className = 'watchlist-toolbar__btn';
+  exportZoteroBtn.textContent = '\u2913 Export Zotero';
+  exportZoteroBtn.addEventListener('click', () => exportZotero(getExportItems()));
+
+  // R4-03: Export Bookmarks button
+  const exportBookmarkBtn = document.createElement('button');
+  exportBookmarkBtn.className = 'watchlist-toolbar__btn';
+  exportBookmarkBtn.textContent = '\u2913 Export Bookmarks';
+  exportBookmarkBtn.addEventListener('click', () => exportBookmarks(getExportItems()));
+
+  // R4-05: Import JSON button
+  const importBtn = document.createElement('button');
+  importBtn.className = 'watchlist-toolbar__btn';
+  importBtn.textContent = '\u2912 Import';
+  importBtn.addEventListener('click', () => importFromJSON(container));
+
   const clearBtn = document.createElement('button');
   clearBtn.className = 'watchlist-toolbar__btn watchlist-toolbar__btn--danger';
   clearBtn.textContent = '\u2717 Clear All';
@@ -290,7 +376,10 @@ export function render(container) {
   toolbar.appendChild(exportCsvBtn);
   toolbar.appendChild(exportHtmlBtn);
   toolbar.appendChild(exportMdBtn);
+  toolbar.appendChild(exportZoteroBtn);
+  toolbar.appendChild(exportBookmarkBtn);
   toolbar.appendChild(dedupLabel);
+  toolbar.appendChild(importBtn);
   toolbar.appendChild(clearBtn);
 
   // Build grid with cards + note areas using DOM methods
