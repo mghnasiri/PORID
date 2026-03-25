@@ -3,7 +3,7 @@
  */
 
 import { relativeTime, formatDate, daysUntil } from '../utils/date.js';
-import { isWatchlisted } from '../utils/storage.js';
+import { isWatchlisted, hasNote } from '../utils/storage.js';
 import { generateBibTeX, copyToClipboard } from '../utils/citation.js';
 
 /**
@@ -100,6 +100,8 @@ export function renderCard(item) {
   const starred = isWatchlisted(item.id);
   const starClass = starred ? 'card__star--active' : '';
   const starLabel = starred ? 'Remove from watchlist' : 'Add to watchlist';
+  const itemHasNote = hasNote(item.id);
+  const noteClass = itemHasNote ? ' card__note-btn--has-note' : '';
   const title = getTitle(item);
   const subtitle = getSubtitle(item);
   const body = getBody(item);
@@ -136,11 +138,15 @@ export function renderCard(item) {
         <button class="card__star ${starClass}" data-id="${item.id}" aria-label="${starLabel}" title="${starLabel}">
           ${starred ? '&#9733;' : '&#9734;'}
         </button>
+        <button class="card__note-btn card__action${noteClass}" data-id="${item.id}" aria-label="Add note" title="Add note">&#9998;${itemHasNote ? '<span class="card__note-badge"></span>' : ''}</button>
         ${item.type === 'publication' ? `<button class="card__cite card__action" data-id="${item.id}" aria-label="Copy BibTeX citation" title="Copy BibTeX">Cite</button>` : ''}
         ${item.url ? `<a href="${item.url}" target="_blank" rel="noopener" class="card__action" aria-label="Open external link">&#8599; Open</a>` : ''}
         ${item.url && item.url.includes('arxiv.org/abs/') ? `<a href="${item.url.replace('/abs/', '/pdf/') + '.pdf'}" target="_blank" rel="noopener" class="card__action card__pdf" title="Download PDF">PDF</a>` : ''}
         <button class="card__detail-btn card__action" data-id="${item.id}">Details</button>
         <a href="https://github.com/mghnasiri/PORID/issues/new?title=${encodeURIComponent('Data correction: ' + title)}&body=${encodeURIComponent('Item ID: ' + item.id + '\nType: ' + item.type + '\n\nWhat needs correction:\n')}&labels=data-correction" target="_blank" rel="noopener" class="card__action card__report" title="Report data correction">&#9873;</a>
+      </div>
+      <div class="card__note-area" data-id="${item.id}" style="display:none;">
+        <textarea class="card__note-input" data-id="${item.id}" placeholder="Add a note..." rows="2">${itemHasNote ? '' : ''}</textarea>
       </div>
     </article>
   `;

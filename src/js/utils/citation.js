@@ -74,6 +74,43 @@ export function generateCSV(items) {
 }
 
 /**
+ * Generate RIS entry from a publication item.
+ * @param {Object} item - Publication with title, authors, date, doi, source, url
+ * @returns {string} RIS formatted string
+ */
+export function generateRIS(item) {
+  const year = item.date ? item.date.slice(0, 4) : '';
+  const lines = ['TY  - JOUR'];
+  if (item.title) lines.push(`TI  - ${item.title}`);
+  if (item.authors && item.authors.length > 0) {
+    item.authors.forEach(a => lines.push(`AU  - ${a}`));
+  }
+  if (year) lines.push(`PY  - ${year}`);
+  if (item.doi) lines.push(`DO  - ${item.doi}`);
+  if (item.source) lines.push(`JO  - ${item.source}`);
+  if (item.url) lines.push(`UR  - ${item.url}`);
+  lines.push('ER  - ');
+  return lines.join('\n');
+}
+
+/**
+ * Remove duplicate items that share the same DOI.
+ * Items without a DOI are always kept.
+ * @param {Object[]} items
+ * @returns {Object[]} Deduplicated array
+ */
+export function deduplicateByDOI(items) {
+  const seen = new Set();
+  return items.filter(item => {
+    if (!item.doi) return true;
+    const key = item.doi.toLowerCase().trim();
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+/**
  * Trigger a file download via Blob URL.
  * @param {string} content - File content
  * @param {string} filename - Download filename

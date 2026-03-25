@@ -104,3 +104,55 @@ export function cycleReadStatus(id) {
     return next;
   } catch { return 'new'; }
 }
+
+// ---------------------------------------------------------------------------
+// Card Notes (FE-06: inline notes on any card)
+// ---------------------------------------------------------------------------
+
+const NOTES_KEY = 'porid-card-notes';
+
+/**
+ * Retrieves all card notes from localStorage.
+ * @returns {Object<string, string>}
+ */
+export function getAllNotes() {
+  try {
+    const raw = localStorage.getItem(NOTES_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
+  }
+}
+
+/**
+ * Get the note text for a specific item.
+ * @param {string} id
+ * @returns {string}
+ */
+export function getNote(id) {
+  return getAllNotes()[id] || '';
+}
+
+/**
+ * Set (or clear) a note for a specific item.
+ * @param {string} id
+ * @param {string} text
+ */
+export function setNote(id, text) {
+  const notes = getAllNotes();
+  if (text && text.trim()) {
+    notes[id] = text.trim();
+  } else {
+    delete notes[id];
+  }
+  localStorage.setItem(NOTES_KEY, JSON.stringify(notes));
+}
+
+/**
+ * Check if an item has a saved note.
+ * @param {string} id
+ * @returns {boolean}
+ */
+export function hasNote(id) {
+  return !!getAllNotes()[id];
+}

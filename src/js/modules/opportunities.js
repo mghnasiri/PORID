@@ -5,8 +5,9 @@
  */
 
 import { formatDate, daysUntil } from '../utils/date.js';
-import { isWatchlisted } from '../utils/storage.js';
+import { isWatchlisted, hasNote } from '../utils/storage.js';
 import { renderEmptyState } from '../components/empty-state.js';
+import { renderAlertBuilder, addAlertRule, deleteAlertRule, getAlertRules } from './opportunity-alerts.js';
 
 const TYPE_LABELS = {
   postdoc: 'Postdoc',
@@ -77,8 +78,12 @@ function renderOpportunityCard(item) {
       </div>
       <div class="card__actions">
         <button class="card__star ${starClass}" data-id="${item.id}" aria-label="Toggle watchlist">${starSymbol}</button>
+        <button class="card__note-btn card__action${hasNote(item.id) ? ' card__note-btn--has-note' : ''}" data-id="${item.id}" aria-label="Add note" title="Add note">&#9998;${hasNote(item.id) ? '<span class="card__note-badge"></span>' : ''}</button>
         ${item.url ? `<a href="${item.url}" target="_blank" rel="noopener" class="card__action">&#8599; Apply</a>` : ''}
         <button class="card__detail-btn card__action" data-id="${item.id}">Details</button>
+      </div>
+      <div class="card__note-area" data-id="${item.id}" style="display:none;">
+        <textarea class="card__note-input" data-id="${item.id}" placeholder="Add a note..." rows="2"></textarea>
       </div>
     </article>
   `;
@@ -113,6 +118,52 @@ export function render(container, data, filters) {
     return;
   }
 
-  // Trusted local data
-  container.innerHTML = `<div class="card-grid">${items.map(renderOpportunityCard).join('')}</div>`;
+  // Alert builder panel (NF-05) — trusted template from our own code
+  const alertHtml = renderAlertBuilder();
+
+  // Trusted local data from static JSON files
+  container.innerHTML = alertHtml + `<div class="card-grid">${items.map(renderOpportunityCard).join('')}</div>`;
+
+  // Wire alert builder events
+  wireAlertBuilderEvents(container, data, filters);
+}
+
+/**
+ * Wires event listeners for the alert builder panel.
+ */
+function wireAlertBuilderEvents(container, data, filters) {
+  const toggle = container.querySelector('#alertBuilderToggle');
+  const body = container.querySelector('#alertBuilderBody');
+  if (toggle && body) {
+    toggle.addEventListener('click', () => {
+      const isOpen = body.style.display !== 'none';
+      body.style.display = isOpen ? 'none' : 'block';
+    });
+  }
+
+  const addBtn = container.querySelector('#alertAddRule');
+  if (addBtn) {
+    addBtn.addEventListener('click', () => {
+      const typeEl = container.querySelector('#alertType');
+      const geoEl = container.querySelector('#alertGeo');
+      const subfieldEl = container.querySelector('#alertSubfield');
+      const type = typeEl ? typeEl.value : '';
+      const geography = geoEl ? geoEl.value.trim() : '';
+      const subfield = subfieldEl ? subfieldEl.value.trim() : '';
+
+      if (!type && !geography && !subfield) return;
+
+      addAlertRule({ type, geography, subfield });
+      // Re-render to show updated rules
+      render(container, data, filters);
+    });
+  }
+
+  container.querySelectorAll('.alert-rule__delete').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const ruleId = btn.dataset.deleteRule;
+      deleteAlertRule(ruleId);
+      render(container, data, filters);
+    });
+  });
 }

@@ -76,10 +76,17 @@ export function renderFilterBar(options = {}) {
   const exportSelect = `
     <select class="filter-select" id="filterExport" aria-label="Export filtered results">
       <option value="">Export...</option>
-      <option value="bibtex">Export BibTeX</option>
-      <option value="csv">Export CSV</option>
-      <option value="json">Export JSON</option>
+      <option value="bibtex">Export BibTeX (.bib)</option>
+      <option value="ris">Export RIS (.ris)</option>
+      <option value="csv">Export CSV (.csv)</option>
+      <option value="json">Export JSON (.json)</option>
     </select>
+  `;
+
+  const dedupCheckbox = `
+    <label class="filter-dedup" title="Remove entries with duplicate DOIs before export">
+      <input type="checkbox" id="filterDedup"> Dedup
+    </label>
   `;
 
   return `
@@ -95,7 +102,14 @@ export function renderFilterBar(options = {}) {
       ${sortSelect}
       ${readStatusSelect}
       ${exportSelect}
+      ${dedupCheckbox}
       <button class="tag filter-clear" id="filterClear" style="display:none;" aria-label="Clear all filters">&#10005; Clear</button>
+      <button class="tag filter-save-view" id="filterSaveView" aria-label="Save current filters as preset" title="Save View">&#9745; Save View</button>
+      <div class="save-view-inline" id="saveViewInline" style="display:none;">
+        <input type="text" class="save-view-inline__input" id="saveViewName" placeholder="Preset name..." maxlength="20" aria-label="Preset name">
+        <button class="save-view-inline__btn" id="saveViewConfirm">Save</button>
+        <button class="save-view-inline__cancel" id="saveViewCancel">&times;</button>
+      </div>
     </div>
   `;
 }
@@ -197,4 +211,64 @@ export function applyFilters(items, filters) {
  */
 function getDateKey(item) {
   return item.date || item.cfp_deadline || item.deadline || '1970-01-01';
+}
+
+// ---------------------------------------------------------------------------
+// View Presets (FE-07: saved filter combinations)
+// ---------------------------------------------------------------------------
+
+const PRESETS_KEY = 'porid-view-presets';
+const MAX_PRESETS = 5;
+
+/**
+ * Returns all saved view presets from localStorage.
+ * @returns {Array<{name: string, filters: Object}>}
+ */
+export function getViewPresets() {
+  try {
+    const raw = localStorage.getItem(PRESETS_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Save a new view preset. Enforces max 5.
+ * @param {string} name
+ * @param {Object} filters - The filter state to save.
+ * @returns {boolean} true if saved, false if at limit.
+ */
+export function saveViewPreset(name, filters) {
+  const presets = getViewPresets();
+  if (presets.length >= MAX_PRESETS) return false;
+  presets.push({ name, filters });
+  localStorage.setItem(PRESETS_KEY, JSON.stringify(presets));
+  return true;
+}
+
+/**
+ * Delete a view preset by index.
+ * @param {number} index
+ */
+export function deleteViewPreset(index) {
+  const presets = getViewPresets();
+  presets.splice(index, 1);
+  localStorage.setItem(PRESETS_KEY, JSON.stringify(presets));
+}
+
+/**
+ * Renders the preset pills bar HTML.
+ * @returns {string}
+ */
+export function renderPresetBar() {
+  const presets = getViewPresets();
+  if (presets.length === 0) return '';
+  const pills = presets.map((p, i) =>
+    `<span class="preset-pill" data-preset-index="${i}" title="Load preset: ${p.name}">` +
+      `${p.name}` +
+      `<button class="preset-pill__delete" data-preset-delete="${i}" aria-label="Delete preset ${p.name}" title="Delete">&times;</button>` +
+    `</span>`
+  ).join('');
+  return `<div class="preset-bar">${pills}</div>`;
 }

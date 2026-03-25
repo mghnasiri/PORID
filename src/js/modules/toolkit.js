@@ -183,6 +183,130 @@ function buildSectionCard(title, href, desc) {
   return section;
 }
 
+/**
+ * NF-08: Solver Comparison Wizard — progressive filtering UI
+ * Extracts unique options from solver data and builds an interactive
+ * multi-step filter that highlights matching rows in the table below.
+ */
+function buildSolverWizard(solversData, container, onFilter) {
+  const solvers = solversData.solvers;
+
+  // Collect unique problem types, license categories, and languages
+  const problemTypes = [...new Set(solvers.flatMap(s => s.problem_types || []))].sort();
+  const languages = [...new Set(
+    solvers.flatMap(s => (s.language_bindings || []).filter(l => !['GAMS', 'AMPL'].includes(l)))
+  )].sort();
+
+  const state = { problemType: null, license: null, language: null };
+
+  const wizard = document.createElement('div');
+  wizard.className = 'solver-wizard';
+
+  const heading = document.createElement('h3');
+  heading.className = 'solver-wizard__title';
+  heading.textContent = 'Find a Solver';
+  wizard.appendChild(heading);
+
+  const desc = document.createElement('p');
+  desc.className = 'solver-wizard__desc';
+  desc.textContent = 'Narrow down solvers by answering each question. Click a selection again to deselect it.';
+  wizard.appendChild(desc);
+
+  // Result count
+  const resultBar = document.createElement('div');
+  resultBar.className = 'solver-wizard__result';
+
+  function applyFilter() {
+    const matching = solvers.filter(s => {
+      if (state.problemType && !(s.problem_types || []).includes(state.problemType)) return false;
+      if (state.license === 'open' && !s.open_source) return false;
+      if (state.license === 'commercial' && s.open_source) return false;
+      if (state.language && !(s.language_bindings || []).includes(state.language)) return false;
+      return true;
+    });
+    const anyActive = state.problemType || state.license || state.language;
+    if (anyActive) {
+      resultBar.textContent = `${matching.length} solver${matching.length !== 1 ? 's' : ''} match your criteria`;
+      resultBar.classList.add('solver-wizard__result--visible');
+    } else {
+      resultBar.textContent = '';
+      resultBar.classList.remove('solver-wizard__result--visible');
+    }
+    onFilter(matching.map(s => s.id), anyActive);
+  }
+
+  function buildStep(label, options, stateKey) {
+    const step = document.createElement('div');
+    step.className = 'solver-wizard__step';
+    const lbl = document.createElement('span');
+    lbl.className = 'solver-wizard__label';
+    lbl.textContent = label;
+    step.appendChild(lbl);
+    const pills = document.createElement('div');
+    pills.className = 'solver-wizard__pills';
+    options.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'solver-wizard__pill';
+      btn.textContent = opt.label;
+      btn.dataset.value = opt.value;
+      btn.addEventListener('click', () => {
+        if (state[stateKey] === opt.value) {
+          state[stateKey] = null;
+          btn.classList.remove('solver-wizard__pill--active');
+        } else {
+          state[stateKey] = opt.value;
+          pills.querySelectorAll('.solver-wizard__pill').forEach(b => b.classList.remove('solver-wizard__pill--active'));
+          btn.classList.add('solver-wizard__pill--active');
+        }
+        applyFilter();
+      });
+      pills.appendChild(btn);
+    });
+    step.appendChild(pills);
+    return step;
+  }
+
+  // Step 1: Problem type
+  wizard.appendChild(buildStep(
+    'What problem type?',
+    problemTypes.map(p => ({ label: p, value: p })),
+    'problemType'
+  ));
+
+  // Step 2: License preference
+  wizard.appendChild(buildStep(
+    'License preference?',
+    [
+      { label: 'Commercial (incl. academic free)', value: 'commercial' },
+      { label: 'Open Source Only', value: 'open' },
+    ],
+    'license'
+  ));
+
+  // Step 3: Language
+  wizard.appendChild(buildStep(
+    'Language?',
+    languages.map(l => ({ label: l, value: l })),
+    'language'
+  ));
+
+  // Reset button
+  const resetBtn = document.createElement('button');
+  resetBtn.className = 'solver-wizard__reset';
+  resetBtn.textContent = 'Clear All Filters';
+  resetBtn.addEventListener('click', () => {
+    state.problemType = null;
+    state.license = null;
+    state.language = null;
+    wizard.querySelectorAll('.solver-wizard__pill--active').forEach(b => b.classList.remove('solver-wizard__pill--active'));
+    applyFilter();
+  });
+  wizard.appendChild(resetBtn);
+
+  wizard.appendChild(resultBar);
+  container.appendChild(wizard);
+}
+
 function buildSolvers(solversData, container) {
   if (!solversData || !solversData.solvers || solversData.solvers.length === 0) {
     const empty = document.createElement('div');
@@ -203,6 +327,28 @@ function buildSolvers(solversData, container) {
     return;
   }
 
+  // Wizard filter callback — will be wired after table is built
+  let tableBody = null;
+
+  buildSolverWizard(solversData, container, (matchingIds, isFiltering) => {
+    if (!tableBody) return;
+    const rows = tableBody.querySelectorAll('.solver-row');
+    rows.forEach(row => {
+      const id = row.dataset.solverId;
+      if (!isFiltering) {
+        row.classList.remove('solver-row--dimmed', 'solver-row--highlighted');
+        return;
+      }
+      if (matchingIds.includes(id)) {
+        row.classList.add('solver-row--highlighted');
+        row.classList.remove('solver-row--dimmed');
+      } else {
+        row.classList.add('solver-row--dimmed');
+        row.classList.remove('solver-row--highlighted');
+      }
+    });
+  });
+
   const wrap = document.createElement('div');
   wrap.className = 'solver-table-wrap';
 
@@ -222,9 +368,11 @@ function buildSolvers(solversData, container) {
 
   // tbody
   const tbody = document.createElement('tbody');
+  tableBody = tbody;
   solversData.solvers.forEach(s => {
     const tr = document.createElement('tr');
     tr.className = 'solver-row';
+    tr.dataset.solverId = s.id;
 
     // Name
     const tdName = document.createElement('td');
@@ -344,6 +492,17 @@ function buildSolvers(solversData, container) {
   container.appendChild(wrap);
 }
 
+/** Category ID to filter-label mapping for benchmark type filters. */
+const BENCHMARK_TYPE_FILTERS = [
+  { id: 'all', label: 'All' },
+  { id: 'mip', label: 'MIP' },
+  { id: 'vrp', label: 'VRP' },
+  { id: 'scheduling', label: 'Scheduling' },
+  { id: 'network', label: 'Network' },
+  { id: 'sat-cp', label: 'CP' },
+  { id: 'facility', label: 'Facility' },
+];
+
 function buildBenchmarks(benchmarkData, container) {
   if (!benchmarkData || !benchmarkData.categories || benchmarkData.categories.length === 0) {
     const empty = document.createElement('div');
@@ -364,99 +523,208 @@ function buildBenchmarks(benchmarkData, container) {
     return;
   }
 
+  // --- Controls: search box + type filter buttons ---
+  const controls = document.createElement('div');
+  controls.className = 'benchmark-controls';
+
+  const searchBox = document.createElement('input');
+  searchBox.type = 'text';
+  searchBox.className = 'benchmark-controls__search';
+  searchBox.placeholder = 'Search benchmarks by name or description\u2026';
+  searchBox.setAttribute('aria-label', 'Search benchmarks');
+  controls.appendChild(searchBox);
+
+  const filterRow = document.createElement('div');
+  filterRow.className = 'benchmark-controls__filters';
+  BENCHMARK_TYPE_FILTERS.forEach(f => {
+    const btn = document.createElement('button');
+    btn.className = `benchmark-filter-btn${f.id === 'all' ? ' benchmark-filter-btn--active' : ''}`;
+    btn.dataset.type = f.id;
+    btn.textContent = f.label;
+    filterRow.appendChild(btn);
+  });
+  controls.appendChild(filterRow);
+  container.appendChild(controls);
+
+  // --- Directory container ---
   const dir = document.createElement('div');
   dir.className = 'benchmark-directory';
 
-  benchmarkData.categories.forEach(cat => {
-    const catDiv = document.createElement('div');
-    catDiv.className = 'benchmark-category';
+  /** Render visible categories/benchmarks based on current filter + search state. */
+  function renderFiltered() {
+    dir.textContent = '';
+    const activeType = (controls.querySelector('.benchmark-filter-btn--active') || {}).dataset?.type || 'all';
+    const query = searchBox.value.trim().toLowerCase();
 
-    const catHeader = document.createElement('div');
-    catHeader.className = 'benchmark-category__header';
-    const h2 = document.createElement('h2');
-    h2.textContent = cat.name;
-    catHeader.appendChild(h2);
-    const count = document.createElement('span');
-    count.className = 'benchmark-category__count';
-    count.textContent = `${cat.benchmarks.length} benchmark${cat.benchmarks.length !== 1 ? 's' : ''}`;
-    catHeader.appendChild(count);
-    catDiv.appendChild(catHeader);
+    benchmarkData.categories.forEach(cat => {
+      // Type filter
+      if (activeType !== 'all' && cat.id !== activeType) return;
 
-    if (cat.description) {
-      const desc = document.createElement('p');
-      desc.className = 'benchmark-category__desc';
-      desc.textContent = cat.description;
-      catDiv.appendChild(desc);
-    }
-
-    const list = document.createElement('div');
-    list.className = 'benchmark-list';
-
-    cat.benchmarks.forEach(b => {
-      const item = document.createElement('div');
-      item.className = 'benchmark-item';
-
-      const bHeader = document.createElement('div');
-      bHeader.className = 'benchmark-item__header';
-      const h3 = document.createElement('h3');
-      h3.textContent = b.name;
-      bHeader.appendChild(h3);
-      if (b.instances) {
-        const instCount = document.createElement('span');
-        instCount.className = 'benchmark-item__count';
-        instCount.textContent = `${b.instances} instances`;
-        bHeader.appendChild(instCount);
-      }
-      item.appendChild(bHeader);
-
-      if (b.full_name && b.full_name !== b.name) {
-        const fn = document.createElement('p');
-        fn.className = 'benchmark-item__fullname';
-        fn.textContent = b.full_name;
-        item.appendChild(fn);
+      // Search filter
+      let visibleBenchmarks = cat.benchmarks;
+      if (query) {
+        visibleBenchmarks = cat.benchmarks.filter(b => {
+          const haystack = `${b.name} ${b.full_name || ''} ${b.description || ''} ${(b.tags || []).join(' ')}`.toLowerCase();
+          return haystack.includes(query);
+        });
+        if (visibleBenchmarks.length === 0) return;
       }
 
-      if (b.description) {
+      const catDiv = document.createElement('div');
+      catDiv.className = 'benchmark-category';
+
+      // Collapsible header
+      const catHeader = document.createElement('button');
+      catHeader.className = 'benchmark-category__header benchmark-category__header--toggle';
+      catHeader.setAttribute('aria-expanded', 'true');
+
+      const headerLeft = document.createElement('span');
+      headerLeft.className = 'benchmark-category__header-left';
+      const chevron = document.createElement('span');
+      chevron.className = 'benchmark-category__chevron';
+      chevron.textContent = '\u25BC';
+      headerLeft.appendChild(chevron);
+      const h2 = document.createElement('h2');
+      h2.textContent = cat.name;
+      headerLeft.appendChild(h2);
+      catHeader.appendChild(headerLeft);
+
+      const headerRight = document.createElement('span');
+      headerRight.className = 'benchmark-category__header-right';
+      const count = document.createElement('span');
+      count.className = 'benchmark-category__count';
+      const totalInstances = visibleBenchmarks.reduce((s, b) => s + (b.instances || 0), 0);
+      count.textContent = `${visibleBenchmarks.length} benchmark${visibleBenchmarks.length !== 1 ? 's' : ''}`;
+      headerRight.appendChild(count);
+      if (totalInstances > 0) {
+        const instBadge = document.createElement('span');
+        instBadge.className = 'benchmark-category__instances';
+        instBadge.textContent = `${totalInstances.toLocaleString()} instances`;
+        headerRight.appendChild(instBadge);
+      }
+      catHeader.appendChild(headerRight);
+      catDiv.appendChild(catHeader);
+
+      if (cat.description) {
         const desc = document.createElement('p');
-        desc.className = 'benchmark-item__desc';
-        desc.textContent = b.description;
-        item.appendChild(desc);
+        desc.className = 'benchmark-category__desc';
+        desc.textContent = cat.description;
+        catDiv.appendChild(desc);
       }
 
-      const meta = document.createElement('div');
-      meta.className = 'benchmark-item__meta';
-      if (b.format) { const s = document.createElement('span'); s.textContent = `Format: ${b.format}`; meta.appendChild(s); }
-      if (b.introduced_by) { const s = document.createElement('span'); s.textContent = `By: ${b.introduced_by}`; meta.appendChild(s); }
-      if (b.maintained_by) { const s = document.createElement('span'); s.textContent = `Maintained: ${b.maintained_by}`; meta.appendChild(s); }
-      item.appendChild(meta);
+      const list = document.createElement('div');
+      list.className = 'benchmark-list';
 
-      const actions = document.createElement('div');
-      actions.className = 'benchmark-item__actions';
-      const linkDefs = [
-        [b.url, '\u2197 Website'],
-        [b.download, '\u2B07 Download'],
-        [b.introduced_paper_url, '\uD83D\uDCC4 Paper'],
-        [b.best_known_solutions, '\uD83C\uDFC6 BKS'],
-      ];
-      linkDefs.forEach(([href, label]) => {
-        if (!href) return;
-        const a = document.createElement('a');
-        a.href = href;
-        a.target = '_blank';
-        a.rel = 'noopener';
-        a.className = 'card__action';
-        a.textContent = label;
-        actions.appendChild(a);
+      visibleBenchmarks.forEach(b => {
+        const item = document.createElement('div');
+        item.className = 'benchmark-item';
+
+        const bHeader = document.createElement('div');
+        bHeader.className = 'benchmark-item__header';
+        const h3 = document.createElement('h3');
+        h3.textContent = b.name;
+        bHeader.appendChild(h3);
+
+        const badgeGroup = document.createElement('span');
+        badgeGroup.className = 'benchmark-item__badges';
+        if (b.format) {
+          const fmtBadge = document.createElement('span');
+          fmtBadge.className = 'benchmark-format-badge';
+          fmtBadge.textContent = b.format;
+          badgeGroup.appendChild(fmtBadge);
+        }
+        if (b.instances) {
+          const instCount = document.createElement('span');
+          instCount.className = 'benchmark-item__count';
+          instCount.textContent = `${b.instances} instances`;
+          badgeGroup.appendChild(instCount);
+        }
+        bHeader.appendChild(badgeGroup);
+        item.appendChild(bHeader);
+
+        if (b.full_name && b.full_name !== b.name) {
+          const fn = document.createElement('p');
+          fn.className = 'benchmark-item__fullname';
+          fn.textContent = b.full_name;
+          item.appendChild(fn);
+        }
+
+        if (b.description) {
+          const desc = document.createElement('p');
+          desc.className = 'benchmark-item__desc';
+          desc.textContent = b.description;
+          item.appendChild(desc);
+        }
+
+        const meta = document.createElement('div');
+        meta.className = 'benchmark-item__meta';
+        if (b.introduced_by) { const s = document.createElement('span'); s.textContent = `By: ${b.introduced_by}`; meta.appendChild(s); }
+        if (b.maintained_by) { const s = document.createElement('span'); s.textContent = `Maintained: ${b.maintained_by}`; meta.appendChild(s); }
+        item.appendChild(meta);
+
+        const actions = document.createElement('div');
+        actions.className = 'benchmark-item__actions';
+        const linkDefs = [
+          [b.url, '\u2197 Website'],
+          [b.download, '\u2B07 Download'],
+          [b.introduced_paper_url, '\uD83D\uDCC4 Paper'],
+          [b.best_known_solutions, '\uD83C\uDFC6 BKS'],
+        ];
+        linkDefs.forEach(([href, label]) => {
+          if (!href) return;
+          const a = document.createElement('a');
+          a.href = href;
+          a.target = '_blank';
+          a.rel = 'noopener';
+          a.className = 'card__action';
+          a.textContent = label;
+          actions.appendChild(a);
+        });
+        item.appendChild(actions);
+
+        list.appendChild(item);
       });
-      item.appendChild(actions);
 
-      list.appendChild(item);
+      catDiv.appendChild(list);
+
+      // Collapse/expand toggle
+      catHeader.addEventListener('click', () => {
+        const expanded = catHeader.getAttribute('aria-expanded') === 'true';
+        catHeader.setAttribute('aria-expanded', String(!expanded));
+        list.style.display = expanded ? 'none' : '';
+        const descEl = catDiv.querySelector('.benchmark-category__desc');
+        if (descEl) descEl.style.display = expanded ? 'none' : '';
+        chevron.textContent = expanded ? '\u25B6' : '\u25BC';
+      });
+
+      dir.appendChild(catDiv);
     });
 
-    catDiv.appendChild(list);
-    dir.appendChild(catDiv);
+    if (dir.children.length === 0) {
+      const noResults = document.createElement('p');
+      noResults.className = 'benchmark-no-results';
+      noResults.textContent = 'No benchmarks match your search.';
+      dir.appendChild(noResults);
+    }
+  }
+
+  // Wire filter buttons
+  controls.addEventListener('click', (e) => {
+    const btn = e.target.closest('.benchmark-filter-btn');
+    if (!btn) return;
+    controls.querySelectorAll('.benchmark-filter-btn').forEach(b => b.classList.remove('benchmark-filter-btn--active'));
+    btn.classList.add('benchmark-filter-btn--active');
+    renderFiltered();
   });
 
+  // Wire search input (debounced)
+  let searchTimer;
+  searchBox.addEventListener('input', () => {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(renderFiltered, 200);
+  });
+
+  renderFiltered();
   container.appendChild(dir);
 }
 

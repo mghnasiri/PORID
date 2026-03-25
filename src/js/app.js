@@ -32,11 +32,12 @@ import { render as renderResources } from './modules/resources.js';
 import { initSearch, wireSearchInput } from './modules/search.js';
 
 // --- Component / utility imports ---
-import { renderFilterBar, getActiveFilters } from './components/filters.js';
+import { renderFilterBar, getActiveFilters, applyFilters, getViewPresets, saveViewPreset, deleteViewPreset, renderPresetBar } from './components/filters.js';
 import { showModal, hideModal } from './components/modal.js';
-import { getWatchlist, addToWatchlist, removeFromWatchlist, isWatchlisted, cycleReadStatus } from './utils/storage.js';
-import { generateBibTeX, copyToClipboard, generateCSV, downloadFile } from './utils/citation.js';
+import { getWatchlist, addToWatchlist, removeFromWatchlist, isWatchlisted, cycleReadStatus, getNote, setNote, hasNote } from './utils/storage.js';
+import { generateBibTeX, generateRIS, deduplicateByDOI, copyToClipboard, generateCSV, downloadFile } from './utils/citation.js';
 import { getPreferences, setPreference } from './utils/preferences.js';
+import { checkOpportunityAlerts, getAlertMatchCount } from './modules/opportunity-alerts.js';
 
 // ---------------------------------------------------------------------------
 // State
@@ -123,9 +124,18 @@ const debouncedRenderView = debounce(() => renderView(), 200);
 // ---------------------------------------------------------------------------
 
 async function fetchJSON(url) {
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`Failed to load ${url}: ${res.status}`);
-  return res.json();
+  try {
+    const res = await fetch(url);
+    return res.json();
+  } catch {
+    await new Promise(r => setTimeout(r, 500));
+    try {
+      const res = await fetch(url);
+      return res.json();
+    } catch {
+      return null;
+    }
+  }
 }
 
 async function loadAllData() {
@@ -146,6 +156,7 @@ async function loadAllData() {
   updateStats();
   initSearch(state.data);
   updateDeadlineBadge();
+  updateOpportunityAlertBadge();
 
   // Load optional hub data (trends, solvers, benchmarks)
   const optionalFiles = {
@@ -319,6 +330,30 @@ function updateDeadlineBadge() {
     badge.style.display = 'inline-flex';
   } else {
     badge.textContent = '';
+    badge.style.display = 'none';
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Opportunity Alert Badge (NF-05)
+// ---------------------------------------------------------------------------
+
+function updateOpportunityAlertBadge() {
+  const count = getAlertMatchCount(state.data.opportunities || []);
+  // Find the Opportunities tab and add/update badge
+  const oppTab = document.querySelector('.nav__tab[data-tab="opportunities"]');
+  if (!oppTab) return;
+
+  let badge = oppTab.querySelector('.opp-alert-badge');
+  if (count > 0) {
+    if (!badge) {
+      badge = document.createElement('span');
+      badge.className = 'opp-alert-badge';
+      oppTab.appendChild(badge);
+    }
+    badge.textContent = count;
+    badge.style.display = 'inline-flex';
+  } else if (badge) {
     badge.style.display = 'none';
   }
 }
@@ -604,14 +639,18 @@ function renderView() {
     showDeadlineSort: tab === 'conferences' || tab === 'opportunities',
   };
 
+  // Render preset bar above filter bar (FE-07)
+  const presetHtml = renderPresetBar();
+
   // Render filter bar — trusted template from our own code
   const filterBarEl = document.createElement('div');
-  filterBarEl.innerHTML = renderFilterBar(filterOpts);
+  filterBarEl.innerHTML = presetHtml + renderFilterBar(filterOpts);
   filterContainer.textContent = '';
   while (filterBarEl.firstChild) {
     filterContainer.appendChild(filterBarEl.firstChild);
   }
   wireFilterEvents();
+  wirePresetEvents();
   applyHashFilters();
 
   // Read current filter state
@@ -799,6 +838,124 @@ function updateClearBtn() {
 }
 
 // ---------------------------------------------------------------------------
+// View Preset Event Wiring (FE-07)
+// ---------------------------------------------------------------------------
+
+function wirePresetEvents() {
+  // Save View button — show inline input
+  const saveViewBtn = document.getElementById('filterSaveView');
+  const saveViewInline = document.getElementById('saveViewInline');
+  const saveViewName = document.getElementById('saveViewName');
+  const saveViewConfirm = document.getElementById('saveViewConfirm');
+  const saveViewCancel = document.getElementById('saveViewCancel');
+
+  if (saveViewBtn && saveViewInline) {
+    saveViewBtn.addEventListener('click', () => {
+      const presets = getViewPresets();
+      if (presets.length >= 5) {
+        showToast('Maximum 5 presets reached. Delete one first.');
+        return;
+      }
+      saveViewBtn.style.display = 'none';
+      saveViewInline.style.display = 'flex';
+      saveViewName.value = '';
+      saveViewName.focus();
+    });
+  }
+
+  if (saveViewConfirm && saveViewName) {
+    const doSave = () => {
+      const name = saveViewName.value.trim();
+      if (!name) return;
+      const filters = getActiveFilters();
+      filters._tab = state.activeTab;
+      if (saveViewPreset(name, filters)) {
+        showToast(`View "${name}" saved`);
+        saveViewInline.style.display = 'none';
+        saveViewBtn.style.display = '';
+        renderView();
+      } else {
+        showToast('Maximum 5 presets reached.');
+      }
+    };
+    saveViewConfirm.addEventListener('click', doSave);
+    saveViewName.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') { e.preventDefault(); doSave(); }
+      if (e.key === 'Escape') { saveViewInline.style.display = 'none'; saveViewBtn.style.display = ''; }
+    });
+  }
+
+  if (saveViewCancel) {
+    saveViewCancel.addEventListener('click', () => {
+      saveViewInline.style.display = 'none';
+      if (saveViewBtn) saveViewBtn.style.display = '';
+    });
+  }
+
+  // Preset pills — click to load, delete button
+  document.querySelectorAll('.preset-pill').forEach((pill) => {
+    pill.addEventListener('click', (e) => {
+      if (e.target.closest('.preset-pill__delete')) return;
+      const index = parseInt(pill.dataset.presetIndex);
+      const presets = getViewPresets();
+      const preset = presets[index];
+      if (!preset) return;
+      applyPresetFilters(preset.filters);
+      showToast(`Loaded preset "${preset.name}"`);
+    });
+  });
+
+  document.querySelectorAll('.preset-pill__delete').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const index = parseInt(btn.dataset.presetDelete);
+      const presets = getViewPresets();
+      const name = presets[index] ? presets[index].name : '';
+      deleteViewPreset(index);
+      showToast(`Deleted preset "${name}"`);
+      renderView();
+    });
+  });
+}
+
+function applyPresetFilters(filters) {
+  document.querySelectorAll('.filter-tag').forEach((el) => el.classList.remove('active'));
+  if (filters.tags && filters.tags.length > 0) {
+    filters.tags.forEach((t) => {
+      const el = document.querySelector(`.filter-tag[data-tag="${t}"]`);
+      if (el) el.classList.add('active');
+    });
+  } else {
+    const allTag = document.querySelector('.filter-tag[data-tag="all"]');
+    if (allTag) allTag.classList.add('active');
+  }
+
+  const sourceEl = document.getElementById('filterSource');
+  if (sourceEl) sourceEl.value = filters.source || 'All Sources';
+
+  const sortEl = document.getElementById('filterSort');
+  if (sortEl) sortEl.value = filters.sort || 'newest';
+
+  const logicEl = document.getElementById('filterLogic');
+  if (logicEl) {
+    logicEl.textContent = filters.logic === 'and' ? 'AND' : 'OR';
+    logicEl.classList.toggle('active', filters.logic === 'and');
+  }
+
+  const dateFromEl = document.getElementById('filterDateFrom');
+  const dateToEl = document.getElementById('filterDateTo');
+  if (dateFromEl) dateFromEl.value = filters.dateFrom || '';
+  if (dateToEl) dateToEl.value = filters.dateTo || '';
+
+  const readStatusEl = document.getElementById('filterReadStatus');
+  if (readStatusEl) readStatusEl.value = filters.readStatus || 'all';
+
+  updateClearBtn();
+  syncFiltersToHash();
+  debouncedRenderView();
+}
+
+// ---------------------------------------------------------------------------
 // Card Event Delegation (global — survives re-renders)
 // ---------------------------------------------------------------------------
 
@@ -851,6 +1008,26 @@ function wireCardEvents() {
       return;
     }
 
+    // Note button — toggle inline note area (FE-06)
+    const noteBtn = e.target.closest('.card__note-btn');
+    if (noteBtn) {
+      const id = noteBtn.dataset.id;
+      const card = noteBtn.closest('.card');
+      if (!card) return;
+      const noteArea = card.querySelector(`.card__note-area[data-id="${id}"]`);
+      if (!noteArea) return;
+      const isVisible = noteArea.style.display !== 'none';
+      noteArea.style.display = isVisible ? 'none' : 'block';
+      if (!isVisible) {
+        const textarea = noteArea.querySelector('.card__note-input');
+        if (textarea) {
+          textarea.value = getNote(id);
+          textarea.focus();
+        }
+      }
+      return;
+    }
+
     // Detail button
     const detailBtn = e.target.closest('.card__detail-btn');
     if (detailBtn) {
@@ -859,6 +1036,31 @@ function wireCardEvents() {
       if (item) showModal(item);
     }
   });
+
+  // Note auto-save on blur (FE-06)
+  contentEl.addEventListener('blur', (e) => {
+    const textarea = e.target.closest('.card__note-input');
+    if (!textarea) return;
+    const id = textarea.dataset.id;
+    setNote(id, textarea.value);
+    // Update the note button badge
+    const card = textarea.closest('.card');
+    if (card) {
+      const btn = card.querySelector(`.card__note-btn[data-id="${id}"]`);
+      if (btn) {
+        const hasSavedNote = hasNote(id);
+        btn.classList.toggle('card__note-btn--has-note', hasSavedNote);
+        let badge = btn.querySelector('.card__note-badge');
+        if (hasSavedNote && !badge) {
+          badge = document.createElement('span');
+          badge.className = 'card__note-badge';
+          btn.appendChild(badge);
+        } else if (!hasSavedNote && badge) {
+          badge.remove();
+        }
+      }
+    }
+  }, true);
 }
 
 function findItemById(id) {
@@ -1228,31 +1430,34 @@ function wireFilterExport() {
     const data = state.data[tab] || [];
     const filters = getActiveFilters();
 
-    // Apply current filters to get visible items
-    const { applyFilters } = { applyFilters: (items, f) => {
-      let result = [...items];
-      if (!f.tags.includes('all') && f.tags.length > 0) {
-        const matcher = f.logic === 'and' ? 'every' : 'some';
-        result = result.filter((item) => f.tags[matcher]((t) => (item.tags || []).includes(t)));
-      }
-      if (f.source && f.source !== 'All Sources') {
-        result = result.filter((item) => item.source === f.source);
-      }
-      return result;
-    }};
+    // Use the shared applyFilters (imported from filters.js) so that
+    // tag logic, date range, source, and read-status filters are all
+    // applied consistently with the current view.
+    let filtered = applyFilters(data, filters);
 
-    const filtered = applyFilters(data, filters);
+    // Dedup by DOI if checkbox is checked
+    const dedupEl = document.getElementById('filterDedup');
+    if (dedupEl && dedupEl.checked) {
+      filtered = deduplicateByDOI(filtered);
+    }
+
     const dateStr = new Date().toISOString().slice(0, 10);
+    const count = filtered.length;
 
     if (format === 'bibtex') {
       const bib = filtered.map((item) => generateBibTeX(item)).join('\n\n');
       downloadFile(bib, `porid-${tab}-${dateStr}.bib`, 'application/x-bibtex');
+    } else if (format === 'ris') {
+      const ris = filtered.map((item) => generateRIS(item)).join('\n\n');
+      downloadFile(ris, `porid-${tab}-${dateStr}.ris`, 'application/x-research-info-systems');
     } else if (format === 'csv') {
       const csv = generateCSV(filtered);
       downloadFile(csv, `porid-${tab}-${dateStr}.csv`, 'text/csv');
     } else if (format === 'json') {
       downloadFile(JSON.stringify(filtered, null, 2), `porid-${tab}-${dateStr}.json`, 'application/json');
     }
+
+    console.log(`Exported ${count} items as ${format.toUpperCase()}`);
 
     exportSelect.value = '';
   });

@@ -220,6 +220,204 @@ function renderSpecialIssueCard(item) {
 }
 
 /**
+ * NF-09: Conference Deadline Calendar View
+ * Renders a monthly calendar grid showing CFP deadline dots.
+ * No external libraries -- pure DOM generation.
+ * Security note: all data rendered comes from trusted local JSON.
+ */
+function buildCalendarView(items, container) {
+  const today = new Date();
+  let viewYear = today.getFullYear();
+  let viewMonth = today.getMonth();
+  let selectedDate = null;
+
+  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'];
+
+  // Build map of YYYY-MM-DD -> conferences with deadlines
+  const deadlineMap = {};
+  items.forEach(item => {
+    if (!item.cfp_deadline || item.cfp_deadline === 'TBA') return;
+    const d = new Date(item.cfp_deadline);
+    if (isNaN(d.getTime())) return;
+    const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    if (!deadlineMap[key]) deadlineMap[key] = [];
+    deadlineMap[key].push(item);
+  });
+
+  const calWrap = document.createElement('div');
+  calWrap.className = 'conf-calendar';
+
+  function renderMonth() {
+    calWrap.textContent = '';
+
+    // Navigation
+    const nav = document.createElement('div');
+    nav.className = 'conf-calendar__nav';
+    const prevBtn = document.createElement('button');
+    prevBtn.className = 'conf-calendar__nav-btn';
+    prevBtn.textContent = '\u2190';
+    prevBtn.setAttribute('aria-label', 'Previous month');
+    prevBtn.addEventListener('click', () => {
+      viewMonth--;
+      if (viewMonth < 0) { viewMonth = 11; viewYear--; }
+      selectedDate = null;
+      renderMonth();
+    });
+    const nextBtn = document.createElement('button');
+    nextBtn.className = 'conf-calendar__nav-btn';
+    nextBtn.textContent = '\u2192';
+    nextBtn.setAttribute('aria-label', 'Next month');
+    nextBtn.addEventListener('click', () => {
+      viewMonth++;
+      if (viewMonth > 11) { viewMonth = 0; viewYear++; }
+      selectedDate = null;
+      renderMonth();
+    });
+    const monthLabel = document.createElement('span');
+    monthLabel.className = 'conf-calendar__month-label';
+    monthLabel.textContent = `${monthNames[viewMonth]} ${viewYear}`;
+    nav.appendChild(prevBtn);
+    nav.appendChild(monthLabel);
+    nav.appendChild(nextBtn);
+    calWrap.appendChild(nav);
+
+    // Day-of-week headers
+    const grid = document.createElement('div');
+    grid.className = 'conf-calendar__grid';
+    ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].forEach(d => {
+      const hdr = document.createElement('div');
+      hdr.className = 'conf-calendar__dow';
+      hdr.textContent = d;
+      grid.appendChild(hdr);
+    });
+
+    const firstDay = new Date(viewYear, viewMonth, 1).getDay();
+    const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+    const todayKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+    // Empty leading cells
+    for (let i = 0; i < firstDay; i++) {
+      const empty = document.createElement('div');
+      empty.className = 'conf-calendar__cell conf-calendar__cell--empty';
+      grid.appendChild(empty);
+    }
+
+    // Day cells
+    for (let day = 1; day <= daysInMonth; day++) {
+      const dateKey = `${viewYear}-${String(viewMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+      const cell = document.createElement('div');
+      cell.className = 'conf-calendar__cell';
+      if (dateKey === todayKey) cell.classList.add('conf-calendar__cell--today');
+      if (selectedDate === dateKey) cell.classList.add('conf-calendar__cell--selected');
+
+      const dayNum = document.createElement('span');
+      dayNum.className = 'conf-calendar__day-num';
+      dayNum.textContent = day;
+      cell.appendChild(dayNum);
+
+      const confs = deadlineMap[dateKey];
+      if (confs && confs.length > 0) {
+        cell.classList.add('conf-calendar__cell--has-deadline');
+        const dot = document.createElement('span');
+        dot.className = 'conf-calendar__dot';
+        if (confs.length > 1) {
+          const count = document.createElement('span');
+          count.className = 'conf-calendar__dot-count';
+          count.textContent = confs.length;
+          dot.appendChild(count);
+        }
+        cell.appendChild(dot);
+      }
+
+      cell.addEventListener('click', () => {
+        selectedDate = selectedDate === dateKey ? null : dateKey;
+        renderMonth();
+      });
+      grid.appendChild(cell);
+    }
+
+    calWrap.appendChild(grid);
+
+    // Detail panel below grid
+    const detail = document.createElement('div');
+    detail.className = 'conf-calendar__detail';
+
+    if (selectedDate && deadlineMap[selectedDate]) {
+      const confs = deadlineMap[selectedDate];
+      const detailTitle = document.createElement('h4');
+      detailTitle.className = 'conf-calendar__detail-title';
+      const selDate = new Date(selectedDate + 'T00:00:00');
+      detailTitle.textContent = `Deadlines on ${selDate.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' })}`;
+      detail.appendChild(detailTitle);
+      confs.forEach(c => {
+        const item = document.createElement('div');
+        item.className = 'conf-calendar__detail-item';
+        const name = document.createElement('strong');
+        name.textContent = c.name;
+        item.appendChild(name);
+        const loc = document.createElement('span');
+        loc.className = 'conf-calendar__detail-loc';
+        loc.textContent = c.location || '';
+        item.appendChild(loc);
+        if (c.url) {
+          const link = document.createElement('a');
+          link.href = c.url;
+          link.target = '_blank';
+          link.rel = 'noopener';
+          link.className = 'conf-calendar__detail-link';
+          link.textContent = 'Website';
+          item.appendChild(link);
+        }
+        detail.appendChild(item);
+      });
+    } else if (selectedDate) {
+      const p = document.createElement('p');
+      p.className = 'conf-calendar__detail-empty';
+      p.textContent = 'No deadlines on this date.';
+      detail.appendChild(p);
+    } else {
+      // Show all deadlines in this month as summary
+      const monthConfs = [];
+      for (let day = 1; day <= daysInMonth; day++) {
+        const dk = `${viewYear}-${String(viewMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        if (deadlineMap[dk]) {
+          deadlineMap[dk].forEach(c => monthConfs.push({ conf: c, day }));
+        }
+      }
+      if (monthConfs.length > 0) {
+        const detailTitle = document.createElement('h4');
+        detailTitle.className = 'conf-calendar__detail-title';
+        detailTitle.textContent = `${monthConfs.length} deadline${monthConfs.length !== 1 ? 's' : ''} this month`;
+        detail.appendChild(detailTitle);
+        monthConfs.forEach(({ conf, day }) => {
+          const item = document.createElement('div');
+          item.className = 'conf-calendar__detail-item';
+          const dateLabel = document.createElement('span');
+          dateLabel.className = 'conf-calendar__detail-date';
+          dateLabel.textContent = `${monthNames[viewMonth].slice(0, 3)} ${day}`;
+          item.appendChild(dateLabel);
+          const name = document.createElement('strong');
+          name.textContent = conf.name;
+          item.appendChild(name);
+          detail.appendChild(item);
+        });
+      } else {
+        const p = document.createElement('p');
+        p.className = 'conf-calendar__detail-empty';
+        p.textContent = 'No CFP deadlines this month. Use the arrows to browse other months.';
+        detail.appendChild(p);
+      }
+    }
+
+    calWrap.appendChild(detail);
+  }
+
+  renderMonth();
+  container.appendChild(calWrap);
+}
+
+/**
  * @param {HTMLElement} container
  * @param {Object[]} data - Conferences data
  * @param {Object} filters
@@ -255,7 +453,24 @@ export function render(container, data, filters, awards, specialIssues) {
     return;
   }
 
-  // Calendar subscribe button
+  // Top bar: view toggle + subscribe button
+  const topBar = document.createElement('div');
+  topBar.className = 'conf-top-bar';
+
+  const viewToggle = document.createElement('div');
+  viewToggle.className = 'conf-view-toggle';
+  const listBtn = document.createElement('button');
+  listBtn.className = 'conf-view-toggle__btn conf-view-toggle__btn--active';
+  listBtn.textContent = 'List View';
+  listBtn.dataset.view = 'list';
+  const calToggleBtn = document.createElement('button');
+  calToggleBtn.className = 'conf-view-toggle__btn';
+  calToggleBtn.textContent = 'Calendar View';
+  calToggleBtn.dataset.view = 'calendar';
+  viewToggle.appendChild(listBtn);
+  viewToggle.appendChild(calToggleBtn);
+  topBar.appendChild(viewToggle);
+
   const calBtn = document.createElement('div');
   calBtn.className = 'conf-cal-subscribe';
   const calLink = document.createElement('a');
@@ -264,16 +479,41 @@ export function render(container, data, filters, awards, specialIssues) {
   calLink.textContent = '\uD83D\uDCC5 Subscribe to Calendar';
   calLink.title = 'Download iCal feed for all OR conferences';
   calBtn.appendChild(calLink);
-  container.appendChild(calBtn);
+  topBar.appendChild(calBtn);
 
-  // Conferences grid — all data from trusted local JSON
+  container.appendChild(topBar);
+
+  // View containers
+  const listContainer = document.createElement('div');
+  listContainer.className = 'conf-list-view';
+  const calContainer = document.createElement('div');
+  calContainer.className = 'conf-calendar-view';
+  calContainer.style.display = 'none';
+
+  // Toggle logic
+  [listBtn, calToggleBtn].forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isCalendar = btn.dataset.view === 'calendar';
+      listContainer.style.display = isCalendar ? 'none' : '';
+      calContainer.style.display = isCalendar ? '' : 'none';
+      listBtn.classList.toggle('conf-view-toggle__btn--active', !isCalendar);
+      calToggleBtn.classList.toggle('conf-view-toggle__btn--active', isCalendar);
+    });
+  });
+
+  // List view -- conferences grid (trusted local JSON, innerHTML safe)
   if (items.length > 0) {
     const confGrid = document.createElement('div');
     confGrid.className = 'card-grid';
-    // Trusted local data — innerHTML safe
     confGrid.innerHTML = items.map(renderConferenceCard).join('');
-    container.appendChild(confGrid);
+    listContainer.appendChild(confGrid);
   }
+
+  container.appendChild(listContainer);
+
+  // Calendar view
+  buildCalendarView(items, calContainer);
+  container.appendChild(calContainer);
 
   // Awards section below conferences — trusted local data from awards.json
   if (awards && awards.length > 0) {

@@ -48,6 +48,8 @@ PYPI_PACKAGES = [
 ]
 
 GITHUB_API = "https://api.github.com/repos/{repo}/releases/latest"
+GITHUB_REPO_API = "https://api.github.com/repos/{repo}"
+GITHUB_PRS_API = "https://api.github.com/repos/{repo}/pulls"
 PYPI_API = "https://pypi.org/pypi/{package}/json"
 
 HEADERS = {
@@ -79,6 +81,55 @@ def fetch_github_release(repo: str) -> dict | None:
     except Exception as e:
         print(f"    GitHub {repo}: {e}")
         return None
+
+
+def fetch_github_repo_info(repo: str) -> dict | None:
+    """Fetch repository metadata (stars, open issues) from GitHub API."""
+    url = GITHUB_REPO_API.format(repo=repo)
+    token = os.environ.get("GITHUB_TOKEN", "")
+    headers = {**HEADERS}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    try:
+        resp = requests.get(url, headers=headers, timeout=15)
+        if resp.status_code != 200:
+            print(f"    GitHub repo {repo}: HTTP {resp.status_code}")
+            return None
+        data = resp.json()
+        return {
+            "github_stars": data.get("stargazers_count", 0),
+            "github_open_issues": data.get("open_issues_count", 0),
+        }
+    except Exception as e:
+        print(f"    GitHub repo {repo}: {e}")
+        return None
+
+
+def fetch_github_recent_prs(repo: str, count: int = 5) -> list[str]:
+    """Fetch the titles of the most recent PRs from GitHub API."""
+    url = GITHUB_PRS_API.format(repo=repo)
+    token = os.environ.get("GITHUB_TOKEN", "")
+    headers = {**HEADERS}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    params = {
+        "state": "all",
+        "sort": "created",
+        "direction": "desc",
+        "per_page": count,
+    }
+    try:
+        resp = requests.get(url, headers=headers, params=params, timeout=15)
+        if resp.status_code != 200:
+            print(f"    GitHub PRs {repo}: HTTP {resp.status_code}")
+            return []
+        data = resp.json()
+        return [pr.get("title", "") for pr in data[:count] if pr.get("title")]
+    except Exception as e:
+        print(f"    GitHub PRs {repo}: {e}")
+        return []
 
 
 def fetch_pypi_info(package: str) -> dict | None:
@@ -118,8 +169,16 @@ def load_manual_solvers(path: Path) -> list[dict]:
     return data.get("solvers", data) if isinstance(data, dict) else data
 
 
-def merge_solvers(manual: list[dict], github_data: dict, pypi_data: dict) -> list[dict]:
+def merge_solvers(
+    manual: list[dict],
+    github_data: dict,
+    pypi_data: dict,
+    github_activity: dict | None = None,
+) -> list[dict]:
     """Merge manual data with auto-fetched GitHub and PyPI data."""
+    if github_activity is None:
+        github_activity = {}
+
     merged = []
     for solver in manual:
         sid = solver.get("id", "")
@@ -133,6 +192,13 @@ def merge_solvers(manual: list[dict], github_data: dict, pypi_data: dict) -> lis
                 solver["release_date"] = gh["release_date"]
             if gh.get("changelog"):
                 solver["recent_changes"] = gh["changelog"][:200]
+
+        # Add GitHub activity data (stars, open issues, recent PRs)
+        activity = github_activity.get(sid)
+        if activity:
+            solver["github_stars"] = activity.get("github_stars", 0)
+            solver["github_open_issues"] = activity.get("github_open_issues", 0)
+            solver["github_recent_prs"] = activity.get("github_recent_prs", [])
 
         # Add PyPI download stats
         pypi = pypi_data.get(sid)
@@ -178,7 +244,22 @@ def main() -> None:
             github_data[entry["id"]] = result
             print(f"    ✓ v{result['version']}")
 
-    # 3. Fetch from PyPI
+    # 3. Fetch GitHub activity (stars, open issues, recent PRs)
+    print("\n  Fetching GitHub activity...")
+    github_activity = {}
+    for entry in GITHUB_SOLVERS:
+        print(f"    {entry['repo']}...")
+        repo_info = fetch_github_repo_info(entry["repo"])
+        recent_prs = fetch_github_recent_prs(entry["repo"])
+        if repo_info or recent_prs:
+            activity = repo_info or {}
+            activity["github_recent_prs"] = recent_prs
+            github_activity[entry["id"]] = activity
+            stars = activity.get("github_stars", "?")
+            issues = activity.get("github_open_issues", "?")
+            print(f"    ✓ {stars} stars, {issues} open issues, {len(recent_prs)} recent PRs")
+
+    # 4. Fetch from PyPI
     print("\n  Fetching PyPI info...")
     pypi_data = {}
     for entry in PYPI_PACKAGES:
@@ -188,14 +269,15 @@ def main() -> None:
             pypi_data[entry["id"]] = result
             print(f"    ✓ v{result['version']}")
 
-    # 4. Merge
+    # 5. Merge
     if manual_solvers:
-        solvers = merge_solvers(manual_solvers, github_data, pypi_data)
+        solvers = merge_solvers(manual_solvers, github_data, pypi_data, github_activity)
     else:
         # Build minimal entries from GitHub data
         solvers = []
         for entry in GITHUB_SOLVERS:
             gh = github_data.get(entry["id"], {})
+            activity = github_activity.get(entry["id"], {})
             solvers.append({
                 "id": entry["id"],
                 "name": entry["repo"].split("/")[-1],
@@ -207,9 +289,12 @@ def main() -> None:
                 "github": entry["repo"],
                 "update_source": "github_api",
                 "tags": ["open-source"],
+                "github_stars": activity.get("github_stars", 0),
+                "github_open_issues": activity.get("github_open_issues", 0),
+                "github_recent_prs": activity.get("github_recent_prs", []),
             })
 
-    # 5. Build output
+    # 6. Build output
     output = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "solvers": solvers,

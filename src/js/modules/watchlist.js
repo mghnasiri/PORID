@@ -9,7 +9,7 @@
 
 import { getWatchlist, removeFromWatchlist, exportWatchlist } from '../utils/storage.js';
 import { renderCard } from '../components/card.js';
-import { generateBibTeX } from '../utils/citation.js';
+import { generateBibTeX, generateRIS, deduplicateByDOI, downloadFile } from '../utils/citation.js';
 
 const NOTES_KEY = 'porid-watchlist-notes';
 
@@ -52,6 +52,16 @@ function exportBibTeX(items) {
   a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
+}
+
+/**
+ * Export all publication-type watchlisted items as a .ris file.
+ */
+function exportRIS(items) {
+  const pubs = items.filter((i) => i.type === 'publication');
+  if (pubs.length === 0) return;
+  const content = pubs.map(generateRIS).join('\n\n');
+  downloadFile(content, `porid-watchlist-${new Date().toISOString().slice(0, 10)}.ris`, 'application/x-research-info-systems');
 }
 
 /**
@@ -128,15 +138,32 @@ export function render(container) {
   exportJsonBtn.textContent = '\u2913 Export JSON';
   exportJsonBtn.addEventListener('click', () => exportWatchlist());
 
+  // Dedup checkbox (defined early so export buttons can reference it)
+  const dedupLabel = document.createElement('label');
+  dedupLabel.className = 'watchlist-toolbar__dedup';
+  dedupLabel.title = 'Remove entries with duplicate DOIs before export';
+  const dedupCb = document.createElement('input');
+  dedupCb.type = 'checkbox';
+  dedupCb.id = 'watchlistDedup';
+  dedupLabel.appendChild(dedupCb);
+  dedupLabel.appendChild(document.createTextNode(' Dedup'));
+
+  const getExportItems = () => dedupCb.checked ? deduplicateByDOI(items) : items;
+
   const exportBibBtn = document.createElement('button');
   exportBibBtn.className = 'watchlist-toolbar__btn';
   exportBibBtn.textContent = '\u2913 Export BibTeX';
-  exportBibBtn.addEventListener('click', () => exportBibTeX(items));
+  exportBibBtn.addEventListener('click', () => exportBibTeX(getExportItems()));
+
+  const exportRisBtn = document.createElement('button');
+  exportRisBtn.className = 'watchlist-toolbar__btn';
+  exportRisBtn.textContent = '\u2913 Export RIS';
+  exportRisBtn.addEventListener('click', () => exportRIS(getExportItems()));
 
   const exportCsvBtn = document.createElement('button');
   exportCsvBtn.className = 'watchlist-toolbar__btn';
   exportCsvBtn.textContent = '\u2913 Export CSV';
-  exportCsvBtn.addEventListener('click', () => exportCSV(items));
+  exportCsvBtn.addEventListener('click', () => exportCSV(getExportItems()));
 
   const clearBtn = document.createElement('button');
   clearBtn.className = 'watchlist-toolbar__btn watchlist-toolbar__btn--danger';
@@ -153,7 +180,9 @@ export function render(container) {
   toolbar.appendChild(count);
   toolbar.appendChild(exportJsonBtn);
   toolbar.appendChild(exportBibBtn);
+  toolbar.appendChild(exportRisBtn);
   toolbar.appendChild(exportCsvBtn);
+  toolbar.appendChild(dedupLabel);
   toolbar.appendChild(clearBtn);
 
   // Build grid with cards + note areas using DOM methods
