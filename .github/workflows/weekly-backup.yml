@@ -1,0 +1,48 @@
+name: Weekly Data Backup
+
+on:
+  schedule:
+    - cron: '0 3 * * 0'   # Every Sunday at 03:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create compressed snapshot and push to backup branch
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+
+          # Create the archive in a temp location
+          tar -czf "/tmp/data-${DATE}.tar.gz" data/*.json
+
+          # Configure git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Switch to data-backups branch (create orphan if needed)
+          git fetch origin data-backups 2>/dev/null || true
+          if git rev-parse --verify origin/data-backups >/dev/null 2>&1; then
+            git checkout data-backups
+          else
+            git checkout --orphan data-backups
+            git rm -rf . 2>/dev/null || true
+          fi
+
+          # Place the backup
+          mkdir -p backups
+          cp "/tmp/data-${DATE}.tar.gz" "backups/data-${DATE}.tar.gz"
+
+          # Prune backups older than 12 weeks (keep ~12 snapshots)
+          find backups/ -name "data-*.tar.gz" -mtime +84 -delete 2>/dev/null || true
+
+          # Commit and push
+          git add backups/
+          git commit -m "backup: data snapshot ${DATE}" || echo "No changes to commit"
+          git push origin data-backups

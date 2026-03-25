@@ -120,6 +120,10 @@ def fetch_wikicfp_conferences() -> list[dict]:
                 seen_names.add(name_key)
 
                 parsed["tags"] = ["conference", topic]
+                # Assign conference quality tier
+                tier = _assign_tier(parsed["name"])
+                if tier:
+                    parsed["tier"] = tier
                 all_items.append(parsed)
                 count += 1
 
@@ -231,6 +235,52 @@ def _parse_wikicfp_date(date_str: str) -> str:
     return ""
 
 
+# ── Conference tier rankings ──────────────────────────────────────────
+# Hardcoded mapping of conference name substrings to quality tiers.
+# Matching is case-insensitive substring on the conference name.
+
+CONFERENCE_TIERS: dict[str, str] = {
+    # A* tier
+    "IPCO": "A*",
+    "CPAIOR": "A*",
+    " CP ": "A*",
+    "CP 20": "A*",
+    "Constraint Programming": "A*",
+    # A tier
+    "INFORMS Annual": "A",
+    "EURO ": "A",
+    "EURO-": "A",
+    "CORS": "A",
+    "Winter Simulation": "A",
+    "WSC ": "A",
+    # B tier
+    "MIP Workshop": "B",
+    "META": "B",
+    "ROADEF": "B",
+    "MISTA": "B",
+    "IFORS": "B",
+    "GECCO": "B",
+    "LION": "B",
+}
+
+
+def _assign_tier(name: str) -> str:
+    """
+    Assign a quality tier to a conference based on its name.
+
+    Args:
+        name: Conference name.
+
+    Returns:
+        Tier string ("A*", "A", "B", "C") or empty string if unknown.
+    """
+    name_check = f" {name} "  # pad with spaces for boundary matching
+    for pattern, tier in CONFERENCE_TIERS.items():
+        if pattern.lower() in name_check.lower():
+            return tier
+    return ""
+
+
 # ── Config-based conferences (curated) ───────────────────────────────
 
 def fetch_config_conferences(config: dict) -> list[dict]:
@@ -262,6 +312,10 @@ def fetch_config_conferences(config: dict) -> list[dict]:
         }
         if conf.get("format"):
             item["format"] = conf["format"]
+        # Assign conference quality tier
+        tier = _assign_tier(item["name"])
+        if tier:
+            item["tier"] = tier
         items.append(item)
 
     return items

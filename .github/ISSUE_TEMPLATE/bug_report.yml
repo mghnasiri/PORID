@@ -1,0 +1,67 @@
+name: Bug Report
+description: Report a bug in PORID (pipeline, frontend, or data quality)
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which part of PORID is affected?
+      options:
+        - Pipeline (fetchers, classify, dedup)
+        - Frontend (UI, routing, rendering)
+        - Data quality (missing fields, duplicates)
+        - GitHub Actions workflow
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear description of the bug.
+      placeholder: What happened? What did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce this?
+      placeholder: |
+        1. Run `python pipeline/run_pipeline.py`
+        2. Open the dashboard
+        3. Navigate to #publications
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / screenshots
+      description: Paste relevant logs or attach screenshots.
+      render: shell
+    validations:
+      required: false
+
+  - type: dropdown
+    id: source
+    attributes:
+      label: Data source (if applicable)
+      description: Which fetcher or data source is involved?
+      options:
+        - N/A
+        - arXiv
+        - Crossref
+        - OpenAlex
+        - Semantic Scholar
+        - Optimization Online
+        - GitHub (software)
+        - Conferences
+        - Opportunities
+        - CORDIS / OpenAIRE
+    validations:
+      required: false

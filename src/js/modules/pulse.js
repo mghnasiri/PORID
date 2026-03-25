@@ -9,8 +9,9 @@
  * (data/*.json), not from user input or external sources.
  */
 
-import { daysUntil, formatDate } from '../utils/date.js';
+import { daysUntil, formatDate, relativeTime } from '../utils/date.js';
 import { renderRadarChart } from '../components/radar-chart.js';
+import { getWatchlist, getRecentViews, getAllNotes } from '../utils/storage.js';
 
 /**
  * Computes live metrics from loaded data.
@@ -152,6 +153,12 @@ export function render(container, allData, extra = {}) {
     metrics.appendChild(metric);
   });
   pulse.appendChild(metrics);
+
+  // ── ER-03: Personalized Landing from Browse History ────────────
+  const personalizedSection = buildPersonalizedSection(allData);
+  if (personalizedSection) {
+    pulse.appendChild(personalizedSection);
+  }
 
   // Weekly brief
   const briefContainer = document.createElement('div');
@@ -346,6 +353,125 @@ function buildTagCloud(subdomains) {
   return section;
 }
 
+/**
+ * ER-03: Builds personalized landing section from browse history.
+ * Shows "Your Focus Areas" (most-tagged topics) and "Continue Reading"
+ * (last 5 viewed items) if user has history.
+ * @param {Object} allData
+ * @returns {HTMLElement|null}
+ */
+function buildPersonalizedSection(allData) {
+  const watchlist = getWatchlist();
+  const recentViews = getRecentViews();
+  const notes = getAllNotes();
+
+  // Determine if user has any browse history
+  const hasHistory = watchlist.length > 0 || recentViews.length > 0 || Object.keys(notes).length > 0;
+  if (!hasHistory) return null;
+
+  const container = document.createElement('div');
+  container.className = 'pulse__personalized';
+
+  // --- Your Focus Areas: aggregate tags from watchlisted + noted items ---
+  const tagFreq = {};
+  const allItems = Object.values(allData).flat();
+  const trackedIds = new Set([
+    ...watchlist.map(w => w.id),
+    ...Object.keys(notes),
+    ...recentViews.map(r => r.id),
+  ]);
+
+  allItems.forEach(item => {
+    if (trackedIds.has(item.id) && item.tags) {
+      item.tags.forEach(tag => {
+        tagFreq[tag] = (tagFreq[tag] || 0) + 1;
+      });
+    }
+  });
+
+  const topTags = Object.entries(tagFreq)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10);
+
+  if (topTags.length > 0) {
+    const focusSection = document.createElement('div');
+    focusSection.className = 'pulse__focus-areas';
+    const h2 = document.createElement('h2');
+    h2.textContent = 'Your Focus Areas';
+    focusSection.appendChild(h2);
+
+    const tagsDiv = document.createElement('div');
+    tagsDiv.className = 'focus-tags';
+    topTags.forEach(([tag]) => {
+      const a = document.createElement('a');
+      a.href = '#publications?q=' + encodeURIComponent(tag);
+      a.className = 'tag';
+      a.textContent = tag;
+      tagsDiv.appendChild(a);
+    });
+    focusSection.appendChild(tagsDiv);
+    container.appendChild(focusSection);
+  }
+
+  // --- Continue Reading: last 5 viewed items ---
+  if (recentViews.length > 0) {
+    const continueSection = document.createElement('div');
+    continueSection.className = 'pulse__continue-reading';
+    const h2 = document.createElement('h2');
+    h2.textContent = 'Continue Reading';
+    continueSection.appendChild(h2);
+
+    const list = document.createElement('ul');
+    list.className = 'continue-list';
+
+    const TYPE_ICONS = {
+      publication: '\uD83D\uDCDD',
+      software: '\uD83D\uDD27',
+      conference: '\uD83D\uDCC5',
+      opportunity: '\uD83D\uDCE1',
+      seminar: '\uD83C\uDF93',
+      dataset: '\uD83D\uDCCA',
+    };
+
+    recentViews.slice(0, 5).forEach(item => {
+      const li = document.createElement('li');
+      li.className = 'continue-list__item';
+
+      const icon = document.createElement('span');
+      icon.className = 'continue-list__icon';
+      icon.textContent = TYPE_ICONS[item.type] || '\uD83D\uDCDD';
+      li.appendChild(icon);
+
+      const title = document.createElement('span');
+      title.className = 'continue-list__title';
+      title.textContent = item.title;
+      li.appendChild(title);
+
+      const time = document.createElement('span');
+      time.className = 'continue-list__time';
+      time.textContent = relativeTime(item.timestamp);
+      li.appendChild(time);
+
+      list.appendChild(li);
+    });
+
+    continueSection.appendChild(list);
+    container.appendChild(continueSection);
+  }
+
+  return container;
+}
+
+/**
+ * ER-07: Enhanced weekly brief with rich detail sections and archive navigation.
+ * Includes: trend headline, opportunity deadlines, solver updates, conference
+ * deadlines, and prev/next week navigation if archives exist.
+ */
+
+// Brief archive state for prev/next navigation
+let briefArchiveFiles = null;
+let currentBriefIndex = -1;
+
 function buildBriefDOM(brief, container) {
   const briefEl = document.createElement('div');
   briefEl.className = 'brief';
@@ -356,47 +482,325 @@ function buildBriefDOM(brief, container) {
   h2.className = 'brief__title';
   h2.textContent = 'This Week in OR';
   header.appendChild(h2);
+
+  // Right side of header: date + nav buttons
+  const headerRight = document.createElement('div');
+  headerRight.style.cssText = 'display:flex;align-items:center;gap:0.5rem';
   if (brief.week_of) {
     const dateEl = document.createElement('span');
     dateEl.className = 'brief__date';
     dateEl.textContent = formatDate(brief.week_of);
-    header.appendChild(dateEl);
+    headerRight.appendChild(dateEl);
   }
+
+  // ER-07: Nav buttons for prev/next brief archive
+  const nav = document.createElement('div');
+  nav.className = 'brief__nav';
+  const prevBtn = document.createElement('button');
+  prevBtn.className = 'brief__nav-btn';
+  prevBtn.id = 'briefPrev';
+  prevBtn.textContent = '\u2190 Prev';
+  prevBtn.title = 'Previous week';
+  prevBtn.disabled = true; // Will be enabled if archives exist
+  const nextBtn = document.createElement('button');
+  nextBtn.className = 'brief__nav-btn';
+  nextBtn.id = 'briefNext';
+  nextBtn.textContent = 'Next \u2192';
+  nextBtn.title = 'Next week';
+  nextBtn.disabled = true;
+  nav.appendChild(prevBtn);
+  nav.appendChild(nextBtn);
+  headerRight.appendChild(nav);
+  header.appendChild(headerRight);
   briefEl.appendChild(header);
 
   const body = document.createElement('div');
   body.className = 'brief__body';
 
   const sections = brief.sections || {};
-  const sectionDefs = [
-    { key: 'trends', icon: '\uD83D\uDCC8', label: 'Trends' },
-    { key: 'opportunities', icon: '\uD83D\uDCE1', label: 'Radar' },
-    { key: 'solvers', icon: '\uD83D\uDD27', label: 'Tools' },
-    { key: 'conferences', icon: '\uD83D\uDCC5', label: 'Conferences' },
-  ];
 
-  sectionDefs.forEach(def => {
-    const data = sections[def.key];
-    if (!data) return;
+  // --- Trends section with detail ---
+  if (sections.trends) {
+    const tData = sections.trends;
     const section = document.createElement('div');
     section.className = 'brief__section';
     const iconEl = document.createElement('span');
     iconEl.className = 'brief__section-icon';
-    iconEl.textContent = def.icon;
+    iconEl.textContent = '\uD83D\uDCC8';
     const div = document.createElement('div');
+    div.style.flex = '1';
     const strong = document.createElement('strong');
-    strong.textContent = def.label;
+    strong.textContent = 'Trends';
     const p = document.createElement('p');
-    p.textContent = data.headline || 'No data available.';
+    p.textContent = tData.headline || 'No data available.';
     div.appendChild(strong);
     div.appendChild(p);
+
+    // Detail: accelerating topics
+    if (tData.accelerating && tData.accelerating.length > 0) {
+      const details = document.createElement('div');
+      details.className = 'brief__details';
+      const group = document.createElement('div');
+      group.className = 'brief__detail-group';
+      const gh = document.createElement('h4');
+      gh.textContent = 'Accelerating Topics';
+      group.appendChild(gh);
+      tData.accelerating.slice(0, 5).forEach(t => {
+        const row = document.createElement('div');
+        row.className = 'brief__detail-item';
+        const name = document.createElement('span');
+        name.textContent = t.tag;
+        const badge = document.createElement('span');
+        badge.className = 'brief__detail-badge';
+        badge.textContent = t.velocity || (t.count + ' papers');
+        row.appendChild(name);
+        row.appendChild(badge);
+        group.appendChild(row);
+      });
+      details.appendChild(group);
+      div.appendChild(details);
+    }
+
     section.appendChild(iconEl);
     section.appendChild(div);
     body.appendChild(section);
-  });
+  }
+
+  // --- Opportunities section with deadlines ---
+  if (sections.opportunities) {
+    const oData = sections.opportunities;
+    const section = document.createElement('div');
+    section.className = 'brief__section';
+    const iconEl = document.createElement('span');
+    iconEl.className = 'brief__section-icon';
+    iconEl.textContent = '\uD83D\uDCE1';
+    const div = document.createElement('div');
+    div.style.flex = '1';
+    const strong = document.createElement('strong');
+    strong.textContent = 'Radar';
+    const p = document.createElement('p');
+    p.textContent = oData.headline || 'No data available.';
+    div.appendChild(strong);
+    div.appendChild(p);
+
+    // Detail: closing soon deadlines
+    if (oData.closing_soon && oData.closing_soon.length > 0) {
+      const details = document.createElement('div');
+      details.className = 'brief__details';
+      const group = document.createElement('div');
+      group.className = 'brief__detail-group';
+      const gh = document.createElement('h4');
+      gh.textContent = 'Closing Soon';
+      group.appendChild(gh);
+      oData.closing_soon.forEach(o => {
+        const row = document.createElement('div');
+        row.className = 'brief__detail-item';
+        const name = document.createElement('span');
+        name.textContent = o.title;
+        const dl = document.createElement('span');
+        dl.className = 'brief__detail-deadline';
+        dl.textContent = o.deadline ? formatDate(o.deadline) : '';
+        row.appendChild(name);
+        row.appendChild(dl);
+        group.appendChild(row);
+      });
+      details.appendChild(group);
+      div.appendChild(details);
+    }
+
+    // Funding highlights
+    if (oData.funding_highlights && oData.funding_highlights.length > 0) {
+      const details = div.querySelector('.brief__details') || document.createElement('div');
+      if (!details.className) details.className = 'brief__details';
+      const group = document.createElement('div');
+      group.className = 'brief__detail-group';
+      const gh = document.createElement('h4');
+      gh.textContent = 'Funding Highlights';
+      group.appendChild(gh);
+      oData.funding_highlights.slice(0, 3).forEach(f => {
+        const row = document.createElement('div');
+        row.className = 'brief__detail-item';
+        const name = document.createElement('span');
+        name.textContent = f.title;
+        const badge = document.createElement('span');
+        badge.className = 'brief__detail-badge';
+        badge.textContent = f.amount || '';
+        row.appendChild(name);
+        row.appendChild(badge);
+        group.appendChild(row);
+      });
+      details.appendChild(group);
+      if (!div.querySelector('.brief__details')) div.appendChild(details);
+    }
+
+    section.appendChild(iconEl);
+    section.appendChild(div);
+    body.appendChild(section);
+  }
+
+  // --- Solvers section with updates ---
+  if (sections.solvers) {
+    const sData = sections.solvers;
+    const section = document.createElement('div');
+    section.className = 'brief__section';
+    const iconEl = document.createElement('span');
+    iconEl.className = 'brief__section-icon';
+    iconEl.textContent = '\uD83D\uDD27';
+    const div = document.createElement('div');
+    div.style.flex = '1';
+    const strong = document.createElement('strong');
+    strong.textContent = 'Tools';
+    const p = document.createElement('p');
+    p.textContent = sData.headline || 'No data available.';
+    div.appendChild(strong);
+    div.appendChild(p);
+
+    if (sData.updates && sData.updates.length > 0) {
+      const details = document.createElement('div');
+      details.className = 'brief__details';
+      const group = document.createElement('div');
+      group.className = 'brief__detail-group';
+      const gh = document.createElement('h4');
+      gh.textContent = 'Solver Updates';
+      group.appendChild(gh);
+      sData.updates.forEach(u => {
+        const row = document.createElement('div');
+        row.className = 'brief__detail-item';
+        const name = document.createElement('span');
+        name.textContent = u.solver;
+        const badge = document.createElement('span');
+        badge.className = 'brief__detail-badge';
+        badge.textContent = u.new_version ? 'v' + u.new_version : (u.date || '');
+        row.appendChild(name);
+        row.appendChild(badge);
+        group.appendChild(row);
+      });
+      details.appendChild(group);
+      div.appendChild(details);
+    }
+
+    section.appendChild(iconEl);
+    section.appendChild(div);
+    body.appendChild(section);
+  }
+
+  // --- Conferences section with deadlines ---
+  if (sections.conferences) {
+    const cData = sections.conferences;
+    const section = document.createElement('div');
+    section.className = 'brief__section';
+    const iconEl = document.createElement('span');
+    iconEl.className = 'brief__section-icon';
+    iconEl.textContent = '\uD83D\uDCC5';
+    const div = document.createElement('div');
+    div.style.flex = '1';
+    const strong = document.createElement('strong');
+    strong.textContent = 'Conferences';
+    const p = document.createElement('p');
+    p.textContent = cData.headline || 'No data available.';
+    div.appendChild(strong);
+    div.appendChild(p);
+
+    if (cData.upcoming_deadlines && cData.upcoming_deadlines.length > 0) {
+      const details = document.createElement('div');
+      details.className = 'brief__details';
+      const group = document.createElement('div');
+      group.className = 'brief__detail-group';
+      const gh = document.createElement('h4');
+      gh.textContent = 'Upcoming Deadlines';
+      group.appendChild(gh);
+      cData.upcoming_deadlines.forEach(c => {
+        const row = document.createElement('div');
+        row.className = 'brief__detail-item';
+        const name = document.createElement('span');
+        name.textContent = c.name || c.title || '';
+        const dl = document.createElement('span');
+        dl.className = 'brief__detail-deadline';
+        dl.textContent = c.deadline ? formatDate(c.deadline) : (c.cfp_deadline ? formatDate(c.cfp_deadline) : '');
+        row.appendChild(name);
+        row.appendChild(dl);
+        group.appendChild(row);
+      });
+      details.appendChild(group);
+      div.appendChild(details);
+    }
+
+    section.appendChild(iconEl);
+    section.appendChild(div);
+    body.appendChild(section);
+  }
 
   briefEl.appendChild(body);
   container.appendChild(briefEl);
+
+  // ER-07: Wire prev/next brief navigation
+  initBriefNavigation(container, prevBtn, nextBtn);
+}
+
+/**
+ * ER-07: Discovers brief archive files and wires prev/next navigation.
+ * Looks for brief-YYYY-MM-DD.json files in data/ directory.
+ */
+async function initBriefNavigation(container, prevBtn, nextBtn) {
+  // Discover available brief files by probing date-stamped files
+  if (briefArchiveFiles === null) {
+    briefArchiveFiles = [];
+    // Try the last 8 weeks of brief files
+    const today = new Date();
+    for (let i = 0; i < 56; i++) {
+      const d = new Date(today);
+      d.setDate(d.getDate() - i);
+      const dateStr = d.toISOString().slice(0, 10);
+      briefArchiveFiles.push(dateStr);
+    }
+    // Probe which files actually exist (check first few to find pattern)
+    const validFiles = [];
+    for (const dateStr of briefArchiveFiles) {
+      try {
+        const resp = await fetch(`./data/brief-${dateStr}.json`, { method: 'HEAD' });
+        if (resp.ok) validFiles.push(dateStr);
+      } catch { /* skip */ }
+    }
+    briefArchiveFiles = validFiles.sort().reverse(); // newest first
+    currentBriefIndex = 0; // current brief is the newest
+  }
+
+  if (briefArchiveFiles.length <= 1) return; // No navigation needed
+
+  // Enable buttons based on position
+  function updateNav() {
+    prevBtn.disabled = currentBriefIndex >= briefArchiveFiles.length - 1;
+    nextBtn.disabled = currentBriefIndex <= 0;
+  }
+  updateNav();
+
+  prevBtn.addEventListener('click', async () => {
+    if (currentBriefIndex >= briefArchiveFiles.length - 1) return;
+    currentBriefIndex++;
+    const dateStr = briefArchiveFiles[currentBriefIndex];
+    try {
+      const resp = await fetch(`./data/brief-${dateStr}.json`);
+      if (resp.ok) {
+        const brief = await resp.json();
+        container.textContent = '';
+        buildBriefDOM(brief, container);
+      }
+    } catch { /* skip */ }
+  });
+
+  nextBtn.addEventListener('click', async () => {
+    if (currentBriefIndex <= 0) return;
+    currentBriefIndex--;
+    const dateStr = briefArchiveFiles[currentBriefIndex];
+    try {
+      const resp = await fetch(`./data/brief-${dateStr}.json`);
+      if (resp.ok) {
+        const brief = await resp.json();
+        container.textContent = '';
+        buildBriefDOM(brief, container);
+      }
+    } catch { /* skip */ }
+  });
 }
 
 function buildBriefPlaceholderDOM(container) {

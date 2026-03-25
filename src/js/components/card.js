@@ -75,6 +75,19 @@ function getTitle(item) {
 }
 
 /**
+ * Estimates reading time from abstract word count.
+ * Uses 200 words per minute as average reading speed.
+ * @param {Object} item - Data item.
+ * @returns {string} HTML string for reading time, or empty string.
+ */
+function getReadingTime(item) {
+  if (item.type !== 'publication' || !item.abstract) return '';
+  const words = item.abstract.trim().split(/\s+/).length;
+  const minutes = Math.max(1, Math.round(words / 200));
+  return `<span class="card__reading-time" title="${words} words">~${minutes} min read</span>`;
+}
+
+/**
  * Returns a brief body text.
  */
 function getBody(item) {
@@ -106,7 +119,13 @@ export function renderCard(item) {
   const subtitle = getSubtitle(item);
   const body = getBody(item);
   const dateHtml = getDateDisplay(item);
+  const readingTimeHtml = getReadingTime(item);
   const tagsHtml = renderTags(item.tags || []);
+
+  // Conference tier badge
+  const tierBadge = item.type === 'conference' && item.tier
+    ? `<span class="tag tag--tier tag--tier-${item.tier.replace('*', 's').toLowerCase()}">${item.tier}</span>`
+    : '';
 
   // Check if item is from the last 7 days
   const isNewThisWeek = item.date && (Date.now() - new Date(item.date + 'T00:00:00').getTime()) < 7 * 24 * 60 * 60 * 1000;
@@ -127,12 +146,13 @@ export function renderCard(item) {
       <div class="card__header">
         <h3 class="card__title">${title}</h3>
         ${newBadge}
+        ${readingTimeHtml}
         ${dateHtml}
       </div>
       ${subtitle ? `<p class="card__subtitle">${subtitle}</p>` : ''}
       ${body ? `<p class="card__body">${body}</p>` : ''}
       <div class="card__tags">
-        ${sourceBadge}${tagsHtml}
+        ${tierBadge}${sourceBadge}${tagsHtml}
       </div>
       <div class="card__actions">
         <button class="card__star ${starClass}" data-id="${item.id}" aria-label="${starLabel}" title="${starLabel}">

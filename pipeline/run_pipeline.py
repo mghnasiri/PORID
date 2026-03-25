@@ -22,6 +22,7 @@ import json
 import sys
 import argparse
 import traceback
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional
@@ -226,114 +227,55 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
         "opportunities": len(existing_opps),
     }
 
-    # ── 1. arXiv ──────────────────────────────────────────────────────
-    print("=" * 60)
-    print("[1/7] Fetching arXiv papers...")
-    print("=" * 60)
-    try:
-        arxiv_items = fetch_arxiv(config)
-        publications.extend(arxiv_items)
-        sources_checked.append("arXiv")
-        print(f"  -> {len(arxiv_items)} papers from arXiv\n")
-    except Exception as e:
-        errors.append(f"arXiv: {e}")
-        print(f"  ! arXiv failed: {e}\n", file=sys.stderr)
-        traceback.print_exc(file=sys.stderr)
+    # ── Parallel fetching ────────────────────────────────────────────
+    # All sources are independent and can be fetched concurrently.
+    # We use ThreadPoolExecutor since fetchers are I/O-bound (HTTP).
 
-    # ── 2. Crossref ───────────────────────────────────────────────────
-    print("=" * 60)
-    print("[2/7] Fetching Crossref journal articles...")
-    print("=" * 60)
-    try:
-        crossref_items = fetch_crossref(config)
-        publications.extend(crossref_items)
-        sources_checked.append("Crossref")
-        print(f"  -> {len(crossref_items)} articles from Crossref\n")
-    except Exception as e:
-        errors.append(f"Crossref: {e}")
-        print(f"  ! Crossref failed: {e}\n", file=sys.stderr)
-        traceback.print_exc(file=sys.stderr)
+    fetch_tasks = {
+        "arXiv":               lambda: fetch_arxiv(config),
+        "Crossref":            lambda: fetch_crossref(config),
+        "OpenAlex":            lambda: fetch_openalex(config),
+        "Semantic Scholar":    lambda: fetch_semantic_scholar(config),
+        "Optimization Online": lambda: fetch_optim_online(),
+        "GitHub":              lambda: fetch_software(config),
+        "Conferences":         lambda: fetch_conferences(config),
+        "Opportunities":       lambda: fetch_all_feeds(config),
+    }
 
-    # ── 3. OpenAlex ───────────────────────────────────────────────────
-    print("=" * 60)
-    print("[3/7] Fetching OpenAlex publications...")
-    print("=" * 60)
-    try:
-        openalex_items = fetch_openalex(config)
-        publications.extend(openalex_items)
-        sources_checked.append("OpenAlex")
-        print(f"  -> {len(openalex_items)} publications from OpenAlex\n")
-    except Exception as e:
-        errors.append(f"OpenAlex: {e}")
-        print(f"  ! OpenAlex failed: {e}\n", file=sys.stderr)
-        traceback.print_exc(file=sys.stderr)
+    # Category mapping: which list does each source feed into?
+    pub_sources = {"arXiv", "Crossref", "OpenAlex", "Semantic Scholar", "Optimization Online"}
+    results: dict[str, list[dict]] = {}
 
-    # ── 4. Semantic Scholar ───────────────────────────────────────────
     print("=" * 60)
-    print("[4/7] Fetching Semantic Scholar papers...")
+    print(f"Fetching from {len(fetch_tasks)} sources in parallel...")
     print("=" * 60)
-    try:
-        s2_items = fetch_semantic_scholar(config)
-        publications.extend(s2_items)
-        sources_checked.append("Semantic Scholar")
-        print(f"  -> {len(s2_items)} papers from Semantic Scholar\n")
-    except Exception as e:
-        errors.append(f"Semantic Scholar: {e}")
-        print(f"  ! Semantic Scholar failed: {e}\n", file=sys.stderr)
-        traceback.print_exc(file=sys.stderr)
 
-    # ── 4b. Optimization Online ─────────────────────────────────────
-    print("=" * 60)
-    print("[4b/7] Fetching Optimization Online...")
-    print("=" * 60)
-    try:
-        optim_items = fetch_optim_online()
-        publications.extend(optim_items)
-        sources_checked.append("Optimization Online")
-        print(f"  -> {len(optim_items)} items from Optimization Online\n")
-    except Exception as e:
-        errors.append(f"Optimization Online: {e}")
-        print(f"  ! Optimization Online failed: {e}\n", file=sys.stderr)
-        traceback.print_exc(file=sys.stderr)
+    with ThreadPoolExecutor(max_workers=len(fetch_tasks)) as executor:
+        future_to_name = {
+            executor.submit(fn): name for name, fn in fetch_tasks.items()
+        }
+        for future in as_completed(future_to_name):
+            name = future_to_name[future]
+            try:
+                items = future.result()
+                results[name] = items
+                if name == "Opportunities":
+                    sources_checked.extend(["HigherEdJobs", "OperationsAcademia"])
+                else:
+                    sources_checked.append(name)
+                print(f"  -> {len(items)} items from {name}")
+            except Exception as e:
+                errors.append(f"{name}: {e}")
+                print(f"  ! {name} failed: {e}", file=sys.stderr)
+                traceback.print_exc(file=sys.stderr)
 
-    # ── 5. GitHub Software Releases ───────────────────────────────────
-    print("=" * 60)
-    print("[5/7] Fetching GitHub releases...")
-    print("=" * 60)
-    try:
-        software = fetch_software(config)
-        sources_checked.append("GitHub")
-        print(f"  -> {len(software)} releases from GitHub\n")
-    except Exception as e:
-        errors.append(f"GitHub: {e}")
-        print(f"  ! GitHub failed: {e}\n", file=sys.stderr)
-        traceback.print_exc(file=sys.stderr)
-
-    # ── 6. Conferences ────────────────────────────────────────────────
-    print("=" * 60)
-    print("[6/7] Fetching conference data...")
-    print("=" * 60)
-    try:
-        conferences = fetch_conferences(config)
-        sources_checked.append("Conferences")
-        print(f"  -> {len(conferences)} conferences from config\n")
-    except Exception as e:
-        errors.append(f"Conferences: {e}")
-        print(f"  ! Conferences failed: {e}\n", file=sys.stderr)
-        traceback.print_exc(file=sys.stderr)
-
-    # ── 7. Opportunities ──────────────────────────────────────────────
-    print("=" * 60)
-    print("[7/7] Fetching opportunity feeds...")
-    print("=" * 60)
-    try:
-        opportunities = fetch_all_feeds(config)
-        sources_checked.extend(["HigherEdJobs", "OperationsAcademia"])
-        print(f"  -> {len(opportunities)} opportunities from feeds\n")
-    except Exception as e:
-        errors.append(f"Opportunities: {e}")
-        print(f"  ! Opportunities failed: {e}\n", file=sys.stderr)
-        traceback.print_exc(file=sys.stderr)
+    # Collect results into typed lists
+    for source in pub_sources:
+        publications.extend(results.get(source, []))
+    software = results.get("GitHub", [])
+    conferences = results.get("Conferences", [])
+    opportunities = results.get("Opportunities", [])
+    print()
 
     # ── Classify ──────────────────────────────────────────────────────
     print("=" * 60)
@@ -466,6 +408,22 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     changelog_path = out / "changelog.json"
     changelog = read_json(changelog_path)
 
+    # Collect top new paper titles (most recent first, up to 3)
+    top_new_papers: list[str] = []
+    if pubs_added > 0:
+        existing_pub_ids = {p.get("id") for p in existing_pubs}
+        new_pubs = [p for p in publications if p.get("id") not in existing_pub_ids]
+        new_pubs.sort(key=lambda x: x.get("date", ""), reverse=True)
+        top_new_papers = [p.get("title", "Untitled")[:120] for p in new_pubs[:3]]
+
+    # Collect top new opportunity titles (up to 3)
+    top_new_opportunities: list[str] = []
+    if opps_added > 0:
+        existing_opp_ids = {o.get("id") for o in existing_opps}
+        new_opps = [o for o in opportunities if o.get("id") not in existing_opp_ids]
+        new_opps.sort(key=lambda x: x.get("date", ""), reverse=True)
+        top_new_opportunities = [o.get("title", "Untitled")[:120] for o in new_opps[:3]]
+
     changelog_entry = {
         "date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
         "publications_added": pubs_added,
@@ -474,6 +432,8 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
         "total_dropped": total_dropped,
         "sources_checked": sources_checked,
         "errors": errors,
+        "top_new_papers": top_new_papers,
+        "top_new_opportunities": top_new_opportunities,
     }
     changelog.insert(0, changelog_entry)
 

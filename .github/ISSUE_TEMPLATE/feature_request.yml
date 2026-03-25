@@ -1,0 +1,47 @@
+name: Feature Request
+description: Suggest a new feature or improvement for PORID
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which area does this feature relate to?
+      options:
+        - New data source
+        - Pipeline improvement
+        - Frontend / UI
+        - Digest / email
+        - Developer experience
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or motivation
+      description: What problem does this solve? Why is it useful?
+      placeholder: I want to track papers from [source] because...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Describe what the feature would look like.
+      placeholder: |
+        Add a new fetcher `fetch_xyz.py` that queries the XYZ API...
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any other approaches you thought about?
+    validations:
+      required: false

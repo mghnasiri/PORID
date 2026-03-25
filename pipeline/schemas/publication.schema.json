@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://porid.dev/schemas/publication.schema.json",
+  "title": "PORID Publication",
+  "description": "A research publication tracked by the PORID pipeline.",
+  "type": "object",
+  "required": ["id", "title", "type", "date"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier, typically prefixed by source (e.g. 'arxiv-2401.00001', 'crossref-10.1234/abc')."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 5,
+      "description": "Publication title."
+    },
+    "type": {
+      "type": "string",
+      "const": "publication",
+      "description": "Item type discriminator."
+    },
+    "date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "Publication or discovery date in YYYY-MM-DD format."
+    },
+    "authors": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of author names."
+    },
+    "abstract": {
+      "type": "string",
+      "description": "Paper abstract or summary."
+    },
+    "doi": {
+      "type": "string",
+      "description": "Digital Object Identifier (e.g. '10.1234/abc')."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Link to the publication."
+    },
+    "source": {
+      "type": "string",
+      "description": "Data source or journal name."
+    },
+    "source_detail": {
+      "type": "string",
+      "description": "More specific source info (e.g. journal name when source is 'crossref')."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Classification tags assigned by the pipeline."
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Relevance score (0-100) computed by the classifier."
+    }
+  },
+  "additionalProperties": true
+}

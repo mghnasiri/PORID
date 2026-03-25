@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://porid.dev/schemas/solver.schema.json",
+  "title": "PORID Solver",
+  "description": "An optimization solver tracked by the PORID pipeline.",
+  "type": "object",
+  "required": ["id", "name"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique solver identifier (e.g. 'gurobi', 'cplex')."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "description": "Solver display name."
+    },
+    "vendor": {
+      "type": "string",
+      "description": "Company or organization that develops the solver."
+    },
+    "website": {
+      "type": "string",
+      "format": "uri",
+      "description": "Solver homepage URL."
+    },
+    "current_version": {
+      "type": "string",
+      "description": "Latest known version string."
+    },
+    "release_date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "Date of the latest release in YYYY-MM-DD format."
+    },
+    "license": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["commercial", "open-source", "dual", "free-academic"],
+          "description": "License category."
+        },
+        "academic_free": {
+          "type": "boolean",
+          "description": "Whether free academic licenses are available."
+        },
+        "academic_note": {
+          "type": "string",
+          "description": "Details about academic licensing."
+        }
+      },
+      "description": "Licensing information."
+    },
+    "open_source": {
+      "type": "boolean",
+      "description": "Whether the solver is open-source."
+    },
+    "problem_types": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Supported problem types (e.g. 'LP', 'MIP', 'QP', 'CP')."
+    },
+    "language_bindings": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Supported programming languages."
+    },
+    "github": {
+      "type": ["string", "null"],
+      "description": "GitHub repository URL, if applicable."
+    },
+    "pypi_package": {
+      "type": ["string", "null"],
+      "description": "PyPI package name."
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the solver."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Classification tags."
+    }
+  },
+  "additionalProperties": true
+}

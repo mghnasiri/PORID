@@ -844,6 +844,12 @@ function renderView() {
   }
 
   animateCards();
+
+  // MA-03: Announce card count to screen readers
+  const cardCount = contentEl.querySelectorAll('.card').length;
+  if (cardCount > 0) {
+    announceToScreenReader(`${tab} view loaded, showing ${cardCount} items`);
+  }
 }
 
 function extractTags(items) {
@@ -1257,15 +1263,18 @@ function wireSearch() {
   const searchTrigger = document.getElementById('searchTrigger');
 
   function openSearch() {
+    _modalTriggerElement = document.activeElement; // MA-10
     searchModal.classList.add('open');
     searchModal.setAttribute('aria-hidden', 'false');
     searchInput.focus();
+    trapFocusInModal(searchModal, () => closeSearchFn()); // MA-10
   }
 
   closeSearchFn = function () {
     searchModal.classList.remove('open');
     searchModal.setAttribute('aria-hidden', 'true');
     searchInput.value = '';
+    removeFocusTrap(searchModal); // MA-10
     // Clear results
     const results = searchModal.querySelector('.search-modal__results');
     if (results) {
@@ -1300,15 +1309,15 @@ function wireSearch() {
 }
 
 // ---------------------------------------------------------------------------
-// Theme Toggle — 3-way: dark > light > system > dark
+// Theme Toggle — 4-way: dark > light > high-contrast > system > dark (MA-06)
 // ---------------------------------------------------------------------------
 
 function wireTheme() {
   const toggle = document.getElementById('themeToggle');
   const root = document.documentElement;
 
-  const ICONS = { dark: '\u263D', light: '\u2600', system: '\u25D1' };
-  const CYCLE = ['dark', 'light', 'system'];
+  const ICONS = { dark: '\u263D', light: '\u2600', system: '\u25D1', 'high-contrast': '\u25C9' };
+  const CYCLE = ['dark', 'light', 'high-contrast', 'system'];
 
   function applyTheme(mode) {
     if (mode === 'system') {
@@ -1318,6 +1327,12 @@ function wireTheme() {
       root.dataset.theme = mode;
     }
     toggle.textContent = ICONS[mode] || ICONS.dark;
+
+    // Sync HC toggle button state
+    const hcBtn = document.getElementById('hcToggle');
+    if (hcBtn) {
+      hcBtn.classList.toggle('active', mode === 'high-contrast');
+    }
   }
 
   toggle.addEventListener('click', () => {
@@ -1348,6 +1363,178 @@ function wireTheme() {
       applyTheme('system');
     }
   });
+
+  // --- High Contrast toggle button (MA-06) ---
+  const hcBtn = document.getElementById('hcToggle');
+  if (hcBtn) {
+    hcBtn.addEventListener('click', () => {
+      const current = localStorage.getItem('porid-theme') || 'dark';
+      const next = current === 'high-contrast' ? 'dark' : 'high-contrast';
+      localStorage.setItem('porid-theme', next);
+      setPreference('theme', next);
+      applyTheme(next);
+    });
+  }
+}
+
+// ---------------------------------------------------------------------------
+// MA-06: Font Scale Controls
+// ---------------------------------------------------------------------------
+
+function wireFontScale() {
+  const root = document.documentElement;
+  const SCALE_MAP = { '100': '16px', '125': '20px', '150': '24px' };
+  const controls = document.getElementById('a11yControls');
+  if (!controls) return;
+
+  function applyScale(scale) {
+    root.style.setProperty('--font-scale', SCALE_MAP[scale] || '16px');
+    localStorage.setItem('porid-font-scale', scale);
+    controls.querySelectorAll('[data-scale]').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.scale === scale);
+    });
+  }
+
+  controls.querySelectorAll('[data-scale]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      applyScale(btn.dataset.scale);
+    });
+  });
+
+  // Restore saved scale
+  const savedScale = localStorage.getItem('porid-font-scale') || '100';
+  applyScale(savedScale);
+}
+
+// ---------------------------------------------------------------------------
+// MA-05: Reduced-Motion Toggle (stored in localStorage)
+// ---------------------------------------------------------------------------
+
+function wireMotionToggle() {
+  const toggle = document.getElementById('motionToggle');
+  if (!toggle) return;
+  const root = document.documentElement;
+
+  // Unicode icons: play/pause style
+  const ICONS = { on: '\u275A\u275A', off: '\u25B6' }; // ❚❚ = motion reduced, ▶ = motion on
+
+  function apply(reduced) {
+    if (reduced) {
+      root.setAttribute('data-reduced-motion', 'true');
+      toggle.textContent = ICONS.on;
+      toggle.setAttribute('aria-label', 'Reduced motion is on. Click to enable animations');
+    } else {
+      root.removeAttribute('data-reduced-motion');
+      toggle.textContent = ICONS.off;
+      toggle.setAttribute('aria-label', 'Animations are on. Click to reduce motion');
+    }
+  }
+
+  toggle.addEventListener('click', () => {
+    const current = localStorage.getItem('porid-reduced-motion') === 'true';
+    const next = !current;
+    localStorage.setItem('porid-reduced-motion', String(next));
+    apply(next);
+    announceToScreenReader(next ? 'Reduced motion enabled' : 'Animations enabled');
+  });
+
+  // Restore on load
+  const saved = localStorage.getItem('porid-reduced-motion') === 'true';
+  apply(saved);
+}
+
+// ---------------------------------------------------------------------------
+// MA-03: Aria-live announcements for screen readers
+// ---------------------------------------------------------------------------
+
+/**
+ * Announces a message to screen readers via the aria-live region.
+ * @param {string} message
+ */
+function announceToScreenReader(message) {
+  const region = document.getElementById('a11yStatus');
+  if (!region) return;
+  // Clear then set to ensure the announcement fires even with same text
+  region.textContent = '';
+  requestAnimationFrame(() => {
+    region.textContent = message;
+  });
+}
+
+// ---------------------------------------------------------------------------
+// MA-10: Modal Focus Trap
+// ---------------------------------------------------------------------------
+
+/** @type {HTMLElement|null} */
+let _modalTriggerElement = null;
+
+/**
+ * Traps focus inside the given modal element.
+ * Tab/Shift+Tab cycle within focusable elements inside the modal.
+ * Escape closes the modal.
+ * @param {HTMLElement} modal
+ * @param {Function} closeFn - function to call when Escape is pressed
+ */
+function trapFocusInModal(modal, closeFn) {
+  const FOCUSABLE = 'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
+
+  function getItems() {
+    return [...modal.querySelectorAll(FOCUSABLE)].filter(
+      (el) => !el.closest('[aria-hidden="true"]') && el.offsetParent !== null
+    );
+  }
+
+  function handler(e) {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      closeFn();
+      return;
+    }
+    if (e.key !== 'Tab') return;
+
+    const items = getItems();
+    if (items.length === 0) return;
+
+    const first = items[0];
+    const last = items[items.length - 1];
+
+    if (e.shiftKey) {
+      if (document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      }
+    } else {
+      if (document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  }
+
+  modal._focusTrapHandler = handler;
+  modal.addEventListener('keydown', handler);
+
+  // Focus first focusable element
+  requestAnimationFrame(() => {
+    const items = getItems();
+    if (items.length > 0) items[0].focus();
+  });
+}
+
+/**
+ * Removes the focus trap from a modal.
+ * @param {HTMLElement} modal
+ */
+function removeFocusTrap(modal) {
+  if (modal._focusTrapHandler) {
+    modal.removeEventListener('keydown', modal._focusTrapHandler);
+    delete modal._focusTrapHandler;
+  }
+  // Restore focus to trigger element
+  if (_modalTriggerElement && _modalTriggerElement.focus) {
+    _modalTriggerElement.focus();
+    _modalTriggerElement = null;
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -1395,8 +1582,10 @@ function wireHelpModal() {
 function showHelpModal() {
   const modal = document.getElementById('helpModal');
   if (!modal) return;
+  _modalTriggerElement = document.activeElement; // MA-10
   modal.classList.add('open');
   modal.setAttribute('aria-hidden', 'false');
+  trapFocusInModal(modal, hideHelpModal); // MA-10
 }
 
 function hideHelpModal() {
@@ -1404,6 +1593,7 @@ function hideHelpModal() {
   if (!modal) return;
   modal.classList.remove('open');
   modal.setAttribute('aria-hidden', 'true');
+  removeFocusTrap(modal); // MA-10
 }
 
 // ---------------------------------------------------------------------------
@@ -1785,6 +1975,8 @@ function wireCardKeyNav() {
 
 async function init() {
   wireTheme();
+  wireFontScale();      // MA-06
+  wireMotionToggle();   // MA-05
   wireTabs();
   wireHamburger();
   wireSearch();
@@ -1871,6 +2063,7 @@ function showOnboarding() {
     localStorage.setItem('porid-onboarded', 'true');
     // Also set the old key for backward compat
     localStorage.setItem('porid-welcomed', 'true');
+    removeFocusTrap(modal); // MA-10
     renderView();
   }
 
@@ -1894,6 +2087,8 @@ function showOnboarding() {
   // Show the modal
   goToStep(0);
   modal.style.display = '';
+  _modalTriggerElement = document.activeElement; // MA-10
+  trapFocusInModal(modal, completeOnboarding); // MA-10
 }
 
 // ---------------------------------------------------------------------------
@@ -1930,22 +2125,24 @@ async function wireChangelog() {
         </ul>
       </div>
     `).join('');
+    _modalTriggerElement = document.activeElement; // MA-10
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
+    trapFocusInModal(modal, closeChangelog); // MA-10
   });
 
+  function closeChangelog() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    removeFocusTrap(modal); // MA-10
+  }
+
   if (closeBtn) {
-    closeBtn.addEventListener('click', () => {
-      modal.classList.remove('open');
-      modal.setAttribute('aria-hidden', 'true');
-    });
+    closeBtn.addEventListener('click', closeChangelog);
   }
 
   modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.classList.remove('open');
-      modal.setAttribute('aria-hidden', 'true');
-    }
+    if (e.target === modal) closeChangelog();
   });
 }
 

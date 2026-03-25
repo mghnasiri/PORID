@@ -30,6 +30,44 @@ from typing import Optional
 import yaml
 
 
+# ── Known solver names for paper-to-solver cross-referencing ─────────
+# Derived from solvers_manual.json. Each entry maps a search term
+# (lowercased) to the canonical solver name shown in the UI.
+KNOWN_SOLVERS: dict[str, str] = {
+    "gurobi": "Gurobi",
+    "gurobipy": "Gurobi",
+    "cplex": "CPLEX",
+    "ilog cplex": "CPLEX",
+    "xpress": "Xpress",
+    "fico xpress": "Xpress",
+    "mosek": "MOSEK",
+    "highs": "HiGHS",
+    "highspy": "HiGHS",
+    "scip": "SCIP",
+    "pyscipopt": "SCIP",
+    "or-tools": "OR-Tools",
+    "ortools": "OR-Tools",
+    "google or-tools": "OR-Tools",
+    "cbc": "CBC",
+    "coin-or cbc": "CBC",
+    "baron": "BARON",
+    "hexaly": "Hexaly",
+    "localsolver": "Hexaly",
+    "glpk": "GLPK",
+    "pyomo": "Pyomo",
+    "jump": "JuMP",
+    "jump.jl": "JuMP",
+    "ampl": "AMPL",
+    "gams": "GAMS",
+    "cvxpy": "CVXPY",
+    "knitro": "Knitro",
+    "artelys knitro": "Knitro",
+    "ipopt": "Ipopt",
+    "timefold": "Timefold",
+    "optaplanner": "Timefold",
+}
+
+
 def load_config(config_path: str = "config.yaml") -> dict:
     """Load pipeline configuration from YAML file."""
     path = Path(__file__).parent / config_path
@@ -87,6 +125,43 @@ def classify(item: dict, tag_keywords: dict[str, list[str]]) -> list[str]:
                     break
 
     return matched_tags if matched_tags else ["general-or"]
+
+
+def detect_solver_mentions(item: dict) -> list[str]:
+    """
+    Scan title + abstract for known solver name mentions.
+
+    Uses word-boundary matching for short terms (<=4 chars) and
+    substring matching for longer terms. Returns a deduplicated
+    list of canonical solver names found.
+
+    Args:
+        item: A PORID item dict.
+
+    Returns:
+        List of canonical solver names mentioned (e.g. ["Gurobi", "CPLEX"]).
+    """
+    text = " ".join([
+        item.get("title", ""),
+        item.get("abstract", ""),
+    ]).lower()
+
+    if not text.strip():
+        return []
+
+    found: dict[str, bool] = {}  # canonical name -> True
+    for term, canonical in KNOWN_SOLVERS.items():
+        if canonical in found:
+            continue
+        if len(term) <= 4:
+            pattern = r"\b" + re.escape(term) + r"\b"
+            if re.search(pattern, text):
+                found[canonical] = True
+        else:
+            if term in text:
+                found[canonical] = True
+
+    return list(found.keys())
 
 
 def score_item(item: dict, tag_keywords: dict[str, list[str]]) -> float:
@@ -172,6 +247,12 @@ def classify_items(
 
         # Compute relevance score (backward compatible - score is optional)
         item["score"] = score_item(item, tag_keywords)
+
+        # Detect solver mentions in publications
+        if item.get("type") == "publication":
+            solvers = detect_solver_mentions(item)
+            if solvers:
+                item["mentions_solvers"] = solvers
 
     return items
 

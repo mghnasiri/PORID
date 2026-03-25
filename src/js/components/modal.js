@@ -12,6 +12,8 @@ import { isWatchlisted, addToWatchlist, removeFromWatchlist, addRecentView } fro
 import { generateBibTeX, copyToClipboard } from '../utils/citation.js';
 
 let currentItem = null;
+/** @type {HTMLElement|null} */
+let _detailTriggerElement = null;
 
 /**
  * Escapes HTML special characters to prevent injection.
@@ -216,6 +218,9 @@ function buildModalContent(item, container) {
 export function showModal(item) {
   currentItem = item;
 
+  // MA-10: Save the trigger element for focus restoration
+  _detailTriggerElement = document.activeElement;
+
   // ER-05: Track this item as recently viewed
   addRecentView(item);
 
@@ -226,6 +231,9 @@ export function showModal(item) {
 
   modal.classList.add('open');
   modal.setAttribute('aria-hidden', 'false');
+
+  // MA-10: Trap focus inside the modal
+  _trapFocusInDetailModal(modal);
 }
 
 /**
@@ -236,6 +244,13 @@ export function hideModal() {
   modal.classList.remove('open');
   modal.setAttribute('aria-hidden', 'true');
   currentItem = null;
+
+  // MA-10: Remove focus trap and restore focus
+  _removeFocusTrapFromDetailModal(modal);
+  if (_detailTriggerElement && _detailTriggerElement.focus) {
+    _detailTriggerElement.focus();
+    _detailTriggerElement = null;
+  }
 }
 
 /**
@@ -244,4 +259,55 @@ export function hideModal() {
  */
 export function getCurrentItem() {
   return currentItem;
+}
+
+// ---------------------------------------------------------------------------
+// MA-10: Focus trap helpers (self-contained for modal.js)
+// ---------------------------------------------------------------------------
+
+const _FOCUSABLE_SELECTOR = 'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
+
+function _trapFocusInDetailModal(modal) {
+  function getFocusable() {
+    return [...modal.querySelectorAll(_FOCUSABLE_SELECTOR)].filter(
+      (el) => el.offsetParent !== null
+    );
+  }
+
+  function handler(e) {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      hideModal();
+      return;
+    }
+    if (e.key !== 'Tab') return;
+    const items = getFocusable();
+    if (items.length === 0) return;
+    const first = items[0];
+    const last = items[items.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  }
+
+  modal._focusTrapHandler = handler;
+  modal.addEventListener('keydown', handler);
+
+  // Focus the close button or first focusable
+  requestAnimationFrame(() => {
+    const closeBtn = modal.querySelector('.modal-detail__close');
+    if (closeBtn) { closeBtn.focus(); } else {
+      const items = getFocusable();
+      if (items.length > 0) items[0].focus();
+    }
+  });
+}
+
+function _removeFocusTrapFromDetailModal(modal) {
+  if (modal._focusTrapHandler) {
+    modal.removeEventListener('keydown', modal._focusTrapHandler);
+    delete modal._focusTrapHandler;
+  }
 }

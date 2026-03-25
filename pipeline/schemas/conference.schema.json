@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://porid.dev/schemas/conference.schema.json",
+  "title": "PORID Conference",
+  "description": "A conference or workshop tracked by the PORID pipeline.",
+  "type": "object",
+  "required": ["name"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Conference name (e.g. 'INFORMS Annual Meeting 2026')."
+    },
+    "dates": {
+      "type": "string",
+      "description": "Human-readable date range (e.g. 'October 18-21, 2026')."
+    },
+    "location": {
+      "type": "string",
+      "description": "Venue city/country (e.g. 'San Diego, CA, USA')."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Conference website URL."
+    },
+    "cfp_deadline": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "Call-for-papers deadline in YYYY-MM-DD format."
+    },
+    "format": {
+      "type": "string",
+      "enum": ["in-person", "virtual", "hybrid"],
+      "description": "Attendance format."
+    },
+    "cfp_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Direct link to the call for papers."
+    },
+    "topics": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Relevant topic areas."
+    },
+    "source": {
+      "type": "string",
+      "description": "Data source (e.g. 'config', 'wikicfp')."
+    }
+  },
+  "additionalProperties": true
+}

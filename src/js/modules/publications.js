@@ -198,7 +198,10 @@ function renderTable(items) {
 /**
  * Renders the view toggle buttons.
  */
-function renderViewToggle() {
+function renderViewToggle(filteredData) {
+  // ER-01: Reading progress stats
+  const progressHTML = buildReadingProgressHTML(filteredData);
+
   return `
     <div class="view-toggle" style="display:flex;align-items:center;gap:var(--space-sm);width:100%">
       <button class="view-toggle__btn ${viewMode === 'grid' ? 'active' : ''}" data-view="grid" aria-label="Grid view" title="Grid view">
@@ -210,12 +213,38 @@ function renderViewToggle() {
       <button class="view-toggle__btn ${viewMode === 'table' ? 'active' : ''}" data-view="table" aria-label="Table view" title="Table view">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="1" width="14" height="2" rx="0.5"/><rect x="1" y="5" width="14" height="1" rx="0.3" opacity="0.5"/><rect x="1" y="8" width="14" height="1" rx="0.3" opacity="0.5"/><rect x="1" y="11" width="14" height="1" rx="0.3" opacity="0.5"/><rect x="1" y="14" width="14" height="1" rx="0.3" opacity="0.5"/><rect x="5" y="1" width="0.5" height="14" opacity="0.3"/><rect x="10" y="1" width="0.5" height="14" opacity="0.3"/></svg>
       </button>
+      ${progressHTML}
       <select class="filter-select" id="exportBtn" style="margin-left:auto">
         <option value="">Export...</option>
         <option value="bibtex">BibTeX (.bib)</option>
         <option value="csv">CSV (.csv)</option>
         <option value="json">JSON (.json)</option>
       </select>
+    </div>
+  `;
+}
+
+/**
+ * ER-01: Builds reading progress bar HTML.
+ * Counts read/reading/unread across filtered publications.
+ */
+function buildReadingProgressHTML(data) {
+  if (!data || data.length === 0) return '';
+  let readCount = 0;
+  let readingCount = 0;
+  data.forEach(item => {
+    const status = getReadStatus(item.id);
+    if (status === 'read') readCount++;
+    else if (status === 'reading') readingCount++;
+  });
+  const total = data.length;
+  const pct = total > 0 ? Math.round((readCount / total) * 100) : 0;
+  return `
+    <div class="pub-progress" title="${readCount} read, ${readingCount} reading, ${total - readCount - readingCount} unread">
+      <div class="pub-progress__bar">
+        <div class="pub-progress__fill" style="width:${pct}%"></div>
+      </div>
+      <span class="pub-progress__label">${pct}% read</span>
     </div>
   `;
 }
@@ -284,7 +313,7 @@ function renderPage(container, data, filters) {
     return;
   }
 
-  const toggle = renderViewToggle();
+  const toggle = renderViewToggle(filtered);
 
   // Determine the visible slice for grid/list (table always shows all)
   const isTableMode = viewMode === 'table';

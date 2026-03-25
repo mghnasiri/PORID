@@ -27,6 +27,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
+  <!-- OpenSearch Descriptor (browser search integration) -->
+  <link rel="search" type="application/opensearchdescription+xml" title="PORID" href="opensearch.xml">
+
   <!-- RSS Feed -->
   <link rel="alternate" type="application/rss+xml" title="PORID — OR Intelligence Feed" href="data/feed.xml">
 
@@ -125,6 +128,12 @@
 </head>
 <body>
 
+  <!-- ====== MA-07: Skip to Content ====== -->
+  <a class="skip-link" href="#content">Skip to main content</a>
+
+  <!-- ====== MA-03: Aria-live status region for dynamic updates ====== -->
+  <div id="a11yStatus" class="a11y-status" aria-live="polite" aria-atomic="true"></div>
+
   <!-- ====== Navigation ====== -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <a href="#pulse" class="nav__brand">PORID</a>
@@ -140,7 +149,7 @@
       <li class="nav__tab" role="tab" aria-selected="false" data-tab="radar">Radar</li>
       <li class="nav__tab" role="tab" aria-selected="false" data-tab="toolkit">Toolkit</li>
       <li class="nav__more">
-        <span class="nav__more-trigger">More &#9662;</span>
+        <span class="nav__more-trigger" role="button" aria-label="Show more navigation tabs" aria-expanded="false" tabindex="0">More &#9662;</span>
         <ul class="nav__more-menu">
           <li class="nav__tab" role="tab" aria-selected="false" data-tab="publications">Publications</li>
           <li class="nav__tab" role="tab" aria-selected="false" data-tab="software">Software</li>
@@ -159,8 +168,17 @@
         <span>Search</span>
         <kbd>&#8984;K</kbd>
       </button>
+      <div class="a11y-controls" id="a11yControls">
+        <button class="a11y-controls__btn" data-scale="100" title="Font size 100%">A</button>
+        <button class="a11y-controls__btn" data-scale="125" title="Font size 125%">A+</button>
+        <button class="a11y-controls__btn" data-scale="150" title="Font size 150%">A++</button>
+        <button class="a11y-controls__btn a11y-controls__hc" id="hcToggle" title="Toggle high contrast" aria-label="Toggle high contrast mode">HC</button>
+      </div>
       <button class="nav__prefs" id="prefsBtn" aria-label="Preferences" title="Preferences">
         &#9881;
+      </button>
+      <button class="motion-toggle" id="motionToggle" aria-label="Toggle reduced motion" title="Toggle reduced motion">
+        &#9654;
       </button>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light/system mode">
         &#9789;

@@ -89,3 +89,50 @@ jobs:
       - name: Deploy to GitHub Pages
         if: steps.auto-commit.outputs.changes_detected == 'true'
         uses: actions/deploy-pages@v4
+
+      - name: Send failure notification email
+        if: failure()
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        run: |
+          python -c "
+          import smtplib, os, yaml
+          from email.mime.text import MIMEText
+          from pathlib import Path
+
+          user = os.environ.get('SMTP_USER', '')
+          pwd  = os.environ.get('SMTP_PASSWORD', '')
+          if not user or not pwd:
+              print('SMTP credentials not set, skipping failure email.')
+              exit(0)
+
+          # Load recipient from config
+          cfg = yaml.safe_load(Path('pipeline/config.yaml').read_text())
+          to = cfg.get('email', {}).get('recipient', '')
+          if not to or to == 'your-email@example.com':
+              print('No recipient configured, skipping failure email.')
+              exit(0)
+
+          run_url = f'https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'
+          body = f'''PORID daily pipeline failed.
+
+          Workflow: ${{ github.workflow }}
+          Run:      {run_url}
+          Branch:   ${{ github.ref_name }}
+          Trigger:  ${{ github.event_name }}
+
+          Check the run logs for details.
+          '''
+
+          msg = MIMEText(body, 'plain', 'utf-8')
+          msg['From']    = user
+          msg['To']      = to
+          msg['Subject'] = 'PORID Pipeline FAILED — ${{ github.run_id }}'
+
+          with smtplib.SMTP('smtp.gmail.com', 587, timeout=30) as s:
+              s.starttls()
+              s.login(user, pwd)
+              s.send_message(msg)
+          print(f'Failure notification sent to {to}')
+          "
