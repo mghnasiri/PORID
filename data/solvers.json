@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25T07:59:25.673975+00:00",
+  "generated_at": "2026-03-26T08:07:29.169632+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -211,8 +211,8 @@
         "rising-star"
       ],
       "recent_changes": "## Code changes\r\n\r\nFollowing PR [#2812](https://github.com/ERGO-Code/HiGHS/pull/2812),\r\nHiGHS can read LP files with keywords as constraint names.\r\n\r\nFollowing PR [#2818](https://github.com/ERGO-Code/",
-      "github_stars": 1548,
-      "github_open_issues": 159,
+      "github_stars": 1550,
+      "github_open_issues": 158,
       "github_recent_prs": [
         "Change scaling in HiPO",
         "HiPDLP cleanup",
@@ -257,7 +257,7 @@
         "academic"
       ],
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- fixed that parameters passed on as variadic arguments to `SCIPsolveNLP()` and `SCIPsolveNlpi()` were ignored when compiling with MS compilers without `-Zc:preprocessor`\r\n- ",
-      "github_stars": 574,
+      "github_stars": 575,
       "github_open_issues": 17,
       "github_recent_prs": [
         "Fix endianness issue in dtoa.cpp",
@@ -304,8 +304,8 @@
         "scheduling"
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_stars": 13268,
-      "github_open_issues": 87,
+      "github_stars": 13270,
+      "github_open_issues": 85,
       "github_recent_prs": [
         "cmake: graph fixup",
         "build(deps): bump bazel-contrib/setup-bazel from 0.18.0 to 0.19.0 in the github-actions group",
@@ -348,7 +348,7 @@
         "coin-or"
       ],
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_stars": 983,
+      "github_stars": 984,
       "github_open_issues": 162,
       "github_recent_prs": [
         "fix time measurement and time limit",
@@ -484,13 +484,13 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
       "github_stars": 2419,
-      "github_open_issues": 347,
+      "github_open_issues": 350,
       "github_recent_prs": [
+        "Use Hessian approximation in CyIpopt when grey-box without Hessian is present",
+        "docs: improve documentation for mutable vs immutable Params",
+        "docs: improve documentation for mutable vs immutable Params",
         "KKT Transform Code Refactor",
-        "GDP Hull transform: add handling for cases of constraint functions not well-defined at the origin",
-        "Performance enhancements for XpressDirect / XpressPersistent for large LPs / MIPs",
-        "PyROS Add caching for computed uncertain parameter bounds",
-        "Remove `pyomo.duality` and `pyomo.core.plugins.transform.model`"
+        "GDP Hull transform: add handling for cases of constraint functions not well-defined at the origin"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -527,14 +527,14 @@
         "julia"
       ],
       "recent_changes": "## JuMP v1.30.0\n\n[Diff since v1.29.4](https://github.com/jump-dev/JuMP.jl/compare/v1.29.4...v1.30.0)\n\n\n**Merged pull requests:**\n- Fix errors found by JET (#4108) (@odow)\n- [docs] clarify dual unbound",
-      "github_stars": 2418,
-      "github_open_issues": 16,
+      "github_stars": 2419,
+      "github_open_issues": 17,
       "github_recent_prs": [
+        "RFC: [docs] add a policy for AI assisted contributions",
         "[docs] update versions in Project.toml",
         "Update CODE_OF_CONDUCT to the NumFOCUS CoC",
         "Add a CI test for PackageCompiler.jl",
-        "Add a Lazy constraint tag for lazy constraints",
-        "Bump julia-actions/cache from 2 to 3"
+        "Add a Lazy constraint tag for lazy constraints"
       ]
     },
     {
@@ -635,13 +635,13 @@
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
       "github_stars": 6155,
-      "github_open_issues": 196,
+      "github_open_issues": 190,
       "github_recent_prs": [
+        "Allow array denominator in quad_over_lin",
         "added documentation for quad_over_root",
         "Add quad_over_root atom",
         "Fix coo_mul_elem broadcast-dimension bug (#3257)",
-        "Fix TypeError in DQCP lazy constraints when t.value is None",
-        "Delete .github/workflows/scorecards.yml"
+        "Fix TypeError in DQCP lazy constraints when t.value is None"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -759,14 +759,14 @@
         "constraint"
       ],
       "recent_changes": "This is the first quarterly maintenance update of Timefold Solver 1.x. With all forward development having shifted towards Timefold Solver 2.0.0 (to be released later this month), this release brings ",
-      "github_stars": 1608,
-      "github_open_issues": 74,
+      "github_stars": 1611,
+      "github_open_issues": 72,
       "github_recent_prs": [
-        "docs: hide partial pages",
-        "deps: bump com.diffplug.spotless:spotless-maven-plugin from 3.3.0 to 3.4.0 in the regular group",
+        "fix: handle null planning values in ValueTabuAcceptor",
+        "fix: handle null planning values in ValueTabuAcceptor",
+        "deps: bump org.springframework.boot:spring-boot-dependencies from 4.0.3 to 4.0.4 in the spring group",
         "deps: bump the quarkus group with 4 updates",
-        "fix: Handle null planning values in ValueTabuAcceptor",
-        "chore: misc changes"
+        "deps: bump org.openrewrite.recipe:rewrite-recipe-bom from 3.26.1 to 3.27.0 in the openrewrite group"
       ]
     }
   ],
