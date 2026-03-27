@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27T05:06:55.347325+00:00",
+  "generated_at": "2026-03-27T08:04:46.223916+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -78,7 +78,50 @@
         "industry-standard",
         "fastest"
       ],
+      "tco_estimate": {
+        "license_annual": -1,
+        "license_annual_display": "~$12,000+/year (contact sales)",
+        "integration_days": 1,
+        "support_cost": "Included with license",
+        "hidden_costs": [
+          "Server deployment requires separate Compute Server license",
+          "Annual renewal — prices may increase",
+          "Per-named-user — each developer needs a seat"
+        ]
+      },
       "update_source": "manual",
+      "migration_from": {
+        "cplex": "Similar API paradigm. Most Pyomo/JuMP models work with a one-line solver swap.",
+        "highs": "Drop-in for LP/MIP via Pyomo or PuLP. Expect significant speedup on large instances."
+      },
+      "migration_to": {
+        "highs": "If budget is the issue, HiGHS handles LP/MIP competitively up to medium scale.",
+        "cplex": "Similar commercial tier. Compare pricing — IBM may offer better enterprise deals."
+      },
+      "community_quotes": [
+        {
+          "text": "Best MIP solver bar none, but the pricing is brutal for small companies.",
+          "source": "r/OperationsResearch"
+        },
+        {
+          "text": "The academic license is amazing — full-featured, no variable limits. But the moment you graduate, it's gone.",
+          "source": "r/optimization"
+        }
+      ],
+      "used_by": [
+        {
+          "name": "Amazon",
+          "source": "Gurobi case studies"
+        },
+        {
+          "name": "FedEx",
+          "source": "Gurobi case studies"
+        },
+        {
+          "name": "Uber",
+          "source": "Gurobi case studies"
+        }
+      ],
       "pypi_monthly_downloads": -24
     },
     {
@@ -124,7 +167,7 @@
         "Budget-constrained (pricing is enterprise-oriented)",
         "Prefer open ecosystem without vendor lock-in"
       ],
-      "licensing_gotcha": "IBM has restructured CPLEX into 'Decision Optimization' suite. Academic license requires annual renewal through IBM Academic Initiative — it can lapse without warning. Some advanced features migrating to IBM Cloud (watsonx). DOcplex (Python API) version 2.31 is latest (Jan 2026).",
+      "licensing_gotcha": "IBM has slowed CPLEX release cadence significantly. Last major release was May 2024. Pricing through IBM sales only — expect enterprise-level pricing. Academic license available through IBM Academic Initiative but process can take weeks. If starting fresh, evaluate alternatives.",
       "quick_start": {
         "install": "pip install docplex",
         "code": "from docplex.mp.model import Model\n\nm = Model(name='example')\nx = m.continuous_var(name='x', ub=10)\nm.maximize(x)\nm.solve()\nprint(f\"Optimal: {x.solution_value}\")"
@@ -153,7 +196,40 @@
         "enterprise",
         "ibm"
       ],
+      "tco_estimate": {
+        "license_annual": -1,
+        "license_annual_display": "Enterprise pricing (contact IBM)",
+        "integration_days": 2,
+        "support_cost": "IBM support tiers",
+        "hidden_costs": [
+          "Complex enterprise procurement process",
+          "IBM Cloud Pak bundling may be required",
+          "Slow release cadence — last major update May 2024"
+        ]
+      },
       "update_source": "manual",
+      "migration_from": {
+        "gurobi": "Similar performance tier. Pyomo/JuMP models swap in one line."
+      },
+      "migration_to": {
+        "gurobi": "Most common CPLEX-to-Gurobi migration path. Similar API concepts."
+      },
+      "community_quotes": [
+        {
+          "text": "CPLEX is solid but IBM's sales process is painful. We waited 3 weeks for a quote.",
+          "source": "r/optimization"
+        }
+      ],
+      "used_by": [
+        {
+          "name": "IBM (internal)",
+          "source": "IBM documentation"
+        },
+        {
+          "name": "Major airlines (fleet scheduling)",
+          "source": "IBM case studies"
+        }
+      ],
       "pypi_monthly_downloads": -36
     },
     {
@@ -188,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1550,
+      "github_stars": 1551,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -232,7 +308,42 @@
         "rising-star",
         "free"
       ],
+      "tco_estimate": {
+        "license_annual": 0,
+        "license_annual_display": "Free (MIT)",
+        "integration_days": 1,
+        "support_cost": "Community (GitHub Issues)",
+        "hidden_costs": []
+      },
       "update_source": "github_api",
+      "migration_from": {
+        "cbc": "Similar API concepts through PuLP. Swap solver name in 1 line.",
+        "glpk": "Direct replacement for LP. Install highspy, change solver reference.",
+        "gurobi": "HiGHS handles LP/MIP but is slower on large instances. Good for cost reduction."
+      },
+      "migration_to": {
+        "gurobi": "If HiGHS is too slow on large MIP, Gurobi is the natural upgrade. Same modeling tools (Pyomo, PuLP) work with both."
+      },
+      "community_quotes": [
+        {
+          "text": "We migrated from CBC and got 3x speedup for free. HiGHS is the real deal for open-source LP/MIP.",
+          "source": "r/OperationsResearch"
+        },
+        {
+          "text": "HiGHS is now the default LP solver in SciPy. That's a massive endorsement.",
+          "source": "r/optimization"
+        }
+      ],
+      "used_by": [
+        {
+          "name": "SciPy (default LP solver)",
+          "source": "SciPy 1.9 release notes"
+        },
+        {
+          "name": "Google (via OR-Tools)",
+          "source": "OR-Tools documentation"
+        }
+      ],
       "recent_changes": "## Code changes\r\n\r\nFollowing PR [#2812](https://github.com/ERGO-Code/HiGHS/pull/2812),\r\nHiGHS can read LP files with keywords as constraint names.\r\n\r\nFollowing PR [#2818](https://github.com/ERGO-Code/",
       "github_open_issues": 159,
       "github_recent_prs": [
@@ -259,6 +370,7 @@
       "academic_details": "Fully open source since 2022 (Apache 2.0). Previously was ZIB Academic License (research-only). Now unrestricted.",
       "commercial_pricing_note": "Free. Apache 2.0 allows commercial use.",
       "problem_types": [
+        "LP",
         "MIP",
         "MINLP",
         "CIP"
@@ -312,7 +424,39 @@
         "extensible",
         "research"
       ],
+      "tco_estimate": {
+        "license_annual": 0,
+        "license_annual_display": "Free (Apache 2.0)",
+        "integration_days": 2,
+        "support_cost": "Community + ZIB support for partners",
+        "hidden_costs": [
+          "Steeper learning curve than LP-only solvers",
+          "PySCIPOpt wrapper has its own version compatibility"
+        ]
+      },
       "update_source": "github_api",
+      "migration_from": {
+        "baron": "SCIP handles MINLP with open-source license. Different solver strategies — test on your instances."
+      },
+      "migration_to": {
+        "gurobi": "For pure MIP, Gurobi will be faster. SCIP's strength is MINLP and extensibility."
+      },
+      "community_quotes": [
+        {
+          "text": "SCIP is the Swiss Army knife of optimization. Not the fastest on pure MIP, but unmatched for extensibility and MINLP.",
+          "source": "OR Stack Exchange"
+        }
+      ],
+      "used_by": [
+        {
+          "name": "Zuse Institute Berlin",
+          "source": "SCIP documentation"
+        },
+        {
+          "name": "Multiple universities worldwide",
+          "source": "SCIP annual report"
+        }
+      ],
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- fixed that parameters passed on as variadic arguments to `SCIPsolveNLP()` and `SCIPsolveNlpi()` were ignored when compiling with MS compilers without `-Zc:preprocessor`\r\n- ",
       "github_open_issues": 17,
       "github_recent_prs": [
@@ -354,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13277,
+      "github_stars": 13279,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -392,7 +536,38 @@
         "scheduling",
         "google"
       ],
+      "tco_estimate": {
+        "license_annual": 0,
+        "license_annual_display": "Free (Apache 2.0)",
+        "integration_days": 2,
+        "support_cost": "Community (GitHub, Stack Overflow)",
+        "hidden_costs": [
+          "Google may deprecate or change API without long notice",
+          "Not a traditional solver — different API paradigm"
+        ]
+      },
       "update_source": "github_api",
+      "migration_from": {},
+      "migration_to": {
+        "gurobi": "For pure MIP performance, use OR-Tools's pywraplp with Gurobi backend.",
+        "highs": "OR-Tools wraps HiGHS for LP/MIP. Good free alternative to its internal GLOP."
+      },
+      "community_quotes": [
+        {
+          "text": "CP-SAT is criminally underrated. For scheduling and assignment problems, it often beats MIP formulations.",
+          "source": "r/OperationsResearch"
+        }
+      ],
+      "used_by": [
+        {
+          "name": "Google (internal)",
+          "source": "Google Developers blog"
+        },
+        {
+          "name": "Lyft",
+          "source": "Conference talk"
+        }
+      ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
       "github_open_issues": 84,
       "github_recent_prs": [
@@ -469,7 +644,27 @@
         "legacy",
         "pulp-default"
       ],
+      "tco_estimate": {
+        "license_annual": 0,
+        "license_annual_display": "Free (EPL-2.0)",
+        "integration_days": 0.5,
+        "support_cost": "Community (COIN-OR mailing list)",
+        "hidden_costs": []
+      },
       "update_source": "github_api",
+      "migration_from": {
+        "glpk": "CBC is generally faster than GLPK. Same PuLP interface."
+      },
+      "migration_to": {
+        "highs": "HiGHS is faster than CBC on most LP/MIP instances. Same PuLP interface — one-line swap.",
+        "gurobi": "Significant speedup. PuLP/Pyomo models work with both."
+      },
+      "community_quotes": [
+        {
+          "text": "CBC is fine for prototyping and teaching, but if you need production speed, move to HiGHS or Gurobi.",
+          "source": "r/OperationsResearch"
+        }
+      ],
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
       "github_open_issues": 162,
       "github_recent_prs": [
@@ -553,6 +748,16 @@
         "cp",
         "financial-services"
       ],
+      "tco_estimate": {
+        "license_annual": -1,
+        "license_annual_display": "Enterprise pricing (contact FICO)",
+        "integration_days": 2,
+        "support_cost": "FICO support",
+        "hidden_costs": [
+          "Often bundled with FICO platform — standalone pricing unclear",
+          "Community edition available with variable limits"
+        ]
+      },
       "update_source": "manual"
     },
     {
@@ -629,6 +834,16 @@
         "cvxpy",
         "semidefinite"
       ],
+      "tco_estimate": {
+        "license_annual": -1,
+        "license_annual_display": "~$500-5,000/year (varies by use)",
+        "integration_days": 1,
+        "support_cost": "Included with license",
+        "hidden_costs": [
+          "Pricing tiers based on problem size",
+          "Free personal academic license available"
+        ]
+      },
       "update_source": "manual",
       "pypi_monthly_downloads": -4
     },
@@ -696,6 +911,16 @@
         "global-optimization",
         "non-convex"
       ],
+      "tco_estimate": {
+        "license_annual": -1,
+        "license_annual_display": "~$2,000-8,000/year (via GAMS/AMPL)",
+        "integration_days": 3,
+        "support_cost": "Email support",
+        "hidden_costs": [
+          "Requires GAMS or AMPL license separately",
+          "Total cost = BARON + modeling language license"
+        ]
+      },
       "update_source": "manual"
     },
     {
@@ -715,6 +940,9 @@
       "problem_types": [
         "MIP",
         "NLP",
+        "MINLP",
+        "VRP",
+        "CP",
         "Scheduling",
         "Routing",
         "Hybrid"
@@ -764,6 +992,16 @@
         "scheduling",
         "routing"
       ],
+      "tco_estimate": {
+        "license_annual": -1,
+        "license_annual_display": "~$5,000-15,000/year",
+        "integration_days": 2,
+        "support_cost": "Included",
+        "hidden_costs": [
+          "Proprietary modeling language (LSP) — steep learning curve",
+          "Smaller community than mainstream solvers"
+        ]
+      },
       "update_source": "manual"
     },
     {
@@ -829,6 +1067,16 @@
         "legacy",
         "abandoned"
       ],
+      "tco_estimate": {
+        "license_annual": 0,
+        "license_annual_display": "Free (GPL-3.0)",
+        "integration_days": 0.5,
+        "support_cost": "Community (mailing list)",
+        "hidden_costs": [
+          "GPL license — may require open-sourcing your code if distributing",
+          "No active development since 2020"
+        ]
+      },
       "update_source": "manual"
     },
     {
@@ -883,7 +1131,7 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6156,
+      "github_stars": 6157,
       "github_open_issues": 190,
       "github_recent_prs": [
         "Allow array denominator in quad_over_lin",
@@ -1072,13 +1320,13 @@
       ],
       "recent_changes": "This is the first quarterly maintenance update of Timefold Solver 1.x. With all forward development having shifted towards Timefold Solver 2.0.0 (to be released later this month), this release brings ",
       "github_stars": 1611,
-      "github_open_issues": 72,
+      "github_open_issues": 73,
       "github_recent_prs": [
+        "perf: improve runtime performance of exhaustive search",
         "fix: handle null planning values in ValueTabuAcceptor",
         "fix: handle null planning values in ValueTabuAcceptor",
         "deps: bump org.springframework.boot:spring-boot-dependencies from 4.0.3 to 4.0.4 in the spring group",
-        "deps: bump the quarkus group with 4 updates",
-        "deps: bump org.openrewrite.recipe:rewrite-recipe-bom from 3.26.1 to 3.27.0 in the openrewrite group"
+        "deps: bump the quarkus group with 4 updates"
       ]
     },
     {
@@ -1136,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
-      "github_stars": 2420,
+      "github_stars": 2421,
       "github_open_issues": 349,
       "github_recent_prs": [
         "Improved `ConstraintData.equality`, relational expression generation",
