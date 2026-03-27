@@ -1,0 +1,334 @@
+{
+  "date": "2026-03-27",
+  "generated_at": "2026-03-27T05:06:55.508210+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2603.25517",
+      "title": "NERO-Net: A Neuroevolutionary Approach for the Design of Adversarially Robust CNNs",
+      "authors": [
+        "Inês Valentim",
+        "Nuno Antunes",
+        "Nuno Lourenço"
+      ],
+      "abstract": "Neuroevolution automates the complex task of neural network design but often ignores the inherent adversarial fragility of evolved models which is a barrier to adoption in safety-critical scenarios. While robust training methods have received significant attention, the design of architectures exhibiting intrinsic robustness remains largely unexplored. In this paper, we propose NERO-Net, a neuroevolutionary approach to design convolutional neural networks better equipped to resist adversarial attacks. Our search strategy isolates architectural influence on robustness by avoiding adversarial training during the evolutionary loop. As such, our fitness function promotes candidates that, even trained with standard (non-robust) methods, achieve high post-attack accuracy without sacrificing the accuracy on clean samples. We assess NERO-Net on CIFAR-10 with a specific focus on $L_\\infty$-robustness. In particular, the fittest individual emerged from evolutionary search with 33% accuracy against FGSM, used as an efficient estimator for robustness during the search phase, while maintaining 87% clean accuracy. Further standard training of this individual boosted these metrics to 47% adversarial and 93% clean accuracy, suggesting inherent architectural robustness. Adversarial training brings the overall accuracy of the model up to 40% against AutoAttack.",
+      "date": "2026-03-26",
+      "source": "arXiv",
+      "source_detail": "cs.NE",
+      "url": "http://arxiv.org/abs/2603.25517v1",
+      "tags": [
+        "cs.NE",
+        "metaheuristics",
+        "network-optimization",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.25517",
+      "arxiv_id": "2603.25517v1",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2603.25332",
+      "title": "DRL-Based Spectrum Sharing for RIS-Aided Local High-Quality Wireless Networks",
+      "authors": [
+        "Hamid Reza Hashempour",
+        "Mina Khadem",
+        "Eduard A. Jorswieck"
+      ],
+      "abstract": "This paper investigates a smart spectrum-sharing framework for reconfigurable intelligent surface (RIS)-aided local high-quality wireless networks (LHQWNs) within a mobile network operator (MNO) ecosystem. Although RISs are often considered potentially harmful due to interference, this work shows that properly controlled RISs can enhance the quality of service (QoS). The proposed system enables temporary spectrum access for multiple vertical service providers (VSPs) by dynamically allocating radio resources according to traffic demand. The spectrum is divided into dedicated subchannels assigned to individual VSPs and reusable subchannels shared among multiple VSPs, while RIS is employed to improve propagation conditions. We formulate a multi-VSP utility maximization problem that jointly optimizes subchannel assignment, transmit power, and RIS phase configuration while accounting for spectrum access costs, RIS leasing costs, and QoS constraints. The resulting mixed-integer non-linear program (MINLP) is intractable using conventional optimization methods. To address this challenge, the problem is modeled as a Markov decision process (MDP) and solved using deep reinforcement learning (DRL). Specifically, deep deterministic policy gradient (DDPG) and soft actor-critic (SAC) algorithms are developed and compared. Simulation results show that SAC outperforms DDPG in convergence speed, stability, and achievable utility, reaching up to 96% of the exhaustive search benchmark and demonstrating the potential of RIS to improve overall utility in multi-VSP scenarios.",
+      "date": "2026-03-26",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2603.25332v1",
+      "tags": [
+        "eess.SY",
+        "integer-programming",
+        "stochastic",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.25332",
+      "arxiv_id": "2603.25332v1",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07126-9",
+      "title": "Market structure, financial distress, and input prices in the Chinese banking industry: a novel 2-stage total partial productivity approach",
+      "authors": [
+        "Wanke, P.",
+        "Antunes, J.",
+        "Tan, Y.",
+        "Roubaud, D."
+      ],
+      "abstract": "Abstract\n                  This study introduces a novel Two-Stage Total Partial Productivity Data Envelopment Analysis (2S-TPP-DEA) model to evaluate the efficiency of the Chinese banking sector. Traditional DEA and network DEA models, while useful for analyzing multi-stage processes, often oversimplify the relationships between inputs, intermediate outputs, and final outputs by aggregating data and assuming fixed functional relationships. Our proposed 2S-TPP-DEA model addresses these limitations by evaluating how effectively each input contributes to outputs at different stages of banking operations, rather than simply aggregating them. This approach offers a clearer, more realistic picture of efficiency—especially across banks that differ in size, structure, and market conditions. In addition, the model incorporates key contextual factors such as market structure, input prices, and financial distress, offering a more comprehensive and realistic understanding of efficiency in diverse banking environments. The findings highlight significant differences in efficiency across ownership structures, with state-owned banks benefiting from government support, while joint-stock banks show higher responsiveness to market forces. These insights provide valuable guidance for policymakers and banking managers in optimizing strategies to improve efficiency and sustain growth in the face of economic pressures. By filling a gap in existing methodologies, this research contributes to the ongoing discourse on efficiency measurement in complex financial systems.",
+      "date": "2026-03-26",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07126-9",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07126-9",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2603.25490",
+      "title": "A Framework for Eliminating Paradoxical Orders in European Day-Ahead Electricity Markets through Mixed-Integer Linear Programming Strong Duality",
+      "authors": [
+        "Zhen Wang",
+        "Mohammad Reza Hesamzadeh",
+        "Shudian Zhao",
+        "Jan Kronqvist"
+      ],
+      "abstract": "The presence of integer variables in the European day-ahead electricity market renders the social welfare maximization problem non-convex and non-differentiable, making classical marginal pricing theoretically inconsistent. Existing pricing mechanisms often struggle to balance revenue adequacy with incentive compatibility, typically relying on discriminatory uplift payments or suffering from weak duality. Leveraging the Augmented Lagrangian Duality (ALD) framework, which establishes strong duality for Mixed-Integer Linear Programming (MILP), this paper proposes a novel ALD pricing mechanism. We analytically prove that this mechanism is inherently incentive-compatible, aligning centralized dispatch with individual incentives without requiring side payments. Notably, we demonstrate that the ALD price signals intrinsically eliminate Paradoxically Rejected Orders (PROs) and Paradoxically Accepted Orders (PAOs) for supply orders. For the demand side, a sufficient condition is introduced to further guarantee revenue adequacy, resulting in a transparent and financially consistent settlement system. To ensure computational tractability, we modify the Surrogate Absolute-Value Lagrangian Relaxation (SAVLR) method to efficiently compute the exact penalty coefficients and optimal Lagrangian multipliers. Numerical experiments on illustrative examples and the Nordic 12-area electricity market model confirm the superior economic properties of the ALD pricing mechanism and the tractability of the modified SAVLR algorithm.",
+      "date": "2026-03-26",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2603.25490v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.25490",
+      "arxiv_id": "2603.25490v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2603.25657",
+      "title": "Instance-optimal stochastic convex optimization: Can we improve upon sample-average and robust stochastic approximation?",
+      "authors": [
+        "Liwei Jiang",
+        "Ashwin Pananjady"
+      ],
+      "abstract": "We study the unconstrained minimization of a smooth and strongly convex population loss function under a stochastic oracle that introduces both additive and multiplicative noise; this is a canonical and widely-studied setting that arises across operations research, signal processing, and machine learning. We begin by showing that standard approaches such as sample average approximation and robust (or averaged) stochastic approximation can lead to suboptimal -- and in some cases arbitrarily poor -- performance with realistic finite sample sizes. In contrast, we demonstrate that a carefully designed variance reduction strategy, which we term VISOR for short, can significantly outperform these approaches while using the same sample size. Our upper bounds are complemented by finite-sample, information-theoretic local minimax lower bounds, which highlight fundamental, instance-dependent factors that govern the performance of any estimator. Taken together, these results demonstrate that an accelerated variant of VISOR is instance-optimal, achieving the best possible sample complexity up to logarithmic factors while also attaining optimal oracle complexity. We apply our theory to generalized linear models and improve upon classical results. In particular, we obtain the best-known non-asymptotic, instance-dependent generalization error bounds for stochastic methods, even in linear regression.",
+      "date": "2026-03-26",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2603.25657v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.25657",
+      "arxiv_id": "2603.25657v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2603.25350",
+      "title": "Optimal Dividend, Reinsurance, and Capital Injection for Collaborating Business Lines under Model Uncertainty",
+      "authors": [
+        "Tim J. Boonen",
+        "Engel John C. Dela Vega",
+        "Len Patrick Dominic M. Garces"
+      ],
+      "abstract": "This paper considers an insurer with two collaborating business lines that faces three critical decisions: (1) dividend payout, (2) reinsurance coverage, and (3) capital injection between the lines, in the presence of model uncertainty. The insurer considers the reference model to be an approximation of the true model, and each line has its own robustness preference. The reserve level of each line is modeled using a diffusion process. The objective is to obtain a robust strategy that maximizes the expected weighted sum of discounted dividends until the first ruin time, while incorporating a penalty term for the distortion between the reference and alternative models in the worst-case scenario. We completely solve this problem and obtain the value function and optimal (equilibrium) strategies in closed form. We show that the optimal dividend-capital injection strategy is a barrier strategy. The optimal proportion of risk ceded to the reinsurer and the deviation of the worst-case model from the reference model are decreasing with respect to the aggregate reserve level. Finally, numerical examples are presented to show the impact of the model parameters and ambiguity aversion on the optimal strategies.",
+      "date": "2026-03-26",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2603.25350v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.25350",
+      "arxiv_id": "2603.25350v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2603.25221",
+      "title": "Gap Safe Screening Rules for Fast Training of Robust Support Vector Machines under Feature Noise",
+      "authors": [
+        "Tan-Hau Nguyen",
+        "Thu-Le Tran",
+        "Kien Trung Nguyen"
+      ],
+      "abstract": "Robust Support Vector Machines (R-SVMs) address feature noise by adopting a worst-case robust formulation that explicitly incorporates uncertainty sets into training. While this robustness improves reliability, it also leads to increased computational cost. In this work, we develop safe sample screening rules for R-SVMs that reduce the training complexity without affecting the optimal solution. To the best of our knowledge, this is the first study to apply safe screening techniques to worst-case robust models in supervised machine learning. Our approach safely identifies training samples whose uncertainty sets are guaranteed to lie entirely on either side of the margin hyperplane, thereby reducing the problem size and accelerating optimization. Owing to the nonstandard structure of R-SVMs, the proposed screening rules are derived from the Lagrangian duality rather than the Fenchel-Rockafellar duality commonly used in recent methods. Based on this analysis, we first establish an ideal screening rule, and then derive a practical rule by adapting GAP-based safe regions to the robust setting. Experiments demonstrate that the proposed method significantly reduces training time while preserving classification accuracy.",
+      "date": "2026-03-26",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2603.25221v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.25221",
+      "arxiv_id": "2603.25221v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2603.25719",
+      "title": "Agent Factories for High Level Synthesis: How Far Can General-Purpose Coding Agents Go in Hardware Optimization?",
+      "authors": [
+        "Abhishek Bhandwaldar",
+        "Mihir Choudhury",
+        "Ruchir Puri",
+        "Akash Srivastava"
+      ],
+      "abstract": "We present an empirical study of how far general-purpose coding agents -- without hardware-specific training -- can optimize hardware designs from high-level algorithmic specifications. We introduce an agent factory, a two-stage pipeline that constructs and coordinates multiple autonomous optimization agents.   In Stage~1, the pipeline decomposes a design into sub-kernels, independently optimizes each using pragma and code-level transformations, and formulates an Integer Linear Program (ILP) to assemble globally promising configurations under an area constraint. In Stage~2, it launches $N$ expert agents over the top ILP solutions, each exploring cross-function optimizations such as pragma recombination, loop fusion, and memory restructuring that are not captured by sub-kernel decomposition.   We evaluate the approach on 12 kernels from HLS-Eval and Rodinia-HLS using Claude Code (Opus~4.5/4.6) with AMD Vitis HLS. Scaling from 1 to 10 agents yields a mean $8.27\\times$ speedup over baseline, with larger gains on harder benchmarks: streamcluster exceeds $20\\times$ and kmeans reaches approximately $10\\times$. Across benchmarks, agents consistently rediscover known hardware optimization patterns without domain-specific training, and the best designs often do not originate from top-ranked ILP candidates, indicating that global optimization exposes improvements missed by sub-kernel search. These results establish agent scaling as a practical and effective axis for HLS optimization.",
+      "date": "2026-03-26",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2603.25719v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.25719",
+      "arxiv_id": "2603.25719v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2603.25607",
+      "title": "DeepFAN, a transformer-based deep learning model for human-artificial intelligence collaborative assessment of incidental pulmonary nodules in CT scans: a multi-reader, multi-case trial",
+      "authors": [
+        "Zhenchen Zhu",
+        "Ge Hu",
+        "Weixiong Tan",
+        "Kai Gao",
+        "Chao Sun",
+        "Zhen Zhou",
+        "Kepei Xu",
+        "Wei Han",
+        "Meixia Shang",
+        "Xiaoming Qiu",
+        "Yiqing Tan",
+        "Jinhua Wang",
+        "Zhoumeng Ying",
+        "Li Peng",
+        "Wei Song",
+        "Lan Song",
+        "Zhengyu Jin",
+        "Nan Hong",
+        "Yizhou Yu"
+      ],
+      "abstract": "The widespread adoption of CT has notably increased the number of detected lung nodules. However, current deep learning methods for classifying benign and malignant nodules often fail to comprehensively integrate global and local features, and most of them have not been validated through clinical trials. To address this, we developed DeepFAN, a transformer-based model trained on over 10K pathology-confirmed nodules and further conducted a multi-reader, multi-case clinical trial to evaluate its efficacy in assisting junior radiologists. DeepFAN achieved diagnostic area under the curve (AUC) of 0.939 (95% CI 0.930-0.948) on an internal test set and 0.954 (95% CI 0.934-0.973) on the clinical trial dataset involving 400 cases across three independent medical institutions. Explainability analysis indicated higher contributions from global than local features. Twelve readers' average performance significantly improved by 10.9% (95% CI 8.3%-13.5%) in AUC, 10.0% (95% CI 8.9%-11.1%) in accuracy, 7.6% (95% CI 6.1%-9.2%) in sensitivity, and 12.6% (95% CI 10.9%-14.3%) in specificity (P<0.001 for all). Nodule-level inter-reader diagnostic consistency improved from fair to moderate (overall k: 0.313 vs. 0.421; P=0.019). In conclusion, DeepFAN effectively assisted junior radiologists and may help homogenize diagnostic quality and reduce unnecessary follow-up of indeterminate pulmonary nodules. Chinese Clinical Trial Registry: ChiCTR2400084624.",
+      "date": "2026-03-26",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2603.25607v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.25607",
+      "arxiv_id": "2603.25607v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2603.25524",
+      "title": "CHIRP dataset: towards long-term, individual-level, behavioral monitoring of bird populations in the wild",
+      "authors": [
+        "Alex Hoi Hang Chan",
+        "Neha Singhal",
+        "Onur Kocahan",
+        "Andrea Meltzer",
+        "Saverio Lubrano",
+        "Miyako H. Warrington",
+        "Michel Griesser",
+        "Fumihiro Kano",
+        "Hemal Naik"
+      ],
+      "abstract": "Long-term behavioral monitoring of individual animals is crucial for studying behavioral changes that occur over different time scales, especially for conservation and evolutionary biology. Computer vision methods have proven to benefit biodiversity monitoring, but automated behavior monitoring in wild populations remains challenging. This stems from the lack of datasets that cover a range of computer vision tasks necessary to extract biologically meaningful measurements of individual animals. Here, we introduce such a dataset (CHIRP) with a new method (CORVID) for individual re-identification of wild birds. The CHIRP (Combining beHaviour, Individual Re-identification and Postures) dataset is curated from a long-term population of wild Siberian jays studied in Swedish Lapland, supporting re-identification (re-id), action recognition, 2D keypoint estimation, object detection, and instance segmentation. In addition to traditional task-specific benchmarking, we introduce application-specific benchmarking with biologically relevant metrics (feeding rates, co-occurrence rates) to evaluate the performance of models in real-world use cases. Finally, we present CORVID (COlouR-based Video re-ID), a novel pipeline for individual identification of birds based on the segmentation and classification of colored leg rings, a widespread approach for visual identification of individual birds. CORVID offers a probability-based id tracking method by matching the detected combination of color rings with a database. We use application-specific benchmarking to show that CORVID outperforms state-of-the-art re-id methods. We hope this work offers the community a blueprint for curating real-world datasets from ethically approved biological studies to bridge the gap between computer vision research and biological applications.",
+      "date": "2026-03-26",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2603.25524v1",
+      "tags": [
+        "cs.CV",
+        "metaheuristics",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.25524",
+      "arxiv_id": "2603.25524v1",
+      "score": 50.0
+    }
+  ],
+  "software": [
+    {
+      "id": "gh-cvxpy-cvxpy-1.8.2",
+      "name": "CVXPY",
+      "version": "1.8.2",
+      "date": "2026-03-22",
+      "changelog": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 term for indefinite P (#3150)\n- Fix backward() setting param.gradient to float 0.0 instead of zero ndarray (#3159)\n- Fix Dgp2Dcp.param_backward KeyError when log-param not in dparams (#3164)\n- Fix reshape._infer_shape() for N-D shapes with -1 (#3165)\n- Reject sparse/diag variables with pos/neg attribu…",
+      "url": "https://github.com/cvxpy/cvxpy/releases/tag/v1.8.2",
+      "source": "GitHub",
+      "tags": [
+        "library",
+        "general-or"
+      ],
+      "type": "software",
+      "score": 20.0
+    }
+  ],
+  "deadlines": [
+    {
+      "id": "cordis-101153187",
+      "title": "[HORIZON-MSCA-2023-PF-01] NeurExCo: Synergizing Neural Network Theory and Combinatorial Optimization via Extension Complexity",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101153187",
+      "deadline": "2026-03-31",
+      "date": "2026-03-24",
+      "project_start": "2024-04-01",
+      "project_end": "2026-03-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "ml-for-or"
+      ],
+      "description": "Artificial intelligence is changing our lives. Artificial neural networks are present and entering various fields of modern technology such as medicine, engineering, education and many more. Even a small-scale theoretical understanding of why and how neural networks succeed in practice can have a considerable impact on the future development of such technologies.\n\n            In contrast, combinatorial optimization is a well-established discipline at the intersection of mathematics and computer ",
+      "score": 35.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "cordis-101153187",
+      "title": "[HORIZON-MSCA-2023-PF-01] NeurExCo: Synergizing Neural Network Theory and Combinatorial Optimization via Extension Complexity",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101153187",
+      "deadline": "2026-03-31",
+      "date": "2026-03-24",
+      "project_start": "2024-04-01",
+      "project_end": "2026-03-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "ml-for-or"
+      ],
+      "description": "Artificial intelligence is changing our lives. Artificial neural networks are present and entering various fields of modern technology such as medicine, engineering, education and many more. Even a small-scale theoretical understanding of why and how neural networks succeed in practice can have a considerable impact on the future development of such technologies.\n\n            In contrast, combinatorial optimization is a well-established discipline at the intersection of mathematics and computer ",
+      "score": 35.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 1,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 12
+  }
+}
