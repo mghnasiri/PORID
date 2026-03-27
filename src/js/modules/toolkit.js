@@ -16,6 +16,7 @@ const SUB_TABS = [
   { key: 'benchmarks', label: 'Benchmarks', icon: '\uD83D\uDCCA' },
   { key: 'software', label: 'Software', icon: '\uD83D\uDCE6' },
   { key: 'tools', label: 'Modeling Tools', icon: '\uD83D\uDCDD' },
+  { key: 'licensing', label: 'Licensing', icon: '\uD83D\uDCB0' },
 ];
 
 /**
@@ -64,6 +65,17 @@ export function render(container, allData, sub) {
   const contentDiv = document.createElement('div');
   contentDiv.className = 'toolkit-view__content';
 
+  // Check for solver detail sub-route: #toolkit/solvers/{id}
+  const hashParts = (window.location.hash.replace('#', '') || '').split('/');
+  if (hashParts[1] === 'solvers' && hashParts[2]) {
+    import('../views/solver-detail.js').then(mod => {
+      mod.render(contentDiv, hashParts[2], allData);
+    });
+    view.appendChild(contentDiv);
+    container.appendChild(view);
+    return;
+  }
+
   switch (activeSub) {
     case 'solvers':
       buildSolvers(solvers, contentDiv, allData.decisionRules);
@@ -76,6 +88,9 @@ export function render(container, allData, sub) {
       break;
     case 'tools':
       buildModelingTools(allData.modelingTools, allData.compatibilityMatrix, contentDiv);
+      break;
+    case 'licensing':
+      buildLicensingGuide(allData, contentDiv);
       break;
     default:
       buildOverview(allData, contentDiv);
@@ -93,6 +108,42 @@ function buildOverview(allData, container) {
 
   const overview = document.createElement('div');
   overview.className = 'toolkit-overview';
+
+  // G40: Quick Answer hero
+  const qaSection = document.createElement('section');
+  qaSection.className = 'quick-answer';
+  const qaH1 = document.createElement('h2');
+  qaH1.textContent = 'What are you optimizing?';
+  qaSection.appendChild(qaH1);
+  const qaP = document.createElement('p');
+  qaP.textContent = 'Click your problem type for an instant solver recommendation.';
+  qaSection.appendChild(qaP);
+
+  const qaCards = document.createElement('div');
+  qaCards.className = 'qa-cards';
+
+  const qaData = [
+    { href: '#toolkit/solvers?problem_type=mip', title: 'Linear / Mixed-Integer', desc: 'LP, MIP, ILP' },
+    { href: '#toolkit/solvers?problem_type=minlp', title: 'Nonlinear', desc: 'NLP, MINLP, QP' },
+    { href: '#toolkit/solvers?problem_type=cp', title: 'Constraint Programming', desc: 'Scheduling, Assignment' },
+    { href: '#toolkit/solvers?problem_type=vrp', title: 'Vehicle Routing', desc: 'TSP, VRP, CVRP' },
+    { href: '#toolkit/solvers?problem_type=sdp', title: 'Convex / Conic', desc: 'SDP, SOCP' },
+    { href: '#toolkit/solvers?budget=free', title: 'I need it free', desc: 'Open-source solvers only' },
+  ];
+  qaData.forEach(d => {
+    const a = document.createElement('a');
+    a.href = d.href;
+    a.className = 'qa-card' + (d.title.includes('free') ? ' qa-highlight' : '');
+    const h3 = document.createElement('h3');
+    h3.textContent = d.title;
+    a.appendChild(h3);
+    const p = document.createElement('p');
+    p.textContent = d.desc;
+    a.appendChild(p);
+    qaCards.appendChild(a);
+  });
+  qaSection.appendChild(qaCards);
+  overview.appendChild(qaSection);
 
   // Solver section
   const solverSection = buildSectionCard(
@@ -355,27 +406,7 @@ function buildSolvers(solversData, container, decisionRules) {
     dh.render();
   }
 
-  // Wizard filter callback — will be wired after table is built
   let tableBody = null;
-
-  buildSolverWizard(solversData, container, (matchingIds, isFiltering) => {
-    if (!tableBody) return;
-    const rows = tableBody.querySelectorAll('.solver-row');
-    rows.forEach(row => {
-      const id = row.dataset.solverId;
-      if (!isFiltering) {
-        row.classList.remove('solver-row--dimmed', 'solver-row--highlighted');
-        return;
-      }
-      if (matchingIds.includes(id)) {
-        row.classList.add('solver-row--highlighted');
-        row.classList.remove('solver-row--dimmed');
-      } else {
-        row.classList.add('solver-row--dimmed');
-        row.classList.remove('solver-row--highlighted');
-      }
-    });
-  });
 
   /* ── VD-05: Comparison bar (hidden until 2-4 solvers checked) ── */
   const compareBar = document.createElement('div');
@@ -525,9 +556,13 @@ function buildSolvers(solversData, container, decisionRules) {
     // Name
     const tdName = document.createElement('td');
     tdName.className = 'solver-row__name';
+    const nameLink = document.createElement('a');
+    nameLink.href = `#toolkit/solvers/${s.id}`;
+    nameLink.className = 'solver-name-link';
     const nameStrong = document.createElement('strong');
     nameStrong.textContent = s.name;
-    tdName.appendChild(nameStrong);
+    nameLink.appendChild(nameStrong);
+    tdName.appendChild(nameLink);
     if (s.vendor) {
       const vendor = document.createElement('span');
       vendor.className = 'solver-row__vendor';
@@ -563,6 +598,23 @@ function buildSolvers(solversData, container, decisionRules) {
     actLabel.className = 'solver-activity-label';
     actLabel.textContent = activity.tier === 'active' ? 'Active' : activity.tier === 'moderate' ? 'Moderate' : activity.tier === 'stale' ? 'Stale' : '?';
     tdActivity.appendChild(actLabel);
+    // H47: Health warning for old projects
+    if (s.release_date) {
+      const daysSince = Math.floor((new Date() - new Date(s.release_date)) / 86400000);
+      if (daysSince > 730) {
+        const warn = document.createElement('span');
+        warn.className = 'health-warning health-warning--critical';
+        warn.textContent = 'Unmaintained';
+        warn.title = `No release in ${Math.floor(daysSince / 365)}+ years`;
+        tdActivity.appendChild(warn);
+      } else if (daysSince > 365) {
+        const warn = document.createElement('span');
+        warn.className = 'health-warning health-warning--warning';
+        warn.textContent = 'Slow';
+        warn.title = 'No release in over a year';
+        tdActivity.appendChild(warn);
+      }
+    }
     tr.appendChild(tdActivity);
 
     // License
@@ -701,6 +753,9 @@ function buildSolvers(solversData, container, decisionRules) {
 
   // VD-02: Coverage Heatmap
   buildCoverageHeatmap(solversData, container);
+
+  buildCostPerformanceChart(solversData, container);
+  buildPerformanceCalculator(container);
 }
 
 /**
@@ -773,7 +828,14 @@ function buildCoverageHeatmap(solversData, container) {
       row.appendChild(tdName);
       HEATMAP_PROBLEM_TYPES.forEach(pt => {
         const td = document.createElement('td');
-        const supported = (s.problem_types || []).includes(pt);
+        const types = s.problem_types || [];
+        const TYPE_ALIASES = {
+          'VRP': ['VRP', 'Routing'],
+          'CP': ['CP', 'Scheduling', 'CIP'],
+          'MINLP': ['MINLP', 'NLP'],
+        };
+        const aliases = TYPE_ALIASES[pt] || [pt];
+        const supported = aliases.some(a => types.includes(a));
         td.className = supported ? 'solver-heatmap__cell solver-heatmap__cell--yes' : 'solver-heatmap__cell solver-heatmap__cell--no';
         td.title = supported ? `${s.name}: supports ${pt}` : `${s.name}: no ${pt}`;
         row.appendChild(td);
@@ -786,6 +848,233 @@ function buildCoverageHeatmap(solversData, container) {
 
   renderHeatmap();
   section.appendChild(tableWrap);
+  container.appendChild(section);
+}
+
+function buildCostPerformanceChart(solversData, container) {
+  const solvers = solversData.solvers;
+  const section = document.createElement('section');
+  section.className = 'solver-section';
+  const h2 = document.createElement('h2');
+  h2.textContent = 'Performance vs. Cost';
+  section.appendChild(h2);
+  const subtitle = document.createElement('p');
+  subtitle.className = 'chart-subtitle';
+  subtitle.textContent = 'Higher is better performance. Left is cheaper. Green = open source.';
+  section.appendChild(subtitle);
+
+  const width = 700, height = 400, padding = 60;
+  const data = solvers.filter(s => s.benchmark_tier || s.open_source !== undefined).map(s => {
+    const tier = (s.benchmark_tier || '').includes('Tier 1') ? 3 : (s.benchmark_tier || '').includes('Tier 2') ? 2 : 1;
+    let cost = 0;
+    if (!s.open_source) cost = s.id === 'gurobi' ? 12000 : s.id === 'cplex' ? 10000 : s.id === 'mosek' ? 2500 : s.id === 'baron' ? 5000 : s.id === 'hexaly' ? 10000 : s.id === 'xpress' ? 8000 : 5000;
+    return { name: s.name.split(' ')[0], id: s.id, cost, tier, open_source: s.open_source };
+  }).filter(d => !['pyomo','jump','cvxpy','pulp','scipy','ampl','gams'].includes(d.id));
+
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(svgNS, 'svg');
+  svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+  svg.setAttribute('class', 'cost-perf-chart');
+  svg.style.width = '100%';
+  svg.style.maxWidth = '700px';
+
+  // Axes
+  const xAxis = document.createElementNS(svgNS, 'line');
+  xAxis.setAttribute('x1', padding); xAxis.setAttribute('y1', height - padding);
+  xAxis.setAttribute('x2', width - padding); xAxis.setAttribute('y2', height - padding);
+  xAxis.setAttribute('stroke', '#8892B0'); xAxis.setAttribute('stroke-opacity', '0.3');
+  svg.appendChild(xAxis);
+
+  const yAxis = document.createElementNS(svgNS, 'line');
+  yAxis.setAttribute('x1', padding); yAxis.setAttribute('y1', padding);
+  yAxis.setAttribute('x2', padding); yAxis.setAttribute('y2', height - padding);
+  yAxis.setAttribute('stroke', '#8892B0'); yAxis.setAttribute('stroke-opacity', '0.3');
+  svg.appendChild(yAxis);
+
+  // Labels
+  const xLabel = document.createElementNS(svgNS, 'text');
+  xLabel.setAttribute('x', width / 2); xLabel.setAttribute('y', height - 10);
+  xLabel.setAttribute('text-anchor', 'middle'); xLabel.setAttribute('fill', '#8892B0');
+  xLabel.setAttribute('font-size', '12');
+  xLabel.textContent = 'Annual License Cost →';
+  svg.appendChild(xLabel);
+
+  // Y ticks
+  ['Tier 3', 'Tier 2', 'Tier 1'].forEach((label, i) => {
+    const t = document.createElementNS(svgNS, 'text');
+    const y = height - padding - ((i + 1) / 3) * (height - 2 * padding);
+    t.setAttribute('x', padding - 10); t.setAttribute('y', y + 4);
+    t.setAttribute('text-anchor', 'end'); t.setAttribute('fill', '#8892B0');
+    t.setAttribute('font-size', '11');
+    t.textContent = label;
+    svg.appendChild(t);
+  });
+
+  // X ticks
+  ['$0', '~$5K', '~$10K', '$15K+'].forEach((label, i) => {
+    const t = document.createElementNS(svgNS, 'text');
+    const x = padding + (i / 3) * (width - 2 * padding);
+    t.setAttribute('x', x); t.setAttribute('y', height - padding + 18);
+    t.setAttribute('text-anchor', 'middle'); t.setAttribute('fill', '#8892B0');
+    t.setAttribute('font-size', '11');
+    t.textContent = label;
+    svg.appendChild(t);
+  });
+
+  // Data points
+  data.forEach(d => {
+    const cx = padding + (d.cost / 15000) * (width - 2 * padding);
+    const cy = height - padding - (d.tier / 3) * (height - 2 * padding);
+    const color = d.open_source ? '#50c878' : '#C5A059';
+
+    const circle = document.createElementNS(svgNS, 'circle');
+    circle.setAttribute('cx', cx); circle.setAttribute('cy', cy);
+    circle.setAttribute('r', '8'); circle.setAttribute('fill', color);
+    circle.setAttribute('fill-opacity', '0.7');
+    circle.setAttribute('stroke', color); circle.setAttribute('stroke-width', '1.5');
+    circle.style.cursor = 'pointer';
+    circle.addEventListener('click', () => { window.location.hash = `toolkit/solvers/${d.id}`; });
+    svg.appendChild(circle);
+
+    const text = document.createElementNS(svgNS, 'text');
+    text.setAttribute('x', cx); text.setAttribute('y', cy - 12);
+    text.setAttribute('text-anchor', 'middle'); text.setAttribute('fill', '#CCD6F6');
+    text.setAttribute('font-size', '10');
+    text.textContent = d.name;
+    svg.appendChild(text);
+  });
+
+  // Legend
+  [{ color: '#50c878', label: 'Open Source', y: 20 }, { color: '#C5A059', label: 'Commercial', y: 38 }].forEach(l => {
+    const c = document.createElementNS(svgNS, 'circle');
+    c.setAttribute('cx', width - 130); c.setAttribute('cy', l.y);
+    c.setAttribute('r', '5'); c.setAttribute('fill', l.color);
+    svg.appendChild(c);
+    const t = document.createElementNS(svgNS, 'text');
+    t.setAttribute('x', width - 120); t.setAttribute('y', l.y + 4);
+    t.setAttribute('fill', '#8892B0'); t.setAttribute('font-size', '11');
+    t.textContent = l.label;
+    svg.appendChild(t);
+  });
+
+  section.appendChild(svg);
+  const caveat = document.createElement('p');
+  caveat.className = 'chart-caveat';
+  caveat.textContent = 'Performance tiers based on Mittelmann benchmarks (LP/MIP). Costs are estimates — verify with vendors.';
+  section.appendChild(caveat);
+  container.appendChild(section);
+}
+
+function buildPerformanceCalculator(container) {
+  const section = document.createElement('section');
+  section.className = 'solver-section';
+  const h2 = document.createElement('h2');
+  h2.textContent = 'Performance Gap Estimator';
+  section.appendChild(h2);
+  const caveat = document.createElement('p');
+  caveat.className = 'chart-caveat';
+  caveat.textContent = 'Rough estimates based on published benchmarks. Actual performance depends on problem structure.';
+  section.appendChild(caveat);
+
+  const inputs = document.createElement('div');
+  inputs.className = 'calc-inputs';
+
+  const typeLabel = document.createElement('label');
+  typeLabel.textContent = 'Problem Type ';
+  const typeSelect = document.createElement('select');
+  typeSelect.id = 'calc-type';
+  [['lp', 'LP'], ['mip', 'MIP']].forEach(([v, l]) => {
+    const o = document.createElement('option');
+    o.value = v; o.textContent = l;
+    typeSelect.appendChild(o);
+  });
+  typeSelect.value = 'mip';
+  typeLabel.appendChild(typeSelect);
+  inputs.appendChild(typeLabel);
+
+  const sizeLabel = document.createElement('label');
+  sizeLabel.textContent = 'Problem Size ';
+  const sizeSelect = document.createElement('select');
+  sizeSelect.id = 'calc-size';
+  [['small', 'Small (< 1K vars)'], ['medium', 'Medium (1K-100K)'], ['large', 'Large (100K-1M)'], ['xlarge', 'Very Large (> 1M)']].forEach(([v, l]) => {
+    const o = document.createElement('option');
+    o.value = v; o.textContent = l;
+    sizeSelect.appendChild(o);
+  });
+  sizeSelect.value = 'large';
+  sizeLabel.appendChild(sizeSelect);
+  inputs.appendChild(sizeLabel);
+
+  section.appendChild(inputs);
+
+  const resultsDiv = document.createElement('div');
+  resultsDiv.id = 'calc-results';
+  section.appendChild(resultsDiv);
+
+  const speedData = {
+    lp: { small: {gurobi:1,cplex:1.1,highs:1.3,scip:3,cbc:4,glpk:8}, medium: {gurobi:1,cplex:1.1,highs:1.5,scip:4,cbc:6,glpk:15}, large: {gurobi:1,cplex:1.2,highs:2,scip:6,cbc:10,glpk:30}, xlarge: {gurobi:1,cplex:1.2,highs:3,scip:10,cbc:20} },
+    mip: { small: {gurobi:1,cplex:1.1,highs:2,scip:2.5,cbc:5,glpk:20}, medium: {gurobi:1,cplex:1.2,highs:3,scip:4,cbc:10}, large: {gurobi:1,cplex:1.3,highs:5,scip:8,cbc:20}, xlarge: {gurobi:1,cplex:1.5,highs:10,scip:15} }
+  };
+
+  function updateCalc() {
+    const type = typeSelect.value;
+    const size = sizeSelect.value;
+    const data = speedData[type]?.[size] || {};
+    const entries = Object.entries(data).sort((a, b) => a[1] - b[1]);
+
+    resultsDiv.textContent = '';
+    const table = document.createElement('table');
+    table.className = 'calc-table';
+    const thead = document.createElement('thead');
+    const hRow = document.createElement('tr');
+    ['Solver', 'Relative Speed', 'Cost', ''].forEach(h => {
+      const th = document.createElement('th');
+      th.textContent = h;
+      hRow.appendChild(th);
+    });
+    thead.appendChild(hRow);
+    table.appendChild(thead);
+
+    const tbody = document.createElement('tbody');
+    entries.forEach(([id, mult]) => {
+      const tr = document.createElement('tr');
+      const tdName = document.createElement('td');
+      const a = document.createElement('a');
+      a.href = `#toolkit/solvers/${id}`;
+      a.textContent = id.charAt(0).toUpperCase() + id.slice(1);
+      tdName.appendChild(a);
+      tr.appendChild(tdName);
+
+      const tdSpeed = document.createElement('td');
+      tdSpeed.textContent = mult === 1 ? 'Fastest (baseline)' : `~${mult}x slower`;
+      tr.appendChild(tdSpeed);
+
+      const tdCost = document.createElement('td');
+      tdCost.textContent = ['gurobi', 'cplex', 'xpress'].includes(id) ? 'Commercial' : 'Free';
+      tr.appendChild(tdCost);
+
+      const tdBar = document.createElement('td');
+      const bar = document.createElement('div');
+      bar.className = 'speed-bar';
+      bar.style.width = Math.min(100, (1 / mult) * 100) + '%';
+      tdBar.appendChild(bar);
+      tr.appendChild(tdBar);
+
+      tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+    resultsDiv.appendChild(table);
+
+    const source = document.createElement('p');
+    source.className = 'chart-caveat';
+    source.textContent = 'Source: Estimates from Mittelmann benchmarks and published solver comparisons. Median ratios — individual instances vary.';
+    resultsDiv.appendChild(source);
+  }
+
+  typeSelect.addEventListener('change', updateCalc);
+  sizeSelect.addEventListener('change', updateCalc);
+  updateCalc();
+
   container.appendChild(section);
 }
 
@@ -1141,6 +1430,40 @@ function buildBenchmarks(benchmarkData, container) {
 
   renderFiltered();
   container.appendChild(dir);
+
+  // Community Benchmarks
+  const commSection = document.createElement('section');
+  commSection.className = 'solver-section';
+  const commH2 = document.createElement('h2');
+  commH2.textContent = 'Community & Informal Benchmarks';
+  commSection.appendChild(commH2);
+  const commP = document.createElement('p');
+  commP.textContent = 'Beyond standard benchmark suites, the community publishes comparison studies:';
+  commSection.appendChild(commP);
+
+  const commBenches = [
+    { name: 'Mittelmann Decision Tree', desc: 'Continuously updated independent benchmark — the gold standard for solver comparisons.', url: 'https://plato.asu.edu/bench.html' },
+    { name: 'OR Stack Exchange Comparisons', desc: 'Community-maintained threads comparing solver performance on specific problem classes.', url: 'https://or.stackexchange.com/questions/tagged/solver' },
+    { name: 'MINLPLib', desc: 'Library of mixed-integer nonlinear programming instances with solver performance data.', url: 'https://www.minlplib.org/' },
+  ];
+  commBenches.forEach(cb => {
+    const card = document.createElement('div');
+    card.className = 'licensing-detail-card';
+    const h3 = document.createElement('h3');
+    h3.textContent = cb.name;
+    card.appendChild(h3);
+    const desc = document.createElement('p');
+    desc.textContent = cb.desc;
+    card.appendChild(desc);
+    const link = document.createElement('a');
+    link.href = cb.url;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.textContent = cb.url.replace('https://', '').split('/')[0] + ' ↗';
+    card.appendChild(link);
+    commSection.appendChild(card);
+  });
+  container.appendChild(commSection);
 }
 
 function buildSoftwareDirectory(software, container) {
@@ -1269,6 +1592,182 @@ function buildModelingTools(toolsData, compatMatrix, container) {
   desc.textContent = `${tools.length} modeling tools compared. Each entry includes learning curve, solver compatibility, and quick-start code.`;
   header.appendChild(desc);
   container.appendChild(header);
+
+  // F32: Tool recommendation helper
+  const helperSection = document.createElement('div');
+  helperSection.className = 'tool-helper';
+  const helperH2 = document.createElement('h2');
+  helperH2.textContent = 'Which modeling tool should I use?';
+  helperSection.appendChild(helperH2);
+
+  const helperFlow = document.createElement('div');
+  helperFlow.className = 'tool-helper-flow';
+
+  // Language select
+  const langGroup = document.createElement('div');
+  langGroup.className = 'dh-filter-group';
+  const langLabel = document.createElement('label');
+  langLabel.textContent = 'Language';
+  const langSelect = document.createElement('select');
+  langSelect.id = 'tool-lang';
+  [['', 'Select...'], ['python', 'Python'], ['julia', 'Julia'], ['any', 'Any']].forEach(([v, l]) => {
+    const o = document.createElement('option');
+    o.value = v; o.textContent = l;
+    langSelect.appendChild(o);
+  });
+  langGroup.appendChild(langLabel);
+  langGroup.appendChild(langSelect);
+  helperFlow.appendChild(langGroup);
+
+  // Complexity select
+  const compGroup = document.createElement('div');
+  compGroup.className = 'dh-filter-group';
+  const compLabel = document.createElement('label');
+  compLabel.textContent = 'Complexity';
+  const compSelect = document.createElement('select');
+  compSelect.id = 'tool-complexity';
+  [['', 'Select...'], ['simple', 'Simple LP/MIP'], ['moderate', 'Moderate (callbacks)'], ['complex', 'Complex (MINLP, stochastic)'], ['convex', 'Convex (SDP, SOCP)']].forEach(([v, l]) => {
+    const o = document.createElement('option');
+    o.value = v; o.textContent = l;
+    compSelect.appendChild(o);
+  });
+  compGroup.appendChild(compLabel);
+  compGroup.appendChild(compSelect);
+  helperFlow.appendChild(compGroup);
+
+  helperSection.appendChild(helperFlow);
+
+  const toolRec = document.createElement('div');
+  toolRec.id = 'tool-recommendation';
+  toolRec.className = 'tool-rec';
+  helperSection.appendChild(toolRec);
+
+  function updateToolRec() {
+    const lang = langSelect.value;
+    const comp = compSelect.value;
+    toolRec.textContent = '';
+    if (!lang && !comp) return;
+
+    let tool, reason;
+    if (lang === 'python') {
+      if (comp === 'convex') { tool = 'CVXPY'; reason = 'Purpose-built for convex optimization. Automatic convexity verification.'; }
+      else if (comp === 'complex') { tool = 'Pyomo'; reason = 'Full-featured algebraic modeling. Handles MINLP, stochastic, decomposition.'; }
+      else if (comp === 'simple') { tool = 'PuLP'; reason = 'Simplest Python modeler. 30 minutes to first model. Includes CBC free.'; }
+      else { tool = 'PuLP'; reason = 'Good default for Python. Simple API, switch solvers in one line.'; }
+    } else if (lang === 'julia') {
+      tool = 'JuMP'; reason = 'The standard for Julia optimization. Excellent design, broad solver support.';
+    } else {
+      if (comp === 'convex') { tool = 'CVXPY (Python)'; reason = 'Best convex optimization tooling available.'; }
+      else if (comp === 'complex') { tool = 'Pyomo or JuMP'; reason = 'Both handle complex models. Choose based on language preference.'; }
+      else { tool = 'PuLP (Python)'; reason = 'Lowest barrier to entry. Start here if unsure.'; }
+    }
+
+    const card = document.createElement('div');
+    card.className = 'tool-rec-card';
+    const recH3 = document.createElement('h3');
+    recH3.textContent = '\u2192 ' + tool;
+    card.appendChild(recH3);
+    const recP = document.createElement('p');
+    recP.textContent = reason;
+    card.appendChild(recP);
+    toolRec.appendChild(card);
+  }
+
+  langSelect.addEventListener('change', updateToolRec);
+  compSelect.addEventListener('change', updateToolRec);
+
+  container.appendChild(helperSection);
+
+  // F33: Code comparison
+  const codeSection = document.createElement('section');
+  codeSection.className = 'solver-section';
+  const codeH2 = document.createElement('h2');
+  codeH2.textContent = 'Same Problem, Five Tools';
+  codeSection.appendChild(codeH2);
+  const codeSubtitle = document.createElement('p');
+  codeSubtitle.textContent = 'A simple production planning LP in each tool. Compare syntax.';
+  codeSection.appendChild(codeSubtitle);
+
+  const codeExamples = {
+    PuLP: 'from pulp import *\n\nprob = LpProblem("production", LpMinimize)\nx1 = LpVariable("tables", 0)\nx2 = LpVariable("chairs", 0)\n\nprob += 2*x1 + 3*x2           # Minimize cost\nprob += x1 + x2 >= 100        # Meet demand\nprob += 2*x1 + x2 <= 240      # Wood limit\n\nprob.solve()\nprint(f"Tables: {x1.value()}, Chairs: {x2.value()}")',
+    Pyomo: 'import pyomo.environ as pyo\n\nm = pyo.ConcreteModel()\nm.x1 = pyo.Var(within=pyo.NonNegativeReals)\nm.x2 = pyo.Var(within=pyo.NonNegativeReals)\n\nm.cost = pyo.Objective(expr=2*m.x1 + 3*m.x2)\nm.demand = pyo.Constraint(expr=m.x1 + m.x2 >= 100)\nm.wood = pyo.Constraint(expr=2*m.x1 + m.x2 <= 240)\n\npyo.SolverFactory("highs").solve(m)\nprint(f"Tables: {m.x1()}, Chairs: {m.x2()}")',
+    GurobiPy: 'import gurobipy as gp\nfrom gurobipy import GRB\n\nm = gp.Model()\nx1 = m.addVar(name="tables")\nx2 = m.addVar(name="chairs")\n\nm.setObjective(2*x1 + 3*x2, GRB.MINIMIZE)\nm.addConstr(x1 + x2 >= 100)\nm.addConstr(2*x1 + x2 <= 240)\n\nm.optimize()\nprint(f"Tables: {x1.X}, Chairs: {x2.X}")',
+    CVXPY: 'import cvxpy as cp\n\nx1 = cp.Variable(nonneg=True)\nx2 = cp.Variable(nonneg=True)\n\nobjective = cp.Minimize(2*x1 + 3*x2)\nconstraints = [x1 + x2 >= 100, 2*x1 + x2 <= 240]\n\nprob = cp.Problem(objective, constraints)\nprob.solve()\nprint(f"Tables: {x1.value}, Chairs: {x2.value}")',
+    'JuMP (Julia)': 'using JuMP, HiGHS\n\nmodel = Model(HiGHS.Optimizer)\n@variable(model, x1 >= 0)\n@variable(model, x2 >= 0)\n\n@objective(model, Min, 2x1 + 3x2)\n@constraint(model, x1 + x2 >= 100)\n@constraint(model, 2x1 + x2 <= 240)\n\noptimize!(model)\nprintln("Tables: $(value(x1)), Chairs: $(value(x2))")',
+  };
+
+  const codeTabs = document.createElement('div');
+  codeTabs.className = 'code-tabs';
+  const codeDisplay = document.createElement('pre');
+  codeDisplay.className = 'code-display';
+  const codeContent = document.createElement('code');
+  codeDisplay.appendChild(codeContent);
+
+  let activeTab = 'PuLP';
+  function showCode(name) {
+    activeTab = name;
+    codeContent.textContent = codeExamples[name] || '';
+    codeTabs.querySelectorAll('.code-tab').forEach(b => b.classList.toggle('code-tab--active', b.textContent === name));
+  }
+
+  Object.keys(codeExamples).forEach(name => {
+    const btn = document.createElement('button');
+    btn.className = 'code-tab' + (name === activeTab ? ' code-tab--active' : '');
+    btn.textContent = name;
+    btn.addEventListener('click', () => showCode(name));
+    codeTabs.appendChild(btn);
+  });
+
+  codeSection.appendChild(codeTabs);
+  codeSection.appendChild(codeDisplay);
+  showCode('PuLP');
+
+  container.appendChild(codeSection);
+
+  // F36: Time to First Model
+  const ttfmSection = document.createElement('section');
+  ttfmSection.className = 'solver-section';
+  const ttfmH2 = document.createElement('h2');
+  ttfmH2.textContent = 'Time to First Model';
+  ttfmSection.appendChild(ttfmH2);
+  const ttfmP = document.createElement('p');
+  ttfmP.textContent = 'How quickly can you go from zero to a solved optimization problem?';
+  ttfmSection.appendChild(ttfmP);
+
+  const ttfmData = [
+    { name: 'PuLP', time: '30 min', pct: 20 },
+    { name: 'CVXPY', time: '30 min', pct: 20 },
+    { name: 'scipy.optimize', time: '15 min', pct: 10 },
+    { name: 'GurobiPy', time: '1 hour', pct: 40 },
+    { name: 'JuMP', time: '1-2 hours', pct: 55 },
+    { name: 'OR-Tools', time: '1-2 hours', pct: 55 },
+    { name: 'Pyomo', time: '2-4 hours', pct: 90 },
+  ].sort((a, b) => a.pct - b.pct);
+
+  const barsDiv = document.createElement('div');
+  barsDiv.className = 'ttfm-bars';
+  ttfmData.forEach(d => {
+    const row = document.createElement('div');
+    row.className = 'ttfm-row';
+    const name = document.createElement('span');
+    name.className = 'ttfm-name';
+    name.textContent = d.name;
+    row.appendChild(name);
+    const bar = document.createElement('div');
+    bar.className = 'ttfm-bar';
+    bar.style.width = d.pct + '%';
+    const timeSpan = document.createElement('span');
+    timeSpan.textContent = d.time;
+    bar.appendChild(timeSpan);
+    row.appendChild(bar);
+    barsDiv.appendChild(row);
+  });
+  ttfmSection.appendChild(barsDiv);
+  const ttfmCaveat = document.createElement('p');
+  ttfmCaveat.className = 'chart-caveat';
+  ttfmCaveat.textContent = 'Assumes programming experience but no optimization background. Includes install time.';
+  ttfmSection.appendChild(ttfmCaveat);
+  container.appendChild(ttfmSection);
 
   // Tool cards
   const grid = document.createElement('div');
@@ -1507,4 +2006,253 @@ function buildCompatibilityMatrix(matrix, container) {
   }
 
   container.appendChild(section);
+}
+
+function buildLicensingGuide(allData, container) {
+  const solversData = allData.solvers;
+  const manual = allData.solversManual;
+  const solvers = solversData?.solvers || [];
+  const manualSolvers = manual?.solvers || [];
+
+  // Merge data
+  const merged = solvers.map(s => {
+    const m = manualSolvers.find(ms => ms.id === s.id);
+    return m ? { ...s, ...m } : s;
+  }).filter(s => !['pyomo', 'jump', 'cvxpy', 'pulp', 'scipy', 'ampl', 'gams'].includes(s.id));
+
+  const page = document.createElement('div');
+  page.className = 'licensing-guide';
+
+  // Header
+  const h1 = document.createElement('h1');
+  h1.className = 'licensing-guide__title';
+  h1.textContent = 'OR Solver Licensing Guide';
+  page.appendChild(h1);
+  const subtitle = document.createElement('p');
+  subtitle.className = 'licensing-guide__subtitle';
+  subtitle.textContent = 'How much will this solver cost you? One page, all the answers.';
+  page.appendChild(subtitle);
+
+  // Summary table
+  const tableSection = document.createElement('section');
+  tableSection.className = 'solver-section';
+  const tableH2 = document.createElement('h2');
+  tableH2.textContent = 'Licensing at a Glance';
+  tableSection.appendChild(tableH2);
+
+  const tableWrap = document.createElement('div');
+  tableWrap.className = 'solver-table-wrap';
+  const table = document.createElement('table');
+  table.className = 'licensing-table';
+
+  const thead = document.createElement('thead');
+  const headerRow = document.createElement('tr');
+  ['Solver', 'Type', 'Annual Cost', 'Academic Free?', 'Open Source?'].forEach(h => {
+    const th = document.createElement('th');
+    th.textContent = h;
+    headerRow.appendChild(th);
+  });
+  thead.appendChild(headerRow);
+  table.appendChild(thead);
+
+  const tbody = document.createElement('tbody');
+  merged.forEach(s => {
+    const tr = document.createElement('tr');
+
+    // Name
+    const tdName = document.createElement('td');
+    const nameLink = document.createElement('a');
+    nameLink.href = `#toolkit/solvers/${s.id}`;
+    nameLink.textContent = s.name;
+    tdName.appendChild(nameLink);
+    tr.appendChild(tdName);
+
+    // Type
+    const tdType = document.createElement('td');
+    const typeBadge = document.createElement('span');
+    typeBadge.className = s.open_source ? 'solver-license solver-license--open' : 'solver-license solver-license--comm';
+    typeBadge.textContent = s.open_source ? 'Open' : 'Commercial';
+    tdType.appendChild(typeBadge);
+    tr.appendChild(tdType);
+
+    // Annual cost
+    const tdCost = document.createElement('td');
+    tdCost.textContent = s.tco_estimate?.license_annual_display || (s.open_source ? 'Free' : 'Contact vendor');
+    tr.appendChild(tdCost);
+
+    // Academic
+    const tdAcad = document.createElement('td');
+    tdAcad.textContent = (s.academic_free || s.license?.academic_free) ? 'Yes' : 'No';
+    tr.appendChild(tdAcad);
+
+    // Open source
+    const tdOS = document.createElement('td');
+    tdOS.textContent = s.open_source ? 'Yes' : 'No';
+    tr.appendChild(tdOS);
+
+    tbody.appendChild(tr);
+  });
+  table.appendChild(tbody);
+  tableWrap.appendChild(table);
+  tableSection.appendChild(tableWrap);
+  page.appendChild(tableSection);
+
+  // Commercial solver details
+  const commercialSection = document.createElement('section');
+  commercialSection.className = 'solver-section';
+  const commH2 = document.createElement('h2');
+  commH2.textContent = 'Commercial Solver Details';
+  commercialSection.appendChild(commH2);
+
+  merged.filter(s => !s.open_source).forEach(s => {
+    const card = document.createElement('div');
+    card.className = 'licensing-detail-card';
+    const h3 = document.createElement('h3');
+    h3.textContent = s.name;
+    card.appendChild(h3);
+
+    if (s.commercial_pricing_note) {
+      const p = document.createElement('p');
+      p.className = 'ld-pricing';
+      const lbl = document.createElement('strong');
+      lbl.textContent = 'Pricing: ';
+      p.appendChild(lbl);
+      p.appendChild(document.createTextNode(s.commercial_pricing_note));
+      card.appendChild(p);
+    }
+    if (s.academic_details || s.license?.academic_note) {
+      const p = document.createElement('p');
+      const lbl = document.createElement('strong');
+      lbl.textContent = 'Academic: ';
+      p.appendChild(lbl);
+      p.appendChild(document.createTextNode(s.academic_details || s.license?.academic_note));
+      card.appendChild(p);
+    }
+    if (s.licensing_gotcha) {
+      const gotcha = document.createElement('div');
+      gotcha.className = 'ld-gotcha';
+      gotcha.textContent = '\u26A0 ' + s.licensing_gotcha;
+      card.appendChild(gotcha);
+    }
+    if (s.tco_estimate?.hidden_costs?.length) {
+      const ul = document.createElement('ul');
+      ul.className = 'ld-hidden-costs';
+      s.tco_estimate.hidden_costs.forEach(c => {
+        const li = document.createElement('li');
+        li.textContent = c;
+        ul.appendChild(li);
+      });
+      card.appendChild(ul);
+    }
+    commercialSection.appendChild(card);
+  });
+  page.appendChild(commercialSection);
+
+  // Open source section
+  const ossSection = document.createElement('section');
+  ossSection.className = 'solver-section';
+  const ossH2 = document.createElement('h2');
+  ossH2.textContent = 'Open Source Solvers';
+  ossSection.appendChild(ossH2);
+  const ossP = document.createElement('p');
+  ossP.textContent = 'These solvers are free to use with no licensing restrictions:';
+  ossSection.appendChild(ossP);
+
+  merged.filter(s => s.open_source).forEach(s => {
+    const card = document.createElement('div');
+    card.className = 'licensing-detail-card ld-open';
+    const h3 = document.createElement('h3');
+    h3.textContent = s.name;
+    const code = document.createElement('code');
+    code.textContent = s.license_spdx || s.license?.type || 'Open';
+    h3.appendChild(document.createTextNode(' '));
+    h3.appendChild(code);
+    card.appendChild(h3);
+    const desc = document.createElement('p');
+    desc.textContent = (s.description || '').split('.')[0] + '.';
+    card.appendChild(desc);
+    if (s.licensing_gotcha) {
+      const gotcha = document.createElement('div');
+      gotcha.className = 'ld-gotcha';
+      gotcha.textContent = '\u26A0 ' + s.licensing_gotcha;
+      card.appendChild(gotcha);
+    }
+    ossSection.appendChild(card);
+  });
+  page.appendChild(ossSection);
+
+  // Academic License Checklists (E31)
+  const acadSection = document.createElement('section');
+  acadSection.className = 'solver-section';
+  const acadH2 = document.createElement('h2');
+  acadH2.textContent = 'Academic License Step-by-Step';
+  acadSection.appendChild(acadH2);
+  const acadIntro = document.createElement('p');
+  acadIntro.textContent = 'Most commercial solvers offer free academic licenses. Here\'s how to get them:';
+  acadSection.appendChild(acadIntro);
+
+  const checklists = [
+    {
+      name: 'Gurobi Academic License',
+      steps: ['Go to gurobi.com/academia', 'Create account with .edu email', 'Request "Named-User Academic" license', 'Get license key (usually same day)', 'Run grbgetkey YOUR_KEY'],
+      gotchas: ['License tied to institutional network \u2014 VPN needed off-campus', 'Expires when you leave the institution', 'Cannot be used for consulting or industry-funded projects']
+    },
+    {
+      name: 'IBM CPLEX Academic License',
+      steps: ['Go to ibm.com/academic (IBM Academic Initiative)', 'Register with institutional email', 'Navigate to Software \u2192 search for CPLEX', 'Download CPLEX Optimization Studio', 'Process can take 1-3 weeks'],
+      gotchas: ['Slower approval than Gurobi', 'IBM Academic Initiative interface changes frequently', 'May need to re-register each academic year']
+    },
+    {
+      name: 'MOSEK Academic License',
+      steps: ['Go to mosek.com/products/academic-licenses', 'Fill in request form with institutional email', 'Usually approved within 1-2 business days', 'Place license file in home directory'],
+      gotchas: ['Personal academic license \u2014 one user only', 'Check if institution has site license first']
+    }
+  ];
+
+  checklists.forEach(cl => {
+    const details = document.createElement('details');
+    details.className = 'academic-checklist';
+    const summary = document.createElement('summary');
+    const strong = document.createElement('strong');
+    strong.textContent = cl.name;
+    summary.appendChild(strong);
+    details.appendChild(summary);
+
+    const ol = document.createElement('ol');
+    cl.steps.forEach(step => {
+      const li = document.createElement('li');
+      li.textContent = step;
+      ol.appendChild(li);
+    });
+    details.appendChild(ol);
+
+    if (cl.gotchas.length) {
+      const gotchaDiv = document.createElement('div');
+      gotchaDiv.className = 'checklist-gotcha';
+      const gotchaH = document.createElement('strong');
+      gotchaH.textContent = 'Gotchas:';
+      gotchaDiv.appendChild(gotchaH);
+      const ul = document.createElement('ul');
+      cl.gotchas.forEach(g => {
+        const li = document.createElement('li');
+        li.textContent = g;
+        ul.appendChild(li);
+      });
+      gotchaDiv.appendChild(ul);
+      details.appendChild(gotchaDiv);
+    }
+    acadSection.appendChild(details);
+  });
+
+  // Tip for graduating students
+  const tip = document.createElement('div');
+  tip.className = 'academic-tip';
+  const tipStrong = document.createElement('strong');
+  tipStrong.textContent = 'Tip for graduating students: ';
+  tip.appendChild(tipStrong);
+  tip.appendChild(document.createTextNode('Before you lose access, export your model files and test them with open-source solvers (HiGHS, SCIP). Know your migration path before your license expires.'));
+  acadSection.appendChild(tip);
+
+  page.appendChild(acadSection);
+  container.appendChild(page);
 }

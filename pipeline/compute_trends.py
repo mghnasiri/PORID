@@ -36,15 +36,20 @@ def load_publications(path: str) -> list[dict]:
         return json.load(f)
 
 
-def compute_velocity(current: int, previous: int) -> float:
-    """Compute growth rate between two periods."""
+def compute_velocity(current: int, previous: int) -> float | None:
+    """Compute growth rate between two periods.
+
+    Returns None when previous is 0 and current > 0 (new topic, no baseline).
+    """
     if previous == 0:
-        return 1.0 if current > 0 else 0.0
+        return None if current > 0 else 0.0
     return (current - previous) / previous
 
 
-def classify_velocity(v: float) -> str:
+def classify_velocity(v: float | None) -> str:
     """Classify velocity into human-readable label."""
+    if v is None:
+        return "new"
     if v > 0.15:
         return "accelerating"
     elif v < -0.15:
@@ -211,7 +216,7 @@ def compute_trends(publications: list[dict], window_days: int = 90, min_papers: 
             "display_name": format_tag_display(tag),
             "current_quarter_count": current_count,
             "previous_quarter_count": previous_count,
-            "velocity": round(velocity, 3),
+            "velocity": round(velocity, 3) if velocity is not None else None,
             "velocity_label": velocity_label,
             "total_count": total,
             "sparkline": sparkline,

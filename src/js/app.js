@@ -54,7 +54,7 @@ const state = {
     resources: [],
     special_issues: [],
   },
-  activeTab: 'pulse',
+  activeTab: 'toolkit',
   extraData: {
     trends: null,
     brief: null,
@@ -169,6 +169,7 @@ async function loadAllData() {
     decisionRules: './data/decision_rules.json',
     modelingTools: './data/modeling_tools.json',
     compatibilityMatrix: './data/compatibility_matrix.json',
+    solversManual: './data/solvers_manual.json',
   };
   const optResults = await Promise.all(
     Object.entries(optionalFiles).map(([key, url]) =>
@@ -575,7 +576,7 @@ function formatRelativeTime(isoString) {
 
 function getHashTab() {
   const raw = window.location.hash.replace('#', '').split('?')[0].split('/')[0];
-  return TABS.includes(raw) ? raw : (getPreferences().defaultTab || 'pulse');
+  return TABS.includes(raw) ? raw : (getPreferences().defaultTab || 'toolkit');
 }
 
 function getHashSub() {
@@ -609,14 +610,18 @@ const VIEW_META = {
   software:      { title: 'PORID \u2014 OR Software Releases',           desc: 'Monitor version releases for optimization solvers including Gurobi, CPLEX, SCIP, HiGHS, and OR-Tools.' },
   conferences:   { title: 'PORID \u2014 OR Conference Deadlines',        desc: 'Upcoming Operations Research conferences, workshops, and symposia with submission deadlines.' },
   opportunities: { title: 'PORID \u2014 OR Funding & Positions',         desc: 'PhD positions, postdoc openings, faculty jobs, and funding calls in Operations Research.' },
-  toolkit:       { title: 'PORID \u2014 Solver Observatory & Benchmarks', desc: 'Solver performance dashboards, benchmark datasets, and optimization tool comparisons.' },
+  toolkit:       { title: 'PORID \u2014 The OR Tooling Navigator', desc: 'Which OR solver should I use? Compare solvers, modeling tools, benchmarks, and licensing costs.' },
   radar:         { title: 'PORID \u2014 OR Opportunity Radar',           desc: 'Personalized radar of Operations Research opportunities matching your research interests.' },
+  'toolkit/solvers':    { title: 'PORID \u2014 OR Solver Comparison',    desc: 'Compare OR optimization solvers by performance, cost, and features.' },
+  'toolkit/tools':      { title: 'PORID \u2014 OR Modeling Tools Guide',  desc: 'Compare modeling tools like Pyomo, PuLP, JuMP, and CVXPY.' },
+  'toolkit/benchmarks': { title: 'PORID \u2014 OR Benchmark Datasets',   desc: 'Standard benchmark instance libraries for optimization problems.' },
 };
 
 const BASE_URL = 'https://mghnasiri.github.io/PORID/';
 
-function updatePageMeta(view) {
-  const meta = VIEW_META[view] || VIEW_META.pulse;
+function updatePageMeta(view, sub) {
+  const subKey = sub ? `${view}/${sub}` : null;
+  const meta = (subKey && VIEW_META[subKey]) || VIEW_META[view] || VIEW_META.toolkit;
 
   // Title
   document.title = meta.title;
@@ -659,7 +664,7 @@ function navigate(tab) {
 function onHashChange() {
   state.activeTab = getHashTab();
   updateTabUI();
-  updatePageMeta(state.activeTab);
+  updatePageMeta(state.activeTab, getHashSub());
   renderView();
 }
 
@@ -754,6 +759,7 @@ function renderView() {
       decisionRules: state.extraData.decisionRules,
       modelingTools: state.extraData.modelingTools,
       compatibilityMatrix: state.extraData.compatibilityMatrix,
+      solversManual: state.extraData.solversManual,
     };
     renderToolkit(contentEl, toolkitData, sub);
     animateCards();
@@ -2386,7 +2392,7 @@ async function init() {
 
   state.activeTab = getHashTab();
   updateTabUI();
-  updatePageMeta(state.activeTab);
+  updatePageMeta(state.activeTab, getHashSub());
   renderView();
 
   window.addEventListener('hashchange', onHashChange);
@@ -2397,7 +2403,7 @@ async function init() {
       _isRestoringState = true;
       state.activeTab = e.state.tab || getHashTab();
       updateTabUI();
-      updatePageMeta(state.activeTab);
+      updatePageMeta(state.activeTab, getHashSub());
       renderView();
       // After renderView has built the filter bar, apply the saved filter state
       requestAnimationFrame(() => {

@@ -262,7 +262,10 @@ function buildSparklineGrid(subdomains) {
 
     const arrow = document.createElement('span');
     const vel = sd.velocity_label || '';
-    if (vel === 'accelerating') {
+    if (vel === 'new') {
+      arrow.className = 'sparkline-cell__arrow sparkline-cell__arrow--new';
+      arrow.textContent = 'New';
+    } else if (vel === 'accelerating') {
       arrow.className = 'sparkline-cell__arrow sparkline-cell__arrow--up';
       arrow.textContent = '\u25B2';
     } else if (vel === 'decelerating') {

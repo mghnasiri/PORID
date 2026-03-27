@@ -29,6 +29,7 @@ export class DecisionHelper {
       budget: null,
       language: null,
       scale: null,
+      deployment: null,
     };
   }
 
@@ -49,10 +50,20 @@ export class DecisionHelper {
 
     const filtersDiv = document.createElement('div');
     filtersDiv.className = 'dh-filters';
-    ['problem_type', 'budget', 'language', 'scale'].forEach(key => {
+    ['problem_type', 'budget', 'language', 'scale', 'deployment'].forEach(key => {
       filtersDiv.appendChild(this._buildDropdown(key));
     });
     wrapper.appendChild(filtersDiv);
+
+    const resetBtn = document.createElement('button');
+    resetBtn.className = 'dh-reset';
+    resetBtn.textContent = 'Clear All Filters';
+    resetBtn.addEventListener('click', () => {
+      Object.keys(this.filters).forEach(k => this.filters[k] = null);
+      wrapper.querySelectorAll('select').forEach(s => s.value = '');
+      this._updateResults();
+    });
+    wrapper.appendChild(resetBtn);
 
     const resultsDiv = document.createElement('div');
     resultsDiv.className = 'dh-results';
@@ -66,6 +77,20 @@ export class DecisionHelper {
     this.container.textContent = '';
     this.container.appendChild(wrapper);
     this._bindEvents();
+    // G39: Load filters from URL
+    const hash = window.location.hash.replace('#', '');
+    const qIdx = hash.indexOf('?');
+    if (qIdx >= 0) {
+      const urlParams = new URLSearchParams(hash.slice(qIdx + 1));
+      for (const [k, v] of urlParams) {
+        if (this.filters.hasOwnProperty(k)) {
+          this.filters[k] = v;
+          const select = wrapper.querySelector(`#dh-${k}`);
+          if (select) select.value = v;
+        }
+      }
+      this._updateResults();
+    }
   }
 
   // ── Private methods ───────────────────────────────────────────────
@@ -107,6 +132,11 @@ export class DecisionHelper {
       select.addEventListener('change', (e) => {
         this.filters[e.target.dataset.filter] = e.target.value || null;
         this._updateResults();
+        // G39: URL deep-linking
+        const params = new URLSearchParams();
+        Object.entries(this.filters).forEach(([k, v]) => { if (v) params.set(k, v); });
+        const paramStr = params.toString();
+        history.replaceState(null, '', `#toolkit/solvers${paramStr ? '?' + paramStr : ''}`);
       });
     });
   }
@@ -171,11 +201,10 @@ export class DecisionHelper {
     rank.textContent = isTop ? '★ Best Match' : `#${index + 1}`;
     card.appendChild(rank);
 
-    // Body
     const body = document.createElement('div');
     body.className = 'dh-result-body';
 
-    // Name + score
+    // Name + score row
     const h3 = document.createElement('h3');
     h3.className = 'dh-result-name';
     const nameLink = document.createElement('a');
@@ -188,38 +217,60 @@ export class DecisionHelper {
     h3.appendChild(scoreBadge);
     body.appendChild(h3);
 
-    // Description
-    const desc = document.createElement('p');
-    desc.className = 'dh-result-desc';
-    desc.textContent = s.description || '';
-    body.appendChild(desc);
+    // License + cost badge row
+    const costRow = document.createElement('div');
+    costRow.className = 'dh-cost-row';
+    const isOpen = s.open_source;
+    const isAcademic = (s.academic_free || s.license?.academic_free) && !isOpen;
+    const costBadge = document.createElement('span');
+    if (isOpen) {
+      costBadge.className = 'dh-cost-badge dh-cost-free';
+      costBadge.textContent = 'Free';
+    } else if (isAcademic && (this.filters.budget === 'academic' || this.filters.budget === 'any' || !this.filters.budget)) {
+      costBadge.className = 'dh-cost-badge dh-cost-academic';
+      costBadge.textContent = 'Free (Academic)';
+    } else {
+      costBadge.className = 'dh-cost-badge dh-cost-commercial';
+      costBadge.textContent = 'Paid';
+    }
+    costRow.appendChild(costBadge);
+    const licenseDetail = document.createElement('span');
+    licenseDetail.className = 'dh-cost-detail';
+    licenseDetail.textContent = isOpen ? (s.license_spdx || s.license?.type || 'Open Source') : (s.commercial_pricing_note?.split('.')[0] || s.license?.type || 'Commercial');
+    costRow.appendChild(licenseDetail);
+    body.appendChild(costRow);
 
-    // Meta tags
+    // Justification
+    const justP = document.createElement('p');
+    justP.className = 'dh-justification';
+    justP.textContent = this._generateJustification(s);
+    body.appendChild(justP);
+
+    // Problem type tags
     const meta = document.createElement('div');
     meta.className = 'dh-result-meta';
-
-    const licenseIcon = s.open_source ? '🔓' : '💰';
-    const licenseLabel = s.open_source
-      ? (s.license_spdx || s.license_type || 'Open Source')
-      : (s.license_type || 'Commercial');
-
-    this._addTag(meta, `${licenseIcon} ${licenseLabel}`);
     this._addTag(meta, `v${s.current_version || '?'}`);
-    (s.problem_types || []).slice(0, 5).forEach(pt => {
+    (s.problem_types || []).slice(0, 6).forEach(pt => {
       this._addTag(meta, pt, 'dh-tag-pt');
     });
     body.appendChild(meta);
 
-    // Licensing gotcha
+    // Full licensing gotcha warning
     const gotcha = s.licensing_gotcha || '';
     if (gotcha) {
-      const gotchaP = document.createElement('p');
-      gotchaP.className = 'dh-gotcha';
-      gotchaP.textContent = '⚠️ ' + gotcha.split('.').slice(0, 2).join('.') + '.';
-      body.appendChild(gotchaP);
+      const gotchaDiv = document.createElement('div');
+      gotchaDiv.className = 'dh-gotcha';
+      const gotchaIcon = document.createElement('span');
+      gotchaIcon.className = 'dh-gotcha-icon';
+      gotchaIcon.textContent = '⚠';
+      gotchaDiv.appendChild(gotchaIcon);
+      const gotchaText = document.createElement('span');
+      gotchaText.textContent = gotcha;
+      gotchaDiv.appendChild(gotchaText);
+      body.appendChild(gotchaDiv);
     }
 
-    // Quick start
+    // Quick start (collapsible)
     const quickStart = s.quick_start || {};
     if (quickStart.install) {
       const details = document.createElement('details');
@@ -227,13 +278,11 @@ export class DecisionHelper {
       const summary = document.createElement('summary');
       summary.textContent = 'Quick Start';
       details.appendChild(summary);
-
       const installPre = document.createElement('pre');
       const installCode = document.createElement('code');
       installCode.textContent = quickStart.install;
       installPre.appendChild(installCode);
       details.appendChild(installPre);
-
       if (quickStart.code) {
         const codePre = document.createElement('pre');
         const codeEl = document.createElement('code');
@@ -241,12 +290,32 @@ export class DecisionHelper {
         codePre.appendChild(codeEl);
         details.appendChild(codePre);
       }
-
       body.appendChild(details);
     }
 
     card.appendChild(body);
     return card;
+  }
+
+  _generateJustification(solver) {
+    const parts = [];
+    if (solver.benchmark_tier?.includes('Tier 1')) {
+      parts.push('Industry-leading performance');
+    } else if (solver.benchmark_tier?.includes('Tier 2')) {
+      parts.push('Competitive performance');
+    }
+    if (solver.open_source) {
+      parts.push(`Free and open source (${solver.license_spdx || solver.license_type || solver.license?.type || 'open license'})`);
+    } else if ((solver.academic_free || solver.license?.academic_free) && this.filters.budget === 'academic') {
+      parts.push('Free academic license available');
+    } else {
+      parts.push(solver.commercial_pricing_note?.split('.')[0] || 'Commercial license required');
+    }
+    if (this.filters.language && this.filters.language !== 'any') {
+      const langName = this.filters.language.charAt(0).toUpperCase() + this.filters.language.slice(1);
+      parts.push(`${langName} support available`);
+    }
+    return parts.join('. ') + '.';
   }
 
   _addTag(parent, text, extraClass) {

@@ -3,6 +3,7 @@
   "solvers": [
     {
       "id": "gurobi",
+      "last_verified": "2026-03-27",
       "name": "Gurobi Optimizer",
       "vendor": "Gurobi Optimization",
       "website": "https://www.gurobi.com",
@@ -50,6 +51,7 @@
     },
     {
       "id": "cplex",
+      "last_verified": "2026-03-27",
       "name": "IBM CPLEX",
       "vendor": "IBM",
       "website": "https://www.ibm.com/products/ilog-cplex-optimization-studio",
@@ -91,6 +93,7 @@
     },
     {
       "id": "xpress",
+      "last_verified": "2026-03-27",
       "name": "FICO Xpress",
       "vendor": "FICO",
       "website": "https://www.fico.com/en/products/fico-xpress-optimization",
@@ -130,6 +133,7 @@
     },
     {
       "id": "mosek",
+      "last_verified": "2026-03-27",
       "name": "MOSEK",
       "vendor": "MOSEK ApS",
       "website": "https://www.mosek.com",
@@ -171,6 +175,7 @@
     },
     {
       "id": "highs",
+      "last_verified": "2026-03-27",
       "name": "HiGHS",
       "vendor": "University of Edinburgh (ERGO-Code)",
       "website": "https://highs.dev",
@@ -224,6 +229,7 @@
     },
     {
       "id": "scip",
+      "last_verified": "2026-03-27",
       "name": "SCIP",
       "vendor": "Zuse Institute Berlin",
       "website": "https://www.scipopt.org",
@@ -236,6 +242,7 @@
       },
       "open_source": true,
       "problem_types": [
+        "LP",
         "MIP",
         "MINLP",
         "CP"
@@ -270,6 +277,7 @@
     },
     {
       "id": "or-tools",
+      "last_verified": "2026-03-27",
       "name": "Google OR-Tools",
       "vendor": "Google",
       "website": "https://developers.google.com/optimization",
@@ -317,6 +325,7 @@
     },
     {
       "id": "cbc",
+      "last_verified": "2026-03-27",
       "name": "COIN-OR CBC",
       "vendor": "COIN-OR Foundation",
       "website": "https://github.com/coin-or/Cbc",
@@ -360,6 +369,7 @@
     },
     {
       "id": "baron",
+      "last_verified": "2026-03-27",
       "name": "BARON",
       "vendor": "The Optimization Firm",
       "website": "https://www.minlp.com/baron",
@@ -390,6 +400,7 @@
     },
     {
       "id": "hexaly",
+      "last_verified": "2026-03-27",
       "name": "Hexaly (ex-LocalSolver)",
       "vendor": "Hexaly",
       "website": "https://www.hexaly.com",
@@ -403,7 +414,13 @@
       "open_source": false,
       "problem_types": [
         "MIP",
-        "MINLP"
+        "NLP",
+        "MINLP",
+        "VRP",
+        "CP",
+        "Scheduling",
+        "Routing",
+        "Hybrid"
       ],
       "language_bindings": [
         "Python",
@@ -422,6 +439,7 @@
     },
     {
       "id": "glpk",
+      "last_verified": "2026-03-27",
       "name": "GLPK",
       "vendor": "GNU Project",
       "website": "https://www.gnu.org/software/glpk/",
@@ -454,6 +472,7 @@
     },
     {
       "id": "pyomo",
+      "last_verified": "2026-03-27",
       "name": "Pyomo",
       "vendor": "Sandia National Laboratories",
       "website": "https://www.pyomo.org",
@@ -496,6 +515,7 @@
     },
     {
       "id": "jump",
+      "last_verified": "2026-03-27",
       "name": "JuMP",
       "vendor": "JuMP Community",
       "website": "https://jump.dev",
@@ -539,6 +559,7 @@
     },
     {
       "id": "ampl",
+      "last_verified": "2026-03-27",
       "name": "AMPL",
       "vendor": "AMPL Optimization Inc.",
       "website": "https://ampl.com",
@@ -571,6 +592,7 @@
     },
     {
       "id": "gams",
+      "last_verified": "2026-03-27",
       "name": "GAMS",
       "vendor": "GAMS Development Corp.",
       "website": "https://www.gams.com",
@@ -603,6 +625,7 @@
     },
     {
       "id": "cvxpy",
+      "last_verified": "2026-03-27",
       "name": "CVXPY",
       "vendor": "Stanford University",
       "website": "https://www.cvxpy.org",
@@ -647,6 +670,7 @@
     },
     {
       "id": "knitro",
+      "last_verified": "2026-03-27",
       "name": "Artelys Knitro",
       "vendor": "Artelys",
       "website": "https://www.artelys.com/solvers/knitro/",
@@ -685,6 +709,7 @@
     },
     {
       "id": "ipopt",
+      "last_verified": "2026-03-27",
       "name": "Ipopt",
       "vendor": "COIN-OR Foundation",
       "website": "https://coin-or.github.io/Ipopt/",
@@ -730,6 +755,7 @@
     },
     {
       "id": "optaplanner",
+      "last_verified": "2026-03-27",
       "name": "Timefold (ex-OptaPlanner)",
       "vendor": "Timefold",
       "website": "https://timefold.ai",
