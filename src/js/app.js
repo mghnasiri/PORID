@@ -161,11 +161,14 @@ async function loadAllData() {
   updateRecentViewsBadge();        // ER-05
   updateTabCountBadges();          // MW-08
 
-  // Load optional hub data (trends, solvers, benchmarks)
+  // Load optional hub data (trends, solvers, benchmarks, decision helper)
   const optionalFiles = {
     trends: './data/trends.json',
     solvers: './data/solvers.json',
     benchmarks: './data/benchmarks.json',
+    decisionRules: './data/decision_rules.json',
+    modelingTools: './data/modeling_tools.json',
+    compatibilityMatrix: './data/compatibility_matrix.json',
   };
   const optResults = await Promise.all(
     Object.entries(optionalFiles).map(([key, url]) =>
@@ -748,6 +751,9 @@ function renderView() {
       ...state.data,
       solvers: state.extraData.solvers,
       benchmarks: state.extraData.benchmarks,
+      decisionRules: state.extraData.decisionRules,
+      modelingTools: state.extraData.modelingTools,
+      compatibilityMatrix: state.extraData.compatibilityMatrix,
     };
     renderToolkit(contentEl, toolkitData, sub);
     animateCards();

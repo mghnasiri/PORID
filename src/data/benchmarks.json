@@ -179,6 +179,25 @@
           "tags": ["cp", "constraint-programming", "competition"]
         }
       ]
+    },
+    {
+      "id": "mittelmann",
+      "name": "Mittelmann Benchmarks (Meta)",
+      "description": "Independent benchmark suite — the most cited independent benchmark source in OR",
+      "benchmarks": [
+        {
+          "id": "mittelmann",
+          "name": "Hans Mittelmann's Benchmarks",
+          "full_name": "Mittelmann Decision Tree for Optimization Software",
+          "url": "https://plato.asu.edu/bench.html",
+          "description": "Independent benchmark suite run by Hans Mittelmann at ASU. Tests LP, MIP, and other solvers on standardized instance sets. The most cited independent benchmark source in OR.",
+          "format": "Various (MPS, LP)",
+          "maintained_by": "Hans Mittelmann, Arizona State University",
+          "solver_notes": "Gurobi withdrew Aug 2024. MindOpt withdrew Dec 2024. Results updated periodically.",
+          "interactive_url": "https://mattmilten.github.io/mittelmann-plots/",
+          "tags": ["meta-benchmark", "independent", "lp", "mip"]
+        }
+      ]
     }
   ]
 }

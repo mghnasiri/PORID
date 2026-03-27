@@ -8,12 +8,14 @@
  */
 
 import { relativeTime, formatDate } from '../utils/date.js';
+import { DecisionHelper } from '../components/decision-helper.js';
 
 const SUB_TABS = [
   { key: '', label: 'Overview', icon: '\uD83D\uDEE0' },
   { key: 'solvers', label: 'Solvers', icon: '\u2699' },
   { key: 'benchmarks', label: 'Benchmarks', icon: '\uD83D\uDCCA' },
   { key: 'software', label: 'Software', icon: '\uD83D\uDCE6' },
+  { key: 'tools', label: 'Modeling Tools', icon: '\uD83D\uDCDD' },
 ];
 
 /**
@@ -64,13 +66,16 @@ export function render(container, allData, sub) {
 
   switch (activeSub) {
     case 'solvers':
-      buildSolvers(solvers, contentDiv);
+      buildSolvers(solvers, contentDiv, allData.decisionRules);
       break;
     case 'benchmarks':
       buildBenchmarks(benchmarks, contentDiv);
       break;
     case 'software':
       buildSoftwareDirectory(software, contentDiv);
+      break;
+    case 'tools':
+      buildModelingTools(allData.modelingTools, allData.compatibilityMatrix, contentDiv);
       break;
     default:
       buildOverview(allData, contentDiv);
@@ -321,7 +326,7 @@ function releaseActivityTier(releaseDate) {
 /** VD-02: Canonical problem type columns for the heatmap */
 const HEATMAP_PROBLEM_TYPES = ['LP', 'MIP', 'QP', 'SOCP', 'SDP', 'MINLP', 'CP', 'VRP'];
 
-function buildSolvers(solversData, container) {
+function buildSolvers(solversData, container, decisionRules) {
   if (!solversData || !solversData.solvers || solversData.solvers.length === 0) {
     const empty = document.createElement('div');
     empty.className = 'empty-state';
@@ -339,6 +344,15 @@ function buildSolvers(solversData, container) {
     empty.appendChild(p);
     container.appendChild(empty);
     return;
+  }
+
+  // Decision Helper (scoring-based recommendation wizard)
+  if (decisionRules && decisionRules.scores) {
+    const dhMount = document.createElement('div');
+    dhMount.id = 'decision-helper-mount';
+    container.appendChild(dhMount);
+    const dh = new DecisionHelper(dhMount, decisionRules, solversData.solvers);
+    dh.render();
   }
 
   // Wizard filter callback — will be wired after table is built
@@ -1215,4 +1229,282 @@ function buildSoftwareDirectory(software, container) {
   });
 
   container.appendChild(dir);
+}
+
+
+/**
+ * Modeling Tools sub-view — shows Pyomo, PuLP, JuMP, CVXPY, etc.
+ * with compatibility matrix and quick-start code.
+ */
+function buildModelingTools(toolsData, compatMatrix, container) {
+  if (!toolsData || !toolsData.tools || toolsData.tools.length === 0) {
+    const empty = document.createElement('div');
+    empty.className = 'empty-state';
+    const icon = document.createElement('div');
+    icon.className = 'empty-state__icon';
+    icon.textContent = '\uD83D\uDCDD';
+    const h2 = document.createElement('h2');
+    h2.className = 'empty-state__title';
+    h2.textContent = 'Modeling Tools';
+    const p = document.createElement('p');
+    p.className = 'empty-state__text';
+    p.textContent = 'Modeling tools data will appear here once data/modeling_tools.json is available.';
+    empty.appendChild(icon);
+    empty.appendChild(h2);
+    empty.appendChild(p);
+    container.appendChild(empty);
+    return;
+  }
+
+  const tools = toolsData.tools;
+
+  // Header
+  const header = document.createElement('div');
+  header.className = 'mt-header';
+  const h2 = document.createElement('h2');
+  h2.textContent = 'OR Modeling Tools';
+  header.appendChild(h2);
+  const desc = document.createElement('p');
+  desc.className = 'mt-desc';
+  desc.textContent = `${tools.length} modeling tools compared. Each entry includes learning curve, solver compatibility, and quick-start code.`;
+  header.appendChild(desc);
+  container.appendChild(header);
+
+  // Tool cards
+  const grid = document.createElement('div');
+  grid.className = 'mt-grid';
+
+  tools.forEach(tool => {
+    const card = document.createElement('div');
+    card.className = 'mt-card card';
+
+    // Title row
+    const titleRow = document.createElement('div');
+    titleRow.className = 'mt-card__header';
+    const name = document.createElement('h3');
+    name.className = 'mt-card__name';
+    name.textContent = tool.name;
+    titleRow.appendChild(name);
+    const lang = document.createElement('span');
+    lang.className = 'dh-tag';
+    lang.textContent = tool.language;
+    titleRow.appendChild(lang);
+    const curve = document.createElement('span');
+    curve.className = `dh-tag dh-tag-${tool.learning_curve || 'medium'}`;
+    curve.textContent = `${tool.learning_curve || 'medium'} learning curve`;
+    titleRow.appendChild(curve);
+    card.appendChild(titleRow);
+
+    // Description
+    const descP = document.createElement('p');
+    descP.className = 'mt-card__desc';
+    descP.textContent = tool.description;
+    card.appendChild(descP);
+
+    // Meta: version, license, time to first model
+    const meta = document.createElement('div');
+    meta.className = 'mt-card__meta';
+    if (tool.current_version) {
+      const v = document.createElement('span');
+      v.className = 'dh-tag';
+      v.textContent = `v${tool.current_version}`;
+      meta.appendChild(v);
+    }
+    if (tool.license) {
+      const lic = document.createElement('span');
+      lic.className = 'dh-tag';
+      lic.textContent = tool.license;
+      meta.appendChild(lic);
+    }
+    if (tool.time_to_first_model) {
+      const ttfm = document.createElement('span');
+      ttfm.className = 'dh-tag';
+      ttfm.textContent = `First model: ${tool.time_to_first_model}`;
+      meta.appendChild(ttfm);
+    }
+    card.appendChild(meta);
+
+    // Best for / Not for
+    if (tool.best_for && tool.best_for.length > 0) {
+      const bestFor = document.createElement('div');
+      bestFor.className = 'mt-card__list';
+      const bfLabel = document.createElement('strong');
+      bfLabel.textContent = 'Best for: ';
+      bestFor.appendChild(bfLabel);
+      const bfText = document.createTextNode(tool.best_for.join(', '));
+      bestFor.appendChild(bfText);
+      card.appendChild(bestFor);
+    }
+
+    if (tool.not_for && tool.not_for.length > 0) {
+      const notFor = document.createElement('div');
+      notFor.className = 'mt-card__list mt-card__list--not';
+      const nfLabel = document.createElement('strong');
+      nfLabel.textContent = 'Not for: ';
+      notFor.appendChild(nfLabel);
+      const nfText = document.createTextNode(tool.not_for.join(', '));
+      notFor.appendChild(nfText);
+      card.appendChild(notFor);
+    }
+
+    // Compatible solvers
+    if (tool.solver_support && tool.solver_support.length > 0) {
+      const solverDiv = document.createElement('div');
+      solverDiv.className = 'mt-card__solvers';
+      const solLabel = document.createElement('strong');
+      solLabel.textContent = 'Solvers: ';
+      solverDiv.appendChild(solLabel);
+      tool.solver_support.forEach(s => {
+        const tag = document.createElement('span');
+        tag.className = 'dh-tag dh-tag-pt';
+        tag.textContent = s;
+        solverDiv.appendChild(tag);
+      });
+      card.appendChild(solverDiv);
+    }
+
+    // Quick start (collapsible)
+    if (tool.quick_start) {
+      const details = document.createElement('details');
+      details.className = 'dh-quickstart';
+      const summary = document.createElement('summary');
+      summary.textContent = 'Quick Start';
+      details.appendChild(summary);
+      const pre = document.createElement('pre');
+      const code = document.createElement('code');
+      code.textContent = tool.quick_start;
+      pre.appendChild(code);
+      details.appendChild(pre);
+      card.appendChild(details);
+    }
+
+    // Links
+    const links = document.createElement('div');
+    links.className = 'mt-card__links';
+    if (tool.website) {
+      const a = document.createElement('a');
+      a.href = tool.website;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = 'Website';
+      a.className = 'mt-link';
+      links.appendChild(a);
+    }
+    if (tool.docs_url) {
+      const a = document.createElement('a');
+      a.href = tool.docs_url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = 'Docs';
+      a.className = 'mt-link';
+      links.appendChild(a);
+    }
+    if (tool.github_repo) {
+      const a = document.createElement('a');
+      a.href = `https://github.com/${tool.github_repo}`;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = 'GitHub';
+      a.className = 'mt-link';
+      links.appendChild(a);
+    }
+    card.appendChild(links);
+
+    grid.appendChild(card);
+  });
+
+  container.appendChild(grid);
+
+  // Compatibility Matrix
+  if (compatMatrix && compatMatrix.matrix) {
+    buildCompatibilityMatrix(compatMatrix, container);
+  }
+}
+
+
+/**
+ * Render the solver-tool compatibility matrix as an HTML table.
+ */
+function buildCompatibilityMatrix(matrix, container) {
+  const section = document.createElement('div');
+  section.className = 'compat-section';
+
+  const h2 = document.createElement('h2');
+  h2.textContent = 'Solver Compatibility Matrix';
+  section.appendChild(h2);
+
+  const desc = document.createElement('p');
+  desc.className = 'compat-desc';
+  desc.textContent = 'Which modeling tools work with which solvers.';
+  section.appendChild(desc);
+
+  const tableWrap = document.createElement('div');
+  tableWrap.className = 'table-responsive';
+
+  const table = document.createElement('table');
+  table.className = 'compat-table';
+
+  // Header row
+  const thead = document.createElement('thead');
+  const headerRow = document.createElement('tr');
+  const emptyTh = document.createElement('th');
+  emptyTh.textContent = 'Tool \\ Solver';
+  headerRow.appendChild(emptyTh);
+  matrix.solvers.forEach(s => {
+    const th = document.createElement('th');
+    th.textContent = s;
+    headerRow.appendChild(th);
+  });
+  thead.appendChild(headerRow);
+  table.appendChild(thead);
+
+  // Body rows
+  const tbody = document.createElement('tbody');
+  matrix.modeling_tools.forEach(tool => {
+    const row = document.createElement('tr');
+    const toolTh = document.createElement('th');
+    toolTh.textContent = tool;
+    row.appendChild(toolTh);
+
+    const toolMatrix = matrix.matrix[tool] || {};
+    matrix.solvers.forEach(solver => {
+      const td = document.createElement('td');
+      const val = toolMatrix[solver];
+      if (val === true) {
+        td.textContent = '\u2705';
+        td.title = 'Supported';
+        td.className = 'compat-yes';
+      } else if (val === 'limited') {
+        td.textContent = '\u26A0';
+        td.title = 'Limited/experimental';
+        td.className = 'compat-limited';
+      } else {
+        td.textContent = '\u2014';
+        td.title = 'Not supported';
+        td.className = 'compat-no';
+      }
+      row.appendChild(td);
+    });
+    tbody.appendChild(row);
+  });
+  table.appendChild(tbody);
+  tableWrap.appendChild(table);
+  section.appendChild(tableWrap);
+
+  // Notes
+  if (matrix.notes) {
+    const notesList = document.createElement('ul');
+    notesList.className = 'compat-notes';
+    Object.entries(matrix.notes).forEach(([tool, note]) => {
+      const li = document.createElement('li');
+      const b = document.createElement('strong');
+      b.textContent = tool + ': ';
+      li.appendChild(b);
+      li.appendChild(document.createTextNode(note));
+      notesList.appendChild(li);
+    });
+    section.appendChild(notesList);
+  }
+
+  container.appendChild(section);
 }

@@ -1,0 +1,24 @@
+{
+  "description": "Which modeling tools work with which solvers. true = officially supported, false = not supported, 'limited' = partial/experimental support.",
+  "modeling_tools": ["pyomo", "pulp", "jump", "gurobipy", "cvxpy", "or-tools-py", "scipy", "ampl", "gams"],
+  "solvers": ["gurobi", "cplex", "highs", "scip", "cbc", "glpk", "mosek", "xpress", "baron"],
+  "matrix": {
+    "pyomo":      {"gurobi": true, "cplex": true, "highs": true, "scip": true, "cbc": true, "glpk": true, "mosek": true, "xpress": true, "baron": true},
+    "pulp":       {"gurobi": true, "cplex": true, "highs": true, "scip": false, "cbc": true, "glpk": true, "mosek": false, "xpress": true, "baron": false},
+    "jump":       {"gurobi": true, "cplex": true, "highs": true, "scip": true, "cbc": true, "glpk": true, "mosek": true, "xpress": true, "baron": false},
+    "gurobipy":   {"gurobi": true, "cplex": false, "highs": false, "scip": false, "cbc": false, "glpk": false, "mosek": false, "xpress": false, "baron": false},
+    "cvxpy":      {"gurobi": true, "cplex": true, "highs": false, "scip": false, "cbc": false, "glpk": true, "mosek": true, "xpress": false, "baron": false},
+    "or-tools-py":{"gurobi": false, "cplex": false, "highs": false, "scip": "limited", "cbc": false, "glpk": "limited", "mosek": false, "xpress": false, "baron": false},
+    "scipy":      {"gurobi": false, "cplex": false, "highs": true, "scip": false, "cbc": false, "glpk": false, "mosek": false, "xpress": false, "baron": false},
+    "ampl":       {"gurobi": true, "cplex": true, "highs": true, "scip": true, "cbc": true, "glpk": true, "mosek": true, "xpress": true, "baron": true},
+    "gams":       {"gurobi": true, "cplex": true, "highs": true, "scip": true, "cbc": true, "glpk": true, "mosek": true, "xpress": true, "baron": true}
+  },
+  "notes": {
+    "or-tools-py": "OR-Tools has its own internal solvers (CP-SAT, GLOP, PDLP). External solver integration is limited.",
+    "scipy": "scipy.optimize.linprog uses HiGHS as its default LP solver since SciPy 1.9.",
+    "gurobipy": "Direct Gurobi API. By design, only works with Gurobi.",
+    "ampl": "Commercial modeling language. Supports virtually all major solvers through solver-specific drivers.",
+    "gams": "Commercial modeling language. Supports virtually all major solvers through solver-specific connectors.",
+    "cvxpy": "Primarily for convex optimization. SCS and ECOS also supported as free alternatives."
+  }
+}

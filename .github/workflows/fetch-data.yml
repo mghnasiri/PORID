@@ -68,6 +68,10 @@ jobs:
           cp -f data/brief-*.json src/data/ 2>/dev/null || true
           mkdir -p src/data/briefs 2>/dev/null || true
           cp -f data/briefs/*.json src/data/briefs/ 2>/dev/null || true
+          # Static data files for Decision Helper / Modeling Tools
+          cp -f data/decision_rules.json src/data/ 2>/dev/null || true
+          cp -f data/modeling_tools.json src/data/ 2>/dev/null || true
+          cp -f data/compatibility_matrix.json src/data/ 2>/dev/null || true
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         id: auto-commit
