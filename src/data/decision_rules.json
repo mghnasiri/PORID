@@ -134,6 +134,27 @@
       "language":     {"python": 5, "julia": 4, "cpp": 6, "java": 0, "dotnet": 0, "matlab": 0, "r": 0, "any": 5},
       "scale":        {"small": 7, "medium": 3, "large": 1, "very_large": 0},
       "deployment":   {"desktop": 10, "server": 10, "container": 10, "embedded": 9, "any": 10}
+    },
+    "copt": {
+      "problem_type": {"lp": 10, "mip": 10, "qp": 9, "socp": 8, "sdp": 7, "minlp": 0, "nlp": 0, "cp": 0, "vrp": 3, "scheduling": 2},
+      "budget":       {"free": 0, "academic": 9, "commercial": 10, "any": 10},
+      "language":     {"python": 10, "julia": 0, "cpp": 9, "java": 9, "dotnet": 0, "matlab": 0, "r": 0, "any": 9},
+      "scale":        {"small": 10, "medium": 10, "large": 10, "very_large": 10},
+      "deployment":   {"desktop": 10, "server": 8, "container": 7, "embedded": 3, "any": 10}
+    },
+    "clarabel": {
+      "problem_type": {"lp": 5, "mip": 0, "qp": 8, "socp": 9, "sdp": 9, "minlp": 0, "nlp": 0, "cp": 0, "vrp": 0, "scheduling": 0},
+      "budget":       {"free": 10, "academic": 10, "commercial": 10, "any": 10},
+      "language":     {"python": 9, "julia": 9, "cpp": 0, "java": 0, "dotnet": 0, "matlab": 0, "r": 0, "any": 9},
+      "scale":        {"small": 10, "medium": 8, "large": 6, "very_large": 4},
+      "deployment":   {"desktop": 10, "server": 10, "container": 10, "embedded": 7, "any": 10}
+    },
+    "scs": {
+      "problem_type": {"lp": 5, "mip": 0, "qp": 7, "socp": 9, "sdp": 9, "minlp": 0, "nlp": 0, "cp": 0, "vrp": 0, "scheduling": 0},
+      "budget":       {"free": 10, "academic": 10, "commercial": 10, "any": 10},
+      "language":     {"python": 9, "julia": 8, "cpp": 8, "java": 0, "dotnet": 0, "matlab": 7, "r": 6, "any": 9},
+      "scale":        {"small": 9, "medium": 9, "large": 8, "very_large": 7},
+      "deployment":   {"desktop": 10, "server": 10, "container": 10, "embedded": 7, "any": 10}
     }
   }
 }
