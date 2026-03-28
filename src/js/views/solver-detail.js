@@ -223,8 +223,7 @@ export function render(container, solverId, allData) {
     editTag.textContent = 'Editorial';
     editorialP.appendChild(editTag);
     editorialP.appendChild(document.createTextNode(' Recommendations based on solver characteristics and professional judgment. Not a substitute for benchmarking on your specific problem.'));
-    useSection.insertBefore(editorialP, useGrid);
-
+    useSection.appendChild(editorialP);
     useSection.appendChild(useGrid);
     page.appendChild(useSection);
   }

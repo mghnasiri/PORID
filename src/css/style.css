@@ -21,7 +21,7 @@
   /* Text */
   --color-text: #CCD6F6;
   --color-text-muted: #8892B0;
-  --color-text-faint: #4A5568;
+  --color-text-faint: #718096;
 
   /* Typography */
   --font-title: 'Cormorant Garamond', Georgia, serif;
@@ -57,7 +57,7 @@
   --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 
   /* R4-24: Typographic scale */
-  --fs-xs: 0.65rem;
+  --fs-xs: 0.7rem;
   --fs-sm: 0.75rem;
   --fs-base: 0.875rem;
   --fs-lg: 1rem;
@@ -77,6 +77,10 @@
   --color-code-bg: rgba(197, 160, 89, 0.08);
   --color-code-border: rgba(197, 160, 89, 0.2);
   --color-code-text: #CCD6F6;
+
+  /* Borders & Muted */
+  --color-border: rgba(197, 160, 89, 0.15);
+  --color-muted: #8892B0;
 
   /* Layout */
   --nav-height: 56px;
@@ -109,6 +113,8 @@
   --color-code-bg: rgba(139, 105, 20, 0.06);
   --color-code-border: rgba(139, 105, 20, 0.15);
   --color-code-text: #1A202C;
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-muted: #666;
 }
 
 /* ── Reset & Base ──────────────────────────────────────────────── */
@@ -1158,6 +1164,17 @@ textarea:focus-visible,
 .skeleton__line--subtitle{ width: 50%; height: 10px; }
 .skeleton__line--body    { width: 90%; }
 .skeleton__line--tags    { width: 40%; height: 10px; margin-top: var(--space-md); }
+
+/* Solver detail skeleton */
+.solver-detail-skeleton { padding: 2rem; }
+.skeleton-line {
+  height: 1rem;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(90deg, rgba(136,146,176,0.08) 25%, rgba(136,146,176,0.15) 50%, rgba(136,146,176,0.08) 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: shimmer 1.5s infinite;
+}
 
 /* ── Datasets ──────────────────────────────────────────────────── */
 
@@ -2660,8 +2677,8 @@ textarea:focus-visible,
 
 /* Solver table */
 .solver-table-wrap { overflow-x: auto; }
-.solver-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
-.solver-table th { text-align: left; padding: 0.75rem; font-size: 0.65rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--color-accent); border-bottom: 2px solid var(--color-border); white-space: nowrap; }
+.solver-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.solver-table th { text-align: left; padding: 0.75rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--color-accent); border-bottom: 2px solid var(--color-border); white-space: nowrap; }
 .solver-table td { padding: 0.75rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
 .solver-row:hover td { background: rgba(197, 160, 89, 0.03); }
 .solver-row__name { min-width: 140px; }

@@ -86,6 +86,17 @@ export function render(container, allData, sub, detail) {
   const hashParts = (window.location.hash.replace('#', '') || '').split('/');
   const solverDetailId = detail || (hashParts[0] === 'solvers' && hashParts[1]) || (hashParts[1] === 'solvers' && hashParts[2]);
   if (activeSub === 'solvers' && solverDetailId) {
+    const skeleton = document.createElement('div');
+    skeleton.className = 'solver-detail-skeleton';
+    for (let i = 0; i < 3; i++) {
+      const line = document.createElement('div');
+      line.className = 'skeleton-line';
+      if (i === 0) line.style.width = '40%';
+      if (i === 2) line.style.width = '70%';
+      skeleton.appendChild(line);
+    }
+    contentDiv.appendChild(skeleton);
+
     import('../views/solver-detail.js').then(mod => {
       mod.render(contentDiv, solverDetailId, allData);
     });
@@ -660,18 +671,44 @@ function buildSolvers(solversData, container, decisionRules, allData) {
   // ── Hero chooser: "What are you optimizing?" ──
   const hero = document.createElement('section');
   hero.className = 'hero-chooser';
-  hero.innerHTML = `
-    <h1>What are you optimizing?</h1>
-    <p class="hero-sub">Choose your problem type for an instant solver recommendation. Or use the filters below.</p>
-    <div class="problem-cards">
-      <a href="#solvers?problem_type=mip" class="pcard"><span class="pcard-label">Linear / MIP</span><span class="pcard-desc">LP, MIP, ILP</span></a>
-      <a href="#solvers?problem_type=minlp" class="pcard"><span class="pcard-label">Nonlinear</span><span class="pcard-desc">NLP, MINLP, QP</span></a>
-      <a href="#solvers?problem_type=cp" class="pcard"><span class="pcard-label">Constraint Programming</span><span class="pcard-desc">Scheduling, Assignment</span></a>
-      <a href="#solvers?problem_type=vrp" class="pcard"><span class="pcard-label">Vehicle Routing</span><span class="pcard-desc">TSP, VRP, CVRP</span></a>
-      <a href="#solvers?problem_type=sdp" class="pcard"><span class="pcard-label">Convex / Conic</span><span class="pcard-desc">SDP, SOCP</span></a>
-      <a href="#solvers?budget=free" class="pcard pcard-free"><span class="pcard-label">Free &amp; Open Source</span><span class="pcard-desc">No license required</span></a>
-    </div>
-  `;
+
+  const heroH1 = document.createElement('h1');
+  heroH1.textContent = 'What are you optimizing?';
+  hero.appendChild(heroH1);
+
+  const heroSub = document.createElement('p');
+  heroSub.className = 'hero-sub';
+  heroSub.textContent = 'Choose your problem type for an instant solver recommendation. Or use the filters below.';
+  hero.appendChild(heroSub);
+
+  const cards = document.createElement('div');
+  cards.className = 'problem-cards';
+
+  const cardData = [
+    { href: '#solvers?problem_type=mip', label: 'Linear / MIP', desc: 'LP, MIP, ILP' },
+    { href: '#solvers?problem_type=minlp', label: 'Nonlinear', desc: 'NLP, MINLP, QP' },
+    { href: '#solvers?problem_type=cp', label: 'Constraint Programming', desc: 'Scheduling, Assignment' },
+    { href: '#solvers?problem_type=vrp', label: 'Vehicle Routing', desc: 'TSP, VRP, CVRP' },
+    { href: '#solvers?problem_type=sdp', label: 'Convex / Conic', desc: 'SDP, SOCP' },
+    { href: '#solvers?budget=free', label: 'Free & Open Source', desc: 'No license required', free: true },
+  ];
+
+  cardData.forEach(cd => {
+    const a = document.createElement('a');
+    a.href = cd.href;
+    a.className = 'pcard' + (cd.free ? ' pcard-free' : '');
+    const lbl = document.createElement('span');
+    lbl.className = 'pcard-label';
+    lbl.textContent = cd.label;
+    a.appendChild(lbl);
+    const dsc = document.createElement('span');
+    dsc.className = 'pcard-desc';
+    dsc.textContent = cd.desc;
+    a.appendChild(dsc);
+    cards.appendChild(a);
+  });
+
+  hero.appendChild(cards);
   container.appendChild(hero);
 
   // Data freshness badge
@@ -791,6 +828,13 @@ function buildSolvers(solversData, container, decisionRules, allData) {
   }
 
   compareBtn.addEventListener('click', openComparePanel);
+
+  // P2-7: Comparison hint text
+  const hint = document.createElement('p');
+  hint.className = 'editorial-notice';
+  hint.textContent = 'Select 2\u20134 solvers to compare side by side.';
+  hint.style.marginBottom = '0.5rem';
+  container.appendChild(hint);
 
   const wrap = document.createElement('div');
   wrap.className = 'solver-table-wrap';
@@ -1034,6 +1078,70 @@ function buildSolvers(solversData, container, decisionRules, allData) {
   }
 
   container.appendChild(wrap);
+
+  // ── Hero card filtering: read URL params and dim non-matching rows ──
+  function applyHeroFilter(solvers) {
+    const hash = window.location.hash || '';
+    const qIdx = hash.indexOf('?');
+    if (qIdx < 0) return;
+    const params = new URLSearchParams(hash.slice(qIdx + 1));
+    const problemType = params.get('problem_type');
+    const budget = params.get('budget');
+    if (!problemType && !budget) return;
+
+    const TYPE_MAP = {
+      'mip': ['LP', 'MIP', 'ILP'],
+      'minlp': ['NLP', 'MINLP', 'QP'],
+      'cp': ['CP', 'Scheduling', 'Assignment', 'CIP'],
+      'vrp': ['VRP', 'Routing'],
+      'sdp': ['SOCP', 'SDP', 'Conic'],
+    };
+
+    const rows = container.querySelectorAll('tr[data-solver-id]');
+    let matchCount = 0;
+    rows.forEach(row => {
+      const sid = row.dataset.solverId;
+      const solver = solvers.find(s => s.id === sid);
+      if (!solver) return;
+      let matches = true;
+      if (problemType && TYPE_MAP[problemType]) {
+        const targets = TYPE_MAP[problemType];
+        const types = solver.problem_types || [];
+        matches = targets.some(t => types.includes(t));
+      }
+      if (budget === 'free') {
+        matches = solver.open_source === true;
+      }
+      row.style.opacity = matches ? '1' : '0.3';
+      if (matches) matchCount++;
+    });
+
+    // Add clear filter button
+    if (matchCount > 0 && matchCount < rows.length) {
+      const clearBtn = document.createElement('button');
+      clearBtn.className = 'dh-reset';
+      clearBtn.textContent = 'Clear filter';
+      clearBtn.style.margin = '0.5rem 0';
+      clearBtn.addEventListener('click', () => {
+        rows.forEach(r => r.style.opacity = '1');
+        clearBtn.remove();
+        history.replaceState(null, '', '#solvers');
+      });
+      // Insert before the table
+      const tableParent = rows[0]?.closest('.solver-table-wrap') || rows[0]?.closest('table')?.parentElement;
+      if (tableParent) tableParent.parentElement.insertBefore(clearBtn, tableParent);
+    }
+  }
+
+  applyHeroFilter(solversForTable);
+
+  // Scroll table into view when filtering is active
+  if (window.location.hash.includes('?')) {
+    setTimeout(() => {
+      const tableEl = container.querySelector('.solver-table-wrap') || container.querySelector('table');
+      if (tableEl) tableEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
 
   // VD-03: Solver Release Timeline (swimlane view, last 2 years)
   buildSolverTimeline(solversForTable, container);
