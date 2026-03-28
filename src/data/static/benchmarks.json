@@ -1,0 +1,203 @@
+{
+  "generated_at": "2026-03-24T07:00:00Z",
+  "categories": [
+    {
+      "id": "mip",
+      "name": "Mixed-Integer Programming",
+      "description": "General-purpose MIP benchmark instances for testing solvers and algorithms",
+      "benchmarks": [
+        {
+          "id": "miplib2017",
+          "name": "MIPLIB 2017",
+          "full_name": "Mixed Integer Programming Library 2017",
+          "url": "https://miplib.zib.de/",
+          "description": "The standard benchmark library for MIP solvers. Contains 1,065 instances contributed by the community, with 240 in the benchmark set.",
+          "instances": 1065,
+          "benchmark_subset": 240,
+          "format": "MPS",
+          "introduced_by": "Gleixner et al., 2021",
+          "introduced_paper_url": "https://doi.org/10.1007/s10107-021-01681-8",
+          "maintained_by": "Zuse Institute Berlin (ZIB)",
+          "last_updated": "2023",
+          "best_known_solutions": "https://miplib.zib.de/statistics.html",
+          "download": "https://miplib.zib.de/downloads.html",
+          "tags": ["mip", "lp", "solver-benchmarking"]
+        }
+      ]
+    },
+    {
+      "id": "vrp",
+      "name": "Vehicle Routing",
+      "description": "Benchmark instances for variants of the Vehicle Routing Problem",
+      "benchmarks": [
+        {
+          "id": "cvrplib",
+          "name": "CVRPLIB",
+          "full_name": "Capacitated Vehicle Routing Problem Library",
+          "url": "https://vrp.galgos.inf.puc-rio.br/index.php/en/",
+          "description": "The main benchmark set for CVRP, including instances from Augerat, Christofides-Mingozzi-Toth, and the X instances by Uchoa et al. (2017).",
+          "instances": 270,
+          "format": "VRP/TSPLIB",
+          "introduced_by": "Uchoa et al., 2017",
+          "introduced_paper_url": "https://doi.org/10.1016/j.ejor.2016.08.012",
+          "maintained_by": "PUC-Rio",
+          "best_known_solutions": "https://vrp.galgos.inf.puc-rio.br/index.php/en/",
+          "download": "https://vrp.galgos.inf.puc-rio.br/index.php/en/",
+          "tags": ["vrp", "cvrp", "routing"]
+        },
+        {
+          "id": "solomon",
+          "name": "Solomon VRPTW Instances",
+          "full_name": "Solomon's Vehicle Routing Problems with Time Windows",
+          "url": "https://www.sintef.no/projectweb/top/vrptw/solomon-benchmark/",
+          "description": "56 instances with 100 customers for VRPTW, organized in 6 classes (C1, C2, R1, R2, RC1, RC2) based on customer distribution and time window characteristics.",
+          "instances": 56,
+          "format": "Solomon",
+          "introduced_by": "Solomon, 1987",
+          "maintained_by": "SINTEF",
+          "best_known_solutions": "https://www.sintef.no/projectweb/top/vrptw/solomon-benchmark/100-customers/",
+          "tags": ["vrp", "vrptw", "time-windows"]
+        },
+        {
+          "id": "gehring-homberger",
+          "name": "Gehring-Homberger Extended Instances",
+          "full_name": "Extended Solomon-type VRPTW instances",
+          "url": "https://www.sintef.no/projectweb/top/vrptw/homberger-benchmark/",
+          "description": "Extended Solomon-type instances with 200, 400, 600, 800, and 1000 customers.",
+          "instances": 300,
+          "format": "Solomon",
+          "introduced_by": "Gehring & Homberger, 1999",
+          "maintained_by": "SINTEF",
+          "tags": ["vrp", "vrptw", "large-scale"]
+        }
+      ]
+    },
+    {
+      "id": "scheduling",
+      "name": "Scheduling",
+      "description": "Benchmark instances for scheduling problems (RCPSP, job shop, flow shop)",
+      "benchmarks": [
+        {
+          "id": "psplib",
+          "name": "PSPLIB",
+          "full_name": "Project Scheduling Problem Library",
+          "url": "https://www.om-db.wi.tum.de/psplib/",
+          "description": "Standard benchmark for RCPSP (Resource-Constrained Project Scheduling Problem). Includes J30, J60, J90, J120 instance sets.",
+          "instances": 2040,
+          "format": "PSPLIB",
+          "introduced_by": "Kolisch & Sprecher, 1997",
+          "maintained_by": "TU Munich",
+          "tags": ["scheduling", "rcpsp", "project-scheduling"]
+        },
+        {
+          "id": "taillard",
+          "name": "Taillard's Instances",
+          "full_name": "Taillard's scheduling benchmark instances",
+          "url": "https://mistic.heig-vd.ch/taillard/problemes.dir/ordonnancement.dir/ordonnancement.html",
+          "description": "Widely-used instances for job shop, flow shop, and open shop scheduling problems.",
+          "instances": 530,
+          "format": "Various",
+          "introduced_by": "Taillard, 1993",
+          "maintained_by": "HEIG-VD",
+          "tags": ["scheduling", "job-shop", "flow-shop"]
+        }
+      ]
+    },
+    {
+      "id": "network",
+      "name": "Network Optimization",
+      "description": "Benchmark instances for network design, flow, and routing problems",
+      "benchmarks": [
+        {
+          "id": "tsplib",
+          "name": "TSPLIB",
+          "full_name": "Traveling Salesman Problem Library",
+          "url": "http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/",
+          "description": "The classic benchmark for TSP and related problems. Contains symmetric/asymmetric TSP, HCP, SOP, and CVRP instances.",
+          "instances": 144,
+          "format": "TSPLIB",
+          "introduced_by": "Reinelt, 1991",
+          "maintained_by": "University of Heidelberg",
+          "tags": ["tsp", "routing", "classic"]
+        },
+        {
+          "id": "sndlib",
+          "name": "SNDlib",
+          "full_name": "Survivable Network Design Library",
+          "url": "https://sndlib.put.poznan.pl/",
+          "description": "Benchmark instances for survivable network design problems, based on real telecommunication networks.",
+          "instances": 22,
+          "format": "SNDlib XML",
+          "introduced_by": "Orlowski et al., 2010",
+          "maintained_by": "Poznan University of Technology",
+          "tags": ["network", "design", "telecommunications"]
+        }
+      ]
+    },
+    {
+      "id": "facility",
+      "name": "Facility Location",
+      "description": "Benchmark instances for facility location and p-median problems",
+      "benchmarks": [
+        {
+          "id": "orlib-facility",
+          "name": "OR-Library (Facility Location)",
+          "full_name": "Beasley's OR-Library: Facility Location instances",
+          "url": "http://people.brunel.ac.uk/~mastjjb/jeb/orlib/",
+          "description": "Benchmark instances for capacitated and uncapacitated facility location, p-median, and set covering problems.",
+          "instances": 200,
+          "format": "Various text",
+          "introduced_by": "Beasley, 1990",
+          "maintained_by": "Brunel University",
+          "tags": ["facility-location", "p-median", "set-covering"]
+        }
+      ]
+    },
+    {
+      "id": "sat-cp",
+      "name": "Satisfiability & Constraint Programming",
+      "description": "Benchmark instances for SAT solvers and CP systems",
+      "benchmarks": [
+        {
+          "id": "sat-competition",
+          "name": "SAT Competition Benchmarks",
+          "full_name": "SAT Competition annual benchmark suite",
+          "url": "https://satcompetition.github.io/",
+          "description": "Annual competition benchmarks for SAT solvers, including crafted, random, and application instances.",
+          "format": "DIMACS CNF",
+          "introduced_by": "SAT Competition series",
+          "tags": ["sat", "cp", "competition"]
+        },
+        {
+          "id": "minizinc-challenge",
+          "name": "MiniZinc Challenge Instances",
+          "full_name": "MiniZinc Challenge annual benchmark suite",
+          "url": "https://www.minizinc.org/challenge.html",
+          "description": "Annual benchmark for constraint programming solvers using the MiniZinc modeling language.",
+          "format": "MiniZinc (.mzn)",
+          "introduced_by": "MiniZinc Challenge series",
+          "tags": ["cp", "constraint-programming", "competition"]
+        }
+      ]
+    },
+    {
+      "id": "mittelmann",
+      "name": "Mittelmann Benchmarks (Meta)",
+      "description": "Independent benchmark suite — the most cited independent benchmark source in OR",
+      "benchmarks": [
+        {
+          "id": "mittelmann",
+          "name": "Hans Mittelmann's Benchmarks",
+          "full_name": "Mittelmann Decision Tree for Optimization Software",
+          "url": "https://plato.asu.edu/bench.html",
+          "description": "Independent benchmark suite run by Hans Mittelmann at ASU. Tests LP, MIP, and other solvers on standardized instance sets. The most cited independent benchmark source in OR.",
+          "format": "Various (MPS, LP)",
+          "maintained_by": "Hans Mittelmann, Arizona State University",
+          "solver_notes": "Gurobi withdrew Aug 2024. MindOpt withdrew Dec 2024. Results updated periodically.",
+          "interactive_url": "https://mattmilten.github.io/mittelmann-plots/",
+          "tags": ["meta-benchmark", "independent", "lp", "mip"]
+        }
+      ]
+    }
+  ]
+}
