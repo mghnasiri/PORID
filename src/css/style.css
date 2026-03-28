@@ -5709,3 +5709,21 @@ h3:hover .anchor-link,
     font-size: 0.65rem;
   }
 }
+
+/* ── Modeling Tool Banner (solver detail page) ─────────────────── */
+.tool-not-solver-banner {
+  background: rgba(100, 150, 255, 0.08);
+  border: 1px solid rgba(100, 150, 255, 0.2);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  color: var(--color-text, #CCD6F6);
+  margin-bottom: 1rem;
+}
+.tool-not-solver-banner a {
+  color: var(--color-accent, #C5A059);
+  text-decoration: none;
+}
+.tool-not-solver-banner a:hover {
+  text-decoration: underline;
+}

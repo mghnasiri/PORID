@@ -37,6 +37,22 @@ export function render(container, solverId, allData) {
   const page = document.createElement('div');
   page.className = 'solver-detail';
 
+  // Banner for modeling tools (not actual solvers)
+  const MODELING_TOOL_IDS = ['pyomo', 'jump', 'cvxpy', 'ampl', 'gams'];
+  if (MODELING_TOOL_IDS.includes(solverId)) {
+    const banner = document.createElement('div');
+    banner.className = 'tool-not-solver-banner';
+    const strong = document.createElement('strong');
+    strong.textContent = 'Note: ';
+    banner.appendChild(strong);
+    banner.appendChild(document.createTextNode(solver.name + ' is a modeling framework, not a solver. It formulates optimization problems and passes them to solvers like Gurobi, HiGHS, or SCIP. '));
+    const link = document.createElement('a');
+    link.href = '#tools';
+    link.textContent = 'View on the Modeling Tools page \u2192';
+    banner.appendChild(link);
+    page.appendChild(banner);
+  }
+
   // Breadcrumb
   const breadcrumb = document.createElement('nav');
   breadcrumb.className = 'breadcrumb';

@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import shutil
 from datetime import datetime, timezone
 from pathlib import Path
@@ -74,7 +75,7 @@ def fetch_github_release(repo: str) -> dict | None:
             return None
         data = resp.json()
         return {
-            "version": data.get("tag_name", "").lstrip("v"),
+            "version": re.sub(r'^(v|V|releases/|vreleases/|release-)', '', data.get("tag_name", "")),
             "release_date": (data.get("published_at", "") or "")[:10],
             "changelog": (data.get("body", "") or "")[:500],
             "url": data.get("html_url", ""),

@@ -233,7 +233,9 @@ function animateCounter(el, target) {
 
 function updateStats() {
   // Tooling-focused stats (updated after optional data loads)
-  const solverList = state.extraData.solvers?.solvers || state.extraData.solvers || [];
+  const MODELING_IDS = ['pyomo', 'jump', 'cvxpy', 'ampl', 'gams'];
+  const allSolverEntries = state.extraData.solvers?.solvers || state.extraData.solvers || [];
+  const solverList = allSolverEntries.filter(s => !MODELING_IDS.includes(s.id));
   const toolList = state.extraData.modelingTools?.tools || state.extraData.modelingTools || [];
   const benchList = state.extraData.benchmarks?.categories || state.extraData.benchmarks || [];
 

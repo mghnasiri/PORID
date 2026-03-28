@@ -219,12 +219,12 @@
           class="search-modal__input"
           id="searchInput"
           type="text"
-          placeholder="Search publications, software, conferences&hellip;"
+          placeholder="Search solvers, tools, benchmarks&hellip;"
           autocomplete="off"
         >
       </div>
       <div class="search-modal__results">
-        <div class="search-modal__empty">Start typing to search across all modules.</div>
+        <div class="search-modal__empty">Start typing to search solvers, tools, and benchmarks.</div>
       </div>
       <div class="search-modal__hint">
         <kbd>ESC</kbd>&nbsp;to close
@@ -282,8 +282,8 @@
         </div>
         <div class="help-modal__group">
           <h3>Command Palette</h3>
-          <div class="help-modal__row"><kbd>&#8984;K</kbd><span>then type <code>&gt;pulse</code></span><span>Go to section</span></div>
-          <div class="help-modal__row"><kbd>&#8984;K</kbd><span>then type <code>go:solvers</code></span><span>Go to section</span></div>
+          <div class="help-modal__row"><kbd>&#8984;K</kbd><span>then type <code>go:solvers</code></span><span>Go to Solvers tab</span></div>
+          <div class="help-modal__row"><kbd>&#8984;K</kbd><span>then type <code>go:feed</code></span><span>Go to OR Feed tab</span></div>
         </div>
       </div>
     </div>
@@ -318,16 +318,14 @@
         <div class="onboarding-interests">
           <h3>Pick your interests</h3>
           <div class="onboarding-tags" id="onboardingTags">
-            <button class="onboarding-tag" data-tag="scheduling">scheduling</button>
-            <button class="onboarding-tag" data-tag="vehicle-routing">vehicle-routing</button>
-            <button class="onboarding-tag" data-tag="integer-programming">integer-programming</button>
-            <button class="onboarding-tag" data-tag="stochastic">stochastic</button>
-            <button class="onboarding-tag" data-tag="ml-for-or">ml-for-or</button>
-            <button class="onboarding-tag" data-tag="healthcare-or">healthcare-or</button>
-            <button class="onboarding-tag" data-tag="metaheuristics">metaheuristics</button>
-            <button class="onboarding-tag" data-tag="supply-chain">supply-chain</button>
-            <button class="onboarding-tag" data-tag="decomposition">decomposition</button>
-            <button class="onboarding-tag" data-tag="constraint-programming">constraint-programming</button>
+            <button class="onboarding-tag" data-tag="lp-mip">LP / MIP</button>
+            <button class="onboarding-tag" data-tag="nonlinear">Nonlinear (NLP)</button>
+            <button class="onboarding-tag" data-tag="constraint-programming">Constraint Programming</button>
+            <button class="onboarding-tag" data-tag="vehicle-routing">Vehicle Routing</button>
+            <button class="onboarding-tag" data-tag="open-source">Open Source Only</button>
+            <button class="onboarding-tag" data-tag="academic">Academic Use</button>
+            <button class="onboarding-tag" data-tag="python">Python</button>
+            <button class="onboarding-tag" data-tag="julia">Julia</button>
           </div>
         </div>
       </div>
@@ -381,8 +379,6 @@
     <div class="footer__links">
       <a href="https://github.com/mghnasiri" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
       <span class="footer__sep">&middot;</span>
-      <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener" aria-label="Google Scholar">Scholar</a>
-      <span class="footer__sep">&middot;</span>
       <a href="https://mghnasiri.github.io/" target="_blank" rel="noopener" aria-label="Portfolio">Portfolio</a>
       <span class="footer__sep">&middot;</span>
       <a href="#changelog" aria-label="What's New">What's New</a>
@@ -393,7 +389,7 @@
       <span class="footer__sep">&middot;</span>
       <a href="#" id="tourLink" aria-label="Take the tour">Tour</a>
     </div>
-    &copy; 2025 Mohammad G. Nasiri &middot; <a href="#" id="changelogLink" class="footer__version-link">PORID v2.1</a>
+    &copy; 2026 Mohammad G. Nasiri &middot; <a href="#" id="changelogLink" class="footer__version-link">PORID v2.1</a>
   </footer>
 
   <!-- ====== App Module ====== -->

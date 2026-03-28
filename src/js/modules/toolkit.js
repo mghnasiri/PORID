@@ -11,6 +11,9 @@ import { relativeTime, formatDate } from '../utils/date.js';
 import { DecisionHelper } from '../components/decision-helper.js';
 import { showLastUpdated } from '../utils/data-loader.js';
 
+// Modeling tools that should NOT appear in the solver comparison table
+const MODELING_TOOL_IDS = ['pyomo', 'jump', 'cvxpy', 'ampl', 'gams'];
+
 const SUB_TABS = [
   { key: '', label: 'Overview', icon: '\uD83D\uDEE0' },
   { key: 'solvers', label: 'Solvers', icon: '\u2699' },
@@ -677,6 +680,10 @@ function buildSolvers(solversData, container, decisionRules, allData) {
     dh.render();
   }
 
+  // Separate modeling tools from actual solvers for table/heatmap/charts
+  const allSolvers = solversData.solvers;
+  const solversForTable = allSolvers.filter(s => !MODELING_TOOL_IDS.includes(s.id));
+
   let tableBody = null;
 
   /* ── VD-05: Comparison bar (hidden until 2-4 solvers checked) ── */
@@ -711,7 +718,7 @@ function buildSolvers(solversData, container, decisionRules, allData) {
   container.appendChild(comparePanel);
 
   function openComparePanel() {
-    const selected = solversData.solvers.filter(s => selectedSolverIds.has(s.id));
+    const selected = solversForTable.filter(s => selectedSolverIds.has(s.id));
     if (selected.length < 2) return;
     comparePanel.textContent = '';
     comparePanel.style.display = 'block';
@@ -800,7 +807,7 @@ function buildSolvers(solversData, container, decisionRules, allData) {
   // tbody
   const tbody = document.createElement('tbody');
   tableBody = tbody;
-  solversData.solvers.forEach(s => {
+  solversForTable.forEach(s => {
     const tr = document.createElement('tr');
     tr.className = 'solver-row';
     tr.dataset.solverId = s.id;
@@ -1020,12 +1027,12 @@ function buildSolvers(solversData, container, decisionRules, allData) {
   container.appendChild(wrap);
 
   // VD-03: Solver Release Timeline (swimlane view, last 2 years)
-  buildSolverTimeline(solversData, container);
+  buildSolverTimeline(solversForTable, container);
 
   // VD-02: Coverage Heatmap
-  buildCoverageHeatmap(solversData, container);
+  buildCoverageHeatmap(solversForTable, container);
 
-  buildCostPerformanceChart(solversData, container);
+  buildCostPerformanceChart(solversForTable, container);
   buildPerformanceCalculator(container);
 }
 
@@ -1034,8 +1041,7 @@ function buildSolvers(solversData, container, decisionRules, allData) {
  * Cells are colored green (supported) or gray (unsupported). Column headers are
  * sortable: clicking a header reorders solvers so those supporting that type appear first.
  */
-function buildCoverageHeatmap(solversData, container) {
-  const solvers = solversData.solvers;
+function buildCoverageHeatmap(solvers, container) {
   const section = document.createElement('div');
   section.className = 'solver-heatmap-section';
 
@@ -1122,8 +1128,7 @@ function buildCoverageHeatmap(solversData, container) {
   container.appendChild(section);
 }
 
-function buildCostPerformanceChart(solversData, container) {
-  const solvers = solversData.solvers;
+function buildCostPerformanceChart(solvers, container) {
   const section = document.createElement('section');
   section.className = 'solver-section';
   const h2 = document.createElement('h2');
@@ -1355,8 +1360,7 @@ function buildPerformanceCalculator(container) {
  * Each solver gets a row; dots are positioned by date.
  * Green = open source, gold = commercial.
  */
-function buildSolverTimeline(solversData, container) {
-  const solvers = solversData.solvers;
+function buildSolverTimeline(solvers, container) {
   if (!solvers || solvers.length === 0) return;
 
   const now = new Date();
