@@ -122,7 +122,37 @@
           "source": "Gurobi case studies"
         }
       ],
-      "pypi_monthly_downloads": -24
+      "pypi_monthly_downloads": -24,
+      "sources": {
+        "version": {
+          "url": "https://pypi.org/project/gurobipy/",
+          "type": "pypi"
+        },
+        "problem_types": {
+          "url": "https://www.gurobi.com/solutions/gurobi-optimizer/",
+          "type": "vendor_docs",
+          "verified": "2026-03-28"
+        },
+        "license_type": {
+          "url": "https://www.gurobi.com/pricing/",
+          "type": "vendor_page",
+          "verified": "2026-03-28"
+        },
+        "academic_details": {
+          "url": "https://www.gurobi.com/academia/academic-program-and-licenses/",
+          "type": "vendor_page",
+          "verified": "2026-03-28"
+        },
+        "pricing_estimate": {
+          "type": "community_estimate",
+          "note": "Gurobi does not publish pricing. Estimate based on community reports. Actual pricing varies by use case."
+        },
+        "benchmark_tier": {
+          "url": "https://plato.asu.edu/ftp/milp.html",
+          "type": "benchmark_results",
+          "note": "Tier based on historical Mittelmann results. Gurobi withdrew Aug 2024."
+        }
+      }
     },
     {
       "id": "cplex",
@@ -230,7 +260,37 @@
           "source": "IBM case studies"
         }
       ],
-      "pypi_monthly_downloads": -36
+      "pypi_monthly_downloads": -36,
+      "sources": {
+        "version": {
+          "url": "https://pypi.org/project/cplex/",
+          "type": "pypi"
+        },
+        "problem_types": {
+          "url": "https://www.ibm.com/products/ilog-cplex-optimization-studio",
+          "type": "vendor_docs",
+          "verified": "2026-03-28"
+        },
+        "license_type": {
+          "url": "https://www.ibm.com/products/ilog-cplex-optimization-studio/pricing",
+          "type": "vendor_page",
+          "verified": "2026-03-28"
+        },
+        "academic_details": {
+          "url": "https://www.ibm.com/academic",
+          "type": "vendor_page",
+          "verified": "2026-03-28"
+        },
+        "pricing_estimate": {
+          "type": "community_estimate",
+          "note": "IBM enterprise pricing. Contact IBM directly."
+        },
+        "benchmark_tier": {
+          "url": "https://plato.asu.edu/ftp/milp.html",
+          "type": "benchmark_results",
+          "verified": "2026-03-28"
+        }
+      }
     },
     {
       "id": "highs",
@@ -353,7 +413,29 @@
         "Change scaling in HiPO",
         "HiPDLP cleanup"
       ],
-      "pypi_monthly_downloads": -71
+      "pypi_monthly_downloads": -71,
+      "sources": {
+        "version": {
+          "url": "https://github.com/ERGO-Code/HiGHS/releases",
+          "type": "github"
+        },
+        "problem_types": {
+          "url": "https://ergo-code.github.io/HiGHS/dev/",
+          "type": "official_docs",
+          "verified": "2026-03-28"
+        },
+        "license_type": {
+          "url": "https://github.com/ERGO-Code/HiGHS/blob/master/LICENSE",
+          "type": "github",
+          "verified": "2026-03-28"
+        },
+        "benchmark_tier": {
+          "url": "https://plato.asu.edu/ftp/lpsimp.html",
+          "type": "benchmark_results",
+          "note": "Fastest open-source on Mittelmann LP simplex benchmarks.",
+          "verified": "2026-03-28"
+        }
+      }
     },
     {
       "id": "scip",
@@ -466,7 +548,24 @@
         "make bundled CppAD atomic_base threadsafe",
         "check: fix invalid ctest invocation"
       ],
-      "pypi_monthly_downloads": -41
+      "pypi_monthly_downloads": -41,
+      "sources": {
+        "version": {
+          "url": "https://github.com/scipopt/scip/releases",
+          "type": "github"
+        },
+        "problem_types": {
+          "url": "https://www.scipopt.org/",
+          "type": "official_docs",
+          "verified": "2026-03-28"
+        },
+        "license_type": {
+          "url": "https://github.com/scipopt/scip/blob/master/LICENSE",
+          "type": "github",
+          "note": "Switched from ZIB Academic to Apache 2.0 in SCIP 8.0 (2022).",
+          "verified": "2026-03-28"
+        }
+      }
     },
     {
       "id": "or-tools",
@@ -577,7 +676,23 @@
         "build(deps): bump the pip group across 1 directory with 6 updates",
         "routing: fix pywraprouting build"
       ],
-      "pypi_monthly_downloads": -34
+      "pypi_monthly_downloads": -34,
+      "sources": {
+        "version": {
+          "url": "https://github.com/google/or-tools/releases",
+          "type": "github"
+        },
+        "problem_types": {
+          "url": "https://developers.google.com/optimization",
+          "type": "official_docs",
+          "verified": "2026-03-28"
+        },
+        "license_type": {
+          "url": "https://github.com/google/or-tools/blob/stable/LICENSE",
+          "type": "github",
+          "verified": "2026-03-28"
+        }
+      }
     },
     {
       "id": "cbc",
@@ -673,7 +788,23 @@
         "Update MSVS libCbc project for added CbcSolverStatistics.cpp",
         "Enable manual action runs for stable 2.10",
         "Add outputPrecision parameter to configure precision of values."
-      ]
+      ],
+      "sources": {
+        "version": {
+          "url": "https://github.com/coin-or/Cbc/releases",
+          "type": "github"
+        },
+        "problem_types": {
+          "url": "https://github.com/coin-or/Cbc",
+          "type": "github",
+          "verified": "2026-03-28"
+        },
+        "license_type": {
+          "url": "https://github.com/coin-or/Cbc/blob/master/LICENSE",
+          "type": "github",
+          "verified": "2026-03-28"
+        }
+      }
     },
     {
       "id": "xpress",
@@ -758,7 +889,27 @@
           "Community edition available with variable limits"
         ]
       },
-      "update_source": "manual"
+      "update_source": "manual",
+      "sources": {
+        "version": {
+          "type": "manual",
+          "note": "FICO does not publish on GitHub/PyPI. Version from vendor website."
+        },
+        "problem_types": {
+          "url": "https://www.fico.com/en/products/fico-xpress-optimization",
+          "type": "vendor_docs",
+          "verified": "2026-03-28"
+        },
+        "license_type": {
+          "url": "https://www.fico.com/en/products/fico-xpress-optimization",
+          "type": "vendor_page",
+          "verified": "2026-03-28"
+        },
+        "pricing_estimate": {
+          "type": "community_estimate",
+          "note": "FICO enterprise pricing. Contact vendor."
+        }
+      }
     },
     {
       "id": "mosek",
@@ -845,7 +996,29 @@
         ]
       },
       "update_source": "manual",
-      "pypi_monthly_downloads": -4
+      "pypi_monthly_downloads": -4,
+      "sources": {
+        "version": {
+          "url": "https://pypi.org/project/Mosek/",
+          "type": "pypi"
+        },
+        "problem_types": {
+          "url": "https://www.mosek.com/products/mosek/",
+          "type": "vendor_docs",
+          "verified": "2026-03-28"
+        },
+        "license_type": {
+          "url": "https://www.mosek.com/sales/licensetypes/",
+          "type": "vendor_page",
+          "verified": "2026-03-28"
+        },
+        "pricing_estimate": {
+          "url": "https://www.mosek.com/sales/licensetypes/",
+          "type": "vendor_page",
+          "note": "MOSEK publishes license types with partial pricing.",
+          "verified": "2026-03-28"
+        }
+      }
     },
     {
       "id": "baron",
@@ -922,7 +1095,27 @@
           "Total cost = BARON + modeling language license"
         ]
       },
-      "update_source": "manual"
+      "update_source": "manual",
+      "sources": {
+        "version": {
+          "type": "manual",
+          "note": "Commercial. Version from vendor website."
+        },
+        "problem_types": {
+          "url": "https://minlp.com/baron",
+          "type": "vendor_docs",
+          "verified": "2026-03-28"
+        },
+        "license_type": {
+          "url": "https://minlp.com/baron",
+          "type": "vendor_page",
+          "verified": "2026-03-28"
+        },
+        "pricing_estimate": {
+          "type": "community_estimate",
+          "note": "Commercial. Contact vendor for pricing."
+        }
+      }
     },
     {
       "id": "hexaly",
@@ -1003,7 +1196,27 @@
           "Smaller community than mainstream solvers"
         ]
       },
-      "update_source": "manual"
+      "update_source": "manual",
+      "sources": {
+        "version": {
+          "type": "manual",
+          "note": "Commercial. Version from hexaly.com."
+        },
+        "problem_types": {
+          "url": "https://www.hexaly.com/",
+          "type": "vendor_docs",
+          "verified": "2026-03-28"
+        },
+        "license_type": {
+          "url": "https://www.hexaly.com/pricing",
+          "type": "vendor_page",
+          "verified": "2026-03-28"
+        },
+        "pricing_estimate": {
+          "type": "community_estimate",
+          "note": "Commercial. Contact vendor."
+        }
+      }
     },
     {
       "id": "glpk",
@@ -1078,7 +1291,24 @@
           "No active development since 2020"
         ]
       },
-      "update_source": "manual"
+      "update_source": "manual",
+      "sources": {
+        "version": {
+          "url": "https://www.gnu.org/software/glpk/",
+          "type": "official_docs"
+        },
+        "problem_types": {
+          "url": "https://www.gnu.org/software/glpk/",
+          "type": "official_docs",
+          "verified": "2026-03-28"
+        },
+        "license_type": {
+          "url": "https://www.gnu.org/software/glpk/",
+          "type": "official_docs",
+          "note": "GPL-3.0",
+          "verified": "2026-03-28"
+        }
+      }
     },
     {
       "id": "cvxpy",
@@ -1141,7 +1371,18 @@
         "Fix targets_and_priorities wrong direction when priority <= off_target",
         "Allow array denominator in quad_over_lin"
       ],
-      "pypi_monthly_downloads": -25
+      "pypi_monthly_downloads": -25,
+      "sources": {
+        "version": {
+          "url": "https://pypi.org/project/cvxpy/",
+          "type": "pypi"
+        },
+        "problem_types": {
+          "url": "https://www.cvxpy.org/",
+          "type": "official_docs",
+          "verified": "2026-03-28"
+        }
+      }
     },
     {
       "id": "knitro",
@@ -1200,7 +1441,23 @@
         "nonlinear",
         "minlp",
         "nlp"
-      ]
+      ],
+      "sources": {
+        "version": {
+          "type": "manual",
+          "note": "Commercial. Version from artelys.com."
+        },
+        "problem_types": {
+          "url": "https://www.artelys.com/solvers/knitro/",
+          "type": "vendor_docs",
+          "verified": "2026-03-28"
+        },
+        "license_type": {
+          "url": "https://www.artelys.com/solvers/knitro/",
+          "type": "vendor_page",
+          "verified": "2026-03-28"
+        }
+      }
     },
     {
       "id": "ipopt",
@@ -1266,7 +1523,24 @@
         "IpJournalist: Missing override keyword",
         "Draft at NVIDIA cuDSS (GPU sparse linear solver) integration in Ipopt.",
         "Fix rare use-after-free in IpSpralSolverInterface"
-      ]
+      ],
+      "sources": {
+        "version": {
+          "url": "https://github.com/coin-or/Ipopt/releases",
+          "type": "github"
+        },
+        "problem_types": {
+          "url": "https://coin-or.github.io/Ipopt/",
+          "type": "official_docs",
+          "note": "Continuous optimization only. No integer variable support.",
+          "verified": "2026-03-28"
+        },
+        "license_type": {
+          "url": "https://github.com/coin-or/Ipopt/blob/master/LICENSE",
+          "type": "github",
+          "verified": "2026-03-28"
+        }
+      }
     },
     {
       "id": "optaplanner",
@@ -1329,7 +1603,23 @@
         "fix: handle null planning values in ValueTabuAcceptor",
         "deps: bump org.springframework.boot:spring-boot-dependencies from 4.0.3 to 4.0.4 in the spring group",
         "deps: bump the quarkus group with 4 updates"
-      ]
+      ],
+      "sources": {
+        "version": {
+          "url": "https://github.com/TimefoldAI/timefold-solver/releases",
+          "type": "github"
+        },
+        "problem_types": {
+          "url": "https://timefold.ai/docs/timefold-solver/latest/",
+          "type": "official_docs",
+          "verified": "2026-03-28"
+        },
+        "license_type": {
+          "url": "https://github.com/TimefoldAI/timefold-solver/blob/main/LICENSE",
+          "type": "github",
+          "verified": "2026-03-28"
+        }
+      }
     },
     {
       "id": "pyomo",
@@ -1395,7 +1685,18 @@
         "docs: improve documentation for mutable vs immutable Params",
         "KKT Transform Code Refactor"
       ],
-      "pypi_monthly_downloads": -28
+      "pypi_monthly_downloads": -28,
+      "sources": {
+        "version": {
+          "url": "https://pypi.org/project/Pyomo/",
+          "type": "pypi"
+        },
+        "problem_types": {
+          "url": "https://www.pyomo.org/documentation",
+          "type": "official_docs",
+          "verified": "2026-03-28"
+        }
+      }
     },
     {
       "id": "jump",
@@ -1459,7 +1760,18 @@
         "[docs] fix links in CODE_OF_CONDUCT",
         "terminology on Benders",
         "RFC: [docs] add a policy for AI assisted contributions"
-      ]
+      ],
+      "sources": {
+        "version": {
+          "url": "https://github.com/jump-dev/JuMP.jl/releases",
+          "type": "github"
+        },
+        "problem_types": {
+          "url": "https://jump.dev/JuMP.jl/stable/",
+          "type": "official_docs",
+          "verified": "2026-03-28"
+        }
+      }
     },
     {
       "id": "ampl",
@@ -1511,7 +1823,18 @@
         "commercial",
         "modeling",
         "algebraic"
-      ]
+      ],
+      "sources": {
+        "version": {
+          "url": "https://pypi.org/project/amplpy/",
+          "type": "pypi"
+        },
+        "problem_types": {
+          "url": "https://ampl.com/products/ampl/",
+          "type": "official_docs",
+          "verified": "2026-03-28"
+        }
+      }
     },
     {
       "id": "gams",
@@ -1565,7 +1888,18 @@
         "modeling",
         "algebraic",
         "economic-modeling"
-      ]
+      ],
+      "sources": {
+        "version": {
+          "url": "https://pypi.org/project/gamspy/",
+          "type": "pypi"
+        },
+        "problem_types": {
+          "url": "https://www.gams.com/products/gams/gams-language/",
+          "type": "official_docs",
+          "verified": "2026-03-28"
+        }
+      }
     },
     {
       "id": "copt",
@@ -1581,15 +1915,48 @@
       "academic_free": true,
       "academic_details": "Free academic license available through Cardinal Operations academic program.",
       "commercial_pricing_note": "Contact vendor. Pricing competitive with Gurobi/CPLEX.",
-      "problem_types": ["LP", "MIP", "QP", "QCP", "SOCP", "SDP"],
-      "language_bindings": ["Python", "C", "C++", "Java"],
+      "problem_types": [
+        "LP",
+        "MIP",
+        "QP",
+        "QCP",
+        "SOCP",
+        "SDP"
+      ],
+      "language_bindings": [
+        "Python",
+        "C",
+        "C++",
+        "Java"
+      ],
       "pypi_package": "coptpy",
       "github_repo": null,
       "github_stars": null,
       "description": "High-performance commercial optimization solver competitive with Gurobi and CPLEX on LP/MIP benchmarks.",
-      "tags": ["commercial", "lp", "mip", "high-performance"],
+      "tags": [
+        "commercial",
+        "lp",
+        "mip",
+        "high-performance"
+      ],
       "update_source": "manual",
-      "last_verified": "2026-03-28"
+      "last_verified": "2026-03-28",
+      "sources": {
+        "version": {
+          "url": "https://pypi.org/project/coptpy/",
+          "type": "pypi"
+        },
+        "problem_types": {
+          "url": "https://www.shanshu.ai/copt",
+          "type": "vendor_docs",
+          "verified": "2026-03-28"
+        },
+        "license_type": {
+          "url": "https://www.shanshu.ai/copt",
+          "type": "vendor_page",
+          "verified": "2026-03-28"
+        }
+      }
     },
     {
       "id": "clarabel",
@@ -1605,15 +1972,46 @@
       "academic_free": true,
       "academic_details": "Fully open source. Apache 2.0 license.",
       "commercial_pricing_note": "Free. Apache 2.0 allows unrestricted commercial use.",
-      "problem_types": ["LP", "QP", "SOCP", "SDP"],
-      "language_bindings": ["Rust", "Python", "Julia"],
+      "problem_types": [
+        "LP",
+        "QP",
+        "SOCP",
+        "SDP"
+      ],
+      "language_bindings": [
+        "Rust",
+        "Python",
+        "Julia"
+      ],
       "pypi_package": "clarabel",
       "github_repo": "oxfordcontrol/Clarabel.rs",
       "github_stars": null,
       "description": "Interior-point conic solver written in Rust. Supports LP, QP, SOCP, and SDP. Default CVXPY solver for SDP.",
-      "tags": ["open-source", "conic", "sdp", "socp", "rust"],
+      "tags": [
+        "open-source",
+        "conic",
+        "sdp",
+        "socp",
+        "rust"
+      ],
       "update_source": "github",
-      "last_verified": "2026-03-28"
+      "last_verified": "2026-03-28",
+      "sources": {
+        "version": {
+          "url": "https://github.com/oxfordcontrol/Clarabel.rs/releases",
+          "type": "github"
+        },
+        "problem_types": {
+          "url": "https://clarabel.org/stable/",
+          "type": "official_docs",
+          "verified": "2026-03-28"
+        },
+        "license_type": {
+          "url": "https://github.com/oxfordcontrol/Clarabel.rs/blob/main/LICENSE.md",
+          "type": "github",
+          "verified": "2026-03-28"
+        }
+      }
     },
     {
       "id": "scs",
@@ -1629,15 +2027,47 @@
       "academic_free": true,
       "academic_details": "Fully open source. MIT license.",
       "commercial_pricing_note": "Free. MIT license allows unrestricted commercial use.",
-      "problem_types": ["LP", "QP", "SOCP", "SDP"],
-      "language_bindings": ["C", "Python", "Julia", "MATLAB", "R"],
+      "problem_types": [
+        "LP",
+        "QP",
+        "SOCP",
+        "SDP"
+      ],
+      "language_bindings": [
+        "C",
+        "Python",
+        "Julia",
+        "MATLAB",
+        "R"
+      ],
       "pypi_package": "scs",
       "github_repo": "cvxgrp/scs",
       "github_stars": null,
       "description": "First-order conic solver using operator splitting. Very scalable for large problems. Default CVXPY solver.",
-      "tags": ["open-source", "conic", "first-order", "scalable"],
+      "tags": [
+        "open-source",
+        "conic",
+        "first-order",
+        "scalable"
+      ],
       "update_source": "github",
-      "last_verified": "2026-03-28"
+      "last_verified": "2026-03-28",
+      "sources": {
+        "version": {
+          "url": "https://github.com/cvxgrp/scs/releases",
+          "type": "github"
+        },
+        "problem_types": {
+          "url": "https://www.cvxgrp.org/scs/",
+          "type": "official_docs",
+          "verified": "2026-03-28"
+        },
+        "license_type": {
+          "url": "https://github.com/cvxgrp/scs/blob/master/LICENSE",
+          "type": "github",
+          "verified": "2026-03-28"
+        }
+      }
     }
   ],
   "problem_type_legend": {

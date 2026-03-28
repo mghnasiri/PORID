@@ -20,5 +20,46 @@
     "ampl": "Commercial modeling language. Supports virtually all major solvers through solver-specific drivers.",
     "gams": "Commercial modeling language. Supports virtually all major solvers through solver-specific connectors.",
     "cvxpy": "Primarily for convex optimization. SCS and ECOS also supported as free alternatives."
+  },
+  "compatibility_sources": {
+    "pyomo": {
+      "main_source": "https://pyomo.readthedocs.io/en/stable/solving_pyomo_models.html",
+      "verified": "2026-03-28"
+    },
+    "pulp": {
+      "main_source": "https://coin-or.github.io/pulp/guides/how_to_configure_solvers.html",
+      "verified": "2026-03-28"
+    },
+    "cvxpy": {
+      "main_source": "https://www.cvxpy.org/tutorial/advanced/index.html#choosing-a-solver",
+      "verified": "2026-03-28"
+    },
+    "jump": {
+      "main_source": "https://jump.dev/JuMP.jl/stable/installation/#Supported-solvers",
+      "verified": "2026-03-28"
+    },
+    "or-tools-py": {
+      "main_source": "https://developers.google.com/optimization/lp/lp_advanced",
+      "note": "External solver support via pywraplp interface",
+      "verified": "2026-03-28"
+    },
+    "scipy": {
+      "main_source": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html",
+      "note": "HiGHS is default since SciPy 1.9",
+      "verified": "2026-03-28"
+    },
+    "gurobipy": {
+      "main_source": "https://www.gurobi.com/documentation/current/refman/py_python_api_overview.html",
+      "note": "Direct Gurobi API. By design, only works with Gurobi.",
+      "verified": "2026-03-28"
+    },
+    "ampl": {
+      "main_source": "https://ampl.com/products/solvers/all-solvers-for-ampl/",
+      "verified": "2026-03-28"
+    },
+    "gams": {
+      "main_source": "https://www.gams.com/latest/docs/S_MAIN.html",
+      "verified": "2026-03-28"
+    }
   }
 }

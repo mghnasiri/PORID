@@ -5727,3 +5727,50 @@ h3:hover .anchor-link,
 .tool-not-solver-banner a:hover {
   text-decoration: underline;
 }
+
+/* ================================================================
+   Academic Rigor — Source tags, editorial notices, citations
+   ================================================================ */
+.editorial-notice {
+  font-size: 0.8rem;
+  color: var(--color-muted, #8892B0);
+  margin: 0.5rem 0;
+  font-style: italic;
+}
+.source-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-right: 0.4rem;
+  font-style: normal;
+  vertical-align: middle;
+}
+.source-tag.automated, .source-tag.github, .source-tag.pypi { background: rgba(80,200,120,0.12); color: #50c878; }
+.source-tag.vendor_docs, .source-tag.vendor_page, .source-tag.official_docs { background: rgba(100,150,255,0.12); color: #6496ff; }
+.source-tag.benchmark_results { background: rgba(197,160,89,0.12); color: var(--color-accent, #C5A059); }
+.source-tag.community_estimate, .source-tag.community_discussion { background: rgba(255,170,50,0.08); color: #ffaa32; }
+.source-tag.editorial { background: rgba(255,100,100,0.08); color: #ff6464; }
+.source-tag.manual { background: rgba(136,146,176,0.1); color: var(--color-muted, #8892B0); }
+
+.sources-intro { font-size: 0.8rem; color: var(--color-muted, #8892B0); margin-bottom: 1rem; }
+.source-list { font-size: 0.85rem; }
+.source-item { padding: 0.5rem 0; border-bottom: 1px solid rgba(136,146,176,0.08); }
+.source-item dt { font-weight: 600; color: var(--color-text, #CCD6F6); margin-bottom: 0.2rem; }
+.source-item dd { margin-left: 0; color: var(--color-muted, #8892B0); }
+.source-url { font-size: 0.75rem; color: var(--color-muted, #8892B0); word-break: break-all; display: block; margin-top: 0.15rem; }
+.source-url:hover { color: var(--color-accent, #C5A059); }
+.source-note { display: block; font-style: italic; margin-top: 0.2rem; font-size: 0.8rem; }
+.source-verified { display: block; font-size: 0.7rem; color: var(--color-muted, #8892B0); opacity: 0.7; }
+
+.pricing-disclaimer {
+  background: rgba(255,170,50,0.06);
+  border: 1px solid rgba(255,170,50,0.15);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  color: var(--color-text, #CCD6F6);
+  margin-bottom: 1.5rem;
+}

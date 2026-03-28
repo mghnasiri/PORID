@@ -498,6 +498,15 @@ function buildStarterPaths(container) {
   h2.textContent = 'Not sure where to start?';
   section.appendChild(h2);
 
+  const editP = document.createElement('p');
+  editP.className = 'editorial-notice';
+  const editTag = document.createElement('span');
+  editTag.className = 'source-tag editorial';
+  editTag.textContent = 'Editorial';
+  editP.appendChild(editTag);
+  editP.appendChild(document.createTextNode(' Opinionated starting points based on common use cases. Your needs may differ.'));
+  section.appendChild(editP);
+
   const grid = document.createElement('div');
   grid.className = 'path-cards';
 
@@ -1134,6 +1143,16 @@ function buildCostPerformanceChart(solvers, container) {
   const h2 = document.createElement('h2');
   h2.textContent = 'Performance vs. Cost';
   section.appendChild(h2);
+
+  const disclaimer = document.createElement('p');
+  disclaimer.className = 'editorial-notice';
+  const dTag = document.createElement('span');
+  dTag.className = 'source-tag community_estimate';
+  dTag.textContent = 'Estimates';
+  disclaimer.appendChild(dTag);
+  disclaimer.appendChild(document.createTextNode(' Cost estimates from community reports. Performance tiers based on Mittelmann benchmarks. Both are approximate.'));
+  section.appendChild(disclaimer);
+
   const subtitle = document.createElement('p');
   subtitle.className = 'chart-subtitle';
   subtitle.textContent = 'Higher is better performance. Left is cheaper. Green = open source.';
@@ -1247,6 +1266,16 @@ function buildPerformanceCalculator(container) {
   const h2 = document.createElement('h2');
   h2.textContent = 'Performance Gap Estimator';
   section.appendChild(h2);
+
+  const methNote = document.createElement('p');
+  methNote.className = 'editorial-notice';
+  const methTag = document.createElement('span');
+  methTag.className = 'source-tag community_estimate';
+  methTag.textContent = 'Estimates';
+  methNote.appendChild(methTag);
+  methNote.appendChild(document.createTextNode(' Approximate ratios based on Mittelmann benchmarks (plato.asu.edu). Performance on your specific problem may differ significantly.'));
+  section.appendChild(methNote);
+
   const caveat = document.createElement('p');
   caveat.className = 'chart-caveat';
   caveat.textContent = 'Rough estimates based on published benchmarks. Actual performance depends on problem structure.';
@@ -2311,6 +2340,11 @@ function buildCompatibilityMatrix(matrix, container) {
     section.appendChild(notesList);
   }
 
+  const matrixSource = document.createElement('p');
+  matrixSource.className = 'editorial-notice';
+  matrixSource.textContent = 'Compatibility verified against official documentation for each tool. Last verified: March 28, 2026.';
+  section.appendChild(matrixSource);
+
   container.appendChild(section);
 }
 
@@ -2353,6 +2387,13 @@ function buildLicensingGuide(allData, container) {
   subtitle.className = 'licensing-guide__subtitle';
   subtitle.textContent = 'How much will this solver cost you? One page, all the answers.';
   page.appendChild(subtitle);
+  const disclaimer = document.createElement('div');
+  disclaimer.className = 'pricing-disclaimer';
+  const strong = document.createElement('strong');
+  strong.textContent = 'Pricing data: ';
+  disclaimer.appendChild(strong);
+  disclaimer.appendChild(document.createTextNode('Most commercial solvers do not publish prices. Figures shown as estimates (marked with ~) are based on community reports and may not reflect current pricing. Always contact the vendor directly for an accurate quote. Estimates last reviewed: March 2026.'));
+  page.appendChild(disclaimer);
   showLastUpdated(page);
 
   // Summary table

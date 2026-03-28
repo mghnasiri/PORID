@@ -167,8 +167,12 @@ export function render(container, solverId, allData) {
     const gotchaTitle = document.createElement('h4');
     gotchaTitle.textContent = '\u26A0 Licensing Gotcha';
     gotchaBox.appendChild(gotchaTitle);
+    const gotchaNotice = document.createElement('span');
+    gotchaNotice.className = 'source-tag editorial';
+    gotchaNotice.textContent = 'Editorial';
     const gotchaP = document.createElement('p');
     gotchaP.textContent = solver.licensing_gotcha;
+    gotchaBox.appendChild(gotchaNotice);
     gotchaBox.appendChild(gotchaP);
     licSection.appendChild(gotchaBox);
   }
@@ -211,6 +215,15 @@ export function render(container, solverId, allData) {
       noCol.appendChild(noList);
       useGrid.appendChild(noCol);
     }
+
+    const editorialP = document.createElement('p');
+    editorialP.className = 'editorial-notice';
+    const editTag = document.createElement('span');
+    editTag.className = 'source-tag editorial';
+    editTag.textContent = 'Editorial';
+    editorialP.appendChild(editTag);
+    editorialP.appendChild(document.createTextNode(' Recommendations based on solver characteristics and professional judgment. Not a substitute for benchmarking on your specific problem.'));
+    useSection.insertBefore(editorialP, useGrid);
 
     useSection.appendChild(useGrid);
     page.appendChild(useSection);
@@ -365,6 +378,86 @@ export function render(container, solverId, allData) {
   reportLink.textContent = 'See an error? Report it on GitHub';
   metaDiv.appendChild(reportLink);
   page.appendChild(metaDiv);
+
+  // Sources section
+  if (solver.sources && Object.keys(solver.sources).length > 0) {
+    const srcSection = document.createElement('section');
+    srcSection.className = 'solver-section';
+    srcSection.id = 'sources';
+
+    const srcH2 = document.createElement('h2');
+    srcH2.textContent = 'Sources';
+    srcSection.appendChild(srcH2);
+
+    const srcIntro = document.createElement('p');
+    srcIntro.className = 'sources-intro';
+    const editSpan = document.createElement('span');
+    editSpan.className = 'source-tag editorial';
+    editSpan.textContent = 'editorial';
+    srcIntro.textContent = 'Every data point is sourced. Items marked ';
+    srcIntro.appendChild(editSpan);
+    srcIntro.appendChild(document.createTextNode(' reflect professional judgment.'));
+    srcSection.appendChild(srcIntro);
+
+    const dl = document.createElement('dl');
+    dl.className = 'source-list';
+
+    Object.entries(solver.sources).forEach(([key, src]) => {
+      const item = document.createElement('div');
+      item.className = 'source-item';
+
+      const dt = document.createElement('dt');
+      dt.textContent = key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+      item.appendChild(dt);
+
+      const dd = document.createElement('dd');
+
+      // Type tag
+      const typeLabels = {
+        'automated': 'Auto-tracked', 'vendor_docs': 'Vendor Docs', 'vendor_page': 'Vendor Page',
+        'official_docs': 'Official Docs', 'benchmark_results': 'Benchmark Data',
+        'community_estimate': 'Community Estimate', 'editorial': 'Editorial',
+        'github': 'GitHub', 'pypi': 'PyPI', 'manual': 'Manual'
+      };
+      const tag = document.createElement('span');
+      tag.className = 'source-tag ' + (src.type || 'manual');
+      tag.textContent = typeLabels[src.type] || src.type || 'Manual';
+      dd.appendChild(tag);
+
+      // URL link
+      if (src.url) {
+        const a = document.createElement('a');
+        a.href = src.url;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.textContent = src.url;
+        a.className = 'source-url';
+        dd.appendChild(a);
+      }
+
+      // Note
+      if (src.note) {
+        const note = document.createElement('span');
+        note.className = 'source-note';
+        note.textContent = src.note;
+        dd.appendChild(note);
+      }
+
+      // Verified date
+      if (src.verified) {
+        const ver = document.createElement('span');
+        ver.className = 'source-verified';
+        ver.textContent = 'Verified: ' + src.verified;
+        dd.appendChild(ver);
+      }
+
+      item.appendChild(dd);
+      dl.appendChild(item);
+    });
+
+    srcSection.appendChild(dl);
+    page.appendChild(srcSection);
+  }
 
   container.textContent = '';
   container.appendChild(page);
