@@ -136,7 +136,7 @@ export class DecisionHelper {
         const params = new URLSearchParams();
         Object.entries(this.filters).forEach(([k, v]) => { if (v) params.set(k, v); });
         const paramStr = params.toString();
-        history.replaceState(null, '', `#toolkit/solvers${paramStr ? '?' + paramStr : ''}`);
+        history.replaceState(null, '', `#solvers${paramStr ? '?' + paramStr : ''}`);
       });
     });
   }
@@ -208,7 +208,7 @@ export class DecisionHelper {
     const h3 = document.createElement('h3');
     h3.className = 'dh-result-name';
     const nameLink = document.createElement('a');
-    nameLink.href = `#toolkit/solvers/${r.id}`;
+    nameLink.href = `#solvers/${r.id}`;
     nameLink.textContent = s.name;
     h3.appendChild(nameLink);
     const scoreBadge = document.createElement('span');

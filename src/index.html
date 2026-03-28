@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PORID — The OR Tooling Navigator</title>
-  <meta name="description" content="Which OR solver should I use? Compare solvers, modeling tools, benchmarks, and licensing costs. The definitive guide to choosing optimization software.">
+  <title>PORID — OR Solver & Tool Navigator</title>
+  <meta name="description" content="The auto-updating guide to choosing OR optimization tools. Compare solvers, modeling languages, benchmarks, and licensing — all in one place.">
 
   <!-- Favicon (inline SVG) -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,5 95,50 50,95 5,50' fill='%23C5A059'/%3E%3C/svg%3E">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="PORID — Personal OR Intelligence Dashboard">
-  <meta property="og:description" content="Track OR publications, software releases, conferences, and academic opportunities.">
+  <meta property="og:title" content="PORID — OR Solver & Tool Navigator">
+  <meta property="og:description" content="The auto-updating guide to choosing OR optimization tools. Compare solvers, modeling languages, benchmarks, and licensing.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mghnasiri.github.io/PORID/">
 
@@ -47,7 +47,7 @@
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "PORID",
-    "description": "Personal OR Intelligence Dashboard — track publications, software, conferences, and opportunities in Operations Research",
+    "description": "The auto-updating guide to choosing OR optimization tools — compare solvers, modeling languages, benchmarks, and licensing",
     "url": "https://mghnasiri.github.io/PORID/",
     "applicationCategory": "Research Tool",
     "author": {
@@ -64,7 +64,7 @@
     "@context": "https://schema.org",
     "@type": "DataCatalog",
     "name": "PORID",
-    "description": "A curated intelligence catalog for Operations Research, aggregating publications, solvers, conferences, benchmarks, and funding opportunities.",
+    "description": "The definitive guide to choosing OR optimization tools — solvers, modeling languages, benchmarks, and licensing in one place.",
     "url": "https://mghnasiri.github.io/PORID/",
     "creator": {
       "@type": "Person",
@@ -74,38 +74,31 @@
     "dataset": [
       {
         "@type": "Dataset",
-        "name": "OR Publications",
-        "description": "Recent publications in Operations Research from arXiv, Crossref, OpenAlex, Semantic Scholar, and Optimization Online.",
-        "url": "https://mghnasiri.github.io/PORID/#publications",
-        "keywords": ["operations research", "optimization", "mathematical programming", "arXiv", "publications"]
-      },
-      {
-        "@type": "Dataset",
-        "name": "OR Conferences",
-        "description": "Upcoming conferences, workshops, and symposia in Operations Research with submission deadlines and format details.",
-        "url": "https://mghnasiri.github.io/PORID/#conferences",
-        "keywords": ["conferences", "operations research", "INFORMS", "deadlines", "call for papers"]
-      },
-      {
-        "@type": "Dataset",
         "name": "OR Solvers",
-        "description": "Release tracking for open-source and commercial optimization solvers including version history and changelog highlights.",
-        "url": "https://mghnasiri.github.io/PORID/#software",
+        "description": "Comprehensive comparison of optimization solvers including performance, licensing, and compatibility data.",
+        "url": "https://mghnasiri.github.io/PORID/#solvers",
         "keywords": ["solvers", "optimization software", "Gurobi", "CPLEX", "OR-Tools", "SCIP", "HiGHS"]
+      },
+      {
+        "@type": "Dataset",
+        "name": "OR Modeling Tools",
+        "description": "Comparison of OR modeling tools including Pyomo, PuLP, JuMP, CVXPY with solver compatibility matrix.",
+        "url": "https://mghnasiri.github.io/PORID/#tools",
+        "keywords": ["modeling tools", "Pyomo", "PuLP", "JuMP", "CVXPY", "optimization modeling"]
       },
       {
         "@type": "Dataset",
         "name": "OR Benchmarks",
         "description": "Curated directory of standard benchmark datasets for Operations Research including MIPLIB, TSPLIB, CVRPLIB, and PSPLIB.",
-        "url": "https://mghnasiri.github.io/PORID/#toolkit",
+        "url": "https://mghnasiri.github.io/PORID/#benchmarks",
         "keywords": ["benchmarks", "MIPLIB", "TSPLIB", "CVRPLIB", "optimization benchmarks"]
       },
       {
         "@type": "Dataset",
-        "name": "OR Opportunities",
-        "description": "Funding calls, PhD positions, postdoc openings, and faculty positions in Operations Research and related fields.",
-        "url": "https://mghnasiri.github.io/PORID/#opportunities",
-        "keywords": ["funding", "PhD positions", "postdoc", "faculty", "operations research jobs"]
+        "name": "OR Community Feed",
+        "description": "Publications, conferences, software releases, and opportunities from the Operations Research community.",
+        "url": "https://mghnasiri.github.io/PORID/#feed",
+        "keywords": ["publications", "conferences", "operations research", "funding", "opportunities"]
       }
     ]
   }
@@ -118,7 +111,7 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mghnasiri.github.io/PORID/" },
-      { "@type": "ListItem", "position": 2, "name": "OR Intelligence Hub", "item": "https://mghnasiri.github.io/PORID/#pulse" }
+      { "@type": "ListItem", "position": 2, "name": "OR Solver Comparison", "item": "https://mghnasiri.github.io/PORID/#solvers" }
     ]
   }
   </script>
@@ -136,7 +129,7 @@
 
   <!-- ====== Navigation ====== -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
-    <a href="#pulse" class="nav__brand">PORID</a>
+    <a href="#solvers" class="nav__brand">PORID</a>
 
     <button class="nav__hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
       <span class="nav__hamburger-line"></span>
@@ -145,20 +138,11 @@
     </button>
 
     <ul class="nav__tabs" role="tablist">
-      <li class="nav__tab active" role="tab" aria-selected="true" data-tab="pulse">Pulse</li>
-      <li class="nav__tab" role="tab" aria-selected="false" data-tab="radar">Radar</li>
-      <li class="nav__tab" role="tab" aria-selected="false" data-tab="toolkit">Toolkit</li>
-      <li class="nav__more">
-        <span class="nav__more-trigger" role="button" aria-label="Show more navigation tabs" aria-expanded="false" tabindex="0">More &#9662;</span>
-        <ul class="nav__more-menu">
-          <li class="nav__tab" role="tab" aria-selected="false" data-tab="publications">Publications</li>
-          <li class="nav__tab" role="tab" aria-selected="false" data-tab="software">Software</li>
-          <li class="nav__tab" role="tab" aria-selected="false" data-tab="conferences">Conferences</li>
-          <li class="nav__tab" role="tab" aria-selected="false" data-tab="opportunities">Opportunities</li>
-          <li class="nav__tab" role="tab" aria-selected="false" data-tab="watchlist">Watchlist</li>
-          <li class="nav__tab" role="tab" aria-selected="false" data-tab="trends">Trends</li>
-        </ul>
-      </li>
+      <li class="nav__tab active" role="tab" aria-selected="true" data-tab="solvers">Solvers</li>
+      <li class="nav__tab" role="tab" aria-selected="false" data-tab="tools">Modeling Tools</li>
+      <li class="nav__tab" role="tab" aria-selected="false" data-tab="benchmarks">Benchmarks</li>
+      <li class="nav__tab" role="tab" aria-selected="false" data-tab="licensing">Licensing</li>
+      <li class="nav__tab" role="tab" aria-selected="false" data-tab="feed">OR Feed</li>
     </ul>
 
     <div class="nav__spacer"></div>
@@ -189,13 +173,18 @@
   <!-- ====== Stats Banner ====== -->
   <div class="stats-banner">
     <div class="stats-banner__item">
-      <span class="stats-banner__value" id="statNew">0</span>
-      <span>new today</span>
+      <span class="stats-banner__value" id="statSolvers">&mdash;</span>
+      <span>solvers tracked</span>
     </div>
     <div class="stats-banner__sep"></div>
     <div class="stats-banner__item">
-      <span class="stats-banner__value" id="statTotal">0</span>
-      <span>total tracked</span>
+      <span class="stats-banner__value" id="statTools">&mdash;</span>
+      <span>modeling tools</span>
+    </div>
+    <div class="stats-banner__sep"></div>
+    <div class="stats-banner__item">
+      <span class="stats-banner__value" id="statBenchmarks">&mdash;</span>
+      <span>benchmark suites</span>
     </div>
     <div class="stats-banner__sep"></div>
     <div class="stats-banner__item">
@@ -285,15 +274,11 @@
         </div>
         <div class="help-modal__group">
           <h3>Tabs</h3>
-          <div class="help-modal__row"><kbd>1</kbd><span>Pulse</span></div>
-          <div class="help-modal__row"><kbd>2</kbd><span>Radar</span></div>
-          <div class="help-modal__row"><kbd>3</kbd><span>Toolkit</span></div>
-          <div class="help-modal__row"><kbd>4</kbd><span>Publications</span></div>
-          <div class="help-modal__row"><kbd>5</kbd><span>Software</span></div>
-          <div class="help-modal__row"><kbd>6</kbd><span>Conferences</span></div>
-          <div class="help-modal__row"><kbd>7</kbd><span>Opportunities</span></div>
-          <div class="help-modal__row"><kbd>8</kbd><span>Seminars</span></div>
-          <div class="help-modal__row"><kbd>9</kbd><span>Watchlist</span></div>
+          <div class="help-modal__row"><kbd>1</kbd><span>Solvers</span></div>
+          <div class="help-modal__row"><kbd>2</kbd><span>Modeling Tools</span></div>
+          <div class="help-modal__row"><kbd>3</kbd><span>Benchmarks</span></div>
+          <div class="help-modal__row"><kbd>4</kbd><span>Licensing</span></div>
+          <div class="help-modal__row"><kbd>5</kbd><span>OR Feed</span></div>
         </div>
         <div class="help-modal__group">
           <h3>Command Palette</h3>
@@ -317,18 +302,18 @@
       <!-- Step 1: Welcome -->
       <div class="onboarding-modal__page active" data-page="0">
         <h2 class="onboarding-modal__title">Welcome to PORID</h2>
-        <p class="onboarding-modal__subtitle">Your OR Intelligence Hub</p>
-        <p class="onboarding-modal__text">Track the latest publications, software releases, conferences, and funding opportunities across Operations Research &mdash; all in one place.</p>
+        <p class="onboarding-modal__subtitle">The OR Tool Navigator</p>
+        <p class="onboarding-modal__text">Find the right solver, modeling tool, and benchmark for your optimization problem. Compare features, licensing, and performance &mdash; all in one place.</p>
       </div>
 
       <!-- Step 2: Feature overview -->
       <div class="onboarding-modal__page" data-page="1">
         <h2 class="onboarding-modal__title">What you can do</h2>
         <ul class="onboarding-modal__features">
-          <li><strong>Star papers</strong> &mdash; build a personal watchlist with notes &amp; reading status</li>
-          <li><strong>Set alerts</strong> &mdash; get notified when opportunities match your interests</li>
-          <li><strong>Track solvers</strong> &mdash; monitor releases from Gurobi, CPLEX, SCIP, HiGHS &amp; more</li>
-          <li><strong>Export citations</strong> &mdash; BibTeX, RIS, CSV, JSON with one click</li>
+          <li><strong>Compare solvers</strong> &mdash; Gurobi, CPLEX, HiGHS, SCIP, OR-Tools &amp; more side by side</li>
+          <li><strong>Get recommendations</strong> &mdash; answer a few questions, get a tailored solver stack</li>
+          <li><strong>Check compatibility</strong> &mdash; which modeling tools work with which solvers</li>
+          <li><strong>Understand licensing</strong> &mdash; academic, commercial, open-source costs at a glance</li>
         </ul>
         <div class="onboarding-interests">
           <h3>Pick your interests</h3>

@@ -19,6 +19,7 @@ Usage:
 from __future__ import annotations
 
 import json
+import shutil
 import sys
 import argparse
 import time
@@ -465,6 +466,15 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
         write_json(conferences, src_data / "conferences.json")
         write_json(opportunities, src_data / "opportunities.json")
         print("  Also wrote to src/data/")
+
+    # Copy to static fallback for offline/resilient loading
+    static_dir = out / "static"
+    static_dir.mkdir(parents=True, exist_ok=True)
+    for fname in ("publications.json", "software.json", "conferences.json", "opportunities.json"):
+        src_file = out / fname
+        if src_file.exists():
+            shutil.copy2(str(src_file), str(static_dir / fname))
+    print("  Static fallbacks updated in data/static/")
 
     timings["write"] = time.perf_counter() - t_write_start
 

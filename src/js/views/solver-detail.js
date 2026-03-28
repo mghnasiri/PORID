@@ -1,5 +1,5 @@
 /**
- * Solver Detail Page — renders at #toolkit/solvers/{id}
+ * Solver Detail Page — renders at #solvers/{id}
  * All data from static JSON files. Uses safe DOM methods exclusively.
  */
 
@@ -27,7 +27,7 @@ export function render(container, solverId, allData) {
     msg.textContent = `Solver "${solverId}" not found.`;
     notFound.appendChild(msg);
     const backLink = document.createElement('a');
-    backLink.href = '#toolkit/solvers';
+    backLink.href = '#solvers';
     backLink.textContent = '\u2190 Back to solvers';
     notFound.appendChild(backLink);
     container.appendChild(notFound);
@@ -42,12 +42,12 @@ export function render(container, solverId, allData) {
   breadcrumb.className = 'breadcrumb';
   breadcrumb.setAttribute('aria-label', 'Breadcrumb');
   const bc1 = document.createElement('a');
-  bc1.href = '#toolkit';
-  bc1.textContent = 'Toolkit';
+  bc1.href = '#solvers';
+  bc1.textContent = 'PORID';
   breadcrumb.appendChild(bc1);
   breadcrumb.appendChild(document.createTextNode(' \u203A '));
   const bc2 = document.createElement('a');
-  bc2.href = '#toolkit/solvers';
+  bc2.href = '#solvers';
   bc2.textContent = 'Solvers';
   breadcrumb.appendChild(bc2);
   breadcrumb.appendChild(document.createTextNode(' \u203A '));
@@ -249,7 +249,7 @@ export function render(container, solverId, allData) {
     toolBadges.className = 'solver-badge-list';
     solver.compatible_modeling_tools.forEach(t => {
       const a = document.createElement('a');
-      a.href = '#toolkit/tools';
+      a.href = '#tools';
       a.className = 'solver-tool-badge';
       a.textContent = t;
       toolBadges.appendChild(a);

@@ -21,55 +21,69 @@ const SUB_TABS = [
 
 /**
  * Main render function for the Toolkit view.
+ *
+ * Supports two calling patterns:
+ *   1. Primary tabs (new): render(container, data, 'solvers', detailId)
+ *      — No internal header/tabs rendered; top-level nav handles tab switching.
+ *   2. Legacy route: render(container, data, sub)
+ *      — Renders full toolkit view with internal sub-tabs (backward compat).
+ *
  * @param {HTMLElement} container
  * @param {Object} allData
- * @param {string} [sub] - Sub-route
+ * @param {string} [sub] - Sub-route or primary tab key
+ * @param {string} [detail] - Detail ID (e.g., solver ID for detail page)
  */
-export function render(container, allData, sub) {
+export function render(container, allData, sub, detail) {
   const activeSub = sub || '';
   const software = allData.software || [];
   const solvers = allData.solvers || null;
   const benchmarks = allData.benchmarks || null;
+
+  // Determine if we're called as a primary tab (no internal tabs needed)
+  const PRIMARY_TABS = ['solvers', 'tools', 'benchmarks', 'licensing'];
+  const isPrimaryTab = PRIMARY_TABS.includes(activeSub);
 
   container.textContent = '';
 
   const view = document.createElement('div');
   view.className = 'toolkit-view';
 
-  // Header
-  const header = document.createElement('div');
-  header.className = 'toolkit-view__header';
-  const h1 = document.createElement('h1');
-  h1.className = 'toolkit-view__title';
-  h1.textContent = 'Toolkit';
-  const subP = document.createElement('p');
-  subP.className = 'toolkit-view__subtitle';
-  subP.textContent = 'OR solvers, benchmarks, and software tools';
-  header.appendChild(h1);
-  header.appendChild(subP);
-  view.appendChild(header);
+  if (!isPrimaryTab) {
+    // Legacy mode: show internal header + sub-tabs
+    const header = document.createElement('div');
+    header.className = 'toolkit-view__header';
+    const h1 = document.createElement('h1');
+    h1.className = 'toolkit-view__title';
+    h1.textContent = 'Toolkit';
+    const subP = document.createElement('p');
+    subP.className = 'toolkit-view__subtitle';
+    subP.textContent = 'OR solvers, benchmarks, and software tools';
+    header.appendChild(h1);
+    header.appendChild(subP);
+    view.appendChild(header);
 
-  // Tabs
-  const tabs = document.createElement('div');
-  tabs.className = 'toolkit-view__tabs';
-  SUB_TABS.forEach(t => {
-    const a = document.createElement('a');
-    a.href = t.key ? `#toolkit/${t.key}` : '#toolkit';
-    a.className = `toolkit-tab ${activeSub === t.key ? 'toolkit-tab--active' : ''}`;
-    a.textContent = `${t.icon} ${t.label}`;
-    tabs.appendChild(a);
-  });
-  view.appendChild(tabs);
+    const tabs = document.createElement('div');
+    tabs.className = 'toolkit-view__tabs';
+    SUB_TABS.forEach(t => {
+      const a = document.createElement('a');
+      a.href = t.key ? `#toolkit/${t.key}` : '#toolkit';
+      a.className = `toolkit-tab ${activeSub === t.key ? 'toolkit-tab--active' : ''}`;
+      a.textContent = `${t.icon} ${t.label}`;
+      tabs.appendChild(a);
+    });
+    view.appendChild(tabs);
+  }
 
   // Content
   const contentDiv = document.createElement('div');
   contentDiv.className = 'toolkit-view__content';
 
-  // Check for solver detail sub-route: #toolkit/solvers/{id}
+  // Check for solver detail sub-route: #solvers/{id} or #solvers/{id}
   const hashParts = (window.location.hash.replace('#', '') || '').split('/');
-  if (hashParts[1] === 'solvers' && hashParts[2]) {
+  const solverDetailId = detail || (hashParts[0] === 'solvers' && hashParts[1]) || (hashParts[1] === 'solvers' && hashParts[2]);
+  if (activeSub === 'solvers' && solverDetailId) {
     import('../views/solver-detail.js').then(mod => {
-      mod.render(contentDiv, hashParts[2], allData);
+      mod.render(contentDiv, solverDetailId, allData);
     });
     view.appendChild(contentDiv);
     container.appendChild(view);
@@ -78,7 +92,7 @@ export function render(container, allData, sub) {
 
   switch (activeSub) {
     case 'solvers':
-      buildSolvers(solvers, contentDiv, allData.decisionRules);
+      buildSolvers(solvers, contentDiv, allData.decisionRules, allData);
       break;
     case 'benchmarks':
       buildBenchmarks(benchmarks, contentDiv);
@@ -123,12 +137,12 @@ function buildOverview(allData, container) {
   qaCards.className = 'qa-cards';
 
   const qaData = [
-    { href: '#toolkit/solvers?problem_type=mip', title: 'Linear / Mixed-Integer', desc: 'LP, MIP, ILP' },
-    { href: '#toolkit/solvers?problem_type=minlp', title: 'Nonlinear', desc: 'NLP, MINLP, QP' },
-    { href: '#toolkit/solvers?problem_type=cp', title: 'Constraint Programming', desc: 'Scheduling, Assignment' },
-    { href: '#toolkit/solvers?problem_type=vrp', title: 'Vehicle Routing', desc: 'TSP, VRP, CVRP' },
-    { href: '#toolkit/solvers?problem_type=sdp', title: 'Convex / Conic', desc: 'SDP, SOCP' },
-    { href: '#toolkit/solvers?budget=free', title: 'I need it free', desc: 'Open-source solvers only' },
+    { href: '#solvers?problem_type=mip', title: 'Linear / Mixed-Integer', desc: 'LP, MIP, ILP' },
+    { href: '#solvers?problem_type=minlp', title: 'Nonlinear', desc: 'NLP, MINLP, QP' },
+    { href: '#solvers?problem_type=cp', title: 'Constraint Programming', desc: 'Scheduling, Assignment' },
+    { href: '#solvers?problem_type=vrp', title: 'Vehicle Routing', desc: 'TSP, VRP, CVRP' },
+    { href: '#solvers?problem_type=sdp', title: 'Convex / Conic', desc: 'SDP, SOCP' },
+    { href: '#solvers?budget=free', title: 'I need it free', desc: 'Open-source solvers only' },
   ];
   qaData.forEach(d => {
     const a = document.createElement('a');
@@ -148,7 +162,7 @@ function buildOverview(allData, container) {
   // Solver section
   const solverSection = buildSectionCard(
     'Solver Observatory',
-    '#toolkit/solvers',
+    '#solvers',
     solvers
       ? `${solvers.solvers ? solvers.solvers.length : 0} solvers tracked. Compare features, licenses, and activity.`
       : 'Solver data will appear here once the pipeline generates solvers.json.'
@@ -158,7 +172,7 @@ function buildOverview(allData, container) {
   // Benchmark section
   const benchmarkSection = buildSectionCard(
     'Benchmark Hub',
-    '#toolkit/benchmarks',
+    '#benchmarks',
     benchmarks
       ? `${benchmarks.categories ? benchmarks.categories.length : 0} benchmark categories covering standard OR problem types.`
       : 'Benchmark data will appear here once benchmarks.json is created.'
@@ -174,7 +188,7 @@ function buildOverview(allData, container) {
   h2.textContent = 'Recent Releases';
   recentHeader.appendChild(h2);
   const link = document.createElement('a');
-  link.href = '#toolkit/software';
+  link.href = '#feed/software';
   link.className = 'toolkit-section__link';
   link.textContent = 'View all \u2192';
   recentHeader.appendChild(link);
@@ -377,7 +391,225 @@ function releaseActivityTier(releaseDate) {
 /** VD-02: Canonical problem type columns for the heatmap */
 const HEATMAP_PROBLEM_TYPES = ['LP', 'MIP', 'QP', 'SOCP', 'SDP', 'MINLP', 'CP', 'VRP'];
 
-function buildSolvers(solversData, container, decisionRules) {
+// ── Starter Paths data + builder ──
+const STARTER_PATHS = {
+  'python-beginner': {
+    title: 'Python Beginner Path',
+    solver: { id: 'cbc', name: 'CBC', why: 'Comes bundled with PuLP \u2014 zero setup. Good enough for learning and small problems.' },
+    solver_upgrade: { id: 'highs', name: 'HiGHS', why: 'When you outgrow CBC, HiGHS is the best free upgrade. Same PuLP interface, much faster.' },
+    modeling_tool: { id: 'pulp', name: 'PuLP', why: 'Simplest Python modeling library. You will write your first LP in 30 minutes.' },
+    benchmark: 'Start with small custom instances. When ready, try MIPLIB 2017 easy instances.',
+    first_steps: [
+      'pip install pulp',
+      'Copy the production planning example from the Modeling Tools page',
+      'Run it \u2014 CBC is already included, no solver install needed',
+      'Modify constraints and re-solve to build intuition',
+      'When ready for harder problems, pip install highspy and switch solver in one line'
+    ],
+    time_to_first_model: '30 minutes'
+  },
+  'free-only': {
+    title: 'Free / Open Source Path',
+    solver: { id: 'highs', name: 'HiGHS', why: 'Best open-source LP/MIP solver. MIT licensed. No restrictions.' },
+    solver_alt: { id: 'scip', name: 'SCIP', why: 'Best open-source option for MINLP and research. Apache 2.0 license.' },
+    modeling_tool: { id: 'pyomo', name: 'Pyomo', why: 'Most solver-agnostic. Switch between HiGHS, SCIP, CBC, GLPK without code changes.' },
+    benchmark: 'MIPLIB 2017 for MIP, CVRPLIB for routing, TSPLIB for TSP.',
+    first_steps: [
+      'pip install pyomo highspy',
+      'Write your model in Pyomo with HiGHS as solver',
+      'If you need MINLP: pip install pyscipopt',
+      'For constraint programming: pip install ortools (CP-SAT is free)',
+      'All of these are production-usable with no license restrictions'
+    ],
+    time_to_first_model: '1 hour'
+  },
+  'phd-mip': {
+    title: 'PhD MIP Research Path',
+    solver: { id: 'gurobi', name: 'Gurobi', why: 'Fastest MIP solver. Free academic license with no variable limits. Apply at gurobi.com/academia.' },
+    solver_fallback: { id: 'highs', name: 'HiGHS', why: 'Your fallback when the academic license expires. Write solver-agnostic code from day one.' },
+    modeling_tool: { id: 'pyomo', name: 'Pyomo', why: 'Solver-agnostic modeling lets you benchmark Gurobi vs CPLEX vs HiGHS without rewriting.' },
+    modeling_alt: { id: 'jump', name: 'JuMP (Julia)', why: 'If your group uses Julia, JuMP is excellent and equally solver-agnostic.' },
+    benchmark: 'MIPLIB 2017 is the standard benchmark for MIP research. Use it for computational experiments.',
+    first_steps: [
+      'Apply for Gurobi academic license (takes 1-2 days)',
+      'pip install pyomo gurobipy',
+      'Write your model in Pyomo (NOT gurobipy directly \u2014 keep solver-agnostic)',
+      'Test on MIPLIB easy set first, then graduate to harder instances',
+      'Before graduation: verify your code runs with HiGHS as a drop-in replacement'
+    ],
+    time_to_first_model: '1 hour (after license approval)'
+  },
+  'scheduling': {
+    title: 'Scheduling & Constraint Programming Path',
+    solver: { id: 'or-tools', name: 'OR-Tools CP-SAT', why: "Google's CP-SAT solver is state-of-the-art for scheduling, assignment, and constraint satisfaction. Free." },
+    solver_alt: { id: 'hexaly', name: 'Hexaly', why: 'For very large scheduling problems where CP-SAT is slow. Commercial but powerful heuristic approach.' },
+    modeling_tool: { id: 'or-tools', name: 'OR-Tools (direct API)', why: 'CP-SAT has its own Python API \u2014 no separate modeling tool needed.' },
+    benchmark: 'PSPLIB for project scheduling, OR-Library for assignment problems.',
+    first_steps: [
+      'pip install ortools',
+      'Start with the job-shop scheduling example in OR-Tools documentation',
+      'CP-SAT uses a different paradigm than LP/MIP \u2014 you define variables, domains, and constraints',
+      'For nurse scheduling, vehicle routing, or bin packing: OR-Tools has dedicated APIs',
+      'If CP-SAT is too slow on your instance size, evaluate Hexaly (commercial)'
+    ],
+    time_to_first_model: '45 minutes'
+  },
+  'production': {
+    title: 'Production-Ready Path',
+    solver: { id: 'gurobi', name: 'Gurobi', why: 'Industry standard for production MIP. Best support, best performance, proven at scale.' },
+    solver_alt: { id: 'cplex', name: 'CPLEX', why: 'Alternative if your organization already has an IBM relationship.' },
+    modeling_tool: { id: 'pyomo', name: 'Pyomo', why: 'Solver-agnostic modeling means you can switch solvers without rewriting your application.' },
+    benchmark: 'Benchmark on your actual production data, not standard benchmarks.',
+    first_steps: [
+      'Get a Gurobi trial license or CPLEX trial from IBM',
+      'Build your model in Pyomo \u2014 NOT in the solver\'s native API',
+      'Test with HiGHS first (free) to validate your formulation',
+      'Then switch to Gurobi/CPLEX for production performance',
+      'Plan for: licensing cost per machine, cloud deployment licensing, solver version pinning'
+    ],
+    time_to_first_model: '2-4 hours (including procurement)'
+  },
+  'julia': {
+    title: 'Julia Path',
+    solver: { id: 'highs', name: 'HiGHS', why: 'Best free solver for Julia via JuMP. One-line install.' },
+    solver_upgrade: { id: 'gurobi', name: 'Gurobi', why: 'When you need maximum performance. JuMP switches solvers in one line.' },
+    modeling_tool: { id: 'jump', name: 'JuMP', why: 'The only serious modeling tool for Julia. Beautiful syntax, broad solver support, excellent documentation.' },
+    benchmark: 'Same as Python: MIPLIB for MIP, TSPLIB for TSP.',
+    first_steps: [
+      'using Pkg; Pkg.add(["JuMP", "HiGHS"])',
+      'JuMP syntax is very close to mathematical notation \u2014 model = Model(HiGHS.Optimizer)',
+      'Switch to Gurobi later: Pkg.add("Gurobi"); model = Model(Gurobi.Optimizer)',
+      'Julia is faster than Python for model building (not solving) \u2014 matters for large models',
+      'JuMP ecosystem includes Convex.jl (like CVXPY) and Constraint Solver packages'
+    ],
+    time_to_first_model: '20 minutes'
+  }
+};
+
+function buildStarterPaths(container) {
+  const section = document.createElement('section');
+  section.className = 'starter-paths';
+
+  const h2 = document.createElement('h2');
+  h2.textContent = 'Not sure where to start?';
+  section.appendChild(h2);
+
+  const grid = document.createElement('div');
+  grid.className = 'path-cards';
+
+  const pathEntries = [
+    ['python-beginner', "I'm a Python beginner", '\u2192 PuLP + CBC (free, 30 min to first model)'],
+    ['free-only', 'I need everything free', '\u2192 HiGHS or SCIP + Pyomo'],
+    ['phd-mip', 'PhD student, doing MIP research', '\u2192 Gurobi (academic) + Pyomo + MIPLIB'],
+    ['scheduling', "I'm solving scheduling problems", '\u2192 OR-Tools CP-SAT or Hexaly'],
+    ['production', 'I need production-ready', '\u2192 Gurobi or CPLEX + solver-agnostic modeler'],
+    ['julia', 'I use Julia', '\u2192 JuMP + HiGHS (or Gurobi)'],
+  ];
+
+  pathEntries.forEach(([key, title, result]) => {
+    const btn = document.createElement('button');
+    btn.className = 'path-card';
+    btn.dataset.path = key;
+    const t = document.createElement('span');
+    t.className = 'path-title';
+    t.textContent = title;
+    const r = document.createElement('span');
+    r.className = 'path-result';
+    r.textContent = result;
+    btn.appendChild(t);
+    btn.appendChild(r);
+    grid.appendChild(btn);
+  });
+
+  section.appendChild(grid);
+
+  const detailPanel = document.createElement('div');
+  detailPanel.id = 'path-detail';
+  detailPanel.className = 'path-detail-panel';
+  detailPanel.style.display = 'none';
+  section.appendChild(detailPanel);
+
+  // Wire click handlers
+  grid.addEventListener('click', (e) => {
+    const card = e.target.closest('.path-card');
+    if (!card) return;
+    grid.querySelectorAll('.path-card').forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+    renderPathDetail(card.dataset.path, detailPanel);
+  });
+
+  container.appendChild(section);
+}
+
+function renderPathDetail(pathId, panel) {
+  const path = STARTER_PATHS[pathId];
+  if (!path) return;
+
+  panel.style.display = 'block';
+  panel.textContent = '';
+
+  const expanded = document.createElement('div');
+  expanded.className = 'path-expanded';
+
+  const h3 = document.createElement('h3');
+  h3.textContent = path.title;
+  expanded.appendChild(h3);
+
+  const stack = document.createElement('div');
+  stack.className = 'path-stack';
+
+  // Helper to add a stack item
+  function addStackItem(label, name, id, why) {
+    const item = document.createElement('div');
+    item.className = 'stack-item';
+    const lbl = document.createElement('span');
+    lbl.className = 'stack-label';
+    lbl.textContent = label;
+    item.appendChild(lbl);
+    if (id) {
+      const link = document.createElement('a');
+      link.className = 'stack-link';
+      link.href = `#solvers/${id}`;
+      link.textContent = name;
+      item.appendChild(link);
+    }
+    const whyP = document.createElement('p');
+    whyP.className = 'stack-why';
+    whyP.textContent = why;
+    item.appendChild(whyP);
+    stack.appendChild(item);
+  }
+
+  addStackItem('Recommended Solver', path.solver.name, path.solver.id, path.solver.why);
+  if (path.solver_upgrade) addStackItem('Upgrade Path', path.solver_upgrade.name, path.solver_upgrade.id, path.solver_upgrade.why);
+  if (path.solver_alt) addStackItem('Alternative', path.solver_alt.name, path.solver_alt.id, path.solver_alt.why);
+  if (path.solver_fallback) addStackItem('Fallback (when license expires)', path.solver_fallback.name, path.solver_fallback.id, path.solver_fallback.why);
+  addStackItem('Modeling Tool', path.modeling_tool.name, null, path.modeling_tool.why);
+  if (path.modeling_alt) addStackItem('Alternative Tool', path.modeling_alt.name, null, path.modeling_alt.why);
+  addStackItem('Benchmarks', '', null, path.benchmark);
+
+  expanded.appendChild(stack);
+
+  // Steps
+  const stepsDiv = document.createElement('div');
+  stepsDiv.className = 'path-steps';
+  const h4 = document.createElement('h4');
+  h4.textContent = `Get started (${path.time_to_first_model} to first model)`;
+  stepsDiv.appendChild(h4);
+  const ol = document.createElement('ol');
+  path.first_steps.forEach(step => {
+    const li = document.createElement('li');
+    li.textContent = step;
+    ol.appendChild(li);
+  });
+  stepsDiv.appendChild(ol);
+  expanded.appendChild(stepsDiv);
+
+  panel.appendChild(expanded);
+  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function buildSolvers(solversData, container, decisionRules, allData) {
   if (!solversData || !solversData.solvers || solversData.solvers.length === 0) {
     const empty = document.createElement('div');
     empty.className = 'empty-state';
@@ -396,6 +628,26 @@ function buildSolvers(solversData, container, decisionRules) {
     container.appendChild(empty);
     return;
   }
+
+  // ── Hero chooser: "What are you optimizing?" ──
+  const hero = document.createElement('section');
+  hero.className = 'hero-chooser';
+  hero.innerHTML = `
+    <h1>What are you optimizing?</h1>
+    <p class="hero-sub">Choose your problem type for an instant solver recommendation. Or use the filters below.</p>
+    <div class="problem-cards">
+      <a href="#solvers?problem_type=mip" class="pcard"><span class="pcard-label">Linear / MIP</span><span class="pcard-desc">LP, MIP, ILP</span></a>
+      <a href="#solvers?problem_type=minlp" class="pcard"><span class="pcard-label">Nonlinear</span><span class="pcard-desc">NLP, MINLP, QP</span></a>
+      <a href="#solvers?problem_type=cp" class="pcard"><span class="pcard-label">Constraint Programming</span><span class="pcard-desc">Scheduling, Assignment</span></a>
+      <a href="#solvers?problem_type=vrp" class="pcard"><span class="pcard-label">Vehicle Routing</span><span class="pcard-desc">TSP, VRP, CVRP</span></a>
+      <a href="#solvers?problem_type=sdp" class="pcard"><span class="pcard-label">Convex / Conic</span><span class="pcard-desc">SDP, SOCP</span></a>
+      <a href="#solvers?budget=free" class="pcard pcard-free"><span class="pcard-label">Free &amp; Open Source</span><span class="pcard-desc">No license required</span></a>
+    </div>
+  `;
+  container.appendChild(hero);
+
+  // ── Starter Paths: "Not sure where to start?" ──
+  buildStarterPaths(container);
 
   // Decision Helper (scoring-based recommendation wizard)
   if (decisionRules && decisionRules.scores) {
@@ -557,7 +809,7 @@ function buildSolvers(solversData, container, decisionRules) {
     const tdName = document.createElement('td');
     tdName.className = 'solver-row__name';
     const nameLink = document.createElement('a');
-    nameLink.href = `#toolkit/solvers/${s.id}`;
+    nameLink.href = `#solvers/${s.id}`;
     nameLink.className = 'solver-name-link';
     const nameStrong = document.createElement('strong');
     nameStrong.textContent = s.name;
@@ -1040,7 +1292,7 @@ function buildPerformanceCalculator(container) {
       const tr = document.createElement('tr');
       const tdName = document.createElement('td');
       const a = document.createElement('a');
-      a.href = `#toolkit/solvers/${id}`;
+      a.href = `#solvers/${id}`;
       a.textContent = id.charAt(0).toUpperCase() + id.slice(1);
       tdName.appendChild(a);
       tr.appendChild(tdName);
@@ -1929,12 +2181,12 @@ function buildCompatibilityMatrix(matrix, container) {
   section.className = 'compat-section';
 
   const h2 = document.createElement('h2');
-  h2.textContent = 'Solver Compatibility Matrix';
+  h2.textContent = 'What works with what?';
   section.appendChild(h2);
 
   const desc = document.createElement('p');
   desc.className = 'compat-desc';
-  desc.textContent = 'Which modeling tools work with which solvers.';
+  desc.textContent = 'Which modeling tools connect to which solvers. Green = supported, gray = not supported.';
   section.appendChild(desc);
 
   const tableWrap = document.createElement('div');
@@ -2062,7 +2314,7 @@ function buildLicensingGuide(allData, container) {
     // Name
     const tdName = document.createElement('td');
     const nameLink = document.createElement('a');
-    nameLink.href = `#toolkit/solvers/${s.id}`;
+    nameLink.href = `#solvers/${s.id}`;
     nameLink.textContent = s.name;
     tdName.appendChild(nameLink);
     tr.appendChild(tdName);

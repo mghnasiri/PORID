@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import json
 import os
+import shutil
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -320,6 +321,12 @@ def main() -> None:
     if src_data.exists():
         write_json(output, src_data / "solvers.json")
         print(f"  ✓ Also written to src/data/solvers.json")
+
+    # Copy to static fallback for offline/resilient loading
+    static_dir = base / "../data/static"
+    static_dir.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(str(output_path), str(static_dir / "solvers.json"))
+    print(f"  ✓ Static fallback updated: data/static/solvers.json")
 
     print()
 

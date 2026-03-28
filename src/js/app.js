@@ -10,12 +10,13 @@
  * user-generated content, use DOMPurify.
  */
 
-// --- New hub view imports ---
+// --- Primary view imports (new 5-tab structure) ---
+import { render as renderToolkit } from './modules/toolkit.js';
+import { render as renderFeed } from './modules/feed.js';
+
+// --- Legacy module imports (used by feed + secondary views) ---
 import { render as renderPulse } from './modules/pulse.js';
 import { render as renderRadar } from './modules/radar.js';
-import { render as renderToolkit } from './modules/toolkit.js';
-
-// --- Module imports ---
 import { render as renderPublications } from './modules/publications.js';
 import { render as renderSoftware } from './modules/software.js';
 import { render as renderConferences, getUrgentDeadlineCount } from './modules/conferences.js';
@@ -30,6 +31,7 @@ import { render as renderFunding } from './modules/funding.js';
 import { render as renderAwards } from './modules/awards.js';
 import { render as renderResources } from './modules/resources.js';
 import { initSearch, wireSearchInput } from './modules/search.js';
+import { loadData, showLastUpdated } from './utils/data-loader.js';
 
 // --- Component / utility imports ---
 import { renderFilterBar, getActiveFilters, applyFilters, getViewPresets, saveViewPreset, deleteViewPreset, renderPresetBar, getSystemPresets } from './components/filters.js';
@@ -54,7 +56,7 @@ const state = {
     resources: [],
     special_issues: [],
   },
-  activeTab: 'toolkit',
+  activeTab: 'solvers',
   extraData: {
     trends: null,
     brief: null,
@@ -67,7 +69,13 @@ const state = {
   metadata: null,
 };
 
-const TABS = ['pulse', 'radar', 'toolkit', 'publications', 'software', 'conferences', 'opportunities', 'seminars', 'watchlist', 'digest', 'datasets', 'trends', 'funding', 'awards', 'resources', 'changelog'];
+// Primary 5-tab structure
+const TABS = ['solvers', 'tools', 'benchmarks', 'licensing', 'feed'];
+
+// Legacy tab IDs — kept for routing/redirects
+const LEGACY_TABS = ['pulse', 'radar', 'toolkit', 'publications', 'software', 'conferences', 'opportunities', 'seminars', 'watchlist', 'digest', 'datasets', 'trends', 'funding', 'awards', 'resources', 'changelog'];
+
+const ALL_KNOWN_TABS = [...TABS, ...LEGACY_TABS];
 
 const DATA_FILES = {
   publications: './data/publications.json',
@@ -97,8 +105,9 @@ const MODULE_RENDERERS = {
 
 const contentEl = document.getElementById('content');
 const filterContainer = document.getElementById('filterBarContainer');
-const statNewEl = document.getElementById('statNew');
-const statTotalEl = document.getElementById('statTotal');
+const statSolversEl = document.getElementById('statSolvers');
+const statToolsEl = document.getElementById('statTools');
+const statBenchmarksEl = document.getElementById('statBenchmarks');
 
 // ---------------------------------------------------------------------------
 // Debounce Utility
@@ -180,6 +189,9 @@ async function loadAllData() {
     state.extraData[key] = data;
   }
 
+  // Re-run stats now that solver/tool/benchmark data is loaded
+  updateStats();
+
   // Load latest weekly brief (single request via manifest index)
   try {
     const briefResp = await fetch('./data/brief-latest.json');
@@ -220,14 +232,14 @@ function animateCounter(el, target) {
 }
 
 function updateStats() {
-  const allItems = getAllItems();
-  const today = new Date().toISOString().slice(0, 10);
-  const newToday = allItems.filter(
-    (i) => (i.date || '').slice(0, 10) === today
-  ).length;
+  // Tooling-focused stats (updated after optional data loads)
+  const solverList = state.extraData.solvers?.solvers || state.extraData.solvers || [];
+  const toolList = state.extraData.modelingTools?.tools || state.extraData.modelingTools || [];
+  const benchList = state.extraData.benchmarks?.categories || state.extraData.benchmarks || [];
 
-  animateCounter(statNewEl, newToday);
-  animateCounter(statTotalEl, allItems.length);
+  if (statSolversEl && solverList.length) animateCounter(statSolversEl, solverList.length);
+  if (statToolsEl && toolList.length) animateCounter(statToolsEl, toolList.length);
+  if (statBenchmarksEl && benchList.length) animateCounter(statBenchmarksEl, benchList.length);
 }
 
 function updateLastUpdated() {
@@ -576,7 +588,43 @@ function formatRelativeTime(isoString) {
 
 function getHashTab() {
   const raw = window.location.hash.replace('#', '').split('?')[0].split('/')[0];
-  return TABS.includes(raw) ? raw : (getPreferences().defaultTab || 'toolkit');
+
+  // Primary tabs — direct match
+  if (TABS.includes(raw)) return raw;
+
+  // Legacy redirects — map old tabs to new structure
+  const LEGACY_MAP = {
+    'toolkit': 'solvers',
+    'pulse': 'feed',
+    'radar': 'feed',
+    'publications': 'feed',
+    'software': 'feed',
+    'conferences': 'feed',
+    'opportunities': 'feed',
+    'seminars': 'feed',
+    'trends': 'feed',
+    'watchlist': 'feed',
+    'digest': 'feed',
+    'datasets': 'feed',
+    'funding': 'feed',
+    'awards': 'feed',
+    'resources': 'feed',
+    'changelog': 'feed',
+  };
+
+  // Handle toolkit sub-route redirects
+  if (raw === 'toolkit') {
+    const sub = window.location.hash.replace('#', '').split('?')[0].split('/')[1];
+    if (sub === 'solvers') return 'solvers';
+    if (sub === 'tools') return 'tools';
+    if (sub === 'benchmarks') return 'benchmarks';
+    if (sub === 'licensing') return 'licensing';
+    return 'solvers';
+  }
+
+  if (LEGACY_MAP[raw]) return LEGACY_MAP[raw];
+
+  return 'solvers';
 }
 
 function getHashSub() {
@@ -605,16 +653,16 @@ function getHashParams() {
 // ---------------------------------------------------------------------------
 
 const VIEW_META = {
-  pulse:         { title: 'PORID \u2014 OR Intelligence Hub',            desc: 'Real-time pulse of Operations Research: trending papers, solver news, upcoming deadlines.' },
-  publications:  { title: 'PORID \u2014 OR Publications Tracker',        desc: 'Track the latest Operations Research publications from arXiv, Crossref, OpenAlex, and more.' },
-  software:      { title: 'PORID \u2014 OR Software Releases',           desc: 'Monitor version releases for optimization solvers including Gurobi, CPLEX, SCIP, HiGHS, and OR-Tools.' },
-  conferences:   { title: 'PORID \u2014 OR Conference Deadlines',        desc: 'Upcoming Operations Research conferences, workshops, and symposia with submission deadlines.' },
-  opportunities: { title: 'PORID \u2014 OR Funding & Positions',         desc: 'PhD positions, postdoc openings, faculty jobs, and funding calls in Operations Research.' },
-  toolkit:       { title: 'PORID \u2014 The OR Tooling Navigator', desc: 'Which OR solver should I use? Compare solvers, modeling tools, benchmarks, and licensing costs.' },
-  radar:         { title: 'PORID \u2014 OR Opportunity Radar',           desc: 'Personalized radar of Operations Research opportunities matching your research interests.' },
-  'toolkit/solvers':    { title: 'PORID \u2014 OR Solver Comparison',    desc: 'Compare OR optimization solvers by performance, cost, and features.' },
-  'toolkit/tools':      { title: 'PORID \u2014 OR Modeling Tools Guide',  desc: 'Compare modeling tools like Pyomo, PuLP, JuMP, and CVXPY.' },
-  'toolkit/benchmarks': { title: 'PORID \u2014 OR Benchmark Datasets',   desc: 'Standard benchmark instance libraries for optimization problems.' },
+  solvers:       { title: 'PORID \u2014 OR Solver Comparison',           desc: 'Which OR solver should I use? Compare solvers by performance, cost, and features. The definitive guide.' },
+  tools:         { title: 'PORID \u2014 OR Modeling Tools Guide',        desc: 'Compare modeling tools like Pyomo, PuLP, JuMP, and CVXPY. Compatibility matrix and code examples.' },
+  benchmarks:    { title: 'PORID \u2014 OR Benchmark Datasets',          desc: 'Standard benchmark instance libraries: MIPLIB, TSPLIB, CVRPLIB, PSPLIB, and more.' },
+  licensing:     { title: 'PORID \u2014 OR Solver Licensing Guide',      desc: 'Compare solver licensing: academic vs commercial, TCO estimates, migration paths.' },
+  feed:          { title: 'PORID \u2014 OR Community Feed',              desc: 'Publications, conferences, software releases, and opportunities from the OR community.' },
+  // Legacy keys for backward compat
+  pulse:         { title: 'PORID \u2014 OR Community Feed',              desc: 'Publications, conferences, software releases, and opportunities from the OR community.' },
+  toolkit:       { title: 'PORID \u2014 OR Solver & Tool Navigator',     desc: 'Which OR solver should I use? Compare solvers, modeling tools, benchmarks, and licensing costs.' },
+  publications:  { title: 'PORID \u2014 OR Publications',                desc: 'Track the latest Operations Research publications.' },
+  radar:         { title: 'PORID \u2014 OR Community Feed',              desc: 'Publications, conferences, software releases, and opportunities from the OR community.' },
 };
 
 const BASE_URL = 'https://mghnasiri.github.io/PORID/';
@@ -639,7 +687,7 @@ function updatePageMeta(view, sub) {
   // Canonical URL
   const canonical = document.querySelector('link[rel="canonical"]');
   if (canonical) {
-    canonical.setAttribute('href', view === 'pulse' ? BASE_URL : `${BASE_URL}#${view}`);
+    canonical.setAttribute('href', view === 'solvers' ? BASE_URL : `${BASE_URL}#${view}`);
   }
 
   // BreadcrumbList JSON-LD (CS-06)
@@ -730,7 +778,56 @@ function renderView() {
   // Scroll to top on tab change
   window.scrollTo({ top: 0, behavior: 'smooth' });
 
-  // --- Hub views: Pulse, Radar, Toolkit ---
+  // Shared toolkit data bundle used by solvers/tools/benchmarks/licensing
+  const toolkitData = {
+    ...state.data,
+    solvers: state.extraData.solvers,
+    benchmarks: state.extraData.benchmarks,
+    decisionRules: state.extraData.decisionRules,
+    modelingTools: state.extraData.modelingTools,
+    compatibilityMatrix: state.extraData.compatibilityMatrix,
+    solversManual: state.extraData.solversManual,
+  };
+
+  // --- Primary 5-tab routing ---
+
+  if (tab === 'solvers') {
+    filterContainer.textContent = '';
+    renderToolkit(contentEl, toolkitData, 'solvers', sub);
+    animateCards();
+    return;
+  }
+
+  if (tab === 'tools') {
+    filterContainer.textContent = '';
+    renderToolkit(contentEl, toolkitData, 'tools');
+    animateCards();
+    return;
+  }
+
+  if (tab === 'benchmarks') {
+    filterContainer.textContent = '';
+    renderToolkit(contentEl, toolkitData, 'benchmarks');
+    animateCards();
+    return;
+  }
+
+  if (tab === 'licensing') {
+    filterContainer.textContent = '';
+    renderToolkit(contentEl, toolkitData, 'licensing');
+    animateCards();
+    return;
+  }
+
+  if (tab === 'feed') {
+    filterContainer.textContent = '';
+    renderFeed(contentEl, state.data, sub);
+    animateCards();
+    return;
+  }
+
+  // --- Legacy tab routing (kept for backward compat, but hidden from nav) ---
+
   if (tab === 'pulse') {
     filterContainer.textContent = '';
     renderPulse(contentEl, state.data, {
@@ -738,7 +835,6 @@ function renderView() {
       brief: state.extraData.brief,
     });
     animateCards();
-    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
@@ -746,27 +842,16 @@ function renderView() {
     filterContainer.textContent = '';
     renderRadar(contentEl, state.data, sub);
     animateCards();
-    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
   if (tab === 'toolkit') {
     filterContainer.textContent = '';
-    const toolkitData = {
-      ...state.data,
-      solvers: state.extraData.solvers,
-      benchmarks: state.extraData.benchmarks,
-      decisionRules: state.extraData.decisionRules,
-      modelingTools: state.extraData.modelingTools,
-      compatibilityMatrix: state.extraData.compatibilityMatrix,
-      solversManual: state.extraData.solversManual,
-    };
     renderToolkit(contentEl, toolkitData, sub);
     animateCards();
     return;
   }
 
-  // --- Watchlist: no filter bar, dedicated module ---
   if (tab === 'watchlist') {
     filterContainer.textContent = '';
     renderWatchlist(contentEl);
@@ -774,80 +859,64 @@ function renderView() {
     return;
   }
 
-  // --- Digest: no filter bar, dedicated module ---
   if (tab === 'digest') {
     filterContainer.textContent = '';
     renderDigest(contentEl);
     requestAnimationFrame(() => animateCards());
-    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
-  // --- Seminars: no filter bar, dedicated module ---
   if (tab === 'seminars') {
     filterContainer.textContent = '';
     if (state.loadErrors.seminars) { renderLoadError(contentEl, 'Seminars'); return; }
     renderSeminars(contentEl, state.data.seminars || []);
     requestAnimationFrame(() => animateCards());
-    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
-  // --- Resources (Datasets + Blogs): no filter bar, dedicated module ---
   if (tab === 'datasets') {
     filterContainer.textContent = '';
     if (state.loadErrors.datasets) { renderLoadError(contentEl, 'Datasets'); return; }
     renderDatasets(contentEl, state.data.datasets || [], state.data.blogs || []);
     requestAnimationFrame(() => animateCards());
-    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
-  // --- Trends: no filter bar, dedicated module ---
   if (tab === 'trends') {
     filterContainer.textContent = '';
     renderTrends(contentEl, state.data);
     requestAnimationFrame(() => animateCards());
-    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
-  // --- Funding: no filter bar, dedicated module ---
   if (tab === 'funding') {
     filterContainer.textContent = '';
     if (state.loadErrors.funding) { renderLoadError(contentEl, 'Funding'); return; }
     renderFunding(contentEl, state.data.funding || [], {});
     requestAnimationFrame(() => animateCards());
-    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
-  // --- Awards: no filter bar, dedicated module ---
   if (tab === 'awards') {
     filterContainer.textContent = '';
     if (state.loadErrors.awards) { renderLoadError(contentEl, 'Awards'); return; }
     renderAwards(contentEl, state.data.awards || [], {});
     requestAnimationFrame(() => animateCards());
-    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
-  // --- Resources: no filter bar, dedicated module ---
   if (tab === 'resources') {
     filterContainer.textContent = '';
     if (state.loadErrors.resources) { renderLoadError(contentEl, 'Resources'); return; }
     renderResources(contentEl, state.data.resources || [], {});
     requestAnimationFrame(() => animateCards());
-    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
-  // --- Changelog: no filter bar, dedicated module ---
   if (tab === 'changelog') {
     filterContainer.textContent = '';
     renderChangelog(contentEl);
     requestAnimationFrame(() => animateCards());
-    appendSeeAlsoLinks(tab); // R4-09
     return;
   }
 
@@ -2415,10 +2484,9 @@ async function init() {
     }
   });
 
-  // First-visit onboarding flow (ER-08)
-  if (!localStorage.getItem('porid-onboarded')) {
-    showOnboarding();
-  }
+  // Onboarding modal disabled on first visit — product goes straight to
+  // content. Tour is still accessible via the footer "Tour" link.
+  // if (!localStorage.getItem('porid-onboarded')) { showOnboarding(); }
 
   // Tour link in footer — re-trigger onboarding
   const tourLink = document.getElementById('tourLink');

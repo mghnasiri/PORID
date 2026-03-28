@@ -59,6 +59,15 @@ jobs:
       - name: Build iCal feed
         run: python pipeline/build_ical.py
 
+      - name: Refresh static fallback copies
+        run: |
+          mkdir -p data/static
+          cp -f data/solvers.json data/static/solvers.json 2>/dev/null || true
+          cp -f data/benchmarks.json data/static/benchmarks.json 2>/dev/null || true
+          cp -f data/compatibility_matrix.json data/static/compatibility_matrix.json 2>/dev/null || true
+          cp -f data/decision_rules.json data/static/decision_rules.json 2>/dev/null || true
+          cp -f data/modeling_tools.json data/static/modeling_tools.json 2>/dev/null || true
+
       - name: Copy data to src for deployment
         run: |
           cp -f data/*.json src/data/ 2>/dev/null || true
@@ -68,10 +77,8 @@ jobs:
           cp -f data/brief-*.json src/data/ 2>/dev/null || true
           mkdir -p src/data/briefs 2>/dev/null || true
           cp -f data/briefs/*.json src/data/briefs/ 2>/dev/null || true
-          # Static data files for Decision Helper / Modeling Tools
-          cp -f data/decision_rules.json src/data/ 2>/dev/null || true
-          cp -f data/modeling_tools.json src/data/ 2>/dev/null || true
-          cp -f data/compatibility_matrix.json src/data/ 2>/dev/null || true
+          mkdir -p src/data/static 2>/dev/null || true
+          cp -f data/static/*.json src/data/static/ 2>/dev/null || true
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         id: auto-commit
