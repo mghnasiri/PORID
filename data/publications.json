@@ -1,5 +1,22 @@
 [
   {
+    "id": "optim-online-f441f2885c84",
+    "title": "New Proofs of Exact LP Reformulations for Binary Polynomial Optimization with Bounded Treewidth",
+    "authors": [],
+    "abstract": "In this work, we revisit binary polynomial optimization (BPO) problems with limited treewidth of the associated graph. We provide alternate proofs of the exactness of a reformulated linear program (LP) with O(n.2^d) variables, n being the number of variables and d being the treewidth of the associated graph. The first proof relies on expressing any ... Read more",
+    "date": "2026-03-27",
+    "source": "Optimization Online",
+    "url": "https://optimization-online.org/2026/03/new-proofs-of-exact-lp-reformulations-for-binary-polynomial-optimization-with-bounded-treewidth/?utm_source=rss&utm_medium=rss&utm_campaign=new-proofs-of-exact-lp-reformulations-for-binary-polynomial-optimization-with-bounded-treewidth",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "score": 40.0,
+    "mentions_solvers": [
+      "Xpress"
+    ]
+  },
+  {
     "id": "crossref-10.1007-s10479-026-07126-9",
     "title": "Market structure, financial distress, and input prices in the Chinese banking industry: a novel 2-stage total partial productivity approach",
     "authors": [
@@ -11344,6 +11361,48 @@
     "arxiv_id": "",
     "citation_count": 0,
     "score": 35.0
+  },
+  {
+    "id": "s2-555ecb8e6db1",
+    "title": "Distributionally Robust $k$-of-$n$ Sequential Testing",
+    "authors": [
+      "Rayen Tan",
+      "Viswanath Nagarajan"
+    ],
+    "abstract": "The $k$-of-$n$ testing problem involves performing $n$ independent tests sequentially, in order to determine whether/not at least $k$ tests pass. The objective is to minimize the expected cost of testing. This is a fundamental and well-studied stochastic optimization problem. However, a key limitation of this model is that the success/failure probability of each test is assumed to be known precisely. In this paper, we relax this assumption and study a distributionally-robust model for $k$-of-$n$ testing. In our setting, each test is associated with an interval that contains its (unknown) failure probability. The goal is to find a solution that minimizes the worst-case expected cost, where each test's probability is chosen from its interval. We focus on non-adaptive solutions, that are specified by a fixed permutation of the tests. When all test costs are unit, we obtain a $2$-approximation algorithm for distributionally-robust $k$-of-$n$ testing. For general costs, we obtain an $O(\\frac{1}{\\sqrt \\epsilon})$-approximation algorithm on $\\epsilon$-bounded instances where each uncertainty interval is contained in $[\\epsilon, 1-\\epsilon]$. We also consider the inner maximization problem for distributionally-robust $k$-of-$n$: this involves finding the worst-case probabilities from the uncertainty intervals for a given solution. For this problem, in addition to the above approximation ratios, we obtain a quasi-polynomial time approximation scheme under the assumption that all costs are polynomially bounded.",
+    "date": "2026-03-24",
+    "source": "Semantic Scholar",
+    "source_detail": "robust optimization uncertainty",
+    "url": "https://www.semanticscholar.org/paper/555ecb8e6db1d8a99644bd892c8f49b8c4be47a5",
+    "tags": [
+      "stochastic"
+    ],
+    "type": "publication",
+    "doi": "",
+    "arxiv_id": "2603.23705",
+    "citation_count": 0,
+    "score": 30.0
+  },
+  {
+    "id": "s2-b682c18da71b",
+    "title": "Probabilistic Geometric Alignment via Bayesian Latent Transport for Domain-Adaptive Foundation Models",
+    "authors": [
+      "Aueaphum Aueawatthanaphisut",
+      "Kuepon Auewattanapisut"
+    ],
+    "abstract": "Adapting large-scale foundation models to new domains with limited supervision remains a fundamental challenge due to latent distribution mismatch, unstable optimization dynamics, and miscalibrated uncertainty propagation. This paper introduces an uncertainty-aware probabilistic latent transport framework that formulates domain adaptation as a stochastic geometric alignment problem in representation space. A Bayesian transport operator is proposed to redistribute latent probability mass along Wasserstein-type geodesic trajectories, while a PAC-Bayesian regularization mechanism constrains posterior model complexity to mitigate catastrophic overfitting. The proposed formulation yields theoretical guarantees on convergence stability, loss landscape smoothness, and sample efficiency under distributional shift. Empirical analyses demonstrate substantial reduction in latent manifold discrepancy, accelerated transport energy decay, and improved covariance calibration compared with deterministic fine-tuning and adversarial domain adaptation baselines. Furthermore, bounded posterior uncertainty evolution indicates enhanced probabilistic reliability during cross-domain transfer. By establishing a principled connection between stochastic optimal transport geometry and statistical generalization theory, the proposed framework provides new insights into robust adaptation of modern foundation architectures operating in heterogeneous environments. These findings suggest that uncertainty-aware probabilistic alignment constitutes a promising paradigm for reliable transfer learning in next-generation deep representation systems.",
+    "date": "2026-03-24",
+    "source": "Semantic Scholar",
+    "source_detail": "robust optimization uncertainty",
+    "url": "https://www.semanticscholar.org/paper/b682c18da71b57d8a78a3caa2be985e7e2270ca4",
+    "tags": [
+      "constraint-programming"
+    ],
+    "type": "publication",
+    "doi": "",
+    "arxiv_id": "2603.23783",
+    "citation_count": 0,
+    "score": 30.0
   },
   {
     "id": "crossref-10.1007-s11590-026-02290-0",
@@ -25313,6 +25372,26 @@
     "score": 20.0
   },
   {
+    "id": "crossref-10.1016-j.ejor.2026.03.009",
+    "title": "The parallel stack loading problem: Polynomial solvability in the unlimited-capacity case and exact approaches for the finite-capacity case",
+    "authors": [
+      "Tanaka, S.",
+      "Boge, S.",
+      "Knust, S."
+    ],
+    "abstract": "",
+    "date": "2026-03-01",
+    "source": "EJOR",
+    "source_detail": "EJOR",
+    "url": "https://doi.org/10.1016/j.ejor.2026.03.009",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1016/j.ejor.2026.03.009",
+    "score": 20.0
+  },
+  {
     "id": "crossref-10.1177-10591478261431044",
     "title": "The Impacts of Electronic Health Record Note Usage by Physicians on Efficiency and Quality of Care: An Analysis Using EHR Audit Logs",
     "authors": [
@@ -26060,6 +26139,25 @@
     ],
     "type": "publication",
     "doi": "10.1007/s11081-025-10070-5",
+    "score": 20.0
+  },
+  {
+    "id": "crossref-10.1007-s10479-026-07051-x",
+    "title": "Multi-echelon location routing problem with vehicle-drone delivery and transshipment for cold chain transportation",
+    "authors": [
+      "Li, Y.",
+      "Zhang, J."
+    ],
+    "abstract": "",
+    "date": "2026-01-23",
+    "source": "Annals of Operations Research",
+    "source_detail": "Annals of Operations Research",
+    "url": "https://doi.org/10.1007/s10479-026-07051-x",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1007/s10479-026-07051-x",
     "score": 20.0
   },
   {
