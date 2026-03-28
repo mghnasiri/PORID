@@ -31,7 +31,7 @@ import { render as renderFunding } from './modules/funding.js';
 import { render as renderAwards } from './modules/awards.js';
 import { render as renderResources } from './modules/resources.js';
 import { initSearch, wireSearchInput } from './modules/search.js';
-import { loadData, showLastUpdated } from './utils/data-loader.js';
+// Data loader with fallback chain available at: ./utils/data-loader.js
 
 // --- Component / utility imports ---
 import { renderFilterBar, getActiveFilters, applyFilters, getViewPresets, saveViewPreset, deleteViewPreset, renderPresetBar, getSystemPresets } from './components/filters.js';

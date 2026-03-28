@@ -84,7 +84,7 @@ jobs:
         id: auto-commit
         with:
           commit_message: "chore: daily data fetch"
-          file_pattern: "data/*.json data/*.xml data/*.ics src/data/*.json src/data/*.xml src/data/*.ics"
+          file_pattern: "data/*.json data/*.xml data/*.ics data/static/*.json src/data/*.json src/data/*.xml src/data/*.ics src/data/static/*.json"
 
       # Deploy to GitHub Pages directly (don't rely on deploy.yml trigger)
       - name: Prepare site

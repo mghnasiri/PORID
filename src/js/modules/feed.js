@@ -5,8 +5,6 @@
  * Replaces the old separate top-level tabs for these categories.
  */
 
-import { relativeTime, formatDate } from '../utils/date.js';
-
 const FEED_TYPES = [
   { key: 'all', label: 'All' },
   { key: 'publications', label: 'Publications' },

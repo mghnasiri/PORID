@@ -9,6 +9,7 @@
 
 import { relativeTime, formatDate } from '../utils/date.js';
 import { DecisionHelper } from '../components/decision-helper.js';
+import { showLastUpdated } from '../utils/data-loader.js';
 
 const SUB_TABS = [
   { key: '', label: 'Overview', icon: '\uD83D\uDEE0' },
@@ -645,6 +646,9 @@ function buildSolvers(solversData, container, decisionRules, allData) {
     </div>
   `;
   container.appendChild(hero);
+
+  // Data freshness badge
+  showLastUpdated(container);
 
   // ── Starter Paths: "Not sure where to start?" ──
   buildStarterPaths(container);
@@ -1844,6 +1848,7 @@ function buildModelingTools(toolsData, compatMatrix, container) {
   desc.textContent = `${tools.length} modeling tools compared. Each entry includes learning curve, solver compatibility, and quick-start code.`;
   header.appendChild(desc);
   container.appendChild(header);
+  showLastUpdated(container);
 
   // F32: Tool recommendation helper
   const helperSection = document.createElement('div');
@@ -2284,6 +2289,7 @@ function buildLicensingGuide(allData, container) {
   subtitle.className = 'licensing-guide__subtitle';
   subtitle.textContent = 'How much will this solver cost you? One page, all the answers.';
   page.appendChild(subtitle);
+  showLastUpdated(page);
 
   // Summary table
   const tableSection = document.createElement('section');
