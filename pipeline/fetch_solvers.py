@@ -60,6 +60,11 @@ HEADERS = {
 }
 
 
+def clean_version(tag):
+    """Strip common prefixes from GitHub release tag names."""
+    return re.sub(r'^(releases/|vreleases/|release-|v(?=\d))', '', tag)
+
+
 def fetch_github_release(repo: str) -> dict | None:
     """Fetch latest release from GitHub API."""
     url = GITHUB_API.format(repo=repo)
@@ -75,7 +80,7 @@ def fetch_github_release(repo: str) -> dict | None:
             return None
         data = resp.json()
         return {
-            "version": re.sub(r'^(v|V|releases/|vreleases/|release-)', '', data.get("tag_name", "")),
+            "version": clean_version(data.get("tag_name", "")),
             "release_date": (data.get("published_at", "") or "")[:10],
             "changelog": (data.get("body", "") or "")[:500],
             "url": data.get("html_url", ""),

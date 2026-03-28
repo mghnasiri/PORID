@@ -77,19 +77,30 @@ export class DecisionHelper {
     this.container.textContent = '';
     this.container.appendChild(wrapper);
     this._bindEvents();
-    // G39: Load filters from URL
+    // G39: Load filters from URL and trigger recommendations
     const hash = window.location.hash.replace('#', '');
     const qIdx = hash.indexOf('?');
     if (qIdx >= 0) {
       const urlParams = new URLSearchParams(hash.slice(qIdx + 1));
+      let anySet = false;
       for (const [k, v] of urlParams) {
         if (this.filters.hasOwnProperty(k)) {
           this.filters[k] = v;
           const select = wrapper.querySelector(`#dh-${k}`);
-          if (select) select.value = v;
+          if (select) {
+            select.value = v;
+            anySet = true;
+          }
         }
       }
-      this._updateResults();
+      // Dispatch change event so the bound handler updates results.
+      // Setting .value programmatically does not fire change events.
+      if (anySet) {
+        const firstSelect = wrapper.querySelector('select[data-filter]');
+        if (firstSelect) {
+          firstSelect.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+      }
     }
   }
 
