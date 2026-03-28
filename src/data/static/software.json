@@ -1,0 +1,129 @@
+[
+  {
+    "id": "gh-cvxpy-cvxpy-1.8.2",
+    "name": "CVXPY",
+    "version": "1.8.2",
+    "date": "2026-03-22",
+    "changelog": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 term for indefinite P (#3150)\n- Fix backward() setting param.gradient to float 0.0 instead of zero ndarray (#3159)\n- Fix Dgp2Dcp.param_backward KeyError when log-param not in dparams (#3164)\n- Fix reshape._infer_shape() for N-D shapes with -1 (#3165)\n- Reject sparse/diag variables with pos/neg attribu…",
+    "url": "https://github.com/cvxpy/cvxpy/releases/tag/v1.8.2",
+    "source": "GitHub",
+    "tags": [
+      "library",
+      "general-or"
+    ],
+    "type": "software",
+    "score": 20.0
+  },
+  {
+    "id": "gh-coin-or-Cbc-releases/2.10.13",
+    "name": "CBC",
+    "version": "releases/2.10.13",
+    "date": "2026-03-11",
+    "changelog": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings by @svigerske in https://github.com/coin-or/Cbc/pull/580\r\n* disable another unused-but-set variable by @svigerske in https://github.com/coin-or/Cbc/pull/581\r\n* Drop COIN_HAS_NTY from public header CbcModel.hpp by @jschueller in https://github.com/coin-or/Cbc/pull/593\r\n* Fix compiler warning and com…",
+    "url": "https://github.com/coin-or/Cbc/releases/tag/releases/2.10.13",
+    "source": "GitHub",
+    "tags": [
+      "solver",
+      "general-or"
+    ],
+    "type": "software"
+  },
+  {
+    "id": "gh-coin-or-Clp-releases/1.17.11",
+    "name": "CLP",
+    "version": "releases/1.17.11",
+    "date": "2026-03-11",
+    "changelog": "## What's Changed\r\n* Fix some compiler warnings by @svigerske in https://github.com/coin-or/Clp/pull/236\r\n* Fix clang warnings by @svigerske in https://github.com/coin-or/Clp/pull/259\r\n* fix more clang warnings by @svigerske in https://github.com/coin-or/Clp/pull/260\r\n* Add vs2022 for stable 1.17 by @jhmgoossens in https://github.com/coin-or/Clp/pull/268\r\n* remove or disable more set-but-unused variables by @svigerske in https://github.com/coin-or/Clp/pull/273\r\n* Add macos-14, always upload arti…",
+    "url": "https://github.com/coin-or/Clp/releases/tag/releases/1.17.11",
+    "source": "GitHub",
+    "tags": [
+      "solver",
+      "general-or"
+    ],
+    "type": "software"
+  },
+  {
+    "id": "gh-jump-dev-JuMP.jl-1.30.0",
+    "name": "JuMP",
+    "version": "1.30.0",
+    "date": "2026-03-03",
+    "changelog": "## JuMP v1.30.0\n\n[Diff since v1.29.4](https://github.com/jump-dev/JuMP.jl/compare/v1.29.4...v1.30.0)\n\n\n**Merged pull requests:**\n- Fix errors found by JET (#4108) (@odow)\n- [docs] clarify dual unbounded ray in Benders decomposition tutorial (#4109) (@odow)\n- [docs] use allow_local = false in Benders decomposition tutorial (#4111) (@odow)\n- Add cuPDLPx (#4112) (@blegat)\n- [docs] work-around a bug in Clarabel@0.11 (#4114) (@odow)\n- [docs] add round_and_repair_heuristic in tolerances tutorial (#411…",
+    "url": "https://github.com/jump-dev/JuMP.jl/releases/tag/v1.30.0",
+    "source": "GitHub",
+    "tags": [
+      "library",
+      "decomposition"
+    ],
+    "type": "software"
+  },
+  {
+    "id": "gh-scipy-scipy-1.17.1",
+    "name": "SciPy",
+    "version": "1.17.1",
+    "date": "2026-02-23",
+    "changelog": "SciPy 1.17.1 Release Notes\r\n====================\r\n\r\nSciPy `1.17.1` is a bug-fix release with no new features compared to `1.17.0`.\r\n\r\n\r\nAuthors\r\n=======\r\n* Name (commits)\r\n* Evgeni Burovski (5)\r\n* Lucas Colley (1)\r\n* Christoph Gohlke (1)\r\n* Ralf Gommers (6)\r\n* Matt Haberland (5)\r\n* Matthias Koeppe (1)\r\n* Nick ODell (1)\r\n* Ilhan Polat (10)\r\n* Tyler Reddy (44)\r\n* Martin Schuck (3)\r\n* Dan Schult (3)\r\n* stratakis (1) +\r\n* ਗਗਨਦੀਪ ਸਿੰਘ (Gagandeep Singh) (1)\r\n\r\nA total of 13 people contributed to this …",
+    "url": "https://github.com/scipy/scipy/releases/tag/v1.17.1",
+    "source": "GitHub",
+    "tags": [
+      "library",
+      "general-or"
+    ],
+    "type": "software"
+  },
+  {
+    "id": "gh-Pyomo-pyomo-6.10.0",
+    "name": "Pyomo",
+    "version": "6.10.0",
+    "date": "2026-02-20",
+    "changelog": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, and solution loader\r\n  - `cuopt` direct solver interface\r\n  - v2: Ongoing solver interface refactor\r\n- ...and of course numerous minor bug fixes and performance enhancements\r\n\r\n## Changes in this release\r\n\r\n- General\r\n  - Remove support for Python 3.9 (#3760)\r\n  - Typo corrections (#3779, #3831)\r\n  …",
+    "url": "https://github.com/Pyomo/pyomo/releases/tag/6.10.0",
+    "source": "GitHub",
+    "tags": [
+      "library",
+      "general-or"
+    ],
+    "type": "software"
+  },
+  {
+    "id": "gh-SCIP-Interfaces-PySCIPOpt-6.1.0",
+    "name": "PySCIPOpt",
+    "version": "6.1.0",
+    "date": "2026-02-05",
+    "changelog": "This was a very active month. Thank you to @Zeroto521 for all your work on improving PySCIPOpt's performance, and thank you, @jonathanberthias, for the introduction and continued support of type stubs. Thank you to all the others who helped during this time, either with PRs or by reporting bugs.\r\nSeveral of the repo's oldest issues have been addressed (for the curious, #1150, #993, #1161, #1151, #1132).\r\nPySCIPOpt is entering a new phase, with more people contributing and becoming active partici…",
+    "url": "https://github.com/scipopt/PySCIPOpt/releases/tag/v6.1.0",
+    "source": "GitHub",
+    "tags": [
+      "solver",
+      "general-or"
+    ],
+    "type": "software"
+  },
+  {
+    "id": "gh-cvxpy-cvxpy-1.8.1",
+    "name": "CVXPY",
+    "version": "1.8.1",
+    "date": "2026-02-03",
+    "changelog": "| PR | Title | Type |                                                                                                                                                                       \r\n  |---|---|---|                                                                                                                                                                               \r\n  | #3093 | Fix IndexError with transformed parameters in parametric reshape | Bug fix |                              …",
+    "url": "https://github.com/cvxpy/cvxpy/releases/tag/v1.8.1",
+    "source": "GitHub",
+    "tags": [
+      "library",
+      "general-or"
+    ],
+    "type": "software"
+  },
+  {
+    "id": "gh-google-or-tools-9.15",
+    "name": "OR-Tools",
+    "version": "9.15",
+    "date": "2026-01-12",
+    "changelog": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in MathOpt. It will automatically load the XPressMP shared library on your computer\r\n\r\n## Routing\r\n\r\n* Improved routing performance and search event support (at optimal).\r\n* Improved Doxygen documentation.\r\n* Reworked routing samples (#4590).\r\n* Exported filters update and other improvements from main.\r…",
+    "url": "https://github.com/google/or-tools/releases/tag/v9.15",
+    "source": "GitHub",
+    "tags": [
+      "solver",
+      "general-or"
+    ],
+    "type": "software"
+  }
+]
