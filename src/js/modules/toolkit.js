@@ -630,6 +630,21 @@ function buildSolvers(solversData, container, decisionRules, allData) {
     return;
   }
 
+  // Breadcrumb
+  const bc = document.createElement('nav');
+  bc.className = 'breadcrumb';
+  bc.setAttribute('aria-label', 'Breadcrumb');
+  const bcHome = document.createElement('a');
+  bcHome.href = '#solvers';
+  bcHome.textContent = 'PORID';
+  bc.appendChild(bcHome);
+  bc.appendChild(document.createTextNode(' \u203A '));
+  const bcCurrent = document.createElement('span');
+  bcCurrent.className = 'breadcrumb-current';
+  bcCurrent.textContent = 'Solvers';
+  bc.appendChild(bcCurrent);
+  container.appendChild(bc);
+
   // ── Hero chooser: "What are you optimizing?" ──
   const hero = document.createElement('section');
   hero.className = 'hero-chooser';
@@ -1483,6 +1498,21 @@ function buildBenchmarks(benchmarkData, container) {
     return;
   }
 
+  // Breadcrumb
+  const bc = document.createElement('nav');
+  bc.className = 'breadcrumb';
+  bc.setAttribute('aria-label', 'Breadcrumb');
+  const bcHome = document.createElement('a');
+  bcHome.href = '#solvers';
+  bcHome.textContent = 'PORID';
+  bc.appendChild(bcHome);
+  bc.appendChild(document.createTextNode(' \u203A '));
+  const bcCurrent = document.createElement('span');
+  bcCurrent.className = 'breadcrumb-current';
+  bcCurrent.textContent = 'Benchmarks';
+  bc.appendChild(bcCurrent);
+  container.appendChild(bc);
+
   // --- Controls: search box + type filter buttons ---
   const controls = document.createElement('div');
   controls.className = 'benchmark-controls';
@@ -1836,6 +1866,21 @@ function buildModelingTools(toolsData, compatMatrix, container) {
   }
 
   const tools = toolsData.tools;
+
+  // Breadcrumb
+  const bc = document.createElement('nav');
+  bc.className = 'breadcrumb';
+  bc.setAttribute('aria-label', 'Breadcrumb');
+  const bcHome = document.createElement('a');
+  bcHome.href = '#solvers';
+  bcHome.textContent = 'PORID';
+  bc.appendChild(bcHome);
+  bc.appendChild(document.createTextNode(' \u203A '));
+  const bcCurrent = document.createElement('span');
+  bcCurrent.className = 'breadcrumb-current';
+  bcCurrent.textContent = 'Modeling Tools';
+  bc.appendChild(bcCurrent);
+  container.appendChild(bc);
 
   // Header
   const header = document.createElement('div');
@@ -2279,6 +2324,21 @@ function buildLicensingGuide(allData, container) {
 
   const page = document.createElement('div');
   page.className = 'licensing-guide';
+
+  // Breadcrumb
+  const bc = document.createElement('nav');
+  bc.className = 'breadcrumb';
+  bc.setAttribute('aria-label', 'Breadcrumb');
+  const bcHome = document.createElement('a');
+  bcHome.href = '#solvers';
+  bcHome.textContent = 'PORID';
+  bc.appendChild(bcHome);
+  bc.appendChild(document.createTextNode(' \u203A '));
+  const bcCurrent = document.createElement('span');
+  bcCurrent.className = 'breadcrumb-current';
+  bcCurrent.textContent = 'Licensing';
+  bc.appendChild(bcCurrent);
+  page.appendChild(bc);
 
   // Header
   const h1 = document.createElement('h1');
