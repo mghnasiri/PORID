@@ -1,17 +1,17 @@
 {
   "description": "Which modeling tools work with which solvers. true = officially supported, false = not supported, 'limited' = partial/experimental support.",
   "modeling_tools": ["pyomo", "pulp", "jump", "gurobipy", "cvxpy", "or-tools-py", "scipy", "ampl", "gams"],
-  "solvers": ["gurobi", "cplex", "highs", "scip", "cbc", "glpk", "mosek", "xpress", "baron"],
+  "solvers": ["gurobi", "cplex", "highs", "scip", "cbc", "glpk", "mosek", "xpress", "baron", "copt", "clarabel", "scs"],
   "matrix": {
-    "pyomo":      {"gurobi": true, "cplex": true, "highs": true, "scip": true, "cbc": true, "glpk": true, "mosek": true, "xpress": true, "baron": true},
-    "pulp":       {"gurobi": true, "cplex": true, "highs": true, "scip": false, "cbc": true, "glpk": true, "mosek": false, "xpress": true, "baron": false},
-    "jump":       {"gurobi": true, "cplex": true, "highs": true, "scip": true, "cbc": true, "glpk": true, "mosek": true, "xpress": true, "baron": false},
-    "gurobipy":   {"gurobi": true, "cplex": false, "highs": false, "scip": false, "cbc": false, "glpk": false, "mosek": false, "xpress": false, "baron": false},
-    "cvxpy":      {"gurobi": true, "cplex": true, "highs": false, "scip": false, "cbc": false, "glpk": true, "mosek": true, "xpress": false, "baron": false},
-    "or-tools-py":{"gurobi": true, "cplex": true, "highs": true, "scip": true, "cbc": true, "glpk": true, "mosek": false, "xpress": false, "baron": false},
-    "scipy":      {"gurobi": false, "cplex": false, "highs": true, "scip": false, "cbc": false, "glpk": false, "mosek": false, "xpress": false, "baron": false},
-    "ampl":       {"gurobi": true, "cplex": true, "highs": true, "scip": true, "cbc": true, "glpk": true, "mosek": true, "xpress": true, "baron": true},
-    "gams":       {"gurobi": true, "cplex": true, "highs": true, "scip": true, "cbc": true, "glpk": true, "mosek": true, "xpress": true, "baron": true}
+    "pyomo":      {"gurobi": true, "cplex": true, "highs": true, "scip": true, "cbc": true, "glpk": true, "mosek": true, "xpress": true, "baron": true, "copt": true, "clarabel": false, "scs": false},
+    "pulp":       {"gurobi": true, "cplex": true, "highs": true, "scip": false, "cbc": true, "glpk": true, "mosek": false, "xpress": true, "baron": false, "copt": true, "clarabel": false, "scs": false},
+    "jump":       {"gurobi": true, "cplex": true, "highs": true, "scip": true, "cbc": true, "glpk": true, "mosek": true, "xpress": true, "baron": false, "copt": true, "clarabel": true, "scs": true},
+    "gurobipy":   {"gurobi": true, "cplex": false, "highs": false, "scip": false, "cbc": false, "glpk": false, "mosek": false, "xpress": false, "baron": false, "copt": false, "clarabel": false, "scs": false},
+    "cvxpy":      {"gurobi": true, "cplex": true, "highs": false, "scip": false, "cbc": false, "glpk": true, "mosek": true, "xpress": false, "baron": false, "copt": false, "clarabel": true, "scs": true},
+    "or-tools-py":{"gurobi": true, "cplex": true, "highs": true, "scip": true, "cbc": true, "glpk": true, "mosek": false, "xpress": false, "baron": false, "copt": false, "clarabel": false, "scs": false},
+    "scipy":      {"gurobi": false, "cplex": false, "highs": true, "scip": false, "cbc": false, "glpk": false, "mosek": false, "xpress": false, "baron": false, "copt": false, "clarabel": false, "scs": false},
+    "ampl":       {"gurobi": true, "cplex": true, "highs": true, "scip": true, "cbc": true, "glpk": true, "mosek": true, "xpress": true, "baron": true, "copt": true, "clarabel": false, "scs": false},
+    "gams":       {"gurobi": true, "cplex": true, "highs": true, "scip": true, "cbc": true, "glpk": true, "mosek": true, "xpress": true, "baron": true, "copt": true, "clarabel": false, "scs": false}
   },
   "notes": {
     "or-tools-py": "OR-Tools has internal solvers (CP-SAT, GLOP, PDLP) and also wraps external solvers (Gurobi, CPLEX, SCIP, HiGHS, GLPK, CBC) through its pywraplp linear solver interface. External solvers must be installed separately.",
@@ -20,5 +20,46 @@
     "ampl": "Commercial modeling language. Supports virtually all major solvers through solver-specific drivers.",
     "gams": "Commercial modeling language. Supports virtually all major solvers through solver-specific connectors.",
     "cvxpy": "Primarily for convex optimization. SCS and ECOS also supported as free alternatives."
+  },
+  "compatibility_sources": {
+    "pyomo": {
+      "main_source": "https://pyomo.readthedocs.io/en/stable/solving_pyomo_models.html",
+      "verified": "2026-03-28"
+    },
+    "pulp": {
+      "main_source": "https://coin-or.github.io/pulp/guides/how_to_configure_solvers.html",
+      "verified": "2026-03-28"
+    },
+    "cvxpy": {
+      "main_source": "https://www.cvxpy.org/tutorial/advanced/index.html#choosing-a-solver",
+      "verified": "2026-03-28"
+    },
+    "jump": {
+      "main_source": "https://jump.dev/JuMP.jl/stable/installation/#Supported-solvers",
+      "verified": "2026-03-28"
+    },
+    "or-tools-py": {
+      "main_source": "https://developers.google.com/optimization/lp/lp_advanced",
+      "note": "External solver support via pywraplp interface",
+      "verified": "2026-03-28"
+    },
+    "scipy": {
+      "main_source": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html",
+      "note": "HiGHS is default since SciPy 1.9",
+      "verified": "2026-03-28"
+    },
+    "gurobipy": {
+      "main_source": "https://www.gurobi.com/documentation/current/refman/py_python_api_overview.html",
+      "note": "Direct Gurobi API. By design, only works with Gurobi.",
+      "verified": "2026-03-28"
+    },
+    "ampl": {
+      "main_source": "https://ampl.com/products/solvers/all-solvers-for-ampl/",
+      "verified": "2026-03-28"
+    },
+    "gams": {
+      "main_source": "https://www.gams.com/latest/docs/S_MAIN.html",
+      "verified": "2026-03-28"
+    }
   }
 }

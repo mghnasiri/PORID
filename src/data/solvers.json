@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-28T07:50:14.369460+00:00",
+  "generated_at": "2026-03-29T07:59:46.064899+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -49,7 +49,7 @@
         "Constraint programming (use OR-Tools CP-SAT)",
         "Vendor lock-in is a concern"
       ],
-      "licensing_gotcha": "Free academic license is full-featured BUT tied to institutional domain. Expired students lose access immediately. No public commercial pricing \u2014 you must contact sales. Withdrew from Mittelmann benchmarks in August 2024, so independent benchmark data is limited post-2024.",
+      "licensing_gotcha": "Free academic license is full-featured BUT tied to institutional domain. Expired students lose access immediately. No public commercial pricing — you must contact sales. Withdrew from Mittelmann benchmarks in August 2024, so independent benchmark data is limited post-2024.",
       "quick_start": {
         "install": "pip install gurobipy",
         "code": "import gurobipy as gp\nfrom gurobipy import GRB\n\nm = gp.Model()\nx = m.addVar(name=\"x\")\nm.setObjective(x, GRB.MAXIMIZE)\nm.addConstr(x <= 10)\nm.optimize()\nprint(f\"Optimal: {x.X}\")"
@@ -85,8 +85,8 @@
         "support_cost": "Included with license",
         "hidden_costs": [
           "Server deployment requires separate Compute Server license",
-          "Annual renewal \u2014 prices may increase",
-          "Per-named-user \u2014 each developer needs a seat"
+          "Annual renewal — prices may increase",
+          "Per-named-user — each developer needs a seat"
         ]
       },
       "update_source": "manual",
@@ -96,7 +96,7 @@
       },
       "migration_to": {
         "highs": "If budget is the issue, HiGHS handles LP/MIP competitively up to medium scale.",
-        "cplex": "Similar commercial tier. Compare pricing \u2014 IBM may offer better enterprise deals."
+        "cplex": "Similar commercial tier. Compare pricing — IBM may offer better enterprise deals."
       },
       "community_quotes": [
         {
@@ -104,7 +104,7 @@
           "source": "r/OperationsResearch"
         },
         {
-          "text": "The academic license is amazing \u2014 full-featured, no variable limits. But the moment you graduate, it's gone.",
+          "text": "The academic license is amazing — full-featured, no variable limits. But the moment you graduate, it's gone.",
           "source": "r/optimization"
         }
       ],
@@ -122,37 +122,7 @@
           "source": "Gurobi case studies"
         }
       ],
-      "pypi_monthly_downloads": -24,
-      "sources": {
-        "version": {
-          "url": "https://pypi.org/project/gurobipy/",
-          "type": "pypi"
-        },
-        "problem_types": {
-          "url": "https://www.gurobi.com/solutions/gurobi-optimizer/",
-          "type": "vendor_docs",
-          "verified": "2026-03-28"
-        },
-        "license_type": {
-          "url": "https://www.gurobi.com/pricing/",
-          "type": "vendor_page",
-          "verified": "2026-03-28"
-        },
-        "academic_details": {
-          "url": "https://www.gurobi.com/academia/academic-program-and-licenses/",
-          "type": "vendor_page",
-          "verified": "2026-03-28"
-        },
-        "pricing_estimate": {
-          "type": "community_estimate",
-          "note": "Gurobi does not publish pricing. Estimate based on community reports. Actual pricing varies by use case."
-        },
-        "benchmark_tier": {
-          "url": "https://plato.asu.edu/ftp/milp.html",
-          "type": "benchmark_results",
-          "note": "Tier based on historical Mittelmann results. Gurobi withdrew Aug 2024."
-        }
-      }
+      "pypi_monthly_downloads": -24
     },
     {
       "id": "cplex",
@@ -197,7 +167,7 @@
         "Budget-constrained (pricing is enterprise-oriented)",
         "Prefer open ecosystem without vendor lock-in"
       ],
-      "licensing_gotcha": "IBM has slowed CPLEX release cadence significantly. Last major release was May 2024. Pricing through IBM sales only \u2014 expect enterprise-level pricing. Academic license available through IBM Academic Initiative but process can take weeks. If starting fresh, evaluate alternatives.",
+      "licensing_gotcha": "IBM has slowed CPLEX release cadence significantly. Last major release was May 2024. Pricing through IBM sales only — expect enterprise-level pricing. Academic license available through IBM Academic Initiative but process can take weeks. If starting fresh, evaluate alternatives.",
       "quick_start": {
         "install": "pip install docplex",
         "code": "from docplex.mp.model import Model\n\nm = Model(name='example')\nx = m.continuous_var(name='x', ub=10)\nm.maximize(x)\nm.solve()\nprint(f\"Optimal: {x.solution_value}\")"
@@ -234,7 +204,7 @@
         "hidden_costs": [
           "Complex enterprise procurement process",
           "IBM Cloud Pak bundling may be required",
-          "Slow release cadence \u2014 last major update May 2024"
+          "Slow release cadence — last major update May 2024"
         ]
       },
       "update_source": "manual",
@@ -260,37 +230,7 @@
           "source": "IBM case studies"
         }
       ],
-      "pypi_monthly_downloads": -36,
-      "sources": {
-        "version": {
-          "url": "https://pypi.org/project/cplex/",
-          "type": "pypi"
-        },
-        "problem_types": {
-          "url": "https://www.ibm.com/products/ilog-cplex-optimization-studio",
-          "type": "vendor_docs",
-          "verified": "2026-03-28"
-        },
-        "license_type": {
-          "url": "https://www.ibm.com/products/ilog-cplex-optimization-studio/pricing",
-          "type": "vendor_page",
-          "verified": "2026-03-28"
-        },
-        "academic_details": {
-          "url": "https://www.ibm.com/academic",
-          "type": "vendor_page",
-          "verified": "2026-03-28"
-        },
-        "pricing_estimate": {
-          "type": "community_estimate",
-          "note": "IBM enterprise pricing. Contact IBM directly."
-        },
-        "benchmark_tier": {
-          "url": "https://plato.asu.edu/ftp/milp.html",
-          "type": "benchmark_results",
-          "verified": "2026-03-28"
-        }
-      }
+      "pypi_monthly_downloads": -36
     },
     {
       "id": "highs",
@@ -324,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1552,
+      "github_stars": 1555,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -338,7 +278,7 @@
         "MINLP or global optimization (use SCIP or BARON)",
         "Constraint programming (use OR-Tools CP-SAT)"
       ],
-      "licensing_gotcha": "None. Truly free for everything. MIT license. The only 'gotcha' is performance \u2014 genuinely slower than Gurobi on hard MIP instances, though the gap is narrowing with every release.",
+      "licensing_gotcha": "None. Truly free for everything. MIT license. The only 'gotcha' is performance — genuinely slower than Gurobi on hard MIP instances, though the gap is narrowing with every release.",
       "quick_start": {
         "install": "pip install highspy",
         "code": "import highspy\n\nh = highspy.Highs()\nh.setOptionValue('output_flag', False)\nx = h.addVariable(0, 10)\nh.changeObjectiveSense(highspy.ObjSense.kMaximize)\nh.changeColCost(x, 1.0)\nh.run()\nprint(f\"Optimal: {h.getInfoValue('objective_function_value')[1]}\")"
@@ -352,7 +292,7 @@
         "scipy.optimize (default LP solver)"
       ],
       "benchmark_tier": "Tier 1 (LP), Tier 2 (MIP)",
-      "benchmark_notes": "Fastest open-source LP solver on Mittelmann benchmarks. MIP performance improving rapidly \u2014 ~2-5x slower than Gurobi on MIPLIB benchmark set, but gap closing with each release. HiPO interior point method added 2026.",
+      "benchmark_notes": "Fastest open-source LP solver on Mittelmann benchmarks. MIP performance improving rapidly — ~2-5x slower than Gurobi on MIPLIB benchmark set, but gap closing with each release. HiPO interior point method added 2026.",
       "ecosystem_health": {
         "release_frequency": "Very frequent (10+ releases/year)",
         "community": "Active GitHub, growing rapidly",
@@ -413,29 +353,7 @@
         "Change scaling in HiPO",
         "HiPDLP cleanup"
       ],
-      "pypi_monthly_downloads": -71,
-      "sources": {
-        "version": {
-          "url": "https://github.com/ERGO-Code/HiGHS/releases",
-          "type": "github"
-        },
-        "problem_types": {
-          "url": "https://ergo-code.github.io/HiGHS/dev/",
-          "type": "official_docs",
-          "verified": "2026-03-28"
-        },
-        "license_type": {
-          "url": "https://github.com/ERGO-Code/HiGHS/blob/master/LICENSE",
-          "type": "github",
-          "verified": "2026-03-28"
-        },
-        "benchmark_tier": {
-          "url": "https://plato.asu.edu/ftp/lpsimp.html",
-          "type": "benchmark_results",
-          "note": "Fastest open-source on Mittelmann LP simplex benchmarks.",
-          "verified": "2026-03-28"
-        }
-      }
+      "pypi_monthly_downloads": -71
     },
     {
       "id": "scip",
@@ -464,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 577,
+      "github_stars": 578,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -478,7 +396,7 @@
         "Need many language bindings (Python and C/C++ only)",
         "Production deployment requiring commercial support"
       ],
-      "licensing_gotcha": "Switched from ZIB Academic License to Apache 2.0 in 2022. Many online resources still say SCIP is 'non-commercial only' \u2014 this is outdated. SCIP 9.0+ is fully open source. SoPlex (LP solver component) is also Apache 2.0.",
+      "licensing_gotcha": "Switched from ZIB Academic License to Apache 2.0 in 2022. Many online resources still say SCIP is 'non-commercial only' — this is outdated. SCIP 9.0+ is fully open source. SoPlex (LP solver component) is also Apache 2.0.",
       "quick_start": {
         "install": "pip install pyscipopt",
         "code": "from pyscipopt import Model\n\nm = Model()\nx = m.addVar(\"x\", ub=10)\nm.setObjective(x, \"maximize\")\nm.optimize()\nprint(f\"Optimal: {m.getObjVal()}\")"
@@ -518,7 +436,7 @@
       },
       "update_source": "github_api",
       "migration_from": {
-        "baron": "SCIP handles MINLP with open-source license. Different solver strategies \u2014 test on your instances."
+        "baron": "SCIP handles MINLP with open-source license. Different solver strategies — test on your instances."
       },
       "migration_to": {
         "gurobi": "For pure MIP, Gurobi will be faster. SCIP's strength is MINLP and extensibility."
@@ -548,24 +466,7 @@
         "make bundled CppAD atomic_base threadsafe",
         "check: fix invalid ctest invocation"
       ],
-      "pypi_monthly_downloads": -41,
-      "sources": {
-        "version": {
-          "url": "https://github.com/scipopt/scip/releases",
-          "type": "github"
-        },
-        "problem_types": {
-          "url": "https://www.scipopt.org/",
-          "type": "official_docs",
-          "verified": "2026-03-28"
-        },
-        "license_type": {
-          "url": "https://github.com/scipopt/scip/blob/master/LICENSE",
-          "type": "github",
-          "note": "Switched from ZIB Academic to Apache 2.0 in SCIP 8.0 (2022).",
-          "verified": "2026-03-28"
-        }
-      }
+      "pypi_monthly_downloads": -41
     },
     {
       "id": "or-tools",
@@ -597,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13280,
+      "github_stars": 13279,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -611,7 +512,7 @@
         "MINLP or nonlinear optimization",
         "Need R, Julia, or MATLAB support"
       ],
-      "licensing_gotcha": "OR-Tools bundles multiple solvers: CP-SAT (constraint programming \u2014 excellent), GLOP (LP \u2014 decent), PDLP (LP \u2014 experimental), routing library (VRP \u2014 strong). People sometimes expect MIP performance competitive with Gurobi and get disappointed \u2014 OR-Tools' MIP solver is NOT its strength. Use CP-SAT for constraint problems, routing library for VRP, and an external solver (HiGHS/Gurobi) for pure MIP.",
+      "licensing_gotcha": "OR-Tools bundles multiple solvers: CP-SAT (constraint programming — excellent), GLOP (LP — decent), PDLP (LP — experimental), routing library (VRP — strong). People sometimes expect MIP performance competitive with Gurobi and get disappointed — OR-Tools' MIP solver is NOT its strength. Use CP-SAT for constraint problems, routing library for VRP, and an external solver (HiGHS/Gurobi) for pure MIP.",
       "quick_start": {
         "install": "pip install ortools",
         "code": "from ortools.sat.python import cp_model\n\nmodel = cp_model.CpModel()\nx = model.new_int_var(0, 10, 'x')\ny = model.new_int_var(0, 10, 'y')\nmodel.add(x + y <= 15)\nmodel.maximize(x + 2 * y)\n\nsolver = cp_model.CpSolver()\nstatus = solver.solve(model)\nif status == cp_model.OPTIMAL:\n    print(f\"x={solver.value(x)}, y={solver.value(y)}\")"
@@ -642,7 +543,7 @@
         "support_cost": "Community (GitHub, Stack Overflow)",
         "hidden_costs": [
           "Google may deprecate or change API without long notice",
-          "Not a traditional solver \u2014 different API paradigm"
+          "Not a traditional solver — different API paradigm"
         ]
       },
       "update_source": "github_api",
@@ -676,23 +577,7 @@
         "build(deps): bump the pip group across 1 directory with 6 updates",
         "routing: fix pywraprouting build"
       ],
-      "pypi_monthly_downloads": -34,
-      "sources": {
-        "version": {
-          "url": "https://github.com/google/or-tools/releases",
-          "type": "github"
-        },
-        "problem_types": {
-          "url": "https://developers.google.com/optimization",
-          "type": "official_docs",
-          "verified": "2026-03-28"
-        },
-        "license_type": {
-          "url": "https://github.com/google/or-tools/blob/stable/LICENSE",
-          "type": "github",
-          "verified": "2026-03-28"
-        }
-      }
+      "pypi_monthly_downloads": -34
     },
     {
       "id": "cbc",
@@ -771,7 +656,7 @@
         "glpk": "CBC is generally faster than GLPK. Same PuLP interface."
       },
       "migration_to": {
-        "highs": "HiGHS is faster than CBC on most LP/MIP instances. Same PuLP interface \u2014 one-line swap.",
+        "highs": "HiGHS is faster than CBC on most LP/MIP instances. Same PuLP interface — one-line swap.",
         "gurobi": "Significant speedup. PuLP/Pyomo models work with both."
       },
       "community_quotes": [
@@ -788,23 +673,7 @@
         "Update MSVS libCbc project for added CbcSolverStatistics.cpp",
         "Enable manual action runs for stable 2.10",
         "Add outputPrecision parameter to configure precision of values."
-      ],
-      "sources": {
-        "version": {
-          "url": "https://github.com/coin-or/Cbc/releases",
-          "type": "github"
-        },
-        "problem_types": {
-          "url": "https://github.com/coin-or/Cbc",
-          "type": "github",
-          "verified": "2026-03-28"
-        },
-        "license_type": {
-          "url": "https://github.com/coin-or/Cbc/blob/master/LICENSE",
-          "type": "github",
-          "verified": "2026-03-28"
-        }
-      }
+      ]
     },
     {
       "id": "xpress",
@@ -851,7 +720,7 @@
         "Simple LP/MIP (HiGHS is free and competitive)",
         "Python-first workflow (Gurobi has better Python integration)"
       ],
-      "licensing_gotcha": "Academic license has size limits in community edition. Full academic license requires application. Mosel modeling language is proprietary \u2014 models written in Mosel are locked to Xpress.",
+      "licensing_gotcha": "Academic license has size limits in community edition. Full academic license requires application. Mosel modeling language is proprietary — models written in Mosel are locked to Xpress.",
       "quick_start": {
         "install": "pip install xpress",
         "code": "import xpress as xp\n\nx = xp.var(ub=10)\nprob = xp.problem()\nprob.addVariable(x)\nprob.setObjective(x, sense=xp.maximize)\nprob.solve()\nprint(f\"Optimal: {prob.getObjVal()}\")"
@@ -885,31 +754,11 @@
         "integration_days": 2,
         "support_cost": "FICO support",
         "hidden_costs": [
-          "Often bundled with FICO platform \u2014 standalone pricing unclear",
+          "Often bundled with FICO platform — standalone pricing unclear",
           "Community edition available with variable limits"
         ]
       },
-      "update_source": "manual",
-      "sources": {
-        "version": {
-          "type": "manual",
-          "note": "FICO does not publish on GitHub/PyPI. Version from vendor website."
-        },
-        "problem_types": {
-          "url": "https://www.fico.com/en/products/fico-xpress-optimization",
-          "type": "vendor_docs",
-          "verified": "2026-03-28"
-        },
-        "license_type": {
-          "url": "https://www.fico.com/en/products/fico-xpress-optimization",
-          "type": "vendor_page",
-          "verified": "2026-03-28"
-        },
-        "pricing_estimate": {
-          "type": "community_estimate",
-          "note": "FICO enterprise pricing. Contact vendor."
-        }
-      }
+      "update_source": "manual"
     },
     {
       "id": "mosek",
@@ -923,7 +772,7 @@
       "license_spdx": null,
       "open_source": false,
       "academic_free": true,
-      "academic_details": "Free full-featured academic license. Generous \u2014 covers personal academic use with no variable limits.",
+      "academic_details": "Free full-featured academic license. Generous — covers personal academic use with no variable limits.",
       "commercial_pricing_note": "Contact MOSEK. Pricing is more accessible than Gurobi/CPLEX for conic optimization users.",
       "problem_types": [
         "LP",
@@ -947,7 +796,7 @@
       "github_stars": null,
       "description": "Specialized in conic optimization (SOCP, SDP). Industry standard for semidefinite programming. Also handles LP, QP, and MIP. Preferred solver for CVXPY users.",
       "when_to_use": [
-        "Semidefinite programming (SDP) \u2014 the standard solver",
+        "Semidefinite programming (SDP) — the standard solver",
         "Second-order cone programming (SOCP)",
         "Conic optimization problems",
         "CVXPY users (MOSEK is the recommended backend)"
@@ -957,7 +806,7 @@
         "MINLP (use BARON or SCIP)",
         "Constraint programming (use OR-Tools CP-SAT)"
       ],
-      "licensing_gotcha": "Academic license is genuinely generous \u2014 full-featured, personal use. Commercial pricing is reasonable for conic optimization users. MOSEK 11 added new MATLAB API. Interior point solver now exploits symmetries.",
+      "licensing_gotcha": "Academic license is genuinely generous — full-featured, personal use. Commercial pricing is reasonable for conic optimization users. MOSEK 11 added new MATLAB API. Interior point solver now exploits symmetries.",
       "quick_start": {
         "install": "pip install mosek",
         "code": "import mosek\nimport sys\n\nwith mosek.Task() as task:\n    task.appendvars(1)\n    task.putvarbound(0, mosek.boundkey.ra, 0.0, 10.0)\n    task.putcj(0, 1.0)\n    task.putobjsense(mosek.objsense.maximize)\n    task.optimize()\n    result = task.getxx(mosek.soltype.bas)\n    print(f\"Optimal: {result[0]}\")"
@@ -996,29 +845,7 @@
         ]
       },
       "update_source": "manual",
-      "pypi_monthly_downloads": -4,
-      "sources": {
-        "version": {
-          "url": "https://pypi.org/project/Mosek/",
-          "type": "pypi"
-        },
-        "problem_types": {
-          "url": "https://www.mosek.com/products/mosek/",
-          "type": "vendor_docs",
-          "verified": "2026-03-28"
-        },
-        "license_type": {
-          "url": "https://www.mosek.com/sales/licensetypes/",
-          "type": "vendor_page",
-          "verified": "2026-03-28"
-        },
-        "pricing_estimate": {
-          "url": "https://www.mosek.com/sales/licensetypes/",
-          "type": "vendor_page",
-          "note": "MOSEK publishes license types with partial pricing.",
-          "verified": "2026-03-28"
-        }
-      }
+      "pypi_monthly_downloads": -4
     },
     {
       "id": "baron",
@@ -1031,13 +858,12 @@
       "license_type": "commercial",
       "license_spdx": null,
       "open_source": false,
-      "academic_free": false,
-      "academic_details": "Not directly free for academic use. Accessible through GAMS or AMPL academic licenses, which are separate products with their own terms. No standalone BARON academic license.",
+      "academic_free": true,
+      "academic_details": "Free academic license available with size limits (30 variables for standalone). Full version through GAMS academic license.",
       "commercial_pricing_note": "Via GAMS or AMPL licensing. Contact vendor.",
       "problem_types": [
         "LP",
         "NLP",
-        "QP",
         "MIP",
         "MINLP",
         "Global Optimization"
@@ -1061,7 +887,7 @@
         "Large-scale problems (global optimization is inherently slower)",
         "Need direct Python API (requires GAMS/AMPL layer)"
       ],
-      "licensing_gotcha": "Standalone academic license limited to 30 variables. Full academic access requires GAMS academic license. Not available as a standalone Python package \u2014 accessed through GAMS or AMPL interfaces.",
+      "licensing_gotcha": "Standalone academic license limited to 30 variables. Full academic access requires GAMS academic license. Not available as a standalone Python package — accessed through GAMS or AMPL interfaces.",
       "quick_start": {
         "install": "# Requires GAMS or AMPL installation\n# Via GAMS: gams model.gms solver=baron\n# Via AMPL: option solver baron; solve;",
         "code": "# Accessed via GAMS or AMPL, not direct Python API\n# Example using Pyomo + BARON (requires GAMS):\nimport pyomo.environ as pyo\nm = pyo.ConcreteModel()\nm.x = pyo.Var(bounds=(0, 10))\nm.obj = pyo.Objective(expr=m.x**2 - 4*m.x, sense=pyo.minimize)\npyo.SolverFactory('baron').solve(m)"
@@ -1095,27 +921,7 @@
           "Total cost = BARON + modeling language license"
         ]
       },
-      "update_source": "manual",
-      "sources": {
-        "version": {
-          "type": "manual",
-          "note": "Commercial. Version from vendor website."
-        },
-        "problem_types": {
-          "url": "https://minlp.com/baron",
-          "type": "vendor_docs",
-          "verified": "2026-03-28"
-        },
-        "license_type": {
-          "url": "https://minlp.com/baron",
-          "type": "vendor_page",
-          "verified": "2026-03-28"
-        },
-        "pricing_estimate": {
-          "type": "community_estimate",
-          "note": "Commercial. Contact vendor for pricing."
-        }
-      }
+      "update_source": "manual"
     },
     {
       "id": "hexaly",
@@ -1162,7 +968,7 @@
         "Standard LP/MIP (Gurobi/HiGHS better)",
         "Need to integrate with Pyomo/JuMP ecosystem"
       ],
-      "licensing_gotcha": "Rebranded from LocalSolver in 2023. Old 'LocalSolver' API deprecated as of Hexaly 14.0 (mid-2025). Uses its own LSP modeling language \u2014 not compatible with Pyomo/JuMP/AMPL ecosystem. Results are heuristic (good feasible solutions, not proven optimal).",
+      "licensing_gotcha": "Rebranded from LocalSolver in 2023. Old 'LocalSolver' API deprecated as of Hexaly 14.0 (mid-2025). Uses its own LSP modeling language — not compatible with Pyomo/JuMP/AMPL ecosystem. Results are heuristic (good feasible solutions, not proven optimal).",
       "quick_start": {
         "install": "# Download from hexaly.com, requires license key",
         "code": "import hexaly.optimizer as gp\n\nwith gp.HexalyOptimizer() as optimizer:\n    model = optimizer.model\n    x = model.int(0, 10)\n    model.maximize(x)\n    model.close()\n    optimizer.param.time_limit = 5\n    optimizer.solve()"
@@ -1192,31 +998,11 @@
         "integration_days": 2,
         "support_cost": "Included",
         "hidden_costs": [
-          "Proprietary modeling language (LSP) \u2014 steep learning curve",
+          "Proprietary modeling language (LSP) — steep learning curve",
           "Smaller community than mainstream solvers"
         ]
       },
-      "update_source": "manual",
-      "sources": {
-        "version": {
-          "type": "manual",
-          "note": "Commercial. Version from hexaly.com."
-        },
-        "problem_types": {
-          "url": "https://www.hexaly.com/",
-          "type": "vendor_docs",
-          "verified": "2026-03-28"
-        },
-        "license_type": {
-          "url": "https://www.hexaly.com/pricing",
-          "type": "vendor_page",
-          "verified": "2026-03-28"
-        },
-        "pricing_estimate": {
-          "type": "community_estimate",
-          "note": "Commercial. Contact vendor."
-        }
-      }
+      "update_source": "manual"
     },
     {
       "id": "glpk",
@@ -1254,7 +1040,7 @@
         "Performance-sensitive applications",
         "MIP problems of any complexity"
       ],
-      "licensing_gotcha": "GPL v3 \u2014 derivative works must also be GPL. This is a deal-breaker for many commercial projects. Last release was December 2020. Effectively abandoned. Use HiGHS instead for any new project.",
+      "licensing_gotcha": "GPL v3 — derivative works must also be GPL. This is a deal-breaker for many commercial projects. Last release was December 2020. Effectively abandoned. Use HiGHS instead for any new project.",
       "quick_start": {
         "install": "# Available through package managers:\n# Ubuntu: apt install glpk-utils libglpk-dev\n# macOS: brew install glpk",
         "code": "# Typically accessed via PuLP or Pyomo, not directly\nfrom pulp import *\nprob = LpProblem('example', LpMaximize)\nx = LpVariable('x', 0, 10)\nprob += x\nprob.solve(GLPK_CMD(msg=0))"
@@ -1287,28 +1073,11 @@
         "integration_days": 0.5,
         "support_cost": "Community (mailing list)",
         "hidden_costs": [
-          "GPL license \u2014 may require open-sourcing your code if distributing",
+          "GPL license — may require open-sourcing your code if distributing",
           "No active development since 2020"
         ]
       },
-      "update_source": "manual",
-      "sources": {
-        "version": {
-          "url": "https://www.gnu.org/software/glpk/",
-          "type": "official_docs"
-        },
-        "problem_types": {
-          "url": "https://www.gnu.org/software/glpk/",
-          "type": "official_docs",
-          "verified": "2026-03-28"
-        },
-        "license_type": {
-          "url": "https://www.gnu.org/software/glpk/",
-          "type": "official_docs",
-          "note": "GPL-3.0",
-          "verified": "2026-03-28"
-        }
-      }
+      "update_source": "manual"
     },
     {
       "id": "cvxpy",
@@ -1349,7 +1118,7 @@
         "Need non-Python language support",
         "Performance-critical production systems (modeling overhead)"
       ],
-      "licensing_gotcha": "CVXPY itself is free, but the best backend solvers may not be. MOSEK (recommended for SDP) is commercial. The default solver (SCS) is free but slower. CVXPY enforces DCP rules strictly \u2014 your model must be provably convex or it will be rejected.",
+      "licensing_gotcha": "CVXPY itself is free, but the best backend solvers may not be. MOSEK (recommended for SDP) is commercial. The default solver (SCS) is free but slower. CVXPY enforces DCP rules strictly — your model must be provably convex or it will be rejected.",
       "quick_start": {
         "install": "pip install cvxpy",
         "code": "import cvxpy as cp\n\nx = cp.Variable()\nprob = cp.Problem(cp.Maximize(x), [x <= 10])\nprob.solve()\nprint(f\"Optimal: {x.value}\")"
@@ -1362,27 +1131,16 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6158,
-      "github_open_issues": 190,
+      "github_stars": 6159,
+      "github_open_issues": 189,
       "github_recent_prs": [
+        "Add SvecPSD cone and PSD→SvecPSD reduction via ExactCone2Cone",
+        "Fix mul_bounds producing NaN from 0 * inf",
         "Fix/cuclarabel nvars unbound",
         "Update .git-blame-ignore-revs with formatting and type hint commits",
-        "Removes white space from blank lines",
-        "Fix targets_and_priorities wrong direction when priority <= off_target",
-        "Allow array denominator in quad_over_lin"
+        "Removes white space from blank lines"
       ],
-      "pypi_monthly_downloads": -25,
-      "sources": {
-        "version": {
-          "url": "https://pypi.org/project/cvxpy/",
-          "type": "pypi"
-        },
-        "problem_types": {
-          "url": "https://www.cvxpy.org/",
-          "type": "official_docs",
-          "verified": "2026-03-28"
-        }
-      }
+      "pypi_monthly_downloads": -25
     },
     {
       "id": "knitro",
@@ -1400,7 +1158,6 @@
       "commercial_pricing_note": "Contact Artelys. Annual subscription model.",
       "problem_types": [
         "LP",
-        "MIP",
         "QP",
         "NLP",
         "MINLP"
@@ -1430,7 +1187,7 @@
         "Budget-constrained projects",
         "Constraint programming (use OR-Tools CP-SAT)"
       ],
-      "licensing_gotcha": "Commercial license is per-machine. Academic license is generous but requires annual renewal. Knitro finds local optima by default \u2014 for global optimization, enable multi-start or use BARON instead. Python interface requires separate license file, not just pip install.",
+      "licensing_gotcha": "Commercial license is per-machine. Academic license is generous but requires annual renewal. Knitro finds local optima by default — for global optimization, enable multi-start or use BARON instead. Python interface requires separate license file, not just pip install.",
       "quick_start": {
         "install": "pip install knitro  # Requires license file",
         "code": "from knitro import *\n\nkc = KN_new()\nKN_add_vars(kc, 1)\nKN_set_var_lobnds(kc, [0.0])\nKN_set_var_upbnds(kc, [10.0])\nKN_set_obj_goal(kc, KN_OBJGOAL_MAXIMIZE)\nKN_add_obj_linear_struct(kc, [0], [1.0])\nKN_solve(kc)\nKN_free(kc)"
@@ -1441,23 +1198,7 @@
         "nonlinear",
         "minlp",
         "nlp"
-      ],
-      "sources": {
-        "version": {
-          "type": "manual",
-          "note": "Commercial. Version from artelys.com."
-        },
-        "problem_types": {
-          "url": "https://www.artelys.com/solvers/knitro/",
-          "type": "vendor_docs",
-          "verified": "2026-03-28"
-        },
-        "license_type": {
-          "url": "https://www.artelys.com/solvers/knitro/",
-          "type": "vendor_page",
-          "verified": "2026-03-28"
-        }
-      }
+      ]
     },
     {
       "id": "ipopt",
@@ -1496,12 +1237,12 @@
         "Integration with Pyomo, JuMP, or AMPL for NLP"
       ],
       "when_not_to_use": [
-        "Integer variables needed (Ipopt is continuous only \u2014 use SCIP or Knitro for MINLP)",
+        "Integer variables needed (Ipopt is continuous only — use SCIP or Knitro for MINLP)",
         "Non-smooth optimization (Ipopt requires twice-differentiable functions)",
         "Pure LP/MIP (use HiGHS or Gurobi)",
         "Global optimization (Ipopt finds local optima only)"
       ],
-      "licensing_gotcha": "Ipopt is continuous-only \u2014 it does NOT handle integer variables. Performance depends heavily on the linear algebra backend: using MUMPS (free) is much slower than HSL MA27/MA57 (free for academics, paid for commercial). Always install HSL routines for best performance.",
+      "licensing_gotcha": "Ipopt is continuous-only — it does NOT handle integer variables. Performance depends heavily on the linear algebra backend: using MUMPS (free) is much slower than HSL MA27/MA57 (free for academics, paid for commercial). Always install HSL routines for best performance.",
       "quick_start": {
         "install": "pip install ipopt  # or: conda install -c conda-forge cyipopt",
         "code": "# Via Pyomo (most common usage):\nimport pyomo.environ as pyo\nm = pyo.ConcreteModel()\nm.x = pyo.Var(bounds=(0, 10))\nm.obj = pyo.Objective(expr=-(m.x - 5)**2, sense=pyo.maximize)\npyo.SolverFactory('ipopt').solve(m)\nprint(f\"Optimal: {pyo.value(m.x)}\")"
@@ -1523,24 +1264,7 @@
         "IpJournalist: Missing override keyword",
         "Draft at NVIDIA cuDSS (GPU sparse linear solver) integration in Ipopt.",
         "Fix rare use-after-free in IpSpralSolverInterface"
-      ],
-      "sources": {
-        "version": {
-          "url": "https://github.com/coin-or/Ipopt/releases",
-          "type": "github"
-        },
-        "problem_types": {
-          "url": "https://coin-or.github.io/Ipopt/",
-          "type": "official_docs",
-          "note": "Continuous optimization only. No integer variable support.",
-          "verified": "2026-03-28"
-        },
-        "license_type": {
-          "url": "https://github.com/coin-or/Ipopt/blob/master/LICENSE",
-          "type": "github",
-          "verified": "2026-03-28"
-        }
-      }
+      ]
     },
     {
       "id": "optaplanner",
@@ -1576,7 +1300,7 @@
         "Need incremental score calculation for large problems"
       ],
       "when_not_to_use": [
-        "Pure LP/MIP (use Gurobi/HiGHS \u2014 Timefold is metaheuristic-based)",
+        "Pure LP/MIP (use Gurobi/HiGHS — Timefold is metaheuristic-based)",
         "Need mathematical optimality guarantees",
         "Python-first workflow with small problems (use OR-Tools CP-SAT)",
         "Continuous optimization (Timefold is for discrete/combinatorial problems)"
@@ -1584,7 +1308,7 @@
       "licensing_gotcha": "Rebranded from OptaPlanner to Timefold in 2023. Red Hat still maintains a separate OptaPlanner fork. The Python API (timefold-solver) is newer and less mature than the Java API. Enterprise features (multi-threaded solving, real-time planning) require paid license.",
       "quick_start": {
         "install": "pip install timefold  # or Maven: ai.timefold.solver:timefold-solver-core",
-        "code": "# Java is the primary API \u2014 Python example:\nfrom timefold.solver import SolverFactory\n# Requires annotated domain classes\n# See docs.timefold.ai for full quickstart"
+        "code": "# Java is the primary API — Python example:\nfrom timefold.solver import SolverFactory\n# Requires annotated domain classes\n# See docs.timefold.ai for full quickstart"
       },
       "update_source": "github_api",
       "tags": [
@@ -1603,23 +1327,7 @@
         "fix: handle null planning values in ValueTabuAcceptor",
         "deps: bump org.springframework.boot:spring-boot-dependencies from 4.0.3 to 4.0.4 in the spring group",
         "deps: bump the quarkus group with 4 updates"
-      ],
-      "sources": {
-        "version": {
-          "url": "https://github.com/TimefoldAI/timefold-solver/releases",
-          "type": "github"
-        },
-        "problem_types": {
-          "url": "https://timefold.ai/docs/timefold-solver/latest/",
-          "type": "official_docs",
-          "verified": "2026-03-28"
-        },
-        "license_type": {
-          "url": "https://github.com/TimefoldAI/timefold-solver/blob/main/LICENSE",
-          "type": "github",
-          "verified": "2026-03-28"
-        }
-      }
+      ]
     },
     {
       "id": "pyomo",
@@ -1677,7 +1385,7 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
       "github_stars": 2423,
-      "github_open_issues": 349,
+      "github_open_issues": 350,
       "github_recent_prs": [
         "Improved `ConstraintData.equality`, relational expression generation",
         "Use Hessian approximation in CyIpopt when grey-box without Hessian is present",
@@ -1685,18 +1393,7 @@
         "docs: improve documentation for mutable vs immutable Params",
         "KKT Transform Code Refactor"
       ],
-      "pypi_monthly_downloads": -28,
-      "sources": {
-        "version": {
-          "url": "https://pypi.org/project/Pyomo/",
-          "type": "pypi"
-        },
-        "problem_types": {
-          "url": "https://www.pyomo.org/documentation",
-          "type": "official_docs",
-          "verified": "2026-03-28"
-        }
-      }
+      "pypi_monthly_downloads": -28
     },
     {
       "id": "jump",
@@ -1739,7 +1436,7 @@
         "Team unfamiliar with Julia (learning curve)",
         "Need standalone executable (Julia has large runtime)"
       ],
-      "licensing_gotcha": "JuMP is the modeling layer \u2014 you still need a solver. Julia's package manager makes solver installation easy (Pkg.add(\"HiGHS\")). First-run compilation in Julia can be slow (TTFX), but subsequent runs are fast. Julia ecosystem is smaller than Python's.",
+      "licensing_gotcha": "JuMP is the modeling layer — you still need a solver. Julia's package manager makes solver installation easy (Pkg.add(\"HiGHS\")). First-run compilation in Julia can be slow (TTFX), but subsequent runs are fast. Julia ecosystem is smaller than Python's.",
       "quick_start": {
         "install": "# In Julia REPL:\n# using Pkg; Pkg.add(\"JuMP\"); Pkg.add(\"HiGHS\")",
         "code": "using JuMP, HiGHS\n\nmodel = Model(HiGHS.Optimizer)\n@variable(model, 0 <= x <= 10)\n@objective(model, Max, x)\noptimize!(model)\nprintln(\"Optimal: $(value(x))\")"
@@ -1760,18 +1457,7 @@
         "[docs] fix links in CODE_OF_CONDUCT",
         "terminology on Benders",
         "RFC: [docs] add a policy for AI assisted contributions"
-      ],
-      "sources": {
-        "version": {
-          "url": "https://github.com/jump-dev/JuMP.jl/releases",
-          "type": "github"
-        },
-        "problem_types": {
-          "url": "https://jump.dev/JuMP.jl/stable/",
-          "type": "official_docs",
-          "verified": "2026-03-28"
-        }
-      }
+      ]
     },
     {
       "id": "ampl",
@@ -1813,7 +1499,7 @@
         "Simple problems (overhead of AMPL language not justified)",
         "Need tight integration with application code (AMPL is a separate process)"
       ],
-      "licensing_gotcha": "AMPL Community Edition has 500-variable limit. Commercial AMPL license is separate from solver licenses \u2014 you pay for AMPL AND for each solver. AMPL now offers cloud-based (AMPL.com) execution. Python API (amplpy) is available but AMPL language knowledge is still needed.",
+      "licensing_gotcha": "AMPL Community Edition has 500-variable limit. Commercial AMPL license is separate from solver licenses — you pay for AMPL AND for each solver. AMPL now offers cloud-based (AMPL.com) execution. Python API (amplpy) is available but AMPL language knowledge is still needed.",
       "quick_start": {
         "install": "pip install amplpy  # Also need AMPL license or community edition",
         "code": "from amplpy import AMPL\n\nampl = AMPL()\nampl.eval('var x >= 0, <= 10;')\nampl.eval('maximize obj: x;')\nampl.option['solver'] = 'highs'\nampl.solve()\nprint(f\"Optimal: {ampl.get_value('x')}\")"
@@ -1823,18 +1509,7 @@
         "commercial",
         "modeling",
         "algebraic"
-      ],
-      "sources": {
-        "version": {
-          "url": "https://pypi.org/project/amplpy/",
-          "type": "pypi"
-        },
-        "problem_types": {
-          "url": "https://ampl.com/products/ampl/",
-          "type": "official_docs",
-          "verified": "2026-03-28"
-        }
-      }
+      ]
     },
     {
       "id": "gams",
@@ -1874,10 +1549,10 @@
       "when_not_to_use": [
         "Python-first development (use Pyomo)",
         "Budget-constrained (GAMS + solver licenses add up quickly)",
-        "Simple LP/MIP (overkill \u2014 use PuLP or direct solver API)",
+        "Simple LP/MIP (overkill — use PuLP or direct solver API)",
         "Modern CI/CD pipelines (GAMS integration can be cumbersome)"
       ],
-      "licensing_gotcha": "GAMS license is separate from solver licenses \u2014 a full GAMS + all-solvers license is very expensive. Community edition has strict size limits. GAMS language has a steep learning curve. Python API (gams-python) is improving but GAMS language knowledge is still needed for advanced use.",
+      "licensing_gotcha": "GAMS license is separate from solver licenses — a full GAMS + all-solvers license is very expensive. Community edition has strict size limits. GAMS language has a steep learning curve. Python API (gams-python) is improving but GAMS language knowledge is still needed for advanced use.",
       "quick_start": {
         "install": "pip install gams  # Requires GAMS installation and license",
         "code": "from gams import GamsWorkspace\n\nws = GamsWorkspace()\njob = ws.add_job_from_string(\"\"\"\nVariable x, z;\nPositive Variable x;\nx.up = 10;\nEquation obj;\nobj.. z =e= x;\nModel m /all/;\nSolve m using lp maximizing z;\n\"\"\")\njob.run()"
@@ -1888,186 +1563,7 @@
         "modeling",
         "algebraic",
         "economic-modeling"
-      ],
-      "sources": {
-        "version": {
-          "url": "https://pypi.org/project/gamspy/",
-          "type": "pypi"
-        },
-        "problem_types": {
-          "url": "https://www.gams.com/products/gams/gams-language/",
-          "type": "official_docs",
-          "verified": "2026-03-28"
-        }
-      }
-    },
-    {
-      "id": "copt",
-      "name": "COPT (Cardinal Optimizer)",
-      "vendor": "Cardinal Operations",
-      "website": "https://www.shanshu.ai/copt",
-      "docs_url": "https://guide.coap.online/copt/en-doc/",
-      "current_version": "8.0.3",
-      "release_date": "2025-12-01",
-      "license_type": "Commercial",
-      "license_spdx": null,
-      "open_source": false,
-      "academic_free": true,
-      "academic_details": "Free academic license available through Cardinal Operations academic program.",
-      "commercial_pricing_note": "Contact vendor. Pricing competitive with Gurobi/CPLEX.",
-      "problem_types": [
-        "LP",
-        "MIP",
-        "QP",
-        "QCP",
-        "SOCP",
-        "SDP"
-      ],
-      "language_bindings": [
-        "Python",
-        "C",
-        "C++",
-        "Java"
-      ],
-      "pypi_package": "coptpy",
-      "github_repo": null,
-      "github_stars": null,
-      "description": "High-performance commercial optimization solver competitive with Gurobi and CPLEX on LP/MIP benchmarks.",
-      "tags": [
-        "commercial",
-        "lp",
-        "mip",
-        "high-performance"
-      ],
-      "update_source": "manual",
-      "last_verified": "2026-03-28",
-      "sources": {
-        "version": {
-          "url": "https://pypi.org/project/coptpy/",
-          "type": "pypi"
-        },
-        "problem_types": {
-          "url": "https://www.shanshu.ai/copt",
-          "type": "vendor_docs",
-          "verified": "2026-03-28"
-        },
-        "license_type": {
-          "url": "https://www.shanshu.ai/copt",
-          "type": "vendor_page",
-          "verified": "2026-03-28"
-        }
-      }
-    },
-    {
-      "id": "clarabel",
-      "name": "Clarabel",
-      "vendor": "Oxford Control Group",
-      "website": "https://clarabel.org",
-      "docs_url": "https://clarabel.org/stable/",
-      "current_version": "0.11.1",
-      "release_date": "2025-10-01",
-      "license_type": "Apache-2.0",
-      "license_spdx": "Apache-2.0",
-      "open_source": true,
-      "academic_free": true,
-      "academic_details": "Fully open source. Apache 2.0 license.",
-      "commercial_pricing_note": "Free. Apache 2.0 allows unrestricted commercial use.",
-      "problem_types": [
-        "LP",
-        "QP",
-        "SOCP",
-        "SDP"
-      ],
-      "language_bindings": [
-        "Rust",
-        "Python",
-        "Julia"
-      ],
-      "pypi_package": "clarabel",
-      "github_repo": "oxfordcontrol/Clarabel.rs",
-      "github_stars": null,
-      "description": "Interior-point conic solver written in Rust. Supports LP, QP, SOCP, and SDP. Default CVXPY solver for SDP.",
-      "tags": [
-        "open-source",
-        "conic",
-        "sdp",
-        "socp",
-        "rust"
-      ],
-      "update_source": "github",
-      "last_verified": "2026-03-28",
-      "sources": {
-        "version": {
-          "url": "https://github.com/oxfordcontrol/Clarabel.rs/releases",
-          "type": "github"
-        },
-        "problem_types": {
-          "url": "https://clarabel.org/stable/",
-          "type": "official_docs",
-          "verified": "2026-03-28"
-        },
-        "license_type": {
-          "url": "https://github.com/oxfordcontrol/Clarabel.rs/blob/main/LICENSE.md",
-          "type": "github",
-          "verified": "2026-03-28"
-        }
-      }
-    },
-    {
-      "id": "scs",
-      "name": "SCS",
-      "vendor": "Stanford University",
-      "website": "https://www.cvxgrp.org/scs/",
-      "docs_url": "https://www.cvxgrp.org/scs/",
-      "current_version": "3.2.11",
-      "release_date": "2025-06-01",
-      "license_type": "MIT",
-      "license_spdx": "MIT",
-      "open_source": true,
-      "academic_free": true,
-      "academic_details": "Fully open source. MIT license.",
-      "commercial_pricing_note": "Free. MIT license allows unrestricted commercial use.",
-      "problem_types": [
-        "LP",
-        "QP",
-        "SOCP",
-        "SDP"
-      ],
-      "language_bindings": [
-        "C",
-        "Python",
-        "Julia",
-        "MATLAB",
-        "R"
-      ],
-      "pypi_package": "scs",
-      "github_repo": "cvxgrp/scs",
-      "github_stars": null,
-      "description": "First-order conic solver using operator splitting. Very scalable for large problems. Default CVXPY solver.",
-      "tags": [
-        "open-source",
-        "conic",
-        "first-order",
-        "scalable"
-      ],
-      "update_source": "github",
-      "last_verified": "2026-03-28",
-      "sources": {
-        "version": {
-          "url": "https://github.com/cvxgrp/scs/releases",
-          "type": "github"
-        },
-        "problem_types": {
-          "url": "https://www.cvxgrp.org/scs/",
-          "type": "official_docs",
-          "verified": "2026-03-28"
-        },
-        "license_type": {
-          "url": "https://github.com/cvxgrp/scs/blob/master/LICENSE",
-          "type": "github",
-          "verified": "2026-03-28"
-        }
-      }
+      ]
     }
   ],
   "problem_type_legend": {

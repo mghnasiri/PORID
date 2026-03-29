@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-28T07:50:14.369460+00:00",
+  "generated_at": "2026-03-29T07:59:46.064899+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1552,
+      "github_stars": 1555,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 577,
+      "github_stars": 578,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13280,
+      "github_stars": 13279,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -585,7 +585,7 @@
       "vendor": "COIN-OR Foundation",
       "website": "https://github.com/coin-or/Cbc",
       "docs_url": "https://coin-or.github.io/Cbc/",
-      "current_version": "releases/2.10.13",
+      "current_version": "2.10.13",
       "release_date": "2026-03-11",
       "license_type": "open-source",
       "license_spdx": "EPL-2.0",
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6158,
-      "github_open_issues": 190,
+      "github_stars": 6159,
+      "github_open_issues": 189,
       "github_recent_prs": [
+        "Add SvecPSD cone and PSD→SvecPSD reduction via ExactCone2Cone",
+        "Fix mul_bounds producing NaN from 0 * inf",
         "Fix/cuclarabel nvars unbound",
         "Update .git-blame-ignore-revs with formatting and type hint commits",
-        "Removes white space from blank lines",
-        "Fix targets_and_priorities wrong direction when priority <= off_target",
-        "Allow array denominator in quad_over_lin"
+        "Removes white space from blank lines"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1206,7 +1206,7 @@
       "vendor": "COIN-OR Foundation",
       "website": "https://coin-or.github.io/Ipopt/",
       "docs_url": "https://coin-or.github.io/Ipopt/",
-      "current_version": "releases/3.14.19",
+      "current_version": "3.14.19",
       "release_date": "2025-07-30",
       "license_type": "open-source",
       "license_spdx": "EPL-2.0",
@@ -1385,7 +1385,7 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
       "github_stars": 2423,
-      "github_open_issues": 349,
+      "github_open_issues": 350,
       "github_recent_prs": [
         "Improved `ConstraintData.equality`, relational expression generation",
         "Use Hessian approximation in CyIpopt when grey-box without Hessian is present",
