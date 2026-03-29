@@ -3,158 +3,884 @@
     "problem_type": {
       "label": "Problem Type",
       "options": [
-        {"value": "lp", "label": "Linear Programming (LP)"},
-        {"value": "mip", "label": "Mixed-Integer Programming (MIP)"},
-        {"value": "qp", "label": "Quadratic Programming (QP)"},
-        {"value": "socp", "label": "Second-Order Cone (SOCP)"},
-        {"value": "sdp", "label": "Semidefinite Programming (SDP)"},
-        {"value": "minlp", "label": "Mixed-Integer Nonlinear (MINLP)"},
-        {"value": "nlp", "label": "Nonlinear Programming (NLP)"},
-        {"value": "cp", "label": "Constraint Programming (CP)"},
-        {"value": "vrp", "label": "Vehicle Routing (VRP)"},
-        {"value": "scheduling", "label": "Scheduling"}
+        {
+          "value": "lp",
+          "label": "Linear Programming (LP)"
+        },
+        {
+          "value": "mip",
+          "label": "Mixed-Integer Programming (MIP)"
+        },
+        {
+          "value": "qp",
+          "label": "Quadratic Programming (QP)"
+        },
+        {
+          "value": "socp",
+          "label": "Second-Order Cone (SOCP)"
+        },
+        {
+          "value": "sdp",
+          "label": "Semidefinite Programming (SDP)"
+        },
+        {
+          "value": "minlp",
+          "label": "Mixed-Integer Nonlinear (MINLP)"
+        },
+        {
+          "value": "nlp",
+          "label": "Nonlinear Programming (NLP)"
+        },
+        {
+          "value": "cp",
+          "label": "Constraint Programming (CP)"
+        },
+        {
+          "value": "vrp",
+          "label": "Vehicle Routing (VRP)"
+        },
+        {
+          "value": "scheduling",
+          "label": "Scheduling"
+        }
       ]
     },
     "budget": {
       "label": "Budget",
       "options": [
-        {"value": "free", "label": "Free / Open Source only"},
-        {"value": "academic", "label": "Academic (free for research)"},
-        {"value": "commercial", "label": "Commercial (budget available)"},
-        {"value": "any", "label": "Any"}
+        {
+          "value": "free",
+          "label": "Free / Open Source only"
+        },
+        {
+          "value": "academic",
+          "label": "Academic (free for research)"
+        },
+        {
+          "value": "commercial",
+          "label": "Commercial (budget available)"
+        },
+        {
+          "value": "any",
+          "label": "Any"
+        }
       ]
     },
     "language": {
       "label": "Primary Language",
       "options": [
-        {"value": "python", "label": "Python"},
-        {"value": "julia", "label": "Julia"},
-        {"value": "cpp", "label": "C / C++"},
-        {"value": "java", "label": "Java"},
-        {"value": "dotnet", "label": ".NET / C#"},
-        {"value": "matlab", "label": "MATLAB"},
-        {"value": "r", "label": "R"},
-        {"value": "any", "label": "Any"}
+        {
+          "value": "python",
+          "label": "Python"
+        },
+        {
+          "value": "julia",
+          "label": "Julia"
+        },
+        {
+          "value": "cpp",
+          "label": "C / C++"
+        },
+        {
+          "value": "java",
+          "label": "Java"
+        },
+        {
+          "value": "dotnet",
+          "label": ".NET / C#"
+        },
+        {
+          "value": "matlab",
+          "label": "MATLAB"
+        },
+        {
+          "value": "r",
+          "label": "R"
+        },
+        {
+          "value": "any",
+          "label": "Any"
+        }
       ]
     },
     "scale": {
       "label": "Problem Scale",
       "options": [
-        {"value": "small", "label": "Small (< 1K variables)"},
-        {"value": "medium", "label": "Medium (1K - 100K variables)"},
-        {"value": "large", "label": "Large (100K - 1M variables)"},
-        {"value": "very_large", "label": "Very Large (> 1M variables)"}
+        {
+          "value": "small",
+          "label": "Small (< 1K variables)"
+        },
+        {
+          "value": "medium",
+          "label": "Medium (1K - 100K variables)"
+        },
+        {
+          "value": "large",
+          "label": "Large (100K - 1M variables)"
+        },
+        {
+          "value": "very_large",
+          "label": "Very Large (> 1M variables)"
+        }
       ]
     },
     "deployment": {
       "label": "Deployment Target",
       "options": [
-        {"value": "desktop", "label": "Local / Desktop"},
-        {"value": "server", "label": "Cloud / Server"},
-        {"value": "container", "label": "Docker / Container"},
-        {"value": "embedded", "label": "Embedded / Edge"},
-        {"value": "any", "label": "Any"}
+        {
+          "value": "desktop",
+          "label": "Local / Desktop"
+        },
+        {
+          "value": "server",
+          "label": "Cloud / Server"
+        },
+        {
+          "value": "container",
+          "label": "Docker / Container"
+        },
+        {
+          "value": "embedded",
+          "label": "Embedded / Edge"
+        },
+        {
+          "value": "any",
+          "label": "Any"
+        }
       ]
     }
   },
   "scores": {
     "gurobi": {
-      "problem_type": {"lp": 10, "mip": 10, "qp": 9, "socp": 8, "sdp": 0, "minlp": 0, "nlp": 0, "cp": 0, "vrp": 3, "scheduling": 2},
-      "budget":       {"free": 0, "academic": 10, "commercial": 10, "any": 10},
-      "language":     {"python": 10, "julia": 8, "cpp": 10, "java": 10, "dotnet": 8, "matlab": 10, "r": 8, "any": 10},
-      "scale":        {"small": 10, "medium": 10, "large": 10, "very_large": 10},
-      "deployment":   {"desktop": 10, "server": 8, "container": 7, "embedded": 3, "any": 10}
+      "problem_type": {
+        "lp": 10,
+        "mip": 10,
+        "qp": 9,
+        "socp": 8,
+        "sdp": 0,
+        "minlp": 0,
+        "nlp": 0,
+        "cp": 0,
+        "vrp": 3,
+        "scheduling": 2
+      },
+      "budget": {
+        "free": 0,
+        "academic": 10,
+        "commercial": 10,
+        "any": 10
+      },
+      "language": {
+        "python": 10,
+        "julia": 8,
+        "cpp": 10,
+        "java": 10,
+        "dotnet": 8,
+        "matlab": 10,
+        "r": 8,
+        "any": 10
+      },
+      "scale": {
+        "small": 10,
+        "medium": 10,
+        "large": 10,
+        "very_large": 10
+      },
+      "deployment": {
+        "desktop": 10,
+        "server": 8,
+        "container": 7,
+        "embedded": 3,
+        "any": 10
+      }
     },
     "cplex": {
-      "problem_type": {"lp": 9, "mip": 9, "qp": 8, "socp": 7, "sdp": 0, "minlp": 0, "nlp": 0, "cp": 5, "vrp": 2, "scheduling": 3},
-      "budget":       {"free": 0, "academic": 8, "commercial": 9, "any": 9},
-      "language":     {"python": 9, "julia": 7, "cpp": 9, "java": 9, "dotnet": 8, "matlab": 5, "r": 3, "any": 9},
-      "scale":        {"small": 10, "medium": 10, "large": 10, "very_large": 9},
-      "deployment":   {"desktop": 10, "server": 8, "container": 6, "embedded": 2, "any": 10}
+      "problem_type": {
+        "lp": 9,
+        "mip": 9,
+        "qp": 8,
+        "socp": 7,
+        "sdp": 0,
+        "minlp": 0,
+        "nlp": 0,
+        "cp": 5,
+        "vrp": 2,
+        "scheduling": 3
+      },
+      "budget": {
+        "free": 0,
+        "academic": 8,
+        "commercial": 9,
+        "any": 9
+      },
+      "language": {
+        "python": 9,
+        "julia": 7,
+        "cpp": 9,
+        "java": 9,
+        "dotnet": 8,
+        "matlab": 5,
+        "r": 3,
+        "any": 9
+      },
+      "scale": {
+        "small": 10,
+        "medium": 10,
+        "large": 10,
+        "very_large": 9
+      },
+      "deployment": {
+        "desktop": 10,
+        "server": 8,
+        "container": 6,
+        "embedded": 2,
+        "any": 10
+      }
     },
     "highs": {
-      "problem_type": {"lp": 9, "mip": 7, "qp": 7, "socp": 0, "sdp": 0, "minlp": 0, "nlp": 0, "cp": 0, "vrp": 0, "scheduling": 0},
-      "budget":       {"free": 10, "academic": 10, "commercial": 10, "any": 10},
-      "language":     {"python": 10, "julia": 10, "cpp": 10, "java": 7, "dotnet": 7, "matlab": 4, "r": 7, "any": 10},
-      "scale":        {"small": 10, "medium": 9, "large": 7, "very_large": 5},
-      "deployment":   {"desktop": 10, "server": 10, "container": 10, "embedded": 8, "any": 10}
+      "problem_type": {
+        "lp": 9,
+        "mip": 7,
+        "qp": 7,
+        "socp": 0,
+        "sdp": 0,
+        "minlp": 0,
+        "nlp": 0,
+        "cp": 0,
+        "vrp": 0,
+        "scheduling": 0
+      },
+      "budget": {
+        "free": 10,
+        "academic": 10,
+        "commercial": 10,
+        "any": 10
+      },
+      "language": {
+        "python": 10,
+        "julia": 10,
+        "cpp": 10,
+        "java": 7,
+        "dotnet": 7,
+        "matlab": 4,
+        "r": 7,
+        "any": 10
+      },
+      "scale": {
+        "small": 10,
+        "medium": 9,
+        "large": 7,
+        "very_large": 5
+      },
+      "deployment": {
+        "desktop": 10,
+        "server": 10,
+        "container": 10,
+        "embedded": 8,
+        "any": 10
+      }
     },
     "scip": {
-      "problem_type": {"lp": 5, "mip": 6, "qp": 3, "socp": 0, "sdp": 0, "minlp": 9, "nlp": 5, "cp": 4, "vrp": 2, "scheduling": 2},
-      "budget":       {"free": 10, "academic": 10, "commercial": 10, "any": 10},
-      "language":     {"python": 8, "julia": 7, "cpp": 9, "java": 3, "dotnet": 0, "matlab": 0, "r": 0, "any": 8},
-      "scale":        {"small": 10, "medium": 8, "large": 6, "very_large": 4},
-      "deployment":   {"desktop": 10, "server": 10, "container": 9, "embedded": 5, "any": 10}
+      "problem_type": {
+        "lp": 5,
+        "mip": 6,
+        "qp": 3,
+        "socp": 0,
+        "sdp": 0,
+        "minlp": 9,
+        "nlp": 5,
+        "cp": 4,
+        "vrp": 2,
+        "scheduling": 2
+      },
+      "budget": {
+        "free": 10,
+        "academic": 10,
+        "commercial": 10,
+        "any": 10
+      },
+      "language": {
+        "python": 8,
+        "julia": 7,
+        "cpp": 9,
+        "java": 3,
+        "dotnet": 0,
+        "matlab": 0,
+        "r": 0,
+        "any": 8
+      },
+      "scale": {
+        "small": 10,
+        "medium": 8,
+        "large": 6,
+        "very_large": 4
+      },
+      "deployment": {
+        "desktop": 10,
+        "server": 10,
+        "container": 9,
+        "embedded": 5,
+        "any": 10
+      }
     },
     "or-tools": {
-      "problem_type": {"lp": 4, "mip": 3, "qp": 0, "socp": 0, "sdp": 0, "minlp": 0, "nlp": 0, "cp": 10, "vrp": 10, "scheduling": 9},
-      "budget":       {"free": 10, "academic": 10, "commercial": 10, "any": 10},
-      "language":     {"python": 10, "julia": 0, "cpp": 9, "java": 8, "dotnet": 8, "matlab": 0, "r": 0, "any": 9},
-      "scale":        {"small": 10, "medium": 9, "large": 7, "very_large": 5},
-      "deployment":   {"desktop": 10, "server": 10, "container": 10, "embedded": 6, "any": 10}
+      "problem_type": {
+        "lp": 4,
+        "mip": 3,
+        "qp": 0,
+        "socp": 0,
+        "sdp": 0,
+        "minlp": 0,
+        "nlp": 0,
+        "cp": 10,
+        "vrp": 10,
+        "scheduling": 9
+      },
+      "budget": {
+        "free": 10,
+        "academic": 10,
+        "commercial": 10,
+        "any": 10
+      },
+      "language": {
+        "python": 10,
+        "julia": 0,
+        "cpp": 9,
+        "java": 8,
+        "dotnet": 8,
+        "matlab": 0,
+        "r": 0,
+        "any": 9
+      },
+      "scale": {
+        "small": 10,
+        "medium": 9,
+        "large": 7,
+        "very_large": 5
+      },
+      "deployment": {
+        "desktop": 10,
+        "server": 10,
+        "container": 10,
+        "embedded": 6,
+        "any": 10
+      }
     },
     "cbc": {
-      "problem_type": {"lp": 4, "mip": 4, "qp": 0, "socp": 0, "sdp": 0, "minlp": 0, "nlp": 0, "cp": 0, "vrp": 0, "scheduling": 0},
-      "budget":       {"free": 10, "academic": 10, "commercial": 10, "any": 10},
-      "language":     {"python": 7, "julia": 6, "cpp": 7, "java": 0, "dotnet": 0, "matlab": 0, "r": 0, "any": 7},
-      "scale":        {"small": 8, "medium": 5, "large": 3, "very_large": 1},
-      "deployment":   {"desktop": 10, "server": 10, "container": 10, "embedded": 7, "any": 10}
+      "problem_type": {
+        "lp": 4,
+        "mip": 4,
+        "qp": 0,
+        "socp": 0,
+        "sdp": 0,
+        "minlp": 0,
+        "nlp": 0,
+        "cp": 0,
+        "vrp": 0,
+        "scheduling": 0
+      },
+      "budget": {
+        "free": 10,
+        "academic": 10,
+        "commercial": 10,
+        "any": 10
+      },
+      "language": {
+        "python": 7,
+        "julia": 6,
+        "cpp": 7,
+        "java": 0,
+        "dotnet": 0,
+        "matlab": 0,
+        "r": 0,
+        "any": 7
+      },
+      "scale": {
+        "small": 8,
+        "medium": 5,
+        "large": 3,
+        "very_large": 1
+      },
+      "deployment": {
+        "desktop": 10,
+        "server": 10,
+        "container": 10,
+        "embedded": 7,
+        "any": 10
+      }
     },
     "xpress": {
-      "problem_type": {"lp": 9, "mip": 9, "qp": 8, "socp": 7, "sdp": 0, "minlp": 7, "nlp": 5, "cp": 5, "vrp": 2, "scheduling": 2},
-      "budget":       {"free": 0, "academic": 7, "commercial": 9, "any": 9},
-      "language":     {"python": 8, "julia": 6, "cpp": 9, "java": 8, "dotnet": 8, "matlab": 5, "r": 3, "any": 8},
-      "scale":        {"small": 10, "medium": 10, "large": 10, "very_large": 9},
-      "deployment":   {"desktop": 10, "server": 8, "container": 6, "embedded": 2, "any": 10}
+      "problem_type": {
+        "lp": 9,
+        "mip": 9,
+        "qp": 8,
+        "socp": 7,
+        "sdp": 0,
+        "minlp": 7,
+        "nlp": 5,
+        "cp": 5,
+        "vrp": 2,
+        "scheduling": 2
+      },
+      "budget": {
+        "free": 0,
+        "academic": 7,
+        "commercial": 9,
+        "any": 9
+      },
+      "language": {
+        "python": 8,
+        "julia": 6,
+        "cpp": 9,
+        "java": 8,
+        "dotnet": 8,
+        "matlab": 5,
+        "r": 3,
+        "any": 8
+      },
+      "scale": {
+        "small": 10,
+        "medium": 10,
+        "large": 10,
+        "very_large": 9
+      },
+      "deployment": {
+        "desktop": 10,
+        "server": 8,
+        "container": 6,
+        "embedded": 2,
+        "any": 10
+      }
     },
     "mosek": {
-      "problem_type": {"lp": 7, "mip": 5, "qp": 9, "socp": 10, "sdp": 10, "minlp": 0, "nlp": 3, "cp": 0, "vrp": 0, "scheduling": 0},
-      "budget":       {"free": 0, "academic": 10, "commercial": 8, "any": 9},
-      "language":     {"python": 9, "julia": 9, "cpp": 7, "java": 8, "dotnet": 7, "matlab": 8, "r": 6, "any": 9},
-      "scale":        {"small": 10, "medium": 10, "large": 9, "very_large": 7},
-      "deployment":   {"desktop": 10, "server": 9, "container": 8, "embedded": 3, "any": 10}
+      "problem_type": {
+        "lp": 7,
+        "mip": 5,
+        "qp": 9,
+        "socp": 10,
+        "sdp": 10,
+        "minlp": 0,
+        "nlp": 3,
+        "cp": 0,
+        "vrp": 0,
+        "scheduling": 0
+      },
+      "budget": {
+        "free": 0,
+        "academic": 10,
+        "commercial": 8,
+        "any": 9
+      },
+      "language": {
+        "python": 9,
+        "julia": 9,
+        "cpp": 7,
+        "java": 8,
+        "dotnet": 7,
+        "matlab": 8,
+        "r": 6,
+        "any": 9
+      },
+      "scale": {
+        "small": 10,
+        "medium": 10,
+        "large": 9,
+        "very_large": 7
+      },
+      "deployment": {
+        "desktop": 10,
+        "server": 9,
+        "container": 8,
+        "embedded": 3,
+        "any": 10
+      }
     },
     "baron": {
-      "problem_type": {"lp": 2, "mip": 3, "qp": 5, "socp": 3, "sdp": 0, "minlp": 10, "nlp": 8, "cp": 0, "vrp": 0, "scheduling": 0},
-      "budget":       {"free": 0, "academic": 6, "commercial": 7, "any": 7},
-      "language":     {"python": 5, "julia": 3, "cpp": 3, "java": 0, "dotnet": 0, "matlab": 0, "r": 0, "any": 5},
-      "scale":        {"small": 10, "medium": 7, "large": 4, "very_large": 2},
-      "deployment":   {"desktop": 8, "server": 7, "container": 4, "embedded": 1, "any": 8}
+      "problem_type": {
+        "lp": 2,
+        "mip": 3,
+        "qp": 5,
+        "socp": 3,
+        "sdp": 0,
+        "minlp": 10,
+        "nlp": 8,
+        "cp": 0,
+        "vrp": 0,
+        "scheduling": 0
+      },
+      "budget": {
+        "free": 0,
+        "academic": 3,
+        "commercial": 7,
+        "any": 7
+      },
+      "language": {
+        "python": 5,
+        "julia": 3,
+        "cpp": 3,
+        "java": 0,
+        "dotnet": 0,
+        "matlab": 0,
+        "r": 0,
+        "any": 5
+      },
+      "scale": {
+        "small": 10,
+        "medium": 7,
+        "large": 4,
+        "very_large": 2
+      },
+      "deployment": {
+        "desktop": 8,
+        "server": 7,
+        "container": 4,
+        "embedded": 1,
+        "any": 8
+      }
     },
     "hexaly": {
-      "problem_type": {"lp": 1, "mip": 5, "qp": 2, "socp": 0, "sdp": 0, "minlp": 3, "nlp": 6, "cp": 3, "vrp": 7, "scheduling": 8},
-      "budget":       {"free": 0, "academic": 7, "commercial": 7, "any": 7},
-      "language":     {"python": 7, "julia": 0, "cpp": 7, "java": 7, "dotnet": 7, "matlab": 0, "r": 0, "any": 7},
-      "scale":        {"small": 7, "medium": 9, "large": 10, "very_large": 10},
-      "deployment":   {"desktop": 10, "server": 9, "container": 7, "embedded": 3, "any": 10}
+      "problem_type": {
+        "lp": 1,
+        "mip": 5,
+        "qp": 2,
+        "socp": 0,
+        "sdp": 0,
+        "minlp": 3,
+        "nlp": 6,
+        "cp": 3,
+        "vrp": 7,
+        "scheduling": 8
+      },
+      "budget": {
+        "free": 0,
+        "academic": 7,
+        "commercial": 7,
+        "any": 7
+      },
+      "language": {
+        "python": 7,
+        "julia": 0,
+        "cpp": 7,
+        "java": 7,
+        "dotnet": 7,
+        "matlab": 0,
+        "r": 0,
+        "any": 7
+      },
+      "scale": {
+        "small": 7,
+        "medium": 9,
+        "large": 10,
+        "very_large": 10
+      },
+      "deployment": {
+        "desktop": 10,
+        "server": 9,
+        "container": 7,
+        "embedded": 3,
+        "any": 10
+      }
     },
     "glpk": {
-      "problem_type": {"lp": 3, "mip": 2, "qp": 0, "socp": 0, "sdp": 0, "minlp": 0, "nlp": 0, "cp": 0, "vrp": 0, "scheduling": 0},
-      "budget":       {"free": 8, "academic": 8, "commercial": 5, "any": 7},
-      "language":     {"python": 5, "julia": 4, "cpp": 6, "java": 0, "dotnet": 0, "matlab": 0, "r": 0, "any": 5},
-      "scale":        {"small": 7, "medium": 3, "large": 1, "very_large": 0},
-      "deployment":   {"desktop": 10, "server": 10, "container": 10, "embedded": 9, "any": 10}
+      "problem_type": {
+        "lp": 3,
+        "mip": 2,
+        "qp": 0,
+        "socp": 0,
+        "sdp": 0,
+        "minlp": 0,
+        "nlp": 0,
+        "cp": 0,
+        "vrp": 0,
+        "scheduling": 0
+      },
+      "budget": {
+        "free": 8,
+        "academic": 8,
+        "commercial": 5,
+        "any": 7
+      },
+      "language": {
+        "python": 5,
+        "julia": 4,
+        "cpp": 6,
+        "java": 0,
+        "dotnet": 0,
+        "matlab": 0,
+        "r": 0,
+        "any": 5
+      },
+      "scale": {
+        "small": 7,
+        "medium": 3,
+        "large": 1,
+        "very_large": 0
+      },
+      "deployment": {
+        "desktop": 10,
+        "server": 10,
+        "container": 10,
+        "embedded": 9,
+        "any": 10
+      }
     },
     "copt": {
-      "problem_type": {"lp": 10, "mip": 10, "qp": 9, "socp": 8, "sdp": 7, "minlp": 0, "nlp": 0, "cp": 0, "vrp": 3, "scheduling": 2},
-      "budget":       {"free": 0, "academic": 9, "commercial": 10, "any": 10},
-      "language":     {"python": 10, "julia": 0, "cpp": 9, "java": 9, "dotnet": 0, "matlab": 0, "r": 0, "any": 9},
-      "scale":        {"small": 10, "medium": 10, "large": 10, "very_large": 10},
-      "deployment":   {"desktop": 10, "server": 8, "container": 7, "embedded": 3, "any": 10}
+      "problem_type": {
+        "lp": 10,
+        "mip": 10,
+        "qp": 9,
+        "socp": 8,
+        "sdp": 7,
+        "minlp": 0,
+        "nlp": 0,
+        "cp": 0,
+        "vrp": 3,
+        "scheduling": 2
+      },
+      "budget": {
+        "free": 0,
+        "academic": 9,
+        "commercial": 10,
+        "any": 10
+      },
+      "language": {
+        "python": 10,
+        "julia": 0,
+        "cpp": 9,
+        "java": 9,
+        "dotnet": 0,
+        "matlab": 0,
+        "r": 0,
+        "any": 9
+      },
+      "scale": {
+        "small": 10,
+        "medium": 10,
+        "large": 10,
+        "very_large": 10
+      },
+      "deployment": {
+        "desktop": 10,
+        "server": 8,
+        "container": 7,
+        "embedded": 3,
+        "any": 10
+      }
     },
     "clarabel": {
-      "problem_type": {"lp": 5, "mip": 0, "qp": 8, "socp": 9, "sdp": 9, "minlp": 0, "nlp": 0, "cp": 0, "vrp": 0, "scheduling": 0},
-      "budget":       {"free": 10, "academic": 10, "commercial": 10, "any": 10},
-      "language":     {"python": 9, "julia": 9, "cpp": 0, "java": 0, "dotnet": 0, "matlab": 0, "r": 0, "any": 9},
-      "scale":        {"small": 10, "medium": 8, "large": 6, "very_large": 4},
-      "deployment":   {"desktop": 10, "server": 10, "container": 10, "embedded": 7, "any": 10}
+      "problem_type": {
+        "lp": 5,
+        "mip": 0,
+        "qp": 8,
+        "socp": 9,
+        "sdp": 9,
+        "minlp": 0,
+        "nlp": 0,
+        "cp": 0,
+        "vrp": 0,
+        "scheduling": 0
+      },
+      "budget": {
+        "free": 10,
+        "academic": 10,
+        "commercial": 10,
+        "any": 10
+      },
+      "language": {
+        "python": 9,
+        "julia": 9,
+        "cpp": 0,
+        "java": 0,
+        "dotnet": 0,
+        "matlab": 0,
+        "r": 0,
+        "any": 9
+      },
+      "scale": {
+        "small": 10,
+        "medium": 8,
+        "large": 6,
+        "very_large": 4
+      },
+      "deployment": {
+        "desktop": 10,
+        "server": 10,
+        "container": 10,
+        "embedded": 7,
+        "any": 10
+      }
     },
     "scs": {
-      "problem_type": {"lp": 5, "mip": 0, "qp": 7, "socp": 9, "sdp": 9, "minlp": 0, "nlp": 0, "cp": 0, "vrp": 0, "scheduling": 0},
-      "budget":       {"free": 10, "academic": 10, "commercial": 10, "any": 10},
-      "language":     {"python": 9, "julia": 8, "cpp": 8, "java": 0, "dotnet": 0, "matlab": 7, "r": 6, "any": 9},
-      "scale":        {"small": 9, "medium": 9, "large": 8, "very_large": 7},
-      "deployment":   {"desktop": 10, "server": 10, "container": 10, "embedded": 7, "any": 10}
+      "problem_type": {
+        "lp": 5,
+        "mip": 0,
+        "qp": 7,
+        "socp": 9,
+        "sdp": 9,
+        "minlp": 0,
+        "nlp": 0,
+        "cp": 0,
+        "vrp": 0,
+        "scheduling": 0
+      },
+      "budget": {
+        "free": 10,
+        "academic": 10,
+        "commercial": 10,
+        "any": 10
+      },
+      "language": {
+        "python": 9,
+        "julia": 8,
+        "cpp": 8,
+        "java": 0,
+        "dotnet": 0,
+        "matlab": 7,
+        "r": 6,
+        "any": 9
+      },
+      "scale": {
+        "small": 9,
+        "medium": 9,
+        "large": 8,
+        "very_large": 7
+      },
+      "deployment": {
+        "desktop": 10,
+        "server": 10,
+        "container": 10,
+        "embedded": 7,
+        "any": 10
+      }
+    },
+    "optaplanner": {
+      "problem_type": {
+        "lp": 0,
+        "mip": 0,
+        "qp": 0,
+        "socp": 0,
+        "sdp": 0,
+        "minlp": 0,
+        "nlp": 0,
+        "cp": 9,
+        "vrp": 10,
+        "scheduling": 10
+      },
+      "budget": {
+        "free": 10,
+        "academic": 10,
+        "commercial": 9,
+        "any": 10
+      },
+      "language": {
+        "python": 5,
+        "julia": 0,
+        "cpp": 0,
+        "java": 10,
+        "dotnet": 0,
+        "matlab": 0,
+        "r": 0,
+        "any": 8
+      },
+      "scale": {
+        "small": 10,
+        "medium": 10,
+        "large": 9,
+        "enterprise": 8
+      },
+      "deployment": {
+        "desktop": 10,
+        "server": 10,
+        "container": 10,
+        "embedded": 5,
+        "any": 10
+      }
+    },
+    "ipopt": {
+      "problem_type": {
+        "lp": 3,
+        "mip": 0,
+        "qp": 6,
+        "socp": 3,
+        "sdp": 0,
+        "minlp": 0,
+        "nlp": 10,
+        "cp": 0,
+        "vrp": 0,
+        "scheduling": 0
+      },
+      "budget": {
+        "free": 10,
+        "academic": 10,
+        "commercial": 10,
+        "any": 10
+      },
+      "language": {
+        "python": 7,
+        "julia": 7,
+        "cpp": 9,
+        "java": 3,
+        "dotnet": 0,
+        "matlab": 5,
+        "r": 3,
+        "any": 7
+      },
+      "scale": {
+        "small": 10,
+        "medium": 9,
+        "large": 7,
+        "enterprise": 5
+      },
+      "deployment": {
+        "desktop": 10,
+        "server": 10,
+        "container": 9,
+        "embedded": 5,
+        "any": 10
+      }
+    },
+    "knitro": {
+      "problem_type": {
+        "lp": 4,
+        "mip": 5,
+        "qp": 8,
+        "socp": 4,
+        "sdp": 0,
+        "minlp": 9,
+        "nlp": 10,
+        "cp": 0,
+        "vrp": 0,
+        "scheduling": 0
+      },
+      "budget": {
+        "free": 0,
+        "academic": 7,
+        "commercial": 8,
+        "any": 8
+      },
+      "language": {
+        "python": 8,
+        "julia": 5,
+        "cpp": 8,
+        "java": 5,
+        "dotnet": 0,
+        "matlab": 7,
+        "r": 3,
+        "any": 7
+      },
+      "scale": {
+        "small": 10,
+        "medium": 10,
+        "large": 9,
+        "enterprise": 8
+      },
+      "deployment": {
+        "desktop": 10,
+        "server": 9,
+        "container": 7,
+        "embedded": 3,
+        "any": 9
+      }
     }
   }
 }

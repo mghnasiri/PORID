@@ -1335,6 +1335,10 @@ function buildCostPerformanceChart(solvers, container) {
     circle.setAttribute('r', '8'); circle.setAttribute('fill', color);
     circle.setAttribute('fill-opacity', '0.7');
     circle.setAttribute('stroke', color); circle.setAttribute('stroke-width', '1.5');
+    if (d.id === 'gurobi') {
+      circle.setAttribute('stroke-dasharray', '3,2');
+      circle.setAttribute('stroke-width', '2');
+    }
     circle.style.cursor = 'pointer';
     circle.addEventListener('click', () => { window.location.hash = `toolkit/solvers/${d.id}`; });
     svg.appendChild(circle);
@@ -1361,6 +1365,11 @@ function buildCostPerformanceChart(solvers, container) {
   });
 
   section.appendChild(svg);
+  const footnote = document.createElement('p');
+  footnote.className = 'editorial-notice';
+  footnote.style.fontSize = '0.7rem';
+  footnote.textContent = '* Gurobi (dashed border) withdrew from Mittelmann benchmarks Aug 2024. Tier based on historical results.';
+  section.appendChild(footnote);
   const caveat = document.createElement('p');
   caveat.className = 'chart-caveat';
   caveat.textContent = 'Performance tiers based on Mittelmann benchmarks (LP/MIP). Costs are estimates — verify with vendors.';
@@ -2549,6 +2558,16 @@ function buildLicensingGuide(allData, container) {
     // Annual cost
     const tdCost = document.createElement('td');
     tdCost.textContent = s.tco_estimate?.license_annual_display || (s.open_source ? 'Free' : 'Contact vendor');
+    if (s.sources && s.sources.pricing_estimate) {
+      const info = document.createElement('span');
+      info.className = 'pricing-info';
+      info.textContent = ' \u24D8';
+      info.title = s.sources.pricing_estimate.note || 'Community estimate';
+      info.style.cursor = 'help';
+      info.style.fontSize = '0.7rem';
+      info.style.opacity = '0.6';
+      tdCost.appendChild(info);
+    }
     tr.appendChild(tdCost);
 
     // Academic
