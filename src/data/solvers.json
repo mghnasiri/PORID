@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-29T07:59:46.064899+00:00",
+  "generated_at": "2026-03-30T08:26:24.159084+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "## Code changes\r\n\r\nFollowing PR [#2812](https://github.com/ERGO-Code/HiGHS/pull/2812),\r\nHiGHS can read LP files with keywords as constraint names.\r\n\r\nFollowing PR [#2818](https://github.com/ERGO-Code/",
-      "github_open_issues": 157,
+      "github_open_issues": 160,
       "github_recent_prs": [
+        "Hipdlp format plus presolve",
+        "Presolve profile",
         "bump: update bazel dependencies in MODULE.bazel",
         "Updated documentation to include HiPDLP",
-        "Docs: specify architecture for cuda in bazel",
-        "Change scaling in HiPO",
-        "HiPDLP cleanup"
+        "Docs: specify architecture for cuda in bazel"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13279,
+      "github_stars": 13283,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6159,
-      "github_open_issues": 189,
+      "github_stars": 6160,
+      "github_open_issues": 191,
       "github_recent_prs": [
+        "Support PSD matrices in sparse_cholesky",
+        "Refactor: extract shared _pow_const_base helper for b**x pattern",
         "Add SvecPSD cone and PSD→SvecPSD reduction via ExactCone2Cone",
         "Fix mul_bounds producing NaN from 0 * inf",
-        "Fix/cuclarabel nvars unbound",
-        "Update .git-blame-ignore-revs with formatting and type hint commits",
-        "Removes white space from blank lines"
+        "Fix/cuclarabel nvars unbound"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "This is the first quarterly maintenance update of Timefold Solver 1.x. With all forward development having shifted towards Timefold Solver 2.0.0 (to be released later this month), this release brings ",
-      "github_stars": 1612,
-      "github_open_issues": 74,
+      "github_stars": 1614,
+      "github_open_issues": 75,
       "github_recent_prs": [
+        "deps: bump the regular group with 2 updates",
+        "deps: bump org.springframework.boot:spring-boot-dependencies from 4.0.4 to 4.0.5 in the spring group",
+        "deps: bump the quarkus group with 4 updates",
         "perf: improve runtime performance of exhaustive search",
-        "fix: handle null planning values in ValueTabuAcceptor",
-        "fix: handle null planning values in ValueTabuAcceptor",
-        "deps: bump org.springframework.boot:spring-boot-dependencies from 4.0.3 to 4.0.4 in the spring group",
-        "deps: bump the quarkus group with 4 updates"
+        "fix: handle null planning values in ValueTabuAcceptor"
       ]
     },
     {
@@ -1450,13 +1450,13 @@
       ],
       "recent_changes": "## JuMP v1.30.0\n\n[Diff since v1.29.4](https://github.com/jump-dev/JuMP.jl/compare/v1.29.4...v1.30.0)\n\n\n**Merged pull requests:**\n- Fix errors found by JET (#4108) (@odow)\n- [docs] clarify dual unbound",
       "github_stars": 2420,
-      "github_open_issues": 20,
+      "github_open_issues": 17,
       "github_recent_prs": [
+        "[docs] remove MathOptSymbolicAD from packages.toml",
         "Remove outdated sentence from LICENSE.md",
         "[docs] remove \"subproblem\" from the Benders decomposition tutorial",
         "[docs] fix links in CODE_OF_CONDUCT",
-        "terminology on Benders",
-        "RFC: [docs] add a policy for AI assisted contributions"
+        "terminology on Benders"
       ]
     },
     {
