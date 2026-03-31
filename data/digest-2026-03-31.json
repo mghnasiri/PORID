@@ -1,0 +1,355 @@
+{
+  "date": "2026-03-31",
+  "generated_at": "2026-03-31T08:13:15.313250+00:00",
+  "publications": [
+    {
+      "id": "s2-4bd33d4da801",
+      "title": "AI-enhanced integration of production planning and vehicle routing in logistics operations: a hybrid metaheuristic framework",
+      "authors": [
+        "Matheus de Freitas Araujo",
+        "Thiago Henrique Nogueira",
+        "J. E. C. Arroyo",
+        "J. C. Alves",
+        "Gustavo Alves de Melo",
+        "M. Ravetti",
+        "T. Costa",
+        "Maria Luiza Alves Santana"
+      ],
+      "abstract": "\n \n Integrating production planning on unrelated parallel machines with the vehicle routing problem in modern logistics operations presents significant challenges. This study aims to address this integration to optimize operational efficiency and meet customer demands.\n \n \n \n This study presents a comprehensive solution framework that combines exact and heuristic methods. First, it formulates a mixed integer programming (MIP) model and develop two tailored heuristics – a constructive heuristic and a neighborhood search heuristic – to generate high-quality solutions. Next, the study proposes a machine learning-based selection mechanism that predicts, for each problem instance, which heuristic will perform best. Finally, the study introduces two novel metaheuristics: a randomized variable neighborhood descent (RVND) algorithm and a hybrid framework (PPO-VND) that integrates variable neighborhood descent (VND) with the proximal policy optimization (PPO) reinforcement learning algorithm. Together, these contributions offer a robust, adaptive toolkit for solving complex instances across diverse settings.\n \n \n \n Comparative tests demonstrate the superiority of our proposed methods over existing approaches, confirming their effectiveness in addressing the critical challenges posed by integrated production planning and vehicle routing in logistics operations.\n \n \n \n The proposed model was tested on controlled instances with limited problem sizes, which may not fully capture the complexity of large-scale real-world scenarios. Moreover, the performance of the machine learning framework depends on the quality and diversity of the training data. Future research could explore alternative production configurations, different routing policies and more dynamic environments, as well as assess scalability under realistic uncertainties such as demand fluctuations and stochastic delivery times.\n \n \n \n This study offers a practical and adaptable approach for companies operating in complex logistics environments, enabling more efficient integration of production and distribution decisions. By applying artificial intelligence (AI) and hybrid algorithms, managers can obtain high-quality solutions in less time, reducing delays and operational costs. The model’s flexibility allows its application across various sectors – such as manufacturing, retail and transportation – supporting more agile and synchronized supply chains, particularly in contexts that demand rapid and customized customer responses.\n \n \n \n Improved logistics integration can positively impact society by reducing waste, optimizing resource use and enhancing delivery punctuality, benefiting both end customers and suppliers. On a broader scale, adopting intelligent solutions in supply chains may promote more sustainable and responsible practices. Furthermore, the diffusion of AI-based technologies can encourage professional upskilling, fostering new job opportunities in sectors focused on innovation and digital transformation.\n \n \n \n This study highlights the key role of AI in logistics optimization, promoting adaptability and resilience in dynamic operational environments. These innovations significantly improve solution quality and computational efficiency.\n",
+      "date": "2026-03-31",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.1108/ijoa-06-2025-5620",
+      "tags": [
+        "integer-programming",
+        "metaheuristics",
+        "scheduling",
+        "vehicle-routing",
+        "stochastic",
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1108/ijoa-06-2025-5620",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 85.0
+    },
+    {
+      "id": "s2-128ee8aaa633",
+      "title": "Integer programming models for unidirectional and bidirectional cyclic load-dependent routing problems",
+      "authors": [
+        "M. Yadegari",
+        "Sebastián Urrutia",
+        "Andréa C. Santos",
+        "Q. Dang"
+      ],
+      "abstract": "\n \n Vehicle load is a critical factor that impacts route selection within logistic networks. This study aims to compare two different strategies for generating routes in a cyclic load-dependent traveling salesman problem.\n \n \n \n The study introduces novel load-dependent cyclic routing strategies and propose two new problems to model them: The unidirectional and bidirectional variants of the cyclic load-dependent traveling salesman problem. Three mathematical formulations are proposed for the problems using integer linear programming. Two formulations, for both variants of the problem, use the so-called MTZ constraints while the third one for the bidirectional variant is based on an arc-network. To evaluate the performance of the proposed strategies, the study uses three sets of instances: benchmarks from the literature, realistic instances and randomly generated instances.\n \n \n \n The study shows that the bidirectional strategy is strictly better than the unidirectional one in instances with unitary distances and demands. For general-distance and general-demand instances, computational results show that the bidirectional strategy obtains better solutions than the unidirectional one in most cases.\n \n \n \n The proposed problems are original despite being variants of cyclic inventory routing problems. The load on the vehicle is often neglected in operational research literature. The bidirectional strategy in the context of cyclic problems is original. While not extremely complex, the theoretical results on unitary distance and unitary demand instances are new.\n",
+      "date": "2026-03-31",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.1108/jm2-09-2025-0468",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "vehicle-routing",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1108/jm2-09-2025-0468",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 70.0
+    },
+    {
+      "id": "s2-6f9dedc53850",
+      "title": "Application of machine learning to storage allocation decision making system within air cargo terminals",
+      "authors": [
+        "D. Mambetalin",
+        "A. Koshekov",
+        "Bibigul Orazbayeva",
+        "A. Moldabekov",
+        "T. Keribayeva"
+      ],
+      "abstract": "The rapid growth of global air cargo demand has intensified the need for more efficient and intelligent storage allocation within airport cargo terminals. Traditional static allocation and rule-based systems struggle to adapt to dynamic cargo flows, leading to operational inefficiencies. This study aims to develop a hybrid decision support system that optimizes storage allocation by integrating machine learning and multicriteria decision-making techniques. A Random Forest Classifier was trained using historical cargo data, including weight, quantity, size, priority, and cargo type, to predict optimal storage zones. To enhance interpretability and expert control, the Analytic Hierarchy Process AHP was used to derive feature weights, while the Technique for Order Preference by Similarity to Ideal Solution (TOPSIS) was employed to rank the best storage alternatives. The model was tested on real-world data from Almaty International Airport involving 1,500 cargo orders. Results show that the system reduced average storage time by 14%, minimized cargo redistributions by 22%, increased storage density by 9%, and improved on-time delivery for priority cargo by 17% compared to traditional FIFO-based methods. The integration of data-driven learning with expert judgment offers a robust and transparent decision-making framework. These improvements confirm the value of combining machine learning with AHP–TOPSIS methods in logistics operations. This system presents significant implications for airport terminal managers seeking to enhance operational throughput, academic researchers exploring hybrid intelligent systems, and policymakers promoting digital logistics infrastructure. Future studies may include adaptive learning, seasonal cargo flow modelling, and digital twin-based scenario testing to further generalize the solution.",
+      "date": "2026-03-31",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.22306/al.v13i1.720",
+      "tags": [
+        "stochastic",
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.22306/al.v13i1.720",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 65.0
+    },
+    {
+      "id": "s2-a95336e2fbaf",
+      "title": "Applying Bayesian Neural Networks to optimize maintenance logistics",
+      "authors": [
+        "M. Hermans",
+        "Péter Tamás"
+      ],
+      "abstract": "In maintenance logistics, optimising material and information flows requires predictive methodologies that cope with uncertainty and support decision-making across the maintenance supply chain. This paper proposes a Bayesian Neural Network (BNN) approach to predict maintenance demand and improve logistical planning of spare parts and technician deployment in flow-based production systems. By incorporating uncertainty directly into model outputs, the BNN provides probabilistic predictions that enhance robustness, precision, and responsiveness within logistics operations. The model is trained and validated on historical maintenance data and synthetic scenarios generated to reflect stochastic degradation and repair behaviour typical of industrial flow environments. Compared to deterministic benchmarks, the proposed approach demonstrates superior logistics performance, with improvements in downtime reduction, spare-parts availability, and overall material-flow efficiency. These insights highlight the benefit of probabilistic modelling as a decision-support tool for maintenance logistics in complex manufacturing logistics systems.",
+      "date": "2026-03-31",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.22306/al.v13i1.745",
+      "tags": [
+        "stochastic",
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.22306/al.v13i1.745",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 65.0
+    },
+    {
+      "id": "s2-632dce9bd4c7",
+      "title": "Integrating predictive analytics into health insurance operations: A framework for cycle time optimization",
+      "authors": [
+        "Sohan manmeet sethi"
+      ],
+      "abstract": "The escalating complexity of health insurance processes has led to the need to find new solutions to realize the efficiency, cost-reduction, and service delivery. The analytics technique known as predictive analytics is a statistical model based analytics using machine learning to predict the outcome and it can deliver gigantic potential in the area of maximizing the time in the operation of the insurance business to include the underwriting processes, claims management processes, and fraud detection processes. The review article investigates the way predictive analytics can be integrated into health insurance operation and proposes a template on the optimization of the cycle time. Based on the synthesis of the recent literature, the paper identifies a collection of core aspects of integration, which include data consolidation, model development, workflow embedding, feedback-driven learning, and ethical governance. It highlights the importance of predictive systems in helping the insurers to automate decision making, concentrate on low-risk claims, detect fraudulent activity, and customize customer interaction. The given model is aimed at the cycle of constant improvement with the help of monitoring performance and open governance which will ensure the long-term enhancement of the operational efficiency and compliance with the laws. Additionally, the article discusses the issues related to data privacy, algorithm bias, and interpretability and provides the ethical and technical solutions to eliminate the risks. The future research directions are to bring artificial intelligence, blockchain, and Internet of Things (IoT) into the picture to obtain more interoperability, transparency, and real-time flexibility. Overall, this paper has demonstrated that predictive analytics is not only a groundbreaking technology, but also a wonderful strategic enabler to efficiency, accountability and innovation in the health insurance sector.",
+      "date": "2026-03-31",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.30574/wjaets.2026.18.3.0134",
+      "tags": [
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.30574/wjaets.2026.18.3.0134",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "s2-7f0c94196131",
+      "title": "VRP with Time Windows and Other Time Constraints – Modeling and Solution Approaches",
+      "authors": [
+        "M. Anholcer",
+        "A. Kawa"
+      ],
+      "abstract": ": In this paper we study the Vehicle Routing Problem with time windows and other possible exclusions concerning time. After a brief introduction we present the problem of exclusionary constraints, in particular the ones connected with time. Then we present the mathematical model of the problem. Finally we discuss possible solution strategies",
+      "date": "2026-03-30",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.17270/j.log.001348",
+      "tags": [
+        "vehicle-routing"
+      ],
+      "type": "publication",
+      "doi": "10.17270/j.log.001348",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "s2-180ceea5fef7",
+      "title": "Cislunar Transportation Optimization Framework Based on Weighted Multi-Objective Optimization and Negative Binomial Reliability Modeling",
+      "authors": [
+        "Qizhen Guo",
+        "Zixuan Shi",
+        "Meng Gao"
+      ],
+      "abstract": "This paper develops a decision-making framework for large-scale Earth–Moon material transportation that balances transportation efficiency and economic cost. We first construct transportation models for both the space elevator system and conventional rocket launches, characterizing their operational behavior through capacity constraints and cost functions. Based on these models, we develop a hybrid transportation optimization model that allocates cargo mass between different transportation routes. We then formulate a weighted multi-objective optimization model to jointly optimize transportation time and total cost. To account for uncertainty in rocket launches, we introduce a reliability analysis framework based on the negative binomial distribution, which captures the influence of launch success probability on transportation duration and cost. Numerical results show that the proposed framework achieves a stable trade-off between efficiency and cost while maintaining robust performance under varying launch reliability conditions. The framework provides a practical modeling approach for planning large-scale space transportation systems.",
+      "date": "2026-03-30",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.54097/42b2yb62",
+      "tags": [
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.54097/42b2yb62",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2603.28447",
+      "title": "Nonlinear Trajectory Optimization Models for Energy-Sharing UAV-UGV Systems with Multiple Task Locations",
+      "authors": [
+        "Minsen Yuan",
+        "Amanuel Adane",
+        "James Humann",
+        "Yue Yu"
+      ],
+      "abstract": "Energy-sharing UAV-UGV systems extend the endurance of Uncrewed Aerial Vehicles (UAVs) by leveraging Uncrewed Ground Vehicles (UGVs) as mobile charging stations, enabling persistent autonomy in infrastructure-sparse environments. Trajectory optimization for these systems is often challenging due to UGVs' terrain access constraints and the discrete nature of task scheduling. We propose a smooth nonlinear program model for the joint trajectory optimization for these systems. Unlike existing models, the proposed model allows smooth parameterization of UGVs' terrain access constraints and supports partial UAV recharging. Further, it introduces a smooth approximation of disjunctive constraints that eliminates the need for computationally expensive integer programming and enables efficient solutions via nonlinear programming algorithms. We demonstrate the proposed model on a one-UAV-one-UGV system with multiple task locations. Compared with mixed-integer nonlinear programs, this model reduces the computation time by orders of magnitude.",
+      "date": "2026-03-30",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2603.28447v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.28447",
+      "arxiv_id": "2603.28447v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2603.28218",
+      "title": "Efficient modeling of chemotherapy regimens using mixed-integer linear programming",
+      "authors": [
+        "Alain Billionnet"
+      ],
+      "abstract": "In this article, we focus on determining a minimum-cost treatment program aimed at maintaining the size of a cancerous tumor at a level that allows the patient to live comfortably. At each predetermined point in a treatment horizon, the patient either receives drug treatment or does not. In the first case, the tumor shrinks and its size is multiplied by a constant factor lower than 1; in the second, it grows following an exponential or Gompertz growth law. We first demonstrate that a simple heuristic solution provides an optimal treatment program. We then show that the Gompertz function can be described, like the exponential function, by a simple recurrence relation that does not explicitly depend on time. Thanks to the characteristics of the logarithmic function, this property allows us to formulate the problem as a mixed-integer linear program. This result makes it possible to solve the problem very efficiently using one of the many solvers available to handle this type of program, and above all to consider and solve several extensions to the problem. In particular, we show how to determine which of the optimal equivalent solutions to the initial problem are the most relevant. We also show how to measure the effect of a marginal increase in the treatment budget on patient quality of life. Numerous computational experiments are presented to illustrate these issues.",
+      "date": "2026-03-30",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2603.28218v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2603.28218",
+      "arxiv_id": "2603.28218v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2603.28394",
+      "title": "From Simulation to Deep Learning: Survey on Network Performance Modeling Approaches",
+      "authors": [
+        "Carlos Güemes-Palau",
+        "Miquel Ferriol-Galmés",
+        "Jordi Paillisse-Vilanova",
+        "Pere Barlet-Ros",
+        "Albert Cabellos-Aparicio"
+      ],
+      "abstract": "Network performance modeling is a field that predates early computer networks and the beginning of the Internet. It aims to predict the traffic performance of packet flows in a given network. Its applications range from network planning and troubleshooting to feeding information to network controllers for configuration optimization. Traditional network performance modeling has relied heavily on Discrete Event Simulation (DES) and analytical methods grounded in mathematical theories such as Queuing Theory and Network Calculus. However, as of late, we have observed a paradigm shift, with attempts to obtain efficient Parallel DES, the surge of Machine Learning models, and their integration with other methodologies in hybrid approaches. This has resulted in a great variety of modeling approaches, each with its strengths and often tailored to specific scenarios or requirements. In this paper, we comprehensively survey the relevant network performance modeling approaches for wired networks over the last decades. With this understanding, we also define a taxonomy of approaches, summarizing our understanding of the state-of-the-art and how both technology and the concerns of the research community evolve over time. Finally, we also consider how these models are evaluated, how their different nature results in different evaluation requirements and goals, and how this may complicate their comparison.",
+      "date": "2026-03-30",
+      "source": "arXiv",
+      "source_detail": "cs.NI",
+      "url": "http://arxiv.org/abs/2603.28394v1",
+      "tags": [
+        "cs.NI",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1016/j.comnet.2026.112253",
+      "arxiv_id": "2603.28394v1",
+      "score": 55.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "cordis-101153187",
+      "title": "[HORIZON-MSCA-2023-PF-01] NeurExCo: Synergizing Neural Network Theory and Combinatorial Optimization via Extension Complexity",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101153187",
+      "deadline": "2026-03-31",
+      "date": "2026-03-24",
+      "project_start": "2024-04-01",
+      "project_end": "2026-03-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "ml-for-or"
+      ],
+      "description": "Artificial intelligence is changing our lives. Artificial neural networks are present and entering various fields of modern technology such as medicine, engineering, education and many more. Even a small-scale theoretical understanding of why and how neural networks succeed in practice can have a considerable impact on the future development of such technologies.\n\n            In contrast, combinatorial optimization is a well-established discipline at the intersection of mathematics and computer ",
+      "score": 35.0
+    },
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "cordis-101153187",
+      "title": "[HORIZON-MSCA-2023-PF-01] NeurExCo: Synergizing Neural Network Theory and Combinatorial Optimization via Extension Complexity",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101153187",
+      "deadline": "2026-03-31",
+      "date": "2026-03-24",
+      "project_start": "2024-04-01",
+      "project_end": "2026-03-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "ml-for-or"
+      ],
+      "description": "Artificial intelligence is changing our lives. Artificial neural networks are present and entering various fields of modern technology such as medicine, engineering, education and many more. Even a small-scale theoretical understanding of why and how neural networks succeed in practice can have a considerable impact on the future development of such technologies.\n\n            In contrast, combinatorial optimization is a well-established discipline at the intersection of mathematics and computer ",
+      "score": 35.0
+    },
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 2,
+    "conferences": 0,
+    "opportunities": 2,
+    "total": 12
+  }
+}
