@@ -1,0 +1,317 @@
+{
+  "date": "2026-04-02",
+  "generated_at": "2026-04-02T08:12:55.212019+00:00",
+  "publications": [
+    {
+      "id": "s2-83012f5f1115",
+      "title": "Degradation-Aware Charger Deployment, Battery Sizing, and Charge Scheduling for Electric Bus Fleets",
+      "authors": [
+        "Ehsan Kheirkhah-Rad",
+        "Pierre Le Bodic",
+        "Hao Wang",
+        "Mark Wallace"
+      ],
+      "abstract": "The transition to battery electric buses (BEBs) presents new challenges to the transportation and energy sectors, necessitating meticulous decision-making for a sustainable transition. This article proposes an integrated optimization model to determine the required number of chargers, charger power, grid capacity upgrade, battery sizing, and charging schedules for a heterogeneous fleet of BEBs. The proposed battery-degradation-aware (DA) model captures the interdependencies of charger deployment, battery sizing, and battery degradation to determine the optimal decisions based on an assumed battery degradation behavior. To this end, we assume an arbitrary nonlinear degradation model and develop a tractable mixed-integer linear programming formulation using a decomposition approach and McCormick relaxation. We further account for the uncertainty of electricity prices to design a robust model. The model is then implemented for a real fleet of 78 buses with different trip schedules, and two empirical battery degradation models are employed. The results show that, considering the two degradation models, the DA model reduces the overall costs by 28.6% and 46.8% in comparison with the degradation-neutral (DN) model due to prolonging the estimated cycle life of batteries by 67% and 135% on average.",
+      "date": "2026-04-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/TTE.2025.3639669",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "scheduling",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TTE.2025.3639669",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 70.0
+    },
+    {
+      "id": "s2-341d655124e5",
+      "title": "A Novel Optimal Power Flow Method Considering Interval Uncertainties Under High Renewable Penetration Based on Security Limits Definition",
+      "authors": [
+        "Cong Zhang",
+        "Dapeng Wang",
+        "Wei Zhang",
+        "Lili He",
+        "Ke Zhou",
+        "Jiayong Li",
+        "Lipeng Zhu",
+        "Bin Zhou",
+        "Quan Zhou",
+        "Zhikang Shuai"
+      ],
+      "abstract": "This paper proposes an optimal power flow method considering interval uncertainties (OPFIU) to enhance the security and economy of power systems with high renewable energy penetration. The OPFIU incorporates bi-level interval power flow (BIPF) equations, security and operation constraints, and active power balance across two extreme renewable output scenarios. Firstly, a dynamic-balance optimization scenario method (DOSM) is proposed to solve the BIPF within the OPFIU. The BIPF involves multiple generators in dynamically balancing the system’s active power, thus reducing the conservatism prevalent in existing interval power flow methods. Next, based on the BIPF results, an adaptive security limits definition method (ASLDM) is presented to convert the OPFIU model into a deterministic optimal power flow model, making it more tractable for solution. The ASLDM not only improves the solution efficiency and convergence of existing interval optimization methods, but also provides enhanced reliability in maintaining transmission power within operational limits across a broad spectrum of uncertainty scenarios. Moreover, the ASLDM, unlike robust optimization methods that require convexification of nonlinear AC power flow equations, partially avoids potential issues such as accuracy degradation or solution infeasibility resulting from model simplifications. The Simulation results, compared with robust optimization and chance-constrained programming methods, demonstrate that the proposed ASLDM improves both solution efficiency and convergence in solving the OPFIU problem.",
+      "date": "2026-04-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/TSTE.2025.3602456",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TSTE.2025.3602456",
+      "arxiv_id": "",
+      "citation_count": 20,
+      "score": 65.0
+    },
+    {
+      "id": "s2-591a8ff385e8",
+      "title": "Hybrid Tri-Level Optimal Sizing of Hydrogen Storage for Addressing Long-Term Seasonal Fluctuation of RES",
+      "authors": [
+        "Qianwen Hu",
+        "Gengfeng Li",
+        "Bingkai Huang",
+        "Qiming Yang",
+        "Siyuan Sun",
+        "Z. Bie",
+        "Jianzhong Wu",
+        "Yue Zhou",
+        "Yiheng Bian"
+      ],
+      "abstract": "Time-varying renewable energy sources (RES), influenced by climate conditions, create seasonal power mismatches. Allocation of hydrogen energy storage (HES) can mitigate long-duration seasonal power mismatch caused by load variation, climate variability and seasonal meteorological conditions. However, one single uncertainty set cannot well consider the characteristics of RES uncertainty in different seasons impacted by long-term climate conditions. To address the above challenges and optimally size and allocate HES in power systems, this paper proposes a hybrid tri-level planning framework that integrates RES interannual long-term and seasonal fluctuation, using a combination of distributionally robust optimization (DRO) and adaptive robust optimization (ARO). Specifically, a RES probability distribution ambiguity set under typical climate conditions is constructed using norm constraints, and data-driven DRO is introduced to address RES long-term uncertainty. RES seasonal uncertainty is then adaptively modelled using multiple uncertainty sets based on the seasonal meteorological characteristics of RES, and ARO is proposed to reformulate the lower-level problem for the worst-case scenarios. The proposed framework is solved using the improved column and constraint generation algorithm (C&CG) with duality-free decomposition. Simulations on IEEE 39-bus system and IEEE 118-bus system confirm the effectiveness of the proposed planning framework and solution algorithm.",
+      "date": "2026-04-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/TSTE.2025.3600298",
+      "tags": [
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TSTE.2025.3600298",
+      "arxiv_id": "",
+      "citation_count": 3,
+      "score": 65.0
+    },
+    {
+      "id": "s2-1ea31c296414",
+      "title": "Elitist genetic algorithm improved with parenting fitness parameter",
+      "authors": [
+        "Ouiss Mustapha",
+        "Ettaoufik Abdelaziz",
+        "Marzak Abdelaziz"
+      ],
+      "abstract": "In genetic algorithms, the selection of individuals that will be part of future generations is a critical process of the algorithm. Various strategies exist to select these individuals: the general approach and the elitist approach. The general approach involves replacing the whole current population with the offspring generated so far. The elitist approach introduces a competitive element in which both parents and offspring compete for survival, and only fit individuals will be part of the next generation. While selecting fit individuals helps the algorithm to produce better results, the elitism has a major drawback: the premature convergence, which can limit the algorithm's overall performance. In this article, we compared a typical elitist genetic algorithm and an elitist algorithm improved with the parenting fitness parameter in resolving the vehicle routing problem with drones (VRPD). The parenting fitness parameter helps preserving diversity by retaining parents with high offspring potential despite of their personal fitness. The findings from the study demonstrates that integrating the parenting fitness parameter lead to better results in comparison with a typical elitist genetic algorithm, with relative improvement varying from 1.06% to 10.34% according to the dataset’s size.",
+      "date": "2026-04-01",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.11591/ijece.v16i2.pp883-894",
+      "tags": [
+        "metaheuristics",
+        "vehicle-routing"
+      ],
+      "type": "publication",
+      "doi": "10.11591/ijece.v16i2.pp883-894",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "s2-3c0d4a57e096",
+      "title": "Real-Time Voltage Control in Smart Distribution Network Through Multi-Agent Cooperative Optimization",
+      "authors": [
+        "Na Xu",
+        "Chaoxu Mu",
+        "Liang Ma",
+        "Ke Wang"
+      ],
+      "abstract": "With the increasing renewable energy penetration, maintaining real-time voltage stability becomes increasingly challenging for smart distribution networks due to the stochastic nature of distributed generation and loads. To address this, a fully cooperative multi-agent reinforcement learning (MARL) framework is proposed for distributed voltage control under uncertainty. The problem is formulated as a partially observable Markov decision process (POMDP), where each controllable node operates as an agent with local observations. A security-region-based policy optimization scheme is introduced to adapt control objectives across different voltage ranges. A cooperation advantage function is embedded in the policy update to guide agents toward globally beneficial actions. Additionally, a joint action-value function incorporating a cooperation metric is designed to promote inter-agent coordination during training, particularly under varying volatility across renewable and load nodes. The framework adopts centralized training and decentralized execution (CTDE) paradigm, with daily operation modeled as a training episode. The proposed method is validated on two modified single-phase networks and two unbalanced three-phase distribution network. Simulation results demonstrate that the proposed method achieves robust and stable real-time voltage regulation while enhancing overall system cooperation.",
+      "date": "2026-04-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/TSTE.2025.3598325",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TSTE.2025.3598325",
+      "arxiv_id": "",
+      "citation_count": 1,
+      "score": 60.0
+    },
+    {
+      "id": "s2-43e798bbfb13",
+      "title": "A Probabilistic Approach to Voltage Security Assessment With High Penetration of Renewable Generation",
+      "authors": [
+        "Maiara C. Oliveira",
+        "R. Ramos",
+        "Luís F. Costa-Alberto",
+        "A. Grilo-Pavani"
+      ],
+      "abstract": "The energy transition presents new challenges for power system planning and operation, particularly due to the increasing penetration of intermittent renewable sources. Ensuring a reliable balance between generation and demand requires advanced methodologies that account for variability and uncertainty. This study introduces a novel probabilistic framework for analyzing the Voltage Security Margin (VSM), incorporating spatial and temporal correlations between renewable sources while considering seasonal and hourly variations in operational scenarios. A key feature of the proposed methodology is the identification of rare events that may trigger voltage instability, addressed through an importance sampling optimization based on the Cross-Entropy (CE) method. To validate its accuracy and computational efficiency, the CE-based approach was compared against conventional Monte Carlo (MC) simulations, demonstrating equivalent results with significantly lower computational effort. Moreover, the methodology was applied to the entire large-scale Brazilian power system, further confirming its practical applicability and robustness. The results highlight the importance of integrating probabilistic criteria into stability assessments, enabling a more comprehensive and reliable evaluation of voltage security under uncertainty. By enhancing renewable generation characterization and risk assessment, the proposed approach supports more secure and flexible power system operation amid increasing variability.",
+      "date": "2026-04-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/TSTE.2025.3610523",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TSTE.2025.3610523",
+      "arxiv_id": "",
+      "citation_count": 1,
+      "score": 60.0
+    },
+    {
+      "id": "s2-4853573c57dd",
+      "title": "Energy Management for Island Electro-Hydrogen Microgrid via Physically-Bounded Distributionally Robust Chance-Constrained Approach",
+      "authors": [
+        "J. Zhai",
+        "Yi Shen",
+        "Zhongjian Kang",
+        "Zhi Wu",
+        "Zhigang Li",
+        "Bin Li",
+        "Jianxiao Wang"
+      ],
+      "abstract": "Island electro-hydrogen microgrid with offshore wind power generation is a promising way to promote the development of marine economy. Data-driven distributionally robust chance-constrained (DRCC) offers a risk-aware framework when the distribution of uncertainties is unknown. However, the general reformulation for DRCC may result in a sub-optimal or an over-conservative solution. This paper focuses on the coordinated energy management of island electro-hydrogen microgrid. First, a comprehensive hydrogen-related model is proposed that incorporates dynamic offshore hydrogen production, storage, and usage, where the multiphysics-aware offshore hydrogen production model for alkaline water electrolysis is introduced. Then, a physically-bounded DRCC model is developed to account for the uncertainty of offshore wind power. An improved metric-based ambiguity set is introduced by enforcing physical bounds on the uncertainty while preserving the exactness, resulting in a bilinear programming problem. Finally, an iterative sequential convex optimization algorithm is tailored to solve the resulting physically-bounded DRCC model with the exact bilinear form and reduce the solution conservatism. Numerical results illustrate the effectiveness of the proposed approach.",
+      "date": "2026-04-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/TSTE.2025.3625954",
+      "tags": [
+        "linear-programming",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TSTE.2025.3625954",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "s2-aca941b8b0b5",
+      "title": "A Nonlinear Drivetrain Torsional Oscillation Damper for WTGs: Robust Rejection of Large Disturbances With Balanced Noise Immunity",
+      "authors": [
+        "Bi Liu",
+        "Qi Huang",
+        "Lijia Xu",
+        "Weihao Hu"
+      ],
+      "abstract": "Drivetrain torsional oscillations in wind turbine generators (WTGs) challenge power system reliability and stability due to nonlinearities and uncertainties, especially under large disturbances, while measurement noise further degrades damper performance. This paper develops a nonlinear drivetrain torsional oscillation damper (DTOD) within an active disturbance rejection control (ADRC) framework. To adapt to its standard form, the nonlinear drivetrain dynamics of grid-connected WTG are exactly transformed into a second-order Brunovsky canonical form using differential homeomorphism coordinate transformation. DTOD parameters, including those of the extended state observer (ESO) and nonlinear state error feedback (NLSEF), are Pareto-optimally tuned through normalized multi-objective frequency-domain optimization, enhancing the robust rejection of large disturbance while balancing the trade-off with noise immunity. The fully decentralized DTOD relies only on local measurements, supporting scalable deployment across large wind farms. Simulation results under various large disturbance scenarios in grid-connected single and multiple wind farms validate the effectiveness, advantages, robustness, and scalability of the proposed nonlinear WTG DTOD.",
+      "date": "2026-04-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/TSTE.2025.3614712",
+      "tags": [
+        "stochastic",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TSTE.2025.3614712",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2604.01098",
+      "title": "Approximating Pareto Frontiers in Stochastic Multi-Objective Optimization via Hashing and Randomization",
+      "authors": [
+        "Jinzhao Li",
+        "Nan Jiang",
+        "Yexiang Xue"
+      ],
+      "abstract": "Stochastic Multi-Objective Optimization (SMOO) is critical for decision-making trading off multiple potentially conflicting objectives in uncertain environments. SMOO aims at identifying the Pareto frontier, which contains all mutually non-dominating decisions. The problem is highly intractable due to the embedded probabilistic inference, such as computing the marginal, posterior probabilities, or expectations. Existing methods, such as scalarization, sample average approximation, and evolutionary algorithms, either offer arbitrarily loose approximations or may incur prohibitive computational costs. We propose XOR-SMOO, a novel algorithm that with probability $1-δ$, obtains $γ$-approximate Pareto frontiers ($γ>1$) for SMOO by querying an SAT oracle poly-log times in $γ$ and $δ$. A $γ$-approximate Pareto frontier is only below the true frontier by a fixed, multiplicative factor $γ$. Thus, XOR-SMOO solves highly intractable SMOO problems (\\#P-hard) with only queries to SAT oracles while obtaining tight, constant factor approximation guarantees. Experiments on real-world road network strengthening and supply chain design problems demonstrate that XOR-SMOO outperforms several baselines in identifying Pareto frontiers that have higher objective values, better coverage of the optimal solutions, and the solutions found are more evenly distributed. Overall, XOR-SMOO significantly enhanced the practicality and reliability of SMOO solvers.",
+      "date": "2026-04-01",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.01098v1",
+      "tags": [
+        "cs.LG",
+        "metaheuristics",
+        "stochastic",
+        "supply-chain",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.01098",
+      "arxiv_id": "2604.01098v1",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s10957-026-02965-9",
+      "title": "A New Constant-Rank-Type Condition Related to MFCQ and Local Error Bounds",
+      "authors": [
+        "Andreani, R.",
+        "Rosa, M.",
+        "Secchin, L."
+      ],
+      "abstract": "Abstract\n                  \n                    Constraint qualifications (CQs) are fundamental for understanding the geometry of feasible sets and for ensuring the validity of optimality conditions in nonlinear programming. A known idea is that constant-rank type CQs allow one to modify the description of the feasible set, by eliminating redundant constraints, so that the Mangasarian-Fromovitz CQ (MFCQ) holds. Traditionally, such modifications, called\n                    reductions\n                    here, have served primarily as auxiliary tools to connect existing CQs. In this work, we adopt a different viewpoint: we treat the very existence of such reductions as a CQ in itself. We study these “reduction-induced” CQs in a general framework, relating them not only to MFCQ, but also to arbitrary CQs. Moreover, we establish their connection with the local error bound (LEB) property. Building on this, we introduce a relaxed variant of the constant rank CQ known as\n                    constant rank of the subspace component\n                    (CRSC). This new CQ preserves the main geometric features of CRSC, guarantees LEB and the existence of reductions to MFCQ.",
+      "date": "2026-04-01",
+      "source": "Journal of Optimization Theory and Applications",
+      "source_detail": "Journal of Optimization Theory and Applications",
+      "url": "https://doi.org/10.1007/s10957-026-02965-9",
+      "tags": [
+        "linear-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10957-026-02965-9",
+      "score": 55.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}

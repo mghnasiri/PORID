@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-01T08:19:41.481431+00:00",
+  "generated_at": "2026-04-02T08:12:55.027374+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1560,
+      "github_stars": 1561,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,7 +345,7 @@
         }
       ],
       "recent_changes": "## Code changes\r\n\r\nFollowing PR [#2812](https://github.com/ERGO-Code/HiGHS/pull/2812),\r\nHiGHS can read LP files with keywords as constraint names.\r\n\r\nFollowing PR [#2818](https://github.com/ERGO-Code/",
-      "github_open_issues": 157,
+      "github_open_issues": 156,
       "github_recent_prs": [
         "Check dynamism in Chvatal-Gomory strengthening",
         "Allow callbacks to persist when using getIis",
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 578,
+      "github_stars": 581,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13290,
+      "github_stars": 13295,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,7 +569,7 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 86,
+      "github_open_issues": 85,
       "github_recent_prs": [
         "cmake: use OVERRIDE_FIND_PACKAGE when building ZLIB",
         "build(deps): bump protobuf from 6.32.0 to 6.33.5 in /bazel in the pip group across 1 directory",
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6161,
-      "github_open_issues": 191,
+      "github_stars": 6163,
+      "github_open_issues": 192,
       "github_recent_prs": [
+        "Fix clarabel keyerror 3276",
         "Rewrite MOSEK interface: ACC API + DualizeConeProg for PSD",
         "docs: add n-dimensional portfolio Marimo example (#2618)",
         "Add native RSOC support to MOSEK and use RSOC in reductions",
-        "Bump github/codeql-action from 4.33.0 to 4.35.1",
-        "Support PSD matrices in sparse_cholesky"
+        "Bump github/codeql-action from 4.33.0 to 4.35.1"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,7 +1319,7 @@
         "metaheuristic"
       ],
       "recent_changes": "This is the first quarterly maintenance update of Timefold Solver 1.x. With all forward development having shifted towards Timefold Solver 2.0.0 (to be released later this month), this release brings ",
-      "github_stars": 1617,
+      "github_stars": 1619,
       "github_open_issues": 73,
       "github_recent_prs": [
         "feat: improve unassign move generation",
@@ -1385,13 +1385,13 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
       "github_stars": 2425,
-      "github_open_issues": 350,
+      "github_open_issues": 353,
       "github_recent_prs": [
-        "Improved `ConstraintData.equality`, relational expression generation",
-        "Use Hessian approximation in CyIpopt when grey-box without Hessian is present",
-        "docs: improve documentation for mutable vs immutable Params",
-        "docs: improve documentation for mutable vs immutable Params",
-        "KKT Transform Code Refactor"
+        "Temporarily pin to PyPy 7.3.20",
+        "Add core symbolic gradient support to Pyomo.DoE",
+        "April 2026 typos update",
+        "Add pre-commit hooks for black formatting and spell-checking",
+        "Improved `ConstraintData.equality`, relational expression generation"
       ],
       "pypi_monthly_downloads": -28
     },
