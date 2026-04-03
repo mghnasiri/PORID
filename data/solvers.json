@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-02T08:12:55.027374+00:00",
+  "generated_at": "2026-04-03T08:09:45.310953+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1561,
+      "github_stars": 1566,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "## Code changes\r\n\r\nFollowing PR [#2812](https://github.com/ERGO-Code/HiGHS/pull/2812),\r\nHiGHS can read LP files with keywords as constraint names.\r\n\r\nFollowing PR [#2818](https://github.com/ERGO-Code/",
-      "github_open_issues": 156,
+      "github_open_issues": 158,
       "github_recent_prs": [
+        "Updated `FEATURES.md`",
+        "HiPO parameter tuning",
         "Check dynamism in Chvatal-Gomory strengthening",
         "Allow callbacks to persist when using getIis",
-        "Hipdlp format plus presolve",
-        "Presolve profile",
-        "bump: update bazel dependencies in MODULE.bazel"
+        "Hipdlp format plus presolve"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -361,8 +361,8 @@
       "vendor": "Zuse Institute Berlin (ZIB)",
       "website": "https://www.scipopt.org",
       "docs_url": "https://www.scipopt.org/doc/html/",
-      "current_version": "10.0.1",
-      "release_date": "2026-02-03",
+      "current_version": "10.0.2",
+      "release_date": "2026-04-02",
       "license_type": "open-source",
       "license_spdx": "Apache-2.0",
       "open_source": true,
@@ -457,7 +457,7 @@
           "source": "SCIP annual report"
         }
       ],
-      "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- fixed that parameters passed on as variadic arguments to `SCIPsolveNLP()` and `SCIPsolveNlpi()` were ignored when compiling with MS compilers without `-Zc:preprocessor`\r\n- ",
+      "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- an error is now produced if the emphasis settings in parameter files are wrong\r\n- propagate focus lower bound to child nodes to avoid outdated global lower bound\r\n- set sma",
       "github_open_issues": 18,
       "github_recent_prs": [
         "Fix endianness issue in dtoa.cpp",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13295,
+      "github_stars": 13302,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,7 +569,7 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 85,
+      "github_open_issues": 90,
       "github_recent_prs": [
         "cmake: use OVERRIDE_FIND_PACKAGE when building ZLIB",
         "build(deps): bump protobuf from 6.32.0 to 6.33.5 in /bazel in the pip group across 1 directory",
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6163,
-      "github_open_issues": 192,
+      "github_stars": 6165,
+      "github_open_issues": 193,
       "github_recent_prs": [
+        "Broke long lines",
         "Fix clarabel keyerror 3276",
         "Rewrite MOSEK interface: ACC API + DualizeConeProg for PSD",
         "docs: add n-dimensional portfolio Marimo example (#2618)",
-        "Add native RSOC support to MOSEK and use RSOC in reductions",
-        "Bump github/codeql-action from 4.33.0 to 4.35.1"
+        "Add native RSOC support to MOSEK and use RSOC in reductions"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1724,
+      "github_stars": 1725,
       "github_open_issues": 13,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "This is the first quarterly maintenance update of Timefold Solver 1.x. With all forward development having shifted towards Timefold Solver 2.0.0 (to be released later this month), this release brings ",
-      "github_stars": 1619,
-      "github_open_issues": 73,
+      "github_stars": 1620,
+      "github_open_issues": 75,
       "github_recent_prs": [
-        "feat: improve unassign move generation",
-        "deps: bump the regular group with 2 updates",
-        "deps: bump org.springframework.boot:spring-boot-dependencies from 4.0.4 to 4.0.5 in the spring group",
-        "deps: bump the quarkus group with 4 updates",
-        "perf: improve runtime performance of exhaustive search"
+        "Refactor pom.xml by cleaning up and adding validation",
+        "chore: upgrade GraalVM plugin",
+        "fix: reset internal iterator state",
+        "chore: remove an outdated TODO",
+        "feat: improve unassign move generation"
       ]
     },
     {
@@ -1384,14 +1384,14 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
-      "github_stars": 2425,
+      "github_stars": 2427,
       "github_open_issues": 353,
       "github_recent_prs": [
+        "Update actions; exclude mathworks from URL checks",
         "Temporarily pin to PyPy 7.3.20",
         "Add core symbolic gradient support to Pyomo.DoE",
         "April 2026 typos update",
-        "Add pre-commit hooks for black formatting and spell-checking",
-        "Improved `ConstraintData.equality`, relational expression generation"
+        "Add pre-commit hooks for black formatting and spell-checking"
       ],
       "pypi_monthly_downloads": -28
     },

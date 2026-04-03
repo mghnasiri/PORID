@@ -1,0 +1,310 @@
+{
+  "date": "2026-04-03",
+  "generated_at": "2026-04-03T08:09:45.495347+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2604.02131",
+      "title": "Intelligent Cloud Orchestration: A Hybrid Predictive and Heuristic Framework for Cost Optimization",
+      "authors": [
+        "Heet Nagoriya",
+        "Komal Rohit"
+      ],
+      "abstract": "Cloud computing allows scalable resource provisioning, but dynamic workload changes often lead to higher costs due to over-provisioning. Machine learning (ML) approaches, such as Long Short-Term Memory (LSTM) networks, are effective for predicting workload patterns at a higher level, but they can introduce delays during sudden traffic spikes. In contrast, mathematical heuristics like Game Theory provide fast and reliable scheduling decisions, but they do not account for future workload changes. To address this trade-off, this paper proposes a hybrid orchestration framework that combines LSTM-based predictive scaling with heuristic task allocation. The results show that this approach reduces infrastructure costs close to ML-based models while maintaining fast response times similar to heuristic methods. This work presents a practical approach for improving cost efficiency in cloud resource management.",
+      "date": "2026-04-02",
+      "source": "arXiv",
+      "source_detail": "cs.DC",
+      "url": "http://arxiv.org/abs/2604.02131v1",
+      "tags": [
+        "cs.DC",
+        "scheduling",
+        "ml-for-or",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.02131",
+      "arxiv_id": "2604.02131v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.02151",
+      "title": "Auction-Based Online Policy Adaptation for Evolving Objectives",
+      "authors": [
+        "Guruprerana Shabadi",
+        "Kaushik Mallik"
+      ],
+      "abstract": "We consider multi-objective reinforcement learning problems where objectives come from an identical family -- such as the class of reachability objectives -- and may appear or disappear at runtime. Our goal is to design adaptive policies that can efficiently adjust their behaviors as the set of active objectives changes. To solve this problem, we propose a modular framework where each objective is supported by a selfish local policy, and coordination is achieved through a novel auction-based mechanism: policies bid for the right to execute their actions, with bids reflecting the urgency of the current state. The highest bidder selects the action, enabling a dynamic and interpretable trade-off among objectives. Going back to the original adaptation problem, when objectives change, the system adapts by simply adding or removing the corresponding policies. Moreover, as objectives arise from the same family, identical copies of a parameterized policy can be deployed, facilitating immediate adaptation at runtime. We show how the selfish local policies can be computed by turning the problem into a general-sum game, where the policies compete against each other to fulfill their own objectives. To succeed, each policy must not only optimize its own objective, but also reason about the presence of other goals and learn to produce calibrated bids that reflect relative priority. In our implementation, the policies are trained concurrently using proximal policy optimization (PPO). We evaluate on Atari Assault and a gridworld-based path-planning task with dynamic targets. Our method achieves substantially better performance than monolithic policies trained with PPO.",
+      "date": "2026-04-02",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.02151v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "multi-objective",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.02151",
+      "arxiv_id": "2604.02151v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.02139",
+      "title": "Application of parametric Shallow Recurrent Decoder Network to magnetohydrodynamic flows in liquid metal blankets of fusion reactors",
+      "authors": [
+        "M. Lo Verso",
+        "C. Introini",
+        "E. Cervi",
+        "L. Savoldi",
+        "J. N. Kutz",
+        "A. Cammi"
+      ],
+      "abstract": "Magnetohydrodynamic (MHD) phenomena play a pivotal role in the design and operation of nuclear fusion systems, where electrically conducting fluids (such as liquid metals or molten salts employed in reactor blankets) interact with magnetic fields of varying intensity and orientation, influencing the resulting flow dynamics. The numerical solution of MHD models entails the resolution of highly nonlinear, multiphysics systems of equations, which can become computationally demanding, particularly in multi-query, parametric, or real-time contexts. This study investigates a fully data-driven framework for MHD state reconstruction that integrates dimensionality reduction through Singular Value Decomposition (SVD) with the SHallow REcurrent Decoder (SHRED), a neural network architecture designed to reconstruct the full spatio-temporal state from sparse time-series measurements of selected observables, including previously unseen parametric configurations. The SHRED methodology is applied to a three-dimensional geometry representative of a portion of a WCLL blanket cell, in which lead-lithium flows around a water-cooled tube. Multiple magnetic field configurations are examined, including constant toroidal fields, combined toroidal-poloidal fields, and time-dependent magnetic fields. Across all considered scenarios, SHRED achieves high reconstruction accuracy, robustness, and generalization to magnetic field intensities, orientations, and temporal evolutions not seen during training. Notably, in the presence of time-varying magnetic fields, the model accurately infers the temporal evolution of the magnetic field itself using temperature measurements alone. Overall, the findings identify SHRED as a computationally efficient, data-driven, and flexible approach for MHD state reconstruction, with significant potential for real-time monitoring, diagnostics and control in fusion reactor systems.",
+      "date": "2026-04-02",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.02139v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.02139",
+      "arxiv_id": "2604.02139v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07140-x",
+      "title": "Sustainability and Financial Risk: the Green Mean-to-CVaR Efficient Frontier",
+      "authors": [
+        "Di Felice, V.",
+        "Morelli, G."
+      ],
+      "abstract": "Abstract\n                  \n                    In light of the recent policy developments, such as the 2015\n                    Paris Agreements\n                    , which steers financial markets towards more sustainable investments, understanding the risk-return dynamics of environmentally focused portfolios becomes crucial. This research proposes a new methodological approach to quantify the trade-off between sustainability and financial performance, the Green Mean-to-CVaR frontier. Measuring the environmental impact using well established environmental metrics, such as the E (Environmental) score and the Greenhouse gas (GHG) emissions, we explore this topic in the mean-Conditional Value at Risk (CVaR) space where we derive the green Mean-to-CVaR (MtC) efficient frontier. We focus our analysis on the European stock market, using data from the STOXX Europe 600 for the period 03/01/2007 30/12/2019. We find that portfolios with higher E score (lower GHG) have lower CVaR and lower expected return. Above a certain threshold of the green metric only inefficient portfolios are obtained. The sectoral analysis confirms the findings across all sectors except Energy, where higher E scores (lower GHG) correspond to increased risk.",
+      "date": "2026-04-02",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07140-x",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07140-x",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.02276",
+      "title": "De Jure: Iterative LLM Self-Refinement for Structured Extraction of Regulatory Rules",
+      "authors": [
+        "Keerat Guliani",
+        "Deepkamal Gill",
+        "David Landsman",
+        "Nima Eshraghi",
+        "Krishna Kumar",
+        "Lovedeep Gondara"
+      ],
+      "abstract": "Regulatory documents encode legally binding obligations that LLM-based systems must respect. Yet converting dense, hierarchically structured legal text into machine-readable rules remains a costly, expert-intensive process. We present De Jure, a fully automated, domain-agnostic pipeline for extracting structured regulatory rules from raw documents, requiring no human annotation, domain-specific prompting, or annotated gold data. De Jure operates through four sequential stages: normalization of source documents into structured Markdown; LLM-driven semantic decomposition into structured rule units; multi-criteria LLM-as-a-judge evaluation across 19 dimensions spanning metadata, definitions, and rule semantics; and iterative repair of low-scoring extractions within a bounded regeneration budget, where upstream components are repaired before rule units are evaluated. We evaluate De Jure across four models on three regulatory corpora spanning finance, healthcare, and AI governance. On the finance domain, De Jure yields consistent and monotonic improvement in extraction quality, reaching peak performance within three judge-guided iterations. De Jure generalizes effectively to healthcare and AI governance, maintaining high performance across both open- and closed-source models. In a downstream compliance question-answering evaluation via RAG, responses grounded in De Jure extracted rules are preferred over prior work in 73.8% of cases at single-rule retrieval depth, rising to 84.0% under broader retrieval, confirming that extraction fidelity translates directly into downstream utility. These results demonstrate that explicit, interpretable evaluation criteria can substitute for human annotation in complex regulatory domains, offering a scalable and auditable path toward regulation-grounded LLM alignment.",
+      "date": "2026-04-02",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2604.02276v1",
+      "tags": [
+        "cs.AI",
+        "healthcare-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.02276",
+      "arxiv_id": "2604.02276v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.02270",
+      "title": "Crystalite: A Lightweight Transformer for Efficient Crystal Modeling",
+      "authors": [
+        "Tin Hadži Veljković",
+        "Joshua Rosenthal",
+        "Ivor Lončarić",
+        "Jan-Willem van de Meent"
+      ],
+      "abstract": "Generative models for crystalline materials often rely on equivariant graph neural networks, which capture geometric structure well but are costly to train and slow to sample. We present Crystalite, a lightweight diffusion Transformer for crystal modeling built around two simple inductive biases. The first is Subatomic Tokenization, a compact chemically structured atom representation that replaces high-dimensional one-hot encodings and is better suited to continuous diffusion. The second is the Geometry Enhancement Module (GEM), which injects periodic minimum-image pair geometry directly into attention through additive geometric biases. Together, these components preserve the simplicity and efficiency of a standard Transformer while making it better matched to the structure of crystalline materials. Crystalite achieves state-of-the-art results on crystal structure prediction benchmarks, and de novo generation performance, attaining the best S.U.N. discovery score among the evaluated baselines while sampling substantially faster than geometry-heavy alternatives.",
+      "date": "2026-04-02",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.02270v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.02270",
+      "arxiv_id": "2604.02270v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.02226",
+      "title": "When to ASK: Uncertainty-Gated Language Assistance for Reinforcement Learning",
+      "authors": [
+        "Juarez Monteiro",
+        "Nathan Gavenski",
+        "Gianlucca Zuin",
+        "Adriano Veloso"
+      ],
+      "abstract": "Reinforcement learning (RL) agents often struggle with out-of-distribution (OOD) scenarios, leading to high uncertainty and random behavior. While language models (LMs) contain valuable world knowledge, larger ones incur high computational costs, hindering real-time use, and exhibit limitations in autonomous planning. We introduce Adaptive Safety through Knowledge (ASK), which combines smaller LMs with trained RL policies to enhance OOD generalization without retraining. ASK employs Monte Carlo Dropout to assess uncertainty and queries the LM for action suggestions only when uncertainty exceeds a set threshold. This selective use preserves the efficiency of existing policies while leveraging the language model's reasoning in uncertain situations. In experiments on the FrozenLake environment, ASK shows no improvement in-domain, but demonstrates robust navigation in transfer tasks, achieving a reward of 0.95. Our findings indicate that effective neuro-symbolic integration requires careful orchestration rather than simple combination, highlighting the need for sufficient model scale and effective hybridization mechanisms for successful OOD generalization.",
+      "date": "2026-04-02",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2604.02226v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.02226",
+      "arxiv_id": "2604.02226v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.02211",
+      "title": "Multi-Agent Video Recommenders: Evolution, Patterns, and Open Challenges",
+      "authors": [
+        "Srivaths Ranganathan",
+        "Abhishek Dharmaratnakar",
+        "Anushree Sinha",
+        "Debanshu Das"
+      ],
+      "abstract": "Video recommender systems are among the most popular and impactful applications of AI, shaping content consumption and influencing culture for billions of users. Traditional single-model recommenders, which optimize static engagement metrics, are increasingly limited in addressing the dynamic requirements of modern platforms. In response, multi-agent architectures are redefining how video recommender systems serve, learn, and adapt to both users and datasets. These agent-based systems coordinate specialized agents responsible for video understanding, reasoning, memory, and feedback, to provide precise, explainable recommendations. In this survey, we trace the evolution of multi-agent video recommendation systems (MAVRS). We combine ideas from multi-agent recommender systems, foundation models, and conversational AI, culminating in the emerging field of large language model (LLM)-powered MAVRS. We present a taxonomy of collaborative patterns and analyze coordination mechanisms across diverse video domains, ranging from short-form clips to educational platforms. We discuss representative frameworks, including early multi-agent reinforcement learning (MARL) systems such as MMRF and recent LLM-driven architectures like MACRec and Agent4Rec, to illustrate these patterns. We also outline open challenges in scalability, multimodal understanding, incentive alignment, and identify research directions such as hybrid reinforcement learning-LLM systems, lifelong personalization and self-improving recommender systems.",
+      "date": "2026-04-02",
+      "source": "arXiv",
+      "source_detail": "cs.IR",
+      "url": "http://arxiv.org/abs/2604.02211v1",
+      "tags": [
+        "cs.IR",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.02211",
+      "arxiv_id": "2604.02211v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.02207",
+      "title": "Blinded Radiologist and LLM-Based Evaluation of LLM-Generated Japanese Translations of Chest CT Reports: Comparative Study",
+      "authors": [
+        "Yosuke Yamagishi",
+        "Atsushi Takamatsu",
+        "Yasunori Hamaguchi",
+        "Tomohiro Kikuchi",
+        "Shouhei Hanaoka",
+        "Takeharu Yoshikawa",
+        "Osamu Abe"
+      ],
+      "abstract": "Background: Accurate translation of radiology reports is important for multilingual research, clinical communication, and radiology education, but the validity of LLM-based evaluation remains unclear. Objective: To evaluate the educational suitability of LLM-generated Japanese translations of chest CT reports and compare radiologist assessments with LLM-as-a-judge evaluations. Methods: We analyzed 150 chest CT reports from the CT-RATE-JPN validation set. For each English report, a human-edited Japanese translation was compared with an LLM-generated translation by DeepSeek-V3.2. A board-certified radiologist and a radiology resident independently performed blinded pairwise evaluations across 4 criteria: terminology accuracy, readability, overall quality, and radiologist-style authenticity. In parallel, 3 LLM judges (DeepSeek-V3.2, Mistral Large 3, and GPT-5) evaluated the same pairs. Agreement was assessed using QWK and percentage agreement. Results: Agreement between radiologists and LLM judges was near zero (QWK=-0.04 to 0.15). Agreement between the 2 radiologists was also poor (QWK=0.01 to 0.06). Radiologist 1 rated terminology as equivalent in 59% of cases and favored the LLM translation for readability (51%) and overall quality (51%). Radiologist 2 rated readability as equivalent in 75% of cases and favored the human-edited translation for overall quality (40% vs 21%). All 3 LLM judges strongly favored the LLM translation across all criteria (70%-99%) and rated it as more radiologist-like in >93% of cases. Conclusions: LLM-generated translations were often judged natural and fluent, but the 2 radiologists differed substantially. LLM-as-a-judge showed strong preference for LLM output and negligible agreement with radiologists. For educational use of translated radiology reports, automated LLM-based evaluation alone is insufficient; expert radiologist review remains important.",
+      "date": "2026-04-02",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2604.02207v1",
+      "tags": [
+        "cs.AI",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.02207",
+      "arxiv_id": "2604.02207v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.02158",
+      "title": "A Practical Two-Stage Framework for GPU Resource and Power Prediction in Heterogeneous HPC Systems",
+      "authors": [
+        "Beste Oztop",
+        "Dhruva Kulkarni",
+        "Zhengji Zhao",
+        "Ayse Kivilcim Coskun",
+        "Kadidia Konate"
+      ],
+      "abstract": "Efficient utilization of GPU resources and power has become critical with the growing demand for GPUs in high-performance computing (HPC). In this paper, we analyze GPU utilization and GPU memory utilization, as well as the power consumption of the Vienna ab initio Simulation Package (VASP), using the Slurm workload manager historical logs and GPU performance metrics collected by NVIDIA's Data Center GPU Manager (DCGM). VASP is a widely used materials science application on Perlmutter at NERSC, an HPE Cray EX system based on NVIDIA A100 GPUs. Using our insights from the resource utilization analysis of VASP applications, we propose a resource prediction framework to predict the average GPU power, maximum GPU utilization, and maximum GPU memory utilization values of heterogeneous HPC system applications to enable more efficient scheduling decisions and power-aware system operation. Our prediction framework consists of two stages: 1) using only the Slurm accounting logs as training data and 2) augmenting the training data with historical GPU profiling metrics collected with DCGM. The maximum GPU utilization predictions using only the Slurm submission features achieve up to 97% accuracy. Furthermore, features engineered from GPU-compute and memory activity metrics exhibit good correlations with average power utilization, and our runtime power usage prediction experiments result in up to 92% prediction accuracy. These findings demonstrate the effectiveness of DCGM metrics in capturing application characteristics and highlight their potential for developing predictive models to support dynamic power management in HPC systems.",
+      "date": "2026-04-02",
+      "source": "arXiv",
+      "source_detail": "cs.DC",
+      "url": "http://arxiv.org/abs/2604.02158v1",
+      "tags": [
+        "cs.DC",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.02158",
+      "arxiv_id": "2604.02158v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
