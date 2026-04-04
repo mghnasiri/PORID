@@ -1,0 +1,281 @@
+{
+  "date": "2026-04-04",
+  "generated_at": "2026-04-04T07:53:26.936153+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1287-trsc.2025.0180",
+      "title": "Demand-Driven Hub Network Design Under Uncertainty for Less-Than-Truckload Carriers",
+      "authors": [
+        "Li, H.",
+        "Taherkhani, G.",
+        "Hewitt, M.",
+        "Alumur, S."
+      ],
+      "abstract": "We consider a planning problem for freight transportation carriers that seek to profitably match supply with demand while recognizing uncertainty in shipment volumes. On the supply side, the problem determines transportation network design decisions regarding hub locations and the number of vehicles to be dispatched within the network in each period of the planning horizon. On the demand side, the problem incorporates the carrier’s ability to expand its service coverage by selectively accepting additional customer demands beyond its existing contractual base. Furthermore, although some of these additional customers seek a long-term commitment from the carrier, others are transactional and only require the transportation of a single set of shipments. We refer to this problem as the demand-driven hub network design under uncertainty problem and formulate it as a two-stage stochastic program. Further, we develop an enhanced Benders decomposition–based solution method for solving instances of this model. The solution methodology is inspired by partial Benders decomposition, leveraging a problem reformulation that embeds subsets of subproblem variables and constraints into the master problem while also incorporating valid inequalities to strengthen the formulation. We illustrate with an extensive computational study that the proposed method outperforms adaptations of benchmarks proposed for similar problems. We validate the benefits of solving the proposed model, which integrates decisions that have not yet been jointly modeled, with an analysis based on sample average approximation.\n                  Funding: This work was supported by the Natural Sciences and Engineering Research Council of Canada [Grant RGPIN-2022-03523].",
+      "date": "2026-04-03",
+      "source": "Transportation Science",
+      "source_detail": "Transportation Science",
+      "url": "https://doi.org/10.1287/trsc.2025.0180",
+      "tags": [
+        "network-optimization",
+        "stochastic",
+        "facility-location",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1287/trsc.2025.0180",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261443194",
+      "title": "EXPRESS: Will Machines Take Over? Algorithms for Human-Machine Collaborative Decision Making in Healthcare",
+      "authors": [
+        "Ahsen, M.",
+        "Ayvaci, M.",
+        "Mookerjee, R."
+      ],
+      "abstract": "Despite significant advancements in predictive artificial intelligence (AI), organizations continue to grapple with determining the most effective integration of AI into their operations, particularly in combining AI with human capabilities in task execution. This paper introduces a diagnostic system aimed at minimizing costs while maintaining patient safety in hospitals by efficiently allocating mammography interpretation tasks between AI algorithms and radiologists. The optimal diagnostic system employs algorithm-generated risk scores for mammograms to determine if additional assessment by a radiologist is necessary. It evaluates the costs of two approaches—automation, where AI completely replaces human interpretation, and delegation, where AI and radiologists share interpretation tasks–compared to the current expert-alone strategy. When AI performance does not exceed that of radiologists, the optimal design is a simple two-threshold policy: AI recommends no follow-up for low-risk cases, recommends follow-up for high-risk cases, and delegates ambiguous cases in between to radiologists; the thresholds are analytically derived and state-independent. This two-threshold policy is state-independent and that optimal thresholds are not contingent on the diagnostic system’s prior history. We demonstrate our system’s performance by back-testing against real-life scenarios, utilizing data from a mammography AI contest and real-world cost and performance metrics. Backtesting demonstrates potential cost savings of up to 20.9% compared to the expert-alone approach. Beyond radiology imaging, our work holds significant implications for the design of workflows in the AI era and human-machine collaboration contexts.",
+      "date": "2026-04-03",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261443194",
+      "tags": [
+        "stochastic",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261443194",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2023.01486",
+      "title": "Private Equity, Consumers, and Competition: Evidence from the Nursing Home Industry",
+      "authors": [
+        "Gandhi, A.",
+        "Song, Y.",
+        "Upadrashta, P."
+      ],
+      "abstract": "This paper studies how product market competition shapes the impact of private equity (PE) acquisitions on consumers. We examine nursing home buyouts and observe that PE-owned facilities exhibit greater competitive sensitivity: competing more aggressively when competitive incentives are strong and exploiting market power more aggressively when competitive incentives are weak. We find that PE-owned facilities are more sensitive to local market competition—even when comparing effects only across facilities purchased as part of the same acquisition—and are more responsive to a pro-competitive policy helping consumers compare facilities. This suggests that regulators should attend to the competitive sensitivity of acquirers and the concentration of markets where acquisitions occur, as well as consider pro-competitive policies to mitigate or even reverse PE’s potentially adverse consequences.\n                  This paper was accepted by Carrie Chan, healthcare management.\n                  Funding: This work was supported by the UCLA Price Center for Entrepreneurship and Innovation and the UCLA Fink Center for Finance and Investment.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2023.01486 .",
+      "date": "2026-04-03",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2023.01486",
+      "tags": [
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2023.01486",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2025.1446",
+      "title": "MathOptAI.jl: Embed Trained Machine-Learning Predictors into JuMP Models",
+      "authors": [
+        "Dowson, O.",
+        "Parker, R.",
+        "Bent, R."
+      ],
+      "abstract": "We present MathOptAI.jl, an open-source Julia library for embedding trained machine-learning predictors into a JuMP model. MathOptAI.jl can embed a wide variety of neural networks, decision trees, and Gaussian Processes into a larger mathematical optimization model. MathOptAI.jl supports a range of Julia-based machine-learning libraries such as Lux.jl and Flux.jl. In addition, MathOptAI.jl uses Julia’s Python interface to provide support for PyTorch models. When the PyTorch support is combined with MathOptAI.jl’s gray-box formulation, the function, Jacobian, and Hessian evaluations associated with the PyTorch model are offloaded to the GPU in Python, whereas the rest of the nonlinear oracles are evaluated on the CPU in Julia.\n                  History: Accepted by Ted Ralphs, Area Editor for Software Tools.\n                  Funding: Funding was provided by the Los Alamos National Laboratory LDRD program as part of the Artimis project (approved for unlimited release: LA-UR-25-24963).\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2025.1446 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2025.1446 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-04-03",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2025.1446",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2025.1446",
+      "score": 45.0,
+      "mentions_solvers": [
+        "JuMP"
+      ]
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2024.06732",
+      "title": "Do Carbon Emissions Affect Stock Returns? Causal Evidence from a Supreme Court Ruling",
+      "authors": [
+        "Lyu, X.",
+        "Shan, C.",
+        "Tang, D."
+      ],
+      "abstract": "Considering the importance of corporate carbon emissions, the Supreme Court of the United States ruled against the Environmental Protection Agency (EPA) and curtailed EPA’s regulatory powers by unprecedentedly invoking the “major questions doctrine” in its judgment of West Virginia v. EPA in 2022. We find that the stock prices of firms with greater exposure to carbon risk increased relative to firms with lower exposure after the Supreme Court verdict. The results are more pronounced for firms subject to higher federal climate enforcement intensity prior to the court ruling. Long-term climate commitments by state governments and carbon-sensitive institutional investors attenuate the effect. Both cash flow and discount rate contribute to the climate risk effect in firm value. Overall, our findings from this landmark climate litigation suggest that climate transition risks can affect stock prices.\n                  This paper was accepted by Lin William Cong, finance.\n                  Funding: Funding support by Hong Kong General Research Fund [Grant 17501825] is gratefully acknowledged. This work was supported by National Natural Science Foundation of China [Grants 72172082 and 72342021 (C. Shan)].\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.06732 .",
+      "date": "2026-04-03",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2024.06732",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2024.06732",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2022.00370",
+      "title": "Tobin Tax Policy, Housing Speculation, and Property Market Dynamics",
+      "authors": [
+        "Agarwal, S.",
+        "Chau, K.",
+        "Hu, M.",
+        "Wan, W."
+      ],
+      "abstract": "Hong Kong introduced a Tobin property tax—the Special Stamp Duty (SSD)—in 2010, which substantially increased the selling costs of short-term residential property holders. This study examines the effectiveness of this Tobin tax in curbing speculation and cooling down the housing market. We find that the SSD effectively curtails flippers who hold homes for less than two years and reduces their market presence from 23.2% in 2009% to 2.4% in 2011 and 0.9% in 2013. However, one year after implementing the tax, housing prices grow by 12.64% and 15.76% in the primary and secondary markets, respectively, indicating a lack of a market cooling effect. Flippers strategically defer sales to circumvent the SSD charges, resulting in the sharp bunching of urgent sales immediately after the lock-in period ends. Further, the SSD effectively increases selling costs and prolongs potential sellers’ holding periods, thereby significantly reducing liquidity and driving up prices in the secondary market. The unintended externality is that the unmet housing demand from the secondary market triggers a buying frenzy in the primary market, which increases the prices in the primary market as well. Our findings have policy implications for the viability of Tobin taxes for regulating real estate markets.\n                  This paper was accepted by Agostino Capponi, finance.\n                  Funding: S. Agarwal was supported by the National Natural Science Foundation of China [Grant 72495154].\n                  Supplemental Material: The internet appendix and data files are available at https://doi.org/10.1287/mnsc.2022.00370 .",
+      "date": "2026-04-03",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2022.00370",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2022.00370",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2024.06944",
+      "title": "Exchange-Traded Funds and the Wash Sale Loophole",
+      "authors": [
+        "Dambra, M.",
+        "Glover, A.",
+        "Lee, C.",
+        "Quinn, P."
+      ],
+      "abstract": "Tax wash sale rules prohibit the recognition of capital losses when substantially identical securities are sold and immediately repurchased within short windows. This study examines whether institutional investors use exchange-traded funds (ETFs) to circumvent wash sale rules. Consistent with tax-motivated demand for ETFs, incumbent ETFs both create more shares and experience more trading volume upon the introduction of nearly identical ETFs, particularly when recent returns are negative. We show that tax-sensitive institutions’ investment in highly correlated ETFs has proliferated in recent years, exceeding a quarter of their assets under management. Furthermore, tax-sensitive institutions holding more ETFs are significantly more likely to engage in swapping nearly identical ETFs. This swapping behavior has become widespread, with tax-sensitive institutional investors swapping $417 billion of nearly identical ETFs since 2001. We estimate that tax-sensitive institutions realized more than $84 billion dollars in losses in highly correlated ETFs associated with the swapping activity since 2001.\n                  This paper was accepted by Shiva Rajgopal, accounting.\n                  Funding: The authors thank their institutions for financial support. M. Dambra thanks the Kenneth W. Colwell endowment for research support, C. M. C. Lee thanks the Kermit O. Hanson endowment for research support, and P. J. Quinn thanks PricewaterhouseCoopers for research support.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.06944 .",
+      "date": "2026-04-03",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2024.06944",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2024.06944",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s11081-026-10090-9",
+      "title": "Simultaneous kinematics and shape optimization of a carangiform swimmer using gradient-based optimization",
+      "authors": [
+        "Yan, J.",
+        "Tolley, M.",
+        "Zhu, Q.",
+        "Hwang, J."
+      ],
+      "abstract": "",
+      "date": "2026-04-04",
+      "source": "Optimization and Engineering",
+      "source_detail": "Optimization and Engineering",
+      "url": "https://doi.org/10.1007/s11081-026-10090-9",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11081-026-10090-9",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1080-02331934.2024.2444621",
+      "title": "Two new extragradient algorithms for solving non-monotone VIs in Hilbert spaces",
+      "authors": [
+        "Viet Thong, D.",
+        "Li, X.",
+        "Tien Dung, V.",
+        "Van Thang, H."
+      ],
+      "abstract": "",
+      "date": "2026-04-04",
+      "source": "Optimization",
+      "source_detail": "Optimization",
+      "url": "https://doi.org/10.1080/02331934.2024.2444621",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1080/02331934.2024.2444621",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1080-02331934.2024.2448312",
+      "title": "Properties of the complementarity set for the cone of copositive matrices",
+      "authors": [
+        "Kostyukova, O."
+      ],
+      "abstract": "",
+      "date": "2026-04-04",
+      "source": "Optimization",
+      "source_detail": "Optimization",
+      "url": "https://doi.org/10.1080/02331934.2024.2448312",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1080/02331934.2024.2448312",
+      "score": 40.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
