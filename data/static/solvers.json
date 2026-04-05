@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-04T07:53:26.752159+00:00",
+  "generated_at": "2026-04-05T07:58:24.518376+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1568,
+      "github_stars": 1569,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -347,11 +347,11 @@
       "recent_changes": "## Code changes\r\n\r\nFollowing PR [#2812](https://github.com/ERGO-Code/HiGHS/pull/2812),\r\nHiGHS can read LP files with keywords as constraint names.\r\n\r\nFollowing PR [#2818](https://github.com/ERGO-Code/",
       "github_open_issues": 158,
       "github_recent_prs": [
+        "Added testing of passing square Hessian via `passModel` and `passHessian`",
         "Allow kCallbackLogging to persist when using getIis",
         "Presolve profile",
         "Incorporate formatting, logging and handling of PDLP option values incompatible with HiPDLP ",
-        "Updated `FEATURES.md`",
-        "HiPO parameter tuning"
+        "Updated `FEATURES.md`"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -458,13 +458,13 @@
         }
       ],
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- an error is now produced if the emphasis settings in parameter files are wrong\r\n- propagate focus lower bound to child nodes to avoid outdated global lower bound\r\n- set sma",
-      "github_open_issues": 18,
+      "github_open_issues": 19,
       "github_recent_prs": [
+        "Allow documentation builds when testing is turned off",
         "Fix endianness issue in dtoa.cpp",
         "Fix two bugs in SCIPcreateConsBasicSOCNonlinear",
         "Fix typo in nauty.h pragma directive intrinsic",
-        "make bundled CppAD atomic_base threadsafe",
-        "check: fix invalid ctest invocation"
+        "make bundled CppAD atomic_base threadsafe"
       ],
       "pypi_monthly_downloads": -41
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13307,
+      "github_stars": 13309,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1319,7 +1319,7 @@
         "metaheuristic"
       ],
       "recent_changes": "This is the first quarterly maintenance update of Timefold Solver 1.x. With all forward development having shifted towards Timefold Solver 2.0.0 (to be released later this month), this release brings ",
-      "github_stars": 1623,
+      "github_stars": 1624,
       "github_open_issues": 72,
       "github_recent_prs": [
         "Refactor pom.xml by cleaning up and adding validation",
@@ -1449,7 +1449,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.30.0\n\n[Diff since v1.29.4](https://github.com/jump-dev/JuMP.jl/compare/v1.29.4...v1.30.0)\n\n\n**Merged pull requests:**\n- Fix errors found by JET (#4108) (@odow)\n- [docs] clarify dual unbound",
-      "github_stars": 2421,
+      "github_stars": 2422,
       "github_open_issues": 16,
       "github_recent_prs": [
         "[docs] add a section clarifying the usage of the init kwarg",
