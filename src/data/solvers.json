@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-05T07:58:24.518376+00:00",
+  "generated_at": "2026-04-06T08:25:53.134360+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -345,7 +345,7 @@
         }
       ],
       "recent_changes": "## Code changes\r\n\r\nFollowing PR [#2812](https://github.com/ERGO-Code/HiGHS/pull/2812),\r\nHiGHS can read LP files with keywords as constraint names.\r\n\r\nFollowing PR [#2818](https://github.com/ERGO-Code/",
-      "github_open_issues": 158,
+      "github_open_issues": 157,
       "github_recent_prs": [
         "Added testing of passing square Hessian via `passModel` and `passHessian`",
         "Allow kCallbackLogging to persist when using getIis",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13309,
+      "github_stars": 13313,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 91,
+      "github_open_issues": 93,
       "github_recent_prs": [
+        "math-opt: add CPLEX solver backend",
         "[ENH] set_cover Python: add SetCoverLagrangian bindings",
         "[BUG] set_cover Python: fix UB in vector transforms and swapped GuidedTabuSearch bindings",
         "format fix",
-        "cmake: use OVERRIDE_FIND_PACKAGE when building ZLIB",
-        "build(deps): bump protobuf from 6.32.0 to 6.33.5 in /bazel in the pip group across 1 directory"
+        "cmake: use OVERRIDE_FIND_PACKAGE when building ZLIB"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1132,13 +1132,13 @@
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
       "github_stars": 6167,
-      "github_open_issues": 192,
+      "github_open_issues": 191,
       "github_recent_prs": [
+        "fix: raise ValueError when cp.Parameter receives a sparse value (#2890)",
+        "Fix backward() crash on batched symmetric/PSD variables",
         "Broke long lines",
         "Fix clarabel keyerror 3276",
-        "Rewrite MOSEK interface: ACC API + DualizeConeProg for PSD",
-        "docs: add n-dimensional portfolio Marimo example (#2618)",
-        "Add native RSOC support to MOSEK and use RSOC in reductions"
+        "Rewrite MOSEK interface: ACC API + DualizeConeProg for PSD"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "This is the first quarterly maintenance update of Timefold Solver 1.x. With all forward development having shifted towards Timefold Solver 2.0.0 (to be released later this month), this release brings ",
-      "github_stars": 1624,
-      "github_open_issues": 72,
+      "github_stars": 1628,
+      "github_open_issues": 76,
       "github_recent_prs": [
-        "Refactor pom.xml by cleaning up and adding validation",
-        "chore: upgrade GraalVM plugin",
-        "feat: improve unassign move generation",
-        "chore: remove an outdated TODO",
-        "feat: improve unassign move generation"
+        "deps: bump the regular group with 7 updates",
+        "deps: bump the regular group with 2 updates",
+        "deps: bump the quarkus group with 4 updates",
+        "deps: bump graalvm/setup-graalvm from 1.5.0 to 1.5.2 in the regular group",
+        "Refactor pom.xml by cleaning up and adding validation"
       ]
     },
     {
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
-      "github_stars": 2427,
+      "github_stars": 2429,
       "github_open_issues": 354,
       "github_recent_prs": [
         "Reorganizing ParmEst and Pyomo.DoE Documentation Pages",
@@ -1449,7 +1449,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.30.0\n\n[Diff since v1.29.4](https://github.com/jump-dev/JuMP.jl/compare/v1.29.4...v1.30.0)\n\n\n**Merged pull requests:**\n- Fix errors found by JET (#4108) (@odow)\n- [docs] clarify dual unbound",
-      "github_stars": 2422,
+      "github_stars": 2423,
       "github_open_issues": 16,
       "github_recent_prs": [
         "[docs] add a section clarifying the usage of the init kwarg",
