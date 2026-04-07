@@ -1,0 +1,305 @@
+{
+  "date": "2026-04-07",
+  "generated_at": "2026-04-07T08:18:56.377951+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2604.04599",
+      "title": "LP-GEMM: Integrating Layout Propagation into GEMM Operations",
+      "authors": [
+        "César Guedes Carneiro",
+        "Lucas Alvarenga",
+        "Guido Araujo",
+        "Sandro Rigo"
+      ],
+      "abstract": "In Scientific Computing and modern Machine Learning (ML) workloads, sequences of dependent General Matrix Multiplications (GEMMs) often dominate execution time. While state-of-the-art BLAS libraries aggressively optimize individual GEMM calls, they remain constrained by the BLAS API, which requires each call to independently pack input matrices and restore outputs to a canonical memory layout. In sequential GEMMs, these constraints cause redundant packing and unpacking, wasting valuable computational resources.   This paper introduces LP-GEMM, a decomposition of the GEMM kernel that enables packing-layout propagation across sequential GEMM operations. This approach eliminates unnecessary data repacking while preserving full BLAS semantic correctness at the boundaries. We evaluate LP-GEMM on x86 (AVX-512) and RISC-V (RVV 1.0) architectures across MLP-like and Attention-like workloads. Our results show average speedups of 2.25x over OpenBLAS on Intel x86 for sequential GEMMs and competitive gains relative to vendor-optimized libraries such as Intel MKL.   We demonstrate the practicality of the approach beyond microbenchmarks by implementing a standalone C++ version of the Llama-3.2 inference path using exclusively BLAS-level GEMM calls. These results confirm that leveraging data layout propagation between operations can significantly boost performance.",
+      "date": "2026-04-06",
+      "source": "arXiv",
+      "source_detail": "cs.DC",
+      "url": "http://arxiv.org/abs/2604.04599v1",
+      "tags": [
+        "cs.DC",
+        "ml-for-or",
+        "decomposition",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.04599",
+      "arxiv_id": "2604.04599v1",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2604.04698",
+      "title": "Explainable Machine Learning for Sepsis Outcome Prediction Using a Novel Romanian Electronic Health Record Dataset",
+      "authors": [
+        "Andrei-Alexandru Bunea",
+        "Ovidiu Ghibea",
+        "Dan-Matei Popovici",
+        "Ion Daniel",
+        "Octavian Andronic"
+      ],
+      "abstract": "We develop and analyze explainable machine learning (ML) models for sepsis outcome prediction using a novel Electronic Health Record (EHR) dataset from 12,286 hospitalizations at a large emergency hospital in Romania. The dataset includes demographics, International Classification of Diseases (ICD-10) diagnostics, and 600 types of laboratory tests. This study aims to identify clinically strong predictors while achieving state-of-the-art results across three classification tasks: (1)deceased vs. discharged, (2)deceased vs. recovered, and (3)recovered vs. ameliorated. We trained five ML models to capture complex distributions while preserving clinical interpretability. Experiments explored the trade-off between feature richness and patient coverage, using subsets of the 10--50 most frequent laboratory tests. Model performance was evaluated using accuracy and area under the curve (AUC), and explainability was assessed using SHapley Additive exPlanations (SHAP). The highest performance was obtained for the deceased vs. recovered case study (AUC=0.983, accuracy=0.93). SHAP analysis identified several strong predictors such as cardiovascular comorbidities, urea levels, aspartate aminotransferase, platelet count, and eosinophil percentage. Eosinopenia emerged as a top predictor, highlighting its value as an underutilized marker that is not included in current assessment standards, while the high performance suggests the applicability of these models in clinical settings.",
+      "date": "2026-04-06",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.04698v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.04698",
+      "arxiv_id": "2604.04698v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.04614",
+      "title": "A Clinical Point Cloud Paradigm for In-Hospital Mortality Prediction from Multi-Level Incomplete Multimodal EHRs",
+      "authors": [
+        "Bohao Li",
+        "Tao Zou",
+        "Junchen Ye",
+        "Yan Gong",
+        "Bowen Du"
+      ],
+      "abstract": "Deep learning-based modeling of multimodal Electronic Health Records (EHRs) has become an important approach for clinical diagnosis and risk prediction. However, due to diverse clinical workflows and privacy constraints, raw EHRs are inherently multi-level incomplete, including irregular sampling, missing modalities, and sparse labels. These issues cause temporal misalignment, modality imbalance, and limited supervision. Most existing multimodal methods assume relatively complete data, and even methods designed for incompleteness usually address only one or two of these issues in isolation. As a result, they often rely on rigid temporal/modal alignment or discard incomplete data, which may distort raw clinical semantics. To address this problem, we propose HealthPoint (HP), a unified clinical point cloud paradigm for multi-level incomplete EHRs. HP represents heterogeneous clinical events as points in a continuous 4D space defined by content, time, modality, and case. To model interactions between arbitrary point pairs, we introduce a Low-Rank Relational Attention mechanism that efficiently captures high-order dependencies across these four dimensions. We further develop a hierarchical interaction and sampling strategy to balance fine-grained modeling and computational efficiency. Built on this framework, HP enables flexible event-level interaction and fine-grained self-supervision, supporting robust modality recovery and effective use of unlabeled data. Experiments on large-scale EHR datasets for risk prediction show that HP consistently achieves state-of-the-art performance and strong robustness under varying degrees of incompleteness.",
+      "date": "2026-04-06",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.04614v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.04614",
+      "arxiv_id": "2604.04614v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2024.0969",
+      "title": "Multistage Mobile Anchor Redeployment in an Indoor Positioning System Using Hierarchical State Lagrangian Cut-Augmented Stochastic Dual Dynamic Integer Programming",
+      "authors": [
+        "Lyu, Z.",
+        "Chan, T.",
+        "Lun, D."
+      ],
+      "abstract": "Technological advances enable mobile anchors to assist indoor localization services and lower system setup and maintenance costs. This research investigates the strategy for mobile anchor redeployment in light of dynamic target movements among areas of interest (AOIs), signal degradation, and obstacles leading to non-line-of-sight (NLOS) connections. By representing the realizations of target numbers in AOIs using a scenario tree, we formulate a multistage stochastic optimization model for the mobile anchor-assisted indoor positioning system (IPS) to minimize anchor movement cost, signal path loss, and NLOS penalties. The solution developed is based on the stochastic dual dynamic integer programming (SDDiP) framework using binary variables to indicate deployment states. To speed up solving large-scale instances, we propose the hierarchical state Lagrangian cut (HSLC), which extends the Lagrangian cut to approximate the value function based on both exact states and group binary-state variables that aggregate deployment states over location clusters. To tightly approximate cost-to-go functions, HSLC incorporates additional linear terms that model the transition costs from each exact state to an expected deployment state derived from solving the dual subproblem associated with the cut. We further incorporate a dynamic coefficient update scheme to progressively control the scale of transition costs, achieving asymptotic convergence while avoiding overestimation. Comparative experiments conducted on simulation instances with reference to an IPS project for exhibition halls demonstrate that the proposed algorithms can achieve the best cost performance compared with previous anchor deployment strategies. Under the same computational time for large-scale instances, the gap between the lower and upper bounds is reduced by over 95% compared with the SDDiP with previous benchmark cuts.\n                  History: Accepted by Pascal Van Hentenryck, Area Editor for Computational Modeling: Methods &amp; Analysis.\n                  Funding: The work presented in this article is supported by the Centre for Advances in Reliability and Safety admitted under the Air@InnoHK Research Cluster.\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2024.0969 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2024.0969 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-04-06",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2024.0969",
+      "tags": [
+        "integer-programming",
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2024.0969",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s11590-026-02292-y",
+      "title": "Heuristic algorithms for stochastic K-adaptability",
+      "authors": [
+        "Malaguti, E.",
+        "Monaci, M.",
+        "Pruente, J."
+      ],
+      "abstract": "Abstract\n                  \n                    We study stochastic optimization problems where both the objective function and the feasible set are subject to uncertainty. To address these challenges, we adopt a\n                    K\n                    -adaptability approach, in which\n                    K\n                    candidate solutions are computed prior to the realization of uncertainty, and the best among them is selected once the actual scenario is known. We introduce a simple lower bounding procedure, for which we study the worst-case performance ratio. In addition, we propose two heuristic approaches tailored to this class of problems. The first one is an iterative approach that starts from a feasible solution, progressively improves it, and applies a diversification phase to escape from local optima. The second approach is instead based on a truncated enumerative scheme applied to a mathematical formulation of the problem. Furthermore, a refinement procedure is also presented for possibly improving feasible solutions. The performance of these methods is evaluated based on their gap with respect to the lower bound on a large set of instances describing stochastic variants of the unconstrained binary problem, of the knapsack problem, and of the multidimensional knapsack problem.",
+      "date": "2026-04-07",
+      "source": "Optimization Letters",
+      "source_detail": "Optimization Letters",
+      "url": "https://doi.org/10.1007/s11590-026-02292-y",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11590-026-02292-y",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.04752",
+      "title": "DAG Projections: Reducing Distance and Flow Problems to DAGs",
+      "authors": [
+        "Bernhard Haeupler",
+        "Yonggang Jiang",
+        "Thatchaphol Saranurak"
+      ],
+      "abstract": "We show that every directed graph $G$ with $n$ vertices and $m$ edges admits a directed acyclic graph (DAG) with $m^{1+o(1)}$ edges, called a DAG projection, that can either $(1+1/\\text{polylog} (n))$-approximate distances between all pairs of vertices $(s,t)$ in $G$, or $n^{o(1)}$-approximate maximum flow between all pairs of vertex subsets $(S,T)$ in $G$. Previous similar results suffer a $Ω(\\log n)$ approximation factor for distances [Assadi, Hoppenworth, Wein, STOC'25] [Filtser, SODA'26] and, for maximum flow, no prior result of this type is known.   Our DAG projections admit $m^{1+o(1)}$-time constructions. Further, they admit almost-optimal parallel constructions, i.e., algorithms with $m^{1+o(1)}$ work and $m^{o(1)}$ depth, assuming the ones for approximate shortest path or maximum flow on DAGs, even when the input $G$ is not a DAG.   DAG projections immediately transfer results on DAGs, usually simpler and more efficient, to directed graphs. As examples, we improve the state-of-the-art of $(1+ε)$-approximate distance preservers [Hoppenworth, Xu, Xu, SODA'25] and single-source minimum cut [Cheung, Lau, Leung, SICOMP'13], and obtain simpler construction of $(n^{1/3},ε)$-hop-set [Kogan, Parter, SODA'22] [Bernstein, Wein, SODA'23] and combinatorial max flow algorithms [Bernstein, Blikstad, Saranurak, Tu, FOCS'24] [Bernstein, Blikstad, Li, Saranurak, Tu, FOCS'25].   Finally, via DAG projections, we reduce major open problems on almost-optimal parallel algorithms for exact single-source shortest paths (SSSP) and maximum flow to easier settings: (1) From exact directed SSSP to exact undirected ones, (2) From exact directed SSSP to $(1+1/\\text{polylog}(n))$-approximation on DAGs, and (3) From exact directed maximum flow to $n^{o(1)}$-approximation on DAGs.",
+      "date": "2026-04-06",
+      "source": "arXiv",
+      "source_detail": "cs.DS",
+      "url": "http://arxiv.org/abs/2604.04752v1",
+      "tags": [
+        "cs.DS",
+        "network-optimization",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.04752",
+      "arxiv_id": "2604.04752v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.04868",
+      "title": "Noise Immunity in In-Context Tabular Learning: An Empirical Robustness Analysis of TabPFN's Attention Mechanisms",
+      "authors": [
+        "James Hu",
+        "Mahdi Ghelichi"
+      ],
+      "abstract": "Tabular foundation models (TFMs) such as TabPFN (Tabular Prior-Data Fitted Network) are designed to generalize across heterogeneous tabular datasets through in-context learning (ICL). They perform prediction in a single forward pass conditioned on labeled examples without dataset-specific parameter updates. This paradigm is particularly attractive in industrial domains (e.g., finance and healthcare) where tabular prediction is pervasive. Retraining a bespoke model for each new table can be costly or infeasible in these settings, while data quality issues such as irrelevant predictors, correlated feature groups, and label noise are common. In this paper, we provide strong empirical evidence that TabPFN is highly robust under these sub-optimal conditions. We study TabPFN and its attention mechanisms for binary classification problems with controlled synthetic perturbations that vary: (i) dataset width by injecting random uncorrelated features and by introducing nonlinearly correlated features, (ii) dataset size by increasing the number of training rows, and (iii) label quality by increasing the fraction of mislabeled targets. Beyond predictive performance, we analyze internal signals including attention concentration and attention-based feature ranking metrics. Across these parametric tests, TabPFN is remarkably resilient: ROC-AUC remains high, attention stays structured and sharp, and informative features are highly ranked by attention-based metrics. Qualitative visualizations with attention heatmaps, feature-token embeddings, and SHAP plots further support a consistent pattern across layers in which TabPFN increasingly concentrates on useful features while separating their signals from noise. Together, these findings suggest that TabPFN is a robust TFM capable of maintaining both predictive performance and coherent internal behavior under various scenarios of data imperfections.",
+      "date": "2026-04-06",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.04868v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.04868",
+      "arxiv_id": "2604.04868v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.04342",
+      "title": "Generative models for decision-making under distributional shift",
+      "authors": [
+        "Xiuyuan Cheng",
+        "Yunqin Zhu",
+        "Yao Xie"
+      ],
+      "abstract": "Many data-driven decision problems are formulated using a nominal distribution estimated from historical data, while performance is ultimately determined by a deployment distribution that may be shifted, context-dependent, partially observed, or stress-induced. This tutorial presents modern generative models, particularly flow- and score-based methods, as mathematical tools for constructing decision-relevant distributions. From an operations research perspective, their primary value lies not in unconstrained sample synthesis but in representing and transforming distributions through transport maps, velocity fields, score fields, and guided stochastic dynamics. We present a unified framework based on pushforward maps, continuity, Fokker-Planck equations, Wasserstein geometry, and optimization in probability space. Within this framework, generative models can be used to learn nominal uncertainty, construct stressed or least-favorable distributions for robustness, and produce conditional or posterior distributions under side information and partial observation. We also highlight representative theoretical guarantees, including forward-reverse convergence for iterative flow models, first-order minimax analysis in transport-map space, and error-transfer bounds for posterior sampling with generative priors. The tutorial provides a principled introduction to using generative models for scenario generation, robust decision-making, uncertainty quantification, and related problems under distributional shift.",
+      "date": "2026-04-06",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.04342v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.04342",
+      "arxiv_id": "2604.04342v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.04916",
+      "title": "Empowering Power Outage Prediction with Spatially Aware Hybrid Graph Neural Networks and Contrastive Learning",
+      "authors": [
+        "Xuyang Shen",
+        "Zijie Pan",
+        "Diego Cerrai",
+        "Xinxuan Zhang",
+        "Christopher Colorio",
+        "Emmanouil N. Anagnostou",
+        "Dongjin Song"
+      ],
+      "abstract": "Extreme weather events, such as severe storms, hurricanes, snowstorms, and ice storms, which are exacerbated by climate change, frequently cause widespread power outages. These outages halt industrial operations, impact communities, damage critical infrastructure, profoundly disrupt economies, and have far-reaching effects across various sectors. To mitigate these effects, the University of Connecticut and Eversource Energy Center have developed an outage prediction modeling (OPM) system to provide pre-emptive forecasts for electric distribution networks before such weather events occur. However, existing predictive models in the system do not incorporate the spatial effect of extreme weather events. To this end, we develop Spatially Aware Hybrid Graph Neural Networks (SA-HGNN) with contrastive learning to enhance the OPM predictions for extreme weather-induced power outages. Specifically, we first encode spatial relationships of both static features (e.g., land cover, infrastructure) and event-specific dynamic features (e.g., wind speed, precipitation) via Spatially Aware Hybrid Graph Neural Networks (SA-HGNN). Next, we leverage contrastive learning to handle the imbalance problem associated with different types of extreme weather events and generate location-specific embeddings by minimizing intra-event distances between similar locations while maximizing inter-event distances across all locations. Thorough empirical studies in four utility service territories, i.e., Connecticut, Western Massachusetts, Eastern Massachusetts, and New Hampshire, demonstrate that SA-HGNN can achieve state-of-the-art performance for power outage prediction.",
+      "date": "2026-04-06",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.04916v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.04916",
+      "arxiv_id": "2604.04916v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.04858",
+      "title": "FairLogue: A Toolkit for Intersectional Fairness Analysis in Clinical Machine Learning Models",
+      "authors": [
+        "Nick Souligne",
+        "Vignesh Subbian"
+      ],
+      "abstract": "Objective: Algorithmic fairness is essential for equitable and trustworthy machine learning in healthcare. Most fairness tools emphasize single-axis demographic comparisons and may miss compounded disparities affecting intersectional populations. This study introduces Fairlogue, a toolkit designed to operationalize intersectional fairness assessment in observational and counterfactual contexts within clinical settings. Methods: Fairlogue is a Python-based toolkit composed of three components: 1) an observational framework extending demographic parity, equalized odds, and equal opportunity difference to intersectional populations; 2) a counterfactual framework evaluating fairness under treatment-based contexts; and 3) a generalized counterfactual framework assessing fairness under interventions on intersectional group membership. The toolkit was evaluated using electronic health record data from the All of Us Controlled Tier V8 dataset in a glaucoma surgery prediction task using logistic regression with race and gender as protected attributes. Results: Observational analysis identified substantial intersectional disparities despite moderate model performance (AUROC = 0.709; accuracy = 0.651). Intersectional evaluation revealed larger fairness gaps than single-axis analyses, including demographic parity differences of 0.20 and equalized odds true positive and false positive rate gaps of 0.33 and 0.15, respectively. Counterfactual analysis using permutation-based null distributions produced unfairness (\"u-value\") estimates near zero, suggesting observed disparities were consistent with chance after conditioning on covariates. Conclusion: Fairlogue provides a modular toolkit integrating observational and counterfactual methods for quantifying and evaluating intersectional bias in clinical machine learning workflows.",
+      "date": "2026-04-06",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.04858v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.04858",
+      "arxiv_id": "2604.04858v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
