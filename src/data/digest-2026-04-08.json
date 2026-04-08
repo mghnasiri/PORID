@@ -1,0 +1,335 @@
+{
+  "date": "2026-04-08",
+  "generated_at": "2026-04-08T08:17:26.446825+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s11590-026-02292-y",
+      "title": "Heuristic algorithms for stochastic K-adaptability",
+      "authors": [
+        "Malaguti, E.",
+        "Monaci, M.",
+        "Pruente, J."
+      ],
+      "abstract": "Abstract\n                  \n                    We study stochastic optimization problems where both the objective function and the feasible set are subject to uncertainty. To address these challenges, we adopt a\n                    K\n                    -adaptability approach, in which\n                    K\n                    candidate solutions are computed prior to the realization of uncertainty, and the best among them is selected once the actual scenario is known. We introduce a simple lower bounding procedure, for which we study the worst-case performance ratio. In addition, we propose two heuristic approaches tailored to this class of problems. The first one is an iterative approach that starts from a feasible solution, progressively improves it, and applies a diversification phase to escape from local optima. The second approach is instead based on a truncated enumerative scheme applied to a mathematical formulation of the problem. Furthermore, a refinement procedure is also presented for possibly improving feasible solutions. The performance of these methods is evaluated based on their gap with respect to the lower bound on a large set of instances describing stochastic variants of the unconstrained binary problem, of the knapsack problem, and of the multidimensional knapsack problem.",
+      "date": "2026-04-07",
+      "source": "Optimization Letters",
+      "source_detail": "Optimization Letters",
+      "url": "https://doi.org/10.1007/s11590-026-02292-y",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11590-026-02292-y",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.05877",
+      "title": "Automatic dental superimposition of 3D intraorals and 2D photographs for human identification",
+      "authors": [
+        "Antonio D. Villegas-Yeguas",
+        "Xavier Abreau-Freire",
+        "Guillermo R-García",
+        "Andrea Valsecchi",
+        "Teresa Pinho",
+        "Daniel Pérez-Mongiovi",
+        "Oscar Ibáñez",
+        "Oscar Cordón"
+      ],
+      "abstract": "Dental comparison is considered a primary identification method, at the level of fingerprints and DNA profiling. One crucial but time-consuming step of this method is the morphological comparison. One of the main challenges to apply this method is the lack of ante-mortem medical records, specially on scenarios such as migrant death at the border and/or in countries where there is no universal healthcare. The availability of photos on social media where teeth are visible has led many odontologists to consider morphological comparison using them. However, state-of-the-art proposals have significant limitations, including the lack of proper modeling of perspective distortion and the absence of objective approaches that quantify morphological differences.   Our proposal involves a 3D (post-mortem scan) - 2D (ante-mortem photos) approach. Using computer vision and optimization techniques, we replicate the ante-mortem image with the 3D model to perform the morphological comparison. Two automatic approaches have been developed: i) using paired landmarks and ii) using a segmentation of the teeth region to estimate camera parameters. Both are capable of obtaining very promising results over 20,164 cross comparisons from 142 samples, obtaining mean ranking values of 1.6 and 1.5, respectively. These results clearly outperform filtering capabilities of automatic dental chart comparison approaches, while providing an automatic, objective and quantitative score of the morphological correspondence, easily to interpret and analyze by visualizing superimposed images.",
+      "date": "2026-04-07",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2604.05877v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.05877",
+      "arxiv_id": "2604.05877v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.05685",
+      "title": "Discrete Mean Field Games on Finite Graphs as Initial Value Optimization",
+      "authors": [
+        "Yaxin Feng",
+        "Yang Xiang",
+        "Haomin Zhou"
+      ],
+      "abstract": "In this paper, we propose an initial value fomulation of the discrete mean field games on finite graphs (Graph MFG), and design a neural network based approach to solve it. Graph MFG describes infinite, non-cooperative and interactive homogeneous agents move on node states through the edges to optimize their own goals. Nash Equilibrium of the Graph MFG is characterized by a coupled ordinary differential equations (ODE) system, including the discrete forward continuity equation and the discrete backward Hamilton-Jacobi equation. In this paper, we mainly focus on the potential mean field games (Potential MFG) on finite graphs, which has an infinite-dimensional constrained optimization structure. We reformulate Potential MFG as an initial value finite-dimentional optimization problem with dynamics constrains, names Graph MFG-IV. Specifically, the initial condition of the Hamilton-Jacobi equation is regarded as the unique variable, constrained by the coupled Hamilton-Jacobi and continuity equation system as the ODE integrator. This formulation is a reduced-order model, which avoids time-discretization of the infinite-dimensional path and has a much smaller searching space than the general path-wise problem setting. We design a neural network-based approach to solve the Graph MFG-IV problem.",
+      "date": "2026-04-07",
+      "source": "arXiv",
+      "source_detail": "math.NA",
+      "url": "http://arxiv.org/abs/2604.05685v1",
+      "tags": [
+        "math.NA",
+        "ml-for-or",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.05685",
+      "arxiv_id": "2604.05685v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.05587",
+      "title": "ResearchEVO: An End-to-End Framework for Automated Scientific Discovery and Documentation",
+      "authors": [
+        "Zhe Zhao",
+        "Haibin Wen",
+        "Jiaming Ma",
+        "Jiachang Zhan",
+        "Tianyi Xu",
+        "Ye Wei",
+        "Qingfu Zhang"
+      ],
+      "abstract": "An important recurring pattern in scientific breakthroughs is a two-stage process: an initial phase of undirected experimentation that yields an unexpected finding, followed by a retrospective phase that explains why the finding works and situates it within existing theory. We present ResearchEVO, an end-to-end framework that computationally instantiates this discover-then-explain paradigm. The Evolution Phase employs LLM-guided bi-dimensional co-evolution -- simultaneously optimizing both algorithmic logic and overall architecture -- to search the space of code implementations purely by fitness, without requiring any understanding of the solutions it produces. The Writing Phase then takes the best-performing algorithm and autonomously generates a complete, publication-ready research paper through sentence-level retrieval-augmented generation with explicit anti-hallucination verification and automated experiment design. To our knowledge, ResearchEVO is the first system to cover this full pipeline end to end: no prior work jointly performs principled algorithm evolution and literature-grounded scientific documentation. We validate the framework on two cross-disciplinary scientific problems -- Quantum Error Correction using real Google quantum hardware data, and Physics-Informed Neural Networks -- where the Evolution Phase discovered human-interpretable algorithmic mechanisms that had not been previously proposed in the respective domain literatures. In both cases, the Writing Phase autonomously produced compilable LaTeX manuscripts that correctly grounded these blind discoveries in existing theory via RAG, with zero fabricated citations.",
+      "date": "2026-04-07",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2604.05587v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.05587",
+      "arxiv_id": "2604.05587v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.06156",
+      "title": "MMEmb-R1: Reasoning-Enhanced Multimodal Embedding with Pair-Aware Selection and Adaptive Control",
+      "authors": [
+        "Yuchi Wang",
+        "Haiyang Yu",
+        "Weikang Bian",
+        "Jiefeng Long",
+        "Xiao Liang",
+        "Chao Feng",
+        "Hongsheng Li"
+      ],
+      "abstract": "MLLMs have been successfully applied to multimodal embedding tasks, yet their generative reasoning capabilities remain underutilized. Directly incorporating chain-of-thought reasoning into embedding learning introduces two fundamental challenges. First, structural misalignment between instance-level reasoning and pairwise contrastive supervision may lead to shortcut behavior, where the model merely learns the superficial format of reasoning. Second, reasoning is not universally beneficial for embedding tasks. Enforcing reasoning for all inputs may introduce unnecessary computation and latency, and can even obscure salient semantic signals for simple cases. To address these issues, we propose MMEmb-R1, an adaptive reasoning-based multimodal embedding framework. We formulate reasoning as a latent variable and introduce pair-aware reasoning selection that employs counterfactual intervention to identify reasoning paths beneficial for query-target alignment. Furthermore, we adopt reinforcement learning to selectively invoke reasoning only when necessary. Experiments on the MMEB-V2 benchmark demonstrate that our model achieves a score of 71.2 with only 4B parameters, establishing a new state-of-the-art while significantly reducing reasoning overhead and inference latency.",
+      "date": "2026-04-07",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2604.06156v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.06156",
+      "arxiv_id": "2604.06156v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.06079",
+      "title": "Scientific Graphics Program Synthesis via Dual Self-Consistency Reinforcement Learning",
+      "authors": [
+        "Juekai Lin",
+        "Yun Zhu",
+        "Honglin Lin",
+        "Sijing Li",
+        "Tianwei Lin",
+        "Zheng Liu",
+        "Xiaoyang Wang",
+        "Wenqiao Zhang",
+        "Lijun Wu"
+      ],
+      "abstract": "Graphics Program Synthesis is pivotal for interpreting and editing visual data, effectively facilitating the reverse-engineering of static visuals into editable TikZ code. While TikZ is the de facto standard for scientific schematics due to its programmatic flexibility, its requirement for rigorous spatial precision presents a significant challenge for Multimodal Large Language Models. Progress is currently stifled by two primary gaps: (1) Data Quality Gap: existing image-TikZ corpora often lack strict executability and reliable visual alignment; (2) Evaluation Gap: a lack of benchmarks for both structural and visual fidelity. To address these, we present a closed-loop framework featuring: SciTikZ-230K, a large-scale, high-quality dataset from our Execution-Centric Data Engine covering 11 diverse scientific disciplines; SciTikZ-Bench, a multifaceted benchmark spanning from basic geometric constructs to intricate hierarchical schematics to evaluate both visual fidelity and structural logic. To further broaden the scope of visual-code optimization methodology, we introduce a novel Dual Self-Consistency Reinforcement Learning optimization paradigm, which utilizes Round-Trip Verification to penalize degenerate code and boost overall self-consistency. Empowered by these, our trained model SciTikZer-8B achieves state-of-the-art performance, consistently outperforming proprietary giants like Gemini-2.5-Pro and massive models like Qwen3-VL-235B-A22B-Instruct.",
+      "date": "2026-04-07",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2604.06079v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.06079",
+      "arxiv_id": "2604.06079v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.06028",
+      "title": "A Multi-Stage Validation Framework for Trustworthy Large-scale Clinical Information Extraction using Large Language Models",
+      "authors": [
+        "Maria Mahbub",
+        "Gregory M. Dams",
+        "Josh Arnold",
+        "Caitlin Rizy",
+        "Sudarshan Srinivasan",
+        "Elliot M. Fielstein",
+        "Minu A. Aghevli",
+        "Kamonica L. Craig",
+        "Elizabeth M. Oliva",
+        "Joseph Erdos",
+        "Jodie Trafton",
+        "Ioana Danciu"
+      ],
+      "abstract": "Large language models (LLMs) show promise for extracting clinically meaningful information from unstructured health records, yet their translation into real-world settings is constrained by the lack of scalable and trustworthy validation approaches. Conventional evaluation methods rely heavily on annotation-intensive reference standards or incomplete structured data, limiting feasibility at population scale. We propose a multi-stage validation framework for LLM-based clinical information extraction that enables rigorous assessment under weak supervision. The framework integrates prompt calibration, rule-based plausibility filtering, semantic grounding assessment, targeted confirmatory evaluation using an independent higher-capacity judge LLM, selective expert review, and external predictive validity analysis to quantify uncertainty and characterize error modes without exhaustive manual annotation. We applied this framework to extraction of substance use disorder (SUD) diagnoses across 11 substance categories from 919,783 clinical notes. Rule-based filtering and semantic grounding removed 14.59% of LLM-positive extractions that were unsupported, irrelevant, or structurally implausible. For high-uncertainty cases, the judge LLM's assessments showed substantial agreement with subject matter expert review (Gwet's AC1=0.80). Using judge-evaluated outputs as references, the primary LLM achieved an F1 score of 0.80 under relaxed matching criteria. LLM-extracted SUD diagnoses also predicted subsequent engagement in SUD specialty care more accurately than structured-data baselines (AUC=0.80). These findings demonstrate that scalable, trustworthy deployment of LLM-based clinical information extraction is feasible without annotation-intensive evaluation.",
+      "date": "2026-04-07",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2604.06028v1",
+      "tags": [
+        "cs.CL",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.06028",
+      "arxiv_id": "2604.06028v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.05931",
+      "title": "Saliency-Guided Representation with Consistency Policy Learning for Visual Unsupervised Reinforcement Learning",
+      "authors": [
+        "Jingbo Sun",
+        "Qichao Zhang",
+        "Songjun Tu",
+        "Xing Fang",
+        "Yupeng Zheng",
+        "Haoran Li",
+        "Ke Chen",
+        "Dongbin Zhao"
+      ],
+      "abstract": "Zero-shot unsupervised reinforcement learning (URL) offers a promising direction for building generalist agents capable of generalizing to unseen tasks without additional supervision. Among existing approaches, successor representations (SR) have emerged as a prominent paradigm due to their effectiveness in structured, low-dimensional settings. However, SR methods struggle to scale to high-dimensional visual environments. Through empirical analysis, we identify two key limitations of SR in visual URL: (1) SR objectives often lead to suboptimal representations that attend to dynamics-irrelevant regions, resulting in inaccurate successor measures and degraded task generalization; and (2) these flawed representations hinder SR policies from modeling multi-modal skill-conditioned action distributions and ensuring skill controllability. To address these limitations, we propose Saliency-Guided Representation with Consistency Policy Learning (SRCP), a novel framework that improves zero-shot generalization of SR methods in visual URL. SRCP decouples representation learning from successor training by introducing a saliency-guided dynamics task to capture dynamics-relevant representations, thereby improving successor measure and task generalization. Moreover, it integrates a fast-sampling consistency policy with URL-specific classifier-free guidance and tailored training objectives to improve skill-conditioned policy modeling and controllability. Extensive experiments on 16 tasks across 4 datasets from the ExORL benchmark demonstrate that SRCP achieves state-of-the-art zero-shot generalization in visual URL and is compatible with various SR methods.",
+      "date": "2026-04-07",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2604.05931v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.05931",
+      "arxiv_id": "2604.05931v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.05856",
+      "title": "Neural Network Pruning via QUBO Optimization",
+      "authors": [
+        "Osama Orabi",
+        "Artur Zagitov",
+        "Hadi Salloum",
+        "Viktor A. Lobachev",
+        "Kasymkhan Khubiev",
+        "Yaroslav Kholodov"
+      ],
+      "abstract": "Neural network pruning can be formulated as a combinatorial optimization problem, yet most existing approaches rely on greedy heuristics that ignore complex interactions between filters. Formal optimization methods such as Quadratic Unconstrained Binary Optimization (QUBO) provide a principled alternative but have so far underperformed due to oversimplified objective formulations based on metrics like the L1-norm. In this work, we propose a unified Hybrid QUBO framework that bridges heuristic importance estimation with global combinatorial optimization. Our formulation integrates gradient-aware sensitivity metrics - specifically first-order Taylor and second-order Fisher information - into the linear term, while utilizing data-driven activation similarity in the quadratic term. This allows the QUBO objective to jointly capture individual filter relevance and inter-filter functional redundancy. We further introduce a dynamic capacity-driven search to strictly enforce target sparsity without distorting the optimization landscape. Finally, we employ a two-stage pipeline featuring a Tensor-Train (TT) Refinement stage - a gradient-free optimizer that fine-tunes the QUBO-derived solution directly against the true evaluation metric. Experiments on the SIDD image denoising dataset demonstrate that the proposed Hybrid QUBO significantly outperforms both greedy Taylor pruning and traditional L1-based QUBO, with TT Refinement providing further consistent gains at appropriate combinatorial scales. This highlights the potential of hybrid combinatorial formulations for robust, scalable, and interpretable neural network compression.",
+      "date": "2026-04-07",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2604.05856v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.05856",
+      "arxiv_id": "2604.05856v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.06046",
+      "title": "$k$-Clustering via Iterative Randomized Rounding",
+      "authors": [
+        "Jarosław Byrka",
+        "Yuhao Guo",
+        "Yang Hu",
+        "Shi Li",
+        "Chengzhang Wan",
+        "Zaixuan Wang"
+      ],
+      "abstract": "In this work we propose a single rounding algorithm for the fractional solutions of the standard LP relaxation for $k$-clustering. As a starting point, we obtain an iterative rounding $(\\frac{3^p + 1}{2})$-Lagrangian Multiplier-Perserving (LMP) approximation for the $k$-clustering problem with the cost function being the $p$-th power of the distance. Such an algorithm outputs a random solution that opens $k$ facilities \\emph{in expectation}, whose cost in expectation is at most $\\frac{3^p + 1}{2}$ times the optimum cost. Thus, we recover the $2$-LMP approximation for $k$-median by Jain et al.~[JACM'03], which played a central role in deriving the current best $2$ approximation for $k$-median. Unlike the result of Jain et al., our algorithm is based on LP rounding, and it can be easily adapted to the $L_p^p$-cost setting. For the Euclidean $k$-means problem, the LMP factor we obtain is $\\frac{11}{3}$, which is better than the $5$ approximation given by this framework for general metrics.   Then, we show how to convert the LMP-approximation algorithms to a true-approximation, with only a $(1+\\varepsilon)$ factor loss in the approximation ratio. We obtain a ($\\frac{3^p + 1}{2}+\\varepsilon$)-approximation algorithm for $k$-clustering with cost function being the $p$-th power of the distance, for $p \\geq 1$. This reproduces the best known ($2+\\varepsilon$)-approximation for $k$-median by Cohen-Addad et al. [STOC'25], and improves the approximation factor for metric $k$-means from 5.83 by Charikar at al. [FOCS'25] to $5+\\varepsilon$ in our framework. Moreover, the same algorithm, but with a specialized analysis, attains ($4+\\varepsilon$)-approximation for Euclidean $k$-means matching the recent result by Charikar et al. [STOC'26].",
+      "date": "2026-04-07",
+      "source": "arXiv",
+      "source_detail": "cs.DS",
+      "url": "http://arxiv.org/abs/2604.06046v1",
+      "tags": [
+        "cs.DS",
+        "linear-programming",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.06046",
+      "arxiv_id": "2604.06046v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
