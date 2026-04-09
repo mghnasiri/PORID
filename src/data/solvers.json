@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-08T08:17:26.223750+00:00",
+  "generated_at": "2026-04-09T08:25:41.744635+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1573,
+      "github_stars": 1575,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 158,
+      "github_open_issues": 159,
       "github_recent_prs": [
+        "publish-nuget action",
         "Latest",
         "Version bump 1.14",
         "do not try to compile cuda even if toolkit is present if flag is off",
-        "Added testing of passing square Hessian via `passModel` and `passHessian`",
-        "Allow kCallbackLogging to persist when using getIis"
+        "Added testing of passing square Hessian via `passModel` and `passHessian`"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 581,
+      "github_stars": 580,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13326,
+      "github_stars": 13330,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 92,
+      "github_open_issues": 90,
       "github_recent_prs": [
+        "ci: rework cmake job in presubmit.yml (#5130)",
+        "cmake: fix some emscripten errors",
         "cmake: fix jni::jvm usage (#5117)",
         "bazel: fix macos jniortools link (#5115)",
-        "cmake: update highs to v1.14.0",
-        "math-opt: add CPLEX solver backend",
-        "[ENH] set_cover Python: add SetCoverLagrangian bindings"
+        "cmake: update highs to v1.14.0"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -668,11 +668,11 @@
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
       "github_open_issues": 162,
       "github_recent_prs": [
+        "Update linux-ci for macos and all ci for action updates for Node.js",
         "Output facelift: structured tabular output for all solver phases",
         "fix time measurement and time limit",
         "Update linux-ci to move from macos-13 to macos-15-intel",
-        "Update MSVS libCbc project for added CbcSolverStatistics.cpp",
-        "Enable manual action runs for stable 2.10"
+        "Update MSVS libCbc project for added CbcSolverStatistics.cpp"
       ]
     },
     {
@@ -1131,8 +1131,8 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6169,
-      "github_open_issues": 193,
+      "github_stars": 6170,
+      "github_open_issues": 189,
       "github_recent_prs": [
         "Bump pypa/cibuildwheel from 3.4.0 to 3.4.1",
         "fix: raise ValueError when cp.Parameter receives a sparse value (#2890)",
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1730,
+      "github_stars": 1731,
       "github_open_issues": 14,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1319,7 +1319,7 @@
         "metaheuristic"
       ],
       "recent_changes": "This is the first quarterly maintenance update of Timefold Solver 1.x. With all forward development having shifted towards Timefold Solver 2.0.0 (to be released later this month), this release brings ",
-      "github_stars": 1629,
+      "github_stars": 1630,
       "github_open_issues": 76,
       "github_recent_prs": [
         "deps: bump the regular group with 7 updates",

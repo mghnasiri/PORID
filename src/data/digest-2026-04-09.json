@@ -1,0 +1,331 @@
+{
+  "date": "2026-04-09",
+  "generated_at": "2026-04-09T08:25:41.943388+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2604.07100",
+      "title": "STRIDE-ED: A Strategy-Grounded Stepwise Reasoning Framework for Empathetic Dialogue Systems",
+      "authors": [
+        "Hongru Ji",
+        "Yuyin Fan",
+        "Meng Zhao",
+        "Xianghua Li",
+        "Lianwei Wu",
+        "Chao Gao"
+      ],
+      "abstract": "Empathetic dialogue requires not only recognizing a user's emotional state but also making strategy-aware, context-sensitive decisions throughout response generation. However, the lack of a comprehensive empathy strategy framework, explicit task-aligned multi-stage reasoning, and high-quality strategy-aware data fundamentally limits existing approaches, preventing them from effectively modeling empathetic dialogue as a complex, multi-stage cognitive and decision-making process. To address these challenges, we propose STRIDE-ED, a STRategy-grounded, Interpretable, and DEep reasoning framework that models Empathetic Dialogue through structured, strategy-conditioned reasoning. To support effective learning, we develop a strategy-aware data refinement pipeline integrating LLM-based annotation, multi-model consistency-weighted evaluation, and dynamic sampling to construct high-quality training data aligned with empathetic strategies. Furthermore, we adopt a two-stage training paradigm that combines supervised fine-tuning with multi-objective reinforcement learning to better align model behaviors with target emotions, empathetic strategies, and response formats. Extensive experiments demonstrate that STRIDE-ED generalizes across diverse open-source LLMs and consistently outperforms existing methods on both automatic metrics and human evaluations.",
+      "date": "2026-04-08",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2604.07100v1",
+      "tags": [
+        "cs.CL",
+        "stochastic",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.07100",
+      "arxiv_id": "2604.07100v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.06621",
+      "title": "The Theorems of Dr. David Blackwell and Their Contributions to Artificial Intelligence",
+      "authors": [
+        "Napoleon Paxton"
+      ],
+      "abstract": "Dr. David Blackwell was a mathematician and statistician of the first rank, whose contributions to statistical theory, game theory, and decision theory predated many of the algorithmic breakthroughs that define modern artificial intelligence. This survey examines three of his most consequential theoretical results the Rao Blackwell theorem, the Blackwell Approachability theorem, and the Blackwell Informativeness theorem (comparison of experiments) and traces their direct influence on contemporary AI and machine learning. We show that these results, developed primarily in the 1940s and 1950s, remain technically live across modern subfields including Markov Chain Monte Carlo inference, autonomous mobile robot navigation (SLAM), generative model training, no-regret online learning, reinforcement learning from human feedback (RLHF), large language model alignment, and information design. NVIDIAs 2024 decision to name their flagship GPU architecture (Blackwell) provides vivid testament to his enduring relevance. We also document an emerging frontier: explicit Rao Blackwellized variance reduction in LLM RLHF pipelines, recently proposed but not yet standard practice. Together, Blackwell theorems form a unified framework addressing information compression, sequential decision making under uncertainty, and the comparison of information sources precisely the problems at the core of modern AI.",
+      "date": "2026-04-08",
+      "source": "arXiv",
+      "source_detail": "cs.GL",
+      "url": "http://arxiv.org/abs/2604.06621v1",
+      "tags": [
+        "cs.GL",
+        "ml-for-or",
+        "game-theory",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.06621",
+      "arxiv_id": "2604.06621v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.07171",
+      "title": "Smart Commander: A Hierarchical Reinforcement Learning Framework for Fleet-Level PHM Decision Optimization",
+      "authors": [
+        "Yong Si",
+        "Mingfei Lu",
+        "Jing Li",
+        "Yang Hu",
+        "Guijiang Li",
+        "Yueheng Song",
+        "Zhaokui Wang"
+      ],
+      "abstract": "Decision-making in military aviation Prognostics and Health Management (PHM) faces significant challenges due to the \"curse of dimensionality\" in large-scale fleet operations, combined with sparse feedback and stochastic mission profiles. To address these issues, this paper proposes Smart Commander, a novel Hierarchical Reinforcement Learning (HRL) framework designed to optimize sequential maintenance and logistics decisions. The framework decomposes the complex control problem into a two-tier hierarchy: a strategic General Commander manages fleet-level availability and cost objectives, while tactical Operation Commanders execute specific actions for sortie generation, maintenance scheduling, and resource allocation. The proposed approach is validated within a custom-built, high-fidelity discrete-event simulation environment that captures the dynamics of aircraft configuration and support logistics.By integrating layered reward shaping with planning-enhanced neural networks, the method effectively addresses the difficulty of sparse and delayed rewards. Empirical evaluations demonstrate that Smart Commander significantly outperforms conventional monolithic Deep Reinforcement Learning (DRL) and rule-based baselines. Notably, it achieves a substantial reduction in training time while demonstrating superior scalability and robustness in failure-prone environments. These results highlight the potential of HRL as a reliable paradigm for next-generation intelligent fleet management.",
+      "date": "2026-04-08",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.07171v1",
+      "tags": [
+        "cs.LG",
+        "scheduling",
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.07171",
+      "arxiv_id": "2604.07171v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.07064",
+      "title": "TSO-DSO Coordinated Reactive Power Dispatch for Smart Inverters with Multiple Control Modes Real-Time Implementation",
+      "authors": [
+        "Mohammad Almomani",
+        "Ahmed Alkhonain",
+        "Venkataramana Ajjarapu"
+      ],
+      "abstract": "This paper presents TSO-DSO coordinated reactive power dispatch, with a focus on real-time implementation. A sensitivity-aware, mixed-integer linear programming (MILP) formulation is developed to model the IEEE 1547-compliant droop-based control modes Volt VAR (VV), Volt Watt (VW), and Watt VAR (WV) of smart inverters. The algorithm employs a hierarchical optimization strategy using Special Ordered Sets (SOS1) to enhance computational efficiency and supports limited measurement scenarios through Recursive Least Squares (RLS) estimation. The proposed method is tested on the IEEE 13-bus and 123-bus distribution networks, which are connected to a 9-bus transmission system. Results demonstrate the feasibility and effectiveness of the real-time dispatch framework in improving voltage regulation and minimizing power curtailment.",
+      "date": "2026-04-08",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2604.07064v1",
+      "tags": [
+        "eess.SY",
+        "linear-programming",
+        "integer-programming",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.07064",
+      "arxiv_id": "2604.07064v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.06882",
+      "title": "Telecom World Models: Unifying Digital Twins, Foundation Models, and Predictive Planning for 6G",
+      "authors": [
+        "Hang Zou",
+        "Yuzhi Yang",
+        "Lina Bariah",
+        "Yu Tian",
+        "Yuhuan Lu",
+        "Bohao Wang",
+        "Anis Bara",
+        "Brahim Mefgouda",
+        "Hao Liu",
+        "Yiwei Tao",
+        "Sergy Petrov",
+        "Salma Cheour",
+        "Nassim Sehad",
+        "Sumudu Samarakoon",
+        "Chongwen Huang",
+        "Samson Lasaulce",
+        "Mehdi Bennis",
+        "Mérouane Debbah"
+      ],
+      "abstract": "The integration of machine learning tools into telecom networks, has led to two prevailing paradigms, namely, language-based systems, such as Large Language Models (LLMs), and physics-based systems, such as Digital Twins (DTs). While LLM-based approaches enable flexible interaction and automation, they lack explicit representations of network dynamics. DTs, in contrast, offer a high-fidelity network simulation, but remain scenario-specific and are not designed for learning or decision-making under uncertainty. This gap becomes critical for 6G systems, where decisions must take into account the evolving network states, uncertainty, and the cascading effects of control actions across multiple layers. In this article, we introduce the {Telecom World Model}~(TWM) concept, an architecture for learned, action-conditioned, uncertainty-aware modeling of telecom system dynamics. We decompose the problem into two interacting worlds, a controllable system world consisting of operator-configurable settings and an external world that captures propagation, mobility, traffic, and failures. We propose a three-layer architecture, comprising a field world model for spatial environment prediction, a control/dynamics world model for action-conditioned Key Performance Indicator (KPI) trajectory prediction, and a telecom foundation model layer for intent translation and orchestration. We showcase a comparative analysis between existing paradigms, which demonstrates that TWM jointly provides telecom state grounding, fast action-conditioned roll-outs, calibrated uncertainty, multi-timescale dynamics, model-based planning, and LLM-integrated guardrails. Furthermore, we present a proof-of-concept on network slicing to validate the proposed architecture, showing that the full three-layer pipeline outperforms single-world baselines and accurately predicts KPI trajectories.",
+      "date": "2026-04-08",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2604.06882v1",
+      "tags": [
+        "cs.RO",
+        "stochastic",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.06882",
+      "arxiv_id": "2604.06882v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.06936",
+      "title": "Adaptive Distributionally Robust Optimal Control with Bayesian Ambiguity Sets",
+      "authors": [
+        "Wentao Ma",
+        "Zhiping Chen",
+        "Huifu Xu",
+        "Enlu Zhou"
+      ],
+      "abstract": "In stochastic optimal control (SOC), uncertainty may arise from incomplete knowledge of the true probability distribution of the underlying environment, which is known as Knightian or epistemic uncertainty. Distributionally robust optimal control (DROC) models are subsequently proposed to tackle this source of uncertainty. While such models are effective in some practical applications, most existing DROC models are offline and can be overly conservative when data are scarce. Moreover, they cannot be applied to the case when samples are generated episodically. Motivated by the Bayesian SOC framework recently proposed by Shapiro et al.~\\cite{shapiro2025episodic}, we propose an adaptive DROC model in which the ambiguity set is updated via Bayesian learning from new data. Under some moderate conditions, we derive a tractable risk-averse reformulation, establish consistency of the optimal value function and optimal policy for an infinite-horizon SOC and establish a finite-sample posterior credibility guarantee for the policy value induced by the proposed episodic Bayesian DROC model. We also study the stability and statistical robustness of the proposed model with respect to sample perturbations that often arise in data-driven environments. To solve the episodic Bayesian DROC model, we propose a Bellman-operator cutting-plane (BOCP) algorithm that is computationally efficient and provably convergent. Numerical results on an inventory control problem demonstrate the effectiveness, adaptivity, and robust performance of the proposed model and algorithm.",
+      "date": "2026-04-08",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.06936v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.06936",
+      "arxiv_id": "2604.06936v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.06918",
+      "title": "Multi-layer Predictor Feedback Design for Nonlinear Integro-Differential Equations with State-dependent Input Delays",
+      "authors": [
+        "Tong Li",
+        "Peipei Shang",
+        "Mamadou Diagne"
+      ],
+      "abstract": "We develop a novel multi-layer predictor-feedback to achieve exact compensation of state-dependent input delay of general nonlinear integro-differential equations. The system of interest is an unconventional mixed Partial Differential Equation (PDE)-Ordinary Differential Equation (ODE) system, in which a nonlinear ODE is actuated through an inhomogeneous advection PDE. Moreover, the propagation speed of the PDE depends on a moving window integral of the ODE state. The two above features are not addressed yet in standard PDE backstepping-based predictor-feedback designs. Unlike the conventional Lyapunov-based approaches used in the field, our stability and well-posedness analysis rely on the characteristic method and a fixed-point argument. Both of our designs achieve global asymptotic stability (GAS) in the supremum norm of the PDE and ODE states under the mild assumption that the nonlinearity in the PDE governing equation is uniformly Lipschitz continuous. The transport speed, governed by the integral of the ODE state, models systems such as production or queuing processes in which the state of a finite buffer-namely, the inventory level-determines the production or service rate. Numerical simulations demonstrate the effectiveness of the proposed control design for buffer-regulated production lines and queuing systems, ensuring asymptotic stability under a locally safe softened bang-bang feedback law that preserves the positivity of both the system state and the actuation signal.",
+      "date": "2026-04-08",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.06918v1",
+      "tags": [
+        "math.OC",
+        "supply-chain",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.06918",
+      "arxiv_id": "2604.06918v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.06675",
+      "title": "An Effective Particle Gradient Projection Method for Solving Stochastic and Mean Field Control Problem",
+      "authors": [
+        "Hui Sun"
+      ],
+      "abstract": "This work puts forward a novel numerical approach for solving the stochastic optimal control problem (SOCP) and the mean field control (MFC) problem using projection algorithm inspired by the stochastic maximum principle (SMP) which is also powered by the randomized neural network. This approach is mesh-free, derivative free and it relies on gradually updating the underlying control via regression. It distinguishes itself from other traditional deep learning methods as it does not require minimizing the loss/cost function via direct error backward propagation to train the neural networks. The methodology designed can effectively solve stochastic optimal control problem in high dimensions ($100$ and above) and it can also be used to solve the mean field control problems. Due to the connection between the HJB equations and SOCP, the designed approach also provides a procedure for solving high dimensional HJB equations. Importantly, the infinite dimensional HJ equation related to the mean field control problem can also be solved in a point-wise sense (given the initial distribution) due to its connection with the Mean Field Control (MFC) problem. Our extensive test results show that the proposed approach typically performs better than the direct deep learning based approaches for solving control problems. We will leave the convergence proof and the extension to Mean Field Games (MFG) as future works.",
+      "date": "2026-04-08",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.06675v1",
+      "tags": [
+        "math.OC",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.06675",
+      "arxiv_id": "2604.06675v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.07286",
+      "title": "CADENCE: Context-Adaptive Depth Estimation for Navigation and Computational Efficiency",
+      "authors": [
+        "Timothy K Johnsen",
+        "Marco Levorato"
+      ],
+      "abstract": "Autonomous vehicles deployed in remote environments typically rely on embedded processors, compact batteries, and lightweight sensors. These hardware limitations conflict with the need to derive robust representations of the environment, which often requires executing computationally intensive deep neural networks for perception. To address this challenge, we present CADENCE, an adaptive system that dynamically scales the computational complexity of a slimmable monocular depth estimation network in response to navigation needs and environmental context. By closing the loop between perception fidelity and actuation requirements, CADENCE ensures high-precision computing is only used when mission-critical. We conduct evaluations on our released open-source testbed that integrates Microsoft AirSim with an NVIDIA Jetson Orin Nano. As compared to a state-of-the-art static approach, CADENCE decreases sensor acquisitions, power consumption, and inference latency by 9.67%, 16.1%, and 74.8%, respectively. The results demonstrate an overall reduction in energy expenditure by 75.0%, along with an increase in navigation accuracy by 7.43%.",
+      "date": "2026-04-08",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2604.07286v1",
+      "tags": [
+        "cs.RO",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.07286",
+      "arxiv_id": "2604.07286v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.07154",
+      "title": "Bridging MRI and PET physiology: Untangling complementarity through orthogonal representations",
+      "authors": [
+        "Sonja Adomeit",
+        "Kartikay Tehlan",
+        "Lukas Förner",
+        "Katharina Weisser",
+        "Helen Scholtiseek",
+        "David Kaufmann",
+        "Julie Steinestel",
+        "Constantin Lapa",
+        "Thomas Kröncke",
+        "Thomas Wendler"
+      ],
+      "abstract": "Multimodal imaging analysis often relies on joint latent representations, yet these approaches rarely define what information is shared versus modality-specific. Clarifying this distinction is clinically relevant, as it delineates the irreducible contribution of each modality and informs rational acquisition strategies. We propose a subspace decomposition framework that reframes multimodal fusion as a problem of orthogonal subspace separation rather than translation. We decompose Prostate-Specific Membrane Antigen (PSMA) PET uptake into an MRI-explainable physiological envelope and an orthogonal residual reflecting signal components not expressible within the MRI feature manifold. Using multiparametric MRI, we train an intensity-based, non-spatial implicit neural representation (INR) to map MRI feature vectors to PET uptake. We introduce a projection-based regularization using singular value decomposition to penalize residual components lying within the span of the MRI feature manifold. This enforces mathematical orthogonality between tissue-level physiological properties (structure, diffusion, perfusion) and intracellular PSMA expression. Tested on 13 prostate cancer patients, the model demonstrates that residual components spanned by MRI features are absorbed into the learned envelope, while the orthogonal residual is largest in tumour regions. This indicates that PSMA PET contains signal components not recoverable from MRI-derived physiological descriptors. The resulting decomposition provides a structured characterization of modality complementarity grounded in representation geometry rather than image translation.",
+      "date": "2026-04-08",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2604.07154v1",
+      "tags": [
+        "cs.CV",
+        "healthcare-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.07154",
+      "arxiv_id": "2604.07154v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
