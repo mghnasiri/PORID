@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T08:25:41.744635+00:00",
+  "generated_at": "2026-04-10T08:26:17.799241+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 159,
+      "github_open_issues": 160,
       "github_recent_prs": [
+        "Fix 2957",
         "publish-nuget action",
         "Latest",
         "Version bump 1.14",
-        "do not try to compile cuda even if toolkit is present if flag is off",
-        "Added testing of passing square Hessian via `passModel` and `passHessian`"
+        "do not try to compile cuda even if toolkit is present if flag is off"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13330,
+      "github_stars": 13335,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 90,
+      "github_open_issues": 89,
       "github_recent_prs": [
+        "cmake: bump scip to v10.0.2",
         "ci: rework cmake job in presubmit.yml (#5130)",
         "cmake: fix some emscripten errors",
         "cmake: fix jni::jvm usage (#5117)",
-        "bazel: fix macos jniortools link (#5115)",
-        "cmake: update highs to v1.14.0"
+        "bazel: fix macos jniortools link (#5115)"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,8 +1131,8 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6170,
-      "github_open_issues": 189,
+      "github_stars": 6172,
+      "github_open_issues": 190,
       "github_recent_prs": [
         "Bump pypa/cibuildwheel from 3.4.0 to 3.4.1",
         "fix: raise ValueError when cp.Parameter receives a sparse value (#2890)",
@@ -1384,8 +1384,8 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
-      "github_stars": 2435,
-      "github_open_issues": 354,
+      "github_stars": 2437,
+      "github_open_issues": 355,
       "github_recent_prs": [
         "Internal/mindtpy short circuit base",
         "Minor efficiency change to sensitivity toolbox Pynumero calculations",

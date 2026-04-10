@@ -1,0 +1,321 @@
+{
+  "date": "2026-04-10",
+  "generated_at": "2026-04-10T08:26:18.003262+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2604.08333",
+      "title": "Lost in the Hype: Revealing and Dissecting the Performance Degradation of Medical Multimodal Large Language Models in Image Classification",
+      "authors": [
+        "Xun Zhu",
+        "Fanbin Mo",
+        "Xi Chen",
+        "Kaili Zheng",
+        "Shaoshuai Yang",
+        "Yiming Shi",
+        "Jian Gao",
+        "Miao Li",
+        "Ji Wu"
+      ],
+      "abstract": "The rise of multimodal large language models (MLLMs) has sparked an unprecedented wave of applications in the field of medical imaging analysis. However, as one of the earliest and most fundamental tasks integrated into this paradigm, medical image classification reveals a sobering reality: state-of-the-art medical MLLMs consistently underperform compared to traditional deep learning models, despite their overwhelming advantages in pre-training data and model parameters. This paradox prompts a critical rethinking: where exactly does the performance degradation originate? In this paper, we conduct extensive experiments on 14 open-source medical MLLMs across three representative image classification datasets. Moving beyond superficial performance benchmarking, we employ feature probing to track the information flow of visual features module-by-module and layer-by-layer throughout the entire MLLM pipeline, enabling explicit visualization of where and how classification signals are distorted, diluted, or overridden. As the first attempt to dissect classification performance degradation in medical MLLMs, our findings reveal four failure modes: 1) quality limitation in visual representation, 2) fidelity loss in connector projection, 3) comprehension deficit in LLM reasoning, and 4) misalignment of semantic mapping. Meanwhile, we introduce quantitative scores that characterize the healthiness of feature evolution, enabling principled comparisons across diverse MLLMs and datasets. Furthermore, we provide insightful discussions centered on the critical barriers that prevent current medical MLLMs from fulfilling their promised clinical potential. We hope that our work provokes rethinking within the community-highlighting that the road from high expectations to clinically deployable MLLMs remains long and winding.",
+      "date": "2026-04-09",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2604.08333v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.08333",
+      "arxiv_id": "2604.08333v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.08326",
+      "title": "ProMedical: Hierarchical Fine-Grained Criteria Modeling for Medical LLM Alignment via Explicit Injection",
+      "authors": [
+        "He Geng",
+        "Yangmin Huang",
+        "Lixian Lai",
+        "Qianyun Du",
+        "Hui Chu",
+        "Zhiyang He",
+        "Jiaxue Hu",
+        "Xiaodong Tao"
+      ],
+      "abstract": "Aligning Large Language Models (LLMs) with high-stakes medical standards remains a significant challenge, primarily due to the dissonance between coarse-grained preference signals and the complex, multi-dimensional nature of clinical protocols. To bridge this gap, we introduce ProMedical, a unified alignment framework grounded in fine-grained clinical criteria. We first construct ProMedical-Preference-50k, a dataset generated via a human-in-the-loop pipeline that augments medical instructions with rigorous, physician-derived rubrics. Leveraging this corpus, we propose the Explicit Criteria Injection paradigm to train a multi-dimensional reward model. Unlike traditional scalar reward models, our approach explicitly disentangles safety constraints from general proficiency, enabling precise guidance during reinforcement learning. To rigorously validate this framework, we establish ProMedical-Bench, a held-out evaluation suite anchored by double-blind expert adjudication. Empirical evaluations demonstrate that optimizing the Qwen3-8B base model via ProMedical-RM-guided GRPO yields substantial gains, improving overall accuracy by 22.3% and safety compliance by 21.7%, effectively rivaling proprietary frontier models. Furthermore, the aligned policy generalizes robustly to external benchmarks, demonstrating performance comparable to state-of-the-art models on UltraMedical. We publicly release our datasets, reward models, and benchmarks to facilitate reproducible research in safety-aware medical alignment.",
+      "date": "2026-04-09",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2604.08326v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.08326",
+      "arxiv_id": "2604.08326v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.08174",
+      "title": "Value-Guidance MeanFlow for Offline Multi-Agent Reinforcement Learning",
+      "authors": [
+        "Teng Pang",
+        "Zhiqiang Dong",
+        "Yan Zhang",
+        "Rongjian Xu",
+        "Guoqiang Wu",
+        "Yilong Yin"
+      ],
+      "abstract": "Offline multi-agent reinforcement learning (MARL) aims to learn the optimal joint policy from pre-collected datasets, requiring a trade-off between maximizing global returns and mitigating distribution shift from offline data. Recent studies use diffusion or flow generative models to capture complex joint policy behaviors among agents; however, they typically rely on multi-step iterative sampling, thereby reducing training and inference efficiency. Although further research improves sampling efficiency through methods like distillation, it remains sensitive to the behavior regularization coefficient. To address the above-mentioned issues, we propose Value Guidance Multi-agent MeanFlow Policy (VGM$^2$P), a simple yet effective flow-based policy learning framework that enables efficient action generation with coefficient-insensitive conditional behavior cloning. Specifically, VGM$^2$P uses global advantage values to guide agent collaboration, treating optimal policy learning as conditional behavior cloning. Additionally, to improve policy expressiveness and inference efficiency in multi-agent scenarios, it leverages classifier-free guidance MeanFlow for both policy training and execution. Experiments on tasks with both discrete and continuous action spaces demonstrate that, even when trained solely via conditional behavior cloning, VGM$^2$P efficiently achieves performance comparable to state-of-the-art methods.",
+      "date": "2026-04-09",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.08174v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.08174",
+      "arxiv_id": "2604.08174v1",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1287-opre.2024.1481",
+      "title": "Dual Sourcing Made Easy: Distributionally Robust Optimization of Inventory Systems Under Independent Demand",
+      "authors": [
+        "Jiang, S.",
+        "Li, Z.",
+        "Bi, S.",
+        "Teo, C.",
+        "Huang, M."
+      ],
+      "abstract": "A Distribution-Free Playbook for Dual Sourcing\n                  In the paper “Dual Sourcing Made Easy: Distributionally Robust Optimization of an Inventory System Under Independent Demand,” the authors study a common dual-sourcing dilemma: a low-cost supplier with a long lead time versus a faster, more expensive backup. Rather than committing to a parametric demand model, they propose a distributionally robust formulation that relies only on the demand mean and variance, while leveraging independence across periods. This yields a simple, closed-form way to set a tailored base–surge (TBS) policy: regular orders cover the predictable component of demand, and emergency orders buffer the remaining uncertainty, with inventory targets reflecting lead-time differences. The resulting policy is lightweight to calibrate, easy to deploy, and straightforward to stress test. In a field application using data from a multinational food manufacturer, the robust TBS settings improve service performance and reduce stockouts relative to the firm’s current rule and standard benchmarks, without sacrificing cost efficiency under volatility.",
+      "date": "2026-04-09",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2024.1481",
+      "tags": [
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2024.1481",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2023.0381",
+      "title": "Sparse Gaussian Graphical Models with Discrete Optimization: Computational and Statistical Perspectives",
+      "authors": [
+        "Behdin, K.",
+        "Chen, W.",
+        "Mazumder, R."
+      ],
+      "abstract": "GraphL0: Sparse Gaussian Graphical Models with Discrete Optimization\n                  Recovering sparse dependency graphs in undirected Gaussian graphical models is a well-known problem in statistical machine learning. Given samples from a [Formula: see text]-dimensional Gaussian distribution, the task amounts to estimating the [Formula: see text] precision (inverse covariance) matrix under the assumption that only a small fraction of its entries are nonzero. In “Sparse Gaussian Graphical Models with Discrete Optimization: Computational and Statistical Perspectives,” the authors introduce GraphL0. GraphL0 is an estimator based on an [Formula: see text]-penalized pseudo-likelihood, departing from the more common [Formula: see text] relaxation. The resulting formulation is a convex mixed-integer program, which becomes challenging for standard commercial solvers at moderate-to-large [Formula: see text]. To make the approach practical, the authors develop a custom nonlinear branch-and-bound algorithm, alongside scalable approximate solvers. The paper also provides new statistical guarantees for estimation accuracy and support recovery, and experiments on synthetic and real data sets show substantial computational gains over off-the-shelf solvers and competitive runtime and accuracy versus leading alternatives.",
+      "date": "2026-04-09",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2023.0381",
+      "tags": [
+        "integer-programming",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2023.0381",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.08236",
+      "title": "Improved Convergence for Decentralized Stochastic Optimization with Biased Gradients",
+      "authors": [
+        "Qing Xu",
+        "Yiwei Liao",
+        "Wenqi Fan",
+        "Xingxing You",
+        "Songyi Dian"
+      ],
+      "abstract": "Decentralized stochastic optimization has emerged as a fundamental paradigm for large-scale machine learning. However, practical implementations often rely on biased gradient estimators arising from communication compression or inexact local oracles, which severely degrade convergence in the presence of data heterogeneity. To address the challenge, we propose Decentralized Momentum Tracking with Biased Gradients (Biased-DMT), a novel decentralized algorithm designed to operate reliably under biased gradient information. We establish a comprehensive convergence theory for Biased-DMT in nonconvex settings and show that it achieves linear speedup with respect to the number of agents. The theoretical analysis shows that Biased-DMT decouples the effects of network topology from data heterogeneity, enabling robust performance even in sparse communication networks. Notably, when the gradient oracle introduces only absolute bias, the proposed method eliminates the structural heterogeneity error and converges to the exact physical error floor. For the case of relative bias, we further characterize the convergence limit and show that the remaining error is an unavoidable physical consequence of locally injected noise. Extensive numerical experiments corroborate our theoretical analysis and demonstrate the practical effectiveness of Biased-DMT across a range of decentralized learning scenarios.",
+      "date": "2026-04-09",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.08236v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.08236",
+      "arxiv_id": "2604.08236v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.07738",
+      "title": "Optimizing Treatment Allocation to Maximize the Health of a Population",
+      "authors": [
+        "Daniel Adelman",
+        "Alba V Olivares-Nadal",
+        "Miaolan Xie"
+      ],
+      "abstract": "Recent shifts in global health priorities have positioned Population Health Management (PHM) as a central area of focus. However, optimizing PHM strategies presents several challenges: managing high-dimensional patient covariates, tracking their evolution and long-term response to interventions, and accounting for the inflow and outflow of individuals within the population. In this paper, we propose a novel approach based on Measurized MDPs that integrates these components. We consider a setting in which a treatment with population-level benefits is available but scarce, and model an MDP that optimizes the long-term distribution of the healthcare population under expected capacity constraints. This formulation allows us to bypass both the dimensionality and practical challenges of handling and tracking individual patient covariates across the population. To ensure ethical compliance, we introduce a non-maleficence constraint that limits the allowable mortality rate. To solve the resulting infinite-dimensional problem, we use ADP and reduce the task to identifying a finite set of high-performing treated and untreated patients. Despite the complexity of the underlying structure, our approach yields a simple, clinically implementable index policy: a patient is selected for treatment if their adjusted impactability exceeds a specified threshold. The adjusted impactability captures the long-term consequences of receiving or not receiving treatment. While straightforward to apply, the policy remains flexible and can incorporate general machine learning models. Using CMS data, we show that our policy yields a statistically significant improvement over a myopic benchmark. This advantage increases with the time horizon, consistent with the forward-looking nature of our policy. At the longest horizon tested, this corresponds to over 1,500 additional home days annually per 1,000 patients.",
+      "date": "2026-04-09",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.07738v1",
+      "tags": [
+        "math.OC",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.07738",
+      "arxiv_id": "2604.07738v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.08502",
+      "title": "Quantifying Explanation Consistency: The C-Score Metric for CAM-Based Explainability in Medical Image Classification",
+      "authors": [
+        "Kabilan Elangovan",
+        "Daniel Ting"
+      ],
+      "abstract": "Class Activation Mapping (CAM) methods are widely used to generate visual explanations for deep learning classifiers in medical imaging. However, existing evaluation frameworks assess whether explanations are correct, measured by localisation fidelity against radiologist annotations, rather than whether they are consistent: whether the model applies the same spatial reasoning strategy across different patients with the same pathology. We propose the C-Score (Consistency Score), a confidence-weighted, annotation-free metric that quantifies intra-class explanation reproducibility via intensity-emphasised pairwise soft IoU across correctly classified instances. We evaluate six CAM techniques: GradCAM, GradCAM++, LayerCAM, EigenCAM, ScoreCAM, and MS GradCAM++ across three CNN architectures (DenseNet201, InceptionV3, ResNet50V2) over thirty training epochs on the Kermany chest X-ray dataset, covering transfer learning and fine-tuning phases. We identify three distinct mechanisms of AUC-consistency dissociation, invisible to standard classification metrics: threshold-mediated gold list collapse, technique-specific attribution collapse at peak AUC, and class-level consistency masking in global aggregation. C-Score provides an early warning signal of impending model instability. ScoreCAM deterioration on ResNet50V2 is detectable one full checkpoint before catastrophic AUC collapse and yields architecture-specific clinical deployment recommendations grounded in explanation quality rather than predictive ranking alone.",
+      "date": "2026-04-09",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2604.08502v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.08502",
+      "arxiv_id": "2604.08502v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.08476",
+      "title": "Faithful GRPO: Improving Visual Spatial Reasoning in Multimodal Language Models via Constrained Policy Optimization",
+      "authors": [
+        "Sai Srinivas Kancheti",
+        "Aditya Kanade",
+        "Rohit Sinha",
+        "Vineeth N Balasubramanian",
+        "Tanuja Ganu"
+      ],
+      "abstract": "Multimodal reasoning models (MRMs) trained with reinforcement learning with verifiable rewards (RLVR) show improved accuracy on visual reasoning benchmarks. However, we observe that accuracy gains often come at the cost of reasoning quality: generated Chain-of-Thought (CoT) traces are frequently inconsistent with the final answer and poorly grounded in the visual evidence. We systematically study this phenomenon across seven challenging real-world spatial reasoning benchmarks and find that it affects contemporary MRMs such as ViGoRL-Spatial, TreeVGR as well as our own models trained with standard Group Relative Policy Optimization (GRPO). We characterize CoT reasoning quality along two complementary axes: \"logical consistency\" (does the CoT entail the final answer?) and \"visual grounding\" (does each reasoning step accurately describe objects, attributes, and spatial relationships in the image?). To address this, we propose Faithful GRPO (FGRPO), a variant of GRPO that enforces consistency and grounding as constraints via Lagrangian dual ascent. FGRPO incorporates batch-level consistency and grounding constraints into the advantage computation within a group, adaptively adjusting the relative importance of constraints during optimization. We evaluate FGRPO on Qwen2.5-VL-7B and 3B backbones across seven spatial datasets. Our results show that FGRPO substantially improves reasoning quality, reducing the inconsistency rate from 24.5% to 1.7% and improving visual grounding scores by +13%. It also improves final answer accuracy over simple GRPO, demonstrating that faithful reasoning enables better answers.",
+      "date": "2026-04-09",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2604.08476v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.08476",
+      "arxiv_id": "2604.08476v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.08468",
+      "title": "TTVS: Boosting Self-Exploring Reinforcement Learning via Test-time Variational Synthesis",
+      "authors": [
+        "Sikai Bai",
+        "Haoxi Li",
+        "Jie Zhang",
+        "Yongjiang Liu",
+        "Song Guo"
+      ],
+      "abstract": "Despite significant advances in Large Reasoning Models (LRMs) driven by reinforcement learning with verifiable rewards (RLVR), this paradigm is fundamentally limited in specialized or novel domains where such supervision is prohibitively expensive or unavailable, posing a key challenge for test-time adaptation. While existing test-time methods offer a potential solution, they are constrained by learning from static query sets, risking overfitting to textual patterns. To address this gap, we introduce Test-Time Variational Synthesis (TTVS), a novel framework that enables LRMs to self-evolve by dynamically augmenting the training stream from unlabeled test queries. TTVS comprises two synergistic modules: (1) Online Variational Synthesis, which transforms static test queries into a dynamic stream of diverse, semantically-equivalent variations, enforcing the model to learn underlying problem logic rather than superficial patterns; (2) Test-time Hybrid Exploration, which balances accuracy-driven exploitation with consistency-driven exploration across synthetic variants. Extensive experiments show TTVS yields superior performance across eight model architectures. Notably, using only unlabeled test-time data, TTVS not only surpasses other test-time adaptation methods but also outperforms state-of-the-art supervised RL-based techniques trained on vast, high-quality labeled data.",
+      "date": "2026-04-09",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.08468v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.08468",
+      "arxiv_id": "2604.08468v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
