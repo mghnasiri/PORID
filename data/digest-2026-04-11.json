@@ -1,0 +1,188 @@
+{
+  "date": "2026-04-11",
+  "generated_at": "2026-04-11T07:55:22.399356+00:00",
+  "publications": [
+    {
+      "id": "optim-online-0cf1a9c22953",
+      "title": "Decomposition-Based Reformulation of Nonseparable Quadratic Expressions in Convex MINLP",
+      "authors": [],
+      "abstract": "In this paper, we present a reformulation technique for convex mixed-integer nonlinear programming (MINLP) problems with nonseparable quadratic terms. For each convex non-diagonal matrix that defines quadratic expressions in the problem, we show that an eigenvalue or LDLT decomposition can be performed to transform the quadratic expressions into convex additively separable constraints. The reformulated problem ... Read more",
+      "date": "2026-04-11",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/04/decomposition-based-reformulation-of-nonseparable-quadratic-expressions-in-convex-minlp/?utm_source=rss&utm_medium=rss&utm_campaign=decomposition-based-reformulation-of-nonseparable-quadratic-expressions-in-convex-minlp",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "decomposition"
+      ],
+      "type": "publication",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "optim-online-3d73f535b32b",
+      "title": "Adaptive Subproblem Selection in Benders Decomposition for Survivable Network Design Problems",
+      "authors": [],
+      "abstract": "Scenario-based optimization problems can be solved via Benders decomposition, which separates first-stage (master problem) decisions from second-stage (subproblem) recourse actions and iteratively refines the master problem with Benders cuts. In conventional Benders decomposition, all subproblems are solved at each iteration. For problems with many scenarios, solving only a selected subset can reduce computation. We quantify ... Read more",
+      "date": "2026-04-10",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/04/adaptive-subproblem-selection-in-benders-decomposition-for-survivable-network-design-problems/?utm_source=rss&utm_medium=rss&utm_campaign=adaptive-subproblem-selection-in-benders-decomposition-for-survivable-network-design-problems",
+      "tags": [
+        "network-optimization",
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "score": 45.0
+    },
+    {
+      "id": "s2-5c8c30137093",
+      "title": "Leveraging simulation and robust decision-making to optimize military asset maintenance and workforce management",
+      "authors": [
+        "H. Turan",
+        "S. Kahagalage",
+        "Sondoss El Sawah"
+      ],
+      "abstract": "\n \n This study develops an integrated simulation and robust decision-making framework to support long-term military asset maintenance and workforce planning under deep uncertainty. The objective is to evaluate how alternative maintenance workforce strategies perform across a wide range of plausible future conditions where key system parameters cannot be reliably estimated.\n \n \n \n A discrete-event simulation model is developed to represent maintenance operations, workforce competency progression, certification dynamics and resource constraints within a military maintenance system. The model is integrated with an exploratory modelling and analysis (EMA) framework implementing robust decision-making (RDM). Predefined workforce recruitment and periodic maintenance strategies are evaluated across ensembles of scenarios generated using Latin Hypercube sampling, followed by robustness assessment and scenario discovery analysis.\n \n \n \n Results indicate that strategies combining lower workforce recruitment with higher maintenance intensity can outperform intuitively preferred high-resource strategies when evaluated under deep uncertainty. The analysis identifies workforce separation rates – particularly among coordinator and verifier roles – as key drivers of system vulnerability. The framework also reveals critical uncertainty thresholds that may act as early warning indicators of degradation in maintenance performance.\n \n \n \n The study focuses on a single asset class and workforce type to enable detailed behavioural representation. Future research may extend the framework to multiple asset portfolios, adaptive strategy design and dynamic policy adjustment.\n \n \n \n The proposed approach provides defence planners with a transparent decision-support tool for evaluating maintenance and workforce policies when historical data are limited, enabling identification of robust strategies and workforce indicators that should be monitored to sustain long-term readiness.\n \n \n \n This study presents an integrated framework combining simulation-based asset management modelling with robust decision-making to evaluate maintenance and workforce strategies for military systems under deep uncertainty. By assessing strategies across many scenarios using robustness metrics, the framework supports more resilient long-term sustainment planning.\n",
+      "date": "2026-04-10",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.1108/jdal-03-2025-0007",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1108/jdal-03-2025-0007",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1007-s12532-026-00316-3",
+      "title": "A novel linear optimization presolve technique based on Fourier-Motzkin elimination",
+      "authors": [
+        "Zhang, Y.",
+        "Ploskas, N.",
+        "Sahinidis, N."
+      ],
+      "abstract": "Abstract\n                  Linear optimization solvers commonly employ presolve techniques to simplify and improve the solution characteristics of models before a simplex or interior point algorithm is used for solution. The Fourier-Motzkin elimination, a well-known mathematical algorithm for removing columns from linear inequality systems, has not been utilized as a presolve method in existing solvers due to its exponential row growth. We propose a novel presolve method based on the Fourier-Motzkin elimination, along with postsolve algorithms to recover the primal and dual optimal solutions. The algorithm controls row growth by judiciously selecting which columns to eliminate after computing an upper bound on model size prior to each variable elimination step. Our computational results demonstrate that the proposed presolve with Fourier-Motzkin elimination effectively reduces the number of rows, columns, and nonzero elements in general linear optimization problems. As a result, the algorithm reduces the total number of iterations of simplex methods in CPLEX. Additionally, when combined with the CPLEX presolve, our FME implementation leads to models smaller than those obtained by CPLEX presolve alone, leading to speed-ups for CPLEX’s primal simplex, dual simplex, and barrier methods.",
+      "date": "2026-04-10",
+      "source": "Mathematical Programming Computation",
+      "source_detail": "Mathematical Programming Computation",
+      "url": "https://doi.org/10.1007/s12532-026-00316-3",
+      "tags": [
+        "linear-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s12532-026-00316-3",
+      "score": 45.0,
+      "mentions_solvers": [
+        "CPLEX"
+      ]
+    },
+    {
+      "id": "crossref-10.1007-s00291-026-00853-2",
+      "title": "Heuristics for revenue management: an application of the robust knapsack problem",
+      "authors": [
+        "Bahtiyar, İ.",
+        "Demir, A.",
+        "Pınar, M.",
+        "Karaesmen, I."
+      ],
+      "abstract": "",
+      "date": "2026-04-10",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00853-2",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00853-2",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07194-x",
+      "title": "Impact of Industry 4.0, carbon cap and trade policy, circular economy, emission and waste control in sustainable agricultural industry",
+      "authors": [
+        "Thomas, A.",
+        "Mishra, U."
+      ],
+      "abstract": "",
+      "date": "2026-04-10",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07194-x",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07194-x",
+      "score": 30.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 6,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 7
+  }
+}
