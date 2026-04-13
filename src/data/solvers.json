@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-12T08:06:34.702463+00:00",
+  "generated_at": "2026-04-13T09:08:39.734754+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13344,
+      "github_stars": 13347,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1131,8 +1131,8 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6172,
-      "github_open_issues": 190,
+      "github_stars": 6173,
+      "github_open_issues": 186,
       "github_recent_prs": [
         "fix: handle scalar Python bool/int in leaf.py project()  ",
         "propagate XPRESS IIS Status for qp solver",
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1732,
+      "github_stars": 1733,
       "github_open_issues": 15,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1320,13 +1320,13 @@
       ],
       "recent_changes": "This is the first quarterly maintenance update of Timefold Solver 1.x. With all forward development having shifted towards Timefold Solver 2.0.0 (to be released later this month), this release brings ",
       "github_stars": 1631,
-      "github_open_issues": 76,
+      "github_open_issues": 73,
       "github_recent_prs": [
-        "deps: bump the regular group with 7 updates",
-        "deps: bump the regular group with 2 updates",
-        "deps: bump the quarkus group with 4 updates",
-        "deps: bump graalvm/setup-graalvm from 1.5.0 to 1.5.2 in the regular group",
-        "Refactor pom.xml by cleaning up and adding validation"
+        "refactor: move explainability and incremental calculator",
+        "deps: bump tools.jackson:jackson-bom from 3.1.1 to 3.1.2 in the regular group",
+        "deps: bump pnpm/action-setup from 5.0.0 to 6.0.0 in the regular group",
+        "deps: bump org.openrewrite.recipe:rewrite-recipe-bom from 3.27.0 to 3.28.0 in the openrewrite group",
+        "deps: bump the regular group with 7 updates"
       ]
     },
     {
@@ -1384,14 +1384,14 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
-      "github_stars": 2437,
+      "github_stars": 2438,
       "github_open_issues": 355,
       "github_recent_prs": [
+        "Disallow cplex 22.1.2.1 from conda, too",
+        "Update URL for cyipopt documentation",
         "Internal/mindtpy short circuit base",
         "Minor efficiency change to sensitivity toolbox Pynumero calculations",
-        "Reorganizing ParmEst and Pyomo.DoE Documentation Pages",
-        "[cyipopt] Auto-select limited-memory Hessian for grey-box models",
-        "TrustRegion: remove direct manipulation of `sys.stdout` / `sys.__stdout__`"
+        "Reorganizing ParmEst and Pyomo.DoE Documentation Pages"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1449,7 +1449,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.30.0\n\n[Diff since v1.29.4](https://github.com/jump-dev/JuMP.jl/compare/v1.29.4...v1.30.0)\n\n\n**Merged pull requests:**\n- Fix errors found by JET (#4108) (@odow)\n- [docs] clarify dual unbound",
-      "github_stars": 2424,
+      "github_stars": 2426,
       "github_open_issues": 14,
       "github_recent_prs": [
         "[docs] add a section clarifying the usage of the init kwarg",

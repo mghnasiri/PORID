@@ -1,0 +1,237 @@
+{
+  "date": "2026-04-13",
+  "generated_at": "2026-04-13T09:08:39.943583+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s10479-026-07187-w",
+      "title": "Predicting energy poverty using household budget survey: a machine learning approach",
+      "authors": [
+        "Scandurra, G.",
+        "Carfora, A.",
+        "Thomas, A.",
+        "Camporeale, C."
+      ],
+      "abstract": "Abstract\n                  Energy poverty (EP) is considered an urgent challenge, intensified by rising energy costs, economic inequality, and the transition toward green energy, which involves many Western countries. By referring to Italy, this study employs machine learning algorithms (MLAs) to predict and classify EP using official Household Budget Survey (HBS) data. To evaluate EP, the study compares several MLAs alongside three expenditure-based indicators proposed in three seminal articles by Hills, Faiella and Lavecchia, and Betto et al. Among these, the indicator developed by Betto et al., which accounts for regional and socioeconomic disparities, consistently outperforms the others across all MLAs, demonstrating higher accuracy, precision, and recall. This ensures a more comprehensive identification of energy-poor households. The analysis highlights the significant impact of data imbalance on model performance, emphasizing the need for techniques such as SMOTE and undersampling. The superior performance of the Betto et al. indicator underscores its potential as a benchmark for EP measurement, providing a valuable tool for policymakers to design targeted interventions, allocate resources effectively, and support a just and sustainable energy transition. The study reinforces the importance of dynamic, data-driven approaches to address EP, and calls for improved data collection to enhance prediction accuracy and policy effectiveness.",
+      "date": "2026-04-13",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07187-w",
+      "tags": [
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07187-w",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07189-8",
+      "title": "Student assignments with preferences and maximum diversity",
+      "authors": [
+        "Schulz, A."
+      ],
+      "abstract": "Abstract\n                  The paper considers the assignment of students to seminars regarding three hierarchical objectives: maximizing the students’ preferences, maximizing the within seminar diversity, minimizing the between seminar diversity variation. While the first objective pictures the students, preferences, the second and third picture the school’s preference of having comparable seminar groups. To reach this aim the paper extends the well-known Maximally Diverse Grouping Problem and its balanced version by the first objective, the students’ interests. The students’ interests are pictured by a preference sequence the students have for the offered seminars, e.g. because of the scheduled time, the topic or the lecturer. We present solution approaches that include properties from game theory in the assignment and result in an assignment of students to seminars including the students’ as well as the school’s preferences. Our results show that the presented solution approaches are able to solve instances of practical relevant size within half an hour (close to) optimality. Furthermore, in our artificial test instances, including student preferences in the assignment only led to a small reduction of the maximal diversity for instances of realistic size (2–3% difference for seminars with 20 students).",
+      "date": "2026-04-13",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07189-8",
+      "tags": [
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07189-8",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10107-026-02343-3",
+      "title": "A Randomized Linearly Convergent Frank-Wolfe-type Method for Smooth Convex Minimization over the Spectrahedron",
+      "authors": [
+        "Garber, D."
+      ],
+      "abstract": "Abstract\n                  \n                    We consider the problem of minimizing a smooth and convex function over the\n                    n\n                    -dimensional spectrahedron — the set of real symmetric\n                    \n                      \n                        $$n\\times n$$\n                        \n                          \n                            n\n                            ×\n                            n\n                          \n                        \n                      \n                    \n                    positive semidefinite matrices with unit trace, which underlies numerous applications in statistics, machine learning and additional domains. Standard first-order methods often require high-rank matrix computations which are prohibitive when the dimension\n                    n\n                    is large. The well-known Frank-Wolfe method on the other hand, only requires efficient rank-one matrix computations, however suffers from worst-case slow convergence, even under conditions that enable linear convergence rates for standard methods. In this work we present the first Frank-Wolfe-based algorithm that only applies efficient rank-one matrix computations and, assuming quadratic growth and strict complementarity conditions, is guaranteed, after a finite number of iterations, to converge linearly, in expectation, and independently of the ambient dimension.",
+      "date": "2026-04-13",
+      "source": "Mathematical Programming",
+      "source_detail": "Mathematical Programming",
+      "url": "https://doi.org/10.1007/s10107-026-02343-3",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10107-026-02343-3",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-net.70038",
+      "title": "Speeding‐Up Graph Algorithms via Clique Partitioning",
+      "authors": [
+        "Chavan, A.",
+        "Rabinia, S.",
+        "Grosu, D.",
+        "Brocanelli, M."
+      ],
+      "abstract": "ABSTRACT\n                  \n                    Reducing the running time of graph algorithms is vital for tackling real‐world problems such as shortest paths and matching in large‐scale graphs, where path information plays a crucial role. To address this critical challenge, this paper introduces a graph restructuring algorithm that identifies bipartite cliques and replaces them with tripartite graphs. This restructuring leads to fewer edges while preserving complete graph path information, enabling the direct application of algorithms like matching and all‐pairs shortest paths to achieve significant runtime reductions, especially for large, dense graphs. The running time of the proposed algorithm for a graph , with  and  is , which is better than , the running time of the best existing algorithm for speeding‐up other graph algorithms (the Feder–Motwani (\n                    FM\n                    ) algorithm), where . Both the\n                    FM\n                    algorithm and the proposed algorithm are originally formulated for bipartite graphs, but can also be applied to general directed or undirected graphs. Our extensive experimental analysis demonstrates that the proposed algorithm achieves up to 21.26% higher reduction in the number of edges and runs up to  faster than the\n                    FM\n                    algorithm. On large synthetic graphs with up to 1.05 billion edges, it attains a reduction in the number of edges of up to 74.36%. On real‐world graphs, it achieves a reduction in the number of edges by up to 46.8%. Furthermore, when used as a preprocessing step, our approach yields up to a  speedup for the matching algorithms on large synthetic graphs, and up to a  speedup for the All‐Pairs Shortest Path algorithms on real‐world graphs, when compared to using the given graph as input.",
+      "date": "2026-04-13",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70038",
+      "tags": [
+        "network-optimization"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70038",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07159-0",
+      "title": "A Shapley value for games with expanded coalitions",
+      "authors": [
+        "Albizui, M.",
+        "Cerny, M.",
+        "Zarzuelo, J."
+      ],
+      "abstract": "Abstract\n                  Derks and Peters (1993) introduce games with restricted coalitions defined by means of restrictions, which are monotonic projections of the set of players that assign to each coalition a subcoalition. They introduce a Shapley value considering these projections. In our work, we also consider a monotonic projection of the set of players, but instead of taking subcoalitions of coalitions, we take coalitions that contain them. That is, coalitions are expanded. In this way, we model situations in which some players are necessary to make a coalition effective. We give a Shapley value in this framework and obtain two axiomatic characterizations that determine endogenously the projection that expands the coalitions. In the first characterization, we employ a generalization of a monotonicity axiom used by (Young, (1985)) to characterize the Shapley value. In the second one, a dummy player axiom is required, together with additivity. Additionally, we provide an axiomatic characterization of the value introduced by Derks and Peters (1993), employing a suitably adapted dummy player axiom.",
+      "date": "2026-04-13",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07159-0",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07159-0",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1002-nav.70070",
+      "title": "Tactical and Strategic Risks From Supply Disruptions in Competing Supply Chains",
+      "authors": [
+        "Singla, A.",
+        "Hopp, W.",
+        "Iravani, S.",
+        "Liu, Z."
+      ],
+      "abstract": "ABSTRACT\n                  \n                    Supply chain disruptions can lead to both tactical (i.e., loss of short‐term sales during a disruption) and strategic (i.e., loss of long‐term market share) consequences. We model the impact of a supply disruption on competing supply chains in which two firms compete for a limited backup supply. We describe strategies for both firms in a two‐stage game comprising (i)\n                    Preparation\n                    , which involves investment prior to the disruption to secure backup supply, and (ii)\n                    Response\n                    , which involves post‐disruption purchasing from the secured backup supply for a component whose availability has been compromised. Firms maximize their long‐run profit while simultaneously deciding their preparation and response strategies. We find the equilibrium strategy for firms in the two stages of the game. We describe the conditions under which a firm can use its preparation investment to not only minimize its disruption risks but also capture more market share. We also introduce a Leader‐Follower‐based game‐theoretic model that helps measure each firm's risk exposure by estimating the benefit of preparation. We identify the primary factors that influence the firm's preparation investment and affect customer satisfaction, and show that these depend on the size of the firm and the length of the disruption. This enables us to characterize the appropriate balance between protecting market share and exploiting a disruption to gain market share.",
+      "date": "2026-04-12",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70070",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70070",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07186-x",
+      "title": "Stochastic referee assignment in sports tournaments",
+      "authors": [
+        "Çanakoǧlu, E.",
+        "Atan, T.",
+        "Çavdaroǧlu, B.",
+        "Özcan, Z."
+      ],
+      "abstract": "",
+      "date": "2026-04-13",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07186-x",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07186-x",
+      "score": 40.0
+    },
+    {
+      "id": "optim-online-9aac189997fd",
+      "title": "An Interpretable Ensemble Heuristic for Principal-Agent Games with Machine Learning",
+      "authors": [],
+      "abstract": "This paper addresses the challenge of enhancing public policy decision-making by efficiently solving principal-agent models (PAMs) for public-private partnerships, a critical yet computationally demanding problem. We develop a fast, interpretable, and generalizable approach to support policy decisions under these settings. We propose an interpretable ensemble heuristic (EH) that integrates Machine Learning (ML), Operations Research (OR), ... Read more",
+      "date": "2026-04-12",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/04/an-interpretable-ensemble-heuristic-for-principal-agent-games-with-machine-learning/?utm_source=rss&utm_medium=rss&utm_campaign=an-interpretable-ensemble-heuristic-for-principal-agent-games-with-machine-learning",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "score": 35.0
+    },
+    {
+      "id": "optim-online-f6be53f2575a",
+      "title": "Deep Learning for Sequential Decision Making under Uncertainty: Foundations, Frameworks, and Frontiers",
+      "authors": [],
+      "abstract": "Artificial intelligence (AI) is moving increasingly beyond prediction to support decisions in complex, uncertain, and dynamic environments. This shift creates a natural intersection with operations research and management sciences (OR/MS), which have long offered conceptual and methodological foundations for sequential decision-making under uncertainty. At the same time, recent advances in deep learning, including feedforward neural ... Read more",
+      "date": "2026-04-12",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/04/deep-learning-for-sequential-decision-making-under-uncertainty-foundations-frameworks-and-frontiers/?utm_source=rss&utm_medium=rss&utm_campaign=deep-learning-for-sequential-decision-making-under-uncertainty-foundations-frameworks-and-frontiers",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "score": 35.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 9,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 10
+  }
+}
