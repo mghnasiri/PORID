@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T09:08:39.734754+00:00",
+  "generated_at": "2026-04-14T08:49:29.660141+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1576,
+      "github_stars": 1578,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 163,
+      "github_open_issues": 161,
       "github_recent_prs": [
+        "Mangle symbols of metis, amd, rcm",
         "Added sub-solver timers to `hmw-mt`",
         "`Highs::qFormatOk` now allows square Hessian",
         "Round bounds before calling changeColBounds",
-        "Remove continuous singletons from double-sided rows",
-        "Fix 2957"
+        "Remove continuous singletons from double-sided rows"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- an error is now produced if the emphasis settings in parameter files are wrong\r\n- propagate focus lower bound to child nodes to avoid outdated global lower bound\r\n- set sma",
-      "github_open_issues": 20,
+      "github_open_issues": 21,
       "github_recent_prs": [
         "Allow documentation builds when testing is turned off",
         "Fix endianness issue in dtoa.cpp",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13347,
+      "github_stars": 13353,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6173,
-      "github_open_issues": 186,
+      "github_stars": 6177,
+      "github_open_issues": 187,
       "github_recent_prs": [
+        "Fix backward/derivative crash for Hermitian parameters",
         "fix: handle scalar Python bool/int in leaf.py project()  ",
         "propagate XPRESS IIS Status for qp solver",
         "Bump pypa/cibuildwheel from 3.4.0 to 3.4.1",
-        "fix: raise ValueError when cp.Parameter receives a sparse value (#2890)",
-        "Fix backward() crash on batched symmetric/PSD variables"
+        "fix: raise ValueError when cp.Parameter receives a sparse value (#2890)"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1733,
+      "github_stars": 1734,
       "github_open_issues": 15,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1319,8 +1319,8 @@
         "metaheuristic"
       ],
       "recent_changes": "This is the first quarterly maintenance update of Timefold Solver 1.x. With all forward development having shifted towards Timefold Solver 2.0.0 (to be released later this month), this release brings ",
-      "github_stars": 1631,
-      "github_open_issues": 73,
+      "github_stars": 1632,
+      "github_open_issues": 72,
       "github_recent_prs": [
         "refactor: move explainability and incremental calculator",
         "deps: bump tools.jackson:jackson-bom from 3.1.1 to 3.1.2 in the regular group",
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
-      "github_stars": 2438,
+      "github_stars": 2439,
       "github_open_issues": 355,
       "github_recent_prs": [
         "Disallow cplex 22.1.2.1 from conda, too",
