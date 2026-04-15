@@ -1,0 +1,318 @@
+{
+  "date": "2026-04-15",
+  "generated_at": "2026-04-15T08:51:32.146224+00:00",
+  "publications": [
+    {
+      "id": "s2-663e3fa182b0",
+      "title": "A novel approach based on TOPSIS method to solve Fermatean fuzzy multi-objective optimization problem",
+      "authors": [
+        "Vishnu Pratap Singh",
+        "Anjali Sharma",
+        "Kirti Sharma",
+        "Ali Ebrahimnejad",
+        "Debjani Chakraborty"
+      ],
+      "abstract": "\n \n This study addresses the challenge of solving real-world multi-objective optimization problems under uncertainty, where data is often vague or incomplete. Existing fuzzy models, such as intuitionistic and Pythagorean fuzzy sets, may not fully capture high levels of hesitancy. A Fermatean fuzzy environment is adopted to better represent uncertainty and support more reliable decision-making.\n \n \n \n A novel multi-objective linear programming model is developed with Fermatean fuzzy coefficients in both objectives and constraints. The model is converted into a crisp form using an accuracy function, followed by component-wise optimization. The Technique for Order Preference by Similarity to an Ideal Solution (TOPSIS) is then used to determine efficient solutions. Various linear and nonlinear membership functions, including linear, parabolic and hyperbolic, are employed to represent satisfaction levels. A numerical example from the agricultural sector is provided.\n \n \n \n The approach effectively identifies an efficient compromise solution. Among the membership functions tested, the hyperbolic function yields more flexible and balanced results. The method handles higher uncertainty levels better than conventional fuzzy techniques.\n \n \n \n The methodology supports decision-making under uncertainty in domains like agriculture, finance and healthcare.\n \n \n \n This study proposes a novel integration of Fermatean fuzzy theory, component-wise optimization and TOPSIS, offering a robust framework for solving uncertain multi-objective problems.\n",
+      "date": "2026-04-14",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1108/ec-08-2025-0866",
+      "tags": [
+        "linear-programming",
+        "healthcare-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1108/ec-08-2025-0866",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 65.0
+    },
+    {
+      "id": "arxiv-2604.12879",
+      "title": "FastGrasp: Learning-based Whole-body Control method for Fast Dexterous Grasping with Mobile Manipulators",
+      "authors": [
+        "Heng Tao",
+        "Yiming Zhong",
+        "Zemin Yang",
+        "Yuexin Ma"
+      ],
+      "abstract": "Fast grasping is critical for mobile robots in logistics, manufacturing, and service applications. Existing methods face fundamental challenges in impact stabilization under high-speed motion, real-time whole-body coordination, and generalization across diverse objects and scenarios, limited by fixed bases, simple grippers, or slow tactile response capabilities. We propose \\textbf{FastGrasp}, a learning-based framework that integrates grasp guidance, whole-body control, and tactile feedback for mobile fast grasping. Our two-stage reinforcement learning strategy first generates diverse grasp candidates via conditional variational autoencoder conditioned on object point clouds, then executes coordinated movements of mobile base, arm, and hand guided by optimal grasp selection. Tactile sensing enables real-time grasp adjustments to handle impact effects and object variations. Extensive experiments demonstrate superior grasping performance in both simulation and real-world scenarios, achieving robust manipulation across diverse object geometries through effective sim-to-real transfer.",
+      "date": "2026-04-14",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2604.12879v1",
+      "tags": [
+        "cs.RO",
+        "metaheuristics",
+        "stochastic",
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.12879",
+      "arxiv_id": "2604.12879v1",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2604.13024",
+      "title": "CLAD: Efficient Log Anomaly Detection Directly on Compressed Representations",
+      "authors": [
+        "Benzhao Tang",
+        "Shiyu Yang"
+      ],
+      "abstract": "The explosive growth of system logs makes streaming compression essential, yet existing log anomaly detection (LAD) methods incur severe pre-processing overhead by requiring full decompression and parsing. We introduce CLAD, the first deep learning framework to perform LAD directly on compressed byte streams. CLAD bypasses these bottlenecks by exploiting a key insight: normal logs compress into regular byte patterns, while anomalies systematically disrupt them. To extract these multi-scale deviations from opaque bytes, we propose a purpose-built architecture integrating a dilated convolutional byte encoder, a hybrid Transformer--mLSTM, and four-way aggregation pooling. This is coupled with a two-stage training strategy of masked pre-training and focal-contrastive fine-tuning to effectively handle severe class imbalance. Evaluated across five datasets, CLAD achieves a state-of-the-art average F1-score of 0.9909 and outperforms the best baseline by 2.72 percentage points. It delivers superior accuracy while completely eliminating decompression and parsing overheads, offering a robust solution that generalizes to structured streaming compressors.",
+      "date": "2026-04-14",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.13024v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.13024",
+      "arxiv_id": "2604.13024v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.12968",
+      "title": "Evolution of Optimization Methods: Algorithms, Scenarios, and Evaluations",
+      "authors": [
+        "Tong Zhang",
+        "Jiangning Zhang",
+        "Zhucun Xue",
+        "Juntao Jiang",
+        "Yicheng Xu",
+        "Chengming Xu",
+        "Teng Hu",
+        "Xingyu Xie",
+        "Xiaobin Hu",
+        "Yabiao Wang",
+        "Yong Liu",
+        "Shuicheng Yan"
+      ],
+      "abstract": "Balancing convergence speed, generalization capability, and computational efficiency remains a core challenge in deep learning optimization. First-order gradient descent methods, epitomized by stochastic gradient descent (SGD) and Adam, serve as the cornerstone of modern training pipelines. However, large-scale model training, stringent differential privacy requirements, and distributed learning paradigms expose critical limitations in these conventional approaches regarding privacy protection and memory efficiency. To mitigate these bottlenecks, researchers explore second-order optimization techniques to surpass first-order performance ceilings, while zeroth-order methods reemerge to alleviate memory constraints inherent to large-scale training. Despite this proliferation of methodologies, the field lacks a cohesive framework that unifies underlying principles and delineates application scenarios for these disparate approaches. In this work, we retrospectively analyze the evolutionary trajectory of deep learning optimization algorithms and present a comprehensive empirical evaluation of mainstream optimizers across diverse model architectures and training scenarios. We distill key emerging trends and fundamental design trade-offs, pinpointing promising directions for future research. By synthesizing theoretical insights with extensive empirical evidence, we provide actionable guidance for designing next-generation highly efficient, robust, and trustworthy optimization methods. The code is available at https://github.com/APRIL-AIGC/Awesome-Optimizer.",
+      "date": "2026-04-14",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.12968v1",
+      "tags": [
+        "cs.LG",
+        "metaheuristics",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.12968",
+      "arxiv_id": "2604.12968v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.12655",
+      "title": "Robust Semi-Supervised Temporal Intrusion Detection for Adversarial Cloud Networks",
+      "authors": [
+        "Anasuya Chattopadhyay",
+        "Daniel Reti",
+        "Hans D. Schotten"
+      ],
+      "abstract": "Cloud networks increasingly rely on machine learning based Network Intrusion Detection Systems to defend against evolving cyber threats. However, real-world deployments are challenged by limited labeled data, non-stationary traffic, and adaptive adversaries. While semi-supervised learning can alleviate label scarcity, most existing approaches implicitly assume benign and stationary unlabeled traffic, leading to degraded performance in adversarial cloud environments. This paper proposes a robust semi-supervised temporal learning framework for cloud intrusion detection that explicitly addresses adversarial contamination and temporal drift in unlabeled network traffic. Operating on flow-level data, this framework combines supervised learning with consistency regularization, confidence-aware pseudo-labeling, and selective temporal invariance to conservatively exploit unlabeled traffic while suppressing unreliable samples. By leveraging the temporal structure of network flows, the proposed method improves robustness and generalization across heterogeneous cloud environments. Extensive evaluations on publicly available datasets (CIC-IDS2017, CSE-CIC-IDS2018, and UNSW-NB15) under limited-label conditions demonstrate that the proposed framework consistently outperforms state-of-the-art supervised and semi-supervised network intrusion detection systems in detection performance, label efficiency, and resilience to adversarial and non-stationary traffic.",
+      "date": "2026-04-14",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.12655v1",
+      "tags": [
+        "cs.LG",
+        "network-optimization",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.12655",
+      "arxiv_id": "2604.12655v1",
+      "score": 55.0
+    },
+    {
+      "id": "s2-f8d9a0000af0",
+      "title": "Optimal Cross-Domain Path Planning and Data Collection Strategy: A Dual-Mapping Fermat Point and Adaptive Learning-Based Approach",
+      "authors": [
+        "Yao Li",
+        "Chenyu Wei",
+        "Jianjie Pan",
+        "Jianyong Zheng",
+        "Xinping Guan"
+      ],
+      "abstract": "Cross-domain data collection in the maritime Internet of Things (IoT) requires coordinated operation between autonomous underwater vehicles (AUVs) and unmanned surface vehicles (USVs). This coordination is challenged by heterogeneous AUVs and USVs, environmental dynamics and uncertainty, stringent energy budgets, and the intrinsic coupling between task allocation and path optimization. These factors jointly degrade collection efficiency, inflate energy consumption, and reduce temporal responsiveness. Distinct from existing studies, we propose an integrated cross-domain path planning and data collection framework that combines a novel dual-mapping Fermat-point method, a learning-based adaptive distributed Kalman filter (LADKF), and an improved multiagent deep deterministic policy gradient (MADDPG) algorithm. By generating the individual AUV trajectories, the dual-mapping Fermat-point method then constructs the USV route, simplifying the original complex dynamic collaboration problem, which enables efficient collaborative task allocation for cross-domain data collection. Concurrently, the LADKF adjusts process and measurement noise covariance online to improve state estimation robustness under complex sea conditions. In addition, the improved MADDPG performs dynamic optimization that jointly accounts for data collection efficiency, energy expenditure, and task completion ratio. Simulation results show that, in scenarios affected by noise and ocean currents, the proposed dual-mapping Fermat-point method and LADKF-MADDPG framework significantly enhance cross-domain cooperative data collection efficiency, reduce energy consumption, and provide reliable support for large-scale maritime IoT deployments.",
+      "date": "2026-04-15",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.1109/JIOT.2025.3639267",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1109/JIOT.2025.3639267",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-net.70041",
+      "title": "Consistent Collaborative Vehicle Utilization",
+      "authors": [
+        "Ahari, S.",
+        "Bakir, I.",
+        "Roodbergen, K."
+      ],
+      "abstract": "ABSTRACT\n                  \n                    Carriers are often reluctant to collaborate with other carriers in delivering goods to customers despite potential cost reductions. A durable collaboration requires attention to more aspects. Carriers typically wish to remain competitive, unconstrained by the collaboration, increasing profits by attracting new customers and withholding information about their customers from the other carriers. They may also wish to provide good services, such as making all deliveries consistently at approximately the same time of the day. To facilitate this setting, we introduce a multi‐period collaborative model, the\n                    “consistent collaborative vehicle utilization”\n                    framework. Carriers engage in collaboration by borrowing trucks from each other. A borrowed truck first departs from the lender's depot to the borrowing carrier's depot and then visits delivery locations based on optimal routing decisions. Customers are served exclusively by their designated carrier and in an assigned time window, selected from a set of options specified by the customers. We formulate an integer programming problem and develop a branch‐and‐price algorithm to solve it. Additionally, to address larger instances, we propose two heuristics employing column generation techniques. Our experiments demonstrate reductions of up to 43% in the number of utilized vehicles, accompanied by a profit increase of up to 15.2%.",
+      "date": "2026-04-14",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70041",
+      "tags": [
+        "integer-programming",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70041",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.13013",
+      "title": "Bilevel Late Acceptance Hill Climbing for the Electric Capacitated Vehicle Routing Problem",
+      "authors": [
+        "Yinghao Qin",
+        "Mosab Bazargani",
+        "Edmund K. Burke",
+        "Carlos A. Coello Coello",
+        "Zhongmin Song",
+        "Jun Chen"
+      ],
+      "abstract": "This paper tackles the Electric Capacitated Vehicle Routing Problem (E-CVRP) through a bilevel optimization framework that handles routing and charging decisions separately or jointly depending on the search stage. By analyzing their interaction, we introduce a surrogate objective at the upper level to guide the search and accelerate convergence. A bilevel Late Acceptance Hill Climbing algorithm (b-LAHC) is introduced that operates through three phases: greedy descent, neighborhood exploration, and final solution refinement. b-LAHC operates with fixed parameters, eliminating the need for complex adaptation while remaining lightweight and effective. Extensive experiments on the IEEE WCCI-2020 benchmark show that b-LAHC achieves superior or competitive performance against eight state-of-the-art algorithms. Under a fixed evaluation budget, it attains near-optimal solutions on small-scale instances and sets 9/10 new best-known results on large-scale benchmarks, improving existing records by an average of 1.07%. Moreover, the strong correlation (though not universal) observed between the surrogate objective and the complete cost justifies the use of the surrogate objective while still necessitating a joint solution of both levels, thereby validating the effectiveness of the proposed bilevel framework and highlighting its potential for efficiently solving large-scale routing problems with a hierarchical structure.",
+      "date": "2026-04-14",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2604.13013v1",
+      "tags": [
+        "cs.AI",
+        "vehicle-routing",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.13013",
+      "arxiv_id": "2604.13013v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.12913",
+      "title": "CoDe-R: Refining Decompiler Output with LLMs via Rationale Guidance and Adaptive Inference",
+      "authors": [
+        "Qiang Zhang",
+        "Zhongnian Li"
+      ],
+      "abstract": "Binary decompilation is a critical reverse engineering task aimed at reconstructing high-level source code from stripped executables. Although Large Language Models (LLMs) have recently shown promise, they often suffer from \"logical hallucinations\" and \"semantic misalignment\" due to the irreversible semantic loss during compilation, resulting in generated code that fails to re-execute. In this study, we propose Cognitive Decompiler Refinement with Robustness (CoDe-R), a lightweight two-stage code refinement framework. The first stage introduces Semantic Cognitive Enhancement (SCE), a Rationale-Guided Semantic Injection strategy that trains the model to recover high-level algorithmic intent alongside code. The second stage introduces a Dynamic Dual-Path Fallback (DDPF) mechanism during inference, which adaptively balances semantic recovery and syntactic stability via a hybrid verification strategy. Evaluation on the HumanEval-Decompile benchmark demonstrates that CoDe-R (using a 1.3B backbone) establishes a new State-of-the-Art (SOTA) in the lightweight regime. Notably, it is the first 1.3B model to exceed an Average Re-executability Rate of 50.00%, significantly outperforming the baseline and effectively bridging the gap between efficient models and expert-level performance. Our code is available at https://github.com/Theaoi/CoDe-R.",
+      "date": "2026-04-14",
+      "source": "arXiv",
+      "source_detail": "cs.SE",
+      "url": "http://arxiv.org/abs/2604.12913v1",
+      "tags": [
+        "cs.SE",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.12913",
+      "arxiv_id": "2604.12913v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.12898",
+      "title": "BEAM: Bi-level Memory-adaptive Algorithmic Evolution for LLM-Powered Heuristic Design",
+      "authors": [
+        "Chuyang Xiang",
+        "Yichen Wei",
+        "Jiale Ma",
+        "Handing Wang",
+        "Junchi Yan"
+      ],
+      "abstract": "Large Language Model-based Hyper Heuristic (LHH) has recently emerged as an efficient way for automatic heuristic design. However, most existing LHHs just perform well in optimizing a single function within a pre-defined solver. Their single-layer evolution makes them not effective enough to write a competent complete solver. While some variants incorporate hyperparameter tuning or attempt to generate complex code through iterative local modifications, they still lack a high-level algorithmic modeling, leading to limited exploration efficiency. To address this, we reformulate heuristic design as a Bi-level Optimization problem and propose \\textbf{BEAM} (Bi-level Memory-adaptive Algorithmic Evolution). BEAM's exterior layer evolves high-level algorithmic structures with function placeholders through genetic algorithm (GA), while the interior layer realizes these placeholders via Monte Carlo Tree Search (MCTS). We further introduce an Adaptive Memory module to facilitate complex code generation. To support the evaluation for complex code generation, we point out the limitations of starting LHHs from scratch or from code templates and introduce a Knowledge Augmentation (KA) Pipeline. Experimental results on several optimization problems demonstrate that BEAM significantly outperforms existing LHHs, notably reducing the optimality gap by 37.84\\% on aggregate in CVRP hybrid algorithm design. BEAM also designs a heuristic that outperforms SOTA Maximum Independent Set (MIS) solver KaMIS.",
+      "date": "2026-04-14",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2604.12898v1",
+      "tags": [
+        "cs.AI",
+        "metaheuristics",
+        "vehicle-routing"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.12898",
+      "arxiv_id": "2604.12898v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
