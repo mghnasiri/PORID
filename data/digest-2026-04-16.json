@@ -1,0 +1,319 @@
+{
+  "date": "2026-04-16",
+  "generated_at": "2026-04-16T08:51:05.557236+00:00",
+  "publications": [
+    {
+      "id": "s2-f8d9a0000af0",
+      "title": "Optimal Cross-Domain Path Planning and Data Collection Strategy: A Dual-Mapping Fermat Point and Adaptive Learning-Based Approach",
+      "authors": [
+        "Yao Li",
+        "Chenyu Wei",
+        "Jianjie Pan",
+        "Jianyong Zheng",
+        "Xinping Guan"
+      ],
+      "abstract": "Cross-domain data collection in the maritime Internet of Things (IoT) requires coordinated operation between autonomous underwater vehicles (AUVs) and unmanned surface vehicles (USVs). This coordination is challenged by heterogeneous AUVs and USVs, environmental dynamics and uncertainty, stringent energy budgets, and the intrinsic coupling between task allocation and path optimization. These factors jointly degrade collection efficiency, inflate energy consumption, and reduce temporal responsiveness. Distinct from existing studies, we propose an integrated cross-domain path planning and data collection framework that combines a novel dual-mapping Fermat-point method, a learning-based adaptive distributed Kalman filter (LADKF), and an improved multiagent deep deterministic policy gradient (MADDPG) algorithm. By generating the individual AUV trajectories, the dual-mapping Fermat-point method then constructs the USV route, simplifying the original complex dynamic collaboration problem, which enables efficient collaborative task allocation for cross-domain data collection. Concurrently, the LADKF adjusts process and measurement noise covariance online to improve state estimation robustness under complex sea conditions. In addition, the improved MADDPG performs dynamic optimization that jointly accounts for data collection efficiency, energy expenditure, and task completion ratio. Simulation results show that, in scenarios affected by noise and ocean currents, the proposed dual-mapping Fermat-point method and LADKF-MADDPG framework significantly enhance cross-domain cooperative data collection efficiency, reduce energy consumption, and provide reliable support for large-scale maritime IoT deployments.",
+      "date": "2026-04-15",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.1109/JIOT.2025.3639267",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1109/JIOT.2025.3639267",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.13812",
+      "title": "AlphaCNOT: Learning CNOT Minimization with Model-Based Planning",
+      "authors": [
+        "Jacopo Cossio",
+        "Daniele Lizzio Bosco",
+        "Riccardo Romanello",
+        "Giuseppe Serra",
+        "Carla Piazza"
+      ],
+      "abstract": "Quantum circuit optimization is a central task in Quantum Computing, as current Noisy Intermediate Scale Quantum devices suffer from error propagation that often scales with the number of operations. Among quantum operations, the CNOT gate is of fundamental importance, being the only 2-qubit gate in the universal Clifford+T set. The problem of CNOT gates minimization has been addressed by heuristic algorithms such as the well-known Patel-Markov-Hayes (PMH) for linear reversible synthesis (i.e., CNOT minimization with no topological constraints), and more recently by Reinforcement Learning (RL) based strategies in the more complex case of topology-aware synthesis, where each CNOT can act on a subset of all qubits pairs. In this work we introduce AlphaCNOT, a RL framework based on Monte Carlo Tree Search (MCTS) that address effectively the CNOT minimization problem by modeling it as a planning problem. In contrast to other RL- based solution, our method is model-based, i.e. it can leverage lookahead search to evaluate future trajectories, thus finding more efficient sequences of CNOTs. Our method achieves a reduction of up to 32% in CNOT gate count compared to PMH baseline on linear reversible synthesis, while in the constraint version we report a consistent gate count reduction on a variety of topologies with up to 8 qubits, with respect to state-of-the-art RL-based solutions. Our results suggest the combination of RL with search-based strategies can be applied to different circuit optimization tasks, such as Clifford minimization, thus fostering the transition toward the \"quantum utility\" era.",
+      "date": "2026-04-15",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2604.13812v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.13812",
+      "arxiv_id": "2604.13812v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.13980",
+      "title": "BOAT: Navigating the Sea of In Silico Predictors for Antibody Design via Multi-Objective Bayesian Optimization",
+      "authors": [
+        "Jackie Rao",
+        "Ferran Gonzalez Hernandez",
+        "Leon Gerard",
+        "Alexandra Gessner"
+      ],
+      "abstract": "Antibody lead optimization is inherently a multi-objective challenge in drug discovery. Achieving a balance between different drug-like properties is crucial for the development of viable candidates, and this search becomes exponentially challenging as desired properties grow. The ever-growing zoo of sophisticated in silico tools for predicting antibody properties calls for an efficient joint optimization procedure to overcome resource-intensive sequential filtering pipelines. We present BOAT, a versatile Bayesian optimization framework for multi-property antibody engineering. Our `plug-and-play' framework couples uncertainty-aware surrogate modeling with a genetic algorithm to jointly optimize various predicted antibody traits while enabling efficient exploration of sequence space. Through systematic benchmarking against genetic algorithms and newer generative learning approaches, we demonstrate competitive performance with state-of-the-art methods for multi-objective protein optimization. We identify clear regimes where surrogate-driven optimization outperforms expensive generative approaches and establish practical limits imposed by sequence dimensionality and oracle costs.",
+      "date": "2026-04-15",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.13980v1",
+      "tags": [
+        "cs.LG",
+        "metaheuristics",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.13980",
+      "arxiv_id": "2604.13980v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.14017",
+      "title": "Stochastic Trust-Region Methods for Over-parameterized Models",
+      "authors": [
+        "Aike Yang",
+        "Hao Wang"
+      ],
+      "abstract": "Under interpolation-type assumptions such as the strong growth condition, stochastic optimization methods can attain convergence rates comparable to full-batch methods, but their performance, particularly for SGD, remains highly sensitive to step-size selection. To address this issue, we propose a unified stochastic trust-region framework that eliminates manual step-size tuning and extends naturally to equality-constrained problems. For unconstrained optimization, we develop a first-order stochastic trust-region algorithm and show that, under the strong growth condition, it achieves an iteration and stochastic first-order oracle complexity of $O(\\varepsilon^{-2} \\log(1/\\varepsilon))$ for finding an $\\varepsilon$-stationary point. For equality-constrained problems, we introduce a quadratic-penalty-based stochastic trust-region method with penalty parameter $μ$, and establish an iteration and oracle complexity of $O(\\varepsilon^{-4} \\log(1/\\varepsilon))$ to reach an $\\varepsilon$-stationary point of the penalized problem, corresponding to an $O(\\varepsilon)$-approximate KKT point of the original constrained problem. Numerical experiments on deep neural network training and orthogonally constrained subspace fitting demonstrate that the proposed methods achieve performance comparable to well-tuned stochastic baselines, while exhibiting stable optimization behavior and effectively handling hard constraints without manual learning-rate scheduling.",
+      "date": "2026-04-15",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.14017v1",
+      "tags": [
+        "math.OC",
+        "scheduling",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.14017",
+      "arxiv_id": "2604.14017v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.13915",
+      "title": "Anchored Spectral Estimator for Rigid Motion Synchronization",
+      "authors": [
+        "Ziyue Zhao",
+        "Huikang Liu",
+        "Man-Chung Yue"
+      ],
+      "abstract": "A rigid motion in $\\mathbb{R}^d$ consists of a proper rotation and a translation, and it can be represented as a matrix in $\\mathbb{R}^{(d+1)\\times (d+1)}$. The problem of rigid motion synchronization aims to estimate a collection of rigid motions $G^*_1, \\dots, G^*_n$ from noisy observations of their comparisons ${G^*_i}^{-1} G^*_j$. Such problems naturally arise in diverse applications across signal processing, robotics, and computer vision, and have thus attracted intense research attention in recent years. Motivated by geometric considerations, this paper develops a novel spectral approach for rigid motion synchronization, called the anchored spectral estimator (ASE). Theoretically, we establish uniform estimation error bounds for the estimators produced by ASE. Empirically, we show that ASE outperforms the widely used two-stage approach, which first estimates the rotations and then the translations. Further numerical experiments on the multiple point-set registration problem are presented to demonstrate the superiority of ASE over state-of-the-art methods.",
+      "date": "2026-04-15",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.13915v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.13915",
+      "arxiv_id": "2604.13915v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.13857",
+      "title": "Mamba Sequence Modeling meets Model Predictive Control",
+      "authors": [
+        "Michiel Cevaal",
+        "Thomas de Jong",
+        "Mircea Lazar"
+      ],
+      "abstract": "In this paper, we consider the design of Model Predictive Control (MPC) algorithms based on Mamba neural networks. Mamba is a neural network architecture capable of sub-quadratic computational scaling in sequence length with state-of-the-art modeling capabilities. We provide a consistent and complete mathematical description of the Mamba neural network is provided. Then, adjustments and optimizations are made to construct a decoder-only Mamba multi-step predictor for MPC and an input-output formulation is given for sequence-to-sequence modeling of dynamical systems. The performance of Mamba-MPC is evaluated on several numerical examples and compared to a Long-Short-Term-Memory based MPC (LSTM-MPC) equivalent. First, a Single-Input-Single-Output (SISO) Van der Pol oscillator is considered, where stability, reference tracking, and noise robustness are evaluated. Then, a MIMO Four Tank setup is introduced where Multiple-Input-Multiple-Output (MIMO) reference tracking is evaluated. Lastly, Mamba-MPC is implemented on a physical Quanser Aero2 setup for closed-loop reference tracking. The results demonstrate that Mamba-MPC is able to stabilize and track a reference for SISO and MIMO systems, both in simulation and on a physical setup. Moreover, Mamba-MPC consistently outperforms LSTM-MPC in predictive control and is significantly computationally faster.",
+      "date": "2026-04-15",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.13857v1",
+      "tags": [
+        "math.OC",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.13857",
+      "arxiv_id": "2604.13857v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.14125",
+      "title": "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System",
+      "authors": [
+        "Tianshuo Yang",
+        "Guanyu Chen",
+        "Yutian Chen",
+        "Zhixuan Liang",
+        "Yitian Liu",
+        "Zanxin Chen",
+        "Chunpu Xu",
+        "Haotian Liang",
+        "Jiangmiao Pang",
+        "Yao Mu",
+        "Ping Luo"
+      ],
+      "abstract": "While end-to-end Vision-Language-Action (VLA) models offer a promising paradigm for robotic manipulation, fine-tuning them on narrow control data often compromises the profound reasoning capabilities inherited from their base Vision-Language Models (VLMs). To resolve this fundamental trade-off, we propose HiVLA, a visual-grounded-centric hierarchical framework that explicitly decouples high-level semantic planning from low-level motor control. In high-level part, a VLM planner first performs task decomposition and visual grounding to generate structured plans, comprising a subtask instruction and a precise target bounding box. Then, to translate this plan into physical actions, we introduce a flow-matching Diffusion Transformer (DiT) action expert in low-level part equipped with a novel cascaded cross-attention mechanism. This design sequentially fuses global context, high-resolution object-centric crops and skill semantics, enabling the DiT to focus purely on robust execution. Our decoupled architecture preserves the VLM's zero-shot reasoning while allowing independent improvement of both components. Extensive experiments in simulation and the real world demonstrate that HiVLA significantly outperforms state-of-the-art end-to-end baselines, particularly excelling in long-horizon skill composition and the fine-grained manipulation of small objects in cluttered scenes.",
+      "date": "2026-04-15",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2604.14125v1",
+      "tags": [
+        "cs.CV",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.14125",
+      "arxiv_id": "2604.14125v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.13924",
+      "title": "ASTER: Latent Pseudo-Anomaly Generation for Unsupervised Time-Series Anomaly Detection",
+      "authors": [
+        "Romain Hermary",
+        "Samet Hicsonmez",
+        "Dan Pineau",
+        "Abd El Rahman Shabayek",
+        "Djamila Aouada"
+      ],
+      "abstract": "Time-series anomaly detection (TSAD) is critical in domains such as industrial monitoring, healthcare, and cybersecurity, but it remains challenging due to rare and heterogeneous anomalies and the scarcity of labelled data. This scarcity makes unsupervised approaches predominant, yet existing methods often rely on reconstruction or forecasting, which struggle with complex data, or on embedding-based approaches that require domain-specific anomaly synthesis and fixed distance metrics. We propose ASTER, a framework that generates pseudo-anomalies directly in the latent space, avoiding handcrafted anomaly injections and the need for domain expertise. A latent-space decoder produces tailored pseudo-anomalies to train a Transformer-based anomaly classifier, while a pre-trained LLM enriches the temporal and contextual representations of this space. Experiments on three benchmark datasets show that ASTER achieves state-of-the-art performance and sets a new standard for LLM-based TSAD.",
+      "date": "2026-04-15",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.13924v1",
+      "tags": [
+        "cs.LG",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.13924",
+      "arxiv_id": "2604.13924v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.13891",
+      "title": "Beyond Conservative Automated Driving in Multi-Agent Scenarios via Coupled Model Predictive Control and Deep Reinforcement Learning",
+      "authors": [
+        "Saeed Rahmani",
+        "Gözde Körpe",
+        "Zhenlin",
+        "Xu",
+        "Bruno Brito",
+        "Simeon Craig Calvert",
+        "Bart van Arem"
+      ],
+      "abstract": "Automated driving at unsignalized intersections is challenging due to complex multi-vehicle interactions and the need to balance safety and efficiency. Model Predictive Control (MPC) offers structured constraint handling through optimization but relies on hand-crafted rules that often produce overly conservative behavior. Deep Reinforcement Learning (RL) learns adaptive behaviors from experience but often struggles with safety assurance and generalization to unseen environments. In this study, we present an integrated MPC-RL framework to improve navigation performance in multi-agent scenarios. Experiments show that MPC-RL outperforms standalone MPC and end-to-end RL across three traffic-density levels. Collectively, MPC-RL reduces the collision rate by 21% and improves the success rate by 6.5% compared to pure MPC. We further evaluate zero-shot transfer to a highway merging scenario without retraining. Both MPC-based methods transfer substantially better than end-to-end PPO, which highlights the role of the MPC backbone in cross-scenario robustness. The framework also shows faster loss stabilization than end-to-end RL during training, which indicates a reduced learning burden. These results suggest that the integrated approach can improve the balance between safety performance and efficiency in multi-agent intersection scenarios, while the MPC component provides a strong foundation for generalization across driving environments. The implementation code is available open-source.",
+      "date": "2026-04-15",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2604.13891v1",
+      "tags": [
+        "cs.RO",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.13891",
+      "arxiv_id": "2604.13891v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.13882",
+      "title": "Evaluating Supervised Machine Learning Models: Principles, Pitfalls, and Metric Selection",
+      "authors": [
+        "Xuanyan Liu",
+        "Ignacio Cabrera Martin",
+        "Marcello Trovati",
+        "Xiaolong Xu",
+        "Nikolaos Polatidis"
+      ],
+      "abstract": "The evaluation of supervised machine learning models is a critical stage in the development of reliable predictive systems. Despite the widespread availability of machine learning libraries and automated workflows, model assessment is often reduced to the reporting of a small set of aggregate metrics, which can lead to misleading conclusions about real-world performance. This paper examines the principles, challenges, and practical considerations involved in evaluating supervised learning algorithms across classification and regression tasks. In particular, it discusses how evaluation outcomes are influenced by dataset characteristics, validation design, class imbalance, asymmetric error costs, and the choice of performance metrics. Through a series of controlled experimental scenarios using diverse benchmark datasets, the study highlights common pitfalls such as the accuracy paradox, data leakage, inappropriate metric selection, and overreliance on scalar summary measures. The paper also compares alternative validation strategies and emphasizes the importance of aligning model evaluation with the intended operational objective of the task. By presenting evaluation as a decision-oriented and context-dependent process, this work provides a structured foundation for selecting metrics and validation protocols that support statistically sound, robust, and trustworthy supervised machine learning systems.",
+      "date": "2026-04-15",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.13882v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.13882",
+      "arxiv_id": "2604.13882v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
