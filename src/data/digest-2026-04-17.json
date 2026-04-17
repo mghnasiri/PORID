@@ -1,0 +1,307 @@
+{
+  "date": "2026-04-17",
+  "generated_at": "2026-04-17T08:51:10.819516+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s10479-026-07199-6",
+      "title": "Linear optimization with local differential privacy for resource sharing",
+      "authors": [
+        "Karaca, U.",
+        "Aydın, N.",
+        "Yıldırım, S.",
+        "Birbil, Ş."
+      ],
+      "abstract": "Abstract\n                  This study examines a resource-sharing problem involving multiple parties that agree to use a set of capacities together. We start with modeling the whole problem as a mathematical program, where all parties are required to exchange information to obtain the optimal objective function value. This information bears private data from each party in terms of the coefficients used in the mathematical program. Moreover, the parties also consider the individual optimal solutions as private. In this setting, the concern for the parties is the privacy of their data and their optimal allocations. We propose a two-step approach to meet the privacy requirements of the parties. In the first step, we obtain a reformulated model that is amenable to a decomposition scheme. Although this scheme eliminates almost all data exchanges, it does not provide a formal privacy guarantee. In the second step, we provide this guarantee with a local differential privacy algorithm, which does not need a trusted aggregator, at the expense of deviating slightly from the optimality. We provide bounds on this deviation and discuss the consequences of these theoretical results. We also propose a novel modification to increase the efficiency of the algorithm in terms of reducing the theoretical optimality gap. The study ends with a numerical experiment on a planning problem that demonstrates an application of the proposed approach. As we work with a general linear optimization model, our analysis and discussion can be used in different application areas, including production planning, logistics, and revenue management.",
+      "date": "2026-04-17",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07199-6",
+      "tags": [
+        "linear-programming",
+        "supply-chain",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07199-6",
+      "score": 65.0
+    },
+    {
+      "id": "arxiv-2604.14987",
+      "title": "AI-Enabled Covert Channel Detection in RF Receiver Architectures",
+      "authors": [
+        "Abdelrahman Emad Abdelazim",
+        "Alan Rodrigo Diaz-Rizo",
+        "Hassan Aboushady",
+        "Haralampos-G. Stratigopoulos"
+      ],
+      "abstract": "Covert channels (CCs) in wireless chips pose a serious security threat, as they enable the exfiltration of sensitive information from the chip to an external attacker. In this work, we propose an AI-based defense mechanism deployed at the RF receiver, where the model directly monitors raw I/Q samples to detect, in real time, the presence of a CC embedded within an otherwise nominal signal. We first compact a state-of-the-art convolutional neural network (CNN), achieving an 80% reduction in parameters, which is an essential requirement for efficient edge deployment. When evaluated on the open-source hardware Trojan (HT)-based CC dataset, the compacted CNN attains an average accuracy of 90.28% for CC detection and 86.50% for identifying the underlying HT, with results averaged across SNR values above 1 dB. For practical communication scenarios where SNR > 20 dB, the model achieves over 97% accuracy for both tasks. These results correspond to a minimal performance degradation of less than 2% compared to the baseline model. The compacted CNN is further benchmarked against alternative classifiers, demonstrating an excellent accuracy-model size trade-off. Finally, we design a lightweight CNN hardware accelerator and demonstrate it on an FPGA, achieving very low resource utilization and an efficiency of 107 GOPs/W. Being the first AI hardware accelerator proposed specifically for CC detection, we compare it against state-of-the-art AI accelerators for RF signal classification tasks such as modulation recognition, showing superior performance.",
+      "date": "2026-04-16",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2604.14987v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.14987",
+      "arxiv_id": "2604.14987v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.15107",
+      "title": "MinShap: A Modified Shapley Value Approach for Feature Selection",
+      "authors": [
+        "Chenghui Zheng",
+        "Garvesh Raskutti"
+      ],
+      "abstract": "Feature selection is a classical problem in statistics and machine learning, and it continues to remain an extremely challenging problem especially in the context of unknown non-linear relationships with dependent features. On the other hand, Shapley values are a classic solution concept from cooperative game theory that is widely used for feature attribution in general non-linear models with highly-dependent features. However, Shapley values are not naturally suited for feature selection since they tend to capture both direct effects from each feature to the response and indirect effects through other features. In this paper, we combine the advantages of Shapley values and adapt them to feature selection by proposing \\emph{MinShap}, a modification of the Shapley value framework along with a suite of other related algorithms. In particular for MinShap, instead of taking the average marginal contributions over permutations of features, considers the minimum marginal contribution across permutations. We provide a theoretical foundation motivated by the faithfulness assumption in DAG (directed acyclic graphical models), a guarantee for the Type I error of MinShap, and show through numerical simulations and real data experiments that MinShap tends to outperform state-of-the-art feature selection algorithms such as LOCO, GCM and Lasso in terms of both accuracy and stability. We also introduce a suite of algorithms related to MinShap by using the multiple testing/p-value perspective that improves performance in lower-sample settings and provide supporting theoretical guarantees.",
+      "date": "2026-04-16",
+      "source": "arXiv",
+      "source_detail": "stat.ML",
+      "url": "http://arxiv.org/abs/2604.15107v1",
+      "tags": [
+        "stat.ML",
+        "ml-for-or",
+        "game-theory",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.15107",
+      "arxiv_id": "2604.15107v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.15201",
+      "title": "RL-STPA: Adapting System-Theoretic Hazard Analysis for Safety-Critical Reinforcement Learning",
+      "authors": [
+        "Steven A. Senczyszyn",
+        "Timothy C. Havens",
+        "Nathaniel Rice",
+        "Jason E. Summers",
+        "Benjamin D. Werner",
+        "Benjamin J. Schumeg"
+      ],
+      "abstract": "As reinforcement learning (RL) deployments expand into safety-critical domains, existing evaluation methods fail to systematically identify hazards arising from the black-box nature of neural network enabled policies and distributional shift between training and deployment. This paper introduces Reinforcement Learning System-Theoretic Process Analysis (RL-STPA), a framework that adapts conventional STPA's systematic hazard analysis to address RL's unique challenges through three key contributions: hierarchical subtask decomposition using both temporal phase analysis and domain expertise to capture emergent behaviors, coverage-guided perturbation testing that explores the sensitivity of state-action spaces, and iterative checkpoints that feed identified hazards back into training through reward shaping and curriculum design. We demonstrate RL-STPA in the safety-critical test case of autonomous drone navigation and landing, revealing potential loss scenarios that can be missed by standard RL evaluations. The proposed framework provides practitioners with a toolkit for systematic hazard analysis, quantitative metrics for safety coverage assessment, and actionable guidelines for establishing operational safety bounds. While RL-STPA cannot provide formal guarantees for arbitrary neural policies, it offers a practical methodology for systematically evaluating and improving RL safety and robustness in safety-critical applications where exhaustive verification methods remain intractable.",
+      "date": "2026-04-16",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.15201v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.15201",
+      "arxiv_id": "2604.15201v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07219-5",
+      "title": "Stochastic scheduled service network design problem with flexible schedules: Mathematical formulations and benders decomposition-based solution approach",
+      "authors": [
+        "Belieres, S.",
+        "Hewitt, M."
+      ],
+      "abstract": "",
+      "date": "2026-04-16",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07219-5",
+      "tags": [
+        "network-optimization",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07219-5",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1007-s11081-026-10089-2",
+      "title": "Relax-and-round strategies for solving the unit commitment problem with AC power flow constraints",
+      "authors": [
+        "Gómez, D.",
+        "Göttlich, S.",
+        "Ríos-Alborés, A.",
+        "Salgado, P."
+      ],
+      "abstract": "Abstract\n                  The Unit Commitment problem with AC power flow constraints (UC-ACOPF) is a non-convex mixed-integer nonlinear programming (MINLP) problem encountered in power systems. Its combinatorial complexity, together with its non-convex and nonlinear constraints, makes it particularly challenging. A common approach to tackle this problem is to relax the integrality condition, but this often results in infeasible solutions. Consequently, rounding heuristics are frequently employed to restore integer feasibility. This paper addresses recent advances in heuristics aimed at quickly obtaining feasible points for the UC-ACOPF problem, focusing specifically on direct relax-and-round strategies. We propose a model-based heuristic that rescales the solution of the integer-relaxed problem before rounding. Furthermore, we introduce rounding formulas designed to enforce combinatorial constraints and with the aim of maintaining AC feasibility in the returned points. These methodologies are compared with standard direct rounding techniques in the literature, and applied to 6- and 118-bus test systems. Additionally, we integrate the proposed heuristics into an implementation of the Feasibility Pump (FP) method, demonstrating their utility and potential to enhance existing rounding strategies.",
+      "date": "2026-04-16",
+      "source": "Optimization and Engineering",
+      "source_detail": "Optimization and Engineering",
+      "url": "https://doi.org/10.1007/s11081-026-10089-2",
+      "tags": [
+        "linear-programming",
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11081-026-10089-2",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.15176",
+      "title": "Lightweight Real-Time ALADIN for Distributed Optimization",
+      "authors": [
+        "Yifei Wang",
+        "Xuhui Feng",
+        "Shimin Pan",
+        "Liangfan Zhu",
+        "Xu Du",
+        "Apostolos I. Rikos"
+      ],
+      "abstract": "This paper presents a real-time computational framework for multi-node distributed optimization by extending the Augmented Lagrangian Alternating Direction Inexact Newton (ALADIN) algorithm. Our approach integrates adjoint sequential quadratic programming (SQP) techniques to enable efficient approximation of Jacobian information within the ALADIN embedded quadratic program, thereby reducing communication overhead. Furthermore, to decrease computational complexity, we design an event-triggered update strategy that avoids updating Hessian and Jacobian matrices at every iteration. The proposed method achieves local convergence and enhanced communication efficiency, making it well suited for time-critical applications. Numerical experiments demonstrate that our approach achieves competitive performance while exhibiting superior computational efficiency in real-time scenarios, validating its practical applicability for time-sensitive distributed optimization challenges.",
+      "date": "2026-04-16",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.15176v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.15176",
+      "arxiv_id": "2604.15176v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.15161",
+      "title": "A Robust Optimization Approach for Scheduling with Uncertain Start-Time Dependent Costs",
+      "authors": [
+        "Sofía Rodríguez-Ballesteros",
+        "Javier Alcaraz",
+        "Laura Anton-Sanchez",
+        "Marc Goerigk",
+        "Dorothee Henke"
+      ],
+      "abstract": "In this work, we study a single-machine scheduling problem that aims at minimizing the total cost of a schedule subject to start-time dependent costs. This framework naturally captures scenarios where costs fluctuate throughout the day, such as time-varying energy or labor prices. To model more realistic scenarios, we assume that these costs lie within a budgeted uncertainty set and propose a two-stage robust optimization approach. In a first stage, the order in which activities should be executed is decided. After a cost scenario has been revealed, the starting times for each activity are established, subject to the ordering from the first stage. We demonstrate that the proposed problem is NP-hard and not approximable, implying the complexity of its robust counterpart. Furthermore, we show that already evaluating a first-stage solution is NP-hard when the uncertainty set is discrete. We develop models and solution methods for both continuous and discrete budgeted uncertainty. In computational experiments, we compare these approaches and demonstrate the advantages of including uncertainty beforehand.",
+      "date": "2026-04-16",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.15161v1",
+      "tags": [
+        "math.OC",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.15161",
+      "arxiv_id": "2604.15161v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.14897",
+      "title": "Mix-CALADIN: A Distributed Algorithm for Consensus Mixed-Integer Optimization",
+      "authors": [
+        "Boyu Han",
+        "Xu Du",
+        "Karl H. Johansson",
+        "Apostolos I. Rikos"
+      ],
+      "abstract": "This paper addresses distributed consensus optimization problems with mixed-integer variables, with a specific focus on Boolean variables. We introduce a novel distributed algorithm that extends the Consensus Augmented Lagrangian Alternating Direction Inexact Newton (CALADIN) framework by incorporating specialized techniques for handling Boolean variables without relying on local mixed-integer solvers. Under the mild assumption of Lipschitz continuity of the objective functions, we establish rigorous convergence guarantees for both convex and nonconvex mixed-integer programming problems. Numerical experiments demonstrate that the proposed algorithm achieves competitive performance compared to existing approaches while providing rigorous convergence guarantees.",
+      "date": "2026-04-16",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.14897v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.14897",
+      "arxiv_id": "2604.14897v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.15306",
+      "title": "Generalization in LLM Problem Solving: The Case of the Shortest Path",
+      "authors": [
+        "Yao Tong",
+        "Jiayuan Ye",
+        "Anastasia Borovykh",
+        "Reza Shokri"
+      ],
+      "abstract": "Whether language models can systematically generalize remains actively debated. Yet empirical performance is jointly shaped by multiple factors such as training data, training paradigms, and inference-time strategies, making failures difficult to interpret. We introduce a controlled synthetic environment based on shortest-path planning, a canonical composable sequential optimization problem. The setup enables clean separation of these factors and supports two orthogonal axes of generalization: spatial transfer to unseen maps and length scaling to longer-horizon problems. We find that models exhibit strong spatial transfer but consistently fail under length scaling due to recursive instability. We further analyze how distinct stages of the learning pipeline influence systematic problem-solving: for example, data coverage sets capability limits; reinforcement learning improves training stability but does not expand those limits; and inference-time scaling enhances performance but cannot rescue length-scaling failures.",
+      "date": "2026-04-16",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2604.15306v1",
+      "tags": [
+        "cs.AI",
+        "network-optimization",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.15306",
+      "arxiv_id": "2604.15306v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
