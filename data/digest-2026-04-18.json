@@ -1,0 +1,283 @@
+{
+  "date": "2026-04-18",
+  "generated_at": "2026-04-18T08:03:45.745804+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s10479-026-07199-6",
+      "title": "Linear optimization with local differential privacy for resource sharing",
+      "authors": [
+        "Karaca, U.",
+        "Aydın, N.",
+        "Yıldırım, S.",
+        "Birbil, Ş."
+      ],
+      "abstract": "Abstract\n                  This study examines a resource-sharing problem involving multiple parties that agree to use a set of capacities together. We start with modeling the whole problem as a mathematical program, where all parties are required to exchange information to obtain the optimal objective function value. This information bears private data from each party in terms of the coefficients used in the mathematical program. Moreover, the parties also consider the individual optimal solutions as private. In this setting, the concern for the parties is the privacy of their data and their optimal allocations. We propose a two-step approach to meet the privacy requirements of the parties. In the first step, we obtain a reformulated model that is amenable to a decomposition scheme. Although this scheme eliminates almost all data exchanges, it does not provide a formal privacy guarantee. In the second step, we provide this guarantee with a local differential privacy algorithm, which does not need a trusted aggregator, at the expense of deviating slightly from the optimality. We provide bounds on this deviation and discuss the consequences of these theoretical results. We also propose a novel modification to increase the efficiency of the algorithm in terms of reducing the theoretical optimality gap. The study ends with a numerical experiment on a planning problem that demonstrates an application of the proposed approach. As we work with a general linear optimization model, our analysis and discussion can be used in different application areas, including production planning, logistics, and revenue management.",
+      "date": "2026-04-17",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07199-6",
+      "tags": [
+        "linear-programming",
+        "supply-chain",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07199-6",
+      "score": 65.0
+    },
+    {
+      "id": "optim-online-43c297cf14f2",
+      "title": "Paving and computing the set of nondominated points for the bi-objective 0/1 uncapacitated facility location problem",
+      "authors": [],
+      "abstract": "The paper presents a three-phase algorithm to compute the set of nondominated points for the binary version of the uncapacitated facility location problem with two objectives. The first phase constructs a paving in objective space which is a collection of boxes that covers all nondominated points. The paving procedure is a branch and bound algorithm ... Read more",
+      "date": "2026-04-18",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/04/paving-and-computing-the-set-of-nondominated-points-for-the-bi-objective-0-1-uncapacitated-facility-location-problem/?utm_source=rss&utm_medium=rss&utm_campaign=paving-and-computing-the-set-of-nondominated-points-for-the-bi-objective-0-1-uncapacitated-facility-location-problem",
+      "tags": [
+        "integer-programming",
+        "facility-location",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s11081-026-10083-8",
+      "title": "Sophisticated control design for direct drive permanent magnet synchronous generator-based wind turbines under voltage sags",
+      "authors": [
+        "de Oliveira Evald, P.",
+        "Dall’asta, M.",
+        "Schmitz, L.",
+        "de Andrade, J.",
+        "Lazzarin, T."
+      ],
+      "abstract": "Abstract\n                  Power generation from renewable energy sources is the key to a sustainable future. However, the efficiency in energy conversion is driven by the precision of the control system. A common problem in this kind of applicationis the voltage sags in the DC link,which can disturb the operation ofthe machine-side converter. In thissense, this work presents a methodfor tuning applied proportional-integral controllers with cross-coupling feed forward compensation terms and an integral clamping strategy used to control direct drive non-salientpoles permanent magnet synchronous generator-based wind turbines under voltage sags. Thismethod is grounded in the black-winged kite optimization algorithm enhanced with chaoticinitialization using Chebyshevmap, and takes into consideration the minimization of the current tracking errors while concerns with system stability. Wind speed profile is emulated with a log-normal distribution model during the controller tuning and test. Anin-depth discussion on how to use the parametrization procedure is provided, discussing 45experiments (controller tuning andclosed-loop system performance using optimized controllers). Theresults indicate the feasibility of using this sophisticated control design, where all obtained sets ofgains provide fast tracking response and system stability,even when an unpredicted voltagesag occurs. Besides, a comparison with well-established meta-heuristic optimizers shows that the chaotic black-winged kite optimizer can provide a controller that provides smaller meanabsolute tracking errors incomparison to bat optimizer,artificial bee colony algorithm,and krill herd optimizer.",
+      "date": "2026-04-17",
+      "source": "Optimization and Engineering",
+      "source_detail": "Optimization and Engineering",
+      "url": "https://doi.org/10.1007/s11081-026-10083-8",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11081-026-10083-8",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261446056",
+      "title": "EXPRESS: Assortment Optimization for Online Video Games",
+      "authors": [
+        "Wang, Y.",
+        "You, F.",
+        "Vossen, T.",
+        "Zhang, R."
+      ],
+      "abstract": "We consider an assortment optimization problem for a class of online video games where the in-game virtual store has a unique structure with two sections: Featured and Just For You (JFY). All customers (players) are offered the same Featured section assortment, whereas the JFY section is used for personalized recommendations. We model customer choice under a constrained mixture-of-nested-logit model and propose different solution methods for the resulting assortment optimization problems. First, we introduce a novel mixed-integer nonlinear programming (MINLP) formulation. Numerical experiments show that the MINLP formulation generally obtains optimal solutions efficiently, using a variety of instances derived from conversations with our industry partner to mimic the environment found in their video game stores. In addition, we propose three approximate solution methods with theoretical performance guarantees: a fully polynomial time approximation scheme (FPTAS), a mixed-integer linear programming (MILP) formulation, and a heuristic algorithm. To understand the impact of a shared Featured section, we analyze the distribution of display capacity between the Featured and JFY sections. Our numerical experiments highlight that the Featured section plays a critical role in balancing revenue and customer utility. To validate our use of a mixture-of-nested-logit model, we further conduct a simulation study based on ground-truth instances that are independent of the underlying structure of the consumer choice models we consider. The results indicate that our nested structure yields superior performance in terms of both capturing customer behavior and simulation revenue, compared with the mixture-of-MNL model and the current practice of our industry partner. Overall, our paper is the first to study assortment optimization for the gaming industry under discrete choice models; it is also the first to devise both exact and approximate solution approaches for the constrained mixture-of-nested-logit model. Our results provide guidance for effective management of assortments in online video game stores and offer an “assortment” of solution approaches, allowing practitioners to choose one that best suits their environment.",
+      "date": "2026-04-17",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261446056",
+      "tags": [
+        "linear-programming",
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261446056",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1177-10591478261446418",
+      "title": "EXPRESS: When Does Skewness Matter in Robust Inventory Management?",
+      "authors": [
+        "Tao, F.",
+        "Wang, Y.",
+        "Li, Z.",
+        "Geismar, H."
+      ],
+      "abstract": "We investigate the impact of skewed demand on robust inventory management. Including skewness in calculations leads to cubic constraints that prevent the standard two-stage method from deriving an explicit and tractable objective function. To overcome this roadblock, we propose a joint optimization method to directly derive the robust solution in closed form. The joint optimization method is widely applicable to various robust inventory models with different ambiguity sets. The notable advantage is that we can obtain the final solution without deriving the objective function, so many tedious intermediate steps are circumvented. We conduct numerical experiments on industry data to demonstrate that our moment-based policies deliver more consistent performance than divergence-based policies. After obtaining various closed-form solutions, we demonstrate that including skewness in the model improves the profit generated by the robust optimal order quantity if either demand is bounded or the cost-to-price ratio is low, even though the sample moments used may not equal the population moments. Furthermore, under these conditions in which skewness should be included in the calculations, the firm’s expected profit, under the most unfavorable distribution, increases with variance but decreases with skewness. This result stands in contrast to findings in the economics and finance literature, where distributional ambiguity is not considered.",
+      "date": "2026-04-17",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261446418",
+      "tags": [
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261446418",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2023.00475",
+      "title": "Analyzing Network Formation Using Big Data Analytics: A Study of Degree Distribution, Clustering Coefficient, Diameter, and Assortativity",
+      "authors": [
+        "Li, H.",
+        "Xu, T.",
+        "Qi, J.",
+        "Chen, Y."
+      ],
+      "abstract": "This research presents an innovative approach to network development which goes beyond conventional models that use connection rules for individual agents. We show that agents can produce diverse network structures through uniform edge searches which involve random connection attempts without preference. This model offers a new viewpoint on network formation by emphasizing edges in contrast to nodes. Within this framework, edges are considerably more crucial than those in other network formation models as they represent tangible interactions such as question-and-answer exchanges, commercial transactions, and coauthorships, rather than abstract relationships. We prove that the model converges to a stationary equilibrium degree distribution, implying that in the long term, the probability of observing certain network characteristics stabilizes and becomes time-invariant. Furthermore, we derive closed‐form asymptotic expressions for key network statistics and validate them through both simulations and real‐world data sets. Our research shows that three core dimensions are inherently in competition with one another: (1) quantity (mean degree), reflecting agents’ overall connectivity; (2) quality (clustering coefficient), capturing local cohesion; and (3) equity (skewness of the in-degree distribution), indicating how strongly connections concentrate on a few nodes. Our results show that raising the search times boosts quantity but lowers quality by diluting clustering, whereas raising the secondary connection probability enhances clustering yet decreases equity by concentrating in-degree and intensifying the Matthew effect. These trade-offs reveal essential limits of network formation while providing a flexible framework which connects theoretical insight to practical decisions in network design and management.\n                  This paper was accepted by J. George Shanthikumar, data science.\n                  Funding: The research of J. Qi is funded by the National Natural Science Foundation of China [Grant 72422005] and the Hong Kong Research Grant Council [Grants GRF 16209923, 16213424, and TRS T32-615/24-R]. Y.-J. Chen acknowledges financial support from the Hong Kong Research Grant Council [Grants C6020-21GF, 16212821, and 16204521].\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2023.00475 .",
+      "date": "2026-04-17",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2023.00475",
+      "tags": [
+        "network-optimization"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2023.00475",
+      "score": 45.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1287-trsc.2021.0485",
+      "title": "Coordinated Logistics with a Truck and Multiple Sidekicks",
+      "authors": [
+        "Jones, B.",
+        "Xu, K.",
+        "Carlsson, J."
+      ],
+      "abstract": "One of the more novel recent innovations in the logistics world, both in theory and in practice, is the use of small autonomous vehicles to facilitate last-mile delivery. One particular scheme that has received considerable recent attention is the “sidekick” scheme, in which a large cargo truck acts as a mobile “host” that deploys smaller vehicles such as aerial drones or unmanned ground vehicles (UGVs). In this paper, we develop a continuous approximation model that estimates the improvements to total completion time that such a system provides in the asymptotic limit as many demand points are drawn from a continuous probability distribution in the plane. Our key finding is that sidekick systems can be beneficial even when the sidekicks are slower than the host, provided there are sufficiently many of them.\n                  Funding: The authors gratefully acknowledge support from the Toyota University Research Program [ONR Grant N000142412277, DARPA Grant HR00112530234, and USC DOT Grant USC-DOT-913].\n                  Disclaimer: The views expressed in this article are those of the author(s) and do not reflect the official policy or position of the U.S. Naval Academy, Department of the Navy, the Department of Defense, or the U.S. Government.",
+      "date": "2026-04-17",
+      "source": "Transportation Science",
+      "source_detail": "Transportation Science",
+      "url": "https://doi.org/10.1287/trsc.2021.0485",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1287/trsc.2021.0485",
+      "score": 45.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1007-s00291-026-00851-4",
+      "title": "Original performance measures for efficiency analysis and essential assumptions for benchmarking when applying the DEA methodology",
+      "authors": [
+        "Dyckhoff, H."
+      ],
+      "abstract": "",
+      "date": "2026-04-17",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00851-4",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00851-4",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s11081-026-10095-4",
+      "title": "Robust mathematical formulations for the two state phylogenetic tree reconstruction",
+      "authors": [
+        "Enayatsefat, R.",
+        "Bagherian, M.",
+        "Vaziri, H."
+      ],
+      "abstract": "",
+      "date": "2026-04-17",
+      "source": "Optimization and Engineering",
+      "source_detail": "Optimization and Engineering",
+      "url": "https://doi.org/10.1007/s11081-026-10095-4",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11081-026-10095-4",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2024.05241",
+      "title": "Investment Performance of Private Pension Plans: Defined Benefit vs. Defined Contribution",
+      "authors": [
+        "Jang, D.",
+        "Wu, Y."
+      ],
+      "abstract": "Using data on over 160,000 U.S. private pension plans, we analyze the investment performance of defined benefit (DB) and defined contribution (DC) plans. We find a positive asset size effect in performance, stronger in DB plans partly because of greater economies of scale in administrative expenses. Small DB plans underperform small DC plans on various performance metrics and face the highest termination risk. After adjusting for investable passive benchmarks, DC plans outperform DB plans in all but the largest size decile. Our findings suggest that plan consolidation and converting small DB plans to the DC structure are likely to improve the efficiency of pension financing.\n                  This paper was accepted by Camelia Kuhnen, finance.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.05241 .",
+      "date": "2026-04-17",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2024.05241",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2024.05241",
+      "score": 40.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}

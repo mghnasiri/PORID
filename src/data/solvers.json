@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T08:51:10.572625+00:00",
+  "generated_at": "2026-04-18T08:03:45.493348+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1585,
+      "github_stars": 1586,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 165,
+      "github_open_issues": 167,
       "github_recent_prs": [
+        "Various changes to HiPO",
         "Added unit test issue-2975; formatted",
         "Bazel sanitizer test action",
         "Add tiny function for checking row index to simplify postsolve",
-        "Added support for scalar division to highspy",
-        "Mangle symbols of metis, amd, rcm"
+        "Added support for scalar division to highspy"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13367,
+      "github_stars": 13373,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -604,7 +604,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 986,
+      "github_stars": 987,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6180,
-      "github_open_issues": 190,
+      "github_stars": 6182,
+      "github_open_issues": 185,
       "github_recent_prs": [
+        "Accept INFEASIBLE_OR_UNBOUNDED status in TestCUOPT::test_cuopt_lp_3",
         "Run backend tests as uv matrix",
         "Run CVXPYgen upstream tests",
         "Upgrade GitHub Actions to Node 24 runtimes",
-        "Tightened reltol for `TestQOCO.test_qoco_socp_1`",
-        "Map cuOpt UnboundedOrInfeasible status to INFEASIBLE_OR_UNBOUNDED"
+        "Tightened reltol for `TestQOCO.test_qoco_socp_1`"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1320,9 +1320,9 @@
       ],
       "recent_changes": "This is a maintenance release, focusing on bug fixes and stability.\r\nWe have also upgraded to the latest Quarkus LTS (3.33.1) and from now on, Timefold Solver 1.x will stick to LTS versions only.\r\n\r\n#",
       "github_stars": 1634,
-      "github_open_issues": 73,
+      "github_open_issues": 72,
       "github_recent_prs": [
-        "Fix type conversion in DiminishedReturnsProperty",
+        "feat(spring): improve type conversion in DiminishedReturnsProperty",
         "docs: quarkus versioning notice",
         "ci: improve release validation",
         "ci: validate release version",
@@ -1385,7 +1385,7 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
       "github_stars": 2443,
-      "github_open_issues": 357,
+      "github_open_issues": 358,
       "github_recent_prs": [
         "Handle cuOpt UnboundedOrInfeasible termination status (11)",
         "Fix memory leak in appsi LegacySolverInterface wrapper",

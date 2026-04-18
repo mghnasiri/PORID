@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-17T08:51:05.187632+00:00",
+  "generated_at": "2026-04-18T08:03:36.217852+00:00",
   "period": "2026-Q2",
   "subdomains": [
     {
       "tag": "ml-for-or",
       "display_name": "ML for Optimization",
-      "current_quarter_count": 825,
+      "current_quarter_count": 832,
       "previous_quarter_count": 0,
       "velocity": null,
       "velocity_label": "new",
-      "total_count": 825,
+      "total_count": 832,
       "sparkline": [
         0,
         0,
@@ -20,9 +20,9 @@
         0,
         0,
         1,
-        2,
+        3,
         380,
-        442
+        448
       ],
       "top_keywords": [
         "learning",
@@ -105,11 +105,11 @@
     {
       "tag": "stochastic",
       "display_name": "Stochastic Optimization",
-      "current_quarter_count": 522,
+      "current_quarter_count": 527,
       "previous_quarter_count": 0,
       "velocity": null,
       "velocity_label": "new",
-      "total_count": 522,
+      "total_count": 527,
       "sparkline": [
         0,
         0,
@@ -122,16 +122,22 @@
         1,
         3,
         258,
-        260
+        265
       ],
       "top_keywords": [
         "ml-for-or",
-        "eess.SY",
-        "survey",
         "robust",
-        "cs.LG"
+        "survey",
+        "eess.SY",
+        "learning"
       ],
       "sample_papers": [
+        {
+          "title": "EXPRESS: When Does Skewness Matter in Robust Inventory Management?",
+          "authors": "Tao, F., Wang, Y., Li, Z.",
+          "url": "https://doi.org/10.1177/10591478261446418",
+          "date": "2026-04-17"
+        },
         {
           "title": "Benchmarking Classical Coverage Path Planning Heuristics on Irregular Hexagonal Grids for Maritime Coverage Scenarios",
           "authors": "Carlos S. Sepúlveda, Gonzalo A. Ruz",
@@ -142,12 +148,6 @@
           "title": "Lightweight Real-Time ALADIN for Distributed Optimization",
           "authors": "Yifei Wang, Xuhui Feng, Shimin Pan",
           "url": "http://arxiv.org/abs/2604.15176v1",
-          "date": "2026-04-16"
-        },
-        {
-          "title": "A Robust Optimization Approach for Scheduling with Uncertain Start-Time Dependent Costs",
-          "authors": "Sofía Rodríguez-Ballesteros, Javier Alcaraz, Laura Anton-Sanchez",
-          "url": "http://arxiv.org/abs/2604.15161v1",
           "date": "2026-04-16"
         }
       ]
@@ -403,13 +403,63 @@
       ]
     },
     {
-      "tag": "healthcare-or",
-      "display_name": "Healthcare OR",
-      "current_quarter_count": 179,
+      "tag": "supply-chain",
+      "display_name": "Supply Chain",
+      "current_quarter_count": 180,
       "previous_quarter_count": 0,
       "velocity": null,
       "velocity_label": "new",
-      "total_count": 179,
+      "total_count": 180,
+      "sparkline": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        6,
+        81,
+        91
+      ],
+      "top_keywords": [
+        "supply",
+        "stochastic",
+        "chain",
+        "ml-for-or",
+        "under"
+      ],
+      "sample_papers": [
+        {
+          "title": "Linear optimization with local differential privacy for resource sharing",
+          "authors": "Karaca, U., Aydın, N., Yıldırım, S.",
+          "url": "https://doi.org/10.1007/s10479-026-07199-6",
+          "date": "2026-04-17"
+        },
+        {
+          "title": "Coordinated Logistics with a Truck and Multiple Sidekicks",
+          "authors": "Jones, B., Xu, K., Carlsson, J.",
+          "url": "https://doi.org/10.1287/trsc.2021.0485",
+          "date": "2026-04-17"
+        },
+        {
+          "title": "EXPRESS: When Does Skewness Matter in Robust Inventory Management?",
+          "authors": "Tao, F., Wang, Y., Li, Z.",
+          "url": "https://doi.org/10.1177/10591478261446418",
+          "date": "2026-04-17"
+        }
+      ]
+    },
+    {
+      "tag": "healthcare-or",
+      "display_name": "Healthcare OR",
+      "current_quarter_count": 180,
+      "previous_quarter_count": 0,
+      "velocity": null,
+      "velocity_label": "new",
+      "total_count": 180,
       "sparkline": [
         0,
         0,
@@ -422,7 +472,7 @@
         0,
         3,
         92,
-        84
+        85
       ],
       "top_keywords": [
         "ml-for-or",
@@ -449,56 +499,6 @@
           "authors": "Khalid Adnan Alsayed",
           "url": "http://arxiv.org/abs/2604.15038v1",
           "date": "2026-04-16"
-        }
-      ]
-    },
-    {
-      "tag": "supply-chain",
-      "display_name": "Supply Chain",
-      "current_quarter_count": 177,
-      "previous_quarter_count": 0,
-      "velocity": null,
-      "velocity_label": "new",
-      "total_count": 177,
-      "sparkline": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        2,
-        6,
-        81,
-        88
-      ],
-      "top_keywords": [
-        "supply",
-        "stochastic",
-        "chain",
-        "ml-for-or",
-        "under"
-      ],
-      "sample_papers": [
-        {
-          "title": "Linear optimization with local differential privacy for resource sharing",
-          "authors": "Karaca, U., Aydın, N., Yıldırım, S.",
-          "url": "https://doi.org/10.1007/s10479-026-07199-6",
-          "date": "2026-04-17"
-        },
-        {
-          "title": "Deepbullwhip: An Open-Source Simulation and Benchmarking for Multi-Echelon Bullwhip Analyses",
-          "authors": "Mansur M. Arief",
-          "url": "http://arxiv.org/abs/2604.13478v1",
-          "date": "2026-04-15"
-        },
-        {
-          "title": "Sandpile Economics: Theory, Identification, and Evidence",
-          "authors": "Diego Vallarino",
-          "url": "http://arxiv.org/abs/2604.13890v1",
-          "date": "2026-04-15"
         }
       ]
     },
@@ -705,11 +705,11 @@
     {
       "tag": "multi-objective",
       "display_name": "Multi-Objective Optimization",
-      "current_quarter_count": 130,
+      "current_quarter_count": 133,
       "previous_quarter_count": 0,
       "velocity": null,
       "velocity_label": "new",
-      "total_count": 130,
+      "total_count": 133,
       "sparkline": [
         0,
         0,
@@ -722,7 +722,7 @@
         1,
         1,
         56,
-        72
+        75
       ],
       "top_keywords": [
         "stochastic",
@@ -732,6 +732,12 @@
         "cs.LG"
       ],
       "sample_papers": [
+        {
+          "title": "Paving and computing the set of nondominated points for the bi-objective 0/1 uncapacitated facility location problem",
+          "authors": "",
+          "url": "https://optimization-online.org/2026/04/paving-and-computing-the-set-of-nondominated-points-for-the-bi-objective-0-1-uncapacitated-facility-location-problem/?utm_source=rss&utm_medium=rss&utm_campaign=paving-and-computing-the-set-of-nondominated-points-for-the-bi-objective-0-1-uncapacitated-facility-location-problem",
+          "date": "2026-04-18"
+        },
         {
           "title": "VisPCO: Visual Token Pruning Configuration Optimization via Budget-Aware Pareto-Frontier Learning for Vision-Language Models",
           "authors": "Huawei Ji, Yuanhao Sun, Yuan Jin",
@@ -743,23 +749,17 @@
           "authors": "Zihao Xu, John Harvill, Ziwei Fan",
           "url": "http://arxiv.org/abs/2604.15153v1",
           "date": "2026-04-16"
-        },
-        {
-          "title": "COEVO: Co-Evolutionary Framework for Joint Functional Correctness and PPA Optimization in LLM-Based RTL Generation",
-          "authors": "Heng Ping, Peiyu Zhang, Shixuan Li",
-          "url": "http://arxiv.org/abs/2604.15001v1",
-          "date": "2026-04-16"
         }
       ]
     },
     {
       "tag": "metaheuristics",
       "display_name": "Metaheuristics",
-      "current_quarter_count": 112,
+      "current_quarter_count": 114,
       "previous_quarter_count": 0,
       "velocity": null,
       "velocity_label": "new",
-      "total_count": 112,
+      "total_count": 114,
       "sparkline": [
         0,
         0,
@@ -772,7 +772,7 @@
         2,
         1,
         53,
-        56
+        58
       ],
       "top_keywords": [
         "stochastic",
@@ -805,11 +805,11 @@
     {
       "tag": "integer-programming",
       "display_name": "Integer Programming",
-      "current_quarter_count": 103,
-      "previous_quarter_count": 1,
-      "velocity": 102.0,
-      "velocity_label": "accelerating",
-      "total_count": 104,
+      "current_quarter_count": 105,
+      "previous_quarter_count": 0,
+      "velocity": null,
+      "velocity_label": "new",
+      "total_count": 105,
       "sparkline": [
         0,
         0,
@@ -819,35 +819,35 @@
         0,
         0,
         0,
-        1,
+        0,
         0,
         58,
-        45
+        47
       ],
       "top_keywords": [
         "stochastic",
-        "scheduling",
         "linear-programming",
+        "scheduling",
         "math.OC",
         "decomposition"
       ],
       "sample_papers": [
         {
+          "title": "Paving and computing the set of nondominated points for the bi-objective 0/1 uncapacitated facility location problem",
+          "authors": "",
+          "url": "https://optimization-online.org/2026/04/paving-and-computing-the-set-of-nondominated-points-for-the-bi-objective-0-1-uncapacitated-facility-location-problem/?utm_source=rss&utm_medium=rss&utm_campaign=paving-and-computing-the-set-of-nondominated-points-for-the-bi-objective-0-1-uncapacitated-facility-location-problem",
+          "date": "2026-04-18"
+        },
+        {
+          "title": "EXPRESS: Assortment Optimization for Online Video Games",
+          "authors": "Wang, Y., You, F., Vossen, T.",
+          "url": "https://doi.org/10.1177/10591478261446056",
+          "date": "2026-04-17"
+        },
+        {
           "title": "Relax-and-round strategies for solving the unit commitment problem with AC power flow constraints",
           "authors": "Gómez, D., Göttlich, S., Ríos-Alborés, A.",
           "url": "https://doi.org/10.1007/s11081-026-10089-2",
-          "date": "2026-04-16"
-        },
-        {
-          "title": "Pricing Electric Vehicle Charging and Station Access via Copositive Duality",
-          "authors": "Nanfei Jiang, Yi Zhou, Josh A. Taylor",
-          "url": "http://arxiv.org/abs/2604.15227v1",
-          "date": "2026-04-16"
-        },
-        {
-          "title": "Mix-CALADIN: A Distributed Algorithm for Consensus Mixed-Integer Optimization",
-          "authors": "Boyu Han, Xu Du, Karl H. Johansson",
-          "url": "http://arxiv.org/abs/2604.14897v1",
           "date": "2026-04-16"
         }
       ]
@@ -855,11 +855,11 @@
     {
       "tag": "constraint-programming",
       "display_name": "Constraint Programming",
-      "current_quarter_count": 96,
+      "current_quarter_count": 98,
       "previous_quarter_count": 0,
       "velocity": null,
       "velocity_label": "new",
-      "total_count": 96,
+      "total_count": 98,
       "sparkline": [
         0,
         0,
@@ -872,7 +872,7 @@
         0,
         1,
         39,
-        56
+        58
       ],
       "top_keywords": [
         "eess.SY",
@@ -955,11 +955,11 @@
     {
       "tag": "linear-programming",
       "display_name": "Linear Programming",
-      "current_quarter_count": 90,
+      "current_quarter_count": 92,
       "previous_quarter_count": 0,
       "velocity": null,
       "velocity_label": "new",
-      "total_count": 90,
+      "total_count": 92,
       "sparkline": [
         0,
         0,
@@ -972,7 +972,7 @@
         0,
         0,
         50,
-        40
+        42
       ],
       "top_keywords": [
         "integer-programming",
@@ -989,15 +989,15 @@
           "date": "2026-04-17"
         },
         {
+          "title": "EXPRESS: Assortment Optimization for Online Video Games",
+          "authors": "Wang, Y., You, F., Vossen, T.",
+          "url": "https://doi.org/10.1177/10591478261446056",
+          "date": "2026-04-17"
+        },
+        {
           "title": "Relax-and-round strategies for solving the unit commitment problem with AC power flow constraints",
           "authors": "Gómez, D., Göttlich, S., Ríos-Alborés, A.",
           "url": "https://doi.org/10.1007/s11081-026-10089-2",
-          "date": "2026-04-16"
-        },
-        {
-          "title": "Balancing Weights, Directed Sparsification, and Augmenting Paths",
-          "authors": "Jason Li",
-          "url": "http://arxiv.org/abs/2604.14633v1",
           "date": "2026-04-16"
         }
       ]
@@ -1155,11 +1155,11 @@
     {
       "tag": "network-optimization",
       "display_name": "Network Optimization",
-      "current_quarter_count": 43,
+      "current_quarter_count": 44,
       "previous_quarter_count": 0,
       "velocity": null,
       "velocity_label": "new",
-      "total_count": 43,
+      "total_count": 44,
       "sparkline": [
         0,
         0,
@@ -1172,16 +1172,22 @@
         0,
         0,
         27,
-        16
+        17
       ],
       "top_keywords": [
         "stochastic",
-        "design",
         "network",
+        "design",
         "decomposition",
         "cs.DS"
       ],
       "sample_papers": [
+        {
+          "title": "Analyzing Network Formation Using Big Data Analytics: A Study of Degree Distribution, Clustering Coefficient, Diameter, and Assortativity",
+          "authors": "Li, H., Xu, T., Qi, J.",
+          "url": "https://doi.org/10.1287/mnsc.2023.00475",
+          "date": "2026-04-17"
+        },
         {
           "title": "Stochastic scheduled service network design problem with flexible schedules: Mathematical formulations and benders decomposition-based solution approach",
           "authors": "Belieres, S., Hewitt, M.",
@@ -1193,12 +1199,6 @@
           "authors": "Yao Tong, Jiayuan Ye, Anastasia Borovykh",
           "url": "http://arxiv.org/abs/2604.15306v1",
           "date": "2026-04-16"
-        },
-        {
-          "title": "Block-Based Pathfinding: A Minecraft System for Visualizing Graph Algorithms",
-          "authors": "Luca-Stefan Pirvu, Bogdan-Alexandru Maciuca, Andrei-Ciprian Rabu",
-          "url": "http://arxiv.org/abs/2604.13957v1",
-          "date": "2026-04-15"
         }
       ]
     },
@@ -1653,6 +1653,56 @@
       ]
     },
     {
+      "tag": "facility-location",
+      "display_name": "Facility Location",
+      "current_quarter_count": 18,
+      "previous_quarter_count": 0,
+      "velocity": null,
+      "velocity_label": "new",
+      "total_count": 18,
+      "sparkline": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        10,
+        7
+      ],
+      "top_keywords": [
+        "location",
+        "supply-chain",
+        "facility",
+        "decomposition",
+        "stochastic"
+      ],
+      "sample_papers": [
+        {
+          "title": "Paving and computing the set of nondominated points for the bi-objective 0/1 uncapacitated facility location problem",
+          "authors": "",
+          "url": "https://optimization-online.org/2026/04/paving-and-computing-the-set-of-nondominated-points-for-the-bi-objective-0-1-uncapacitated-facility-location-problem/?utm_source=rss&utm_medium=rss&utm_campaign=paving-and-computing-the-set-of-nondominated-points-for-the-bi-objective-0-1-uncapacitated-facility-location-problem",
+          "date": "2026-04-18"
+        },
+        {
+          "title": "Tradeoffs in Privacy, Welfare, and Fairness for Facility Location",
+          "authors": "Sara Fish, Yannai A. Gonczarowski, Jason Z. Tang",
+          "url": "http://arxiv.org/abs/2604.10443v1",
+          "date": "2026-04-12"
+        },
+        {
+          "title": "Hub location problems with asymmetric allocation",
+          "authors": "I. Espejo, M. Landete, M. Leal",
+          "url": "http://arxiv.org/abs/2604.10307v1",
+          "date": "2026-04-11"
+        }
+      ]
+    },
+    {
       "tag": "math.AP",
       "display_name": "Math.Ap",
       "current_quarter_count": 18,
@@ -1699,56 +1749,6 @@
           "authors": "Friedemann Schuricht",
           "url": "http://arxiv.org/abs/2604.10670v1",
           "date": "2026-04-12"
-        }
-      ]
-    },
-    {
-      "tag": "facility-location",
-      "display_name": "Facility Location",
-      "current_quarter_count": 17,
-      "previous_quarter_count": 0,
-      "velocity": null,
-      "velocity_label": "new",
-      "total_count": 17,
-      "sparkline": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        10,
-        6
-      ],
-      "top_keywords": [
-        "location",
-        "supply-chain",
-        "facility",
-        "decomposition",
-        "stochastic"
-      ],
-      "sample_papers": [
-        {
-          "title": "Tradeoffs in Privacy, Welfare, and Fairness for Facility Location",
-          "authors": "Sara Fish, Yannai A. Gonczarowski, Jason Z. Tang",
-          "url": "http://arxiv.org/abs/2604.10443v1",
-          "date": "2026-04-12"
-        },
-        {
-          "title": "Hub location problems with asymmetric allocation",
-          "authors": "I. Espejo, M. Landete, M. Leal",
-          "url": "http://arxiv.org/abs/2604.10307v1",
-          "date": "2026-04-11"
-        },
-        {
-          "title": "Quantum bridge analytics: a QUBO approach to the uncapacitated facility location problem",
-          "authors": "Li, H., Hennig, R., Kochenberger, G.",
-          "url": "https://doi.org/10.1007/s10479-026-07201-1",
-          "date": "2026-04-09"
         }
       ]
     },
@@ -2854,7 +2854,7 @@
     }
   ],
   "meta": {
-    "total_papers_analyzed": 4350,
+    "total_papers_analyzed": 4386,
     "time_window_days": 90,
     "min_paper_threshold": 5,
     "unique_tags": 57
