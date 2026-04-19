@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-18T08:03:45.493348+00:00",
+  "generated_at": "2026-04-19T08:19:54.696051+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1586,
+      "github_stars": 1587,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,7 +345,7 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 167,
+      "github_open_issues": 168,
       "github_recent_prs": [
         "Various changes to HiPO",
         "Added unit test issue-2975; formatted",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13373,
+      "github_stars": 13383,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1132,13 +1132,13 @@
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
       "github_stars": 6182,
-      "github_open_issues": 185,
+      "github_open_issues": 187,
       "github_recent_prs": [
+        "Use triangular Hessian format when passing QP to HiGHS",
         "Accept INFEASIBLE_OR_UNBOUNDED status in TestCUOPT::test_cuopt_lp_3",
         "Run backend tests as uv matrix",
         "Run CVXPYgen upstream tests",
-        "Upgrade GitHub Actions to Node 24 runtimes",
-        "Tightened reltol for `TestQOCO.test_qoco_socp_1`"
+        "Upgrade GitHub Actions to Node 24 runtimes"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,13 +1319,13 @@
         "metaheuristic"
       ],
       "recent_changes": "This is a maintenance release, focusing on bug fixes and stability.\r\nWe have also upgraded to the latest Quarkus LTS (3.33.1) and from now on, Timefold Solver 1.x will stick to LTS versions only.\r\n\r\n#",
-      "github_stars": 1634,
-      "github_open_issues": 72,
+      "github_stars": 1636,
+      "github_open_issues": 73,
       "github_recent_prs": [
+        "feat(neighborhoods): allow uni pick() and split change moves",
         "feat(spring): improve type conversion in DiminishedReturnsProperty",
         "docs: quarkus versioning notice",
         "ci: improve release validation",
-        "ci: validate release version",
         "ci: validate release version"
       ]
     },
