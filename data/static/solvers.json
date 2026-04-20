@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T08:19:54.696051+00:00",
+  "generated_at": "2026-04-20T09:14:33.497110+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1587,
+      "github_stars": 1591,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13383,
+      "github_stars": 13386,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,7 +569,7 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 91,
+      "github_open_issues": 92,
       "github_recent_prs": [
         "Integrate HiGHS and few minor fixes",
         "Fix Bazel build of FlatZinc on Windows",
@@ -666,13 +666,13 @@
         }
       ],
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_open_issues": 162,
+      "github_open_issues": 164,
       "github_recent_prs": [
+        "Update windows-ci for action update for Node.js 24 to set up msvc for stable",
+        "Update windows-ci for action update for Node.js 24 to set up msvc",
         "Update linux-ci for macos and all ci for action updates for Node.js for stable",
         "Update linux-ci for macos and all ci for action updates for Node.js",
-        "Output facelift: structured tabular output for all solver phases",
-        "fix time measurement and time limit",
-        "Update linux-ci to move from macos-13 to macos-15-intel"
+        "Output facelift: structured tabular output for all solver phases"
       ]
     },
     {
@@ -1131,8 +1131,8 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6182,
-      "github_open_issues": 187,
+      "github_stars": 6181,
+      "github_open_issues": 184,
       "github_recent_prs": [
         "Use triangular Hessian format when passing QP to HiGHS",
         "Accept INFEASIBLE_OR_UNBOUNDED status in TestCUOPT::test_cuopt_lp_3",
@@ -1320,13 +1320,13 @@
       ],
       "recent_changes": "This is a maintenance release, focusing on bug fixes and stability.\r\nWe have also upgraded to the latest Quarkus LTS (3.33.1) and from now on, Timefold Solver 1.x will stick to LTS versions only.\r\n\r\n#",
       "github_stars": 1636,
-      "github_open_issues": 73,
+      "github_open_issues": 75,
       "github_recent_prs": [
+        "docs: reference the new license manager",
+        "deps: bump the quarkus group with 4 updates",
+        "deps: bump the regular group with 2 updates",
         "feat(neighborhoods): allow uni pick() and split change moves",
-        "feat(spring): improve type conversion in DiminishedReturnsProperty",
-        "docs: quarkus versioning notice",
-        "ci: improve release validation",
-        "ci: validate release version"
+        "feat(spring): improve type conversion in DiminishedReturnsProperty"
       ]
     },
     {
