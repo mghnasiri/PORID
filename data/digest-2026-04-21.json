@@ -1,0 +1,299 @@
+{
+  "date": "2026-04-21",
+  "generated_at": "2026-04-21T08:58:17.885588+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1002-net.70042",
+      "title": "A Graph‐Based Diverse Trajectory‐Driven Attention Model for Vehicle Routing Problems",
+      "authors": [
+        "Ou, B.",
+        "Guan, Q.",
+        "Yan, D.",
+        "Cao, H."
+      ],
+      "abstract": "ABSTRACT\n                  The vehicle routing problem (VRP) has garnered significant interest due to its central role in logistics and transportation systems. However, existing deep reinforcement learning (DRL) approaches often underexploit the structural information encoded in graph topologies, and tend to generate solution trajectories with limited diversity, restricting effective exploration of the solution space. To overcome these limitations, we present a Graph‐based Diverse Trajectory‐driven Attention Model (GDTAM) for solving VRPs across a range of scales and types. Built upon a transformer backbone, GDTAM operates directly on undirected graphs and integrates an edge‐driven graph attention block within the encoder, enabling the joint modeling of node‐ and edge‐level topological features. To enhance adaptability to dynamic environments, we introduce a feature integrator that bridges the encoder and decoder, enabling the fusion of real‐time state features with static graph representations. Moreover, GDTAM incorporates a multi‐decoder architecture with identical structures but independently network parameters, promoting the generation of diverse routing trajectories through a Jensen–Shannon divergence regularization term. We evaluate GDTAM on four canonical VRP variants, i.e., the traveling salesman problem (TSP), the capacitated VRP (CVRP), the orienteering problem (OP), and the asymmetric traveling salesman problem (ATSP). Experimental results demonstrate that GDTAM represents a meaningful advancement over mainstream heuristic and DRL‐based baselines, while exhibiting strong generalization across various problem scales, underscoring its effectiveness and robustness for real‐world routing applications.",
+      "date": "2026-04-20",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70042",
+      "tags": [
+        "vehicle-routing",
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70042",
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07220-y",
+      "title": "A two-echelon vehicle routing problem with multi-trips, synchronisation constraints and direct deliveries, in the context of city logistics",
+      "authors": [
+        "Oliveira, B.",
+        "Ramos, A.",
+        "Sousa, J."
+      ],
+      "abstract": "Abstract\n                  This work studies a two-echelon distribution system, in the context of city logistics, where storage is not permitted at intermediate transfer locations. Therefore, vehicles operating at both echelons need to be synchronised in time and space, allowing loads to be directly transferred from the first to the second echelon vehicles. Moreover, the problem considers that vehicles operating at the first echelon can perform direct deliveries to customers, that load transfers may occur at some customers’ locations, and that vehicles operating at the second echelon are able to perform multiple trips before returning to the depot at the end of the day. To address this problem, we propose a novel mixed integer programming (MIP) model for the two-echelon, multi-trip vehicle routing problem with satellite synchronisation and direct deliveries (2E-MTVRPSS-DD). We tighten this formulation with several sets of valid inequalities, including symmetry breaking constraints based on lexicographical ordering, vehicle rounded capacity constraints, and satellite rounded capacity constraints. We test the model using a commercial solver with newly generated instances, and present computational results, as well as an evaluation of the performance of the proposed valid inequalities. The results show that for relatively small instances, the proposed model is able to solve the problem optimally, but in general, is unable to solve large instances in acceptable computational time, even when considering the proposed valid inequalities. Nevertheless, we show that adding these valid inequalities has a positive impact in improving the model’s linear relaxation, with better lower and upper bounds, and ultimately in improving the MIP gaps. Moreover, we show that adding symmetry breaking constraints based on lexicographical ordering has a negative impact, in terms of computational time, for the solver to find a first upper bound, and that this issue may be overcome by warm-starting the MIP model.",
+      "date": "2026-04-20",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07220-y",
+      "tags": [
+        "integer-programming",
+        "vehicle-routing",
+        "supply-chain",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07220-y",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2604.17776",
+      "title": "Trajectory-Based Optimization for Air Traffic Control in the Terminal Maneuvering Area",
+      "authors": [
+        "Yutian Pang",
+        "Daniel Delahaye",
+        "John-Paul Clarke"
+      ],
+      "abstract": "We present a trajectory-based optimization framework for arrival sequencing and scheduling in the terminal maneuvering area (TMA). Unlike node-link scheduling models that reduce trajectories to time-delay variables, the proposed method computes implementable per-aircraft speed profiles and path extensions that achieve required landing separation through terminal air traffic control actions. The framework combines an analytic TMA path model, consisting of a tangent leg, a radius-to-fix turn, and a final-approach segment, with a nonlinear program (NLP) that jointly optimizes path stretch and segment speeds under a weighted objective. Three landing-order policies are examined: First-Entry-First-Serve (FEFS), First-on-Final-First-Serve (FOFFS), and FOFFS with Constrained Position Shifting (CPS) up to $k$ positions. CPS is implemented through a two-phase approach coupling mixed-integer linear programming (MILP) with NLP to select an optimized landing order before trajectory optimization. The aircraft population follows a realistic weight-class fleet mix with pair-specific wake-turbulence separation, and each scenario is perturbed by a Gaussian wind sample projected onto each segment to convert commanded airspeeds into ground speeds. An online rolling-horizon formulation commits each aircraft trajectory irrevocably upon entry, enabling real-time decision-making. Monte Carlo experiments on the simplified A80 TMA show that: (i) FOFFS consistently outperforms FEFS in delay, path stretch, and fuel burn by exploiting geometric asymmetries among arrival streams; (ii) CPS further reduces separation violations and path stretch, though with diminishing returns and rapidly increasing solver cost; (iii) fuel estimates from BADA 3 and OpenAP show consistent qualitative trends; and (iv) per-entry optimization completes in near real-time, supporting practical deployment.",
+      "date": "2026-04-20",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2604.17776v1",
+      "tags": [
+        "eess.SY",
+        "linear-programming",
+        "integer-programming",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.17776",
+      "arxiv_id": "2604.17776v1",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07224-8",
+      "title": "Enhanced optimal tracking error portfolio via quantile regression with SSD constraints",
+      "authors": [
+        "Bonomelli, M.",
+        "Cassader, M.",
+        "Giacometti, R.",
+        "Lauria, D.",
+        "Ortobelli Lozza, S."
+      ],
+      "abstract": "Abstract\n                  Constructing an index-tracking portfolio involves closely replicating the performance of a benchmark index while minimizing deviations from it. In this paper, we propose a novel enhanced index tracking model that combines a quantile-regression-based deviation measure with linear second-order stochastic dominance (SSD) constraints. The objective is to control the tail risk of the tracking error while guaranteeing an enhancement of the portfolio return distribution relative to the benchmark. The proposed formulation leads to a linear optimization problem that remains computationally tractable under realistic portfolio constraints. The model is empirically evaluated using real-world data to assess the contribution of SSD constraints and to compare its performance with that of classical quantile regression. The empirical results show that both models outperform the benchmark index. However, when the investable universe is restricted through preselection, the proposed model delivers significant improvements in risk-return performance and tail-risk control.",
+      "date": "2026-04-20",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07224-8",
+      "tags": [
+        "linear-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07224-8",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.18481",
+      "title": "Physics-Informed Neural Networks: A Didactic Derivation of the Complete Training Cycle",
+      "authors": [
+        "Abdeladhim Tahimi"
+      ],
+      "abstract": "This paper is a step-by-step, self-contained guide to the complete training cycle of a Physics-Informed Neural Network (PINN) -- a topic that existing tutorials and guides typically delegate to automatic differentiation libraries without exposing the underlying algebra. Using a first-order initial value problem with a known analytical solution as a running example, we walk through every stage of the process: forward propagation of both the network output and its temporal derivative, evaluation of a composite loss function built from the ODE residual and the initial condition, backpropagation of gradients -- with particular attention to the product rule that arises in hidden layers -- and a gradient descent parameter update. Every calculation is presented with explicit, verifiable numerical values using a 1-3-3-1 multilayer perceptron with two hidden layers and 22 trainable parameters. From these concrete examples, we derive general recursive formulas -- expressed as sensitivity propagation relations -- that extend the gradient computation to networks of arbitrary depth, and we connect these formulas to the automatic differentiation engines used in practice. The trained network is then validated against the exact solution, achieving a relative $L^2$ error of $4.290 \\times 10^{-4}$ using only the physics-informed loss, without any data from the true solution. A companion Jupyter/PyTorch notebook reproduces every manual calculation and the full training pipeline, providing mutual validation between hand-derived and machine-computed gradients.",
+      "date": "2026-04-20",
+      "source": "arXiv",
+      "source_detail": "math.NA",
+      "url": "http://arxiv.org/abs/2604.18481v1",
+      "tags": [
+        "math.NA",
+        "ml-for-or",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.18481",
+      "arxiv_id": "2604.18481v1",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2604.18399",
+      "title": "Bridge-Centered Metapath Classification Using R-GCN-VGAE for Disaster-Resilient Maintenance Decisions",
+      "authors": [
+        "Takato Yasuno"
+      ],
+      "abstract": "Daily infrastructure management in preparation for disasters is critical for urban resilience. When bridges remain resilient against disaster-induced external forces, access to hospitals, shops, and residences via metapaths can be sustained, maintaining essential urban functions. However, prioritizing bridge maintenance under limited budgets requires quantifying the multi-dimensional roles that bridges play in disaster scenarios -- a challenge that existing single-indicator approaches fail to address. We focus on metapaths from national highways through bridges to buildings (hospitals, shops, residences), constructing a heterogeneous graph with road, bridge, and building layers. A Relation-centric Graph Convolutional Network Variational Autoencoder (R-GCN-VGAE) learns metapath-based feature representations, enabling classification of bridges into disaster-preparedness categories: Supply Chain (commercial logistics), Medical Access (emergency healthcare), and Residential Protection (preventing isolation). Using OSMnx and open data, we validate our methodology on three diverse cities in Ibaraki Prefecture, Japan: Mito (697 bridges), Chikusei (258 bridges), and Moriya (148 bridges), totaling 1,103 bridges. The heterogeneous graph construction from open data enables redefining bridge roles for disaster scenarios, supporting maintenance budget decision-making. We contributed that (1) Open-data methodology for constructing urban heterogeneous graphs. (2) Redefinition of bridge roles for disaster scenarios via metapath-based classification. (3) Establishment of maintenance budget decision support methodology. (4) k-NN tuning strategy validated across diverse city scales. (5) Empirical demonstration of UMAP superiority over t-SNE/PCA for multi-role bridge visualization.",
+      "date": "2026-04-20",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.18399v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "healthcare-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.18399",
+      "arxiv_id": "2604.18399v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.17690",
+      "title": "Path-Based Quantum Meta-Learning for Adaptive Optimization of Reconfigurable Intelligent Surfaces",
+      "authors": [
+        "Noha Hassan",
+        "Xavier Fernando",
+        "Halim Yanikomeroglu"
+      ],
+      "abstract": "Reconfigurable intelligent surfaces (RISs) modify signal reflections to enhance wireless communication capabilities. Classical RIS phase optimization is highly non convex and challenging in dynamic environments due to high interference and user mobility. Here we propose a hierarchical multi-objective quantum metalearning algorithm that switches among specific quantum paths based on historical success, energy cost, and current data rate. Candidate RIS control directions are arranged as switch paths between quantum neural network layers to minimize inference, and a scoring mechanism selects the top performing paths per layer. Instead of merely storing past successful settings of the RIS and picking the closest match when a new problem is encountered, the algorithm learns how to select and recombine the best parts of different solutions to solve new scenarios. In our model, high-dimensional RIS scenario features are compressed into a quantum state using the tensor product, then superimposed during quantum path selection, significantly improving quantum computational advantage. Results demonstrate efficient performance with enhanced spectral efficiency, convergence rate, and adaptability.",
+      "date": "2026-04-20",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2604.17690v1",
+      "tags": [
+        "eess.SY",
+        "stochastic",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.17690",
+      "arxiv_id": "2604.17690v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07135-8",
+      "title": "Behavioral personae, narrow framing, and stochastic dominance in the cryptocurrency market",
+      "authors": [
+        "Arvanitis, S.",
+        "Topaloglou, N.",
+        "Tsomidis, G."
+      ],
+      "abstract": "Abstract\n                  This study examines whether the inclusion of cryptoassets improves optimal portfolio performance for key investor archetypes in behavioral finance: Cumulative Prospect Theory (CPT), Markowitz, and Loss Averse investors. We develop a framework that integrates Second-Order Stochastic Dominance (SSD) with Stochastic Spanning to construct optimal portfolios, accounting for investors’ subjective risk perceptions and narrow framing. Our methodology incorporates non-stationarities, asset return bubbles, and the safe-haven role of gold while also considering the impact of the COVID-19 pandemic. Empirical results, based on a rolling-window analysis of business-day returns, indicate that while the traditional portfolio universe (stocks, bonds, and gold) generally spans the augmented universe (including cryptoassets) in-sample, out-of-sample tests reveal that cryptoassets enhance performance, particularly for CPT and Loss Averse investors. The findings suggest that behavioral criteria do not overturn the fundamental instability and risk characteristics of crypto assets, although under certain behavioral biases, investor risk perceptions shape portfolio choices in ways that cryptoassets can appear as attractive investment options.",
+      "date": "2026-04-20",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07135-8",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07135-8",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2024.0718",
+      "title": "Network Flow Models for Robust Binary Optimization with Selective Adaptability",
+      "authors": [
+        "Bodur, M.",
+        "Chan, T.",
+        "Zhu, I."
+      ],
+      "abstract": "Adaptive robust optimization problems have received significant attention in recent years but remain notoriously difficult to solve when recourse decisions are discrete. In this paper, we propose new reformulation techniques for adaptive robust binary optimization (ARBO) problems with objective uncertainty. Without loss of generality, we focus on ARBO problems with “selective adaptability,” a term we coin to describe a common class of linking constraints between first-stage and second-stage solutions. Our main contributions involve reformulating and approximating these ARBO problems as network flow models by leveraging ideas from the decision diagram literature. We show that these models are versatile and easy to customize and can generate feasible solutions, primal bounds, and dual bounds. Furthermore, in contrast to existing approaches, they require no specialized algorithms and can be solved directly using standard optimization solvers. Through an extensive set of computational experiments, we show that our models generate high-quality solutions and dual bounds in significantly less time than popular benchmark methods.\n                  History: Accepted by Andrea Lodi/Design &amp; Analysis of Algorithms-Discrete.\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2024.0718 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2024.0718 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-04-20",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2024.0718",
+      "tags": [
+        "network-optimization",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2024.0718",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.18454",
+      "title": "Geometric Trajectory Optimization for TRACON Arrivals: An NLP Approach with ATC Vectoring Maneuver Modeling",
+      "authors": [
+        "Yutian Pang",
+        "Daniel Delahaye",
+        "John-Paul Clarke"
+      ],
+      "abstract": "Terminal airspace congestion remains a major bottleneck in the global air traffic network. Although the Aircraft Sequencing and Scheduling Problem (ASSP) has been widely studied, many methods rely on simplified node-link abstractions that ignore the practical flight path, producing schedules that can be hard to execute under real airspace geometric constraints. This paper introduces a high-fidelity trajectory optimization framework for Terminal Arrival Sequencing and Scheduling (TASS) that explicitly models controller vectoring maneuvers. We formulate a single-stage nonlinear programming (NLP) model with a weighted objective function that optimizes Baseleg path extension and segment-wise speed profiles for arriving aircraft. The model enforces nonlinear geometric coupling between Baseleg extensions and the required Radius-to-Fix (RF) turn for Final Approach Fix (FAF) intercept through closed-form expressions. Under the First-Come-First-Served (FCFS) rule, it generates separated, operationally feasible trajectories aligned with controller practice. Monte Carlo simulations with ample runs on the A80 TRACON in Atlanta demonstrate minimal separation violations below the runway capacity threshold through tactical path stretching, with violations occurring only when arrival rates exceed the maximum tolerable rate.",
+      "date": "2026-04-20",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.18454v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.18454",
+      "arxiv_id": "2604.18454v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
