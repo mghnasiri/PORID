@@ -1,0 +1,294 @@
+{
+  "date": "2026-04-22",
+  "generated_at": "2026-04-22T08:55:19.176606+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2604.19457",
+      "title": "Four-Axis Decision Alignment for Long-Horizon Enterprise AI Agents",
+      "authors": [
+        "Vasundra Srininvasan"
+      ],
+      "abstract": "Long-horizon enterprise agents make high-stakes decisions (loan underwriting, claims adjudication, clinical review, prior authorization) under lossy memory, multi-step reasoning, and binding regulatory constraints. Current evaluation reports a single task-success scalar that conflates distinct failure modes and hides whether an agent is aligned with the standards its deployment environment requires. We propose that long-horizon decision behavior decomposes into four orthogonal alignment axes, each independently measurable and failable: factual precision (FRP), reasoning coherence (RCS), compliance reconstruction (CRR), and calibrated abstention (CAR). CRR is a novel regulatory-grounded axis; CAR is a measurement axis separating coverage from accuracy. We exercise the decomposition on a controlled benchmark (LongHorizon-Bench) covering loan qualification and insurance claims adjudication with deterministic ground-truth construction. Running six memory architectures, we find structure aggregate accuracy cannot see: retrieval collapses on factual precision; schema-anchored architectures pay a scaffolding tax; plain summarization under a fact-preservation prompt is a strong baseline on FRP, RCS, EDA, and CRR; and all six architectures commit on every case, exposing a decisional-alignment axis the field has not targeted. The decomposition also surfaced a pre-registered prediction of our own, that summarization would fail factual recall, which the data reversed at large magnitude, an axis-level reversal aggregate accuracy would have hidden. Institutional alignment (regulatory reconstruction) and decisional alignment (calibrated abstention) are under-represented in the alignment literature and become load-bearing once decisions leave the laboratory. The framework transfers to any regulated decisioning domain via two steps: build a fact schema, and calibrate the CRR auditor prompt.",
+      "date": "2026-04-21",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2604.19457v1",
+      "tags": [
+        "cs.AI",
+        "healthcare-or",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.19457",
+      "arxiv_id": "2604.19457v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07192-z",
+      "title": "A novel max–min BWM method to boost the digital transformation of resilience supply chains",
+      "authors": [
+        "Cristina, L.",
+        "Ishizaka, A.",
+        "Khan, J."
+      ],
+      "abstract": "Abstract\n                  The increasing frequency of supply chain disruptions has made resilience and digital integration essential. Indeed, firms that succeeded during the COVID-19 pandemic demonstrated advanced digital and supply chain resilience capabilities, enabling them to mitigate adverse consequences. Addressing this forefront topic in operations management, the article introduces an innovative max–min best–worst method to guide digital transformation in global supply chains. This approach aims to maximize resilience capabilities and minimize the impact of supply chain disruptions. The method is examined through an empirical case study of a highly digitalized furniture company. The findings emphasize the importance of redundancy, a robust risk management culture, and adaptability, with raw material delays and cyberattacks being the most significant threats. Moreover, prioritizing the adoption of big data, digital platforms, blockchain, and advanced control systems is crucial for addressing ongoing geopolitical disruptions. Finally, the study discusses both theoretical and managerial implications and suggests avenues for future research.",
+      "date": "2026-04-22",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07192-z",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07192-z",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.19670",
+      "title": "Multi-Cycle Spatio-Temporal Adaptation in Human-Robot Teaming",
+      "authors": [
+        "Alex Cuellar",
+        "Michael Hagenow",
+        "Julie Shah"
+      ],
+      "abstract": "Effective human-robot teaming is crucial for the practical deployment of robots in human workspaces. However, optimizing joint human-robot plans remains a challenge due to the difficulty of modeling individualized human capabilities and preferences. While prior research has leveraged the multi-cycle structure of domains like manufacturing to learn an individual's tendencies and adapt plans over repeated interactions, these techniques typically consider task-level and motion-level adaptation in isolation. Task-level methods optimize allocation and scheduling but often ignore spatial interference in close-proximity scenarios; conversely, motion-level methods focus on collision avoidance while ignoring the broader task context. This paper introduces RAPIDDS, a framework that unifies these approaches by modeling an individual's spatial behavior (motion paths) and temporal behavior (time required to complete tasks) over multiple cycles. RAPIDDS then jointly adapts task schedules and steers diffusion models of robot motions to maximize efficiency and minimize proximity accounting for these individualized models. We demonstrate the importance of this dual adaptation through an ablation study in simulation and a physical robot scenario using a 7-DOF robot arm. Finally, we present a user study (n=32) showing significant plan improvement compared to non-adaptive systems across both objective metrics, such as efficiency and proximity, and subjective measures, including fluency and user preference. See this paper's companion video at: https://youtu.be/55Q3lq1fINs.",
+      "date": "2026-04-21",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2604.19670v1",
+      "tags": [
+        "cs.RO",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.19670",
+      "arxiv_id": "2604.19670v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.19598",
+      "title": "Cross-Model Consistency of AI-Generated Exercise Prescriptions: A Repeated Generation Study Across Three Large Language Models",
+      "authors": [
+        "Kihyuk Lee"
+      ],
+      "abstract": "This study compared repeated generation consistency of exercise prescription outputs across three large language models (LLMs), specifically GPT-4.1, Claude Sonnet 4.6, and Gemini 2.5 Flash, under temperature=0 conditions. Each model generated prescriptions for six clinical scenarios 20 times, yielding 360 total outputs analyzed across four dimensions: semantic similarity, output reproducibility, FITT classification, and safety expression. Mean semantic similarity was highest for GPT-4.1 (0.955), followed by Gemini 2.5 Flash (0.950) and Claude Sonnet 4.6 (0.903), with significant inter-model differences confirmed (H = 458.41, p < .001). Critically, these scores reflected fundamentally different generative behaviors: GPT-4.1 produced entirely unique outputs (100%) with stable semantic content, while Gemini 2.5 Flash showed pronounced output repetition (27.5% unique outputs), indicating that its high similarity score derived from text duplication rather than consistent reasoning. Identical decoding settings thus yielded fundamentally different consistency profiles, a distinction that single-output evaluations cannot capture. Safety expression reached ceiling levels across all models, confirming its limited utility as a differentiating metric. These results indicate that model selection constitutes a clinical rather than merely technical decision, and that output behavior under repeated generation conditions should be treated as a core criterion for reliable deployment of LLM-based exercise prescription systems.",
+      "date": "2026-04-21",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2604.19598v1",
+      "tags": [
+        "cs.CL",
+        "stochastic",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.19598",
+      "arxiv_id": "2604.19598v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2604.19567",
+      "title": "Multi-modal Reasoning with LLMs for Visual Semantic Arithmetic",
+      "authors": [
+        "Chuou Xu",
+        "Liya Ji",
+        "Qifeng Chen"
+      ],
+      "abstract": "Reinforcement learning (RL) as post-training is crucial for enhancing the reasoning ability of large language models (LLMs) in coding and math. However, their capacity for visual semantic arithmetic, inferring relationships from images, remains underexplored. The classic text analogy \"king\"-\"man\"+\"woman\" = \"queen\" illustrates relational reasoning, yet replacing text with images of \"king\" and \"man\" significantly reduces performance because it requires commonsense knowledge and the extraction of concise concepts from irrelevant visual details. This capability is important for service and domestic robotics in unstructured environments, where robots must infer semantic relationships among objects, agents, and actions. In a kitchen, recognizing from images that \"powder\" and \"cake\" are related by \"is made of\" grounds symbolic relations in perception, enabling tool substitution, task generalization, and improved semantic reasoning. Prior work approaches semantic arithmetic by decoding image features after vector arithmetic, but suffers from modality gaps and lacks systematic evaluation. In this paper, we formulate two novel tasks, two-term subtraction and three-term operations, and construct the Image-Relation-Pair Dataset (IRPD) for benchmarking. We further propose Semantic Arithmetic Reinforcement Fine-Tuning (SAri-RFT), which post-trains large vision-language models (LVLMs) using a verifiable function and Group Relative Policy Optimization (GRPO). Our method achieves state-of-the-art results on IRPD and the real-world Visual7W-Telling dataset. By equipping LVLMs with robust cross-modal relational reasoning, this work advances domestic robots' ability to ground symbolic reasoning in perception, enhancing decision-making, tool adaptability, and human-robot interaction in complex environments. Datasets and source code are provided in the supplementary material.",
+      "date": "2026-04-21",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2604.19567v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.19567",
+      "arxiv_id": "2604.19567v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.19271",
+      "title": "Effective Traveling for Metric Instances of the Traveling Thief Problem",
+      "authors": [
+        "Jan Eube",
+        "Kelin Luo",
+        "Aneta Neumann",
+        "Frank Neumann",
+        "Heiko Röglin"
+      ],
+      "abstract": "The Traveling Thief Problem (TTP) is a multi-component optimization problem that captures the interplay between routing and packing decisions by combining the classical Traveling Salesperson Problem (TSP) and the Knapsack Problem (KP). The TTP has gained significant attention in the evolutionary computation literature and a wide range of approaches have been developed over the last 10 years. Judging the performance of these algorithms in particular in terms of how close the get to optimal solutions is a very challenging task as effective exact methods are not available due to the highly challenging traveling component. In this paper, we study the tour-optimization component of TTP under a fixed packing plan. We formulate this task as a weighted variant of the TSP, where travel costs depend on the cumulative weight of collected items, and investigate how different distance metrics and cost functions affect computational complexity. We present an $(O(n^2))$-time dynamic programming algorithm for the path metric with general cost functions, prove that the problem is NP-hard even on a star metric, and develop constant-factor approximation algorithms for star metrics. Finally, we also develop an approximation algorithm for the problem under a general metric with a linear cost function.   We complement our theoretical results with experimental evaluations on standard TTP instances adjusted to a path metric. Our experimental results demonstrate the practical effectiveness of our approaches by comparing it to solutions produced by popular iterative search algorithms. The results show that our methods are able to significantly improve the quality of solutions for some benchmark instances by optimizing the traveling part while pointing out the optimality of the travel component for other solutions obtained by iterative search methods.",
+      "date": "2026-04-21",
+      "source": "arXiv",
+      "source_detail": "cs.DS",
+      "url": "http://arxiv.org/abs/2604.19271v1",
+      "tags": [
+        "cs.DS",
+        "metaheuristics",
+        "vehicle-routing"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.19271",
+      "arxiv_id": "2604.19271v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.19669",
+      "title": "HardNet++: Nonlinear Constraint Enforcement in Neural Networks",
+      "authors": [
+        "Andrea Goertzen",
+        "Kaveh Alim",
+        "Navid Azizan"
+      ],
+      "abstract": "Enforcing constraint satisfaction in neural network outputs is critical for safety, reliability, and physical fidelity in many control and decision-making applications. While soft-constrained methods penalize constraint violations during training, they do not guarantee constraint adherence during inference. Other approaches guarantee constraint satisfaction via specific parameterizations or a projection layer, but are tailored to specific forms (e.g., linear constraints), limiting their utility in other general problem settings. Many real-world problems of interest are nonlinear, motivating the development of methods that can enforce general nonlinear constraints. To this end, we introduce HardNet++, a constraint-enforcement method that simultaneously satisfies linear and nonlinear equality and inequality constraints. Our approach iteratively adjusts the network output via damped local linearizations. Each iteration is differentiable, admitting an end-to-end training framework, where the constraint satisfaction layer is active during training. We show that under certain regularity conditions, this procedure can enforce nonlinear constraint satisfaction to arbitrary tolerance. Finally, we demonstrate tight constraint adherence without loss of optimality in a learning-for-optimization context, where we apply this method to a model predictive control problem with nonlinear state constraints.",
+      "date": "2026-04-21",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.19669v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.19669",
+      "arxiv_id": "2604.19669v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.19357",
+      "title": "FairTree: Subgroup Fairness Auditing of Machine Learning Models with Bias-Variance Decomposition",
+      "authors": [
+        "Rudolf Debelak"
+      ],
+      "abstract": "The evaluation of machine learning models typically relies mainly on performance metrics based on loss functions, which risk to overlook changes in performance in relevant subgroups. Auditing tools such as SliceFinder and SliceLine were proposed to detect such groups, but usually have conceptual disadvantages, such as the inability to directly address continuous covariates. In this paper, we introduce FairTree, a novel algorithm adapted from psychometric invariance testing. Unlike SliceFinder and related algorithms, FairTree directly handles continuous, categorical, and ordinal features without discretization. It further decomposes performance disparities into systematic bias and variance, allowing a categorization of changes in algorithm performance. We propose and evaluate two variations of the algorithm: a permutation-based approach, which is conceptually closer to SliceFinder, and a fluctuation test. Through simulation studies that include a direct comparison with SliceLine, we demonstrate that both approaches have a satisfactory rate of false-positive results, but that the fluctuation approach has relatively higher power. We further illustrate the method on the UCI Adult Census dataset. The proposed algorithms provide a flexible framework for the statistical evaluation of the performance and aspects of fairness of machine learning models in a wide range of applications even in relatively small data.",
+      "date": "2026-04-21",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.19357v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.19357",
+      "arxiv_id": "2604.19357v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.19355",
+      "title": "LASER: Learning Active Sensing for Continuum Field Reconstruction",
+      "authors": [
+        "Huayu Deng",
+        "Jinghui Zhong",
+        "Xiangming Zhu",
+        "Yunbo Wang",
+        "Xiaokang Yang"
+      ],
+      "abstract": "High-fidelity measurements of continuum physical fields are essential for scientific discovery and engineering design but remain challenging under sparse and constrained sensing. Conventional reconstruction methods typically rely on fixed sensor layouts, which cannot adapt to evolving physical states. We propose LASER, a unified, closed-loop framework that formulates active sensing as a Partially Observable Markov Decision Process (POMDP). At its core, LASER employs a continuum field latent world model that captures the underlying physical dynamics and provides intrinsic reward feedback. This enables a reinforcement learning policy to simulate ''what-if'' sensing scenarios within a latent imagination space. By conditioning sensor movements on predicted latent states, LASER navigates toward potentially high-information regions beyond current observations. Our experiments demonstrate that LASER consistently outperforms static and offline-optimized strategies, achieving high-fidelity reconstruction under sparsity across diverse continuum fields.",
+      "date": "2026-04-21",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.19355v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.19355",
+      "arxiv_id": "2604.19355v1",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2023.00885",
+      "title": "From Black to Gray: Improving Access to Antimalarial Drugs in the Presence of Deceptive Counterfeits",
+      "authors": [
+        "Ding, J.",
+        "Freeman, M.",
+        "Zorc, S."
+      ],
+      "abstract": "In malaria-endemic countries, the limited availability of affordable antimalarial medication has contributed to the widespread distribution of counterfeit drugs. This paper examines such markets to determine how philanthropic donors can best allocate limited funds to subsidize the purchase or sales of antimalarial drugs via private-sector distribution channels. We develop a game-theoretic model of the antimalarial supply chain wherein the retailer strategically sources legitimate drugs from a donor-certified supplier, potentially counterfeit drugs from an uncertified supplier, or both. In contrast with the extant literature, we demonstrate that, in the presence of counterfeits, exclusive reliance on purchase subsidies may no longer be optimal. Specifically, under donor budget constraints, offering sales subsidies that incorporate both legitimate and counterfeit drugs may be preferable or, in some cases, abstaining from subsidy provision completely. Additionally, we evaluate the implications of three pertinent nonsubsidy strategies deployed to combat counterfeit drugs: imposing penalties for sourcing counterfeits, eliminating subsidies on counterfeit drugs with traceability technology, and implementing price controls. Our study concludes with extensive numerical analysis calibrated to malaria data from Mozambique. Overall, this paper offers strategic guidance for improving outcomes in the presence of counterfeit drugs. Our results highlight the need for governments and donors to carefully consider market-specific factors, such as retailers’ pricing power and donors’ budget constraints, when designing subsidy schemes and access policies for life-saving medicines. These insights could potentially be extrapolated to address similar challenges in other endemic disease contexts, offering a broader framework for enhancing public health in resource-constrained environments.\n                  This paper was accepted by Jeannette Song, operations management.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2023.00885 .",
+      "date": "2026-04-21",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2023.00885",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2023.00885",
+      "score": 45.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}

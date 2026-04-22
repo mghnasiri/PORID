@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T08:58:17.631978+00:00",
+  "generated_at": "2026-04-22T08:55:18.921256+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1591,
+      "github_stars": 1592,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 166,
+      "github_open_issues": 167,
       "github_recent_prs": [
+        "Updated build for external dependencies",
+        "Reduce shift size in reduced-cost fixing",
         "Allow slightly asymmetric square Hessians, and revert to using `HighsHashTable` (mainly) In `assessMatrix`",
         "Significant improvements for highspy static typing",
-        "Bug fixes for getIis",
-        "Fix C-heap memory leaks in solver state cleanup",
-        "Various changes to HiPO"
+        "Bug fixes for getIis"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13389,
+      "github_stars": 13393,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 92,
+      "github_open_issues": 93,
       "github_recent_prs": [
+        "build(deps): bump the pip group across 1 directory with 2 updates",
         "Integrate HiGHS and few minor fixes",
         "Fix Bazel build of FlatZinc on Windows",
         "cmake: bump scip to v10.0.2",
-        "ci: rework cmake job in presubmit.yml (#5130)",
-        "cmake: fix some emscripten errors"
+        "ci: rework cmake job in presubmit.yml (#5130)"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1132,7 +1132,7 @@
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
       "github_stars": 6182,
-      "github_open_issues": 185,
+      "github_open_issues": 183,
       "github_recent_prs": [
         "Bump github/codeql-action from 4.35.1 to 4.35.2",
         "Use triangular Hessian format when passing QP to HiGHS",
@@ -1320,7 +1320,7 @@
       ],
       "recent_changes": "This is a maintenance release, focusing on bug fixes and stability.\r\nWe have also upgraded to the latest Quarkus LTS (3.33.1) and from now on, Timefold Solver 1.x will stick to LTS versions only.\r\n\r\n#",
       "github_stars": 1635,
-      "github_open_issues": 74,
+      "github_open_issues": 73,
       "github_recent_prs": [
         "refactor: move incremental back",
         "docs: reference the new license manager",
@@ -1384,14 +1384,14 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
-      "github_stars": 2444,
+      "github_stars": 2445,
       "github_open_issues": 358,
       "github_recent_prs": [
+        "Add NEOS solvers",
+        "Document use of 'Draft' status when reviewing PRs",
         "Handle cuOpt UnboundedOrInfeasible termination status (11)",
         "Fix memory leak in appsi LegacySolverInterface wrapper",
-        "Update osx installers and urlchecker environment",
-        "[Depends on #3821 and #3744] Initialization Module",
-        "Disallow cplex 22.1.2.1 from conda, too"
+        "Update osx installers and urlchecker environment"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1449,14 +1449,14 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.30.0\n\n[Diff since v1.29.4](https://github.com/jump-dev/JuMP.jl/compare/v1.29.4...v1.30.0)\n\n\n**Merged pull requests:**\n- Fix errors found by JET (#4108) (@odow)\n- [docs] clarify dual unbound",
-      "github_stars": 2430,
+      "github_stars": 2429,
       "github_open_issues": 14,
       "github_recent_prs": [
+        "Fix issues found by JET",
+        "Combine iterations in `collect_to_with_first!`",
         "[docs] add a section clarifying the usage of the init kwarg",
         "Bump codecov/codecov-action from 5 to 6",
-        "[docs] remove MathOptSymbolicAD from packages.toml",
-        "Remove outdated sentence from LICENSE.md",
-        "[docs] remove \"subproblem\" from the Benders decomposition tutorial"
+        "[docs] remove MathOptSymbolicAD from packages.toml"
       ]
     },
     {
