@@ -1,0 +1,320 @@
+{
+  "date": "2026-04-23",
+  "generated_at": "2026-04-23T08:59:30.027463+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s10479-026-07192-z",
+      "title": "A novel max–min BWM method to boost the digital transformation of resilience supply chains",
+      "authors": [
+        "Cristina, L.",
+        "Ishizaka, A.",
+        "Khan, J."
+      ],
+      "abstract": "Abstract\n                  The increasing frequency of supply chain disruptions has made resilience and digital integration essential. Indeed, firms that succeeded during the COVID-19 pandemic demonstrated advanced digital and supply chain resilience capabilities, enabling them to mitigate adverse consequences. Addressing this forefront topic in operations management, the article introduces an innovative max–min best–worst method to guide digital transformation in global supply chains. This approach aims to maximize resilience capabilities and minimize the impact of supply chain disruptions. The method is examined through an empirical case study of a highly digitalized furniture company. The findings emphasize the importance of redundancy, a robust risk management culture, and adaptability, with raw material delays and cyberattacks being the most significant threats. Moreover, prioritizing the adoption of big data, digital platforms, blockchain, and advanced control systems is crucial for addressing ongoing geopolitical disruptions. Finally, the study discusses both theoretical and managerial implications and suggests avenues for future research.",
+      "date": "2026-04-22",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07192-z",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07192-z",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.20433",
+      "title": "On Reward-Balancing Methods for Reinforcement Learning",
+      "authors": [
+        "Simone Baroncini",
+        "Bahman Gharesifard",
+        "Giuseppe Notarstefano"
+      ],
+      "abstract": "This paper investigates the so-called reward-balancing methods, a novel class of algorithms for solving discounted-return reinforcement learning (RL) problems. These methods consist of iteratively adjusting the reward function to transform the RL problem into an equivalent one in which the optimal policies are greedy. For this procedure, referred to as normalization process, we provide a theoretical analysis of the involved transformations, emphasizing their algebraic structure. Then, we introduce a control-theoretic reformulation, recasting the reward-balancing procedure into an optimal control framework. The approach is further extended to address model uncertainty through stochastic model sampling, yielding normalization guarantees and probabilistic bounds on stochastic fluctuations. Using the proposed optimal control framework within a scenario model predictive control (MPC) setting, we demonstrate, through simulation studies, performance improvements over the current state-of-the-art.",
+      "date": "2026-04-22",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.20433v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.20433",
+      "arxiv_id": "2604.20433v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.20771",
+      "title": "DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles",
+      "authors": [
+        "Shahid Alam",
+        "Amina Jameel",
+        "Zahida Parveen",
+        "Ehab Alnfrawy",
+        "Adeela Ashraf",
+        "Raza Uddin",
+        "Jamal Aqib"
+      ],
+      "abstract": "The Internet of Vehicles (IoV) is advancing modern transportation by improving safety, efficiency, and intelligence. However, the reliance on the Controller Area Network (CAN) introduces critical security risks, as CAN-based communication is highly vulnerable to cyberattacks. Addressing this challenge, we propose DAIRE (Detecting Attacks in IoV in REal-time), a lightweight machine learning framework designed for real-time detection and classification of CAN attacks. DAIRE is built on a lightweight artificial neural network (ANN) where each layer contains Ni = i x c neurons, with Ni representing the number of neurons in the ith layer and c corresponding to the total number of attack classes. Other hyperparameters are determined empirically to ensure real-time operation. To support the detection and classification of various IoV attacks, such as Denial-of-Service, Fuzzy, and Spoofing, DAIRE employs the sparse categorical cross-entropy loss function and root mean square propagation for loss minimization. In contrast to more resource-intensive architectures, DAIRE leverages a lightweight ANN to reduce computational demands while still delivering strong performance. Experimental results on the CICIoV2024 and Car-Hacking datasets demonstrate DAIRE's effectiveness, achieving an average detection rate of 99.88%, a false positive rate of 0.02%, and an overall accuracy of 99.96%. Furthermore, DAIRE significantly outperforms state-of-the-art approaches in inference speed, with a classification time of just 0.03 ms per sample. These results highlight DAIRE's effectiveness in detecting IoV cyberattacks and its practical suitability for real-time deployment in vehicular systems, underscoring its vital role in strengthening automotive cybersecurity.",
+      "date": "2026-04-22",
+      "source": "arXiv",
+      "source_detail": "cs.CR",
+      "url": "http://arxiv.org/abs/2604.20771v1",
+      "tags": [
+        "cs.CR",
+        "ml-for-or",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1016/j.mlwa.2026.100859",
+      "arxiv_id": "2604.20771v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.20816",
+      "title": "ParetoSlider: Diffusion Models Post-Training for Continuous Reward Control",
+      "authors": [
+        "Shelly Golan",
+        "Michael Finkelson",
+        "Ariel Bereslavsky",
+        "Yotam Nitzan",
+        "Or Patashnik"
+      ],
+      "abstract": "Reinforcement Learning (RL) post-training has become the standard for aligning generative models with human preferences, yet most methods rely on a single scalar reward. When multiple criteria matter, the prevailing practice of ``early scalarization'' collapses rewards into a fixed weighted sum. This commits the model to a single trade-off point at training time, providing no inference-time control over inherently conflicting goals -- such as prompt adherence versus source fidelity in image editing. We introduce ParetoSlider, a multi-objective RL (MORL) framework that trains a single diffusion model to approximate the entire Pareto front. By training the model with continuously varying preference weights as a conditioning signal, we enable users to navigate optimal trade-offs at inference time without retraining or maintaining multiple checkpoints. We evaluate ParetoSlider across three state-of-the-art flow-matching backbones: SD3.5, FluxKontext, and LTX-2. Our single preference-conditioned model matches or exceeds the performance of baselines trained separately for fixed reward trade-offs, while uniquely providing fine-grained control over competing generative goals.",
+      "date": "2026-04-22",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.20816v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.20816",
+      "arxiv_id": "2604.20816v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.20736",
+      "title": "F\\textsuperscript{2}LP-AP: Fast \\& Flexible Label Propagation with Adaptive Propagation Kernel",
+      "authors": [
+        "Yutong Shen",
+        "Ruizhe Xia",
+        "Jingyi Liu",
+        "Yinqi Liu"
+      ],
+      "abstract": "Semi-supervised node classification is a foundational task in graph machine learning, yet state-of-the-art Graph Neural Networks (GNNs) are hindered by significant computational overhead and reliance on strong homophily assumptions. Traditional GNNs require expensive iterative training and multi-layer message passing, while existing training-free methods, such as Label Propagation, lack adaptability to heterophilo\\-us graph structures. This paper presents \\textbf{F$^2$LP-AP} (Fast and Flexible Label Propagation with Adaptive Propagation Kernel), a training-free, computationally efficient framework that adapts to local graph topology. Our method constructs robust class prototypes via the geometric median and dynamically adjusts propagation parameters based on the Local Clustering Coefficient (LCC), enabling effective modeling of both homophilous and heterophilous graphs without gradient-based training. Extensive experiments across diverse benchmark datasets demonstrate that \\textbf{F$^2$LP-AP} achieves competitive or superior accuracy compared to trained GNNs, while significantly outperforming existing baselines in computational efficiency.",
+      "date": "2026-04-22",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.20736v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.20736",
+      "arxiv_id": "2604.20736v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2023.04308",
+      "title": "Distributionally Robust Group Testing with Correlation Information",
+      "authors": [
+        "Long, D.",
+        "Qi, J.",
+        "Sun, Y.",
+        "Zhang, A."
+      ],
+      "abstract": "Motivated by the need for more efficient and reliable methods of group testing during widespread infectious outbreaks, this paper introduces a novel operational improvement to the widely used Dorfman’s group testing procedure, where a single test is conducted on the pooled sample, followed by individual testing of positive pools. Our method minimizes a weighted sum of testing volume and misclassifications, taking prevalence rates and interindividual Pearson correlation coefficients as inputs, and employs a distributionally robust optimization (DRO) framework to address the ambiguity in the joint infection distribution induced by these correlations. We study two correlation structures within a population. In single-cluster cases, where all subject pairs share equal correlation, we connect our analysis to Nash equilibrium principles and show that higher correlation favors larger testing groups, whereas higher prevalence often calls for individual testing. In multicluster cases, where the population consists of several intracorrelated but interindependent clusters, we highlight the effectiveness of mixed-cluster testing strategies, particularly under low prevalence and correlation. This is a notable addition to the prevailing view that advocates pooling correlated individuals. We provide polynomial-time solutions for both correlation structures and demonstrate the trade-offs and benefits of our DRO approach through a thorough comparison with stochastic alternatives. Using a case study based on a real-world COVID-19 data set, we show that our proposed pooling strategy can save up to 0.1 tests per individual compared with an independence-based pooling scheme and up to 0.5 tests per individual compared with a heuristic pooling strategy implemented in the studied region.\n                  This paper was accepted by Jeannette Song, operations management.\n                  Funding: This research was supported by the National Natural Science Foundation of China [Grants 72293582 and 72422005], the Hong Kong Research Grants Council [Collaborative Research Fund C6103-20GF, General Research Fund 14210523, 16209923, and 16213424], and the Natural Sciences and Engineering Research Council of Canada [Grants RGPIN-2024-05910 and DGECR-2024-00094].\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2023.04308 .",
+      "date": "2026-04-22",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2023.04308",
+      "tags": [
+        "stochastic",
+        "multi-objective",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2023.04308",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.20532",
+      "title": "Reliability as a Design Principle: A Systematic Review and Integrated Framework for Renewable-Based Microgrids",
+      "authors": [
+        "Mohammed Zeehan Saleheen",
+        "Markus Wagner",
+        "Reza Razzaghi",
+        "Hao Wang"
+      ],
+      "abstract": "Reliable operation is a central motivation for deploying renewable-based microgrids. This paper presents a systematic rapid review that positions reliability as the central organizing principle for microgrid design. Specifically, this review systematically synthesizes recent literature to examine how planning assumptions, optimization formulations, operational flexibility mechanisms, and reliability assessment frameworks jointly shape reliability outcomes. The synthesis shows that reliability in renewable-based microgrids is governed primarily by chronological, time-coupled energy adequacy rather than installed capacity alone, with Dunkelflaute events emerging as a key determinant of adequacy failure. Reliability outcomes are shaped by the joint interaction of resource portfolios, storage operating policies, and state trajectories, network features, and protection feasibility under inverter-dominated operation. The review further demonstrates that reliability indices inherited from conventional power systems are poorly suited for renewable-based microgrids, as they compress performance into single dimensions and obscure temporal, spatial, and service-critical risk concentrations. Across optimization practice, reliability is increasingly embedded through multi-objective and constrained formulations; however, persistent gaps remain in representing correlated renewable scarcity, mission-profile-dependent component reliability, and interruption valuation (e.g., value of lost load and customer damage functions) in a consistent and decision-relevant manner. Overall, this review consolidates planning factors, optimization approaches, reliability evaluation methods, and metric suitability into an integrated roadmap for reliability-centered microgrid planning, and outlines future directions toward state-aware, service-oriented planning and assessment frameworks.",
+      "date": "2026-04-22",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.20532v1",
+      "tags": [
+        "math.OC",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1016/j.ecmx.2026.101878",
+      "arxiv_id": "2604.20532v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.20109",
+      "title": "Learning to Solve the Quadratic Assignment Problem with Warm-Started MCMC Finetuning",
+      "authors": [
+        "Yicheng Pan",
+        "Ruisong Zhou",
+        "Haijun Zou",
+        "Tianyou Li",
+        "Zaiwen Wen"
+      ],
+      "abstract": "The quadratic assignment problem (QAP) is a fundamental NP-hard task that poses significant challenges for both traditional heuristics and modern learning-based solvers. Existing QAP solvers still struggle to achieve consistently competitive performance across structurally diverse real-world instances. To bridge this performance gap, we propose PLMA, an innovative permutation learning framework. PLMA features an efficient warm-started MCMC finetuning procedure to enhance deployment-time performance, leveraging short Markov chains to anchor the adaptation to the promising regions previously explored. For rapid exploration via MCMC over the permutation space, we design an additive energy-based model (EBM) that enables an $O(1)$-time 2-swap Metropolis-Hastings sampling step. Moreover, the neural network used to parameterize the EBM incorporates a scalable and flexible cross-graph attention mechanism to model interactions between facilities and locations in the QAP. Extensive experiments demonstrate that PLMA consistently outperforms state-of-the-art baselines across various benchmarks. In particular, PLMA achieves a near-zero average optimality gap on QAPLIB, exhibits remarkably superior robustness on the notoriously difficult Taixxeyy instances, and also serves as an effective QAP solver in bandwidth minimization.",
+      "date": "2026-04-22",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.20109v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.20109",
+      "arxiv_id": "2604.20109v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.20755",
+      "title": "V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization",
+      "authors": [
+        "Yubo Jiang",
+        "Yitong An",
+        "Xin Yang",
+        "Abudukelimu Wuerkaixi",
+        "Xuxin Cheng",
+        "Fengying Xie",
+        "Zhiguo Jiang",
+        "Cao Liu",
+        "Ke Zeng",
+        "Haopeng Zhang"
+      ],
+      "abstract": "We introduce V-tableR1, a process-supervised reinforcement learning framework that elicits rigorous, verifiable reasoning from multimodal large language models (MLLMs). Current MLLMs trained solely on final outcomes often treat visual reasoning as a black box, relying on superficial pattern matching rather than performing rigorous multi-step inference. While Reinforcement Learning with Verifiable Rewards could enforce transparent reasoning trajectories, extending it to visual domains remains severely hindered by the ambiguity of grounding abstract logic into continuous pixel space. We solve this by leveraging the deterministic grid structure of tables as an ideal visual testbed. V-tableR1 employs a specialized critic VLM to provide dense, step-level feedback on the explicit visual chain-of-thought generated by a policy VLM. To optimize this system, we propose Process-Guided Direct Alignment Policy Optimization (PGPO), a novel RL algorithm integrating process rewards, decoupled policy constraints, and length-aware dynamic sampling. Extensive evaluations demonstrate that V-tableR1 explicitly penalizes visual hallucinations and shortcut guessing. By fundamentally shifting multimodal inference from black-box pattern matching to verifiable logical derivation, V-tableR1 4B establishes state-of-the-art accuracy among open-source models on complex tabular benchmarks, outperforming models up to 18x its size and improving over its SFT baseline",
+      "date": "2026-04-22",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2604.20755v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.20755",
+      "arxiv_id": "2604.20755v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.20714",
+      "title": "Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization",
+      "authors": [
+        "Shan He",
+        "Runze Wang",
+        "Zhuoyun Du",
+        "Huiyu Bai",
+        "Zouying Cao",
+        "Yu Cheng",
+        "Bo Zheng"
+      ],
+      "abstract": "Designing and optimizing multi-agent systems (MAS) is a complex, labor-intensive process of \"Agent Engineering.\" Existing automatic optimization methods, primarily focused on flat prompt tuning, lack the structural awareness to debug the intricate web of interactions in MAS. More critically, these optimizers are static; they do not learn from experience to improve their own optimization strategies. To address these gaps, we introduce Textual Parameter Graph Optimization (TPGO), a framework that enables a multi-agent system to learn to evolve. TPGO first models the MAS as a Textual Parameter Graph (TPG), where agents, tools, and workflows are modular, optimizable nodes. To guide evolution, we derive \"textual gradients,\" structured natural language feedback from execution traces, to pinpoint failures and suggest granular modifications. The core of our framework is Group Relative Agent Optimization (GRAO), a novel meta-learning strategy that learns from historical optimization experiences. By analyzing past successes and failures, GRAO becomes progressively better at proposing effective updates, allowing the system to learn how to optimize itself. Extensive experiments on complex benchmarks like GAIA and MCP-Universe show that TPGO significantly enhances the performance of state-of-the-art agent frameworks, achieving higher success rates through automated, self-improving optimization.",
+      "date": "2026-04-22",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2604.20714v1",
+      "tags": [
+        "cs.AI",
+        "network-optimization",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.20714",
+      "arxiv_id": "2604.20714v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}

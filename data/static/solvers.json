@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T08:55:18.921256+00:00",
+  "generated_at": "2026-04-23T08:59:29.772336+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -347,11 +347,11 @@
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
       "github_open_issues": 167,
       "github_recent_prs": [
+        "Updated build for external dependencies (mods-latest)",
+        "Fix C-heap memory leaks in solver state cleanup",
         "Updated build for external dependencies",
         "Reduce shift size in reduced-cost fixing",
-        "Allow slightly asymmetric square Hessians, and revert to using `HighsHashTable` (mainly) In `assessMatrix`",
-        "Significant improvements for highspy static typing",
-        "Bug fixes for getIis"
+        "Allow slightly asymmetric square Hessians, and revert to using `HighsHashTable` (mainly) In `assessMatrix`"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 584,
+      "github_stars": 585,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13393,
+      "github_stars": 13397,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,7 +569,7 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 93,
+      "github_open_issues": 94,
       "github_recent_prs": [
         "build(deps): bump the pip group across 1 directory with 2 updates",
         "Integrate HiGHS and few minor fixes",
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6182,
-      "github_open_issues": 183,
+      "github_stars": 6184,
+      "github_open_issues": 184,
       "github_recent_prs": [
+        "Prep for 1.9: DNLP sync",
+        "docs: DPP-breaking patterns + decision checklist",
         "Bump github/codeql-action from 4.35.1 to 4.35.2",
         "Use triangular Hessian format when passing QP to HiGHS",
-        "Accept INFEASIBLE_OR_UNBOUNDED status in TestCUOPT::test_cuopt_lp_3",
-        "Run backend tests as uv matrix",
-        "Run CVXPYgen upstream tests"
+        "Accept INFEASIBLE_OR_UNBOUNDED status in TestCUOPT::test_cuopt_lp_3"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1738,
+      "github_stars": 1740,
       "github_open_issues": 15,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1272,8 +1272,8 @@
       "vendor": "Timefold",
       "website": "https://timefold.ai",
       "docs_url": "https://docs.timefold.ai/",
-      "current_version": "1.33.0",
-      "release_date": "2026-04-16",
+      "current_version": "2.0.0",
+      "release_date": "2026-04-22",
       "license_type": "open-source",
       "license_spdx": "Apache-2.0",
       "open_source": true,
@@ -1318,15 +1318,15 @@
         "constraint",
         "metaheuristic"
       ],
-      "recent_changes": "This is a maintenance release, focusing on bug fixes and stability.\r\nWe have also upgraded to the latest Quarkus LTS (3.33.1) and from now on, Timefold Solver 1.x will stick to LTS versions only.\r\n\r\n#",
-      "github_stars": 1635,
-      "github_open_issues": 73,
+      "recent_changes": "We are excited to announce Timefold Solver 2.0.0, the first major version bump in three years. There is a lot to unpack, let's get into it.\r\n\r\n## What's new in the Community Edition\r\n\r\n### The Neighbo",
+      "github_stars": 1637,
+      "github_open_issues": 75,
       "github_recent_prs": [
+        "chore: split random at the start of step so results are reproducible across higher thread counts",
+        "docs: link to plus enterprise pages",
         "refactor: move incremental back",
         "docs: reference the new license manager",
-        "deps: bump the quarkus group with 4 updates",
-        "deps: bump the regular group with 2 updates",
-        "feat(neighborhoods): allow uni pick() and split change moves"
+        "deps: bump the quarkus group with 4 updates"
       ]
     },
     {
@@ -1385,7 +1385,7 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
       "github_stars": 2445,
-      "github_open_issues": 358,
+      "github_open_issues": 356,
       "github_recent_prs": [
         "Add NEOS solvers",
         "Document use of 'Draft' status when reviewing PRs",
@@ -1450,13 +1450,13 @@
       ],
       "recent_changes": "## JuMP v1.30.0\n\n[Diff since v1.29.4](https://github.com/jump-dev/JuMP.jl/compare/v1.29.4...v1.30.0)\n\n\n**Merged pull requests:**\n- Fix errors found by JET (#4108) (@odow)\n- [docs] clarify dual unbound",
       "github_stars": 2429,
-      "github_open_issues": 14,
+      "github_open_issues": 15,
       "github_recent_prs": [
+        "Add example of building & solving JuMP models in parallel",
         "Fix issues found by JET",
         "Combine iterations in `collect_to_with_first!`",
         "[docs] add a section clarifying the usage of the init kwarg",
-        "Bump codecov/codecov-action from 5 to 6",
-        "[docs] remove MathOptSymbolicAD from packages.toml"
+        "Bump codecov/codecov-action from 5 to 6"
       ]
     },
     {
