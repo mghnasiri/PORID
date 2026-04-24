@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T08:59:29.772336+00:00",
+  "generated_at": "2026-04-24T09:06:42.061204+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1592,
+      "github_stars": 1594,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 167,
+      "github_open_issues": 169,
       "github_recent_prs": [
+        "Add single machine scheduling separator",
         "Updated build for external dependencies (mods-latest)",
         "Fix C-heap memory leaks in solver state cleanup",
         "Updated build for external dependencies",
-        "Reduce shift size in reduced-cost fixing",
-        "Allow slightly asymmetric square Hessians, and revert to using `HighsHashTable` (mainly) In `assessMatrix`"
+        "Reduce shift size in reduced-cost fixing"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13397,
+      "github_stars": 13401,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1131,7 +1131,7 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6184,
+      "github_stars": 6186,
       "github_open_issues": 184,
       "github_recent_prs": [
         "Prep for 1.9: DNLP sync",
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1740,
+      "github_stars": 1742,
       "github_open_issues": 15,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1320,13 +1320,13 @@
       ],
       "recent_changes": "We are excited to announce Timefold Solver 2.0.0, the first major version bump in three years. There is a lot to unpack, let's get into it.\r\n\r\n## What's new in the Community Edition\r\n\r\n### The Neighbo",
       "github_stars": 1637,
-      "github_open_issues": 75,
+      "github_open_issues": 77,
       "github_recent_prs": [
+        "Fix/missing migrations",
         "chore: split random at the start of step so results are reproducible across higher thread counts",
         "docs: link to plus enterprise pages",
         "refactor: move incremental back",
-        "docs: reference the new license manager",
-        "deps: bump the quarkus group with 4 updates"
+        "docs: reference the new license manager"
       ]
     },
     {
@@ -1384,14 +1384,14 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
-      "github_stars": 2445,
-      "github_open_issues": 356,
+      "github_stars": 2444,
+      "github_open_issues": 357,
       "github_recent_prs": [
+        "Simplify arc creation through connect_to method on port",
         "Add NEOS solvers",
         "Document use of 'Draft' status when reviewing PRs",
         "Handle cuOpt UnboundedOrInfeasible termination status (11)",
-        "Fix memory leak in appsi LegacySolverInterface wrapper",
-        "Update osx installers and urlchecker environment"
+        "Fix memory leak in appsi LegacySolverInterface wrapper"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1450,13 +1450,13 @@
       ],
       "recent_changes": "## JuMP v1.30.0\n\n[Diff since v1.29.4](https://github.com/jump-dev/JuMP.jl/compare/v1.29.4...v1.30.0)\n\n\n**Merged pull requests:**\n- Fix errors found by JET (#4108) (@odow)\n- [docs] clarify dual unbound",
       "github_stars": 2429,
-      "github_open_issues": 15,
+      "github_open_issues": 16,
       "github_recent_prs": [
-        "Add example of building & solving JuMP models in parallel",
-        "Fix issues found by JET",
-        "Combine iterations in `collect_to_with_first!`",
-        "[docs] add a section clarifying the usage of the init kwarg",
-        "Bump codecov/codecov-action from 5 to 6"
+        "[docs] convert parallelism tutorial into a literate document",
+        "[docs] add an example to the Parallelism tutorial about channels",
+        "Prep for v1.30.1",
+        "Fix primal_feasibility_report with NonlinearExpr and skip_missing=true",
+        "[docs] Remove Manopt from the documentation"
       ]
     },
     {
