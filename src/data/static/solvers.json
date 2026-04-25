@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T09:06:42.061204+00:00",
+  "generated_at": "2026-04-25T08:09:52.385689+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1594,
+      "github_stars": 1595,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13401,
+      "github_stars": 13405,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -604,7 +604,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 987,
+      "github_stars": 988,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -1131,7 +1131,7 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6186,
+      "github_stars": 6187,
       "github_open_issues": 184,
       "github_recent_prs": [
         "Prep for 1.9: DNLP sync",
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1742,
+      "github_stars": 1743,
       "github_open_issues": 15,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1320,13 +1320,13 @@
       ],
       "recent_changes": "We are excited to announce Timefold Solver 2.0.0, the first major version bump in three years. There is a lot to unpack, let's get into it.\r\n\r\n## What's new in the Community Edition\r\n\r\n### The Neighbo",
       "github_stars": 1637,
-      "github_open_issues": 77,
+      "github_open_issues": 76,
       "github_recent_prs": [
-        "Fix/missing migrations",
+        "[Aikido] AI Fix for Template Injection in GitHub Workflows Action",
+        "fix(migration): add missing rewrite scripts",
         "chore: split random at the start of step so results are reproducible across higher thread counts",
         "docs: link to plus enterprise pages",
-        "refactor: move incremental back",
-        "docs: reference the new license manager"
+        "refactor: move incremental back"
       ]
     },
     {

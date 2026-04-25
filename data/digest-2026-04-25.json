@@ -1,0 +1,281 @@
+{
+  "date": "2026-04-25",
+  "generated_at": "2026-04-25T08:09:52.655537+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1287-mnsc.2024.05530",
+      "title": "Service-Oriented Considerate Routing: Data, Predictions, and Robust Decisions",
+      "authors": [
+        "Zhao, Y.",
+        "Luo, Z.",
+        "Lim, S.",
+        "Chen, C.",
+        "Sim, M."
+      ],
+      "abstract": "In this research, we focus on improving service-oriented routing by addressing the nuanced challenge of punctuality through the consideration of couriers’ ability to ensure on-time deliveries. We utilize a comprehensive real-world data set from a cold chain logistics firm for analysis. Our empirical investigation indicates that relying solely on travel distance is inadequate for accurate delivery time prediction. We highlight critical elements, including couriers’ fixed effects and workload, as key covariates to improve prediction performance. Distinguishing our work from existing literature, we integrate couriers’ workload and location familiarity into our service-oriented routing model to enhance predictions of delivery times. We introduce the courier-assigned location mismatch (CALM) metric as a less intrusive approach to incorporating couriers’ location familiarity into their delivery efficiency. We propose the novel service-oriented considerate routing (SOCR) model; by minimizing the CALM metric, couriers are assigned routes within familiar territories to the extent possible within the total routing distance constraint. The considerate routing strategies could potentially reduce the stress couriers face when delivering in unfamiliar areas. Additionally, we develop the connection of the SOCR model with a robust satisficing approach. This strategy guarantees timely deliveries by effectively mitigating the effects of predictive inaccuracies and potential model misspecifications. To solve the SOCR model, we apply Benders decomposition for an exact solution and tabu search for a heuristic approach, demonstrating their effectiveness and superior out-of-sample performance. Notably, our heuristic solutions significantly outperform exact solutions of classical vehicle routing problems with deadlines, resulting in substantial improvements in timely delivery performance.\n                  This paper was accepted by Wolfram Wiesemann, data science.\n                  Funding: Y. Zhao and M. Sim were partially supported by the Ministry of Education, Singapore, under its 2019 Academic Research Fund Tier 3 [Grant MOE-2019-T3-1-010]. Z. Luo was supported by the National Natural Science Foundation of China [Grants 72222011, 72171112, and 72442006]. C. Chen was supported in part by the National Natural Science Foundation of China [Grants 72394363, 12431011, and 72394364].\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.05530 .",
+      "date": "2026-04-24",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2024.05530",
+      "tags": [
+        "metaheuristics",
+        "vehicle-routing",
+        "supply-chain",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2024.05530",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s11081-026-10091-8",
+      "title": "An Operator Splitting Method for Large-Scale CVaR-Constrained Quadratic Programs",
+      "authors": [
+        "Luxenberg, E.",
+        "Pérez-Piñeiro, D.",
+        "Diamond, S.",
+        "Boyd, S."
+      ],
+      "abstract": "Abstract\n                  \n                    We introduce a fast and scalable method for solving quadratic programs with conditional value-at-risk (CVaR) constraints. While these problems can be formulated as standard quadratic programs, the number of variables and constraints grows linearly with the number of scenarios, making general-purpose solvers impractical for large-scale problems. Our method combines operator splitting with a specialized\n                    \n                      \n                        $$O(m\\log m)$$\n                        \n                          \n                            O\n                            (\n                            m\n                            log\n                            m\n                            )\n                          \n                        \n                      \n                    \n                    algorithm for projecting onto CVaR constraints, where\n                    m\n                    is the number of scenarios. The method alternates between solving a linear system and performing parallel projections, onto CVaR constraints using our specialized algorithm and onto box constraints by simple clipping. Numerical examples from several application domains demonstrate that our method outperforms general-purpose solvers by several orders of magnitude on problems with up to millions of scenarios. Our method is implemented in an open-source package called CVQP.",
+      "date": "2026-04-25",
+      "source": "Optimization and Engineering",
+      "source_detail": "Optimization and Engineering",
+      "url": "https://doi.org/10.1007/s11081-026-10091-8",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11081-026-10091-8",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07160-7",
+      "title": "Vessel sharing agreements under nonlinear costs",
+      "authors": [
+        "Caruso, F.",
+        "Ceparano, M.",
+        "Quartieri, F."
+      ],
+      "abstract": "Abstract\n                  We examine a game-theoretic model of vessel sharing agreements in industries endowed with a general class of price functions and classes of convex cost functions. We study the equilibrium structure thereof—in particular, the existence of a unique equilibrium global aggregate as well as the existence of a unique equilibrium—and we provide a comparative statics analysis of consumer welfare with respect to an ordinal measure of concentration of the industry. We show that the a “high degree\" of convexity of the cost functions can generate anti-competitive effects. In the presence of linear costs, the model satisfies a weak aggregative form in the sense of aggregative games. By allowing for the nonlinearity of variable cost functions, we further weaken the aggregative nature of the games considered. We provide a refined technique for treating these games in which both the equilibrium structure and the comparative statics analysis are based on the comparison of the equilibrium conditions of the players who strictly decrease their equilibrium strategies within the groups that strictly decrease the group’s equilibrium aggregate from an equilibrium with a smaller global aggregate associated with a less concentrated industry to an equilibrium with a (weakly) larger global aggregate associated with a more concentrated (but possibly identical) industry.",
+      "date": "2026-04-24",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07160-7",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07160-7",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2024.1016",
+      "title": "The Routing-and-Driving Problem for Plug-in Hybrid Electric Vehicles",
+      "authors": [
+        "Wu, F.",
+        "Adulyasak, Y.",
+        "Cordeau, J."
+      ],
+      "abstract": "The routing-and-driving problem for plug-in hybrid electric vehicles (PHEVs) is an extension of the vehicle routing problem with time windows, where routing involves determining optimal routes and recharging decisions for a fleet of PHEVs, whereas driving involves choosing the speed and operating mode on each road segment traveled by a vehicle. Specifically, four driving modes are considered: fuel only, electricity only, a combination of fuel and electricity, and energy recuperation, which returns energy to the battery. We consider two variants of the problem where the speed variables are either continuous, which results in a nonlinear model, or discrete, which represents the case when speeds are chosen from a predetermined set. To solve these two models, we propose a set of valid inequalities to strengthen the continuous linear programming relaxation, and we use a tailored branch-and-cut algorithm. Extensive computational experiments demonstrate the efficiency of the proposed solution methods, which can optimally solve instances with a realistic number of customers and recharging stations. In addition, we show that incorporating speed optimization can significantly reduce the energy consumption costs of a PHEV fleet compared with using fixed speeds.\n                  History: Accepted by Andrea Lodi, Area Editor for Design &amp; Analysis of Algorithms–Discrete.\n                  Funding: This work was supported by the GuangDong Basic and Applied Basic Research Foundation [Grant 2026A1515030009].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2024.1016 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2024.1016 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-04-24",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2024.1016",
+      "tags": [
+        "linear-programming",
+        "vehicle-routing"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2024.1016",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07158-1",
+      "title": "Towards the sustainable massive food services customization: a multi-objective optimization approach",
+      "authors": [
+        "Mauricio, C.",
+        "Suazo, F.",
+        "Espinoza Pérez, A.",
+        "Vásquez, Ó."
+      ],
+      "abstract": "",
+      "date": "2026-04-24",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07158-1",
+      "tags": [
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07158-1",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261447637",
+      "title": "EXPRESS: Online Traffic Games: Should Firms Compete on Website Speed or Website Capacity?",
+      "authors": [
+        "Hosseini, L.",
+        "Mookerjee, V."
+      ],
+      "abstract": "In today’s fast-paced digital world, consumers demand instant access to online content and are intolerant of delays, making website speed a key competitive advantage in attracting web traffic. Google’s Speed Update and Core Web Vitals have further emphasized the significance of website speed in web traffic competition. This study examines how firms strategically compete for web traffic by managing website speed, focusing specifically on two distinct strategies: response-based and capacity-based. Under response-based competition, firms first set their desired website speed (or equivalently, website response time), subsequently determining the necessary website capacity. In contrast, in capacity-based competition, firms initially select the website capacity level, which in turn determines the website response time.\n                  We analyze a duopoly scenario in which two firms compete for web traffic. Although website speed and capacity are functionally related, surprisingly, firms sometimes compete more aggressively under response-based competition. Interestingly, the aggression of response-based competition can sometimes increase firms’ profits. We also show that when firms freely choose the decision process, firms sometimes engage in a mode of competition in equilibrium, which yields a lower profit for the capacity provider (e.g., computing capacity provider) than the alternative mode.\n                  We further show how the cloud provider can increase profit by strategically inducing firms to engage in a preferred mode of competition. This is achieved by lowering the unit price of renting capacity related to that mode of competition. This strategic price reduction can lead to faster websites for consumers, an increase in the provider’s revenue, and consequently an increase in the cloud provider’s profit under a cost-efficiency condition. The profit of firms can sometimes increase too, implying a win-win-win for all the parties, namely, firms, consumers, and the provider.",
+      "date": "2026-04-24",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261447637",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261447637",
+      "score": 45.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07200-2",
+      "title": "ESG anchor words and risk",
+      "authors": [
+        "Kosmidou, K.",
+        "Kousenidis, D.",
+        "Ladas, A.",
+        "Negkakis, C.",
+        "Negkakis, I."
+      ],
+      "abstract": "Abstract\n                  The present study provides a novel methodology to quantify ESG, using deep machine learning along with earnings conference calls, to examine the extent to which sentiment patterns around ESG anchor words convey information about future stock crash risk. We define ESG anchor words as terms related to the three pillars of ESG, with the sentiment surrounding these words revealing firms' disclosure strategies and information transparency. As Bordalo et al. (Q J Econ 135:1399–1442, 2020) show, an anchor may relate to higher attention being paid by an observer. In specific, they show that when a risk surpasses a known threshold, identified as a risk-anchor, people seem to pay more attention. For the task in hand, we first compile expanded dictionaries of ESG-related terms using word2vec and then employ FinBERT, to extract sentiment from sentences containing these ESG anchor words. Using stock crash risk as our primary measure of information asymmetry and bad news hoarding, our results show that environmental sentiment operates as a credible signal that reduces crash risk, with effects amplified in environmentally sensitive industries and attenuated by financial opacity; social sentiment exhibits context-dependent patterns, increasing crash risk in optimistic narratives but reducing it in balanced communications, while governance sentiment shows low impact. Our findings likely imply that not all ESG communication reduces information asymmetry; credibility depends critically on dimension-specific materiality, narrative consistency and financial transparency.",
+      "date": "2026-04-24",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07200-2",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07200-2",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07171-4",
+      "title": "Resilience and restructuring of global electric vehicle supply network in response to tariffs",
+      "authors": [
+        "Tan, K.",
+        "Piplani, R.",
+        "Li, D."
+      ],
+      "abstract": "",
+      "date": "2026-04-24",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07171-4",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07171-4",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s11590-026-02298-6",
+      "title": "Recovering linear causal models with latent variables via Cholesky factorization of covariance matrix",
+      "authors": [
+        "Cai, Y.",
+        "Li, X.",
+        "Sun, M.",
+        "Li, P."
+      ],
+      "abstract": "",
+      "date": "2026-04-24",
+      "source": "Optimization Letters",
+      "source_detail": "Optimization Letters",
+      "url": "https://doi.org/10.1007/s11590-026-02298-6",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11590-026-02298-6",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2024.08294",
+      "title": "Forecasting and Managing Correlation Risks",
+      "authors": [
+        "Bollerslev, T.",
+        "Li, S.",
+        "Tang, Y."
+      ],
+      "abstract": "We propose a novel and easy-to-implement framework for forecasting time-varying correlations based on a large set of salient realized correlation features and the sparsity-encouraging Least Absolute Shrinkage and Selection Operator technique. Considering the universe of S&amp;P 500 stocks, we find that the new approach manifests in statistically superior out-of-sample forecasts compared with commonly used procedures. We further demonstrate how the forecasts translate into significant economic gains in the form of higher pairs trading profits, better equity premium predictions, more accurate portfolio risk targeting, and superior overall risk control and minimization.\n                  This paper was accepted by Kay Giesecke, finance.\n                  Funding: S. Z. Li received financial support from the Rutgers Business School Dean’s Research Seed Fund.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.08294 .",
+      "date": "2026-04-24",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2024.08294",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2024.08294",
+      "score": 40.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
