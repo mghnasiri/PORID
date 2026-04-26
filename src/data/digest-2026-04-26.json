@@ -1,0 +1,271 @@
+{
+  "date": "2026-04-26",
+  "generated_at": "2026-04-26T08:20:29.870280+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s11081-026-10091-8",
+      "title": "An Operator Splitting Method for Large-Scale CVaR-Constrained Quadratic Programs",
+      "authors": [
+        "Luxenberg, E.",
+        "Pérez-Piñeiro, D.",
+        "Diamond, S.",
+        "Boyd, S."
+      ],
+      "abstract": "Abstract\n                  \n                    We introduce a fast and scalable method for solving quadratic programs with conditional value-at-risk (CVaR) constraints. While these problems can be formulated as standard quadratic programs, the number of variables and constraints grows linearly with the number of scenarios, making general-purpose solvers impractical for large-scale problems. Our method combines operator splitting with a specialized\n                    \n                      \n                        $$O(m\\log m)$$\n                        \n                          \n                            O\n                            (\n                            m\n                            log\n                            m\n                            )\n                          \n                        \n                      \n                    \n                    algorithm for projecting onto CVaR constraints, where\n                    m\n                    is the number of scenarios. The method alternates between solving a linear system and performing parallel projections, onto CVaR constraints using our specialized algorithm and onto box constraints by simple clipping. Numerical examples from several application domains demonstrate that our method outperforms general-purpose solvers by several orders of magnitude on problems with up to millions of scenarios. Our method is implemented in an open-source package called CVQP.",
+      "date": "2026-04-25",
+      "source": "Optimization and Engineering",
+      "source_detail": "Optimization and Engineering",
+      "url": "https://doi.org/10.1007/s11081-026-10091-8",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11081-026-10091-8",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s12532-026-00315-4",
+      "title": "Graph-Based modeling and decomposition of hierarchical optimization problems",
+      "authors": [
+        "Cole, D.",
+        "Pecci, F.",
+        "Guerra, O.",
+        "Gangammanavar, H.",
+        "Jenkins, J.",
+        "Zavala, V."
+      ],
+      "abstract": "Abstract\n                  We present a graph-theoretic modeling approach for hierarchical optimization that leverages the OptiGraph abstraction implemented in the  package . We show that the abstraction is flexible and can effectively capture complex hierarchical connectivity that arises from decision-making over multiple spatial and temporal scales (e.g., integration of planning, scheduling, and operations in manufacturing and infrastructures). We also show that the graph abstraction facilitates the conceptualization and implementation of decomposition and approximation schemes. Specifically, we propose a graph-based Benders decomposition (gBD) framework that enables the exploitation of hierarchical (nested) structures and that uses graph aggregation/partitioning procedures to discover such structures. In addition, we provide a  implementation of gBD, which we call . We illustrate the capabilities using examples arising in the context of energy and power systems.",
+      "date": "2026-04-25",
+      "source": "Mathematical Programming Computation",
+      "source_detail": "Mathematical Programming Computation",
+      "url": "https://doi.org/10.1007/s12532-026-00315-4",
+      "tags": [
+        "scheduling",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s12532-026-00315-4",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07161-6",
+      "title": "Tripartite evolutionary game analysis on openness strategy for technology service platform",
+      "authors": [
+        "Yang, D.",
+        "Sun, X.",
+        "Yang, T.",
+        "Pei, M."
+      ],
+      "abstract": "",
+      "date": "2026-04-26",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07161-6",
+      "tags": [
+        "metaheuristics"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07161-6",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1007-s11590-026-02299-5",
+      "title": "Special issue on optimization in practice: selected papers from OPTIMA-CON 2024",
+      "authors": [
+        "Muñoz, M.",
+        "Zhang, L.",
+        "Alipour, H.",
+        "Khorshidi, H.",
+        "Wang, H."
+      ],
+      "abstract": "",
+      "date": "2026-04-25",
+      "source": "Optimization Letters",
+      "source_detail": "Optimization Letters",
+      "url": "https://doi.org/10.1007/s11590-026-02299-5",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11590-026-02299-5",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s11081-026-10094-5",
+      "title": "A trust region gradient sampling method for noisy nonsmooth convex optimization",
+      "authors": [
+        "Shang, T.",
+        "Su, K."
+      ],
+      "abstract": "",
+      "date": "2026-04-25",
+      "source": "Optimization and Engineering",
+      "source_detail": "Optimization and Engineering",
+      "url": "https://doi.org/10.1007/s11081-026-10094-5",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11081-026-10094-5",
+      "score": 40.0
+    },
+    {
+      "id": "optim-online-aa23a841fa8b",
+      "title": "Probabilistic analysis of dual decomposition on two-stage stochastic integer programs",
+      "authors": [],
+      "abstract": "Two-stage stochastic integer programs provide a powerful framework for modeling decision-making under uncertainty, but they are notoriously difficult to solve at scale due to their high dimensionality and intrinsic nonconvexity. Decomposition-based algorithms such as Benders methods and Branch-and-Price (related dual decomposition methods) have become standard computational approaches for such problems and demonstrate excellent empirical performance ... Read more",
+      "date": "2026-04-25",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/04/probabilistic-analysis-of-dual-decomposition-on-two-stage-stochastic-integer-programs/?utm_source=rss&utm_medium=rss&utm_campaign=probabilistic-analysis-of-dual-decomposition-on-two-stage-stochastic-integer-programs",
+      "tags": [
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07190-1",
+      "title": "Time-sensitive circularity in agri-food supply chains: a hybrid closed-open loop model under scenario-based disruption",
+      "authors": [
+        "Beheshti, S.",
+        "Bigdellou, S.",
+        "Heydari, J."
+      ],
+      "abstract": "",
+      "date": "2026-04-25",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07190-1",
+      "tags": [
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07190-1",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07236-4",
+      "title": "Simulation-based design optimization of deep-lane autonomous vehicle storage and retrieval systems (AVS/RS) for efficient and sustainable automated picking",
+      "authors": [
+        "Faveto, A.",
+        "Panza, L.",
+        "Bruno, G."
+      ],
+      "abstract": "",
+      "date": "2026-04-26",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07236-4",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07236-4",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1080-02331934.2025.2475203",
+      "title": "Nonmonotone Wolfe-type quasi-Newton methods for multiobjective optimization problems",
+      "authors": [
+        "Upadhayay, A.",
+        "Ghosh, D.",
+        "Kumar, K."
+      ],
+      "abstract": "",
+      "date": "2026-04-26",
+      "source": "Optimization",
+      "source_detail": "Optimization",
+      "url": "https://doi.org/10.1080/02331934.2025.2475203",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1080/02331934.2025.2475203",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1080-02331934.2025.2459191",
+      "title": "Relaxed two-step inertial method for solving a class of split variational inequality problems with application to traffic analysis",
+      "authors": [
+        "Ly, L.",
+        "Thuy, N.",
+        "Anh, N."
+      ],
+      "abstract": "",
+      "date": "2026-04-26",
+      "source": "Optimization",
+      "source_detail": "Optimization",
+      "url": "https://doi.org/10.1080/02331934.2025.2459191",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1080/02331934.2025.2459191",
+      "score": 40.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}

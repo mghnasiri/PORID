@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T08:09:52.385689+00:00",
+  "generated_at": "2026-04-26T08:20:29.610410+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1595,
+      "github_stars": 1596,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13405,
+      "github_stars": 13406,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 94,
+      "github_open_issues": 95,
       "github_recent_prs": [
+        "Fix illegal pybind11 keep_alive in def_property_readonly (#5140)",
         "build(deps): bump the pip group across 1 directory with 2 updates",
         "Integrate HiGHS and few minor fixes",
         "Fix Bazel build of FlatZinc on Windows",
-        "cmake: bump scip to v10.0.2",
-        "ci: rework cmake job in presubmit.yml (#5130)"
+        "cmake: bump scip to v10.0.2"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6187,
-      "github_open_issues": 184,
+      "github_stars": 6189,
+      "github_open_issues": 183,
       "github_recent_prs": [
+        "DNLP sync with CVXPY for 1.9",
         "Prep for 1.9: DNLP sync",
         "docs: DPP-breaking patterns + decision checklist",
         "Bump github/codeql-action from 4.35.1 to 4.35.2",
-        "Use triangular Hessian format when passing QP to HiGHS",
-        "Accept INFEASIBLE_OR_UNBOUNDED status in TestCUOPT::test_cuopt_lp_3"
+        "Use triangular Hessian format when passing QP to HiGHS"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,7 +1319,7 @@
         "metaheuristic"
       ],
       "recent_changes": "We are excited to announce Timefold Solver 2.0.0, the first major version bump in three years. There is a lot to unpack, let's get into it.\r\n\r\n## What's new in the Community Edition\r\n\r\n### The Neighbo",
-      "github_stars": 1637,
+      "github_stars": 1638,
       "github_open_issues": 76,
       "github_recent_prs": [
         "[Aikido] AI Fix for Template Injection in GitHub Workflows Action",
@@ -1450,7 +1450,7 @@
       ],
       "recent_changes": "## JuMP v1.30.0\n\n[Diff since v1.29.4](https://github.com/jump-dev/JuMP.jl/compare/v1.29.4...v1.30.0)\n\n\n**Merged pull requests:**\n- Fix errors found by JET (#4108) (@odow)\n- [docs] clarify dual unbound",
       "github_stars": 2429,
-      "github_open_issues": 16,
+      "github_open_issues": 15,
       "github_recent_prs": [
         "[docs] convert parallelism tutorial into a literate document",
         "[docs] add an example to the Parallelism tutorial about channels",
