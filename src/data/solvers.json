@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T08:20:29.610410+00:00",
+  "generated_at": "2026-04-27T09:28:37.859894+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1596,
+      "github_stars": 1597,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13406,
+      "github_stars": 13410,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 95,
+      "github_open_issues": 97,
       "github_recent_prs": [
+        "Fix: Add missing return statements for non-void methods in ModelStorageV2",
+        "fix(routing): respect use_relocate_neighbors search parameter in GetNeighborhoodOperators",
         "Fix illegal pybind11 keep_alive in def_property_readonly (#5140)",
         "build(deps): bump the pip group across 1 directory with 2 updates",
-        "Integrate HiGHS and few minor fixes",
-        "Fix Bazel build of FlatZinc on Windows",
-        "cmake: bump scip to v10.0.2"
+        "Integrate HiGHS and few minor fixes"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1320,13 +1320,13 @@
       ],
       "recent_changes": "We are excited to announce Timefold Solver 2.0.0, the first major version bump in three years. There is a lot to unpack, let's get into it.\r\n\r\n## What's new in the Community Edition\r\n\r\n### The Neighbo",
       "github_stars": 1638,
-      "github_open_issues": 76,
+      "github_open_issues": 79,
       "github_recent_prs": [
-        "[Aikido] AI Fix for Template Injection in GitHub Workflows Action",
-        "fix(migration): add missing rewrite scripts",
-        "chore: split random at the start of step so results are reproducible across higher thread counts",
-        "docs: link to plus enterprise pages",
-        "refactor: move incremental back"
+        "deps: bump the regular group with 2 updates",
+        "deps: bump org.openrewrite.recipe:rewrite-recipe-bom from 3.28.0 to 3.29.0 in the openrewrite group",
+        "deps: bump org.springframework.boot:spring-boot-dependencies from 4.0.5 to 4.0.6 in the spring group across 1 directory",
+        "deps: bump the quarkus group with 4 updates",
+        "deps: bump pnpm/action-setup from 6.0.1 to 6.0.3 in the regular group"
       ]
     },
     {
@@ -1385,13 +1385,13 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
       "github_stars": 2444,
-      "github_open_issues": 357,
+      "github_open_issues": 358,
       "github_recent_prs": [
+        "Add shell-based HiGHS solver interface",
         "Simplify arc creation through connect_to method on port",
         "Add NEOS solvers",
         "Document use of 'Draft' status when reviewing PRs",
-        "Handle cuOpt UnboundedOrInfeasible termination status (11)",
-        "Fix memory leak in appsi LegacySolverInterface wrapper"
+        "Handle cuOpt UnboundedOrInfeasible termination status (11)"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1401,8 +1401,8 @@
       "vendor": "JuMP Community",
       "website": "https://jump.dev",
       "docs_url": "https://jump.dev/JuMP.jl/stable/",
-      "current_version": "1.30.0",
-      "release_date": "2026-03-03",
+      "current_version": "1.30.1",
+      "release_date": "2026-04-26",
       "license_type": "open-source",
       "license_spdx": "MPL-2.0",
       "open_source": true,
@@ -1448,9 +1448,9 @@
         "julia",
         "algebraic"
       ],
-      "recent_changes": "## JuMP v1.30.0\n\n[Diff since v1.29.4](https://github.com/jump-dev/JuMP.jl/compare/v1.29.4...v1.30.0)\n\n\n**Merged pull requests:**\n- Fix errors found by JET (#4108) (@odow)\n- [docs] clarify dual unbound",
-      "github_stars": 2429,
-      "github_open_issues": 15,
+      "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
+      "github_stars": 2431,
+      "github_open_issues": 14,
       "github_recent_prs": [
         "[docs] convert parallelism tutorial into a literate document",
         "[docs] add an example to the Parallelism tutorial about channels",
