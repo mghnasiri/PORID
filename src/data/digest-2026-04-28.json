@@ -1,0 +1,358 @@
+{
+  "date": "2026-04-28",
+  "generated_at": "2026-04-28T09:32:01.231654+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1287-ijoc.2025.1308",
+      "title": "A Polynomial-Time Inner Approximation Algorithm for Multiobjective and Parametric Optimization",
+      "authors": [
+        "Nemesch, L.",
+        "Ruzika, S.",
+        "Thielen, C.",
+        "Wittmann, A."
+      ],
+      "abstract": "In multiobjective optimization, computing the entire nondominated set (also known as the Pareto front or the Pareto frontier) is often intractable. However, for any multiplicative factor greater than one, an approximation set can be constructed in polynomial time for many problems. In this paper, we use the concept of convex approximation sets: Each point in the nondominated set is approximated by a convex combination of images of solutions in such a set. Convex approximation sets can be used to efficiently approximate multiobjective optimization problems and parametric optimization problems. Recently, a convex approximation algorithm was presented that works in an adaptive fashion and runs faster than all previously existing algorithms. We use a different approach for constructing an even more efficient adaptive algorithm for computing convex approximation sets of multiobjective mixed-integer linear programs. Our algorithm is based on a skeleton algorithm for polyhedral inner approximation. If the weighted sum scalarization can be solved exactly or approximately in polynomial time, our algorithm can find a convex approximation set for an approximation factor arbitrarily close to this solution quality. We demonstrate that our new algorithm runs faster than the current state-of-the-art algorithm on instances of the multiobjective variants of the assignment problem, the knapsack problem, and the symmetric metric traveling salesman problem.\n                  History: Accepted by Andrea Lodi, Area Editor for Design &amp; Analysis of Algorithms–Discrete.\n                  Funding: This research was funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation)—Project number 508981269 and GRK 2982, 516090167 “Mathematics of Interdisciplinary Multiobjective Optimization.”\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2025.1308 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2025.1308 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-04-27",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2025.1308",
+      "tags": [
+        "integer-programming",
+        "vehicle-routing",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2025.1308",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1287-trsc.2025.0026",
+      "title": "Integrated Planning of Supply and Inventory Under Seasonal Demand Uncertainty",
+      "authors": [
+        "Wu, T.",
+        "Zhang, C.",
+        "Chen, W.",
+        "Zhang, X."
+      ],
+      "abstract": "This study investigates several classes of integrated supply and inventory (SI) planning problems, addressing supplier selection with limited or unlimited capacities, distribution, and centralized or decentralized inventory planning for various products with uncertain demand. Our focus is on retailers specializing in fashion products characterized by seasonal demand, extended lead times, and the inability to restock during midselling seasons, requiring salvage of unsold items at diminished returns. We formulate the capacitated problems as convex mixed-integer programs and show they are strongly NP-hard. To address these complex problems, we propose employing Lagrangian relaxation methods for analytically deriving lower bounds, establishing optimal multiplier ranges, and deriving worst-case error bounds. Additionally, we introduce heuristics to generate feasible solutions. Computational studies demonstrate that our relaxation-based heuristics produce solutions closely approaching optimality. Furthermore, we demonstrate that uncapacitated SI problems can be solved analytically, providing closed-form optimal solutions. This research contributes significant managerial insights for practitioners involved in supplier selection, distribution strategies, and inventory management within centralized and decentralized supply chains. Particularly noteworthy are our analytical findings on the benefits of centralization, especially under correlated Gaussian and heavy-tailed stable demand distributions. Our computational experiments further explore the influence of critical factors such as economies of scale, demand correlation, demand distribution characteristics, and upstream and downstream costs. Specifically, we assess how these factors impact the efficacy of centralization versus decentralized inventory management in minimizing expected inventory and overall system costs.\n                  Supplemental Material: The online supplement is available at https://doi.org/10.1287/trsc.2025.0026 .",
+      "date": "2026-04-27",
+      "source": "Transportation Science",
+      "source_detail": "Transportation Science",
+      "url": "https://doi.org/10.1287/trsc.2025.0026",
+      "tags": [
+        "integer-programming",
+        "supply-chain",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1287/trsc.2025.0026",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.24506",
+      "title": "MIMIC: A Generative Multimodal Foundation Model for Biomolecules",
+      "authors": [
+        "Siavash Golkar",
+        "Jake Kovalic",
+        "Irina Espejo Morales",
+        "Samuel Sledzieski",
+        "Minhuan Li",
+        "Ksenia Sokolova",
+        "Geraud Krawezik",
+        "Alberto Bietti",
+        "Claudia Skok Gibbs",
+        "Roman Klypa",
+        "Shengwei Xiong",
+        "Francois Lanusse",
+        "Liam Parker",
+        "Kyunghyun Cho",
+        "Miles Cranmer",
+        "Tom Hehir",
+        "Michael McCabe",
+        "Lucas Meyer",
+        "Rudy Morel",
+        "Payel Mukhopadhyay",
+        "Mariel Pettee",
+        "Helen Qu",
+        "Jeff Shen",
+        "David Fouhey",
+        "Hadi Sotoudeh",
+        "Vikram Mulligan",
+        "Pilar Cossio",
+        "Sonya M. Hanson",
+        "Alisha N. Jones",
+        "Olga G. Troyanskaya",
+        "Shirley Ho"
+      ],
+      "abstract": "Biological function emerges from coupled constraints across sequence, structure, regulation, evolution, and cellular context, yet most foundation models in biology are trained within one modality or for a fixed forward task. We present MIMIC, a generative multimodal foundation model trained on our newly curated and aligned dataset, LORE, linking nucleic acid, protein, evolutionary, structural, regulatory, and semantic/contextual modalities within partially observed biomolecular states. MIMIC uses a split-track encoder-decoder architecture to condition on arbitrary subsets of observed modalities and reconstruct or generate missing components of molecular state across the genome, transcriptome, and proteome. Multimodal conditioning consistently improves MIMIC's sequence reconstruction relative to sequence-only inputs, while its learned representations enable state-of-the-art performance on RNA and protein downstream tasks. MIMIC achieves state-of-the-art splicing prediction, and its joint generative formulation enables isoform-aware inference that further improves performance. Beyond prediction, the same generative framework supports constrained design. For RNA, MIMIC identifies corrective edits in a clinically relevant HBB splice-disrupting mutation without reverting it by using evolutionary and structural signals. For proteins, jointly conditioning on shape and surface chemistry of PD-L1 and hACE2 binding sites produces diverse, high-confidence sequences with strong in silico support for target binding. Finally, MIMIC uses experimental context as semantic conditioning to model assay-dependent RNA chemical probing, rather than treating context as a fixed output. Together, these results position MIMIC's aligned multimodal generative modeling as a strong foundation for unifying representation learning, conditional prediction, and constrained biomolecular design within a single model.",
+      "date": "2026-04-27",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2604.24506v1",
+      "tags": [
+        "cs.AI",
+        "metaheuristics",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.24506",
+      "arxiv_id": "2604.24506v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.24532",
+      "title": "A Reward-Free Viewpoint on Multi-Objective Reinforcement Learning",
+      "authors": [
+        "Ying-Tu Chen",
+        "Wei Hung",
+        "Bing-Shu Wu",
+        "Zhang-Wei Hong",
+        "Ping-Chun Hsieh"
+      ],
+      "abstract": "Many sequential decision-making tasks involve optimizing multiple conflicting objectives, requiring policies that adapt to different user preferences. In multi-objective reinforcement learning (MORL), one widely studied approach} addresses this by training a single policy network conditioned on preference-weighted rewards. In this paper, we explore a novel algorithmic perspective: leveraging reward-free reinforcement learning (RFRL) for MORL. While RFRL has historically been studied independently of MORL, it learns optimal policies for any possible reward function, making it a natural fit for MORL's challenge of handling unknown user preferences. We propose using the RFRL's training objective as an auxiliary task to enhance MORL, enabling more effective knowledge sharing beyond the multi-objective reward function given at training time. To this end, we adapt a state-of-the-art RFRL algorithm to the MORL setting and introduce a preference-guided exploration strategy that focuses learning on relevant parts of the environment. Through extensive experiments and ablation studies, we demonstrate that our approach significantly outperforms the state-of-the-art MORL methods across diverse MO-Gymnasium tasks, achieving superior performance and data efficiency. This work provides the first systematic adaptation of RFRL to MORL, demonstrating its potential as a scalable and empirically effective solution to multi-objective policy learning.",
+      "date": "2026-04-27",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.24532v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.24532",
+      "arxiv_id": "2604.24532v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.24483",
+      "title": "Scheduling and Routing in the Flexible Job Shop with Heterogeneous Transbots and Zoning: A Constraint Programming Approach",
+      "authors": [
+        "Arnovi Moinuddin",
+        "El Mehdi Er Raqabi",
+        "Pascal Van Hentenryck"
+      ],
+      "abstract": "Coordinating production and material transfers is increasingly important in modern manufacturing systems equipped with mobile transfer robots, known as transbots. This study considers a flexible job shop environment in which heterogeneous transbots transport parts between machines. The shop floor is partitioned into zones, with each transbot assigned to a specific zone, and inter-zone movements are facilitated through designated handoff points. These zoning constraints, transbot heterogeneity, and inter-zone handoffs give rise to a challenging variant of the flexible job shop problem with embedded transbot-routing features, resulting in substantial computational complexity. Motivated by a real manufacturing setting, two constraint programming formulations that integrate production scheduling with transbot routing are proposed: an arc-based formulation that explicitly models machine-to-machine transfers, and an operation-embedded formulation that embeds transfer decisions directly within the operation scheduling structure, leading to tighter synchronization between production and transportation decisions. Both formulations capture machine flexibility, zoning restrictions, handoff coordination, and collision-free path planning. To efficiently solve the resulting problem, a book-and-release strategy is proposed. It coordinates transbot movements without enforcing rigid routing patterns. Computational experiments on case study-adapted benchmark-based demonstrate that the proposed formulations generate high-quality solutions with strong computational performance. The generation of instances is described in detail to support future work in this emerging area.",
+      "date": "2026-04-27",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.24483v1",
+      "tags": [
+        "math.OC",
+        "scheduling",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.24483",
+      "arxiv_id": "2604.24483v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.23951",
+      "title": "Presolving for GPU-Accelerated First-Order LP Solvers",
+      "authors": [
+        "Daniel Cederberg",
+        "Stephen Boyd"
+      ],
+      "abstract": "Recent research has focused on developing GPU-accelerated first-order solvers for linear programming (LP). This line of work, however, has largely overlooked the role of presolving, and thus prior results do not fully reflect the speedups achievable through GPU acceleration in a realistic end-to-end solver pipeline. At the same time, LP presolving has traditionally been developed for CPU-based solvers, where presolve time rarely dominates the total runtime and the emphasis has been on maximizing the reduction in problem size, even at the expense of costly presolve rules. Given the high performance of modern GPU-accelerated solvers and the inherently sequential nature of presolving, it is unclear whether this traditional approach to presolving remains appropriate.   In this paper we revisit LP presolving from the perspective of GPU-accelerated first-order LP solvers. We identify a set of relatively simple presolve rules and show that a carefully engineered collection of these captures most of the reduction achieved by Gurobi's commercial state-of-the-art presolver, at a fraction of the cost. Moreover, we demonstrate that such lightweight presolving can yield substantial end-to-end speedups for the GPU-accelerated solver cuPDLPx, despite presolving sometimes constituting a significant fraction of the total runtime. These results suggest that lightweight presolving may remain beneficial as GPU performance continues to scale, while the sequential nature of presolving presumably does not.   We accompany this paper with an open-source C implementation of an LP presolver, called PSLP (Presolver for Linear Programs). PSLP is battle-tested and has been adopted by the community, with integrations in cuPDLPx, cuOpt (NVIDIA's optimization library), and HPR-LP.",
+      "date": "2026-04-27",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.23951v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.23951",
+      "arxiv_id": "2604.23951v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Gurobi"
+      ]
+    },
+    {
+      "id": "arxiv-2604.24710",
+      "title": "Case-Specific Rubrics for Clinical AI Evaluation: Methodology, Validation, and LLM-Clinician Agreement Across 823 Encounters",
+      "authors": [
+        "Aaryan Shah",
+        "Andrew Hines",
+        "Alexia Downs",
+        "Denis Bajet",
+        "Paulius Mui",
+        "Fabiano Araujo",
+        "Laura Offutt",
+        "Aida Rutledge",
+        "Elizabeth Jimenez"
+      ],
+      "abstract": "Objective. Clinical AI documentation systems require evaluation methodologies that are clinically valid, economically viable, and sensitive to iterative changes. Methods requiring expert review per scoring instance are too slow and expensive for safe, iterative deployment. We present a case-specific, clinician-authored rubric methodology for clinical AI evaluation and examine whether LLM-generated rubrics can approximate clinician agreement.   Materials and Methods. Twenty clinicians authored 1,646 rubrics for 823 clinical cases (736 real-world, 87 synthetic) across primary care, psychiatry, oncology, and behavioral health. Each rubric was validated by confirming that an LLM-based scoring agent consistently scored clinician-preferred outputs higher than rejected ones. Seven versions of an EHR-embedded AI agent for clinicians were evaluated across all cases.   Results. Clinician-authored rubrics discriminated effectively between high- and low-quality outputs (median score gap: 82.9%) with high scoring stability (median range: 0.00%). Median scores improved from 84% to 95%. In later experiments, clinician-LLM ranking agreement (tau: 0.42-0.46) matched or exceeded clinician-clinician agreement (tau: 0.38-0.43), attributable to both ceiling compression and LLM rubric improvement.   Discussion. This convergence supports incorporating LLM rubrics alongside clinician-authored ones. At roughly 1,000 times lower cost, LLM rubrics enable substantially greater evaluation coverage, while continued clinical authorship grounds evaluation in expert judgment. Ceiling compression poses a methodological challenge for future inter-rater agreement studies.   Conclusion. Case-specific rubrics offer a path for clinical AI evaluation that preserves expert judgment while enabling automation at three orders lower cost. Clinician-authored rubrics establish the baseline against which LLM rubrics are validated.",
+      "date": "2026-04-27",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2604.24710v1",
+      "tags": [
+        "cs.AI",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.24710",
+      "arxiv_id": "2604.24710v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.24700",
+      "title": "Green Shielding: A User-Centric Approach Towards Trustworthy AI",
+      "authors": [
+        "Aaron J. Li",
+        "Nicolas Sanchez",
+        "Hao Huang",
+        "Ruijiang Dong",
+        "Jaskaran Bains",
+        "Katrin Jaradeh",
+        "Zhen Xiang",
+        "Bo Li",
+        "Feng Liu",
+        "Aaron Kornblith",
+        "Bin Yu"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly deployed, yet their outputs can be highly sensitive to routine, non-adversarial variation in how users phrase queries, a gap not well addressed by existing red-teaming efforts. We propose Green Shielding, a user-centric agenda for building evidence-backed deployment guidance by characterizing how benign input variation shifts model behavior. We operationalize this agenda through the CUE criteria: benchmarks with authentic Context, reference standards and metrics that capture true Utility, and perturbations that reflect realistic variations in the Elicitation of model behavior. Guided by the PCS framework and developed with practicing physicians, we instantiate Green Shielding in medical diagnosis through HealthCareMagic-Diagnosis (HCM-Dx), a benchmark of patient-authored queries, together with structured reference diagnosis sets and clinically grounded metrics for evaluating differential diagnosis lists. We also study perturbation regimes that capture routine input variation and show that prompt-level factors shift model behavior along clinically meaningful dimensions. Across multiple frontier LLMs, these shifts trace out Pareto-like tradeoffs. In particular, neutralization, which removes common user-level factors while preserving clinical content, increases plausibility and yields more concise, clinician-like differentials, but reduces coverage of highly likely and safety-critical conditions. Together, these results show that interaction choices can systematically shift task-relevant properties of model outputs and support user-facing guidance for safer deployment in high-stakes domains. Although instantiated here in medical diagnosis, the agenda extends naturally to other decision-support settings and agentic AI systems.",
+      "date": "2026-04-27",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2604.24700v1",
+      "tags": [
+        "cs.CL",
+        "healthcare-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.24700",
+      "arxiv_id": "2604.24700v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.24622",
+      "title": "CF-VLA: Efficient Coarse-to-Fine Action Generation for Vision-Language-Action Policies",
+      "authors": [
+        "Fan Du",
+        "Feng Yan",
+        "Jianxiong Wu",
+        "Xinrun Xu",
+        "Weiye Zhang",
+        "Weinong Wang",
+        "Yu Guo",
+        "Bin Qian",
+        "Zhihai He"
+      ],
+      "abstract": "Flow-based vision-language-action (VLA) policies offer strong expressivity for action generation, but suffer from a fundamental inefficiency: multi-step inference is required to recover action structure from uninformative Gaussian noise, leading to a poor efficiency-quality trade-off under real-time constraints. We address this issue by rethinking the role of the starting point in generative action modeling. Instead of shortening the sampling trajectory, we propose CF-VLA, a coarse-to-fine two-stage formulation that restructures action generation into a coarse initialization step that constructs an action-aware starting point, followed by a single-step local refinement that corrects residual errors. Concretely, the coarse stage learns a conditional posterior over endpoint velocity to transform Gaussian noise into a structured initialization, while the fine stage performs a fixed-time refinement from this initialization. To stabilize training, we introduce a stepwise strategy that first learns a controlled coarse predictor and then performs joint optimization. Experiments on CALVIN and LIBERO show that our method establishes a strong efficiency-performance frontier under low-NFE (Number of Function Evaluations) regimes: it consistently outperforms existing NFE=2 methods, matches or surpasses the NFE=10 $π_{0.5}$ baseline on several metrics, reduces action sampling latency by 75.4\\%, and achieves the best average real-robot success rate of 83.0\\%, outperforming MIP by 19.5 points and $π_{0.5}$ by 4.0 points. These results suggest that structured, coarse-to-fine generation enables both strong performance and efficient inference. Our code is available at https://github.com/EmbodiedAI-RoboTron/CF-VLA.",
+      "date": "2026-04-27",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2604.24622v1",
+      "tags": [
+        "cs.CV",
+        "integer-programming",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.24622",
+      "arxiv_id": "2604.24622v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2604.24618",
+      "title": "Evaluating whether AI models would sabotage AI safety research",
+      "authors": [
+        "Robert Kirk",
+        "Alexandra Souly",
+        "Kai Fronsdal",
+        "Abby D'Cruz",
+        "Xander Davies"
+      ],
+      "abstract": "We evaluate the propensity of frontier models to sabotage or refuse to assist with safety research when deployed as AI research agents within a frontier AI company. We apply two complementary evaluations to four Claude models (Mythos Preview, Opus 4.7 Preview, Opus 4.6, and Sonnet 4.6): an unprompted sabotage evaluation testing model behaviour with opportunities to sabotage safety research, and a sabotage continuation evaluation testing whether models continue to sabotage when placed in trajectories where prior actions have started undermining research. We find no instances of unprompted sabotage across any model, with refusal rates close to zero for Mythos Preview and Opus 4.7 Preview, though all models sometimes only partially completed tasks. In the continuation evaluation, Mythos Preview actively continues sabotage in 7% of cases (versus 3% for Opus 4.6, 4% for Sonnet 4.6, and 0% for Opus 4.7 Preview), and exhibits reasoning-output discrepancy in the majority of these cases, indicating covert sabotage reasoning. Our evaluation framework builds on Petri, an open-source LLM auditing tool, with a custom scaffold running models inside Claude Code, alongside an iterative pipeline for generating realistic sabotage trajectories. We measure both evaluation awareness and a new form of situational awareness termed \"prefill awareness\", the capability to recognise that prior trajectory content was not self-generated. Opus 4.7 Preview shows notably elevated unprompted evaluation awareness, while prefill awareness remains low across all models. Finally, we discuss limitations including evaluation awareness confounds, limited scenario coverage, and untested pathways to risk beyond safety research sabotage.",
+      "date": "2026-04-27",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2604.24618v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.24618",
+      "arxiv_id": "2604.24618v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}

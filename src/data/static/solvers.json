@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T09:28:37.859894+00:00",
+  "generated_at": "2026-04-28T09:32:00.950013+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1597,
+      "github_stars": 1599,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 169,
+      "github_open_issues": 170,
       "github_recent_prs": [
+        "Update actions",
         "Add single machine scheduling separator",
         "Updated build for external dependencies (mods-latest)",
         "Fix C-heap memory leaks in solver state cleanup",
-        "Updated build for external dependencies",
-        "Reduce shift size in reduced-cost fixing"
+        "Updated build for external dependencies"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13410,
+      "github_stars": 13412,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -604,7 +604,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 988,
+      "github_stars": 987,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -1131,7 +1131,7 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6189,
+      "github_stars": 6188,
       "github_open_issues": 183,
       "github_recent_prs": [
         "DNLP sync with CVXPY for 1.9",
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1743,
+      "github_stars": 1742,
       "github_open_issues": 15,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1319,7 +1319,7 @@
         "metaheuristic"
       ],
       "recent_changes": "We are excited to announce Timefold Solver 2.0.0, the first major version bump in three years. There is a lot to unpack, let's get into it.\r\n\r\n## What's new in the Community Edition\r\n\r\n### The Neighbo",
-      "github_stars": 1638,
+      "github_stars": 1640,
       "github_open_issues": 79,
       "github_recent_prs": [
         "deps: bump the regular group with 2 updates",
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
-      "github_stars": 2444,
+      "github_stars": 2443,
       "github_open_issues": 358,
       "github_recent_prs": [
         "Add shell-based HiGHS solver interface",
