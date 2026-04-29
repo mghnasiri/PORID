@@ -1,0 +1,312 @@
+{
+  "date": "2026-04-29",
+  "generated_at": "2026-04-29T09:20:57.636673+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2604.25357",
+      "title": "Handling Overtime Constraints in Mixed Integer Linear Programming for Surgical Scheduling: A Comparison of Neural Network and Classical Linearization Techniques",
+      "authors": [
+        "Cindy Pistorius",
+        "J. Theresia van Essen"
+      ],
+      "abstract": "Uncertainty in surgery durations continues to be difficult to account for in operating room scheduling. In particular, it remains complex to accurately incorporate uncertainty in surgical overtime constraints within mixed-integer linear programming (MILP) models. Therefore, we propose a method that integrates feedforward neural networks (FNNs) into MILP models to approximate the total surgery duration in these overtime constraints. The proposed approach is evaluated using real-life hospital data and compared against two classical approaches: scenario-based modelling and piecewise linear function approximations. We demonstrate that with a relatively small FNN, we achieve competitive operating room schedules in terms of both solution quality and computational performance. The FNN-based approach is the most computationally efficient with an optimality gap lower than 2% in all cases, achieves the highest operating room utilization in six out of eight considered cases, and on average produces simulated overtime probabilities closest to the predefined target.",
+      "date": "2026-04-28",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.25357v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming",
+        "scheduling",
+        "stochastic",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.25357",
+      "arxiv_id": "2604.25357v1",
+      "score": 70.0
+    },
+    {
+      "id": "arxiv-2604.25764",
+      "title": "Benders Cut Filtering for Affine Potential-Based Flow Problems with Robustness Scenarios and Topology Switching",
+      "authors": [
+        "Tim Donkiewicz",
+        "Oliver Gaul"
+      ],
+      "abstract": "Many large-scale optimization problems decompose into a master problem and scenario subproblems, a structure that can be exploited by Benders decomposition. In Benders decomposition, each iteration may generate many cuts from scenario subproblems, and adding all of them as constraints then causes the master problem to grow rapidly. These are constraints that may need to be added to the master problem to guarantee optimality and feasibility of solutions, but we can avoid adding those constraints that are never violated. Adding fewer cuts per iteration can reduce the number of cuts added in total, but increase the number of iterations. In contrast, the cuts filtered for regular cut selection in mixed-integer programming solvers are optional and added exclusively to improve runtime behavior.   We study Benders cut filtering: given the Benders cuts produced in an iteration, which subset should be added to the master problem? To our knowledge, few prior works have studied this question. We propose violation-based filtering (retaining the most-violated cuts), diversity-based filtering via k-medoids clustering on pairwise cosine distances (adding an original cut closest to the cluster centroid), and a hybrid that selects a most-violated cut per cluster. Each strategy can be augmented with an aggregated cut that retains discarded information.   Computational experiments on 149 instances of an affine potential-based flow problem with topology switching and robustness scenarios -- solved via Benders decomposition -- show that all informed filtering strategies solve at least 125 instances (vs. 91 for the unfiltered baseline), reducing shifted geometric mean solve time by 55-57%. The hybrid strategy attains the best geometric mean (271.89 s vs. 629.34 s, a 57% reduction, p < 0.001).",
+      "date": "2026-04-28",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.25764v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.25764",
+      "arxiv_id": "2604.25764v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.25655",
+      "title": "Residual-loss Anomaly Analysis of Physics-Informed Neural Networks: An Inverse Method for Change-point Detection in Nonlinear Dynamical Systems with Regime Switching",
+      "authors": [
+        "Yuhe Bai",
+        "Chengli Tan",
+        "Jiaqi Li",
+        "Xiangjun Wang",
+        "Zhikun Zhang"
+      ],
+      "abstract": "Nonlinear dynamical systems with regime transitions are typically described by ordinary differential equations with jumping parameters parameters. Traditional methods often treat change-point detection and parameter estimation as separate tasks, ignoring the inherent coupling between them. To address this, we propose residual-loss anomaly analysis of physics-informed neural networks, a unified framework that leverages dynamical consistency within the physics-informed learning paradigm. This approach jointly infers piecewise parameters and transition points under a single set of constraints. The method follows a two-stage strategy: First, local physical residuals are analyzed through overlapping subinterval decomposition. When a subinterval spans a true transition point, the residual exhibits a distinct structural elevation in noise-free conditions, which has a non-zero lower bound, enabling effective localization of potential transition intervals. Second, within our framework, change-point locations and piecewise parameters are integrated into a unified physical loss function for joint optimization, enabling simultaneous identification. Experiments on benchmark nonlinear dynamical systems, including Malthusian and logistic growth models, Van der Pol oscillator, Lotka-Volterra model and Lorenz system, demonstrate that the proposed method outperforms traditional decoupled approaches in both change-point localization and parameter estimation accuracy. This study provides an efficient, unified solution for structurally coupled inverse problems in nonlinear dynamical systems with regime switching.",
+      "date": "2026-04-28",
+      "source": "arXiv",
+      "source_detail": "stat.ML",
+      "url": "http://arxiv.org/abs/2604.25655v1",
+      "tags": [
+        "stat.ML",
+        "stochastic",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.25655",
+      "arxiv_id": "2604.25655v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07234-6",
+      "title": "Deviations from the Nash equilibrium in a two-player optimal execution game with reinforcement learning",
+      "authors": [
+        "Lillo, F.",
+        "Macrì, A."
+      ],
+      "abstract": "",
+      "date": "2026-04-28",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07234-6",
+      "tags": [
+        "ml-for-or",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07234-6",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.25258",
+      "title": "Regulation of Rumor Propagation via (Multi-Leader) Stackelberg Graphon Games",
+      "authors": [
+        "Huaning Liu",
+        "Gokce Dayanikli"
+      ],
+      "abstract": "We study the control of rumor propagation in large networked populations by using Stackelberg graphon games. We first introduce a principal who wants to incentivize the spread of her preferred news and discourage the spread of non-preferred news. We define the Stackelberg graphon game equilibrium (SGGE), characterize the graphon game Nash equilibrium (GGNE) with a forward-backward differential equation system, and establish existence results. We further formulate a multi-leader model with two competing principals, each incentivizing her own preferred news. Finally, we propose a bi-level algorithm for computing (multi-leader) Stackelberg graphon game equilibria and conclude with numerical experiments where we show that existence of competing principals will result in strong opinion divisions in the population.",
+      "date": "2026-04-28",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.25258v1",
+      "tags": [
+        "math.OC",
+        "constraint-programming",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.25258",
+      "arxiv_id": "2604.25258v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.25233",
+      "title": "A Combinatorial Optimisation Approach to Multi-factorial Gap-filling in Genome-scale Metabolic Models (GEMs)",
+      "authors": [
+        "Philip Kilby",
+        "Sevvandi Kandanaarachchi",
+        "Matthew J. Morgan",
+        "Amy M. Paten",
+        "Mariana Velasque",
+        "Andrew C. Warden",
+        "Juan P. Molina Ortiz"
+      ],
+      "abstract": "Genome-Scale Metabolic Models (GEMs) describe the interactions between genes, proteins, and the biochemical reactions that underpin an organism's metabolism aiming to computationally simulate functions at the cellular level. While many metabolic reactions can be inferred from genome analysis, constructing GEMs often involves incorporating reactions unsupported by genomic data to improve prediction accuracy. This is known as gap-filling, a process that can be performed manually (a time-consuming task) or computationally. Traditional computational gap-filling approaches aim to correct GEM predictions for a single environmental condition (medium) by solving a large Integer Linear Programming problem. Sequential application across multiple media can produce a more robust model, but often introduces unrealistic predictions in other media. They are also slow to run. In this paper, we study multi-factorial gap filling, which aims to gap-fill GEMs across typically 10 or more input media simultaneously, while improving their overall predictive accuracy and minimising unrealistic behaviour. We view the selection of the set of reactions as a combinatorial optimisation problem, and describe a method based on classic metaheuristic approaches which requires the solution of continuous Linear Programming problems only. This paper provides an introduction of this problem to an audience whose speciality lies outside biology, and suggests a practical first-cut solution method. We demonstrate the method gap-filling GEMs for three bacteria strains, selecting 3000 to 4000 reactions from a database of more than 11000 reactions, while attempting to match the empirically measured performance on 9 to 28 separate media conditions. We show that our method outperforms conventional approaches on multiple metrics, including Kendal Tau and RMS Error by an average of 7.3% and 13.3%, respectively.",
+      "date": "2026-04-28",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.25233v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "metaheuristics"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.25233",
+      "arxiv_id": "2604.25233v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.25192",
+      "title": "Reconfiguring flexibility in renewable power-to-ammonia systems using molten-salt thermal energy storage in the ammonia synthesis loop: A coordinated electro-hydrogen-thermal scheduling approach",
+      "authors": [
+        "Yiwei Qiu",
+        "Qingjie Sun",
+        "Yangjun Zeng",
+        "Ge Chen",
+        "Longjie Yang",
+        "Ge He",
+        "Xu Ji",
+        "Shi Chen",
+        "Buxiang Zhou",
+        "Kaigui Xie"
+      ],
+      "abstract": "In renewable power-to-ammonia (ReP2A) systems, the intermittency of wind and solar generation propagates through electrolytic hydrogen production and induces thermal instability in the ammonia synthesis reactor (ASR). The resulting temperature cycling accelerates fatigue and shortens service life, while reactor thermal inertia limits flexible start-up, shutdown, and load adjustment. To address this issue, this study integrates molten-salt thermal energy storage (MS-TES) into the Haber-Bosch synthesis loop and develops a coordinated electro-hydrogen-thermal scheduling framework. MS-TES decouples hydrogen supply fluctuations from reactor thermal dynamics by enabling hot standby operation and sustained thermal support during start-up and low-load conditions. A state-space model is established to capture the thermal dynamics of the ASR and MS-TES. Based on this model, an optimal scheduling program coordinates ammonia synthesis operation with hydrogen production, battery energy storage (BES), and hydrogen storage (HS). The problem is formulated as a mixed-integer linear program (MILP) and extended with information gap decision theory (IGDT) to address renewable uncertainty. Case studies based on an industrial-scale project in northern China show that MS-TES enhances reactor thermal stability and system-level flexibility, while diminishing the marginal benefit of large BES capacity. As a result, a configuration combining small BES, HS, and MS-TES achieves near-equivalent performance to large-BES systems, with lower investment and improved economic returns. Year-round simulations further show that MS-TES avoids ASR start-up and shutdown and delivers consistently higher net revenue under variable renewable conditions.",
+      "date": "2026-04-28",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.25192v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.25192",
+      "arxiv_id": "2604.25192v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.25153",
+      "title": "On rates of convergence for sample average approximations without smoothness",
+      "authors": [
+        "Hien Duy Nguyen",
+        "Jacob Westerhout",
+        "Xin Guo"
+      ],
+      "abstract": "Sample average approximation (SAA) replaces an intractable expected objective by an empirical average and is a basic device of modern stochastic optimization. We develop a rate theory for optimal values and empirical $\\varepsilon$-minimizers that does not assume continuity, lower semicontinuity, or smooth perturbation structure of the sample objectives. Working on $\\ell^{\\infty}(X)$ with the Hoffmann--Jørgensen outer-probability formalism, we show that uniform control of the empirical objective process transfers deterministically to convergence rates for optimal values, excess risks of empirical $\\varepsilon$-minimizers, and, under a sharp-growth condition, distances to the expected objective solution set. Combined with the directional differentiability of the infimum functional, this yields weak limits for empirical optimal values at the $n^{-1/2}$ scale. Combined with LILs and maximal inequalities, it yields outer almost-sure and outer-mean rates. The definability, envelope, and VC-subgraph hypotheses are verified for definable discontinuous or non-Lipschitz classes arising in direct $0$--$1$ classification, fixed-architecture neural networks, threshold regression, and non-Lipschitz $\\ell_{p}$-type objectives with rational $0<p<1$. Practical sufficient conditions for measurability hypotheses are discussed. Together, the framework extends continuity-based SAA theory to a tame-topological setting.",
+      "date": "2026-04-28",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2604.25153v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.25153",
+      "arxiv_id": "2604.25153v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.25895",
+      "title": "Three Models of RLHF Annotation: Extension, Evidence, and Authority",
+      "authors": [
+        "Steve Coyne"
+      ],
+      "abstract": "Preference-based alignment methods, most prominently Reinforcement Learning with Human Feedback (RLHF), use the judgments of human annotators to shape large language model behaviour. However, the normative role of these judgments is rarely made explicit. I distinguish three conceptual models of that role. The first is extension: annotators extend the system designers' own judgments about what outputs should be. The second is evidence: annotators provide independent evidence about some facts, whether moral, social or otherwise. The third is authority: annotators have some independent authority (as representatives of the broader population) to determine system outputs. I argue that these models have implications for how RLHF pipelines should solicit, validate and aggregate annotations. I survey landmark papers in the literature on RLHF and related methods to illustrate how they implicitly draw on these models, describe failure modes that come from unintentionally or intentionally conflating them, and offer normative criteria for choosing among them. My central recommendation is that RLHF pipeline designers should decompose annotation into separable dimensions and tailor each pipeline to the model most appropriate for that dimension, rather than seeking a single unified pipeline.",
+      "date": "2026-04-28",
+      "source": "arXiv",
+      "source_detail": "cs.CY",
+      "url": "http://arxiv.org/abs/2604.25895v1",
+      "tags": [
+        "cs.CY",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1145/3805689.3812225",
+      "arxiv_id": "2604.25895v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.25848",
+      "title": "Semi-Markov Reinforcement Learning for City-Scale EV Ride-Hailing with Feasibility-Guaranteed Actions",
+      "authors": [
+        "An Nguyen",
+        "Hoang Nguyen",
+        "Phuong Le",
+        "Hung Pham",
+        "Cuong Do",
+        "Laurent El Ghaoui"
+      ],
+      "abstract": "We study city-scale control of electric-vehicle (EV) ride-hailing fleets where dispatch, repositioning, and charging decisions must respect charger and feeder limits under uncertain, spatially correlated demand and travel times. We formulate the problem as a hex-grid semi-Markov decision process (semi-MDP) with mixed actions -- discrete actions for serving, repositioning, and charging, together with continuous charging power -- and variable action durations. To guarantee physical feasibility during both training and deployment, the policy learns over high-level intentions produced by a masked, temperature-annealed actor. These intentions are projected at every decision step through a time-limited rolling mixed-integer linear program (MILP) that strictly enforces state-of-charge, port, and feeder constraints. To mitigate distributional shifts, we optimize a Soft Actor--Critic (SAC) agent against a Wasserstein-1 ambiguity set with a graph-aligned Mahalanobis ground metric that captures spatial correlations. The robust backup uses the Kantorovich--Rubinstein dual, a projected subgradient inner loop, and a primal--dual risk-budget update. Our architecture combines a two-layer Graph Convolutional Network (GCN) encoder, twin critics, and a value network that drives the adversary. Experiments on a large-scale EV fleet simulator built from NYC taxi data show that PD--RSAC achieves the highest net profit, reaching \\$1.22M, compared with \\$0.58M--\\$0.70M for strong heuristic, single-agent RL, and multi-agent RL baselines, including Greedy, SAC, MAPPO, and MADDPG, while maintaining zero feeder-limit violations.",
+      "date": "2026-04-28",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2604.25848v1",
+      "tags": [
+        "cs.AI",
+        "integer-programming",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.25848",
+      "arxiv_id": "2604.25848v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
