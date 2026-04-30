@@ -1,0 +1,314 @@
+{
+  "date": "2026-04-30",
+  "generated_at": "2026-04-30T09:23:21.673652+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2604.26459",
+      "title": "Solve Crude Oil Scheduling Problems by Using Quantum-Classical Hybrid Algorithms",
+      "authors": [
+        "Jian Yang",
+        "Bohang Wang",
+        "Lina Wang",
+        "Jiacheng Chen",
+        "Gaoxiang Tang",
+        "Zihan Deng",
+        "Wending Zhao",
+        "Xianfeng Cai"
+      ],
+      "abstract": "The optimization of front-end crude oil scheduling is a critical determinant of refinery profitability and operational stability. However, the coupling of discrete logistics events (e.g., vessel berthing) with continuous material flows (e.g., pipeline transfers) renders this problem an NP-hard Mixed-Integer Linear Programming (MILP) challenge, often intractable for classical solvers at industrial scales. This study proposes a novel hybrid quantum-classical framework to address these computational bottlenecks. We employ Benders Decomposition to decouple the monolithic model into a discrete Master Problem (MP) and a continuous Subproblem (SP). To exploit the search capabilities of quantum computing, the MP is reformulated as a Quadratic Unconstrained Binary Optimization (QUBO) model and solved via a hybrid quantum solver, while the SP enforces mass balance and quality constraints through iterative optimality and feasibility cuts. Extensive experiments on 15 multi-scale instances demonstrate that the proposed framework significantly outperforms traditional metaheuristics (e.g., Genetic Algorithms, Tabu Search), reducing total operating costs by approximately 73--80% and achieving computational speeds comparable to state-of-the-art commercial solvers (Gurobi). By effectively leveraging global optimality cuts, the method overcomes the tendency of heuristic approaches to trap in local optima, providing a robust and scalable solution for complex refinery logistics.",
+      "date": "2026-04-29",
+      "source": "arXiv",
+      "source_detail": "quant-ph",
+      "url": "http://arxiv.org/abs/2604.26459v1",
+      "tags": [
+        "quant-ph",
+        "linear-programming",
+        "integer-programming",
+        "metaheuristics",
+        "scheduling",
+        "supply-chain",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.26459",
+      "arxiv_id": "2604.26459v1",
+      "score": 75.0,
+      "mentions_solvers": [
+        "Gurobi"
+      ]
+    },
+    {
+      "id": "s2-b7235f2b5ff6",
+      "title": "Smart Emergency Route Optimizer System: A Systematic Literature Review",
+      "authors": [
+        "Mrs. H Meenal"
+      ],
+      "abstract": "Urban road congestion creates a serious and measurable problem for emergency medical services. Ambulances get\nstuck at fixed-cycle traffic signals, dispatchers rely on static maps that do not reflect current conditions, and there is rarely any\nmechanism to match patients to hospitals based on available treatment capability. India's 108 Ambulance Service records an\naverage urban response time of around 15 minutes [A], which already exceeds the National Health Mission's own urban\nbenchmark of 20 minutes [B] in many high-traffic scenarios. This paper has two goals. The first is to present a structured review\nof ten peer-reviewed studies from 2019 to 2025, covering AI-based dispatch, computer vision signal control, heuristic routing,\nautonomous vehicle frameworks, and hybrid congestion prediction. The second is to describe SEROS (Smart Emergency Route\nOptimizer System), a working three-tier platform built specifically for Hyderabad's road network, which was developed to\naddress the gaps those studies leave open. SEROS brings together YOLOv8n for real-time traffic monitoring, A* routing with\ncongestion-sensitive edge costs, a hospital capability scoring model, signal preemption communication, and a Kotlin Android app\nfor field drivers. Across thirty real Hyderabad intersections and forty-six road segments, the system cut average response time\nfrom a 15 to 20 minute manual baseline down to 6 to 10 minutes. YOLOv8n detected vehicles at 97% accuracy running at twelve\nframes per second on standard CPU hardware, with no GPU required.",
+      "date": "2026-04-30",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.22214/ijraset.2026.79545",
+      "tags": [
+        "stochastic",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.22214/ijraset.2026.79545",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 65.0
+    },
+    {
+      "id": "arxiv-2604.26424",
+      "title": "Risk-Aware Multi-Market Scheduling of Virtual Power Plants with Dynamic Network Tariffs",
+      "authors": [
+        "Lorenzo Zapparoli",
+        "Paul Fäth",
+        "Blazhe Gjorgiev",
+        "Giovanni Sansavini"
+      ],
+      "abstract": "As the penetration of distributed energy resources (DERs) increases, harnessing their flexibility becomes critical for power system operations. Virtual power plants (VPPs) offer a promising solution. However, most existing scheduling tools rely on simplified DER or grid models and largely overlook local flexibility procurement mechanisms such as dynamic network tariffs. This paper proposes a two-stage stochastic optimization framework for VPP multi-market scheduling that integrates detailed device-level constraints, network limitations, and operational and market uncertainties. Conditional value-at-risk is incorporated to represent risk preferences, and Benders decomposition ensures tractability with extensive scenario sets. The model jointly optimizes bidding across energy and reserve markets while explicitly accounting for local flexibility procurement through dynamic network tariffs. The results from a realistic case study show that both risk-neutral and risk-averse strategies exploit arbitrage opportunities. However, risk aversion reduces profit volatility through closer alignment with physical dispatch. Dynamic tariffs unlock local flexibility by shifting demand across the day, though strong tariff signals reduce expected profitability by up to 65% with limited additional flexibility gains.",
+      "date": "2026-04-29",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2604.26424v1",
+      "tags": [
+        "eess.SY",
+        "scheduling",
+        "stochastic",
+        "supply-chain",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.26424",
+      "arxiv_id": "2604.26424v1",
+      "score": 60.0
+    },
+    {
+      "id": "s2-13d16bf47ea0",
+      "title": "HYDRAULIC TECHNOLOGY IN TUBER CROP MECHANIZATION: APPLICATIONS, CHALLENGES, AND RESEARCH PROGRESS",
+      "authors": [
+        "Zhixi Deng",
+        "Mansheng Zheng",
+        "Zhiguo Pan",
+        "Wenjing Li",
+        "Zihao Zhao",
+        "Yuming Zhai"
+      ],
+      "abstract": "Hydraulic drives are widely used in tuber crop machinery for travelling and working-unit operations to cope with complex field conditions. However, under low-speed high-torque operation, fluctuating loads, and multi-actuator working conditions, hydraulic systems often suffer from reduced energy efficiency and insufficient stability. This paper reviews typical applications of hydraulic technology in travelling and working-unit drive systems of tuber crop machinery, and analyzes key issues including energy efficiency under low-speed high-torque conditions, dynamic responses to load fluctuations, system coupling induced by multi-actuator operation, and stability constraints related to crop damage sensitivity. Recent advances in system optimization and control strategies are summarized.",
+      "date": "2026-04-30",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.35633/inmateh-78-01",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.35633/inmateh-78-01",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "s2-155fcbe08b56",
+      "title": "NexusMind: Agentic AI Orchestration Model",
+      "authors": [
+        "Mrs. P. Nandini"
+      ],
+      "abstract": "Agentic AI has considerably evolved from simple prompt-based language models that would respond to users based\nexclusively on the input provided. The modern versions of agentic systems are far more ambitious, in that they seek to\nindependently plan tasks, reason out complicated contexts, use memory effectively, and even interact with external tools to\nexecute multistage operations. These increased capabilities make this form of AI an attractive option for deployment in the real\nworld, but each of the better- known frameworks, including the likes of AutoGPT, CrewAI, Puppeteer, and AgentGuard,\ncontinues to exhibit various issues that prevent seamless adoption. Common challenges include high computational cost due to\nrepetitive LLM usage, limited scalability when handling large workflows, hallucination risks stemming from unverified outputs,\nand significant governance gaps that raise safety and compliance concerns. To overcome these limitations, this paper introduces\nNexusMind: a hybrid agentic AI orchestration model designed to achieve a balance between intelligent reasoning and the\nutilization of resources in an efficient manner. The proposed NexusMind unifies Large Language Models, Small Language\nModels, reflective memory, multi-agent collaboration, and policy-driven governance. By routing the tasks dynamically between\nLLMs and SLMs based on problem complexity and precision requirements, the model attempts to improve processing efficiency,\nlessen computational overhead, and preserve accuracy. An integrated governance layer that includes policy enforcement, rolebased access control, audit trail generation, and risk evaluation ensures that the behavior of agents remains safe, transparent,\nand conforms to ethical and operational standards. Powered with such capabilities, NexusMind enhances the autonomy,\ntrustworthiness, adaptability, and system reliability for applications in verticals like healthcare decision support, financial\nanalysis, research automation, education technology, and enterprise-level intelligent software. The discussion presents the\ndevelopment of a functional prototype, the introduction of multimodal capabilities for broader perception, reinforcementlearning-based optimization as a means for continuous improvement, and real-time dynamic routing strategies toward making the\narchitecture more flexible for real-world environments.",
+      "date": "2026-04-30",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.22214/ijraset.2026.79343",
+      "tags": [
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.22214/ijraset.2026.79343",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "s2-08ab6a9c4cf9",
+      "title": "A Comprehensive Study of Web-Based Real-Time Vehicle Tracking and Analytics System",
+      "authors": [
+        "Sanju Yadav"
+      ],
+      "abstract": "Real-time vehicle tracking systems have become an important part of modern transportation and logistics industries.\nWith the help of web-based systems, it is easy to access vehicle data atany time and from anywhere. These systems have improved\nsignificantly over time. In the beginning, these systems were simple devices used to record the data only. But with time, began to\nwork in real-time using GPS and mobile networks to track vehicles live. As the number of vehicles increases, managing them\nhave become difficult. So, there is a growing need for the systems that can easily track a vehicle’s location, movement and\nbehaviour in real-time. It is a modern solution which helps to improve fleet management through real-time GPS tracking and\nintelligent route optimization.In this paper, we study different vehicle tracking and analytics systems and explains how they\nwork.It includes technologies like GPS and GSM, IoT-based solutions, cloud-based systems and computer vision. Most of the\nresearch mainly focus on improving vehicle safety, fuel consumption and providing support during emergencies. Our study\nshows that GPS-based systems are more affordable and easier to use, while IoT and computer vision-based technologies are\nmore advanced and can manage large systems easily.Instead of these advantages, there are still some major problems like poor\nnetwork, data security risks and environmental challenges which are faced in the vehicle tracking systems. Choosing the right\ntechnology is very important. It depends on how and where the systems are used. In some cases, hybrid systems which combine\ndifferent technologies, can give good results.",
+      "date": "2026-04-30",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.22214/ijraset.2026.79927",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.22214/ijraset.2026.79927",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "s2-8769b3ee363b",
+      "title": "YOLOv8: An Integrated Framework for Automated Road Damage Quantification and Prioritization",
+      "authors": [
+        "R. Verma"
+      ],
+      "abstract": "The bad state of roads is still a big problem in India, causing accidents, damaging vehicles, and creating delays that\nimpact everyday life and the economy. One of the main problems that officials face is not having up-to-date and specific\ninformation about where repairs are needed, which makes it hard to decide which areas to fix first. Most current complaint\nsystems use only text for input, don't have good ways to check if the information is correct, and don't give much helpful\ninformation to the public. To fix these issues, this project presents Street Info Hub, a web platform designed for citizens. It lets\nusers report damaged roads by sharing pictures and providing location details through GPS. The main part of the system is a\ncombined artificial intelligence process. A fine-tuned MobileNetV3 Small model first checks whether the uploaded image\ncontains a road surface. Once validated, a YOLOv8n model trained to detect four types of road damage identifies and marks\ndefects. The severity of each issue is calculated based on damage type, bounding-box area, and image dimensions. All verified\nreports are stored in a cloud-based MongoDB database along with detailed metadata. The platform also includes tools for\nanalyzing damage patterns and supports route planning by displaying reported potholes on navigation paths using\nOpenRouteService and Leaflet maps. A dedicated dashboard enables users to monitor their submissions. After training, the\nYOLOv8n model achieved a mAP@50 score of 46.7% and a precision of 54.7%, showing reliable performance. Overall, the\nsystem demonstrates how citizen participation and computer vision can provide real-time data for faster and better road\nmaintenance decisions in practical real-world deployment scenarios today",
+      "date": "2026-04-30",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.22214/ijraset.2026.79585",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.22214/ijraset.2026.79585",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2604.26904",
+      "title": "ClawGym: A Scalable Framework for Building Effective Claw Agents",
+      "authors": [
+        "Fei Bai",
+        "Huatong Song",
+        "Shuang Sun",
+        "Daixuan Cheng",
+        "Yike Yang",
+        "Chuan Hao",
+        "Renyuan Li",
+        "Feng Chang",
+        "Yuan Wei",
+        "Ran Tao",
+        "Bryan Dai",
+        "Jian Yang",
+        "Wayne Xin Zhao"
+      ],
+      "abstract": "Claw-style environments support multi-step workflows over local files, tools, and persistent workspace states. However, scalable development around these environments remains constrained by the absence of a systematic framework, especially one for synthesizing verifiable training data and integrating it with agent training and diagnostic evaluation. To address this challenge, we present ClawGym, a scalable framework that supports the full lifecycle of Claw-style personal agent development. Concretely, we construct ClawGym-SynData, a diverse dataset of 13.5K filtered tasks synthesized from persona-driven intents and skill-grounded operations, paired with realistic mock workspaces and hybrid verification mechanisms. We then train a family of capable Claw-style models, termed ClawGym-Agents, through supervised fine-tuning on black-box rollout trajectories, and further explore reinforcement learning via a lightweight pipeline that parallelizes rollouts across per-task sandboxes.To support reliable evaluation, we further construct ClawGym-Bench, a benchmark of 200 instances calibrated through automated filtering and human-LLM review. Relevant resources will be soon released at https://github.com/ClawGym.",
+      "date": "2026-04-29",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2604.26904v1",
+      "tags": [
+        "cs.CL",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.26904",
+      "arxiv_id": "2604.26904v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.26833",
+      "title": "Rule-based High-Level Coaching for Goal-Conditioned Reinforcement Learning in Search-and-Rescue UAV Missions Under Limited-Simulation Training",
+      "authors": [
+        "Mahya Ramezani",
+        "Holger Voos"
+      ],
+      "abstract": "This paper presents a hierarchical decision-making framework for unmanned aerial vehicle (UAV) missions motivated by search-and-rescue (SAR) scenarios under limited simulation training. The framework combines a fixed rule-based high-level advisor with an online goal-conditioned low-level reinforcement learning (RL) controller. To stress-test early adaptation, we also consider a strict no-pretraining deployment regime. The high-level advisor is defined offline from a structured task specification and compiled into deterministic rules. It provides interpretable mission- and safety-aware guidance through recommended actions, avoided actions, and regime-dependent arbitration weights. The low-level controller learns online from task-defined dense rewards and reuses experience through a mode-aware prioritized replay mechanism augmented with rule-derived metadata. We evaluate the framework on two tasks: battery-aware multi-goal delivery and moving-target delivery in obstacle-rich environments. Across both tasks, the proposed method improves early safety and sample efficiency primarily by reducing collision terminations, while preserving the ability to adapt online to scenario-specific dynamics.",
+      "date": "2026-04-29",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2604.26833v1",
+      "tags": [
+        "cs.RO",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.26833",
+      "arxiv_id": "2604.26833v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2604.26831",
+      "title": "Weighted Emulators with Local Heaviest Edges Stretch for Undirected Graphs",
+      "authors": [
+        "Liam Roditty",
+        "Ariel Sapir"
+      ],
+      "abstract": "We introduce a generalized family of $\\left( 2\\cdot \\left\\lfloor \\frac{k}{2} \\right\\rfloor-1, 2\\cdot \\left\\lceil \\frac{k}{2} \\right\\rceil \\cdot W_{1} +\\max\\left\\{0,2\\cdot\\left(\\left\\lceil\\frac{k}{2}\\right\\rceil-2\\right)\\right\\}\\cdot W_{2} \\right)$-emulators with $\\tilde O \\left(n^{1+\\frac{1}{k}}\\right)$ edges, for any $k\\in\\mathbb{N}$, where $W_{i}$ is the $i$th heaviest edge on a shortest path between two vertices. Our construction generalizes the $+2W_{1}$-spanner of size $\\tilde O\\left(n^{\\frac{3}{2}}\\right)$ and the $+4W_{1}$-emulator of size $\\tilde O \\left(n^{\\frac{4}{3}}\\right)$, both by Elkin, Gitlitz and Neiman [DISC'21 and DICO'23].   When $k$ is even, these are $\\left(k-1,k\\cdot W_{1} + \\left(k-4\\right)\\cdot W_{2}\\right)$-emulators and when $k$ is odd, these are $\\left(k-2,\\left(k+1\\right)\\cdot W_{1} + \\left(k-3\\right) \\cdot W_{2}\\right)$-emulators. Our framework not only expands known constructions for weighted graphs but also yields an improved stretch over state of the art emulators and spanners for unweighted graphs within a specific distance regime. In particular, for all vertex pairs separated by a distance of $δ\\leq O\\left(3^{k^{2}}\\right)$, our construction improves upon the seminal additive $+\\tilde O\\left(δ^{1-\\frac{1}{k}}\\right)$-emulator of size $\\tilde O\\left(n^{1+\\frac{1}{2^{k+1}-1}}\\right)$ by Thorup and Zwick [SODA'06].",
+      "date": "2026-04-29",
+      "source": "arXiv",
+      "source_detail": "cs.DS",
+      "url": "http://arxiv.org/abs/2604.26831v1",
+      "tags": [
+        "cs.DS",
+        "network-optimization",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.26831",
+      "arxiv_id": "2604.26831v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2502118",
+      "title": "NSF Award: Conference: Integers Conference 2025",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of Georgia Research Foundation Inc",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2502118",
+      "deadline": "2026-04-30",
+      "date": "2026-03-24",
+      "award_start": "2025-05-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This award will provide funding for the “Integers Conference 2025,” which will be held in Athens, Georgia, May 14-17, 2025. The conference is being hosted by the Department of Mathematics of the University of Georgia. The Integers conferences, of which this will be the tenth, serve to bring together mathematicians and students interested in the fields of combinatorics and number theory. The conference will promote interaction among research mathematicians at all career stages ranging from underg",
+      "funding_amount": "$27,999",
+      "pi": "Bruce Landman",
+      "program": "ALGEBRA,NUMBER THEORY,AND COM",
+      "end_date": "2026-04-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
