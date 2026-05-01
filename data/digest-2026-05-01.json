@@ -1,0 +1,258 @@
+{
+  "date": "2026-05-01",
+  "generated_at": "2026-05-01T09:06:26.295431+00:00",
+  "publications": [
+    {
+      "id": "s2-b7235f2b5ff6",
+      "title": "Smart Emergency Route Optimizer System: A Systematic Literature Review",
+      "authors": [
+        "Mrs. H Meenal"
+      ],
+      "abstract": "Urban road congestion creates a serious and measurable problem for emergency medical services. Ambulances get\nstuck at fixed-cycle traffic signals, dispatchers rely on static maps that do not reflect current conditions, and there is rarely any\nmechanism to match patients to hospitals based on available treatment capability. India's 108 Ambulance Service records an\naverage urban response time of around 15 minutes [A], which already exceeds the National Health Mission's own urban\nbenchmark of 20 minutes [B] in many high-traffic scenarios. This paper has two goals. The first is to present a structured review\nof ten peer-reviewed studies from 2019 to 2025, covering AI-based dispatch, computer vision signal control, heuristic routing,\nautonomous vehicle frameworks, and hybrid congestion prediction. The second is to describe SEROS (Smart Emergency Route\nOptimizer System), a working three-tier platform built specifically for Hyderabad's road network, which was developed to\naddress the gaps those studies leave open. SEROS brings together YOLOv8n for real-time traffic monitoring, A* routing with\ncongestion-sensitive edge costs, a hospital capability scoring model, signal preemption communication, and a Kotlin Android app\nfor field drivers. Across thirty real Hyderabad intersections and forty-six road segments, the system cut average response time\nfrom a 15 to 20 minute manual baseline down to 6 to 10 minutes. YOLOv8n detected vehicles at 97% accuracy running at twelve\nframes per second on standard CPU hardware, with no GPU required.",
+      "date": "2026-04-30",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.22214/ijraset.2026.79545",
+      "tags": [
+        "stochastic",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.22214/ijraset.2026.79545",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 65.0
+    },
+    {
+      "id": "s2-19c36edbe6b3",
+      "title": "A Hybrid Graph-Quantum Neural Network for Solar Irradiance Forecasting Using Chaotic Swarm Optimization and Cauchy Distribution",
+      "authors": [
+        "Ying-Yi Hong",
+        "Christian Lian Paulo P. Rioflorido",
+        "Yun-Yuan Wang"
+      ],
+      "abstract": "Solar and photovoltaic power operations rely on accurate Global Horizontal Irradiance (GHI) forecasting, which directly influences power markets and unit commitment decisions in power grids. This paper presents a 24-hour ahead GHI forecasting framework for power system applications. The framework leverages a Hybrid Graph-Quantum Neural Network (HGQNN) that effectively captures spatial correlations and quantifies uncertainty—both essential for operational decision-making. Integrating the strengths of graph convolution networks (GCN) and quantum neural networks (QNN), this proposed method captures intricate spatial and temporal relationships within solar irradiance data. Optimization of architecture, parameters/hyperparameters of the GCN and QNN is achieved using a proposed Chaotic Phasor Particle Swarm Optimization with Cauchy Distribution (CPPSO-CD). By incorporating quantum computing principles, the HGQNN model offers enhanced parallelism and computational power. Utilizing the Solcast database, the proposed method is used to forecast 24-hour ahead GHI at individual PV farms located in Taiwan and the Philippines. Simulation results demonstrate superior performance compared to traditional techniques such as back-propagation-based neural networks, convolutional neural networks (CNN), long short-term memory (LSTM) networks, robust self-attention based multi-horizon models, CNN-LSTM models, XGBoost, and gated recurrent units.",
+      "date": "2026-05-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/TPWRS.2025.3626336",
+      "tags": [
+        "metaheuristics",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TPWRS.2025.3626336",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 65.0
+    },
+    {
+      "id": "arxiv-2604.27307",
+      "title": "A Novel Computational Framework for Causal Inference: Tree-Based Discretization with ILP-Based Matching",
+      "authors": [
+        "Tianyu Yang",
+        "Md. Noor-E-Alam"
+      ],
+      "abstract": "Causal inference is essential for data-driven decision-making, as it aims to uncover causal relationships from observational data. However, identifying causality remains challenging due to the potential for confounding and the distinction between correlation and causation. While recent advances in causal machine learning and matching algorithms have improved estimation accuracy, these methods often face trade-offs between interpretability and computational efficiency. This paper proposes a novel approach that combines a tree-based discretization technique, tailored for causal inference, with an integer linear programming-based matching algorithm. The discretization ensures approximately linear relationships for control datasets within strata, enabling effective matching, while the optimization framework optimizes for global balance. The resulting algorithm yields computational efficiency and less biased ATT estimates compared to state-of-the-art algorithms. Empirical evaluations demonstrate the proposed method's practical advantages over existing techniques in causal inference scenarios.",
+      "date": "2026-04-30",
+      "source": "arXiv",
+      "source_detail": "stat.ML",
+      "url": "http://arxiv.org/abs/2604.27307v1",
+      "tags": [
+        "stat.ML",
+        "linear-programming",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.27307",
+      "arxiv_id": "2604.27307v1",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2604.28102",
+      "title": "FiLMMeD: Feature-wise Linear Modulation for Cross-Problem Multi-Depot Vehicle Routing",
+      "authors": [
+        "Arthur Corrêa",
+        "Paulo Nascimento",
+        "Samuel Moniz"
+      ],
+      "abstract": "Solving practical multi-depot vehicle routing problems (MDVRP) is a challenging optimization task central to modern logistics, increasingly driven by e-commerce. To address the MDVRP's computational complexity, neural-based combinatorial optimization methods offer a promising scalable alternative to traditional approaches. However, neural-based methods typically rely on rigid architectures and input encodings tailored to specific problem formulations. In real-world settings, heterogeneous constraints create multiple MDVRP variants, limiting the applicability of such models. While multi-task learning (MTL) has begun to accelerate the development of unified neural-based solvers, prior works focus almost exclusively on single-depot VRPs, leaving the MDVRP unaddressed. To bridge this gap, we propose Feature-wise Linear Modulation for Cross-Problem Multi-Depot Vehicle Routing (FiLMMeD), a novel unified neural-based model for 24 different MDVRP variants. We introduce three main contributions: (1) to improve the model's generalization, we augment the standard Transformer encoder with Feature-wise Linear Modulation (FiLM), which dynamically conditions learned internal representations based on the active set of constraints; (2) we provide an initial demonstration of Preference Optimization in the MTL setting, establishing it as a superior alternative to Reinforcement Learning for future MTL works; (3) to mitigate the generalization gap caused by the introduction of multi-depot constraints, we introduce a targeted curriculum learning strategy that progressively exposes the model to increasingly more complex constraint interactions. Extensive experiments on 24 MDVRP variants (including 8 novel formulations) and 16 single-depot VRPs confirm the effectiveness of FiLMMeD, which consistently outperforms state-of-the-art baselines. Our code is available at: https://github.com/AJ-Correa/FiLMMeD/tree/main",
+      "date": "2026-04-30",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.28102v1",
+      "tags": [
+        "cs.LG",
+        "vehicle-routing",
+        "ml-for-or",
+        "supply-chain",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.28102",
+      "arxiv_id": "2604.28102v1",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2604.27967",
+      "title": "Differentiable latent structure discovery for interpretable forecasting in clinical time series",
+      "authors": [
+        "Ivan Lerner",
+        "Jean Feydy",
+        "Alexandre Kalimouttou",
+        "Anita Burgun",
+        "Francis Bach"
+      ],
+      "abstract": "Background: Timely, uncertainty-aware forecasting from irregular electronic health records (EHR) can support critical-care decisions, yet most approaches either impute to a grid or sacrifice interpretability. We introduce StructGP, a continuous-time multi-task Gaussian process that couples process convolutions with differentiable structure learning to uncover a sparse, ordered directed acyclic graph (DAG) of inter-variable dependencies while preserving principled uncertainty. We further propose LP-StructGP, which augments StructGP with latent pathways-shared, temporally shifted trajectories inferred via subject-specific coupling filters and a softmax gating mechanism-to capture cross-patient progression patterns. Both models are trained under sparsity and acyclicity constraints (augmented Lagrangian, Adam) using scalable low-rank updates. Results: In simulations, the approach reliably recovers ground-truth graphs (Structural Hamming Distance approaching 0 as cohorts grow) and pathway assignments (high Adjusted Rand Index). On a MIMIC-IV septic shock cohort (n=1,008; norepinephrine, creatinine, mean arterial pressure), StructGP improves short-horizon (6 h) forecasting over independent-task baselines (average RMSE 0.68 [95%CI: 0.63--0.74] vs. 0.88 [0.83-0.94]) and, with 15 additional inputs, markedly outperforms unstructured kernels (0.63 [0.58-0.69] vs. 3.02 [2.85-3.18]) with superior calibration (coverage 0.96 vs. 0.84). On the PhysioNet Challenge (12k patients, 41 variables), StructGP attains competitive accuracy (MAE 3.72e-2) relative to a state-of-the-art graph neural model while maintaining calibrated uncertainty. Conclusion: These results show that structured process convolutions with latent pathways deliver interpretable, scalable, and well-calibrated forecasting for irregular clinical time series.",
+      "date": "2026-04-30",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2604.27967v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "healthcare-or",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2604.27967",
+      "arxiv_id": "2604.27967v1",
+      "score": 60.0
+    },
+    {
+      "id": "s2-193785036ebe",
+      "title": "Reserve Constrained AC Optimal Power Flow Using Accelerated Primal-Dual Interior Point Method",
+      "authors": [
+        "Yehong Peng",
+        "Yong Fu"
+      ],
+      "abstract": "The reserve constrained AC optimal power flow (RCOPF) problem integrates operating reserves with system operation scheduling to provide optimal power generation, delivery, as well as reserve allocation. As the reserve functions as a backup capacity for maintaining the balance between electricity supply and demand, co-optimizing both energy and reserve quantities will ensure a higher operational efficiency and reliability of power system. The complex RCOPF problem is characterized by its expanded model scale with additional reserve scheduling and the nonlinear nature inherent to power system. In this paper, an accelerated primal-dual interior point method (A-PDIPM) is proposed to solve the RCOPF problem, which addresses issues caused by the large-scale introduction of variables and constraints when handling inequality constraints in the common practice of PDIPM, and also utilizes coefficient matrix symmetrization for speeding up the solution. Further, a set of direct and non-iterative Newton’s step size updates and appropriate primal-dual variable initializations are utilized to enhance the computational efficiency of A-PDIPM. The effectiveness of the proposed method is demonstrated through a plenty of case studies, ranging from a small 73-bus system test to a large-scale 23,643-bus system experiment. The practical energy and reserve formulations, as well as datasets used in this paper, are derived from the US Department of Energy (DOE) Advanced Research Projects Agency-Energy (ARPA-E) Grid Optimization (GO) Competition Challenge 3.",
+      "date": "2026-05-01",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.1109/TPWRS.2025.3626450",
+      "tags": [
+        "linear-programming",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TPWRS.2025.3626450",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "s2-2b97bb66bef1",
+      "title": "Adaptive Polyhedral Approximation for Enhancing the Distributionally Robust Optimization of Uncertain Power Systems",
+      "authors": [
+        "Ke Zhang",
+        "Xu Wang",
+        "M. Shahidehpour",
+        "Chuanwen Jiang",
+        "Zhaohao Ding"
+      ],
+      "abstract": "The increasing penetration of renewable energy, particularly wind power, introduces significant uncertainty into power system operations, posing new challenges for reliable and cost-effective dispatch. To address this, we propose a two-stage distributionally robust optimization (DRO) scheduling model that incorporates renewable energy uncertainty using ∞-Wasserstein ambiguity set constructed on unbalanced optimal transport (UOT) augmented empirical data. This approach enhances out-of-sample performance by better capturing the distributional characteristics of renewable variability. To overcome the computational challenges posed by the infinite-dimensional nature of the DRO model, we develop an adaptive polyhedral approximation (APA) method. The APA algorithm iteratively refines scenario-specific recourse approximations, transforming the original DRO model into a tractable finite-dimensional problem while maintaining theoretical convergence guarantees. Case studies on the modified IEEE 14 and 118-bus test systems validate the proposed method's effectiveness. Results demonstrate that the model achieves a desirable trade-off between economic efficiency and robustness and that the APA method reduces computation time without comprising the solution accuracy.",
+      "date": "2026-05-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/TPWRS.2025.3635527",
+      "tags": [
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TPWRS.2025.3635527",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "s2-508d13fc3532",
+      "title": "Orthogonal Ray Projection: A Tangent-Space Visual Measurement Model for Robust Visual-Inertial Odometry",
+      "authors": [
+        "Bing Han",
+        "Tuan Li",
+        "Yuezu Lv",
+        "Weisong Wen",
+        "Zhipeng Wang",
+        "Chuang Shi"
+      ],
+      "abstract": "The reprojection error in Visual-Inertial Odometry (VIO) suffers from high nonlinearity due to perspective division, which degrades estimator consistency and robustness, particularly under large depth uncertainty. To address this, we propose a novel visual measurement model, the Orthogonal Ray Projection Error (ORPE), which is formulated in the tangent space of the observation ray. By minimizing the orthogonal distance between the estimated landmark and the measurement ray, ORPE decouples the measurement error from the scalar depth, rendering the residual function linear with respect to the feature position. We derive the exact analytical Jacobians and an uncertainty propagation model, integrating ORPE into both the MSCKF-based OpenVINS and the optimization-based ORB-SLAM3 frameworks. Simulations confirm that ORPE achieves geometric linearity for features, while significantly reducing the system nonlinearity with respect to camera pose. Extensive real-world experiments demonstrate that the proposed method significantly improves trajectory accuracy and estimator consistency in challenging weak-parallax scenarios, while maintaining computational efficiency comparable to standard approaches.",
+      "date": "2026-05-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/LRA.2026.3673929",
+      "tags": [
+        "stochastic",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1109/LRA.2026.3673929",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "s2-13d16bf47ea0",
+      "title": "HYDRAULIC TECHNOLOGY IN TUBER CROP MECHANIZATION: APPLICATIONS, CHALLENGES, AND RESEARCH PROGRESS",
+      "authors": [
+        "Zhixi Deng",
+        "Mansheng Zheng",
+        "Zhiguo Pan",
+        "Wenjing Li",
+        "Zihao Zhao",
+        "Yuming Zhai"
+      ],
+      "abstract": "Hydraulic drives are widely used in tuber crop machinery for travelling and working-unit operations to cope with complex field conditions. However, under low-speed high-torque operation, fluctuating loads, and multi-actuator working conditions, hydraulic systems often suffer from reduced energy efficiency and insufficient stability. This paper reviews typical applications of hydraulic technology in travelling and working-unit drive systems of tuber crop machinery, and analyzes key issues including energy efficiency under low-speed high-torque conditions, dynamic responses to load fluctuations, system coupling induced by multi-actuator operation, and stability constraints related to crop damage sensitivity. Recent advances in system optimization and control strategies are summarized.",
+      "date": "2026-04-30",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.35633/inmateh-78-01",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.35633/inmateh-78-01",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "s2-155fcbe08b56",
+      "title": "NexusMind: Agentic AI Orchestration Model",
+      "authors": [
+        "Mrs. P. Nandini"
+      ],
+      "abstract": "Agentic AI has considerably evolved from simple prompt-based language models that would respond to users based\nexclusively on the input provided. The modern versions of agentic systems are far more ambitious, in that they seek to\nindependently plan tasks, reason out complicated contexts, use memory effectively, and even interact with external tools to\nexecute multistage operations. These increased capabilities make this form of AI an attractive option for deployment in the real\nworld, but each of the better- known frameworks, including the likes of AutoGPT, CrewAI, Puppeteer, and AgentGuard,\ncontinues to exhibit various issues that prevent seamless adoption. Common challenges include high computational cost due to\nrepetitive LLM usage, limited scalability when handling large workflows, hallucination risks stemming from unverified outputs,\nand significant governance gaps that raise safety and compliance concerns. To overcome these limitations, this paper introduces\nNexusMind: a hybrid agentic AI orchestration model designed to achieve a balance between intelligent reasoning and the\nutilization of resources in an efficient manner. The proposed NexusMind unifies Large Language Models, Small Language\nModels, reflective memory, multi-agent collaboration, and policy-driven governance. By routing the tasks dynamically between\nLLMs and SLMs based on problem complexity and precision requirements, the model attempts to improve processing efficiency,\nlessen computational overhead, and preserve accuracy. An integrated governance layer that includes policy enforcement, rolebased access control, audit trail generation, and risk evaluation ensures that the behavior of agents remains safe, transparent,\nand conforms to ethical and operational standards. Powered with such capabilities, NexusMind enhances the autonomy,\ntrustworthiness, adaptability, and system reliability for applications in verticals like healthcare decision support, financial\nanalysis, research automation, education technology, and enterprise-level intelligent software. The discussion presents the\ndevelopment of a functional prototype, the introduction of multimodal capabilities for broader perception, reinforcementlearning-based optimization as a means for continuous improvement, and real-time dynamic routing strategies toward making the\narchitecture more flexible for real-world environments.",
+      "date": "2026-04-30",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.22214/ijraset.2026.79343",
+      "tags": [
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.22214/ijraset.2026.79343",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    }
+  ],
+  "software": [],
+  "deadlines": [],
+  "conferences": [],
+  "opportunities": [],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 0,
+    "conferences": 0,
+    "opportunities": 0,
+    "total": 10
+  }
+}
