@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T09:06:26.006568+00:00",
+  "generated_at": "2026-05-02T08:25:37.783869+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1604,
+      "github_stars": 1605,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13426,
+      "github_stars": 13429,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1131,7 +1131,7 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6196,
+      "github_stars": 6197,
       "github_open_issues": 187,
       "github_recent_prs": [
         "Prep for 1.9: release docs",
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1743,
+      "github_stars": 1742,
       "github_open_issues": 15,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1319,7 +1319,7 @@
         "metaheuristic"
       ],
       "recent_changes": "We are excited to announce Timefold Solver 2.0.0, the first major version bump in three years. There is a lot to unpack, let's get into it.\r\n\r\n## What's new in the Community Edition\r\n\r\n### The Neighbo",
-      "github_stars": 1643,
+      "github_stars": 1644,
       "github_open_issues": 81,
       "github_recent_prs": [
         "perf: make Random splittable (2.0.x)",
@@ -1385,13 +1385,13 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
       "github_stars": 2444,
-      "github_open_issues": 355,
+      "github_open_issues": 356,
       "github_recent_prs": [
+        "Revert PyPy pin in GHA workflow",
         "Remove Octeract from list of NEOS solvers",
         "Add shell-based HiGHS solver interface",
         "Simplify arc creation through connect_to method on port",
-        "Add NEOS solvers",
-        "Document use of 'Draft' status when reviewing PRs"
+        "Add NEOS solvers"
       ],
       "pypi_monthly_downloads": -28
     },

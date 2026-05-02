@@ -1,0 +1,285 @@
+{
+  "date": "2026-05-02",
+  "generated_at": "2026-05-02T08:25:38.052822+00:00",
+  "publications": [
+    {
+      "id": "s2-19c36edbe6b3",
+      "title": "A Hybrid Graph-Quantum Neural Network for Solar Irradiance Forecasting Using Chaotic Swarm Optimization and Cauchy Distribution",
+      "authors": [
+        "Ying-Yi Hong",
+        "Christian Lian Paulo P. Rioflorido",
+        "Yun-Yuan Wang"
+      ],
+      "abstract": "Solar and photovoltaic power operations rely on accurate Global Horizontal Irradiance (GHI) forecasting, which directly influences power markets and unit commitment decisions in power grids. This paper presents a 24-hour ahead GHI forecasting framework for power system applications. The framework leverages a Hybrid Graph-Quantum Neural Network (HGQNN) that effectively captures spatial correlations and quantifies uncertainty—both essential for operational decision-making. Integrating the strengths of graph convolution networks (GCN) and quantum neural networks (QNN), this proposed method captures intricate spatial and temporal relationships within solar irradiance data. Optimization of architecture, parameters/hyperparameters of the GCN and QNN is achieved using a proposed Chaotic Phasor Particle Swarm Optimization with Cauchy Distribution (CPPSO-CD). By incorporating quantum computing principles, the HGQNN model offers enhanced parallelism and computational power. Utilizing the Solcast database, the proposed method is used to forecast 24-hour ahead GHI at individual PV farms located in Taiwan and the Philippines. Simulation results demonstrate superior performance compared to traditional techniques such as back-propagation-based neural networks, convolutional neural networks (CNN), long short-term memory (LSTM) networks, robust self-attention based multi-horizon models, CNN-LSTM models, XGBoost, and gated recurrent units.",
+      "date": "2026-05-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/TPWRS.2025.3626336",
+      "tags": [
+        "metaheuristics",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TPWRS.2025.3626336",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 65.0
+    },
+    {
+      "id": "s2-193785036ebe",
+      "title": "Reserve Constrained AC Optimal Power Flow Using Accelerated Primal-Dual Interior Point Method",
+      "authors": [
+        "Yehong Peng",
+        "Yong Fu"
+      ],
+      "abstract": "The reserve constrained AC optimal power flow (RCOPF) problem integrates operating reserves with system operation scheduling to provide optimal power generation, delivery, as well as reserve allocation. As the reserve functions as a backup capacity for maintaining the balance between electricity supply and demand, co-optimizing both energy and reserve quantities will ensure a higher operational efficiency and reliability of power system. The complex RCOPF problem is characterized by its expanded model scale with additional reserve scheduling and the nonlinear nature inherent to power system. In this paper, an accelerated primal-dual interior point method (A-PDIPM) is proposed to solve the RCOPF problem, which addresses issues caused by the large-scale introduction of variables and constraints when handling inequality constraints in the common practice of PDIPM, and also utilizes coefficient matrix symmetrization for speeding up the solution. Further, a set of direct and non-iterative Newton’s step size updates and appropriate primal-dual variable initializations are utilized to enhance the computational efficiency of A-PDIPM. The effectiveness of the proposed method is demonstrated through a plenty of case studies, ranging from a small 73-bus system test to a large-scale 23,643-bus system experiment. The practical energy and reserve formulations, as well as datasets used in this paper, are derived from the US Department of Energy (DOE) Advanced Research Projects Agency-Energy (ARPA-E) Grid Optimization (GO) Competition Challenge 3.",
+      "date": "2026-05-01",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.1109/TPWRS.2025.3626450",
+      "tags": [
+        "linear-programming",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TPWRS.2025.3626450",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "s2-2b97bb66bef1",
+      "title": "Adaptive Polyhedral Approximation for Enhancing the Distributionally Robust Optimization of Uncertain Power Systems",
+      "authors": [
+        "Ke Zhang",
+        "Xu Wang",
+        "M. Shahidehpour",
+        "Chuanwen Jiang",
+        "Zhaohao Ding"
+      ],
+      "abstract": "The increasing penetration of renewable energy, particularly wind power, introduces significant uncertainty into power system operations, posing new challenges for reliable and cost-effective dispatch. To address this, we propose a two-stage distributionally robust optimization (DRO) scheduling model that incorporates renewable energy uncertainty using ∞-Wasserstein ambiguity set constructed on unbalanced optimal transport (UOT) augmented empirical data. This approach enhances out-of-sample performance by better capturing the distributional characteristics of renewable variability. To overcome the computational challenges posed by the infinite-dimensional nature of the DRO model, we develop an adaptive polyhedral approximation (APA) method. The APA algorithm iteratively refines scenario-specific recourse approximations, transforming the original DRO model into a tractable finite-dimensional problem while maintaining theoretical convergence guarantees. Case studies on the modified IEEE 14 and 118-bus test systems validate the proposed method's effectiveness. Results demonstrate that the model achieves a desirable trade-off between economic efficiency and robustness and that the APA method reduces computation time without comprising the solution accuracy.",
+      "date": "2026-05-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/TPWRS.2025.3635527",
+      "tags": [
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TPWRS.2025.3635527",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "s2-508d13fc3532",
+      "title": "Orthogonal Ray Projection: A Tangent-Space Visual Measurement Model for Robust Visual-Inertial Odometry",
+      "authors": [
+        "Bing Han",
+        "Tuan Li",
+        "Yuezu Lv",
+        "Weisong Wen",
+        "Zhipeng Wang",
+        "Chuang Shi"
+      ],
+      "abstract": "The reprojection error in Visual-Inertial Odometry (VIO) suffers from high nonlinearity due to perspective division, which degrades estimator consistency and robustness, particularly under large depth uncertainty. To address this, we propose a novel visual measurement model, the Orthogonal Ray Projection Error (ORPE), which is formulated in the tangent space of the observation ray. By minimizing the orthogonal distance between the estimated landmark and the measurement ray, ORPE decouples the measurement error from the scalar depth, rendering the residual function linear with respect to the feature position. We derive the exact analytical Jacobians and an uncertainty propagation model, integrating ORPE into both the MSCKF-based OpenVINS and the optimization-based ORB-SLAM3 frameworks. Simulations confirm that ORPE achieves geometric linearity for features, while significantly reducing the system nonlinearity with respect to camera pose. Extensive real-world experiments demonstrate that the proposed method significantly improves trajectory accuracy and estimator consistency in challenging weak-parallax scenarios, while maintaining computational efficiency comparable to standard approaches.",
+      "date": "2026-05-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/LRA.2026.3673929",
+      "tags": [
+        "stochastic",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1109/LRA.2026.3673929",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s10957-026-02998-0",
+      "title": "S-shaped Utility Maximization with VaR Constraint and Partial Information",
+      "authors": [
+        "Zhu, D.",
+        "Davey, A.",
+        "Zheng, H."
+      ],
+      "abstract": "Abstract\n                  We study S-shaped utility maximisation with VaR constraint and unobservable drift coefficient. Using the Bayesian filter, the concavification principle, and the change of measure, we give a semi-closed integral representation for the dual value function and find a critical wealth level that determines if the constrained problem admits a unique optimal solution and Lagrange multiplier or is infeasible. We also propose three algorithms (Lagrange, simulation, deep neural network) to solve the problem and compare their performances with numerical examples.",
+      "date": "2026-05-01",
+      "source": "Journal of Optimization Theory and Applications",
+      "source_detail": "Journal of Optimization Theory and Applications",
+      "url": "https://doi.org/10.1007/s10957-026-02998-0",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10957-026-02998-0",
+      "score": 55.0
+    },
+    {
+      "id": "s2-55c0076282b0",
+      "title": "A Bi-Level Distributed Framework for Hierarchical Coordination of Multiple Agents’ Flexibility Under Uncertainty of Flexibility Requirements",
+      "authors": [
+        "Niloofar Pourghaderi",
+        "M. Fotuhi‐Firuzabad",
+        "Milad Kabirifar",
+        "Mohammad Shahidehpour",
+        "Moein Moeini‐Aghtaie"
+      ],
+      "abstract": "This paper presents a market-based hierarchical framework to coordinate joint energy and flexibility capability trading in a day-ahead market, while considering real-time flexibility adjustment to cover uncertainties in forecasted flexibility requirements, using an adaptive robust optimization (ARO) method. In this regard, a two-stage model is presented; in the first stage, the agents’ energy and flexibility capabilities and the distributed energy resources’ commitments are optimized to meet the forecasted flexibility requirements. In the second stage, the agents’ flexibility is adjusted to cover the worst-case uncertainty realization in the net load variations. In the proposed framework, a technical virtual power plant (TVPP) operates a local market in the distribution network which is cleared in coordination with the wholesale market. In this model, a deregulated environment is addressed in which the agents’ hierarchical interactions and their preferences are captured using a bilevel problem with multiple lower levels. To solve the problem, the ARO problems are solved using the column-and-constraint generation (CCG) algorithm. Moreover, the bilevel problem is solved according to the agents’ hierarchical transactions using a distributed iterative approach. Implemented case studies and numerical results demonstrate the model’s effectiveness and show that the framework ensures full flexibility requirement coverage under all uncertainty levels.",
+      "date": "2026-05-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/TSG.2025.3641247",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TSG.2025.3641247",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "s2-827826bec4e8",
+      "title": "$\\pi$-BA: Probabilistic Neural Bundle Adjustment With Iterative Cycle Optimization for Driving Scene Reconstruction",
+      "authors": [
+        "Yunxuan Mao",
+        "Dongkun Zhang",
+        "Lilu Liu",
+        "Yue Wang",
+        "Rong Xiong"
+      ],
+      "abstract": "Urban scene reconstruction under noisy camera poses remains a critical challenge for autonomous driving. While recent neural dense Bundle Adjustment (BA) methods have shown promising results in specific settings, their performance often degrades in real-world urban scenarios due to noisy correspondences and imbalanced optimization between camera poses and scene parameters, which leads the scene representation to overfit to erroneous geometric constraints, causing the system to converge to suboptimal local minima. We propose <inline-formula><tex-math notation=\"LaTeX\">$\\pi$</tex-math></inline-formula>-BA, a neural BA framework designed to improve robustness in large-scale outdoor reconstruction. <inline-formula><tex-math notation=\"LaTeX\">$\\pi$</tex-math></inline-formula>-BA introduces an uncertainty-aware probabilistic model that adaptively down-weights unreliable correspondences, enabling more stable joint optimization of camera poses and scene geometry. To decouple pose estimation from geometry artifacts, we employ a cyclic optimization strategy that periodically reinitializes the radiance field while preserving refined camera poses. Extensive experiments on diverse real-world datasets demonstrate that <inline-formula><tex-math notation=\"LaTeX\">$\\pi$</tex-math></inline-formula>-BA consistently outperforms existing neural BA methods in terms of pose and reconstruction accuracy under noisy initialization. These results highlight the effectiveness of integrating probabilistic modeling with iterative refinement for scalable and robust neural reconstruction in complex outdoor environments.",
+      "date": "2026-05-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/LRA.2026.3669066",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1109/LRA.2026.3669066",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "s2-a9b786f4a758",
+      "title": "Federated Deep Reinforcement Learning for Safe Multi-UAV Cooperative Control in IoT Communications",
+      "authors": [
+        "Jian Gu",
+        "Yin Wang",
+        "Wen Ji"
+      ],
+      "abstract": "The cooperative control of UAVs in a complex environment is the key and fundamental problem in intelligent transportation and IoT communication systems. The cooperative control policy of the UAVs is challenging to determine due to the non-stationarity of the environment caused by the interactions between the UAVs and the environment under IoT communication. The use of deep learning algorithms based on a digital twin (DT) system to optimize the control policy has shown significant benefits in terms of efficiency and flexibility. However, the DT is prone to being inconsistent with real-world applications due to sensor errors and data delays, which lead to incorrect policy, even if the learning process is convergent. To address this issue, this article proposes a federated deep reinforcement learning solution to the multi-UAV intelligent control problem, with a newly developed constrained optimization framework. To effectively eliminate the negative impact of uncertainties such as sensor errors and data delays on system performance, the safety constraint function is integrated into the objective function for optimization. The model undergoes training through the constrained distributed federated reinforcement learning framework, avoiding potentially dangerous behavior and thereby improving the safety and robustness of the resulting control strategies. Experimental results have shown that the proposed solution ensures the safety of the strategy, effectively avoids potential dangerous behaviors, and improves the success rate of multi-UAV cooperative control tasks as well as the average task completion time under IoT communication. Experimental results demonstrate that the proposed solution achieves substantial performance improvements while ensuring operational safety. Compared with baseline methods in IoT environments, the algorithm exhibits a minimum of 26.7% faster convergence, a minimum of 1.8% higher success rate across swarm sizes, and a minimum of 12.3% reduction in task completion time.",
+      "date": "2026-05-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/JIOT.2025.3650490",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1109/JIOT.2025.3650490",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1016-j.ejor.2025.10.005",
+      "title": "Benders decompositions for order acceptance and scheduling in additive manufacturing",
+      "authors": [
+        "Chen, J.",
+        "Ye, X.",
+        "Xie, N.",
+        "Sang, Y.",
+        "Sterna, M."
+      ],
+      "abstract": "",
+      "date": "2026-05-01",
+      "source": "EJOR",
+      "source_detail": "EJOR",
+      "url": "https://doi.org/10.1016/j.ejor.2025.10.005",
+      "tags": [
+        "scheduling",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1016/j.ejor.2025.10.005",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1016-j.cor.2026.107383",
+      "title": "Stochastic dynamic inventory-routing: A comprehensive review",
+      "authors": [
+        "Maia, F.",
+        "Figueira, G.",
+        "Neves-Moreira, F."
+      ],
+      "abstract": "",
+      "date": "2026-05-01",
+      "source": "Computers & Operations Research",
+      "source_detail": "Computers & Operations Research",
+      "url": "https://doi.org/10.1016/j.cor.2026.107383",
+      "tags": [
+        "supply-chain",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1016/j.cor.2026.107383",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
