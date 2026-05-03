@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T08:25:37.783869+00:00",
+  "generated_at": "2026-05-03T08:53:12.776228+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 586,
+      "github_stars": 585,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- an error is now produced if the emphasis settings in parameter files are wrong\r\n- propagate focus lower bound to child nodes to avoid outdated global lower bound\r\n- set sma",
-      "github_open_issues": 24,
+      "github_open_issues": 23,
       "github_recent_prs": [
         "fix several typos",
         "Allow documentation builds when testing is turned off",
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6197,
+      "github_stars": 6198,
       "github_open_issues": 187,
       "github_recent_prs": [
+        "Add scratch script exploring scipy.linalg.ldl on low-rank matrices",
         "Prep for 1.9: release docs",
         "Fall back to dense eigh in sparse_cholesky for rank-deficient PSD inputs",
         "DNLP sync with CVXPY for 1.9",
-        "Prep for 1.9: DNLP sync",
-        "docs: DPP-breaking patterns + decision checklist"
+        "Prep for 1.9: DNLP sync"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,7 +1319,7 @@
         "metaheuristic"
       ],
       "recent_changes": "We are excited to announce Timefold Solver 2.0.0, the first major version bump in three years. There is a lot to unpack, let's get into it.\r\n\r\n## What's new in the Community Edition\r\n\r\n### The Neighbo",
-      "github_stars": 1644,
+      "github_stars": 1646,
       "github_open_issues": 81,
       "github_recent_prs": [
         "perf: make Random splittable (2.0.x)",
