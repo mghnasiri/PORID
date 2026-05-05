@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T09:29:34.117962+00:00",
+  "generated_at": "2026-05-05T09:16:34.473498+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -347,11 +347,11 @@
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
       "github_open_issues": 171,
       "github_recent_prs": [
+        "Install readme and license files to the right location",
         "Limit the parallelism in julia-tests.yml",
         "HiPO in Python",
         "Update actions",
-        "Add single machine scheduling separator",
-        "Updated build for external dependencies (mods-latest)"
+        "Add single machine scheduling separator"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 585,
+      "github_stars": 587,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- an error is now produced if the emphasis settings in parameter files are wrong\r\n- propagate focus lower bound to child nodes to avoid outdated global lower bound\r\n- set sma",
-      "github_open_issues": 23,
+      "github_open_issues": 21,
       "github_recent_prs": [
         "fix several typos",
         "Allow documentation builds when testing is turned off",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13435,
+      "github_stars": 13438,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -571,11 +571,11 @@
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
       "github_open_issues": 98,
       "github_recent_prs": [
+        "base: refactor types and use of std::numeric_limits",
+        "cmake: fix highs build on alpine",
         "build(deps): bump the pip group across 1 directory with 2 updates",
         "Integrate HiGHS and few minor fixes from Augmenta",
-        "cp-sat: fix typos and improve docstrings in cp_model.py",
-        "Fix: Add missing return statements for non-void methods in ModelStorageV2",
-        "fix(routing): respect use_relocate_neighbors search parameter in GetNeighborhoodOperators"
+        "cp-sat: fix typos and improve docstrings in cp_model.py"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6197,
-      "github_open_issues": 187,
+      "github_stars": 6200,
+      "github_open_issues": 185,
       "github_recent_prs": [
+        "Fix sparse_cholesky fallback for rank-deficient PSD/NSD inputs",
+        "Bump github/codeql-action from 4.35.1 to 4.35.3",
         "Add scratch script exploring scipy.linalg.ldl on low-rank matrices",
         "Prep for 1.9: release docs",
-        "Fall back to dense eigh in sparse_cholesky for rank-deficient PSD inputs",
-        "DNLP sync with CVXPY for 1.9",
-        "Prep for 1.9: DNLP sync"
+        "Fall back to dense eigh in sparse_cholesky for rank-deficient PSD inputs"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "We are excited to announce Timefold Solver 2.0.0, the first major version bump in three years. There is a lot to unpack, let's get into it.\r\n\r\n## What's new in the Community Edition\r\n\r\n### The Neighbo",
-      "github_stars": 1646,
-      "github_open_issues": 88,
+      "github_stars": 1647,
+      "github_open_issues": 87,
       "github_recent_prs": [
+        "perf: improve ConstraintCollectors.toList()",
+        "fix: use config class loader, then context class loader, then parent in GIZMO",
         "docs: integration page improvements",
         "docs: correct nav structure",
-        "deps: bump org.springframework.boot:spring-boot-dependencies from 3.5.13 to 3.5.14 in the regular group",
-        "deps: bump the regular group with 2 updates",
-        "deps: bump tools.jackson:jackson-bom from 3.1.2 to 3.1.3 in the regular group"
+        "deps: bump org.springframework.boot:spring-boot-dependencies from 3.5.13 to 3.5.14 in the regular group"
       ]
     },
     {
@@ -1384,14 +1384,14 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
-      "github_stars": 2445,
-      "github_open_issues": 358,
+      "github_stars": 2446,
+      "github_open_issues": 357,
       "github_recent_prs": [
+        "Upgrade setup-miniconda to v4",
+        "Add core symbolic gradient support to Pyomo.DoE",
         "Add `CartesianProductSet` to PyROS",
         "GHA: run tests on draft PRs",
-        "Revert PyPy pin in GHA workflow",
-        "Remove Octeract from list of NEOS solvers",
-        "Add shell-based HiGHS solver interface"
+        "Revert PyPy pin in GHA workflow"
       ],
       "pypi_monthly_downloads": -28
     },
