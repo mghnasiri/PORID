@@ -1,0 +1,337 @@
+{
+  "date": "2026-05-06",
+  "generated_at": "2026-05-06T09:37:27.849421+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s10479-026-07243-5",
+      "title": "A Bayesian trust-based hybrid truck-drone coalition framework for resilient and sustainable last-mile delivery",
+      "authors": [
+        "Mahmoodi, A.",
+        "Sajadi, S.",
+        "Easa, S."
+      ],
+      "abstract": "Abstract\n                  This study proposes a novel hybrid Truck-Drone-Coalition (TDC) framework to enhance the resilience and sustainability of last-mile urban delivery systems. The model optimizes four conflicting objectives simultaneously: total delivery cost, service time, operational risk, and unmanned aerial vehicles (UAVs, also called drones) energy consumption. To address behavioral uncertainty among coalition partners, we integrate a Bayesian trust update mechanism with a Markov transition process, enabling dynamic adjustment of cooperation levels and automatic activation of fallback outsourcing when trust thresholds are breached. The solution combines an exact Mixed-Integer Linear Programming (MILP) core with a Non-dominated Sorting Genetic Algorithm II (NSGA-II) metaheuristic to ensure feasible routing, coalition stability, and robust Pareto-optimal trade-offs. Validated using real-world urban scenarios (Solomon benchmarks and commercial UAV specifications), the framework demonstrates: (a) 18% fewer delivery disruptions compared to static trust models, (b) 94% on-time delivery rate under high uncertainty (an 11% improvement over the base case), and (c) 9% lower costs and 12% higher energy efficiency through adaptive coalition reconfiguration. Simulation results demonstrate that the Bayesian trust mechanism effectively detects misbehavior, reallocates tasks via third-party outsourcing, and sustains service reliability under coalition instability or UAV breakdowns. Additionally, dynamic Shapley cost-sharing ensures fair cost allocation among coalition members. By integrating trust modeling, cooperative game theory, and risk-aware controls, this research bridges a critical gap in hybrid truck-drone logistics. The findings provide actionable insights for logistics managers seeking cost-effective, flexible, and resilient last-mile solutions. Future work will focus on real-time trust evaluation and dynamic coalition reconfiguration using live operational data.",
+      "date": "2026-05-05",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07243-5",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "metaheuristics",
+        "stochastic",
+        "supply-chain",
+        "multi-objective",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07243-5",
+      "score": 75.0
+    },
+    {
+      "id": "crossref-10.1007-s00291-026-00857-y",
+      "title": "Computational analysis of a binary tree based algorithm for the triangle scheduling problem",
+      "authors": [
+        "Balogh, J.",
+        "Békési, J.",
+        "Büki, N.",
+        "Dósa, G.",
+        "Tuza, Z."
+      ],
+      "abstract": "Abstract\n                  \n                    The Triangle Scheduling (TS) Problem, defined by Dürr et al. (J Sched 21:305–312, 2018.\n                    https://doi.org/10.1007/s10951-017-0533-1\n                    ), is a geometric model for non-preemptive scheduling of jobs with different criticality levels on a single machine. The jobs have a criticality equal to the worst-case execution time and are scheduled off-line. In this article, we describe, implement and analyze the Bintree algorithm on TS, which is an algorithm based on a binary tree construction. It has\n                    \n                      $$O(n\\log (n))$$\n                    \n                    runtime and its approximation ratio is between 1.35 and\n                    \n                      $$2\\ln (2) \\approx 1.386$$\n                    \n                    . Bintree is, therefore, the first polynomial-time approximation algorithm for TS with an approximation ratio below 1.5. We also explore Bintree’s relation to a previously defined algorithm, Greedy, and a potential hybrid algorithm that runs both and chooses the shorter schedule, which we suspect to be better than either algorithm by itself. We analyze the behavior of Bintree on small values of input sizes formalizing its quadratic integer programming model.",
+      "date": "2026-05-05",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00857-y",
+      "tags": [
+        "integer-programming",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00857-y",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2605.03842",
+      "title": "SOAR: Real-Time Joint Optimization of Order Allocation and Robot Scheduling in Robotic Mobile Fulfillment Systems",
+      "authors": [
+        "Yibang Tang",
+        "Yifan Yang",
+        "Jingyuan Wang",
+        "Junhua Chen",
+        "Zhen Zhao"
+      ],
+      "abstract": "Robotic Mobile Fulfillment Systems (RMFS) rely on mobile robots for automated inventory transportation, coordinating order allocation and robot scheduling to enhance warehousing efficiency. However, optimizing RMFS is challenging due to strict real-time constraints and the strong coupling of multi-phase decisions. Existing methods either decompose the problem into isolated sub-tasks to guarantee responsiveness at the cost of global optimality, or rely on computationally expensive global optimization models that are unsuitable for dynamic industrial environments. To bridge this gap, we propose SOAR, a unified Deep Reinforcement Learning framework for real-time joint optimization. SOAR transforms order allocation and robot scheduling into a unified process by utilizing soft order allocations as observations. We formulate this as an Event-Driven Markov Decision Process, enabling the agent to perform simultaneous scheduling in response to asynchronous system events. Technically, we employ a Heterogeneous Graph Transformer to encode the warehouse state and integrate phased domain knowledge. Additionally, we incorporate a reward shaping strategy to address sparse feedback in long-horizon tasks. Extensive experiments on synthetic and real-world industrial datasets, in collaboration with Geekplus, demonstrate that SOAR reduces global makespan by 7.5\\% and average order completion time by 15.4\\% with sub-100ms latency. Furthermore, sim-to-real deployment confirms its practical viability and significant performance gains in production environments. The code is available at https://github.com/200815147/SOAR.",
+      "date": "2026-05-05",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2605.03842v1",
+      "tags": [
+        "cs.AI",
+        "scheduling",
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.03842",
+      "arxiv_id": "2605.03842v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.04013",
+      "title": "Conditional Diffusion Sampling",
+      "authors": [
+        "Francisco M. Castro-Macías",
+        "Pablo Morales-Álvarez",
+        "Saifuddin Syed",
+        "Daniel Hernández-Lobato",
+        "Rafael Molina",
+        "José Miguel Hernández-Lobato"
+      ],
+      "abstract": "Sampling from unnormalized multimodal distributions with limited density evaluations remains a fundamental challenge in machine learning and natural sciences. Successful approaches construct a bridge between a tractable reference and the target distribution. Parallel Tempering (PT) serves as the gold standard, while recent diffusion-based approaches offer a continuous alternative at the cost of neural training. In this work, we introduce Conditional Diffusion Sampling (CDS), a framework that combines these two paradigms. To this end, we derive Conditional Interpolants, a class of stochastic processes whose transport dynamics are governed by an exact, closed-form stochastic differential equation (SDE), requiring no neural approximation. Although these dynamics require sampling from a non-trivial initialization distribution, we show both theoretically and empirically that the cost of this initialization diminishes for sufficiently short diffusion times. CDS leverages this by a two-stage procedure: (1) PT is used to efficiently sample the initial distribution, and then (2) samples are transported via the transport SDE. This combination couples the robust global exploration of PT with efficient local transport. Experiments suggest that CDS has the potential to achieve a superior trade-off between sample quality and density evaluation cost compared to state-of-the-art samplers.",
+      "date": "2026-05-05",
+      "source": "arXiv",
+      "source_detail": "stat.ML",
+      "url": "http://arxiv.org/abs/2605.04013v1",
+      "tags": [
+        "stat.ML",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.04013",
+      "arxiv_id": "2605.04013v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.04036",
+      "title": "OpenSeeker-v2: Pushing the Limits of Search Agents with Informative and High-Difficulty Trajectories",
+      "authors": [
+        "Yuwen Du",
+        "Rui Ye",
+        "Shuo Tang",
+        "Keduan Huang",
+        "Xinyu Zhu",
+        "Yuzhu Cai",
+        "Siheng Chen"
+      ],
+      "abstract": "Deep search capabilities have become an indispensable competency for frontier Large Language Model (LLM) agents, yet their development remains dominated by industrial giants. The typical industry recipe involves a highly resource-intensive pipeline spanning pre-training, continual pre-training (CPT), supervised fine-tuning (SFT), and reinforcement learning (RL). In this report, we show that when fueled with informative and high-difficulty trajectories, a simple SFT approach could be surprisingly powerful for training frontier search agents. By introducing three simple data synthesis modifications: scaling knowledge graph size for richer exploration, expanding the tool set size for broader functionality, and strict low-step filtering, we establish a stronger baseline. Trained on merely 10.6k data points, our OpenSeeker-v2 achieves state-of-the-art performance across 4 benchmarks (30B-sized agents with ReAct paradigm): 46.0% on BrowseComp, 58.1% on BrowseComp-ZH, 34.6% on Humanity's Last Exam, and 78.0% on xbench, surpassing even Tongyi DeepResearch trained with heavy CPT+SFT+RL pipeline, which achieves 43.4%, 46.7%, 32.9%, and 75.0%, respectively. Notably, OpenSeeker-v2 represents the first state-of-the-art search agent within its model scale and paradigm to be developed by a purely academic team using only SFT. We are excited to open-source the OpenSeeker-v2 model weights and share our simple yet effective findings to make frontier search agent research more accessible to the community.",
+      "date": "2026-05-05",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2605.04036v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.04036",
+      "arxiv_id": "2605.04036v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.04012",
+      "title": "SymptomAI: Towards a Conversational AI Agent for Everyday Symptom Assessment",
+      "authors": [
+        "Joseph Breda",
+        "Fadi Yousif",
+        "Beszel Hawkins",
+        "Marinela Cotoi",
+        "Miao Liu",
+        "Ray Luo",
+        "Po-Hsuan Cameron Chen",
+        "Mike Schaekermann",
+        "Samuel Schmidgall",
+        "Xin Liu",
+        "Girish Narayanswamy",
+        "Samuel Solomon",
+        "Maxwell A. Xu",
+        "Xiaoran Fan",
+        "Longfei Shangguan",
+        "Anran Wang",
+        "Bhavna Daryani",
+        "Buddy Herkenham",
+        "Cara Tan",
+        "Mark Malhotra",
+        "Shwetak Patel",
+        "John B. Hernandez",
+        "Quang Duong",
+        "Yun Liu",
+        "Zach Wasson",
+        "Dimitrios Antos",
+        "Bob Lou",
+        "Matthew Thompson",
+        "Jonathan Richina",
+        "Anupam Pathak",
+        "Nichole Young-Lin",
+        "Jake Sunshine",
+        "Daniel McDuff"
+      ],
+      "abstract": "Language models excel at diagnostic assessments on currated medical case-studies and vignettes, performing on par with, or better than, clinical professionals. However, existing studies focus on complex scenarios with rich context making it difficult to draw conclusions about how these systems perform for patients reporting symptoms in everyday life. We deployed SymptomAI, a set of conversational AI agents for end-to-end patient interviewing and differential diagnosis (DDx), via the Fitbit app in a study that randomized participants (N=13,917) to interact with five AI agents. This corpus captures diverse communication and a realistic distribution of illnesses from a real world population. A subset of 1,228 participants reported a clinician-provided diagnosis, and 517 of these were further evaluated by a panel of clinicians during over 250 hours of annotation. SymptomAI DDx were significantly more accurate (OR = 2.47, p < 0.001) than those from independent clinicians given the same dialogue in a blinded randomized comparison. Moreover, agentic strategies which conduct a dedicated symptom interview that elicit additional symptom information before providing a diagnosis, perform substantially better than baseline, user-guided conversations (p < 0.001). An auxiliary analysis on 1,509 conversations from a general US population panel validated that these results generalize beyond wearable device users. We used SymptomAI diagnoses as labels for all 13,917 participants to analyze over 500,000 days of wearable metrics across nearly 400 unique conditions. We identified strong associations between acute infections and physiological shifts (e.g., OR > 7 for influenza). While limited by self-reported ground truth, these results demonstrate the benefits of a dedicated and complete symptom interview compared to a user-guided symptom discussion, which is the default of most consumer LLMs.",
+      "date": "2026-05-05",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2605.04012v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.04012",
+      "arxiv_id": "2605.04012v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.03986",
+      "title": "From Intent to Execution: Composing Agentic Workflows with Agent Recommendation",
+      "authors": [
+        "Kishan Athrey",
+        "Ramin Pishehvar",
+        "Brian Riordan",
+        "Mahesh Viswanathan"
+      ],
+      "abstract": "Multi-Agent Systems (MAS) built using AI agents fulfill a variety of user intents that may be used to design and build a family of related applications. However, the creation of such MAS currently involves manual composition of the plan, manual selection of appropriate agents, and manual creation of execution graphs. This paper introduces a framework for the automated creation of multi-agent systems which replaces multiple manual steps with an automated framework. The proposed framework consists of software modules and a workflow to orchestrate the requisite task- specific application. The modules include: an LLM-derived planner, a set of tasks described in natural language, a dynamic call graph, an orchestrator for map agents to tasks, and an agent recommender that finds the most suitable agent(s) from local and global agent registries. The agent recommender uses a two-stage information retrieval (IR) system comprising a fast retriever and an LLM-based re-ranker. We implemented a series of experiments exploring the choice of embedders, re- rankers, agent description enrichment, and supervising critique agent. We benchmarked this system end-to-end, evaluating the combination of planning, agent selection, and task completion, with our proposed approach. Our experimental results show that our approach outperforms the state-of-the- art in terms of the recall rate and is more robust and scalable compared to previous approaches. The critique agent holistically reevaluates both agent and tool recommendations against the overall plan. We show that the inclusion of the critique agent further enhances the recall score, proving that the comprehensive review and revision of task-based agent selection is an essential step in building end-to-end multi-agent systems.",
+      "date": "2026-05-05",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2605.03986v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.03986",
+      "arxiv_id": "2605.03986v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.03934",
+      "title": "Towards Open World Sound Event Detection",
+      "authors": [
+        "P. H. Hai",
+        "L. T. Minh",
+        "L. H. Son"
+      ],
+      "abstract": "Sound Event Detection (SED) plays a vital role in audio understanding, with applications in surveillance, smart cities, healthcare, and multimedia indexing. However, conventional SED systems operate under a closed-world assumption, limiting their effectiveness in real-world environments where novel acoustic events frequently emerge. Inspired by the success of open-world learning in computer vision, we introduce the Open-World Sound Event Detection (OW-SED) paradigm, where models must detect known events, identify unseen ones, and incrementally learn from them. To tackle the unique challenges of OW-SED, such as overlapping and ambiguous events, we propose a 1D Deformable architecture that leverages deformable attention to adaptively focus on salient temporal regions. Furthermore, we design a novel Open-World Deformable Sound Event Detection Transformer (WOOT) framework incorporating feature disentanglement to separate class-specific and class-agnostic representations, together with a one-to-many matching strategy and a diversity loss to enhance representation diversity. Experimental results demonstrate that our method achieves marginally superior performance compared to existing leading techniques in closed-world settings and significantly improves over existing baselines in open-world scenarios.",
+      "date": "2026-05-05",
+      "source": "arXiv",
+      "source_detail": "cs.SD",
+      "url": "http://arxiv.org/abs/2605.03934v1",
+      "tags": [
+        "cs.SD",
+        "stochastic",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.03934",
+      "arxiv_id": "2605.03934v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.03862",
+      "title": "Correct Is Not Enough: Training Reasoning Planners with Executor-Grounded Rewards",
+      "authors": [
+        "Tianyang Han",
+        "Hengyu Shi",
+        "Junjie Hu",
+        "Xu Yang",
+        "Zhiling Wang",
+        "Junhao Su"
+      ],
+      "abstract": "Reinforcement learning with verifiable rewards has become a common way to improve explicit reasoning in large language models, but final-answer correctness alone does not reveal whether the reasoning trace is faithful, reliable, or useful to the model that consumes it. This outcome-only signal can reinforce traces that are right for the wrong reasons, overstate reasoning gains by rewarding shortcuts, and propagate flawed intermediate states in multi-step systems. To this end, we propose TraceLift, a planner-executor training framework that treats reasoning as a consumable intermediate artifact. During planner training, the planner emits tagged reasoning. A frozen executor turns this reasoning into the final artifact for verifier feedback, while an executor-grounded reward shapes the intermediate trace. This reward multiplies a rubric-based Reasoning Reward Model (RM) score by measured uplift on the same frozen executor, crediting traces that are both high-quality and useful. To make reasoning quality directly learnable, we introduce TRACELIFT-GROUPS, a rubric-annotated reason-only dataset built from math and code seed problems. Each example is a same-problem group containing a high-quality reference trace and multiple plausible flawed traces with localized perturbations that reduce reasoning quality or solution support while preserving task relevance. Extensive experiments on code and math benchmarks show that this executor-grounded reasoning reward improves the two-stage planner-executor system over execution-only training, suggesting that reasoning supervision should evaluate not only whether a trace looks good, but also whether it helps the model that consumes it.",
+      "date": "2026-05-05",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2605.03862v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.03862",
+      "arxiv_id": "2605.03862v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.03743",
+      "title": "A Workflow-Oriented Framework for Asynchronous Human-AI Collaboration in Hybrid and Compute-Intensive HPC Environments",
+      "authors": [
+        "Sergio Mendoza",
+        "Cedric Bhihe",
+        "Natalia Zamora",
+        "David Modesto",
+        "Jose Martin Bugallo Batalla",
+        "Jesus Gomez Canovas",
+        "Rafel Palomo Avellaneda",
+        "Miguel Perez Espinosa"
+      ],
+      "abstract": "Human involvement is critical in training and deploying AI systems in high-stakes defence and security contexts. However, real-time interaction is impractical in HPC environments due to compute intensity and resource constraints. We present a workflow framework that enables asynchronous human-AI collaboration across hybrid infrastructures, including HPC clusters, local machines, and cloud platforms. Workflows can pause at defined checkpoints for human input without halting underlying compute jobs, preventing idle resources and enabling non-blocking supervision. The framework supports interaction with SLURM-based scheduling, containerized and native tasks, and is customized for scenarios requiring human judgment and adaptability. We demonstrate its application in model training on systems like MareNostrum 5, highlighting benefits in portability, efficiency, and oversight in operational AI workflows.",
+      "date": "2026-05-05",
+      "source": "arXiv",
+      "source_detail": "cs.DC",
+      "url": "http://arxiv.org/abs/2605.03743v1",
+      "tags": [
+        "cs.DC",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1117/12.3069887",
+      "arxiv_id": "2605.03743v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
