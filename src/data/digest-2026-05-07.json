@@ -1,0 +1,306 @@
+{
+  "date": "2026-05-07",
+  "generated_at": "2026-05-07T09:47:27.988683+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2605.05125",
+      "title": "Joint Treatment Effect Estimation from Incomplete Healthcare Data: Temporal Causal Normalizing Flows with LLM-driven Evolutionary MNAR Imputation",
+      "authors": [
+        "Olivia Jullian Parra",
+        "Sara Zoccheddu",
+        "David Catalan Cerezo",
+        "Tom Forzy",
+        "Franziska Ulrich",
+        "William Sutcliffe",
+        "Jakob Martin Burgstaller",
+        "Oliver Senn",
+        "Patrick Owen",
+        "Nicola Serra"
+      ],
+      "abstract": "Target trial emulation (TTE) enables causal questions to be studied with observational data when randomized controlled trials (RCTs) are infeasible. Yet treatment-effect methods often address causal estimation, missingness, and temporal structure separately, limiting their robustness in electronic health records (EHRs), where time-varying confounding and missing-not-at-random (MNAR) biomarkers can reach 50%--80%. We propose a two-stage pipeline for treatment effect estimation from incomplete longitudinal EHRs. First, CausalFlow-T, a directed acyclic graph (DAG)-constrained normalizing flow with long short-term memory (LSTM)-encoded patient history, performs exact invertible counterfactual inference, avoiding approximation errors from variational inference and separating confounding through explicit causal structure. Ablations on four synthetic and one semi-synthetic benchmark with known counterfactuals show that DAG constraints and exact inference address distinct failure modes: neither compensates for the other. Second, because CausalFlow-T requires completed inputs, we introduce an LLM-driven evolutionary imputer that proposes executable imputation operators rather than individual entries, and evaluate it with three large language model (LLM) backends, including two open-source models. Across 30%--80% MNAR missingness, this imputer achieves the best pooled rank over biomarker and causal metrics, leading in point-wise accuracy and temporal extrapolation while preserving average treatment effect (ATE) recovery as statistical baselines degrade. On Swiss primary-care EHRs from adults with type 2 diabetes initiating a GLP-1 receptor agonist or SGLT-2 inhibitor, the pipeline estimates a per-protocol weight-loss difference of -0.98 kg [95% CI -1.01, -0.96] favoring GLP-1 receptor agonists, consistent with randomized evidence and obtained from realistically incomplete real-world EHRs.",
+      "date": "2026-05-06",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.05125v1",
+      "tags": [
+        "cs.LG",
+        "metaheuristics",
+        "stochastic",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.05125",
+      "arxiv_id": "2605.05125v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.05071",
+      "title": "Look Once, Beam Twice: Camera-Primed Real-Time Double-Directional mmWave Beam Management for Vehicular Connectivity",
+      "authors": [
+        "Avhishek Biswas",
+        "Apala Pramanik",
+        "Eylem Ekici",
+        "Mehmet C. Vuran"
+      ],
+      "abstract": "Millimeter-wave (mmWave) frequencies promise multi-gigabit connectivity for vehicle-to-everything (V2X) networks, but face challenges in terms of severe path loss and mobility-related beam misalignment. Reliable V2X connectivity requires fast, double-directional beam alignment. However, existing methods suffer from high training overhead and limited generalization to unseen scenarios. This paper presents VIsion-based BEamforming(VIBE), a hybrid model-based, closed-loop, learning architecture for real-time double-directional mmWave beam management primed by camera sensing. VIBE fuses machine learning, model-based reasoning, and closed-loop RF feedback to balance beam-pair establishment latency with link quality. VIBE bypasses exhaustive training overhead and accelerates link establishment by leveraging camera observations to reduce the beam-search space. Lightweight beam refinement and offset tracking mechanisms adaptively refine beams in response to dynamic application requirements. VIBE is implemented and evaluated across online indoor/outdoor testbeds, public datasets, and real-time vehicular experiments, demonstrating strong generalization capabilities, making it suitable for real-time V2X communication. Comparisons with 5G NR hierarchical beamforming show that VIBE consistently maintains lower outage rates. Furthermore, VIBE outperforms state-of-the-art end-to-end ML models for beam selection when evaluated on public datasets and achieves outage rates as low as 1.1-1.4 %. The results show that a hybrid model-based, closed-loop learning architecture is better suited for real-world mmWave vehicular connectivity than end-to-end trained ML models. For reproducibility, we publish our code to https://github.com/UNL-CPN-Lab/Look-Once-Beam-Twice.",
+      "date": "2026-05-06",
+      "source": "arXiv",
+      "source_detail": "cs.NI",
+      "url": "http://arxiv.org/abs/2605.05071v1",
+      "tags": [
+        "cs.NI",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.05071",
+      "arxiv_id": "2605.05071v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.05164",
+      "title": "Geometry-Aware State Space Model: A New Paradigm for Whole-Slide Image Representation",
+      "authors": [
+        "Enhui Chai",
+        "Sicheng Chen",
+        "Tianyi Zhang",
+        "Chad Wong",
+        "Kecheng Huang",
+        "Zeyu Liu",
+        "Fei Xia"
+      ],
+      "abstract": "Accurate analysis of histopathological images is critical for disease diagnosis and treatment planning. Whole-slide images (WSIs), which digitize tissue specimens at gigapixel resolution, are fundamental to this process but require aggregating thousands of patches for slide-level predictions. Multiple Instance Learning (MIL) tackles this challenge with a two-stage paradigm, decoupling tile-level embedding and slide-level prediction. However, most existing methods implicitly embed patch representations in homogeneous Euclidean spaces, overlooking the hierarchical organization and regional heterogeneity of pathological tissues. This limits current models' ability to capture global tissue architecture and fine-grained cellular morphology. To address this limitation, we introduce a hybrid hyperbolic-Euclidean representation that embeds WSI features in dual geometric spaces, enabling complementary modeling of hierarchical tissue structures and local morphological details. Building on this formulation, we develop BatMIL, a WSI classification framework that leverages both geometric spaces. To model long-range dependencies among thousands of patches, we employ a structured state space sequence model (S4) backbone that encodes patch sequences with linear computational complexity. Furthermore, to account for regional heterogeneity, we introduce a chunk-level mixture-of-experts (MoE) module that groups patches into regions and dynamically routes them to specialized subnetworks, improving representational capacity while reducing redundant computation. Extensive experiments on seven WSI datasets spanning six cancer types demonstrate that BatMIL consistently outperforms state-of-the-art MIL approaches in slide-level classification tasks. These results indicate that geometry-aware representation learning offers a promising direction for next-generation computational pathology.",
+      "date": "2026-05-06",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2605.05164v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.05164",
+      "arxiv_id": "2605.05164v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.05055",
+      "title": "Adaptive Learning Strategies for AoA-Based Outdoor Localization: A Comprehensive Framework",
+      "authors": [
+        "Bac Trinh-Nguyen",
+        "Sara Berri",
+        "Sin G. Teo",
+        "Tram Truong-Huu",
+        "Arsenia Chorti"
+      ],
+      "abstract": "Localization in 5G and 6G networks is essential for important use cases such as intelligent transportation, smart factories, and smart cities. Although deep learning has enabled improving localization accuracy, depending on the deployment scenario and the effort required for dataset collection campaigns on a given infrastructure, the training process for localization models can vary significantly. Furthermore, with respect to feature selection, recent works have demonstrated the robustness of angle-of-arrival (AoA) based localization. In view of these two points, we propose an adaptive framework for AoA-based localization that consists of two alternative learning strategies, each suited either for large or small training datasets. The proposed framework is evaluated on a real, massive multiple input multiple output (mMIMO) orthogonal frequency division multiplexing (OFDM) outdoor channel state information (CSI) dataset. First, we investigate offline learning when large training datasets are available; we propose a hierarchical framework that first distinguishes between line of sight (LoS) and non line of sight (NLoS) regions and then moves to more fine grained localization in the respective region. This approach provides high-performance localization through accumulated batch retraining and an integrated hyperparameter optimization mechanism. Second, when only a small training dataset is available, an online learning framework is proposed, using incremental tree-based and ensemble-based models for handling streaming data and continuously updating mode, as well as an online few-shot learning model for rapidly initializing new classes from a limited labeled support set. These results showcase that highly accurate robust localization can be achieved incrementally during network operation by exploiting online learning, alleviating the need for large dataset collection campaigns.",
+      "date": "2026-05-06",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.05055v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.05055",
+      "arxiv_id": "2605.05055v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.05054",
+      "title": "Direct Product Flow Matching: Decoupling Radial and Angular Dynamics for Few-Shot Adaptation",
+      "authors": [
+        "Hongxu Chen",
+        "Yanghao Wang",
+        "Bowei Zhu",
+        "Hongxiang Li",
+        "Zhen Wang",
+        "Ziqi Jiang",
+        "Lin Li",
+        "Rui Liu",
+        "Long Chen"
+      ],
+      "abstract": "Recent flow matching (FM) methods improve the few-shot adaptation of vision-language models, by modeling cross-modal alignment as a continuous multi-step flow. In this paper, we argue that existing FM methods are inherently constrained by incompatible geometric priors on pre-trained cross-modal features, resulting in suboptimal adaptation performance. We first analyze these methods from a polar decomposition perspective (i.e., radial and angular sub-manifolds). Under this new geometric view, we identify three overlooked limitations in them: 1) Angular dynamics distortion: The radial-angular coupling induces non-uniform speed on the angular sub-manifold, leading to regression training difficulty and extra truncation errors. 2) Radial dynamics neglect: Feature normalization discards modality confidence, failing to distinguish out-of-distribution and in-distribution data, and abandoning crucial radial dynamics. 3) Context-agnostic unconditional flow: Dataset-specific information loss during pre-trained cross-modal feature extraction remains unrecovered. To resolve these issues, we propose warped product flow matching (WP-FM), a unified Riemannian framework that reformulates alignment on a warped product manifold. Within this framework, we derive direct product flow matching (DP-FM) by introducing a constant-warping metric, which yields a decoupled cylindrical manifold (i.e., direct product manifold). DP-FM enables independent radial evolution and constant-speed angular geodesic transport, effectively eliminating angular dynamics distortion while preserving radial consistency. Meanwhile, we incorporate classifier-free guidance by conditioning the flow on the pre-trained VLMs' hidden states to inject missing dataset-specific information. Extensive results across 11 benchmarks have demonstrated that DP-FM achieves a new state-of-the-art for multi-step few-shot adaptation.",
+      "date": "2026-05-06",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2605.05054v1",
+      "tags": [
+        "cs.CV",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.05054",
+      "arxiv_id": "2605.05054v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.04995",
+      "title": "Adaptivity Under Realizability Constraints: Comparing In-Context and Agentic Learning",
+      "authors": [
+        "Anastasis Kratsios",
+        "A. Martina Neuman",
+        "Philipp Petersen"
+      ],
+      "abstract": "We compare in-context learning with fixed queries and agentic learning with adaptive queries for uniform approximation of task families. We consider two settings: an unrestricted regime, where querying and approximation are arbitrary functions, and a realizable regime, where we require these operations to be implemented by ReLU neural networks. In both settings, adaptivity never hinders approximation performance. However, this advantage can change when one passes from the unrestricted regime to the realizable regime. We identify four distinct approximation scenarios, each witnessed by an explicit task family: (a) no advantage of adaptivity; (b) an advantage in the unrestricted regime that persists under ReLU realizability; (c) an advantage that arises only under realizability; and (d) an advantage that disappears under realizability. This demonstrates that representational constraints interact profoundly with the effect of adaptivity.",
+      "date": "2026-05-06",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.04995v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.04995",
+      "arxiv_id": "2605.04995v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.04734",
+      "title": "Hamilton decompositions of all directed tori at odd modulus",
+      "authors": [
+        "SangHyun Park"
+      ],
+      "abstract": "Let $D_d(m) = \\operatorname{Cay}((\\mathbb{Z}/m\\mathbb{Z})^d, \\{e_0, \\ldots, e_{d-1}\\})$ be the directed Cartesian product of $d$ directed $m$-cycles. We prove that $D_d(m)$ admits a directed Hamilton decomposition for every dimension $d \\geq 2$ and every odd modulus $m \\geq 3$. The proof combines two new closure mechanisms with a small set of base dimensions. The high-modulus count branch handles every odd $d \\geq 5$ and every odd $m \\geq d$ via triangular prefix coordinates and a primitivity criterion controlled by gcd conditions on symbol counts. The base-tail modular-trade branch handles the complementary range $m < d$ by decomposing a base multigraph into cylinders and scheduling active tail residues by local symbol trades; it yields the successor closure $b \\mapsto 2b+1$ for $b \\geq 5$. Together with multiplicative product closure, these reduce the all-dimensions theorem to the four base dimensions $d \\in \\{2, 3, 5, 7\\}$. Dimensions $2$ and $3$ are proved here; dimensions $5$ and $7$ are imported from companion arXiv preprints.   A Lean 4 formalization records the same all-dimensions endpoint. As an independent consequence, the dimensions $2$ and $3$ alone solve every odd $d \\geq 29$, by a dyadic-triadic interval-hitting argument.",
+      "date": "2026-05-06",
+      "source": "arXiv",
+      "source_detail": "math.CO",
+      "url": "http://arxiv.org/abs/2605.04734v1",
+      "tags": [
+        "math.CO",
+        "scheduling",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.04734",
+      "arxiv_id": "2605.04734v1",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2025.1150",
+      "title": "Competitive Facility Location Under Cross-Nested Logit Customer Choice Model: Hardness and Exact Approaches",
+      "authors": [
+        "Le, B.",
+        "Mai, T.",
+        "Ta, T.",
+        "Hà, M.",
+        "Vu, D."
+      ],
+      "abstract": "We study the competitive facility location problem, in which a firm aims to establish new facilities in a market already occupied by competitors. In this problem, customer behavior is a crucial factor in making optimal location decisions. We explore a general class of customer choice models, known as the cross-nested logit model, which is recognized for its flexibility and generality in predicting people’s choice behavior. To explore the problem, we first demonstrate that it is NP-hard even when there is only one customer class and the cross-nested structure has only two nests. To tackle the challenging facility location problem, we demonstrate that the objective function under a general cross-nested structure is not concave. Interestingly, we show that, by a change of variables, the objective function can be converted to a mixed-integer exponential cone convex program, enabling it to be solved to optimality via an outer approximation algorithm. Extensive experiments show the efficiency of our approach and provide analyses on the benefits of using the cross-nested model in the facility location context.\n                  History: Accepted by Andrea Lodi, Area Editor for Design &amp; Analysis of Algorithms–Discrete.\n                  Funding: This work was supported by the Vingroup Innovation Foundation, Vietnam [Grant VINIF.2024.DA072].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2025.1150 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2025.1150 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-05-06",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2025.1150",
+      "tags": [
+        "integer-programming",
+        "facility-location"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2025.1150",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07228-4",
+      "title": "Joint carbon emission reduction in the supply chain under altruistic preferences",
+      "authors": [
+        "Wang, Z.",
+        "Huo, J.",
+        "He, Q.",
+        "Kim, T."
+      ],
+      "abstract": "",
+      "date": "2026-05-06",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07228-4",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07228-4",
+      "score": 45.0
+    },
+    {
+      "id": "arxiv-2605.05172",
+      "title": "When Life Gives You BC, Make Q-functions: Extracting Q-values from Behavior Cloning for On-Robot Reinforcement Learning",
+      "authors": [
+        "Lakshita Dodeja",
+        "Ondrej Biza",
+        "Shivam Vats",
+        "Stephen Hart",
+        "Stefanie Tellex",
+        "Robin Walters",
+        "Karl Schmeckpeper",
+        "Thomas Weng"
+      ],
+      "abstract": "Behavior Cloning (BC) has emerged as a highly effective paradigm for robot learning. However, BC lacks a self-guided mechanism for online improvement after demonstrations have been collected. Existing offline-to-online learning methods often cause policies to replace previously learned good actions due to a distribution mismatch between offline data and online learning. In this work, we propose Q2RL, Q-Estimation and Q-Gating from BC for Reinforcement Learning, an algorithm for efficient offline-to-online learning. Our method consists of two parts: (1) Q-Estimation extracts a Q-function from a BC policy using a few interaction steps with the environment, followed by online RL with (2) Q-Gating, which switches between BC and RL policy actions based on their respective Q-values to collect samples for RL policy training. Across manipulation tasks from D4RL and robomimic benchmarks, Q2RL outperforms SOTA offline-to-online learning baselines on success rate and time to convergence. Q2RL is efficient enough to be applied in an on-robot RL setting, learning robust policies for contact-rich and high precision manipulation tasks such as pipe assembly and kitting, in 1-2 hours of online interaction, achieving success rates of up to 100% and up to 3.75x improvement against the original BC policy. Code and video are available at https://pages.rai-inst.com/q2rl_website/",
+      "date": "2026-05-06",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2605.05172v1",
+      "tags": [
+        "cs.RO",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.05172",
+      "arxiv_id": "2605.05172v1",
+      "score": 45.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
