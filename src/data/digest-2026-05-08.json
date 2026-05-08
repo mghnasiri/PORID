@@ -1,0 +1,293 @@
+{
+  "date": "2026-05-08",
+  "generated_at": "2026-05-08T08:28:53.780933+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2605.06561",
+      "title": "Optimal Counterfactual Search in Tree Ensembles: A Study Across Modeling and Solution Paradigms",
+      "authors": [
+        "Awa Khouna",
+        "Youssouf Emine",
+        "Julien Ferry",
+        "Thibaut Vidal"
+      ],
+      "abstract": "Trust in counterfactual explanations depends critically on whether their recommended changes are truly minimal: suboptimal explanations may vastly overshoot the actual changes needed to alter a decision, and heuristic errors can affect individuals unevenly, giving some users relevant recourse while assigning others unnecessarily costly recommendations. Consequently, we study the problem of computing optimal counterfactual explanations for tree ensembles under plausibility and actionability constraints. This is a combinatorial problem: for a fixed model, counterfactual search boils down to selecting consistent branching decisions and threshold-defined regions under a distance objective. We exploit this structure through CPCF, a constraint programming (CP) formulation in which numerical features are encoded as interval domains induced by split thresholds, while discrete features retain native finite-domain representations. This yields a compact finite-domain formulation that supports multiple distance objectives without continuous split-boundary search. We then place CPCF in a broader comparison across mathematical programming paradigms: we extend a maximum Boolean satisfiability (MaxSAT) formulation, originally designed for hard-voting random forests, to soft-voting ensembles, and compare against the current state-of-the-art mixed-integer linear programming (MILP) optimal approach. Across ten datasets and three types of tree ensembles, we analyze scalability, anytime performance, and sensitivity to distance metrics. We observe that CP achieves the best overall performance. More importantly, our results identify regimes in which the specific strengths of each paradigm make it best suited: CP is most versatile overall, MaxSAT handles hard-voting ensembles particularly well, and MILP remains competitive in amortized inference settings with a moderate number of split levels.",
+      "date": "2026-05-07",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.06561v1",
+      "tags": [
+        "cs.LG",
+        "linear-programming",
+        "integer-programming",
+        "stochastic",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.06561",
+      "arxiv_id": "2605.06561v1",
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1002-net.70049",
+      "title": "A Hierarchical Divide‐and‐Conquer Neural Approach for Multiple Traveling Salesman Problems",
+      "authors": [
+        "Ou, B.",
+        "Guan, Q.",
+        "Zhu, Z.",
+        "Cao, H.",
+        "Yan, D."
+      ],
+      "abstract": "ABSTRACT\n                  The multiple traveling salesman problem (mTSP) has attracted considerable attention due to its importance in logistics, robotics, and transportation systems. However, existing deep reinforcement learning (DRL) methods often rely on monolithic solution paradigms, which limit scalability, underutilize local graph structures, and hinder adaptability in dynamic decision‐making. To address these challenges, we propose a hierarchical divide‐and‐conquer neural approach (HDCN) for solving mTSPs in a scalable and principled manner. HDCN adopts a hierarchical architecture that decomposes the global problem into task allocation and route planning, which are jointly optimized within a unified framework. At the upper level, an affinity‐guided self‐organizing map is employed to generate structured task assignments by capturing latent spatial patterns. At the lower level, a neighborhood‐aware deep reinforcement learning model with a transformer‐inspired policy network constructs routing trajectories conditioned on the allocation results. To improve adaptability during sequential decision‐making, an integrator is introduced to fuse dynamic environmental states with static graph representations. Extensive experiments conducted on mTSP benchmarks with varying scales and spatial distributions demonstrate that HDCN consistently outperforms mainstream heuristic methods and DRL‐based baselines in terms of solution quality, scalability, and generalization performance, highlighting its effectiveness and robustness for large‐scale and complex mTSP scenarios.",
+      "date": "2026-05-07",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70049",
+      "tags": [
+        "vehicle-routing",
+        "stochastic",
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70049",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2605.05660",
+      "title": "Distributionally Robust Multi-Objective Optimization",
+      "authors": [
+        "Yufeng Yang",
+        "Fangning Zhuo",
+        "Ziyi Chen",
+        "Heng Huang",
+        "Yi Zhou"
+      ],
+      "abstract": "Multi-objective optimization (MOO) has received growing attention in applications that require learning under multiple criteria. However, the existing MOO formulations do not explicitly account for distributional shifts in the data. We introduce distributionally robust multi-objective optimization (DR-MOO), which minimizes multiple objectives under their respective worst-case distributions. We propose Pareto-type solution concepts for DR-MOO and develop multi-gradient descent algorithms (MGDA) with provable guarantees. Leveraging a Lagrangian dual reformulation, we first design a double-loop MGDA that uses an inner loop to estimate dual variables and achieves a total sample complexity $\\mathcal{O}(ε^{-12})$ for reaching an $ε$-Pareto-stationary point. To further improve efficiency, we incorporate gradient clipping to handle generalized-smooth and biased gradient estimates, removing the need for double sampling. This yields a single-loop double-clip MGDA with substantially improved sample complexity $\\mathcal{O}(ε^{-4})$. Our theory applies to the nonconvex setting and does not require bounded objectives or gradients. Experiments demonstrate that our methods are competitive with state-of-the-art MGDA baselines.",
+      "date": "2026-05-07",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.05660v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "multi-objective",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.05660",
+      "arxiv_id": "2605.05660v1",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2605.06516",
+      "title": "Learning to Cut: Reinforcement Learning for Benders Decomposition",
+      "authors": [
+        "Haochen Cai",
+        "Xian Yu"
+      ],
+      "abstract": "Benders decomposition (BD) is a widely used solution approach for solving two-stage stochastic programs arising in real-world decision-making under uncertainty. However, it often suffers from slow convergence as the master problem grows with an increasing number of cuts. In this paper, we propose Reinforcement Learning for BD (RLBD), a framework that adaptively selects cuts using a neural network-based stochastic policy. The policy is trained using a policy gradient method via the REINFORCE algorithm. We evaluate the proposed approach on a two-stage stochastic electric vehicle charging station location problem and compare it with vanilla BD and LearnBD, a supervised learning approach that classifies cuts using a support vector machine. Numerical results demonstrate that RLBD achieves substantial improvements in computational efficiency and exhibits strong generalization to problems with similar structures but varying data inputs and decision variable dimensions.",
+      "date": "2026-05-07",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2605.06516v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.06516",
+      "arxiv_id": "2605.06516v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07225-7",
+      "title": "A multigraph and multiplex approach for the recognition of important states in Markov decision processes",
+      "authors": [
+        "Milani, R.",
+        "Moll, M.",
+        "De Leone, R.",
+        "Pickl, S."
+      ],
+      "abstract": "Abstract\n                  The determination of the most important states in Markov Decision Processes has recently gained interest due to its applicability in increasing both the performance and the explainability of Reinforcement Learning algorithms. In this paper, we extend the concept of Reconstructed Transition Graphs from simple unweighted graphs to advanced notions of weighted Multigraphs and Multiplexes to better represent Markov Decision Processes and identify the most important states. To this end, we adapt the classical centrality measures (betweenness, closeness, and eigenvector) to our proposed frameworks and delineate the theoretical assumptions required to ensure their existence and uniqueness. Compared to other graph-based measures available in the literature, this novel approach can take into account the different rewards and transform them into weights specific to the task. Computational experiments indicate the superior capacity of these measures in the detection of dangerous states and high-reward situations for non-sparse reward environments compared to state-of-the-art methodologies. Moreover, a statistical analysis carried out allowed to discover significant interconnections between the newly defined centrality measure structures and Q-value-based measures that are helpful for the recognition of critical states.",
+      "date": "2026-05-07",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07225-7",
+      "tags": [
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07225-7",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1002-nav.70075",
+      "title": "A Joint Production and Delivery Problem in Multi‐Factory Multi‐Distribution‐Center Multiproduct Systems With Limited Capacities",
+      "authors": [
+        "Zhai, S.",
+        "Liu, F.",
+        "Zuo, Z."
+      ],
+      "abstract": "ABSTRACT\n                  We consider a joint production and delivery problem in multi‐factory multi‐DC (distribution center) multiproduct systems with limited production and delivery capacities over a finite horizon. The objective is to minimize the system's expected total cost. Since the structure of the optimal policy is hard to find, we propose a Lagrangian relaxation heuristic to solve the problem. The proposed heuristic is based on solving a Lagrangian relaxation of the original problem. Although the Lagrangian relaxation problem remains challenging due to the joint production and delivery decisions, we identify a zero‐inventory policy that enables further decomposition into independent single‐product, single‐DC subproblems, each of which can be solved independently. We evaluate the heuristic's performance by deriving a theoretical upper bound on its expected loss. In numerical experiments, we compare the Lagrangian relaxation heuristic with a benchmark myopic heuristic. The results consistently show that the Lagrangian relaxation heuristic achieves a significantly smaller expected relative loss and exhibits greater stability than the myopic heuristic.",
+      "date": "2026-05-07",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70075",
+      "tags": [
+        "supply-chain",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70075",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.06618",
+      "title": "MTRBO: Multiple trust-region based Bayesian optimization",
+      "authors": [
+        "Sourav Das",
+        "Debjani Chakraborty",
+        "Pabitra Mitra"
+      ],
+      "abstract": "Bayesian Optimization (BO) is a popular framework for optimizing black-box functions. Despite its effectiveness, BO is often inefficient for high-dimensional problems due to the exponential growth of the search space, heterogeneity of the objective function, and low sampling budget. To overcome these issues, this work proposes a multiple trust region-based Bayesian optimization technique(MTRBO). A trust region is a localized region within which an optimization model is trusted to approximate the objective function accurately. Assuming a Gaussian process (GP) as a prior belief about the objective function and based on the posterior mean and variance functions, the method adaptively exploits near the promising current solution inside a trust region. Also explores the most uncertain region in the search space inside another trust region. The theoretical global convergence property of the proposed method is established. Then the work is benchmarked against other state-of-the-art trust-region-based Bayesian optimization algorithms, demonstrating superior performance on a variety of non-convex and high-dimensional test functions. The proposed method outperforms others in terms of solution quality within the sampling budget (the number of function evaluations). The proposed method is applied to the portfolio optimization problem to verify its applicability in real-world scenarios.",
+      "date": "2026-05-07",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2605.06618v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.06618",
+      "arxiv_id": "2605.06618v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.06585",
+      "title": "Distributionally-Robust Learning to Optimize",
+      "authors": [
+        "Vinit Ranjan",
+        "Jisun Park",
+        "Bartolomeo Stellato"
+      ],
+      "abstract": "We propose a distributionally robust approach to learning hyperparameters for first-order methods in convex optimization. Given a dataset of problem instances, we minimize a Wasserstein distributionally robust version of the performance estimation problem (PEP) over algorithm parameters such as step sizes. Our framework unifies two extremes: as the robustness radius vanishes, we recover classical learning to optimize (L2O); as it grows, we recover worst-case optimal algorithm design via PEP. We solve the resulting problem with stochastic gradient descent, differentiating through the solution of an inner semidefinite program at each step. We prove high-probability bounds showing that the true risk of the learned algorithm is at most the in-sample L2O optimum plus a slack that shrinks with the sample size, and is no worse than the worst-case PEP bound. On unconstrained quadratic minimization, LASSO, and linear programming benchmarks, our learned algorithms achieve strong out-of-sample performance with certifiable robustness, outperforming both worst-case optimal and vanilla L2O baselines.",
+      "date": "2026-05-07",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.06585v1",
+      "tags": [
+        "cs.LG",
+        "linear-programming",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.06585",
+      "arxiv_id": "2605.06585v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.06341",
+      "title": "CoupleEvo: Evolving Heuristics for Coupled Optimization Problems Using Large Language Models",
+      "authors": [
+        "Thomas Bömer",
+        "Bastian Amberg",
+        "Max Disselnmeyer",
+        "Anne Meyer"
+      ],
+      "abstract": "Many real-world optimization problems consist of multiple tightly coupled subproblems whose solutions must be coordinated to achieve high overall performance. However, existing large language model driven automated heuristic design approaches are limited to single-problem settings. In this paper, we propose CoupleEvo. CoupleEvo proposes three evolutionary coordination strategies to evolve heuristics for coupled optimization problems: the sequential strategy evolves heuristics for one subproblem after the other; the iterative strategy alternates the evolution of heuristics for different subproblems over successive generations; and the integrated strategy evolves heuristics for all problems simultaneously. The approach is evaluated on two representative coupled optimization problems. Experimental results show that decomposition-based strategies (sequential and iterative) provide more stable convergence and higher solution quality, while the integrated evolution strategy suffers from increased search complexity and variability. These findings highlight the importance of coordinating evolutionary search across interdependent subproblems and demonstrate the potential of LLM-driven heuristic design for complex coupled optimization problems. The code is available: https://github.com/tb-git-kit-research/CoupleEvo.",
+      "date": "2026-05-07",
+      "source": "arXiv",
+      "source_detail": "cs.NE",
+      "url": "http://arxiv.org/abs/2605.06341v1",
+      "tags": [
+        "cs.NE",
+        "metaheuristics",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1145/3795101.3814664",
+      "arxiv_id": "2605.06341v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.06328",
+      "title": "FAB: A First-Order AB-based Gradient Algorithm for Distributed Bilevel Optimization over Time-Varying Directed Graphs",
+      "authors": [
+        "Yaoshuai Ma",
+        "Xiao Wang",
+        "Wei Yao",
+        "Jin Zhang"
+      ],
+      "abstract": "Distributed optimization over time-varying directed graphs has shown promising performance in addressing challenges posed by complex communication constraints in real-world scenarios. In many practical settings, however, the direct application of distributed optimization algorithms encounters additional difficulties, most notably hyperparameter tuning, which our empirical observations suggest can be effectively mitigated by integrating bilevel optimization. Motivated by these findings, we study distributed bilevel optimization over time-varying directed networks, a problem that remains largely unexplored due to the compounded challenges arising from consensus bias in dynamic unbalanced communication and the nested optimization structure. In this work, we propose a fully first-order distributed gradient-based algorithm that integrates the Push-Pull (also known as AB) communication strategy with a value function-based penalty method and establish its non-asymptotic convergence properties. Notably, a simplified variant of our analysis framework for nonconvex single-level distributed optimization establishes a convergence rate for the Push-Pull algorithm, thereby resolving an open question concerning its convergence over time-varying directed graphs. Empirical evaluations across diverse tasks, including hyperparameter tuning, data hyper-cleaning, and reinforcement learning, validate the effectiveness and efficiency of the proposed algorithm.",
+      "date": "2026-05-07",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2605.06328v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.06328",
+      "arxiv_id": "2605.06328v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
