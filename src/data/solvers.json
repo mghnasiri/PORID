@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T08:28:53.480926+00:00",
+  "generated_at": "2026-05-09T08:48:50.611730+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1609,
+      "github_stars": 1611,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 173,
+      "github_open_issues": 176,
       "github_recent_prs": [
-        "Use std::move in OpenNode constructor",
-        "Potential typo in FactorHiGHSSolver::chooseNla()",
-        "Fix computation of fractional value for variable with finite lower and upper bounds",
-        "Minor fixes for HighsCliqueTable",
-        "Fix check in `Highs::qFormatOk`"
+        "Fast triangular solves in HiPO",
+        "Improvements to free variables in HiPO",
+        "Fixed errors exposed by AI agent that do not lead to incorrect execution",
+        "Keep strengthened variable bounds",
+        "Use std::move in OpenNode constructor"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13447,
+      "github_stars": 13453,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1132,13 +1132,13 @@
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
       "github_stars": 6207,
-      "github_open_issues": 186,
+      "github_open_issues": 185,
       "github_recent_prs": [
+        "Pip install qoco off gc/experiment",
+        "Adjust static reg",
+        "Fix reshaping of symmetric variable gradients",
         "Test scopes",
-        "Test scopes",
-        "Robustify scope managers",
-        "Add compose_constr_id_map",
-        "Extensions CI"
+        "Test scopes"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1320,13 +1320,13 @@
       ],
       "recent_changes": "We are excited to announce Timefold Solver 2.0.0, the first major version bump in three years. There is a lot to unpack, let's get into it.\r\n\r\n## What's new in the Community Edition\r\n\r\n### The Neighbo",
       "github_stars": 1651,
-      "github_open_issues": 81,
+      "github_open_issues": 82,
       "github_recent_prs": [
+        "fix: ensure that the random seed is configured correctly",
         "chore: upgrade to quarkus 3.35.1",
         "docs: clarify CH need for Neighborhoods API",
         "doc: remove mention of old benchmark method reference",
-        "perf: improve ConstraintCollectors.toList()",
-        "fix: use config class loader, then context class loader, then parent in GIZMO"
+        "perf: improve ConstraintCollectors.toList()"
       ]
     },
     {
@@ -1384,8 +1384,8 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
-      "github_stars": 2448,
-      "github_open_issues": 357,
+      "github_stars": 2450,
+      "github_open_issues": 354,
       "github_recent_prs": [
         "Add a new template for tracking tasks",
         "Upgrade setup-miniconda to v4",
@@ -1449,7 +1449,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
-      "github_stars": 2434,
+      "github_stars": 2435,
       "github_open_issues": 14,
       "github_recent_prs": [
         "Add JaCoP in solver lists",
