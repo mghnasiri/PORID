@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T10:43:23.273848+00:00",
+  "generated_at": "2026-05-12T09:49:21.174972+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -238,8 +238,8 @@
       "vendor": "University of Edinburgh (ERGO-Code)",
       "website": "https://highs.dev",
       "docs_url": "https://ergo-code.github.io/HiGHS/dev/",
-      "current_version": "1.14.0",
-      "release_date": "2026-04-06",
+      "current_version": "1.13.1",
+      "release_date": "2026-03-15",
       "license_type": "open-source",
       "license_spdx": "MIT",
       "open_source": true,
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1613,
+      "github_stars": null,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -344,15 +344,6 @@
           "source": "OR-Tools documentation"
         }
       ],
-      "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 174,
-      "github_recent_prs": [
-        "Fast triangular solves in HiPO",
-        "Improvements to free variables in HiPO",
-        "Fixed errors exposed by AI agent that do not lead to incorrect execution",
-        "Keep strengthened variable bounds",
-        "Use std::move in OpenNode constructor"
-      ],
       "pypi_monthly_downloads": -71
     },
     {
@@ -361,8 +352,8 @@
       "vendor": "Zuse Institute Berlin (ZIB)",
       "website": "https://www.scipopt.org",
       "docs_url": "https://www.scipopt.org/doc/html/",
-      "current_version": "10.0.2",
-      "release_date": "2026-04-02",
+      "current_version": "10.0.1",
+      "release_date": "2025-12-01",
       "license_type": "open-source",
       "license_spdx": "Apache-2.0",
       "open_source": true,
@@ -382,7 +373,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 588,
+      "github_stars": null,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -457,15 +448,6 @@
           "source": "SCIP annual report"
         }
       ],
-      "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- an error is now produced if the emphasis settings in parameter files are wrong\r\n- propagate focus lower bound to child nodes to avoid outdated global lower bound\r\n- set sma",
-      "github_open_issues": 21,
-      "github_recent_prs": [
-        "fix several typos",
-        "Allow documentation builds when testing is turned off",
-        "Fix endianness issue in dtoa.cpp",
-        "Fix two bugs in SCIPcreateConsBasicSOCNonlinear",
-        "Fix typo in nauty.h pragma directive intrinsic"
-      ],
       "pypi_monthly_downloads": -41
     },
     {
@@ -474,7 +456,7 @@
       "vendor": "Google",
       "website": "https://developers.google.com/optimization",
       "docs_url": "https://developers.google.com/optimization/introduction",
-      "current_version": "9.15",
+      "current_version": "9.15.6755",
       "release_date": "2026-01-12",
       "license_type": "open-source",
       "license_spdx": "Apache-2.0",
@@ -498,7 +480,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13462,
+      "github_stars": null,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -568,15 +550,6 @@
           "source": "Conference talk"
         }
       ],
-      "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 99,
-      "github_recent_prs": [
-        "python: export cleanup from google3",
-        "Xpress: empty bound check not working -- fixed",
-        "[ci] Enable GCP Bucket caching for Bazel",
-        "Export benchmarks from google3",
-        "graph: Extract `Build()` from the `BaseGraph` class."
-      ],
       "pypi_monthly_downloads": -34
     },
     {
@@ -585,8 +558,8 @@
       "vendor": "COIN-OR Foundation",
       "website": "https://github.com/coin-or/Cbc",
       "docs_url": "https://coin-or.github.io/Cbc/",
-      "current_version": "2.10.13",
-      "release_date": "2026-03-11",
+      "current_version": "2.10.12",
+      "release_date": "2024-04-01",
       "license_type": "open-source",
       "license_spdx": "EPL-2.0",
       "open_source": true,
@@ -604,7 +577,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 987,
+      "github_stars": null,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -664,15 +637,6 @@
           "text": "CBC is fine for prototyping and teaching, but if you need production speed, move to HiGHS or Gurobi.",
           "source": "r/OperationsResearch"
         }
-      ],
-      "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_open_issues": 162,
-      "github_recent_prs": [
-        "Update windows-ci for action update for Node.js 24 to set up msvc for stable",
-        "Update windows-ci for action update for Node.js 24 to set up msvc",
-        "Update linux-ci for macos and all ci for action updates for Node.js for stable",
-        "Update linux-ci for macos and all ci for action updates for Node.js",
-        "Output facelift: structured tabular output for all solver phases"
       ]
     },
     {
@@ -1085,8 +1049,8 @@
       "vendor": "Stanford University",
       "website": "https://www.cvxpy.org",
       "docs_url": "https://www.cvxpy.org/tutorial/index.html",
-      "current_version": "1.8.2",
-      "release_date": "2026-03-22",
+      "current_version": "1.5.0",
+      "release_date": "2024-09-01",
       "license_type": "open-source",
       "license_spdx": "Apache-2.0",
       "open_source": true,
@@ -1129,16 +1093,6 @@
         "modeling",
         "convex",
         "python"
-      ],
-      "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6207,
-      "github_open_issues": 184,
-      "github_recent_prs": [
-        "Pip install qoco off gc/experiment",
-        "Adjust static reg",
-        "Fix reshaping of symmetric variable gradients",
-        "Test scopes",
-        "Test scopes"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1206,8 +1160,8 @@
       "vendor": "COIN-OR Foundation",
       "website": "https://coin-or.github.io/Ipopt/",
       "docs_url": "https://coin-or.github.io/Ipopt/",
-      "current_version": "3.14.19",
-      "release_date": "2025-07-30",
+      "current_version": "3.14.14",
+      "release_date": "2024-04-01",
       "license_type": "open-source",
       "license_spdx": "EPL-2.0",
       "open_source": true,
@@ -1254,16 +1208,6 @@
         "coin-or",
         "nlp",
         "interior-point"
-      ],
-      "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1741,
-      "github_open_issues": 15,
-      "github_recent_prs": [
-        "Fix data-race global variables with atomics",
-        "Remove unnecessary <iostream> includes",
-        "IpJournalist: Missing override keyword",
-        "Draft at NVIDIA cuDSS (GPU sparse linear solver) integration in Ipopt.",
-        "Fix rare use-after-free in IpSpralSolverInterface"
       ]
     },
     {
@@ -1272,8 +1216,8 @@
       "vendor": "Timefold",
       "website": "https://timefold.ai",
       "docs_url": "https://docs.timefold.ai/",
-      "current_version": "2.0.0",
-      "release_date": "2026-04-22",
+      "current_version": "1.8.0",
+      "release_date": "2024-10-01",
       "license_type": "open-source",
       "license_spdx": "Apache-2.0",
       "open_source": true,
@@ -1317,16 +1261,6 @@
         "routing",
         "constraint",
         "metaheuristic"
-      ],
-      "recent_changes": "We are excited to announce Timefold Solver 2.0.0, the first major version bump in three years. There is a lot to unpack, let's get into it.\r\n\r\n## What's new in the Community Edition\r\n\r\n### The Neighbo",
-      "github_stars": 1652,
-      "github_open_issues": 86,
-      "github_recent_prs": [
-        "deps: bump org.apache.logging.log4j:log4j-to-slf4j from 2.25.4 to 2.26.0 in the regular group",
-        "deps: bump org.openrewrite.recipe:rewrite-recipe-bom from 3.30.0 to 3.30.1 in the openrewrite group",
-        "deps: bump the quarkus group with 4 updates",
-        "deps: bump the regular group with 2 updates",
-        "docs: fix assorted issues"
       ]
     },
     {
@@ -1335,8 +1269,8 @@
       "vendor": "Sandia National Laboratories",
       "website": "https://www.pyomo.org",
       "docs_url": "https://pyomo.readthedocs.io/",
-      "current_version": "6.10.0",
-      "release_date": "2026-02-20",
+      "current_version": "6.8.0",
+      "release_date": "2024-09-01",
       "license_type": "open-source",
       "license_spdx": "BSD-3-Clause",
       "open_source": true,
@@ -1383,16 +1317,6 @@
         "python",
         "algebraic"
       ],
-      "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
-      "github_stars": 2451,
-      "github_open_issues": 358,
-      "github_recent_prs": [
-        "Fix GLOA convex affine cut slope",
-        "Fix GDPopt LOA maximization objective sense",
-        "Add a new template for tracking tasks",
-        "Upgrade setup-miniconda to v4",
-        "Add core symbolic gradient support to Pyomo.DoE"
-      ],
       "pypi_monthly_downloads": -28
     },
     {
@@ -1401,8 +1325,8 @@
       "vendor": "JuMP Community",
       "website": "https://jump.dev",
       "docs_url": "https://jump.dev/JuMP.jl/stable/",
-      "current_version": "1.30.1",
-      "release_date": "2026-04-26",
+      "current_version": "1.23.0",
+      "release_date": "2024-10-01",
       "license_type": "open-source",
       "license_spdx": "MPL-2.0",
       "open_source": true,
@@ -1447,16 +1371,6 @@
         "modeling",
         "julia",
         "algebraic"
-      ],
-      "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
-      "github_stars": 2437,
-      "github_open_issues": 13,
-      "github_recent_prs": [
-        "Add JaCoP in solver lists",
-        "[docs] add an example for defining callbacks in a package extension",
-        "[docs] convert parallelism tutorial into a literate document",
-        "[docs] add an example to the Parallelism tutorial about channels",
-        "Prep for v1.30.1"
       ]
     },
     {

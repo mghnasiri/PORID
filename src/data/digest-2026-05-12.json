@@ -1,0 +1,299 @@
+{
+  "date": "2026-05-12",
+  "generated_at": "2026-05-12T09:49:21.506074+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s10479-026-07232-8",
+      "title": "Exact algorithms for a personnel scheduling problem in intra-hospital patient transfer with hierarchical objectives",
+      "authors": [
+        "Claps, M.",
+        "Delorme, M.",
+        "Zucchi, G.",
+        "Iori, M."
+      ],
+      "abstract": "Abstract\n                  We study a personnel scheduling problem faced by a healthcare and pharmaceutical logistics company, whose goal is to schedule a set of identical employees to transport patients within different healthcare facilities of a hospital. In addition to minimizing the total number of working hours in the schedule, we also aim to maximize shift homogeneity, where two shifts are considered homogeneous if they start and end at the same time, possibly on different days. We introduce three solution methods: two based on integer linear programming (ILP) and one using a decomposition approach in which shifts are determined in the master problem and assigned to employees in the subproblem. We show that the decomposition approach can solve all real-world instances provided by the company in a short amount of time, unlike the ILP models. We also provide managerial insights regarding the effect on the optimal solution of modifying certain instance parameters, such as varying the number of employees, allowing for shorter shifts, and imposing a mandatory lunch break in each shift. Finally, we investigate instance features that make our scheduling problem more difficult to solve for the proposed approaches.",
+      "date": "2026-05-11",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07232-8",
+      "tags": [
+        "linear-programming",
+        "scheduling",
+        "healthcare-or",
+        "supply-chain",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07232-8",
+      "score": 75.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07242-6",
+      "title": "An immediate due date assignment policy with family setups",
+      "authors": [
+        "Düzgit, Z.",
+        "Ünal, A."
+      ],
+      "abstract": "Abstract\n                  In this study, due date assignment problem is addressed in a dynamic and stochastic single machine environment with family setups. A due date is to be assigned for each new job immediately at the time of its arrival. While assigning a due date for the new arrival, non-complete jobs that have arrived before that job and whose due dates are already assigned, are also considered and rescheduled. While assigning a short due date for the new arrival as close as possible, compliance to assigned due dates of non-complete jobs is necessary. These two objectives conflict with each other. The trade-off between assigning tight and loose due dates reflects the trade-off between competitive power and delivery performance. To solve this problem, a two-phase solution methodology is proposed where a sequential lexicographic approach is followed. In the first phase, a capacity allocation takes place for families before observing any actual jobs arrivals, based on expected workload and arrival estimation, in a periodic and static manner. In this phase, families can be assigned to batches, and a batching structure is formed. In the second phase, a due date is assigned for the new arrival immediately in an online fashion, based on the outputs of the first phase. A mixed integer programming model is developed for each phase. Also, a heuristic algorithm is proposed for the second phase. Simultaneously, a discrete event simulation is carried out to imitate a real production system. The performance of the designed policy is measured through the developed simulation model and results are reported under different control and system parameters.",
+      "date": "2026-05-11",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07242-6",
+      "tags": [
+        "integer-programming",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07242-6",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2605.10401",
+      "title": "LLM4Branch: Large Language Model for Discovering Efficient Branching Policies of Integer Programs",
+      "authors": [
+        "Zhinan Hou",
+        "Xingchen Li",
+        "Yankai Zhang",
+        "Tianxun Li",
+        "Keyou You"
+      ],
+      "abstract": "Efficient branching policies are essential for accelerating Mixed Integer Linear Programming (MILP) solvers. Their design has long relied on hand-crafted heuristics, and now machine learning has emerged as a promising paradigm to automate this process. However, existing learning-based methods are often hindered by their dependence on expensive expert demonstrations and the gap between training objectives and the solver's end-to-end performance. In this work, we propose LLM4Branch, a novel framework that leverages Large Language Models (LLMs) to automate the discovery of efficient branching policies. Specifically, the discovered policy is an executable program with a program skeleton generated by the LLM and a parameter vector, which is optimized via a zeroth-order method over a few instances with their end-to-end performance feedback. Extensive experiments on standard MILP benchmarks demonstrate that LLM4Branch establishes a new state-of-the-art among CPU-based methods and achieves performance competitive with advanced GPU-based models. Codes are available at https://github.com/hzn18/LLM4Branch.",
+      "date": "2026-05-11",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2605.10401v1",
+      "tags": [
+        "cs.AI",
+        "linear-programming",
+        "integer-programming",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.10401",
+      "arxiv_id": "2605.10401v1",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261451549",
+      "title": "EXPRESS: Economics of Smart Products with Machine Learning",
+      "authors": [
+        "Zhou, M.",
+        "Gong, Y.",
+        "Qiu, L.",
+        "Kumar, A."
+      ],
+      "abstract": "Driven by advances in machine learning (ML), smart products improve over time through data-driven insights as ongoing user interactions generate usage data that enable the training, evaluation, and refinement of underlying algorithms. However, when firms implement strategies to collect more data to enhance product quality and profits, they must also consider strategic consumer behavior that may lead to unintended negative consequences. Specifically, consumers may intentionally postpone purchases in the early stages of a product’s development, anticipating future quality improvements and price reductions, which in turn complicates data collection during this critical period. Considering advancements in disruptive technologies, this study examines the critical yet underexplored economic impact of ML on pricing strategies. Few studies have focused on how ML influences profit maximization in the presence of strategic consumers. To address this gap, we develop two-period game-theoretic models that employ two dynamic pricing strategies, responsive versus preannounced pricing, to investigate how firms developing smart products adapt to the disruptive impact of ML, considering the behavior of strategic consumers. Our study provides several significant implications. First, we find that ML impacts firms’ profits by impacting consumers’ strategic behaviors in opposite directions. Second, under both dynamic pricing strategies, prices may initially be low and may either rise or decline over time. Third, we demonstrate that, different from findings in the existing literature on strategic consumer behavior, preannounced pricing policies are generally not optimal for the firm when its ability to leverage ML is relatively limited, and consumers are less strategic. Overall, this study makes three contributions to the literature. First, we clarify the impact of ML on a smart product firm’s profit. We find two effects in the application of ML: 1) a positive effect associated with ML (the “\n                    ML\n                    +\n                    effect”) and 2) a negative effect (the “\n                    ML\n                    −\n                    effect”). Second, this study highlights a fundamental economic mechanism for smart products in the presence of strategic consumers. Finally, it provides a decision-making tool for smart product firms to select an optimal dynamic pricing strategy.",
+      "date": "2026-05-11",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261451549",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261451549",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2605.10542",
+      "title": "Computation of Set Tolerances with Applications to the Minimum Spanning Tree Problem",
+      "authors": [
+        "Gerold Jäger",
+        "Dmitrii Panasenko"
+      ],
+      "abstract": "The regular set tolerance is an important term in sensitivity analysis. For combinatorial sum problems, e.g., the Traveling Salesman Problem, Shortest Path Problem and Minimum Spanning Tree Problem, it determines how much the sum of the costs of the elements of a set can be increased while ensuring that all current optimal solutions remain optimal. The regular set lower tolerance determines how much the sum of the costs of the elements of a set can be decreased while ensuring that the objective value of the optimal solution is not changed. We investigate a general method for computing regular (upper and lower) set tolerances in combinatorial sum problems. For the upper tolerance, we present a linear programming approach, and for the lower tolerances, three linear programming approaches, where the last two are novel and lead to recursive procedures for computation of the lower tolerances of all subsets of the given ground set. Furthermore, we give new upper bounds for set lower tolerances. For both upper and lower tolerances, we give an exact formula for sets of cardinality 2 and 3. Finally, we consider the computation of tolerances for the Minimum Spanning Tree Problem, give a formula for single tolerances, a lower bound for regular set upper tolerances and an exact formula for regular set lower tolerances.",
+      "date": "2026-05-11",
+      "source": "arXiv",
+      "source_detail": "math.CO",
+      "url": "http://arxiv.org/abs/2605.10542v1",
+      "tags": [
+        "math.CO",
+        "linear-programming",
+        "network-optimization",
+        "vehicle-routing"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.10542",
+      "arxiv_id": "2605.10542v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.10899",
+      "title": "RubricEM: Meta-RL with Rubric-guided Policy Decomposition beyond Verifiable Rewards",
+      "authors": [
+        "Gaotang Li",
+        "Bhavana Dalvi Mishra",
+        "Zifeng Wang",
+        "Jun Yan",
+        "Yanfei Chen",
+        "Chun-Liang Li",
+        "Long T. Le",
+        "Rujun Han",
+        "George Lee",
+        "Hanghang Tong",
+        "Chen-Yu Lee",
+        "Tomas Pfister"
+      ],
+      "abstract": "Training deep research agents, namely systems that plan, search, evaluate evidence, and synthesize long-form reports, pushes reinforcement learning beyond the regime of verifiable rewards. Their outputs lack ground-truth answers, their trajectories span many tool-augmented decisions, and standard post-training offers little mechanism for turning past attempts into reusable experience. In this work, we argue that rubrics should serve not merely as final-answer evaluators, but as the shared interface that structures policy execution, judge feedback, and agent memory. Based on this view, we introduce RubricEM, a rubric-guided reinforcement learning framework that combines stagewise policy decomposition with reflection-based meta-policy evolution. RubricEM first makes research trajectories stage-aware by conditioning planning, evidence gathering, review, and synthesis on self-generated rubrics. It then assigns credit with Stage-Structured GRPO, which uses stagewise rubric judgments to provide denser semantic feedback for long-horizon optimization. In parallel, RubricEM trains a shared-backbone reflection meta-policy that distills judged trajectories into reusable rubric-grounded guidance for future attempts. The resulting RubricEM-8B achieves strong performance across four long-form research benchmarks, outperforming comparable open models and approaching proprietary deep-research systems. Beyond final performance, we perform thorough analyses to understand the key ingredients of RubricEM.",
+      "date": "2026-05-11",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2605.10899v1",
+      "tags": [
+        "cs.CL",
+        "ml-for-or",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.10899",
+      "arxiv_id": "2605.10899v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.10621",
+      "title": "Hierarchical End-to-End Taylor Bounds for Complete Neural Network Verification",
+      "authors": [
+        "Taha Entesari",
+        "Mahyar Fazlyab"
+      ],
+      "abstract": "Reachability analysis of neural networks, which seeks to compute or bound the set of outputs attainable over a given input domain, is central to certifying safety and robustness in learning-enabled physical systems. Since exact reachable set computation is generally intractable, existing methods typically rely on tractable overapproximations. Examining the state of the art for smooth, twice-differentiable networks, we observe that existing approaches exploit at most second-order information and do not systematically leverage higher-order information. In this work, we introduce \\textsc{HiTaB}, a novel verification framework that exploits second-order smoothness through both the Hessian, $\\nabla^2 f$, and its Lipschitz constant, $L_{\\nabla^2 f}$. We further develop a unified hierarchy of zeroth-, first-, and second-order bounds, together with precise conditions under which higher-order approximations yield provable improvements. Our main technical contribution is a compositional procedure for efficiently bounding $L_{\\nabla^2 f}$ in deep neural networks via layerwise propagation of curvature bounds. We extend the framework to both $\\ell_2$- and $\\ell_\\infty$-constrained input sets and show how it can be integrated into branch-and-bound verification pipelines. To our knowledge, this is the first practical reachability analysis framework for smooth neural networks that systematically exploits Lipschitz continuity of curvature, leading to tighter and more informative safety certificates.",
+      "date": "2026-05-11",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.10621v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.10621",
+      "arxiv_id": "2605.10621v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.10490",
+      "title": "Glycemic Safety Tube: A Provably Safe Control Framework for Artificial Pancreas Systems under Parametric Uncertainty",
+      "authors": [
+        "Pukhrambam Akash Singh",
+        "Ratnangshu Das",
+        "Ahan Basu",
+        "Pushpak Jagtap"
+      ],
+      "abstract": "Type 1 diabetes eliminates the body's ability to produce insulin, making glucose regulation entirely dependent on external insulin delivery and the control algorithm. Existing closed-loop methods either rely on accurate patient-specific models or do not provide formal safety guarantees, and are often computationally demanding for wearable devices. This paper proposes Glycemic Safety Tube Control (GSTC), a model-free and computationally efficient control framework for automated insulin delivery. The method enforces clinically relevant safety bounds on glucose levels by design, ensuring that glucose remains within a prescribed safe range. We also derive feasibility conditions that guarantee safety and input constraint satisfaction under bounded meal disturbances and estimation errors. The performance of GSTC is evaluated against state-of-the-art methods, including linear and nonlinear model predictive control and sliding mode control. The results demonstrate that GSTC maintains safety under varying meal patterns and patient conditions, highlighting its robustness and computational efficiency. Overall, GSTC provides a safe, efficient, and patient-independent approach for next-generation artificial pancreas systems.",
+      "date": "2026-05-11",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2605.10490v1",
+      "tags": [
+        "eess.SY",
+        "healthcare-or",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.10490",
+      "arxiv_id": "2605.10490v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.09824",
+      "title": "Geometric Pareto Control: Riemannian Gradient Flow of Energy Function via Lie Group Homotopy",
+      "authors": [
+        "Tong Wu"
+      ],
+      "abstract": "We propose Geometric Pareto Control (GPC), a framework overcoming barriers of reinforcement learning in cyber-physical systems where governing physics is known. Reinforcement learning confronts barriers in safety-critical applications: sample complexity grows with action-space dimension, retraining is required when objectives or conditions shift, goals such as safety recovery and economic dispatch demand brittle switching logic, and unsafe exploration persists under constrained RL formulations. GPC resolves these barriers through a two-stage geometric approach. Offline, the supported family of Pareto-optimal solutions (i.e., solutions recoverable by weighted scalarization) is embedded as a submanifold within a Lie group. Exponential map closure preserves membership in the ambient Lie group; drift and reset assumptions keep online latent states within a bounded neighbourhood of the Pareto submanifold, and a training-time feasibility margin guarantees decoded actions remain feasible without post-hoc projection, constructing a \"map\" of the solution landscape. Online, a closed-form proximal navigator traverses this submanifold via a unified Riemannian gradient flow driven by a singular perturbation potential field, inducing dual-timescale dynamics that prioritize constraint restoration over performance optimization. The homeomorphic structure of the submanifold guarantees that varying system parameters and objective weights produce continuous control actions, enabling deployment under unseen conditions without retraining. Validated on a nonconvex control task and real-time multi-objective optimal power flow, GPC achieves 100% feasibility, 0.30% oracle suboptimality, and 12.3 ms decisions while shifting from constraint recovery to economic dispatch. Under branch-admittance uncertainty, it remains 100% feasible without retraining, whereas model-free baselines produce no feasible dispatches.",
+      "date": "2026-05-11",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2605.09824v1",
+      "tags": [
+        "eess.SY",
+        "stochastic",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.09824",
+      "arxiv_id": "2605.09824v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261451661",
+      "title": "EXPRESS: Information Sharing and Manufacturer Rebate Competition",
+      "authors": [
+        "Ha, A.",
+        "Shang, W.",
+        "Wang, Y."
+      ],
+      "abstract": "We investigate the incentive for a retailer to share private demand information with two rebate-offering manufacturers who sell substitutable products through the retailer. We show that the retailer's incentive to share information depends on the proportion of rebate-sensitive consumers, the competition intensity, and whether the retailer can charge a side payment for sharing the information. When the retailer cannot charge a side payment, we show that he will not voluntarily share information with a monopolistic manufacturer, but he may do so with none, one or both of the manufacturers when there is competition. Interestingly, we find that more intense competition or a smaller proportion of rebate-sensitive consumers may benefit a manufacturer if it induces the retailer to share information with her. When the retailer can charge a side payment, we consider the two cases when he either contracts concurrently or sequentially with the manufacturers for sharing the information. We show that the retailer always prefers concurrent contracting, which induces the system-optimal information sharing decision, over sequential contracting.",
+      "date": "2026-05-11",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261451661",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261451661",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
