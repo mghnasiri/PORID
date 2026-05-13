@@ -1,0 +1,297 @@
+{
+  "date": "2026-05-13",
+  "generated_at": "2026-05-13T09:51:56.257895+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2605.11990",
+      "title": "Securing the Flow: Maritime Energy Resilience under Correlated and Decision-Dependent Disruptions",
+      "authors": [
+        "Monit Sharma",
+        "Hoong Chuin Lau"
+      ],
+      "abstract": "We develop a two-stage stochastic multi-commodity flow model to design a resilient maritime energy supply network under correlated chokepoint disruptions. A planner selects strategic inventories and infrastructure activations prior to uncertainty resolution, then routes crude oil, LNG, LPG, and fertilizer through a capacitated network. Three features distinguish this model: disruption scenarios are \\emph{correlated}, reflecting the reality that proximate chokepoints (e.g., Hormuz, Bab el-Mandeb) fail jointly; scenario probabilities depend endogenously on first-stage decisions via affine distortion, formalizing \\emph{risk exposure through utilization}; and a mean-CVaR objective mitigates tail-risk shortages. Methodologically, the decision-dependent probability model admits an exact MILP reformulation via McCormick linearization. CVaR preserves scenario-wise decomposability, and our Benders decomposition with corridor-based group-failure cuts converges finitely. The model is calibrated to Indian maritime energy imports (16 nodes, 28 arcs) using EIA, UNCTAD, World Bank, and operational data from the 2026 Hormuz crisis. Benders recovers the extensive-form optimum for scenario sizes up to $|S|=729$ with a constant iteration count (10-11). Empirically, the value of the stochastic solution (VSS) is 14.8%; the value of decision-dependent probabilities (VEP) ranges from 0.93% to 8.18%. The mean-CVaR frontier exhibits a design phase transition at confidence level $α\\approx 0.75$. Notably, the value of modeling correlation is identically zero across stress tests: the network's diversified portfolio absorbs joint-corridor disruptions using the same hedging mechanisms as single-corridor disruptions (\\emph{structural joint-failure resilience}). Finally, LPG emerges as the most exposed commodity, whereas crude oil is fully hedgeable via reserves and pipeline bypasses.",
+      "date": "2026-05-12",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2605.11990v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.11990",
+      "arxiv_id": "2605.11990v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.12312",
+      "title": "Transferable Delay-Aware Reinforcement Learning via Implicit Causal Graph Modeling",
+      "authors": [
+        "Chenran Zhao",
+        "Dianxi Shi",
+        "Yaowen Zhang",
+        "Chunping Qiu",
+        "Shaowu Yang"
+      ],
+      "abstract": "Random delays weaken the temporal correspondence between actions and subsequent state feedback, making it difficult for agents to identify the true propagation process of action effects. In cross-task scenarios, changes in task objectives and reward formulations further reduce the reusability of previously acquired task knowledge. To address this problem, this paper proposes a transferable delay-aware reinforcement learning method based on implicit causal graph modeling. The proposed method uses a field-node encoder to represent high-dimensional observations as latent states with node-level semantics, and employs a message-passing mechanism to characterize dynamic causal dependencies among nodes, thereby learning transferable structured representations and environment dynamics knowledge. On this basis, imagination-driven behavior learning and planning are incorporated to optimize policies in the latent space, enabling cross-task knowledge transfer and rapid adaptation. Experimental results show that the proposed method outperforms baseline methods on DMC continuous control tasks with random delays. Cross-task transfer experiments further demonstrate that the learned structured representations and dynamics knowledge can be effectively transferred to new tasks and significantly accelerate policy adaptation.",
+      "date": "2026-05-12",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.12312v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.12312",
+      "arxiv_id": "2605.12312v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.11362",
+      "title": "Causal Fairness for Survival Analysis",
+      "authors": [
+        "Drago Plecko"
+      ],
+      "abstract": "In the data-driven era, large-scale datasets are routinely collected and analyzed using machine learning (ML) and artificial intelligence (AI) to inform decisions in high-stakes domains such as healthcare, employment, and criminal justice, raising concerns about the fairness behavior of these systems. Existing works in fair ML cover tasks such as bias detection, fair prediction, and fair decision-making, but largely focus on static settings. At the same time, fairness in temporal contexts, particularly survival/time-to-event (TTE) analysis, remains relatively underexplored, with current approaches to fair survival analysis adopting statistical fairness definitions, which, even with unlimited data, cannot disentangle the causal mechanisms that generate disparities. To address this gap, we develop a causal framework for fairness in TTE analysis, enabling the decomposition of disparities in survival into contributions from direct, indirect, and spurious pathways. This provides a human-understandable explanation of why disparities arise and how they evolve over time. Our non-parametric approach proceeds in four steps: (1) formalizing the necessary assumptions about censoring and lack of confounding using a graphical model; (2) recovering the conditional survival function given covariates; (3) applying the Causal Reduction Theorem to reframe the problem in a form amenable to causal pathway decomposition; (4) estimating the effects efficiently. Finally, our approach is used to analyze the temporal evolution of racial disparities in outcome after admission to an intensive care unit (ICU).",
+      "date": "2026-05-12",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.11362v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "healthcare-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.11362",
+      "arxiv_id": "2605.11362v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.12308",
+      "title": "In-context learning to predict critical transitions in dynamical systems",
+      "authors": [
+        "Yunus Sevinchan",
+        "Juan Nathaniel",
+        "Kai Ueltzhöffer",
+        "Carla Roesch",
+        "Tobias Weber",
+        "Vaios Laschos",
+        "Hang Fan",
+        "Gregor Ramien",
+        "Johannes Haux",
+        "Pierre Gentine",
+        "Benjamin Herdeanu"
+      ],
+      "abstract": "Critical transitions - abrupt, often irreversible changes in system dynamics - arise across human and natural systems, often with catastrophic consequences. Real-world observations of such shifts remain scarce, preventing the development of reliable early warning systems. Conventional statistical and spectral indicators, such as increasing variance, tend to fail under realistic conditions of limited data and correlated noise, whereas existing deep learning classifiers do not extrapolate beyond their training data distribution. In this work, we introduce TipPFN, an in-context learning (ICL) framework that uses a prior-data fitted network to infer a system's proximity to a critical transition. Trained on our novel synthetic data generator, which is based on canonical bifurcation scenarios coupled to diverse, randomized stochastic dynamics, TipPFN flexibly capitalizes on contexts of various sizes, complexity and dimensionalities. We demonstrate robust, state-of-the-art early detection of critical transitions in previously unseen tipping regimes, sim-to-real examples, and real-world observations in both ICL and zero-shot settings.",
+      "date": "2026-05-12",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.12308v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.12308",
+      "arxiv_id": "2605.12308v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2025.1178",
+      "title": "Local Search for Integer Quadratic Programming",
+      "authors": [
+        "He, X.",
+        "Lin, P.",
+        "Jiang, T.",
+        "Cai, S."
+      ],
+      "abstract": "Integer quadratic programming (IQP) is an important problem in operations research. Local search is a powerful primal heuristic method for solving hard problems, but the research on local search algorithms for solving IQP is still in its early stages. This paper introduces an efficient local search algorithm called LS-IQCQP, which stands for “local search for integer quadratically constrained quadratic programming.” The algorithm is designed for solving general IQP, and it is capable of handling cases where quadratic terms appear in the objective function, constraints, or both. We propose four newly designed operators: the root operator for feasibility and three operators—inequality exploration, equality balance, and unconstrained free operator—for optimizing the objective function. To evaluate the quality of these operations, a weighted scoring function is introduced. Based on the scoring function, LS-IQCQP iteratively applies effective operations and employs a WalkSAT-like approach (a classic local search algorithm for satisfiability problems) by randomly selecting an operation to escape local optima. Experiments are conducted on standard IQP benchmarks from the Quadratic Programming Library (QPLIB) and Mixed-Integer Nonlinear Programming Library (MINLPLIB), comparing LS-IQCQP with several state-of-the-art IQP solvers. Experimental results demonstrate that LS-IQCQP is competitive with the most powerful commercial solver Gurobi and other state-of-the-art solvers in terms of finding a good feasible solution quickly. Moreover, LS-IQCQP has established six new records for QPLIB and MINLPLIB open instances by finding the new best-known solutions.\n                  History: Accepted by Erwin Pesch, Area Editor for Heuristic Search &amp; Approximation Algorithms.\n                  Funding: This research was supported by the National Key Research and Development Program of China [Grant 2023YFA1009500].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2025.1178 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2025.1178 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-05-12",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2025.1178",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2025.1178",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Gurobi"
+      ]
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2025.1210",
+      "title": "Dynamic Transmission Line Switching Amid Wildfire-Prone Weather Under Decision-Dependent Uncertainty",
+      "authors": [
+        "Estrada-Garcia, J.",
+        "Jiang, R.",
+        "Moreira, A."
+      ],
+      "abstract": "During dry and windy seasons, environmental conditions significantly increase the risk of wildfires, exposing power grids to disruptions caused by transmission line failures. Wildfire propagation exacerbates grid vulnerability, potentially leading to prolonged power outages. To address this challenge, we propose a multistage optimization model that dynamically adjusts transmission grid topology in response to wildfire propagation, aiming to develop an optimal response policy. By accounting for decision-dependent uncertainty, where line survival probabilities depend on usage, we employ distributionally robust optimization to model uncertainty in line survival distributions. We adapt the stochastic nested decomposition algorithm and derive a deterministic upper bound for its finite convergence. To enhance computational efficiency, we exploit the Lagrangian dual problem structure for a faster generation of Lagrangian cuts. Using realistic data from the California transmission grid, we demonstrate the superior performance of dynamic response policies against two-stage alternatives through a comprehensive case study. In addition, after solving the multistage formulation, we construct easy-to-implement policies that significantly reduce computational burden while maintaining good performance in real-time deployment.\n                  History: Accepted by Russell Bent, Area Editor for Network Optimization: Algorithms and Applications.\n                  Funding: This work was supported by the U.S. Department of Energy, Office of Electricity [Grant DE-AC02-05CH11231]. The work of R. Jiang was supported in part by the U.S. National Science Foundation, Division of Electrical, Communications and Cyber Systems [Grant ECCS-1845980] and the U.S. Air Force Office of Scientific Research [Grant FA9550-23-1-0323].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2025.1210 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2025.1210 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-05-12",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2025.1210",
+      "tags": [
+        "stochastic",
+        "decomposition",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2025.1210",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.12432",
+      "title": "Stochastic block coordinate and function alternation for multi-objective optimization and learning",
+      "authors": [
+        "Trang H. Tran",
+        "Luis Nunes Vicente"
+      ],
+      "abstract": "Multi-objective optimization is central to many engineering and machine learning applications, where multiple objectives must be optimized in balance. While multi-gradient based optimization methods combine these objectives in each step, such methods require computing gradients with respect to all variables at every iteration, resulting in high computational costs in large-scale settings. In this work, we propose a framework that simultaneously alternates the optimization of each objective and the (stochastic) gradient update with respect to each variable block. Our framework reduces per-iteration computational cost while enabling exploration of the Pareto front by allocating a prescribed number of gradient steps to each objective. We establish rigorous convergence guarantees across several stochastic smooth settings, including convex, non-convex, and Polyak-Lojasiewicz conditions, recovering classical convergence rates of single-objective methods. Numerical experiments demonstrate that our framework outperforms non-alternating methods on multi-target regression and produces a competitive Pareto front approximation, highlighting its computational efficiency and practical effectiveness.",
+      "date": "2026-05-12",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2605.12432v1",
+      "tags": [
+        "math.OC",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.12432",
+      "arxiv_id": "2605.12432v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.11838",
+      "title": "Gradient Clipping Beyond Vector Norms: A Spectral Approach for Matrix-Valued Parameters",
+      "authors": [
+        "Alexander Yukhimchuk",
+        "Mladen Kolar",
+        "Martin Takáč",
+        "Sayantan Choudhury"
+      ],
+      "abstract": "Gradient clipping is a standard safeguard for training neural networks under noisy, heavy-tailed stochastic gradients; yet, most clipping rules treat all parameters as vectors and ignore the matrix structure of modern architectures. We show empirically that data outliers often amplify only a small number of leading singular values in layer-wise gradient matrices, while the rest of the spectrum remains largely unchanged. Motivated by this phenomenon, we propose spectral clipping, which stabilizes training by clamping singular values that exceed a threshold while preserving the singular directions. This framework generalizes classical gradient norm clipping and can be easily integrated into existing optimizers. We provide a convergence analysis for non-convex optimization with spectrally clipped SGD, yielding the optimal $\\mathcal{O}\\left(K^{\\frac{2 - 2α}{3α- 2}}\\right)$ rate for heavy-tailed noise. To minimize hyperparameter tuning, we introduce layer-wise adaptive thresholds based on moving averages or sliding-window quantiles of the top singular values. Finally, we develop efficient implementations that clip only the top $r$ singular values via randomized truncated SVD, avoiding full decompositions for large layers. We demonstrate competitive performance across synthetic heavy-tailed settings and neural network training tasks.",
+      "date": "2026-05-12",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.11838v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.11838",
+      "arxiv_id": "2605.11838v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.11586",
+      "title": "Learning Weakly Communicating Average-Reward CMDPs: Strong Duality and Improved Regret",
+      "authors": [
+        "Kihyun Yu",
+        "Beomhan Baek",
+        "Dabeen Lee"
+      ],
+      "abstract": "We study infinite-horizon average-reward constrained Markov decision processes (CMDPs) under the weakly communicating assumption. Our contributions are twofold. First, we establish strong duality for weakly communicating average-reward CMDPs over stationary policies with finite state and action spaces. Despite the absence of a linear programming formulation and the resulting nonconvexity under the weakly communicating setting, we show that strong duality still holds by carefully exploiting the geometric structure of the occupation measure set. Second, building on this result, we propose a primal--dual clipped value iteration algorithm for learning weakly communicating average-reward linear CMDPs. Our algorithm achieves regret and constraint violation bounds of $\\widetilde{\\mathcal{O}}(T^{2/3})$, improving upon the best known bounds, where $T$ denotes the number of interactions. Our approach extends clipped value iteration to the constrained setting and adapts it to a finite-horizon approximation, which stabilizes the dual variable and is crucial for achieving improved regret bounds. To analyze this, we develop a novel approach based on strong duality that enables the decomposition of the composite Lagrangian regret into separate bounds on regret and constraint violation.",
+      "date": "2026-05-12",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.11586v1",
+      "tags": [
+        "cs.LG",
+        "linear-programming",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.11586",
+      "arxiv_id": "2605.11586v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.11526",
+      "title": "Efficient and provably convergent end-to-end training of deep neural networks with linear constraints",
+      "authors": [
+        "Zonglin Yang",
+        "Zhexuan Gu",
+        "Yancheng Yuan"
+      ],
+      "abstract": "Training a deep neural network with the outputs of selected layers satisfying linear constraints is required in many contemporary data-driven applications. While this can be achieved by incorporating projection layers into the neural network, its end-to-end training remains challenging due to the lack of rigorous theory and efficient algorithms for backpropagation. A key difficulty in developing the theory and efficient algorithms for backpropagation arose from the nonsmoothness of the solution mapping of the projection layer. To address this bottleneck, we introduce an efficiently computable HS-Jacobian to the projection layer. Importantly, we prove that the HS-Jacobian is a conservative mapping for the projection operator onto the polyhedral set, enabling its seamless integration into the nonsmooth automatic differentiation framework for backpropagation. Therefore, many efficient algorithms, such as Adam, can be applied for end-to-end training of deep neural networks with linear constraints. Particularly, we establish convergence guarantees of the HS-Jacobian based Adam algorithm for training linearly constrained deep neural networks. Extensive experiment results on several important applications, including finance, computer vision, and network architecture design, demonstrate the superior performance of our method compared to other existing popular methods.",
+      "date": "2026-05-12",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2605.11526v1",
+      "tags": [
+        "math.OC",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.11526",
+      "arxiv_id": "2605.11526v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
