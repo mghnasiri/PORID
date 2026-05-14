@@ -1,0 +1,330 @@
+{
+  "date": "2026-05-14",
+  "generated_at": "2026-05-14T09:39:49.523075+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1002-net.70050",
+      "title": "The Orienteering Problem With Heterogeneous Drones",
+      "authors": [
+        "Cheng, C.",
+        "Yu, Z.",
+        "Yu, L.",
+        "Yu, Q."
+      ],
+      "abstract": "ABSTRACT\n                  Motivated by real‐world applications in logistics and post‐disaster relief, this study introduces a novel variant of the orienteering problem, termed the orienteering problem with heterogeneous drones (OP‐HD). In this problem, a single truck collaborates with multiple heterogeneous drones to serve a subset of customers. While the truck is stationed at a customer location, multiple drones can be launched simultaneously, each capable of performing multiple trips. The objective is to maximize the total collected profit within a limited time horizon. We formulate the OP‐HD as a mixed‐integer linear programming model and discuss potential extensions to accommodate broader application scenarios. To solve the problem efficiently, we develop an adaptive large neighborhood search (ALNS) heuristic with customized destroy and repair operators. Computational experiments based on classical Solomon benchmark instances are conducted to evaluate the effectiveness of the proposed ALNS algorithm, assess the advantages of the profit‐oriented OP‐HD model, and analyze the impact of key parameter settings. The results demonstrate that the truck‐drone cooperative system can serve more customers and achieve higher profits within a limited time horizon compared to a truck‐only system. Furthermore, the advantage of employing heterogeneous drones becomes more significant in scenarios where customers are spatially clustered. The results further show that time is the primary operational constraint, and that improving battery capacity, energy efficiency, and drone speed enhances system profitability. Finally, a case study based on delivery areas in North Carolina is conducted to demonstrate the practical applicability of the proposed model.",
+      "date": "2026-05-14",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70050",
+      "tags": [
+        "linear-programming",
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70050",
+      "score": 65.0
+    },
+    {
+      "id": "arxiv-2605.13702",
+      "title": "Adaptive mine planning under geological uncertainty: A POMDP framework for sequential decision-making",
+      "authors": [
+        "Hamza Khalifi",
+        "Jef Caers",
+        "Yassine Taha",
+        "Mostafa Benzaazoua",
+        "Abdellatif Elghali"
+      ],
+      "abstract": "Strategic mine production scheduling under geological uncertainty is conventionally formulated as a stochastic optimization problem in which a fixed extraction sequence and routing decisions are computed ex ante. This plan-driven paradigm treats uncertainty as passive: decisions are hedged across geological scenarios, but planning does not anticipate how future observations will inform future decisions. We propose a different perspective by formulating mine scheduling as a Partially Observable Markov Decision Process (POMDP), in which extraction and routing decisions are made sequentially with planning explicitly integrating the expectation of future belief updates. To achieve computational tractability, we introduce a hybrid SA-POMDP architecture that combines simulated annealing-based (SA) value approximation with ensemble-based belief updating via ensemble smoother with multiple data assimilation (ES-MDA). At each decision epoch, candidate actions are evaluated through their expected long-term value under the current belief, and the belief is updated as mining observations are assimilated. This yields an adaptive policy rather than a fixed plan. We evaluate the framework on a copper-gold open-pit mining complex with multiple processing destinations. Under a statistically consistent prior, the SA-POMDP reduces the expectation-reality gap from 22.3% to 4.6%, improving realized NPV by USD8.4M relative to one-shot stochastic optimization. Under systematic prior misspecification of 10%, the adaptive framework outperforms static planning by up to USD44.6M (36.9%), demonstrating structural robustness beyond scenario hedging. These results show that sequential belief updating transforms geological uncertainty from a passive constraint into an active component of value creation.",
+      "date": "2026-05-13",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2605.13702v1",
+      "tags": [
+        "cs.AI",
+        "metaheuristics",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.13702",
+      "arxiv_id": "2605.13702v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-net.70045",
+      "title": "Self‐Service and Home Delivery Combined: Coordinating the Route of a Mobile Parcel Locker With the Delivery Tasks of Its Human Driver",
+      "authors": [
+        "Boysen, N.",
+        "Briskorn, D.",
+        "Schwerdfeger, S."
+      ],
+      "abstract": "ABSTRACT\n                  In response to the increasing volume of parcels, last‐mile delivery innovations are exploring the integration of multiple delivery modes. The most prominent examples are delivery vans that, next to being the base for the delivery tasks of their human drivers, also function as mobile launching platforms for drones or autonomous delivery robots. This paper investigates a novel approach involving the cooperation of a mobile parcel locker, which repositions continuously to facilitate self‐pickup by urban customers, alongside the parallel home‐delivery tasks of its human driver. For a predetermined set of customers, divided into home‐delivery and self‐service categories, we aim to identify a synchronized route for a locker‐driver tandem that minimizes the total delivery duration. Based on a comprehensive analysis of the problem's computational complexity, we develop efficient solution methods for the deterministic version of the problem. Additionally, we address the scenario with stochastic response times of self‐service customers. From a managerial perspective, we examine the service‐cost trade‐off: accommodating convenient pickup times for self‐service customers can disrupt route efficiency, and vice versa. Our findings indicate that effective synchronization of both delivery modes can provide a suitable balance between service quality and operational efficiency.",
+      "date": "2026-05-14",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70045",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70045",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.13586",
+      "title": "HetScene: Heterogeneity-Aware Diffusion for Dense Indoor Scene Generation",
+      "authors": [
+        "Zini Chen",
+        "Junming Huang",
+        "Rong Zhang",
+        "Jiamin Xu",
+        "Cheng Peng",
+        "Chi Wang",
+        "Weiwei Xu"
+      ],
+      "abstract": "Generating controllable and physically plausible indoor scenes is a pivotal prerequisite for constructing high-fidelity simulation environments for embodied AI. However, existing deeplearning-based methods usually treat all objects as homogeneous instances within a unified generation process. While effective for sparse and simplistic layouts, they struggle to model realistic layouts with dense object arrangements and complex spatial dependencies, leadingto limited scalability and degraded physical plausibility. To deal with these challenges, we revisit indoor layout generation from the perspective of structural heterogeneity and decompose the objects into primary objects and secondary objects according to their distinct roles in shaping a scene. Based on this decomposition, we propose HetScene, a heterogeneous two-stage generation framework that decouples indoor layout synthesis into Structural Layout Generation (SLG) and Contextual Layout Generation (CLG). SLG first generates globally coherent structural layouts with only primary objects conditioned on text descriptions, top-down binary room masks, and spatial relation graphs, establishing a stable global macro-skeleton of large core furniture.",
+      "date": "2026-05-13",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2605.13586v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.13586",
+      "arxiv_id": "2605.13586v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.13568",
+      "title": "Dynamical Predictive Modelling of Cardiovascular Disease Progression Post-Myocardial Infarction via ECG-Trained Artificial Intelligence Model",
+      "authors": [
+        "Riccardo Cavarra",
+        "Lupo Lovatelli",
+        "Shaheim Ogbomo-Harmitt",
+        "Shahid Aziz",
+        "Adelaide De Vecchi",
+        "Andrew King",
+        "Oleg Aslanidi"
+      ],
+      "abstract": "Myocardial infarction (MI) is a leading cause of death, and its adverse outcomes are urgent to predict. Yet ECG-based prognostic models underperform because deep learning requires large, labelled datasets, which are scarce in medicine. Foundation models can learn from unlabelled ECGs via selfsupervision, but medically relevant training strategies remain underexplored. We propose a pretrained artificial intelligence model that combines patient-specific temporal information using contrastive learning with supervised multitask heads, then fine-tunes on post-MI outcome prediction. The proposed model outperformed a model trained from scratch (0.794 vs 0.608 AUC) showing that clinically structured ECG modelling improves classification in limited data regimes.",
+      "date": "2026-05-13",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.13568v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.13140/RG.2.2.29492.21124",
+      "arxiv_id": "2605.13568v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.13555",
+      "title": "Generating synthetic computed tomography for radiotherapy: SynthRAD2025 challenge report",
+      "authors": [
+        "Viktor Rogowski",
+        "Maarten L. Terpstra",
+        "Niklas Wahl",
+        "Florian Kamp",
+        "Erik van der Bijl",
+        "Arthur Jr. Galapon",
+        "Christopher Kurz",
+        "Bowen Xin",
+        "Zhengxiang Sun",
+        "Hollie Min",
+        "Gregg Belous",
+        "Jason Dowling",
+        "Yan Xia",
+        "Siyuan Mei",
+        "Fuxin Fan",
+        "Arthur Longuefosse",
+        "Javier Sequeiro Gonzalez",
+        "Miguel Diaz Benito",
+        "Alvaro Garcia Martin",
+        "Fabien Baldacci",
+        "Valentin Boussot",
+        "Cédric Hémon",
+        "Jean-Claude Nunes",
+        "Jean-Louis Dillenseger",
+        "Zhiyuan Zhang",
+        "Jinghua Cai",
+        "Han Bing",
+        "Tan Zuopeng",
+        "Ricardo Brioso",
+        "Daniele Loiacono",
+        "Guillaume Landry",
+        "Adrian Thummerer",
+        "Matteo Maspero"
+      ],
+      "abstract": "Radiation therapy (RT) requires precise dose delivery over multiple fractions, with CT fundamental for treatment planning due to its electron density information. Repeated CT acquisitions impose radiation exposure and logistical burdens, MRI lacks electron density, and cone-beam CT (CBCT) requires correction for dose calculation. Synthetic CT (sCT) generation addresses these by converting MRI or CBCT into CT-equivalent images with accurate Hounsfield Unit (HU) values, enabling MRI-only RT and CBCT-based adaptive workflows. Building on SynthRAD2023, SynthRAD2025 benchmarked sCT methods on 2,362 patients from five European centers across head and neck, thorax, and abdomen. Two tasks: MRI-to-CT (890 cases) and CBCT-to-CT (1,472 cases), evaluated via image similarity (MAE, PSNR, MS-SSIM), segmentation (Dice, HD95), and dosimetric metrics from photon and proton plans. With 803 participants and 12/13 valid submissions, Task 1 top performance reached MAE $64.8\\pm21.3$ HU, PSNR $\\sim$30 dB, MS-SSIM $\\sim$0.936, Dice 0.79, photon $γ_{2\\%/2\\text{mm}}>98\\%$, proton $γ\\approx85\\%$. Task 2 improved: MAE $48.3\\pm13.4$ HU, PSNR 32.6 dB, MS-SSIM 0.968, Dice 0.86, photon $γ>99\\%$, proton $γ\\approx89\\%$. Strong image--segmentation correlations ($ρ=0.78$--$0.79$) but moderate dose correlations confirmed image quality is insufficient as a dosimetric surrogate. Head-and-neck cases were most consistent; thoracic and abdominal cases showed greater variability. Residual errors at tissue interfaces propagate along beam paths, affecting proton dose more than photon. SynthRAD2025 demonstrates that deep learning yields clinically relevant sCTs, especially for CBCT-to-CT, while identifying persistent MRI-to-CT challenges and underscoring dose-based evaluation as essential for clinical validation.",
+      "date": "2026-05-13",
+      "source": "arXiv",
+      "source_detail": "physics.med-ph",
+      "url": "http://arxiv.org/abs/2605.13555v1",
+      "tags": [
+        "physics.med-ph",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.13555",
+      "arxiv_id": "2605.13555v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.13542",
+      "title": "RealICU: Do LLM Agents Understand Long-Context ICU Data? A Benchmark Beyond Behavior Imitation",
+      "authors": [
+        "Chengzhi Shen",
+        "Weixiang Shen",
+        "Tobias Susetzky",
+        "Chen",
+        "Chen",
+        "Jun Li",
+        "Yuyuan Liu",
+        "Xuepeng Zhang",
+        "Zhenyu Gong",
+        "Daniel Rueckert",
+        "Jiazhen Pan"
+      ],
+      "abstract": "Intensive care units (ICU) generate long, dense and evolving streams of clinical information, where physicians must repeatedly reassess patient states under time pressure, underscoring a clear need for reliable AI decision support. Existing ICU benchmarks typically treat historical clinician actions as ground truth. However, these actions are made under incomplete information and limited temporal context of the underlying patient state, and may therefore be suboptimal, making it difficult to assess the true reasoning capabilities of AI systems. We introduce RealICU, a hindsight-annotated benchmark for evaluating large language models (LLMs) under realistic ICU conditions, where labels are created after senior physicians review the full patient trajectory. We formulate four physician-motivated tasks: assess Patient Status, Acute Problems, Recommended Actions, and Red Flag actions that risk unsafe outcomes. We partition each trajectory with 30-min windows and release two datasets: RealICU-Gold with 930-window annotations from 94 MIMIC-IV patients, and RealICU-Scale with 11,862 windows extended by Oracle, a physician-validated LLM hindsight labeler. Existing LLMs including memory-augmented ones performed poorly on RealICU, exposing two failure modes: a recall-safety tradeoff for clinical recommendations, and an anchoring bias to early interpretations of the patient. We further introduce ICU-Evo to study structured-memory agents that improves long-horizon reasoning but does not fully eliminate safety failures. Together, RealICU provides a clinically grounded testbed for measuring and improving AI sequential decision-support in high-stakes care. Project page: https://chengzhi-leo.github.io/RealICU-Bench/",
+      "date": "2026-05-13",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2605.13542v1",
+      "tags": [
+        "cs.AI",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.13542",
+      "arxiv_id": "2605.13542v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.13717",
+      "title": "Tight Sample Complexity Bounds for Entropic Best Policy Identification",
+      "authors": [
+        "Amer Essakine",
+        "Claire Vernade"
+      ],
+      "abstract": "We study best-policy identification for finite-horizon risk-sensitive reinforcement learning under the entropic risk measure. Recent work established a constant gap in the exponential horizon dependence between lower and upper bounds on the number of samples required to identify an approximately optimal policy. Precisely, known lower bounds scale in $Ω(e^{|β| H})$ where $H$ is the horizon of the MDP, while the state-of-the-art upper bound achieves at best $O(e^{2|β| H})$ (arXiv:2506.00286v2) using a generative model. We show that this extra exponential factor can be traced to overly loose concentration control for exponential utilities. To close this open gap, we revisit the analysis of this problem through a forward-model based algorithm building on KL-based exploration bonuses that we adapt to the entropic criterion. The improvement we get is due to two main novel technical innovations. We leverage the smoothness properties of the exponential utility to derive sharper concentration bounds, and we propose a new stopping rule that exploits further this tightness to obtain a sample complexity that matches the lower bound.",
+      "date": "2026-05-13",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.13717v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.13717",
+      "arxiv_id": "2605.13717v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.13128",
+      "title": "Amortized Neural Clustering of Time Series based on Statistical Features",
+      "authors": [
+        "Ángel López-Oriona",
+        "Ying Sun"
+      ],
+      "abstract": "This paper introduces an algorithm-agnostic approach to feature-based time series clustering via amortized neural inference. By training neural networks to approximate the optimal partitioning rule from simulated data, the proposed framework reduces reliance on conventional clustering methods, such as $K$-means, $K$-medoids, or hierarchical clustering, and their associated objective functions and heuristics. Leveraging statistical features, such as autocorrelations and quantile autocorrelations, the approach learns a data-driven affinity structure from which clustering partitions can be recovered, without requiring explicit prior specification of cluster shapes or structures. In addition, one version of the method can automatically determine the number of clusters, avoiding ad-hoc selection procedures. Comprehensive empirical studies show that the proposed framework achieves competitive or superior clustering accuracy relative to traditional methods, even in challenging scenarios where competing techniques are provided with the true number of clusters. An application to financial time series of stock returns illustrates its practical utility. By reducing the need for algorithm selection and calibration, the proposed framework opens new possibilities for automated, adaptive, and data-driven clustering of temporal data across scientific and industrial domains.",
+      "date": "2026-05-13",
+      "source": "arXiv",
+      "source_detail": "stat.ML",
+      "url": "http://arxiv.org/abs/2605.13128v1",
+      "tags": [
+        "stat.ML",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.13128",
+      "arxiv_id": "2605.13128v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.13786",
+      "title": "Interpretable Machine Learning for Antepartum Prediction of Pregnancy-Associated Thrombotic Microangiopathy Using Routine Longitudinal Laboratory Data",
+      "authors": [
+        "Chuanchuan Sun",
+        "Zhen Yu",
+        "Qin Fan",
+        "Qingchao Chen",
+        "Feng Yu"
+      ],
+      "abstract": "Background: Pregnancy-associated thrombotic microangiopathy (P-TMA) is rare but life-threatening. Early risk prediction before overt clinical presentation remains challenging, as the associated laboratory abnormalities are subtle, multidimensional, and frequently masked by common physiological changes such as gestational thrombocytopenia and pregnancy-related proteinuria, thus overlapping heavily with benign obstetric and renal conditions. This complexity is poorly captured by univariate or rule-based approaches; however, it is addressable by machine learning, which can extract latent, time-dependent risk signatures from longitudinal clinical tests. Methods: This retrospective study included 300 pregnancies comprising 142 P-TMA cases and 158 controls. After exclusion of identifiers and non-informative variables, 146 longitudinal laboratory predictors were retained. Participants were divided into a training cohort (80%) and a held-out test cohort (20%) using stratified sampling. Five algorithms were evaluated: logistic regression, support vector machine with radial basis function kernel, random forest, extra trees, and gradient boosting. The final model was selected by mean cross-validated AUROC, refitted on the full training cohort, and evaluated once in the held-out test cohort. Interpretability analyses examined global feature importance and distributional patterns of leading predictors. Results: Gradient boosting was prespecified by cross-validation in the training cohort. The model achieved an AUROC of 0.872 (95% CI: 0.769-0.952) and an AUPRC of 0.883 (95% CI: 0.780-0.959) in a held-out test cohort, with sensitivity of 0.750 and specificity of 0.812. Conclusions: Longitudinal clinical laboratory tests obtained during routine care contained informative and clinically plausible signals for P-TMA risk. Notably, cystatin C at week 6 showed promise as an early monitoring indicator.",
+      "date": "2026-05-13",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.13786v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.13786",
+      "arxiv_id": "2605.13786v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
