@@ -1,0 +1,302 @@
+{
+  "date": "2026-05-15",
+  "generated_at": "2026-05-15T09:53:13.161974+00:00",
+  "publications": [
+    {
+      "id": "s2-5339d3a9dcfe",
+      "title": "An Intelligent Optimization for the Vehicle Routing of Multicommodity and Multitrip Supply Chain Logistics in Internet of Things",
+      "authors": [
+        "Heng Wang",
+        "Lingxi Meng",
+        "Yanzhong Liu",
+        "Xiaoyi Yin",
+        "Jinyu Wang",
+        "Zhenfeng Wang",
+        "Zhanwu Wang"
+      ],
+      "abstract": "In the complex supply chain logistics environment, enterprises face core challenges such as multicommodity transportation, multitrip distribution planning, and supply chain stability maintenance. However, existing studies often fail to fully balance workload allocation equilibrium and dynamic coordination of supply chain safety inventory (SI) when addressing multicommodity and multitrip distribution issues, leading to practical operational problems such as cost fluctuations, low distribution efficiency, and inventory imbalance. Thus, achieving workload balance, optimizing vehicle routes, and setting appropriate SI are crucial for improving supply chain efficiency and stability. This study constructs a multicommodity and multitrip supply chain logistics vehicle routing optimization model considering SI and workload balance constraint (WBC) and uses an improved ant colony optimization (IACO) for solution. Internet of Things (IoT) technology enables real-time inventory monitoring, data collection, and demand forecasting using historical data, supporting intelligent decision-making. SI is critical for supply chain stability; its proportion positively correlates with optimal cost, path length, and vehicle count, with specific dynamics analyzed in simulations. The WBC reduces total costs and overtime expenses, with larger scale scenarios (70 collection points) showing the most significant improvement (13.09% cost reduction). Taking some areas in Runan County, Zhumadian City as examples, the results verify the model’s comprehensiveness and the algorithm’s effectiveness.",
+      "date": "2026-05-15",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.1109/JIOT.2025.3619495",
+      "tags": [
+        "metaheuristics",
+        "vehicle-routing",
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1109/JIOT.2025.3619495",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 70.0
+    },
+    {
+      "id": "crossref-10.1002-net.70050",
+      "title": "The Orienteering Problem With Heterogeneous Drones",
+      "authors": [
+        "Cheng, C.",
+        "Yu, Z.",
+        "Yu, L.",
+        "Yu, Q."
+      ],
+      "abstract": "ABSTRACT\n                  Motivated by real‐world applications in logistics and post‐disaster relief, this study introduces a novel variant of the orienteering problem, termed the orienteering problem with heterogeneous drones (OP‐HD). In this problem, a single truck collaborates with multiple heterogeneous drones to serve a subset of customers. While the truck is stationed at a customer location, multiple drones can be launched simultaneously, each capable of performing multiple trips. The objective is to maximize the total collected profit within a limited time horizon. We formulate the OP‐HD as a mixed‐integer linear programming model and discuss potential extensions to accommodate broader application scenarios. To solve the problem efficiently, we develop an adaptive large neighborhood search (ALNS) heuristic with customized destroy and repair operators. Computational experiments based on classical Solomon benchmark instances are conducted to evaluate the effectiveness of the proposed ALNS algorithm, assess the advantages of the profit‐oriented OP‐HD model, and analyze the impact of key parameter settings. The results demonstrate that the truck‐drone cooperative system can serve more customers and achieve higher profits within a limited time horizon compared to a truck‐only system. Furthermore, the advantage of employing heterogeneous drones becomes more significant in scenarios where customers are spatially clustered. The results further show that time is the primary operational constraint, and that improving battery capacity, energy efficiency, and drone speed enhances system profitability. Finally, a case study based on delivery areas in North Carolina is conducted to demonstrate the practical applicability of the proposed model.",
+      "date": "2026-05-14",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70050",
+      "tags": [
+        "linear-programming",
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70050",
+      "score": 65.0
+    },
+    {
+      "id": "s2-1260ed332727",
+      "title": "Robust Optimization Localization via Ellipsoidal Uncertainty Sets for NLOS Errors Learned From CIR-Based Range Error Prediction",
+      "authors": [
+        "Wenqi Shui",
+        "Rui Cheng",
+        "Xiangxin Zhu",
+        "Fading Zhao",
+        "Shuang Qin"
+      ],
+      "abstract": "In wireless localization, nonline-of-sight (NLOS) propagation in complex environments significantly degrades the time-of-arrival (TOA) positioning accuracy of ultrawideband (UWB) systems. However, existing robust optimization methods mainly rely on interval uncertainty set modeling for NLOS errors, which inherently neglects the nonuniformity and correlation of NLOS errors, with these interval set bounds often being conservatively predefined. To address these issues, this article proposes replacing interval sets with ellipsoidal uncertainty sets for a more accurate characterization of the statistical properties of NLOS errors. In particular, the ellipsoidal uncertainty set is constructed based on the mean vector and covariance matrix of NLOS errors predicted by a deep learning model. Since ellipsoidal uncertainty sets inherently lead to nonconvex formulations, we introduce auxiliary variables for reparameterization and apply the S-lemma, thereby reformulating the original problem into a tractable convex optimization problem. Simulation and experimental results demonstrate that, compared with existing methods, our ellipsoidal set-based approach, which accounts for the nonuniformity and correlation of NLOS errors, significantly improves localization accuracy and robustness across various complex environments.",
+      "date": "2026-05-15",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/JIOT.2026.3666736",
+      "tags": [
+        "stochastic",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1109/JIOT.2026.3666736",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 65.0
+    },
+    {
+      "id": "arxiv-2605.14662",
+      "title": "Scalable Solution of the Stochastic Multi-path Traveling Salesman Problem via Neural Networks",
+      "authors": [
+        "Xiaochen Chou",
+        "Ludovica Di Marco",
+        "Enza Messina"
+      ],
+      "abstract": "The multi-path Traveling Salesman Problem with stochastic travel costs arises in hybrid vehicle routing applications designed for Smart City and City Logistics, where multiple paths exist between each pair of locations. Travel times along these paths are typically affected by real-time traffic conditions and therefore modeled as stochastic. The objective of the problem is to determine a Hamiltonian tour that minimizes the expected total travel cost under uncertainty. In this work, we adopt a two-stage stochastic programming formulation. In the first stage, a predefined route specifying the sequence of locations to be visited is determined, while taking into consideration a second-stage recourse problem that selects the optimal path from the feasible set of alternative paths for each pair of locations, once real-time traffic conditions are realized. To reduce the computational burden imposed by the large number of scenarios required to capture travel time uncertainty, the innovation of this work is the integration of neural network-based surrogate models to approximate the expected value of the second-stage recourse problem. Different architectures and training strategies for the neural networks are proposed and analyzed, with performance evaluated in terms of computation time, solution quality, and generalization capability. Preliminary findings demonstrate the enhanced scalability and practical applicability of the approach for complex vehicle routing problems under uncertainty.",
+      "date": "2026-05-14",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2605.14662v1",
+      "tags": [
+        "math.OC",
+        "vehicle-routing",
+        "stochastic",
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.14662",
+      "arxiv_id": "2605.14662v1",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2605.14489",
+      "title": "A Novel Schur-Decomposition-Based Weight Projection Method for Stable State-Space Neural-Network Architectures",
+      "authors": [
+        "Sergio Vanegas",
+        "Lasse Lensu",
+        "Fredy Ruiz"
+      ],
+      "abstract": "Building black-box models for dynamical systems from data is a challenging problem in machine learning, especially when asymptotic stability guarantees are required. In this paper, we introduce a novel stability-ensuring and backpropagation-compatible projection scheme based on the Schur decomposition for the state matrix of linear discrete-time state-space layers, as well as an alternative pre-factorized formulation of the methodology. The proposed methods dynamically project the quasi-triangular factor of the state matrix's real Schur decomposition onto its nearest stable peer, ensuring stable dynamics with minimal overparameterization. Experiments on synthetic linear systems demonstrate that the method achieves accuracy and convergence rates comparable to those of state-of-the-art stable-system identification techniques, despite a marginal increase in computational complexity. Furthermore, the lower weight count facilitates convergence during training without sacrificing accuracy in stacked neural-network architectures with static nonlinearities targeting real-world datasets. These results suggest that the Schur-based projection provides a numerically robust framework for identifying complex dynamics on par with the State of the Art while satisfying strict asymptotic-stability requirements.",
+      "date": "2026-05-14",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.14489v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "decomposition",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.14489",
+      "arxiv_id": "2605.14489v1",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1002-net.70045",
+      "title": "Self‐Service and Home Delivery Combined: Coordinating the Route of a Mobile Parcel Locker With the Delivery Tasks of Its Human Driver",
+      "authors": [
+        "Boysen, N.",
+        "Briskorn, D.",
+        "Schwerdfeger, S."
+      ],
+      "abstract": "ABSTRACT\n                  In response to the increasing volume of parcels, last‐mile delivery innovations are exploring the integration of multiple delivery modes. The most prominent examples are delivery vans that, next to being the base for the delivery tasks of their human drivers, also function as mobile launching platforms for drones or autonomous delivery robots. This paper investigates a novel approach involving the cooperation of a mobile parcel locker, which repositions continuously to facilitate self‐pickup by urban customers, alongside the parallel home‐delivery tasks of its human driver. For a predetermined set of customers, divided into home‐delivery and self‐service categories, we aim to identify a synchronized route for a locker‐driver tandem that minimizes the total delivery duration. Based on a comprehensive analysis of the problem's computational complexity, we develop efficient solution methods for the deterministic version of the problem. Additionally, we address the scenario with stochastic response times of self‐service customers. From a managerial perspective, we examine the service‐cost trade‐off: accommodating convenient pickup times for self‐service customers can disrupt route efficiency, and vice versa. Our findings indicate that effective synchronization of both delivery modes can provide a suitable balance between service quality and operational efficiency.",
+      "date": "2026-05-14",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70045",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70045",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.14374",
+      "title": "Optimal Pattern Detection Tree for Symbolic Rule-Based Classification",
+      "authors": [
+        "Young-Chae Hong",
+        "Yangho Chen"
+      ],
+      "abstract": "Pattern discovery in data plays a crucial role across diverse domains, including healthcare, risk assessment, and machinery maintenance. In contrast to black-box deep learning models, symbolic rule discovery emerges as a key data mining task, generating human-interpretable rules that offer both transparency and intuitive explainability. This paper introduces the Optimal Pattern Detection Tree (OPDT), a rule-based machine learning model based on novel mixed-integer programming to discover a single optimal pattern in data through binary classification. To incorporate prior knowledge and compliance requirements, we further introduce the Branching Structure Constraints (BSC) framework, which enables decision makers to encode domain knowledge and constraints directly into the model. This optimization-based approach discovers a hidden underlying pattern in datasets, when it exists, by identifying an optimal rule that maximizes coverage while minimizing the false positive rate due to misclassification. Our computational experiments show that OPDT discovers a pattern with optimality guarantees on moderately sized datasets within reasonable runtime.",
+      "date": "2026-05-14",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.14374v1",
+      "tags": [
+        "cs.LG",
+        "integer-programming",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.14374",
+      "arxiv_id": "2605.14374v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.14273",
+      "title": "Generalized Dual Decomposition",
+      "authors": [
+        "Pengyu Zhang",
+        "Ruiwei Jiang"
+      ],
+      "abstract": "We study two-stage stochastic optimization models with mixed-integer decision variables appearing in both stages. For these models, dual decomposition enables parallel computing implementation and can quickly provide a lower bound for the optimal value. However, the lower bound thus obtained is not exact in general due to the lack of strong duality. In this paper, we propose a generalized dual decomposition (GDD) that extends the linear regularizer used in dual decomposition to a general nonlinear one, which still admits parallelization while exhibiting strong duality. By encoding the nonlinear regularizers through parameterization and cutting planes, we establish the convergence of a GDD algorithm to achieve global optimum. In addition, we discuss strategies for solving the GDD scenario subproblems more efficiently, including pruning and valid inequalities. Furthermore, we extend GDD to a more general, constrained form that subsumes, as special cases, robust optimization, chance-constrained programs, and bilevel optimization with multiple followers. Finally, numerical experiments demonstrate the strong duality of GDD, its computational efficacy versus primal (Benders-type) decomposition algorithms, and the speedup through parallel computing.",
+      "date": "2026-05-14",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2605.14273v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.14273",
+      "arxiv_id": "2605.14273v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.15058",
+      "title": "NeuroTrain: Surveying Local Learning Rules for Spiking Neural Networks with an Open Benchmarking Framework",
+      "authors": [
+        "Alessio Caviglia",
+        "Filippo Marostica",
+        "Roberta Bardini",
+        "Alessandro Savino",
+        "Stefano Di Carlo"
+      ],
+      "abstract": "The rapid expansion of spiking neural networks (SNNs) has led to a proliferation of training algorithms that differ widely in biological inspiration, computational structure, and hardware suitability. Despite this progress, the field lacks a unified, fine-grained taxonomy that systematically organizes these approaches and clarifies their conceptual relationships. This survey provides a comprehensive taxonomy of SNN training algorithms, spanning surrogate-gradient backpropagation, local and three-factor learning rules, biologically inspired plasticity mechanisms, ANN-to-SNN conversion pipelines, and non-standard optimization strategies. We analyze each class in terms of its computational principles, learning signals, and locality properties. To support reproducible research, we release NeuroTrain, an open-source snnTorch-based framework that implements a representative set of these algorithms within a unified, modular, and extendable framework, enabling consistent benchmarking across datasets, architectures, and training regimes. By consolidating fragmented literature and providing a reusable benchmarking framework, this survey identifies common patterns, highlights open challenges, and outlines promising directions for future work on scalable, efficient SNN training.",
+      "date": "2026-05-14",
+      "source": "arXiv",
+      "source_detail": "cs.NE",
+      "url": "http://arxiv.org/abs/2605.15058v1",
+      "tags": [
+        "cs.NE",
+        "ml-for-or",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.15058",
+      "arxiv_id": "2605.15058v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.15085",
+      "title": "From Data to Action: Accelerating Refinery Optimization with AI",
+      "authors": [
+        "Dániel Pfeifer",
+        "Ábrahám Papp",
+        "Tibor Bernáth",
+        "Tamás Zoltán Varga",
+        "Márk Czifra",
+        "Botond Szilágyi",
+        "Edith Alice Kovács"
+      ],
+      "abstract": "Nowadays refinery optimization utilizes sheer amounts of data, which can be handled with modern Linear Programming (LP) software, but the interpreting and applying the results remains challenging. Large petrochemical companies use massive models, with hundreds of thousands of input matrix elements. The LP solution is mathematically correct, but simplifications are made in the model, and data supply errors may occur. Therefore, further insight is needed to trust the results. The LP solver does not have a memory, so additional understanding could be gained by analyzing historical data and comparing it to the current plan. As such, machine learning approaches were suggested to support decision making based on the LP solution. Among these, Anomaly Detection tools are proposed to be used in tandem with the LP output. A transformed version of the popular ECOD methodology is applied. New methods are proposed to handle high-dimensional data: choosing the most informative pairs. Then, this is used alongside two 2D Anomaly Detection algorithms, revealing several business opportunities and data supply errors in the MOL refinery scheduling and planning architecture.",
+      "date": "2026-05-14",
+      "source": "arXiv",
+      "source_detail": "stat.ML",
+      "url": "http://arxiv.org/abs/2605.15085v1",
+      "tags": [
+        "stat.ML",
+        "linear-programming",
+        "scheduling",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.15085",
+      "arxiv_id": "2605.15085v1",
+      "score": 55.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
