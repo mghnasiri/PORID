@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-17T09:15:01.606579+00:00",
+  "generated_at": "2026-05-18T11:16:20.604673+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1625,
+      "github_stars": 1626,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 588,
+      "github_stars": 590,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13488,
+      "github_stars": 13490,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -571,11 +571,11 @@
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
       "github_open_issues": 102,
       "github_recent_prs": [
+        "scheduling and graph_base update",
+        "Export from google3 (flatzinc & sorted_interval_list)",
         "Update to or-tools 9.15 base",
         "Add more ortools/util tests, update benchmarks",
-        "Fix variable_and_expressions_with_counters_test",
-        "Lperron dev",
-        "bazel: bump highs to 1.14.0"
+        "Fix variable_and_expressions_with_counters_test"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -604,7 +604,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 987,
+      "github_stars": 988,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -1131,8 +1131,8 @@
         "python"
       ],
       "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6211,
-      "github_open_issues": 174,
+      "github_stars": 6212,
+      "github_open_issues": 175,
       "github_recent_prs": [
         "Improve solver_path tests",
         "DNLP sync",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "With Timefold Solver 2.1.0, we return to a predictable release schedule. We have fixed some issues that slipped through the cracks of the major release, made more tweaks to multi-threaded solving, and",
-      "github_stars": 1656,
-      "github_open_issues": 77,
+      "github_stars": 1657,
+      "github_open_issues": 75,
       "github_recent_prs": [
+        "deps: bump the regular group with 4 updates",
+        "deps: bump the quarkus group with 4 updates",
+        "deps: bump the regular group with 2 updates",
         "chore: introduce the pom.xml structure",
-        "feat: implement direct testing of score/impact of constraints",
-        "perf: perform shadow variable update exactly once",
-        "docs: add link to upgrade from OptaPlanner",
-        "ci: re-enable Revapi now that 2.x is stable"
+        "feat: implement direct testing of score/impact of constraints"
       ]
     },
     {
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
-      "github_stars": 2460,
+      "github_stars": 2461,
       "github_open_issues": 357,
       "github_recent_prs": [
         "Amend documentation of PyROS `BudgetSet.budget_membership_mat`",
@@ -1449,14 +1449,14 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
-      "github_stars": 2439,
-      "github_open_issues": 12,
+      "github_stars": 2438,
+      "github_open_issues": 13,
       "github_recent_prs": [
+        "Enhance tutorial clarity and formatting for sports scheduling",
+        "[docs] update sports scheduling tutorial with a few minor changes",
         "Re-enable depwarn=error in tests",
         "[docs] add sports scheduling tutorial",
-        "Add JaCoP in solver lists",
-        "[docs] add an example for defining callbacks in a package extension",
-        "[docs] convert parallelism tutorial into a literate document"
+        "Add JaCoP in solver lists"
       ]
     },
     {
