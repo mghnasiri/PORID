@@ -1,0 +1,286 @@
+{
+  "date": "2026-05-19",
+  "generated_at": "2026-05-19T10:40:54.931683+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s10479-026-07260-4",
+      "title": "A covering tour-based inventory routing framework for humanitarian logistics",
+      "authors": [
+        "Uzgören Kazanç, H.",
+        "Soysal, M.",
+        "Kanık, Z.",
+        "Coelho, L."
+      ],
+      "abstract": "Abstract\n                  In post-disaster situations, swiftly delivering humanitarian assistance to victims amid chaos and uncertainty poses a significant challenge in practice. Furthermore, efficient distribution of restricted resources, effective inventory control, and optimal resource allocation remain imperative priorities for humanitarian organizations that strive to meet urgent needs under adverse conditions. This study proposes a two-echelon Covering Inventory Routing Problem (CIRP) that integrates the Inventory Routing Problem (IRP) and the Covering Tour Problem (CTP) to support decision-making in the distribution of medical kits in post-disaster humanitarian logistics. A scenario-based probabilistic Mixed-Integer Linear Programming (MILP) model is introduced to decrease costs while adequately addressing unpredictable demand. The applicability of the model was assessed through scenario analysis and a case study. In addition, a three-phase matheuristic algorithm is proposed to solve the CIRP. The results demonstrate that integrating IRP and CTP in a two-echelon structure improves both cost efficiency and the reach of aid delivery under uncertainty. The use of a static-dynamic inventory approach, together with coordinated routing, effectively minimizes emergency shipments and adapts to fluctuating demand, providing valuable support for decision-making in real-time humanitarian contexts. The three-phase matheuristic achieved cost reductions of over 70% relative to the model’s incumbent solution within the first hour on large-scale instances, highlighting its practical use in accelerating decision-making amid post-disaster uncertainty.",
+      "date": "2026-05-18",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07260-4",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07260-4",
+      "score": 70.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07239-1",
+      "title": "Adaptive lexicographical optimization with vague goals in green fuzzy flexible job shop scheduling",
+      "authors": [
+        "García Gómez, P.",
+        "Palacios, J.",
+        "Vela, C.",
+        "González-Rodríguez, I."
+      ],
+      "abstract": "Abstract\n                  Nowadays, the need to reduce the industry’s energy demands means that green concerns must be incorporated as performance indicators. In scheduling, this translates into decision makers willing to sacrifice, to a certain point, production-related criteria, such as meeting delivery deadlines, in favour of reducing energy consumption. The exact degree of compromise can be difficult to set a priori; instead, the expert may only be able to provide some vague production goals that need to be achieved before dealing with energy savings. The decision maker’s task is further complicated in many real-world problems due to the presence of uncertainty in some of the parameters. In this paper, we tackle a flexible job shop scheduling problem with uncertain task durations, minimising the total weighted tardiness while also considering the total energy consumption. In this setting, when there is a clear hierarchy between multiple objectives, a lexicographical goal programming approach seems natural but has the caveat of needing well-defined target values a priori. Therefore, we propose a new hierarchical multiobjective adaptive strategy to work in a lexicographic goal programming setting where only vaguely defined goals are provided. This strategy is then embedded in a memetic algorithm. Extensive experimentation shows that the proposed adaptive strategy is more suitable for the problem at hand than a purely lexicographic and a traditional lexicographic goal programming strategy, and it constitutes an excellent complement to Pareto-based methods.",
+      "date": "2026-05-19",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07239-1",
+      "tags": [
+        "metaheuristics",
+        "scheduling",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07239-1",
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1007-s00291-026-00862-1",
+      "title": "Integrated wind farm design: optimizing turbine placement and cable routing with wake effects",
+      "authors": [
+        "Pedersen, J.",
+        "Lindner, N.",
+        "Rehfeldt, D.",
+        "Koch, T."
+      ],
+      "abstract": "Abstract\n                  An accelerated deployment of renewable energy sources is crucial for a successful transformation of the current energy system, with wind energy playing a key role in this transition. This study addresses the integrated wind farm layout and cable routing problem, a challenging nonlinear optimization problem. We model this problem as an extended version of the quota Steiner tree problem (QSTP), optimizing turbine placement and network connectivity simultaneously to meet specified expansion targets. Our proposed approach accounts for the wake effect − a region of reduced wind speed induced by each installed turbine − and enforces minimum spacing between turbines. We introduce an exact solution framework in terms of the novel quota Steiner tree problem with interference (QSTPI). By leveraging an interference-based splitting strategy, we develop an advanced solver capable of tackling large-scale problem instances. The presented approach outperforms generic state-of-the-art mixed integer programming solvers on our dataset by up to two orders of magnitude. Further, we present a hop-constrained variant of the QSTPI to handle cable capacities in the context of radial topologies. Moreover, we demonstrate that our integrated method significantly reduces the costs in contrast to a sequential approach. Thus, we provide a planning tool that enhances existing planning methodologies for supporting a faster and cost-efficient expansion of wind energy.",
+      "date": "2026-05-19",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00862-1",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00862-1",
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2024.0965",
+      "title": "Rank-Constrained Mixed-Integer Optimization for Heterogeneous Sensor Location in Route Reconstruction",
+      "authors": [
+        "Fu, C.",
+        "Chen, L.",
+        "Lou, Z."
+      ],
+      "abstract": "In this paper, we introduce a mixed-integer rank-constrained optimization model for the route reconstruction–oriented heterogeneous sensor location problem. Although rank constraints are generally nonconvex and not mixed-integer convex representable, we demonstrate that this model is equivalent to a mixed-integer linear optimization model by leveraging the structure of the rank constraints. To enhance computational efficiency, we first propose an exact logic–based Benders decomposition algorithm with an enhanced master problem and tailored feasibility cuts. For large-scale instances, we further present a scalable two-step heuristic, where we first develop an upper bound of the mixed-integer optimization model and then eliminate surplus sensors by a greedy approach. Numerical results show that our logic-based Benders decomposition algorithm is up to two orders of magnitude faster than state-of-the-art commercial solvers. In addition, the two-step heuristic approach exhibits superior scalability while maintaining acceptable solution quality compared with exact methods on large-scale instances. It also consistently outperforms benchmark approaches in terms of computation time and solution quality. Overall, our models lead to substantial reductions in investment costs—achieving savings of 5.56%–24.81% in small-scale networks and 8.51%–42.60% and 2.62%–32.75% in medium and large-scale networks, respectively, relative to the classic route differentiation benchmark.\n                  History: Accepted by Pascal Van Hentenryck, Area Editor for Computational Modeling: Methods and Analysis.\n                  Funding: The research of C. Fu is supported by the National Natural Science Foundation of China [Grants 72401229, 72310107003, and 72271201]. L. Chen acknowledges support from the Emerging Scholar Research Fellowships, University of Sydney Business School.\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2024.0965 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2024.0965 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-05-18",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2024.0965",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2024.0965",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07270-2",
+      "title": "Artificial intelligence for socially responsible investment: a multi-objective decision-making framework",
+      "authors": [
+        "Truyols-Pont, M.",
+        "Arenas-Parra, M.",
+        "Bilbao-Terol, A."
+      ],
+      "abstract": "Abstract\n                  This paper presents a novel multi-objetive methodology for optimizing financial investment decisions. To do this, we integrate machine learning (ML) techniques into a Black–Litterman (BL) model, using conditional value at risk (CVaR) as a risk measure within a socially responsible investment framework. The proposed approach employs ML models, including long short-term memory, random forest, artificial neural networks, gated recurrent unit, and autoregressive integrated moving average (ARIMA), to forecast asset returns. These predictions are aggregated through a model based on historical performance, and they are incorporated into a Black–Litterman–CVaR model (BL–ML–CVaR). Environmental, social, and governance (ESG) criteria are used to construct portfolios that align financial returns with sustainable investment practices. Results demonstrate that the BL–ML–CVaR portfolio offers higher returns and balanced risk compared to traditional models, with the ESG-integrated version achieving competitive performance while adhering to sustainability goals. This study provides valuable insights into how ML-driven models can enhance investment strategies in some emerging sectors facing environmental challenges, offering a path toward more sustainable and responsible financial practices.",
+      "date": "2026-05-19",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07270-2",
+      "tags": [
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07270-2",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s00291-026-00858-x",
+      "title": "Timeslot allocation for waiting list control",
+      "authors": [
+        "Vromans, R.",
+        "van Essen, J.",
+        "van der Vlugt, Y.",
+        "Carlier, M."
+      ],
+      "abstract": "Abstract\n                  As pressure on the healthcare system increases, patients who require surgery experience longer access times to pre- and post-operative appointments and surgery. Hospitals can control their waiting lists by allocating timeslots to the different types of appointments they discern. To inform patients about their appointments in a timely manner, they need to make this decision several weeks in advance. However, the precise consequences of the timeslot allocation on the future waiting list are uncertain, as not all patients follow the same treatment pathway. Furthermore, as these planning decisions are made weeks in advance, they are based on an uncertain prediction of future waiting lists. In this paper, methods are developed with the aim to support hospitals in optimizing their timeslot allocation to reduce patient access times and utilize all available capacity in the outpatient department and operating room. The problem is modelled as a Markov decision process (MDP). However, as the state, decision and outcome spaces grow exponentially in size, even for a single surgeon, an exact solution cannot be determined. We thus compare four alternative solution methods to the static allocation method that is common in hospitals. Least-squares policy iteration is used to find an approximate solution, an (integer) linear program is formulated to solve a deterministic variant of the MDP, several heuristic decision rules are investigated, and a hybrid method is proposed that statically allocates a percentage of timeslots and then dynamically allocates the remaining timeslots with the linear program when sufficient information is available to effectively deal with variability. The solution methods are tested on a case study at the orthopedic care chain of the Sint Maartenskliniek hospital in the Netherlands. Simulation results indicate that in balanced capacity scenarios, static allocation achieves the highest performance when planning more than 4 weeks ahead. In contrast, in unbalanced systems, steering capacity toward patient groups incurring the highest costs yields better outcomes. The hybrid method offers flexibility as it can be adapted to both balanced and unbalanced situations. For the case study, we find that statically allocating 60% of timeslots and dynamically allocating the remainder 4 weeks in advance provides the best results in terms of meeting access time targets and efficient resource utilization.",
+      "date": "2026-05-19",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00858-x",
+      "tags": [
+        "stochastic",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00858-x",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07062-8",
+      "title": "Scenario tree reduction via Wasserstein barycenters",
+      "authors": [
+        "Mimouni, D.",
+        "Malisani, P.",
+        "Zhu, J.",
+        "de Oliveira, W."
+      ],
+      "abstract": "Abstract\n                  Scenario tree reduction techniques are essential for achieving a balance between an accurate representation of uncertainties and computational complexity when solving multistage stochastic programming problems. In the realm of available techniques, the Kovacevic and Pichler algorithm (Ann. Oper. Res., 2015 Kovacevic and Pichler (2015)) stands out for employing the nested distance, a metric for comparing multistage scenario trees. However, dealing with large-scale scenario trees can lead to a prohibitive computational burden due to the algorithm’s requirement of solving several large-scale linear problems per iteration. This study concentrates on efficient approaches to solving such linear problems, recognizing that their solutions are Wasserstein barycenters of the tree nodes’ probabilities on a given stage. We leverage advanced optimal transport techniques to compute Wasserstein barycenters and significantly improve the computational performance of the Kovacevic and Pichler algorithm. Our boosted variants of this algorithm are benchmarked on several multistage scenario trees. Our experiments show that compared to the original scenario tree reduction algorithm, our variants can be eight times faster for reducing scenario trees with 8 stages, 78 125 scenarios, and 97 656 nodes.",
+      "date": "2026-05-18",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07062-8",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07062-8",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.18692",
+      "title": "Democratizing Large-Scale Re-Optimization with LLM-Guided Model Patches",
+      "authors": [
+        "Tinghan Ye",
+        "Arnaud Deza",
+        "Ved Mohan",
+        "El Mehdi Er Raqabi",
+        "Pascal Van Hentenryck"
+      ],
+      "abstract": "Optimization models developed by operations research (OR) experts are often deployed as decision-support systems in industrial settings. However, real-world environments are dynamic, with evolving business rules, previously overlooked constraints, and unforeseen perturbations. In such contexts, end users must rapidly re-optimize models to recover feasible and implementable solutions. This paper introduces an agentic re-optimization framework in which a large language model (LLM) acts as an OR expert, dynamically supporting end users through natural-language interaction. The LLM translates user prompts into structured updates of the underlying optimization model, selects suitable re-optimization techniques from an optimization toolbox, and solves the resulting instance to return implementable solutions. The toolbox leverages primal information, including historical solutions, valid inequalities, solver configurations, and metaheuristics, to accelerate re-optimization while preserving solution quality. The proposed framework enables interactive and continuous adaptation of deployed optimization models, reducing dependence on OR experts and improving the sustainability of decision-support systems. Extensive experiments on two complementary large-scale real-world case studies demonstrate the effectiveness and scalability of the proposed framework. The first considers online supply chain re-optimization, where solutions must be generated rapidly while remaining close to the deployed plan, whereas the second focuses on offline university exam scheduling, where solution quality is prioritized over runtime. Results show that the toolbox-driven architecture significantly improves computational efficiency through primal-based and solver-aware re-optimization techniques, while the structured patch-based updates improve interpretability and traceability of model modifications.",
+      "date": "2026-05-18",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2605.18692v1",
+      "tags": [
+        "cs.AI",
+        "metaheuristics",
+        "scheduling",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.18692",
+      "arxiv_id": "2605.18692v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.18402",
+      "title": "Solving a large oral examination timetabling problem using a multidimensional knapsack MILP formulation",
+      "authors": [
+        "Cyrille Briand",
+        "Jean-Pierre Belaud"
+      ],
+      "abstract": "This paper addresses the Oral Examination Timetabling Problem (OETP) for France's prestigious engineering schools, an organization managed by the Service des Concours Communs Polytechniques (SCCP). The scheduling is highly complex, involving over 7,000 candidates across a four-week period while accounting for constraints such as exam overlaps, geographic origin, and visa requirements. To manage this scale, the paper shows how to model the problem as a Multidimensional Knapsack Problem (MKP) using a Mixed-Integer Linear Programming (MILP) formulation. Their strategy reduces combinatorial complexity by assigning candidates to a predetermined set of pre-validated schedules rather than individual time slots. Experimental results using the SCIP solver on a real 2025 data instance successfully accommodated 7,796 out of 7,804 candidates within a 20-minute time limit.",
+      "date": "2026-05-18",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2605.18402v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.18402",
+      "arxiv_id": "2605.18402v1",
+      "score": 55.0,
+      "mentions_solvers": [
+        "SCIP"
+      ]
+    },
+    {
+      "id": "arxiv-2605.18684",
+      "title": "Reversa: A Reverse Documentation Engineering Framework for Converting Legacy Software into Operational Specifications for AI Agents",
+      "authors": [
+        "Sanderson Oliveira de Macedo",
+        "Ronaldo Martins da Costa"
+      ],
+      "abstract": "Legacy systems concentrate business rules, architectural decisions, and operational exceptions that often remain implicit in code, data, configuration, and   maintenance practices. At the same time, language-model-based coding agents depend on reliable context, correctness criteria, and behavioral contracts to   modify real systems with lower risk. This paper presents Reversa, a reverse documentation engineering framework for converting legacy software into   traceable operational specifications for AI agents. Reversa organizes this process as a multi-agent pipeline: specialized agents map the project surface,   analyze modules, extract implicit rules, synthesize architecture, write unit-level specifications, and review generated claims. The proposal emphasizes   three mechanisms: traceability between code and specification, explicit confidence marking, and preservation of gaps for human validation. The framework is   distributed as a Node.js CLI, installs skills across multiple agent engines, and uses a SHA-256 manifest to preserve modified files during update or   uninstall operations. In addition to the architectural description, we report an exploratory case study on migrating an ATM from COBOL to Go, in which the   pipeline produced 517 claims classified by an internal confidence index, 10 registered gaps, 53 Gherkin parity scenarios, and a reconstruction plan with 9   of 11 tasks completed at inventory time. Final parity validation and cutover were not completed in this study. We do not claim broad empirical superiority;   we position the contribution with respect to the literature on reverse engineering, LLM-based documentation, and software agents, and propose an evaluation   protocol with metrics for coverage, traceability, confidence, utility, and cost.",
+      "date": "2026-05-18",
+      "source": "arXiv",
+      "source_detail": "cs.SE",
+      "url": "http://arxiv.org/abs/2605.18684v1",
+      "tags": [
+        "cs.SE",
+        "stochastic",
+        "supply-chain",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.18684",
+      "arxiv_id": "2605.18684v1",
+      "score": 55.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}

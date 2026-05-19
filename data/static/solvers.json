@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T11:16:20.604673+00:00",
+  "generated_at": "2026-05-19T10:40:54.601651+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1626,
+      "github_stars": 1627,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 172,
+      "github_open_issues": 173,
       "github_recent_prs": [
+        "Added getCols and getRows methods to the csharp wrapper",
+        "Features 1.15",
+        "Alpine patch",
         "sanitizer tests",
-        "Hipo python docs",
-        "Add missing break (in unused postsolve code)",
-        "Ml",
-        "Correct handling of semi-variable infeasibilities"
+        "Hipo python docs"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 590,
+      "github_stars": 591,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13490,
+      "github_stars": 13494,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -571,11 +571,11 @@
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
       "github_open_issues": 102,
       "github_recent_prs": [
+        "routing: export from google3",
+        "math_opt: cleanup",
         "scheduling and graph_base update",
         "Export from google3 (flatzinc & sorted_interval_list)",
-        "Update to or-tools 9.15 base",
-        "Add more ortools/util tests, update benchmarks",
-        "Fix variable_and_expressions_with_counters_test"
+        "Update to or-tools 9.15 base"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -604,7 +604,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 988,
+      "github_stars": 990,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -1085,8 +1085,8 @@
       "vendor": "Stanford University",
       "website": "https://www.cvxpy.org",
       "docs_url": "https://www.cvxpy.org/tutorial/index.html",
-      "current_version": "1.8.2",
-      "release_date": "2026-03-22",
+      "current_version": "1.9.0",
+      "release_date": "2026-05-18",
       "license_type": "open-source",
       "license_spdx": "Apache-2.0",
       "open_source": true,
@@ -1130,15 +1130,15 @@
         "convex",
         "python"
       ],
-      "recent_changes": "## CVXPY 1.8.2\n\nThis is a patch release with bugfixes and solver interface updates.\n\n### Bugfixes\n- Fix a negative axis sum in the Python backends (#3129)\n- Fix quad_form_canon silently dropping M1 te",
-      "github_stars": 6212,
-      "github_open_issues": 175,
+      "recent_changes": "# CVXPY 1.9\n\nThis release is consistent with our semantic versioning guarantee. It comes packed with many new features, bug fixes, and performance improvements.\n\nThis version of CVXPY supports Python ",
+      "github_stars": 6215,
+      "github_open_issues": 179,
       "github_recent_prs": [
-        "Improve solver_path tests",
-        "DNLP sync",
-        "[WIP] Permuted dense tests",
-        "Make solver_path fall back on non-optimal statuses",
-        "Docs: DNLP to front page"
+        "Fix is_mosek_available: use trivial solve instead of getlicense()",
+        "Simplifies version tracking and release procedures",
+        "Begin development of CVXPY 1.10",
+        "Bump github/codeql-action from 4.35.4 to 4.35.5",
+        "Improve solver_path tests"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1744,
+      "github_stars": 1746,
       "github_open_issues": 14,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1384,14 +1384,14 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
-      "github_stars": 2461,
-      "github_open_issues": 357,
+      "github_stars": 2460,
+      "github_open_issues": 355,
       "github_recent_prs": [
+        "Resolve `capture_output` deadlock in multiprocessing environments",
+        "Centralize processing of monomial terms in LinearRepn compiler",
+        "Add logger warning for non-PSD covariance matrix",
         "Amend documentation of PyROS `BudgetSet.budget_membership_mat`",
-        "Update PyROS version number and changelog after #3927",
-        "Unpin GAMS release; rebuild GHA package cache",
-        "More flexible `LinearStandardFormCompiler`",
-        "Fix non-rigorous crossed bound results"
+        "Update PyROS version number and changelog after #3927"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1449,8 +1449,8 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
-      "github_stars": 2438,
-      "github_open_issues": 13,
+      "github_stars": 2439,
+      "github_open_issues": 12,
       "github_recent_prs": [
         "Enhance tutorial clarity and formatting for sports scheduling",
         "[docs] update sports scheduling tutorial with a few minor changes",
