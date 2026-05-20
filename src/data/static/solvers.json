@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T10:40:54.601651+00:00",
+  "generated_at": "2026-05-20T10:29:59.783179+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1627,
+      "github_stars": 1629,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -347,11 +347,11 @@
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
       "github_open_issues": 173,
       "github_recent_prs": [
-        "Added getCols and getRows methods to the csharp wrapper",
-        "Features 1.15",
-        "Alpine patch",
-        "sanitizer tests",
-        "Hipo python docs"
+        "Speed up dual fixing's single equation handling",
+        "Significantly improve macos build times (i.e., github actions)",
+        "A minor change to HighsSymmetry",
+        "Updated third party dependency support",
+        "Patch 1"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -458,13 +458,13 @@
         }
       ],
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- an error is now produced if the emphasis settings in parameter files are wrong\r\n- propagate focus lower bound to child nodes to avoid outdated global lower bound\r\n- set sma",
-      "github_open_issues": 19,
+      "github_open_issues": 20,
       "github_recent_prs": [
+        "Add MSVC flag /bigobj when compiling LPS=spx in debug mode",
         "fix several typos",
         "Allow documentation builds when testing is turned off",
         "Fix endianness issue in dtoa.cpp",
-        "Fix two bugs in SCIPcreateConsBasicSOCNonlinear",
-        "Fix typo in nauty.h pragma directive intrinsic"
+        "Fix two bugs in SCIPcreateConsBasicSOCNonlinear"
       ],
       "pypi_monthly_downloads": -41
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13494,
+      "github_stars": 13501,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 102,
+      "github_open_issues": 103,
       "github_recent_prs": [
+        "ortools: Fix source location ODR violation",
         "routing: export from google3",
         "math_opt: cleanup",
         "scheduling and graph_base update",
-        "Export from google3 (flatzinc & sorted_interval_list)",
-        "Update to or-tools 9.15 base"
+        "Export from google3 (flatzinc & sorted_interval_list)"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9\n\nThis release is consistent with our semantic versioning guarantee. It comes packed with many new features, bug fixes, and performance improvements.\n\nThis version of CVXPY supports Python ",
-      "github_stars": 6215,
+      "github_stars": 6216,
       "github_open_issues": 179,
       "github_recent_prs": [
+        "Fix MOSEK conic interface: SDP dual KeyError + xfail unsupported bounds test",
+        "Update xpress.getversion() to getVersion() for Xpress 9.9",
         "Fix is_mosek_available: use trivial solve instead of getlicense()",
         "Simplifies version tracking and release procedures",
-        "Begin development of CVXPY 1.10",
-        "Bump github/codeql-action from 4.35.4 to 4.35.5",
-        "Improve solver_path tests"
+        "Begin development of CVXPY 1.10"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1746,
+      "github_stars": 1747,
       "github_open_issues": 14,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1387,11 +1387,11 @@
       "github_stars": 2460,
       "github_open_issues": 355,
       "github_recent_prs": [
+        "Add AI policy to contribution guide",
         "Resolve `capture_output` deadlock in multiprocessing environments",
         "Centralize processing of monomial terms in LinearRepn compiler",
         "Add logger warning for non-PSD covariance matrix",
-        "Amend documentation of PyROS `BudgetSet.budget_membership_mat`",
-        "Update PyROS version number and changelog after #3927"
+        "Amend documentation of PyROS `BudgetSet.budget_membership_mat`"
       ],
       "pypi_monthly_downloads": -28
     },

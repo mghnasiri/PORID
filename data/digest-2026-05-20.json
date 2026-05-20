@@ -1,0 +1,286 @@
+{
+  "date": "2026-05-20",
+  "generated_at": "2026-05-20T10:30:00.118277+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s10479-026-07239-1",
+      "title": "Adaptive lexicographical optimization with vague goals in green fuzzy flexible job shop scheduling",
+      "authors": [
+        "García Gómez, P.",
+        "Palacios, J.",
+        "Vela, C.",
+        "González-Rodríguez, I."
+      ],
+      "abstract": "Abstract\n                  Nowadays, the need to reduce the industry’s energy demands means that green concerns must be incorporated as performance indicators. In scheduling, this translates into decision makers willing to sacrifice, to a certain point, production-related criteria, such as meeting delivery deadlines, in favour of reducing energy consumption. The exact degree of compromise can be difficult to set a priori; instead, the expert may only be able to provide some vague production goals that need to be achieved before dealing with energy savings. The decision maker’s task is further complicated in many real-world problems due to the presence of uncertainty in some of the parameters. In this paper, we tackle a flexible job shop scheduling problem with uncertain task durations, minimising the total weighted tardiness while also considering the total energy consumption. In this setting, when there is a clear hierarchy between multiple objectives, a lexicographical goal programming approach seems natural but has the caveat of needing well-defined target values a priori. Therefore, we propose a new hierarchical multiobjective adaptive strategy to work in a lexicographic goal programming setting where only vaguely defined goals are provided. This strategy is then embedded in a memetic algorithm. Extensive experimentation shows that the proposed adaptive strategy is more suitable for the problem at hand than a purely lexicographic and a traditional lexicographic goal programming strategy, and it constitutes an excellent complement to Pareto-based methods.",
+      "date": "2026-05-19",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07239-1",
+      "tags": [
+        "metaheuristics",
+        "scheduling",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07239-1",
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1007-s00291-026-00862-1",
+      "title": "Integrated wind farm design: optimizing turbine placement and cable routing with wake effects",
+      "authors": [
+        "Pedersen, J.",
+        "Lindner, N.",
+        "Rehfeldt, D.",
+        "Koch, T."
+      ],
+      "abstract": "Abstract\n                  An accelerated deployment of renewable energy sources is crucial for a successful transformation of the current energy system, with wind energy playing a key role in this transition. This study addresses the integrated wind farm layout and cable routing problem, a challenging nonlinear optimization problem. We model this problem as an extended version of the quota Steiner tree problem (QSTP), optimizing turbine placement and network connectivity simultaneously to meet specified expansion targets. Our proposed approach accounts for the wake effect − a region of reduced wind speed induced by each installed turbine − and enforces minimum spacing between turbines. We introduce an exact solution framework in terms of the novel quota Steiner tree problem with interference (QSTPI). By leveraging an interference-based splitting strategy, we develop an advanced solver capable of tackling large-scale problem instances. The presented approach outperforms generic state-of-the-art mixed integer programming solvers on our dataset by up to two orders of magnitude. Further, we present a hop-constrained variant of the QSTPI to handle cable capacities in the context of radial topologies. Moreover, we demonstrate that our integrated method significantly reduces the costs in contrast to a sequential approach. Thus, we provide a planning tool that enhances existing planning methodologies for supporting a faster and cost-efficient expansion of wind energy.",
+      "date": "2026-05-19",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00862-1",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00862-1",
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07270-2",
+      "title": "Artificial intelligence for socially responsible investment: a multi-objective decision-making framework",
+      "authors": [
+        "Truyols-Pont, M.",
+        "Arenas-Parra, M.",
+        "Bilbao-Terol, A."
+      ],
+      "abstract": "Abstract\n                  This paper presents a novel multi-objetive methodology for optimizing financial investment decisions. To do this, we integrate machine learning (ML) techniques into a Black–Litterman (BL) model, using conditional value at risk (CVaR) as a risk measure within a socially responsible investment framework. The proposed approach employs ML models, including long short-term memory, random forest, artificial neural networks, gated recurrent unit, and autoregressive integrated moving average (ARIMA), to forecast asset returns. These predictions are aggregated through a model based on historical performance, and they are incorporated into a Black–Litterman–CVaR model (BL–ML–CVaR). Environmental, social, and governance (ESG) criteria are used to construct portfolios that align financial returns with sustainable investment practices. Results demonstrate that the BL–ML–CVaR portfolio offers higher returns and balanced risk compared to traditional models, with the ESG-integrated version achieving competitive performance while adhering to sustainability goals. This study provides valuable insights into how ML-driven models can enhance investment strategies in some emerging sectors facing environmental challenges, offering a path toward more sustainable and responsible financial practices.",
+      "date": "2026-05-19",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07270-2",
+      "tags": [
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07270-2",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s00291-026-00858-x",
+      "title": "Timeslot allocation for waiting list control",
+      "authors": [
+        "Vromans, R.",
+        "van Essen, J.",
+        "van der Vlugt, Y.",
+        "Carlier, M."
+      ],
+      "abstract": "Abstract\n                  As pressure on the healthcare system increases, patients who require surgery experience longer access times to pre- and post-operative appointments and surgery. Hospitals can control their waiting lists by allocating timeslots to the different types of appointments they discern. To inform patients about their appointments in a timely manner, they need to make this decision several weeks in advance. However, the precise consequences of the timeslot allocation on the future waiting list are uncertain, as not all patients follow the same treatment pathway. Furthermore, as these planning decisions are made weeks in advance, they are based on an uncertain prediction of future waiting lists. In this paper, methods are developed with the aim to support hospitals in optimizing their timeslot allocation to reduce patient access times and utilize all available capacity in the outpatient department and operating room. The problem is modelled as a Markov decision process (MDP). However, as the state, decision and outcome spaces grow exponentially in size, even for a single surgeon, an exact solution cannot be determined. We thus compare four alternative solution methods to the static allocation method that is common in hospitals. Least-squares policy iteration is used to find an approximate solution, an (integer) linear program is formulated to solve a deterministic variant of the MDP, several heuristic decision rules are investigated, and a hybrid method is proposed that statically allocates a percentage of timeslots and then dynamically allocates the remaining timeslots with the linear program when sufficient information is available to effectively deal with variability. The solution methods are tested on a case study at the orthopedic care chain of the Sint Maartenskliniek hospital in the Netherlands. Simulation results indicate that in balanced capacity scenarios, static allocation achieves the highest performance when planning more than 4 weeks ahead. In contrast, in unbalanced systems, steering capacity toward patient groups incurring the highest costs yields better outcomes. The hybrid method offers flexibility as it can be adapted to both balanced and unbalanced situations. For the case study, we find that statically allocating 60% of timeslots and dynamically allocating the remainder 4 weeks in advance provides the best results in terms of meeting access time targets and efficient resource utilization.",
+      "date": "2026-05-19",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00858-x",
+      "tags": [
+        "stochastic",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00858-x",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2605.19202",
+      "title": "Aerial Inspection Behaviors via RL-based Quadrotor Control for Under-canopy Forest Environments",
+      "authors": [
+        "Fausto Mauricio Lagos Suarez",
+        "Akshit Saradagi",
+        "Vidya Sumathy",
+        "Viswa Narayanan Sankaranarayanan",
+        "George Nikolakopoulos"
+      ],
+      "abstract": "This paper addresses the problem of using a deep Reinforcement Learning (RL)-based low-level Quadrotor controller within an autonomous Quadrotor navigation stack for aerial inspection missions in under-canopy forest environments. Specifically, the article presents an end-to-end (mapping states to RPMs) Quadrotor control policy that achieves inspection view-pose tracking (simultaneous position and yaw reference tracking), which is crucial for various target inspection behaviors and point-to-point navigation in forests. To ensure safe and reliable deployment of the end-to-end RL controller in long-range missions, this article utilizes a higher navigation guidance layer comprising of a Traveling Salesman Problem planner (TSP) and a Rapidly-exploring Random Tree Star (RRT*) planner. Over a known map of a forest and a set of user-specified inspection regions, the TSP planner finds the optimal visitation sequence. Between two target regions, collision-free paths that respect the tracking limitations of the lower end-to-end RL policy are generated by an RRT* planner. Through five target inspection scenarios, this article demonstrates that an RL-based motor-level stabilizing controller, supported by a navigation guidance layer, can be used effectively as the low-level inspection execution module for under-canopy forest inspection missions.",
+      "date": "2026-05-19",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2605.19202v1",
+      "tags": [
+        "cs.RO",
+        "vehicle-routing",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.19202",
+      "arxiv_id": "2605.19202v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.19823",
+      "title": "Smooth Piecewise Cutting for Neural Operator to Handle Discontinuities and Sharp Transitions",
+      "authors": [
+        "Ha Dang",
+        "Sebastian Schmidt",
+        "Juergen Hesser"
+      ],
+      "abstract": "Neural operators have achieved strong performance in learning solution operators of partial differential equations (PDEs), but their inherently continuous representations struggle to capture discontinuities and sharp transitions. Existing approaches typically approximate such features within continuous function spaces, often requiring increased model capacity and high-resolution data. In this work, we propose Cut-DeepONet, a two-stage training framework that explicitly models discontinuities while reducing learning complexity. Our approach reformulates the problem via a lifting strategy, partitioning the domain into smooth subregions while representing discontinuities as boundaries in a higher-dimensional space. This separation aligns the operator learning task with the inductive bias of neural networks and avoids directly approximating discontinuities. An additional network predicts input-dependent discontinuity locations for unseen inputs, which are then used to guide the neural operator in generating smooth components within each region. Experiments on benchmark PDEs show that Cut-DeepONet outperforms state-of-the-art methods, even when trained on low-resolution datasets. The method excels on problems with discontinuities and sharp transitions, while using fewer trainable parameters. Our results highlight the benefits of changing the representation of operator learning rather than increasing model complexity.",
+      "date": "2026-05-19",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.19823v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.19823",
+      "arxiv_id": "2605.19823v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.19947",
+      "title": "Exploiting Non-Negativity in DAG Structure Learning",
+      "authors": [
+        "Samuel Rey",
+        "Madeline navarro",
+        "Gonzalo Mateos"
+      ],
+      "abstract": "This work addresses the problem of learning directed acyclic graphs (DAGs) from nodal observations generated by a linear structural equation model. DAG learning is a central task in signal processing, machine learning, and causal inference, but it remains challenging because acyclicity is a global combinatorial property. Continuous acyclicity constraints have led to important algorithmic advances by replacing the discrete DAG constraint with smooth equality constraints. However, existing formulations still involve difficult non-convex optimization landscapes and may suffer from degenerate first-order optimality conditions. Here, we restrict attention to DAGs with non-negative edge weights and exploit this additional structure to obtain a simpler characterization of acyclicity. Building on this characterization, we formulate a regularized non-negative DAG learning problem and develop an algorithm based on the method of multipliers. We further analyze the benign optimization landscape induced by non-negativity. In the population regime, we show that the true DAG is the unique global minimizer of the proposed augmented-Lagrangian formulation; moreover, the landscape contains no spurious interior stationary points, and the true DAG is the only acyclic KKT point. Numerical experiments on synthetic and real-world data show that the proposed method improves over state-of-the-art continuous DAG-learning alternatives.",
+      "date": "2026-05-19",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.19947v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.19947",
+      "arxiv_id": "2605.19947v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07282-y",
+      "title": "Adaptive bayesian optimization for sustainable regional resilience: a multiscale framework",
+      "authors": [
+        "Pacifico, A."
+      ],
+      "abstract": "Abstract\n                  This paper develops an integrated Bayesian-optimisation framework to assess and strengthen regional recovery capacity under adverse conditions, combining recovery-risk modelling with risk-aware policy design. To address the joint challenges of sustainability, uncertainty, and performance reliability in complex systems, the study draws together several operations research approaches, including Bayesian variable selection, spatial econometrics, and multi-objective optimisation. The proposed framework combines a dynamic Bayesian shrinkage model to identify the main drivers of recovery across time and space, a discrete-time hazard component to estimate annual and cumulative recovery probabilities, and a policy module that incorporates tail risk and probabilistic constraints through conditional Value-at-Risk and chance-constrained programming. Applied to a large panel of European regions, the framework identifies structural vulnerabilities and supports the design of adaptive interventions under both structural and distributional uncertainty. The results show that recovery reliability is geographically differentiated and sensitive to the recovery horizon, while policy allocations that account for broader structural disadvantage and adverse outcomes yield more balanced and robust intervention profiles.",
+      "date": "2026-05-20",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07282-y",
+      "tags": [
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07282-y",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07207-9",
+      "title": "Evolution of Socio-economic Impacts on COVID-19 Cases and Deaths in the US",
+      "authors": [
+        "Amaratunga, D.",
+        "Cabrera, J.",
+        "Cheng, G.",
+        "Cui, M.",
+        "Dastgiri, M.",
+        "Diaz-Tena, N.",
+        "Duan, Y.",
+        "Katehakis, M.",
+        "Qi, K.",
+        "Sargsyan, D.",
+        "Wang, J."
+      ],
+      "abstract": "Abstract\n                  This paper investigates the interplay of socio-economic factors, vaccination, and the dynamics of COVID-19 across New Jersey (NJ), New York State, California, and Florida. Utilizing a diverse set of explanatory variables, including those related to food and health access, geographic factors, demographic attributes, and vaccine-related variables, we employ statistical models to discern patterns and trends. Our investigation delves into the influence of socio-economic factors on COVID-19 cases and deaths, considering variations across different periods. We employ two distinct models, Univariate modeling and linear model with backward selection, to gain comprehensive insights into the evolving dynamics of the pandemic. Our analysis of New Jersey data unveils notable trends, particularly in vaccination effectiveness. Our findings demonstrate that while vaccinations significantly lower COVID-19 mortality rates, they may not consistently reduce case numbers. Expanding our investigation to other states underscores regional disparities, underscoring the necessity for customized public health approaches. The results imply the relationship between socio-economic dynamics and vaccination campaigns, guiding targeted interventions to alleviate the pandemic’s repercussions effectively.",
+      "date": "2026-05-19",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07207-9",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07207-9",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.19306",
+      "title": "A Two-Phase Adaptive Balanced Penalty Method for Controllable Pareto Front Learning under Split Feasibility Conditions",
+      "authors": [
+        "Nguyen Viet Hoang",
+        "Dung D. Le",
+        "Tran Ngoc Thang"
+      ],
+      "abstract": "We address the open problem of training hypernetworks for Controllable Pareto Front Learning (CPFL) under split feasibility conditions with rigorous theoretical guarantees. We reformulate the constrained Pareto problem as a Bi-Level Scalarized Split Problem (BSSP) and propose the Adaptive Balanced Penalty (ABP) algorithm, whose three gradient components -- optimality, set feasibility, and image feasibility -- are blended through an adaptive indicator driven by a computable lower bound. Using a novel convex surrogate technique, we prove full-sequence convergence under standard convexity and Robbins-Monro step-size assumptions. The ABP penalty structure is then translated into a two-phase, feasibility-first training strategy for Hyper-MLP and HyperTrans architectures (ABP-HyperNet). To evaluate constrained CPFL, we introduce the Expected Feasible Hypervolume (EFHV), which jointly captures solution quality and constraint satisfaction. Experiments on five multi-objective benchmarks validate the ABP solver against ground truth, while three multi-task learning datasets demonstrate that ABP-HyperNet achieves up to 2.3x higher EFHV than unconstrained baselines by raising feasibility from 36-49% to 87-100%.",
+      "date": "2026-05-19",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.19306v1",
+      "tags": [
+        "cs.LG",
+        "multi-objective",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.19306",
+      "arxiv_id": "2605.19306v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
