@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T10:29:59.783179+00:00",
+  "generated_at": "2026-05-21T10:44:14.567513+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -347,11 +347,11 @@
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
       "github_open_issues": 173,
       "github_recent_prs": [
+        "Implement setBasis and setLogicalBasis methods",
+        "Added unit tests for highspy-extras",
         "Speed up dual fixing's single equation handling",
         "Significantly improve macos build times (i.e., github actions)",
-        "A minor change to HighsSymmetry",
-        "Updated third party dependency support",
-        "Patch 1"
+        "A minor change to HighsSymmetry"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- an error is now produced if the emphasis settings in parameter files are wrong\r\n- propagate focus lower bound to child nodes to avoid outdated global lower bound\r\n- set sma",
-      "github_open_issues": 20,
+      "github_open_issues": 21,
       "github_recent_prs": [
         "Add MSVC flag /bigobj when compiling LPS=spx in debug mode",
         "fix several typos",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13501,
+      "github_stars": 13506,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 103,
+      "github_open_issues": 104,
       "github_recent_prs": [
+        "[ci] Use Ninja on Mac to benefit from sccache",
+        "[ci] Disable auth (and caching) from forks",
         "ortools: Fix source location ODR violation",
         "routing: export from google3",
-        "math_opt: cleanup",
-        "scheduling and graph_base update",
-        "Export from google3 (flatzinc & sorted_interval_list)"
+        "math_opt: cleanup"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1132,13 +1132,13 @@
       ],
       "recent_changes": "# CVXPY 1.9\n\nThis release is consistent with our semantic versioning guarantee. It comes packed with many new features, bug fixes, and performance improvements.\n\nThis version of CVXPY supports Python ",
       "github_stars": 6216,
-      "github_open_issues": 179,
+      "github_open_issues": 181,
       "github_recent_prs": [
+        "add new status of COPT",
         "Fix MOSEK conic interface: SDP dual KeyError + xfail unsupported bounds test",
         "Update xpress.getversion() to getVersion() for Xpress 9.9",
         "Fix is_mosek_available: use trivial solve instead of getlicense()",
-        "Simplifies version tracking and release procedures",
-        "Begin development of CVXPY 1.10"
+        "Simplifies version tracking and release procedures"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1747,
+      "github_stars": 1748,
       "github_open_issues": 14,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "With Timefold Solver 2.1.0, we return to a predictable release schedule. We have fixed some issues that slipped through the cracks of the major release, made more tweaks to multi-threaded solving, and",
-      "github_stars": 1657,
-      "github_open_issues": 75,
+      "github_stars": 1658,
+      "github_open_issues": 76,
       "github_recent_prs": [
+        "fix: improve JaxbIO parsing",
         "deps: bump the regular group with 4 updates",
         "deps: bump the quarkus group with 4 updates",
         "deps: bump the regular group with 2 updates",
-        "chore: introduce the pom.xml structure",
-        "feat: implement direct testing of score/impact of constraints"
+        "chore: introduce the pom.xml structure"
       ]
     },
     {
@@ -1384,14 +1384,14 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
-      "github_stars": 2460,
-      "github_open_issues": 355,
+      "github_stars": 2461,
+      "github_open_issues": 356,
       "github_recent_prs": [
+        "Ranged LinearStandardFormCompiler",
         "Add AI policy to contribution guide",
         "Resolve `capture_output` deadlock in multiprocessing environments",
         "Centralize processing of monomial terms in LinearRepn compiler",
-        "Add logger warning for non-PSD covariance matrix",
-        "Amend documentation of PyROS `BudgetSet.budget_membership_mat`"
+        "Add logger warning for non-PSD covariance matrix"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1452,11 +1452,11 @@
       "github_stars": 2439,
       "github_open_issues": 12,
       "github_recent_prs": [
+        "[docs] change the parallelism tutorial to spawn only a limited set of tasks",
         "Enhance tutorial clarity and formatting for sports scheduling",
         "[docs] update sports scheduling tutorial with a few minor changes",
         "Re-enable depwarn=error in tests",
-        "[docs] add sports scheduling tutorial",
-        "Add JaCoP in solver lists"
+        "[docs] add sports scheduling tutorial"
       ]
     },
     {

@@ -1,0 +1,304 @@
+{
+  "date": "2026-05-21",
+  "generated_at": "2026-05-21T10:44:14.906875+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1287-ijoc.2025.1307",
+      "title": "Towards Large-Scale Probabilistic Set Covering Problems: An Efficient Benders Decomposition Approach",
+      "authors": [
+        "Lv, W.",
+        "Chen, W.",
+        "Chen, Y.",
+        "Dai, Y."
+      ],
+      "abstract": "In this paper, we investigate the probabilistic set covering problem (PSCP) in which the right-hand side is a binary random vector and the covering constraint is required to be satisfied with a prespecified probability. We consider the case with a finite discrete distribution of the random vector, which usually arises in the context of the sample average approximation approach. We develop an effective Benders decomposition (BD) algorithm for solving large-scale PSCPs that enjoys two key advantages: (i) the number of variables in the underlying Benders reformulation is independent of the scenario size, and (ii) the Benders cuts can be separated by an efficient combinatorial algorithm. For the special case that the random vector is a combination of several independent random blocks/subvectors, we explicitly take this kind of block structure into consideration and develop a more efficient BD algorithm. Moreover, to further speed up the two proposed BD algorithms, we develop a class of strong valid inequalities, which are guaranteed to be facet-defining for the polytope induced by the probabilistic constraint. Numerical results on instances with up to one million scenarios demonstrate the effectiveness of the proposed BD algorithms over a black box mixed integer programming solver’s branch-and-cut and automatic BD algorithms and a state-of-the-art algorithm in the literature.\n                  History: Accepted by Andrea Lodi, Area Editor for Design &amp; Analysis of Algorithms–Discrete.\n                  Funding: The work of Wei-Kun Chen was supported by the National Natural Science Foundation of China (NSFC) [Grant 12571317], the work of Yu-Hong Dai was supported by the NSFC [Grant 92473208], and the work of Wei Lv was supported in part by the NSFC [Grant 12331011].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2025.1307 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2025.1307 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-05-20",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2025.1307",
+      "tags": [
+        "integer-programming",
+        "stochastic",
+        "facility-location",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2025.1307",
+      "score": 65.0
+    },
+    {
+      "id": "arxiv-2605.21312",
+      "title": "Frontier: Towards Comprehensive and Accurate LLM Inference Simulation",
+      "authors": [
+        "Yicheng Feng",
+        "Xin Tan",
+        "Yangtao Deng",
+        "Yimin Jiang",
+        "Yibo Zhu",
+        "Hong Xu"
+      ],
+      "abstract": "Modern LLM serving is no longer homogeneous or monolithic. Production systems now combine disaggregated execution, complex parallelism, runtime optimizations, and stateful workloads such as reasoning, agents, and RL rollouts. Simulation is attractive for exploring this growing design space, yet existing simulators lack the architectural completeness and decision-grade fidelity it demands. Their monolithic-replica abstractions are ill-suited to disaggregated serving, while average-case analytical proxies can distort SLA predictions and even reverse optimization conclusions.   We present Frontier, a discrete-event simulator for modern LLM inference serving. Frontier features a disaggregated abstraction. It captures the structure and dynamics of modern serving systems by modeling co-location, Prefill-Decode Disaggregation (PDD), and Attention-FFN Disaggregation (AFD) with role-specific cluster workers, incorporating key runtime optimizations (e.g., CUDA Graphs, speculative decoding) within the scheduler-batch-engine loop, and supporting stateful requests for emerging workloads. It further provides accurate and generalizable predictions of computation, communication, and memory costs across diverse serving scenarios with complex workload compositions. On 16-H800 GPU testbed, Frontier achieves an average throughput error below 4%. Compared with state-of-the-art simulators, it reduces end-to-end latency error from 44.9% to 6.4% under co-location and from 51.7% to 2.6% under disaggregation. It scales to over 1K GPUs on commodity CPUs and enables new use cases such as SLA-dependent Pareto frontier exploration, heterogeneous disaggregated allocation, agentic reasoning scheduling validation, and RL post-training reconfiguration.",
+      "date": "2026-05-20",
+      "source": "arXiv",
+      "source_detail": "cs.DC",
+      "url": "http://arxiv.org/abs/2605.21312v1",
+      "tags": [
+        "cs.DC",
+        "scheduling",
+        "stochastic",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.21312",
+      "arxiv_id": "2605.21312v1",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s12532-026-00320-7",
+      "title": "Clarabel: An interior-point solver for conic programs with quadratic objectives",
+      "authors": [
+        "Goulart, P.",
+        "Chen, Y."
+      ],
+      "abstract": "Abstract\n                  \n                    We present a general-purpose interior-point solver for convex optimization problems with conic constraints. Our method is based on a homogeneous embedding method originally developed for general monotone complementarity problems and more recently applied to operator splitting methods, and here specialized to an interior-point method for problems with quadratic objectives. We allow for a variety of standard symmetric and non-symmetric cones, and provide support for chordal decomposition methods in the case of semidefinite cones. We describe the implementation of this method in the open-source solver\n                    Clarabel\n                    , and provide a detailed numerical evaluation of its performance versus several state-of-the-art solvers on a wide range of standard benchmark problems.\n                    Clarabel\n                    is faster than competing commercial and open-source solvers across a range of test sets with quadratic objectives, and remains competitive for problems with linear objectives even at large scale.\n                    Clarabel\n                    is currently distributed as a default solver for the Python\n                    Cvxpy\n                    optimization suite.",
+      "date": "2026-05-21",
+      "source": "Mathematical Programming Computation",
+      "source_detail": "Mathematical Programming Computation",
+      "url": "https://doi.org/10.1007/s12532-026-00320-7",
+      "tags": [
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s12532-026-00320-7",
+      "score": 60.0,
+      "mentions_solvers": [
+        "CVXPY"
+      ]
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07282-y",
+      "title": "Adaptive bayesian optimization for sustainable regional resilience: a multiscale framework",
+      "authors": [
+        "Pacifico, A."
+      ],
+      "abstract": "Abstract\n                  This paper develops an integrated Bayesian-optimisation framework to assess and strengthen regional recovery capacity under adverse conditions, combining recovery-risk modelling with risk-aware policy design. To address the joint challenges of sustainability, uncertainty, and performance reliability in complex systems, the study draws together several operations research approaches, including Bayesian variable selection, spatial econometrics, and multi-objective optimisation. The proposed framework combines a dynamic Bayesian shrinkage model to identify the main drivers of recovery across time and space, a discrete-time hazard component to estimate annual and cumulative recovery probabilities, and a policy module that incorporates tail risk and probabilistic constraints through conditional Value-at-Risk and chance-constrained programming. Applied to a large panel of European regions, the framework identifies structural vulnerabilities and supports the design of adaptive interventions under both structural and distributional uncertainty. The results show that recovery reliability is geographically differentiated and sensitive to the recovery horizon, while policy allocations that account for broader structural disadvantage and adverse outcomes yield more balanced and robust intervention profiles.",
+      "date": "2026-05-20",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07282-y",
+      "tags": [
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07282-y",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.21295",
+      "title": "TimeSRL: Generalizable Time-Series Behavioral Modeling via Semantic RL-Tuned LLMs -- A Case Study in Mental Health",
+      "authors": [
+        "Yuang Fan",
+        "Lilin Xu",
+        "Millie Wu",
+        "Jingping Nie",
+        "Qingyu Chen",
+        "Yuzhe Yang",
+        "Zhuo Zhang",
+        "Xin Liu",
+        "Subigya Nepal",
+        "Xiaofan Jiang",
+        "Xuhai \"Orson\" Xu"
+      ],
+      "abstract": "Longitudinal passive sensing enables continuous health prediction, yet models often fail under cross-dataset distribution shifts. Traditional ML overfits cohort-specific artifacts, while Large Language Models (LLMs) struggle to reason reliably over long, heterogeneous time-series. We introduce TimeSRL, a two-stage LLM framework that routes predictions through an explicit semantic bottleneck. The model first abstracts raw signals into high-level natural language, then predicts behavioral outcomes from these abstractions alone. This forces the model to reason over semantic concepts that we argue generalize better than raw numbers. We optimize this process end-to-end using Group Relative Policy Optimization (GRPO) with Reinforcement Learning from Verifiable Rewards (RLVR), learning outcome-aligned abstractions without gold intermediate annotations. Instantiated on mental-health prediction, TimeSRL achieves state-of-the-art performance on a benchmark designed to stress-test cross-cohort generalization under a rigorous leave-one-dataset-out (LOSO) protocol, reducing mean absolute error (MAE) over strong non-LLM ML and LLM baselines by 3.1--10.1% and 9.5--44.1% for anxiety, and 3.2--9.6% and 27.4--57.6% for depression (all $p$s<0.05). TimeSRL significantly outperforms prior methods in cross-benchmark transfer across different sensing pipelines, rivaling its own within-domain performance without target-domain fine-tuning. These results demonstrate that semantic abstractions are reusable and point to a new direction for generalizable behavior modeling via RL-tuned LLMs.",
+      "date": "2026-05-20",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.21295v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.21295",
+      "arxiv_id": "2605.21295v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.21183",
+      "title": "Collaborative Optimization of Battery Charging / Swapping Stations for eVTOLs Based on Closed-Loop Supply Chain and Space-Time Network",
+      "authors": [
+        "Pengfeng Lin",
+        "Miao Zhu",
+        "Jiahui Sun",
+        "Haoyang Cui",
+        "Xiaoyong Cao",
+        "Chuanlin Zhang",
+        "Yunda Yan"
+      ],
+      "abstract": "Against the backdrop of the burgeoning global low-altitude economy, countries have successively introduced a series of policies to accelerate the application and commercialization of electric vertical take-off and landing (eVTOL) aircraft. Nevertheless, purely electric eVTOLs confront constraints including limited battery energy density, high operational power requirements, and challenges associated with rapid energy replenishment, which collectively restrict their flight endurance and application scenarios. Furthermore, while eVTOL deployment is scaling up, supporting charging infrastructure and regulations remain underdeveloped. This situation presents emerging power distribution networks with new challenges in maintaining adequate electricity supply and ensuring operational continuity. To tackle these issues, following an investigation into battery energy replenishment strategies, a closed-loop supply chain-based model for eVTOL battery charging and swapping is proposed. Time-space network methods are utilized to characterize the scheduling of batteries and logistics throughout the system. Subsequently, aiming to maximize the operational revenue of the model, optimized management of battery swapping, transportation, and charging processes is implemented, facilitating coordinated operation among eVTOLs, swapping stations, and charging stations. Finally, the model is solved by Gurobi, verifying its feasibility. Simulation results further indicate that the model alleviates range anxiety for eVTOLs, offering strong support for their commercialization. Moreover, it enables coordinated scheduling between eVTOLs and the distribution network, thereby facilitating the network's gradual improvement and upgrading.",
+      "date": "2026-05-20",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2605.21183v1",
+      "tags": [
+        "eess.SY",
+        "scheduling",
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.21183",
+      "arxiv_id": "2605.21183v1",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Gurobi"
+      ]
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07261-3",
+      "title": "A coupled task scheduling approximation algorithm for minimizing the sum of completion times",
+      "authors": [
+        "Békési, J.",
+        "Dósa, G.",
+        "Galambos, G."
+      ],
+      "abstract": "Abstract\n                  \n                    In the considered coupled task problem (CTP) we have to schedule\n                    n\n                    jobs on a single machine, each consisting of two tasks with exact time delay between them, while the objective is to minimize the total completion time of the jobs. We analyze a greedy type algorithm – called\n                    SDF\n                    (Shortest Delay First) – from worst case point of view, and we give bounds for the asymptotic behavior of SDF for the special case where each task has equal length processing time\n                    p\n                    . For this case, the best-known upper bound on the asymptotic performance ratio of algorithm SDF is\n                    \n                      \n                        $$\\frac{5}{3}\\approx 1.666\\ldots .$$\n                        \n                          \n                            \n                              5\n                              3\n                            \n                            ≈\n                            1.666\n                            …\n                            .\n                          \n                        \n                      \n                    \n                    We improve this bound to a general upper bound\n                    \n                      \n                        $$\\frac{21p-\\sqrt{3(43p^2-28p+4)}-6}{6p}$$\n                        \n                          \n                            \n                              21\n                              p\n                              -\n                              \n                                \n                                  3\n                                  (\n                                  43\n                                  \n                                    p\n                                    2\n                                  \n                                  -\n                                  28\n                                  p\n                                  +\n                                  4\n                                  )\n                                \n                              \n                              -\n                              6\n                            \n                            \n                              6\n                              p\n                            \n                          \n                        \n                      \n                    \n                    that holds for all\n                    \n                      \n                        $$p\\ge 2.$$\n                        \n                          \n                            p\n                            ≥\n                            2\n                            .\n                          \n                        \n                      \n                    \n                    Using constructions to compute lower bounds, we give narrow intervals for the asymptotic behavior of algorithm SDF as a function of the parameter\n                    p\n                    .",
+      "date": "2026-05-21",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07261-3",
+      "tags": [
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07261-3",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.20875",
+      "title": "Spare Strategy for Large-Scale Satellite Constellations Under Dual Resupply Channels Using Markov Chain",
+      "authors": [
+        "Seungyeop Han",
+        "Shoji Yoshikawa",
+        "Takumi Noro",
+        "Takumi Suda",
+        "Koki Ho"
+      ],
+      "abstract": "This paper presents a Markov-chain-based method for the early-phase analysis and design of hybrid spare-management architectures for large-scale satellite constellations.} The hybrid strategy combines two channels: an indirect path that stages spares in parking orbits via heavy launch for later transfer to constellation planes, and a direct path that delivers spares to in-plane orbits using small launch vehicles. {To assess the long-run viability of such concepts of operations, satellite failure and replenishment processes are modeled as a Markov chain:} the indirect channel follows a periodic-review reorder-point/order-quantity policy, while the direct channel uses a standard reorder-point/order-quantity policy. These coupled chains yield a periodic steady state over the right ascension of the ascending node cycle via fixed-point iteration, and the stationary distributions provide rigorous cost and resilience metrics. By directly modeling the stochastic, multi-echelon dynamics governed by orbital mechanics, our framework avoids the aggregation assumptions of prior works and remains valid across a wider operating domain. We also introduce an approximate analysis that preserves delay statistics while significantly reducing model size. Building on this fast, accurate analysis, we formulate a cost minimization problem with resilience constraints and solve it using a genetic algorithm. The framework is channel-neutral; the optimization autonomously selects the preferred path and roles. {A case study validates the analysis against Monte Carlo simulations and demonstrates the practical value of the framework in identifying the conditions under which the hybrid policy outperforms pure strategies.",
+      "date": "2026-05-20",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2605.20875v1",
+      "tags": [
+        "math.OC",
+        "metaheuristics",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.20875",
+      "arxiv_id": "2605.20875v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.20849",
+      "title": "Large Language Models for Operations Research: A Comprehensive Survey",
+      "authors": [
+        "Xianchao Xiu",
+        "Jianhao Li",
+        "Jun Fan",
+        "Wanquan Liu"
+      ],
+      "abstract": "Operations Research (OR) serves as a core decision-support methodology for complex systems, with significant applications across mathematics, management science, and computer science. Traditional approaches heavily rely on expert knowledge and often struggle to efficiently solve large-scale and multi-constraint problems. The rapid advancement of Large Language Models (LLMs) in recent years has offered a novel research paradigm to address these challenges. This paper presents a systematic survey of Large Language Models for Operations Research (LLM4OR). We begin by introducing the definition of OR problems and the fundamental principles of LLMs. We then focus on analyzing the roles of LLMs in OR, specifically covering such as model formulation, algorithm design, and solution verification. In addition, we discuss practical applications in representative scenarios and summarize benchmark datasets in this field. Finally, we outline the key challenges and provide perspectives on future research directions. A collection of related literature is available at https://github.com/xianchaoxiu/LLM4OR.",
+      "date": "2026-05-20",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2605.20849v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.20849",
+      "arxiv_id": "2605.20849v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.20638",
+      "title": "Distributed and Decentralized Optimization Algorithms via Consensus ALADIN",
+      "authors": [
+        "Xu Du",
+        "Jingzhe Wang",
+        "Karl H. Johansson",
+        "Apostolos I. Rikos"
+      ],
+      "abstract": "Distributed optimization has found widespread applications in smart grids, optimal control, and machine learning. This paper studies distributed consensus optimization. We extend the Augmented Lagrangian-based Alternating Direction Inexact Newton (ALADIN) framework to propose Consensus ALADIN (C-ALADIN) with a central coordinator, which directly handles consensus constraints. Our C-ALADIN algorithm admits both a first-order variant and a second-order variant that employs a Hessian approximation, avoiding direct transmission of second-order information while preserving fast local convergence. We then develop a decentralized version of C-ALADIN that operates over directed graphs with quantized communication, using a finite-time coordination protocol. For both versions, we establish global convergence guarantees for convex problems and local convergence guarantees for non-convex problems. For the decentralized case, the iterates converge to a neighborhood of the optimum determined by the quantization level. Numerical results demonstrate that our methods retain fast convergence while substantially reducing communication and computational costs compared to existing decentralized approaches.",
+      "date": "2026-05-20",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2605.20638v1",
+      "tags": [
+        "math.OC",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.20638",
+      "arxiv_id": "2605.20638v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
