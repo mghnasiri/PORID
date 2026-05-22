@@ -1,0 +1,252 @@
+{
+  "date": "2026-05-22",
+  "generated_at": "2026-05-22T10:33:03.061425+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s12532-026-00320-7",
+      "title": "Clarabel: An interior-point solver for conic programs with quadratic objectives",
+      "authors": [
+        "Goulart, P.",
+        "Chen, Y."
+      ],
+      "abstract": "Abstract\n                  \n                    We present a general-purpose interior-point solver for convex optimization problems with conic constraints. Our method is based on a homogeneous embedding method originally developed for general monotone complementarity problems and more recently applied to operator splitting methods, and here specialized to an interior-point method for problems with quadratic objectives. We allow for a variety of standard symmetric and non-symmetric cones, and provide support for chordal decomposition methods in the case of semidefinite cones. We describe the implementation of this method in the open-source solver\n                    Clarabel\n                    , and provide a detailed numerical evaluation of its performance versus several state-of-the-art solvers on a wide range of standard benchmark problems.\n                    Clarabel\n                    is faster than competing commercial and open-source solvers across a range of test sets with quadratic objectives, and remains competitive for problems with linear objectives even at large scale.\n                    Clarabel\n                    is currently distributed as a default solver for the Python\n                    Cvxpy\n                    optimization suite.",
+      "date": "2026-05-21",
+      "source": "Mathematical Programming Computation",
+      "source_detail": "Mathematical Programming Computation",
+      "url": "https://doi.org/10.1007/s12532-026-00320-7",
+      "tags": [
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s12532-026-00320-7",
+      "score": 60.0,
+      "mentions_solvers": [
+        "CVXPY"
+      ]
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07261-3",
+      "title": "A coupled task scheduling approximation algorithm for minimizing the sum of completion times",
+      "authors": [
+        "Békési, J.",
+        "Dósa, G.",
+        "Galambos, G."
+      ],
+      "abstract": "Abstract\n                  \n                    In the considered coupled task problem (CTP) we have to schedule\n                    n\n                    jobs on a single machine, each consisting of two tasks with exact time delay between them, while the objective is to minimize the total completion time of the jobs. We analyze a greedy type algorithm – called\n                    SDF\n                    (Shortest Delay First) – from worst case point of view, and we give bounds for the asymptotic behavior of SDF for the special case where each task has equal length processing time\n                    p\n                    . For this case, the best-known upper bound on the asymptotic performance ratio of algorithm SDF is\n                    \n                      \n                        $$\\frac{5}{3}\\approx 1.666\\ldots .$$\n                        \n                          \n                            \n                              5\n                              3\n                            \n                            ≈\n                            1.666\n                            …\n                            .\n                          \n                        \n                      \n                    \n                    We improve this bound to a general upper bound\n                    \n                      \n                        $$\\frac{21p-\\sqrt{3(43p^2-28p+4)}-6}{6p}$$\n                        \n                          \n                            \n                              21\n                              p\n                              -\n                              \n                                \n                                  3\n                                  (\n                                  43\n                                  \n                                    p\n                                    2\n                                  \n                                  -\n                                  28\n                                  p\n                                  +\n                                  4\n                                  )\n                                \n                              \n                              -\n                              6\n                            \n                            \n                              6\n                              p\n                            \n                          \n                        \n                      \n                    \n                    that holds for all\n                    \n                      \n                        $$p\\ge 2.$$\n                        \n                          \n                            p\n                            ≥\n                            2\n                            .\n                          \n                        \n                      \n                    \n                    Using constructions to compute lower bounds, we give narrow intervals for the asymptotic behavior of algorithm SDF as a function of the parameter\n                    p\n                    .",
+      "date": "2026-05-21",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07261-3",
+      "tags": [
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07261-3",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2023.02287",
+      "title": "A Nonparametric Approach with Marginals for Modeling Consumer Choice",
+      "authors": [
+        "Ruan, Y.",
+        "Li, X.",
+        "Murthy, K.",
+        "Natarajan, K."
+      ],
+      "abstract": "Given data on the choices made by consumers for different offer sets, a key challenge is to develop parsimonious models that describe and predict consumer choice behavior while being amenable to prescriptive tasks, such as pricing and assortment optimization. The marginal distribution model (MDM) is one such model, which requires only the specification of marginal distributions of the random utilities. This paper aims to establish necessary and sufficient conditions for given choice data to be consistent with the MDM hypothesis inspired by the usefulness of similar characterizations for the random utility model (RUM). This endeavor leads to an exact characterization of the set of choice probabilities that the MDM can represent. Verifying the consistency of choice data with this characterization is equivalent to solving a polynomial-sized linear program. Because the analogous verification task for RUM is computationally intractable and neither of these models subsume the other, MDM is helpful in striking a balance between tractability and representational power. The characterization is then used with robust optimization for making data-driven sales and revenue predictions for new unseen assortments. When the choice data lack consistency with the MDM hypothesis, finding the best-fitting MDM choice probabilities reduces to solving a mixed-integer convex program. Numerical results using real-world data and synthetic data demonstrate that MDM exhibits competitive representational power and prediction performance compared with RUM and parametric models while being significantly faster in computation than RUM.\n                  This paper was accepted by Omar Besbes, revenue management and pricing department.\n                  Funding: This work was supported by the Singapore Ministry of Education Academic Research Fund [Grants T2EP20223-0008 and T2MOE1906]. X. Li was supported in part by the Singapore Ministry of Education Academic Research Fund Tier 1 [Grants 23-0619-P0001 and 24-0500-A0001]. The research of K. Murthy was supported by the Singapore Ministry of Education Academic Research Fund [Grants MOE2019-T2-2-163 and MOE-T2EP20223-0017]. The research of K. Natarajan was partly supported by the Singapore Ministry of Education Academic Research Fund Tier 2 [Grant MOE2019-T2-2-138].\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2023.02287 .",
+      "date": "2026-05-21",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2023.02287",
+      "tags": [
+        "integer-programming",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2023.02287",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2025.1415",
+      "title": "RouteOpt: An Open-Source Modular Exact Solver for Vehicle Routing Problems",
+      "authors": [
+        "You, Z.",
+        "Yang, Y."
+      ],
+      "abstract": "Despite significant advancements in exact methods for vehicle routing problems (VRPs) over the past three decades, there remains a lack of high-performing and accessible open-source solvers for researchers and practitioners. To bridge this gap, we introduce RouteOpt, the first open-source modular exact solver for VRPs, delivering state-of-the-art performance while maintaining a flexible and extensible structure. RouteOpt achieves the best performance reported in the literature on both the capacitated vehicle routing problem (CVRP) and the VRP with time windows. Crucially, its modular design allows users to develop and integrate customized branching, cutting-plane, and variable reduction modules to tackle a broad range of VRP variants. Furthermore, RouteOpt introduces a novel node restoration mechanism, enabling efficient parallel processing of a branch-and-bound tree. Leveraging this feature, we have for the first time proven the optimality of three open CVRP instances. By combining modularity, efficiency, and open accessibility, RouteOpt establishes itself as an invaluable platform for both academic research and real-world applications. The source code of RouteOpt and relevant data are publicly available in the RouteOpt repository.\n                  History: Accepted by Ted Ralphs, Area Editor for Software Tools.\n                  Funding: This work was supported by the Division of Civil, Mechanical and Manufacturing Innovation [Grant CMMI-2309667].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2025.1415 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2025.1415 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-05-21",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2025.1415",
+      "tags": [
+        "vehicle-routing",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2025.1415",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2024.08105",
+      "title": "The Joy of Shopping: Thrill of the Treasure Hunt",
+      "authors": [
+        "Gu, J.",
+        "Nistor, C.",
+        "Selove, M."
+      ],
+      "abstract": "People sometimes enjoy the thrill of the hunt, which implies search can generate joy in addition to costs. Some customers say they enjoy searching for unique items such as vintage T-shirts and luxury handbags, and managers at warehouse stores, thrift stores, and many online selling platforms say they design their store format to offer a treasure hunt experience. We develop a model in which customers enjoy searching for a treasure. Our model’s search utility function includes a term based on the treasure’s net value, a term based on the instantaneous likelihood of discovering treasure, and a constant term reflecting other factors such as social aspects of shopping and customers’ enthusiasm level for the product category. We derive the optimal product price and treasure hunt difficulty level. In equilibrium, for products with either very low or very high value, customers’ utility from visiting the store comes primarily from the thrill of the hunt.\n                  This paper was accepted by Raphael Thomadsen, marketing.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.08105 .",
+      "date": "2026-05-21",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2024.08105",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2024.08105",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07216-8",
+      "title": "Optimal resident physician supervision when patient care is non-preemptive",
+      "authors": [
+        "Andradóttir, S.",
+        "Ayhan, H."
+      ],
+      "abstract": "Abstract\n                  This paper focuses on the assignment of attending physicians between the residents they supervise and their own responsibilities. Unlike prior work that assumes patient care can be interrupted at any time, we consider the more realistic and technically challenging situation when patient care is non-preemptive. Under the assumption that a holding cost is incurred when residents and patients wait for a conference with the attending physician and that rewards are earned whenever the attending physician completes a task (on his own or with his residents), we completely characterize the allocation of the attending physician that maximizes the long-run average profit. Furthermore, we show that the optimality conditions are simple thresholds on the holding cost. We also discuss how the optimal allocation of the attending physician differs from those in systems with preemptions. In particular, we show that the main difference occurs when the holding cost is high and there is no resident waiting for a conference. In this case, the attending physician waits for a resident to be ready for consultation in the non-preemptive case, whereas he works on his own responsibilities in the preemptive model. We conclude with a study of various extensions of our attending physician and residents interaction model and show that the structure of the optimal policy remains the same in these more general settings.",
+      "date": "2026-05-21",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07216-8",
+      "tags": [
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07216-8",
+      "score": 45.0
+    },
+    {
+      "id": "optim-online-216e1a8cd4a0",
+      "title": "Normalized stochastic proximal approximation methods for nonsmooth composite optimization under heavy-tailed noise",
+      "authors": [],
+      "abstract": "In this paper, we study nonsmooth composite optimization problems under heavy-tailed noise, with the objective being a summation of a nested function and a nonsmooth convex regularizer. We propose stochastic proximal approximation methods incorporating a normalization technique to handle the potential challenges caused by the nonsmooth regularizer and heavy-tailed noise. For the case where the ... Read more",
+      "date": "2026-05-21",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/05/normalized-stochastic-proximal-approximation-methods-for-nonsmooth-composite-optimization-under-heavy-tailed-noise/?utm_source=rss&utm_medium=rss&utm_campaign=normalized-stochastic-proximal-approximation-methods-for-nonsmooth-composite-optimization-under-heavy-tailed-noise",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s12532-026-00321-6",
+      "title": "Accelerated nested proximal gradient algorithm for structured sparse optimization with capped-$$\\ell _1$$ penalty",
+      "authors": [
+        "Tao, H.",
+        "Bian, W.",
+        "Qu, X."
+      ],
+      "abstract": "",
+      "date": "2026-05-21",
+      "source": "Mathematical Programming Computation",
+      "source_detail": "Mathematical Programming Computation",
+      "url": "https://doi.org/10.1007/s12532-026-00321-6",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s12532-026-00321-6",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2023.01986",
+      "title": "Comment on “Regulating Gender Diversity: Evidence from California Senate Bill 826”",
+      "authors": [
+        "Greene, D.",
+        "Hwang, J.",
+        "Intintoli, V.",
+        "Kahle, K."
+      ],
+      "abstract": "Prior studies draw mixed conclusions on the market response to California SB 826, the first board gender diversity mandate in the United States. We find that these discrepancies stem from two factors: confusion about the legislative process and the use of different return methodologies. We find that the response to early dates in the legislative process yields largely insignificant and sometimes conflicting results, depending on the return methodology used. This result is consistent with our finding that many of these dates generated little interest from investors. Returns are mostly negative and significant on the date the bill was signed into law. Additionally, all models show a negative and significant relation between the signing-day return and the number of female directors needed to meet the law.\n                  This paper was accepted by Eric So, accounting.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2023.01986 .",
+      "date": "2026-05-21",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2023.01986",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2023.01986",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2024.07098",
+      "title": "Mission Driven and Data Averse: How Empathy Fosters Resistance to Algorithms and Hard Data",
+      "authors": [
+        "Ghita, R.",
+        "Zureich, J."
+      ],
+      "abstract": "Socially driven organizations aiming to become more data driven often face practical barriers such as difficulties in measuring complex social objectives. We argue that, even when those practical barriers are addressed, social missions make it harder to foster a data-driven culture by exacerbating employee aversion to algorithms and hard data. Our theory is that emphasizing a social rather than profit-oriented mission increases employees’ concern for empathy, and this, in turn, makes them more averse to the cold, impersonal methods associated with using algorithms and hard data. Furthermore, if the aversion to algorithms and hard data in social organizations stems from empathy concerns as we predict, then designing fair data systems should mitigate this effect because fairness appeals to empathy concerns. Results of four experiments support these predictions. These findings suggest that, even when social organizations can accurately measure their objectives and attract employees with requisite data skills, they may still struggle to become data driven because prosocial employees avoid unempathetic decision approaches. However, social organizations can mitigate these effects by increasing the perceived empathy of data-driven decision making.\n                  This paper was accepted by Ranjani Krishnan, accounting.\n                  Funding: Generous financial support was provided by the Institute of Management Accountants [Grant Number INC #6-2002], Tilburg University, and the Fynske Købstæders Fond.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.07098 .",
+      "date": "2026-05-21",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2024.07098",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2024.07098",
+      "score": 40.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
