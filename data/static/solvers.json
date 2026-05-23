@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T10:33:02.726152+00:00",
+  "generated_at": "2026-05-23T09:08:04.401054+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1632,
+      "github_stars": 1634,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13514,
+      "github_stars": 13513,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1132,13 +1132,13 @@
       ],
       "recent_changes": "# CVXPY 1.9\n\nThis release is consistent with our semantic versioning guarantee. It comes packed with many new features, bug fixes, and performance improvements.\n\nThis version of CVXPY supports Python ",
       "github_stars": 6216,
-      "github_open_issues": 183,
+      "github_open_issues": 181,
       "github_recent_prs": [
+        "Isolate KNITRO conic tests and warn on OpenMP-runtime conflicts",
         "Add KNITRO to the nlp solvers CI job",
         "Improves type hintings",
         "Fix COPT PSD bounds with unbounded variables and NLP interface ",
-        "add new status of COPT",
-        "Fix MOSEK conic interface: SDP dual KeyError + xfail unsupported bounds test"
+        "add new status of COPT"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "With Timefold Solver 2.1.0, we return to a predictable release schedule. We have fixed some issues that slipped through the cracks of the major release, made more tweaks to multi-threaded solving, and",
-      "github_stars": 1660,
-      "github_open_issues": 74,
+      "github_stars": 1661,
+      "github_open_issues": 75,
       "github_recent_prs": [
+        "Fix two Neighborhoods bugs",
         "fix: address XXE in JaxbIO parsing",
         "deps: bump the regular group with 4 updates",
         "deps: bump the quarkus group with 4 updates",
-        "deps: bump the regular group with 2 updates",
-        "chore: introduce the pom.xml structure"
+        "deps: bump the regular group with 2 updates"
       ]
     },
     {
@@ -1449,7 +1449,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
-      "github_stars": 2439,
+      "github_stars": 2441,
       "github_open_issues": 12,
       "github_recent_prs": [
         "[docs] change the parallelism tutorial to spawn only a limited set of tasks",

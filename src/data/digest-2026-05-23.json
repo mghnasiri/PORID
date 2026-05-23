@@ -1,0 +1,263 @@
+{
+  "date": "2026-05-23",
+  "generated_at": "2026-05-23T09:08:04.748733+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1287-trsc.2025.0189",
+      "title": "Optimal Assignment of Shipments to Milk Runs for Just-in-Time Part Supply Under Uncertain Due Dates",
+      "authors": [
+        "Baals, J.",
+        "Emde, S.",
+        "Jabali, O."
+      ],
+      "abstract": "We focus on a logistics service provider (LSP) that organizes the inbound logistics for an original equipment manufacturer (OEM) using just-in-time production. The LSP conducts periodic milk runs, that is, tours visiting a subset of suppliers on a fixed route to collect shipments bound for the OEM. Although the milk-run routes and rough schedules are fixed well in advance, the exact shipment due dates at the OEM become known only once the production sequence has been finalized. During daily operation, the given milk runs are executed such that shipments are picked up from the suppliers and delivered to the OEM ideally exactly just in time. However, the production sequence on the assembly lines at the OEM often changes on the day of execution, which alters shipment due dates at the OEM and makes it necessary to anticipate potential disturbances when assigning shipments to milk runs. We formulate a two-stage stochastic program, where, in the first stage, shipments are assigned to specific milk runs and, in the second stage, when alterations to the production sequence are revealed, arrival times are adjusted and shipments are express delivered if necessary. The assignment induces earliness–tardiness costs depending on the uncertain due date of each shipment at the OEM, and express deliveries induce fixed costs. Besides an extensive-form mixed-integer linear program, we develop a solution procedure based on the integer L-shaped method, enriched with valid inequalities and cuts derived from partial Benders decomposition and a subproblem relaxation. In a computational study on realistic test data, we show that the proposed L-shaped method solves 62 out of 70 instances to optimality. From a managerial perspective, we show that express deliveries are an effective way of mitigating uncertainty in the production sequence, as are overlapping milk-run routes, which are not yet widely used in practice but are relatively easy to implement.\n                  Funding: O. Jabali work is supported by Ministero dell’ Università e della Ricerca (MUR), PRIN 2022 project [20229ZWC97] – Revise and En-hance: Win-win INsights for home Delivery services (REWIND).\n                  Supplemental Material: The online appendix is available at https://doi.org/10.1287/trsc.2025.0189 .",
+      "date": "2026-05-22",
+      "source": "Transportation Science",
+      "source_detail": "Transportation Science",
+      "url": "https://doi.org/10.1287/trsc.2025.0189",
+      "tags": [
+        "integer-programming",
+        "stochastic",
+        "supply-chain",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1287/trsc.2025.0189",
+      "score": 60.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1007-s12532-026-00324-3",
+      "title": "Accelerating Benders decomposition for solving a sequence of sample average approximation replications",
+      "authors": [
+        "Kothari, H.",
+        "Luedtke, J."
+      ],
+      "abstract": "Abstract\n                  Sample average approximation (SAA) is a technique for obtaining approximate solutions to stochastic programs that uses the average from a random sample to approximate the expected value that is being optimized. Since the outcome from solving an SAA is random, statistical estimates on the optimal value of the true problem can be obtained by solving multiple SAA replications with independent samples. We study techniques to accelerate the solution of this set of SAA replications, when solving them sequentially via Benders decomposition. We investigate how to exploit similarities in the problem structure, as the replications just differ in the realizations of the random samples. Our extensive computational experiments provide empirical evidence that our techniques for using information from solving previous replications can significantly reduce the solution time of later replications.",
+      "date": "2026-05-23",
+      "source": "Mathematical Programming Computation",
+      "source_detail": "Mathematical Programming Computation",
+      "url": "https://doi.org/10.1007/s12532-026-00324-3",
+      "tags": [
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s12532-026-00324-3",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s10951-026-00874-3",
+      "title": "Branch-cut-and-price for open-shop scheduling problems with any regular minsum objective",
+      "authors": [
+        "Emde, S.",
+        "Lysgaard, J."
+      ],
+      "abstract": "Abstract\n                  This paper deals with a general open-shop scheduling problem where jobs have release and due dates, transferring between machines incurs a machine–pair-dependent delay, and any regular objective defined over job completion times is minimized. Such problems are widely encountered in practice, e.g., in industrial testing and maintenance processes and just-in-time logistics. Despite its relevance, exact solution methods from the literature have so far focused on the makespan objective or very specific special cases. We hence present the first exact method for the general open-shop scheduling problem with any regular minsum objective with respect to job completion times. Moreover, we demonstrate how branch-cut-and-price methods can be applied to the open shop. Finally, we also adapt the famous subset-row inequalities, originally proposed for the vehicle routing problem, to the open shop. Our computational study on both newly generated instances as well as those from the literature demonstrates good performance on a broad set of different objective functions, finding tight bounds even for the largest problems.",
+      "date": "2026-05-22",
+      "source": "Journal of Scheduling",
+      "source_detail": "Journal of Scheduling",
+      "url": "https://doi.org/10.1007/s10951-026-00874-3",
+      "tags": [
+        "scheduling",
+        "vehicle-routing",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10951-026-00874-3",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2024.0994",
+      "title": "Inventory Allocation Under the Greedy Fulfillment Policy: The (Potential) Perils of the Hindsight Approach",
+      "authors": [
+        "Jasin, S.",
+        "Liu, S.",
+        "Zhao, J."
+      ],
+      "abstract": "Will Hindsight Approach Work Well for Multi-Location Inventory Allocation?\n                  Online retailers often decide where to place inventory before knowing which customers will arrive and in what order. A common solution is the hindsight or stochastic programming approach: allocate inventory as if future demand were known, then fulfill orders using a simple greedy rule, shipping from the cheapest available warehouse. In “Inventory Allocation under the Greedy Fulfillment Policy: The (Potential) Perils of the Hindsight Approach,” Jasin, Liu, and Zhao show that this widely used method can be deceptively optimistic. The hindsight solution is equivalent to optimizing greedy fulfillment for the most favorable arrival sequence, rather than the sequence that unfolds. The authors characterize when this optimism is harmless—identical ordering costs, no warehouse capacity constraints, and independent demands—and show that violating any of these conditions can make the hindsight allocation arbitrarily worse than the true optimum under greedy fulfillment. Their results caution retailers to evaluate allocation heuristics against the fulfillment policy actually used.",
+      "date": "2026-05-22",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2024.0994",
+      "tags": [
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2024.0994",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261453193",
+      "title": "Diversification, supplier selection, and order allocation under yield risks and strategic rivalry",
+      "authors": [
+        "Yenipazarli, A."
+      ],
+      "abstract": "This article examines supply-base configuration, supplier selection, and order allocation under supply risk and downstream rivalry. We develop a Cournot duopoly model in which two firms sell partially substitutable products and procure a critical input from two unreliable suppliers with asymmetric cost-risk profiles and correlated yield risks. We formulate a two-stage game: firms first choose their supply bases either endogenously or under a one-sided sourcing-flexibility structure and then allocate orders across selected suppliers. We derive closed-form, supplier-specific sourcing thresholds that quantify the marginal revenue gain from adding either supplier to an otherwise sole-sourced supply base. These thresholds vary systematically with supplier heterogeneity, yield correlation, the rival’s sourcing strategy, and competition intensity. In the endogenous sourcing game, supply-base choices are structurally independent of strategic rivalry—which affects only equilibrium order allocations—and the unique equilibrium takes the form of either mutual dual-sourcing or mutual sole-sourcing from the same supplier. Yet mutual dual-sourcing can be Pareto-dominated by distinct-supplier sole-sourcing. This Prisoner’s Dilemma arises only when yield correlation exceeds an explicit cutoff that declines with competition intensity. We also identify conditions under which the classical cost-based supplier-selection rule fails: above a critical correlation threshold, firms may optimally sole-source from the supplier with the higher effective cost because it is more reliable, and that equilibrium is Pareto-optimal. Under one-sided sourcing flexibility, when the rival is committed to sole-sourcing, both the sourcing threshold for the locked-in supplier and the correlation cutoff for supplier-selection reversal decline, strengthening the flexible firm’s incentive to sole-source from the other supplier. Finally, we show how the extent of firms’ supply-base overlap shapes strategic interaction and equilibrium order allocation under correlated yield risks.",
+      "date": "2026-05-22",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261453193",
+      "tags": [
+        "stochastic",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261453193",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07283-x",
+      "title": "Enhancing a multilayer perceptron model for multi-state network reliability evaluation via an arc-wise architecture",
+      "authors": [
+        "Nguyen, T.",
+        "Yeh, C.",
+        "Fang, C.",
+        "Lin, Y."
+      ],
+      "abstract": "Abstract\n                  Many real-world systems, including supply chains and manufacturing, have been modeled as multi-state networks (MSNs) to assess network reliability performance. This paper introduces an arc-wise architecture designed to enhance the efficiency of a multilayer perceptron (MLP) model for MSN reliability estimation. By representing each arc with a dedicated subnetwork and incorporating system-level requirements directly into the input layer, the proposed MLP effectively maps complex dependencies between arc capacities and system-level reliability. Integrated with Bayesian optimization for hyperparameter tuning, the proposed approach is validated through comprehensive numerical experiments. The results demonstrate high estimation accuracy and efficiency, highlighting the efficacy of deep learning for reliability analysis in complex, large-scale MSNs.",
+      "date": "2026-05-22",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07283-x",
+      "tags": [
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07283-x",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2025.1769",
+      "title": "Capacity Investment Decisions in Equilibrium: A Distributionally Robust Approach",
+      "authors": [
+        "Abada, I.",
+        "Ancel, J."
+      ],
+      "abstract": "Investing in Electricity Production Assets Under Price Ambiguity\n                  How should investors set their capacity when market prices, which determine the revenues of their assets, are ambiguous? In Capacity Investment Decisions in Equilibrium: A Distributionally Robust Approach, Abada and Ancel focus on European electricity markets and argue that the past distribution of prices is no longer trustworthy in crisis regimes such as those recently observed. Leveraging the distributionally robust optimization framework, the authors provide a novel and tractable formulation of the stochastic capacity expansion problem under price ambiguity in a power economy, leading to an equilibrium framework. They prove existence and show that their framework is compatible with the economic theory of pure and perfect competition. Through simulations, they quantify the detrimental impact of ambiguity on system welfare and installed capacity and estimate how certain contracts could help mitigate these effects.",
+      "date": "2026-05-22",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2025.1769",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2025.1769",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2022.0177",
+      "title": "Last-Mile Delivery of Malaria Prevention Products in the DRC: An Inventory Management Model Under Supply Chain Disruptions",
+      "authors": [
+        "Ata, B.",
+        "Lehman, A.",
+        "Montgomery, R."
+      ],
+      "abstract": "Improved Inventory Management to Reduce Malaria Rates in the Congo\n                  Humanitarian operations in some of the world’s most remote regions often require ingenuity. Still, much can be applied from the extensive research on successfully managing operations in more common and often stable settings. Occasionally, this convergence of existing models with the unique considerations of these settings arrives at a void in the literature. The authors found themselves at such a point when they partnered with the Lake Tanganyika Floating Health Clinic to deliver malaria prevention products across 41 villages in the far East of the Congo. To allow continuous access to these products in a region that experiences seasonal flooding and frequent armed conflict, the authors introduce a model that incorporates random availability of high-capacity primary delivery methods with agile and costlier secondary delivery methods during disruptions. The optimal policy when the fixed cost varies between the disrupted and normal states is not previously addressed in Markovian inventory model results. The authors of the paper prove that an (s, S) policy remains optimal during normal operations even when facing these specific cost dynamics. They conduct numerical analysis demonstrating that the use of an (s, S) policy in normal operating periods and an order-up-to policy in the disrupted state is often optimal although they provide counterexamples of instances when it is not. Reducing costs in such settings allows for more potentially life-saving interventions to reach those in need.",
+      "date": "2026-05-22",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2022.0177",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2022.0177",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2023.03624",
+      "title": "The Spillover Effect of Suspending Nonessential Surgery: Evidence from Kidney Transplantation",
+      "authors": [
+        "Zhang, M.",
+        "Wang, G.",
+        "Dai, T."
+      ],
+      "abstract": "Kidney transplantation is a life-saving procedure for patients with end-stage kidney disease. A delay in kidney transplantation has serious, even life-threatening, consequences. This study examines the impact of suspending nonessential surgery on deceased-donor kidney transplantation. Between March and April 2020, amid the COVID-19 pandemic, multiple states in the United States temporarily suspended nonessential surgery. Although these suspensions were not intended for deceased-donor kidney transplantation, because it is an essential surgery, the literature on service operations implies such suspensions may have either a positive or a negative spillover effect, depending on whether hospitals maintain or reduce resources. Motivated by these divergent implications, we estimate the potential spillover effect of suspending nonessential surgery on deceased-donor kidney transplantation. Analyzing a data set of all U.S. kidney transplant procedures, we observe a steep decline in transplant volume during the early months of the pandemic, with states that suspended nonessential surgery experiencing steeper declines. Using a difference-in-differences approach, we estimate a 13% reduction in transplant volume due to state-level suspension of nonessential surgery. This negative spillover effect is particularly pronounced in low-efficiency transplant centers with long cold ischemia times (CITs) but less so in high-efficiency centers, suggesting CIT is a key indicator of operational resilience against disruptions. Our mediation analysis reveals more than 40% of the spillover effect is attributable to changes in healthcare employment. This study indicates that in future public health crises, policymakers should adopt nuanced strategies to secure the healthcare workforce essential for supporting critical services, especially in centers with longer CITs.\n                  This paper was accepted by Jayashankar Swaminathan, operations management.\n                  Funding: This work was supported by the Johns Hopkins Bloomberg School of Public Health [Hopkins Business of Health Initiative seed grant, “COVID-19 and the Business of Health”].\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2023.03624 .",
+      "date": "2026-05-22",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2023.03624",
+      "tags": [
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2023.03624",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2024.05415",
+      "title": "Why Is Choice Stochastic? Deliberate Randomization vs. Strength of Preference",
+      "authors": [
+        "Alós-Ferrer, C.",
+        "Buckenmaier, J.",
+        "Garagnani, M.",
+        "Rustichini, A."
+      ],
+      "abstract": "Choice inconsistency is ubiquitous in economic decision making. Standard random utility models as well as sequential sampling models account for it and predict a relation between inconsistency rates and utility differences (strength-of-preference effects). The latter phenomenon is well-established empirically. However, recent literature argues that inconsistency might be the outcome of a deliberate attempt to implement an explicit preference for randomization. We collected new data in three preregistered experiments and also reanalyzed the previous evidence for this explanation. Our evidence is generally well-explained by strength-of-preference effects. That is, people are less consistent for choices that are closer to indifference. When an option to randomize is made explicit and salient, this option is sometimes chosen. However, in a within-subject design, we statistically reject the hypothesis that explicit mixing in one-shot decisions (revealed preference for randomization) equals choice proportions in repeated decisions (choice inconsistency). The deliberate choice of randomization devices is influenced both by explicit costs (if any) and whether decision makers are close to indifference between the nonrandomized alternatives. The latter effect might create a correlation with choice inconsistency at the aggregate level.\n                  This paper was accepted by Dorothea Kübler, behavioral economics and decision analysis.\n                  Funding: Financial support from the Spanish Ministry of Science and Innovation [Grant PID2022-136977NB-I00] is gratefully acknowledged.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.05415 .",
+      "date": "2026-05-22",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2024.05415",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2024.05415",
+      "score": 40.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
