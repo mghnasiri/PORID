@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-24T09:24:36.528167+00:00",
+  "generated_at": "2026-05-25T11:15:51.821989+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 593,
+      "github_stars": 592,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13516,
+      "github_stars": 13517,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 102,
+      "github_open_issues": 103,
       "github_recent_prs": [
+        "fix build with pybind 3.0.2+",
         "[ci] Simplify .github/workflows/presubmit.yml",
         "[ci] Use fail fast, parallelize CMake tests",
         "ci: install swig 4.3.1 on macos since 4.4 from brew has regression.",
-        "java: export util/java from google3",
-        "[ci] Remove Windows and Mac Intel from CMake presubmits"
+        "java: export util/java from google3"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1132,7 +1132,7 @@
       ],
       "recent_changes": "# CVXPY 1.9\n\nThis release is consistent with our semantic versioning guarantee. It comes packed with many new features, bug fixes, and performance improvements.\n\nThis version of CVXPY supports Python ",
       "github_stars": 6216,
-      "github_open_issues": 182,
+      "github_open_issues": 180,
       "github_recent_prs": [
         "Draft: Pass attributes to real variables in Complex2Real canonicalizer",
         "Isolate KNITRO conic tests and warn on OpenMP-runtime conflicts",
@@ -1322,11 +1322,11 @@
       "github_stars": 1661,
       "github_open_issues": 75,
       "github_recent_prs": [
-        "Assorted fixes",
-        "fix: address XXE in JaxbIO parsing",
-        "deps: bump the regular group with 4 updates",
+        "deps: bump the regular group with 5 updates",
+        "deps: bump org.openrewrite.recipe:rewrite-recipe-bom from 3.30.1 to 3.31.0 in the openrewrite group",
         "deps: bump the quarkus group with 4 updates",
-        "deps: bump the regular group with 2 updates"
+        "Assorted fixes",
+        "fix: address XXE in JaxbIO parsing"
       ]
     },
     {
