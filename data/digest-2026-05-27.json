@@ -1,0 +1,310 @@
+{
+  "date": "2026-05-27",
+  "generated_at": "2026-05-27T10:59:32.677542+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2605.27339",
+      "title": "Learning to reoptimize: a GNN-aided fix-and-optimize approach and an application to the Lot Sizing problem",
+      "authors": [
+        "Mathieu Lerouge",
+        "Andrea Lodi",
+        "Enrico Malaguti",
+        "Michele Monaci",
+        "Filippo Focacci"
+      ],
+      "abstract": "In many operational contexts, solutions to NP-hard combinatorial optimization problems, modeled by means of Mixed-Integer Linear Programming (MILP), may become infeasible due to unpredictable disruptions. Typically, reoptimizing by solving the MILP formulation on the perturbed instance is not possible as new solutions must be obtained in a very short computing time, while simple repairing heuristics may result in low-quality solutions. To bridge this gap, we propose a learning-to-reoptimize framework, and apply it to the Lot Sizing Problem (LSP) under machine breakdown disruptions. We design a fix-and-optimize strategy aided by a Graph Neural Network (GNN) that efficiently computes a new solution within the neighborhood of a repaired solution. By representing the instance, the original solution and the disruption as a feature graph, we train a GNN to predict the likelihood that specific binary variables require to be modified. These predictions guide the selection of a small subset of variables to be reoptimized by an MILP solver, while the other variables are hard-fixed. Numerical experiments on a large dataset demonstrate that our approach handles effectively different problem sizes, and that it significantly outperforms a baseline alternative approach, yielding larger cost reductions within the same limited time budget.",
+      "date": "2026-05-26",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2605.27339v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming",
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.27339",
+      "arxiv_id": "2605.27339v1",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1002-net.70051",
+      "title": "Multi‐Objective Route Optimization for Drone Deliveries Integrated With Public Transportation",
+      "authors": [
+        "Peng, Y.",
+        "Yu, Y.",
+        "Yu, D.",
+        "Yang, X.",
+        "Xiang, C.",
+        "Ren, Z."
+      ],
+      "abstract": "ABSTRACT\n                  To enhance delivery efficiency while supporting urban public transportation development, this study investigates a bus‐assisted drone delivery route optimization problem within the context of the low‐altitude economy. A multi‐objective optimization model is formulated to minimize both distribution cost and time. To solve this problem efficiently, we propose a non‐dominated sorting variable neighborhood search (NSVNS) algorithm. To validate the algorithm's performance, we conduct a dispersion analysis to assess its stability and demonstrate its superiority over NSGA‐II in solution diversity, distribution uniformity, and overall effectiveness. Additionally, experimental analysis confirms the effectiveness of the proposed neighborhood search operators. Finally, a case study is conducted based on Chongqing city's line 100 bus route and surrounding customer locations to derive optimal drone delivery routes. Sensitivity analysis indicates that increasing drone payload capacity has a more significant impact on delivery efficiency than extending drone range, providing insights for optimizing drone‐based urban logistics.",
+      "date": "2026-05-26",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70051",
+      "tags": [
+        "metaheuristics",
+        "supply-chain",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70051",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.26577",
+      "title": "Bridging Control with Neural Network Verifier alpha-beta-CROWN: A Tutorial",
+      "authors": [
+        "Haoyu Li",
+        "Xiangru Zhong",
+        "Hao Cheng",
+        "Bin Hu",
+        "Huan Zhang"
+      ],
+      "abstract": "Learning-based methods for synthesizing controllers have gained popularity due to their high expressiveness and strong empirical performance. However, in safety-critical scenarios such as autonomous driving, robotics, and power systems, empirical performance alone is insufficient, and formal verification of controller properties such as stability and safety is highly desirable. Unfortunately, many prior verification approaches are either tied to specific structural assumptions on the system or the certificate, making them difficult to transfer across settings, or suffer from poor scalability on higher-dimensional neural network systems. In this tutorial, we present a unified framework that aims to mitigate this gap via bridging control with the state-of-the-art neural network verifier $α,\\!β$-CROWN (alpha-beta-CROWN). At its core, $α,\\!β$-CROWN is a general-purpose bounding engine for nonlinear functions represented as computation graphs: given an input domain, it can produce certified bounds and explicit linear relaxation of the nonlinear function. These certified bounds are useful on their own for tasks such as reachability analysis, and they also provide the foundation for more complex routines that perform satisfiability checking and optimization. More specifically, many control problems reduce to verifying real-valued inequalities over a state domain (e.g., Lyapunov theory). Consequently, $α,\\!β$-CROWN enables scalable verification of such conditions by computing tight bounds and recursively partitioning and pruning subdomains based on the bounds. Thanks to GPU parallelization, this pipeline demonstrates superior scalability on verification and optimization problems that are challenging for traditional approaches. In this tutorial, we discuss the basics of $α,\\!β$-CROWN and introduce its application to various control-related tasks.",
+      "date": "2026-05-26",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2605.26577v1",
+      "tags": [
+        "eess.SY",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.26577",
+      "arxiv_id": "2605.26577v1",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2605.27082",
+      "title": "Can Broad Biomedical Knowledge be Contextualized into Scenario-Grounded Propositions?",
+      "authors": [
+        "Qingyuan Zeng",
+        "Ziyang Chen",
+        "Pengxiang Cai",
+        "Zixin Guan",
+        "Anglin Liu",
+        "Lang Qin",
+        "Xinyao Lai",
+        "Jintai Chen"
+      ],
+      "abstract": "Biomedical discovery often requires connecting broad biomedical knowledge with specific experimental or clinical data. Background knowledge suggests relevant mechanisms but is usually too general to map directly onto dataset variables, while data-driven patterns can be dataset-specific and hard to interpret mechanistically. We study this missing link as knowledge contextualization: transforming broad biomedical knowledge into evidence-supported, scenario-grounded propositions that domain experts can inspect, replay, and validate. We propose SCENE, a bi-level multi-agent framework that treats knowledge contextualization as iterative search. The upper level converts broad knowledge into search directions and grounds them in the dataset schema. The lower level executes these directions through multi-objective optimization to identify concrete propositions that balance evidential strength and data support. Feedback between the two levels progressively refines the search. We evaluate SCENE in two settings: discovering patient subgroups with heterogeneous treatment benefits in clinical trial scenarios, and identifying context-specific biological responses in LINCS L1000 studies. In clinical trials, SCENE discovers specific, well-supported subgroups and outperforms existing baselines. In L1000 studies, SCENE identifies perturbational contexts with strong target-response matching and high positive rates. These results show that SCENE bridges broad knowledge and scenario-specific evidence, producing traceable, inspectable hypotheses for follow-up validation.",
+      "date": "2026-05-26",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2605.27082v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "healthcare-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.27082",
+      "arxiv_id": "2605.27082v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.27027",
+      "title": "SQARL: A Size-Agnostic Reinforcement Learning approach for Circuit Allocation in Distributed Quantum Architectures",
+      "authors": [
+        "Víctor Carballo",
+        "Júlia López-Closa",
+        "Mario Martin"
+      ],
+      "abstract": "The scaling of quantum processors is currently limited by technical challenges such as decoherence and cross-talk. As the number of qubits grows, interference increases the computational noise. Distributed quantum computing addresses these limitations by interconnecting smaller, easier-to-handle quantum processors (cores), but it introduces the challenge of minimizing slow, error-prone inter-core communication. The task of distributing quantum circuits across cores while minimizing communication costs is known as the Qubit Allocation problem. This work focuses on developing a deep learning approach to this problem, emphasizing flexibility to quantum hardware topology and improving state-of-the-art performance.   Heuristic and non-learning algorithms, such as the Hungarian Qubit Allocation (HQA), currently represent the state of the art. Reinforcement Learning (RL) approaches leverage learned allocation policies but often lack flexibility, requiring retraining when hardware configurations change, and they fall short of the solution quality achieved by non-learning methods. However, learning mechanisms could outperform human-crafted heuristics.   To overcome these limitations, this work proposes a flexible, transformer-based architecture that can handle arbitrary numbers of qubits and cores without retraining. Results show that the trained policy consistently outperforms the previous RL state of the art and narrows the gap between RL and HQA for the most common circuits. It achieves a 33% reduction in allocation cost relative to the HQA for the Cuccaro Adder and 25% on average for random circuits. These findings show that learning-based approaches can effectively match the performance of hand-crafted heuristics, a crucial step towards their application in real-world scenarios.",
+      "date": "2026-05-26",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2605.27027v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.27027",
+      "arxiv_id": "2605.27027v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2605.27094",
+      "title": "En-route Charging Coordination for Electric Trucks",
+      "authors": [
+        "Joas Kahlert",
+        "Ruiting Wang",
+        "Jonas Mårtensson"
+      ],
+      "abstract": "The electrification of long-haul freight transport introduces several new challenges, such as the limited capacity and congestion at en-route charging infrastructure. To reduce waiting times during peak periods, this paper proposes a framework for coordinated charging scheduling. The approach employs a mixed-integer formulation to optimize charging-related costs across charging, operation, battery degradation, and congestion delay, considering a range of scenarios. The results demonstrate that coordinated scheduling yields substantial cost savings up to 36% compared to uncoordinated scheduling, particularly by reducing battery degradation and delay costs.",
+      "date": "2026-05-26",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2605.27094v1",
+      "tags": [
+        "eess.SY",
+        "integer-programming",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1109/FISTS67319.2026.11421748",
+      "arxiv_id": "2605.27094v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261457704",
+      "title": "EXPRESS: Decision support for sales and operations planning under asymmetric power: A case study from the agrochemical industry",
+      "authors": [
+        "Löffel, C.",
+        "Fleischmann, M.",
+        "Hausen, T.",
+        "Klosterhalfen, S."
+      ],
+      "abstract": "Agrochemical companies operate multi-echelon, long-lead-time supply chains to serve seasonal and uncertain demand for crop protection products from farmers around the globe. To match supply and demand in this challenging setting, alignment of the sales and supply chain functions is crucial. We investigate this alignment task, building on a case study. At the case company, cross-functional coordination is achieved through annual sales and operations planning (S&amp;OP) budget meetings. In the budgeting process, sales and supply chain organizations agree on a set of supply volume guarantees to align commercial and production plans. The guarantees must respect a maximum allowable inventory investment imposed by the business unit head. Our work focuses on the choice of these volume guarantees. Specifically, we support the S&amp;OP negotiation process by developing an optimization-based budget planning model. Importantly, the model reflects differences in the decision-making scope and power of the relevant actors. Moreover, it captures the available flexibility of future plan adjustments by means of an affinely adjustable robust optimization approach. We evaluate the performance of our model against relevant benchmarks in two numerical studies, based on synthetic and real-world data. We also study the structure of the obtained solution. We find that optimizing the volume guarantees can substantially reduce lost margins, relative to uniform guarantees. For our real-world data set, our approach saves up to 32% relative to a current practice benchmark.",
+      "date": "2026-05-26",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261457704",
+      "tags": [
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261457704",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1177-10591478261457242",
+      "title": "EXPRESS: Fighting against Digital Recruitment Scam Behavior: Theory-driven Supervised Learning and Interpretable Analysis",
+      "authors": [
+        "Wang, T.",
+        "Xu, D.",
+        "SIAU, K.",
+        "Zhang, Z."
+      ],
+      "abstract": "The number of recruitment postings on digital recruitment hiring platforms has increased since the COVID-19 pandemic. However, the weak surveillance and operations of these platforms, combined with the fact that most job seekers have relatively low vigilance and strong desire for recruitment offers, enable scammers to easily deceive job seekers for their money and confidential information. In this work, we combine prevailing text mining techniques (i.e., ChatGPT with prompting engineering and supervised machine learning) with interpersonal deception theory (IDT) from social science to design an interpretable IT system to predict fraudulent recruitment posting on digital recruitment-hiring platforms. We compare our designed framework with the state-of-the-art general-purpose algorithms to demonstrate the efficacy of our system using two testbeds. To further confer intuitive and human understandable operational guidance of IDT-driven design for the fraudulent recruitment phenomenon, we perform instance-agnostic and instance-specific explanation analysis based on the aggregated marginal contributions of IDT-driven contextualized features. A between-subjects user experiment empirically shows that IDT-driven explanations enhance users’ trust, understanding, and perceived usefulness. Using an illustrative example, we further quantify the economic value of IDT-driven design via a cost-revenue analysis. We conclude the academic contributions and practical implications of our work to job seekers, recruiters, and third-party recruitment-hiring platforms.",
+      "date": "2026-05-26",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261457242",
+      "tags": [
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261457242",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07181-2",
+      "title": "Enhancing efficiency and workflow in oncology outpatient services through simulation-based optimization",
+      "authors": [
+        "Zhou, C.",
+        "Ding, X.",
+        "Chen, W.",
+        "Lei, L.",
+        "Norrell, J.",
+        "Tray, A.",
+        "Evens, A."
+      ],
+      "abstract": "Abstract\n                  Outpatient chemotherapy clinics face rising demand and growing patient dissatisfaction, creating pressures to improve efficiency while sustaining quality care. This study uses an agent-based simulation of a National Cancer Institute (NCI)-designated cancer center’s infusion clinic to evaluate the effectiveness of three proposed operational changes: setting up an on-site laboratory, adapting nurse staffing based on anticipated demand increases, and balancing appointment scheduling via simulation optimization. The model, calibrated with historical data, tracks patient visit length and nurse utilization. Our study shows that combining an on-site lab with optimized scheduling reduces average visit length by about 75–90 minutes (approximately 30%) under various demand levels, smoothing workflow peaks. The study also shows that modest increases in nursing staff ensure timely patient throughput with 7–10% decreases in nurse utilization. Joint implementation of these operational changes outperforms individual changes, highlighting important synergies and the value of an integrated operations strategy. Overall, the study demonstrates a generalizable simulation-based framework to guide oncology process redesign and strategic decisions such as capacity expansion or facility relocation.",
+      "date": "2026-05-26",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07181-2",
+      "tags": [
+        "scheduling",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07181-2",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2605.26985",
+      "title": "A Unified Primal-Dual Recipe for Accelerating Three-Operator Splitting Methods",
+      "authors": [
+        "Abdurakhmon Sadiev",
+        "Laurent Condat",
+        "Peter Richtárik"
+      ],
+      "abstract": "Composite optimization problems, formulated as the minimization of three functions, are ubiquitous in large-scale machine learning and signal processing. While state-of-the-art splitting methods such as Condat-Vũ (CV) [Condat, 2013, Vũ, 2013], Primal-Dual Davis-Yin (PDDY) [Salim et al., 2022b], and Primal-Dual Twice Reflected (PDTR) [Malitsky and Tam, 2026] are highly versatile, they inherently exhibit non-accelerated convergence rates. Existing accelerated primal-dual splitting results either focus on special structures like one of the functions being zero, or linearly constrained problems, or smooth regimes, or directly use Nesterov-type momentum. Our contribution is a unified Bregman primal-dual framework that yields four variants and a common Lyapunov analysis. By applying the Chambolle-Pock algorithm [Chambolle and Pock, 2011] to primal-dual reformulations, we systematically derive four novel accelerated algorithms: Accelerated Condat-Vũ (ACV-I and ACV-II) and Accelerated Primal-Dual Twice Reflected (APDTR-I and APDTR-II). Through a simplified Lyapunov-based analysis, we establish iteration complexities for both smooth and nonsmooth cases, successfully removing the restrictive assumptions restrictions required by prior works.",
+      "date": "2026-05-26",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2605.26985v1",
+      "tags": [
+        "math.OC",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2605.26985",
+      "arxiv_id": "2605.26985v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
