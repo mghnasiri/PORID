@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T10:56:55.215057+00:00",
+  "generated_at": "2026-05-30T09:24:49.681782+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1642,
+      "github_stars": 1645,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13537,
+      "github_stars": 13543,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 101,
+      "github_open_issues": 102,
       "github_recent_prs": [
+        "base: rework status_builder and status_macros",
         "graph: export from google3",
         "google3 export",
         "export base/benchmark_main.cc from google3",
-        "[ci] Disable remote caching when running from a fork",
-        "Test do not merge"
+        "[ci] Disable remote caching when running from a fork"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -604,7 +604,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 993,
+      "github_stars": 994,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6224,
+      "github_stars": 6227,
       "github_open_issues": 186,
       "github_recent_prs": [
+        "Fix Contributing Guide Link",
+        "Fix #3333: Support parsing SCS solver options",
         "Return COPT dual Farkas infeasibility certificates (conic + QP interfaces)",
         "Fix XPRESS QP test gating to run under the Community license",
-        "Add coverage gap tests",
-        "Dedup identical subtrees in Dcp2Cone and Dnlp2Smooth canonicalization",
-        "Remove dead code surfaced by coverage report"
+        "Add coverage gap tests"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "With Timefold Solver 2.1.0, we return to a predictable release schedule. We have fixed some issues that slipped through the cracks of the major release, made more tweaks to multi-threaded solving, and",
-      "github_stars": 1665,
-      "github_open_issues": 74,
+      "github_stars": 1667,
+      "github_open_issues": 78,
       "github_recent_prs": [
-        "feat: add support for maps with traffic",
-        "deps: bump the regular group with 5 updates",
-        "deps: bump org.openrewrite.recipe:rewrite-recipe-bom from 3.30.1 to 3.31.0 in the openrewrite group",
-        "deps: bump the quarkus group with 4 updates",
-        "Assorted fixes"
+        "feat: Add sliding window and minimum improvement ratio to termination confiig",
+        "chore: merge model parents and disconnect it from build parent",
+        "chore: update release workflow",
+        "feat: Add effective map location to metadata events",
+        "feat: add support for maps with traffic"
       ]
     },
     {
@@ -1384,14 +1384,14 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
-      "github_stars": 2464,
-      "github_open_issues": 355,
+      "github_stars": 2465,
+      "github_open_issues": 356,
       "github_recent_prs": [
-        "Support a reusable 'seen' cache within the `IdentifyVariableVisitor`",
+        "Remove references to `scipopt.org`; update DoE paper reference",
+        "Revert pypy pin in GHA workflow",
+        "Support a reusable 'var_cache' within the `IdentifyVariableVisitor`",
         "Fix IIS interface for current CPLEX releases",
-        "Mindtpy docs",
-        "LinearStandardFormCompiler: `allow_nonlinear` and `ignore_ctypes` options",
-        "Testing: add missing Ipopt guards (parmest); add GHA nosolvers test"
+        "Mindtpy docs"
       ],
       "pypi_monthly_downloads": -28
     },
