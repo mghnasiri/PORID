@@ -1,0 +1,339 @@
+{
+  "date": "2026-06-01",
+  "generated_at": "2026-06-01T12:44:58.877840+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s12532-025-00300-3",
+      "title": "Column generation in column-and-constraint generation for adjustable robust optimization with Interdiction-type linking Constraints",
+      "authors": [
+        "Lefebvre, H.",
+        "Schmidt, M.",
+        "Thürauf, J."
+      ],
+      "abstract": "Abstract\n                  Adjustable robust optimization (ARO) is a powerful tool to model problems that have uncertain data and that feature a two-stage decision-making process. Computationally, they are often addressed using the column-and-constraint generation (CCG) algorithm introduced by Zeng and Zhao [45]. While it was empirically shown that the algorithm scales well if all second-stage decisions are continuous, the presence of integer variables in the second stage rapidly leads to challenging large-scale mixed-integer problems within CCG. These problems can no longer be solved to global optimality within reasonable time limits in general. In this work, we explicitly focus on ARO problems with mixed-integer second-stage decisions and discuss the main difficulties of successfully applying CCG to this problem class. We then introduce, for a large set of problems with specific structural properties, a stronger formulation, which can be used in place of the master problem in the classic CCG algorithm. We show how this model can be effectively solved by column generation (CG). Additionally, we introduce a new CG-based heuristic that is able to generate new feasible points to speed up the overall method. We apply this nested scheme, combining CCG and CG, to three problems from logistics and scheduling to show the applicability of our approach.",
+      "date": "2026-06-01",
+      "source": "Mathematical Programming Computation",
+      "source_detail": "Mathematical Programming Computation",
+      "url": "https://doi.org/10.1007/s12532-025-00300-3",
+      "tags": [
+        "integer-programming",
+        "scheduling",
+        "stochastic",
+        "supply-chain",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s12532-025-00300-3",
+      "score": 75.0
+    },
+    {
+      "id": "crossref-10.1007-s10732-026-09582-9",
+      "title": "A Robust Optimization Framework for eBus Charging Infrastructure Planning",
+      "authors": [
+        "Loaiza Quintana, C.",
+        "Climent, L.",
+        "Arbelaez, A."
+      ],
+      "abstract": "Abstract\n                  Efficient and robust charging infrastructure plays a key role in accelerating the adoption of electric buses (eBuses) in urban transit systems. Unlike diesel buses, eBuses depend on strategically placed fast-charging stations to maintain continuous operation while ensuring high service quality. Planners must balance infrastructure investment, network reliability, and operational feasibility when determining optimal charging locations. Providing redundant charging access prevents disruptions from station failures, energy consumption fluctuations, and scheduling uncertainties. This work introduces an Iterated Local Search (ILS) algorithm that optimises the number and placement of charging stations. The approach improves robustness by incorporating backup charging stations and flexible energy redistribution techniques. We evaluate performance using real-world public transportation data from Cork and Dublin, comparing results against the state-of-the-art Large Neighborhood Search (LNS) method. Our experiments show that ILS outperforms LNS in 81.2% of cases by requiring fewer charging stations, whereas LNS performs better in 7.8% of cases. ILS is particularly effective in high-energy-demand scenarios with strict timetable constraints and realistic discharging rates, demonstrating its effectiveness in ensuring viable and scalable charging station placement.",
+      "date": "2026-06-01",
+      "source": "Journal of Heuristics",
+      "source_detail": "Journal of Heuristics",
+      "url": "https://doi.org/10.1007/s10732-026-09582-9",
+      "tags": [
+        "metaheuristics",
+        "scheduling",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10732-026-09582-9",
+      "score": 70.0
+    },
+    {
+      "id": "s2-a6bd3798dd8e",
+      "title": "Hybrid Digitized-Counterdiabatic Quantum–Classical Benders Decomposition for EV Charging Navigation in Coupled Transportation and Distribution Network",
+      "authors": [
+        "Yanyu Zhang",
+        "Yanhao Li",
+        "Hengji Li",
+        "Feixiang Jiao",
+        "Xibeng Zhang",
+        "Yi Zhou",
+        "Abhishek Ukil"
+      ],
+      "abstract": "With the increasing integration of transportation network (TN) and distribution network (DN), the growing prevalence of electric vehicles (EVs) has posed significant challenges to both TN and DN operations, such as congestion at charging stations (CSs) and overload in the DN. To address these challenges, this article proposes a bi-layer coupled model that integrates EV route navigation and CS power scheduling. The upper layer of the model optimizes the lowest-cost routes for multiple EVs to reach the CS, while the lower layer optimizes the energy-efficient scheduling of the CS to meet EV charging demands. For solving the model in the form of mixed-integer linear programming (MILP), quantum computing (QC) has demonstrated significant potential. Therefore, a hybrid quantum–classical algorithm combining the digitized-counterdiabatic quantum approximate optimization algorithm (DC-QAOA) with Benders decomposition (DC-Q-BD) is developed. This algorithm leverages the parallelism of QC and the rapid convergence of digitized-counterdiabatic evolution. It also employs collaborative processing between a classical CPU and a quantum processing unit (QPU) to handle continuous and discrete variables, respectively. Results from practical case studies demonstrate that the proposed algorithm significantly enhances solution efficiency and quality. It provides cost-effective charging routes for EVs and notably reduces the adverse impacts of EV charging on the CS. This work provides a quantum-based approach for addressing the EV charging navigation problem in coupled TN and DN.",
+      "date": "2026-06-01",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.1109/TTE.2026.3667988",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "scheduling",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TTE.2026.3667988",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 70.0
+    },
+    {
+      "id": "s2-7499c702b57d",
+      "title": "Integrating Towable Mobile Charging Hubs Into Electric Vehicle Route Planning With Time Window Constraints and Partial Recharging",
+      "authors": [
+        "Zifei Su",
+        "Pingen Chen"
+      ],
+      "abstract": "As electrification technology for medium- to heavy-duty trucks becomes more mature, an increasing number of logistics companies are integrating electric trucks into their fleets. However, limitations such as limited driving range and increased labor costs associated with long charging durations still need to be addressed. To tackle these challenges, towable mobile charging hubs (MCHs) can be adopted as an alternative charging solution for electric delivery fleets. This article integrates towable MCHs into the traditional electric vehicle routing problem with time window constraints (EVRPTW) and nonlinear partial recharging. A hybrid ant colony system (HACS)-based algorithm is introduced to co-optimize decisions between intraroute charging using fixed charging stations (FCSs) and interroute charging using MCHs, routing for delivery vehicles (DVs) and MCHs, and charging schedules for DVs. Case study results demonstrate that the proposed algorithm can balance the benefits between intraroute charging using FCSs and interroute charging using MCHs, achieving up to a 12.16% reduction in operational costs on Solomon instances and 11.27% on a real-world dataset.",
+      "date": "2026-06-01",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.1109/TTE.2026.3670642",
+      "tags": [
+        "metaheuristics",
+        "vehicle-routing",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TTE.2026.3670642",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 65.0
+    },
+    {
+      "id": "s2-53892a27e83c",
+      "title": "Multi-Objective Optimization of Software Testing Using Artificial Intelligence Techniques",
+      "authors": [
+        "Amitesh Arya"
+      ],
+      "abstract": "Software testing plays a crucial role in ensuring software quality, reliability, and performance in modern digital\nsystems. Traditional software testing approaches often face challenges in balancing multiple objectives such as minimizing\ntesting cost and execution time while maximizing test coverage and defect detection efficiency. With the emergence of Artificial\nIntelligence (AI), optimization-based testing techniques have gained significant attention among researchers and software\nindustries. This paper explores the application of multi-objective optimization techniques integrated with Artificial Intelligence\nfor improving software testing processes. The study proposes a hybrid AI-driven optimization framework combining Genetic\nAlgorithms, Machine Learning, and predictive analytics for intelligent test case prioritization and resource allocation. The\nproposed framework aims to optimize software testing by reducing cost, minimizing execution time, increasing test coverage, and\nimproving fault detection accuracy. The paper also discusses methodologies, optimization models, implementation strategies,\npractical implications, limitations, and future research opportunities in AI-enabled software testing systems.\nThis research paper focuses on the integration of Artificial Intelligence and Operations Research techniques for optimizing\nsoftware testing systems in modern digital environments. The study highlights the significance of intelligent automation and\nmulti-objective optimization for achieving efficient and reliable software quality assurance.",
+      "date": "2026-05-31",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.22214/ijraset.2026.82640",
+      "tags": [
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.22214/ijraset.2026.82640",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "s2-436c760cba21",
+      "title": "MARCA-v2: Mamba Accelerator With Complementary State-Space Model Sparsity and Reconfigurable Architecture",
+      "authors": [
+        "Jinhao Li",
+        "Shan Huang",
+        "Jiaming Xu",
+        "Jun Liu",
+        "Ningyi Xu",
+        "Guohao Dai"
+      ],
+      "abstract": "Large language models (LLMs) with a state-space model (SSM), especially Mamba, have demonstrated remarkable capabilities in various domains. Compared to Transformers, Mamba reduces the quadratic computational complexity and achieves a higher algorithm performance. Current research on Mamba focuses primarily on integrating it with various application scenarios. However, there is limited research on optimizing for Mamba processing. Therefore, we profile the processing carefully and identify three main challenges in Mamba computations: 1) Large memory access overhead of element-wise operations in the SSM. Based on the MARCA architecture, the time proportion of the SSM is still the bottleneck when the sequence length reaches 2048, accounting for 62.52% of the total runtime. In the SSM, the memory access overhead of element-wise operations accounts for 97.17%, leading to consuming 96.56% of the time. 2) Inefficient sparse element-wise (Sp-EW) execution on MARCA architecture. SOTA architectures like MARCA propose a reconfigurable reduction tree to accelerate dense element-wise operations but lack effective sparse support for sparse execution. When 30% of the element-wise operations are skipped, these skipped operations are still mapped to the PE array and trigger redundant execution cycles, incurring <inline-formula> <tex-math notation=\"LaTeX\">$1.43\\times $ </tex-math></inline-formula> performance gap with the ideal. 3) Large-area overhead for the nonlinear function unit. Exponential function and SiLU are two main nonlinear functions in the SSM. Previous methods designed a specific unit for acceleration, leading to 38% and 18% area overheads of the PE. In response to these challenges, we propose a new Mamba accelerator with complementary SSM sparsity and reconfigurable architecture, MARCA-v2, based on MARCA, to support fast and energy-efficient Mamba computations. Three novel techniques are as follows: 1) Complementary SSM sparsity with column-wise granularity. We first profile the numerical distributions of activations in the SSM and propose a column-wise complementary static sparsity for SSM computation. To further enable lightweight and hardware-friendly sparse computation, we propose a <inline-formula> <tex-math notation=\"LaTeX\">$\\delta $ </tex-math></inline-formula>-bitmap encoding scheme for compressed storage and introduce two abstractions for Sp-EW operations. 2) Lightweight Sp-EW architecture. Based on the hardware-friendly sparsity algorithm and MARCA architecture, we design and integrate a lightweight metadata processing unit (Meta-PU) into the existing pipeline, which decodes the sparsity metadata and dynamically generates control signals to guide PE arrays. The overall architecture can efficiently support both dense and sparse operations, maximizing speed and energy efficiency. 3) Reusable nonlinear function unit based on reconfigurable PE arrays. We decompose the exponential function and SiLU into several element-wise operations. Thus, the reconfigurable PEs are fully reused to execute nonlinear functions with negligible accuracy loss. We conduct extensive experiments on Mamba model families with different sizes. Experimental results show that in the prefill stage, MARCA-v2 achieve 1.77–<inline-formula> <tex-math notation=\"LaTeX\">$10.87\\times $ </tex-math></inline-formula>, 1.03–<inline-formula> <tex-math notation=\"LaTeX\">$1.08\\times $ </tex-math></inline-formula>, and 4.78–<inline-formula> <tex-math notation=\"LaTeX\">$9.10\\times $ </tex-math></inline-formula> speedup, and 8.29–<inline-formula> <tex-math notation=\"LaTeX\">$33.47\\times $ </tex-math></inline-formula>/1.03-<inline-formula> <tex-math notation=\"LaTeX\">$1.08\\times $ </tex-math></inline-formula>/4.78–<inline-formula> <tex-math notation=\"LaTeX\">$9.10\\times $ </tex-math></inline-formula> energy efficiency improvement compared with Mamba–GPU, MARCA, and Spada, respec-tively. In the decode stage, MARCA-v2 achieve 0.88–<inline-formula> <tex-math notation=\"LaTeX\">$7.65\\times $ </tex-math></inline-formula>/ 1.00–<inline-formula> <tex-math notation=\"LaTeX\">$1.01\\times $ </tex-math></inline-formula>/1.19–<inline-formula> <tex-math notation=\"LaTeX\">$1.64\\times $ </tex-math></inline-formula> speedup and 3.11–<inline-formula> <tex-math notation=\"LaTeX\">$27.01\\times $ </tex-math></inline-formula>/1.00–<inline-formula> <tex-math notation=\"LaTeX\">$1.01\\times $ </tex-math></inline-formula>/ 1.19–<inline-formula> <tex-math notation=\"LaTeX\">$1.64\\times $ </tex-math></inline-formula> energy efficiency improvement compared with Mamba–GPU, MARCA, and Spada, respectively.",
+      "date": "2026-06-01",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.1109/TCAD.2025.3624278",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TCAD.2025.3624278",
+      "arxiv_id": "",
+      "citation_count": 2,
+      "score": 60.0
+    },
+    {
+      "id": "s2-30ae5b0b16fc",
+      "title": "A Step Backward is a Leap Forward: Solving the CVTSP Based on Near-Optimal TSP Routes",
+      "authors": [
+        "Weice Sun",
+        "Zhi Pei"
+      ],
+      "abstract": "The carrier-vehicle traveling salesman problem (CVTSP) involves two types of heterogeneous vehicles, i.e., the carrier and a vehicle, operating cooperatively in a continuous space, where the vehicle may take off from and land on the carrier. Given a set of target points, the CVTSP seeks to determine both the visiting sequence of the targets and the corresponding takeoff and landing locations, with the objective of minimizing the total travel time. The problem is widely recognized in the truck-and-drone delivery and mothership-and-drone routing scenarios. In this letter, we prove that the optimal sequence of the CVTSP lies within a set of sequences whose traveling salesman problem (TSP) costs are within a fixed range, i.e., $\\Delta$, of the optimal TSP cost. Based on this insight, the proposed solution pool search strategy explores the near-optimal neighborhood more efficiently. Extensive experiments on benchmark datasets demonstrate that our method consistently finds optimal or near-optimal solutions for all small to medium-scale instances and identifies new best-known solutions for large-scale cases.",
+      "date": "2026-06-01",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.1109/LRA.2026.3682619",
+      "tags": [
+        "vehicle-routing",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1109/LRA.2026.3682619",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "s2-1c751555cad6",
+      "title": "Popularity Uncertainty-Aware Online Edge Data Migration",
+      "authors": [
+        "Ruikun Luo",
+        "Zixia Feng",
+        "Qiang He",
+        "Feifei Chen",
+        "Song Wu",
+        "Hai Jin",
+        "Xiaoyu Xia"
+      ],
+      "abstract": "As an emerging distributed computing paradigm, edge computing (EC) brings computing and storage capabilities to the network edge to support low-latency services. Service providers can cache popular data on edge servers to greatly reduce service latency and improve service quality. However, data popularity in EC environments is often dynamic and stochastic. Given the limited storage resources of edge servers, when data popularity changes, data may need to be migrated from edge servers with lower data popularity to those with higher data popularity. Data migration between edge servers can effectively reduce the high transmission costs associated with transferring data from the cloud to the edge. Most existing data migration approaches are designed for static EC environments, assuming that user access patterns and data demands remain constant over time. Even in dynamic EC environments, many approaches oversimplify data popularity by treating it as static, failing to model its fluctuations over time. In realistic EC scenarios, unexpected situations, such as sudden shifts in user preferences for specific data at certain times, can cause significant fluctuations in data popularity, leading to increased data retrieval latency and inefficient storage management. To address this uncertainty, this paper proposes a popularity uncertainty-aware online data migration approach that combines distributed robust optimization and Lyapunov optimization to minimize the data retrieval latency and migration cost for service providers. Specifically, it handles data popularity uncertainty in a data-driven manner through robust optimization. Then, it employs Lyapunov optimization to decompose the continuous optimization problem into multiple single-slot online optimization problems. Extensive experiments on a widely used real-world dataset confirm the effectiveness of this approach and its significant advantages over state-of-the-art approaches.",
+      "date": "2026-06-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/TPDS.2026.3682012",
+      "tags": [
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TPDS.2026.3682012",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "s2-55e559014af4",
+      "title": "Robust Feedback Linearization Based PSO Algorithm for Overhead Crane System",
+      "authors": [
+        "J. Khalaf",
+        "Ahmed Al-Talabi",
+        "A. Miry"
+      ],
+      "abstract": "Overhead crane systems are found in many industrial environments; however, controlling their motion in the presence of nonlinear and underactuated dynamics considers as a big challenge. To address this, a nonlinear control method proposed to enable the trolley to track the desired trajectory and quickly eliminate swing. First, feedback linearization is applied to the crane dynamics. Next, an energy-based compensation is implemented to ensure the boundedness of the system trajectories. Then, Particle Swarm Optimization (PSO) is utilized to optimally tune the controller parameters. The optimization relies on a multi-objective cost function formulated to simultaneously minimize steady-state error and overshoot, while improving robustness against model uncertainties and external disturbances. Finally, the robustness and validity of the proposed control method are demonstrated through the simulation of an underactuated crane system in several cases, including reference tracking, robustness against system uncertainty and external disturbances. Simulation results illustrated that the presented control method has minimum rise time, settling time with respect other control methods with zero steady state error.",
+      "date": "2026-06-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.33971/ijmrai.2.1.7",
+      "tags": [
+        "metaheuristics",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.33971/ijmrai.2.1.7",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "s2-0817ce9a99bf",
+      "title": "AI-Driven Power Grid Optimization Engine Using Graph Theory, Operations Research and Machine Learning",
+      "authors": [
+        "Sahil Choudhary"
+      ],
+      "abstract": "This paper presents an advanced AI-driven power grid optimization engine that seamlessly integrates graph theory,\noperations research, and machine learning techniques to address the multifaceted challenges of modern energy management. As\nthe global demand for electricity surges and renewable energy sources introduce new variables into the grid, the proposed system\naims to optimize energy distribution, significantly reduce transmission losses, and improve overall grid reliability and resilience.\nGraph algorithms are meticulously utilized for efficient routing, structural mapping, and network topology analysis, ensuring\nthat energy travels through the most viable paths. Concurrently, operations research methods, including linear and non-linear\nprogramming, are applied to optimize complex resource allocation and load balancing under stringent operational constraints.\nAdvanced machine learning models, specifically deep learning neural networks and time-series forecasting algorithms, are\nemployed for highly accurate load forecasting, anomaly detection, and predictive maintenance. The synergistic integration of\nthese three domains significantly enhances smart grid performance by improving real-time efficiency, minimizing exorbitant\noperational costs, preventing catastrophic grid failures, and thereby supporting long-term sustainable energy management\nframeworks.",
+      "date": "2026-05-31",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.22214/ijraset.2026.82736",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.22214/ijraset.2026.82736",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-03-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-informs-paper-2026",
+      "title": "INFORMS Optimization Society Young Researcher Prize 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "INFORMS",
+      "url": "https://connect.informs.org/optimizationsociety/prizes",
+      "deadline": "2026-06-01",
+      "location": "International",
+      "tags": [
+        "award",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Recognizes outstanding research by a young member of INFORMS Optimization Society.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-03-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 2,
+    "conferences": 0,
+    "opportunities": 2,
+    "total": 12
+  }
+}
