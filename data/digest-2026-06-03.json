@@ -1,0 +1,316 @@
+{
+  "date": "2026-06-03",
+  "generated_at": "2026-06-03T12:06:15.840993+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s10479-026-07288-6",
+      "title": "A methodology for the cross-dock door design problem under uncertainty",
+      "authors": [
+        "Escudero, L.",
+        "Garín, M.",
+        "Unzueta, A."
+      ],
+      "abstract": "Abstract\n                  The Cross-Dock door Design Problem (CDDP) consists of deciding on the number and capacity of inbound and outbound doors for receiving commodities from origin nodes and sending them to destination nodes. The uncertainty, realized in scenarios, lies in the sets of nodes that must be dealt with, the volume of commodities handled and the operational cost as well as the doors’ capacity disruption. The CDDP is represented using a stochastic two-stage binary quadratic (BQ) model. The first stage decisions are related to design of the cross-dock infrastructure, and the second stage decisions are related to the assignments of nodes to doors. This is the first time, as far as we know, that a stochastic two-stage BQ model has been presented for minimizing the cost of building the platform’s infrastructure and the expected cost of its use in the scenarios. Given the difficulty of solving this combinatorial problem, a mathematically equivalent MILP formulation is introduced. However, searching for an optimal solution is still impractical for commercial solvers. Thus, a scenario cluster decomposition-based matheuristic algorithm is introduced to obtain feasible solutions with only a small optimality gap and reasonable computational effort. A broad study to validate the proposal gives solutions with a much smaller gap than the ones provided by a state-of-the-art general solver. In fact, the proposal provides solutions with a 1.31% to 8.33% optimality gap, while the solver does it with a gap of up to 12.45%, if any, and requires a wall time twice as high for the largest instances, at least.",
+      "date": "2026-06-02",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07288-6",
+      "tags": [
+        "integer-programming",
+        "stochastic",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07288-6",
+      "score": 70.0
+    },
+    {
+      "id": "crossref-10.1007-s00291-026-00856-z",
+      "title": "Decision-dependent robust optimization with elementwise controllable uncertainty sets",
+      "authors": [
+        "Ley, E.",
+        "Marx, R.",
+        "Merkert, M.",
+        "Niemann, T.",
+        "Stiller, S."
+      ],
+      "abstract": "Abstract\n                  \n                    Applications for optimization with uncertain data in practice often feature a possibility to reduce the uncertainty at a given\n                    query cost\n                    , e.g., by conducting measurements, surveys, or paying a third party in advance to limit the deviations. We model such situations by a class of decision-dependent robust optimization problems in which the uncertainty set can be modified elementwise at a cost. In our framework, uncertain cost coefficients lie in bounded intervals and the optimizer chooses a query vector that shrinks each interval towards a hedging point, possibly down to a single value. We refer to this overall modeling paradigm with decision-dependent uncertainty sets as\n                    optimization under elementwise controllable uncertainty (OCU)\n                    . We study two different problem settings – one with known and one with unknown hedging points – in more detail, in which we handle the remaining uncertainty by the paradigm of robust optimization. For both settings, we draw connections to the existing literature, provide bounds on the optimal objective value, and give a single-level non-linear reformulation. Furthermore, we state assumptions under which the three- respectively four-level problem can be solved as a single-level mixed-integer linear program. Finally, we formalize the phenomenon of\n                    budget deflection\n                    , where a parameter is queried solely to control the uncertainty for other parameters. We provide examples illustrating when budget deflection can occur and identify modeling choices under which it is provably excluded.",
+      "date": "2026-06-02",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00856-z",
+      "tags": [
+        "integer-programming",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00856-z",
+      "score": 65.0
+    },
+    {
+      "id": "s2-2cb884efcb02",
+      "title": "A machine learning-driven decision support system for startup investments using entropy-based adaptive loss with sample weighting",
+      "authors": [
+        "S. Sevim",
+        "Ayberk Soyer"
+      ],
+      "abstract": "\n \n This study presents a new startup investment decision support model (SIDSM) that is specifically designed to mitigate the inherent challenges of class imbalance and uncertainty in startup investment decisions.\n \n \n \n Based on financial and structural indicators sourced from the Crunchbase database, the proposed model incorporates a multi-stage methodology. First, a systematic feature selection process integrating SHAP, Boruta and Elbow methods is used to retain informative features. Subsequently, uncertainty estimates are calculated at the feature and observation levels using the Shannon-Entropy and DeepGini metric and included in XGBoost's learning process through a user-defined loss function and a label-distribution-aware margin (LDAM) integration. Cuckoo Search meta-heuristic algorithm is used to optimize the hyperparameters to ensure model robustness, and a class-based threshold optimization is used to optimize decision boundaries.\n \n \n \n The experimental findings demonstrate that SIDSM outperforms the baseline models, achieving a macro F1-score of 89.47% and more stable minority class detection, thereby indicating its potential to support startup investment decisions in a reliable, transparent and evidence-driven manner under class imbalance.\n \n \n \n This study proposes a novel, data-conscious and holistic approach to the methodological limitations of traditional classification approaches. By integrating feature explanatory power and observation-based uncertainties into the learning process, rather than relying solely on error-driven optimization, the model becomes sensitive to uncertainty, captures difficult-to-learn and minority-class patterns better and provides a highly robust and explainable framework for startup investment decision-making.\n",
+      "date": "2026-06-02",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1108/ijicc-01-2026-0044",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1108/ijicc-01-2026-0044",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2025.1183",
+      "title": "Kernel-Based Distributed Q-Learning: A Scalable Reinforcement Learning Approach for Dynamic Treatment Regimes",
+      "authors": [
+        "Wang, D.",
+        "Wang, Y.",
+        "Lin, S."
+      ],
+      "abstract": "In recent years, large amounts of electronic health records (EHRs) concerning chronic diseases have been collected to facilitate medical diagnosis. Modeling the dynamic properties of EHRs related to chronic diseases can be efficiently done using dynamic treatment regimes (DTRs). Although reinforcement learning (RL) is a widely used method for creating DTRs, there is ongoing research in developing RL algorithms that can effectively handle large amounts of data. In this paper, we present a scalable kernel-based distributed Q-learning algorithm for generating DTRs. We perform both theoretical assessments and numerical analysis for the proposed approach. The results demonstrate that our algorithm significantly reduces the computational complexity associated with the state-of-the-art deep reinforcement learning methods while maintaining comparable generalization performance in terms of accumulated rewards, such as survival time or cumulative survival probability.\n                  History: Accepted by J. Paul Brooks, Area Editor for Applications in Biology, Medicine, &amp; Healthcare.\n                  Funding: This research was supported by the National Natural Science Foundation of China [Grants 12471486, 62276209, and 12371513].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2025.1183 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2025.1183 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-06-02",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2025.1183",
+      "tags": [
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2025.1183",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.03841",
+      "title": "EvoDS: Self-Evolving Autonomous Data Science Agent with Skill Learning and Context Management",
+      "authors": [
+        "Zherui Yang",
+        "Fan Liu",
+        "Yansong Ning",
+        "Hao Liu"
+      ],
+      "abstract": "Recent progress in Large Language Model (LLM) agents has enabled promising advances in automated data science. However, existing approaches remain fundamentally limited by their static action sets and lack of principled long-horizon context management, hindering their ability to accumulate reusable experience across tasks and operate reliably in multi-stage, iterative data science pipelines. To address these challenges, we introduce EvoDS, a self-evolving autonomous data science agent that learns to expand its skills and adaptively managing long-term context through agentic reinforcement learning. Specifically, EvoDS introduces two key strategies: (1) Autonomous Skill Acquisition (ASA) mechanism, which enables agents to synthesize, validate, and reuse executable skills; and (2) Adaptive Context Compression (ACC) strategy, which treats context management as a learned control problem rather than passive truncation. These strategies are orchestrated within a two-stage multi-agent training scheme, enabling EvoDS to autonomously improve over time. Theoretically, we prove that EvoDS's hierarchical design reduces tool-selection error, and its optimization objective aligns with an information bottleneck principle, ensuring efficient context use. Empirically, EvoDS outperforms state-of-the-art open-source data science agents by an average of 28.9% across four diverse benchmarks while eliminating out-of-token failures. Our code and data are available at https://github.com/usail-hkust/EvoDS.",
+      "date": "2026-06-02",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2606.03841v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1145/3770855.3818002",
+      "arxiv_id": "2606.03841v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s11590-026-02295-9",
+      "title": "An improved adaptive general variable neighborhood search algorithm for the integrated production scheduling and vehicle routing problem with order acceptance",
+      "authors": [
+        "Liao, B.",
+        "Luo, D.",
+        "Zhu, X.",
+        "Pardalos, P.",
+        "Huang, X."
+      ],
+      "abstract": "",
+      "date": "2026-06-03",
+      "source": "Optimization Letters",
+      "source_detail": "Optimization Letters",
+      "url": "https://doi.org/10.1007/s11590-026-02295-9",
+      "tags": [
+        "metaheuristics",
+        "scheduling",
+        "vehicle-routing"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11590-026-02295-9",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.03968",
+      "title": "QUBRIC: Co-Designing Queries and Rubrics for RL Beyond Verifiable Rewards",
+      "authors": [
+        "Rongzhi Zhang",
+        "Rui Feng",
+        "Zhihan Zhang",
+        "Jingfeng Yang",
+        "Qingyu Yin",
+        "Xin Liu",
+        "Zixuan Zhang",
+        "Priyanka Nigam",
+        "Bing Yin",
+        "Tuo Zhao",
+        "Chao Zhang"
+      ],
+      "abstract": "Rubric-based RL is a promising route for extending reinforcement learning beyond verifiable rewards, yet existing methods optimize rubrics while treating the query distribution as fixed. We identify a structural bottleneck: rubric quality is constrained by query structure. Open-ended queries yield vague rubrics; naively narrowing them introduces fabricated references that no model can verify, so all responses fail and training receives no reward signal. We present QUBRIC, a framework that co-designs queries and rubrics. Teacher-derived key points ground the rewriting of open-ended queries into scenario-based, evaluable questions. Contrastive rubric generation then turns teacher-policy gaps into query-level criteria, and learnability filtering retains only informative query-rubric pairs for GRPO training. QUBRIC achieves a +5.5 point gain on ArenaHard over the SFT baseline. Trained only on instruction-following data, it further transfers to three held-out benchmarks spanning legal, moral, and narrative reasoning (+6.3 points on average), with improvements concentrated in reasoning-related dimensions. These results provide evidence that co-designing queries and rubrics can make rubric-based RL a practical complement to RLVR beyond strictly verifiable tasks.",
+      "date": "2026-06-02",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2606.03968v1",
+      "tags": [
+        "cs.CL",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.03968",
+      "arxiv_id": "2606.03968v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.03963",
+      "title": "Self-Refining Agentic Reinforcement Learning for Vision-Conditioned UAV Navigation",
+      "authors": [
+        "Roohan Ahmed Khan",
+        "Yasheerah Yaqoot",
+        "Muhammad Ahsan Mustafa",
+        "Dzmitry Tsetserukou"
+      ],
+      "abstract": "Deep reinforcement learning has shown strong potential for enabling autonomous robots to learn complex navigational tasks. However, its practical use still depends heavily on human designed reward functions and repeated manual fine tuning, which is time consuming and does not guarantee high success in the desired task. This paper presents AgenticRL, agent guided reinforcement learning framework that increases autonomy in reward design, policy refinement, and real world deployment for unmanned aerial vehicles (UAV) navigation tasks. AgenticRL uses a multimodal generative pre-trained tansformer (GPT) agent to interpret task information and visual scene observations, generate task specific reward functions, train policies using Proximal Policy Optimization (PPO) algorithm, and then act as a critic by evaluating the trained policy through diagnosis packets to generate feedback. Based on this feedback, the agent identifies failure modes and refines the reward function in a closed loop self improvement process. To further leverage the multimodal GPT agent during inference, AgenticRL uses real world images and natural language task information to automatically identify the active scenario and select the appropriate trained policy for execution. The framework is evaluated on multiple navigational tasks, including gate traversal, obstacle avoidance, wall barrier crossing with landing, trajectory following, and motion behavior learning. Experimental results show that the closed loop refinement process improves policy behavior compared with initial rewards by 71%. We also demonstrate sim-to-real transfer of the proposed framework, achieving a real world success rate of 91% and a sim-to-real accuracy of 94%.",
+      "date": "2026-06-02",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2606.03963v1",
+      "tags": [
+        "cs.RO",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.03963",
+      "arxiv_id": "2606.03963v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.03927",
+      "title": "FFR: Forward-Forward Learning for Regression",
+      "authors": [
+        "Xinyang Liu",
+        "Xuanyu Liang",
+        "Shiqi Ding",
+        "Boyang Li",
+        "Zhiqiang Que",
+        "Jiayang Li",
+        "Guosheng Hu"
+      ],
+      "abstract": "The Forward-Forward (FF) algorithm offers a computationally efficient and biologically plausible alternative to backpropagation (BP) by training neural networks through purely local, layer-wise optimization. However, FF is inherently designed for classification via contrastive positive-negative sample pairs, and extending it to regression poses fundamental challenges: continuous target space lack natural \"opposites\" for contrastive learning, and the standard goodness function carries no information about target magnitude or ordering. We propose FFR (Forward-Forward for Regression), to our knowledge, the first framework to extend FF to real-world regression and demonstrate competitive performance across diverse real-world datasets. FFR introduces three key innovations: (1) an ordinal competitive goodness function that replaces contrastive pairs with competitive learning between partitioned neuron groups under distance-aware ordinal supervision; (2) a stratified ladder architecture where shallow layers learn coarse ordinal discrimination and deeper layers refine into fine-grained regression, with multi-scale feature aggregation for inter-layer collaboration; and (3) hierarchical prediction with uncertainty estimation, where multi-scale predictors jointly provide robust predictions and prediction confidence as a free-lunch. Extensive experimental results show FFR recovers on average 98.6% of BP's accuracy across five real-world regression benchmarks while reducing peak training memory to only 27% of BP's at depth 8 and 8% at depth 32, with per-iteration time around 72% of BP's, and substantially outperforms all BP-free competitors.",
+      "date": "2026-06-02",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2606.03927v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.03927",
+      "arxiv_id": "2606.03927v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.03906",
+      "title": "scTranslation: A Comprehensive Benchmark for Single-Cell Multi-Omics Modality Translation",
+      "authors": [
+        "Jiabei Cheng",
+        "Jingbo Zhou",
+        "Jun Xia",
+        "Changkai Li",
+        "Zhen Lei",
+        "Chang Yu",
+        "Stan Z. Li"
+      ],
+      "abstract": "Simultaneous measurement of multiple omics modalities in single cells enables researchers to gain a more comprehensive understanding of cellular states and regulatory mechanisms. However, due to high experimental costs, significant noise, and incomplete modality coverage, a variety of computational methods for modality translation have emerged in recent years. Despite the development of translation models, there is still a lack of systematic benchmark evaluation in terms of datasets, evaluation metrics, and influencing factors. To address this, we present scTranslation, a comprehensive benchmark for single-cell multi-omics modality translation tasks. It includes diverse translation datasets, integrates state-of-the-art models, and provides a comprehensive evaluation metrics. In addition, we assess model performance under different scenarios, such as feature selection, feature quality, and few-shot settings. These factors significantly affect model performance but have rarely been systematically studied before. Leveraging this benchmark, we conduct a large-scale study of current methods, report many insightful findings that open up new possibilities for future development. The benchmark is open-sourced to facilitate future research. The code is anonymously released at https://github.com/Bunnybeibei/scTranslation.",
+      "date": "2026-06-02",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2606.03906v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.03906",
+      "arxiv_id": "2606.03906v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-03-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-03-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}

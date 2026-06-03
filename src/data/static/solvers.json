@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T11:26:38.258864+00:00",
+  "generated_at": "2026-06-03T12:06:15.480279+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13555,
+      "github_stars": 13570,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 103,
+      "github_open_issues": 104,
       "github_recent_prs": [
-        "[ci] Remove Windows and MacIntel builds from presubmits",
-        "[ci][bazel] Separate testing from building",
-        "google3 export",
-        "Export glop and lp_data from google3",
-        "base: rework status_builder and status_macros"
+        "[ci] Extract caching as a composite action",
+        "Mizux/dev",
+        "[ci] Extract number of cores in a composite action",
+        "math_opt: export from google3",
+        "ci: fix amd64_opensuse_dotnet_env"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6233,
-      "github_open_issues": 184,
+      "github_stars": 6238,
+      "github_open_issues": 181,
       "github_recent_prs": [
+        "Deduplicate Xpress column names to allow duplicate Variable.name()",
         "Draft: Post-solver feasibility design note",
         "Fix Contributing Guide Link",
         "Fix #3333: Support parsing SCS solver options",
-        "Return COPT dual Farkas infeasibility certificates (conic + QP interfaces)",
-        "Fix XPRESS QP test gating to run under the Community license"
+        "Return COPT dual Farkas infeasibility certificates (conic + QP interfaces)"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1322,11 +1322,11 @@
       "github_stars": 1674,
       "github_open_issues": 82,
       "github_recent_prs": [
+        "perf: remove indirection from ElementAwareArrayList",
         "perf: Support reusing the best solution instead of cloning in LS",
         "deps: bump the regular group with 9 updates",
         "deps: bump the regular group with 3 updates",
-        "deps: bump the regular group with 9 updates",
-        "deps: bump the quarkus group with 4 updates"
+        "deps: bump the regular group with 9 updates"
       ]
     },
     {
@@ -1384,14 +1384,14 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New solver interfaces:\r\n  - `gams_v2` solver, writer, ",
-      "github_stars": 2470,
-      "github_open_issues": 355,
+      "github_stars": 2471,
+      "github_open_issues": 356,
       "github_recent_prs": [
+        "Improve ComponentMap / ComponentSet",
         "Extend the PyROS `CardinalitySet` to allow negative deviations",
         "Remove references to `scipopt.org`; update DoE paper reference",
         "Revert pypy pin in GHA workflow",
-        "Support a reusable 'var_cache' within the `IdentifyVariableVisitor`",
-        "Fix IIS interface for current CPLEX releases"
+        "Support a reusable 'var_cache' within the `IdentifyVariableVisitor`"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1449,7 +1449,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
-      "github_stars": 2443,
+      "github_stars": 2444,
       "github_open_issues": 13,
       "github_recent_prs": [
         "[docs] update package versions",
