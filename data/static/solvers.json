@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T10:54:15.323562+00:00",
+  "generated_at": "2026-06-06T09:43:55.475779+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1653,
+      "github_stars": 1655,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 173,
+      "github_open_issues": 175,
       "github_recent_prs": [
+        "Fix suboptimal MIP from singleton column stuffing on mixed-integer rows",
         "Fix HiPDLP GPU initialization consistency",
         "Avoid fixing zero-cost singleton columns to infinite bounds in `HPresolve::dualFixing`",
         "Prevent parallel simplex when solving MIPs",
-        "Implemented additional methods to the csharp wrapper",
-        "Implement setBasis and setLogicalBasis methods"
+        "Implemented additional methods to the csharp wrapper"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13582,
+      "github_stars": 13586,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,7 +569,7 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 103,
+      "github_open_issues": 104,
       "github_recent_prs": [
         "[CBC interface] Add hint handling",
         "graph_base: export from google3",
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6239,
-      "github_open_issues": 182,
+      "github_stars": 6241,
+      "github_open_issues": 184,
       "github_recent_prs": [
+        "Type Canonicalization.canonicalize_tree/expr with Canonical",
+        "Parallelize cvxpygen extension tests",
+        "Probe AVX-512 executability in optional solver workflow",
         "Route super-sparse constant left-matmul to the sparse diffengine binding",
-        "Add dense and parametric quad_form bindings to the NLP diffengine",
-        "Fix cone head lb",
-        "Deduplicate Xpress column names to allow duplicate Variable.name()",
-        "Draft: Post-solver feasibility design note"
+        "Add dense and parametric quad_form bindings to the NLP diffengine"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1322,11 +1322,11 @@
       "github_stars": 1674,
       "github_open_issues": 77,
       "github_recent_prs": [
+        "fix(benchmarker): use approximate problem scale instead of log in the report",
         "feat(neighborhoods): add groupBy() support",
         "perf: remove indirection from ElementAwareArrayList",
         "perf: Support reusing the best solution instead of cloning in LS",
-        "deps: bump the regular group with 9 updates",
-        "deps: bump the regular group with 3 updates"
+        "deps: bump the regular group with 9 updates"
       ]
     },
     {
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2470,
+      "github_stars": 2471,
       "github_open_issues": 355,
       "github_recent_prs": [
         "Modify PyROS `CardinalitySet` documentation and solver output log intro",
@@ -1449,7 +1449,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
-      "github_stars": 2444,
+      "github_stars": 2445,
       "github_open_issues": 13,
       "github_recent_prs": [
         "[docs] update package versions",
