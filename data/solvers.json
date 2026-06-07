@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T09:43:55.475779+00:00",
+  "generated_at": "2026-06-07T10:09:18.671108+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1655,
+      "github_stars": 1656,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13586,
+      "github_stars": 13589,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1131,8 +1131,8 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6241,
-      "github_open_issues": 184,
+      "github_stars": 6243,
+      "github_open_issues": 182,
       "github_recent_prs": [
         "Type Canonicalization.canonicalize_tree/expr with Canonical",
         "Parallelize cvxpygen extension tests",
@@ -1320,13 +1320,13 @@
       ],
       "recent_changes": "With Timefold Solver 2.1.0, we return to a predictable release schedule. We have fixed some issues that slipped through the cracks of the major release, made more tweaks to multi-threaded solving, and",
       "github_stars": 1674,
-      "github_open_issues": 77,
+      "github_open_issues": 79,
       "github_recent_prs": [
+        "fix(constraint-streams): precompute on facts correctly propagates",
+        "perf(constraint-streams): implement runtime node deactivation",
         "fix(benchmarker): use approximate problem scale instead of log in the report",
         "feat(neighborhoods): add groupBy() support",
-        "perf: remove indirection from ElementAwareArrayList",
-        "perf: Support reusing the best solution instead of cloning in LS",
-        "deps: bump the regular group with 9 updates"
+        "perf: remove indirection from ElementAwareArrayList"
       ]
     },
     {

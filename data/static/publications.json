@@ -7966,6 +7966,85 @@
     "score": 40.0
   },
   {
+    "id": "s2-28e1dfa25398",
+    "title": "Beyond Objective Equivalence: Constraint Injection for LLM-Based Optimization Modeling on Vehicle Routing Problems",
+    "authors": [
+      "Xizi Luo",
+      "Changhong He",
+      "Dongdong Geng",
+      "Chenggong Shi",
+      "Yunpeng Mei"
+    ],
+    "abstract": "Large language models (LLMs) increasingly translate natural-language optimization problems into executable solver code. Yet for constraint-dense operations research (OR) problems, existing data-filtering and training pipelines largely rely on objective-equivalence signals such as differential testing and answer agreement, which a program can pass while adding spurious constraints or silently omitting required ones, whenever those constraints are non-binding on the tested instance. We propose constraint injection, which uses feasible probes to expose spurious over-constraint and one-constraint-violating probes to reveal silent constraint omission. Combined with differential testing, it forms a dual verifier. We instantiate and evaluate it on vehicle routing problems (VRPs), a representative constraint-dense combinatorial optimization testbed with coupled operational constraints. We develop VRPCoder, an 8B end-to-end model that translates natural-language VRP scenarios into Gurobi scripts, together with an expert-verified VRP benchmark suite covering 21 variants. The verifier is reused as a rejection-sampling filter during data synthesis and as a per-rollout reward in group relative policy optimization (GRPO). Across four VRP benchmarks, VRPCoder-GRPO reaches 93\\% average Pass@1, outperforms Gemini-3.1-Pro Preview on three benchmarks, exceeds Claude-Sonnet-4.5 by 28 average points, and surpasses prior OR-LLMs by 78 average points.",
+    "date": "2026-06-03",
+    "source": "Semantic Scholar",
+    "source_detail": "vehicle routing problem",
+    "url": "https://www.semanticscholar.org/paper/28e1dfa25398354115f4f507183c16ffeef9267f",
+    "tags": [
+      "vehicle-routing",
+      "stochastic",
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "",
+    "arxiv_id": "2606.04816",
+    "citation_count": 0,
+    "score": 40.0,
+    "mentions_solvers": [
+      "Gurobi"
+    ]
+  },
+  {
+    "id": "s2-636981ab1a49",
+    "title": "Learning Implicit Feasibility Constraints for Real-World Routing and Scheduling: Application to Log Transportation",
+    "authors": [
+      "Abdelhakim Abdellaoui",
+      "Ayoub Boufous",
+      "I. E. Hallaoui",
+      "L. Benabbou",
+      "F. Aubé",
+      "M. Amazouz"
+    ],
+    "abstract": "Real-world vehicle routing and scheduling problems involve complex operational rules and feasibility constraints typically formulated as mixed-integer linear programs (MILP). However, optimization tools are built around a fixed set of hard-coded constraints, while in practice this set evolves as new rules or preferences emerge, seasonally or permanently. Updating it requires modeling and operations research skills that planners rarely have, so generated plans are routinely adjusted by hand based on practical knowledge. Building on recent work that uses machine learning to recover such hidden constraints, we propose a data-driven constraint-learning approach that trains three complementary predictors, a Graph Neural Network (GNN), a decision tree, and a linear regression, on historical execution data from a log-truck routing and scheduling problem ($\\mathcal{LTRSP}$), and embeds each inside a MILP through linearized constraints. We further introduce a stacking mechanism that combines all three within a single augmented optimization problem (AOP), letting the solver endogenously select the most reliable predictor for each decision. On real-world industrial data, each predictor already improves feasibility, but the stacked embedding consistently achieves the lowest objective degradation: it (i)~satisfies the operational rules on unseen instances with smaller degradation than any single-model variant, (ii)~picks the most appropriate predictor per decision without prior knowledge of the rule's nature, and (iii)~reduces daily manual adjustment effort while remaining tractable for daily use. Beyond this application, the framework enables optimization tools that adapt to evolving practice without recurrent manual remodeling.",
+    "date": "2026-06-03",
+    "source": "Semantic Scholar",
+    "source_detail": "vehicle routing problem",
+    "url": "https://www.semanticscholar.org/paper/636981ab1a4954647e7784475850d93a3841b55b",
+    "tags": [
+      "integer-programming",
+      "scheduling",
+      "vehicle-routing",
+      "ml-for-or"
+    ],
+    "type": "publication",
+    "doi": "",
+    "arxiv_id": "2606.05353",
+    "citation_count": 0,
+    "score": 45.0
+  },
+  {
+    "id": "s2-6979517ba560",
+    "title": "Anti-Hyperspectral Anomaly Detection: A First Study on Stealthy Lipschitz-Forcing Perturbations Against Unknown Detectors",
+    "authors": [
+      "Chia-Hsiang Lin",
+      "Si-Sheng Young",
+      "J. Benediktsson"
+    ],
+    "abstract": "Hyperspectral imagery represents the best contemporary technology to remotely detect anomalous objects. Nevertheless, hyperspectral anomaly detection (HAD) technique makes ground facilities/situations completely exposed. For the first time, we develop the first anti-HAD (AHAD) technique rendering the key objects undetected, without perfect coordinate/position state information (CSI) of the detectors (e.g., reconnaissance aircraft). Our AHAD algorithm is generally applicable to defend against almost all the existing benchmark data-driven and model-driven HAD methods. AHAD is fundamentally different from conventional adversarial attacks, so novel theory is needed. We customize novel regularizers for assimilating real anomalies into the backgrounds (ARAB) and fooling the detectors with pseudo-anomalies, thereby optimizing an energy-efficient stealthy perturbation signal for AHAD. The ARAB regularization is mathematically interpretable as flattening the topology-enhanced anomaly/background structures in the feature space, hence termed Lipschitz-forcing perturbations. Considering the imperfect CSI, we further develop a robust AHAD criterion, where the uncertainty is mathematically described as matrix-shifting misalignment for statistically generating the robust perturbation. Comprehensive experiments demonstrate the effectiveness and robustness of our AHAD algorithm across diverse real-world datasets. Remarkably, our algorithm generates a single AHAD perturbation signal that can simultaneously evade almost all benchmark detectors, greatly enhancing its practicality, given that the reconnaissance detector type is usually unknown. To the best of our knowledge, this is the first formal AHAD study. As a side contribution, we propose a new quantitative performance index, ArmCBA, to evaluate the robustness of an HAD method against our AHAD signal.",
+    "date": "2026-06-03",
+    "source": "Semantic Scholar",
+    "source_detail": "robust optimization uncertainty",
+    "url": "https://www.semanticscholar.org/paper/6979517ba560fba6fdf6e201552451e317e1de06",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "",
+    "arxiv_id": "2606.05369",
+    "citation_count": 0,
+    "score": 25.0
+  },
+  {
     "id": "crossref-10.1007-s10479-026-07288-6",
     "title": "A methodology for the cross-dock door design problem under uncertainty",
     "authors": [
@@ -17357,6 +17436,152 @@
     "arxiv_id": "",
     "citation_count": 0,
     "score": 45.0
+  },
+  {
+    "id": "crossref-10.1016-j.orl.2026.107483",
+    "title": "Optimizing coin distribution in the Mexican banking system: minimizing traveling costs and emissions",
+    "authors": [
+      "Alfaro, C.",
+      "Gómez Vargas, M.",
+      "Possani, E."
+    ],
+    "abstract": "",
+    "date": "2026-06-01",
+    "source": "Operations Research Letters",
+    "source_detail": "Operations Research Letters",
+    "url": "https://doi.org/10.1016/j.orl.2026.107483",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1016/j.orl.2026.107483",
+    "score": 25.0
+  },
+  {
+    "id": "crossref-10.1016-j.orl.2026.107482",
+    "title": "Associated consistency and the egalitarian value",
+    "authors": [
+      "Navarro, F."
+    ],
+    "abstract": "",
+    "date": "2026-06-01",
+    "source": "Operations Research Letters",
+    "source_detail": "Operations Research Letters",
+    "url": "https://doi.org/10.1016/j.orl.2026.107482",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1016/j.orl.2026.107482",
+    "score": 25.0
+  },
+  {
+    "id": "crossref-10.1016-j.healthpol.2026.105684",
+    "title": "Advancing Stakeholder Analysis: Power and Participation in Health Technology Assessment Policy Development in the United Arab Emirates",
+    "authors": [
+      "Ahmad, M.",
+      "Brugha, R."
+    ],
+    "abstract": "",
+    "date": "2026-06-01",
+    "source": "Health Policy",
+    "source_detail": "Health Policy",
+    "url": "https://doi.org/10.1016/j.healthpol.2026.105684",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1016/j.healthpol.2026.105684",
+    "score": 25.0
+  },
+  {
+    "id": "s2-01cf2b5a8d6b",
+    "title": "Topology Construction Algorithms for Communication and Localization Services in Multi-UAVs IIoT Networks",
+    "authors": [
+      "Chuyu Li",
+      "Kwan-Wu Chin"
+    ],
+    "abstract": "This article studies a novel network or topology construction problem using uncrewed aerial vehicles (UAVs). Unlike prior works, it aims to construct a topology that jointly optimizes communications between ground users operating in an Industrial Internet of things network as well as provide localization services to users. It first outlines a mixed integer linear program (MILP) that maximizes the minimum flow-rate of ground users subject to localization accuracy. Its key decision variables relate to, first, the position of UAVs, second, routing of traffic between users, and third, link schedule. It then presents a heuristic called localization-aware UAV deployment and communication-aware relay deployment (LAUD-CARD) to position UAVs. The results show that LAUD-CARD is able to achieve 90% of the optimal or MILP result.",
+    "date": "2026-06-01",
+    "source": "Semantic Scholar",
+    "source_detail": "vehicle routing problem",
+    "url": "https://doi.org/10.1109/TII.2026.3663854",
+    "tags": [
+      "integer-programming"
+    ],
+    "type": "publication",
+    "doi": "10.1109/TII.2026.3663854",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 40.0
+  },
+  {
+    "id": "s2-01df44e5d998",
+    "title": "A Constraint Relaxation Co-Evolutionary Algorithm for the Two-Echelon Vehicle Routing Problem With Load-Dependent Drones",
+    "authors": [
+      "Fan Yu",
+      "Jinlong Zhou",
+      "Qun Chen",
+      "Yange Li",
+      "Chao Li",
+      "Sheng Qi",
+      "Weixiong Huang"
+    ],
+    "abstract": "The growing adoption of drones in last-mile logistics has raised urgent demands for controlling energy consumption costs while ensuring delivery efficiency. To address this, we formulate the Two-Echelon Vehicle Routing Problem with Load-dependent Drones (2E-VRPLD) within a depot-satellite-customer framework, which reflects realistic logistics conditions where drones experience continuously changing payloads as they pick up and deliver parcels. These load fluctuations cause discrete shifts in power consumption, making their actual flight endurance highly uncertain under a fixed energy budget and thereby significantly increasing the complexity of planning feasible routes and minimizing overall transportation costs. To solve this complex VRP variant, we develop a novel Constraint Relaxation Co-evolutionary Algorithm (CRCEA) that integrates a customer-satellite matching mechanism to minimize drone endurance redundancy and a minimal impact assessment strategy for route segment merging. Experiments show that CRCEA attains nearly negligible optimality gaps relative to Gurobi on small-scale instances, significantly outperforms seven representative heuristics on large-scale instances, and consistently delivers superior solutions in real-world delivery scenarios from leading express carriers JD and SF Express in Changsha, China. Furthermore, ablation studies identify key factors affecting algorithmic performance, and sensitivity analyses illustrate how drone performance parameters influence the efficiency of solving the 2E-VRPLD. This work provides a robust theoretical and practical approach for solving the two-echelon pickup-and-delivery routing problem with load-dependent drones, offering important insights for advancing smart logistics and improving enterprise operational efficiency.",
+    "date": "2026-06-01",
+    "source": "Semantic Scholar",
+    "source_detail": "vehicle routing problem",
+    "url": "https://doi.org/10.1109/TITS.2026.3658745",
+    "tags": [
+      "metaheuristics",
+      "vehicle-routing",
+      "stochastic",
+      "supply-chain"
+    ],
+    "type": "publication",
+    "doi": "10.1109/TITS.2026.3658745",
+    "arxiv_id": "",
+    "citation_count": 1,
+    "score": 60.0,
+    "mentions_solvers": [
+      "Gurobi",
+      "Xpress"
+    ]
+  },
+  {
+    "id": "s2-010303bb4cd0",
+    "title": "Simple Line Lengths for Multiline Thru-Reflect-Line Calibration",
+    "authors": [
+      "M. Adhikary",
+      "Joo-Yeol Lee",
+      "F. Bergmann",
+      "Bryan T. Bosworth",
+      "A. Osella",
+      "Jérôme Chéron",
+      "T. Karpisz",
+      "Nicholas R. Jungwirth",
+      "Rob D. Jones",
+      "Arkadiusz Lewandowski",
+      "Benjamin F. Jamroz",
+      "J. Jargon",
+      "J. C. Booth",
+      "Angela C. Stelson",
+      "Christian J. Long",
+      "Nathan D. Orloff"
+    ],
+    "abstract": "Multiline thru-reflect-line (mTRL) is a calibration algorithm for vector network analyzers (VNAs) that uses S-parameter measurements of transmission lines with different lengths. While the conventional thru-reflect-line algorithm chooses the line lengths based on phase relationships, choosing the line lengths in mTRL is not as straightforward because the thru is not always the common line. This work tested a simple algorithm to iteratively compute all line lengths with a recursive fraction, only assuming that the longest and the shortest line lengths are known. A cursory theoretical analysis showed that certain recursive fractions should outperform others in terms of calibration error, S-parameter uncertainty, kit compactness, and resilience to the removal of any two lines from the kit. To test this analysis, we fabricated and measured 51 different mTRL calibration kits and benchmarked them against a kit whose normalized uncertainty was optimized by brute force Monte Carlo simulations with a supercomputer. After analyzing the kits, we performed a comparative analysis to determine which recursive fraction kits most closely matched the behavior of the optimized kit. We then developed a figure of merit to capture the strengths and weaknesses of each kit, revealing that the user should choose a recursive fraction within the range of 53/128 ( $\\approx 0.41$ )–37/64 ( $\\approx 0.58$ ) to design line lengths for mTRL. The proposed algorithm offers a simple and practical solution for designing high-performance mTRL line kits, enhancing measurement accuracy and robustness for high-frequency measurement applications.",
+    "date": "2026-06-01",
+    "source": "Semantic Scholar",
+    "source_detail": "robust optimization uncertainty",
+    "url": "https://doi.org/10.1109/TMTT.2026.3674349",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1109/TMTT.2026.3674349",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 35.0
   },
   {
     "id": "s2-0817ce9a99bf",
@@ -207355,6 +207580,25 @@
     ],
     "type": "publication",
     "doi": "10.1007/s11590-025-02260-y",
+    "score": 20.0
+  },
+  {
+    "id": "crossref-10.1016-j.ijpe.2025.109821",
+    "title": "Product line design in the presence of generative AI technology",
+    "authors": [
+      "Jiang, Y.",
+      "Lu, W."
+    ],
+    "abstract": "",
+    "date": "2026-04-01",
+    "source": "Int. J. Production Economics",
+    "source_detail": "Int. J. Production Economics",
+    "url": "https://doi.org/10.1016/j.ijpe.2025.109821",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1016/j.ijpe.2025.109821",
     "score": 20.0
   },
   {
