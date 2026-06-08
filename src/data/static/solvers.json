@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T10:09:18.671108+00:00",
+  "generated_at": "2026-06-08T12:06:20.863548+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 175,
+      "github_open_issues": 176,
       "github_recent_prs": [
+        "Fix numpy version parsing",
         "Fix suboptimal MIP from singleton column stuffing on mixed-integer rows",
         "Fix HiPDLP GPU initialization consistency",
         "Avoid fixing zero-cost singleton columns to infinite bounds in `HPresolve::dualFixing`",
-        "Prevent parallel simplex when solving MIPs",
-        "Implemented additional methods to the csharp wrapper"
+        "Prevent parallel simplex when solving MIPs"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13589,
+      "github_stars": 13594,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -571,11 +571,11 @@
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
       "github_open_issues": 104,
       "github_recent_prs": [
+        "Mizux/dev",
         "[CBC interface] Add hint handling",
         "graph_base: export from google3",
         "[ci] Use remote caching for all postsubmit",
-        "cleanup google3 export",
-        "[ci] Enable remote caching for Bazel postsubmit"
+        "cleanup google3 export"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6243,
-      "github_open_issues": 182,
+      "github_stars": 6244,
+      "github_open_issues": 185,
       "github_recent_prs": [
+        "Bump github/codeql-action from 4.36.0 to 4.36.2",
+        "Bump pypa/cibuildwheel from 3.4.0 to 4.0.0",
+        "perf(quantum_rel_entr): use O(n) canonicalization when one argument i…",
         "Type Canonicalization.canonicalize_tree/expr with Canonical",
-        "Parallelize cvxpygen extension tests",
-        "Probe AVX-512 executability in optional solver workflow",
-        "Route super-sparse constant left-matmul to the sparse diffengine binding",
-        "Add dense and parametric quad_form bindings to the NLP diffengine"
+        "Parallelize cvxpygen extension tests"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "With Timefold Solver 2.1.0, we return to a predictable release schedule. We have fixed some issues that slipped through the cracks of the major release, made more tweaks to multi-threaded solving, and",
-      "github_stars": 1674,
+      "github_stars": 1675,
       "github_open_issues": 79,
       "github_recent_prs": [
-        "fix(constraint-streams): precompute on facts correctly propagates",
-        "perf(constraint-streams): implement runtime node deactivation",
-        "fix(benchmarker): use approximate problem scale instead of log in the report",
-        "feat(neighborhoods): add groupBy() support",
-        "perf: remove indirection from ElementAwareArrayList"
+        "chore: merge rest-definition with definition",
+        "deps: bump the regular group with 4 updates",
+        "deps: bump org.openrewrite.recipe:rewrite-recipe-bom from 3.31.0 to 3.32.0 in the openrewrite group",
+        "deps: bump the quarkus group with 4 updates",
+        "deps: bump graalvm/setup-graalvm from 1.5.3 to 1.5.4 in the regular group"
       ]
     },
     {
@@ -1452,11 +1452,11 @@
       "github_stars": 2445,
       "github_open_issues": 13,
       "github_recent_prs": [
+        "Update code of conduct reporting link",
         "[docs] update package versions",
         "[docs] change the parallelism tutorial to spawn only a limited set of tasks",
         "Enhance tutorial clarity and formatting for sports scheduling",
-        "[docs] update sports scheduling tutorial with a few minor changes",
-        "Re-enable depwarn=error in tests"
+        "[docs] update sports scheduling tutorial with a few minor changes"
       ]
     },
     {
