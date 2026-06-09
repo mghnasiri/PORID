@@ -1,0 +1,300 @@
+{
+  "date": "2026-06-09",
+  "generated_at": "2026-06-09T10:39:49.027248+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1002-nav.70080",
+      "title": "Integrated Production and Delivery Scheduling With Multi‐Machine Open Shop Processing and Capacitated Vehicle Batch Deliveries",
+      "authors": [
+        "Dong, J.",
+        "Tong, W.",
+        "Xu, Y."
+      ],
+      "abstract": "ABSTRACT\n                  We consider an integrated production and delivery scheduling (IPDS) problem where each job must be processed on multiple machines in an open shop environment and then delivered in batches to a single customer using a capacitated vehicle. The objective is to minimize the makespan, which captures both production and delivery stages. This model arises in several practical settings, including additive manufacturing and diagnostic laboratories, where tight coordination between production and outbound logistics is critical. Although IPDS has been extensively studied under single‐machine, parallel‐machine, and flow shop models, the open shop variant has received limited theoretical attention. This paper presents the first constant‐factor approximation algorithms with provable worst‐case guarantees for the multi‐machine open shop IPDS problem. We first introduce a simple two‐phase algorithm that achieves a  approximation ratio for any fixed number of machines. We then develop a refined  approximation algorithm based on a novel framework that combines instance scaling, schedule discretization, configuration enumeration, and LP‐based assignment. In the special case of two open shop machines, our result significantly improves upon the best known 2‐approximation by tightening the bound to . Importantly, we observe that no algorithm can achieve an approximation ratio below  unless , establishing that our algorithm is nearly optimal.",
+      "date": "2026-06-08",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70080",
+      "tags": [
+        "scheduling",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70080",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1002-nav.70081",
+      "title": "Dynamic Lot Sizing With Multiple Age‐Differentiated Demands of a Perishable Product",
+      "authors": [
+        "Fan, J.",
+        "Ou, J.",
+        "Hsu, V."
+      ],
+      "abstract": "ABSTRACT\n                  In this paper, we study a dynamic lot sizing problem in which a manufacturer produces a perishable product and supplies it to several customers, each having a different requirement on the product freshness and only accepting inventory stock whose age is not older than a customer‐dependent threshold. Both production and inventory holding cost functions are assumed to be concave. The manufacturer makes joint production and inventory allocation decisions to minimize the total cost. We explore structural properties and develop an optimal algorithm for solving the problem in polynomial time. More efficient optimal algorithms are also developed for two important special cases. We conduct computational experiments to demonstrate that the proposed algorithm significantly outperforms the commercial solver CPLEX. Through computational experiments, we also obtain managerial insights into the bottleneck customer, who has the highest freshness requirement.",
+      "date": "2026-06-08",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70081",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70081",
+      "score": 55.0,
+      "mentions_solvers": [
+        "CPLEX"
+      ]
+    },
+    {
+      "id": "crossref-10.1002-nav.70077",
+      "title": "Financing the Supply Chain Sustainability: The Role of the Bank's Responsibility Level",
+      "authors": [
+        "Zeng, J.",
+        "Zhong, H.",
+        "Liang, G."
+      ],
+      "abstract": "ABSTRACT\n                  Financial instruments have become an emerging solution to establish sustainable supply chains recently. This paper investigates the effectiveness of a new tool called the sustainability‐linked loan (SLL), which contains a sustainability target, a regular interest rate as well as a discounted rate. If borrowers meet the target at the maturity of the loan, they can enjoy an interest discount, otherwise the regular rate is charged. We consider a retailer that procures a single product from a supplier, under which the supplier is capital‐constrained and can exert costly effort to raise the product sustainability performance. We study two SLL models: the first one is called the supplier profit‐responsibility (SPR) model, where a bank offers the SLL to the supplier, and the bank's objective is to maximize its own profit plus the supplier's effort. Compared with a general loan that contains only an interest rate, the SPR model always induces a higher effort level while weakening the supplier's profit. The second model is called supplier total responsibility (STR) model, under which the bank is totally responsible only to maximize the supplier's effort. We find that the bank's responsibility level (i.e., the weight of effort in the bank's objective function under the SPR model) significantly affects the comparison between the two SLL models. In particular, with a higher responsibility level, while the SPR model induces greater supplier effort, which benefits the retailer, the supplier and the bank obtain lower profits compared to those in the STR model. Furthermore, if the bank's responsibility level is intermediate, the SPR model produces a multi‐lose situation: the sustainability level, the profit of the bank and the supply chain are all worse off compared to the STR model. Our results show that when providing the SLL, the bank's preference regarding supply chain sustainability plays a vital role.",
+      "date": "2026-06-08",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70077",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70077",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.09800",
+      "title": "FASE: Fast Adaptive Semantic Entropy for Code Quality",
+      "authors": [
+        "Shizhe Lin",
+        "Ladan Tahvildari"
+      ],
+      "abstract": "Multi-agent code generation offers a promising paradigm for autonomous software development by simulating the human software engineering lifecycle. However, system reliability remains hindered by LLM hallucinations and error propagation across interacting agents. While semantic entropy provides a principled way to quantify uncertainty without ground-truth answers, current methods often rely on costly LLM-driven equivalence checks. In this work, we introduce Fast Adaptive Semantic Entropy (FASE), a novel metric that approximates functional correctness based on the minimum spanning tree of structural and semantic dissimilarity graphs. Evaluations on HumanEval and BigCodeBench demonstrate that FASE outperforms state-of-the-art semantic entropy by LLM entailment, achieving a 25% average improvement in Spearman correlation and a 19% increase in ROCAUC score against Pass@1 from ground-truth test cases when using the Qwen3-Embedding-8B model. Furthermore, by eliminating costly LLM-driven equivalence evaluation, FASE incurs negligible computational overhead, requiring only approximately 0.3% of the runtime cost of traditional semantic entropy approaches. These results position FASE as a practical, cost-effective solution for optimizing uncertainty quantification in real-world multi-agent workflows.",
+      "date": "2026-06-08",
+      "source": "arXiv",
+      "source_detail": "cs.SE",
+      "url": "http://arxiv.org/abs/2606.09800v1",
+      "tags": [
+        "cs.SE",
+        "network-optimization",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.09800",
+      "arxiv_id": "2606.09800v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.09671",
+      "title": "Transition-Based Digital Twin Modelling for Alzheimer's Disease under Sparse Longitudinal Data",
+      "authors": [
+        "Yinyu Huang",
+        "Yilin Zhang",
+        "Sofia Michopoulou",
+        "Christopher Kipps",
+        "Rahman Attar"
+      ],
+      "abstract": "Alzheimer's disease (AD) progression is highly heterogeneous and is typically observed through sparse and irregular longitudinal data, posing challenges for prediction and personalised monitoring. Existing machine learning approaches have improved AD prediction using multimodal data, yet often focus on static classification or cohort-level risk estimation, providing limited support for subject-specific modelling and uncertainty-aware reasoning. To address these limitations, we present a personalised digital twin framework for AD prediction and scenario-based analysis using multimodal longitudinal data. The proposed approach integrates complementary modelling strategies to capture clinical transitions and temporal dependencies across visits. Using data from the Alzheimer's Disease Neuroimaging Initiative (ADNI), including cognitive assessments, clinical variables, and MRI-derived phenotypes, the framework predicts cognitive status and diagnostic categories while quantifying predictive uncertainty and enabling patient-specific what-if trajectory analysis. Evaluation on leak-free subject-level splits demonstrates strong performance in score forecasting and diagnosis classification. In this sparse and irregular ADNI setting, transition-based modelling of adjacent visits achieved higher predictive accuracy than the sequence-based branch, suggesting that local transition modelling may be more data-efficient. While sequence models remain valuable for uncertainty-aware trajectory forecasting, local transition modelling offers a more data-efficient and robust predictive strategy. These findings highlight the importance of aligning temporal modelling strategies with clinical data structure and suggest that transition-based digital twin formulations may provide a practical and interpretable approach for personalised disease forecasting in neurodegenerative disorders.",
+      "date": "2026-06-08",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2606.09671v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.09671",
+      "arxiv_id": "2606.09671v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.09436",
+      "title": "Leveraging Optimal Information-Power Flow for Transmission Switching in AC/MTDC Grids",
+      "authors": [
+        "Haixiao Li",
+        "Aleksandra Lekić"
+      ],
+      "abstract": "The emerging AC/multi-terminal DC grids are regarded as a promising solution for accommodating the increasing integration of renewable energy sources. This work proposes an optimization framework to address transmission switching (TS) problems arising in practical operational scenarios, such as maintenance scheduling, contingency management, and fault restoration. Unlike most existing studies, the proposed framework considers the role of communication networks in TS operations and develops an optimal information-power flow (OIPF) model. The OIPF model captures the impact of information flows on circuit breaker actions while incorporating communication-related costs, thereby better reflecting practical operational decision-making processes. To ensure computational tractability, the resulting optimization problem is formulated as a mixed-integer second-order cone programming (MISOCP) model through convex relaxations, polygonal approximations, and Big-M reformulations. Numerical case studies illustrate the applicability of the proposed OIPF model and indicate its potential in supporting transmission switching decisions.",
+      "date": "2026-06-08",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2606.09436v1",
+      "tags": [
+        "eess.SY",
+        "integer-programming",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.09436",
+      "arxiv_id": "2606.09436v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.09196",
+      "title": "Impact of Scaling and Rounding on Metaheuristic Performance for the Vehicle Routing Problem with Time Windows",
+      "authors": [
+        "Florian Rascoussier",
+        "Romain Billot",
+        "Lina Fahed",
+        "Christine Solnon"
+      ],
+      "abstract": "Classical Euclidean instances for the Vehicle Routing Problem with Time Windows (VRPTW) have floating-point arc costs derived from node coordinates. This raises reproducibility and numerical consistency issues. Hence, a common practice is to scale and round data to integer values, yet the impact of these choices is poorly understood. This paper studies the effect of integer scaling by a factor P and compares three rounding schemes with distinct feasibility and optimality guarantees. We analyze how scaling and rounding influence empirical performance of two well-known VRPTW solvers: Hybrid Genetic Search (HGS) and OR-Tools. We evaluate the quality of solutions mapped back to the original floating-point instances. Our results show that scaling and rounding can significantly affect both solver performance and solution quality. Based on these findings, we provide practical recommendations for scaling and rounding in VRPTW benchmarks to improve efficiency, robustness and reproducibility.",
+      "date": "2026-06-08",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.09196v1",
+      "tags": [
+        "math.OC",
+        "metaheuristics",
+        "vehicle-routing"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.09196",
+      "arxiv_id": "2606.09196v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "OR-Tools"
+      ]
+    },
+    {
+      "id": "arxiv-2606.08993",
+      "title": "LEAF: A Learning-Enabled ADMM Framework for Accelerated Convex Optimization",
+      "authors": [
+        "Binh Nguyen",
+        "Trinh Tran",
+        "Truong X. Nghiem"
+      ],
+      "abstract": "We propose LEAF, a learning-enabled ADMM framework for accelerated convex optimization. The key idea is to approximate the Moreau envelope of the objective function using an Input Convex Neural Network (ICNN), resulting in a learned model that preserves convexity and smoothness. This leads to the proposed Moreau Envelope Learning ADMM (MEL-ADMM) and its splitting variant sMEL-ADMM. Unlike existing approaches that learn high-dimensional operators directly, LEAF learns a scalar-valued Moreau envelope, significantly reducing model complexity and improving data efficiency. The framework accommodates a broad class of convex problems with smooth and non-smooth objectives. By embedding convexity explicitly through the ICNN architecture, the proposed approach maintains high approximation accuracy while preserving key structural properties of the optimization problem. Both MEL-ADMM and sMEL-ADMM are developed with theoretical guarantees of convergence and feasibility under the learned model. Rigorous analysis shows that the proposed methods achieve convergence rates comparable to classical ADMM while reducing per-iteration computational cost. Numerical experiments demonstrate up to an order-of-magnitude speedup over state-of-the-art solvers while maintaining low optimality gaps",
+      "date": "2026-06-08",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2606.08993v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.08993",
+      "arxiv_id": "2606.08993v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.09751",
+      "title": "Collaborative Human-Agent Protocol (CHAP)",
+      "authors": [
+        "Arsalan Shahid",
+        "Gordon Suttie",
+        "Philip Black"
+      ],
+      "abstract": "Foundation models are moving from response generation into operational roles. They plan across steps, call tools, request human input, coordinate with other agents, and increasingly carry responsibility for work that affects customers, claims, code, contracts, and clinical decisions. Production deployments are no longer one human supervising one model. They are multi-human, multi-agent collaborations that cross teams, time zones, and trust boundaries. The technical surface for this collaboration remains weakly specified. When an agent drafts a response and a human edits it before it ships, the moment of human judgement is the most valuable signal in the system. In current practice it is recorded, if at all, in application code, chat threads, ticket comments, and tribal memory. Two protocol standards address adjacent concerns: MCP standardises agent access to tools and data, and A2A standardises agent-to-agent interoperability. Neither defines the shared workspace in which humans and agents perform accountable work together. This paper presents CHAP, the Collaborative Human-Agent Protocol. Under CHAP, the override that used to vanish into a chat thread becomes a structured event carrying a diff, a rationale, and a content hash. The handoff between shifts becomes a portable envelope rather than a pinned message. The human approval of an agent's draft becomes a non-repudiable signed decision that can be replayed years later. The protocol achieves this through a small Core (workspaces, participants, tasks, artefacts, and an append-only evidence log) together with composable profiles that add review, modes, routing, deliberation, handoff, identity, signatures, and transparency-backed audit as deployments require them. Specification, reference implementation, conformance suite, and worked examples are available at: https://github.com/BrightbeamAI/chap",
+      "date": "2026-06-08",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2606.09751v1",
+      "tags": [
+        "cs.AI",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.09751",
+      "arxiv_id": "2606.09751v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.09746",
+      "title": "Hybrid Robustness Verification for Spatio-Temporal Neural Networks",
+      "authors": [
+        "Sherwin Varghese",
+        "Matthew Wicker",
+        "Alessio Lomuscio"
+      ],
+      "abstract": "With AI increasingly deployed in safety-critical systems, providing formal robustness guarantees for the underlying models is essential. Existing verification methods either rely on overly conservative approximations or incur prohibitive computational costs. For example, the use of lp-norm perturbations in video settings encodes the belief that the adversary can inject noise in every video frame. In practice, adversarial perturbations exhibit structured spatial and temporal correlations, constrained to lower-dimensional, semantically meaningful subspaces. In this work, we study robustness verification of 3D CNNs processing video and volumetric inputs, targeting applications in action recognition (UCF-101), autonomous driving (Udacity), and medical imaging (MedMNIST) exploiting realistic assumptions on adversarial strength by modelling them as spatio-temporal constraints - where the attacker can modify either a subset of frames or patches within a set of consecutive frames. We demonstrate that modelling realistic constraints enables tighter approximations. We introduce Spatio-Temporal Bound Propagation (STBP), a verification framework that computes an exact closed-form characterization of the first convolutional layer and propagates certified bounds through subsequent layers using scalable approximations. Computing the exact closed form provides the tightest bounds for the first convolutional layer. Thus, we utilise approximation methods in the remainder of the network. To spur further progress in this field, we propose ST-Bench, a verification benchmark for autonomous driving and activity recognition, to systematically evaluate verifiable robustness. Compared to existing verification-based approaches, STBP provides stronger robustness guarantees with significantly improved scalability, achieving 1.7x higher certified robust accuracy under identical perturbation budgets.",
+      "date": "2026-06-08",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2606.09746v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.09746",
+      "arxiv_id": "2606.09746v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-03-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-03-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
