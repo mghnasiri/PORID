@@ -1,0 +1,308 @@
+{
+  "date": "2026-06-10",
+  "generated_at": "2026-06-10T11:01:33.587692+00:00",
+  "publications": [
+    {
+      "id": "s2-b9f9a20f23f8",
+      "title": "Contributions to Branch-and-Price Methods for Electric Vehicle Routing Problems",
+      "authors": [
+        "Lukas Eveborn"
+      ],
+      "abstract": "The Vehicle Routing Problem (VRP) is a fundamental combinatorial optimization problem concerned with determining cost-efficient routes for a fleet of vehicles serving a set of customers under operational constraints. In recent years, the electrification of transportation has led to the emergence of the Electric Vehicle Routing Problem (EVRP), where routing decisions must account for battery charging requirements and energy-related constraints. These additional considerations significantly increase the complexity of the problem. This thesis studies exact solution approaches for the EVRP based on branch-and-price algorithms, the state-of-the-art methodology for solving large-scale vehicle routing problems to optimality. Branch-and-price combines branch-and-bound with column generation, where the master problem is solved using linear programming relaxation and new columns (routes) are generated dynamically by solving a pricing problem. For the EVRP, the pricing problem takes the form of an elementary shortest path problem with resource constraints, which is typically solved using labeling algorithms. The thesis consists of three contributions that address different components of the branch-and-price framework. The first and third contributions focus on efficient pricing to speed up the overall algorithm. In the first contribution, bounding techniques tailored to structural properties of the EVRP are introduced, enabling early elimination of non-promising labels and significantly accelerating the labeling procedure. The third contribution instead considers heuristic pricing. A subgraph-based approach is proposed in which the pricing problem is solved on carefully selected subgraphs constructed using a machine learning procedure. This procedure generates subgraphs likely to contain high-quality routes, thereby reducing computational effort while maintaining solution quality. The second contribution addresses the master problem and proposes a primal heuristic designed to obtain high-quality integer solutions early in the branch-and-price search. The method constructs routes that are compatible from an integrality perspective, enabling rapid identification of feasible solutions even when proving optimality is computationally demanding. Overall, the proposed methods improve the computational performance of branch-and-price algorithms for the EVRP and contribute to making exact large-scale electric vehicle routing more practically tractable.",
+      "date": "2026-06-10",
+      "source": "Semantic Scholar",
+      "source_detail": "combinatorial optimization heuristic",
+      "url": "https://doi.org/10.3384/9789181185751",
+      "tags": [
+        "linear-programming",
+        "network-optimization",
+        "vehicle-routing",
+        "ml-for-or",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.3384/9789181185751",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 80.0
+    },
+    {
+      "id": "crossref-10.1007-s12532-026-00310-9",
+      "title": "Implementing a unified solver for nonlinearly constrained optimization",
+      "authors": [
+        "Vanaret, C.",
+        "Leyffer, S."
+      ],
+      "abstract": "Abstract\n                  \n                    SQP and interior-point methods (also referred to as Lagrange-Newton methods) typically share key algorithmic components, such as strategies for computing descent directions and mechanisms that promote global convergence. Building on this insight, we introduce a unifying framework with eight building blocks that abstracts the workflows of Lagrange-Newton methods. We then present Uno, a modular C solver that implements our unifying framework and allows the automatic combination of a wide range of strategies with no programming effort from the user. Uno is meant to (1) organize mathematical optimization strategies into a coherent hierarchy; (2) offer a wide range of efficient and robust methods that can be compared for a given instance; (3) enable researchers to experiment with novel optimization strategies; and (4) reduce the cost of development and maintenance of multiple optimization solvers. Uno’s software design allows user to compose new customized solvers for emerging optimization areas such as robust optimization or optimization problems with complementarity constraints, while building on reliable nonlinear optimization techniques. We demonstrate that Uno is highly competitive against state-of-the-art solvers filterSQP, IPOPT, SNOPT, MINOS, LANCELOT, LOQO, and CONOPT on a subset of 429 small problems from the CUTE collection. Uno is available as open-source software under the MIT license at\n                    https://github.com/cvanaret/Uno\n                    and via its C, Julia, Python, Fortran, and AMPL interfaces.",
+      "date": "2026-06-10",
+      "source": "Mathematical Programming Computation",
+      "source_detail": "Mathematical Programming Computation",
+      "url": "https://doi.org/10.1007/s12532-026-00310-9",
+      "tags": [
+        "linear-programming",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s12532-026-00310-9",
+      "score": 65.0,
+      "mentions_solvers": [
+        "AMPL",
+        "Ipopt"
+      ]
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2023.0372",
+      "title": "An Interpretable Preference Learning Model Admitting Dynamic and Context-Dependent Preferences",
+      "authors": [
+        "Ru, Z.",
+        "Liu, J.",
+        "Kadziński, M.",
+        "Liao, X.",
+        "Li, X."
+      ],
+      "abstract": "We introduce a novel Bayesian preference learning approach for online user rating scenarios. Leveraging user-generated textual reviews, our model automatically extracts feature-opinion-polarity triplets based on phrase-level sentiment analysis. They are summarized as positive and negative topics, providing a low-dimensional feature-based representation of items. Moreover, our approach models the dynamic nature of user behavior and context-dependent preferences by inferring latent motivations represented as discrete distributions over items and contextual preference models. We apply the proposed model to three real-world data sets. Also, we demonstrate its scalability, interpretability, and superior predictive performance against seven benchmark algorithms in the extensive computational experiment. Our research contributes to advancing preference learning in domains such as recommender systems, decision making, and marketing, offering both actionable insights and transparent recommendations.\n                  History: Accepted by Ram Ramesh, Area Editor for Data Science and Machine Learning.\n                  Funding: J. Liu acknowledges support from the National Natural Science Foundation of China [Grants 72471184 and 72071155]. M. Kadziński acknowledges support from the Polish National Science Center under the SONATA BIS project [Grant DEC-2019/34/E/HS4/00045]. X. Liao acknowledges support from the National Natural Science Foundation of China [Grant 71872144].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2023.0372 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2023.0372 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-06-09",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2023.0372",
+      "tags": [
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2023.0372",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.10705",
+      "title": "Event-Driven Reinforcement Learning Enables Long-Horizon Control in Semiconductor Fabrication",
+      "authors": [
+        "Yavar Yeganeh",
+        "Mahsa Shekari",
+        "Nicla Frigerio",
+        "Daniele Pagano",
+        "Andrea Matta"
+      ],
+      "abstract": "Reinforcement learning promises to optimize sequential decisions in large-scale systems. Semiconductor manufacturing systems are stochastic and highly constrained environments where heterogeneous wafers traverse hundreds of processing steps across extensive equipment networks. These characteristics yield complex, high-dimensional decision problems with delayed feedback and long-horizon requirements, complicating production planning and control. We propose a deep reinforcement learning framework for multi-objective policy optimization at this scale. Specifically, we formulate control as a centralized-agent problem, where a core policy coordinates system-wide decisions, while system evolution is represented as an interconnected temporal process driven by discrete events. Accordingly, we develop a tailored event-driven temporal-difference formulation that remains general and can be integrated with various policy optimization methods under relevant training settings. We investigate several core model-free algorithms incorporated into this framework and evaluate their effectiveness using high-fidelity simulations of diverse, industry-real operating scenarios. Across extensive validation experiments, agents trained in both offline and online settings show significant and consistent gains in throughput and utilization. We further evaluate performance and generalization across training phases, clarifying the relative strengths of alternative reinforcement learning formulations and algorithms. Overall, the results support the scalability, generality, and transferability of the proposed framework for controlling event-driven complex adaptive systems.",
+      "date": "2026-06-09",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2606.10705v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.10705",
+      "arxiv_id": "2606.10705v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.10600",
+      "title": "Toward Proactive RF Charging Scheduling: Generative AI for Decision Support",
+      "authors": [
+        "Amirhossein Azarbahram",
+        "Osmel M. Rosabal",
+        "David Ernesto Ruiz-Guirola",
+        "Melike Erol-Kantarci",
+        "Kaibin Huang",
+        "Onel L. A. López"
+      ],
+      "abstract": "Radio frequency wireless power transfer (RF-WPT) is an enabling technology for supporting uninterrupted communications in future Internet of Things systems by reducing the need for battery replacement and mitigating battery-waste-related issues. For large-scale RF-WPT deployment, one of the main challenges is the scheduler-level resource allocation. Specifically, the transmitter must decide how much energy to deliver, when, and to whom, under limited charging resources, incomplete receiver-side information, and uncertain near-future charging conditions. This article positions generative artificial intelligence (GenAI) as a promising tool for this setting because it can foresee multiple plausible charging scenarios conditioned on coarse operational context and receiver-side information. We propose GenAI to act as an uncertainty-aware support layer for the RF-WPT scheduler rather than as a standalone forecasting or decision-making tool. To this end, we first revisit the main challenges of RF-WPT scheduling, and discuss how major GenAI families can support uncertainty-aware charging decisions by generating scenario-based inputs for downstream tasks. We then present a warehouse-style case study showing that preserving uncertainty through the sampling capability of generative models can improve robust charging decisions compared with deterministic prediction and simple non-learning baselines, especially under risk-sensitive objectives. Finally, we identify key open challenges and present some directions for future research.",
+      "date": "2026-06-09",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2606.10600v1",
+      "tags": [
+        "eess.SY",
+        "scheduling",
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.10600",
+      "arxiv_id": "2606.10600v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-net.70053",
+      "title": "An Extended Formulation With Valid Inequalities for the Capacitated Steiner Arborescence Problem",
+      "authors": [
+        "Contu, F.",
+        "Di Francesco, M.",
+        "Gorgone, E.",
+        "Murthy, I."
+      ],
+      "abstract": "ABSTRACT\n                  \n                    Given a directed graph, the Capacitated Steiner Arborescence Problem (CSAP) aims to determine the least‐cost connection from the root node to terminal nodes requiring a demand through Steiner nodes coming with a capacity, such that there is a unique path from the root to each terminal. This paper presents a new extended formulation of the CSAP, which extends the classical multicommodity flow formulation of CSAP by introducing the notion of cardinality of terminals served by arcs. We show that our extended formulation is stronger than the classical one. We present two classes of inequalities and separation heuristics exploiting the cardinality effect of the extended formulation. The first class is a generalization of cardinality induced Cover and (1,\n                    k\n                    )‐Configuration inequalities. The second class is called the\n                    p‐\n                    Arc Cardinality matching inequalities and is based on matching the number of commodities flowing on active arcs across a cut‐set to its composite cardinality. The computational study clearly demonstrates the superiority of the extended formulation over the classical one. In particular, it consistently provides significantly tighter lower bounds at the root node. Moreover, for all hard instances, solving CSAP to optimality requires a number of branch‐and‐bound nodes that is several orders of magnitude larger under the classical formulation than under the extended one.",
+      "date": "2026-06-09",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70053",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70053",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2023.01774",
+      "title": "Exact Logit-Based Product Design",
+      "authors": [
+        "Akchen, İ.",
+        "Mišić, V."
+      ],
+      "abstract": "The share-of-choice product design problem is to find the product, as defined by its attributes, that maximizes market share arising from a collection of customer types or segments. When customers follow a logit model of choice, the market share is given by a weighted sum of logistic probabilities, leading to the logit-based share-of-choice product design problem. In this paper, we develop a methodology for solving this problem to provable optimality. We first analyze the complexity of this problem and show that this problem is theoretically intractable: it is NP-Hard to solve exactly, even when there are only two customer types, and it is furthermore NP-Hard to approximate to within a nontrivial factor. Motivated by the difficulty of this problem, we propose three different mixed-integer exponential cone programs of increasing strength for solving the problem exactly, which allow us to leverage modern integer conic program solvers such as Mosek. Using both synthetic problem instances and instances derived from real conjoint data sets, we show that our methodology can solve large instances to provable optimality or near optimality in operationally feasible time frames and yields solutions that generally achieve higher market share than previously proposed heuristics.\n                  This paper was accepted by J. George Shanthikumar, data science.\n                  Supplemental Material: The electronic companion and data files are available at https://doi.org/10.1287/mnsc.2023.01774 .",
+      "date": "2026-06-09",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2023.01774",
+      "tags": [
+        "integer-programming",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2023.01774",
+      "score": 50.0,
+      "mentions_solvers": [
+        "MOSEK"
+      ]
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2023.0493",
+      "title": "CAAC: Co-attentive Actionability Classification for Assessing Patient Education Videos",
+      "authors": [
+        "Pothugunta, K.",
+        "Liu, X.",
+        "Susarla, A.",
+        "Padman, R."
+      ],
+      "abstract": "The use of video-sharing platforms for disseminating healthcare information is rapidly increasing worldwide. However, professionally produced videos from healthcare organizations cover only a small fraction of known health conditions. In contrast, user-generated videos often address a broader range of health topics and offer personal insights into the daily management of complex diseases, although their educational value remains uncertain. With the growing popularity of self-care videos, there is a critical need to automate manual evaluation methods to ensure these videos meet established health education guidelines. In this study, we propose a hierarchical co-attention mechanism within a transformer-based approach to assess the actionability of health-related videos, using criteria from the Patient Education Materials Assessment Tool (PEMAT). Our model leverages co-attention to dynamically align textual and visual features, enabling a more nuanced understanding of multimodal content. Extensive experiments on 1,795 YouTube videos demonstrate the superior performance of our approach, achieving 82.2% AUC and outperforming state-of-the-art video classifiers. This research contributes to the expanding literature on transformer architectures for video classification and extends the application of PEMAT guidelines to a larger data set of health-related content. By automating the evaluation process, our model overcomes the limitations of manual assessments, offering a scalable and efficient solution for ensuring the quality and reliability of healthcare information on digital platforms.\n                  History: This paper has been accepted by Kaushik Dutta for the Special Issue on Responsible AI and Data Science for Social Good.\n                  Funding: This research was supported in part by the National Library of Medicine [Grant R01LM013443] of the National Institutes of Health.\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2023.0493 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2023.0493 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-06-09",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2023.0493",
+      "tags": [
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2023.0493",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2024.0704",
+      "title": "An Exact Branch-Price-and-Cut Algorithm for the Unrelated Parallel Machine Scheduling Problem",
+      "authors": [
+        "Yu, Y.",
+        "Li, X.",
+        "Baldacci, R.",
+        "Wu, Z.",
+        "Sun, W.",
+        "Tang, J.",
+        "Zhu, H."
+      ],
+      "abstract": "We investigate the Unrelated Parallel Machine Scheduling Problem (UPMSP), where independent jobs need scheduling on unrelated parallel machines. Each job has a distinct processing time, a weight, and a completion time. The goal is to find an optimal schedule that minimizes the total weighted completion time. This problem has been extensively studied in the scheduling literature. To address the UPMSP, we model feasible schedules using Smith’s rule, representing them as paths on directed acyclic graphs, and derive a corresponding set-partitioning-based model. To solve the model, we introduce a branch-price-and-cut (BPC) algorithm with dynamic shrink upper bounds, incorporating state-of-the-art techniques such as the bucket graph-based labeling algorithm, limited-memory subset-row cuts, and strong branching. Notably, the proposed BPC algorithm is the first exact algorithm capable of addressing widespread real-life UPMSPs with rational-number processing times. Extensive numerical experiments demonstrate that our proposed algorithm outperforms state-of-the-art algorithms for the UPMSP with integer-valued processing times, solving larger-scale instances with up to 20 machines and 200 jobs efficiently. Furthermore, it effectively addresses real-life instances (from JD.com) with rational-number processing times involving up to 20 machines and 200 jobs.\n                  History: Accepted by Andrea Lodi, Area Editor for Design &amp; Analysis of Algorithms–Discrete.\n                  Funding: Financial support from the National Natural Science Foundation of China [Grants 72571039, 72322018, 72272027, 72471050, and 72171043] and the Fundamental Research Funds for the Central Universities [Grant DUT23RC(3)070] is gratefully acknowledged.\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2024.0704 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2024.0704 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-06-09",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2024.0704",
+      "tags": [
+        "scheduling",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2024.0704",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.10966",
+      "title": "Dominance and symmetry-breaking rules for the Graph Burning Problem",
+      "authors": [
+        "Nice Prado",
+        "Rafael Colares"
+      ],
+      "abstract": "The Graph Burning Problem (GBP) is a NP-Hard combinatorial optimization problem that models the propagation of influence or contagion in a network. The propagation is represented through the metaphor of a fire spreading through the vertices of a graph. A burning process takes place in a series of discrete time-steps. At each time step, the burning process is characterized by a propagation (where burned nodes spread the fire to their neighbors), and an ignition (where one additional unburned node is chosen to become burned). The minimum number of steps required to burn all vertices of a graph defines its burning number. Literature provides integer linear programming formulations to solve the problem, but with no surprise, such approaches struggle to converge as the graph size increases. Therefore, reducing the search space explored by these formulations becomes a key point to improve performances. In this work, we study the similarities of the Graph Burning Problem with the well-known Dominating Set Problem. We propose a new formulation based on this study and apply dominance rules and symmetry-breaking techniques to reduce the search space and consequently speed up resolution time. We also introduce a perturbation of the proposed objective function, as well as a pruning rule for the perturbed model in order to further accelerate its resolution.",
+      "date": "2026-06-09",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.10966v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.10966",
+      "arxiv_id": "2606.10966v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-03-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-03-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
