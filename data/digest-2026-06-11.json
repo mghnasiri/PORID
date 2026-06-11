@@ -1,0 +1,307 @@
+{
+  "date": "2026-06-11",
+  "generated_at": "2026-06-11T11:27:43.717386+00:00",
+  "publications": [
+    {
+      "id": "s2-b9f9a20f23f8",
+      "title": "Contributions to Branch-and-Price Methods for Electric Vehicle Routing Problems",
+      "authors": [
+        "Lukas Eveborn"
+      ],
+      "abstract": "The Vehicle Routing Problem (VRP) is a fundamental combinatorial optimization problem concerned with determining cost-efficient routes for a fleet of vehicles serving a set of customers under operational constraints. In recent years, the electrification of transportation has led to the emergence of the Electric Vehicle Routing Problem (EVRP), where routing decisions must account for battery charging requirements and energy-related constraints. These additional considerations significantly increase the complexity of the problem. This thesis studies exact solution approaches for the EVRP based on branch-and-price algorithms, the state-of-the-art methodology for solving large-scale vehicle routing problems to optimality. Branch-and-price combines branch-and-bound with column generation, where the master problem is solved using linear programming relaxation and new columns (routes) are generated dynamically by solving a pricing problem. For the EVRP, the pricing problem takes the form of an elementary shortest path problem with resource constraints, which is typically solved using labeling algorithms. The thesis consists of three contributions that address different components of the branch-and-price framework. The first and third contributions focus on efficient pricing to speed up the overall algorithm. In the first contribution, bounding techniques tailored to structural properties of the EVRP are introduced, enabling early elimination of non-promising labels and significantly accelerating the labeling procedure. The third contribution instead considers heuristic pricing. A subgraph-based approach is proposed in which the pricing problem is solved on carefully selected subgraphs constructed using a machine learning procedure. This procedure generates subgraphs likely to contain high-quality routes, thereby reducing computational effort while maintaining solution quality. The second contribution addresses the master problem and proposes a primal heuristic designed to obtain high-quality integer solutions early in the branch-and-price search. The method constructs routes that are compatible from an integrality perspective, enabling rapid identification of feasible solutions even when proving optimality is computationally demanding. Overall, the proposed methods improve the computational performance of branch-and-price algorithms for the EVRP and contribute to making exact large-scale electric vehicle routing more practically tractable.",
+      "date": "2026-06-10",
+      "source": "Semantic Scholar",
+      "source_detail": "combinatorial optimization heuristic",
+      "url": "https://doi.org/10.3384/9789181185751",
+      "tags": [
+        "linear-programming",
+        "network-optimization",
+        "vehicle-routing",
+        "ml-for-or",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.3384/9789181185751",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 80.0
+    },
+    {
+      "id": "crossref-10.1007-s12532-026-00310-9",
+      "title": "Implementing a unified solver for nonlinearly constrained optimization",
+      "authors": [
+        "Vanaret, C.",
+        "Leyffer, S."
+      ],
+      "abstract": "Abstract\n                  \n                    SQP and interior-point methods (also referred to as Lagrange-Newton methods) typically share key algorithmic components, such as strategies for computing descent directions and mechanisms that promote global convergence. Building on this insight, we introduce a unifying framework with eight building blocks that abstracts the workflows of Lagrange-Newton methods. We then present Uno, a modular C solver that implements our unifying framework and allows the automatic combination of a wide range of strategies with no programming effort from the user. Uno is meant to (1) organize mathematical optimization strategies into a coherent hierarchy; (2) offer a wide range of efficient and robust methods that can be compared for a given instance; (3) enable researchers to experiment with novel optimization strategies; and (4) reduce the cost of development and maintenance of multiple optimization solvers. Uno’s software design allows user to compose new customized solvers for emerging optimization areas such as robust optimization or optimization problems with complementarity constraints, while building on reliable nonlinear optimization techniques. We demonstrate that Uno is highly competitive against state-of-the-art solvers filterSQP, IPOPT, SNOPT, MINOS, LANCELOT, LOQO, and CONOPT on a subset of 429 small problems from the CUTE collection. Uno is available as open-source software under the MIT license at\n                    https://github.com/cvanaret/Uno\n                    and via its C, Julia, Python, Fortran, and AMPL interfaces.",
+      "date": "2026-06-10",
+      "source": "Mathematical Programming Computation",
+      "source_detail": "Mathematical Programming Computation",
+      "url": "https://doi.org/10.1007/s12532-026-00310-9",
+      "tags": [
+        "linear-programming",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s12532-026-00310-9",
+      "score": 65.0,
+      "mentions_solvers": [
+        "AMPL",
+        "Ipopt"
+      ]
+    },
+    {
+      "id": "arxiv-2606.12077",
+      "title": "Efficient Time Series Clustering from Multiscale Reservoir Dynamics with Granular-Ball Anchoring Graph Optimization",
+      "authors": [
+        "Yifan Wang",
+        "Lifeng Shen",
+        "Shuyin Xia",
+        "Yi Wang"
+      ],
+      "abstract": "Time-series clustering remains challenging due to the inherent trade-off between clustering effectiveness and computational efficiency. Similarity-based methods often suffer from quadratic complexity caused by pairwise distance computations, while deep learning-based approaches typically rely on costly iterative training and a large number of trainable parameters. In this paper, we propose MSRGC-Net, an efficient time-series clustering framework that integrates multiscale reservoir computing, granular-ball-based anchoring graph construction, and consensus learning. MSRGC-Net adopts a training-free reservoir computing paradigm to extract multiscale temporal representations from raw time series without backpropagation, significantly reducing computational overhead. To capture the intrinsic structure of the resulting representations, granular-ball computing is employed to adaptively model data distributions via density-consistent regions, yielding compact and robust anchor graph representations. Furthermore, a consensus-based anchoring graph optimization strategy is introduced to effectively align multiscale reservoir representations and integrate complementary information across temporal scales. Extensive experiments on widely used univariate and multivariate benchmark datasets demonstrate that MSRGC-Net consistently outperforms state-of-the-art methods in clustering performance while maintaining superior computational efficiency.",
+      "date": "2026-06-10",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2606.12077v1",
+      "tags": [
+        "cs.LG",
+        "network-optimization",
+        "ml-for-or",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.12077",
+      "arxiv_id": "2606.12077v1",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2606.12345",
+      "title": "An Efficient Method for the Optimal Control of Microgrids Under Uncertainties using Local Reduction",
+      "authors": [
+        "Edoardo Scaccia",
+        "Eric C. Kerrigan",
+        "Anna Sadowska"
+      ],
+      "abstract": "The problem of optimal sizing and power scheduling in microgrids subject to uncertainties is well known to the control community. Commonly, the optimal control problem is cast as a mixed-integer program to model the logical constraints arising in energy storage systems, and is then solved approximately using numerical methods such as the scenario approach. In this paper, we propose and compare two formulations of a robust microgrid sizing and power scheduling optimal control problem with logical constraints and uncertainties in the user's power demand, solar power generation, grid electricity prices and battery efficiencies. The first formulation uses binary variables and big-M constraints, leading to a mixed-integer linear program. The second formulation casts the problem as a continuous nonlinear program through an exact smooth reformulation of the logical constraints, consisting of additional modelling variables and non-convex constraints. We then propose a novel local reduction algorithm, extending an existing method, to solve both problems. The two formulations are compared by evaluating the solutions returned by local reduction using 100,000-sample Monte Carlo simulations and achieve promising results, with both averaging feasibility rates above 90%.",
+      "date": "2026-06-10",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.12345v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.12345",
+      "arxiv_id": "2606.12345v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.11589",
+      "title": "Large Language Models in Process Systems Engineering: Opportunities, Architectures, and Industrial Deployment Challenges",
+      "authors": [
+        "Bhushan Gopaluni",
+        "Vidya Kotamraju",
+        "Syon Bhushan"
+      ],
+      "abstract": "Large Language Models (LLMs) have rapidly emerged as tools of interest across engineering disciplines, and Process Systems Engineering (PSE) is no exception. This survey provides a systematic review of LLM applications in PSE, organizing the literature into seven categories: (1) process design and engineering, (2) molecular design and synthesis, (3) process modeling and simulation, (4) time-series forecasting, (5) optimization and scheduling, (6) process control, and (7) fault detection and diagnosis. For each category, we summarize the state of the art, identify common methodological approaches, and critically assess demonstrated capabilities versus aspirational claims. We find that LLMs show genuine promise for tasks involving natural language, including querying documentation, synthesizing unstructured knowledge, and enabling flexible human-machine interaction. However, applications requiring real-time execution, constraint satisfaction, or formal safety guarantees remain challenging. We conclude by identifying open problems and productive research directions for the PSE community.",
+      "date": "2026-06-10",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2606.11589v1",
+      "tags": [
+        "eess.SY",
+        "scheduling",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.11589",
+      "arxiv_id": "2606.11589v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.12177",
+      "title": "LPV Updates for Sequentially Linearized Moving Horizon Estimation of Nonlinear Systems",
+      "authors": [
+        "Jiaxin Ji",
+        "Jan Heiland",
+        "Dimitrios S. Karachalios",
+        "Hossam S. Abbas"
+      ],
+      "abstract": "Moving horizon estimation (MHE) provides high precision state estimation for nonlinear systems, but it is often limited by the substantial computational demands of solving a nonlinear optimization problem at every sampling step. To address this issue, we develop an efficient MHE scheme based on linear parameter-varying (LPV) formulation, where the scheduling parameters are given by the estimated states of the system and used to construct inexact Jacobians. Due to the LPV representation, the Jacobian can be pre-specified offline in a structured form and then updated in the quadratic programming (QP) subproblem, which reduces computational cost commonly used in standard nonlinear programming (NLP) systems. We illustrate the performance by numerical simulations.",
+      "date": "2026-06-10",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.12177v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.12177",
+      "arxiv_id": "2606.12177v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.11820",
+      "title": "On finding exact solutions of linear programs in the oracle model",
+      "authors": [
+        "Daniel Dadush",
+        "László A. Végh",
+        "Giacomo Zambelli"
+      ],
+      "abstract": "We consider linear programming in the oracle model: $\\max\\{c^\\top x \\,:\\, x\\in P\\}$, where the polyhedron $P=\\{x\\in\\mathbb{R}^n\\,:\\, Ax\\le b\\}$ is given by a separation oracle. We present an algorithm that finds exact primal and dual solutions using $O(n^2\\log(n/δ))$ oracle calls and $O(n^4\\log(n/δ)+n^5\\log\\log(1/δ))$ arithmetic operations, where $δ$ is a geometric condition number associated with the system $(A,b)$. These bounds do not depend on the cost vector $c$ and do not require a priori knowledge of $δ$. For rational data, $\\log(1/δ)$ is polynomially bounded in the encoding size of $(A,b)$, thus providing a polynomial-time algorithm.   The algorithm works in a black box manner, requiring a subroutine for approximate primal and dual solutions; the above running times are achieved when using the cutting plane method of Jiang, Lee, Song, and Wong (STOC 2020) for this subroutine. Whereas approximate solvers may return primal solutions only, we develop a general framework for extracting dual certificates based on the work of Burrell and Todd (Math. Oper. Res. 1985).   Our algorithm strengthens results by Grötschel, Lovász, and Schrijver (Prog. Comb. Opt. 1984), and by Frank and Tardos (Combinatorica 1987) that rely on bit-complexity arguments. Our algorithm avoids rounding-based arguments such as simultaneous Diophantine approximation and uses geometric arguments instead.",
+      "date": "2026-06-10",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.11820v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.11820",
+      "arxiv_id": "2606.11820v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.11800",
+      "title": "Accelerated Implicit GDA Schemes: Theoretical Guarantees and Application to Proximal Augmented Lagrangian Methods",
+      "authors": [
+        "Jiaqi Liu",
+        "Bin Shi"
+      ],
+      "abstract": "Convex optimization problems with linear equality constraints arise ubiquitously in scientific computing, machine learning, and control theory. Classical Krylov methods are effective but rely on problem-specific preconditioners and high memory. Conversely, gradient-based methods like the augmented Lagrangian method (ALM) avoid these issues yet suffer from slow outer iterations. Developing accelerated outer-iteration schemes, therefore, remains a critical research objective. In this study, we demonstrate that incorporating a proximal operation into the augmented Lagrangian framework yields the proximal ALM, where the outer iteration is equivalent to an implicit gradient descent-ascent (GDA) scheme. We further establish that this equivalence extends naturally to the setting of variable step sizes. Through Lyapunov analysis, we show that the underlying potential function must be shifted from the conventional objective gap to a variational inequality measure, signaling a shift in perspective from pure convex optimization to minimax optimization. Motivated by these observations, we first develop an implicit GDA scheme with variable step sizes based on a continuous-time ODE framework, which achieves an $o(1/k)$ last-iterate convergence rate for both the primal-dual objective gap and the gradient norm. Building upon a second-order ODE framework, we then propose a family of Nesterov-type implicit GDA schemes parameterized by $r \\geq 0$, which achieves an $o(1/k^{r+1})$ last-iterate convergence rate for the primal-dual objective gap. Furthermore, specializing the second-order ODE formulation to the case $r=0$, we derive a corresponding explicit GDA scheme and prove an $o(1/k)$ last-iterate convergence rate for the primal-dual objective gap. Finally, we present several numerical experiments to validate these theoretical results and demonstrate the effectiveness of the proposed methods.",
+      "date": "2026-06-10",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.11800v1",
+      "tags": [
+        "math.OC",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.11800",
+      "arxiv_id": "2606.11800v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.11798",
+      "title": "Deterministic Policy Gradient for Learning Equilibrium in Time-Inconsistent Control Problems",
+      "authors": [
+        "Xin Guo",
+        "Yijie Huang",
+        "Xiang Yu"
+      ],
+      "abstract": "In this paper, we develop a continuous-time model-free reinforcement learning algorithm to learn deterministic equilibrium policies in general time-inconsistent control problems. Utilizing the extended Hamilton-Jacobi-Bellman system, we recast the original time-inconsistent problem into an equivalent two-stage problem. In the first stage, for given auxiliary functions, we employ the deterministic policy gradient approach to learn an optimal policy in an auxiliary time-consistent control problem. In the second stage, given the updated policy, we exploit the inner fixed point iterations and some martingale characterizations to learn the auxiliary functions. As a theoretical contribution, we provide some mild model assumptions and establish the convergence of inner fixed point iterations. By repeating this actor-critic style of iterations across two stages, our algorithm aims to learn the equilibrium under different sources of time-inconsistency in a unified manner. The superior effectiveness of the proposed algorithm are illustrated in two classical financial applications with time-inconsistency: mean-variance portfolio management and optimal tracking portfolio under non-exponential discounting.",
+      "date": "2026-06-10",
+      "source": "arXiv",
+      "source_detail": "q-fin.CP",
+      "url": "http://arxiv.org/abs/2606.11798v1",
+      "tags": [
+        "q-fin.CP",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.11798",
+      "arxiv_id": "2606.11798v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.12382",
+      "title": "SPEA2$^+$: Improved Density Estimation in SPEA2 with Provable Runtime Guarantees",
+      "authors": [
+        "Duc-Cuong Dang",
+        "Andre Opris",
+        "Dirk Sudholt"
+      ],
+      "abstract": "The Strength Pareto Evolutionary Algorithm 2 (SPEA2) is a popular and prominent evolutionary algorithm for solving multi-objective optimisation problems. Despite its popularity, theoretical analyses of SPEA2 have only appeared recently. Moreover, these analyses focus exclusively on how SPEA2 handles non-dominated solutions and disregard the algorithmic components responsible for handling dominated solutions. We conduct a first runtime analysis of SPEA2 for which these components are analysed. We prove that, unlike other prominent algorithms, including NSGA-II, NSGA-III and SMS-EMOA under the same setting of constant population size and duplicate elimination, SPEA2 is unable to cover the Pareto front of the OneTrapZeroTrap benchmark efficiently. Our results indicate that using k-th nearest-neighbour distance in the fitness assignment provides an insufficient signal to maintain diversity among dominated individuals. To address this issue, we propose an improved variant, SPEA2$^+$, that considers all pairwise distances. The new algorithm achieves the same performance guarantees as the other prominent algorithms on OneTrapZeroTrap, while matching the performance of the original SPEA2 on simpler problems. Experimental results complement our theoretical findings.",
+      "date": "2026-06-10",
+      "source": "arXiv",
+      "source_detail": "cs.NE",
+      "url": "http://arxiv.org/abs/2606.12382v1",
+      "tags": [
+        "cs.NE",
+        "metaheuristics",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.12382",
+      "arxiv_id": "2606.12382v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-03-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-03-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
