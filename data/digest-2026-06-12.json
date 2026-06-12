@@ -1,0 +1,309 @@
+{
+  "date": "2026-06-12",
+  "generated_at": "2026-06-12T11:07:27.605684+00:00",
+  "publications": [
+    {
+      "id": "s2-024021936398",
+      "title": "From taxi trajectories to transit networks: a two-stage DQN-GNN framework for large-scale urban routing",
+      "authors": [
+        "Tao Tang",
+        "Ruilong Yang",
+        "Yunni Xia"
+      ],
+      "abstract": "\n \n This study aims to propose a complete data-driven framework for the Transit Network Design Problem (TNDP) using large-scale taxi GPS trajectories to infer travel patterns and optimize transit routes.\n \n \n \n The proposed framework consists of two stages. First, a convolutional weighted multi-objective stop selection (CWMSS) algorithm is introduced to identify high-demand stop areas by integrating passenger demand, coverage strength, and walking distance using a distance exponential decay mechanism. Second, a Deep Q-Network (DQN) combined with a Graph Neural Network (GNN) is developed. This model uses a fine-grained neighbor-extension strategy to incrementally construct transit routes, optimizing a tunable multi-objective cost function that balances passenger experience and operational cost.\n \n \n \n Evaluations using a decade-long New York City (NYC) taxi dataset show the CWMSS algorithm improves Pickup and Drop-off Records (PDRs) and Effective Coverage Area (ECA) by 9.39% and 21.07% against state-of-the-art stop selection methods. Furthermore, the DQN-GNN model outperforms two advanced heuristics and two state-of-the-art Reinforcement Learning (RL) baselines in passenger-operator balanced and passenger-oriented scenarios. Friedman and Wilcoxon signed-rank tests indicate that the observed improvements are statistically significant (p < 0.05).\n \n \n \n This research addresses the limitations of applying RL to TNDP on large-scale real-world networks. It contributes a novel stop selection algorithm using convolutional operations and a DQN-GNN model. This approach not only resolves the curse of dimensionality inherent in large-scale urban environments but also successfully designs transit networks that simultaneously improve passenger experience and lower operational costs.\n",
+      "date": "2026-06-11",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.1108/ijicc-12-2025-0857",
+      "tags": [
+        "network-optimization",
+        "stochastic",
+        "ml-for-or",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1108/ijicc-12-2025-0857",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 65.0
+    },
+    {
+      "id": "arxiv-2606.13407",
+      "title": "Optimizing Appliance Scheduling for Solar Energy Management Using Metaheuristic Algorithms",
+      "authors": [
+        "Hiba Ahmed",
+        "Alexander E. I. Brownlee",
+        "Jason Adair",
+        "Simon T. Powers"
+      ],
+      "abstract": "Renewable energy is essential for meeting future energy demands; however, solar energy generation, which occurs only during daylight hours often does not align with household consumption patterns. Appliances such as cookers, washing machines, and dryers are typically operated according to user preferred schedules rather than solar energy availability, creating a scheduling optimization problem. The objective is to determine optimal appliance start times to maximize renewable energy utilization while minimizing user inconvenience and adhering to system constraints. This paper presents a metaheuristic approach using Iterated Local Search (ILS) and Simulated Annealing (SA) to optimize appliance start times, while considering appliance operating durations, power consumption, inverter limit, battery state of charge constraints, and solar generation forecasts. Unlike most existing work, the scheduling is extended beyond a single day to accommodate unfinished tasks from previous days (spillover), ensuring operational continuity and enabling sequential operation across multiple days. Experimental results show that the sequential multi-day scheduling framework effectively manages system constraints while ensuring user convenience under exclusive solar generation. These findings also open opportunities for future research on multi-objective trade-offs between investment in equipment of various sizes, return on that investment, and user satisfaction.",
+      "date": "2026-06-11",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2606.13407v1",
+      "tags": [
+        "cs.AI",
+        "metaheuristics",
+        "scheduling",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1145/3795101.3805310",
+      "arxiv_id": "2606.13407v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.13444",
+      "title": "Clustering Node Attributed Networks with Graph Neural Networks and Self Learning",
+      "authors": [
+        "Rodrigo de Sapienza Luna",
+        "Daniel Ratton Figueiredo"
+      ],
+      "abstract": "Graph clustering - partitioning the node set of a graph into disjoint subsets that reflect some latent information - is a fundamental problem as it finds applications in a myriad of different scenarios. While this classic problem has been tackled for decades by different communities, a recent variation of the problem driven by real data considers the scenario where nodes have attributes that are also informative. This has triggered novel methods that simultaneously leverage network information (edges) and node information (attributed) in the design of novel clustering algorithms. This work proposes a novel framework that builds on prior works that have applied graph neural networks (GNN) to graph clustering. The proposed framework operates in rounds of self learning in a fully unsupervised setting. In each round, a GNN generates representations for nodes that are used to cluster the nodes. This clustering influences the graph used to generate the node representation in the next round. Moreover, a context graph built in each round using the original graph is used to generate the node representations. Empirical results show that the proposed methodology extracts information from both network edges and node attributes in synthetic data, outperforming algorithms focused solely on the network or attributes when neither are very informative. Multiple rounds of learning also improve the performance and always outperforms a long single round of training (i.e., classic GNN graph clustering). When considering real datasets, empirical results indicate that the proposed methodology is competitive to state-of-the-art methods when cluster sizes are balanced.",
+      "date": "2026-06-11",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2606.13444v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.13444",
+      "arxiv_id": "2606.13444v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261461916",
+      "title": "EXPRESS: Are Buyers Strategic in Online B2B Reviews?",
+      "authors": [
+        "Ding, H.",
+        "Armony, M.",
+        "Bassamboo, A.",
+        "Cui, R."
+      ],
+      "abstract": "While online reviews are critical in e-commerce, the strategic behavior of reviewers is understudied, especially in business-to-business (B2B) markets. We investigate buyers' strategic behaviors when leaving reviews: whether B2B buyers withhold reviews from high-performing suppliers to temper their growth and maintain future bargaining power. We collect the entire review and transaction histories of 4,605 suppliers on Alibaba.com, the largest B2B global sourcing platform, covering 62,529 reviews and 455,593 transactions from February to November in 2017 and 2018. To identify causal effects, we employ a generalized difference-in-differences approach exploiting the 2018 US-China trade war as a natural experiment. This event created a sudden and exogenous shock to supplier transaction volumes, allowing us to measure the response of non-US buyers to changes in supplier performance. We find strong evidence of strategic review withholding. A one-unit increase in a supplier's transaction volume significantly reduces a buyer's probability of leaving a review by 0.9 percentage points. We also find no effect on the numerical ratings and sentiment of reviews that are posted. This indicates that buyers respond to a supplier's success by withholding reviews, but they do not harm the seller's reputation by leaving negative reviews. This core mechanism was directly confirmed by a comprehensive survey we conducted with B2B professionals. Our findings demonstrate that B2B buyers act as strategic agents who manipulate information for competitive advantage. This presents a crucial insight for platform governance: information transparency is a double-edged sword. While intended to reduce information asymmetry, publicly disclosing performance metrics like transaction histories can enable strategic behavior that distorts the reputation system. Platforms must therefore balance the benefits of transparency against the potential for such strategic manipulation when designing their information disclosure policies.",
+      "date": "2026-06-12",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261461916",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261461916",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2606.13198",
+      "title": "A symmetric Gauss-Seidel based alternating proximal ALM for generalized Nash Equilibrium problems in Banach spaces",
+      "authors": [
+        "Defeng Sun",
+        "Hailing Wang",
+        "Wei Zhao"
+      ],
+      "abstract": "In this paper, we study a class of monotone generalized Nash equilibrium problems (GNEPs) with jointly linear constraints. The players' strategy spaces are real Hilbert spaces, while the joint constraint is formulated in a Banach space. To solve such problems, we propose a novel symmetric Gauss-Seidel (sGS) based alternating proximal augmented Lagrangian method (sGS-APALM) which incorporates newly designed quadratic surrogates. In contrast to existing regularization and ALM-type methods, the proposed method avoids solving coupled Nash equilibrium subproblems at each iteration and instead updates the players' strategies alternately by solving a sequence of unconstrained quadratic programs. Moreover, unlike many existing splitting-based methods, our global convergence analysis and convergence rate estimation require only monotonicity and Lipschitz continuity of the pseudo-gradient mapping, without imposing stronger assumptions such as strong monotonicity or co-coercivity. Finally, we apply the method to a class of risk-neutral PDE-constrained GNEPs with joint state constraints, and preliminary numerical results demonstrate its efficiency and effectiveness.",
+      "date": "2026-06-11",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.13198v1",
+      "tags": [
+        "math.OC",
+        "decomposition",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.13198",
+      "arxiv_id": "2606.13198v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.13058",
+      "title": "Scheduling of Star Observations under Uncertain Conditions: A Comparison of Models and Solvers",
+      "authors": [
+        "Thomas Rahab Lacroix",
+        "Pierre Lemaire",
+        "Nadia Brauner"
+      ],
+      "abstract": "We consider a scheduling problem for star observations using a telescope. Identical nights are available to observe stars that have been identified as of interest by astronomers. Each star yields a profit if it is observed; in that case, the observation must respect a visibility window and a minimum observation duration. The objective is to maximize the total profit of the observations that are actually performed. By interpreting nights as machines and stars as jobs to be processed, this problem is a classic scheduling setting of parallel machines. In the practical star-observation problem, the ability to observe depends on meteorological and atmospheric conditions, which are not known when the schedule is computed. A possible modeling is to consider that each night can be either perfect and everything is observable, either terrible and nothing is observable. The challenge is therefore to propose a ''high-quality'' schedule without knowing the actual number of nights (machines) that will ultimately be available. We focus here on evaluating the worst case within the robust optimization paradigm.",
+      "date": "2026-06-11",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.13058v1",
+      "tags": [
+        "math.OC",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.13058",
+      "arxiv_id": "2606.13058v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.13677",
+      "title": "Mana: Dexterous Manipulation of Articulated Tools",
+      "authors": [
+        "Zhao-Heng Yin",
+        "Guanya Shi",
+        "Pieter Abbeel",
+        "C. Karen Liu"
+      ],
+      "abstract": "Articulated tool manipulation remains a major challenge in dexterous robotics due to the need to coordinate internal degrees of freedom and contact-rich interactions. While prior work has largely focused on rigid objects, articulated tool use remains underexplored because of its physical complexity and the difficulty of learning functional grasping and manipulation policies. We present Mana (Manipulation Animator), a general sim-to-real framework that reinterprets dexterous manipulation as an animation problem. Inspired by computer animation, Mana employs a coarse-to-fine pipeline that transforms procedurally-generated grasp keyframes into manipulation trajectories through motion planning and reinforcement learning. The data generation process is largely automatic, requiring only a few mouse clicks to specify functional affordances (<1 minute per tool). Across four articulated tools spanning different scales and joint types, Mana achieves zero-shot sim-to-real transfer for both grasping and in-hand manipulation, demonstrating a scalable approach to dexterous articulated tool use.",
+      "date": "2026-06-11",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2606.13677v1",
+      "tags": [
+        "cs.RO",
+        "metaheuristics",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.13677",
+      "arxiv_id": "2606.13677v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.13662",
+      "title": "EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery",
+      "authors": [
+        "Amy Xin",
+        "Jiening Siow",
+        "Junjie Wang",
+        "Zijun Yao",
+        "Fanjin Zhang",
+        "Jian Song",
+        "Lei Hou",
+        "Juanzi Li"
+      ],
+      "abstract": "LLM-based agents have shown increasing potential in automating scientific discovery. Given an optimizable metric and an execution environment, they can propose, validate, and iterate scientific solutions, and have produced results that outperform human-designed approaches. As model capabilities continue to improve, we argue that the bottleneck for autonomous scientific discovery is shifting from prescribing agent workflows to designing agent environments: the resources, constraints, and interfaces that shape agent behavior. We frame this as environment engineering: building environments that amplify productive behaviors, such as open-ended exploration, systematic artifact management, and inter-agent collaboration, while suppressing harmful behaviors, such as reward hacking and high-friction human oversight. We present EurekAgent, an environment-engineered agent system for metric-driven autonomous scientific discovery. EurekAgent engineers the environment along four dimensions: permissions engineering for bounded agent execution and isolated evaluation; artifact engineering for filesystem and Git-based collaboration; budget engineering for budget-aware exploration; and human-in-the-loop engineering for easy human supervision and intervention. EurekAgent sets new state-of-the-art results on multiple mathematics, kernel engineering, and machine learning tasks, including new state-of-the-art 26-circle packing results discovered with less than $11 in total API cost. We open-source our code and results, and call for environment engineering as a core research direction for developing reliable autonomous research agents.",
+      "date": "2026-06-11",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2606.13662v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.13662",
+      "arxiv_id": "2606.13662v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.13610",
+      "title": "One Polluted Page Is Enough: Evaluating Web Content Pollution in Generative Recommenders",
+      "authors": [
+        "Minghao Luo",
+        "Liang Chen"
+      ],
+      "abstract": "Search-augmented LLMs increasingly mediate everyday consumer recommendations by retrieving live web content. This creates a new risk: generative recommenders may consume polluted web content, such as fake reviews and promotional pages crafted to mislead recommendations. We ask: to what extent do search-augmented LLMs become unwitting promoters of fake products when consuming polluted retrieval results? To answer this, we introduce FORGE (Fake Online Recommendations in Generative Environments), a benchmark for measuring fake-product promotion under controlled web-content pollution. Given an upstream search result, FORGE locally rewrites real products in retrieved web pages into fake ones to simulate web-content pollution, and measures how often the LLM recommends the fake product. FORGE covers 225 real-world products across 15 categories and 5 consumer scenarios. Across 12 commercial and open-weights LLMs, all models are vulnerable: a single polluted page yields fooled rates of up to 27%, while the full top-3 replacement raises this to 73.8%. Vulnerability varies substantially across categories, increasing when models lack stable prior knowledge of the relevant products. Reasoning does not mitigate this vulnerability; instead, it often generates spurious social proof to justify false recommendations. We evaluate three defenses: skepticism prompting and consensus filtering (over model priors or cross-document evidence). Skepticism can exacerbate vulnerability, much like reasoning, while filtering risks suppressing legitimate products. We release FORGE at https://github.com/leoluolol/forge-benchmark.",
+      "date": "2026-06-11",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2606.13610v1",
+      "tags": [
+        "cs.CL",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.13610",
+      "arxiv_id": "2606.13610v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.13604",
+      "title": "Multi-Agent Reinforcement Learning from Delayed Marketplace Feedback for Objective-Weight Adaptation in Three-Sided Dispatch",
+      "authors": [
+        "Haochen Wu",
+        "Yi Hou",
+        "Shiguang Xie"
+      ],
+      "abstract": "Dispatch in three-sided marketplaces provides a natural setting for reinforcement learning from world feedback: decisions are evaluated by delayed operational outcomes such as delivery speed, courier utilization, and merchant congestion. We present a deployed reinforcement learning system at DoorDash that adapts dispatch objective weights in a large-scale food-delivery marketplace using delayed signals. Rather than replacing the combinatorial assignment optimizer, a store-level policy learned from logged marketplace data selects a discrete multiplier that shifts the dispatch optimizer's tradeoff between delivery quality and batching efficiency. This interface enables offline policy learning under noisy, delayed, and coupled feedback while preserving production feasibility constraints and operational safeguards. We train a shared value function using centralized offline data and decentralized store-level execution, with Double Q-learning targets and a conservative regularizer to reduce out-of-distribution value overestimation. In a production switchback experiment, the offline-trained policy increases batching and reduces courier-side time costs without degrading customer-facing delivery quality. Results illustrate how world feedback from a live economic and logistics system can be used to safely adapt decision policies online.",
+      "date": "2026-06-11",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2606.13604v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.13604",
+      "arxiv_id": "2606.13604v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-03-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-03-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
