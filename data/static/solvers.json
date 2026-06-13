@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T11:07:27.204876+00:00",
+  "generated_at": "2026-06-13T10:07:15.037213+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 172,
+      "github_open_issues": 178,
       "github_recent_prs": [
-        "Implement initial RKO knapsack heuristic",
-        "Lines in options files with only spaces are now ignored, and text of first line with error is printed",
-        "Improved non-convexity identification in the QP solvers, added extended documentation of such",
-        "Model pic",
-        "Fix numpy version parsing"
+        "Add C interface to HiPO linear solver",
+        "Nuget api key to trusted publishing",
+        "workflows and pyproject update: cibuildwheel 4.0.0",
+        "HiPO in python local install docs, DYNAMIC_ARCH=ON for openblas ",
+        "Implement initial RKO knapsack heuristic"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 599,
+      "github_stars": 600,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13612,
+      "github_stars": 13616,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -572,10 +572,10 @@
       "github_open_issues": 104,
       "github_recent_prs": [
         "Fix formatting in scheduling docs for interval variables",
+        "math_opt: Add java support",
+        "Fix formatting in scheduling docs for interval variables",
         "set_cover: update from google3",
-        "julia: export from google3",
-        "cmake: fix object list leaking in install (#5146)",
-        "Fix signature of supports for CPSAT Optimizer"
+        "julia: export from google3"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6248,
-      "github_open_issues": 203,
+      "github_stars": 6250,
+      "github_open_issues": 202,
       "github_recent_prs": [
+        "Adds paper; drops listening sessions.",
         "Update CLAUDE.md: refresh stale content, trim derivable boilerplate",
         "Add qoco extra stats",
         "feat: partial_trace and partial_transpose intelligently propagate DCP attributes",
-        "Perturb DQCP bisection query point when the subproblem solver fails",
-        "Fix unreachable DGP canonicalizers; add registry key sanity test"
+        "Perturb DQCP bisection query point when the subproblem solver fails"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1759,
+      "github_stars": 1760,
       "github_open_issues": 14,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1320,13 +1320,13 @@
       ],
       "recent_changes": "With Timefold Solver 2.1.0, we return to a predictable release schedule. We have fixed some issues that slipped through the cracks of the major release, made more tweaks to multi-threaded solving, and",
       "github_stars": 1681,
-      "github_open_issues": 89,
+      "github_open_issues": 88,
       "github_recent_prs": [
+        "Stabilize `submitMoreProblemsThanCpus_allGetSolved` by removing host-CPU dependence",
+        "chore: update 1.x workflow",
         "ci: update 1.x release workflow",
         "fix: rename directories originally missed",
-        "chore: update CODEOWNERS to change model to service",
-        "docs: document nearby selection for basic variables in move selector reference",
-        "docs: fix link in readme"
+        "chore: update CODEOWNERS to change model to service"
       ]
     },
     {
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2472,
+      "github_stars": 2473,
       "github_open_issues": 355,
       "github_recent_prs": [
         "Modify PyROS uncertainty set documentation and solver output log intro",
@@ -1449,7 +1449,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
-      "github_stars": 2447,
+      "github_stars": 2448,
       "github_open_issues": 13,
       "github_recent_prs": [
         "Fix formatting for new JuliaFormatter release",
