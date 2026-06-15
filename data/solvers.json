@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14T10:32:36.027838+00:00",
+  "generated_at": "2026-06-15T13:23:07.449672+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1661,
+      "github_stars": 1662,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 177,
+      "github_open_issues": 172,
       "github_recent_prs": [
+        "Fix bug for QPs",
         "Add C interface to HiPO linear solver",
         "Nuget api key to trusted publishing",
         "workflows and pyproject update: cibuildwheel 4.0.0",
-        "HiPO in python local install docs, DYNAMIC_ARCH=ON for openblas ",
-        "Implement initial RKO knapsack heuristic"
+        "HiPO in python local install docs, DYNAMIC_ARCH=ON for openblas "
       ],
       "pypi_monthly_downloads": -71
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13622,
+      "github_stars": 13629,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,7 +569,7 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 104,
+      "github_open_issues": 103,
       "github_recent_prs": [
         "Fix formatting in scheduling docs for interval variables",
         "math_opt: Add java support",
@@ -668,11 +668,11 @@
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
       "github_open_issues": 162,
       "github_recent_prs": [
+        "Mistaken PR",
         "Update windows-ci for action update for Node.js 24 to set up msvc for stable",
         "Update windows-ci for action update for Node.js 24 to set up msvc",
         "Update linux-ci for macos and all ci for action updates for Node.js for stable",
-        "Update linux-ci for macos and all ci for action updates for Node.js",
-        "Output facelift: structured tabular output for all solver phases"
+        "Update linux-ci for macos and all ci for action updates for Node.js"
       ]
     },
     {
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6251,
-      "github_open_issues": 201,
+      "github_stars": 6253,
+      "github_open_issues": 198,
       "github_recent_prs": [
+        "Bump pypa/cibuildwheel from 4.0.0 to 4.1.0",
         "Add DNLP Examples",
         "Updates the maintainers list",
         "Adds paper; drops listening sessions.",
-        "Update CLAUDE.md: refresh stale content, trim derivable boilerplate",
-        "Add qoco extra stats"
+        "Update CLAUDE.md: refresh stale content, trim derivable boilerplate"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "With Timefold Solver 2.1.0, we return to a predictable release schedule. We have fixed some issues that slipped through the cracks of the major release, made more tweaks to multi-threaded solving, and",
-      "github_stars": 1681,
-      "github_open_issues": 88,
+      "github_stars": 1683,
+      "github_open_issues": 91,
       "github_recent_prs": [
-        "Stabilize `submitMoreProblemsThanCpus_allGetSolved` by removing host-CPU dependence",
-        "chore: update 1.x workflow",
-        "ci: update 1.x release workflow",
-        "fix: rename directories originally missed",
-        "chore: update CODEOWNERS to change model to service"
+        "fix: add missing config JAR to BOM",
+        "fix: add missing config JAR to BOM",
+        "fix: semaphore release submitted to a dead executor",
+        "perf: further improve performance of ElementAwareArrayList",
+        "deps: bump the regular group across 1 directory with 2 updates"
       ]
     },
     {
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2473,
+      "github_stars": 2474,
       "github_open_issues": 355,
       "github_recent_prs": [
         "Modify PyROS uncertainty set documentation and solver output log intro",
