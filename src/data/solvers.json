@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T12:18:54.544861+00:00",
+  "generated_at": "2026-06-17T11:56:32.668567+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 171,
+      "github_open_issues": 173,
       "github_recent_prs": [
+        "Add explicit -fexceptions copts to Bazel config",
+        "GPU support for local Python pip install",
         "Csharp msvc stl static link and win32 installation fix",
         "Fix bug for QPs",
-        "Add C interface to HiPO linear solver",
-        "Nuget api key to trusted publishing",
-        "workflows and pyproject update: cibuildwheel 4.0.0"
+        "Add C interface to HiPO linear solver"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13635,
+      "github_stars": 13642,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 103,
+      "github_open_issues": 104,
       "github_recent_prs": [
+        "Validate FlatZinc constraint arity before indexing arguments (heap OOB read)",
+        "cmake: rework testing management",
         "bazel: rework java_wrap_cc",
         "Fix formatting in scheduling docs for interval variables",
-        "math_opt: Add java support",
-        "Fix formatting in scheduling docs for interval variables",
-        "set_cover: update from google3"
+        "math_opt: Add java support"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,7 +1131,7 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6256,
+      "github_stars": 6257,
       "github_open_issues": 198,
       "github_recent_prs": [
         "Packaging updates: free threading support + PyOdide",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "With Timefold Solver 2.1.0, we return to a predictable release schedule. We have fixed some issues that slipped through the cracks of the major release, made more tweaks to multi-threaded solving, and",
-      "github_stars": 1684,
-      "github_open_issues": 88,
+      "github_stars": 1685,
+      "github_open_issues": 89,
       "github_recent_prs": [
-        "fix: add missing config JAR to BOM",
-        "fix: add missing config JAR to BOM",
-        "fix: semaphore release submitted to a dead executor",
-        "perf: further improve performance of ElementAwareArrayList",
-        "deps: bump the regular group across 1 directory with 2 updates"
+        "fix: Revert \"feat: Add effective map location to metadata events (#2321)\"",
+        "docs: Add information about version validation of models",
+        "fix: remove the resolvedMapLocation from API",
+        "fix: do not log successful model deploy response as error",
+        "fix: add missing config JAR to BOM"
       ]
     },
     {
@@ -1384,8 +1384,8 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2473,
-      "github_open_issues": 355,
+      "github_stars": 2474,
+      "github_open_issues": 356,
       "github_recent_prs": [
         "Modify PyROS uncertainty set documentation and solver output log intro",
         "Resetting main for development (6.10.2.dev0)",
@@ -1450,13 +1450,13 @@
       ],
       "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
       "github_stars": 2448,
-      "github_open_issues": 13,
+      "github_open_issues": 14,
       "github_recent_prs": [
+        "[docs] add learning intentions to the tutorials",
         "Fix formatting for new JuliaFormatter release",
         "Bump codecov/codecov-action from 6 to 7",
         "Update code of conduct reporting link",
-        "[docs] update package versions",
-        "[docs] change the parallelism tutorial to spawn only a limited set of tasks"
+        "[docs] update package versions"
       ]
     },
     {
