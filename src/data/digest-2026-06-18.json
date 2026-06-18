@@ -1,0 +1,306 @@
+{
+  "date": "2026-06-18",
+  "generated_at": "2026-06-18T11:14:22.573395+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2606.19332",
+      "title": "Sparse-dense flight copy-based interactive mechanism to airline integrated with cruise speed control",
+      "authors": [
+        "Jiajin Lin",
+        "Jianlin Jiang",
+        "Yan Gu",
+        "Yuzhen Guo",
+        "Cheng-Lung Wu"
+      ],
+      "abstract": "Flight recovery, aircraft rerouting, and passenger reallocation are critical in airline recovery. To preserve their interdependence that is neglected by the regular sequential recovery, we consider these recovery phases from an integration perspective. In addition, we incorporate cruise speed control to enhance the recovery performance. While using flight copies is a common modelling method in airline disruption management, the resulting integrated mathematical model is challenging to solve in real time due to the large number of flight copies, especially when considering cruise speed control. This paper introduces a new sparse-dense flight copy approach and proposes an innovative interactive mechanism that alternately adjusts aircraft routes on the sparse flight copy-based network and reallocates passenger itineraries on the dense flight copy-based network. Under the interactive mechanism, the involved sparse and dense networks are much smaller than those in the conventional flight copy approach. To implement such a mechanism, we develop an integrated flight, aircraft, and passenger recovery model (IFAPRM) and propose a customized Benders decomposition (CBD) to solve the model. Besides, we further propose some acceleration techniques to speed up the CBD method, including an effective feasibility certificate, scale management, and valid inequalities. Computational experiments on real-world data demonstrate that the sparse-dense flight copy-based interactive mechanism outperforms the conventional flight copy approach. In essence, the proposed interactive mechanism, along with its corresponding modelling method, algorithm, and acceleration techniques, provides a comprehensive methodology and a general decision-support framework for integrated rescheduling problems in complex operations, with potential applications in logistics, transportation, and beyond.",
+      "date": "2026-06-17",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.19332v1",
+      "tags": [
+        "math.OC",
+        "scheduling",
+        "supply-chain",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.19332",
+      "arxiv_id": "2606.19332v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.19230",
+      "title": "A Human-in-the-Loop Bayesian Optimization Framework for Constraint-Aware Bioprocess Development",
+      "authors": [
+        "Samuel Stricker",
+        "Claus Wirnsperger",
+        "Alessandro Butté",
+        "Laura Helleckes",
+        "Gonzalo Guillén Gosálbez",
+        "Antonio del Rio Chanona",
+        "Mehmet Mercangöz"
+      ],
+      "abstract": "This work presents an extension to Pareto Front Guided Sampling (PFGS), a Human-in-the-Loop (HitL) Bayesian Optimization (BO) framework in which Gaussian process (GP) surrogate-derived quantities are reformulated as objectives of a multi-objective optimization problem, and the resulting Pareto front is exposed to a domain expert for interactive candidate selection rather than returning a single automated recommendation. The framework is extended in two directions: constrained optimization is addressed by incorporating the posterior probability of satisfying output specification limits as an explicit Pareto objective, computed analytically from the GP posterior distribution; robust optimization is addressed by a Monte Carlo sampling strategy that estimates expected lower-confidence performance over a user-defined variability of input perturbations, capturing performance degradation under likely implementation deviations. The resulting multi-dimensional Pareto representation renders trade-offs between predicted performance, model uncertainty, probabilistic constraint satisfaction, and input robustness simultaneously visible through pairwise two-dimensional projections on an interactive dashboard, enabling selection criteria to be iteratively refined as the surrogate model improves and development objectives evolve. The framework is showcased on an eight-dimensional fed-batch Chinese Hamster Ovary (CHO) cell culture simulator demonstrating systematic identification of high-performing, feasibility-compliant, and perturbation-resilient operating conditions, and illustrating how expert-defined requirements provide a principled stopping criterion and support informed allocation of experimental resources.",
+      "date": "2026-06-17",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2606.19230v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "multi-objective",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.19230",
+      "arxiv_id": "2606.19230v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.19185",
+      "title": "AGDN: Learning to Solve Traveling Salesman Problem with Anisotropic Graph Diffusion Network",
+      "authors": [
+        "Bolin Shen",
+        "Ziwei Huang",
+        "Zhiguang Cao",
+        "Yushun Dong"
+      ],
+      "abstract": "The Traveling Salesman Problem (TSP) is a cornerstone of combinatorial optimization and arises in many practical scenarios. Although graph-based learning approaches have been explored for TSP, the question of how to exploit graph structure more effectively remains open. We present the Anisotropic Graph Diffusion Network (AGDN), a new Graph Neural Network framework designed to solve TSP. Our method tackles two central difficulties: (1) the lack of informative topological prior in fully connected TSP graphs, and (2) losing connected nodes in the optimal solution after the commonly used graph sparsification techniques. To overcome these issues, we construct a MixScore transition matrix that merges node similarity with pairwise distance, and we develop an anisotropic graph diffusion strategy that supports efficient information exchange across multiple hops. Comprehensive experiments spanning diverse instance sizes and node distributions show that AGDN consistently outperforms existing methods while keeping computation time competitive. Furthermore, AGDN generalizes well to problem sizes and distributions beyond those seen during training. The implementation is publicly available at: https://github.com/LabRAI/AGDN.",
+      "date": "2026-06-17",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2606.19185v1",
+      "tags": [
+        "cs.LG",
+        "vehicle-routing",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1145/3770855.3817789",
+      "arxiv_id": "2606.19185v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07311-w",
+      "title": "Cardinal-ordinal inconsistency thresholds in discrete and continuous pairwise comparisons",
+      "authors": [
+        "Mazurek, J."
+      ],
+      "abstract": "Abstract\n                  \n                    Pairwise comparisons (PCs) form a crucial part of many popular multiple-criteria decision-making methods designed to solve complex real-world problems. The aim of the paper is to investigate the relationship between cardinal and ordinal inconsistency in the multiplicative pairwise comparisons framework, both for discrete and continuous scales. In particular, the study focuses on thresholds of cardinal inconsistency (expressed by suitable triad based inconsistency indices: Koczkodaj’s index\n                    KI\n                    , the Peláez-Lamata index\n                    PLI\n                    , the triads geometric consistency index\n                    T-GCI\n                    and the Cavallo-d’Apuzzo\n                    \n                      \n                        $$ I_{CD} $$\n                        \n                          \n                            I\n                            \n                              CD\n                            \n                          \n                        \n                      \n                    \n                    index) such that below these thresholds a PC matrix has to be ordinally consistent. The thresholds above which a PC matrix has to be ordinally inconsistent are provided as well. In addition, estimates for Saaty’s index\n                    CR\n                    are also included. The derived thresholds enable a decision maker to quickly assess ordinal consistency without checking the transitivity of all triads contained in the matrix, thus enabling a fast check of rationality of judgments contained in a PC matrix.",
+      "date": "2026-06-17",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07311-w",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07311-w",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07295-7",
+      "title": "An investigation of goal programming parameter sensitivity",
+      "authors": [
+        "Merchant, J.",
+        "Jones, D.",
+        "Lokman, B."
+      ],
+      "abstract": "Abstract\n                  \n                    This paper presents the results of an investigation into the sensitivity of Weighted Goal Programs (WGPs) and Extended Goal Programs (EGPs) to the choice of their parameters. It discusses how sensitivity might be measured and formally defines the sensitivity of WGPs to the choice of the weights given to each goal and the sensitivity of EGPs to the choice of the parameter alpha, which governs the relative importance given to balancing and optimising in an EGP model. It shows that these sensitivities vary significantly between different standard goal programming models and then examines the sensitivity of very general theoretical WGPs and EGPs. It demonstrates the links between these sensitivities and the structure of a goal programme with the aim of predicting such sensitivity\n                    a priori\n                    . The paper concludes with a discussion of the reasons for these links and outlines some possible further work.",
+      "date": "2026-06-17",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07295-7",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07295-7",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1002-nav.70083",
+      "title": "Optimal Designs and Inspection Time Decisions for Gamma Accelerated Degradation Tests",
+      "authors": [
+        "Tung, H.",
+        "Lee, I."
+      ],
+      "abstract": "ABSTRACT\n                  This study analytically derives optimal designs for gamma accelerated degradation tests while incorporating inspection time as a design variable under both D‐ and V‐optimality criteria. Under D‐optimality, we prove that the optimal design allocates test units exclusively to the lowest and highest stress levels and adopts the longest inspection interval, resulting in only two test groups. In contrast, under V‐optimality, although test units are also allocated to the lowest and highest stress levels, the optimal inspection intervals may differ within the same stress level depending on the underlying model parameters, resulting in either two or three test groups. These results can also be applied to the optimal design for gamma‐accelerated destructive degradation tests. We further compared our proposed design with conventional V‐optimal designs that assume equal inspection intervals across all stress levels. The results demonstrate that conventional V‐optimal designs may result in a significant loss of efficiency. Two illustrative examples, an accelerated destructive degradation test and an accelerated degradation test, are provided to demonstrate the practical implementation of the proposed methods and their effectiveness in improving estimation accuracy. Finally, a sensitivity analysis demonstrates that the proposed optimal designs are more robust than the conventional V‐optimal design.",
+      "date": "2026-06-17",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70083",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70083",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.19050",
+      "title": "First-Order Methods for Solving Convex (Strongly) Concave Minimax Problems with Functional Constraints",
+      "authors": [
+        "Yangyang Xu",
+        "Xinhao Ying"
+      ],
+      "abstract": "Minimax problems arise in many applications, including robust learning and Stackelberg models. Most existing methods for minimax problems address unconstrained or projection-friendly settings, while functional constrained minimax problems remain far less explored. We study a class of convex-(strongly-)concave minimax problems with functional constraints. By exploiting strong duality, we incorporate the inner-maximization functional constraints into the objective. This allows us to efficiently obtain inexact gradients of the primal function of the reformulation and to design a proximal augmented Lagrangian method (PALM). Each PALM subproblem is solved by an inexact accelerated proximal gradient scheme to handle inexact gradients arising from approximately solving an auxiliary maximization subproblem. We show that the proposed method returns an $\\varepsilon$-KKT point and a primal $\\varepsilon$-optimal solution, with $\\tilde{\\mathcal{O}}(\\varepsilon^{-1})$ first-order oracle and iteration complexity in the convex-strongly-concave case. For the convex-concave case, the complexity remains the same for the primal gradient evaluation but increases to $\\tilde{\\mathcal{O}}(\\varepsilon^{-\\frac{3}{2}})$ for the dual part.",
+      "date": "2026-06-17",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.19050v1",
+      "tags": [
+        "math.OC",
+        "decomposition",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.19050",
+      "arxiv_id": "2606.19050v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.18730",
+      "title": "Two-Phase Bilevel Search for the Moving-Target Traveling Salesman Problem with Moving Obstacles",
+      "authors": [
+        "Allen George Philip",
+        "Anoop Bhat",
+        "Sivakumar Rathinam",
+        "Howie Choset"
+      ],
+      "abstract": "The Moving-Target Traveling Salesman Problem (MT-TSP) seeks a minimum cost trajectory for an agent that departs from a static depot, visits a set of moving targets, each within one of their assigned time windows, and returns to the depot. In this article, we study the Moving-Target Traveling Salesman Problem with Moving Obstacles (MT-TSP-MO), a generalization of the MT-TSP where the agent trajectory must avoid moving obstacles. We present a Mixed-Integer Conic Programming (MICP) formulation that can be solved using off-the-shelf solvers, as well as a fast and scalable Two-Phase Bilevel Search (TPBS) algorithm that computes high-quality feasible solutions for the problem. We evaluate our approaches against an existing baseline algorithm on a broad range of problem instances with up to 40 targets and 40 obstacles. The results demonstrate that both the proposed methods significantly outperform the baseline with respect to success rates, solution costs, and computation time.",
+      "date": "2026-06-17",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2606.18730v1",
+      "tags": [
+        "cs.RO",
+        "integer-programming",
+        "vehicle-routing"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.18730",
+      "arxiv_id": "2606.18730v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.19327",
+      "title": "Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation",
+      "authors": [
+        "Siyi Gu",
+        "Jialin Chen",
+        "Sophia Zhou",
+        "Arman Cohan",
+        "Rex Ying"
+      ],
+      "abstract": "Post-training of reasoning language models is commonly driven by supervised distillation and reinforcement learning with verifiable rewards. Distillation often relies on chain-of-thought annotations that are expensive to obtain and may themselves be noisy, incomplete, or partially incorrect; even when the final solution is correct, an imperfect rationale can interfere with learning. Reinforcement learning with verified rewards, on the other hand, typically compresses evaluative feedback into a scalar signal, obscuring which aspects of a response should be improved. We propose \\textbf{Rubric-Conditioned Self-Distillation}, a framework that incorporates rubrics as structured, fine-grained feedback for on-policy self-distillation. Our method conditions the teacher model on criterion-level rubrics and uses it to provide token-level guidance on the student's own sampled trajectories. This design avoids treating a single reference rationale as the sole supervision target. Instead, rubrics specify what a strong response should satisfy, enabling more fine-grained credit assignment over the reasoning process than scalar reward optimization. We instantiate this framework with a two-stage pipeline that first learns to generate task-specific rubrics and then trains a rubric-guided reasoner. We evaluate on a diverse suite of science reasoning benchmarks and results show that rubric-conditioned self-distillation effectively converts rubric-level criteria into token-level guidance over the reasoning process, surpassing GRPO by 1.0 points and OPSD by 0.9 points on average.",
+      "date": "2026-06-17",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2606.19327v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.19327",
+      "arxiv_id": "2606.19327v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.19247",
+      "title": "A Taxonomy of Mental Health and Technology Needs for Alzheimer's and Dementia Caregivers",
+      "authors": [
+        "Keran Wang",
+        "Drishti Goel",
+        "Jiayue Melissa Shi",
+        "Violeta J. Rodriguez",
+        "Daniel S. Brown",
+        "Dong Whi Yoo",
+        "Ravi Karkar",
+        "Koustuv Saha"
+      ],
+      "abstract": "Family members caring for individuals with Alzheimer's disease and related dementias (AD/ADRD) provide the foundation of long-term care worldwide. In 2023, more than 11 million U.S. family and friends contributed 18 billion hours of unpaid care, often at the cost of their own physical and mental health. These informal caregivers -- also referred as the \"invisible second patients\" -- experience elevated rates of mental health problems. Yet research commonly reduces their complex psychosocial experiences to a single construct of caregiver burden, obscuring which specific needs are unmet or effectively supported. At the same time, digital and AI-enabled technologies are rapidly expanding, from smartphone apps and videoconferencing to sensor platforms and AI chatbots. However, the absence of shared frameworks across medicine, psychology, and technology research limits cumulative progress. This study introduces a Caregiver Mental Health and Technology Taxonomy that systematically links AD/ADRD caregiver needs with corresponding classes of technology-based interventions. Drawing from an interdisciplinary literature review and two qualitative studies with caregivers, the taxonomy identifies mismatches between caregiver priorities and existing technological support, highlights under-served domains such as relational strain and compassion fatigue, and proposes design directions for adaptive, responsive systems. The framework offers a shared vocabulary to guide clinicians, researchers, and technology designers in developing more person-centered and clinically grounded innovation in dementia care.",
+      "date": "2026-06-17",
+      "source": "arXiv",
+      "source_detail": "cs.HC",
+      "url": "http://arxiv.org/abs/2606.19247v1",
+      "tags": [
+        "cs.HC",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.19247",
+      "arxiv_id": "2606.19247v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-03-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-03-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T11:56:32.668567+00:00",
+  "generated_at": "2026-06-18T11:14:22.171950+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -345,7 +345,7 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 173,
+      "github_open_issues": 174,
       "github_recent_prs": [
         "Add explicit -fexceptions copts to Bazel config",
         "GPU support for local Python pip install",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13642,
+      "github_stars": 13645,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 104,
+      "github_open_issues": 105,
       "github_recent_prs": [
+        "Mizux/dev",
+        "google3 export",
         "Validate FlatZinc constraint arity before indexing arguments (heap OOB read)",
         "cmake: rework testing management",
-        "bazel: rework java_wrap_cc",
-        "Fix formatting in scheduling docs for interval variables",
-        "math_opt: Add java support"
+        "bazel: rework java_wrap_cc"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -604,7 +604,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 997,
+      "github_stars": 998,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -1131,8 +1131,8 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6257,
-      "github_open_issues": 198,
+      "github_stars": 6258,
+      "github_open_issues": 196,
       "github_recent_prs": [
         "Packaging updates: free threading support + PyOdide",
         "Bump pypa/cibuildwheel from 4.0.0 to 4.1.0",
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1760,
+      "github_stars": 1761,
       "github_open_issues": 14,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "With Timefold Solver 2.1.0, we return to a predictable release schedule. We have fixed some issues that slipped through the cracks of the major release, made more tweaks to multi-threaded solving, and",
-      "github_stars": 1685,
-      "github_open_issues": 89,
+      "github_stars": 1689,
+      "github_open_issues": 92,
       "github_recent_prs": [
-        "fix: Revert \"feat: Add effective map location to metadata events (#2321)\"",
-        "docs: Add information about version validation of models",
-        "fix: remove the resolvedMapLocation from API",
-        "fix: do not log successful model deploy response as error",
-        "fix: add missing config JAR to BOM"
+        "docs: improve nearby documentation",
+        "feat: add HGS algorithm",
+        "perf: avoid calling Object.hashCode()",
+        "fix: bring Jackson and Annotations in sync",
+        "fix: Revert \"feat: Add effective map location to metadata events (#2321)\""
       ]
     },
     {
@@ -1384,8 +1384,8 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2474,
-      "github_open_issues": 356,
+      "github_stars": 2477,
+      "github_open_issues": 357,
       "github_recent_prs": [
         "Modify PyROS uncertainty set documentation and solver output log intro",
         "Resetting main for development (6.10.2.dev0)",
@@ -1449,7 +1449,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
-      "github_stars": 2448,
+      "github_stars": 2447,
       "github_open_issues": 14,
       "github_recent_prs": [
         "[docs] add learning intentions to the tutorials",
