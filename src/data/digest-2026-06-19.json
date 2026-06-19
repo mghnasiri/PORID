@@ -1,0 +1,318 @@
+{
+  "date": "2026-06-19",
+  "generated_at": "2026-06-19T11:42:32.194991+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2606.20324",
+      "title": "A Model-Driven Approach for Developing Families of Reinforcement Learning Environments",
+      "authors": [
+        "Xiaoran Liu",
+        "Istvan David"
+      ],
+      "abstract": "Virtual training environments are software-intensive systems in which reinforcement learning (RL) agents learn, adapt, and demonstrate meaningful behavior. Virtual training environments offer a safe and cost-efficient alternative to training agents in real-world settings. However, to converge, most realistic RL problems require training in multiple, mostly similar but slightly different environments - i.e., families of environment variants. The typical development process of environment families is a labor-intensive and error-prone manual endeavor that does not scale well. To alleviate these issues, in this paper, we propose a model-driven approach for developing families of RL training environments. To obtain the family of environments, we develop an approach and prototype tool. In our approach, a hybrid genetic algorithm - a combination of population-based global search and heuristic local search - generates environment families. Mutations and constraints are expressed as model transformations and are operationalized into a search process by a state-of-the-art model transformation engine. We demonstrate the soundness of our approach in a wildfire mitigation scenario and curriculum learning - a particular learning paradigm that relies on environment families.",
+      "date": "2026-06-18",
+      "source": "arXiv",
+      "source_detail": "cs.SE",
+      "url": "http://arxiv.org/abs/2606.20324v1",
+      "tags": [
+        "cs.SE",
+        "metaheuristics",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.20324",
+      "arxiv_id": "2606.20324v1",
+      "score": 60.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2606.20239",
+      "title": "Optimizing Agricultural Drone Operations: From Launch and Recovery Siting to Tiered Routing Strategies",
+      "authors": [
+        "Ethan Kolby",
+        "Josh Noble",
+        "Max Z. Li"
+      ],
+      "abstract": "Drones are increasingly used in agriculture, where tight margins demand efficient planning. Current optimization tools suffer from exponential runtimes as problem sizes grow, necessitating practical heuristics for daily operations. This paper presents an operational framework and benchmarking analysis for drone spraying operations. We evaluate the trade-offs between facility siting methods and tiered routing parameters. For facility siting, comparing a Mixed-Integer Program (MIP) baseline against a $p$-Median heuristic shows that the heuristic reduces runtime by three orders of magnitude, from over 97 seconds to under 1.2 seconds, with only a 4\\% reduction in serviced field area. For route planning, a tiered problem decomposition approach partitioning the target area into 6 to 8 spatial clusters reduces computation time by an order of magnitude with minimal degradation in serviced area. This framework achieves minute-scale planning on commodity hardware, demonstrating operational relevance. Future research will incorporate weather modeling, integrated optimization of facility location and routing, and validation across diverse field geometries.",
+      "date": "2026-06-18",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.20239v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "facility-location",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.20239",
+      "arxiv_id": "2606.20239v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.19695",
+      "title": "A Unified Framework for Joint Sensor Placement and Scheduling for Intrusion Detection",
+      "authors": [
+        "Jayanth Bhargav",
+        "Mahsa Ghasemi",
+        "Shreyas Sundaram"
+      ],
+      "abstract": "We consider an intrusion detection task in which a defender must jointly optimize sensor placement locations and orientations to minimize the probability of missed detection of an intruder traversing a protected environment. We decompose this problem into a meta problem, termed SensorPlacement, and an embedded subproblem, termed OrientationScheduling. The OrientationScheduling subproblem, for a fixed sensor placement, is modeled as a 2-player zero-sum game between the defender and the intruder, where the defender seeks an orientation strategy for the deployed sensors to minimize the probability of missed detection, while the intruder seeks a path selection strategy to maximize it. Since the defender's strategy space grows combinatorially with the number of sensors and orientations, solving the game via standard linear programming becomes prohibitive. To this end, we develop an iterative and efficient equilibrium-seeking algorithm that exploits the structure of the game's payoff function and establishes theoretical guarantees for convergence to the Nash equilibrium (NE) of the game. This NE value is then used as a utility measure in the SensorPlacement meta problem. We show that this game-value-based utility function is weakly submodular over the set of sensor placements and propose a greedy placement algorithm with near-optimality guarantees. To our knowledge, this is the first unified framework to integrate game-theoretic utility design with (weak) submodular optimization, enabling principled joint optimization of sensor placement and orientation scheduling. Through extensive simulations, we demonstrate that the proposed approach achieves near-optimal detection performance while significantly reducing computation time compared to baselines.",
+      "date": "2026-06-18",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2606.19695v1",
+      "tags": [
+        "eess.SY",
+        "linear-programming",
+        "scheduling",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.19695",
+      "arxiv_id": "2606.19695v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.20280",
+      "title": "ELVA: Exploring Ranking-Driven Universal Multimodal Retrieval",
+      "authors": [
+        "Yuhan Liu",
+        "Pei Fu",
+        "Hang Li",
+        "Yukun Qi",
+        "Chao Jiang",
+        "Jingwen Fu",
+        "Zhen Liu",
+        "Bin Qin",
+        "Zhenbo Luo",
+        "Jian Luan",
+        "Jingmin Xin"
+      ],
+      "abstract": "Leveraging Multimodal Large Language Models (MLLMs) via contrastive learning has become a mainstream paradigm for improving the performance of Universal Multimodal Retrieval (UMR). However, previous works have ignored the grain blindness when adapting the contrastive paradigm into retrieval tasks. Grain blindness refers to the tendency of the model to overlook grain-level information contained in the query, which is crucial for effectively handling complex queries. This stems from contrastive learning treating samples as a binary classification (positive/negative), while ignoring the different information carried by each negative sample. To address this, we argue that negatives should be treated differently according to their similarity to the positive sample, enabling the model to learn distinct grain information from each negative. In this paper, we introduce a simple but effective framework, called ELVA, a novel rule-based RL framework that mitigates grain blindness through ranking-driven MLLMs. 1) Instead of relying on reward models, we extend Reinforcement Learning with Verifiable Rewards   (RLVR) to retrieval tasks, allowing the model to explore new ranking behaviors without explicit ranking labels. 2) By utilizing rule-based rewards, our approach jointly optimizes the ranking of negative samples while enlarging the similarity gap between positive and negative. To more precisely measure grain blindness, we further introduce MRBench, a new benchmark specifically designed for multi-grain query scenarios. ELVA achieves state-of-the-art results across standard retrieval benchmarks, and its notable 13.1% improvement on MRBench further demonstrates its effectiveness in alleviating grain blindness.",
+      "date": "2026-06-18",
+      "source": "arXiv",
+      "source_detail": "cs.IR",
+      "url": "http://arxiv.org/abs/2606.20280v1",
+      "tags": [
+        "cs.IR",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.20280",
+      "arxiv_id": "2606.20280v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.20236",
+      "title": "A Multi-Agent system for Multi-Objective constrained optimization",
+      "authors": [
+        "Federica Filippini"
+      ],
+      "abstract": "Many decision-making problems in computing and networking systems can be naturally formulated as cost-minimization problems under performance constraints. In dynamic environments, reinforcement learning (RL) is often used to solve such problems at runtime by embedding both costs and constraint violations into a single scalar reward through weighted penalty terms, following a Lagrangian-inspired formulation. However, in this context the behavior of the learned policy critically depends on the choice of these weights, which are typically selected manually. This makes it difficult to identify an appropriate trade-off between optimizing the primary objective and effectively avoiding constraint violations, particularly in non-stationary environments where their relative importance may change. This paper presents MAMO (Multi-Agent system for Multi-Objective constrained optimization), an approach to tackle this balancing problem through multi-agent RL. MAMO decouples task execution from objective design by formulating the selection of reward weights as a learning problem, providing a !rst step towards more autonomous and robust RL-based solutions for constrained optimization problems in dynamic environments.",
+      "date": "2026-06-18",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2606.20236v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "multi-objective",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.20236",
+      "arxiv_id": "2606.20236v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.20442",
+      "title": "Evolutionary Two-Stage Hyperparameter Optimization Strategies for Physics-Informed Neural Networks",
+      "authors": [
+        "Fedor Buzaev",
+        "Dmitry Efremenko",
+        "Egor Bugaev",
+        "Andrei Ermakov",
+        "Denis Derkach",
+        "Daria Pugacheva",
+        "Fedor Ratnikov"
+      ],
+      "abstract": "Physics-Informed Neural Networks (PINNs) solve Partial Differential Equations (PDEs) by embedding physical laws into neural network training. However, their performance suffers from unstable convergence, training plateaus, and strong sensitivity to architectural and optimization hyperparameters due to the highly non-convex and multi-term structure of the physics-informed loss. In this setting, the outer-loop hyperparameter search is a noisy and black-box optimization problem over heterogeneous parameters, where classical local or gradient-based strategies are easily trapped in suboptimal regions. Evolutionary algorithms, with their population-based exploration and ability to handle mixed, non-differentiable search spaces, provide a more robust mechanism for discovering promising configurations. We propose and investigate a two-stage approach based on evolutionary algorithms that combines exploration and exploitation parts of PINNs training to improve solution accuracy and robustness under fixed computational budgets. In the first stage, we perform low-fidelity training runs with truncated epochs to rapidly screen candidate configurations, treating hyperparameter selection as a black-box outer-loop problem. In the second stage, only the most promising candidates are fully trained with standard gradient-based optimizers to refine the solution. Evaluated on three popular problems, namely Advection, Klein-Gordon and Helmholtz equations, our method consistently outperforms standard training and achieves significantly lower mean error within constrained computational resources.",
+      "date": "2026-06-18",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2606.20442v1",
+      "tags": [
+        "cs.LG",
+        "metaheuristics",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.20442",
+      "arxiv_id": "2606.20442v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.20326",
+      "title": "Quantum-classical physics-informed Kolmogorov-Arnold networks for PDEs",
+      "authors": [
+        "Xiang Rao",
+        "Yuxuan Shen"
+      ],
+      "abstract": "We develop QCPIKAN, the first quantum-classical physics-informed Kolmogorov-Arnold network designed to solve partial differential equations (PDEs). Built upon Chebyshev-polynomial KAN layers and parameterized quantum circuits, this hybrid framework embeds physical constraints into the training loss to enforce physical consistency. Our theoretical investigations grounded in approximation theory prove that this design accelerates high-frequency error convergence to an exponential rate and effectively mitigates numerical dispersion. We validate the framework across three typical seepage scenarios in porous media, including single-phase flow, component transport and two-phase flow. Compared with existing quantum-classical physics-informed neural networks, QCPIKAN achieves superior performance in global prediction accuracy, local error control, dynamic evolution tracking and displacement front localization. This work provides a robust and efficient alternative for solving complex PDEs.",
+      "date": "2026-06-18",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2606.20326v1",
+      "tags": [
+        "cs.LG",
+        "network-optimization",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.20326",
+      "arxiv_id": "2606.20326v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.20383",
+      "title": "A Single-Loop Minorized Dual Decomposition Method for Nonsmooth Multi-Stage Stochastic Programming",
+      "authors": [
+        "Dan Luo",
+        "Hailin Sun",
+        "Lei Yang",
+        "Yang You"
+      ],
+      "abstract": "In this paper, we study multi-stage stochastic programming (MSP) problems with nonsmooth composite objectives. Tailored to their intrinsic stage-wise and scenario-wise structure, we develop a single-loop minorized dual decomposition method, in which each iteration constructs a minorized problem and its restricted Wolfe dual, and then performs \\textit{one iteration} of the symmetric Gauss--Seidel based inexact alternating direction method of multipliers on the resulting dual problem to generate the next iterate. A key feature of the proposed optimization framework is that the resulting updates preserve the stage-wise and scenario-wise decomposable structure of the MSP problem and are suitable for parallel implementation. We establish global convergence of the generated iterates for the three-stage case and further establish the corresponding global convergence theorem for the general multi-stage setting. Numerical experiments illustrate the computational viability of the proposed framework and its favorable scaling behavior with respect to the stage-wise and scenario-wise structure.",
+      "date": "2026-06-18",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.20383v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.20383",
+      "arxiv_id": "2606.20383v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.20062",
+      "title": "Optimal Coarse Correlated Equilibria in Mean Field Games: Linear Programming and No-Regret Learning",
+      "authors": [
+        "Luciano Campi",
+        "Federico Cannerozzi",
+        "Ioannis Tzouanas"
+      ],
+      "abstract": "We introduce optimal coarse correlated equilibria for continuous-time mean field games. A coarse correlated equilibrium is a randomized recommendation scheme from which no player can gain by ignoring the recommendation and switching to an alternative strategy. The problem is as follows: a moderator selects, among all mean-field coarse correlated equilibria, one that optimizes a prescribed performance criterion, which may differ from the representative player's objective. After formulating the problem, we develop a linear programming (LP) formulation, prove the existence of optimal LP coarse correlated equilibria, and relate the LP characterization to the original probabilistic setting. Building on this characterization, we design a no-regret primal-dual algorithm, based on an equivalent Lagrangian formulation of the external-regret constraint, for learning such equilibria. We provide explicit convergence rates for the learning algorithm, and numerical examples illustrate the method.",
+      "date": "2026-06-18",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.20062v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.20062",
+      "arxiv_id": "2606.20062v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.19772",
+      "title": "Signature Methods for Optimal Market Making",
+      "authors": [
+        "Alberto Gennaro",
+        "Thibaut Mastrolia",
+        "Francesca Primavera"
+      ],
+      "abstract": "We propose a signature-based method to solve the optimal market-making problem under a mean-variance criterion. By exploiting signature linearization techniques, we reduce the market-making problem to a pseudo-linear optimization over the expected signature of an augmented market path, and we develop a signature algorithm named Sig-REINFORCE to learn the optimal bid and ask quotes. We test our method in two scenarios, in which market-order arrivals follow either a Poisson or a self-exciting Hawkes process, and we benchmark it against a Proximal Policy Optimization (PPO) baseline.",
+      "date": "2026-06-18",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.19772v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.19772",
+      "arxiv_id": "2606.19772v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-03-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-03-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
