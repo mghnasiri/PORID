@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T11:42:31.798077+00:00",
+  "generated_at": "2026-06-20T10:14:29.721567+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1664,
+      "github_stars": 1665,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 601,
+      "github_stars": 602,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- an error is now produced if the emphasis settings in parameter files are wrong\r\n- propagate focus lower bound to child nodes to avoid outdated global lower bound\r\n- set sma",
-      "github_open_issues": 24,
+      "github_open_issues": 25,
       "github_recent_prs": [
         "[docs] Add Conan entry in installation documentation",
         "Add MSVC flag /bigobj when compiling LPS=spx in debug mode",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13649,
+      "github_stars": 13654,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,11 +569,11 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 106,
+      "github_open_issues": 105,
       "github_recent_prs": [
         "[CBC interface] Support setting CBC hints",
         "Implement callback support for Xpress",
-        "Mizux/dev",
+        "java: Rework layout",
         "google3 export",
         "Validate FlatZinc constraint arity before indexing arguments (heap OOB read)"
       ],
@@ -604,7 +604,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 998,
+      "github_stars": 999,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6258,
-      "github_open_issues": 199,
+      "github_stars": 6259,
+      "github_open_issues": 196,
       "github_recent_prs": [
+        "Add scalar helpers for primal constraint violations",
+        "Patch/1.9.2",
         "TST: replace assertTrue(x==y) with assertEqual(x,y) for better diagnostics",
         "BUG: fix None.value crashes in power, finite_set, and inverse modules",
-        "DOC: Fix mismatched docstring parameter names and return types across cvxpy",
-        "DOC: fix 'overriden' typo in scipy_conif.py",
-        "Install from source using `pip install -e .` fails install numpy on windows (fix provided)"
+        "DOC: Fix mismatched docstring parameter names and return types across cvxpy"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1255,16 +1255,7 @@
         "nlp",
         "interior-point"
       ],
-      "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1761,
-      "github_open_issues": 14,
-      "github_recent_prs": [
-        "Fix data-race global variables with atomics",
-        "Remove unnecessary <iostream> includes",
-        "IpJournalist: Missing override keyword",
-        "Draft at NVIDIA cuDSS (GPU sparse linear solver) integration in Ipopt.",
-        "Fix rare use-after-free in IpSpralSolverInterface"
-      ]
+      "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to "
     },
     {
       "id": "optaplanner",
@@ -1318,16 +1309,7 @@
         "constraint",
         "metaheuristic"
       ],
-      "recent_changes": "Another release packed full of goodness!\r\nWe've improved Neighborhoods, increased performance Constraint Streams as well as made them easier to test, and fixed plenty of bugs.\r\n\r\nGoing forward, we wil",
-      "github_stars": 1689,
-      "github_open_issues": 94,
-      "github_recent_prs": [
-        "fix: Remove logging config for solver.service category",
-        "ci: [Aikido] AI Fix for Template Injection in GitHub Workflows Action",
-        "chore: add service parent pom metadata",
-        "feat: Add effective map location in AbstractDatesetEvents",
-        "docs: improve nearby documentation"
-      ]
+      "recent_changes": "Another release packed full of goodness!\r\nWe've improved Neighborhoods, increased performance Constraint Streams as well as made them easier to test, and fixed plenty of bugs.\r\n\r\nGoing forward, we wil"
     },
     {
       "id": "pyomo",
@@ -1384,14 +1366,14 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2477,
-      "github_open_issues": 358,
+      "github_stars": 2478,
+      "github_open_issues": 359,
       "github_recent_prs": [
+        "KNITROAMPL: use \\$KNITRODIR/knitroampl/knitroampl for executable",
         "Fix reduced costs dropped by legacy results when load_solutions=False",
         "Modify PyROS uncertainty set documentation and solver output log intro",
         "Resetting main for development (6.10.2.dev0)",
-        "Finalize 6.10.1 Release",
-        "Fix typos in PyROS `CardinalitySet` documentation"
+        "Finalize 6.10.1 Release"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1450,13 +1432,13 @@
       ],
       "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
       "github_stars": 2448,
-      "github_open_issues": 17,
+      "github_open_issues": 16,
       "github_recent_prs": [
+        "Improve error messages in src/aff_expr.jl",
         "Improve various error messages",
         "[docs] improve the module docstring",
         "Fix failing test on Julia nightly",
-        "Improve error message when there is an unsupported operator",
-        "[docs] add learning intentions to the tutorials"
+        "Improve error message when there is an unsupported operator"
       ]
     },
     {

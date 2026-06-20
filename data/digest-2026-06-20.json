@@ -1,0 +1,274 @@
+{
+  "date": "2026-06-20",
+  "generated_at": "2026-06-20T10:14:30.135735+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1287-ijoc.2022.0221",
+      "title": "On the Approximation of Separable Nonconvex Optimization Programs to an Arbitrary Numerical Tolerance",
+      "authors": [
+        "Contardo, C.",
+        "Ngueveu, S."
+      ],
+      "abstract": "We consider the problem of minimizing the sum of a series of univariate (possibly nonconvex) functions on a polyhedral domain. We introduce an iterative method with optimality guarantees to approximate this problem to an arbitrary numerical tolerance. At every iteration, our method replaces the objective by a piecewise linear relaxation to compute a dual bound. Because the polyhedral domain in our method remains unchanged, a primal bound is computed by evaluating the cost function on the solution provided by the relaxation. If the difference between these two values is deemed as not satisfactory, then the relaxation is locally tightened with an objective-driven refinement procedure that computes an optimal domain partitioning, and the process is repeated. By keeping the scope of the update local, the computational burden is increased only slightly from iteration to iteration. The convergence of the method is assured under very mild assumptions, and no NLP nor MINLP solver/oracle is required to ever be invoked to do so. As a consequence, our method presents very nice scalability properties and is little sensitive to the desired tolerance. We provide a formal proof of the convergence of our method and assess its efficiency in approximating the nonlinear variants of five problems: the transportation problem, the uncapacitated facility location problem, the multicommodity flow problem, the multicommodity network design problem, and the continuous knapsack problem. Our results indicate that the overall performance of our method is competitive to three state-of-the-art, mixed-integer, nonlinear solvers, often performing better. It also scales better than a naive variant of the method that avoids performing successive iterations in exchange for solving a much larger mixed-integer linear program.\n                  History: Accepted by Alice E. Smith, Andrea Lodi/Design &amp; Analysis of Algorithms-Discrete.\n                  Funding: This work was supported by Fondation Mathématique Jacques Hadamard with support from EDF-Thales-Orange, and Natural Sciences and Engineering Research Council of Canada [2020-06311].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2022.0221 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2022.0221 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-06-19",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2022.0221",
+      "tags": [
+        "integer-programming",
+        "network-optimization",
+        "facility-location",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2022.0221",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261460106",
+      "title": "Retailer–supplier coordination of pricing and delivery ratings availability decisions in online marketplaces",
+      "authors": [
+        "Zhou, C.",
+        "Becerril-Arreola, R.",
+        "Leng, M."
+      ],
+      "abstract": "Businesses selling in online marketplaces often enhance their offerings with short delivery times, but short delivery times typically result in low delivery-time conformance—the probability of on-time delivery, often published in the form of delivery-time ratings. As a result, short delivery times may simultaneously enhance and undermine the perceived value of online offerings. Marketplace operators can moderate this trade-off between delivery time and delivery-time conformance by making delivery-time ratings available or not. We (i) characterize the conditions for the emergence of the trade-off, (ii) identify the mechanisms that may allow managers to preempt the trade-off, and (iii) outline the conditions under which it is profitable for online retailers to solicit and publish delivery-time ratings. We model and compare alternative scenarios for the supply chain of a retailer and a supplier that offer a product in an online marketplace and determine prices and promised delivery times. We develop analytic models and support them with data provided by Cainiao’s logistic network. Differences of outcomes across scenarios reveal that the aforementioned trade-off can be preempted by simultaneously making delivery-time ratings available and coordinating the prices and promised delivery times. Disclosure of ratings can reduce delivery times but is profitable only if the disclosure increases system-wide value. Confirming this finding, analyses of Cainiao’s data indicate that the availability of delivery-time ratings can reduce the average promised delivery time by 3.9 h (or 7.4%). Several extensions show that our results hold for different contexts, including both drop-shipping and retailer-managed fulfillment models. In conclusion, our results suggest when and how supply chains in online marketplaces can use pricing to make the offering of shorter delivery times a dominant strategy.",
+      "date": "2026-06-19",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261460106",
+      "tags": [
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261460106",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1002-nav.70079",
+      "title": "Generic Models and Exact Algorithm for Process Capacity Maximization",
+      "authors": [
+        "Wu, J.",
+        "Wang, X.",
+        "Wang, S.",
+        "Zhen, L."
+      ],
+      "abstract": "ABSTRACT\n                  In this paper, we study an optimization problem for maximizing a generic process's capacity in operations management. Process capacity is defined in this context as the maximum sustainable flow rate. The problem not only considers common features of processes such as collaboration, multitasking, batching, and setups, but also takes account of some features of the processes in which activities are sequentially or parallelly executed and also can be revisited. Unlike previous related analytical studies, we adopt mixed‐integer linear programming (MILP) to develop our decision models as well as an exact algorithm for capacity maximization of generic processes considering the aforementioned process features. The benefit of the MILP models lies in their easy extensibility by adding constraints, making them applicable to a broad range of real manufacturing or service operation processes with certain specific features. To shorten the decision time, the exact algorithm also contains some carefully designed cuts and an embedded dynamic programming module with dimensionality reduction and clustering. Managerial insights are obtained using the proposed methodology. For example, as the batch size of each activity increases, the process capacity grows, but as the number of units of each resource increases, the benefit of a greater batch size does not increase. Thus, operations managers should determine an appropriate batch size for each activity, as a larger batch size does not necessarily result in process capacity improvement. The results of this study also suggest that process capacity can be improved through making some, but not all, resources flexible.",
+      "date": "2026-06-19",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70079",
+      "tags": [
+        "linear-programming",
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70079",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07304-9",
+      "title": "Data envelopment analysis under hybrid uncertainty: a distributionally robust optimization and intuitionistic fuzzy modeling approach",
+      "authors": [
+        "Omrani, H.",
+        "Imanirad, R."
+      ],
+      "abstract": "",
+      "date": "2026-06-19",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07304-9",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07304-9",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2024.1547",
+      "title": "Invariant Distributions in Nonlinear Markov Chains with Aggregators: Theory, Computation, and Applications",
+      "authors": [
+        "Light, B."
+      ],
+      "abstract": "Unique Steady States Without Contraction in Nonlinear Stochastic Models\n                  Many models in operations and economics describe systems whose future behavior depends not only on the current state but also on a function of the current distribution of states. In “Invariant Distributions in Nonlinear Markov Chains with Aggregators: Theory, Computation, and Applications,” Bar Light studies when such systems have a unique invariant distribution. The paper develops flexible monotonicity-based conditions that can be tailored to different models to establish uniqueness. It also shows that standard contraction arguments may fail in natural settings with strategic behavior, aggregate feedback, or interacting agents. The paper provides existence results and a simple computational method that finds an invariant distribution by solving easier subproblems. The framework applies to strategic queues, inventory systems, nonlinear equations, and wealth distributions in dynamic economies, helping identify and compute unique steady states in stochastic systems where aggregate conditions shape individual dynamics.",
+      "date": "2026-06-19",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2024.1547",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2024.1547",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2024.08999",
+      "title": "EnsembleIV: Creating Instrumental Variables from Ensemble Learners for Robust Statistical Inference with ML- Generated Variables",
+      "authors": [
+        "Burtch, G.",
+        "McFowland, E.",
+        "Yang, M.",
+        "Adomavicius, G."
+      ],
+      "abstract": "Advances in machine learning have made it easier to extract useful information from both structured and unstructured data. Accordingly, empirical researchers often seek to leverage machine learning for statistical inference and hypothesis testing. We study an increasingly popular practice wherein a supervised machine learning model is trained to predict a certain variable of interest, and the predicted values are subsequently used in regression models as independent variables to draw statistical inferences. However, inevitably, errors in predictions manifest as measurement errors in regression models and lead to estimation biases. In this paper, we design and evaluate a novel approach, termed EnsembleIV, to address the issue. We propose the use of ensemble machine learning techniques to generate the predictions and show that individual learners in the ensemble (after a proposed special-purpose data-driven transformation procedure) can serve as instrumental variables to correct for the measurement error and avoid estimation biases. EnsembleIV’s effectiveness is demonstrated on both synthetic and real data sets for both linear and generalized linear regression models. We also compare EnsembleIV with several alternative bias correction methods and highlight its advantages. Overall, EnsembleIV represents a flexible algorithm that enables empirical researchers to draw robust statistical inferences with independent variables generated via machine learning.\n                  This paper was accepted by D.J. Wu, information systems.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.08999 .",
+      "date": "2026-06-19",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2024.08999",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2024.08999",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2023.0130",
+      "title": "Machine Learning-Assisted Stochastic Kriging Metamodel for Offline Simulation Online Application",
+      "authors": [
+        "Zhang, H.",
+        "He, J.",
+        "Righter, R.",
+        "Shen, Z.",
+        "Zheng, Z."
+      ],
+      "abstract": "For many real-time decision problems in complex stochastic systems, a decision maker observes the system status online in real time and needs to immediately evaluate the performance of alternative decision choices based on the observed system status. Simulation metamodels can effectively support these needs by constructing a fast-to-evaluate mapping from the system status and decision to system performance using offline-generated simulation samples. However, when the system status involves high-dimensional information and a large number of simulated samples, classical simulation metamodeling approaches, such as stochastic kriging, may face challenges in terms of model specification, computational complexities, and computer storage demands. To address these challenges, we propose using machine learning models to assist stochastic kriging in building metamodels offline, which then can support online applications. The machine learning models can capture the potential nonlinear dependence of the stochastic kriging parameters on the high-dimensional system status. We analyze standard properties, such as mean squared errors and uncertainty quantification, for the proposed machine learning-assisted metamodel, and we show its consistency and asymptotic validity. We demonstrate the comparative advantage of our approach through numerical experiments.\n                  History: Accepted by Bruno Tuffin, Area Editor for Simulation.\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2023.0130 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2023.0130 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-06-19",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2023.0130",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2023.0130",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07318-3",
+      "title": "A data-driven condition-based preventive maintenance strategy for high gravity reactors in petrochemical industry: from the perspective of reinforcement learning",
+      "authors": [
+        "Liu, F.",
+        "Li, F.",
+        "Li, T.",
+        "Xing, X."
+      ],
+      "abstract": "",
+      "date": "2026-06-20",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07318-3",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07318-3",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1007-s10107-026-02383-9",
+      "title": "Special issue: stochastic programming and distributionally robust optimization with decision-dependent uncertainty",
+      "authors": [
+        "Lejeune, M.",
+        "Romeijnders, W.",
+        "Krokhmal, P."
+      ],
+      "abstract": "",
+      "date": "2026-06-20",
+      "source": "Mathematical Programming",
+      "source_detail": "Mathematical Programming",
+      "url": "https://doi.org/10.1007/s10107-026-02383-9",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10107-026-02383-9",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1007-s10107-026-02371-z",
+      "title": "Projection onto hyperbolicity cones and beyond: a dual Frank-Wolfe approach",
+      "authors": [
+        "Nagano, T.",
+        "Lourenço, B.",
+        "Takeda, A."
+      ],
+      "abstract": "",
+      "date": "2026-06-19",
+      "source": "Mathematical Programming",
+      "source_detail": "Mathematical Programming",
+      "url": "https://doi.org/10.1007/s10107-026-02371-z",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10107-026-02371-z",
+      "score": 40.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-03-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-03-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
