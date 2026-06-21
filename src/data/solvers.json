@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T10:14:29.721567+00:00",
+  "generated_at": "2026-06-21T10:36:37.680524+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1665,
+      "github_stars": 1666,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,7 +345,7 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 175,
+      "github_open_issues": 174,
       "github_recent_prs": [
         "Add blas compile def to highs library",
         "Remove hipo from meson tests",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13654,
+      "github_stars": 13659,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1132,13 +1132,13 @@
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
       "github_stars": 6259,
-      "github_open_issues": 196,
+      "github_open_issues": 197,
       "github_recent_prs": [
+        "CI: install Moreau from PyPI instead of private Fury index",
+        "Clean string representations of Sum, quad_over_lin, and Promote atoms (#2619)",
         "Add scalar helpers for primal constraint violations",
         "Patch/1.9.2",
-        "TST: replace assertTrue(x==y) with assertEqual(x,y) for better diagnostics",
-        "BUG: fix None.value crashes in power, finite_set, and inverse modules",
-        "DOC: Fix mismatched docstring parameter names and return types across cvxpy"
+        "TST: replace assertTrue(x==y) with assertEqual(x,y) for better diagnostics"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1255,7 +1255,16 @@
         "nlp",
         "interior-point"
       ],
-      "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to "
+      "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
+      "github_stars": 1761,
+      "github_open_issues": 14,
+      "github_recent_prs": [
+        "Fix data-race global variables with atomics",
+        "Remove unnecessary <iostream> includes",
+        "IpJournalist: Missing override keyword",
+        "Draft at NVIDIA cuDSS (GPU sparse linear solver) integration in Ipopt.",
+        "Fix rare use-after-free in IpSpralSolverInterface"
+      ]
     },
     {
       "id": "optaplanner",
@@ -1309,7 +1318,16 @@
         "constraint",
         "metaheuristic"
       ],
-      "recent_changes": "Another release packed full of goodness!\r\nWe've improved Neighborhoods, increased performance Constraint Streams as well as made them easier to test, and fixed plenty of bugs.\r\n\r\nGoing forward, we wil"
+      "recent_changes": "Another release packed full of goodness!\r\nWe've improved Neighborhoods, increased performance Constraint Streams as well as made them easier to test, and fixed plenty of bugs.\r\n\r\nGoing forward, we wil",
+      "github_stars": 1690,
+      "github_open_issues": 94,
+      "github_recent_prs": [
+        "perf: add ability to ignore inconsistent solutions",
+        "Some improvements for the maven plugin documentation",
+        "fix: Remove logging config for solver.service category",
+        "ci: [Aikido] AI Fix for Template Injection in GitHub Workflows Action",
+        "chore: add service parent pom metadata"
+      ]
     },
     {
       "id": "pyomo",
@@ -1432,7 +1450,7 @@
       ],
       "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
       "github_stars": 2448,
-      "github_open_issues": 16,
+      "github_open_issues": 14,
       "github_recent_prs": [
         "Improve error messages in src/aff_expr.jl",
         "Improve various error messages",
