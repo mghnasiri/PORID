@@ -1,0 +1,256 @@
+{
+  "date": "2026-06-23",
+  "generated_at": "2026-06-23T10:44:18.483109+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2606.23400",
+      "title": "Toward Decarbonization of Chemical Manufacturing: Joint Optimization of Unit Commitment and Microgrid Operations",
+      "authors": [
+        "Saba Ghasemi Naraghi",
+        "Richard Reed",
+        "Tylee Kareck",
+        "Paritosh Ramanan",
+        "Zheyu Jiang"
+      ],
+      "abstract": "The electrification of chemical process heating is essential to industrial decarbonization and sustainable manufacturing of chemical products. Joint optimization of electrified chemical process heating units and electric power systems is needed to achieve decarbonized operation of both sectors. In this work, we introduce a centralized optimization model that identifies the optimal unit commitment of power systems and optimal operation of electrified steam cracking microgrids for sustainable olefins production. A mixed-integer linear programming (MILP) model is developed to optimize the hourly operational plan of 26 ethylene plants and the main power system in Texas. We propose a two-stage solution method to solve the resulting large-scale centralized MILP problem efficiently. In the first stage, we apply Benders decomposition with LP-relaxed subproblems to decouple microgrid operations from the main power system. In the second stage, we use the first-stage optimal solution as a warm starting point for the centralized MILP. This two-stage approach reduces the average solution time by 93.5% compared to direct solution of the MILP. Results show that the largest overall greenhouse gas (GHG) emission reduction for both power systems and microgrids is achieved when the electrification level of steam cracking units is at 30%. Above 30% electrification level, a higher electrification level leads to higher overall GHG emissions and steady increase in operating costs, particularly on the microgrid side. Increasing renewables contributions in the electric power system helps debottleneck the electrification efforts and facilitate holistic decarbonization. We also remark that the optimal operational plan of electrified steam cracking microgrids also exhibit strong spatiotemporal patterns.",
+      "date": "2026-06-22",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.23400v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming",
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.23400",
+      "arxiv_id": "2606.23400v1",
+      "score": 60.0
+    },
+    {
+      "id": "optim-online-c5b9ce4c5c9d",
+      "title": "Skip or Insert? A Priori Optimization for the Vehicle Routing Problem with Time Windows and Stochastic Customers",
+      "authors": [],
+      "abstract": "We study an extension of the vehicle routing problem with time windows by incorporating stochastic customers, i.e., ad-hoc service requests. The uncertainty in stochastic customers is captured through scenarios. Two a priori optimization approaches, a classical and a new one lead to two different problems, both of which are modeled as scenario-based two-stage stochastic programs. ... Read more",
+      "date": "2026-06-22",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/06/skip-or-insert-a-priori-optimization-for-the-vehicle-routing-problem-with-time-windows-and-stochastic-customers/?utm_source=rss&utm_medium=rss&utm_campaign=skip-or-insert-a-priori-optimization-for-the-vehicle-routing-problem-with-time-windows-and-stochastic-customers",
+      "tags": [
+        "vehicle-routing",
+        "stochastic"
+      ],
+      "type": "publication",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.23365",
+      "title": "Exact and Fast Subset Selection Algorithms for the Bi-objective Integral R2 Indicator",
+      "authors": [
+        "Michael T. M. Emmerich"
+      ],
+      "abstract": "We study fixed-cardinality subset selection for the exact integral bi-objective $R_2$ indicator with a uniform continuum of weighted Tchebycheff scalarizing functions. The indicator measures the area under the lower envelope of scalarizing losses over weight space, rather than a finite sample average over weight vectors. For a sorted bi-objective Pareto-front approximation, represented by points ordered by increasing first objective and decreasing second objective, we derive an exact adjacent-neighbor decomposition of this integral objective into boundary terms, unary diagonal corrections, and selected-neighbor transition terms. This yields an exact Bellman dynamic program with $O(kn^2)$ running time for selecting $k$ of $n$ candidate points. We then prove that the transition matrix is Monge. This gives a divide-and-conquer implementation with $O(kn\\log n)$ running time and, more strongly, a staircase matrix-search implementation with $O(kn)$ running time under constant-time arithmetic comparisons. The matrix-search proof is presented through a lower-envelope sweep over single-crossing transition functions and includes the triangular feasibility condition $i<j$. The algorithms are exact for the continuous integral $R_2$ setting and are distinct from finite-weight-vector approximations, although they are related to earlier exact and dynamic-programming work on two-dimensional indicator-based subset selection, including hypervolume subset selection. Reproducible Python code compares exhaustive enumeration, the direct left-to-right dynamic program, the divide-and-conquer dynamic program, and the matrix-search implementation under explicit consistency checks.",
+      "date": "2026-06-22",
+      "source": "arXiv",
+      "source_detail": "cs.CG",
+      "url": "http://arxiv.org/abs/2606.23365v1",
+      "tags": [
+        "cs.CG",
+        "multi-objective",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.23365",
+      "arxiv_id": "2606.23365v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.23680",
+      "title": "CoorDex: Coordinating Body and Hand Priors for Continuous Dexterous Humanoid Loco-Manipulation",
+      "authors": [
+        "Sikai Li",
+        "Shuning Li",
+        "Zhenyu Wei",
+        "Yunchao Yao",
+        "Chenran Li",
+        "Mingyu Ding"
+      ],
+      "abstract": "Humanoid loco-manipulation is often simplified into a stop-and-go process: walking to an object, stopping to manipulate it, and then resuming locomotion. It also commonly relies on low degree-of-freedom (DoF) end effectors that behave like an open-close grasp primitive. We introduce CoorDex, a learning pipeline that converts high-dimensional body and dexterous hand control into coordinated latent residual control, enabling high-DoF dexterous loco-manipulation on the move. Starting from simulated whole-body and hand demonstrations, CoorDex trains privileged motion tracking teachers for the humanoid body and dexterous hand, distills them into proprioception-conditioned latent priors, and uses the frozen priors as the action space for downstream residual reinforcement learning. A coordinated latent residual policy composes these priors through shared task context and separate body-hand residual heads, preserving natural whole-body motion while improving finger-level contact reliability. CoorDex enables a Unitree G1 humanoid with a 20-DoF WUJI hand to execute dexterous manipulation while in motion, including non-stop bottle grasping and carrying, fridge door opening on the move, and cube pick-and-turn. Ablations on the walk-grasp-carry task show that joint-space PPO, joint-space hand control, and monolithic latent prediction all fail under the same reward budget, while the latent-prior interface and coordinated residual structure make high-dimensional contact-rich loco-manipulation trainable. Project Page: https://skevinci.github.io/coordex/",
+      "date": "2026-06-22",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2606.23680v1",
+      "tags": [
+        "cs.RO",
+        "metaheuristics",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.23680",
+      "arxiv_id": "2606.23680v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.23678",
+      "title": "AIR: Adaptive Interleaved Reasoning with Code in MLLMs",
+      "authors": [
+        "Cong Han",
+        "Xiaohan Lan",
+        "Haibo Qiu",
+        "Yujie Zhong"
+      ],
+      "abstract": "Following the paradigm shift initiated by OpenAI o3, interleaved reasoning with code to enhance multimodal large language models (MLLMs) has become a pivotal research frontier. The existing literature focuses primarily on tool-use within vision-perception tasks. However, such approaches typically rely on predefined heuristics for visual manipulation and are inherently incapable of addressing numerical computation problems due to their exclusive focus on visual operations. This paper empowers MLLMs with adaptive interleaved reasoning capabilities through extended reinforcement learning training on code-augmented complex numerical computation tasks. To this end, we propose a comprehensive three-component solution consisting of: a two-stage cold-start data construction pipeline, data filtering strategies for RL dataset curation, and an adaptive tool-invocation strategy leveraging a group-constrained reward function for interleaved reasoning trajectories. Extensive experiments demonstrate that after Reinforcement Learning training with the group-constrained reward function, performance improves by an average of 6.1 percentage points (pp) on evaluation benchmarks. Specifically, the accuracy for interleaved reasoning samples increases by 9.9 pp, and the overall success rate of tool-use exceeds 95%. Our data and code are available at: https://github.com/CongHan0808/AIR.git.",
+      "date": "2026-06-22",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2606.23678v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.23678",
+      "arxiv_id": "2606.23678v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.23631",
+      "title": "AI-driven Optimisation of Quality of Recovery (QoR) in Remote Patient Monitoring",
+      "authors": [
+        "Yansong Liu",
+        " Li-Hsi",
+        " Lin",
+        "Pramit Khetrapal",
+        "Ronnie Stafford",
+        "John Kelly",
+        "Ivana Drobnjak"
+      ],
+      "abstract": "Remote patient monitoring depends on patient-reported data to capture the subjective dimension of recovery that devices cannot measure. The Quality of Recovery (QoR-15) survey is the gold-standard instrument for this purpose. It was designed and validated for occasional in-hospital assessment, yet remote monitoring now administers it to patients daily. In our own post-surgical deployment, only 55% of patients submitted the survey more than 14 days of 30 monitoring days. We developed QoR-compact, a five-item daily input for the RPM prediction pathway. Setting a deployment-driven target of one-third of the daily items, we exhaustively evaluated all 3,003 five-question subsets of the QoR-15 and tested whether the best of them matches the full instrument in predicting near-term postoperative recovery severity. QoR-compact achieves a mean AUC-ROC of 0.968 (95% CI 0.915-0.988), statistically comparable to the 0.964 baseline obtained with one-third of the items. Patient-level backtesting indicates that it tracks readmission events as faithfully as the full form. Its five items span the physical and psychological axes of recovery: Q3 (feeling rested), Q9 (feeling comfortable and in control), Q10 (general well-being), Q12 (severe pain), and Q14 (feeling worried or anxious). The QoR-15 remains the gold-standard measure of recovery; QoR-compact complements it as a shorter daily input designed for prediction. This parity provides the basis for a prospective study of whether a lighter daily input is, in turn, completed more consistently. External validation on larger cohorts is required before clinical use.",
+      "date": "2026-06-22",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2606.23631v1",
+      "tags": [
+        "cs.AI",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.23631",
+      "arxiv_id": "2606.23631v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.23609",
+      "title": "Discovering Latent Groups for Robust Classification",
+      "authors": [
+        "Ankur Garg",
+        "Ulrich Aïvodji",
+        "Samira Ebrahimi Kahou",
+        "Vincent Michalski"
+      ],
+      "abstract": "Machine learning models exploit spurious correlations, achieving high average accuracy but failing disproportionately on underrepresented subgroups. Existing methods address this by adjusting network parameters, guided either by subgroup annotations or inferred pseudo-group labels. Yet at inference, these methods produce only a class prediction, with no insight into a sample's latent subgroup. We propose neural classification trees (NCT), a framework that achieves robustness by encoding subgroup structure in its tree-shaped architecture. By routing each sample to an \"easy\" or \"hard\" node of this tree -- based on prediction correctness -- and reusing these routes as pseudo-labels for the next iteration, NCT disentangles conflicting subgroups, without requiring subgroup supervision. We evaluate NCT on five benchmarks spanning binary and multi-class spurious correlations. Our experiments show that the learned tree topology provides strong interpretability by consistently isolating minority subgroups, which provides a transparent mapping between the model architecture and the data's latent group structure, while yielding competitive robustness with state-of-the-art methods.",
+      "date": "2026-06-22",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2606.23609v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.23609",
+      "arxiv_id": "2606.23609v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.23585",
+      "title": "Decentralized Autonomous Traffic Management through Corridor Networks",
+      "authors": [
+        "Jasmine Jerry Aloor",
+        "Aadarsh Govada",
+        "Hamsa Balakrishnan"
+      ],
+      "abstract": "As autonomous aircraft are introduced at scale and traffic density increases, centralized management becomes insufficient to coordinate the large numbers of crewed and uncrewed aircraft. Dedicated Advanced Air Mobility (AAM) corridors have therefore been proposed for organizing high-density autonomous traffic flows. The desire to scalably provide autonomous aircraft flexibility in trajectory planning motivates the development of decentralized approaches to traffic management in AAM corridors.   In this work, we extend a multi-agent reinforcement learning (MARL) approach to address the challenge of decentralized traffic flow management in air corridor networks. We test policies trained in a single-corridor setting on increasingly complex multi-corridor networks with combinations of merges and splits in a zero-shot manner. Experimental results demonstrate that learned behaviors transfer well to scenarios with varying traffic density, network geometry, and heterogeneous vehicle performance, without needing centralized coordination or model retraining. We evaluate system-level performance in terms of conformance to corridor boundaries, completion rates, average speeds, distance traveled, and maintenance of inter-aircraft separation. We find that although our policies require only locally coordinated entry, traversal, and exit behaviors, they collectively produce desirable traffic flows through the corridor network.",
+      "date": "2026-06-22",
+      "source": "arXiv",
+      "source_detail": "cs.MA",
+      "url": "http://arxiv.org/abs/2606.23585v1",
+      "tags": [
+        "cs.MA",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.23585",
+      "arxiv_id": "2606.23585v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.23419",
+      "title": "GRINQH: Graded Input-based Quantization Hierarchy for Efficient LLM Generation",
+      "authors": [
+        "Jette Oberländer",
+        "Jan Finkbeiner",
+        "Catherine M. Schöfmann",
+        "Emre Neftci"
+      ],
+      "abstract": "Autoregressive decoding with LLMs is primarily bottlenecked by GPU memory bandwidth, especially in edge-computing settings. While quantization is essential for mitigating this bottleneck, most existing methods treat inference as a uniform process and fail to account for the asymmetry between the compute-bound prefill stage and the memory-bound decoding stage. We propose GRINQH (GRaded INput-based Quantization Hierarchy), a weight-only post-training quantization framework that accelerates decoding by unifying quantization and sparsification. GRINQH leverages activation magnitudes as a proxy for computational importance to dynamically assign weight channels to different precision levels, enabling flexible average bit widths during decoding. Evaluated on Llama3 and Qwen3 models, GRINQH outperforms state-of-the-art fixed- and mixed-precision baselines at comparable 3- and 4-bit settings, even enabling effective 2-bit generation. We experimentally verify theoretical speedups by leveraging a hierarchical nested memory layout for multi-precision storage in a custom GPU kernel. Ultimately, GRINQH establishes a new state-of-the-art Pareto frontier for LLM generation, enabling a dynamic trade-off between generation quality and inference speed.",
+      "date": "2026-06-22",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2606.23419v1",
+      "tags": [
+        "cs.LG",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.23419",
+      "arxiv_id": "2606.23419v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.23615",
+      "title": "Hedgementation = Hedgerow Segmentation: A Remote Sensing Benchmark",
+      "authors": [
+        "Nathan Senyard",
+        "Salem Hamdani",
+        "Astrid Zhang",
+        "Derek Wang",
+        "Evan Shelhamer",
+        "Mathias Lécuyer",
+        "Joséphine Gantois"
+      ],
+      "abstract": "We propose Hedgementation: a new benchmark to evaluate machine learning models for hedgerow mapping from remote sensing data at country scale and 10m$^2$ spatial resolution. We combine and harmonize multiple remote sensing data products and ground truth labels sourced from a hedgerow inventory in France. We measure the ability of three baseline models to generalize across spatial distance, and across climatic zones, a more explicitly challenging task. Our benchmark tests both supervised and self-supervised learning approaches for remote sensing, applied to tracking fine-scale features of high agricultural importance. The code to reproduce the benchmark and baselines results is available at https://github.com/hedgementation/hedgementation.",
+      "date": "2026-06-22",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2606.23615v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.23615",
+      "arxiv_id": "2606.23615v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [],
+  "conferences": [],
+  "opportunities": [],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 0,
+    "conferences": 0,
+    "opportunities": 0,
+    "total": 10
+  }
+}
