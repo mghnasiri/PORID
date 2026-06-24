@@ -1,0 +1,331 @@
+{
+  "date": "2026-06-24",
+  "generated_at": "2026-06-24T10:29:17.085659+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2606.24318",
+      "title": "A multi-objective perspective on block-structured integer programs with one soft coupling constraint",
+      "authors": [
+        "Mark Lyngesen",
+        "Kathrin Klamroth",
+        "Britta Efkes",
+        "Sune Lauth Gadegaard"
+      ],
+      "abstract": "This paper presents a multi-objective perspective on block-structured integer programs featuring a single soft coupling constraint. By interpreting the coupling constraint as a second objective, we transform the coupled single-objective problem into an additively-separable bi-objective optimization problem. To avoid the expensive computation of the full Pareto front, we introduce an algorithm, which uses a binary search to isolate a region of interest around the soft constraint limit. This algorithm provides provable bounds on the single-objective optimum. We further enhance this algorithm, by exploiting the block-structure, using a novel $λ$-lookup mechanism to skip repeated sub-problem calculations. Finally, for scenarios requiring all non-dominated solutions within the region of interest, we propose a new approach, that works its way from the middle of the region of interest outwards. This algorithm shows quick convergence in terms of representation. Computational studies demonstrate that our methods dramatically reduce integer programming calls, thereby outperforming traditional dichotomic search. For large instances the method works as a strong heuristic providing bounds on the gap to an optimal solution, providing trade-off information in addition to the solution.",
+      "date": "2026-06-23",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.24318v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "stochastic",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.24318",
+      "arxiv_id": "2606.24318v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.24586",
+      "title": "EERLoss: A Novel Loss Function for Training Deep Biometric Models. A Case Study in Keystroke Dynamics",
+      "authors": [
+        "Nahuel Gonzalez",
+        "Marta Robledo-Moreno",
+        "Ivan DeAndres-Tame",
+        "Ruben Vera-Rodriguez",
+        "Ruben Tolosana"
+      ],
+      "abstract": "Deep learning approaches to biometric verification are commonly trained by optimizing indirect objectives, creating a misalignment between the optimization process and the primary evaluation metric, typically the Equal Error Rate (EER). This paper introduces EERLoss: a subdifferentiable, arbitrarily accurate approximation to EER for training deep biometric models. Furthermore, this framework has the potential to be adapted to optimize any specific operating point on the DET curve, enhancing its generalizability. To validate this approach, EERLoss is evaluated on a particularly demanding behavioral biometric modality: keystroke dynamics verification. This task is characterized by its high intra-class and low inter-class variability. Experiments are conducted on the large-scale KVC-onGoing benchmark, incorporating data from over 185,000 subjects across different scenarios. A comprehensive ablation study initially demonstrates the superiority of EERLoss in comparison to existing state-of-the-art loss functions. It also converges substantially faster compared to other losses, reducing the overall training cost. Additionally, a comparison is made between the proposed loss and the KVC-winning architecture by re-training it with EERLoss, demonstrating that the proposed approach significantly outperforms the original SoTA, achieving a relative EER reduction of up to approx. 30\\%. This improvement on a challenging, large-scale benchmark validates the effectiveness of EERLoss as a task-aligned training objective specifically suited for high-variance biometric traits.",
+      "date": "2026-06-23",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2606.24586v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.24586",
+      "arxiv_id": "2606.24586v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.24133",
+      "title": "Holistic Data Scheduler for LLM Pre-training via Multi-Objective Reinforcement Learning",
+      "authors": [
+        "Chenhao Dang",
+        "Jing Ma",
+        "Mingjie Liao"
+      ],
+      "abstract": "The composition of training data, governed by the diversity of sources and their mixing strategy, is a cornerstone of Large Language Model (LLM) pre-training. Online Data Mixing (ODM), the technique of adaptively adjusting data mixtures during training, has emerged as a promising direction to improve efficiency. However, existing methods are constrained by their reliance on a singular optimization perspective, which fundamentally overlooks the need for complex LLM pre-training to consider the dynamic data composition from multiple dimensions. To overcome this limitation, we introduce the Holistic Data Scheduler (HDS), a novel online data mixing framework. HDS formulates the data scheduling challenge as a reinforcement learning problem in a continuous control space and leverages the Soft Actor-Critic (SAC) algorithm for its stability and sample efficiency in exploring the high-dimensional policy space. At the core of HDS lies a novel multi-objective, holistic reward function that integrates three critical perspectives: a data-driven reward for quality, a loss-driven reward capturing inter-domain influence, and a model-driven reward based on weight norms. To validate our design and determine its optimal configuration, we conducted systematic experiments on LLMs of various sizes. On The Pile benchmark, HDS reaches the final validation perplexity of the next best method with 44% fewer training iterations. Furthermore, it achieves a 7.2% improvement on the MMLU 0-shot task along with consistent gains on other benchmarks, showcasing its ability to enhance both training efficiency and final model capability.",
+      "date": "2026-06-23",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2606.24133v1",
+      "tags": [
+        "cs.LG",
+        "scheduling",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1145/3770854.3780325",
+      "arxiv_id": "2606.24133v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.24545",
+      "title": "Variational convexity: new characterizations, calculus rules, and applications",
+      "authors": [
+        "Radu Ioan Bot",
+        "Ziyuan Wang"
+      ],
+      "abstract": "Introduced by R.T. Rockafellar in 2019, variational convexity is a generalized notion of convexity under which stationary points of nonconvex optimization problems can still be guaranteed to exhibit local optimality. In this paper, we provide characterizations of variationally convex functions through their proximal hulls and epigraphs, and investigate operations that preserve variational convexity, including nonlinear and linear composition, summation, and proximal averaging. We further apply these results to identify variational convexity in nonlinear programming problems with possibly nonsmooth objectives, continuously differentiable inequality constraints, and affine equality constraints. This leads to new conditions ensuring local minimizers, rather than merely stationary points, for such problems, extending beyond current state-of-the-art results that typically require twice continuously differentiable objectives and constraints.",
+      "date": "2026-06-23",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.24545v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.24545",
+      "arxiv_id": "2606.24545v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.24294",
+      "title": "Extreme-Case Distorted Utility under Moment Ambiguity",
+      "authors": [
+        "Zehao Li",
+        "Yijie Peng",
+        "Hui Shao",
+        "Chung-Piaw Teo"
+      ],
+      "abstract": "Many operations decisions under distributional ambiguity, from pricing and inventory to capacity and contracting, evaluate an action through a tail-sensitive distorted utility of an uncertain payoff and hedge against the least favorable distribution consistent with a few known moments; the resulting worst-case evaluation is the inner problem of a moment-based distributionally robust decision. We study this inner problem, the extreme-case distorted utility under moment constraints, for a locally Lipschitz utility that may be nonsmooth and neither convex nor concave together with a general, possibly atomic, distortion. Recasting the problem in the quantile domain, we develop a unified method that yields exact first-order optimality conditions and closed-form extremal values and distributions for both the worst and best cases, drawing on nonsmooth variational analysis. A central step treats the monotonicity constraint by isotonic projection onto the monotone cone, turning an abstract infinite-dimensional restriction into an inexpensive inner solve that scales linearly in the discretization. The method recovers and extends classical moment bounds through three examples: a range value-at-risk extension of the Scarf bound, GlueVaR distortions with a reward--penalty utility, and a capped incentive contract under conditional value-at-risk. As the inner oracle of a robust min-max decision, the characterization embeds directly in outer robust optimization, illustrated on a real capacity-provisioning problem for generative artificial intelligence inference where accounting for moment ambiguity lowers required capacity while preserving service compliance.",
+      "date": "2026-06-23",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.24294v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.24294",
+      "arxiv_id": "2606.24294v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.24779",
+      "title": "DeepBD: A Grounded Agentic Workflow for Variant Prioritization and Diagnosis of Genetic Birth Defects",
+      "authors": [
+        "Shiyu Li",
+        "Ziqi Yan",
+        "Zhihao Wu",
+        "Jielong Lu",
+        "Weiran Liao",
+        "Jiajun Yu",
+        "Genjie Li",
+        "Zeyu Chu",
+        "Jiajun Bu",
+        "Haishuai Wang"
+      ],
+      "abstract": "Birth defects are a major cause of fetal loss, neonatal morbidity and long-term disability. In the subset with suspected genetic etiologies, exome and genome sequencing have moved many cases from variant detection to post-sequencing interpretation: clinicians must rank patient-specific candidate variants under incomplete fetal or infant phenotypes and heterogeneous evidence from population genetics, variant-effect prediction, gene-disease validity, phenotype ontologies, cellular and pathway context, protein structure and clinical literature. We present DeepBD, a grounded agentic workflow for variant prioritization and diagnostic interpretation of genetic birth defects. DeepBD organizes the workflow into LLM-assisted case structuring, a pretrained evidence engine, specialist evidence modules and a grounded diagnostic review layer. The evidence engine learns patient-specific variant scores from structured rule evidence, sequence and variant-effect representations and phenotype-conditioned biological context, whereas specialist modules and the agentic layer provide tool-based refinement, candidate-pool review and diagnosis-oriented synthesis from ranked candidates. Developed using an in-house fetal and infant cohort comprising 18,622 cases, DeepBD achieved Recall@1/3/5/10 of 0.658/0.882/0.912/0.929 on an internal held-out solved-case benchmark, outperforming standalone Exomiser, DeepRare and prompted LLM reranking baselines evaluated on Exomiser-derived top-20 candidate variants. Ablation and overlap analyses show that rule evidence, mechanistic context, and specialist refinement provide complementary signals. These findings support a grounded agentic workflow that separates evidence integration, tool-based refinement, and LLM-assisted diagnostic review for retrospective variant prioritization in genetic birth defects.",
+      "date": "2026-06-23",
+      "source": "arXiv",
+      "source_detail": "q-bio.GN",
+      "url": "http://arxiv.org/abs/2606.24779v1",
+      "tags": [
+        "q-bio.GN",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.24779",
+      "arxiv_id": "2606.24779v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.24679",
+      "title": "FlowPipe: LLM-Enhanced Conditional Generative Flow Networks for Data Preparation Pipeline Construction",
+      "authors": [
+        "Kunyu Ni",
+        "Lei Cao",
+        "Jie He",
+        "Xiaotong Zhang",
+        "Jianfeng Jin",
+        "Junyu Dong",
+        "Yanwei Yu"
+      ],
+      "abstract": "Data preparation pipelines improve data quality in machine learning by transforming raw tables into learning-ready data through sequential cleaning and feature transformation operators. However, automatically constructing such pipelines is computationally difficult because operator sequences are combinatorial and end-to-end evaluation is expensive. Existing state-of-the-art (SOTA) Multi-DQN methods still face three key limitations: decoupled value estimators weaken long-horizon credit assignment, dataset context is only weakly injected into the policy, and exploration is inefficient in a sparse search space with many invalid states. To address these issues, we propose FlowPipe, a unified framework that formulates pipeline synthesis as conditional probabilistic flow generation over a directed acyclic graph. FlowPipe uses Conditional Generative Flow Networks (C-GFlowNets) with a Trajectory Balance objective to connect terminal validation rewards with early pipeline decisions. It further introduces Deep Semantic Modulation through Feature-wise Linear Modulation (FiLM), allowing LLM-derived logical priors to condition the policy's internal activations according to dataset semantics. In addition, FlowPipe incorporates failure awareness into the flow objective to avoid invalid states and concentrate search on high-potential regions. Experiments on two benchmark suites with 74 real-world datasets show that FlowPipe outperforms SOTA baselines, improving accuracy by 11.96% on average and achieving 12.5x faster training convergence. Source code is available at https://github.com/KunyuNi/FlowPipe.",
+      "date": "2026-06-23",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2606.24679v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.24679",
+      "arxiv_id": "2606.24679v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.24636",
+      "title": "CineCap: Structured Reasoning with Spatio-Temporal Anchors for Cinematographic Video Captioning",
+      "authors": [
+        "Xinyu Mao",
+        "Yuhui Zeng",
+        "Xiaokun Liu",
+        "Wenyu Qin",
+        "Meng Wang",
+        "Xin Tao",
+        "Pengfei Wan",
+        "Xiaohan Xing",
+        "Max Meng"
+      ],
+      "abstract": "Cinematographic captioning aims to describe how a video is filmed using professional film-language concepts such as camera movement, shot size, depth of field, composition, and shooting angle. This capability is important for fine-grained video understanding and controllable movie-quality video generation, yet remains underexplored in existing multimodal large language models. Unlike question-answering-based evaluation of cinematic understanding, cinematographic captioning requires a unified open-form description over multiple cinematographic dimensions. This task is challenging for two main reasons: the model must infer professional cinematographic concepts from subtle visual evidence, and it must generate captions that are both comprehensive and accurate. Accordingly, we propose CineCap, a framework that combines structured reasoning with spatio-temporal anchors and reinforcement learning with comprehensiveness, accuracy, and gated coverage rewards. The former grounds professional cinematographic descriptions in explicit visual evidence and organizes them into compact atomic reasoning for supervised fine-tuning, while the latter improves the balance between descriptive completeness and factual correctness. In addition, we construct CineCap Bench, a benchmark of 472 manually annotated video-caption pairs for systematic evaluation. Extensive experiments show that CineCap consistently outperforms strong proprietary and open-source baselines, establishing a new state of the art for cinematographic captioning. The code, model checkpoint, and benchmark are publicly available in https://github.com/Hectormxy/CineCap.git.",
+      "date": "2026-06-23",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2606.24636v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.24636",
+      "arxiv_id": "2606.24636v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.24626",
+      "title": "SAFARI: Scaling Long Horizon Agentic Fault Attribution via Active Investigation",
+      "authors": [
+        "Chenyang Zhu",
+        "Jiayu Yao",
+        "Kushal Chawla",
+        "Youbing Yin",
+        "Nathan Wolfe",
+        "Pengshan Cai",
+        "Jingyu Wu",
+        "Spencer Hong",
+        "Sangwoo Cho",
+        "Shi-Xiong Zhang",
+        "Daben Liu",
+        "Sambit Sahu",
+        "Erin Babinsky"
+      ],
+      "abstract": "As autonomous agents tackle increasingly complex multi-step, multi-agent tasks, their execution trajectories have scaled beyond the constraints of even the largest context windows. Current methods for effectively diagnosing agent failures load the full trajectory into an LLM's context window, which suffers from attention dilution and fails when agentic traces inevitably exceed context limits. To address this, we introduce SAFARI (Scaling long-horizon Agentic Fault AttRibution via active Investigation), a framework that replaces linear context loading with a tool-augmented diagnostic loop. By equipping LLMs with a specialized toolbox to read and search trajectory segments alongside a persistent Short-Term Memory (STM) for cross-turn reasoning, SAFARI effectively decouples diagnostic accuracy from architectural context limits. Our experiments demonstrate that SAFARI outperforms state-of-the-art results by 20% on the Who&When dataset within a 1M token budget, and by 19% on TRAIL GAIA subset on a 25K token budget. Most significantly, SAFARI maintains a 0.58 precision even when the target fault resides 5x beyond the model's native context window, a scenario where traditional evaluators fail entirely.",
+      "date": "2026-06-23",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2606.24626v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.24626",
+      "arxiv_id": "2606.24626v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.24604",
+      "title": "Uncertainty-Aware Longitudinal Forecasting of Alzheimer's Disease Progression Using Deep Learning",
+      "authors": [
+        "Arya Hariharan",
+        "Shreyank N Gowda",
+        "Anala M R"
+      ],
+      "abstract": "Longitudinal modelling of Alzheimer's disease progression is clinically useful only if it can describe not just the most likely next diagnosis, but how a patient may evolve over time and how reliable that forecast is. Most deep learning approaches reduce this problem to single-step classification, treating cognitively normal, mild cognitive impairment, and dementia as flat categories while providing limited insight into how uncertainty accumulates across future visits. We propose a probabilistic framework that combines ordinal diagnosis prediction, multi-horizon trajectory generation, and decomposed uncertainty estimation. A Temporal Fusion Transformer encoder is adapted with a CORAL ordinal output layer, asymmetric loss weighting, and converter oversampling to respect disease-stage ordering and improve sensitivity to MCI-to-dementia transitions. Conditioned on the learned patient-context representation, an autoregressive Mixture Density Network generates five-year probabilistic trajectories for diagnosis state, CDR Sum of Boxes, MMSE orientation, and hippocampal volume. On ADNI, the model outperforms linear, recurrent, and transformer baselines for next-visit diagnosis prediction, with the strongest gains on MCI-versus-dementia discrimination. Generated trajectories achieve near-nominal 90% credible interval coverage, widening uncertainty across the forecast horizon, and biomarker dynamics consistent with expected Alzheimer's disease progression. We further separate aleatoric from epistemic uncertainty using analytic mixture variance and a five-member bootstrap ensemble, which provides the strongest encoder diversity and output-level epistemic signal. Epistemic uncertainty is higher for rare progression archetypes, MCI and dementia patients, and under external evaluation on OASIS-3, where it increases alongside prediction error.",
+      "date": "2026-06-23",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2606.24604v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.24604",
+      "arxiv_id": "2606.24604v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-06-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-06-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T10:44:18.073353+00:00",
+  "generated_at": "2026-06-24T10:29:16.682628+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1668,
+      "github_stars": 1669,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 168,
+      "github_open_issues": 169,
       "github_recent_prs": [
+        "Add reverse CI to test Uno with HiGHS and HiPO",
+        "Update parallel documentation",
         "Proof of concept for the support of AMD GPUs",
         "Minor changes to FindHipoDeps to support Intel MLK BLAS library.",
-        "Fix column stuffing",
-        "Check BLAS used in HiPO at runtime",
-        "Add blas compile def to highs library"
+        "Fix column stuffing"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -458,13 +458,13 @@
         }
       ],
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- an error is now produced if the emphasis settings in parameter files are wrong\r\n- propagate focus lower bound to child nodes to avoid outdated global lower bound\r\n- set sma",
-      "github_open_issues": 25,
+      "github_open_issues": 26,
       "github_recent_prs": [
+        "fix: use bounded strlcpy/snprintf in reader_col.c...",
         "[docs] Add Conan entry in installation documentation",
         "Add MSVC flag /bigobj when compiling LPS=spx in debug mode",
         "fix several typos",
-        "Allow documentation builds when testing is turned off",
-        "Fix endianness issue in dtoa.cpp"
+        "Allow documentation builds when testing is turned off"
       ],
       "pypi_monthly_downloads": -41
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13670,
+      "github_stars": 13680,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -571,11 +571,11 @@
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
       "github_open_issues": 105,
       "github_recent_prs": [
+        "build(deps): bump the github-actions group with 2 updates",
         "math_opt: export from google3",
         "g3 export",
         "[CBC interface] Support setting CBC hints",
-        "Implement callback support for Xpress",
-        "java: Rework layout"
+        "Implement callback support for Xpress"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -666,13 +666,13 @@
         }
       ],
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_open_issues": 162,
+      "github_open_issues": 163,
       "github_recent_prs": [
+        "Update Homebrew installation instructions for Cbc",
         "Mistaken PR",
         "Update windows-ci for action update for Node.js 24 to set up msvc for stable",
         "Update windows-ci for action update for Node.js 24 to set up msvc",
-        "Update linux-ci for macos and all ci for action updates for Node.js for stable",
-        "Update linux-ci for macos and all ci for action updates for Node.js"
+        "Update linux-ci for macos and all ci for action updates for Node.js for stable"
       ]
     },
     {
@@ -1131,8 +1131,8 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6261,
-      "github_open_issues": 196,
+      "github_stars": 6262,
+      "github_open_issues": 195,
       "github_recent_prs": [
         "Bump actions/checkout from 5 to 7",
         "CI: install Moreau from PyPI instead of private Fury index",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Another release packed full of goodness!\r\nWe've improved Neighborhoods, increased performance Constraint Streams as well as made them easier to test, and fixed plenty of bugs.\r\n\r\nGoing forward, we wil",
-      "github_stars": 1692,
-      "github_open_issues": 94,
+      "github_stars": 1693,
+      "github_open_issues": 93,
       "github_recent_prs": [
+        "Clarify service docs endpoints and quickstart build-file instructions",
+        "ci: our use of pull_request_target is safe",
+        "feat: improve LA acceptor",
         "ci: create downstream build for models",
-        "fix: make mvn verify idempotent by replacing stale enhanced OpenAPI file",
-        "chore: simplify dependabot configuration for multi-ecosystem updates",
-        "docs: rename packages in maven plugin readme",
-        "Docs: align service endpoint placeholders and generated-endpoints wording with latest review feedback"
+        "fix: make mvn verify idempotent by replacing stale enhanced OpenAPI file"
       ]
     },
     {
@@ -1384,14 +1384,14 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2478,
-      "github_open_issues": 362,
+      "github_stars": 2479,
+      "github_open_issues": 363,
       "github_recent_prs": [
+        "Move `cplex` and `docplex` to pypi-only installs",
         "Integrate cuopt QP and SOCP",
         "Simple disjunctive transform",
         "[WIP] ParmEst bug fix: SSE_weighted should support heterogenous measurement errors",
-        "Fixed bugs in ParmEst cov_est function and Estimator class",
-        "KNITROAMPL: use \\$KNITRODIR/knitroampl/knitroampl for executable"
+        "Fixed bugs in ParmEst cov_est function and Estimator class"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1450,13 +1450,13 @@
       ],
       "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
       "github_stars": 2448,
-      "github_open_issues": 16,
+      "github_open_issues": 15,
       "github_recent_prs": [
+        "Bump actions/checkout from 6 to 7",
         "Improve various error messages",
         "Add ALGLIB Solver to installation docs",
         "Improve error messages in src/constraints.jl",
-        "Improve error messages in src/aff_expr.jl",
-        "Improve various error messages"
+        "Improve error messages in src/aff_expr.jl"
       ]
     },
     {
