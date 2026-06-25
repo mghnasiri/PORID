@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T10:29:16.682628+00:00",
+  "generated_at": "2026-06-25T10:22:02.644074+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1669,
+      "github_stars": 1675,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 169,
+      "github_open_issues": 170,
       "github_recent_prs": [
+        "Fix 3052",
+        "Fix two bugs in parallel scheduler",
         "Add reverse CI to test Uno with HiGHS and HiPO",
         "Update parallel documentation",
-        "Proof of concept for the support of AMD GPUs",
-        "Minor changes to FindHipoDeps to support Intel MLK BLAS library.",
-        "Fix column stuffing"
+        "Proof of concept for the support of AMD GPUs"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 603,
+      "github_stars": 604,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13680,
+      "github_stars": 13683,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -666,7 +666,7 @@
         }
       ],
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_open_issues": 163,
+      "github_open_issues": 164,
       "github_recent_prs": [
         "Update Homebrew installation instructions for Cbc",
         "Mistaken PR",
@@ -1131,7 +1131,7 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6262,
+      "github_stars": 6263,
       "github_open_issues": 195,
       "github_recent_prs": [
         "Bump actions/checkout from 5 to 7",
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1761,
+      "github_stars": 1762,
       "github_open_issues": 14,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Another release packed full of goodness!\r\nWe've improved Neighborhoods, increased performance Constraint Streams as well as made them easier to test, and fixed plenty of bugs.\r\n\r\nGoing forward, we wil",
-      "github_stars": 1693,
-      "github_open_issues": 93,
+      "github_stars": 1695,
+      "github_open_issues": 94,
       "github_recent_prs": [
-        "Clarify service docs endpoints and quickstart build-file instructions",
-        "ci: our use of pull_request_target is safe",
-        "feat: improve LA acceptor",
-        "ci: create downstream build for models",
-        "fix: make mvn verify idempotent by replacing stale enhanced OpenAPI file"
+        "ci: do not build solver for docs only PR",
+        "ci: avoid resolution of downstream project current version",
+        "ci: use Solver snapshot in the downstream build",
+        "ci: models don't contain mvnw",
+        "Clarify service docs endpoints and quickstart build-file instructions"
       ]
     },
     {
@@ -1385,7 +1385,7 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2479,
-      "github_open_issues": 363,
+      "github_open_issues": 362,
       "github_recent_prs": [
         "Move `cplex` and `docplex` to pypi-only installs",
         "Integrate cuopt QP and SOCP",
@@ -1452,11 +1452,11 @@
       "github_stars": 2448,
       "github_open_issues": 15,
       "github_recent_prs": [
+        "Improve error messages in the macros",
         "Bump actions/checkout from 6 to 7",
         "Improve various error messages",
         "Add ALGLIB Solver to installation docs",
-        "Improve error messages in src/constraints.jl",
-        "Improve error messages in src/aff_expr.jl"
+        "Improve error messages in src/constraints.jl"
       ]
     },
     {

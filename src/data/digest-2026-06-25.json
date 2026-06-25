@@ -1,0 +1,366 @@
+{
+  "date": "2026-06-25",
+  "generated_at": "2026-06-25T10:22:03.054115+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s00291-026-00861-2",
+      "title": "Shift design and assignment optimization to balance nurse workloads in the emergency department",
+      "authors": [
+        "Schoenfelder, J.",
+        "Kraul, S.",
+        "Netzband, S."
+      ],
+      "abstract": "Abstract\n                  This paper addresses the issue of nursing workload imbalances in healthcare environments with highly stochastic patient demand. The core objective is to explore the effects of shift design and scheduling decisions on nursing workload in emergency departments, utilizing the German University Hospital Augsburg as a case study. By introducing a mixed-integer optimization model, we provide a method to balance hourly workload over a typical one-month scheduling horizon, measured as an acuity-adjusted patient-to-nurse ratio, where acuity is represented at the level of care activities rather than individual patients. Our model accounts for real-world parameters including staff details, qualifications, work preferences, and extensive patient data. We further explore the potential impact of various shift designs on the desired target level of workforce balance and care quality. The results provide actionable insights into strategic staffing decisions, their effects on nursing workload, and potential solutions to healthcare staffing challenges. The findings also form the basis for future research in workforce optimization in healthcare.",
+      "date": "2026-06-25",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00861-2",
+      "tags": [
+        "integer-programming",
+        "scheduling",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00861-2",
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2024.0991",
+      "title": "Fast Filter Pruning Method for Neural Network Compression",
+      "authors": [
+        "Wang, D.",
+        "Chen, W.",
+        "Hua, C.",
+        "Zhou, W.",
+        "Lin, X."
+      ],
+      "abstract": "The rapid adoption of artificial neural networks has led to the development of increasingly complex and large models. Although these models have achieved outstanding performance across various applications, their deployment and inference speed on devices with limited computing resources pose significant challenges. To address these issues, model compression techniques have been proposed to reduce model size while preserving performance. In this paper, we propose a two-stage filter pruning approach for model compression, designed to maximize filter diversity given a desired compression ratio. We interpret filter diversity from an information theory perspective and propose a combinatorial optimization model that selects a subset of filters aimed at retaining the maximum information of the original network. We frame the maximization of filter diversity as a p-dispersion problem and propose a polynomial-time algorithm that is within a factor of two of the optimal solution. Compared with state-of-the-art benchmarks in automated pruning methods, the proposed algorithm offers significant advantages in computational complexity and solution speed.\n                  History: Accepted by Ram Ramesh, Area Editor for Data Science &amp; Machine Learning.\n                  Funding: This work was supported by the National Natural Science Foundation of China [Grants 72192823, 72301172, 72394370:72394375, and 72495130:72495132], the Shanghai Jiao Tong University Office of Liberal Arts [Grant ZHWK2502], and the Zhejiang Key Laboratory of Decision Intelligence [Grant 2025E10006].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2024.0991 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2024.0991 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-06-24",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2024.0991",
+      "tags": [
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2024.0991",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.25956",
+      "title": "Pulmonary Embolism Risk Stratification from CTPA and Medical Records: Vascular Graphs Are Not All You Need",
+      "authors": [
+        "Nathan Painchaud",
+        "Tristan Habémont",
+        "Morgane des Ligneris",
+        "Allan Serva",
+        "Pierre Croisille",
+        "Laurent Bertoletti",
+        "Thomas Lampert",
+        "Johannes F. Lutzeyer",
+        "Odyssée Merveille"
+      ],
+      "abstract": "Risk stratification for pulmonary embolism (PE) is critical for clinical decision-making. Stratification guidelines are based on patient medical records, parameters measured from computed tomography pulmonary angiography (CTPA), and blood tests. However, blood tests are often missing in routine practice. This work studies whether state-of-the-art models can accurately classify risk stratification from only medical records and biomarkers extracted from CTPA images. We benchmark different approaches to combine medical records and cardiac biomarkers with rich pulmonary vascular information; we add vascular biomarkers to tabular models and apply graph neural networks (GNNs) on the vascular tree's intrinsic graph representation. We use a private dataset (n=353) with uniquely complete data for PE risk stratification. Our results show that, among global features, medical records and cardiac biomarkers are the most significant predictors, while vascular biomarkers do not further improve stratification. Even more surprising, even GNNs on vascular graphs fail to outperform strong tabular baseline on global features. We consider hypotheses, on both models and data, that could explain this suboptimal performance. Our investigation suggests that, counter-intuitively, vascular graphs might hold no discriminative information for PE risk stratification. Code is available from https://github.com/creatis-myriad/GENESIS.",
+      "date": "2026-06-24",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2606.25956v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.25956",
+      "arxiv_id": "2606.25956v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.25894",
+      "title": "Enhancing Brain MRI Anomaly Detection and Reasoning with ROI Rethink and Synthetic Data",
+      "authors": [
+        "Shangkun Li",
+        "Jie Xu",
+        "Yi Guo",
+        "Zeju Li",
+        "Yuanyuan Wang"
+      ],
+      "abstract": "Medical vision-language models typically generate diagnoses through single-pass inference without indicating which image regions support their conclusions. This lack of spatial grounding limits clinical utility: outputs cannot be audited, and models may hallucinate findings on normal scans. We present BrReMark (Brain Rethink via ROI Marking), a framework that introduces explicit region marking into brain MRI diagnosis. The model first generates hypotheses about potential abnormalities and grounds them through explicit bounding box marking, then verifies conclusions by re-examining the marked evidence. Training combines supervised fine-tuning on structured reasoning trajectories with reinforcement learning using a composite reward over localization accuracy and diagnostic reasoning. Furthermore, we integrate a domain randomization-based pathology synthesis augmentation strategy to improve the model's generalizability to out-of-distribution (OOD) data. On internal benchmark, BrReMark improves mAP50 from 0.74% to 37.54% compared to the base model, while achieving 21.57% Clinical F1 and 45.26% diagnostic accuracy. On NOVA OOD benchmark, it also achieves competitive overall performance with a 45.7% reduction in false positives compared to the state-of-the-art, indicating reduced hallucination on rare pathologies. These findings suggest that explicit hypothesis-verification grounding is a practical path toward trustworthy open-ended brain MRI diagnosis across both in-distribution and OOD settings.",
+      "date": "2026-06-24",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2606.25894v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.25894",
+      "arxiv_id": "2606.25894v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.25769",
+      "title": "Deep Neural Networks with Ordinal Loss for Medical Applications",
+      "authors": [
+        "Tal Dvora",
+        "Rotem Haba",
+        "Gonen Singer"
+      ],
+      "abstract": "In many prediction problems in medical applications, target labels exhibit an inherent ordinal structure, where class ordering reflects clinically meaningful severity levels. The cost associated with misclassification is often non-uniform and asymmetric, as errors between distant ordinal categories may have substantially more severe consequences than errors between adjacent ones, and overestimating disease severity may have different clinical implications than underestimating it. Traditional loss functions such as multi-class cross-entropy treat all misclassifications equally and fail to incorporate this ordering information. Recent advances in ordinal regression aim to address this limitation by integrating rank-based structures into deep learning models. In this work, we introduce the \\textbf{Ordinal Cross-Entropy (OCE)} framework, a general and architecture-independent approach for learning from ordinal data. The proposed method extends the standard cross-entropy formulation to account for misclassification severity through an ordinal cost matrix while preserving the probabilistic interpretation and optimization benefits of the conventional loss. We provide a theoretical analysis of the OCE gradient behavior and show that it yields smoother optimization dynamics and improved ordinal consistency. Experiments on benchmark datasets show that our method achieves lower prediction error costs and better calibration compared to existing state-of-the-art ordinal approaches, establishing OCE as a simple yet effective solution for ordinal regression in deep neural networks.",
+      "date": "2026-06-24",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2606.25769v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.25769",
+      "arxiv_id": "2606.25769v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2606.26002",
+      "title": "Hierarchical Reinforcement Learning for Neural Network Compression (HiReLC): Pruning and Quantization",
+      "authors": [
+        "Kamar Hibatallah Baghdadi",
+        "Kawther Guoual Belhamidi",
+        "Sara Belhadj",
+        "Aissa Boulmerka",
+        "Nadir Farhi"
+      ],
+      "abstract": "We present HiReLC, a hierarchical ensemble-reinforcement learning framework for automated joint quantization and structured pruning of deep neural networks. The framework decomposes the compression search across two levels of abstraction: low-level agents (LLAs) operate independently per block, selecting per-kernel configurations over a multi-discrete action space spanning bitwidth, pruning keep-ratio, quantization type, and granularity, while high-level agents (HLAs) coordinate global budget allocation via ensemble voting guided by Fisher Information-based sensitivity estimates. To mitigate the computational cost of policy evaluation, an iterative active learning loop interleaves surrogate-guided RL optimization with post-compression fine-tuning, using a lightweight MLP surrogate to amortize expensive evaluations and a logit-MSE proxy during cold-start. The surrogate is used for reward shaping rather than as a replacement for final post-compression evaluation. The controller is architecture-agnostic by design, with a modular layer abstraction decoupling the RL environment from the underlying network topology. Experiments across Vision Transformer and CNN benchmarks demonstrate effective parameter-storage compression ratios of 5.99 - 6.72$\\times$ with a 3.83 % gain in one setting and 0.55 - 5.62 % accuracy drops elsewhere, supporting hierarchical policy decomposition and sensitivity-aware guidance as practical design choices for joint neural network compression.",
+      "date": "2026-06-24",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2606.26002v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.26002",
+      "arxiv_id": "2606.26002v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.25362",
+      "title": "Learning Optimization Proxies for Sequential Contextual Stochastic Programs: An Order Fulfillment Application",
+      "authors": [
+        "Tinghan Ye",
+        "Shuaicheng Tong",
+        "Changkun Guan",
+        "Beste Basciftci",
+        "Pascal Van Hentenryck"
+      ],
+      "abstract": "Sequential contextual stochastic programs model real-time decision systems in which each time epoch commits to an action under uncertainty whose consequences propagate into future decisions. In many practical contexts, these programs require obtaining solutions rapidly as new information becomes available. These problems can be represented through scenario approximations to be solved by off-the-shelf optimization solvers, which achieve high decision quality offline but typically run in seconds to minutes per instance, falling short of the sub-second responses that peak periods of planning require. This paper develops a learning-based optimization proxy: a scenario-embedded neural network trained offline on solver-generated labels, paired online with a decoder that enforces feasibility, replacing the per-epoch solve with a single forward pass. The framework is specialized to omnichannel order fulfillment, where each arriving order requires a sub-second assignment of products to distribution centers and carrier services under stochastic delivery times and future demand. A two-stage contextual stochastic program is introduced to formulate this problem, and its contextual sample average approximation (C-SAA) supplies the offline labels, while a composite training loss combines label imitation, a constraint-violation penalty, and self-supervised cost alignment. In a calibrated simulator built from JD.com transactional records, a detailed computational study is provided. The proxy reduces decision latency by roughly 2800x relative to the online finite-sample C-SAA reference and improves over it by 3.3% in realized fulfillment cost. Relative to established fulfillment policies, the proxy lowers total realized cost by at least 10.7% and roughly halves the late-delivery rate.",
+      "date": "2026-06-24",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.25362v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.25362",
+      "arxiv_id": "2606.25362v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.26078",
+      "title": "A cross-process welding penetration status prediction algorithm based on unsupervised domain adaptation in laser and TIG welding",
+      "authors": [
+        "Sen Li",
+        "Haichao Cui",
+        "Chendong Shao",
+        "Yaqi Wang",
+        "Xinhua Tang"
+      ],
+      "abstract": "Supervised deep learning has been widely used for weld penetration state classification; however, its performance often degrades significantly under domain shift, such as when transferring models between welding processes with distinct physical mechanisms:for instance, from arc-dominated tungsten inert gas (TIG) welding to keyhole-based laser welding. To overcome this limitation, we propose an unsupervised domain adaptation (UDA) framework integrated with a gradual source domain expansion (GSDE) strategy. Evaluated on dedicated TIG and laser welding datasets, our approach achieves high accuracy in both same-process and cross-process transfer tasks. Specifically, it attains average accuracies of 90.65% on TIGFH and 90.72% on LSPS in same-process settings, surpassing a supervised baseline by 35.83% and 38.87%, respectively. More notably, in cross-process scenarios, it reaches 80.48% for TIG to Laser and 81.13% for Laser to TIG, improving upon the baseline by 43.39% and 43.40%. UMAP visualizations verify that the model learns domain-invariant features while maintaining discriminative class boundaries. This method considerably lowers the relabeling cost for new welding processes and enhances the versatility of intelligent monitoring across different welding systems.",
+      "date": "2026-06-24",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2606.26078v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1016/j.jmapro.2025.10.101",
+      "arxiv_id": "2606.26078v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.25832",
+      "title": "MiniOpt: Reasoning to Model and Solve General Optimization Problems with Limited Resources",
+      "authors": [
+        "Ke Zhao",
+        "Zixiang Di",
+        "Hong Qian",
+        "Xiang Shu",
+        "Yaolin Wen",
+        "Qitao Shi",
+        "Bingdong Li",
+        "Xingyu Lu",
+        "Xiangfeng Wang",
+        "Jun Zhou",
+        "Ke Tang",
+        "Yang Yu"
+      ],
+      "abstract": "Achieving strong optimization generalization across diverse optimization problems while requiring limited training resources remains a challenging problem for optimization-oriented large language models (LLMs). Existing approaches typically rely on large-scale supervised datasets, costly reasoning annotations, and expensive intermediate step verification, resulting in substantial training overhead. To address these challenges, we propose MiniOpt, a reinforcement learning framework that learns to solve optimization problems through an \"reasoning-to-model-and-solve\" paradigm. MiniOpt decomposes optimization reasoning into structured optimization modeling and executable solver generation. Building upon this paradigm, we introduce OptReward, a reward function with hierarchical score structure that jointly evaluates formulation and solution, enabling effective policy learning without expert demonstrations. We further develop an optimization-oriented policy optimization strategy that improves exploration efficiency and stabilizes reinforcement learning for compact models. Extensive experiments show that MiniOpt-3B exhibits strong optimization generalization across various optimization types, problem scenarios, and task domains. For models with fewer than 10B parameters, MiniOpt series achieves the highest average solving accuracy (SA). For models with more than 10B parameters, MiniOpt still shows competitive performance. These results suggest that optimization-oriented reward design and reinforcement learning provide an effective pathway for developing compact optimization-specialized language models with strong optimization generalization capabilities. The code is available at https://github.com/Hsiang-1/MiniOpt.",
+      "date": "2026-06-24",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2606.25832v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.25832",
+      "arxiv_id": "2606.25832v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.25762",
+      "title": "OncoSynth: Synthetic data generation for treatment effect estimation in oncology",
+      "authors": [
+        "Octavia-Andreea Ciora",
+        "Julian Welzel",
+        "Dennis Frauen",
+        "Maresa Schröder",
+        "Marie Brockschmidt",
+        "Harry Amad",
+        "Thomas Callender",
+        "Mihaela van der Schaar",
+        "Stefan Feuerriegel"
+      ],
+      "abstract": "In oncology, access to patient-level data is often restricted. Synthetic data provides an alternative for analyzing treatment effectiveness, but existing methods for synthetic data generation fail to preserve the causal relationships between covariates, treatments, and outcomes, thereby leading to biased estimates of treatment effects. Here, we introduce OncoSynth, a generative, causally-aware machine learning framework designed to produce synthetic cohorts that enable accurate estimation of population- and patient-level treatment effects. OncoSynth uses a diffusion-based sequential approach to model how covariates influence treatment assignment and how treatment affects survival. We evaluate OncoSynth using large lung (N = 37,128) and breast cancer (N = 17,046) cohorts. Our results show that OncoSynth generates high-fidelity synthetic patient cohorts that preserve real-world patient, treatment, and outcome distributions. Notably, OncoSynth improves treatment effect estimation over existing approaches, by reducing population-level treatment effect error by up to 66%, and patient-level treatment effect error by up to 58%. Thereby, OncoSynth supports reliable evidence generation for precision oncology in settings where data sharing is restricted.",
+      "date": "2026-06-24",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2606.25762v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.25762",
+      "arxiv_id": "2606.25762v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-06-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-06-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 2,
+    "conferences": 0,
+    "opportunities": 2,
+    "total": 12
+  }
+}
