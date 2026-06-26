@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T10:22:02.644074+00:00",
+  "generated_at": "2026-06-26T10:29:06.765391+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1675,
+      "github_stars": 1676,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 170,
+      "github_open_issues": 168,
       "github_recent_prs": [
-        "Fix 3052",
-        "Fix two bugs in parallel scheduler",
-        "Add reverse CI to test Uno with HiGHS and HiPO",
-        "Update parallel documentation",
-        "Proof of concept for the support of AMD GPUs"
+        "Add context manager support to highspy",
+        "Fixed issue #3044",
+        "Fix 3090: Re-check implied bound",
+        "QP hot start",
+        "Fix 3052"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13683,
+      "github_stars": 13688,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1131,8 +1131,8 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6263,
-      "github_open_issues": 195,
+      "github_stars": 6264,
+      "github_open_issues": 187,
       "github_recent_prs": [
         "Bump actions/checkout from 5 to 7",
         "CI: install Moreau from PyPI instead of private Fury index",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Another release packed full of goodness!\r\nWe've improved Neighborhoods, increased performance Constraint Streams as well as made them easier to test, and fixed plenty of bugs.\r\n\r\nGoing forward, we wil",
-      "github_stars": 1695,
-      "github_open_issues": 94,
+      "github_stars": 1696,
+      "github_open_issues": 98,
       "github_recent_prs": [
-        "ci: do not build solver for docs only PR",
-        "ci: avoid resolution of downstream project current version",
-        "ci: use Solver snapshot in the downstream build",
-        "ci: models don't contain mvnw",
-        "Clarify service docs endpoints and quickstart build-file instructions"
+        "perf: simplify how value ranges are built",
+        "chore: first draft - service as primary approach",
+        "ci: add JFrog credentials to downstream build workflow",
+        "chore: add kotlin code for service docs.",
+        "perf: avoid boxing in externalized list var cases"
       ]
     },
     {
@@ -1385,7 +1385,7 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2479,
-      "github_open_issues": 362,
+      "github_open_issues": 361,
       "github_recent_prs": [
         "Move `cplex` and `docplex` to pypi-only installs",
         "Integrate cuopt QP and SOCP",
@@ -1450,7 +1450,7 @@
       ],
       "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
       "github_stars": 2448,
-      "github_open_issues": 15,
+      "github_open_issues": 14,
       "github_recent_prs": [
         "Improve error messages in the macros",
         "Bump actions/checkout from 6 to 7",

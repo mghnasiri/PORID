@@ -1,0 +1,342 @@
+{
+  "date": "2026-06-26",
+  "generated_at": "2026-06-26T10:29:07.202134+00:00",
+  "publications": [
+    {
+      "id": "s2-0b7121d7ee17",
+      "title": "Route optimization of simultaneous delivery and pick-up in automotive inbound logistics under the milk-run mode in a dual-carbon background",
+      "authors": [
+        "Weiwei Zhang"
+      ],
+      "abstract": "\n \n Under the “dual-carbon” goal, this study optimized the Two-echelon Vehicle Routing Problem with Time Windows and Simultaneous Delivery and Pickup (2E-VRPSPDTW) in automotive inbound logistics under a milk-run mode to minimize the total cost and carbon emissions while maximizing time-window satisfaction.\n \n \n \n A novel multi-objective mixed-integer programming model was developed for a three-echelon network comprising suppliers, distribution centers and an original equipment manufacturer. The model incorporates industry-specific constraints, such as two-stage operations, differentiated volume constraints for nested empty and loaded containers and time-window satisfaction requirements. An improved non-dominated sorting genetic algorithm II (NSGA-II) with enhanced operators was designed.\n \n \n \n Validation using real third-party logistics provider data shows that the algorithm outperforms benchmarks (MOEA/D, SPEA2 and Pareto-TS) in terms of solution quality, convergence and diversity, particularly for small-to-medium instances. Furthermore, sensitivity analysis confirmed that carbon tax and time-penalty costs significantly influence routing decisions and system performance.\n \n \n \n This study clarifies the essential differences between the classical VRPSPDTW and the 2E-VRP by treating empty container flow as an active management variable. It incorporates the physical characteristics of nested empty containers and double-carbon constraints, thus providing a targeted modeling framework and an efficient algorithm for the synergistic optimization of economic, environmental and service benefits in automotive inbound logistics.\n",
+      "date": "2026-06-25",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.1108/ec-12-2024-1056",
+      "tags": [
+        "integer-programming",
+        "metaheuristics",
+        "vehicle-routing",
+        "stochastic",
+        "supply-chain",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1108/ec-12-2024-1056",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 70.0
+    },
+    {
+      "id": "crossref-10.1007-s00291-026-00861-2",
+      "title": "Shift design and assignment optimization to balance nurse workloads in the emergency department",
+      "authors": [
+        "Schoenfelder, J.",
+        "Kraul, S.",
+        "Netzband, S."
+      ],
+      "abstract": "Abstract\n                  This paper addresses the issue of nursing workload imbalances in healthcare environments with highly stochastic patient demand. The core objective is to explore the effects of shift design and scheduling decisions on nursing workload in emergency departments, utilizing the German University Hospital Augsburg as a case study. By introducing a mixed-integer optimization model, we provide a method to balance hourly workload over a typical one-month scheduling horizon, measured as an acuity-adjusted patient-to-nurse ratio, where acuity is represented at the level of care activities rather than individual patients. Our model accounts for real-world parameters including staff details, qualifications, work preferences, and extensive patient data. We further explore the potential impact of various shift designs on the desired target level of workforce balance and care quality. The results provide actionable insights into strategic staffing decisions, their effects on nursing workload, and potential solutions to healthcare staffing challenges. The findings also form the basis for future research in workforce optimization in healthcare.",
+      "date": "2026-06-25",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00861-2",
+      "tags": [
+        "integer-programming",
+        "scheduling",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00861-2",
+      "score": 65.0
+    },
+    {
+      "id": "arxiv-2606.27202",
+      "title": "Graph Neural Networks Applications Across Domains: All Insights You Need",
+      "authors": [
+        "Abderaouf Bahi"
+      ],
+      "abstract": "Graph neural networks have moved from a niche representation-learning technique to the default model class wherever data carry relational structure. The interesting question is no longer whether message passing helps on a given dataset, but where graph structure earns its computational cost and where it does not. This survey organises the field around a single design space, derives the spectral and spatial formulations from shared first principles, and connects expressive power to the Weisfeiler-Leman hierarchy with explicit statements of what current architectures can and cannot separate. Against that methodological backbone we examine twelve application domains, among them recommendation and social networks, knowledge graphs and language-model integration, drug discovery and molecular property learning, healthcare and neuroscience, computer vision, traffic and urban computing, power and renewable-energy systems, wireless and sixth-generation networks, fraud and cybersecurity, industrial prognostics, materials science, and climate modelling. For each domain we specify the graph-construction choices and their costs, identify which architecture families dominate and why, and separate reported gains from artefacts of weak baselines or favourable splits. A cross-domain comparison exposes recurring patterns: heterophily and scale undercut the same models almost everywhere, temporal graphs remain harder than their static counterparts, and the architectures that top public leaderboards are seldom the ones that reach deployment. We treat over-smoothing, over-squashing, robustness, distribution shift, fairness, and explainability not as a closing checklist but as the constraints that decide adoption.",
+      "date": "2026-06-25",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2606.27202v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.27202",
+      "arxiv_id": "2606.27202v1",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2606.27196",
+      "title": "Optimizing Accessibility and Maximum Travel Times in Transit Networks: The Hub Covering Location Problem",
+      "authors": [
+        "Carmen-Ana Domínguez-Bravo",
+        "Elena Fernández",
+        "Armin Lüer-Villagra"
+      ],
+      "abstract": "This work introduces an optimization model to support decision-making in the design of integrated transit systems, with the aim of improving urban mobility. We assume that daily user trips consist of two types of segments: short segments where users apply their own transport between their homes or workplaces and the public transit access points, and a longer segment on the transportation network. Users' accessibility is ensured by imposing an upper limit on the travel times of the short segments. We assume that only users within a given coverage radius will employ the system. On the other hand, system effectiveness is ensured by limiting travel time on the transportation network. Two mixed-integer linear programming formulations and a matheuristic procedure are proposed, and their efficiency is evaluated through computational experiments. The results allow us to study the structure of the solutions obtained and analyze the effects of the parameters considered.",
+      "date": "2026-06-25",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.27196v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.27196",
+      "arxiv_id": "2606.27196v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.26991",
+      "title": "Enabling self-supervised learned primal dual with Noise2Inverse",
+      "authors": [
+        "Antti Sällinen",
+        "Siiri Rautio",
+        "Santeri Kaupinmäki",
+        "Andreas Hauptmann"
+      ],
+      "abstract": "X-ray computed tomography reconstruction is an ill-posed inverse problem, particularly in low-dose and sparse-angle settings where measurements are noisy and incomplete. While learned reconstruction methods such as the Learned Primal-Dual algorithm achieve strong performance, they typically rely on supervised training with access to ground-truth data, which is often unavailable in practice.   In this work, we propose a self-supervised reconstruction method by extending the Noise2Inverse framework to the Learned Primal-Dual algorithm. The resulting approach, called Noise2Inverse Learned Primal-Dual (N2I-LPD), enables training of a learned iterative reconstruction operator without ground-truth images by exploiting the statistical independence of noise in distinct measurements with respect to angular rotation of the CT-scan.   We compare the proposed method with classical reconstruction methods, as well as neural network-based approaches such as a U-Net trained within the same N2I framework. The results demonstrate that N2I-LPD achieves improved reconstruction quality, highlighting the potential of combining learned reconstruction operators with self-supervised training strategies for practical CT imaging scenarios where ground-truth data is unavailable.",
+      "date": "2026-06-25",
+      "source": "arXiv",
+      "source_detail": "eess.IV",
+      "url": "http://arxiv.org/abs/2606.26991v1",
+      "tags": [
+        "eess.IV",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.26991",
+      "arxiv_id": "2606.26991v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.26897",
+      "title": "Separation, Constraint Qualifications, and Cycling in Outer Approximation",
+      "authors": [
+        "Erik Tamm",
+        "Jan Kronqvist"
+      ],
+      "abstract": "The outer approximation algorithm is a widely used method for solving convex mixed-integer nonlinear programs. While the algorithm is well established in theory and practice, certain assumptions underlying its convergence are rarely discussed in the literature. In this paper, we examine two such assumptions: that a constraint qualification holds at the optimal solution of each nonlinear programming subproblem, and that these subproblems can be solved exactly. We argue that both assumptions are connected to the issue of cycling, by which we mean that the same integer assignment reappears in successive iterations of the algorithm. When a constraint qualification fails, separation of the current iterate from the feasible set is not guaranteed, which can cause the algorithm to stall. When the nonlinear programming subproblem is solved only approximately, separation may likewise fail, and we show that high precision can be required in certain cases. To formalize the connection between these issues, we prove that when Slater's condition is nearly violated, a point close to the exact solution can be found at which separation fails. Furthermore, within the outer approximation algorithm, we propose to use extended cutting planes as a fallback strategy when cycling is detected. We prove that this approach yields a finitely convergent algorithm under relaxed assumptions regarding constraint qualifications, thereby generalizing the convergence theory of the outer approximation algorithm.",
+      "date": "2026-06-25",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.26897v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.26897",
+      "arxiv_id": "2606.26897v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.26714",
+      "title": "Random Walk on Bézier Curves for Global Optimization",
+      "authors": [
+        "Jinpeng Wang",
+        "Xingguo Xu",
+        "Yujing Sun",
+        "Jiguang Yu",
+        "Kaichen Ouyang",
+        "Yuansheng Gao"
+      ],
+      "abstract": "Balancing exploration and exploitation remains a central challenge in metaheuristic optimization. To address this issue, this paper proposes Bézier Walk Evolution (BWE), a geometry-driven optimization framework that reformulates evolutionary search as adaptive trajectory construction in the decision space. BWE integrates Bézier curve modeling with a distance-aware random walk mechanism to generate topology-guided search trajectories. By adaptively varying the curve order during evolution, the proposed method enables a smooth transition from diversified global exploration to refined local exploitation. Higher-order Bézier curves leverage multiple population-derived control points to enhance search diversity, while lower-order curves generate near-linear trajectories to improve convergence efficiency. This adaptive geometric search mechanism provides an interpretable alternative to conventional nature-inspired designs. Extensive experiments on 41 benchmark functions from the CEC2017 and CEC2022 suites, spanning dimensions from 10 to 100, show that BWE achieves strong overall performance and favorable scalability compared with 7 classical and 6 state-of-the-art optimizers, including L-SHADE and CMA-ES. Additional evaluations on five constrained engineering design problems further demonstrate the practical applicability and robustness of BWE.",
+      "date": "2026-06-25",
+      "source": "arXiv",
+      "source_detail": "cs.NE",
+      "url": "http://arxiv.org/abs/2606.26714v1",
+      "tags": [
+        "cs.NE",
+        "metaheuristics",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.26714",
+      "arxiv_id": "2606.26714v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.26648",
+      "title": "Comparative Analysis of Linear Battery Models for Carbon Emission Optimization in Solar Energy Systems",
+      "authors": [
+        "Anna Sacilotto",
+        "Ambrogio Maria Bernardelli",
+        "Stefano Gualandi"
+      ],
+      "abstract": "This work addresses the problem of minimizing equivalent carbon emissions in residential photovoltaic-battery energy storage systems (PV-BESS) under uncertainty. We develop and compare a hierarchy of linear optimization models that differ in their degree of anticipativity and feedback complexity, ranging from a rule-based self-consumption heuristic to fully stochastic formulations with linear feedback control. The proposed models explicitly incorporate the stochastic variability of household load, solar production, and grid carbon intensity through large scenario sets generated via principal component analysis of real operational data. Computational experiments on synthetic yet realistic scenarios show that direct stochastic optimization of expected emissions (Programmed Battery model) substantially outperforms heuristic control, achieving emission reductions close to the theoretical lower bound provided by the Omniscient Battery benchmark. Feedback-based models marginally improve training performance but do not generalize better on unseen data, while incurring higher computational costs. Overall, results demonstrate that linear stochastic programming provides an effective and tractable framework for emission-aware energy management in distributed PV-BESS systems.",
+      "date": "2026-06-25",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2606.26648v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.26648",
+      "arxiv_id": "2606.26648v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.27302",
+      "title": "AI Healthcare Chatbots as Information Infrastructure: A Large-Scale Study of User-Reported Breakdowns",
+      "authors": [
+        "Muhammad Hassan",
+        "Ramazan Yener",
+        "Ece Gumusel",
+        "Masooda Bashir"
+      ],
+      "abstract": "AI healthcare chatbots are increasingly used to support health information seeking and self-management, yet their performance and impact on users remains to be studied. This study examines over 15,000 user reviews from 59 AI healthcare chatbot apps to explore how these systems function in everyday informational and emotional contexts. Topic modeling and interpretive analysis identify three recurring breakdowns: access barriers and service unreliability, user experience and interaction quality, and billing and customer support issues. Privacy and security concerns are associated with the most negative experiences. By framing AI healthcare chatbots as information infrastructures, our findings highlight how failures in access, usability, and trust affect users, offering actionable insights for designers, policymakers, and information professionals aiming to improve digital health systems.",
+      "date": "2026-06-25",
+      "source": "arXiv",
+      "source_detail": "cs.HC",
+      "url": "http://arxiv.org/abs/2606.27302v1",
+      "tags": [
+        "cs.HC",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.27302",
+      "arxiv_id": "2606.27302v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2606.27229",
+      "title": "CARVE: Content-Aware Recurrent with Value Efficiency for Chunk-Parallel Linear Attention",
+      "authors": [
+        "Sayak Dutta"
+      ],
+      "abstract": "Recurrent models must forget in order to remember, yet the state of the art decides what to erase without consulting what is stored -- the gate sees only the arriving token, not the memory it is about to modify. This memory-blind gating is one of three coupled defects in the leading delta-rule architecture (GDN-2): the value-axis erase mask wastes parameters at the scale of the value projection, and -- as we prove -- mathematically prevents the WY-form triangular chunk solver that makes recurrent training competitive with Transformers.   We introduce CARVE (Content-Aware Recurrent with Value Efficiency), which resolves all three problems through one principle: erase only on the key axis. This is provably necessary and sufficient for the WY-form solver to remain valid. Within it, CARVE reuses the recurrent output tensor -- already written to GPU memory -- as a free content signal for the erase gate, and replaces the per-value write-gate projection with a single scalar per head. At initialisation CARVE is bit-identical to GDN-2; any quality difference emerges from what the content gate learns.   At 1.3B parameters trained on 100B tokens, CARVE achieves WikiText perplexity 15.72 (minus 0.18 vs. GDN-2, a 4.5-sigma effect), leads every recurrent baseline on nine common-sense reasoning benchmarks, and sets state of the art on every RULER retrieval probe -- at 0.4% throughput overhead, 13% lower peak memory, and 19% fewer parameters. Six formal theorems cover memory capacity, Lyapunov stability, gradient flow, expressivity separation, Pareto-optimal chunk size, and hybrid optimality.",
+      "date": "2026-06-25",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2606.27229v1",
+      "tags": [
+        "cs.CL",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2606.27229",
+      "arxiv_id": "2606.27229v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-06-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2516933",
+      "title": "NSF Award: I-Corps: Translation Potential of an Electric Vehicle Fleet Management Platform",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of California-Berkeley",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2516933",
+      "deadline": "2026-06-30",
+      "date": "2026-06-24",
+      "award_start": "2025-07-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This I-Corps project focuses on the development of a software platform designed to simplify and optimize the adoption of electric vehicle charging infrastructure by businesses such as hotels, retail centers, universities, and similar organizations. These organizations face challenges in planning how many chargers to install, selecting appropriate equipment, identifying qualified installation partners, and managing ongoing operations without specialized expertise. Without an integrated solution, ",
+      "funding_amount": "$50,000",
+      "pi": "Scott Moura",
+      "program": "I-Corps",
+      "end_date": "2026-06-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 2,
+    "conferences": 0,
+    "opportunities": 2,
+    "total": 12
+  }
+}
