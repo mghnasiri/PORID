@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T10:29:06.765391+00:00",
+  "generated_at": "2026-06-27T09:34:42.005427+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1676,
+      "github_stars": 1677,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 168,
+      "github_open_issues": 165,
       "github_recent_prs": [
-        "Add context manager support to highspy",
-        "Fixed issue #3044",
-        "Fix 3090: Re-check implied bound",
-        "QP hot start",
-        "Fix 3052"
+        "Adding --threads to command line ",
+        "Implement strongly connected component analysis on the clique table",
+        "v1 of Features.md",
+        "PR 2988 with latest merged in",
+        "Add context manager support to highspy"
       ],
       "pypi_monthly_downloads": -71
     },
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- an error is now produced if the emphasis settings in parameter files are wrong\r\n- propagate focus lower bound to child nodes to avoid outdated global lower bound\r\n- set sma",
-      "github_open_issues": 26,
+      "github_open_issues": 25,
       "github_recent_prs": [
         "fix: use bounded strlcpy/snprintf in reader_col.c...",
         "[docs] Add Conan entry in installation documentation",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13688,
+      "github_stars": 13689,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 105,
+      "github_open_issues": 106,
       "github_recent_prs": [
+        "bazel: rework copt and linkopt management",
+        "export from google3 (abseil-cpp@20260526.0 + few cleanup)",
+        "export from google3 (abseil-cpp@20260526.0 + few cleanup)",
         "build(deps): bump the github-actions group with 2 updates",
-        "math_opt: export from google3",
-        "g3 export",
-        "[CBC interface] Support setting CBC hints",
-        "Implement callback support for Xpress"
+        "math_opt: export from google3"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,8 +1131,8 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6264,
-      "github_open_issues": 187,
+      "github_stars": 6266,
+      "github_open_issues": 186,
       "github_recent_prs": [
         "Bump actions/checkout from 5 to 7",
         "CI: install Moreau from PyPI instead of private Fury index",
@@ -1320,13 +1320,13 @@
       ],
       "recent_changes": "Another release packed full of goodness!\r\nWe've improved Neighborhoods, increased performance Constraint Streams as well as made them easier to test, and fixed plenty of bugs.\r\n\r\nGoing forward, we wil",
       "github_stars": 1696,
-      "github_open_issues": 98,
+      "github_open_issues": 96,
       "github_recent_prs": [
+        "Fail build when timefold.application.version is missing",
+        "springboot2.7改造",
         "perf: simplify how value ranges are built",
         "chore: first draft - service as primary approach",
-        "ci: add JFrog credentials to downstream build workflow",
-        "chore: add kotlin code for service docs.",
-        "perf: avoid boxing in externalized list var cases"
+        "ci: correctly replace parent version in downstream build workflow"
       ]
     },
     {
@@ -1385,7 +1385,7 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2479,
-      "github_open_issues": 361,
+      "github_open_issues": 360,
       "github_recent_prs": [
         "Move `cplex` and `docplex` to pypi-only installs",
         "Integrate cuopt QP and SOCP",
@@ -1450,13 +1450,13 @@
       ],
       "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
       "github_stars": 2448,
-      "github_open_issues": 14,
+      "github_open_issues": 15,
       "github_recent_prs": [
+        "Fix BridgeableConstraint with model_convert",
         "Improve error messages in the macros",
         "Bump actions/checkout from 6 to 7",
         "Improve various error messages",
-        "Add ALGLIB Solver to installation docs",
-        "Improve error messages in src/constraints.jl"
+        "Add ALGLIB Solver to installation docs"
       ]
     },
     {
