@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T09:34:42.005427+00:00",
+  "generated_at": "2026-06-28T10:08:09.341656+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -238,8 +238,8 @@
       "vendor": "University of Edinburgh (ERGO-Code)",
       "website": "https://highs.dev",
       "docs_url": "https://ergo-code.github.io/HiGHS/dev/",
-      "current_version": "1.14.0",
-      "release_date": "2026-04-06",
+      "current_version": "1.15.0",
+      "release_date": "2026-06-28",
       "license_type": "open-source",
       "license_spdx": "MIT",
       "open_source": true,
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1677,
+      "github_stars": 1678,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -344,16 +344,16 @@
           "source": "OR-Tools documentation"
         }
       ],
-      "recent_changes": "The highlight of v1.14 is the extension of the HiPO interior point LP\r\nsolver to handle convex QPs.\r\n\r\n## Code changes\r\n\r\nPrompted by [#2821](https://github.com/ERGO-Code/HiGHS/issues/2821),\r\nthe trea",
-      "github_open_issues": 165,
+      "recent_changes": "The highlights of v1.15 are the first variant of the parallel MIP solver\r\nand the addition of HiPO in Python.\r\n\r\n## Code changes\r\n\r\nFollowing [PR #2886](https://github.com/ERGO-Code/HiGHS/pull/2886), ",
+      "github_open_issues": 162,
       "github_recent_prs": [
-        "Adding --threads to command line ",
-        "Implement strongly connected component analysis on the clique table",
-        "v1 of Features.md",
-        "PR 2988 with latest merged in",
-        "Add context manager support to highspy"
+        "Latest in master 1.15",
+        "bazel hconfig",
+        "Latest in master for release",
+        "Version bump 1.15",
+        "Adding --threads to command line "
       ],
-      "pypi_monthly_downloads": -71
+      "pypi_monthly_downloads": -61
     },
     {
       "id": "scip",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13689,
+      "github_stars": 13693,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1131,7 +1131,7 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6266,
+      "github_stars": 6267,
       "github_open_issues": 186,
       "github_recent_prs": [
         "Bump actions/checkout from 5 to 7",
@@ -1320,13 +1320,13 @@
       ],
       "recent_changes": "Another release packed full of goodness!\r\nWe've improved Neighborhoods, increased performance Constraint Streams as well as made them easier to test, and fixed plenty of bugs.\r\n\r\nGoing forward, we wil",
       "github_stars": 1696,
-      "github_open_issues": 96,
+      "github_open_issues": 97,
       "github_recent_prs": [
+        "perf: improve consecutive sequences collector",
         "Fail build when timefold.application.version is missing",
         "springboot2.7改造",
         "perf: simplify how value ranges are built",
-        "chore: first draft - service as primary approach",
-        "ci: correctly replace parent version in downstream build workflow"
+        "chore: first draft - service as primary approach"
       ]
     },
     {
@@ -1384,14 +1384,14 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2479,
-      "github_open_issues": 360,
+      "github_stars": 2481,
+      "github_open_issues": 361,
       "github_recent_prs": [
+        "Fix GDPopt LOA maximization objective sense",
         "Move `cplex` and `docplex` to pypi-only installs",
         "Integrate cuopt QP and SOCP",
         "Simple disjunctive transform",
-        "[WIP] ParmEst bug fix: SSE_weighted should support heterogenous measurement errors",
-        "Fixed bugs in ParmEst cov_est function and Estimator class"
+        "[WIP] ParmEst bug fix: SSE_weighted should support heterogenous measurement errors"
       ],
       "pypi_monthly_downloads": -28
     },
