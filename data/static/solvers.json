@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T12:08:05.874619+00:00",
+  "generated_at": "2026-06-30T10:40:08.481390+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1681,
+      "github_stars": 1682,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlights of v1.15 are the first variant of the parallel MIP solver\r\nand the addition of HiPO in Python.\r\n\r\n## Code changes\r\n\r\nFollowing [PR #2886](https://github.com/ERGO-Code/HiGHS/pull/2886), ",
-      "github_open_issues": 167,
+      "github_open_issues": 171,
       "github_recent_prs": [
-        "Implement HighsDynamicLibrary::call in a C++11 & C++20 compatible way",
-        "All values passed for string option values (except for file names) are converted to lower case",
-        "Latest in master 1.15",
-        "bazel hconfig",
-        "Latest in master for release"
+        "Exclude OpenBLAS unit tests on windows 32, occassional  time out ",
+        "MinGW vs MSVC ",
+        "Pr 3110 with julia updates",
+        "ipo off for debug builds",
+        "Static packages generation bug fix "
       ],
       "pypi_monthly_downloads": -61
     },
@@ -460,11 +460,11 @@
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- an error is now produced if the emphasis settings in parameter files are wrong\r\n- propagate focus lower bound to child nodes to avoid outdated global lower bound\r\n- set sma",
       "github_open_issues": 25,
       "github_recent_prs": [
-        "fix: use bounded strlcpy/snprintf in reader_col.c...",
         "[docs] Add Conan entry in installation documentation",
         "Add MSVC flag /bigobj when compiling LPS=spx in debug mode",
         "fix several typos",
-        "Allow documentation builds when testing is turned off"
+        "Allow documentation builds when testing is turned off",
+        "Fix endianness issue in dtoa.cpp"
       ],
       "pypi_monthly_downloads": -41
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13697,
+      "github_stars": 13703,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,7 +569,7 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 106,
+      "github_open_issues": 105,
       "github_recent_prs": [
         "export from google3",
         "bazel: rework copt and linkopt management",
@@ -1131,15 +1131,6 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6269,
-      "github_open_issues": 186,
-      "github_recent_prs": [
-        "Bump actions/checkout from 5 to 7",
-        "CI: install Moreau from PyPI instead of private Fury index",
-        "Clean string representations of Sum, quad_over_lin, and Promote atoms (#2619)",
-        "Add scalar helpers for primal constraint violations",
-        "Patch/1.9.2"
-      ],
       "pypi_monthly_downloads": -25
     },
     {
@@ -1255,16 +1246,7 @@
         "nlp",
         "interior-point"
       ],
-      "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1764,
-      "github_open_issues": 14,
-      "github_recent_prs": [
-        "Fix data-race global variables with atomics",
-        "Remove unnecessary <iostream> includes",
-        "IpJournalist: Missing override keyword",
-        "Draft at NVIDIA cuDSS (GPU sparse linear solver) integration in Ipopt.",
-        "Fix rare use-after-free in IpSpralSolverInterface"
-      ]
+      "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to "
     },
     {
       "id": "optaplanner",
@@ -1318,16 +1300,7 @@
         "constraint",
         "metaheuristic"
       ],
-      "recent_changes": "Another release packed full of goodness!\r\nWe've improved Neighborhoods, increased performance Constraint Streams as well as made them easier to test, and fixed plenty of bugs.\r\n\r\nGoing forward, we wil",
-      "github_stars": 1696,
-      "github_open_issues": 98,
-      "github_recent_prs": [
-        "deps: bump version.io.quarkus from 3.36.3 to 3.37.0",
-        "deps: bump version.io.quarkus from 3.33.2 to 3.33.2.1",
-        "deps: bump the patch group with 6 updates",
-        "deps: bump the actions group with 4 updates",
-        "fix: write generated service build artifacts to target instead of sources"
-      ]
+      "recent_changes": "Another release packed full of goodness!\r\nWe've improved Neighborhoods, increased performance Constraint Streams as well as made them easier to test, and fixed plenty of bugs.\r\n\r\nGoing forward, we wil"
     },
     {
       "id": "pyomo",
@@ -1448,16 +1421,7 @@
         "julia",
         "algebraic"
       ],
-      "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
-      "github_stars": 2448,
-      "github_open_issues": 13,
-      "github_recent_prs": [
-        "[docs] prod users and agents to provide feedback via the forum and issues",
-        "Fix BridgeableConstraint with model_convert",
-        "Improve error messages in the macros",
-        "Bump actions/checkout from 6 to 7",
-        "Improve various error messages"
-      ]
+      "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action"
     },
     {
       "id": "ampl",
