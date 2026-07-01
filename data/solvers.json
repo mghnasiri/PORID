@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T10:40:08.481390+00:00",
+  "generated_at": "2026-07-01T10:52:02.684904+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1682,
+      "github_stars": 1684,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlights of v1.15 are the first variant of the parallel MIP solver\r\nand the addition of HiPO in Python.\r\n\r\n## Code changes\r\n\r\nFollowing [PR #2886](https://github.com/ERGO-Code/HiGHS/pull/2886), ",
-      "github_open_issues": 171,
+      "github_open_issues": 169,
       "github_recent_prs": [
+        "Fixed issue with OpenBLAS not recognized when using BLAS_LIBRARIES ",
+        "fix: wrong comment in postsolve basis",
         "Exclude OpenBLAS unit tests on windows 32, occassional  time out ",
         "MinGW vs MSVC ",
-        "Pr 3110 with julia updates",
-        "ipo off for debug builds",
-        "Static packages generation bug fix "
+        "Pr 3110 with julia updates"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 604,
+      "github_stars": 606,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- an error is now produced if the emphasis settings in parameter files are wrong\r\n- propagate focus lower bound to child nodes to avoid outdated global lower bound\r\n- set sma",
-      "github_open_issues": 25,
+      "github_open_issues": 24,
       "github_recent_prs": [
         "[docs] Add Conan entry in installation documentation",
         "Add MSVC flag /bigobj when compiling LPS=spx in debug mode",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13703,
+      "github_stars": 13707,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1131,6 +1131,15 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
+      "github_stars": 6270,
+      "github_open_issues": 183,
+      "github_recent_prs": [
+        "Bump actions/checkout from 5 to 7",
+        "CI: install Moreau from PyPI instead of private Fury index",
+        "Clean string representations of Sum, quad_over_lin, and Promote atoms (#2619)",
+        "Add scalar helpers for primal constraint violations",
+        "Patch/1.9.2"
+      ],
       "pypi_monthly_downloads": -25
     },
     {
@@ -1246,7 +1255,16 @@
         "nlp",
         "interior-point"
       ],
-      "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to "
+      "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
+      "github_stars": 1764,
+      "github_open_issues": 14,
+      "github_recent_prs": [
+        "Fix data-race global variables with atomics",
+        "Remove unnecessary <iostream> includes",
+        "IpJournalist: Missing override keyword",
+        "Draft at NVIDIA cuDSS (GPU sparse linear solver) integration in Ipopt.",
+        "Fix rare use-after-free in IpSpralSolverInterface"
+      ]
     },
     {
       "id": "optaplanner",
@@ -1300,7 +1318,16 @@
         "constraint",
         "metaheuristic"
       ],
-      "recent_changes": "Another release packed full of goodness!\r\nWe've improved Neighborhoods, increased performance Constraint Streams as well as made them easier to test, and fixed plenty of bugs.\r\n\r\nGoing forward, we wil"
+      "recent_changes": "Another release packed full of goodness!\r\nWe've improved Neighborhoods, increased performance Constraint Streams as well as made them easier to test, and fixed plenty of bugs.\r\n\r\nGoing forward, we wil",
+      "github_stars": 1698,
+      "github_open_issues": 98,
+      "github_recent_prs": [
+        "docs: fix links",
+        "ci: allow unsafe PR checkout in downstream build workflow",
+        "feat: R&R allows for value to be kept unassigned",
+        "chore: identify RC builds by their Git ref",
+        "chore: fail fast on custom phase if it returns an inconsistent solution"
+      ]
     },
     {
       "id": "pyomo",
@@ -1358,13 +1385,13 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2482,
-      "github_open_issues": 361,
+      "github_open_issues": 362,
       "github_recent_prs": [
+        "Fix new typos identified in latest typos release",
+        "Add Xpress direct and persistent solver interfaces",
         "Fix GDPopt LOA maximization objective sense",
         "Move `cplex` and `docplex` to pypi-only installs",
-        "Integrate cuopt QP and SOCP",
-        "Simple disjunctive transform",
-        "[WIP] ParmEst bug fix: SSE_weighted should support heterogenous measurement errors"
+        "Integrate cuopt QP and SOCP"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1421,7 +1448,16 @@
         "julia",
         "algebraic"
       ],
-      "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action"
+      "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
+      "github_stars": 2450,
+      "github_open_issues": 12,
+      "github_recent_prs": [
+        "RFC: Refactor moi_function and jump_function into separate file",
+        "Restore uncached version of moi_function",
+        "Prep for v1.31.0",
+        "[docs] update package versions",
+        "[docs] change the license of PATHSolver"
+      ]
     },
     {
       "id": "ampl",
