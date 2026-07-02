@@ -1,0 +1,425 @@
+{
+  "date": "2026-07-02",
+  "generated_at": "2026-07-02T10:18:54.419612+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2607.00604",
+      "title": "Vehicle Routing Problem Meets Large Language Models: An Overview and Perspectives",
+      "authors": [
+        "Xianchao Xiu",
+        "Chong Shen",
+        "Yanjiao Zhu",
+        "Wanquan Liu"
+      ],
+      "abstract": "The vehicle routing problem (VRP) is a central optimization problem in artificial intelligence, logistics automation, transportation scheduling, and industrial decision-making. VRP and its variants are NP-hard, and practical routing tasks often combine time windows, vehicle capacities, pickup-and-delivery relations, dynamic requests, and other operational constraints, making both modeling and solving difficult. Large language models (LLMs) provide a flexible interface for routing optimization by processing natural-language requirements, generating code, reasoning over constraints, and interacting with external tools. This survey reviews LLM-driven research on VRP, covering the basic definition, main variants, major solver families, and LLM concepts needed for this topic. Existing studies are organized into three roles: modelers translate natural-language requirements into constraints and modeling code; designers generate heuristics, operators, or route plans; and coordinators organize tool calls, multi-agent collaboration, and connections with neural solvers. The survey also reviews standard benchmarks, real or near-real operational datasets, LLM-oriented evaluation frameworks, and two comparative experiments. The goal is to clarify current progress in LLM-assisted routing optimization and provide a structured reference for intelligent decision-making, advanced manufacturing, and industrial automation.",
+      "date": "2026-07-01",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2607.00604v1",
+      "tags": [
+        "math.OC",
+        "scheduling",
+        "vehicle-routing",
+        "supply-chain",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.00604",
+      "arxiv_id": "2607.00604v1",
+      "score": 60.0
+    },
+    {
+      "id": "s2-1c45f990830d",
+      "title": "Linear Relaxation-Based Robust Interval State Estimation for Low Voltage Networks With Photovoltaic and Measurement Uncertainties",
+      "authors": [
+        "Suntao Su",
+        "Gang Cheng",
+        "Junbo Zhao"
+      ],
+      "abstract": "Distribution system state estimation (DSSE) poses significant challenges for low voltage (LV) networks due to the uncertainties of distributed generations and measurements. While interval state estimation (ISE) is developed to address them, the existing ISE methods face two significant challenges: i) the non-convex nature of nonlinear ISE can lead to convergence issues and lack guaranteed optimality, ii) they do not adequately address robustness against bad data. This paper proposes a linear relaxation-based robust ISE method for LV networks. First, a three-phase unbalanced nonlinear interval measurement model is formulated to minimize and maximize state variables subject to measurement uncertainty constraints. Then, the non-convex nonlinear ISE model is relaxed to a linear optimization problem by introducing the McCormick enclosures of the bilinear terms, enabling efficient solutions while ensuring approximate global optimality. Inspired by sparse state recovery optimization method, an $L_{1}$-norm is proposed to suppress sparse bad data in the measurements. The optimality-based bound tightening (OBBT) algorithm is also developed to determine near-global solutions. Numerical results on two realistic LV networks demonstrate the advantages of the proposed robust ISE method compared to the existing ISE approaches.",
+      "date": "2026-07-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/TPWRS.2026.3653838",
+      "tags": [
+        "linear-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TPWRS.2026.3653838",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261468430",
+      "title": "EXPRESS: The Impact of Supply Base Geographical Distance and Dispersion on Product Quality Risks: Evidence from the Chinese Automobile Industry",
+      "authors": [
+        "Li, H.",
+        "Bapuji, H.",
+        "Talluri, S.",
+        "Singh, P.",
+        "Venkataraman, S."
+      ],
+      "abstract": "Prior research on supply chain geographical complexity has predominantly treated geographical distance and geographical dispersion as interchangeable concepts. Further, nearly all empirical studies in this stream that examined supply chain antecedents of product quality risks used samples from Western, educated, industrialized, rich, and democratic (WEIRD) countries. To improve the theoretical and practical insights from this stream of research, we theorize that, particularly for manufacturers in emerging markets, supply base geographical distance and dispersion affect product quality risks through monitoring and coordination challenges, respectively. Analyzing data from the Chinese automobile industry, we find that the geographical distance of firms from their supply base is not significantly related to automobile quality risks, but geographical dispersion is significantly and positively associated. In line with our arguments, we found that the relationship between geographical distance and quality risk is weakened when firms source from suppliers located in countries with strong regulatory quality, and that the positive relationship between geographical dispersion and quality risks is weakened by supplier quality certifications. Taken together, our findings provide a nuanced understanding of the relationship between supply chain geographical complexity and product quality risks, which leads to new theoretical and practical insights relevant for non-WEIRD countries.",
+      "date": "2026-07-01",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261468430",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261468430",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1177-10591478261468124",
+      "title": "EXPRESS: Proximity Matters: The Impact of Urgent Care Centers on Emergency Department Arrivals",
+      "authors": [
+        "Li, S.",
+        "Bassamboo, A.",
+        "Lariviere, M."
+      ],
+      "abstract": "The use of urgent care centers (UCCs) to reduce emergency department (ED) overuse has yielded mixed results in prior research. This paper investigates how the spatial proximity between UCCs and EDs drives heterogeneous effects of UCCs on ED demand. Using novel, granular encounter-level data from both EDs and newly opened UCCs within a major medical system, we leverage exogenous variation driven by institutional UCC operating hour policies to estimate causal effects. Through difference-in-differences models and generalized synthetic control methods, we find that\n                    collocated\n                    UCCs reduce ED demand for initial patient visits during UCC operating hours, with reductions spanning both nonurgent and urgent encounters. In contrast,\n                    non-collocated\n                    UCCs do not reduce ED demand. Such a difference is statistically significant. We identify queue sampling as the key mechanism driving these heterogeneous effects. Using timestamped arrival data, we show that higher ED waiting room census leads to increased arrivals at the collocated UCC, but only when the waiting room reaches visibly congested levels—in our setting, the top quintile of census distribution. This suggests patients exploit minimal switching costs to avoid observable congestion. This dynamic substitution pattern is absent at non-collocated sites, where transportation costs inhibit real-time facility switching. Our work sheds light on UCC location decisions and patients’ facility choice behavior in an era of rapid UCC market expansion. For hospital managers, we show that when reducing ED demand is a primary objective, opening UCCs collocated with EDs proves substantially more effective than establishing them elsewhere in the region. For policymakers, while current UCC siting discussions focus primarily on expanding geographic access, our results demonstrate that carefully considering UCCs' spatial configuration relative to EDs can unlock additional operational benefits beyond long-term access improvements.",
+      "date": "2026-07-01",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261468124",
+      "tags": [
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261468124",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1177-10591478251412030",
+      "title": "Board Gender Diversity and Supply Chain Risk Management",
+      "authors": [
+        "Aral, K.",
+        "Giambona, E.",
+        "Lopez A, R.",
+        "Wang, Y."
+      ],
+      "abstract": "How does corporate board gender diversity affect supply chain risk management? Board gender diversity can influence supply chain risk management through behavioral and agency-based mechanisms. Female directors’ greater risk aversion, lower overconfidence in the face of uncertainty, and heightened accountability pressures may lead to stronger oversight and risk mitigation efforts in operations, where risks are quantifiable and failures are highly visible. Therefore, we should expect supply chain risk management to increase with increased women representation in corporate boards. We test this prediction leveraging on a reform requiring California firms to increase board gender diversity. We find that the propensity to use purchase obligations, supply contracts designed to mitigate the risk of future price fluctuations and reduce procurement uncertainty, increased for California buyers following the reform. We also find that California buyers increased their geographic supply chain diversification and became more likely to discontinue relationships with high-default risk suppliers after the reform. These changes are larger when female directors are better positioned to influence corporate decisions, contributing to validate board gender diversity as an important channel for operational changes. The takeaway for corporate leaders, policymakers, and shareholders is that board gender diversity can lead to a greater focus on supply chain risk management, which increases profitability.",
+      "date": "2026-07-01",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478251412030",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478251412030",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10957-026-03046-7",
+      "title": "An Adaptive Proximal Point Method for Nonsmooth and Nonconvex Optimization on Hadamard Manifolds",
+      "authors": [
+        "Amaral, V.",
+        "A. Bortoloti, M.",
+        "Lopes, J.",
+        "Silva, G."
+      ],
+      "abstract": "Abstract\n                  This paper addresses a class of nonsmooth and nonconvex optimization problems defined on Hadamard manifolds. The objective function has a composite structure involving convex, differentiable, and lower semicontinuous terms. This formulation is generally nonconvex and contains the classical difference-of-convex (DC) framework as a particular case. The generalization lies in allowing more general composite decompositions, beyond the difference of two convex functions, in the Hadamard manifold setting. Motivated by recent advances in proximal point methods in Euclidean and Riemannian settings, we propose two variants: one that uses the Lipschitz constant of the gradient of the smooth part, suitable when this parameter is accessible, and another that does not require such knowledge, thereby broadening its applicability. We analyze the complexity of both approaches, establish their convergence properties, and illustrate their effectiveness through numerical experiments.",
+      "date": "2026-07-01",
+      "source": "Journal of Optimization Theory and Applications",
+      "source_detail": "Journal of Optimization Theory and Applications",
+      "url": "https://doi.org/10.1007/s10957-026-03046-7",
+      "tags": [
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10957-026-03046-7",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.00975",
+      "title": "TRCGL-Net: A Long-Tailed Multi-Label Chest X-Ray Classification Framework with Generative Data Augmentation and Label Co-Occurrence Modeling",
+      "authors": [
+        "Tong Shao",
+        "Hongshun Ling",
+        "Li Zhang",
+        "Jinjing Wu",
+        "Junke Wang",
+        "Yuan Gao",
+        "Fang Wang"
+      ],
+      "abstract": "Chest X-ray multi-label classification is a core task in intelligent medical imaging diagnosis. However, real clinical data often exhibit extreme long-tailed distributions, leading to degraded performance on rare diseases in tail classes. This issue is not only driven by data scarcity but also by two intrinsic factors:1) attenuation of tail-class lesion representations under complex anatomical backgrounds, and 2) dominance of head classes in modeling label co-occurrence relationships. To address these challenges, we propose TRCGL-Net. First, a learnable text-guided conditional diffusion model is employed to generate high-quality tail-class chest X-ray image samples under disease semantic constraints, improving data diversity and realism of rare disease patterns while alleviating class imbalance and preserving pathology-consistent semantics.Second, a channel reweighting mechanism is introduced to perform feature recalibration by emphasizing disease-relevant feature channels, thereby improving feature discriminability under long-tailed distributions.A class-aware attention mechanism is further applied to generate class-specific attention maps, enabling the model to localize disease-relevant regions and focus on fine-grained lesion areas.Finally, a graph convolution network based on label co occurrence is introduced to establish an information propagation mechanism among categories. Experiments on the PadChest dataset show that the proposed method achieves a tail-class mAP of 0.4904, an overall mAP of 0.4408, and an mAUC of 0.8989, outperforming state-of-the-art methods. TRCGL-Net effectively improves recognition performance for rare diseases under long-tailed distributions and mitigates the impact of extreme class imbalance in chest X-ray multi-label classification.",
+      "date": "2026-07-01",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2607.00975v1",
+      "tags": [
+        "cs.CV",
+        "healthcare-or",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.00975",
+      "arxiv_id": "2607.00975v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2025.1203",
+      "title": "A Reduction-Driven Local Search for the Generalized Independent Set Problem",
+      "authors": [
+        "Liu, Y.",
+        "Zhou, Y.",
+        "Xu, Z.",
+        "Xiao, M.",
+        "Hao, J."
+      ],
+      "abstract": "The Generalized Independent Set (GIS) problem extends the classical maximum independent set problem by incorporating profits for vertices and penalties for edges. This generalized problem has been identified in diverse applications in fields such as forest harvesting, competitive facility location, social network analysis, and even machine learning. However, solving the GIS problem in large-scale, real-world networks remains computationally challenging. In this paper, we explore data reduction techniques to address this challenge. We first propose 14 reduction rules that can reduce the input graph with rigorous optimality guarantees. We then present a reduction-driven local search (RLS) algorithm that integrates these reduction rules into the preprocessing, the initial solution generation, and the local search components in a computationally efficient way. The RLS is empirically evaluated on 278 graphs drawn from different application scenarios. The results indicate that the RLS is highly competitive: for most graphs, it achieves significantly superior solutions compared with other known solvers, and it effectively provides solutions for graphs exceeding 260 million edges, a task at which every other known method fails. Analysis also reveals that data reduction plays a key role in achieving such a competitive performance.\n                  History: Accepted by Erwin Pesch, Area Editor for Heuristic Search and Approximation Algorithms.\n                  Funding: This research was supported by the National Natural Science Foundation of China [Grants 62372093 and 62372095].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2025.1203 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2025.1203 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-07-01",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2025.1203",
+      "tags": [
+        "stochastic",
+        "ml-for-or",
+        "facility-location"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2025.1203",
+      "score": 55.0
+    },
+    {
+      "id": "s2-397e7c2b8222",
+      "title": "Dantzig-Wolfe decomposition and valid inequalities for the vehicle routing problem with time windows and operation synchronization",
+      "authors": [
+        "Naiyu Wang",
+        "Canrong Zhang"
+      ],
+      "abstract": "",
+      "date": "2026-07-01",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.1016/j.trb.2026.103483",
+      "tags": [
+        "vehicle-routing",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1016/j.trb.2026.103483",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261468125",
+      "title": "EXPRESS: Enhancing Electric Vehicle Charging Station Design Using Multi-Fidelity Simulations",
+      "authors": [
+        "Li, J.",
+        "Du, J.",
+        "Gao, S.",
+        "Ye, Q.",
+        "Jiang, G."
+      ],
+      "abstract": "We study simulation-assisted service system design, where stochastic simulation is used to select the best design from a finite set of structural or parametric alternatives. Since high-fidelity simulation can be prohibitively time-consuming, we adopt a multi-fidelity approach that combines expensive high-fidelity runs with cheaper, coarser low-fidelity runs to estimate system performance and compare designs. This research is motivated by the design of an integrated electric vehicle (EV) fast-charging station. We formulate the design problem under the fixed-budget ranking and selection (R&amp;S) framework, in which the simulation budget is allocated across fidelity levels and design alternatives to maximize the probability of correct selection (PCS) of the best design. We derive an asymptotic solution, develop a selection algorithm that satisfies the resulting optimality conditions, and establish its consistency and asymptotic optimality. We further demonstrate the algorithm’s empirical performance through an EV fast-charging station case study and a set of synthetic examples. These theoretical and empirical results provide actionable guidance on when and how multi-fidelity simulation can improve best-design selection in complex service system design problems.",
+      "date": "2026-07-01",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261468125",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261468125",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 14
+  }
+}
