@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T10:18:54.081305+00:00",
+  "generated_at": "2026-07-03T10:15:04.575212+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -238,8 +238,8 @@
       "vendor": "University of Edinburgh (ERGO-Code)",
       "website": "https://highs.dev",
       "docs_url": "https://ergo-code.github.io/HiGHS/dev/",
-      "current_version": "1.15.0",
-      "release_date": "2026-06-28",
+      "current_version": "1.15.1",
+      "release_date": "2026-07-02",
       "license_type": "open-source",
       "license_spdx": "MIT",
       "open_source": true,
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1688,
+      "github_stars": 1690,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -344,8 +344,8 @@
           "source": "OR-Tools documentation"
         }
       ],
-      "recent_changes": "The highlights of v1.15 are the first variant of the parallel MIP solver\r\nand the addition of HiPO in Python.\r\n\r\n## Code changes\r\n\r\nFollowing [PR #2886](https://github.com/ERGO-Code/HiGHS/pull/2886), ",
-      "github_open_issues": 167,
+      "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
+      "github_open_issues": 168,
       "github_recent_prs": [
         "Add workflow to build pyodide package",
         "Latest in master for release 1.15.1",
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 606,
+      "github_stars": 607,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13714,
+      "github_stars": 13717,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,7 +569,7 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 106,
+      "github_open_issues": 105,
       "github_recent_prs": [
         "examples/python: add tree ensemble global optimisation via CP-SAT",
         "export from google3",
@@ -1131,7 +1131,7 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6272,
+      "github_stars": 6273,
       "github_open_issues": 183,
       "github_recent_prs": [
         "Bump actions/checkout from 5 to 7",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Another release packed full of goodness!\r\nWe've improved Neighborhoods, increased performance Constraint Streams as well as made them easier to test, and fixed plenty of bugs.\r\n\r\nGoing forward, we wil",
-      "github_stars": 1699,
-      "github_open_issues": 98,
+      "github_stars": 1700,
+      "github_open_issues": 100,
       "github_recent_prs": [
-        "docs: remove planning ai",
-        "perf: improve comparison indexer",
-        "docs: description lists",
-        "feat: add nullable to model config params",
-        "docs: mention quarkus dev mode"
+        "perf: improve filtered joins",
+        "docs: remove preview note for service module",
+        "docs: link getting started structure",
+        "ci: don't fail downstream CI on every OpenAPI change",
+        "docs: remove planning ai"
       ]
     },
     {
@@ -1385,13 +1385,13 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2483,
-      "github_open_issues": 362,
+      "github_open_issues": 364,
       "github_recent_prs": [
+        "contrib.piecewise: Add special case for single-segment \"piecewise\" linear functions",
+        "contrib.piecewise: Adding option for convexity/concavity and an epigraph/hypograph transformation",
         "Fix new typos identified in latest typos release",
         "Add Xpress direct and persistent solver interfaces",
-        "Fix GDPopt LOA maximization objective sense",
-        "Move `cplex` and `docplex` to pypi-only installs",
-        "Integrate cuopt QP and SOCP"
+        "Fix GDPopt LOA maximization objective sense"
       ],
       "pypi_monthly_downloads": -28
     },

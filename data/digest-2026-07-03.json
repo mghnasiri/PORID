@@ -1,0 +1,441 @@
+{
+  "date": "2026-07-03",
+  "generated_at": "2026-07-03T10:15:04.909977+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1177-10591478261469015",
+      "title": "EXPRESS: Two-Stage Newsvendor Network Problem: A Data-Driven Distributionally Robust Optimization Approach",
+      "authors": [
+        "Zhang, D.",
+        "Turan, H.",
+        "Sarker, R.",
+        "Essam, D.",
+        "Dai, S.",
+        "Zhang, L."
+      ],
+      "abstract": "We consider a multilocation newsvendor network in which historical data are the only available information about the joint demand distribution. To determine optimal inventory levels, we develop a novel data-driven two-stage distributionally robust optimization (DRO) model that does not assume the demand support is known. Instead, we infer the support from historical data using two prediction algorithms, which yield quantile-based and Mahalanobis-distance-based support estimates and therefore either ignore or capture cross-location demand dependence. Our objective is to minimize worst-case expected cost over an ambiguity set constructed from these support estimates, consisting of all probability distributions within a prescribed type-∞ Wasserstein (W\n                    ∞\n                    ) distance of the empirical distribution. To approximate the second-stage recourse decisions, we employ a multiple-linear-decision-rule (MLDR) approximation that is provably asymptotically optimal. This leads to tractable linear programming (LP) and second-order cone programming (SOCP) reformulations for the quantile-based and Mahalanobis-distance-based formulations, respectively. We also establish support-aware finite-sample guarantees for the proposed framework. Numerical results show that quantile-based support estimation is more effective at maintaining reliable service levels, whereas Mahalanobis-distance-based support estimation yields larger cost reductions, particularly under correlated demand.",
+      "date": "2026-07-02",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261469015",
+      "tags": [
+        "linear-programming",
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261469015",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2607.02194",
+      "title": "An Optimisation Framework for the Well-Conditioned Training of Physics-Informed Neural Networks",
+      "authors": [
+        "Joseph Webb",
+        "Sadok Jerad",
+        "Coralia Cartis"
+      ],
+      "abstract": "Physics-informed neural networks (PINNs) have emerged as a promising route to solve partial differential equations, yet they have struggled to reach the precision of classical solvers. The obstacle is increasingly understood to be one of optimisation, owing to the severely ill-conditioned loss landscape. We present $\\textbf{DSGNAR}$: Doubly-Sketched Gauss-Newton with Adaptive Ratio, a scalable second-order optimisation framework that confronts this ill-conditioning and, in doing so, obtains unprecedented accuracy and speed. $\\textbf{DSGNAR}$ couples a doubly-sketched Gauss-Newton model with a novel strategy that carefully controls both regularisation and step length. Across a suite of problems spanning nonlinear, chaotic, multi-scale, high-dimensional, and Navier-Stokes, the framework greatly improves on the state of the art: able to attain relative $\\ell_2$ errors as low as $3\\times10^{-16}$ in double precision, improve contemporary results by five orders of magnitude on the canonical Burgers' equation, and as much as eight orders on a high-dimensional Poisson problem, while remaining markedly faster. We further show that, in single precision, solutions at the limit of round-off error can be obtained very quickly: Burgers' equation to $\\ell_2^{\\text{rel}} = 4.75 \\times 10^{-7}$ in under ten seconds. The framework is also robust to the choice of architecture, arithmetic precision, and initial hyperparameters.   The code is available at https://www.github.com/wephy/physics-informed-neural-networks",
+      "date": "2026-07-02",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.02194v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.02194",
+      "arxiv_id": "2607.02194v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.02507",
+      "title": "What LLM Agents Say When No One Is Watching: Social Structure and Latent Objective Emergence in Multi-Agent Debates",
+      "authors": [
+        "Arman Ghaffarizadeh",
+        "Danyal Mohaddes",
+        "Aliakbar Izadkhah",
+        "Shahriar Noroozizadeh"
+      ],
+      "abstract": "LLM agents will increasingly act in socially structured settings where role, audience, and relational context can shape what is advantageous or costly to say. We study whether such social structure, without any explicit objective in the prompt, changes what an agent expresses publicly relative to an off-the-record (OTR) channel elicited under the same condition. We introduce a dual-channel debate framework in which agents produce public utterances that enter the shared history alongside OTR responses that are recorded but never shown to the other participant. Across 10 models, 3 scenarios, and 5 variations within each scenario, alignment-inducing settings produce systematic public-OTR divergence in the targeted agent, with its decision divergence rising from a $\\sim$3% baseline to roughly 40%. The effect is consistent across four aggregate analyses: stance, semantic similarity, natural language inference, and survey responses. In some cases, the OTR response explicitly attributes public accommodation to relational pressures, such as career risk or sponsorship obligation. The findings suggest that agent evaluation should extend beyond explicit goals and detect emergent objectives. We present a dual-channel evaluation framework and complementary behavioral measures that operationalize this assessment.",
+      "date": "2026-07-02",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2607.02507v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.02507",
+      "arxiv_id": "2607.02507v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2607.02466",
+      "title": "Learning to Move Before Learning to Do: Task-Agnostic pretraining for VLAs",
+      "authors": [
+        "Junhao Shi",
+        "Siyin Wang",
+        "Xiaopeng Yu",
+        "Li Ji",
+        "Jingjing Gong",
+        "Xipeng Qiu"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models are fundamentally bottlenecked by the scarcity of expert demonstrations -- triplets of observations, instructions, and actions that are costly to collect at scale. We argue that this bottleneck stems from conflating two distinct learning objectives: acquiring physical competence (how to move) and acquiring semantic alignment (what to do). Crucially, only the latter requires language supervision. Building on this Decomposition Hypothesis, we propose Task-Agnostic Pretraining (TAP), a two-stage framework that first learns transferable motor priors from cheap, unlabeled interaction data -- including discarded off-task trajectories and autonomous robot play -- via a self-supervised Inverse Dynamics objective. A lightweight second stage then grounds these priors in language using minimal expert data. On the SIMPLER benchmark, TAP matches models trained on over 1M expert trajectories while using orders of magnitude less labeled data, yielding a 10% absolute gain over standard behavior cloning. On a real-world WidowX platform, TAP retains 25% success under camera perturbations where internet-scale baselines collapse to 0%, demonstrating that task-agnostic pretraining produces robust, transferable physical representations and offers a scalable path forward for Embodied AI.",
+      "date": "2026-07-02",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2607.02466v1",
+      "tags": [
+        "cs.RO",
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.02466",
+      "arxiv_id": "2607.02466v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.02431",
+      "title": "WorldSample: Closed-loop Real-robot RL with World Modelling",
+      "authors": [
+        "Yuquan Xue",
+        "Le Xu",
+        "Zeyi Liu",
+        "Zhenyu Wu",
+        "Zhengyi Gu",
+        "Xinyang Song",
+        "Bofang Jia",
+        "Ziwei Wang"
+      ],
+      "abstract": "Reinforcement learning (RL) can overcome the demonstration-coverage limitation of imitation learning (IL) by allowing robots to improve through trial-and-error interaction beyond the states observed in demonstrations. However, deploying RL on real robots remains constrained by high interaction costs, since each physical rollout is costly and reflects only one realized action-outcome path. To address this challenge, we propose WorldSample, a physically grounded data augmentation framework for real-robot RL that closes a real-synthetic loop between physical rollouts, world-model generation, and policy improvement. Grounded on real rollouts, WorldSample generates high-fidelity synthetic transitions through a post-trained world model, which greatly lowers the visual hallucination. Specifically, rather than simply using these transitions as real-world experience, WorldSample introduces Policy-Paced Learning (PPL) to regulate the training process through sample selection and scheduling, balancing useful augmentation against value overestimation and mitigating the hallucination-induced noise. Experiments on robot manipulation tasks involving contact-rich and precise tasks show that WorldSample improves policy success rate by 28% while reducing training steps by 59% compared with baselines. Furthermore, WorldSample improves world model visual fidelity by 19.4dB in PSNR and 0.47 in SSIM over demonstration-only post-training, validating the effectiveness of the real-synthetic loop for both policy and world model performance.",
+      "date": "2026-07-02",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2607.02431v1",
+      "tags": [
+        "cs.RO",
+        "scheduling",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.02431",
+      "arxiv_id": "2607.02431v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.02343",
+      "title": "SelectTSL: Prompt-Guided Selective Target Sound Localization in Complex Scenarios",
+      "authors": [
+        "Ziyang Jiang",
+        "Yu Chen",
+        "Zexu Pan",
+        "Xinyuan Qian",
+        "Bowen Xing",
+        "Ivor W. Tsang",
+        "Xu-Cheng Yin",
+        "Haizhou Li"
+      ],
+      "abstract": "Humans can selectively attend to a target sound and estimate its direction in complex scenarios, whereas such selective localization remains challenging for current deep learning-based systems. Sound source localization (SSL) has achieved remarkable success with deep learning, yet most methods localize all active sources without selectivity. Conversely, target sound extraction (TSE) extracts sources using multimodal prompts but typically fails to preserve the multichannel spatial information required for accurate localization. To bridge this gap, we formulate the task of prompt-guided selective target sound localization and propose SelectTSL, an end-to-end architecture that localizes only the user-specified target in multi-source acoustic scenes. Specifically, we design a target-aware selective localization strategy that employs a Prompt-Guided Selective Attention Module (PGSA) to generate prompt-informed embeddings. These embeddings guide an inter-channel phase difference (IPD) enhancer to refine raw phase cues, fusing with target magnitudes to jointly estimate direction of arrival (DoA) and target-source cardinality, i.e., the number of target sound sources. This coupled design effectively focuses on the user-specified target spatial cues for selective localization and also handles time-varying numbers of target sources. Extensive experiments on both synthetic data and real-world recordings demonstrate that our proposed method consistently outperforms other baselines and exhibits robust generalization to real acoustic environments.",
+      "date": "2026-07-02",
+      "source": "arXiv",
+      "source_detail": "cs.SD",
+      "url": "http://arxiv.org/abs/2607.02343v1",
+      "tags": [
+        "cs.SD",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.02343",
+      "arxiv_id": "2607.02343v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.02212",
+      "title": "An Additive MLP-GNN Framework for Characterizing Chemical and Structural Contributions to Aqueous Solubility",
+      "authors": [
+        "Sampreeti Bhattacharya",
+        "Arkaprava Roy"
+      ],
+      "abstract": "Aqueous solubility is a key property in early-stage drug discovery, but most predictive models merge physicochemical descriptors and molecular graph information into a single representation, obscuring whether a prediction is driven by global chemistry, molecular structure, or both. We present an additive deep-learning framework that keeps these two sources of information separate throughout training: physicochemical descriptors are encoded by a multilayer perceptron (the chemical branch) and molecular graph topology by a graph neural network (the structural branch), with the two outputs combined only at the prediction stage through an additive model with an optional multiplicative interaction. This design provides a direct decomposition of chemical and structural components that can be examined separately after training. Furthermore, pretraining on the larger AqSolDB dataset and fine-tuning on the smaller BigSolDB2 dataset substantially improve accuracy and reduce run-to-run variations, indicating generalizability of the learned features from the data-rich settings. We further interpret the fitted model using best linear projections of the branch outputs, molecule-level embedding summaries across solubility classes, and atom-level GNNExplainer masks aggregated over functional groups. These analyses show that the chemical branch aligns with familiar physicochemical descriptors, while the structural branch captures graph-topological and functional-group patterns associated with solubility. Across both datasets, the framework attains competitive predictive performance while making the distinct roles of chemical and structural information more transparent.",
+      "date": "2026-07-02",
+      "source": "arXiv",
+      "source_detail": "stat.ML",
+      "url": "http://arxiv.org/abs/2607.02212v1",
+      "tags": [
+        "stat.ML",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.02212",
+      "arxiv_id": "2607.02212v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.01741",
+      "title": "Full Bayesian Reinforcement Learning via LF-IBIS",
+      "authors": [
+        "Stefano Masini",
+        "Cecilia Viscardi",
+        "Michela Baccini"
+      ],
+      "abstract": "Reinforcement Learning (RL) is a sequential decision-making framework in which an agent learns optimal policies through interaction with an environment by maximizing cumulative rewards. Among RL methods, Bayesian Reinforcement Learning (BRL) addresses common practical challenges related to data scarcity by leveraging prior knowledge about the environment and sequential belief updates. However, most BRL approaches require an explicit likelihood function, which is frequently inaccessible or intractable in real-world settings.   We propose Likelihood-Free Iterated Batch Importance Sampling (LF-IBIS), a novel algorithm for BRL that updates the agent's beliefs online as new interactions become available. By combining Approximate Bayesian Computation with Iterated Batch Importance Sampling, LF-IBIS enables full Bayesian inference in settings where the environment dynamics are not described by an explicit or tractable likelihood. The method yields approximate posterior distributions over both environment parameters and optimal policies, providing a quantification of policy uncertainty useful for a Bayesian treatment of the exploration-exploitation trade-off. We test the method on a simulation study in response-adaptive randomization in clinical trials, where closed-form posteriors enable validation. Additional experiments address settings where the posterior has no closed form and illustrate online policy updating based on the posterior distribution of the optimal policy.",
+      "date": "2026-07-02",
+      "source": "arXiv",
+      "source_detail": "stat.ML",
+      "url": "http://arxiv.org/abs/2607.01741v1",
+      "tags": [
+        "stat.ML",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.01741",
+      "arxiv_id": "2607.01741v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.02203",
+      "title": "Self-explainable Operator Learning for Discovering Spatial Patterns in Functional Data",
+      "authors": [
+        "Mojgan Alishiri",
+        "Amirhossein Arzani"
+      ],
+      "abstract": "Operator learning has emerged as a powerful tool for modeling complex physical systems in functional spaces. However, their neural network-based architectures make them opaque models, obscuring the reasoning behind their predictions. In this work, we introduce a self-explainable operator learning framework that overcomes this challenge by reformulating operator learning as a linear combination of generalized functional linear models expressed through integral equations. Exploiting the additive decomposability of these integral equations, we divide the input domain into subdomains and compute localized integrals to evaluate the contribution of each region to the final prediction. This decomposition enables direct interpretability where the model explains both inputs and outputs by linking specific input regions to corresponding output patterns, thereby revealing which spatial features drive predictions. We demonstrate the framework on function-to-scalar and function-to-function mappings in fluid flow problems involving blood flow and unsteady aerodynamics. The results show that the operator most often prioritizes regions with strong feature gradients, providing physically meaningful insight into the model's decision-making process. Comparisons with established post-hoc explainability methods demonstrate qualitative agreement while highlighting the key advantage of the proposed approach: explainability is embedded directly within the operator structure itself and does not require an external tool. Therefore, our framework provides a mathematically transparent and physically interpretable approach to uncover relationships within data, fostering trust in machine learning for scientific applications by enabling more informed data-driven analysis of physical systems.",
+      "date": "2026-07-02",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.02203v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.02203",
+      "arxiv_id": "2607.02203v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2607.02175",
+      "title": "A rubric-based controlled comparison of frontier language models on expert-authored clinical reasoning tasks",
+      "authors": [
+        "Samiha A. Ismail",
+        "Fan X. Chen",
+        "Ali Merali"
+      ],
+      "abstract": "Multiple-choice medical benchmarks are increasingly saturated, and recent rubric-based evaluations such as HealthBench have shown that open-ended clinical performance is far from solved - its \"Hard\" subset top score remains 32%. We present a small, deliberately difficult evaluation dataset of five clinician-authored clinical scenarios spanning four specialties (anaesthesia, internal/family medicine, emergency medicine, and obstetrics), each accompanied by an atomic, weighted, MECE rubric (25-62 criteria per task; 184 criteria total) authored from a clinician-drafted golden answer. We evaluate three frontier models: GPT 5.4, Claude Opus 4.7, and Gemini 3.1 Pro. Mean rubric pass rates were 0.47 (Claude), 0.39 (GPT), and 0.37 (Gemini). The central finding is an inversion of clinical priority: the highest-weighted (weight-5, critical) criteria passed at only 32.4-41.7%, while low-stakes weight-1 criteria passed at 80-90%. 56 of 108 critical (weight-5) criteria (52%) were satisfied by no model. Three LLM autoraters reproduced expert met/not-met labels on 92.8-94.7% of 552 graded criteria. We position this as a methods-and-preliminary-findings contribution: the five tasks demonstrate a scalable, defensible pipeline ready to develop into a large-scale benchmark.",
+      "date": "2026-07-02",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2607.02175v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.02175",
+      "arxiv_id": "2607.02175v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 14
+  }
+}
