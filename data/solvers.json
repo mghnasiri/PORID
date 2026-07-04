@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T10:15:04.575212+00:00",
+  "generated_at": "2026-07-04T09:30:36.974225+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1690,
+      "github_stars": 1691,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 168,
+      "github_open_issues": 170,
       "github_recent_prs": [
+        "Strongcg",
+        "Misc",
+        "Workflows",
         "Add workflow to build pyodide package",
-        "Latest in master for release 1.15.1",
-        "Version bump patch 1.15.1",
-        "Parallel early termination",
-        "Fixed issue with OpenBLAS not recognized when using BLAS_LIBRARIES "
+        "Latest in master for release 1.15.1"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -460,11 +460,11 @@
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- an error is now produced if the emphasis settings in parameter files are wrong\r\n- propagate focus lower bound to child nodes to avoid outdated global lower bound\r\n- set sma",
       "github_open_issues": 24,
       "github_recent_prs": [
+        "fix: use bounded strlcpy/snprintf in reader_col.c...",
         "[docs] Add Conan entry in installation documentation",
         "Add MSVC flag /bigobj when compiling LPS=spx in debug mode",
         "fix several typos",
-        "Allow documentation builds when testing is turned off",
-        "Fix endianness issue in dtoa.cpp"
+        "Allow documentation builds when testing is turned off"
       ],
       "pypi_monthly_downloads": -41
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13717,
+      "github_stars": 13721,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Another release packed full of goodness!\r\nWe've improved Neighborhoods, increased performance Constraint Streams as well as made them easier to test, and fixed plenty of bugs.\r\n\r\nGoing forward, we wil",
-      "github_stars": 1700,
-      "github_open_issues": 100,
+      "github_stars": 1701,
+      "github_open_issues": 99,
       "github_recent_prs": [
+        "chore: improve logging",
         "perf: improve filtered joins",
         "docs: remove preview note for service module",
         "docs: link getting started structure",
-        "ci: don't fail downstream CI on every OpenAPI change",
-        "docs: remove planning ai"
+        "ci: don't fail downstream CI on every OpenAPI change"
       ]
     },
     {
