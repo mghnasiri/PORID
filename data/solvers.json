@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T09:46:42.606465+00:00",
+  "generated_at": "2026-07-06T11:46:34.322046+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -347,11 +347,11 @@
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
       "github_open_issues": 170,
       "github_recent_prs": [
+        "Remove assert for empty workers",
         "Strongcg",
         "Misc",
         "Workflows",
-        "Add workflow to build pyodide package",
-        "Latest in master for release 1.15.1"
+        "Add workflow to build pyodide package"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -361,8 +361,8 @@
       "vendor": "Zuse Institute Berlin (ZIB)",
       "website": "https://www.scipopt.org",
       "docs_url": "https://www.scipopt.org/doc/html/",
-      "current_version": "10.0.2",
-      "release_date": "2026-04-02",
+      "current_version": "10.0.3",
+      "release_date": "2026-07-06",
       "license_type": "open-source",
       "license_spdx": "Apache-2.0",
       "open_source": true,
@@ -457,7 +457,7 @@
           "source": "SCIP annual report"
         }
       ],
-      "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- an error is now produced if the emphasis settings in parameter files are wrong\r\n- propagate focus lower bound to child nodes to avoid outdated global lower bound\r\n- set sma",
+      "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- fixed statistic on added linear constraints in propagation\r\n- keep flag `rangedrowpropagated` of linear and exactlinear constraints for probing bound changes to avoid dupli",
       "github_open_issues": 24,
       "github_recent_prs": [
         "fix: use bounded strlcpy/snprintf in reader_col.c...",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13729,
+      "github_stars": 13731,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 105,
+      "github_open_issues": 107,
       "github_recent_prs": [
+        "python: declare free-threading support in graph modules",
         "examples/python: add tree ensemble global optimisation via CP-SAT",
         "export from google3",
         "export from google3",
-        "bazel: rework copt and linkopt management",
-        "export from google3 (abseil-cpp@20260526.0 + few cleanup)"
+        "bazel: rework copt and linkopt management"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1132,13 +1132,13 @@
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
       "github_stars": 6273,
-      "github_open_issues": 183,
+      "github_open_issues": 181,
       "github_recent_prs": [
+        "Bump github/codeql-action/upload-sarif from 4.36.2 to 4.36.3",
+        "docs: fix CBC solver options and COIN-OR links (#1747)",
         "Bump actions/checkout from 5 to 7",
         "CI: install Moreau from PyPI instead of private Fury index",
-        "Clean string representations of Sum, quad_over_lin, and Promote atoms (#2619)",
-        "Add scalar helpers for primal constraint violations",
-        "Patch/1.9.2"
+        "Clean string representations of Sum, quad_over_lin, and Promote atoms (#2619)"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1764,
+      "github_stars": 1765,
       "github_open_issues": 14,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Another release packed full of goodness!\r\nWe've improved Neighborhoods, increased performance Constraint Streams as well as made them easier to test, and fixed plenty of bugs.\r\n\r\nGoing forward, we wil",
-      "github_stars": 1702,
-      "github_open_issues": 99,
+      "github_stars": 1704,
+      "github_open_issues": 101,
       "github_recent_prs": [
-        "chore: improve logging",
-        "perf: improve filtered joins",
-        "docs: remove preview note for service module",
-        "docs: link getting started structure",
-        "ci: don't fail downstream CI on every OpenAPI change"
+        "ci: only publish SBOM in JSON",
+        "deps: bump version.io.quarkus from 3.36.3 to 3.37.1",
+        "deps: bump org.apache.logging.log4j:log4j-to-slf4j from 2.26.0 to 2.26.1 in the patch group",
+        "deps: bump the minor group with 2 updates",
+        "deps: bump graalvm/setup-graalvm from 1.5.6 to 1.6.0 in the actions group"
       ]
     },
     {
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2483,
+      "github_stars": 2484,
       "github_open_issues": 364,
       "github_recent_prs": [
         "contrib.piecewise: Add special case for single-segment \"piecewise\" linear functions",
@@ -1449,14 +1449,14 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
-      "github_stars": 2450,
-      "github_open_issues": 12,
+      "github_stars": 2452,
+      "github_open_issues": 13,
       "github_recent_prs": [
+        "Adds CONOPT to solvers documentation",
         "Fix hashing of DenseAxisArray by hashing the axis lookup",
         "RFC: Refactor moi_function and jump_function into separate file",
         "Restore uncached version of moi_function",
-        "Prep for v1.31.0",
-        "[docs] update package versions"
+        "Prep for v1.31.0"
       ]
     },
     {
