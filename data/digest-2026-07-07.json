@@ -1,0 +1,430 @@
+{
+  "date": "2026-07-07",
+  "generated_at": "2026-07-07T10:34:52.107100+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2607.04569",
+      "title": "LLMs for Agentic Home Energy Management",
+      "authors": [
+        "Sokipriala Jonah"
+      ],
+      "abstract": "Home Energy Management Systems (HEMS) can reduce residential electricity costs and support demand response, but adoption is limited by the difficulty of translating household preferences into technical scheduling constraints. This paper evaluates whether large language model (LLM) agents can provide a practical natural-language interface for multi-appliance home energy scheduling. We present a tool-calling ReAct agent that uses live half-hourly Octopus Agile prices, weather forecasts, photovoltaic generation estimates, household usage data, and a retrieval-augmented knowledge base to schedule flexible loads against a mixed-integer linear programming (MILP) ground truth. Three commercial models, GPT-4o-mini, Gemini 2.5 Flash, and Claude Sonnet 4.6, are benchmarked across tariff days, constraint-conflict scenarios, weather-aware solar co-optimization, and week-long deployment. With native function calling, all models achieve 100% scheduling success and near-MILP optimality, while text-parsed action interfaces sharply reduce reliability. Constraint testing shows that cost-optimal and safety-optimal models differ: Claude is strongest under infeasibility and power-cap conflicts, while GPT-4o-mini is most efficient. Over a simulated week, agents capture 96.7-98.0% of oracle savings, projecting approximately GBP 1,270 annual savings over an off-peak timer baseline. Code and a live demonstration are available at https://github.com/sokistar24/ecohome-energy-agent and https://www.ecohomeagent.com/.",
+      "date": "2026-07-06",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2607.04569v1",
+      "tags": [
+        "eess.SY",
+        "linear-programming",
+        "integer-programming",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.04569",
+      "arxiv_id": "2607.04569v1",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2607.05346",
+      "title": "OptiAgent: End-to-End Optimization Modeling via Multi-Agent Iterative Refinement",
+      "authors": [
+        "Adriana Laurindo Monteiro",
+        "Nayse Fagundes",
+        "Gabriel Mattos Langeloh",
+        "Gustavo de Oliveira Kanno",
+        "Priscila Louise Aguirre",
+        "Thiago Costa Rizuti da Rocha",
+        "Victor Leme Beltran"
+      ],
+      "abstract": "We propose OptiAgent, a multi-agent framework that, given a natural language description of an Operations Research problem, is able to output a solver-ready mathematical formulation as well as executable code. Our architecture prioritizes the mathematical modeling step, where dedicated agents extract structures, such as decision variables and constraints, enabling iterative self-correction. We introduce a novel multi-loop validation architecture with four specialized feedback mechanisms, each targeting a distinct failure mode such as misinterpretation, structural defects, mathematical inconsistencies, validation failures, and code errors. Alongside accuracy, our modular design improves the process of solving optimization problems by improving transparency, as each agent exposes its reasoning and feedback, making the full modeling process auditable. Our framework achieves state-of-the-art performance on 3 out of 4 benchmarks across LP, MILP, and Nonlinear Programming tasks, while remaining highly competitive on the remaining dataset.",
+      "date": "2026-07-06",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2607.05346v1",
+      "tags": [
+        "cs.AI",
+        "linear-programming",
+        "integer-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.05346",
+      "arxiv_id": "2607.05346v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.05177",
+      "title": "CP-WSP: A Declarative CP-SAT Framework for Configurable Multi-Constraint Workforce Scheduling",
+      "authors": [
+        "Vipul Patel",
+        "Anirudh Deodhar",
+        "Dagnachew Birru"
+      ],
+      "abstract": "Workforce scheduling is an NP-hard combinatorial optimization problem requiring simultaneous satisfaction of labor regulations, coverage requirements, employee preferences and operational objectives. Existing CP formulations typically model simplified instances with 6-12 constraints at shift-level granularity and critically lack explicit support for: mandatory break scheduling with midpoint placement control; acuity weighted workload equity; sub-shift temporal granularity enabling demand-driven staffing; inter-week schedule stability; and cross-midnight shift patterns common in 24-hour operations. This paper presents CP-WSP: a declarative CP-SAT framework enforcing 14 hard constraints as mathematically inviolable requirements (zero regulatory violations by construction) while optimizing 15 soft objectives through a unified weighted penalty function -- all configurable via a JSON specification with no code changes required. Key contributions include: a shift-window variable decomposition enabling mandatory break scheduling with centrality control; acuity-weighted workload equity; multi-granularity temporal resolution from 30 minutes to 2 hours; inter-week schedule stability; a grid-offset preprocessing technique for cross-midnight shifts; and a reproducible 36-configuration benchmark suite for community comparison. Evaluated on INRC-II benchmarks at both hourly and shift-level granularity and on 36 synthetic configurations.",
+      "date": "2026-07-06",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2607.05177v1",
+      "tags": [
+        "cs.AI",
+        "scheduling",
+        "decomposition",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.05177",
+      "arxiv_id": "2607.05177v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.04949",
+      "title": "Sensitivity Sampling with Predictions for k-Means Clustering",
+      "authors": [
+        "Cristian Boldrin",
+        "Fabio Vandin"
+      ],
+      "abstract": "We study the problem of k-means clustering on large datasets. The state-of-the-art for the problem is given by coresets-based approaches, which build small weighted summaries of the input and derive approximate solutions with rigorous quality guarantees from them. One of the most popular and advanced approaches to derive coresets for k-means is sensitivity sampling. However, sensitivity sampling requires to compute the importance of each input point with respect to the whole dataset over all possible choices of centers. Since the exact computation of such quantities is unfeasible, current approaches work by approximating the sensitivity values. Nevertheless, the runtime of such approaches is still impractical for large datasets.   In this work, we propose to reduce the runtime of sensitivity-based approaches for k-means by leveraging predictions to approximate the importance of input points. We first formally prove that current theoretical results on coresets construction via sensitivity sampling hold for coarser approximations of sensitivities compared to the one required by existing approaches. This implies that even fairly noisy predictors can be leveraged for sensitivity-sampling approaches. We then propose a natural predictor, which applies to the common scenario where clustering is performed (over time) on a sequence of datasets from the same problem. We prove that when the datasets in the sequence come from the same (unknown) distribution, centers resulting in a low error on one dataset can be used as predictions for sensitivity sampling in subsequent datasets, with guarantees on their quality. We perform an extensive experimental evaluation showing that our approach significantly improves, in terms of clustering cost vs runtime, over uniform sampling and state-of-the-art sensitivity sampling approaches when applied to sequences of datasets.",
+      "date": "2026-07-06",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.04949v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.04949",
+      "arxiv_id": "2607.04949v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.05063",
+      "title": "Surrogate-based prioritization of sub-problems for Benders decomposition in energy planning",
+      "authors": [
+        "Wanhong Yu",
+        "Boyung Jürgens",
+        "Leonard Göke"
+      ],
+      "abstract": "Benders decomposition solves optimization problems by separating the first-stage master problem from one or more second-stage sub-problems. While the standard Benders decomposition solves all sub-problems in each iteration, solving only selected sub-problems still guarantees convergence and can reduce solution time, but raises the question of how to select.   In this work, we introduce surrogate-based prioritization of sub-problems. The method leverages surrogates to estimate the sub-problems' objectives, assess the current error of the cutting-plane estimator, and then prioritize the sub-problem with the largest error. We implement surrogate-based prioritization within sequential and asynchronous Benders decomposition. Both these algorithms also leverage the surrogate to trigger convergence checks and implement regularization.   Benchmarks for an energy planning problem with a few large sub-problems show that the applied prioritization strategy works. The reduction in solution time correlates with the surrogate's accuracy. In our case, geometric interpolation-based surrogates are more accurate than machine learning methods. As a result, prioritization consistently and significantly outperforms the standard algorithm in sequential Benders decomposition. The speed-up increases with the number of scenarios, reaching 33\\% with four scenarios and 55% with ten scenarios. In the case of asynchronous parallelization, the impact on performance is less clear, and the average speed-up from prioritization is 19%.",
+      "date": "2026-07-06",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2607.05063v1",
+      "tags": [
+        "eess.SY",
+        "stochastic",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.05063",
+      "arxiv_id": "2607.05063v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s12532-026-00312-7",
+      "title": "Fix-and-propagate heuristics using low-precision first-order LP solutions for large-scale mixed-integer linear optimization",
+      "authors": [
+        "Kempke, N.",
+        "Koch, T."
+      ],
+      "abstract": "Abstract\n                  We investigate the use of low-precision first-order methods (FOMs) within a fix-and-propagate (FP) framework for solving mixed-integer programming problems (MIPs). We employ GPU-accelerated PDLP, a variant of the Primal-Dual Hybrid Gradient (PDHG) method specialized to LPproblems, to solve the LP-relaxation of our MIPsto low accuracy. This solution is used to motivate fixings within our FPframework. We evaluate the performance of our heuristic on MIPLIB2017, demonstrating that low-accuracy LPsolutions do not lead to a loss in the quality of the FPheuristic solutions. Further, we use our FPframework to produce high-accuracy solutions for large-scale (up to 243 million nonzeros and 8 million decision variables) unit commitment-based dispatch and expansion planning problems created with the modeling framework REMix. For the largest problems, we can generate solutions with a primal-dual gap of under 2% in less than 4 hours, whereas state-of-the-art commercial solvers cannot produce feasible solutions within 2 days of runtime.",
+      "date": "2026-07-06",
+      "source": "Mathematical Programming Computation",
+      "source_detail": "Mathematical Programming Computation",
+      "url": "https://doi.org/10.1007/s12532-026-00312-7",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s12532-026-00312-7",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07338-z",
+      "title": "Resilient seasonal supply chain analytics using data science and machine learning: pediatric vaccine case study",
+      "authors": [
+        "Gharedaghi, M.",
+        "Nemati, A.",
+        "Arasteh, A."
+      ],
+      "abstract": "",
+      "date": "2026-07-06",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07338-z",
+      "tags": [
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07338-z",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.05057",
+      "title": "Multi Impulse Low Earth Orbit Maneuver Synthesis Through Thrust Measure Primer Vector Conditions and Piecewise Multiple Shooting",
+      "authors": [
+        "Pedro Kuntz Puglia",
+        "Willer Gomes dos Santos",
+        "Emilien Flayac"
+      ],
+      "abstract": "This work sets out to apply primer vector theory to optimal impulse maneuvers in Low Earth Orbit (LEO) and adapt it to the types of perturbations encountered in this environment, which is not readily available in the literature. A review of the theory of optimal control and orbital maneuvering is made and in particular, primer vector theory is laid out in detail based on the extension of the thrust control to a measure, including its generalization to conservative and non-conservative perturbation models. An impulsive multiple shooting optimization scheme in Cartesian coordinates is presented, through a piecewise approach to the problem. Then, some maneuver scenarios with known solutions under the Keplerian model are solved under perturbed orbital dynamics with the help of the primer vector, and the resulting trajectories are compared. The perturbation models include a J2 model, representing the class of conservative perturbations by modeling Earth's nonspherical gravity field, and a J2+Drag model, representing the class of non-conservative perturbations by including the effects of atmospheric drag in LEO\\@. For each model, some valid methods of primer vector calculation have been tried and validated between each other, and the primer vector is proven to be a useful tool in reducing the cost of orbital maneuvers.",
+      "date": "2026-07-06",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2607.05057v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.05057",
+      "arxiv_id": "2607.05057v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.04585",
+      "title": "Infinite Drive: Optimal Urban Location of Dynamic Wireless Charging at Signalized Intersections",
+      "authors": [
+        "Yudai Honma",
+        "Daisuke Hasegawa",
+        "Katsuhiro Hata",
+        " Xuesong",
+        " Zhou",
+        "Michael J. Kuby",
+        "Takashi Oguchi"
+      ],
+      "abstract": "Dynamic Wireless Power Transfer (DWPT) could eliminate plug-in charging in cities, but optimal urban deployment is complex. This paper develops a mixed-integer programming model that optimizes DWPT location under signalized intersection dynamics -- acceleration, deceleration, and queue-position-dependent dwell time -- through probabilistic signal patterns and saturation headway-based modeling. A case study of Kawagoe City, Japan, shows that electrifying 1.5% of the road network is sufficient to sustain continuous urban EV operation without plug-in charging for the baseline scenario, and at most 2.9% suffices across all tested assumptions. Monte Carlo simulations of continuous trip chains averaging approximately 600 km and reaching up to approximately 800 km confirm that optimized 12 kWh-battery deployments sustain operation in all simulated runs, revealing an infrastructure-battery tradeoff corresponding to roughly 1.7-3.0 tonnes CO2e of avoided battery manufacturing emissions per vehicle relative to a conventional 40 kWh urban EV. These findings position DWPT deployment as an environmentally efficient pathway for sustainable urban mobility when deployed optimally.",
+      "date": "2026-07-06",
+      "source": "arXiv",
+      "source_detail": "physics.soc-ph",
+      "url": "http://arxiv.org/abs/2607.04585v1",
+      "tags": [
+        "physics.soc-ph",
+        "integer-programming",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.04585",
+      "arxiv_id": "2607.04585v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.05393",
+      "title": "Interpretable Human-Label-Free Deep Learning for Real-Bogus Classification with Uncertainty Quantification",
+      "authors": [
+        "Raphaël Bonnet-Guerrini",
+        "Bruno Sanchez",
+        "Dominique Fouchez",
+        "Benjamin Racine",
+        "Maya Guy",
+        "Mariam Sabalbal",
+        "Manal Yassine",
+        "Vincenzo Piuri"
+      ],
+      "abstract": "Time-domain surveys generate many transient candidates, making Real-Bogus classification a critical step in automated discovery pipelines. Reliable labels are costly, while community labels can be noisy and survey-dependent. We aim to develop a Real-Bogus classification framework that can be trained without human-labeled data using injected transients and bogus-dominated survey data, remains robust under strong class contamination, and provides calibrated uncertainty quantification. We combine simulated transient injections with a contaminated survey class and train a dual-network model using asymmetric co-teaching for classes with different label-noise levels. We evaluate performance on a benchmark subset and analyze the learned representation with latent-space visualization tools. For uncertainty quantification (UQ), we compare MC dropout and deep ensembles and propose a low-cost hybrid strategy that exploits the dual-network setting to improve calibration. We extend the evaluation to the light-curve domain to assess recovery of light-curve classes. The method achieves strong Real-Bogus performance on the labeled subset and remains stable under severe class contamination. It recovers transient light-curve classes with high fidelity, while single-source identification is limited by ambiguity in light-curve-derived labels. Our hybrid UQ approach achieves competitive calibration relative to more expensive ensemble baselines. Latent-space analyses indicate that uncertainty aligns with the decision boundary and reveal subclasses within the bogus population. Our results show that injection-driven, weakly supervised training can enable scalable and consistent Real-Bogus classification without human-labeled training data while providing calibrated uncertainties. The method is suited for transfer to forthcoming surveys by re-running the injection-based training pipeline.",
+      "date": "2026-07-06",
+      "source": "arXiv",
+      "source_detail": "astro-ph.IM",
+      "url": "http://arxiv.org/abs/2607.05393v1",
+      "tags": [
+        "astro-ph.IM",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.05393",
+      "arxiv_id": "2607.05393v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 14
+  }
+}
