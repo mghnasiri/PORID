@@ -1,0 +1,433 @@
+{
+  "date": "2026-07-08",
+  "generated_at": "2026-07-08T09:33:18.958353+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2607.06531",
+      "title": "The Large Cancer Assistant (LCA): A Model-Agnostic Orchestration Framework for Scalable Clinical Decision Support in Oncology",
+      "authors": [
+        "Ghassen Marrakchi",
+        "Basarab Matei"
+      ],
+      "abstract": "- Objective: Multimodal deep learning models in oncology are currently limited by monolithic designs that rigidly couple data ingestion, clinical routing, and artificial intelligence (AI) inference. To address this inflexibility, we propose the Large Cancer Assistant (LCA), a model-agnostic, post-hoc orchestration framework designed for scalable clinical decision support. - Methods: The LCA is mathematically formalized as a 7-tuple architecture grounded in the principle of Algorithmic Impermeability, ensuring the orchestration logic remains strictly independent of underlying black-box AI models. We introduce the Entry Theory, leveraging Geometric Deep Learning (GDL) to standardize multimodal patient data along distinct structural and medical axes. The system dynamically orchestrates data via a Cancer Switching Module and intentionally isolates the core AI execution from volatile hospital IT infrastructures by outputting a Standardized Intermediate Payload (SIP). - Results: A Proof of Concept (PoC) validated the orchestration logic across four technical scenarios. The framework executed a nominal flow with negligible orchestration overhead. It empirically demonstrated algorithmic impermeability by maintaining an invariant routing projection during AI model swaps, and it validated strict failure-safety by achieving a 100\\% recall rate in generating targeted Supplementary Data Requests (SDR) under injected data anomalies. Multi-protocol execution capability was also successfully verified. - Conclusion: By structurally decoupling multimodal ingestion from feature inference, the LCA provides a highly adaptable and modular orchestration foundation. The SIP establishes a clear architectural boundary, natively setting the stage for downstream Electronic Medical Record (EMR) interoperability as an independent future paradigm.",
+      "date": "2026-07-07",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2607.06531v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.06531",
+      "arxiv_id": "2607.06531v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.06435",
+      "title": "Finding H. pylori in the Fine Print: Evidence-Linked Multi-Agent Case Finding from Gastric Biopsy Reports",
+      "authors": [
+        "Yufan Wang",
+        "Anit Kumar Sahu",
+        "Yan Fei Ng",
+        "Daniel Kang",
+        "Shayan Vassef",
+        "Soorya Ram Shimgekar",
+        "Koustuv Saha",
+        "Piyum Zonooz",
+        "Navin Kumar",
+        "Chee Leong Cheng",
+        "Li Yan Khor"
+      ],
+      "abstract": "Data from Singapore indicated that about 31% of the population had evidence of Helicobacter pylori infection. Persistent H. pylori infection is associated with chronic active gastritis and peptic ulcer disease, and its eradication is key to gastric cancer prevention. However, evidence supporting \\textit{H. pylori} positivity and H. pylori-associated gastritis may be distributed across heterogeneous coded and free-text report fields and may require contextual interpretation of assertion and negation, limiting keyword search, and making manual review difficult to scale. We conducted a retrospective pilot evaluation of the Nimblemind Multi-Agent System (nMAS), a field-name-driven, evidence-linked extraction workflow, using 54 de-identified gastric biopsy pathology reports from a large healthcare system in Singapore. Four clinician-scoped binary fields were evaluated: gastric/stomach biopsy, biopsy status, H. pylori positivity, and H. pylori-associated gastritis. Across 216 feature-case decisions, nMAS correctly classified 213, corresponding to 98.61% overall accuracy. A separately implemented UMA-style MiniMax M2.5 comparator produced similar aggregate and per-field classification metrics. Although predictive performance was similar, nMAS maintained unified report-level outputs with supporting source sentences; the demonstrated contribution is therefore workflow integration and traceability rather than predictive superiority. Under an illustrative, unmeasured scenario, reviewing 1,000 reports at five minutes per manual review versus five seconds per evidence-linked verification would reduce review time from 83.3 to 1.4 staff-hours, corresponding to 81.9 staff-hours and about USD~6,100 in potential staff-time value. Larger multi-institutional studies should evaluate evidence-span correctness, clinician verification time, and generalizability.",
+      "date": "2026-07-07",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2607.06435v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.06435",
+      "arxiv_id": "2607.06435v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.06388",
+      "title": "Learning to Throw Objects Safely in Multi-Obstacle Environments",
+      "authors": [
+        "Mohammadreza Kasaei",
+        "Klemen Voncina",
+        "Hamidreza Kasaei"
+      ],
+      "abstract": "Robotic throwing enables fast and efficient object placement beyond the robot's immediate workspace, but reliable throwing in cluttered environments remains underexplored. Existing approaches, such as TossingBot, learn throwing strategies from visual input but assume obstacle-free settings. In this paper, we address the problem of throwing objects into a target basket while avoiding obstacles placed randomly in the scene. We introduce a potential field state representation that compactly encodes both basket attraction and obstacle repulsion on a fixed-size grid, enabling reinforcement learning (RL) policies to generalize across arbitrary numbers and configurations of obstacles. The policy is initialized from kinesthetic demonstrations and optimized in simulation using three state-of-the-art RL algorithms (SAC, DDPG, TD3). Among these, SAC achieves the most consistent performance across scenarios. We compare the potential field representation against explicit state encodings and demonstrate that it achieves higher success rates and better scalability to unseen obstacle configurations. Real-robot experiments with unseen throwable objects confirm robust sim-to-real transfer, achieving up to $90\\%$ success in cluttered scenes. These results demonstrate that PFR provides a practical and robust representation for safe and efficient robotic throwing in unstructured environments. A video showcasing our experiments is available at: https://youtu.be/ZZnJf8ua2dE",
+      "date": "2026-07-07",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2607.06388v1",
+      "tags": [
+        "cs.RO",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.06388",
+      "arxiv_id": "2607.06388v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.06535",
+      "title": "Neural-ESO: A Dual-Pathway Architecture for Provably Robust Learning-Based Control",
+      "authors": [
+        "Fan Zhang",
+        "Richie Suganda",
+        "Jinfeng Chen",
+        "Wenhua Liu",
+        "Hantao Fu",
+        "Bin Hu",
+        "Qin Lin"
+      ],
+      "abstract": "A learning-enabled disturbance-rejection framework based on a Neural Extended State Observer (Neural-ESO) is presented in this letter. Unlike existing learning-based control methods that largely rely on the learned model once deployed, Neural-ESO adopts a dual-pathway architecture: a predictive pathway uses a neural network to provide a feedforward disturbance estimate that accelerates convergence, while a corrective pathway employs a conventional ESO to compensate prediction errors and prevent over-reliance on the neural component. Using Lyapunov theory and a small-gain analysis, we show that enforcing a Lipschitz bound on the learning component guarantees uniform ultimate boundedness of the closed-loop error dynamics. The proposed framework is validated on a quadrotor landing task subject to strong ground-effect disturbances across normal and out-of-distribution scenarios, demonstrating accuracy-robustness trade-off and greater operational reliability during training, deployment, and transfer compared with state-of-the-art baselines.",
+      "date": "2026-07-07",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2607.06535v1",
+      "tags": [
+        "cs.RO",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.06535",
+      "arxiv_id": "2607.06535v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.06087",
+      "title": "A Decomposition-Based Framework for Joint Optimization and Spatial Packaging of Interconnected Systems with Physical Interactions",
+      "authors": [
+        "Julien Bückmann",
+        "Jorn van Kampen",
+        "Theo Hofman"
+      ],
+      "abstract": "This paper presents an approach and application of optimization of spatial packaging of interconnected systems with physical interactions (SPI2) in three-dimensional component placement problems. To enable its application for an automotive use case, SPI2 must support both initial design generation, including component alignment, and robust system-level coordination, requiring improved solution reliability and tractable computational cost. To address these requirements, the proposed methodology improves convergence rate and solution quality by enhancing numerical robustness in gradient-based optimization while reducing computational load. Existing SPI2 approaches are extended through the addition of alignment capabilities, enabling the representation of port-to-port alignments between components. Furthermore, the applicability of SPI2 is expanded by treating component placement locations as design variables, allowing for penalty-based coordination to ensure design feasibility and enabling integration within system-level optimization. The approach is validated using a multi-objective optimization framework based on Nondominated Sorting Genetic Algorithm II (NSGA-II), applied to a combined powertrain optimization and battery chassis integration problem. This demonstrates the effectiveness of the SPI2 in a system-level design context. The results show a twofold application of SPI2 in an automotive use case: first, as a tool for initial design generation, and second, as part of a system-level design coordinator that outperforms a discretized exhaustive search while requiring lower computational cost.",
+      "date": "2026-07-07",
+      "source": "arXiv",
+      "source_detail": "cs.CE",
+      "url": "http://arxiv.org/abs/2607.06087v1",
+      "tags": [
+        "cs.CE",
+        "metaheuristics",
+        "multi-objective",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.06087",
+      "arxiv_id": "2607.06087v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2024.0847",
+      "title": "Online Fair Allocation of Perishable Resources",
+      "authors": [
+        "Banerjee, S.",
+        "Hssaine, C.",
+        "Sinclair, S."
+      ],
+      "abstract": "Fair Allocation with Perishable Resources\n                  Food banks, blood banks, and vaccine programs routinely face a hard operational question: How can scarce supplies be distributed fairly and efficiently when tomorrow’s need is uncertain and today’s inventory may expire? In “Online Fair Allocation of Perishable Resources,” Sid Banerjee, Chamsi Hssaine, and Sean R. Sinclair study this problem in a setting where a decision maker must allocate a limited budget of perishable resources over time to stochastically arriving demand. The goal is to construct allocations that balance two competing objectives: fairness, where individuals receive similar allocations over time, and efficiency, where the available supply of goods is not wasted. The paper shows that perishability fundamentally alters the achievable fairness-efficiency Pareto frontier, relative to settings where resources do not expire. The authors first derive lower bounds characterizing the unavoidable perishing-induced loss incurred by any algorithm; this loss drives the modified frontier. They then design an algorithm that provably matches this Pareto frontier, up to polylogarithmic factors. The algorithm uses forecasts of future demand and perishing to adaptively choose between two guardrail quantities that control allocation decisions. Simulations calibrated to real-world data show strong performance and demonstrate that perishing-agnostic methods can perform poorly.",
+      "date": "2026-07-07",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2024.0847",
+      "tags": [
+        "supply-chain",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2024.0847",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.06532",
+      "title": "GraphBU: MILP Instance Generation with Graph-Native Block Units",
+      "authors": [
+        "Xiaolei Guo",
+        "Chenyu Zhou",
+        "Jianghao Lin",
+        "Dongdong Ge"
+      ],
+      "abstract": "Mixed-integer linear programming (MILP) instances used for solver development are hard to obtain when models come from private or application-specific pipelines. A generator must keep the structure that solvers and learned policies rely on. Existing general generators usually choose their generation unit from a formulation template, summary statistics, local graph edits, or blocks found after recombination. These units do not explicitly record how a local part of the MILP is coupled to the rest of the instance. We propose GraphBU, a graph-native generator whose basic unit is a local subproblem plus its interface. The method promotes coupling nodes into master constraints or boundary variables and uses the resulting block units for compatibility-checked replacement. The analysis focuses on the properties needed by this construction: promotion separates interfaces, replacement can preserve feasibility under an interface-slack condition, and the graph construction is invariant to row-column permutations. On MILP instances generation, this unit keeps graph statistics close to the source family, preserves feasibility on most datasets, and improves downstream Predict-and-Search training. Genrated by GraphBU, The average graph-statistical similarity was approximately 0.934, the average feasibility was approximately 96.7%, and the average increase in the main index of downstream PS was approximately 8.0%.",
+      "date": "2026-07-07",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.06532v1",
+      "tags": [
+        "cs.LG",
+        "linear-programming",
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.06532",
+      "arxiv_id": "2607.06532v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.06316",
+      "title": "Does Financial Trading Smooth Non-Convex Markets?",
+      "authors": [
+        "Nicolas Stevens",
+        "Peter Cramton",
+        "Martial Toniotti"
+      ],
+      "abstract": "In non-convex markets, a competitive equilibrium may fail to exist. This turns out to be an important issue in real-world non-convex auction markets, such as electricity markets, as it complicates pricing and requires the auctioneer to resort to out-of-market discriminatory side payments to sustain an equilibrium. We investigate whether the introduction of convex financial trading induces a smoothing effect, mitigating the issues arising from non-convexities. We develop a two-stage non-convex market model (a forward market followed by a spot market) in which convex financial traders participate in the forward market. Our model predicts that financial trading reduces the magnitude of side payments required to support the cleared allocation. To test the prediction of our model, we examine the introduction of a transaction fee on financial traders in 2020 by PJM, the US's largest electricity market. We show that the substantial decline in financial trading volume caused by this policy coincided with a significant increase in side payments, in line with our theoretical predictions.",
+      "date": "2026-07-07",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2607.06316v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.06316",
+      "arxiv_id": "2607.06316v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.05731",
+      "title": "Distributionally Robust Optimization via Targeted Integral Probability Metrics for General Data Processes",
+      "authors": [
+        "Lanran Fang",
+        "Jianqiang Cheng",
+        "Grani A. Hanasusanto",
+        "Yijie Wang"
+      ],
+      "abstract": "Distributionally robust optimization (DRO) provides a principled framework for decision-making under distributional uncertainty. Classical data-driven DRO frameworks typically construct ambiguity sets from distributional information, such as moment constraints, divergence neighborhoods, or Wasserstein balls, specified before the downstream loss is considered. We propose a task-aware DRO framework based on targeted integral probability metrics. The ambiguity set is defined directly through the loss functions induced by feasible decisions, thereby controlling the loss discrepancy between an adversarial distribution and a data-driven reference distribution. This construction leads to an expected hinge-constrained formulation that is equivalent to an infinitely constrained loss-discrepancy formulation. It also yields finite-sample guarantees that bypass the ambient curse of dimensionality: whenever an appropriate scalar pointwise concentration inequality is available for the induced loss estimator, the ambiguity radius can be calibrated at the canonical $\\widetilde{\\mathcal O}(N^{-1/2})$ rate after uniformization over the decision class. As a result, the framework applies broadly to settings including heavier-tailed sub-Weibull losses, Markovian data, outlier-corrupted data, and incomplete data. We derive exact infinite-dimensional dual reformulations, establish out-of-sample and excess-risk guarantees, and develop a conservative Monte Carlo approximation scheme with convergence and suboptimality guarantees. For piecewise affine losses, the sampled problems admit tractable conic reformulations. Numerical experiments in inventory management under heavy-tailed demand and regression with outlier corruption demonstrate strong out-of-sample performance relative to existing approaches.",
+      "date": "2026-07-07",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2607.05731v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.05731",
+      "arxiv_id": "2607.05731v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.06489",
+      "title": "Multi-Agent Deep Reinforcement Learning for Multi Objective Battery Management in Dairy Farms",
+      "authors": [
+        "Marcos Eduardo Cruz Victorio",
+        "Karl Mason"
+      ],
+      "abstract": "The dairy industry in Ireland has a large potential for the integration of renewable energy and the reduction of carbon emissions. However, researchers of distributed generation control are mainly focused on residential and commercial applications. To contribute to the effective integration of renewable energy in the dairy sector, this paper presents a multi-objective optimisation control system based on differential evolution and multi agent Deep Reinforcement Learning. The proposed control is organised in two layers: the upper layer uses dynamic pricing, and the lower layer is based on multi-agent reinforcement learning for battery management. This paper also simulates the electrical response of the proposed control system in a rural distribution circuit. The simulation results show that the proposed control framework can improve profits from energy arbitrage up to 18% compared to using Rule-based models, increase the use of distributed generation without significantly increasing cost, and comply with the Irish grid code in terms of voltage variation.",
+      "date": "2026-07-07",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2607.06489v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.06489",
+      "arxiv_id": "2607.06489v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 14
+  }
+}
