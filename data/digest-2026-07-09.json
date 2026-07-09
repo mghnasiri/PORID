@@ -1,0 +1,422 @@
+{
+  "date": "2026-07-09",
+  "generated_at": "2026-07-09T10:34:01.707422+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2607.07343",
+      "title": "Latency-Aware Bid Acceptance under Operational Feasibility: A Public Benchmark with Hindsight Ceilings",
+      "authors": [
+        "Aswin Chandrasekaran"
+      ],
+      "abstract": "Online truckload bid acceptance is a closed-loop stochastic decision problem in which a carrier or broker must, in real time, accept or reject a tendered load subject to operational feasibility, fleet repositioning costs, and opportunity cost against future demand. Public, reproducible benchmarks for this problem are scarce: existing routing benchmarks are static, while dynamic-fleet studies typically rely on private operator data. We introduce FreightBidBench, a public-calibrated, dependency-free, closed-loop benchmark in which feasibility (pickup reach, appointment windows, simplified hours-of-service, stochastic yard delays) and economics (service-failure penalty, terminal fleet value, daily price-premium window) are explicit, versioned, and reproducible from public Freight Analysis Framework and U.S. Department of Agriculture truck rate data. We develop two full-horizon hindsight ceilings: a simple LP style relaxation and a tighter Lagrangian-per-truck information relaxation that retains per-truck hours-of-service and sequencing structure and is 20.7% tighter than the LP relaxation on a tight-capacity scenario and 39.3% tighter on a scarce-capacity scenario. We introduce a parametric surrogate-rollout cascade with boundary-band and scarcity-pressure escalation triggers. On ten-seed tight and scarce scenarios, the best simple policy retains 91.0% and 86.5% of rollout profit and the standard-library surrogate 94.2% and 89.3%; a cascade at a single escalation band recovers roughly 98% on both at 40-56% of rollout's mean decision latency, and on the tight scenario is statistically indistinguishable from the rollout teacher (paired-bootstrap 95% CI on the profit delta spans zero).",
+      "date": "2026-07-08",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.07343v1",
+      "tags": [
+        "cs.LG",
+        "linear-programming",
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.07343",
+      "arxiv_id": "2607.07343v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.06935",
+      "title": "Mathematical methods of reinforcement learning",
+      "authors": [
+        "Denis Belomestny",
+        "Alexander Gasnikov",
+        "Egor Gladin",
+        "Alexey Naumov",
+        "Artemy Rubtsov",
+        "Yuri Sapronov",
+        "Daniil Tiapkin",
+        "Nikita Yudin"
+      ],
+      "abstract": "Reinforcement learning (RL) is increasingly grounded in tools from probability, optimization, and operator theory. This survey organizes the mathematical structures that underpin the design and analysis of modern algorithms in RL. We begin from Markov decision processes (MDPs) and the Bellman operators, emphasizing contraction mappings, monotonicity, and fixed-point theory that yield convergence guarantees and rates for value and policy iteration, and temporal-difference schemes. We then develop the optimization perspective: stochastic approximation and martingale methods, convex duality and the role of regularization linking mirror/proximal methods. Function approximation is treated through linear and non-linear settings, covering stabilization, error decomposition, and sample-complexity via concentration inequalities for dependent data and mixing processes. We further cover off-policy evaluation/learning, constrained RL and constrained MDPs (CMDPs). Throughout we unify algorithmic templates under common operator and variational lenses, highlighting both finite-sample bounds and asymptotic results. Our presentation is intended to provide a unified mathematical entry point for researchers in probability, optimization, and statistics interested in reinforcement learning.",
+      "date": "2026-07-08",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2607.06935v1",
+      "tags": [
+        "math.OC",
+        "ml-for-or",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.06935",
+      "arxiv_id": "2607.06935v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.07500",
+      "title": "TimEE: End-to-end Time Series Classification via In-Context Learning",
+      "authors": [
+        "Jaris Küken",
+        "Shi Bin Hoo",
+        "Martin Mráz",
+        "Frank Hutter",
+        "Lennart Purucker"
+      ],
+      "abstract": "Time series classification (TSC) is dominated by a two-stage paradigm: train a feature encoder -- either from scratch on the target dataset or via pretraining on large corpora -- and then fit a task-specific classifier on top. While effective, this decoupling optimizes representation learning independently of the classification objective, requires per-dataset training, and prevents the model from exploiting label information during inference. We introduce TimEE, a 4.5M-parameter foundation model for end-to-end TSC via in-context learning. Given a labeled support set and a query time series, TimEE directly outputs a predicted class distribution in a single forward pass with no per-dataset training required. Following the prior-data fitted network (PFN) framework, TimEE is meta-trained exclusively on synthetic TSC tasks, where each task contains time series with distinct class identities arising from structured distributional shifts in the generative process. Despite seeing no real time series during pre-training, TimEE ranks first in ROC AUC (and third on accuracy) on the UCR benchmark among all compared methods, which include both foundation models and supervised deep learning baselines. To our knowledge, TimEE is the first purely synthetic-pretrained model to reach state-of-the-art performance on the UCR benchmark. These results establish end-to-end ICL with synthetic priors as a compelling, largely unexplored direction for TSC, with scaling, prior design, and richer generation mechanisms as natural avenues for improvement. Code is publicly available at http://github.com/automl/timee.",
+      "date": "2026-07-08",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.07500v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.07500",
+      "arxiv_id": "2607.07500v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07329-0",
+      "title": "Maximising Entertainment in the Score Reveal Problem",
+      "authors": [
+        "Fowler, A.",
+        "Booth, R."
+      ],
+      "abstract": "Abstract\n                  In many elections or competitions, a set of voters assign scores to the candidates in a way that indicates their preferences, with the winning candidate being the candidate with the highest total score. When it comes to revealing the result after all votes have been cast, some competitions proceed by having a roll call where each voter announces their vote in turn. This is often done for entertainment purposes, leading to the introduction of the score reveal problem: Which ordering of the voters should be chosen to maximise the entertainment utility of the roll call? We define several entertainment measures and consider their properties, motivated by considerations such as avoiding early resolution of the outcome, focusing attention on the leading candidates, and catering towards preferences for surprise or suspense. We compare several approaches for finding optimal solutions, demonstrating that entertainment measures can be applied and solved effectively in a realistic context and comparing the hardness of optimising different entertainment measures on various voting formats. We also identify cases where instances are degenerate, meaning that all solutions according to a given measure have the same score.",
+      "date": "2026-07-08",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07329-0",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07329-0",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.07637",
+      "title": "An optimal control approach for neural network architecture adaptation with a posteriori error estimation",
+      "authors": [
+        "C G Krishnanunni",
+        "Thomas Scott",
+        "Tan Bui-Thanh"
+      ],
+      "abstract": "This work presents a novel approach for adapting neural network architecture along the depth based on a posteriori error estimation. By formulating neural network training as a continuous-time optimal control problem, we derive rigorous error estimates that quantify how approximation error distributes across network layers. This error decomposition enables a principled depth adaptation strategy: new layers are inserted at locations of maximum estimated error, allowing the network to efficiently capture complex, nonlinear variations in the underlying problem. Our framework introduces a novel network architecture that treats weights and biases as piecewise linear functions varying across layers, with the error estimator bounding the discrepancy between this discrete representation and the true continuous optimal control solution. The approach leverages dual weighted residual methodology from finite element analysis to derive computable upper bounds on the functional error. A key theoretical contribution is the derivation of explicit error bounds that decompose the total approximation error into interval-wise contributions, providing a rigorous basis for targeted architecture refinement. We demonstrate the effectiveness of our method on scientific datasets, including learning the observable-to-parameter map for the Navier-Stokes equation. Numerical results reveal that our approach consistently outperforms existing architecture adaptation methods in terms of generalization performance.",
+      "date": "2026-07-08",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.07637v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.07637",
+      "arxiv_id": "2607.07637v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.07289",
+      "title": "Bayesian Optimization of Genetic Algorithm Hyperparameters in a Multi-Fidelity Framework for Efficient Lattice Material Design",
+      "authors": [
+        "Sergei Zorkaltsev",
+        "Maciej Haranczyk",
+        "Christina Schenk"
+      ],
+      "abstract": "This study presents a multi-fidelity framework for the systematic optimization of genetic algorithm (GA) hyperparameters. The framework integrates three fidelity levels: high-fidelity Fast Fourier Transform (FFT) homogenization for validation, a medium-fidelity 3D convolutional neural network surrogate for rapid property evaluation, and a low-fidelity Gaussian process (GP) surrogate within a Bayesian optimization (BO) framework to guide the hyperparameter search. Various acquisition functions are evaluated, with logNEI achieving the best performance by effectively accounting for the noise inherent in GA evaluations. The proposed framework identifies hyperparameter configurations that enable a 25-generation GA run to achieve elastic modulus values comparable to those obtained in a full 75-generation optimization. Furthermore, introducing a penalized BO objective significantly reduces the number of required lattices with only minor decreases in absolute achieved elastic modulus, revealing a practical trade-off between performance and the number of structures that must be evaluated. High-fidelity FFT validation verifies the effectiveness of the surrogate-driven optimization strategy. The optimized hyperparameters allow for rapid convergence, eliminate the need for lattice mutation, and reduce the overall computational cost by 24% (from 225 to 171 hours) while preserving mechanical performance. These results demonstrate the potential of multi-fidelity optimization as an efficient and practical approach for GA hyperparameter tuning and future experimental lattice design studies.",
+      "date": "2026-07-08",
+      "source": "arXiv",
+      "source_detail": "cond-mat.mtrl-sci",
+      "url": "http://arxiv.org/abs/2607.07289v1",
+      "tags": [
+        "cond-mat.mtrl-sci",
+        "metaheuristics",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.07289",
+      "arxiv_id": "2607.07289v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.07206",
+      "title": "Geometric--Nongeometric Optimizer Calculus: A Modular Language for Reachable Gradient Methods",
+      "authors": [
+        "Zavier Li"
+      ],
+      "abstract": "Adaptive optimizers mix several mechanisms: a metric or preconditioner maps gradients to descent directions, while estimation, memory, step-size control, constraints, stochasticity, target modification, and discretization determine which directions are available and how they are used. We introduce geometric--nongeometric optimizer calculus, a modular language for auditing reachable gradient methods under explicit oracle, budget, state, and rule constraints. The geometric module is a positive cometric family that maps covectors to parameter-space directions; the nongeometric modules are information, memory, control, operator, noise, target, and discretization mechanisms. The main formal result is a direction-expressivity theorem: away from critical points, full positive-definite geometry expresses exactly the strict descent directions. We then define restricted direction residuals for admissible metric families, prove exact expressivity conditions for diagonal and block geometries, and separate this direction-level diagnostic from condition-number geometric complexity. The resulting design problem is a Pareto optimization over module budgets, not a single universal optimizer ordering. We also lift pointwise residuals to a trajectory-level residual complexity that couples direction mismatch with the variation of the explaining geometry. We include diagnostic prototypes only as evidence for the language: a high-information full-metric probe solves deterministic quadratic benchmarks to numerical precision, while a practical Muon-style PyTorch candidate gives small-scale evidence that matrix-operator updates can be audited by the calculus. The paper is a theory and benchmark-language manuscript; it does not claim large-scale optimizer state-of-the-art performance.",
+      "date": "2026-07-08",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.07206v1",
+      "tags": [
+        "cs.LG",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.07206",
+      "arxiv_id": "2607.07206v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2607.07690",
+      "title": "Agon: Competitive Cross-Model RL with Implicit Rival Grading of Reasoning",
+      "authors": [
+        "Vladislav Beliaev"
+      ],
+      "abstract": "Reinforcement learning from verifiable rewards (e.g. GRPO) is the engine behind today's reasoning models, yet it grades only the final answer. On hard problems this trains models to write more rather than to think better, since the trace itself is never graded and no label for good thinking exists. We introduce Agon, which makes two competing models each other's graders. Both attempt the same problem; in alternating roles, one drafts a solution and the other reads it while solving, and each is rewarded for out-solving the other. To win, a model must out-reason a rival that has seen its work, so reasoning is judged implicitly during training, with no process labels and no reward model. Because both models are optimized, each faces a progressively stronger rival, which single-model RL cannot provide. The two need only be comparably strong and behaviorally different. At inference the pair deploys as it trains, a two-stage cascade in which one model drafts and the other answers after reading the draft. On the hard split of DeepMath with Qwen3, this doubles GRPO's pass@1, roughly eight times the gain of an untrained Mixture-of-Agents pass over the same base. The ordering replicates on competitive-programming code and across model families (Qwen3.5, Gemma 4). For now the models talk in text; the next step is to let them reason together in latent space.",
+      "date": "2026-07-08",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.07690v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.07690",
+      "arxiv_id": "2607.07690v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.07640",
+      "title": "ALER-TI: Aligned Latent Embedding Retrieval for Time Series Imputation",
+      "authors": [
+        "Xuan-Thong Truong",
+        "Trung-Kien Le",
+        "Tung Kieu",
+        "Thi-Thu Nguyen",
+        "Nhat-Hai Nguyen"
+      ],
+      "abstract": "Deep learning has significantly advanced time series imputation, yet most existing architectures primarily rely on localized temporal context within the corrupted input sequence. This reliance can be limiting in real-world scenarios, where time series often exhibit non-stationary dynamics, weak temporal correlations, and infrequent patterns that are difficult to reconstruct from nearby observations alone. In this paper, we propose ALER-TI, Aligned Latent Embedding Retrieval for Time Series Imputation, a retrieval-augmented framework that explicitly leverages historical patterns to supplement degraded local context for more reliable missing-value reconstruction. The core of ALER-TI is Latent Embedding Alignment (LEA), which mitigates the representation mismatch between corrupted queries and complete historical candidates. By applying post-hoc masking in the latent space, LEA aligns candidates with the query's missingness pattern while allowing historical embeddings to be pre-computed and cached for efficient retrieval. ALER-TI is model-agnostic and can be integrated with various imputation backbones through a lightweight adaptation module. Extensive experiments on six real-world datasets under different missing rates demonstrate that ALER-TI consistently improves strong baseline models and enhances robustness across diverse imputation settings.",
+      "date": "2026-07-08",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.07640v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.07640",
+      "arxiv_id": "2607.07640v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.07471",
+      "title": "Where to Intervene? Benchmarking Fairness-Aware Learning on Differentially Private Synthetic Tabular Data",
+      "authors": [
+        "Vinícius Gabriel Angelozzi",
+        "Héber H. Arcolezi"
+      ],
+      "abstract": "Machine learning models are increasingly deployed in high-stakes domains, raising concerns about both privacy and fairness. Differential Privacy (DP) has become a gold standard for privacy-preserving data analysis, while fairness-aware mechanisms aim to mitigate discrimination against underrepresented groups. However, these objectives can conflict: DP often amplifies disparities across demographic groups, and little is known about whether established fairness interventions remain effective under DP constraints. In this work, we present, to our knowledge, the first systematic evaluation of fairness interventions on differentially private synthetic tabular data. Our benchmark centers on the Adaptive Iterative Mechanism (AIM), identified as the state-of-the-art marginal-based DP synthesizer (Cormode et al. 2025). We thus evaluate fairness interventions across four datasets, multiple group fairness metrics, and three categories of mitigation strategies (pre-processing, in-processing, and post-processing) under a wide range of privacy budgets. We compare four pipeline configurations: (Baseline) training on original data; (DP-only) training on DP synthetic data; (Fair-only) applying fairness mechanisms on original data; and (DP+Fair) combining fairness mechanisms with DP synthetic data. Our results demonstrate that while DP alone can degrade both utility and fairness, applying fairness interventions can partially restore equitable outcomes. Among them, post-processing methods tend to provide more stable fairness-utility trade-offs across privacy budgets and synthesizers, achieving strong fairness improvements while preserving competitive utility relative to other intervention stages. We release all code, data, and experimental artifacts in an open-source repository to ensure full reproducibility and to support future research on the privacy-fairness-utility trade-off.",
+      "date": "2026-07-08",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.07471v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.07471",
+      "arxiv_id": "2607.07471v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 14
+  }
+}

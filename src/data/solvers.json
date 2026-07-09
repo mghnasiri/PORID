@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T09:33:18.604914+00:00",
+  "generated_at": "2026-07-09T10:34:01.363051+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1701,
+      "github_stars": 1706,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 176,
+      "github_open_issues": 174,
       "github_recent_prs": [
+        "Test an LP with HiPO in the Julia CI job",
+        "fix compiler warnings from version 1.15.1",
+        "docs: fix some typos",
         "Remove resetGlobalScheduler calls from C API",
-        "Fix 2866",
-        "Processor affinity",
-        "Update Julia CI job, and add MultiObjectiveAlgorithms as a test",
-        "Fix 3118"
+        "Fix 2866"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 608,
+      "github_stars": 610,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13747,
+      "github_stars": 13748,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 111,
+      "github_open_issues": 110,
       "github_recent_prs": [
+        "cmake: bump scip to v10.0.3",
         "fix(python): statically link and hide bundled HiGHS to avoid symbol clash with highspy (#5246)",
         "bazel: bump scip to 10.0.2",
         "python: declare free-threading support in graph modules",
-        "examples/python: add tree ensemble global optimisation via CP-SAT",
-        "export from google3"
+        "examples/python: add tree ensemble global optimisation via CP-SAT"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1132,13 +1132,13 @@
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
       "github_stars": 6273,
-      "github_open_issues": 184,
+      "github_open_issues": 189,
       "github_recent_prs": [
-        "Add regression tests for duplicate-index gather multiply (#3442)",
-        "Avoid importing solvers during availability checks",
-        "Pin highspy below 1.15",
-        "Fix CUOPT crash on time limit with no incumbent solution",
-        "Dual feasibility checks"
+        "Pr c resolve caching",
+        "Pr b ignoredpp default",
+        "Add the DIFFENGINE canon backend, opt-in via canon_backend or env var",
+        "Kron diffengine converter",
+        "Add regression tests for duplicate-index gather multiply (#3442)"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1766,
+      "github_stars": 1765,
       "github_open_issues": 15,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1320,13 +1320,13 @@
       ],
       "recent_changes": "Another release packed full of goodness!\r\nWe've improved Neighborhoods, increased performance Constraint Streams as well as made them easier to test, and fixed plenty of bugs.\r\n\r\nGoing forward, we wil",
       "github_stars": 1710,
-      "github_open_issues": 106,
+      "github_open_issues": 105,
       "github_recent_prs": [
+        "feat: add logging for effective map location",
+        "docs: remove plus version (#2475)",
+        "docs: introduce docs on how to deploy to the platform, and help page for the licensing tool",
         "chore: remove \"Plus\" edition from solver docs",
-        "ci: only publish SBOM in JSON (#2468)",
-        "docs: Improve model enrichment docs",
-        "docs: remove plus version",
-        "perf: improve performance of ConnectedRange collector"
+        "ci: only publish SBOM in JSON (#2468)"
       ]
     },
     {
@@ -1385,13 +1385,13 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2484,
-      "github_open_issues": 364,
+      "github_open_issues": 365,
       "github_recent_prs": [
+        "Fix bug in initialization routines to return solve with bounded nlp",
         "contrib.piecewise: Add special case for single-segment \"piecewise\" linear functions",
         "contrib.piecewise: Adding option for convexity/concavity and an epigraph/hypograph transformation",
         "Fix new typos identified in latest typos release",
-        "Add Xpress direct and persistent solver interfaces",
-        "Fix GDPopt LOA maximization objective sense"
+        "Add Xpress direct and persistent solver interfaces"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1450,13 +1450,13 @@
       ],
       "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
       "github_stars": 2452,
-      "github_open_issues": 13,
+      "github_open_issues": 15,
       "github_recent_prs": [
+        "Drop zero when adding to GenericNonlinearExpr",
+        "Maintain order of expression generators when calling flatten!",
         "[docs] drop GitHub owner from solvers and extensions",
         "Fix comments for basis status explanation",
-        "Adds CONOPT to solvers documentation",
-        "Fix hashing of DenseAxisArray by hashing the axis lookup",
-        "Refactor moi_function and jump_function into separate file"
+        "Adds CONOPT to solvers documentation"
       ]
     },
     {
