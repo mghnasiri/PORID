@@ -1,0 +1,464 @@
+{
+  "date": "2026-07-10",
+  "generated_at": "2026-07-10T10:27:57.766587+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2607.08102",
+      "title": "Decomposition-Based QAOA for Maximum Coverage Location Problem in Satellite Constellation Design",
+      "authors": [
+        "Divya Sisodiya",
+        "Amiratabak Bahengam",
+        "Hang Woon Lee",
+        "Hao Chen"
+      ],
+      "abstract": "An increase in earth observation missions has increased the demand of efficient design and optimization of satellite constellations. Maximizing coverage of the target while effectively utilizing the limited orbital resources is one of the critical design challenges for complex combinatorial optimization problems. The maximal covering location problem (MCLP), serves as a base for orbital coverage modeling, is NP-hard and computationally intractable for large-constellation instances. Using heuristics, metaheuristics, and mixed-integer linear programming, classical solvers have achieved optimal or near-optimal results, yet their scalability is limited as the problem size increases. Quantum computing advancements, including the quantum approximate optimization algorithms, offer a potential solution to NP-hard combinatorial optimization problems. Current quantum hardware limitations, such as low qubit counts and circuit depth, restrict solutions for small-scale instance problems. To address this challenge, this paper proposes a scalable quantum optimization framework for MCLP in satellite constellation design. A decomposition-based quantum methodology is proposed, in which large MCLP instances are partitioned into subgraphs by classical decomposition, optimized independently via quantum optimization circuits, and combined using quantum reconstruction strategies. Computational results across different constellation sizes reveal better scalability in less time while maintaining competitive coverage performance compared to classical solvers.",
+      "date": "2026-07-09",
+      "source": "arXiv",
+      "source_detail": "quant-ph",
+      "url": "http://arxiv.org/abs/2607.08102v1",
+      "tags": [
+        "quant-ph",
+        "linear-programming",
+        "integer-programming",
+        "metaheuristics",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.08102",
+      "arxiv_id": "2607.08102v1",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2607.08454",
+      "title": "Spatio-Temporal Scheduling Prediction Under Backhaul Delay for Resilient Coordinated Beamforming",
+      "authors": [
+        "Prashant Kumar Singh",
+        "Shubham Vaishnav",
+        "Ahmet Hasim Gökceoglu",
+        "Li Wang"
+      ],
+      "abstract": "Coordinated beamforming in distributed 5G networks relies on the timely exchange of inter-cell scheduling information, but backhaul latency makes this information stale. Even a single transmission time interval (TTI) of delay can reduce CBF-SLNR performance below the uncoordinated baseline, because the precoder suppresses interference toward users that are no longer active. Coordination on stale information is therefore worse than no coordination at all. To address this, we propose a two-stage predictive framework in which a Spectral Temporal Graph Neural Network (StemGNN) predicts future user equipment (UE) scheduling states from delayed historical observations, and the predictions replace stale inputs to the CBF-SLNR precoder. Evaluated on a three-cell massive MIMO downlink with 60 UEs and 64 antennas per base station under Quadriga Urban Micro (UMi) channels and a proportional fair scheduler, StemGNN achieves a mean scheduling prediction accuracy of 87.57%, outperforming LSTM, GRU, Simple RNN, and Markov chain baselines at all evaluated horizons, with gains of up to 7.71% over LSTM at longer horizons where inter-UE structural dependencies dominate over temporal autocorrelation. When integrated into coordinated beamforming, the predictions recover 57-73% of the sum rate loss caused by one TTI of backhaul delay, improving sum rate by 9.58-14.35% over the no-prediction baseline and recovering up to 83% of the Lag-1 fairness loss for cell-edge users, with fairness gains persisting at higher lag values where throughput gains diminish. These results show that treating backhaul latency as a spatio-temporal forecasting problem is an effective approach for robust inter-cell coordination in delay-constrained networks.",
+      "date": "2026-07-09",
+      "source": "arXiv",
+      "source_detail": "cs.NI",
+      "url": "http://arxiv.org/abs/2607.08454v1",
+      "tags": [
+        "cs.NI",
+        "scheduling",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.08454",
+      "arxiv_id": "2607.08454v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.08406",
+      "title": "Beyond Backpropagation: Monte Carlo Method Can Train Deep Neural Networks",
+      "authors": [
+        "Hong Zhao"
+      ],
+      "abstract": "Backpropagation (BP) dominates deep learning training, but its reliance on gradients brings inherent troubles -- vanishing and exploding gradients. The pursuit of gradient-free methods has long been a goal in the field of artificial intelligence. This paper shows that indeed the simplest Monte Carlo algorithm implemented on a single GPU -- randomly mutate a parameter, keep it if the loss decreases, otherwise retry -- can practically train deep networks. This gradient-free method does not even need common techniques such as batch normalization or residual connections to directly train sufficiently deep networks. More remarkably, its flexibility extends to several nontrivial scenarios: it enables pure pruning training, supports discrete weights, accommodates unconventional transfer functions such as Gaussian, and reveals the substantial redundancy of deep networks. We have demonstrated its feasibility on deep networks with more than 20 layers, single-hidden-layer wide networks with up to 16,384 hidden neurons, and even a simple Transformer architecture trained on both image classification (MNIST) and character-level language modeling (Tiny Shakespeare). This simple gradient-free method may offer a complementary perspective for understanding the self-organization and learning mechanisms of neural networks, and also provides an alternative route for building physically inspired deep learning systems.",
+      "date": "2026-07-09",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.08406v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.08406",
+      "arxiv_id": "2607.08406v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-nav.70086",
+      "title": "Locating Obnoxious Facilities With Variable Capacities",
+      "authors": [
+        "Drezner, Z.",
+        "Kalczynski, P."
+      ],
+      "abstract": "ABSTRACT\n                  The problem of locating facilities, such as garbage dumps or noisy factories, that have a negative impact on surrounding communities was initiated about 50 years ago, and intensively analyzed in the literature. In the models proposed in the literature, it is assumed that all facilities have the same capacity (size), and thus inflict the same negative impact. In this article, we propose to construct facilities of different capacities with a total given capacity. Facilities located in open areas are far from communities and can be larger without impacting the most affected community. This extra capacity allows facilities close to communities to be smaller without changing the total capacity and significantly reduces the negative impact on the most affected community. Such an important extension leads to a more complicated formulation that we were able to simplify and get much better solutions in shorter run times. In extensive computational experiments, we found in some cases that the negative impact on the most affected community is reduced by more than 50% when facilities of different capacities are established.",
+      "date": "2026-07-09",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70086",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70086",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2024.07517",
+      "title": "Vertical Patient Streaming in Emergency Departments",
+      "authors": [
+        "Feizi, A.",
+        "Orfanoudaki, A.",
+        "Saghafian, S.",
+        "Martini, W.",
+        "Hodgson, N."
+      ],
+      "abstract": "Tackling hospital emergency department (ED) overcrowding is a paramount challenge for healthcare systems. To combat this issue, an innovative approach is to identify patients who can be served vertically (i.e., in a seated position) and route them to a dedicated area termed the vertical processing pathway (VPP). Successfully implementing this design requires understanding which patients should be routed to the VPP and when. Currently, the decision to leverage the VPP is made in an ad hoc fashion. To assist our partner hospital and other EDs in capturing the value of the VPP, we develop a machine learning model that provides personalized risk scores predicting whether each arriving patient needs an ED bed. We use these scores as input to a stochastic patient flow model and analytically characterize the optimal VPP policy that minimizes length of stay. We then combine our results to derive an interpretable VPP patient streaming protocol suitable for implementation in practice and conduct a before-and-after experiment in which we leverage empirical analyses to evaluate the impact of integrating it into practice. The implemented protocol led to an 11-minute (4.2%) reduction in ED length of stay in our partner hospital without any adverse effect on quality-of-care outcomes. This effect was statistically significant and remained robust after controlling for various confounding factors and potential sources of endogeneity. Our VPP protocol can also be utilized in other EDs, offering operational improvements without requiring additional resources.\n                  This paper was accepted by Stefan Scholtes, healthcare management.\n                  Funding: S. Saghafian received financial support from the NSF [Grant CMMI-15 62645], “Data-Driven Management of Post-Transplant Medications,” which partially enabled this work, as well as funding and support from the Harvard Data Science Initiative and the Harvard Mossavar-Rahmani Center for Business and Government.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.07517 .",
+      "date": "2026-07-09",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2024.07517",
+      "tags": [
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2024.07517",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261470928",
+      "title": "EXPRESS: Tackling Decision Dependency in Contextual Stochastic Optimization",
+      "authors": [
+        "Liu, W.",
+        "Liu, X.",
+        "Liu, M.",
+        "Zhang, Z.",
+        "Qin, H."
+      ],
+      "abstract": "In this paper, we study contextual stochastic optimization (CSO), where decisions are made under uncertainty and the distribution of random parameters can be partially inferred from covariates observed prior to decision-making. In many practical settings, these distributions also depend on the decisions themselves, a phenomenon known as the\n                    decision-dependent effect\n                    . Most existing studies address this issue by imposing structural assumptions on the relationship between decisions and the underlying distributions. However, such assumptions may lead to model misspecification when the true relationship deviates from the assumed form. A prominent alternative is the weighted sample average approximation (wSAA) method proposed by Bertsimas and Kallus (2019), which adapts sample weights based on their similarity to the current decision–context pair. Nevertheless, because these weights are typically computed using complex machine learning models and depend on the decision variables in decision-dependent settings, solving the resulting optimization problem becomes computationally challenging. To overcome this challenge, we extend the wSAA framework from the loss function to its gradient, leading to the notion of the\n                    contextual gradient\n                    . We show that the contextual gradient serves as a meaningful indicator of optimality and leverage this property to develop the\n                    contextual gradient descent (CGD)\n                    algorithm. Our analysis establishes that CGD converges to a neighborhood of the global optimum when the loss function exhibits sufficient strong convexity. Moreover, the derived bounds reveal a key insight: the strength of convexity in the loss function can compensate for the uncertainty introduced by decision-dependent effects. Extensive numerical experiments on both synthetic and real-world datasets demonstrate that CGD consistently outperforms existing methods for contextual optimization under decision-dependent uncertainty.",
+      "date": "2026-07-09",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261470928",
+      "tags": [
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261470928",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2607.08578",
+      "title": "Robust Dynamic Operating Envelopes in Unbalanced Three-Phase Distribution Systems",
+      "authors": [
+        "Wilhiam de Carvalho",
+        "Florin Capitanescu",
+        "Cyril Rasic",
+        "Jean-François Toubeau",
+        "François Vallée"
+      ],
+      "abstract": "This paper proposes a robust optimization formulation to calculate dynamic operating envelopes (DOEs) to safely operate unbalanced three-phase distribution systems. Unlike conventional formulations that satisfy network constraints only at the envelope bound, the robust formulation covers the entire envelope range. We formulate a robust non-linear programming (NLP) problem with the full AC power flow equations, as well as an approximate linear programming (LP) model. Numerical simulations are run with real-world data from Belgium and two different distribution test feeders. The paper compares the conventional approaches with their robust counterparts and examines the trade-off between constraint violation and envelope size as well as accuracy and solve time aspects.",
+      "date": "2026-07-09",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2607.08578v1",
+      "tags": [
+        "eess.SY",
+        "linear-programming",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.08578",
+      "arxiv_id": "2607.08578v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.08725",
+      "title": "Pose-to-Biomechanics: Bridging 3D Human Pose Estimation and Biomechanical Attribute Prediction",
+      "authors": [
+        "Ayda Eghbalian",
+        "Kevin Desai"
+      ],
+      "abstract": "Recent progress in 3D human pose estimation has made markerless recovery of skeletal motion increasingly accurate and scalable. However, most pose estimators remain optimized for geometric keypoint accuracy, while many real-world applications in rehabilitation, sports science, ergonomics, and clinical movement analysis require biomechanical quantities that describe how the body moves, loads, and activates. In this work, we propose BioModule, a lightweight plug-in temporal transformer that attaches downstream of any 3D pose estimator and predicts biomechanical attributes from standard 17-joint 3D skeletons. BioModule is estimator-agnostic and requires no modification of the upstream pose model, enabling existing pose estimators to be extended toward physically interpretable motion analysis.   To train and evaluate BioModule, we construct a large-scale aligned dataset pairing Human3.6M video and 3D keypoints with the biomechanical label space of Human3.6Mplus. We establish and verify anatomical correspondence between coordinate systems of the two datasets, enabling frame-accurate cross-modal supervision. Using this aligned supervision, BioModule predicts biomechanical quantities. We further benchmark BioModule across seven state-of-the-art 3D pose estimators, providing the first systematic analysis of how upstream pose estimation quality propagates to downstream biomechanical prediction fidelity. The results position BioModule as a compact, modular bridge between vision-based pose estimation and biomechanically meaningful human motion analysis.",
+      "date": "2026-07-09",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2607.08725v1",
+      "tags": [
+        "cs.CV",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.08725",
+      "arxiv_id": "2607.08725v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.08647",
+      "title": "Multi-Modal, Multi-Environment Machine Teaching for Robust Reward Learning",
+      "authors": [
+        "Ali Larian",
+        "Qian Lin",
+        "Chang Zong Wu",
+        "Daniel S. Brown"
+      ],
+      "abstract": "As autonomous agents are increasingly deployed across diverse operational contexts, aligning their behavior with human intent demands reward functions that remain robust to such changes rather than overfitting to any single environment. Inverse reinforcement learning (IRL) provides a principled way to infer such objectives from human feedback. However, existing analyses of optimal teaching approaches for IRL focus on single-environment, demonstration-only settings, leaving underexplored how heterogeneous feedback modalities and environment dynamics jointly constrain reward functions that generalize across multiple environments. Because demonstrations in one MDP entangle reward information with that environments specific structure, the resulting rewards frequently fail to generalize when the agent is deployed in a new setting. We first analyze how different feedback modalities constrain rewards, showing that, in the unlimited-data regime, comparisons impose strictly stronger global constraints than other modalities. Beyond this theoretical analysis, we introduce a hierarchical machine teaching algorithm for reward learning that operates across multiple MDPs. The algorithm first greedily selects informative environments that expose complementary reward constraints, then strategically queries low-cost feedback within those environments. Empirically, our method achieves substantially lower regret and stronger generalization to held-out environments than uniform teaching baselines under identical feedback budgets, demonstrating the importance of multi-environment, multi-modal teaching for learning dynamics-robust reward functions.",
+      "date": "2026-07-09",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.08647v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.08647",
+      "arxiv_id": "2607.08647v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.08602",
+      "title": "Towards Precision Therapy in Hepatocellular Carcinoma: A Clinical-Reasoning LLM for Risk Stratification and Treatment Guidance",
+      "authors": [
+        "Peng Cui",
+        "Jitao Wang",
+        "Siyan Xue",
+        "Yao Huang",
+        "Haoming Xia",
+        "Dong Li",
+        "Dengxiang Liu",
+        "Weilin Wang",
+        "Liping Liu",
+        "Leida Zhang",
+        "Yunfu Cui",
+        "Tao Peng",
+        "Daolin Ji",
+        "Haitao Zhao",
+        "Wei Zhang",
+        "Xiaojuan Wang",
+        "Weijie Ma",
+        "Zongren Ding",
+        "Jinlong Li",
+        "Yuan Ding",
+        "Jiajing Zhao",
+        "Zhiyu Chen",
+        "Chengkun Yang",
+        "Ziyue Huang",
+        "Jiaqi Liu",
+        "Fusheng Liu",
+        "Yang Zhou",
+        "Xiaojuan Wang",
+        "Zhongquan Sun",
+        "Shiyun Bao",
+        "Xiaojun Wang",
+        "Ming Yang",
+        "Guangxin Li",
+        "Bin Shu",
+        "Yong Liao",
+        "Hongxuan Li",
+        "Yao Tang",
+        "Shizhong Yang",
+        "Yongyi Zeng",
+        "Yufeng Yuan",
+        "Yinpeng Dong",
+        "Jihui Hao",
+        "Jun Zhu",
+        "Jiahong Dong"
+      ],
+      "abstract": "Hepatocellular carcinoma (HCC) is a common malignancy and a leading cause of cancer-related mortality. Current guidelines and staging systems provide coarse categories, but often miss within-stage heterogeneity and the clinical context in electronic medical records (EMRs). We present HCC-STAR (Hepatocellular Carcinoma Staging, Treatment And pRognosis), a clinically aligned large language model that reads routine EMR narratives and jointly outputs risk score-based staging, ranked guideline-consistent treatments with evidence-based rationales, and individualized survival estimates. We curated about 30,000 HCC cases from SEER and expanded them into EMR-style narrative training data using a clinician-validated, prompt-based augmentation workflow. On this corpus, we developed a knowledge-aligned reasoning framework optimized with a step-verifiable composite reward, moving beyond text-level memorization of clinical guidelines. In a multi-center cohort of 6,668 patients from 12 hospitals in China, HCC-STAR achieved state-of-the-art performance in treatment recommendation and risk stratification compared with clinical guidelines and competitive models, including GPT-5 and Gemini-2.5 Pro. Hypothetical overall-survival analysis showed a median survival of 51 months under adherence to HCC-STAR recommendations, compared with 29 and 32 months under BCLC and CNLC. In clinician-centric evaluations, blinded hepatobiliary specialists rated HCC-STAR's reasoning and evidence-based justifications as trustworthy. The model surpassed resident and attending physicians in treatment accuracy and helped physicians make more accurate decisions faster when used as an assistant. These findings support HCC-STAR as a reliable and verifiable decision-support system for risk stratification and precision therapy in HCC.",
+      "date": "2026-07-09",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2607.08602v1",
+      "tags": [
+        "cs.AI",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.08602",
+      "arxiv_id": "2607.08602v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 14
+  }
+}
