@@ -1,0 +1,400 @@
+{
+  "date": "2026-07-11",
+  "generated_at": "2026-07-11T08:53:41.449187+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s12532-026-00331-4",
+      "title": "A sequential benders-based mixed-integer quadratic programming algorithm and its implementation in the Programming AI CAMINO Toolbox",
+      "authors": [
+        "Ghezzi, A.",
+        "Van Roy, W.",
+        "Sager, S.",
+        "Diehl, M."
+      ],
+      "abstract": "Abstract\n                  \n                    Sequential quadratic programming and sequential convex programming efficiently solve nonlinear programs (NLPs) by linearizing inner nonlinearities while preserving the outer convex structure. This paper introduces a sequential mixed-integer quadratic programming (MIQP) algorithm to extend this methodology to mixed-integer nonlinear problems (MINLPs), leveraging the efficiency of modern MIQP solvers. The algorithm uses a three-step iterative process. First, the MINLP is linearized around the current iterate. Second, an MIQP is formulated and solved, with its feasible region restricted to a specific area around the linearization point. This region is defined using objective values and derivatives from previous iterations, drawing on concepts from generalized Benders’ decomposition. Third, the integer variables from the MIQP solution are fixed, and an NLP involving only the continuous variables is solved. The best solution among all iterates becomes the linearization point for the next iteration. A fallback strategy based on a mixed-integer linear program (MILP) is used when MIQP progress stalls. This guarantees convergence to the globally optimal solution for convex MINLPs. For nonconvex problems, the algorithm functions as a heuristic without global optimality guarantees. Numerical experiments show its competitiveness with other MINLP solvers on benchmark problems. In addition, the algorithm was successfully applied to mixed-integer optimal control problems, demonstrating its effectiveness in handling challenging nonlinear equality constraints. The proposed algorithm is publicly available at\n                    https://github.com/minlp-toolbox/CAMINO\n                    with the name .",
+      "date": "2026-07-11",
+      "source": "Mathematical Programming Computation",
+      "source_detail": "Mathematical Programming Computation",
+      "url": "https://doi.org/10.1007/s12532-026-00331-4",
+      "tags": [
+        "integer-programming",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s12532-026-00331-4",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07310-x",
+      "title": "Viable supply chain network design: machine learning-derived chance-constrained programming",
+      "authors": [
+        "Rohaninejad, M.",
+        "Vahedi-Nouri, B.",
+        "Jelodari Mamaghani, E.",
+        "Foumani, M.",
+        "Battaia, O."
+      ],
+      "abstract": "",
+      "date": "2026-07-11",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07310-x",
+      "tags": [
+        "network-optimization",
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07310-x",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s00291-026-00866-x",
+      "title": "Integrated optimization of patient examination scheduling with room flexibility and precedence constraints: a column generation-based heuristic approach",
+      "authors": [
+        "Lan, S.",
+        "Yang, H.",
+        "Shao, K.",
+        "Chen, J.",
+        "Lu, Y."
+      ],
+      "abstract": "",
+      "date": "2026-07-11",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00866-x",
+      "tags": [
+        "scheduling",
+        "healthcare-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00866-x",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-net.70057",
+      "title": "A Branch‐and‐Price Algorithm for the Symmetric Electric Traveling Salesman Problem",
+      "authors": [
+        "Ceselli, A.",
+        "Ondei, C.",
+        "Righini, G."
+      ],
+      "abstract": "ABSTRACT\n                  The Electric Traveling Salesman Problem (ETSP) is a variant of the well‐known TSP in which an electric vehicle must visit a set of customers minimizing the total cost of its route. The vehicle is assumed to be equipped with a battery of limited capacity that may need to be recharged along the route. A set of available recharge stations is given, where recharges can be done at given energy prices. The objective is to minimize the total cost of the energy consumed. We consider the symmetric version of the problem, we introduce a mathematical programming formulation, and we solve it with a branch‐and‐price algorithm, where columns correspond to station‐to‐station paths.",
+      "date": "2026-07-10",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70057",
+      "tags": [
+        "vehicle-routing"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70057",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2025.01870",
+      "title": "Improving Coordination in Teams: Combining Team and Individual Relative Performance Evaluations",
+      "authors": [
+        "Douthit, J.",
+        "Hewitt, M.",
+        "Sauciuc, A."
+      ],
+      "abstract": "Employees working in teams often fail to coordinate because of strategic uncertainty, i.e., difficulty predicting their colleagues’ actions. Using an incentivized economic experiment, we examine the potentially beneficial effects of a ubiquitous competitive incentive—individual relative performance evaluations (RPE)—in reducing strategic uncertainty and improving team output. When employees work in highly interdependent teams and are motivated by team incentives, we predict that individual RPE reduce employees’ strategic uncertainty and, in doing so, improve coordination. Consistent with our theory, we find that the use of individual RPE reduces employees’ strategic uncertainty about both their team members’ direct effort and indirect actions (i.e., helping or hurting). Furthermore, by reducing each component of strategic uncertainty, we find that firms can effectively improve coordination and team output. Contrary to claims that competitive, individual-level incentives harm team outcomes, our study highlights that individual RPE play an important role in reducing strategic uncertainty such that their use in interdependent teams motivated by cooperative team incentives yields superior outcomes.\n                  This paper was accepted by Ranjani Krishnan, accounting.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2025.01870 .",
+      "date": "2026-07-10",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2025.01870",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2025.01870",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2024.06909",
+      "title": "The Uneven Impact of Generative Artificial Intelligence on Entrepreneurial Performance: Evidence from a Field Experiment in Kenya",
+      "authors": [
+        "Otis, N.",
+        "Clarke, R.",
+        "Delecourt, S.",
+        "Holtz, D.",
+        "Koning, R."
+      ],
+      "abstract": "Scalable and low-cost artificial intelligence (AI) assistance has the potential to improve firm decision making and economic performance, particularly in emerging markets. However, running a business involves a wide range of open-ended problems, making it unclear whether and how recent advances in AI can help business owners around the world make better decisions. In a field experiment with Kenyan entrepreneurs, we evaluated the impact of AI advice on small business revenues and profits by randomizing access to a GPT-4-powered AI business assistant. Although we are unable to reject the null hypothesis of no average treatment effect on firm revenues and profits, we find that the effect for entrepreneurs who were low performing at baseline is over 0.20-standard-deviations lower than for initial high performers. Subsample analyses show that low performers did nearly 10% worse because of the AI assistant, whereas high performers may have benefited by over 15%. This differential impact does not appear to result from differences in the questions posed to the AI or the advice that it provided but rather, from the advice that entrepreneurs chose to implement. More broadly, these results show that generative AI is already capable of impacting real-world business performance—although in uneven and sometimes unexpected ways.\n                  This paper was accepted by Anita McGahan, business strategy.\n                  Funding: This work was supported by the Weiss Fund, Harvard Business School, Berkeley Haas, the Cora Jane Flood Endowment at Berkeley Haas, the Agency Fund, the South Park Common Social Impact Fellowship, and the Digital Data Design Institute at Harvard.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.06909 .",
+      "date": "2026-07-10",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2024.06909",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2024.06909",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07340-5",
+      "title": "Supplier disruption risk diagnosis in a machine-tool component supply network: a T2NN–ITARA–ALWAS decision-support framework",
+      "authors": [
+        "Lo, H.",
+        "Lin, Z."
+      ],
+      "abstract": "",
+      "date": "2026-07-11",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07340-5",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07340-5",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s11081-026-10114-4",
+      "title": "Multi-material topology optimization of load-bearing porous structures for thermomechanical behaviors under convective cooling",
+      "authors": [
+        "Fan, T.",
+        "Zhang, L.",
+        "He, S.",
+        "Wang, K."
+      ],
+      "abstract": "",
+      "date": "2026-07-11",
+      "source": "Optimization and Engineering",
+      "source_detail": "Optimization and Engineering",
+      "url": "https://doi.org/10.1007/s11081-026-10114-4",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11081-026-10114-4",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s12532-026-00325-2",
+      "title": "Disciplined Geodesically Convex Programming: A Symbolic Framework for Verifying Geodesic Convexity",
+      "authors": [
+        "Cheng, A.",
+        "Dixit, V.",
+        "Weber, M."
+      ],
+      "abstract": "",
+      "date": "2026-07-11",
+      "source": "Mathematical Programming Computation",
+      "source_detail": "Mathematical Programming Computation",
+      "url": "https://doi.org/10.1007/s12532-026-00325-2",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s12532-026-00325-2",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1080-01605682.2026.2697954",
+      "title": "Data-driven approach to robust portfolio optimization using deep neural networks",
+      "authors": [
+        "Garg, D.",
+        "Sehgal, R.",
+        "Mehra, A."
+      ],
+      "abstract": "",
+      "date": "2026-07-10",
+      "source": "Journal of the Operational Research Society",
+      "source_detail": "Journal of the Operational Research Society",
+      "url": "https://doi.org/10.1080/01605682.2026.2697954",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1080/01605682.2026.2697954",
+      "score": 35.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 14
+  }
+}
