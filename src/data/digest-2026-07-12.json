@@ -1,0 +1,391 @@
+{
+  "date": "2026-07-12",
+  "generated_at": "2026-07-12T09:08:26.094302+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s12532-026-00331-4",
+      "title": "A sequential benders-based mixed-integer quadratic programming algorithm and its implementation in the Programming AI CAMINO Toolbox",
+      "authors": [
+        "Ghezzi, A.",
+        "Van Roy, W.",
+        "Sager, S.",
+        "Diehl, M."
+      ],
+      "abstract": "Abstract\n                  \n                    Sequential quadratic programming and sequential convex programming efficiently solve nonlinear programs (NLPs) by linearizing inner nonlinearities while preserving the outer convex structure. This paper introduces a sequential mixed-integer quadratic programming (MIQP) algorithm to extend this methodology to mixed-integer nonlinear problems (MINLPs), leveraging the efficiency of modern MIQP solvers. The algorithm uses a three-step iterative process. First, the MINLP is linearized around the current iterate. Second, an MIQP is formulated and solved, with its feasible region restricted to a specific area around the linearization point. This region is defined using objective values and derivatives from previous iterations, drawing on concepts from generalized Benders’ decomposition. Third, the integer variables from the MIQP solution are fixed, and an NLP involving only the continuous variables is solved. The best solution among all iterates becomes the linearization point for the next iteration. A fallback strategy based on a mixed-integer linear program (MILP) is used when MIQP progress stalls. This guarantees convergence to the globally optimal solution for convex MINLPs. For nonconvex problems, the algorithm functions as a heuristic without global optimality guarantees. Numerical experiments show its competitiveness with other MINLP solvers on benchmark problems. In addition, the algorithm was successfully applied to mixed-integer optimal control problems, demonstrating its effectiveness in handling challenging nonlinear equality constraints. The proposed algorithm is publicly available at\n                    https://github.com/minlp-toolbox/CAMINO\n                    with the name .",
+      "date": "2026-07-11",
+      "source": "Mathematical Programming Computation",
+      "source_detail": "Mathematical Programming Computation",
+      "url": "https://doi.org/10.1007/s12532-026-00331-4",
+      "tags": [
+        "integer-programming",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s12532-026-00331-4",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07342-3",
+      "title": "Approximating end-of-life electric vehicle battery flows: surrogate modeling of a discrete event and agent-based simulation model",
+      "authors": [
+        "Huster, S.",
+        "Faraji-Niri, M.",
+        "Rudi, A.",
+        "Schultmann, F."
+      ],
+      "abstract": "Abstract\n                  Decision support tools are essential for planning end-of-life pathways of electric vehicle (EV) batteries, including recycling, repurposing, and reconditioning. As large volumes of EV batteries reach end-of-life in the coming decades, estimating material flows under different scenarios becomes increasingly important. Detailed simulation models, such as those based on discrete event and agent-based modeling, can capture the complex dynamics of battery life cycles. However, their high computational cost limits their applicability in decision-making contexts that require extensive scenario analysis. To overcome this challenge, machine learning-based surrogate models are evaluated for approximating the outputs of a simulation model that estimates future end-of-life quantities of EV batteries. The simulation model uses static input configurations and produces time-dependent outputs, for which no historical time series exist. Two surrogate modeling strategies are compared: an all-at-once approach that predicts all time steps simultaneously, and a recursive approach that predicts them sequentially. Several machine learning algorithms are evaluated, including neural networks, Gaussian process regression, random forests, and XGBoost. Results show that neither approach consistently outperforms the other, and model performance varies strongly across key performance indicators. While surrogate models can substantially accelerate analysis, predictive accuracy is limited for outputs with sparse or highly variable data. The results underline the importance of selecting surrogate modeling approaches based on the specific characteristics of the output indicators and the analytical needs of the decision context.",
+      "date": "2026-07-12",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07342-3",
+      "tags": [
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07342-3",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07310-x",
+      "title": "Viable supply chain network design: machine learning-derived chance-constrained programming",
+      "authors": [
+        "Rohaninejad, M.",
+        "Vahedi-Nouri, B.",
+        "Jelodari Mamaghani, E.",
+        "Foumani, M.",
+        "Battaia, O."
+      ],
+      "abstract": "",
+      "date": "2026-07-11",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07310-x",
+      "tags": [
+        "network-optimization",
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07310-x",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s00291-026-00866-x",
+      "title": "Integrated optimization of patient examination scheduling with room flexibility and precedence constraints: a column generation-based heuristic approach",
+      "authors": [
+        "Lan, S.",
+        "Yang, H.",
+        "Shao, K.",
+        "Chen, J.",
+        "Lu, Y."
+      ],
+      "abstract": "",
+      "date": "2026-07-11",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00866-x",
+      "tags": [
+        "scheduling",
+        "healthcare-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00866-x",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07340-5",
+      "title": "Supplier disruption risk diagnosis in a machine-tool component supply network: a T2NN–ITARA–ALWAS decision-support framework",
+      "authors": [
+        "Lo, H.",
+        "Lin, Z."
+      ],
+      "abstract": "",
+      "date": "2026-07-11",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07340-5",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07340-5",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s11081-026-10114-4",
+      "title": "Multi-material topology optimization of load-bearing porous structures for thermomechanical behaviors under convective cooling",
+      "authors": [
+        "Fan, T.",
+        "Zhang, L.",
+        "He, S.",
+        "Wang, K."
+      ],
+      "abstract": "",
+      "date": "2026-07-11",
+      "source": "Optimization and Engineering",
+      "source_detail": "Optimization and Engineering",
+      "url": "https://doi.org/10.1007/s11081-026-10114-4",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11081-026-10114-4",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s12532-026-00325-2",
+      "title": "Disciplined Geodesically Convex Programming: A Symbolic Framework for Verifying Geodesic Convexity",
+      "authors": [
+        "Cheng, A.",
+        "Dixit, V.",
+        "Weber, M."
+      ],
+      "abstract": "",
+      "date": "2026-07-11",
+      "source": "Mathematical Programming Computation",
+      "source_detail": "Mathematical Programming Computation",
+      "url": "https://doi.org/10.1007/s12532-026-00325-2",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s12532-026-00325-2",
+      "score": 40.0
+    },
+    {
+      "id": "optim-online-4919f208135a",
+      "title": "A Two-Stage Stochastic Programming Model for Anti-Submarine Operations",
+      "authors": [
+        "Route `Em and Count `Em"
+      ],
+      "abstract": "Tracking targets in undersea warfare requires successful detection by an active search asset. Maximizing detection likelihood requires strategic placement and routing of the search assets in the search region over the planning horizon. We develop a two-stage stochastic integer programming model that maximizes the expected total reward for target detections under uncertainty in target motion ... Read more",
+      "date": "2026-07-11",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/07/route-em-and-count-em-a-two-stage-stochastic-programming-model-for-anti-submarine-operations/?utm_source=rss&utm_medium=rss&utm_campaign=route-em-and-count-em-a-two-stage-stochastic-programming-model-for-anti-submarine-operations",
+      "tags": [
+        "integer-programming",
+        "stochastic"
+      ],
+      "type": "publication",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07339-y",
+      "title": "Conditional expectations and pouring water from full cups to empty",
+      "authors": [
+        "Gaitsgori, G.",
+        "Molchanov, S.",
+        "Sonin, I."
+      ],
+      "abstract": "",
+      "date": "2026-07-11",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07339-y",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07339-y",
+      "score": 30.0
+    },
+    {
+      "id": "optim-online-84eff1547db9",
+      "title": "Stochastic Queens Elimination",
+      "authors": [],
+      "abstract": "This research introduces the Stochastic Sequential Queens Elimination Problem, where on the \\(n\\)-queens board, each activated queen simultaneously attempts to eliminate all queens in her unblocked neighborhood, each independently succeeding with probability \\(p\\). The objective is to minimize the expected cumulative conflict count over the trajectory. This research proposes a Markov decision process for this ... Read more",
+      "date": "2026-07-11",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/07/stochastic-queens-elimination/?utm_source=rss&utm_medium=rss&utm_campaign=stochastic-queens-elimination",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "score": 30.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 14
+  }
+}
