@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T10:33:34.753876+00:00",
+  "generated_at": "2026-07-14T09:10:29.938617+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1720,
+      "github_stars": 1721,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -460,11 +460,11 @@
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- fixed statistic on added linear constraints in propagation\r\n- keep flag `rangedrowpropagated` of linear and exactlinear constraints for probing bound changes to avoid dupli",
       "github_open_issues": 24,
       "github_recent_prs": [
-        "fix: use bounded strlcpy/snprintf in reader_col.c...",
         "[docs] Add Conan entry in installation documentation",
         "Add MSVC flag /bigobj when compiling LPS=spx in debug mode",
         "fix several typos",
-        "Allow documentation builds when testing is turned off"
+        "Allow documentation builds when testing is turned off",
+        "Fix endianness issue in dtoa.cpp"
       ],
       "pypi_monthly_downloads": -41
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13764,
+      "github_stars": 13775,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 110,
+      "github_open_issues": 111,
       "github_recent_prs": [
+        "Expose `AddRouteConstraint` to C# / bring back swig to C#",
         "cmake: bump highs to v1.15.1",
         "cmake: bump highs to v1.15.0",
         "cmake: bump to soplex v8.0.3",
-        "bazel: bump scip to 10.0.3",
-        "cmake: bump scip to v10.0.3"
+        "bazel: bump scip to 10.0.3"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6276,
-      "github_open_issues": 191,
+      "github_stars": 6275,
+      "github_open_issues": 192,
       "github_recent_prs": [
+        "Bump github/codeql-action/upload-sarif from 4.36.3 to 4.37.0",
         "docs: use default solver in graphical LASSO example",
         "Add regression tests: composed parametric coefficients refresh across re-solves",
         "composed parametric coefficients must refresh through cached DIFFENGINE re-solves",
-        "Add DCP violation explanations for non-DCP problems",
-        "Pr c resolve caching"
+        "Add DCP violation explanations for non-DCP problems"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1318,16 +1318,7 @@
         "constraint",
         "metaheuristic"
       ],
-      "recent_changes": "Just like the planet lately, we're turning up the heat! In this release, we improve solver performance across the board - Constraint Streams, Value Ranges, Shadow Variables, everything gets a speed bu",
-      "github_stars": 1712,
-      "github_open_issues": 104,
-      "github_recent_prs": [
-        "deps: upgrade Quarkus to 3.37.2",
-        "docs: add consumer guide",
-        "chore: Remove webjars dependencies",
-        "deps: bump version.io.quarkus from 3.36.3 to 3.37.2",
-        "deps: bump the patch group with 4 updates"
-      ]
+      "recent_changes": "Just like the planet lately, we're turning up the heat! In this release, we improve solver performance across the board - Constraint Streams, Value Ranges, Shadow Variables, everything gets a speed bu"
     },
     {
       "id": "pyomo",
@@ -1385,13 +1376,13 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2485,
-      "github_open_issues": 364,
+      "github_open_issues": 366,
       "github_recent_prs": [
+        "Adding method for multistart initialization of nonlinear models.",
+        "Clip and scale calculate_variable_from_constraint",
         "Add PyROS paper preprint to Pyomo docs reference list",
         "Fix bug in initialization routines to return solve with bounded nlp",
-        "contrib.piecewise: Add special case for single-segment \"piecewise\" linear functions",
-        "contrib.piecewise: Adding option for convexity/concavity and an epigraph/hypograph transformation",
-        "Fix new typos identified in latest typos release"
+        "contrib.piecewise: Add special case for single-segment \"piecewise\" linear functions"
       ],
       "pypi_monthly_downloads": -28
     },

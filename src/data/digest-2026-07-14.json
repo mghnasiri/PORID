@@ -1,0 +1,426 @@
+{
+  "date": "2026-07-14",
+  "generated_at": "2026-07-14T09:10:30.288625+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2607.11714",
+      "title": "Contextual Stochastic Optimization with Decision-Dependent Uncertainty via Nonparametric Learning",
+      "authors": [
+        "Huangrong Sun",
+        "Xian Yu"
+      ],
+      "abstract": "We study a general decision-dependent contextual stochastic program (DD-CSP) in which uncertainty depends on both exogenous contextual information and endogenous decisions. To learn the potentially complex dependence of uncertainty on decisions and contextual information, we employ several nonparametric regression models, including k nearest neighbors (kNN), classification and regression trees (CART), and ReLU neural networks. To account for estimation errors in predicting the uncertainty, we adopt an empirical residuals-based decision-dependent sample average approximation (ER-DD-SAA) framework, which adds empirical residuals to the point predictions from the learned regression models. For each nonparametric regression model, we develop exact mixed-integer programming (MIP) representations that can be seamlessly embedded within the ER-DD-SAA framework. For two-stage ER-DD-SAA problems with kNN, we further propose a tailored decomposition algorithm, named BD-CG, that combines Bender's decomposition with constraint generation. Under suitable assumptions, we prove that the proposed BD-CG converges to a global optimum within a finite number of iterations. From a statistical perspective, we establish the consistency and asymptotic optimality of ER-DD-SAA with all three nonparametric regression models under mild regularity conditions. Numerical experiments on a newsvendor problem with pricing and a two-stage facility location problem demonstrate that the ER-DD-SAA model with nonparametric learning consistently outperforms a parametric benchmark in out-of-sample performance and the proposed reformulations and algorithm substantially improve computational tractability.",
+      "date": "2026-07-13",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2607.11714v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "stochastic",
+        "ml-for-or",
+        "facility-location",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.11714",
+      "arxiv_id": "2607.11714v1",
+      "score": 65.0
+    },
+    {
+      "id": "arxiv-2607.11725",
+      "title": "Time-Lag-Aware Deep Reinforcement Learning for Flexible Job-Shop Scheduling in PPVC Module Factories",
+      "authors": [
+        "Ziheng Zhang",
+        "Wei Zhang"
+      ],
+      "abstract": "Prefabricated prefinished volumetric construction moves most building work into module factories, whose production floor operates as a flexible job shop. A major complication is decisive: long post-operation time-lags caused by concrete curing, watertightness ponding tests, and paint drying, during which a module is blocked while its workstation stays free. On benchmark instances grounded in an official national prefabrication guidebook, these lags inflate even the optimal reference makespan by about 67% on average, and ignoring them at decision time, then repairing to feasibility, is worse than every dispatching rule. We adapt a state-of-the-art dual-attention deep reinforcement learning solver through three minimally invasive, individually ablatable extensions: lag-aware dynamics with an admissible reward bound, two anticipatory lag feature channels, and liveness-masked operation- and station-type embeddings. With every extension disabled the implementation reproduces the original solver exactly, so all gains are attributable to the adaptations. We release a public, guidebook-grounded benchmark generator. On held-out instances the learned policy is the strongest solver-free scheduler: it reaches within about 4% of a constraint-programming reference and beats every dispatching rule and a genetic-algorithm metaheuristic, with its advantage widening under capacity contention, and a single size-mixed policy carries this lead across the trained range of factory sizes. It needs no solver, model, or license in the loop and re-plans within seconds of a disruption; where an exact solver can be deployed, that solver remains the quality ceiling, a boundary we map explicitly.",
+      "date": "2026-07-13",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.11725v1",
+      "tags": [
+        "cs.LG",
+        "metaheuristics",
+        "scheduling",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.11725",
+      "arxiv_id": "2607.11725v1",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s12532-026-00323-4",
+      "title": "A preconditioned interior point method for support vector machines using an ANOVA decomposition and NFFT-based matrix–vector products",
+      "authors": [
+        "Wagner, T.",
+        "Pearson, J.",
+        "Stoll, M."
+      ],
+      "abstract": "Abstract\n                  In this paper, we consider the numerical solution to the soft margin support vector machine optimization problem. This problem is typically solved using the SMO algorithm, given the high computational complexity of traditional optimization algorithms when dealing with large-scale kernel matrices. In this work, we propose employing an NFFT-accelerated matrix–vector product using an ANOVA decomposition for the feature space. Through this approach, an additive kernel design of trivariate sub-kernels is induced and the total number of used features can be reduced. This is used within an interior point method for the overall optimization problem. As this method requires the solution of a linear system of saddle point form we suggest a preconditioning approach that is based on low-rank approximations of the kernel matrix together with a Krylov subspace solver. We compare the accuracy of the ANOVA-based kernel with the default LIBSVM implementation. We investigate the performance of the different preconditioners as well as the accuracy of the ANOVA kernel on several large-scale data sets.",
+      "date": "2026-07-14",
+      "source": "Mathematical Programming Computation",
+      "source_detail": "Mathematical Programming Computation",
+      "url": "https://doi.org/10.1007/s12532-026-00323-4",
+      "tags": [
+        "linear-programming",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s12532-026-00323-4",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s10107-026-02389-3",
+      "title": "Implied integrality in mixed-integer optimization",
+      "authors": [
+        "der Hulst, R.",
+        "Walter, M."
+      ],
+      "abstract": "Abstract\n                  \n                    Implied-integer detection is a well-known presolving technique that is used by many Mixed-Integer Linear Programming solvers. Informally, a variable is said to be\n                    implied integer\n                    if its integrality is enforced implicitly by integrality of other variables and the constraints of a problem. In this case, algorithms used in MILP software can choose whether they treat it as an integer or continuous variable. In this work we formalize the definition of implied integrality by taking a polyhedral perspective. Our main result characterizes implied integrality as occurring when a subset of integer variables is fixed to integer values and the polyhedron on the remaining variables is integral. While integral polyhedra are well-understood theoretically, existing detection methods infer implied integrality only for one variable at a time. We introduce new detection methods based on the detection of integral polyhedra, extending existing techniques to multiple variables. Additionally, we discuss the computational complexity of recognizing implied integers. We conduct experiments using a new detection method that uses totally unimodular submatrices to identify implied integrality. For the MIPLIB 2017 collection dataset our results indicate that, on average, 18.8 % of the variables are classified as implied integer after presolving, compared to just 3.3 % identified by state-of-the-art techniques. Moreover, we are able to reduce the average percentage of variables whose integrality needs to be enforced after presolving from 70.2% to 59.0%.",
+      "date": "2026-07-13",
+      "source": "Mathematical Programming",
+      "source_detail": "Mathematical Programming",
+      "url": "https://doi.org/10.1007/s10107-026-02389-3",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10107-026-02389-3",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.11593",
+      "title": "Scenario Reduction for Two-Stage Stochastic Mixed-Integer Programs",
+      "authors": [
+        "Yannick Werner",
+        "Juan Miguel Morales",
+        "Salvador Pineda",
+        "Line Roald",
+        "Sonja Wogrin"
+      ],
+      "abstract": "Two-stage stochastic mixed-integer programs (MIPs) are important tools for decision-making under uncertainty, but representing uncertainty with a large number of scenarios -- while ensuring accurate results -- can make them challenging to solve. Scenario reduction addresses this by finding a distribution supported on fewer scenarios that still yields similar optimal first-stage decisions. In this paper, we revisit the classical scenario reduction theory based on distances between probability distributions and the optimal mass transportation problem. We then review and compare various transportation cost functions from the literature and propose a new one. Using the Forward Selection Algorithm, we prove that our proposed cost function selects the best possible scenario from a given sample on the first draw with respect to the relative approximation error. To reduce the computational cost of evaluating this cost function, we further propose a hybrid algorithm that includes a scenario pre-selection phase. We assess solution quality and computational complexity on the two-stage stochastic unit commitment problem for small 24-bus and large 300-bus case studies. With only around five scenarios, the proposed cost function approximates the full-distribution optimum to within roughly 2.1% and 0.4% error for the small and large cases, respectively. The hybrid algorithm achieves similar solution quality while reducing wall-clock time by a factor of 18 and work (as measured by the Gurobi solver) by a factor of 66 on the large case study.",
+      "date": "2026-07-13",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2607.11593v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.11593",
+      "arxiv_id": "2607.11593v1",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Gurobi"
+      ]
+    },
+    {
+      "id": "arxiv-2607.11301",
+      "title": "Approximation Algorithms for Discounted Graph Search with Norm Objectives",
+      "authors": [
+        "Svenja M. Griesbach",
+        "Felix Hommelsheim",
+        "Max Klimm"
+      ],
+      "abstract": "We introduce a unified framework for classical search and routing problems, including pathwise search, expanding search, the minimum spanning tree problem, and the traveling salesperson problem. The framework is based on two parameters. The first is a discount factor $α\\in [0,1]$: the first traversal of an edge incurs its full cost, whereas each subsequent traversal incurs only an $α$-fraction of this cost. For a path starting at a designated root vertex, the $α$-latency of a vertex is the discounted cost accumulated until the vertex is first visited. The second parameter is a norm parameter $p\\geq 1$. The objective is to find a root-starting path that visits all vertices and minimizes the $p$-norm of the resulting vector of $α$-latencies.   The model interpolates between several well-studied objectives. For $p=1$ and $α=1$, it recovers pathwise search; for $p=1$ and $α=0$, it recovers expanding search. As $p$ tends to infinity, the objective converges to a makespan-type criterion. At the endpoints $α=1$ and $α=0$, this limiting objective corresponds to TSP-type and MST-type behavior, respectively. For $p=1$, we give polynomial-time constant-factor approximation algorithms for all $α\\in[0,1]$, matching the best known guarantees for expanding search at $α=0$ and pathwise search at $α=1$. For general $p\\geq 1$, we obtain a randomized constant-factor approximation algorithm and a derandomized pseudo-polynomial-time algorithm with the same guarantee.",
+      "date": "2026-07-13",
+      "source": "arXiv",
+      "source_detail": "cs.DS",
+      "url": "http://arxiv.org/abs/2607.11301v1",
+      "tags": [
+        "cs.DS",
+        "network-optimization",
+        "scheduling",
+        "vehicle-routing"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.11301",
+      "arxiv_id": "2607.11301v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.11091",
+      "title": "Adapting Evidential Neural Networks to Test-Time Neighbor Fusion Improves Molecular Property Prediction",
+      "authors": [
+        "Cameron Gruich",
+        "Weichi Yao",
+        "Yixin Wang",
+        "Bryan Goldsmith"
+      ],
+      "abstract": "A trained molecular property model can be refined at test time by correcting each prediction with the measured labels of the most similar training molecules, a retraining-free procedure we call neighbor fusion; evidential neural networks make it principled by using their aleatoric and epistemic uncertainty to parameterize a Bayesian update. Our main contribution, PG-EVIKAL, learns a property-distance metric to re-rank structurally similar neighbors by their property relevance before fusion, building on EVIKAL (scalar Kalman filter) and GP-EVIKAL (Gaussian process variant handling correlated neighbors). Evaluated on 16 molecular datasets, PG-EVIKAL reduces RMSE relative to the evidential model baseline on 14 of them, with a median reduction of 19.4%, and improves calibration; in sequential-assay scenarios it further incorporates newly measured molecules, refining predictions as they arrive without retraining. This work demonstrates that evidential uncertainty decomposition is not merely a calibration objective but an actionable inference resource that enables test-time refinement of molecular property predictions.",
+      "date": "2026-07-13",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.11091v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.11091",
+      "arxiv_id": "2607.11091v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.11449",
+      "title": "Robust sensor coverage in the presence of spatial obstacles and exclusion zones",
+      "authors": [
+        "Vanshika Datta",
+        "C. Nahak"
+      ],
+      "abstract": "In this article, we develop a robust optimization framework for obstacle-aware aerial directional sensor networks operating under positional uncertainty using a sector-based sensing model. The monitoring area is discretized into grid points and a unified geometric formulation is developed to model directional sensing while explicitly accounting for obstacle-induced visibility loss and exclusion regions. To enhance sensing performance under uncertainty, three progressive optimization strategies, namely robust aerial grid coverage (RAGC), robust aerial target coverage (RATC) and robust aerial target scheduling (RATS), are proposed. The framework employs robust orientation optimization based on the radius of robust feasibility to maximize effective grid and target coverage under sensor perturbations, followed by a target-aware sleep scheduling mechanism that minimizes the number of active sensors without compromising target monitoring. Extensive simulations under varying target distributions, obstacle configurations, uncertainty levels and sensor failure scenarios demonstrate that the proposed framework achieves robust and energy-efficient sensing while consistently outperforming representative approaches from the literature in terms of coverage quality, target monitoring and sensor utilization.",
+      "date": "2026-07-13",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2607.11449v1",
+      "tags": [
+        "math.OC",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.11449",
+      "arxiv_id": "2607.11449v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.11306",
+      "title": "Optimal Control of Pandemic Dynamics via Model Predictive Control: A Health-Economic Trade-off Analysis",
+      "authors": [
+        "Lokman Rachid Melhani",
+        "Lars Grune",
+        "Antonino Sferlazza",
+        "Dominique Persano Adorno",
+        "Filippo D'Ippolito",
+        "Alberto Firenze"
+      ],
+      "abstract": "This paper addresses the optimal control of epidemic dynamics under conflicting socio-economic objectives. We propose an economic Model Predictive Control (MPC) framework, applied to an extended SEIR-V (Susceptible-Exposed-Infected-Recovered-Vaccinated) compartmental model to govern the spread of an infectious disease while minimizing economic disruption. The control problem is formulated as a constrained nonlinear optimization problem, in which the controller dynamically adjusts social interaction levels (transmission rate beta) and vaccination efforts to minimize a composite cost function that penalizes fatalities, healthcare capacity violations, and economic losses. We conduct a rigorous sensitivity analysis of the prediction horizon N, demonstrating that the closed loop is robust to the horizon choice and that N = 35 days minimizes the realized cost. Furthermore, both the closed-loop solution and an open-loop turnpike analysis across diverse initial conditions reveal that the celebrated \"Hammer and Dance\" mitigation strategy emerges naturally as the mathematical optimum: the optimal trajectories anchor to a unique suppression turnpike (maximum lockdown) to drive hospitalizations toward the disease-free equilibrium before progressively reopening the economy. Through a turnpike-based argument we establish practical asymptotic stability of the optimal operating point, providing a mathematically grounded decision-support tool for pandemic policy.",
+      "date": "2026-07-13",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2607.11306v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.11306",
+      "arxiv_id": "2607.11306v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.11826",
+      "title": "Transformer-Guided Swarm Intelligence for Frugal Neural Architecture Search",
+      "authors": [
+        "Romain Amigon"
+      ],
+      "abstract": "Neural Architecture Search (NAS) has automated the design of deep learning models but traditionally requires massive computational resources, often measured in thousands of GPU-days. In this paper, we propose a frugal and memetic NAS framework designed to democratize architecture design on consumer-grade hardware. Our approach combines the global macro-search capabilities of an autoregressive Transformer controller, trained via Reinforcement Learning (RL), with the local micro-exploitation of an Artificial Bee Colony (ABC) algorithm. To prevent premature convergence during the RL phase, we introduce a dynamic entropy mechanism that forces topological exploration upon detection of performance stagnation. Evaluated on a standard GPU (NVIDIA RTX 3060), our hybrid method effectively resolves the \"cold-start\" problem inherent in metaheuristics. By algorithmically penalizing network depth, our framework actively mitigates model bloat: on the CIFAR-10 dataset, it discovers an efficient architecture reaching 84.85% accuracy with only $\\sim$174,000 parameters (significantly smaller than standard baselines like ResNet-20) in 3 hours of search time. Furthermore, we demonstrate the framework's flexibility by applying it to credit card fraud detection, directly optimizing the F1-Score on highly imbalanced tabular data to reach a F1-Score of 0.71 with a compact network of $\\sim$4,600 parameters. These results suggest that our approach can yield tailored, accessible, and highly parameter-efficient deep learning models suitable for edge deployment.",
+      "date": "2026-07-13",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.11826v1",
+      "tags": [
+        "cs.LG",
+        "metaheuristics",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.11826",
+      "arxiv_id": "2607.11826v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 14
+  }
+}
