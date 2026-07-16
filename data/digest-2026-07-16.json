@@ -1,0 +1,450 @@
+{
+  "date": "2026-07-16",
+  "generated_at": "2026-07-16T09:21:36.900157+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s10479-026-07330-7",
+      "title": "Integrated super-efficiency models for network systems: from slack-based measure to unified analysis framework",
+      "authors": [
+        "Lu, C.",
+        "Emrouznejad, A.",
+        "Wang, X.",
+        "Kremantzis, M."
+      ],
+      "abstract": "Abstract\n                  As an extension beyond the conventional Data Envelopment Analysis (DEA), non-radial efficiency assessment methods, particularly the Slack-based Measure (SBM) model, have garnered significant attention for their enhanced discriminant power in evaluating black-box systems. Building on this, the Super-SBM (Sup-SBM) model has emerged to rigorously assess the performance of efficient Decision-Making Units (DMUs). While recent extensions of SBM have addressed two-stage or network structures, a systematic framework for Super-SBM in general network systems remains unexplored. This study presents the first comprehensive methodology for Sup-SBM analysis within network systems, introducing innovative models to compute overall and division-specific super efficiency across diverse configurations, including parallel, series, and general networks. To overcome critical challenges in non-radial Super-efficiency measurement, such as reliance on two-stage computational processes and non-Pareto efficient projection points, we develop a Mixed Integer Linear Programming (MILP) model that streamlines efficiency evaluation. Additionally, by integrating a multiplicative analysis framework with the unified super-efficiency approach, we resolve computational complexities arising from ratio-based data and unbounded efficiency scores. The practical applicability and robustness of our models are rigorously validated through numerical experiments and a case study of the European railway industry, demonstrating their effectiveness in real-world settings. This research not only advances the theoretical foundations of efficiency analysis in network systems but also provides actionable insights for policymakers and industry practitioners seeking to optimise complex operational structures.",
+      "date": "2026-07-16",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07330-7",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "stochastic",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07330-7",
+      "score": 70.0
+    },
+    {
+      "id": "s2-213cb27fb1db",
+      "title": "Performance, Adaptability, and Security in AI-Driven IIoT: A Survey",
+      "authors": [
+        "Uddin Md. Borhan",
+        "Arif Raza",
+        "Taki Uddin",
+        "Mahbubul Islam",
+        "A. Muzahidul Islam",
+        "Jie Chen"
+      ],
+      "abstract": "The Industrial Internet of Things (IIoT) integrates cyber–physical systems (CPSs), edge–cloud computing, artificial intelligence (AI), and advanced connectivity to enable intelligent, data-driven operations across manufacturing, energy, transportation, and healthcare. The convergence of operational technology (OT) and information technology (IT), together with pervasive AI-driven automation, complicates meeting the joint requirements of performance, adaptability, and security (PAS). This survey adopts an explicitly AI-centric view of PAS and reviews IIoT research spanning deep reinforcement learning (DRL), multiagent reinforcement learning (MARL), digital twins (DTs), federated learning (FL) and collaborative learning, graph neural networks (GNNs), blockchain-assisted analytics, and lightweight and post-quantum cryptography (PQC). The reviewed approaches are analyzed across device, edge, fog, cloud, and application layers under industrial constraints, such as latency, reliability, resource limits, safety requirements, and regulatory compliance. A PAS-centric taxonomy is introduced that links technique families to deployment layers and application domains, and recurring tradeoffs among PAS dimensions are summarized. Open challenges are identified in multiobjective optimization, semantic interoperability, lifecycle validation, and governance, with directions outlined toward secure and sustainable Industry 5.0 IIoT ecosystems.",
+      "date": "2026-07-15",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.1109/JIOT.2026.3701588",
+      "tags": [
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1109/JIOT.2026.3701588",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 65.0
+    },
+    {
+      "id": "arxiv-2607.13789",
+      "title": "Dynamical Vehicle Orienteering Problem for Multi-Rotor Unmanned Aerial Vehicles",
+      "authors": [
+        "František Nekovář",
+        "Matej Novosad",
+        "Martin Saska",
+        "Robert Pěnička"
+      ],
+      "abstract": "This paper introduces the Dynamical Vehicle Orienteering Problem (DVOP), a generalization of the Orienteering Problem (OP). The OP maximizes the reward collected from spatial targets under a limited travel budget; the DVOP extends it by accounting for both external and vehicle-actuated forces. We study the DVOP in the context of multi-rotor Unmanned Aerial Vehicle (UAV) flight planning, using a three-dimensional Point-Mass Model (PMM) constrained by maximum velocity and acceleration magnitudes and subject to gravitational acceleration, with the travel budget expressed as a maximum flight time. Because the DVOP couples reward maximization with time-optimal trajectory planning, it cannot be formulated as a simple graph problem and solved exactly without relaxing or under-actuating the vehicle dynamics. We therefore propose two solution approaches: a Branch-and-Bound (BnB) procedure that combines Non-Linear Programming (NLP) and Mixed-Integer Linear Programming (MILP) to provide high-quality solutions, and a Large Neighborhood Search (LNS) metaheuristic that supplies an initial reward bound and scales to instances intractable for the BnB. The BnB relies on a novel MILP formulation of travel costs based on minimum-time trajectory primitives through target triplets, yielding a tight reward upper bound, while the LNS uses limited thrust decomposition to compute fast, high-quality PMM trajectories. Experiments on benchmark instances show improvements of up to 37 % over state-of-the-art solutions for the Kinematic Orienteering Problem, and a real-world deployment on a multi-rotor UAV verifies the proposed PMM solution trajectories.",
+      "date": "2026-07-15",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2607.13789v1",
+      "tags": [
+        "cs.RO",
+        "linear-programming",
+        "integer-programming",
+        "metaheuristics",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.13789",
+      "arxiv_id": "2607.13789v1",
+      "score": 65.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2607.13735",
+      "title": "Constraint-Driven Model Optimization: An Industry Framework for Selecting Compression and Acceleration Techniques in Modern Machine Learning Systems",
+      "authors": [
+        "Dhruv Shivkant",
+        "Saket Mohanty",
+        "Utkarsh Wadhwa"
+      ],
+      "abstract": "The rapid deployment of machine learning systems across cloud, edge, and enterprise environments has brought model optimization to the forefront of systems-engineering. Despite a rich literature spanning quantization, pruning, knowledge distillation, parameter-efficient fine-tuning (PEFT), and inference-time optimization, practitioners are often left navigating these techniques through heuristics rather than principled methodology. We argue that optimization should be formulated as a constraint-driven, multi-objective engineering decision and introduce a unified framework that characterizes any production deployment along five interacting constraint dimensions: data availability, latency budget, memory budget, accuracy tolerance, and retraining budget. Building on this taxonomy, we synthesize empirical gains reported across the research literature and map them to operational constraints rather than algorithmic categories. To ensure practical relevance, we selected these techniques by reviewing recent literature for methods that report measurable improvements against critical deployment bottlenecks. We propose a prescriptive decision framework and provide optimization pipelines for four representative industrial scenarios to illustrate it in practice. To the best of our knowledge, this work provides one of the first structured attempts to formalize model optimization as a constraint-aware, multi-objective engineering process, synthesizing quantitative evidence from the research literature.",
+      "date": "2026-07-15",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.13735v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.13735",
+      "arxiv_id": "2607.13735v1",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1287-trsc.2026.0063",
+      "title": "Inductive Transportation Origin-Destination Demand Forecasting via Bayesian Destination-Choice Modeling",
+      "authors": [
+        "Chen, X.",
+        "Yin, Y.",
+        "Sun, L."
+      ],
+      "abstract": "Accurate forecasting of origin-destination (O-D) demand is critical for transportation network design, planning, and operational management. An underexplored challenge is inductive forecasting: predicting O-D flows for new or unobserved locations, which is essential for evaluating network expansions and new facility placements. However, most existing approaches either are transductive (limited to fixed observed networks) or are deep learning models that lack interpretability, fail to provide uncertainty quantification, and often overlook critical data constraints such as structural zeros. To this end, we develop a Bayesian spatiotemporal hierarchical model for probabilistic O-D demand estimation, designed specifically for inductive forecasting. We assume total trip generation is given and model the destination-choice counts using a multinomial distribution. To handle the high-dimensional probability tensor, which features both simplex and structural zero constraints, we parameterize it via a masked-centered softmax transformation of a latent utility tensor. We then model this latent utility tensor using a CANDECOMP/PARAFAC (CP) tensor factorization to parsimoniously capture spatiotemporal patterns. Crucially, we impose Gaussian process (GP) priors on the spatial and temporal latent factors; the GP over the network provides the principled statistical mechanism to make inductive predictions for new locations. For posterior inference, we propose an Markov chain Monte Carlo algorithm. We validate the proposed model on synthetic data and two real-world O-D data sets. Results confirm our model’s ability to accurately estimate O-D flows and provide robust inductive forecasts with full uncertainty quantification, which is essential for robust decision making in downstream applications, such as stochastic network optimization and facility location problems.\n                  Funding: This research is supported by the Natural Sciences and Engineering Research Council (NSERC) of Canada [Discovery Grant RGPIN-2025-04479].\n                  Supplemental Material: The online appendix is available at https://doi.org/10.1287/trsc.2026.0063 .",
+      "date": "2026-07-15",
+      "source": "Transportation Science",
+      "source_detail": "Transportation Science",
+      "url": "https://doi.org/10.1287/trsc.2026.0063",
+      "tags": [
+        "network-optimization",
+        "ml-for-or",
+        "facility-location"
+      ],
+      "type": "publication",
+      "doi": "10.1287/trsc.2026.0063",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.13655",
+      "title": "Explaining Reinforcement Learning Agents via Inductive Logic Programming",
+      "authors": [
+        "Celeste Veronese",
+        "Edoardo Zorzi",
+        "Daniele Meli",
+        "Alessandro Farinelli"
+      ],
+      "abstract": "Explainable Reinforcement Learning (XRL) seeks to make Reinforcement Learning (RL) policies more transparent and interpretable, a key requirement in safety-critical and human-centric scenarios. However, it is mostly based on user studies, thus targeting the needs of a specific audience and lacking shared evaluation metrics. On the other hand, logic-based approaches within eXplainable Artificial Intelligence (XAI) provide compact, human-readable abstractions of decision-making. However, the systematic quantification of the explainability degree of logical representations remains an open problem. This work aims to advance the state of the art in XRL by introducing objective and planning-oriented metrics for policy explainability in RL settings. At the same time, it contributes to the field of logic for XAI by providing a principled way to quantify the explainability of logical rules, moving beyond common-sense assessments and simple propositional fragments. We employ Inductive Logic Programming (ILP) to extract symbolic representations of RL policies and define a novel set of explainability metrics, including activation rate, feature coverage, syntactic distance and semantic distance. These metrics quantify alignment between symbolic rules and agent behavior, the role of features in decision-making, and the evolution of policies during training and across agents in single and multi-agent RL. Experiments across different RL domains show that the proposed metrics highlight action-specific learning dynamics beyond global return, provide fine-grained insights into domain features beyond classical approaches for global feature importance estimation, and uncover coordination, specialization, and adaptation patterns in MARL. Moreover, they provide crucial insights for the transfer and generalization of action-specific policies.",
+      "date": "2026-07-15",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2607.13655v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.13655",
+      "arxiv_id": "2607.13655v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.13639",
+      "title": "OvisOCR2 Technical Report",
+      "authors": [
+        "Shiyin Lu",
+        "Yinglun Li",
+        "Yu Xia",
+        "Yuhui Chen",
+        "An-Yang Ji",
+        "Jun-Peng Jiang",
+        "Qing-Guo Chen",
+        "Jianshan Zhao",
+        "En Lin",
+        "Haijun Li",
+        "Cheng Qin",
+        "Zhao Xu",
+        "Weihua Luo"
+      ],
+      "abstract": "We introduce OvisOCR2, a 0.8B document parsing model. OvisOCR2 is designed as an end-to-end parser: given a document page image, it generates a Markdown representation in natural reading order, covering text, formulas, tables, and visual regions. We build a data engine that combines filtered real-document annotations with synthetic pages whose rendered images and Markdown targets are derived from the same HTML source. The training recipe includes supervised fine-tuning, reinforcement learning on a 4B branch with a multi-component reward design, on-policy distillation into the 0.8B model, and model fusion. On OmniDocBench v1.6, OvisOCR2 achieves a state-of-the-art overall score of 96.58, placing an end-to-end model at the top of this leaderboard previously dominated by pipeline methods and highlighting the potential of end-to-end document parsing. On PureDocBench, OvisOCR2 also achieves the highest Avg3 score of 75.06. Beyond these two public benchmarks, we evaluate OvisOCR2 on an in-house benchmark designed to cover a broader set of long-tail and challenging scenarios. OvisOCR2 obtains the best overall performance among the compared methods, providing further evidence of its generalization and robustness. OvisOCR2 is available at https://huggingface.co/ATH-MaaS/OvisOCR2.",
+      "date": "2026-07-15",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2607.13639v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.13639",
+      "arxiv_id": "2607.13639v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.13728",
+      "title": "Cluster with Auctions for Vector Search",
+      "authors": [
+        "Swann Bessa",
+        "Pierre Fernandez",
+        "Gergely Szilvasy",
+        "Matthijs Douze",
+        "Hervé Jégou"
+      ],
+      "abstract": "Large-scale approximate nearest neighbor search commonly relies on partitions for indexing: database vectors are partitioned into clusters, and for each query a probing function selects the clusters to be scanned. The query probing function and the database partition are rarely treated as separate entities: most techniques assign queries with the same assignment function as the database vectors, which is suboptimal especially when database and query distributions differ. This paper introduces CwA (Cluster with Auctions), which addresses this limitation by jointly learning a balanced database partition and a neural probing function. CwA optimizes search performance directly for the query distribution. It minimizes its objective by alternating two steps: (i) gradient descent on the neural network of the probing function, and (ii) a large-scale combinatorial optimization of the cluster assignment for the database vectors. We solve the latter with a parallelizable auction algorithm that balances the partition by design. To further scale CwA, we extend the method to a Cartesian product of clusters that increases the partition's granularity. When database and query distributions differ, CwA achieves up to 4.7$\\times$ throughput over the state-of-the-art at equal recall. In the in-distribution (ID) setting, even a simple linear probing function trained with CwA outperforms competing deep neural methods.",
+      "date": "2026-07-15",
+      "source": "arXiv",
+      "source_detail": "cs.IR",
+      "url": "http://arxiv.org/abs/2607.13728v1",
+      "tags": [
+        "cs.IR",
+        "ml-for-or",
+        "game-theory",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.13728",
+      "arxiv_id": "2607.13728v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.13914",
+      "title": "Epidemic Informatics and Control: A Holistic Approach from System Informatics to Epidemic Response and Risk Management in Public Health",
+      "authors": [
+        "Hui Yang",
+        "Siqi Zhang",
+        "Runsang Liu",
+        "Alexander Krall",
+        "Yidan Wang",
+        "Marta Ventura",
+        "Chris Deflitch"
+      ],
+      "abstract": "This paper presents a holistic systems informatics approach, i.e., Define, Measure, Analyze, Improve, and Control (DMAIC), for epidemic response and management through the intensive use of data, statistics and optimization. Despite the sustained successes of system informatics in a variety of established industries such as manufacturing, logistics, services and beyond, there is a dearth of concentrated review and application of the data-driven DMAIC approach in the context of epidemic outbreaks. First, we define specific challenges posed by epidemic outbreaks to populational health, health systems, as well as economic challenges to different industries such as retailing, education and manufacturing. Second, we present a review of medical testing and statistical sampling methods for data collection, as well as existing efforts in data management and data visualization. Third, we discuss the importance to realizing the full potential of data for epidemic insights, and emphasize the need to leverage analytical methods and tools for decision support. Fourth, an epidemic brings imperative changes to health systems. We discuss the new trend of healthcare solutions to improve system resilience, including telehealth, artificial intelligence, resource allocation, and system re-design. In closing, prescriptive approaches are discussed to optimize the health policies and action strategies for controlling the spread of virus. We posit that this work will catalyze more in-depth investigations and multi-disciplinary research efforts to accelerate the application of system informatics methods and tools in epidemic response and risk management.",
+      "date": "2026-07-15",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2607.13914v1",
+      "tags": [
+        "eess.SY",
+        "healthcare-or",
+        "supply-chain",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.13914",
+      "arxiv_id": "2607.13914v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-net.70058",
+      "title": "Energy Optimization Models for the Locomotive Assignment Problem",
+      "authors": [
+        "Baumgartner, G.",
+        "Kocatürk, F.",
+        "Scherr, N.",
+        "Fabian Ehmke, J."
+      ],
+      "abstract": "ABSTRACT\n                  Reducing energy consumption is a key objective in transportation. Using detailed infrastructure data, this study introduces the Green Locomotive Assignment Problem (GLAP) to minimize energy consumption in railway operations by efficiently assigning locomotives to pre‐scheduled trains. The model targets key energy consumption sources, such as heating, consist‐busting, idling, and light‐traveling, which occurs when locomotives relocate without pulling a train. Energy consumption and regenerative braking during light‐traveling are calculated using the Davis equation with track gradients. Additionally, we propose a variation of the model that incorporates deadheading, where locomotives are repositioned by attaching them to trains without fully using their engines. Including detailed gradient information from the Austrian railway network, we compare the distance‐ and locomotive‐minimizing objective with the GLAP solution and observe that energy consumption can be reduced significantly by utilizing more energy‐efficient paths, and optimizing the order of locomotive types on light‐traveling trips.",
+      "date": "2026-07-15",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70058",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70058",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 14
+  }
+}
