@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T09:16:09.717115+00:00",
+  "generated_at": "2026-07-18T08:53:22.825834+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1729,
+      "github_stars": 1730,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 174,
+      "github_open_issues": 176,
       "github_recent_prs": [
+        "Feature/grpc server impl",
+        "Hessian oracle",
         "Claude/hipo parallel solve sketch",
         "Claude/highs cpu optimization review xy o7z",
-        "Fix edge-case assertion failures in presolve and domain propagation code",
-        "Documentation update, mainly for C API",
-        "Bazel fixup"
+        "Fix edge-case assertion failures in presolve and domain propagation code"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13780,
+      "github_stars": 13784,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1132,7 +1132,7 @@
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
       "github_stars": 6277,
-      "github_open_issues": 194,
+      "github_open_issues": 191,
       "github_recent_prs": [
         "Replace Sum shape inference with exact tuple formula",
         "Add problem-level constraint violation helper",
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1766,
+      "github_stars": 1767,
       "github_open_issues": 15,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Just like the planet lately, we're turning up the heat! In this release, we improve solver performance across the board - Constraint Streams, Value Ranges, Shadow Variables, everything gets a speed bu",
-      "github_stars": 1717,
-      "github_open_issues": 106,
+      "github_stars": 1718,
+      "github_open_issues": 98,
       "github_recent_prs": [
+        "chore: make Radovan a co-owner for docs",
         "feat: enable automated code formatting for models",
         "docs: correct double version prefix",
         "fix: create copy DecimalFormat",
-        "fix: use correct format specifier in BenchmarkAggregatorFrame",
-        "chore: Backport changes from version `2.x`"
+        "fix: use correct format specifier in BenchmarkAggregatorFrame"
       ]
     },
     {
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2485,
+      "github_stars": 2486,
       "github_open_issues": 368,
       "github_recent_prs": [
         "Enable More Complex Error Structures in ParmEst and Pyomo.DoE",

@@ -1,0 +1,382 @@
+{
+  "date": "2026-07-18",
+  "generated_at": "2026-07-18T08:53:23.187415+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1287-mnsc.2025.01729",
+      "title": "Learning to Cover: Online Learning and Optimization with Irreversible Decisions",
+      "authors": [
+        "Jacquillat, A.",
+        "Li, M."
+      ],
+      "abstract": "We define an online learning and optimization problem with discrete and irreversible decisions contributing toward a coverage target. In each period, a decision-maker selects facilities to open, receives information on the success of each one, and updates a classification model to guide future decisions. The goal is to minimize facility openings under a chance constraint reflecting the coverage target, in an asymptotic regime characterized by a large target number of facilities but a finite planning horizon. We prove that, under statistical conditions, the online classifier converges to the Bayes-optimal classifier at the standard square-root rate. Thus, we formulate our online learning and optimization problem with a generalized learning rate and a residual classification error. We derive an asymptotically optimal algorithm and an asymptotically tight lower bound. The regret grows sublinearly under perfect learning and remains sublinear more generally; in particular, the regret converges exponentially fast to its infinite-horizon limit. We extend this result to a more complicated facility location setting in a bipartite facility-customer graph with a target on customer coverage. Throughout, constructive proofs identify a policy featuring limited exploration initially and fast exploitation later on once uncertainty gets mitigated. These results uncover the benefits of limited online learning and optimization through pilot programs prior to full-fledged expansion.\n                  Supplemental Material: The online appendices and data files are available at https://doi.org/10.1287/mnsc.2025.01729 .",
+      "date": "2026-07-17",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2025.01729",
+      "tags": [
+        "stochastic",
+        "facility-location"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2025.01729",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261472999",
+      "title": "EXPRESS: Optimal Online Strategies for the Secretary Problem with Two-Tier Decision-Making",
+      "authors": [
+        "Zhang, W.",
+        "Zhang, X.",
+        "Shu, N.",
+        "Cheng, Y."
+      ],
+      "abstract": "In the classic secretary problem, the decision-maker is faced with an online sequence of candidates with values. Upon seeing a candidate, they have to make an irrevocable take-it-or-leave-it decision. We generalize this framework to the secretary problem with two-tier decision-making (\n                    SP-TT\n                    ), modeling online selection with hierarchical screening. The problem becomes even more complicated under two-tier decision-making, which captures pervasive real-world scenarios. The first-tier decision-maker (\n                    DM1\n                    ) filters candidates for the second-tier decision-maker (\n                    DM2\n                    ), who must make an irrevocable decision without knowing future candidates' scores, except that all scores are bounded within the known interval [\n                    m\n                    ,\n                    M\n                    ]. The aim is to find a collaborative online strategy between\n                    DM1\n                    and\n                    DM2\n                    that maximizes the expected return. We prove that no strategy surpasses a competitive ratio of\n                    r\n                    * and propose a randomized threshold-based strategy RTS achieving this bound. Our main contribution is introducing a new non-linear programming technique for obtaining and analyzing strategy RTS for\n                    SP-TT\n                    and its extended variants. We establish a one-to-one correspondence between strategy RTS for\n                    SP-TT\n                    and the optimal solution to the non-linear program (\n                    NLP\n                    ). The contribution of the extension section lies in enhancing the real-world applicability of the framework. Introducing a family of problem variants, including those based on different performance evaluations, data-driven dynamic thresholds considering prior information, inaccuracy scores, and interview costs, we rigorously derive the optimal deterministic and randomized online strategies for each variant. Through simulation experiments, we demonstrate the superior performance of the proposed strategies, particularly compared with the strategy derived from the classic single-stage secretary model, and provide practical recommendations for firm recruitment.",
+      "date": "2026-07-17",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261472999",
+      "tags": [
+        "linear-programming",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261472999",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1080-01605682.2026.2697952",
+      "title": "Leveraging online reviews for customer regional preference demand analysis: evidence from Chinese new energy vehicle reviews",
+      "authors": [
+        "Wu, P.",
+        "Chen, S.",
+        "Deveci, M."
+      ],
+      "abstract": "",
+      "date": "2026-07-17",
+      "source": "Journal of the Operational Research Society",
+      "source_detail": "Journal of the Operational Research Society",
+      "url": "https://doi.org/10.1080/01605682.2026.2697952",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1080/01605682.2026.2697952",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261473004",
+      "title": "EXPRESS: Governing AI-Enabled Decision Making: Delegation, Autonomy, and Control at the Operations–Marketing Interface",
+      "authors": [
+        "Srivastava, A."
+      ],
+      "abstract": "Firms are increasingly confronting a fundamental organizational choice: whether to retain human control over operational and marketing decisions or to delegate decision authority to agentic artificial intelligence systems. While recent advances in generative and autonomous AI enable real-time pricing, inventory allocation, and demand coordination, firms exhibit substantial heterogeneity in how much autonomy they grant these systems—ranging from full automation to extensive human oversight. This raises a central operations management question: when should firms delegate pricing and inventory decisions to agentic AI, and how should such delegation be governed? We develop an analytical model of AI delegation at the operations–marketing interface in which a firm jointly determines pricing and inventory under demand uncertainty and chooses among human control, full AI autonomy, or human-in-the-loop governance. Agentic AI improves responsiveness by enabling state-contingent decisions, but also introduces new forms of operational exposure by reducing buffers and accelerating execution. Our analysis yields several key insights. First, we identify a demand-variance threshold above which delegating decisions to agentic AI becomes optimal, even when AI is imperfect. Second, we show that partial delegation can strictly dominate both full autonomy and full human control, providing a theoretical foundation for hybrid governance structures widely observed in practice. Third, when AI investment is endogenous, adoption and autonomy become distinct decisions, generating a three-region equilibrium in which firms may invest in AI while deliberately restricting its authority. We further show that learning, service-level asymmetry, stochastic lead time, endogenous human oversight, and organizational scale fundamentally reshape delegation incentives, often in counterintuitive ways: faster learning can delay early autonomy; improved pricing coordination can increase inventory imbalance; and larger organizations may rely on autonomy even under moderate uncertainty. Together, our results demonstrate that AI delegation is not a technological inevitability but an economically contingent organizational choice shaped by uncertainty, risk asymmetry, and structural complexity. The paper provides a unified theoretical framework for understanding AI governance in operations and offers guidance for firms navigating the transition toward autonomous decision-making.",
+      "date": "2026-07-17",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261473004",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261473004",
+      "score": 45.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1080-01605682.2026.2702071",
+      "title": "The conceptual HABITS prototype for integrating behavioural theories with system dynamics and agent-based models to capture complex health behaviours",
+      "authors": [
+        "Nguyen, L.",
+        "Donnachie, C.",
+        "Howick, S.",
+        "Williams, L.",
+        "Adwubi, E.",
+        "Ewart, C.",
+        "Ang, M.",
+        "Hajiebrahimi Farashah, V.",
+        "Heimdal, K.",
+        "Ibrahimy, S.",
+        "Megiddo, I."
+      ],
+      "abstract": "",
+      "date": "2026-07-17",
+      "source": "Journal of the Operational Research Society",
+      "source_detail": "Journal of the Operational Research Society",
+      "url": "https://doi.org/10.1080/01605682.2026.2702071",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1080/01605682.2026.2702071",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2025.00771",
+      "title": "Left-Digit Bias, Quality Choice, and Channel Coordination",
+      "authors": [
+        "Peng, X.",
+        "Zhong, Z."
+      ],
+      "abstract": "Left-digit bias in price perception has been widely documented. We study how it affects firms’ joint pricing and quality choices. The bias increases quality at interior prices but decreases quality at 99-ending prices. At 99-ending price points, the bias discourages price adjustment, leading firms to absorb cost shocks through quality changes and thereby, contributing to shrinkflation (quality reductions with nominal prices held fixed). In channels, the bias can either exacerbate double marginalization via a prisoner’s dilemma or—because retailers are rigid at 99-ending prices—induce wholesale price adjustments that may strengthen coordination. When manufacturers choose quality, for empirically relevant bias magnitudes, the bias can generate 99-ending retail pricing and raise total channel profits; its coordination effects depend on whether the induced move to 99-ending prices is upward or downward. In decentralized channels, consumer surplus can sometimes increase alongside total channel profit.\n                  This paper was accepted by Greg Shaffer, marketing.\n                  Funding: X. Peng acknowledges the support from National Natural Science Foundation of China [72531009] and China Scholarship Council.\n                  Supplemental Material: The online appendix is available at https://doi.org/10.1287/mnsc.2025.00771 .",
+      "date": "2026-07-17",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2025.00771",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2025.00771",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07335-2",
+      "title": "Using optimization and AI for large-scale stochastic resource planning",
+      "authors": [
+        "de Alba, H.",
+        "Li, H.",
+        "Tellez-Crespo, A.",
+        "Santos, C.",
+        "Gomez-Rocha, J.",
+        "Vargas, M.",
+        "Regueira, V.",
+        "Ramshaw, L.",
+        "Ramirez-Nafarrate, A."
+      ],
+      "abstract": "",
+      "date": "2026-07-18",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07335-2",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07335-2",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07317-4",
+      "title": "Technology-resource interaction innovation decisions in small and medium-sized manufacturing enterprise alliances: A dynamic biform game model",
+      "authors": [
+        "Ma, X.",
+        "Ma, W."
+      ],
+      "abstract": "",
+      "date": "2026-07-18",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07317-4",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07317-4",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1080-01605682.2026.2705098",
+      "title": "Correction",
+      "authors": [],
+      "abstract": "",
+      "date": "2026-07-17",
+      "source": "Journal of the Operational Research Society",
+      "source_detail": "Journal of the Operational Research Society",
+      "url": "https://doi.org/10.1080/01605682.2026.2705098",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1080/01605682.2026.2705098",
+      "score": 30.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 9,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 13
+  }
+}
