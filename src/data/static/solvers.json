@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T08:53:22.825834+00:00",
+  "generated_at": "2026-07-19T09:09:48.420603+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 176,
+      "github_open_issues": 175,
       "github_recent_prs": [
+        "highs-server: standalone gRPC service interface for HiGHS",
         "Feature/grpc server impl",
         "Hessian oracle",
         "Claude/hipo parallel solve sketch",
-        "Claude/highs cpu optimization review xy o7z",
-        "Fix edge-case assertion failures in presolve and domain propagation code"
+        "Claude/highs cpu optimization review xy o7z"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13784,
+      "github_stars": 13790,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -571,11 +571,11 @@
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
       "github_open_issues": 109,
       "github_recent_prs": [
+        "Validate indices in set cover file readers to prevent OOB access",
         "Export from google3",
         "Do not redefine absl::SourceLocation when Abseil provides it",
         "Expose `AddRouteConstraint` to C# / bring back swig to C#",
-        "cmake: bump highs to v1.15.1",
-        "cmake: bump highs to v1.15.0"
+        "cmake: bump highs to v1.15.1"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6277,
-      "github_open_issues": 191,
+      "github_stars": 6281,
+      "github_open_issues": 192,
       "github_recent_prs": [
+        "Updated the link to the Uno installation instructions",
         "Replace Sum shape inference with exact tuple formula",
         "Add problem-level constraint violation helper",
         "Bump github/codeql-action/upload-sarif from 4.36.3 to 4.37.0",
-        "docs: use default solver in graphical LASSO example",
-        "Add regression tests: composed parametric coefficients refresh across re-solves"
+        "docs: use default solver in graphical LASSO example"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Just like the planet lately, we're turning up the heat! In this release, we improve solver performance across the board - Constraint Streams, Value Ranges, Shadow Variables, everything gets a speed bu",
-      "github_stars": 1718,
-      "github_open_issues": 98,
+      "github_stars": 1720,
+      "github_open_issues": 99,
       "github_recent_prs": [
+        "fix: mark ModelConvertor parameters and returns as non-null (#2507)",
         "chore: make Radovan a co-owner for docs",
         "feat: enable automated code formatting for models",
         "docs: correct double version prefix",
-        "fix: create copy DecimalFormat",
-        "fix: use correct format specifier in BenchmarkAggregatorFrame"
+        "fix: create copy DecimalFormat"
       ]
     },
     {
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2486,
+      "github_stars": 2487,
       "github_open_issues": 368,
       "github_recent_prs": [
         "Enable More Complex Error Structures in ParmEst and Pyomo.DoE",

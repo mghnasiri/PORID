@@ -1,0 +1,330 @@
+{
+  "date": "2026-07-19",
+  "generated_at": "2026-07-19T09:09:48.764222+00:00",
+  "publications": [
+    {
+      "id": "s2-21e26ad18623",
+      "title": "A Reproducibility Study of Bundle Editing and Bundle Recommendation",
+      "authors": [
+        "Yiran An",
+        "Lin Li",
+        "Ming Li",
+        "Wenxing Ye",
+        "Qing Xie",
+        "J. Huang"
+      ],
+      "abstract": "Bundle recommender system is divided into two main stages: bundle editing and bundle recommendation. While substantial research progress has been made in each stage, in practical application scenarios, bundle compositions and the final recommended bundles mutually influence each other: the continuously editing bundle compositions affect the recommendation results, while user feedback on recommended bundles in turn guides the refinement of bundle compositions. This paper presents the first comprehensive reproducibility study of the complete bundle recommendation pipeline. We implement eight bundle-level editing methods, nine item-level editing methods, and seven state-of-the-art bundle recommendation models, and evaluate their performance across six real-world datasets. Our empirical analysis reveals several key findings. First, bundle-level editing faces the challenge of generating high-quality bundles. Second, in the item-level editing, the replacement operation emerges as a universal bottleneck across all methods. Third, in the recommendation stage, recommendation models exhibit varying performance across different interaction density scenarios (e.g., cold-start). Finally, bundle recommendation suffers degraded performance when integrating item-level editing and bundle recommendation within a unified pipeline. Overall, there is the systemic limitation of bundle recommendation: prior work has focused on optimizing individual stages independently, disregarding the interdependencies throughout the entire recommendation system. These findings highlight the urgent need to develop end-to-end solutions that can holistically address the bundle editing and recommendation workflow. Our repository is now available for public access via https://github.com/anyr123/Bundle_Edit_Rec_SIGIR26.",
+      "date": "2026-07-19",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.1145/3805712.3808559",
+      "tags": [
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1145/3805712.3808559",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "s2-0a4c51cb010d",
+      "title": "Faithful LLM-Assisted Question Answering for Technical and Academic Search",
+      "authors": [
+        "Juan Luis Filgueiras"
+      ],
+      "abstract": "Technology scouting and competitive intelligence increasingly rely on rapid access to scientific and technical evidence. Large language models (LLMs) are reshaping question answering by enabling users to express exploratory and evolving information needs in natural language. However, their usefulness is limited by hallucinations, weak calibration, poor abstention when evidence is missing, and the cost of keeping knowledge up to date. In such settings, the key question is whether LLM-generated answers can be trusted for decision support, that is, whether they are faithful to available evidence, transparent about uncertainty, and easy to verify. Recent work shows that hallucinations remain pervasive, while retrieval-augmented generation (RAG) has become the main strategy for grounding answers in external evidence. Yet even strong RAG systems often cite unsupported claims or generate plausible but fabricated references, especially under poor retrieval conditions. In response, prior work has examined citation faithfulness, decomposed generations into checkable units, and proposed factuality verification models and benchmarks. Still, the literature underexplores how to filter and validate evidence when sources are sparse, conflicting, or rapidly changing, as is common in technical and academic search. This thesis addresses that gap by studying faithful LLM-assisted question answering for technical and academic search as an end-to-end problem spanning collection construction, model adaptation, grounded generation, evidence verification, and user-centered evaluation. It is organized around five questions: how LLMs can support exploratory search beyond keywords; how retrieval and generation pipelines can produce trustworthy responses; how systems should behave when evidence is sparse or unreliable; how usefulness and trustworthiness should be evaluated; and which architectures and optimization strategies enable reliable real-world deployment. The thesis argues that truthful technical search requires explicit mechanisms for claim-level grounding, calibrated abstention, contradiction handling, and support-aware evidence presentation. Methodologically, the work follows a pipeline perspective in which datasets, models, and evaluation procedures co-evolve. The empirical setup combines public QA and RAG benchmarks with technical and scientific collections tailored to technology scouting scenarios. A central methodological contribution will be the design of scenario-based evaluation subsets targeting null-retrieval, conflicting evidence, noisy or weak-signal evidence, and exploratory information needs. On top of these resources, the thesis will compare single-pass RAG and more structured agentic pipelines while varying retrieval strategies, prompting policies, claim-evidence alignment procedures, quotation and citation behaviors, and model adaptation techniques such as instruction tuning, parameter-efficient fine-tuning, and reinforcement-based optimization. Evaluation will be multi-dimensional. In addition to answer utility and retrieval effectiveness, the thesis will measure citation faithfulness, support coverage, hallucination and false citation rates, abstention quality, uncertainty communication, and robustness under perturbed retrieval conditions. Whenever feasible, these automatic analyses will be complemented with analyst-oriented user studies that examine whether different evidence presentation formats help users reduce verification cost in realistic scouting workflows. Overall, the expected contribution is a principled and deployable framework for trustworthy natural-language access to scientific and technical information, combining faithful generation, verifiable evidence selection, and evaluation protocols tailored to real technical and academic search.",
+      "date": "2026-07-19",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1145/3805712.3808357",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1145/3805712.3808357",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "optim-online-72b761b9e30e",
+      "title": "Robust Chance-Constrained Optimization using a Continuous Parameter Space Wasserstein-2 Ambiguity Set of Gaussian Mixtures",
+      "authors": [],
+      "abstract": "We study distributionally robust linear chance-constrained problems in which uncertainty is modeled by a Gaussian mixture model (GMM). Finite-support distributionally robust (FDR) formulations, widely used in data-driven robust optimization, robustify over empirical mixture support points and therefore primarily stress-test the fitted nominal mixture. This can be insufficient when service reliability depends on structural misspecification of ... Read more",
+      "date": "2026-07-19",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/07/robust-chance-constrained-optimization-using-a-continuous-parameter-space-wasserstein-2-ambiguity-set-of-gaussian-mixtures/?utm_source=rss&utm_medium=rss&utm_campaign=robust-chance-constrained-optimization-using-a-continuous-parameter-space-wasserstein-2-ambiguity-set-of-gaussian-mixtures",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07335-2",
+      "title": "Using optimization and AI for large-scale stochastic resource planning",
+      "authors": [
+        "de Alba, H.",
+        "Li, H.",
+        "Tellez-Crespo, A.",
+        "Santos, C.",
+        "Gomez-Rocha, J.",
+        "Vargas, M.",
+        "Regueira, V.",
+        "Ramshaw, L.",
+        "Ramirez-Nafarrate, A."
+      ],
+      "abstract": "",
+      "date": "2026-07-18",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07335-2",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07335-2",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07317-4",
+      "title": "Technology-resource interaction innovation decisions in small and medium-sized manufacturing enterprise alliances: A dynamic biform game model",
+      "authors": [
+        "Ma, X.",
+        "Ma, W."
+      ],
+      "abstract": "",
+      "date": "2026-07-18",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07317-4",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07317-4",
+      "score": 40.0
+    },
+    {
+      "id": "optim-online-ff5a3030016f",
+      "title": "Tight Conic Relaxations for Rank-one Doubly Nonnegative Matrix Completion",
+      "authors": [],
+      "abstract": "We study tight conic relaxations for a quadratically constrained quadratic programming (QCQP) formulation of rank-one doubly nonnegative (DNN) matrix completion. Motivated by sparse QCQPs whose lifted matrix variables include elements not directly specified by the objective or constraints, we interpret tightness as a rank-one completion property for the unspecified elements. For sparsity patterns whose blocks ... Read more",
+      "date": "2026-07-18",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/07/tight-conic-relaxations-for-rank-one-doubly-nonnegative-matrix-completion/?utm_source=rss&utm_medium=rss&utm_campaign=tight-conic-relaxations-for-rank-one-doubly-nonnegative-matrix-completion",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "score": 30.0
+    },
+    {
+      "id": "crossref-10.1007-s11081-026-10111-7",
+      "title": "Modeling and optimization: theory and applications (MOPTA), Bethlehem, PA, USA, August 2024, selected contributions",
+      "authors": [
+        "Giovannelli, T.",
+        "Terlaky, T.",
+        "Yang, X."
+      ],
+      "abstract": "",
+      "date": "2026-07-18",
+      "source": "Optimization and Engineering",
+      "source_detail": "Optimization and Engineering",
+      "url": "https://doi.org/10.1007/s11081-026-10111-7",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11081-026-10111-7",
+      "score": 30.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 7,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 11
+  }
+}
