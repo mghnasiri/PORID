@@ -1,0 +1,438 @@
+{
+  "date": "2026-07-21",
+  "generated_at": "2026-07-21T09:34:27.153435+00:00",
+  "publications": [
+    {
+      "id": "s2-274dad7efc43",
+      "title": "A hybrid GA-LP scenario-based framework for day-ahead scheduling of PV-BES systems with profit-robustness trade-off.",
+      "authors": [
+        "Ibrahim Alsaidan"
+      ],
+      "abstract": "This paper proposes a scenario-based scheduling framework for a photovoltaic-battery energy storage (PV-BES) system participating in day-ahead energy arbitrage markets. The proposed framework accounts for uncertainties in both PV generation and electricity prices. A hybrid optimization approach is developed, combining a genetic algorithm (GA) with a linear programming (LP) model. The optimization problem is decomposed into two layers. In the first layer, the GA determines the BES commitment schedule, while in the second layer, a coupled LP is solved to obtain the shared BES dispatch schedule, held fixed across all scenarios, with the grid exchange power varying per scenario. A robustness weight is incorporated to control the trade-off between profitability and robustness. Solving the problem across multiple values of robustness weight yields a Pareto frontier, enabling operators to select a scheduling strategy aligned with their risk preference. A case study based on real PV generation and electricity price data is conducted to validate the effectiveness of the proposed framework. The results are further compared with those obtained from three benchmark approaches: deterministic MILP, a naive rule-based method, and classical robust optimization.",
+      "date": "2026-07-20",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1038/s41598-026-62641-w",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "metaheuristics",
+        "scheduling",
+        "stochastic",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1038/s41598-026-62641-w",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 70.0
+    },
+    {
+      "id": "arxiv-2607.17781",
+      "title": "Geometric Projection Particle Filtering under Model Uncertainty",
+      "authors": [
+        "Surya Ratna Prakash D",
+        "Soumyendu Raha"
+      ],
+      "abstract": "Nonlinear state estimation under structural model uncertainty remains a central challenge in autonomous Guidance, Navigation, and Control (GNC) systems. Classical estimators propagate states using assumed dynamics and incorporate measurements through posterior correction, which under mismatch leads to biased innovations, estimator inconsistency, and particle degeneracy due to proposal--likelihood mismatch.   This paper presents the \\emph{Geometric Projection Particle Filter (GPF)}, a measurement-informed framework in which observation geometry directly influences state propagation. The method projects nominal drift dynamics onto the measurement-consistent subspace, enforcing local compatibility between dynamics and observations. This yields a geometry-consistent proposal process that reduces effective mismatch prior to weighting while preserving the Bayesian posterior via a change-of-measure formulation.   A continuous-time formulation is developed, introducing a geometric co-state variable that characterizes mismatch-induced inconsistency and has zero conditional mean under correct modeling. It is shown that filtering error is governed by the component of mismatch orthogonal to the measurement-consistent subspace, and particle consistency is established with convergence at the standard Monte Carlo rate.   The approach is evaluated on lunar descent navigation scenarios with partial observability and persistent mismatch. Results demonstrate significant reduction in particle degeneracy, sustained effective sample size, and bounded estimation error in regimes where standard particle filters diverge, achieving up to an order-of-magnitude improvement in accuracy.   These findings show that enforcing geometric compatibility during propagation provides a principled mechanism for improving robustness and consistency in nonlinear particle filtering under model uncertainty.",
+      "date": "2026-07-20",
+      "source": "arXiv",
+      "source_detail": "math.DS",
+      "url": "http://arxiv.org/abs/2607.17781v1",
+      "tags": [
+        "math.DS",
+        "stochastic",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.17781",
+      "arxiv_id": "2607.17781v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.17491",
+      "title": "Supply Chain Networks",
+      "authors": [
+        "Elioth Sanabria"
+      ],
+      "abstract": "This study provides a quantitative framework for analysis of systemic demand uncertainty and risk propagation cascades across general supply chain networks. By leveraging properties derived from stochastic networks embedded within a Newsvendor paradigm, we model multi-echelon networks under equilibrium and transient operational regimes. We mathematically validate that the systemic volatility behavior commonly referred to as the Bullwhip effect persists entirely as an unavoidable, inherent topological property of coordinated logistics networks, independent of traditional operational noise or information visibility constraints. Extending this paradigm to transient environments, we model inventory drawdown horizons as a multi-dimensional Skorokhod reflection problem. Crucially, we endogenize market-clearing feedback loops by incorporating non-linear price elasticity mechanisms and dynamic trade relation rebalancing, demonstrating how decentralized rational actions co-evolve with physical capacity bottlenecks to accelerate systemic network degradation. Finally, we operationalize the framework through a data-driven numerical experiment mapping global oil trade dynamics, showing how localized chokepoint disruptions, such as a capacity shock in the Strait of Hormuz, trigger non-linear cascading stockouts and systemic reallocation across sovereign buffers over time.",
+      "date": "2026-07-20",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2607.17491v1",
+      "tags": [
+        "math.OC",
+        "supply-chain",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.17491",
+      "arxiv_id": "2607.17491v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.18147",
+      "title": "LLMs and Agentic AI Systems for Smart Grids: A Tutorial on Architectures and Applications",
+      "authors": [
+        "Daniela Rojas",
+        "Abdulwahab Albassam",
+        "Aidan G. Leung",
+        "Jett Ngo",
+        "Ryan Luo",
+        "Peter R. Quawas",
+        "Junpyung Kim",
+        "Kangkai Liang",
+        "Mansi Nanavati",
+        "Jonathan Mai",
+        "Meng-Chi Tsai",
+        "Yun-Tong Tsai",
+        "Yize Chen",
+        "Yuanyuan Shi"
+      ],
+      "abstract": "Large language models (LLMs) and agentic AI systems have evolved from natural language tasks to using external tools to plan, retrieve, and act in technical domains. In smart grids, recent work applies agentic schemes to forecasting, optimization, and control, wrapping trusted solvers behind language interfaces and orchestrating multi-step workflows. The literature lacks a unified approach to designing and evaluating such systems. LLMs can produce numerically plausible yet physically infeasible outputs, evaluation protocols vary across tasks, and the boundary between what the model should and should not compute is implicit. This paper presents a solver-grounded design principle: a numerical result is reported only when it originates from a trusted tool and passes explicit verification. We review the building blocks of LLM and agentic AI systems for power systems: prompting strategies and agentic architectures. We instantiate the principle in four case studies: wind power forecasting, EV charging scheduling, power flow analysis, and contingency diagnosis, each comparing an LLM-only baseline against its solver-grounded counterpart on identical data and metrics. EVAgent reproduces the CVXPY optimum while reducing LLM-only unmet energy by 7.5-9.5x, and GridDebugAgent repairs 17/39 contingency cases while reducing total violations by 52.3%. We propose a four-group evaluation framework spanning task utility, solver-grounded correctness, faithfulness and safe failure, and cost and latency. A consistent division of labor emerges: the agentic system reliably orchestrates, retrieves, and explains, while trusted tools compute and a verification gate decides what is reported.",
+      "date": "2026-07-20",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2607.18147v1",
+      "tags": [
+        "eess.SY",
+        "scheduling",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.18147",
+      "arxiv_id": "2607.18147v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "CVXPY"
+      ]
+    },
+    {
+      "id": "arxiv-2607.18086",
+      "title": "Judge-dependent safety gains and model-specific helpfulness costs of evidence-sufficiency prompting in clinical LLMs",
+      "authors": [
+        "Koyar Afrasyab"
+      ],
+      "abstract": "Background: LLM judges increasingly score whether clinical language models give overconfident answers under incomplete evidence, yet whether a measured \"safety gain\" reflects real behavior change or the judge's calibration is unresolved. Using a structured evidence-sufficiency prompt as a test case, we asked whether it reduces unsafe overconfident answers, how far that effect depends on the scoring judge, and what it costs in helpfulness.   Methods: In a retrospective public-data benchmark (Real-POCQi, HealthBench, MedRBench), four models (GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Grok 4.3) answered a fully paired common panel (1,200 cells) with a standard prompt and the wrapper. The pre-specified endpoint was the paired reduction in unsafe overconfidence scored by the primary judge (GPT-5.4-nano); secondary analyses added a different-family judge (Claude Sonnet 5), a correctness judge, matched scaffold controls, and a blinded three-clinician review.   Results: Unsafe overconfidence fell from 49.3% to 24.7%, a paired reduction of 24.7 points (95% CI 21.8-27.7; p<0.001), robust in direction across models and paraphrases. Magnitude was judge-dependent: Sonnet agreed on direction but nearly halved the effect (+13.1 points), with one-directional disagreement. Blinded clinicians characterized the primary judge as a high-sensitivity (1.00), low-specificity (0.55) screen, not a calibrated rate. The gain carried a model-specific helpfulness cost (correct diagnosis 80.3% to 50.3%): near-free for GPT-5.5, near-total for Gemini (-58 points). Matched scaffold controls showed genuine behavior change, not judge circularity.   Conclusions: LLM-judged clinical safety effects should be reported as directional and relative, anchored to human review and evaluated jointly with helpfulness, not as calibrated absolute rates. This does not establish clinical deployment readiness.",
+      "date": "2026-07-20",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2607.18086v1",
+      "tags": [
+        "cs.AI",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.18086",
+      "arxiv_id": "2607.18086v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.18006",
+      "title": "MADA-RL: Multi-Agent Debate-Aware Reinforcement Learning for Parameter-Efficient Reasoning in Compact Models",
+      "authors": [
+        "Martino M. L. Pulici",
+        "Cuong Xuan Chu",
+        "Evgeny Kharlamov",
+        "Zifeng Ding",
+        "Volker Tresp",
+        "Yunpu Ma"
+      ],
+      "abstract": "Large language models achieve strong reasoning performance, but often at prohibitive training cost - a challenge that is especially acute for compact models ($\\leq 4 \\, \\mathrm{B}$ parameters) trained under limited budgets. We introduce MADA-RL, a post-training framework that specializes compact models into generator and critic roles and trains them with a debate-aware learning signal, fine-tuning only a small subset of parameters via LoRA adapters. Our central contribution is a counterfactual critic advantage: a dynamic, role-conditioned baseline that redefines the critic's advantage as its reward minus the generator ensemble's per-instance accuracy. This explicitly optimizes critics to improve over generator consensus rather than to merely reproduce a correct answer, yielding more targeted credit assignment than static mean-reward normalization. At deployment, the specialized agents are composed in a lightweight multi-round protocol. Across five mathematical reasoning benchmarks, MADA-RL raises the accuracy of the DeepSeek-R1-Distill-Qwen-1.5B model from $39.9 \\, \\%$ to $41.9 \\, \\%$ ($+2.0$ points, $p < 0.001$) using $16$ times fewer trainable parameters than fully fine-tuned baselines, placing it on the accuracy-trainable-parameter Pareto front. It approaches, but does not surpass, the strongest baselines (DeepScaleR, STILL-3), which are trained on substantially larger datasets; we analyse this gap and the associated inference-time cost directly. A controlled study isolates the source of MADA-RL's gains: the counterfactual advantage produces the highest critic improvement rate of any model evaluated, indicating that trained critics learn to correct generator errors rather than to imitate them.",
+      "date": "2026-07-20",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.18006v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.18006",
+      "arxiv_id": "2607.18006v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.18226",
+      "title": "Causal Discovery on Irregular Time Series",
+      "authors": [
+        "Martim Penim",
+        "Ricardo Ribeiro Pereira",
+        "Jacopo Bono",
+        "Hugo Ferreira",
+        "Mário A. T. Figueiredo",
+        "Pedro Bizarro"
+      ],
+      "abstract": "Causal discovery methods have shown strong performance in temporal systems, but they typically rely on regular and discrete lag structures, limiting their applicability to regularly sampled data. However, many real-world tasks require dealing with irregularly sampled streams of events, such as sensor streams, healthcare data, and financial transactions. In this work, we propose an extension of PCMCI+, a state-of-the-art method for causal discovery on regular multivariate time series, to allow for handling irregular time series. Instead of modelling causal relations through fixed-lag dependencies, our method aggregates causal influence over predefined temporal windows. We evaluate our method on synthetic irregular event streams with known causal structures under different signal-to-noise ratios, showing that it consistently recovers the underlying causal graph and substantially outperforms the standard PCMCI+ on irregularly sampled data.",
+      "date": "2026-07-20",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.18226v1",
+      "tags": [
+        "cs.LG",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.18226",
+      "arxiv_id": "2607.18226v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.18101",
+      "title": "Empowering On-Device Model Adaptation with an Edge AI Inference Accelerator",
+      "authors": [
+        "Mateusz Piechocki",
+        "Alessandro Capotondi",
+        "Marek Kraft"
+      ],
+      "abstract": "On-device model adaptation is essential to enable lifelong personalization on resource-constrained hardware, but compute, power, and memory limitations of such devices make end-to-end backpropagation impractical for modern deep neural networks. This work proposes a heterogeneous adaptation pipeline that repurposes a commercial edge AI inference accelerator, Hailo-8L, for frozen-backbone feature extraction during on-device training. The computational graph is partitioned so that the pre-trained backbone is quantized to INT8 and run on the accelerator, while only a lightweight FP32 classification head is fine-tuned on the host CPU, enabling frequent, energy-efficient in-field updates with most weights remaining fixed. Across multiple architectures and datasets, this pipeline achieves up to 15.4x faster wall-clock training time compared to a Raspberry Pi 5 CPU baseline, offers competitive throughput in favorable settings, and consistently reduces energy per sample. Post-training quantization restoration is shown to be crucial for preserving the quality of accelerator-generated features and mitigating accuracy loss in quantization-sensitive architectures. Overall, the results demonstrate a practical approach to efficient on-device adaptation using inference-oriented edge accelerators. The implementation is available at https://github.com/MatPiech/accelerator-training.",
+      "date": "2026-07-20",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.18101v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.18101",
+      "arxiv_id": "2607.18101v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.18043",
+      "title": "Adaptive Mamba Neural Operators",
+      "authors": [
+        "Zeyuan Song",
+        "Zheyu Jiang"
+      ],
+      "abstract": "Accurately solving partial differential equations (PDEs) on arbitrary geometries and a variety of meshes is an important task in science and engineering applications. In this paper, we propose Adaptive Mamba Neural Operators (AMO), which integrates reproducing kernels for state-space models (SSMs) rather than the kernel integral formulation of SSMs. This is achieved by constructing Takenaka-Malmquist systems for the PDEs. AMO offers new representations that align well with the adaptive Fourier decomposition (AFD) theory and can approximate the solution manifold of PDEs on a wide range of geometries and meshes. In several challenging benchmark PDE problems in the fields of fluid physics, solid physics, and finance on point clouds, structured meshes, regular grids, and irregular domains, AMO consistently outperforms state-of-the-art solvers in terms of relative $L^2$ error. Overall, this work presents a new paradigm for designing explainable neural operator frameworks.",
+      "date": "2026-07-20",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.18043v1",
+      "tags": [
+        "cs.LG",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.18043",
+      "arxiv_id": "2607.18043v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.17990",
+      "title": "fSRD: Fuzzy Spectral Region Decomposition -- Automated Multi Operator Koopman Representations via an Adaptive Spectral Learning Architecture",
+      "authors": [
+        "Charles Bokor",
+        "Mark Cary",
+        "Denise Morrey",
+        "Fabrizio Bonatesta"
+      ],
+      "abstract": "Highly nonlinear chaotic dynamical systems remain difficult to model due to fundamental trade-offs between complexity, expressivity, and data efficiency. Modern machine learning methods achieve strong predictive performance but often rely on a-priori system knowledge or curated data with limited interpretability. Koopman operator theory offers a promising direction via linear representation in an infinite-dimensional observable space. However, many data-driven Koopman methods seek globally valid operators for which useful finite-dimensional spectral embeddings remain difficult to identify under these constraints. To overcome associated limitations, we introduce Fuzzy Spectral Region Decomposition (fSRD), a fully automated learning framework for estimating finite Koopman representation via multiple operators. The proposed method realizes a data-adaptive framework for assembling locally invariant embeddings, termed Invariant Decomposition. fSRD achieves highly accurate linear reconstructions of nonlinear systems while learning finite-dimensional representations of their induced evolution operators, bridging interpretable operator-theoretic models with expressive data-driven sequence learning. These embeddings are adaptively constructed via a global fuzzy tree model, drawing inspiration from fuzzy neural architectures to learn the induced dynamics while prioritizing parsimonious solutions. Empirical results across canonical chaotic systems (e.g., Lorenz and Duffing) and high-dimensional real-world data demonstrate strong predictive accuracy, interpretability, and robust expressivity across data-rich and data-limited regimes, highlighting the method's generality.",
+      "date": "2026-07-20",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.17990v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.17990",
+      "arxiv_id": "2607.17990v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 14
+  }
+}

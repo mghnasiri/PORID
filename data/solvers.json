@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T10:18:38.316513+00:00",
+  "generated_at": "2026-07-21T09:34:26.772219+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1733,
+      "github_stars": 1735,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,7 +345,7 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 176,
+      "github_open_issues": 173,
       "github_recent_prs": [
         "Build free-threaded (cp314t) wheels",
         "highs-server: standalone gRPC service interface for HiGHS",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13793,
+      "github_stars": 13797,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 109,
+      "github_open_issues": 110,
       "github_recent_prs": [
+        "sat: update",
         "Validate indices in set cover file readers to prevent OOB access",
         "Export from google3",
         "Do not redefine absl::SourceLocation when Abseil provides it",
-        "Expose `AddRouteConstraint` to C# / bring back swig to C#",
-        "cmake: bump highs to v1.15.1"
+        "Expose `AddRouteConstraint` to C# / bring back swig to C#"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -604,7 +604,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 1003,
+      "github_stars": 1004,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -1132,13 +1132,13 @@
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
       "github_stars": 6282,
-      "github_open_issues": 192,
+      "github_open_issues": 195,
       "github_recent_prs": [
-        "Fix matrix_frac crash on a matrix argument with an ndarray P",
-        "Updated the link to the Uno installation instructions",
-        "Replace Sum shape inference with exact tuple formula",
-        "Add problem-level constraint violation helper",
-        "Bump github/codeql-action/upload-sarif from 4.36.3 to 4.37.0"
+        "Make bmat promote scalars and 1-D blocks like numpy.block",
+        "fix: replace deprecated distutils.version.LooseVersion with packaging.version.Version",
+        "Bump actions/setup-python from 6 to 7",
+        "Bump github/codeql-action/upload-sarif from 4.36.3 to 4.37.1",
+        "Fix matrix_frac crash on a matrix argument with an ndarray P"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1768,
+      "github_stars": 1769,
       "github_open_issues": 15,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Just like the planet lately, we're turning up the heat! In this release, we improve solver performance across the board - Constraint Streams, Value Ranges, Shadow Variables, everything gets a speed bu",
-      "github_stars": 1720,
-      "github_open_issues": 100,
+      "github_stars": 1721,
+      "github_open_issues": 98,
       "github_recent_prs": [
+        "fix: replay RecordedUndoMove actions in reverse recording order",
         "refactor: remove variable listeners",
         "deps: bump com.google.cloud.tools:jib-maven-plugin from 3.5.1 to 3.5.2 in the patch group",
         "deps: bump org.openrewrite.recipe:rewrite-recipe-bom from 3.34.0 to 3.35.0 in the minor group",
-        "deps: bump the quarkus-patch group with 5 updates",
-        "deps: bump the actions group with 2 updates"
+        "deps: bump the quarkus-patch group with 5 updates"
       ]
     },
     {
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2488,
+      "github_stars": 2489,
       "github_open_issues": 368,
       "github_recent_prs": [
         "Enable More Complex Error Structures in ParmEst and Pyomo.DoE",
@@ -1449,8 +1449,8 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
-      "github_stars": 2454,
-      "github_open_issues": 11,
+      "github_stars": 2455,
+      "github_open_issues": 10,
       "github_recent_prs": [
         "Remove some unnecessary parens when printing nonlinear expressions",
         "Clean up check_belongs_to_model methods",
