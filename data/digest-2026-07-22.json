@@ -1,0 +1,437 @@
+{
+  "date": "2026-07-22",
+  "generated_at": "2026-07-22T09:33:27.481441+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2607.19075",
+      "title": "From Operations to Elderly Care Outcomes: A Thematic Review of Industrial Engineering and Decision-Support Approaches",
+      "authors": [
+        "Shayan Farhang Pazhooh",
+        "Fereshteh Parvaresh"
+      ],
+      "abstract": "The rapid growth of the global aging population presents severe challenges to healthcare systems, necessitating efficient, equitable, and patient-centered care models. While Industrial Engineering and Operations Research (OR) provide robust optimization and decision-support tools to address these multidimensional complexities, current applications often remain fragmented. This paper presents a thematic review of 30 seminal studies at the intersection of OR and elderly care, categorizing the literature into home healthcare operations, polypharmacy management, and clinical chronotherapy. Our analysis highlights a significant methodological evolution from static, deterministic models toward dynamic and stochastic frameworks integrated with artificial intelligence (AI). Despite these advancements, a critical translational gap persists: the current OR literature is heavily dominated by process-level optimizations, such as staff routing, and struggles to translate these operational efficiencies into measurable clinical outcomes. Furthermore, holistic models bridging the transition between hospital and community care remain critically underexplored. To develop resilient and smart healthcare systems, this study proposes a conceptual framework that shifts the research focus from isolated operational tasks to integrated, multi-level decision-making. We emphasize the critical need for robust systems analysis, human-inclusive design, and the smartification of care through emerging digital technologies - including digital twins and large language models - to successfully bridge the gap between theoretical operational metrics and tangible patient-level health outcomes.",
+      "date": "2026-07-21",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2607.19075v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.19075",
+      "arxiv_id": "2607.19075v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.19270",
+      "title": "GUIDED Network-Agnostic Feature Initialization for Spatial Transferability in GNN-based Models",
+      "authors": [
+        "Alessandro Scalese",
+        "Santhanakrishnan Narayanan",
+        "Constantinos Antoniou"
+      ],
+      "abstract": "The Traffic Assignment Problem is a fundamental but computationally expensive component of transportation planning. While Graph Neural Networks have emerged as fast, data-driven surrogates, their practical deployment is severely constrained by a spatial generalization gap. Standard models rely on transductive feature initializations that tie travel demand to fixed network topologies, preventing seamless transfer to new urban environments. To overcome this structural limitation, this research proposes a network-agnostic initialization layer, termed Geometrically Unconstrained Inductive Demand EmbeDding (GUIDED). By injecting travel demand as a scalar attribute on auxiliary virtual links rather than as specific node features, this modular framework standardizes the input space regardless of network scale. Extensive experimental evaluation across multiple urban topologies demonstrates that a Heterogeneous Graph Attention Network (HetGAT) model integrated with the proposed GUIDED layer maintains state-of-the-art predictive accuracy on single-network tasks, while demonstrating superior robustness to out-of-distribution demand patterns and maintaining a distinct performance advantage over the baseline even under severe data scarcity. Notably, the proposed feature initialization enables highly parameter-efficient domain adaptation for inter-network transfer learning without artificial input homogenization, establishing a robust foundation for truly inductive models. At the same time, the optimized scatter operations of the initialization layer yield an approximate 50% reduction in training time per epoch compared to the baseline approach. Furthermore, while demonstrated on vehicular traffic, this fundamental abstraction of spatial topology provides a versatile blueprint for generalized origin-destination spatial problems, such as freight logistics and multimodal network optimization.",
+      "date": "2026-07-21",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.19270v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "supply-chain",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.19270",
+      "arxiv_id": "2607.19270v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.19010",
+      "title": "Evaluating DV/CV-QKD Architectures for SAFE Long-Term Secure Storage: A Risk Model and ILP-Based Cost Optimization Approach",
+      "authors": [
+        "Alireza Tasdighi",
+        "Romain Alléaume"
+      ],
+      "abstract": "This paper presents a unified cost-modeling and optimization framework designed to evaluate hybrid discrete-variable/continuous-variable quantum key distribution (DV/CV-QKD) infrastructures operating within the SAFE (Secure and Efficient) long-term storage (LTSS) protocol. Our methodology jointly addresses the information-theoretic and computational dimensions of cryptographic durability over multi-decade horizons by coupling a quantitative risk model with a stochastic integer linear programming (ILP) formulation. Going beyond idealized physics-informed limits, the framework incorporates realistic next-generation industrial implementations and multiplexed coexistence specifications, together with a sample-average approximation (SAA) pipeline, to determine cost-optimal and structurally feasible SAFE topologies under transmission-budget and security constraints. The proposed framework is evaluated on both randomized synthetic deployments and realistic metropolitan-scale QKD infrastructures, including the Paris Metro-Scale and Greater Paris networks, to characterize the interplay between network topology, QKD modality, and deployment cost while enforcing a target global compromise tolerance $ε$. Numerical results show that the economically optimal architecture is highly scenario-dependent and that both hybrid and homogeneous modality allocations naturally emerge from the optimization. More importantly, the analysis reveals a non-monotonic relationship between the minimum required QKD link capacity and the infrastructure cost: contrary to intuition, increasing the minimum required per-link secret-key rate may reduce the overall deployment cost by enabling a global transition toward more economical CV-based solutions, whereas further capacity increases do not necessarily yield additional savings.",
+      "date": "2026-07-21",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2607.19010v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.19010",
+      "arxiv_id": "2607.19010v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.19213",
+      "title": "Computing on the Fly: Navigating a Vision for the Future of Drone Computing",
+      "authors": [
+        "Kevin Butler",
+        "Christopher Stewart",
+        "Nils Aschenbruck",
+        "Alina Gerall",
+        "Weisong Shi",
+        "Deborah Silver",
+        "Ufuk Topcu"
+      ],
+      "abstract": "The report envisions a decade in which drones move goods, medical supplies, and information at a scale comparable to national infrastructure investments like highways and the electric grid. Potential applications include natural disaster detection drones that spot wildfire sources within minutes, medical supply chains that bypass ground congestion to reach rural hospitals, and nationwide fleets that continuously inspect bridges and power lines. Realizing this future, however, requires closing what report authors call a \"capability gap,\" where hardware and aspirations are outpacing the software and systems needed to operate safely at scale.   The report identifies twelve technical challenges that must be addressed to realize the transformative potential of drone technology: Scaling to millions of drones; AI intelligence and assurance; Edge-cloud continuum and real-time coordination; AI autonomy and agentic systems; Data, training, and validation infrastructure; Critical infrastructure protection; Building reliable fleets from non-deterministic agents; Trust, security, and distributed authentication; Next-generation drone networks; Human-AI partnership and scalable insight; Standards, certification, and regulation; and Workforce development and education.   These twelve challenges and proposed approaches to them form the basis of the report, laying out a multifaceted path forward for the evolution of done technology.",
+      "date": "2026-07-21",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2607.19213v1",
+      "tags": [
+        "cs.RO",
+        "healthcare-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.19213",
+      "arxiv_id": "2607.19213v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.19181",
+      "title": "Reasoning Before Translation: Enhancing Legal Machine Translation with Structured Reasoning",
+      "authors": [
+        "Aixiu An",
+        "Michael Jungo",
+        "Eloi Eynard",
+        "Mark Drenhaus",
+        "Andreas Fischer",
+        "Jean Hennebert",
+        "Sébastien Rumley"
+      ],
+      "abstract": "Neural machine translation (NMT) in the legal domain is a linguistically and conceptually demanding task, primarily due to the complexity of legal language and the high level of precision it requires. The recent emergence of reasoning-capable language models opens new possibilities for tackling such challenges. They add to a set of other previously proposed techniques to enhance the translation quality, which includes supervised fine-tuning and reinforcement learning.   In this work, we perform a comparison between these various approaches. More particularly, we evaluate small language models such as Qwen3.5 4B, Qwen3.5 9B, and Gemma 3 12B enhanced with various re-training paradigms and compare their performances against frontier reasoning models. We focus on the Swiss legal system, which -- with its unique multilingual statutes -- offers a particularly challenging testbed for reasoning-augmented models. Our results show that the quality of small ``base'' models can be greatly enhanced, and that reinforcement learning with verifiable rewards can be applied to NMT in the legal domain and surpasses the translation quality of supervised fine-tuning. The performance of enhanced small models is close to the one of state-of-the-art reasoning models yet remains inferior. We also note that re-training paradigms yield diminishing returns as model size increase. The code and models are publicly available at https://github.com/aixiuxiuxiu/Legal-MT-SFT-RL.",
+      "date": "2026-07-21",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2607.19181v1",
+      "tags": [
+        "cs.CL",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.19181",
+      "arxiv_id": "2607.19181v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.19147",
+      "title": "Incomplete Observations Boost Evolutionary Performance in Ocean Modeling",
+      "authors": [
+        "Yangyang Kong",
+        "Yutong Jiang",
+        "Yanhai Gan",
+        "Junyu Dong",
+        "Feng Gao",
+        "Xiaopei Lin"
+      ],
+      "abstract": "Data-driven methods have revolutionized ocean modeling, yet current approaches rely heavily on complete reanalysis datasets, imposing computational constraints and limiting model performance to that of the training data. Here, we present a generative state-space model and an optimization framework that enable learning directly from sparse and noisy observations. The model is essentially a hidden Markov model with a continuous state space, where oceanic physical quantities are treated as hidden states and measurements as observations, enabling a unified representation of ocean fields and observational data. Both the initial-state and state-transition modules are implemented as neural networks to capture the complexity and temporal evolution of ocean states, while the emission module is formulated as a masked Gaussian distribution. To train the model from sparse observations, we derive an optimization framework based on the expectation-maximization (EM) algorithm. The framework alternately reconstructs high-fidelity ocean fields via Langevin dynamics and optimizes deep neural networks to capture temporal evolution. Theoretical analysis shows that the framework maximizes the likelihood of observations under the generative model. For efficiency, we assume that ocean-state evolution follows a stationary, ergodic, and Markovian stochastic process and adopt only length-two state sequences during optimization. Experiments on CMIP6 simulation data and FY-3D satellite data demonstrate high-fidelity reconstruction and accurate prediction, showing that sparse observations can directly improve the model's representation of ocean-state dynamics. This work offers a scalable pathway for next-generation Earth system models to learn directly from sparse, incomplete real-world observations.",
+      "date": "2026-07-21",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.19147v1",
+      "tags": [
+        "cs.LG",
+        "metaheuristics",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.19147",
+      "arxiv_id": "2607.19147v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.18734",
+      "title": "Uncertainty quantification in mechanics: A unified Bayesian perspective",
+      "authors": [
+        "Sascha Ranftl",
+        "Malte Rolf",
+        "Gerhard A. Holzapfel",
+        "Ellen Kuhl"
+      ],
+      "abstract": "Uncertainty quantification (UQ) is essential to experimental mechanics, but has become particularly relevant in computational mechanics, manifesting in two fundamental problem types: forward and inverse problems. The former addresses how input uncertainties propagate to the quantities of interest, whereas the latter aims to infer unknown parameters from experimental observations or simulations. Since efficient propagation typically requires a prohibitive number of evaluations to compute marginal output distributions, the development of fast, data-driven surrogate models becomes necessary. Thus, we can distinguish between two inverse tasks: (i) the identification and calibration of input uncertainties, and (ii) the construction of surrogates, a methodology collectively referred to as surrogate-based UQ. Building on probabilistic reasoning and the concept of partial belief, we demonstrate that Bayesian probability theory provides a unified theoretical framework for addressing both problem types. We further show that Bayesian inference allows for the seamless incorporation of essential subproblems, including model selection for identifying the most probable model specifications and experimental design for optimizing data collection by identifying experiments or simulations that maximize expected information gain about parameters, among others such as connections to sensitivity analysis or the use of special priors like random fields. While this theoretical framework is presented for general mechanical problems, particular emphasis is placed on biomechanics, where variability and uncertainty is especially pronounced due to inherent biological heterogeneity, patient-specific variability, and noisy data.",
+      "date": "2026-07-21",
+      "source": "arXiv",
+      "source_detail": "physics.comp-ph",
+      "url": "http://arxiv.org/abs/2607.18734v1",
+      "tags": [
+        "physics.comp-ph",
+        "healthcare-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.18734",
+      "arxiv_id": "2607.18734v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.19232",
+      "title": "S3: Stable Subgoal Selection by Constraining Uncertainty of Coarse Dynamics in Hierarchical Reinforcement Learning",
+      "authors": [
+        "Kshitij Kumar Srivastava",
+        "Kshitij Jerath"
+      ],
+      "abstract": "Hierarchical Reinforcement Learning (HRL) intends to separate strategic planning from primitive execution. It has been widely successful in solving long-horizon and complex tasks, where flat-RL algorithms have difficulty in learning. However, while the low-level agent in HRL benefits from dense feedback and abundant trial opportunities, the high-level agent receives sparse, delayed feedback from the environment and its performance depends on the low-level execution capability. In this paper, we study whether subgoal selection by the high-level agent can be performed more strategically, by providing it with dynamics-aware intrinsic motivation. Since motivation based on primitive transition dynamics would require broad coverage of the state-action space, we propose to use coarse dynamics, i.e., environment transitions aggregated over multiple steps at the temporal scale at which the high-level agent operates. This approach stabilizes the high-level policy by learning to minimize the predictive uncertainty associated with the coarse dynamics, and provides a guided structure for navigation. We model the predictive uncertainty by evaluating different dispersion metrics as approximated by a Mixture Density Network (MDN). Empirically, we observe that a dense, dynamics-aware intrinsic reward leads to risk-averse subgoal selection, enabling it to outperform state-of-the-art HRL methods in non-stationary long-horizon environments.",
+      "date": "2026-07-21",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.19232v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.19232",
+      "arxiv_id": "2607.19232v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.19223",
+      "title": "AdaFlash: Adaptive Speculative Decoding via On-Policy Distilled Diffusion Drafters",
+      "authors": [
+        "Yu-Yang Qian",
+        "Hao-Cong Wu",
+        "Chen Chen",
+        "Jiacheng Sun",
+        "Zhenhua Dong",
+        "Peng Zhao",
+        "Zhi-Hua Zhou"
+      ],
+      "abstract": "Speculative decoding, in which a lightweight draft model first generates a draft sequence that is then verified in parallel by the target model, has become a prevalent paradigm for accelerating large language model inference. Recent work such as DFlash further boosts drafting efficiency by leveraging diffusion drafters, whose parallel denoising mechanism enables draft generation in a single forward pass. In this work, we uncover a central pitfall of diffusion drafters: bidirectional attention is a double-edged sword. On one hand, it endows the model with parallel generation and global contextual modeling capabilities; on the other hand, this inherent global dependency introduces high variance at both the domain-level and the token-level: acceptance rates fluctuate substantially across different domains, and draft token quality also varies heterogeneously at different token positions. To tackle this issue, we propose AdaFlash framework, comprising two components: (i) an on-policy distillation (OPD) algorithm with reverse-KL divergence tailored for diffusion drafters, bringing stable convergence and effectively reducing domain-level variance; and (ii) an adaptive length head that dynamically adjusts the candidate sequence length on the fly, substantially lowering the verification cost of the target model and handling token-level variance. Experiments demonstrate that AdaFlash consistently improves speedup rate during deployment, with especially significant gains in high-concurrency scenarios, achieving up to approximately 66% higher throughput than previous state-of-the-art methods.",
+      "date": "2026-07-21",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.19223v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.19223",
+      "arxiv_id": "2607.19223v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.19198",
+      "title": "ATLAS: A Foundation Neural Sampler for Amorphous Materials",
+      "authors": [
+        "Mouyang Cheng",
+        "Denis Blessing",
+        "Botao Yu",
+        "Gerhard Neumann",
+        "Mingda Li",
+        "Carles Domingo-Enrich",
+        "Yuanqi Du"
+      ],
+      "abstract": "Amorphous materials exhibit exceptional mechanical and functional properties, yet their rugged energy landscapes are notoriously difficult to sample. Below the glass-transition temperature, conventional molecular dynamics and Monte Carlo become inefficient because equilibration relies on rare barrier-crossing events, while data-driven generative models are constrained by scarce and biased reference ensembles. Here, we introduce ATLAS, an efficient sampler that learns a diffusion process to generate Boltzmann-distributed amorphous structures directly from a target energy function. Parameterized by an equivariant graph neural network, ATLAS generalizes across system size, temperature, and composition. By exploiting the time reversal of the diffusion process, it enables efficient estimation of thermodynamic quantities and steering toward target observables. In two-dimensional Kob-Andersen systems, ATLAS reproduces parallel tempering Markov chain Monte Carlo structural distributions, free energies and entropies, achieving below 0.2% free energy error in the low-temperature glass regime with over 500-fold fewer energy evaluations. In Cu-Zr and Cr-Co-Ni metallic glasses, ATLAS recovers experimentally observed short-range-order trends and steers structures toward prescribed order parameters and optimized bulk moduli. Moreover, composition-amortized pretraining outperforms composition-specific training from scratch, reduces inverse-design costs by several hundred-fold, and enables sampling with expensive universal machine learning interatomic potentials. Coupled to a large language model agent, ATLAS searches an eight-element space for high-entropy metallic glasses balancing stiffness and ductility, identifying a converged Pareto frontier within 480 oracle evaluations. Together, these results establish ATLAS as a foundation model for sampling, steering and designing amorphous materials.",
+      "date": "2026-07-21",
+      "source": "arXiv",
+      "source_detail": "cond-mat.mtrl-sci",
+      "url": "http://arxiv.org/abs/2607.19198v1",
+      "tags": [
+        "cond-mat.mtrl-sci",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.19198",
+      "arxiv_id": "2607.19198v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 14
+  }
+}

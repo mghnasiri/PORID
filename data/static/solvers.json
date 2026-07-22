@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T09:34:26.772219+00:00",
+  "generated_at": "2026-07-22T09:33:27.118958+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 173,
+      "github_open_issues": 176,
       "github_recent_prs": [
+        "Update BLA_VENDOR in julia/build_tarballs.jl",
+        "Simplified factorisation for HiPO",
         "Build free-threaded (cp314t) wheels",
         "highs-server: standalone gRPC service interface for HiGHS",
-        "Feature/grpc server impl",
-        "Hessian oracle",
-        "Claude/hipo parallel solve sketch"
+        "Feature/grpc server impl"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 613,
+      "github_stars": 615,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13797,
+      "github_stars": 13800,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 110,
+      "github_open_issues": 109,
       "github_recent_prs": [
+        "[bazel] Add more default compilation and linker options",
+        "build(deps): bump the github-actions group with 2 updates",
         "sat: update",
         "Validate indices in set cover file readers to prevent OOB access",
-        "Export from google3",
-        "Do not redefine absl::SourceLocation when Abseil provides it",
-        "Expose `AddRouteConstraint` to C# / bring back swig to C#"
+        "Export from google3"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6282,
-      "github_open_issues": 195,
+      "github_stars": 6283,
+      "github_open_issues": 194,
       "github_recent_prs": [
         "Make bmat promote scalars and 1-D blocks like numpy.block",
-        "fix: replace deprecated distutils.version.LooseVersion with packaging.version.Version",
         "Bump actions/setup-python from 6 to 7",
         "Bump github/codeql-action/upload-sarif from 4.36.3 to 4.37.1",
-        "Fix matrix_frac crash on a matrix argument with an ndarray P"
+        "Fix matrix_frac crash on a matrix argument with an ndarray P",
+        "Updated the link to the Uno installation instructions"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1769,
+      "github_stars": 1770,
       "github_open_issues": 15,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1384,12 +1384,12 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2489,
+      "github_stars": 2490,
       "github_open_issues": 368,
       "github_recent_prs": [
         "Enable More Complex Error Structures in ParmEst and Pyomo.DoE",
-        "Use scaling factors in solve_strongly_connected_components",
-        "Adding method for multistart initialization of nonlinear models.",
+        "Use scaling factors in solve_strongly_connected_components [Depends on #3993]",
+        "[Depends on #3991] Adding method for multistart initialization of nonlinear models.",
         "Clip and scale calculate_variable_from_constraint",
         "Add PyROS paper preprint to Pyomo docs reference list"
       ],
@@ -1401,8 +1401,8 @@
       "vendor": "JuMP Community",
       "website": "https://jump.dev",
       "docs_url": "https://jump.dev/JuMP.jl/stable/",
-      "current_version": "1.30.1",
-      "release_date": "2026-04-26",
+      "current_version": "1.31.0",
+      "release_date": "2026-07-21",
       "license_type": "open-source",
       "license_spdx": "MPL-2.0",
       "open_source": true,
@@ -1448,9 +1448,9 @@
         "julia",
         "algebraic"
       ],
-      "recent_changes": "## JuMP v1.30.1\n\n[Diff since v1.30.0](https://github.com/jump-dev/JuMP.jl/compare/v1.30.0...v1.30.1)\n\n\n**Merged pull requests:**\n- Add CoolPDLP to list of solvers (#4130) (@blegat)\n- Bump julia-action",
+      "recent_changes": "## JuMP v1.31.0\n\n[Diff since v1.30.1](https://github.com/jump-dev/JuMP.jl/compare/v1.30.1...v1.31.0)\n\n\n**Merged pull requests:**\n- Allow array in nonlinear expressions (#3451) (@blegat)\n- Cache subexp",
       "github_stars": 2455,
-      "github_open_issues": 10,
+      "github_open_issues": 9,
       "github_recent_prs": [
         "Remove some unnecessary parens when printing nonlinear expressions",
         "Clean up check_belongs_to_model methods",
