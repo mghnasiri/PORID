@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T09:33:27.118958+00:00",
+  "generated_at": "2026-07-23T09:29:41.828017+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1735,
+      "github_stars": 1736,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -347,11 +347,11 @@
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
       "github_open_issues": 176,
       "github_recent_prs": [
+        "fix message when solver option value is not ok",
         "Update BLA_VENDOR in julia/build_tarballs.jl",
         "Simplified factorisation for HiPO",
         "Build free-threaded (cp314t) wheels",
-        "highs-server: standalone gRPC service interface for HiGHS",
-        "Feature/grpc server impl"
+        "highs-server: standalone gRPC service interface for HiGHS"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -460,11 +460,11 @@
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- fixed statistic on added linear constraints in propagation\r\n- keep flag `rangedrowpropagated` of linear and exactlinear constraints for probing bound changes to avoid dupli",
       "github_open_issues": 26,
       "github_recent_prs": [
+        "Fix typo in MSVC version number",
         "[docs] Add Conan entry in installation documentation",
         "Add MSVC flag /bigobj when compiling LPS=spx in debug mode",
         "fix several typos",
-        "Allow documentation builds when testing is turned off",
-        "Fix endianness issue in dtoa.cpp"
+        "Allow documentation builds when testing is turned off"
       ],
       "pypi_monthly_downloads": -41
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13800,
+      "github_stars": 13803,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -571,11 +571,11 @@
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
       "github_open_issues": 109,
       "github_recent_prs": [
-        "[bazel] Add more default compilation and linker options",
-        "build(deps): bump the github-actions group with 2 updates",
-        "sat: update",
-        "Validate indices in set cover file readers to prevent OOB access",
-        "Export from google3"
+        "graph: mermaid graph fixup",
+        "google3 export",
+        "google3 export",
+        "Add more util tests",
+        "[go] Add status streaming"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Just like the planet lately, we're turning up the heat! In this release, we improve solver performance across the board - Constraint Streams, Value Ranges, Shadow Variables, everything gets a speed bu",
-      "github_stars": 1721,
-      "github_open_issues": 98,
+      "github_stars": 1724,
+      "github_open_issues": 99,
       "github_recent_prs": [
+        "chore: add indictment support to Bavet's Node Network",
         "fix: replay RecordedUndoMove actions in reverse recording order",
         "refactor: remove variable listeners",
         "deps: bump com.google.cloud.tools:jib-maven-plugin from 3.5.1 to 3.5.2 in the patch group",
-        "deps: bump org.openrewrite.recipe:rewrite-recipe-bom from 3.34.0 to 3.35.0 in the minor group",
-        "deps: bump the quarkus-patch group with 5 updates"
+        "deps: bump org.openrewrite.recipe:rewrite-recipe-bom from 3.34.0 to 3.35.0 in the minor group"
       ]
     },
     {
@@ -1384,8 +1384,8 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2490,
-      "github_open_issues": 368,
+      "github_stars": 2492,
+      "github_open_issues": 370,
       "github_recent_prs": [
         "Enable More Complex Error Structures in ParmEst and Pyomo.DoE",
         "Use scaling factors in solve_strongly_connected_components [Depends on #3993]",
@@ -1401,8 +1401,8 @@
       "vendor": "JuMP Community",
       "website": "https://jump.dev",
       "docs_url": "https://jump.dev/JuMP.jl/stable/",
-      "current_version": "1.31.0",
-      "release_date": "2026-07-21",
+      "current_version": "1.31.1",
+      "release_date": "2026-07-22",
       "license_type": "open-source",
       "license_spdx": "MPL-2.0",
       "open_source": true,
@@ -1448,15 +1448,15 @@
         "julia",
         "algebraic"
       ],
-      "recent_changes": "## JuMP v1.31.0\n\n[Diff since v1.30.1](https://github.com/jump-dev/JuMP.jl/compare/v1.30.1...v1.31.0)\n\n\n**Merged pull requests:**\n- Allow array in nonlinear expressions (#3451) (@blegat)\n- Cache subexp",
+      "recent_changes": "## JuMP v1.31.1\n\n[Diff since v1.31.0](https://github.com/jump-dev/JuMP.jl/compare/v1.31.0...v1.31.1)\n\n\n**Merged pull requests:**\n- Revert #4032 because it is subject to hash collisions (#4205) (@odow)",
       "github_stars": 2455,
-      "github_open_issues": 9,
+      "github_open_issues": 11,
       "github_recent_prs": [
+        "Prep for v1.31.1",
+        "Revert #4032 because it is subject to hash collisions",
+        "Use Base.IdDict instead of objectid to store subexpressions",
         "Remove some unnecessary parens when printing nonlinear expressions",
-        "Clean up check_belongs_to_model methods",
-        "Fix checking if problem is an LP in lp_sensitivity_report",
-        "Improve error messages when Hermitian matrices passed invalid data",
-        "Drop zero when adding to GenericNonlinearExpr"
+        "Clean up check_belongs_to_model methods"
       ]
     },
     {

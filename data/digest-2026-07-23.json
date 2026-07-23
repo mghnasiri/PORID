@@ -1,0 +1,452 @@
+{
+  "date": "2026-07-23",
+  "generated_at": "2026-07-23T09:29:42.173252+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2607.19944",
+      "title": "Optimal Placement of Docking Stations and Resident AUVs for Subsea Pipeline Inspection",
+      "authors": [
+        "Gabrielė Kasparavičiūtė",
+        "Pasquale Grippa",
+        "Kjetil Skaugset",
+        "Asgeir J. Sørensen",
+        "Martin Ludvigsen"
+      ],
+      "abstract": "A two-stage mixed-integer linear programming framework is introduced for subsea pipeline incident response planning, jointly optimizing Subsea Docking Plate (SDP) placement and resident autonomous underwater vehicle allocation to minimize both maximum and average response times under spatial uncertainty. Phase 1 minimizes the maximum response time across all potential leak locations. Phase 2 reduces the average response time subject to the maximum bound. A case study based on the Johan Sverdrup oil and gas field in Norway, with 9 SDP options and 33 pipelines, shows that just a few well-placed SDPs are enough to achieve top performance. A cost versus time Pareto analysis reveals the trade-off between deployment expenditure and response efficiency, providing actionable guidance for designing resilient and cost-effective subsea inspection networks.",
+      "date": "2026-07-22",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2607.19944v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming",
+        "stochastic",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1109/JOE.2026.3694005",
+      "arxiv_id": "2607.19944v1",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261474392",
+      "title": "EXPRESS: Regret Optimality of Sample Average Approximation for Data-Driven Newsvendor Problems: A General Optimization Perspective",
+      "authors": [
+        "Lyu, J.",
+        "Yuan, S.",
+        "Zhou, B.",
+        "Zhou, Y."
+      ],
+      "abstract": "Numerous existing studies have examined the performance of Sample Average Approximation (SAA) in the fundamental newsvendor problem. Despite these advances, critical gaps remain in two aspects. First, existing works focus on the linear-cost newsvendor problem and heavily rely on the quantile expression of the optimal solution. As a result, their analytical methods limit generalizability to more general inventory problems, where the optimal solution is not a quantile of the demand distribution. Second, even within the linear-cost setting, notable gaps exist between the state-of-the-art regret lower bound and upper bound for SAA under various conditions.\n                  In this paper, we generalize the structure of the newsvendor problem to generic convexity conditions and provide a unified regret analysis of SAA for general sequential stochastic optimization problems. Our approach provides further insights to a broader range of data-driven inventory problems, improves both the upper and lower regret bounds, and establishes the regret rate optimality of SAA. Our lower bound identifies the performance limit achievable by any policy for sequential stochastic optimization and inventory management problems, offering important guidance for future policy design in this area. Moreover, in empirical studies, SAA’s performance is frequently used as a benchmark for evaluating new algorithms. The regret rate optimality result provides strong support for its role in assessing other data-driven methods, benefiting both practitioners and researchers. Our new analysis techniques enrich the analysis tools for regret upper and lower bounds for data-driven decision-making problems and other general stochastic optimization problems.",
+      "date": "2026-07-22",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261474392",
+      "tags": [
+        "stochastic",
+        "supply-chain",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261474392",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2607.20339",
+      "title": "Interval and fuzzy physics-augmented neural networks (iPANN and fPANN) for uncertainty quantification and propagation in constitutive modeling",
+      "authors": [
+        "Somesh Pratap Singh",
+        "Govinda Anantha Padmanabha",
+        "Jingye Tan",
+        "Steven Yang",
+        "Reese E. Jones",
+        "D. Thomas Seidl",
+        "Nikolaos Bouklas"
+      ],
+      "abstract": "Constitutive modeling under uncertainty remains a central challenge for reliable mechanics simulations, particularly when the available stress-deformation data are sparse, noisy, or heterogeneous. We propose interval and fuzzy physics-augmented neural networks (iPANNs and fPANNs) for uncertainty-aware hyperelastic constitutive modeling. iPANNs learn sparse lower, mean, and upper free energy density branches whose stresses, obtained by automatic differentiation, ultimately enclose noisy stress observations. In contrast to this deterministic interval description, fPANNs embed the learned iPANN branches into a fuzzy-set representation through alpha-cut interpolation, yielding a nested family of admissible responses. iPANNs and fPANNs encode mechanistic constraints - preserving objectivity, consistency and promoting polyconvexity - and smoothed L0 regularization promotes interpretable energy representations. The bound models are trained through a two-stage transfer-learning procedure in which a sparse mean constitutive response is learned first and then fine-tuned into lower and upper energy branches. We evaluate the framework on synthetic isotropic hyperelastic data with heteroscedastic noise, varying random realizations, shifted noise means, and varying noise magnitudes. The results show that the learned bounds enclose noisy stress observations while generalizing to the test set. Further, we examine the propagation of uncertainty through the mean, upper and lower bound predictions of the learned iPANN models in a finite element setting. The proposed framework provides a compact, physics-consistent route for distribution-free aleatoric uncertainty quantification in hyperelastic constitutive modeling, and propagation in downstream finite element simulations.",
+      "date": "2026-07-22",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.20339v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.20339",
+      "arxiv_id": "2607.20339v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10107-026-02379-5",
+      "title": "Convexification of multi-period quadratic programs with indicators",
+      "authors": [
+        "Lee, J.",
+        "Gómez, A.",
+        "Atamtürk, A."
+      ],
+      "abstract": "Abstract\n                  \n                    We study a multi-period mixed-integer convex quadratic optimization problem, where the state evolves dynamically as an affine function of the state and action (control) variables in each period. We begin by projecting out the state variables using linear dynamics, resulting in a mixed-integer quadratic optimization problem with a positive-definite (block-)factorizable cost matrix. Employing this expression, we construct a closed convex hull representation of the epigraph of the quadratic cost over the feasible region in an extended space. Subsequently, we establish a tight second-order cone programming formulation with\n                    \n                      \n                        $$\\mathscr {O}(n^2)$$\n                        \n                          \n                            O\n                            (\n                            \n                              n\n                              2\n                            \n                            )\n                          \n                        \n                      \n                    \n                    conic constraints. We further propose a polynomial-time algorithm based on a reformulation of the problem as a shortest path problem on a directed acyclic graph. To illustrate the applicability of our results across diverse domains, we present case studies in statistical learning and hybrid system control.",
+      "date": "2026-07-22",
+      "source": "Mathematical Programming",
+      "source_detail": "Mathematical Programming",
+      "url": "https://doi.org/10.1007/s10107-026-02379-5",
+      "tags": [
+        "integer-programming",
+        "network-optimization"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10107-026-02379-5",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2607.19928",
+      "title": "Continuous-Time Reinforcement Learning for $N$-Player Stochastic Differential Games with Exploratory Policies",
+      "authors": [
+        "Jisheng Liu",
+        "Jing Zhang"
+      ],
+      "abstract": "We study continuous-time reinforcement learning for $N$-player noncooperative stochastic differential games. Each player adopts an entropy-regularized exploratory policy; given the others' actions, the optimal response is a Gibbs distribution, and a Nash equilibrium requires these $N$ conditional distributions to be jointly compatible. We prove that the natural equilibrium concept -- simultaneous Hamiltonian maximization -- is equivalent to this compatibility, and establish a necessary and sufficient condition expressed as a computable cross-partial criterion on the optimal $q$-functions. Nash equilibria exist unconditionally for decoupled and symmetric games. When compatibility fails, a coordinate path integral construction yields an approximate correlated equilibrium with explicit quadratic KL-divergence bounds that vanish locally uniformly as the exploration weight $γ\\to\\infty$. A $q$-function framework for the $N$-player game extends the single-agent $q$-learning theory of [21], with weak martingale characterizations motivating model-free on-policy and off-policy algorithms. The framework extends to the ergodic (infinite-horizon) setting with the same locally uniform $O_R(1/γ)$ asymptotic rates.",
+      "date": "2026-07-22",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2607.19928v1",
+      "tags": [
+        "math.OC",
+        "ml-for-or",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.19928",
+      "arxiv_id": "2607.19928v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2607.20286",
+      "title": "Sound Probabilistic Safety Bounds for Large Language Models",
+      "authors": [
+        "Mahdi Nazeri",
+        "Anne-Kathrin Schmuck",
+        "Sadegh Soudjani",
+        "Alessandro Abate"
+      ],
+      "abstract": "We propose a novel framework for computing rigorous bounds on the probability that a large language model (LLM) generates harmful output to a given prompt. We study a new application of the Clopper-Pearson confidence intervals to obtain probably approximately correct (PAC) bounds for this problem. As our main technical contribution, we propose an algorithm that leverages features in the latent space to prioritize exploring branches in the auto-regressive generation tree that are more likely to produce harmful outputs. Our approach in particular enables the efficient computation of useful lower bounds, even in scenarios where the true harm probability is extremely small, and crucially, the obtained lower bounds are sound, i.e., formally proven to be less than the actual harmfulness probability: our experimental results demonstrate the effectiveness of our method by computing non-trivial lower bounds on state-of-the-art LLMs. This study newly enables the evaluation and statistical certification of LLMs.",
+      "date": "2026-07-22",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2607.20286v1",
+      "tags": [
+        "cs.CL",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.20286",
+      "arxiv_id": "2607.20286v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.20136",
+      "title": "PRIME-SVR: Physics-infoRmed Implicit Multi-Echo Slice-to-Volume Reconstruction for Fetal T2 mapping",
+      "authors": [
+        "Busra Bulut",
+        "Maik Dannecker",
+        "Thomas Sanchez",
+        "Sara Neves Silva",
+        "Steven Jia",
+        "Jean-Baptiste Ledoux",
+        "Leo Pomar",
+        "Joanna Sichitiu",
+        "Yvan Gomez",
+        "Meriam Koob",
+        "Vincent Dunet",
+        "Maria Deprez",
+        "Guillaume Auzias",
+        "Francois Rousseau",
+        "Jana Hutter",
+        "Daniel Rueckert",
+        "Meritxell Bach Cuadra"
+      ],
+      "abstract": "Slice-to-volume reconstruction (SVR) is the standard method for obtaining high-resolution (HR) 3D fetal brain volumes from motion-corrupted 2D MRI slice stacks acquired in multiple orientations. Existing SVR methods are optimized and validated only for clinical-range echo times (TEs), limiting their use at non-clinical TEs and making them incompatible with quantitative T2 mapping, a protocol- and center-independent biomarker of fetal brain maturation requiring HR reconstructions across multiple TEs. We present PRIME-SVR, the first implicit neural representation (INR) framework for joint HR reconstruction from multi-echo MRI. A single fully connected network models a continuous function from spatial coordinates to signal intensities across TEs, while a second network estimates slice-specific acquisition degradations. Cross-TE coherence is enforced via a Bloch equation-derived regularization penalizing deviations from expected T2 decay, with adaptive weighting that strengthens coupling for degraded stacks. The method is fully self-supervised. We validate PRIME-SVR on 39 in vivo fetal acquisitions (13 subjects x 3 TEs) from two centers, two vendors, and two field strengths (1.5 T and 0.55 T). Compared to state-of-the-art SVR, PRIME-SVR improves reconstruction sharpness by 47%, anatomical accuracy by 30%, and cross-TE structural consistency by 14%. It enables reconstruction at late TEs previously inaccessible to SVR, yielding the first 0.8 mm isotropic T2 maps at 0.55 T and the first T2 maps derived from INR-based SVR. PRIME-SVR also accelerates quantitative imaging by reducing the data needed for multi-TE reconstruction, cutting acquisition from 15 to 10 minutes while keeping T2 accuracy within 1.7% in white and deep gray matter, or to 5 minutes with a mean T2 error of 2.3% for high-quality acquisitions.",
+      "date": "2026-07-22",
+      "source": "arXiv",
+      "source_detail": "physics.med-ph",
+      "url": "http://arxiv.org/abs/2607.20136v1",
+      "tags": [
+        "physics.med-ph",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.20136",
+      "arxiv_id": "2607.20136v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.20028",
+      "title": "A Systematic Benchmark of Intensity Normalisation Methods for 3D Knee MRI Segmentation and Cross-Domain Generalisability",
+      "authors": [
+        "Oliver Mills",
+        "Philip Conaghan",
+        "Samuel Relton"
+      ],
+      "abstract": "Robust out-of-the-box performance is essential for the clinical deployment of deep learning models in medical imaging. An important but underexplored factor affecting model generalisability is intensity normalisation, particularly for magnetic resonance imaging (MRI), where image intensities vary across scanners and protocols. In this study, we systematically compared seven normalisation methods and their impact on the performance of a 3D U-Net model for meniscus segmentation from knee MRI. The methods included standard scaling approaches, histogram-based techniques, and a Gaussian Mixture Model (GMM)-based method. Models were trained on the IWOAI 2019 dataset and evaluated on both internal and external test sets (SKM-TEA) to assess generalisability. Performance was similar internally but differences were significant on external data, with Z-score, Nyúl histogram matching, and CLAHE showing greater robustness than other methods. However, these differences were small compared to the significant performance drop observed between datasets. Overall, while intensity normalisation had a measurable effect on model generalisability, its impact was limited relative to the effects of domain shift, highlighting the need for complementary strategies for robust deployment.",
+      "date": "2026-07-22",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2607.20028v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.20028",
+      "arxiv_id": "2607.20028v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.20022",
+      "title": "Global Difference Constraint Propagation for Constraint Programming",
+      "authors": [
+        "Lucas Kletzander",
+        "Jip J. Dekker",
+        "Andreas Schutt",
+        "Peter J. Stuckey"
+      ],
+      "abstract": "Difference constraints of the form $x - y \\leq d$ are well studied, with efficient algorithms for satisfaction and implication, because of their connection to shortest paths. Finite domain propagation algorithms, however, typically do not make use of these algorithms, and treat each difference constraint as a separate propagator. Propagation does guarantee completeness of solving, but can be needlessly slow. In this paper we describe how to build a (bounds consistent) global propagator for difference constraints that treats them all simultaneously. SAT modulo theory solvers have included theory solvers for difference constraints for some time. While a theory solver for difference constraints gives the basis of a global difference constraint propagator, we show how the requirements on the propagator are quite different. Crucially, we show how to explain propagations by a global difference constraint propagator, in order to use it within a lazy clause generation solver. We give experiments showing that treating difference constraints globally can substantially improve on the standard propagation approach.",
+      "date": "2026-07-22",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2607.20022v1",
+      "tags": [
+        "cs.AI",
+        "network-optimization",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.20022",
+      "arxiv_id": "2607.20022v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.19985",
+      "title": "Coordinating from Memory: Graph-Structured Experience Reuse for Multi-Agent Adaptation in Dynamic Manufacturing",
+      "authors": [
+        "Chengxiao Dai",
+        "Zhanhui Lin",
+        "Zhaokun Yan",
+        "Youyang Ni",
+        "Chenjun Lei",
+        "Luyan Zhang"
+      ],
+      "abstract": "Dynamic manufacturing environments require multi-agent systems to coordinate effectively under frequent operational disturbances such as machine failures, urgent job arrivals, and processing time variations. Existing multi-agent reinforcement learning approaches treat each disturbance episode independently, discarding valuable coordination experience that could accelerate future adaptation. In this paper, we propose a Graph-Structured Experiential Memory (GSEM) framework for multi-agent coordination in dynamic manufacturing. The framework encodes historical coordination episodes as heterogeneous relational graphs that capture task dependencies, machine states, and inter-agent collaboration patterns. When a new disturbance occurs, a graph neural network-based retrieval mechanism identifies structurally similar past episodes, enabling experience-guided policy adaptation rather than learning from scratch. Experiments on dynamic flexible job-shop scheduling benchmarks with three disturbance types show that GSEM reduces makespan by 4.1%-10.0% and adaptation time by 33%-38% compared to the strongest memory-augmented baseline, with the advantage increasing under higher disturbance frequency. Ablation studies and cross-disturbance transfer experiments further validate the necessity of graph-structured encoding and similarity-based retrieval and demonstrate the cross-disturbance generalizability of learned coordination patterns.",
+      "date": "2026-07-22",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2607.19985v1",
+      "tags": [
+        "cs.AI",
+        "scheduling",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.19985",
+      "arxiv_id": "2607.19985v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 14
+  }
+}
