@@ -1,0 +1,446 @@
+{
+  "date": "2026-07-24",
+  "generated_at": "2026-07-24T09:27:34.904355+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2607.20901",
+      "title": "Learning to recover: Adaptive local branching with reinforcement learning for log-truck routing and scheduling under disruptions",
+      "authors": [
+        "Abdelhakim Abdellaoui",
+        "Issmail El Hallaoui",
+        "Loubna Benabbou",
+        "François Aubé",
+        "Mouloud Amazouz"
+      ],
+      "abstract": "We consider the real-time reoptimisation of log-truck routing and scheduling in the Canadian forestry industry following unforeseen disruptions. Road closures, vehicle breakdowns, travel delays, and demand fluctuations invalidate pre-established tactical plans and call for recovery decisions that simultaneously restore feasibility and limit deviation from the original schedule, two objectives inherently in tension under tight time constraints. We formulate recovery as a sequence of neighbourhood-restricted mixed-integer linear programs parameterised by a deviation bound $k$, the $\\ell_1$ distance between the recovered and baseline plans. We show that the minimum feasible value $k_{\\min}$ can be computed exactly, anchoring the search at its most stable extreme. Rather than targeting a single $k$, we seek a Pareto front of non-dominated recovery plans spanning the stability--cost space, giving dispatchers a structured set of operational options. To navigate this space efficiently, we propose a reinforcement learning policy, trained with the REINFORCE policy-gradient algorithm, that adaptively selects successive values of $k$ from solver feedback, concentrating computational effort in productive regions and terminating exploration when further improvement is unlikely. Evaluated on weekly instances derived from historical data of a Canadian forestry partner, under disruption scenarios covering all event categories considered, the approach recovers richer Pareto fronts with fewer solver calls than fixed-$k$ grid and dichotomic search baselines, and produces feasible recovery plans within operationally acceptable reoptimization times across all configurations and disruption types.",
+      "date": "2026-07-23",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2607.20901v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "scheduling",
+        "stochastic",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.20901",
+      "arxiv_id": "2607.20901v1",
+      "score": 65.0
+    },
+    {
+      "id": "arxiv-2607.20961",
+      "title": "Dynamic Cloud Service-Capacity Deployment with Costly Response Readiness",
+      "authors": [
+        "Ruihan Zhou",
+        "Xiaowei Zhang",
+        "Yijie Peng"
+      ],
+      "abstract": "AI product launches require service-capacity decisions before sufficient product-specific workload histories are available. Early service observations update beliefs about remaining workload, but workload does not physically deplete capacity as inventory demand does. Preserving rapid-response capability may also require costly capacity-access and operational arrangements. We study how a firm should jointly decide current capacity deployment and future response readiness. We formulate a finite-horizon dynamic program with workload beliefs, serviceable capacity, and an absorbing response-channel state. A preservation-deployment decomposition solves one deployment problem for each continuation choice and compares the resulting optimized values. This structure identifies when response readiness should be preserved and how much capacity should be deployed. We operationalize the framework through the Cold-Start Belief Actionability Policy (CBAP), which estimates side-specific values using workload scenarios drawn from predictive beliefs. We also establish bounds on its decision and lifecycle performance losses. Numerical experiments and a BurstGPT-based evaluation show that CBAP reduces lifecycle cost relative to benchmark policies by avoiding premature deployment and unnecessary readiness spending. The results distinguish forecast informativeness from operational actionability and show that current deployment and future response readiness are separate decision margins. Zero deployment may represent Standby rather than Exit, while positive deployment need not imply preserving the response channel.",
+      "date": "2026-07-23",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2607.20961v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "supply-chain",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.20961",
+      "arxiv_id": "2607.20961v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.21488",
+      "title": "Compact Latent Coordination for Autonomous Vehicles at Unsignalized Intersections",
+      "authors": [
+        "Gil Lifshits",
+        "Igal Bilik",
+        "Gilad Katz"
+      ],
+      "abstract": "Coordinating autonomous vehicles at unsignalized intersections remains a critical challenge for multi-agent reinforcement learning (MARL) systems, which typically struggle with combinatorial action spaces, reliance on privileged information, or rigid agent designs. We propose Master-Agent Proto-plan System (MAPS), a hierarchical deep reinforcement learning (DRL) architecture in which a centralized Master agent generates a compact, continuous embedding, denoted as proto-plan, that encodes a global coordination strategy. Decentralized Worker agents integrate this embedding with local observations to execute vehicle-specific control, decoupling strategic intent from tactical execution and enabling independent optimization of each module.   As a proof-of-concept evaluation of this coordination mechanism, we test MAPS across 72 intersection configurations in HighwayEnv. MAPS achieves collision-free navigation while significantly reducing average travel time, outperforming state-of-the-art baselines. The learned proto-plans further exhibit robust generalization: a system trained with three agents achieves a 94% success rate when deployed zero-shot to five-agent scenarios, confirming that proto-plan-based hierarchical learning provides a promising framework for multi-vehicle coordination.",
+      "date": "2026-07-23",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.21488v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.21488",
+      "arxiv_id": "2607.21488v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.21384",
+      "title": "Multimodal Pretraining for Generalizable EEG Representation Learning",
+      "authors": [
+        "Targol Bakhtiarvand",
+        "Jugal Kalita",
+        "Adham Atyabi"
+      ],
+      "abstract": "Electroencephalography (EEG) models used for epilepsy are often limited to specific datasets and tasks. This limited approach can make it challenging to apply these models across different datasets or in various situations. However, recent studies in foundation models and self-supervised learning suggest that an adaptable EEG backbone could support a range of EEG related tasks. In this study, we have developed a multimodal EEG foundation model that combines a raw signal encoder based on the Mamba architecture, a Vision Transformer (ViT)-style encoder for time-frequency data, and a lightweight encoder for text, all within a shared embedding space. The pretraining process relies on several innovative techniques, such as masked modeling, cross-view contrastive alignment, and temporal consistency losses. These methods are designed to create rich, seizure-relevant representations without requiring labeled data. To assess the efficacy and generalization of our pretrained model, we fine-tuned it on the canonical CHB-MIT seizure detection benchmark and additional seizure detection datasets, and conducted extensive experiments comparing different model variants. On the standard CHB-MIT split, our best single model achieved an AUROC of 0.874, and an ensemble variant reached 0.878 AUROC, representing state-of-the-art performance on this benchmark. In addition to standard train-test splits, we evaluated performance under a leave-one-subject-out (LOSO) protocol, which is rarely reported in prior EEG seizure modeling work and highlights the difficulty of patient-independent seizure detection, with a mean LOSO balanced accuracy of 0.558 across 19 subjects. Across datasets and evaluation settings, our multimodal foundation model enabled robust seizure detection and straightforward adaptation to new seizure detection scenarios, while also supporting interpretable seizure localization.",
+      "date": "2026-07-23",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2607.21384v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.21384",
+      "arxiv_id": "2607.21384v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.21577",
+      "title": "Synthetic data generation framework for quality control automation in gravure printing",
+      "authors": [
+        "Korota Arsène Coulibaly",
+        "Mohamed Hamlich",
+        "Khalid Hmali",
+        "Andrea Trombin"
+      ],
+      "abstract": "Quality control in printing, particularly in rotogravure printing, still depends on slow, costly, and subjective manual inspection. Automated surface defect detection is critical for maintaining high-quality standards in rotogravure printing. Deep learning models give prospects for automation. However, training robust deep learning models, such as YOLO or Vision Transformers, is heavily hindered by the extreme scarcity of real-world industrial defects images. To overcome this limitation, this paper introduces a novel synthetic data generation framework tailored for rotogravure printing quality control. The proposed pipeline automatically generates high-fidelity images of specific printing defects (creases, streaks, misregistration, etc.) and outputs corresponding bounding boxes and annotations. To validate the framework, a synthetic dataset of 7533 images was generated and used to train the state-of-the-art object-detection model RFDETR. Experimental results demonstrate that the model trained on our synthetic data achieves a Mean Average Precision (mAP) of 80.9\\% on real industrial testing samples. This framework provides a zero-cost, rapid-deployment solution for automating defect inspection in printing lines without requiring massive manual data collection.",
+      "date": "2026-07-23",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2607.21577v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.21577",
+      "arxiv_id": "2607.21577v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.21437",
+      "title": "Agent-Guided Relational Concept Discovery: Toward Interpretable Surgical Margin Assessment",
+      "authors": [
+        "Nooshin Maghsoodi",
+        "Amoon Jamzad",
+        "Robert Policelli",
+        "Mohammad Farahmand",
+        "Dilakshan Srikanthan",
+        "Martin Kaufmann",
+        "Kevin Y. M. Ren",
+        "Shaila Merchant",
+        "Sonal Varma",
+        "Ross Walker",
+        "Doug McKay",
+        "John Rudan",
+        "Gabor Fichtinger",
+        "Parvin Mousavi"
+      ],
+      "abstract": "Deep learning models can effectively use Rapid Evaporative Ionization Mass Spectrometry (REIMS) data for surgical margin assessment. However, their clinical adoption remains challenging due to limited generalization to operating room conditions. This difficulty arises because models are typically trained on labeled spectra collected from resected tissue samples, while they must operate on noisy, unlabeled data acquired directly during surgery. In addition, the black-box nature of deep learning models makes it difficult to understand and systematically improve their behavior. Concept-based learning offers a promising way to address these challenges by mapping raw measurements to human-understandable concepts. However, supervised concept-based approaches rely on concept annotations, which are difficult to obtain in complex mass spectrometry workflows. We propose Agent-Guided Concept Discovery, a framework that learns meaningful concepts directly from data without requiring predefined concept labels. During training, a reasoning agent refines semantic descriptions of the learned concepts and adaptively adjusts their weight based on diagnostic relevance. These concepts are further grounded using a biochemical knowledge graph to ensure consistency with known metabolic relationships. Across Skin and Breast Cancer datasets, our model improves balanced accuracy and sensitivity over the baseline. In a representative intraoperative case, it shows fewer false positives, indicating better generalization to surgical conditions.",
+      "date": "2026-07-23",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2607.21437v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.21437",
+      "arxiv_id": "2607.21437v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.21402",
+      "title": "MSBraM: A Multi-scale Self-supervised Brain Foundation Model for Hierarchical EEG Dynamics Learning",
+      "authors": [
+        "Tao Zhou",
+        "Jing Han",
+        "Lingyu Shu",
+        "Zixing Zhang"
+      ],
+      "abstract": "Self-supervised foundation models have recently shown strong potential for electroencephalogram (EEG)-based analysis. However, existing approaches struggle to capture the inherently multi-scale temporal structure of EEG signals, where local neural patterns and long-range dependencies jointly encode task-relevant information. This limitation hampers cross-scale representation learning and generalization across diverse downstream tasks. To address this challenge, we propose MSBraM, a Multi-Scale self-supervised Brain foundation Model designed to learn hierarchical EEG representations. MSBraM follows a two-stage pretraining framework. First, a multi-scale neural tokenizer discretizes raw EEG signals into semantic codes at different temporal resolutions via vector-quantized reconstruction. Second, the model is pretrained to predict masked codes using a curriculum multi-scale masking strategy, progressively integrating fine-grained local patterns with global temporal context. We pretrain MSBraM on over 2,400 hours of EEG data and evaluate it across 10 downstream tasks on 12 public datasets. Extensive experiments show that MSBraM achieves superior performance on other state-of-the-art pretrained models, demonstrating strong generalization and transferability. These results indicate that explicitly modeling multi-scale temporal dynamics is critical for effective EEG foundation models.",
+      "date": "2026-07-23",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2607.21402v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.21402",
+      "arxiv_id": "2607.21402v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.21381",
+      "title": "Towards Faithful Graph Explanations with Synergistic Edge Effects via Granular Balls",
+      "authors": [
+        "Jiancu Chen",
+        "Shuyin Xia",
+        "Guan Wang",
+        "Degang Chen",
+        "Fan Chen"
+      ],
+      "abstract": "Instance-level explanations aim to reveal the rationale behind a model's decisions for a specific graph. Previous methods explain graph neural networks (GNNs) by selecting important edges to induce subgraphs, where edge importance is assessed by perturbing each edge and observing changes in the model predictions. However, they often neglect the synergistic effects among edges, which are crucial for accurately characterizing edge importance. To address this issue, we propose SeeExplainer, a parameter-free explainer to interpret GNNs. Specifically, we first introduce a granular-ball graph refinement mechanism that decomposes a graph into several disjoint granular-balls with no fixed size, and utilize them as nodes to construct a structural graph. This process can better capture the synergistic effects among edges. Then, we perturb nodes and edges in the structural graph to generate explanatory subgraphs based on their respective contributions. Experiments on several graph classification datasets of different networks show that SeeExplainer outperforms state-of-the-art baselines.",
+      "date": "2026-07-23",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2607.21381v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.21381",
+      "arxiv_id": "2607.21381v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.21354",
+      "title": "SPORD: A Simulation-Propose-then-OR-Dispose Approach for Supply Chain Planning",
+      "authors": [
+        "Jiayin He",
+        "Yutong Pan",
+        "Sen Yang",
+        "Ningxuan Kang",
+        "Yongzhi Qi",
+        "Jianshen Zhang",
+        "Wei Qi",
+        "Zuo-Jun Max Shen"
+      ],
+      "abstract": "For years, supply chain planning at e-commerce firms has operated as a collection of isolated projects. Each planning task from static network planning to dynamic warehouse assortment planning requires analysts to spend weeks building models from scratch, calibrating and persuading executives to act on outputs they cannot verify. Three barriers drive this: bespoke models proliferate because standardization is difficult (operational fragmentation); once unified, the combinatorial scale of millions of SKUs, thousands of nodes, and intricate routing logic exceeds what solvers can handle within a tight window (computational intractability); and a mathematically optimal solution still fails to be implemented if the executives do not trust it (implementation hurdle). To bridge this gap, we propose and implement the Simulation-Propose-then-OR-Dispose method, deployed as JD.com's NetSim platform. The central insight is decoupling: simulation proposes by generating and evaluating the full set of operationally valid candidate paths-absorbing all idiosyncratic business logic, while an integer program disposes by selecting the globally optimal subset. Computationally, matrix-vectorized CPU/GPU accelerated simulation achieves a 10-100 times speedup over serial methods, and a list scheduling algorithm reduces coupled-order processing from hours to minutes. Operationally, we establish a closed loop via an intelligent diagnosis engine. Since 2025, NetSim has optimized end to-end services for over 20,000 suppliers, the cross-regional fulfillment rate dropped from 6.1% to 4.9%, and the average monthly carbon reduction is approximately 5,745 tCO2e. SPORD moves simulation from monitoring to active planning. The transparent outputs turn skeptical executives into engaged collaborators, and the modular architecture ensures that the next planning requires just configuration, not reconstruction.",
+      "date": "2026-07-23",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2607.21354v1",
+      "tags": [
+        "cs.AI",
+        "scheduling",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.21354",
+      "arxiv_id": "2607.21354v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.20811",
+      "title": "New Complexity-Theoretic Frontiers of Tractability for Neural Network Training",
+      "authors": [
+        "Cornelius Brand",
+        "Robert Ganian",
+        "Mathis Rocton"
+      ],
+      "abstract": "In spite of the fundamental role of neural networks in contemporary machine learning research, our understanding of the computational complexity of optimally training neural networks remains incomplete even when dealing with the simplest kinds of activation functions. Indeed, while there has been a number of very recent results that establish ever-tighter lower bounds for the problem under linear and ReLU activation functions, less progress has been made towards the identification of novel polynomial-time tractable network architectures. In this article we obtain novel algorithmic upper bounds for training linear- and ReLU-activated neural networks to optimality which push the boundaries of tractability for these problems beyond the previous state of the art. In particular, for ReLU networks we establish the polynomial-time tractability of all architectures where hidden neurons have an out-degree of $1$, improving upon the previous algorithm of Arora, Basu, Mianjy and Mukherjee. On the other hand, for networks with linear activation functions we identify the first non-trivial polynomial-time solvable class of networks by obtaining an algorithm that can optimally train network architectures satisfying a novel data throughput condition.",
+      "date": "2026-07-23",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.20811v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.20811",
+      "arxiv_id": "2607.20811v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-nsf-career-2026",
+      "title": "NSF CAREER Award 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "National Science Foundation",
+      "url": "https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214",
+      "deadline": "2026-07-25",
+      "location": "USA",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "NSF's most prestigious award for early-career faculty. $500K+ over 5 years. Must be tenure-track at a US institution.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 14
+  }
+}
