@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T09:27:34.639371+00:00",
+  "generated_at": "2026-07-25T09:05:36.708035+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1738,
+      "github_stars": 1741,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 177,
+      "github_open_issues": 176,
       "github_recent_prs": [
+        "Names of rows and columns if possible when logging illegal data in `assessBounds` and `assessMatrix`",
         "fix message when solver option value is not ok",
         "Update BLA_VENDOR in julia/build_tarballs.jl",
         "Simplified factorisation for HiPO",
-        "Build free-threaded (cp314t) wheels",
-        "highs-server: standalone gRPC service interface for HiGHS"
+        "Build free-threaded (cp314t) wheels"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13807,
+      "github_stars": 13809,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 109,
+      "github_open_issues": 111,
       "github_recent_prs": [
+        "Support Gurobi 13 dynamic loading",
+        "Add XPRESS support to the MathOpt Python API",
         "graph: mermaid graph fixup",
         "google3 export",
-        "google3 export",
-        "Add more util tests",
-        "[go] Add status streaming"
+        "google3 export"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,7 +1131,7 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6285,
+      "github_stars": 6286,
       "github_open_issues": 192,
       "github_recent_prs": [
         "Make bmat promote scalars and 1-D blocks like numpy.block",
@@ -1320,13 +1320,13 @@
       ],
       "recent_changes": "Just like the planet lately, we're turning up the heat! In this release, we improve solver performance across the board - Constraint Streams, Value Ranges, Shadow Variables, everything gets a speed bu",
       "github_stars": 1724,
-      "github_open_issues": 100,
+      "github_open_issues": 101,
       "github_recent_prs": [
+        "ci: enable native in downstream to enterprise",
+        "chore: remove storage from REST",
         "fix: race condition in SolverWorker job registration",
         "chore: add indictment support to Bavet's Node Network",
-        "fix: replay RecordedUndoMove actions in reverse recording order",
-        "refactor: remove variable listeners",
-        "deps: bump com.google.cloud.tools:jib-maven-plugin from 3.5.1 to 3.5.2 in the patch group"
+        "fix: replay RecordedUndoMove actions in reverse recording order"
       ]
     },
     {
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2492,
+      "github_stars": 2493,
       "github_open_issues": 371,
       "github_recent_prs": [
         "Enable More Complex Error Structures in ParmEst and Pyomo.DoE",
