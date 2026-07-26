@@ -1,0 +1,327 @@
+{
+  "date": "2026-07-26",
+  "generated_at": "2026-07-26T09:20:15.563575+00:00",
+  "publications": [
+    {
+      "id": "s2-45d21f01a4b8",
+      "title": "A Deepsets-Guided Framework for Learning Job Priorities In Single-Machine Scheduling",
+      "authors": [
+        "Daniel Zhu"
+      ],
+      "abstract": "Scheduling is a fundamental decision-making problem in chemical engineering as well as numerous other sectors, arising in manufacturing, energy systems, and supply chains. Many scheduling problems are NP-hard [1], meaning that even small problems are computationally hard to solve deterministically. As a result, existing exact and heuristic methods face trade-offs between scalability, solution quality, and generalizability. This work addresses these limitations through a hybrid machine learning–optimization framework for the single-machine total tardiness scheduling problem (SMTTP). We introduce the DeepSets-Guided Scheduling Framework (DGSF), a hybrid methodology that integrates data-driven priority learning with structured optimization for single-machine scheduling. First, we propose a geometric instance classification rule that characterizes scheduling instances through aggregate structural parameters, enabling models trained on small instances to generalize to larger instances within the same structural class. Second, we develop a modified DeepSets [2] machine learning (ML) architecture that processes variable-sized sets of jobs and produces job-aligned priority scores. The model combines job-level feature transformations with an attention-based aggregation mechanism to incorporate instance-level context, allowing priority estimation to depend jointly on job and instance characteristics. Input features are constructed to retain interpretability and include normalized processing, release and due times, slack-based measures, and features derived from classical heuristics. Third, we introduce a two-stage post-processing step. A fast local pairwise-swap heuristic improves the predicted sequence, which is then used to warm-start a neighborhood-restricted continuous-time mixed-integer programming formulation. By explicitly limiting the search space around the learned solution, this formulation achieves high-quality refinement while controlling combinatorial complexity. Computational experiments indicate that the learned priority structure aligns with classical one-shot dispatching heuristics while improving solution quality. On instances with up to 120 jobs, DGSF consistently outperforms these heuristics, achieving optimality gaps of 3–6% compared to 26–31% for the best-performing one-shot heuristic. Furthermore, DGSF maintains high-quality solutions across different instance structures, time discretizations, and product catalogues.",
+      "date": "2026-07-26",
+      "source": "Semantic Scholar",
+      "source_detail": "combinatorial optimization heuristic",
+      "url": "https://doi.org/10.69997/pse.115708",
+      "tags": [
+        "integer-programming",
+        "scheduling",
+        "stochastic",
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.69997/pse.115708",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 75.0
+    },
+    {
+      "id": "s2-253f4655a516",
+      "title": "A Quantitative Framework for Comparing Classical and Quantum Algorithms for the Traveling Salesman Problem",
+      "authors": [
+        "Krit Grover",
+        "Marcelo Ponce"
+      ],
+      "abstract": "The Traveling Salesman Problem is a classical NP-hard problem with significant implications in logistics, circuit design, and operations research. This paper presents a comparative study of four approaches to solving the Traveling Salesman Problem: brute-force enumeration, a 2-approximation algorithm using minimum spanning trees, simulated annealing, and the Quantum Approximate Optimization Algorithm. We implement each technique and evaluate them on graphs of varying sizes to analyze performance, solution quality, and scalability. In doing so, we have also developed an open-source framework that allows researchers and practitioners to explore, test and extend these methods.",
+      "date": "2026-07-26",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.1145/3785462.3815790",
+      "tags": [
+        "metaheuristics",
+        "network-optimization",
+        "vehicle-routing",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1145/3785462.3815790",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 70.0
+    },
+    {
+      "id": "s2-2a5bfbf50c4f",
+      "title": "Data-driven optimization: efficient adaptive learning for self-driving laboratories",
+      "authors": [
+        "N. Sahinidis"
+      ],
+      "abstract": "Self-driving laboratories promise to compress materials-discovery timelines from years to weeks by replacing trial-and-error experimentation with closed-loop, algorithm-guided campaigns. Yet, despite the rapid proliferation of robotic and automation hardware, today's autonomous labs rely almost exclusively on Bayesian optimization (BO) to decide what experiment to run next. BO is a sensible approach to low-dimensional optimization problems with smooth response surfaces, but it struggles in precisely the regimes that matter most for real materials campaigns: tight experimental budgets, dozens of process parameters, mixed-integer choices, hard physical constraints, and noisy expensive measurements. In this talk, I will show how moving from BO to partitioning-based algorithms can substantially improve data efficiency, scale gracefully to dozens of process variables, and handle the constraints and noise that characterize realistic experimental campaigns. I will summarize a recently completed large-scale black-box optimization (BBO) benchmark in which we compared 42 solvers across 502 problems ranging from one to 300 dimensions and from smooth and convex to nonsmooth and nonconvex. The results overturn several community assumptions: BO solves only about 9% of problems within a 2,500-evaluationbudget, while a new branch-and-model (BAM) algorithm reaches an 81% success rate, with GLCCLUSTER, MULTIMIN, MCS, and SNOBFIT also performing strongly. A minimal, irreducible set of eight complementary solvers attains 88% solvability on the full suite. I will then move from in-silico benchmarks to the wet lab, presenting a recent algorithmguided experimental campaign on high-performance perovskite solar cells in which a non- BO solver was used to co-optimize six process variables spanning the perovskite, electrontransport, and hole-transport layers. Time permitting, I will also share early results from applying ensembles of BBO algorithms to digital twins of self-driving labs across additional materials systems. I will close with a forward-looking research vision: accelerating autonomous labs by developing, benchmarking, and experimentally validating data-efficient adaptive algorithms across batteries, semiconductors, catalysts, polymeric membranes, and biomolecules. The benchmarking software will be released as open source, with BAM and most BBO software available free to academic users, so that experimental groups can deploy these tools on their own self-driving platforms. Bio: Nick Sahinidis is the Butler Family Chair and Professor in the H. Milton Stewart School of Industrial and Systems Engineering and the School of Chemical and Biomolecular Engineering at Georgia Tech. His current research activities are at the interface between computer science and operations research, with applications in various engineering and scientific areas, including: global optimization of mixed-integer nonlinear programs: theory, algorithms, and software; informatics problems in chemistry and biology; process and energy systems engineering. Professor Sahinidis teaches mathematical optimization, process systems engineering, and scientific computing. He has developed a bioinformatics M.S. program and has taught courses ranging from thermodynamics and metabolic engineering to approximation algorithms and GPU computing. Sahinidis has served on the editorial boards of many leading journals and in various positions within AIChE (American Institute of Chemical Engineers). He received an NSF CAREER award, the INFORMS Computing Society Prize, the MOS Beale-Orchard-Hays Prize, the Computing in Chemical Engineering Award, the Constantin Carathéodory Prize, and the National Award and Gold Medal from the Hellenic Operational Research Society. Sahinidis is a member of the U.S. National Academy of Engineering and a fellow of AIChE and INFORMS.",
+      "date": "2026-07-26",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.69997/pse.147800",
+      "tags": [
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.69997/pse.147800",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "s2-2e89adbc2847",
+      "title": "Beyond Data Science: Driving Industrial Value through Data-Driven Decisions",
+      "authors": [
+        "Zhenyu Wang"
+      ],
+      "abstract": "Artificial intelligence is increasingly delivering measurable impact in the chemicalindustry, moving from isolated pilots toward embedded analytics across operations,supply chain, and Research & Development. At the same time, a clear industry shift isemerging: while developing accurate models remains important, there is a growingemphasis on realizing sustained value from AI investments. This talk presents apractitioner’s perspective on applied AI in the chemical industry, focusing on what isworking, what is challenging, and where future opportunities lie. We begin with examples of AI applications that have demonstrated value in industrialsettings, including process monitoring, demand forecasting, and computervision–enabled inspection and automation. These successes highlight a criticalprinciple, i.e. value is not created by models alone, but by extracting actionable insightsfrom data and enabling datadriven decisions informed by those insights. It is ultimatelythe decisions that drive the measurable business impact. We then examine key challenges that continue to limit broader adoption. These includeinconsistent data quality, lack of contextualization across systems, and modeldegradation under changing environment. Additional barriers arise from difficulties ininterpreting model outputs, translating insights into decisions, and embedding analyticsinto real operational workflows. Finally, the talk explores emerging directions in industrial AI, including hybrid modelingthat combines physics and data-driven insights, scalable data infrastructures, andtighter integration between analytics, optimization, and automation technologies. Thesession concludes by outlining a forward-looking path toward more adaptive, integrated,and decision-centric AI systems that can reliably translate data into sustained industrialvalue at scale.",
+      "date": "2026-07-26",
+      "source": "Semantic Scholar",
+      "source_detail": "operations research optimization",
+      "url": "https://doi.org/10.69997/pse.110684",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.69997/pse.110684",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-net.70063",
+      "title": "A Clustering Approach for\n                    <scp>NSGA</scp>\n                    ‐\n                    <scp>II</scp>\n                    in Political Redistricting",
+      "authors": [
+        "Splitter, B.",
+        "Saltzman, M.",
+        "Kurz, M."
+      ],
+      "abstract": "ABSTRACT\n                  Political redistricting is a complex, multi‐objective problem that has been extensively studied. One approach to solve this geographical partitioning problem is to use multiobjective genetic algorithms applied to the adjacency graph of precincts. Following the work of Vanneschi et al., we develop an algorithm using a Non‐Dominated Sorting Genetic Algorithm (NSGA‐II) to build electoral plans in the state of South Carolina. Our work (which we name Cluster‐NSGA‐II) utilizes a novel clustering approach to breed children rather than the standard crossover step. We find that this approach is competitive with other similar algorithms in terms of both solution diversity and Pareto optimality.",
+      "date": "2026-07-25",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70063",
+      "tags": [
+        "metaheuristics",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70063",
+      "score": 50.0
+    },
+    {
+      "id": "s2-317aca40d61b",
+      "title": "From Insight to Action: AI-Powered Decisions in the Chemical Industry",
+      "authors": [
+        "Ivan Castillo"
+      ],
+      "abstract": "Decision-making in the chemical industry is difficult because operators must choose actions under uncertainty: plant behavior is nonlinear and time-varying, measurements are noisy and incomplete, operating constraints and safety margins are strict, and economic objectives often conflict with each other. Data-driven AI methods can help turn high-frequency process data into predictions and recommendations, but in highstakes settings they are most useful when they leverage prior domain knowledge rather than treating the plant as a black box. In this work, prior knowledge is incorporated in two general ways. First, we use hybrid modeling, where deterministic structure from first principles (e.g., balances, thermodynamics, kinetics) is combined with data-driven learning to improve extrapolation, robustness, and interpretability. Second, we use preference-based learning, where expert judgment is captured qualitatively through pairwise comparisons or rankings of candidate options, enabling optimization even when a single numerical objective is hard to define. We illustrate these ideas with industrial decision-making examples that span physics-grounded monitoring of gradual degradation and preference-driven tuning of operational and control choices. In the hybrid modeling examples, mechanistic knowledge such as mass and energy balances and reaction kinetics is embedded alongside data-driven models to yield physically consistent predictions that remain reliable even when data are sparse or subject to drift. This work focuses on industrial systems that undergo gradual deterioration over time. Three representative case studies are considered: catalyst deactivation monitoring in continuous reactors, where an adiabatic reactor model is used to compute catalyst activity as a health indicator that is integrated into an empirical lifetime model; heat exchanger fouling forecasting in an ethylene oxide plant, where physics-informed features enable month-ahead prediction of fouling surrogates to support cleaning decisions; and remaining useful life prediction for pollutant scrubbers, where hybrid models capture slow degradation trends to inform maintenance planning. Together, these examples show that combining first-principles understanding with datadriven methods enables accurate characterization of degradation dynamics using limited data, improves extrapolation to unseen operating conditions, and increases confidence in maintenance-related decisions (Sansana et al., 2024; Venegas et al., 2024; Bui et al., 2022).",
+      "date": "2026-07-26",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.69997/pse.105983",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.69997/pse.105983",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 50.0,
+      "mentions_solvers": [
+        "HiGHS"
+      ]
+    },
+    {
+      "id": "crossref-10.1002-nav.70090",
+      "title": "Seeing Beauty in Ugly Produce: Do Ugly Produce Retailers Reduce Food Waste?",
+      "authors": [
+        "Han, Z.",
+        "Hu, B.",
+        "Dawande, M."
+      ],
+      "abstract": "ABSTRACT\n                  Ugly produce refers to cosmetically unconventional yet taste‐ and nutrition‐wise perfectly edible produce. Advocates of ugly produce retailers claim that they help reduce food waste, but skeptics argue that ugly produce is often not wasted but meets alternative demands such as from restaurants and processed food manufacturers. Given such complications, it is necessary to model the entire produce supply chain to properly evaluate the impact of ugly produce retailers on food waste. We model an agricultural cooperative producing, pricing, and selling produce to a retailer and an alternative buyer and find that the retailer selling ugly produce indeed strictly reduces food waste. However, doing so also weakly reduces the retailer's profit, which explains traditional grocery chains' hesitancy to carry ugly produce. Fortunately, we find that a dedicated ugly produce retailer competing with a traditional retailer yields the same food waste reduction. This research reveals supply‐chain level insights into the debate about ugly produce retailers and alludes to the sustainability value of dedicated ugly produce startups.",
+      "date": "2026-07-25",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70090",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70090",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07323-6",
+      "title": "Risk-aware trading portfolio optimization",
+      "authors": [
+        "Bianchetti, M.",
+        "D’Acunto, G.",
+        "De Francisci Morales, G.",
+        "Kuroki, Y.",
+        "Scaringi, M.",
+        "Vitale, F."
+      ],
+      "abstract": "",
+      "date": "2026-07-25",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07323-6",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07323-6",
+      "score": 30.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 8,
+    "software": 0,
+    "deadlines": 3,
+    "conferences": 0,
+    "opportunities": 3,
+    "total": 11
+  }
+}
