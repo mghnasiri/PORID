@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T09:20:15.222340+00:00",
+  "generated_at": "2026-07-27T10:49:24.626392+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1742,
+      "github_stars": 1748,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 177,
+      "github_open_issues": 172,
       "github_recent_prs": [
-        "Introduces presolve \"light\"",
-        "Names of rows and columns if possible when logging illegal data in `assessBounds` and `assessMatrix`",
-        "fix message when solver option value is not ok",
-        "Update BLA_VENDOR in julia/build_tarballs.jl",
-        "Simplified factorisation for HiPO"
+        "Restore per-coefficient bound substitutions before untransforming a path cut (#3171)",
+        "fix gcc for hipo sanitizer workflow",
+        "Fix #3173: bound the objective perturbation when treating a near-fixed column as fixed",
+        "Fix #3170: discard a redundant variable bound instead of substituting it as if tight",
+        "Now checking matrix value magnitude in first pass when not summing duplicates"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 615,
+      "github_stars": 618,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13814,
+      "github_stars": 13823,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1130,14 +1130,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6287,
-      "github_open_issues": 192,
+      "github_stars": 6289,
+      "github_open_issues": 195,
       "github_recent_prs": [
+        "Stop internal parameter checks warning about sparse .value reads",
+        "Fix SCIP interface misclassifying single-SOC problems as continuous LPs",
         "Make bmat promote scalars and 1-D blocks like numpy.block",
         "Bump actions/setup-python from 6 to 7",
-        "Bump github/codeql-action/upload-sarif from 4.36.3 to 4.37.1",
-        "Fix matrix_frac crash on a matrix argument with an ndarray P",
-        "Updated the link to the Uno installation instructions"
+        "Bump github/codeql-action/upload-sarif from 4.36.3 to 4.37.1"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1255,7 +1255,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1770,
+      "github_stars": 1772,
       "github_open_issues": 15,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1318,14 +1318,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Just like the planet lately, we're turning up the heat! In this release, we improve solver performance across the board - Constraint Streams, Value Ranges, Shadow Variables, everything gets a speed bu",
-      "github_stars": 1725,
-      "github_open_issues": 101,
+      "github_stars": 1724,
+      "github_open_issues": 102,
       "github_recent_prs": [
-        "ci: enable native in downstream to enterprise",
-        "chore: remove storage from REST",
-        "fix: race condition in SolverWorker job registration",
-        "chore: add indictment support to Bavet's Node Network",
-        "fix: replay RecordedUndoMove actions in reverse recording order"
+        "deps: bump version.io.quarkus from 3.37.3 to 3.38.0",
+        "deps: bump org.apache.maven.plugins:maven-jar-plugin from 3.5.0 to 3.5.1 in the patch group",
+        "deps: bump the minor group with 4 updates",
+        "deps: bump the quarkus-patch group with 2 updates",
+        "fix: prevent stale tuples after a join"
       ]
     },
     {
@@ -1448,7 +1448,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.31.1\n\n[Diff since v1.31.0](https://github.com/jump-dev/JuMP.jl/compare/v1.31.0...v1.31.1)\n\n\n**Merged pull requests:**\n- Revert #4032 because it is subject to hash collisions (#4205) (@odow)",
-      "github_stars": 2456,
+      "github_stars": 2457,
       "github_open_issues": 12,
       "github_recent_prs": [
         "Use WeakRef as the keys for the subexpression dictionary",
