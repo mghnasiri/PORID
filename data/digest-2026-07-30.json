@@ -1,0 +1,391 @@
+{
+  "date": "2026-07-30",
+  "generated_at": "2026-07-30T09:35:33.630904+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2607.27106",
+      "title": "Hierarchical Spatio-Temporal Transformer for Coherent Emergency Department Forecasting",
+      "authors": [
+        "Filipa Lino",
+        "Bárbara Tavares",
+        "Carlos Santiago",
+        "Cláudia Soares",
+        "Manuel Marques"
+      ],
+      "abstract": "Emergency Departments (EDs) are critical access points in healthcare systems, yet they face persistent pressure from unpredictable patient demand, seasonal surges, and non-urgent visits. Effective ED planning requires forecasts at multiple decision-making levels: hospitals need local demand estimates for staffing and bed management, regions require forecasts to coordinate healthcare units, and national authorities need system-wide projections for capacity planning. However, most existing approaches forecast ED demand independently at a single level, ignoring the hierarchy linking hospitals, regions, and national systems. This can produce incoherent predictions, where hospital-level forecasts do not aggregate consistently to regional or national demand. We propose HierSTT, a hierarchical Transformer-based framework for coherent multi-level ED forecasting. HierSTT jointly predicts hospital, regional, and national level demand in a single end-to-end model. A Temporal Fusion Transformer captures national dynamics, while spatio-temporal Transformer encoder-decoder modules model regional and hospital demand conditioned on higher-level forecasts. A coherence-aware loss penalizes cross-level inconsistencies during training. We further introduce a nationwide Portuguese ED dataset covering 81 hospitals across 5 regional health administrations, with heterogeneous covariates at each level. Experiments show that HierSTT reduces average WAPE by 32\\% relative to the best non-hierarchical deep learning baseline and outperforms all classical hierarchical reconciliation methods, while producing near-coherent predictions across levels. Additional resources associated with this work are available at https://github.com/FilipaLino/HierSTT.",
+      "date": "2026-07-29",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.27106v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "healthcare-or",
+        "facility-location"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.27106",
+      "arxiv_id": "2607.27106v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.26570",
+      "title": "Semi-Decentralized Multi-Spacecraft Collision Avoidance under Communication Constraints",
+      "authors": [
+        "Grace Ra Kim",
+        "Mahdi Al-Husseini",
+        "Duncan Eddy",
+        "Mykel J. Kochenderfer"
+      ],
+      "abstract": "Current spacecraft collision-avoidance operations rely on intermittent ground-station contacts, requiring operators to plan with delayed and asynchronously updated information. Consequently, maneuvers must be planned with only intermittent information sharing between operators, raising the question of how much coordination is needed to achieve collision-avoidance performance comparable to centralized planning. Although decision-theoretic approaches such as partially observable Markov decision processes (POMDPs) capture the sequential and uncertain nature of collision avoidance, existing multiagent extensions typically assume either continuous information sharing or communication models that do not reflect operational ground-station constraints. To explicitly model this intermittent information availability, we formulate the spacecraft-to-spacecraft collision avoidance problem as a semi-decentralized POMDP (SDec-POMDP), where we govern information propagation directly by realistic ground-station visibility windows. Joint maneuver policies are computed using approximate Recursive Small-Step Semi-Decentralized A* (RS-SDA*), following the state-of-the-art A*-based lineage for decentralized multiagent planning. Across a representative suite of conjunction scenarios, semi-decentralized planning recovers near-centralized maneuver quality while requiring 28.5% fewer synchronization events than continuous coordination. Comparisons with representative rule-based operator heuristics further show that communication-aware planning more consistently achieves the desired operational miss-distance band while minimizing unnecessary trajectory deviation. Together, these results establish a practical planning framework for autonomous collision avoidance under realistic intermittent communication, bridging the gap between idealized centralized coordination and fully decentralized planning execution.",
+      "date": "2026-07-29",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2607.26570v1",
+      "tags": [
+        "cs.RO",
+        "stochastic",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.26570",
+      "arxiv_id": "2607.26570v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2025.1368",
+      "title": "Learning Virtual Machine Scheduling in Cloud Computing Through Language Agents",
+      "authors": [
+        "Wu, J.",
+        "Wang, Z.",
+        "Sheng, J.",
+        "Li, W.",
+        "Wang, X.",
+        "Luo, J."
+      ],
+      "abstract": "In cloud services, virtual machine scheduling is a typical online dynamic multidimensional bin-packing (ODMBP) problem characterized by large-scale and nonstationary demands. Traditional optimization methods struggle to adapt to dynamic environments, existing learning-based methods often lack generalizability and interpretability, and domain expert–designed heuristic approaches are constrained by rigid strategies. To address these limitations, this paper proposes a hierarchical language agent framework named MiCo, which provides a large language model (LLM)–driven heuristic design paradigm for solving ODMBP. Specifically, ODMBP is formulated as a semi-Markov decision process with options, enabling dynamic scheduling through a micromacro hierarchical architecture, that is, option miner and option composer. Option miner utilizes LLMs to discover context-independent strategies through environment interactions. Option composer uses LLMs to develop a context-aware composing strategy that integrates the context-independent strategies. Extensive experiments on a real-world data set demonstrate that MiCo achieves a 96.9% performance ratio under large-scale and nonstationary scenarios. It maintains high performance even under nonstationary request flows and different configurations.\n                  History: Accepted by Ram Ramesh, Area Editor for Data Science &amp; Machine Learning.\n                  Funding: The work of J. Luo was supported by the National Natural Science Foundation of China [Grants 72542012, 72571170, and 72031006]. The work of X. Wang was supported in part by a research collaboration with Huawei Cloud [Grant TC20241122017]. The work of W. Li was supported in part by the National Natural Science Foundation of China [Grant 62406270] and the Science and Technology Commission of Shanghai Municipality Shanghai Rising-Star Program [Grant 24YF2748800].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2025.1368 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2025.1368 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-07-29",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2025.1368",
+      "tags": [
+        "scheduling",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2025.1368",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2607.26482",
+      "title": "A Receding Horizon Control For General Assembly Line Balancing Problems",
+      "authors": [
+        "Ali Mohamed Ali",
+        "Luca Tirel"
+      ],
+      "abstract": "This paper introduces a novel approach to the General Assembly Line Balancing Problem (GALBP) by utilizing a receding horizon optimal control framework. The proposed discrete model for the assembly line offers a flexible representation, avoiding assumptions about specific line configurations. The control actions aim to optimize the industrial assembly line by minimizing the completion time while adhering to constraints such as task precedence, workstation capacity, and resource requirements. Control actions are represented through task assignment and resource allocation matrices, assigning tasks to specific workstations and assigning resources to workstations, respectively. The optimization problem is formulated as a Mixed-Integer Nonlinear Programming (MINLP) problem. The inherent robustness of the receding horizon approach ensures optimal solutions for the assembly line, effectively adapting to sudden changes. Numerical experiments demonstrate the robustness and effectiveness of the proposed control synthesis in efficiently distributing tasks and resources, minimizing the overall completion time.",
+      "date": "2026-07-29",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2607.26482v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.26482",
+      "arxiv_id": "2607.26482v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.27143",
+      "title": "Cost-Sensitive Conformal Prediction and Human-in-the-Loop Abstention for Imbalanced High-Stakes Decision Support: A Multi-Domain Benchmark",
+      "authors": [
+        "Manpreet Singh",
+        "Akshatha Srikantha",
+        "Shyamal Lakhanpal"
+      ],
+      "abstract": "High-stakes decision systems in credit scoring, fraud detection, healthcare, and industrial safety require reliable uncertainty quantification under severe class imbalance and asymmetric error costs. Standard marginal conformal prediction (CP) provides valid overall coverage guarantees; however, we show that it severely under-covers rare, costly minority classes, with minority-class coverage dropping to as low as 0.5% on certain datasets. To characterize and address this limitation, we conduct a comprehensive benchmark comparing marginal CP, class-conditional (Mondrian) CP, and cost-controlled abstention mechanisms across 15 real-world imbalanced tabular datasets, 7 classification models, 3 probability calibration techniques, and 10 random seeds, resulting in 3,150 experimental runs. Our results show that Mondrian CP restores valid minority-class coverage, achieving an average minority-coverage improvement of 61.7 percentage points over marginal CP (p < 1e-80). Furthermore, combining Mondrian CP with cost-controlled abstention significantly reduces expected decision cost compared with standard decision boundaries, confidence-based rejectors, and risk-controlled rejectors under realistic human review budgets. We further quantify dataset-specific break-even thresholds at which deferring ambiguous instances to human experts becomes cost-effective. These findings provide practical guidance for deploying distribution-free, cost-aware uncertainty quantification in high-stakes decision support systems.",
+      "date": "2026-07-29",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2607.27143v1",
+      "tags": [
+        "cs.LG",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.27143",
+      "arxiv_id": "2607.27143v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.26414",
+      "title": "Origins and mitigation of double descent in reduced order modeling",
+      "authors": [
+        "Andrei A. Klishin",
+        "J. Nathan Kutz",
+        "Krithika Manohar"
+      ],
+      "abstract": "Latent low-dimensional structure in datasets of natural and engineered systems enables their sparse sensing, or full-state reconstruction from historical data and very few carefully chosen localized measurements. Depending on the reconstruction algorithm, sensor locations, and measurement noise, the reconstruction risk curves demonstrate a diversity of patterns including a dramatic peak in error known as double descent in Machine Learning literature. Here we explore those scenarios under a unified Data-Noise Averaging theory. Qualitatively, we formulate sufficient criteria for double descent to emerge through a catastrophic amplification of a pathological signal in reconstruction. Quantitatively, we predict the detailed risk curves at a fraction of computational cost, trace reconstruction instability to individual sensors and their combinations, and provide regularization mechanisms to mitigate the instability. We demonstrate results for both static reconstruction of Sea Surface Temperature patterns and time integration of a reduced order model of a PDE.",
+      "date": "2026-07-29",
+      "source": "arXiv",
+      "source_detail": "stat.ML",
+      "url": "http://arxiv.org/abs/2607.26414v1",
+      "tags": [
+        "stat.ML",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.26414",
+      "arxiv_id": "2607.26414v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.26929",
+      "title": "Same Evidence, Different Target: Decoding How Diagnostic Evidence Bears on Causal Questions from Language-Model States",
+      "authors": [
+        "Weiyi Kong",
+        "Zhuoran Li"
+      ],
+      "abstract": "The same diagnostic result can support or challenge one causal claim yet fail to address another when the claims concern different populations, outcomes, estimands, pathways, or identifying assumptions. When the evidence and target vary together, a correct answer may reflect favorable or adverse wording, lexical overlap, or a familiar diagnostic pattern rather than matching the evidence to the causal question. We introduce paired prompts that repeat the same diagnostic evidence verbatim while changing the causal target. Each prompt is labeled Favors, Challenges, Unresolved, or Wrong Target according to how the evidence bears on the causal question. A pair is recovered only when both prompts are classified correctly. Using linear readouts trained on a separate development set, we analyze the final-token hidden state from the penultimate transformer block of Qwen2.5-7B-Instruct, Qwen3-8B, and Llama-3.1-8B-Instruct. On the 49-pair primary benchmark spanning nine diagnostic families, balanced accuracy ranges from 0.654 to 0.659 and 18-21 pairs are recovered. Two independent human reviewers assigned the same label to 95 of the 98 prompts (96.9%). Across checkpoints, balanced accuracy and complete-pair recovery exceed permutation nulls that preserve development scenario groups. In Qwen2.5, full-prompt balanced accuracy exceeds both restricted inputs, with paired-bootstrap intervals for both differences above zero. Readouts trained without development examples from the evaluated diagnostic family recover 21 pairs, including at least one in each of the nine families. The hidden-state readout exceeds a linear classifier on answer-option logits and text baselines in balanced accuracy and recovered pairs. These results show that the hidden state contains linearly decodable information about whether diagnostic evidence favors, challenges, or fails to address the causal target.",
+      "date": "2026-07-29",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2607.26929v1",
+      "tags": [
+        "cs.CL",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.26929",
+      "arxiv_id": "2607.26929v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.26968",
+      "title": "From Crop and Energy Data to Optimized Lighting Scheduling: A Surrogate-Based MILP Framework for Vertical Farming",
+      "authors": [
+        "Francesco Ceccanti",
+        "Andrea Baccioli",
+        "Aldo Bischi"
+      ],
+      "abstract": "Vertical farming enables high productivity and stable crop production under controlled conditions, but its economic feasibility remains limited by electricity demand for artificial lighting and climate control. This study develops a surrogate-based optimization framework for cost-minimizing lighting management in hydroponic vertical farms. A key contribution is a procedure for converting crop-energy response data into relationships suitable for mathematical programming. The method can be applied to experimental datasets or outputs from validated dynamic models, provided that relevant ranges of control variables, crop stages, and energy responses are represented. The framework is applied to lettuce cultivation in an industrial-scale vertical farm in northern Italy. Synthetic data generated by a verified agri-energy model are used to derive surrogate relationships for fresh biomass growth, leaf area index, and electricity demand for lighting, heating, and cooling. These relationships depend on photosynthetic photon flux density, crop stage, and outdoor temperature. Different temporal aggregation levels are examined to evaluate the trade-off among surrogate accuracy, scheduling flexibility, and computational compactness. The surrogate model reproduced crop and energy trends of the reference model with sufficient accuracy for optimization. Compared with fixed-lighting benchmarks, optimized schedules reduced electric energy consumption by up to 15.9% and electricity cost by up to 17.8%, while achieving the target harvest weight. Results indicate that moderate light intensities combined with flexible photoperiods are more cost-effective than high-intensity lighting under the investigated conditions. The proposed framework offers a tractable and generalizable approach for integrating crop growth, energy demand, and electricity price variability into vertical farming lighting strategies.",
+      "date": "2026-07-29",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2607.26968v1",
+      "tags": [
+        "eess.SY",
+        "integer-programming",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.26968",
+      "arxiv_id": "2607.26968v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.26560",
+      "title": "Emission-Forecasting-Based Spatial-Temporal Carbon Response: A Multi-Agent Attention-Enhanced Deep Learning Framework",
+      "authors": [
+        "Feiyu Cai",
+        "Jing Qiu",
+        "Yi Yang",
+        "Chenxi Zhang",
+        "Xinlei Wang",
+        "Baichuan Liu",
+        "Junhua Zhao"
+      ],
+      "abstract": "As a major contributor to carbon emissions, the decarbonization of power systems has garnered significant societal attention. Nodal carbon intensity (NCI), a critical factor in carbon-oriented demand response, has traditionally been determined through ex-post calculations. However, this ex-post approach introduces latency in low-carbon dispatch. To address this, this paper presents a proactive ex-ante spatial-temporal carbon response framework. At its core, we develop a novel deep learning-based hierarchical design, enhanced by a dual-stage attention mechanism and a large language model (LLM)-based multi-agent cooperation system, to accurately forecast day-ahead NCI. This design effectively mitigates the impact of renewable energy uncertainty and enhances predictive resilience. On the demand side, the framework proposes a spatial-temporal carbon scheduling model that integrates geographically dispatchable loads (GDLs), including mobile energy storage systems (MESSs) and distributed data centers (DDCs). Leveraging high-accuracy day-ahead NCI predictions, the framework can effectively reduce system emissions by quickly responding to carbon intensity fluctuations. The proposed framework is tested on the modified IEEE 33-bus system. According to the simulation results, the impacts of proposed framework on dispatching latency and emission outcomes are analyzed. The results demonstrate that under a one-hour reduction in carbon scheduling latency, the proposed model and methodology can achieve over 30% emission reduction. This research breaks through the limitations of passive carbon accounting, advancing toward proactive carbon management. It offers an intelligent solution that accelerates the transition to cleaner power systems while directly supporting sustainable production goals.",
+      "date": "2026-07-29",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2607.26560v1",
+      "tags": [
+        "eess.SY",
+        "scheduling",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.26560",
+      "arxiv_id": "2607.26560v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2607.26424",
+      "title": "Fully distributed singularity-free prescribed-time stabilization of the continuous-time generalized adaptive Bellman-Ford algorithm",
+      "authors": [
+        "Yuanqiu Mo",
+        "Jian Qin",
+        "Soura Dasgupta"
+      ],
+      "abstract": "Building upon the well-established distributed biased min-consensus protocol, which serves as an efficient approach to address the shortest path problem in a distributed fashion, the continuous-time generalized adaptive Bellman-Ford algorithm (GABF) introduces flexibility by accommodating various forms of distance metrics. This adaptability makes GABF suitable for more complex scenarios, such as time-dependent shortest path problem and robotic path planning. However, existing research on this protocol primarily focuses on asymptotic stability, providing no insights into convergence speed, which limits its practical applications. To address this gap, this paper proposes two control strategies that achieve prescribed-time stabilization of GABF by ensuring its convergence to the stationary value within a user-defined time, thereby broadening its applicability. Simulation scenarios, including robotic manipulator path planning with real-world data and learning-based path planning, are provided to validate the effectiveness of the proposed approaches.",
+      "date": "2026-07-29",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2607.26424v1",
+      "tags": [
+        "eess.SY",
+        "network-optimization",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2607.26424",
+      "arxiv_id": "2607.26424v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2544947",
+      "title": "NSF Award: RI: Small: Cooperative Planning and Learning via Scalable and Learnable Multi-Agent Commitments",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Worcester Polytechnic Institute",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2544947",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-15",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Stemming from human societies, the notion of commitment refers to a decision maker, or agent, making credible and prolonged promises about various aspects of the consequences of its future decisions, thus facilitating cooperation with other agents. Engineering commitments is therefore a promising framework to achieve cooperative artificial intelligence (AI) that equips a group of autonomous agents with the capability of planning and learning to maximize their joint utility. This research project",
+      "funding_amount": "$170,544",
+      "pi": "Qi Zhang",
+      "program": "Robust Intelligence",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2549926",
+      "title": "NSF Award: CRII: CIF: Leveraging the Laplacian Paradigm for Efficient Non-Convex Optimization in Transportation and Payment Channel Networks",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "The University of Central Florida Board of Trustees",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2549926",
+      "deadline": "2026-07-31",
+      "date": "2026-06-24",
+      "award_start": "2025-08-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "Within the last 15 years, permissionless, decentralized electronic cash systems based on a public consensus mechanism, such as Bitcoin, have emerged as credible tools for efficient cross-border payments, financial inclusion and debasement protection. While payment channel networks (PCNs) such as the Lightning network help to overcome their inherent limitations with respect to payment throughput and transaction speed, the reliability of such off-chain payments is not guaranteed, especially for pa",
+      "funding_amount": "$125,304",
+      "pi": "Christian Kümmerle",
+      "program": "Comm & Information Foundations",
+      "end_date": "2026-07-31",
+      "score": 30.0
+    },
+    {
+      "id": "manual-nwo-veni-2026",
+      "title": "NWO Veni Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "Dutch Research Council (NWO)",
+      "url": "https://www.nwo.nl/en/calls/nwo-talent-programme-veni",
+      "deadline": "2026-08-01",
+      "location": "Netherlands",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "250K EUR for 3 years for recently graduated PhDs to develop their research ideas at a Dutch university.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 3,
+    "conferences": 0,
+    "opportunities": 3,
+    "total": 13
+  }
+}
