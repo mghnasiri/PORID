@@ -1,0 +1,312 @@
+{
+  "date": "2026-08-02",
+  "generated_at": "2026-08-02T09:14:57.900622+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s11081-026-10115-3",
+      "title": "Autonomous Unmanned Aircraft Systems for Enhanced Search and Rescue of Drowning Swimmers: Location-Allocation Optimization and Flight Trajectory Planning",
+      "authors": [
+        "Zell, S.",
+        "Schneidereit, T.",
+        "Fügenschuh, A.",
+        "Breuß, M."
+      ],
+      "abstract": "Abstract\n                  Drowning is among the most prevalent causes of death from unintentional injuries worldwide. Because of the time-sensitive nature of swimming accidents and the shortage of lifeguard staff resulting in unsupervised swimming areas, interest in innovative supportive rescue methods increases. In this paper, we introduce an autonomous Unmanned Aircraft System (UAS) that can be employed by Emergency Medical Service (EMS) providers in swimmer rescue scenarios additionally to Standard Rescue Operation (SRO) equipment. The UAS consists of Unmanned Aerial Vehicles (UAVs) and purpose-built hangars located near the swimming area to store the UAVs. When receiving an alert, the UAVs autonomously navigate to the emergency site to conduct a Search and Rescue (S&amp;R) operation for the swimmer in distress. We introduce a Mixed-Integer Linear Programming (MILP) model to address the Facility Location-Allocation Problem (FALP), identifying optimal hangar locations and allocation of UAVs to hangars to serve the demand in the swimming area. Additionally, we present a MILP model to optimize the UAV flight trajectories in advance of the operation, allowing for efficient coordination of a heterogeneous UAV swarm. We apply the presented MILP models to a real-world scenario in the Lusatian Lake District, Eastern Germany using the state-of-the-art commercial solver CPLEX to solve the instances.",
+      "date": "2026-08-01",
+      "source": "Optimization and Engineering",
+      "source_detail": "Optimization and Engineering",
+      "url": "https://doi.org/10.1007/s11081-026-10115-3",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "stochastic",
+        "facility-location",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11081-026-10115-3",
+      "score": 75.0,
+      "mentions_solvers": [
+        "CPLEX"
+      ]
+    },
+    {
+      "id": "s2-3ad5bf6c348a",
+      "title": "Clustering Based Neural Combinatorial Optimization for Scanning Path Planning of Heterogeneous Multi-Agent System",
+      "authors": [
+        "Bocheng Zhao",
+        "Hang Shi",
+        "Jirou Feng",
+        "Bo Qi",
+        "Mingying Huo",
+        "Naiming Qi"
+      ],
+      "abstract": "An effective solution method is proposed for the scanning path planning problem of heterogeneous multi-agent systems. Target mission is divided into multiple task clusters by density clustering to balance the task difficulty. Afterwards, the method innovatively first performs path planning for each task cluster, then systematically allocates tasks by utilizing mixed-integer linear programming (MILP) based on the planning outcomes and the diverse capabilities within the heterogeneous system, ensuring that agents possess unique adaptability to tasks that align with their specific capabilities. In the optimization solving phase, a neural combinatorial optimization (NCO) algorithm based on graph neural network (GNN) is proposed. Through supervised learning and cross-instance parallel training, the automation of heuristic design and the enhancement of heuristic rules are achieved, avoiding the inefficiency and suboptimality of expert design and manual parameter tuning. Simulation results show that the algorithm has better performance in terms of task completion time, execution time and deviation rate, showing its application potential in the rapid task planning problem of heterogeneous multi-agent systems.",
+      "date": "2026-08-01",
+      "source": "Semantic Scholar",
+      "source_detail": "combinatorial optimization heuristic",
+      "url": "https://doi.org/10.1109/TETCI.2026.3681463",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TETCI.2026.3681463",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 65.0
+    },
+    {
+      "id": "s2-47583da86868",
+      "title": "Deep Q-Network-Based Power Management for Emission-Aware Optimization in Port Ship Microgrid Systems",
+      "authors": [
+        "M. Elsisi",
+        "Mahmoud N. Ali"
+      ],
+      "abstract": "The control and optimization of shipboard microgrid operations in port environments pose increasing challenges due to limited shore power capacity and stringent emissions regulations. This article presents a power electronics-oriented control strategy that leverages a Deep Q-Network (DQN) framework to achieve emission-aware energy management in ship auxiliary systems. The proposed method enables bidirectional power coordination between shore power infrastructure and the ship’s onboard microgrid, targeting minimum emission point tracking. By integrating deep reinforcement learning with power system control, the DQN approach dynamically adapts to varying load profiles and ensures optimal engine dispatch, reducing reliance on high-emission operation modes. Additionally, energy storage units are incorporated to enhance system flexibility, with real-time control of battery state of charge and adaptive response to specific fuel consumption variations. Various scenarios are conducted, including robustness tests and analysis under varying load profiles, grid availability, stochastic uncertainties, and realistic berthing load conditions, to validate the effectiveness of the proposed strategy. The experiments demonstrate that the proposed DQN achieves a higher reduction in emissions by 6.69% and faster convergence to the optimal operational state compared to advanced reinforcement learning approaches (deep deterministic policy gradient (DDPG), twin delayed DDPG, soft actor–critic, and proximal policy optimization) and traditional rule-based methods. These results highlight the potential of intelligent power electronics control for sustainable and high-efficiency maritime applications.",
+      "date": "2026-08-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/TPEL.2026.3676288",
+      "tags": [
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TPEL.2026.3676288",
+      "arxiv_id": "",
+      "citation_count": 1,
+      "score": 65.0
+    },
+    {
+      "id": "s2-100a3a3a5ac1",
+      "title": "TransACO: Transformer-Guided Ant Colony Algorithm for Combinatorial Optimization",
+      "authors": [
+        "Bo Sun",
+        "Peixi Peng",
+        "Guang Tan",
+        "Yanjie Song",
+        "Yonghong Tian",
+        "Witold Pedrycz"
+      ],
+      "abstract": "Ant Colony Optimization (ACO) is a heuristic algorithm that has been widely used to solve combinatorial optimization problems. However, determining heuristic measures and initial pheromones levels in an ACO is problem-specific and often requires expert intervention, posing a significant challenge for the users. We investigate how the Transformer, a powerful learning model based on a self-attention mechanism, can be used to enable the automatic design of heuristic measures and pheromones. We present Transformer-Guided ACO (TransACO), a framework that combines neural methods with heuristic algorithms. The Transformer is designed as a learner that encodes problem instances, captures individual interactions, and generates heuristic measures and pheromone matrix. Additionally, a candidate point perturbation local search technique is proposed to enhance exploration. We conduct extensive experiments on four representative combinatorial optimization problems—traveling salesman problem, capacitated vehicle routing problem, orienteering problem, and multiple knapsack problem—across diverse instance sizes. Notably, in cross-scale generalization experiments, a model trained solely on small instances successfully transfers to 10k-node problems: on TSP-10 k, TransACO achieves a 4.12% improvement, and on CVRP-10 k, it yields a 1.16% gain over strong baselines. These findings demonstrate the robustness, adaptability, and scalability of TransACO.",
+      "date": "2026-08-01",
+      "source": "Semantic Scholar",
+      "source_detail": "combinatorial optimization heuristic",
+      "url": "https://doi.org/10.1109/TETCI.2026.3683773",
+      "tags": [
+        "metaheuristics",
+        "vehicle-routing"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TETCI.2026.3683773",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "s2-ec33b1104150",
+      "title": "Joint Pricing of Hydrogen-Integrated Microgrid Aggregator in Coupled Power-Traffic System",
+      "authors": [
+        "Dongxiang Yan",
+        "Yue Chen",
+        "Yun Liu",
+        "Jizhong Zhu"
+      ],
+      "abstract": "The proliferation of electric vehicles (EVs), hydrogen fuel cell EVs (HVs), and wireless charging lanes (WCLs) tightens the power and transportation sectors. This promotes conventional charging stations (CSs) to expand their services by integrating hydrogen generation, providing both wireless charging and hydrogen refueling services. However, the power-hydrogen coupling and coupled power-transportation system (CPTS) challenge its pricing strategy for providing dual services. This article proposes a joint pricing model for a hydrogen-integrated microgrid aggregator (MGA) in the CPTS with emerging WCLs. Specifically, we construct a hierarchical joint pricing model where the MGA jointly determines EV charging and HV refueling prices to maximize its profit. The mixed user equilibrium (UE) in the transportation system (TS) is modeled to determine the routing and charging/refueling decisions of EVs and HVs. The branch flow-based power market model is employed to provide locational marginal prices for MGA, where nonlinear constraints are approximated via polyhedra to implement efficient primal-dual conditions. In addition, bilinear terms in the objective function and nonlinear travel/hydrogen refueling times are transformed into tractable forms. To mitigate renewable uncertainties, a distributionally robust chance constraint (DRCC) is incorporated, reducing the risk of over-dispatch. Finally, a mixed-integer linear program is formulated for efficient problem-solving. Case studies validate the effectiveness of the proposed model and methodology.",
+      "date": "2026-08-01",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.1109/TTE.2026.3676125",
+      "tags": [
+        "integer-programming",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TTE.2026.3676125",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "s2-1528124caba6",
+      "title": "Advances in Reliability and Artificial Intelligence for Power Electronic Systems",
+      "authors": [
+        "F. Blaabjerg",
+        "Kaichen Zhang",
+        "Yubo Song",
+        "Yichi Zhang",
+        "Bo Yao",
+        "M. Novak",
+        "Shuai Zhao",
+        "Subham Sahoo",
+        "A. Sangwongwanich",
+        "Huai Wang"
+      ],
+      "abstract": "Power electronics is a key technology for the global electrification including sustainable energy production, enabling large energy savings and electrification of the transport sector. In this context, reliability is key to achieve lower cost, lower material consumption, and high confidence of a product—and recently artificial intelligence (AI) is emerging as a key discipline to further shape the next generation of power electronics technology. At the same time, the power electronic systems are growing in complexity including both hardware and software, thereby reliability considerations in design, testing, and operation are important. Furthermore, AI offers new opportunities for condition monitoring, better lifetime prediction, and more robust decision-making. This article provides a roadmap for advancing reliability engineering and AI applications in power electronic systems by reviewing recent advances and trends covering system-level reliability practices, multiple related standards, critical components (both active and passive), mission-profile-based analysis and testing approaches, as well as uncertainty-aware reliability analysis. It further discusses how AI-based methods can enhance reliability prediction by doing predictive maintenance and optimized design. Finally, this article outlines future challenges and opportunities, like how to deal with new power devices including their packaging, hybrid testing concepts, applying virtual sensors, and digital twins using AI, analyzing complicated systems and also how to integrate circular economy into the design of power electronics technology.",
+      "date": "2026-08-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/TPEL.2026.3675661",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TPEL.2026.3675661",
+      "arxiv_id": "",
+      "citation_count": 2,
+      "score": 60.0
+    },
+    {
+      "id": "s2-45f7e7c10b5f",
+      "title": "Robust Ensemble Framework for Extrapolation and Uncertainty Quantification across Limited Time-Series Data in Prognostics",
+      "authors": [
+        "Ayushi Bharti",
+        "N. Kim",
+        "Hee-Cheol Kim"
+      ],
+      "abstract": "Remaining Useful Life (RUL) prediction for turbofan engines is critical for balancing operational safety against maintenance costs and environmental impact from premature replacements. Models must reliably extrapolate beyond training data, yet no single method performs optimally across all operational contexts, making model selection fundamentally heuristic. Rather than demonstrating individual model superiority, this work recognizes that reliable prognostic performance emerges from adaptive model contribution. This work introduces an ensemble framework integrating three components: (1) legacy-representative data splitting that mirrors realistic deployment where models predict for newer assets using historical data, (2) median absolute deviation-based outlier filtering for stability, and (3) WTA³ weighting that dynamically adjusts model influence based on cycle-by-cycle performance. This treats model coordination as a time-varying optimization problem adapting to evolving degradation patterns. The framework is validated on NASA CMAPSS data using six diverse models spanning traditional machine learning (Random Forest, XGBoost, Support Vector Regression) and deep learning (LSTM, CNN, Transformer). We investigate how prediction robustness changes during temporal extrapolation, whether adaptive weighting provides more stable forecasts than individual models or fixed combinations, and how uncertainty quantification supports safer maintenance decisions. Initial validation demonstrates that the WTA³ meta-ensemble achieves approximately 3 cycles RMSE and under 3 cycles MAE, representing over 30% improvement over the best individual model, with particularly strong performance in the critical late-life phase. The ensemble maintains highly stable predictions with well-calibrated confidence intervals and substantially improved coverage compared to individual models. This work reframes prognostics from competitive model selection to adaptive coordination, demonstrating that ensemble stability under extrapolation can be systematically achieved. The approach provides actionable confidence bounds for aerospace maintenance programs, enabling cost-efficient scheduling while reducing environmental waste, directly supporting both economic and sustainability objectives where data scarcity and safety criticality are paramount.",
+      "date": "2026-08-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.58286/34011",
+      "tags": [
+        "scheduling",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.58286/34011",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "s2-4b1099ff5f7c",
+      "title": "Hierarchical Image-Based Visual-Servoing Control for Stewart Manipulators via Data-Driven Adaptation and Incremental Prediction",
+      "authors": [
+        "Shengyou Zhou",
+        "Junzheng Wang",
+        "Dongchen Liu",
+        "Hao Yu",
+        "Renjian Hao",
+        "Jing Li",
+        "Haowei Zhang"
+      ],
+      "abstract": "This work presents a hierarchical image-based visual servoing (IBVS) framework for a Stewart manipulator, integrating target recognition, tracking, and adaptive control. To mitigate calibration uncertainties and external disturbances inherent in IBVS systems, a data-driven adaptive incremental predictive control scheme is developed by constructing a linear image-plane model from visual feedback. A structured incremental prediction model and a data-driven adaptive law are introduced to avoid updating the full image Jacobian, a process subject to pose-observation difficulty, delay-induced instability, and parameter divergence in eye-in-hand (EIH) Stewart manipulators. The proposed controller employs an online saturated recursive least-squares algorithm with a forgetting factor to optimize a multi-objective cost function that incorporates image-pixel errors, base disturbances, and observed manipulator poses. In addition, a Newton-Raphson iteration with adaptive termination thresholds is used to ensure efficient and accurate kinematic computation. Comparative experiments against feature-space control and proportional-derivative predictive control validate that the proposed method significantly reduces pixel errors and enhances tracking robustness, demonstrating the effectiveness for dynamic target tracking of Stewart manipulators.",
+      "date": "2026-08-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/TIE.2026.3663766",
+      "tags": [
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TIE.2026.3663766",
+      "arxiv_id": "",
+      "citation_count": 1,
+      "score": 60.0
+    },
+    {
+      "id": "s2-317edf9b7b06",
+      "title": "Interference-Aware UAV Path Planning on Grid SINR Maps With Event-Triggered Updates",
+      "authors": [
+        "Lantu Guo",
+        "Mengchen Yao",
+        "Han Zhang",
+        "Weiqing Mu",
+        "Yun Lin"
+      ],
+      "abstract": "Urban unpiloted aerial vehicle (UAV) navigation operates under tight bandwidth, compute, and latency budgets. Interference and building blockage cause rapid link fluctuations, making interference-aware path planning on grid signal-to-interference-plus-noise ratio (SINR) maps essential for reliable communication. In this paper, we formulate the problem as a joint update–navigation decision: map uncertainty triggers on-demand partial refreshes that are co-optimized with motion under a bandwidth budget. We introduce UT-Grid, an uncertainty-triggered grid-update framework, that refreshes conditionally triggered upon necessity to reduce overall map-update traffic, and MoE-D3QN, a Dueling Double DQN with sparse Mixture-of-Experts (Top-1 routing) that activates a single expert per step, cutting per-decision active parameters and FLOPs while matching or surpassing comparable dense D3QN planners. In an urban simulation with multi-source interference, the framework outperforms static-map, periodic-refresh, and dense D3QN baselines, increasing reaching probability and path efficiency while markedly reducing communication overhead.",
+      "date": "2026-08-01",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.1109/TMC.2026.3667780",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TMC.2026.3667780",
+      "arxiv_id": "",
+      "citation_count": 1,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10957-026-03068-1",
+      "title": "Flexible Block-Iterative Analysis for the Frank-Wolfe Algorithm",
+      "authors": [
+        "Braun, G.",
+        "Halbey, J.",
+        "Pokutta, S.",
+        "Woodstock, Z."
+      ],
+      "abstract": "Abstract\n                  We prove that the block-coordinate Frank-Wolfe (BCFW) algorithm converges with state-of-the-art rates in both convex and nonconvex settings under a very mild “block-iterative” assumption. This appears to be the first result on BCFW addressing the setting of nonconvex objective functions with Lipschitz-continuous gradients and no additional assumptions. This analysis newly allows for (I) progress without activating the most-expensive linear minimization oracle(s), LMO(s), at every iteration, (II) parallelized updates that do not require all LMOs, and therefore (III) deterministic parallel update strategies that take into account the numerical cost of the problem’s LMOs. Our results apply for short-step BCFW as well as an adaptive method for convex functions. New relationships between updated coordinates and primal progress are proven, and a favorable speedup is demonstrated using .",
+      "date": "2026-08-01",
+      "source": "Journal of Optimization Theory and Applications",
+      "source_detail": "Journal of Optimization Theory and Applications",
+      "url": "https://doi.org/10.1007/s10957-026-03068-1",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10957-026-03068-1",
+      "score": 55.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "cordis-101114748",
+      "title": "[HORIZON-SESAR-2022-DES-IR-01] NETWORK TBO: Network Trajectory Based Operations",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101114748",
+      "deadline": "2026-08-31",
+      "date": "2026-05-13",
+      "project_start": "2023-09-01",
+      "project_end": "2026-08-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "general-or"
+      ],
+      "description": "The NETWORK Trajectory based operations (NETWORK TBO) project proposes to validate TBO SESAR Solutions covers all aspects of Trajectory management processes involving – but not limited to - Network actors. It covers both planning and execution phases. The proposed SESAR Solutions, with an indication of the Technology Readiness Levels (with the associated EOCVM level) at the end of the project, are:\n            * Solution #1: TBO Planning and Impact on Execution. Taking as baseline FF-ICE/1 imple",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "cordis-101114748",
+      "title": "[HORIZON-SESAR-2022-DES-IR-01] NETWORK TBO: Network Trajectory Based Operations",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101114748",
+      "deadline": "2026-08-31",
+      "date": "2026-05-13",
+      "project_start": "2023-09-01",
+      "project_end": "2026-08-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "general-or"
+      ],
+      "description": "The NETWORK Trajectory based operations (NETWORK TBO) project proposes to validate TBO SESAR Solutions covers all aspects of Trajectory management processes involving – but not limited to - Network actors. It covers both planning and execution phases. The proposed SESAR Solutions, with an indication of the Technology Readiness Levels (with the associated EOCVM level) at the end of the project, are:\n            * Solution #1: TBO Planning and Impact on Execution. Taking as baseline FF-ICE/1 imple",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
