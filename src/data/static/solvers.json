@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T09:14:57.545896+00:00",
+  "generated_at": "2026-08-03T10:51:58.192782+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 167,
+      "github_open_issues": 170,
       "github_recent_prs": [
+        "Guard conflict-analysis walks over prevboundval_ against running past the chain start",
+        "Parallel redesign",
+        "Fourier-Motzkin presolve",
         "Fix spurious \"semi-variable infeasibilities\" kSolveError: assess semi-continuous feasibility at the reformulation's bound-scaled tolerance",
-        "Normal equations constructed in parallel",
-        "Now scaling the LP offset so it is consistent with user cost and bound scaling; also scaling any dual bound in `HighsInfo`",
-        "Added timeout to forming initial basis and factorization in IPX",
-        "Upgrade activity contributions to highscdouble"
+        "Normal equations constructed in parallel"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 620,
+      "github_stars": 621,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13843,
+      "github_stars": 13846,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -571,11 +571,11 @@
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
       "github_open_issues": 114,
       "github_recent_prs": [
+        "clean from google3 (bop, flatzinc)",
         "[ENH] set_cover Python: expose the lower bound accessors directly",
         "CMake: split ortools.dll in few libs to avoid maximum symbols limit on windows",
         "Support Gurobi 13 dynamic loading",
-        "Add XPRESS support to the MathOpt Python API",
-        "graph: mermaid graph fixup"
+        "Add XPRESS support to the MathOpt Python API"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1255,7 +1255,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1773,
+      "github_stars": 1774,
       "github_open_issues": 15,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1319,13 +1319,13 @@
       ],
       "recent_changes": "More Solvery goodness! This time, we have spent a lot of our energy on the service module and on our documentation, especially regarding how solver services work. But we haven't forgotten about the so",
       "github_stars": 1736,
-      "github_open_issues": 98,
+      "github_open_issues": 97,
       "github_recent_prs": [
-        "perf(bavet): only switch to TreeMap when churn detected",
-        "feat: emit failed solution even if there is no solverJob",
-        "ci: do not publish Javadocs outside of public API",
-        "fix: handle end slash into platform url",
-        "chore: more specific problem scale"
+        "deps: bump the patch group with 5 updates",
+        "deps: bump the minor group with 4 updates",
+        "deps: bump the patch group with 7 updates",
+        "deps: bump the actions group with 3 updates",
+        "deps: bump actions/setup-java from 5 to 5.6.0 in the actions group"
       ]
     },
     {
@@ -1383,7 +1383,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2497,
+      "github_stars": 2496,
       "github_open_issues": 373,
       "github_recent_prs": [
         "Support trivial constraints in SCIP interfaces",
@@ -1448,7 +1448,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.31.1\n\n[Diff since v1.31.0](https://github.com/jump-dev/JuMP.jl/compare/v1.31.0...v1.31.1)\n\n\n**Merged pull requests:**\n- Revert #4032 because it is subject to hash collisions (#4205) (@odow)",
-      "github_stars": 2458,
+      "github_stars": 2460,
       "github_open_issues": 11,
       "github_recent_prs": [
         "Fix formatting of return value in tests",
