@@ -1,0 +1,303 @@
+{
+  "date": "2026-08-04",
+  "generated_at": "2026-08-04T09:43:55.904130+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2608.02343",
+      "title": "Hard Constraints, Smooth Gradients: Learning Feasible Inventory Policies via Differentiable Projection",
+      "authors": [
+        "Patrick Helm",
+        "Jan-Niklas Doerr",
+        "Joren Gijsbrechts",
+        "Stefan Minner"
+      ],
+      "abstract": "Many operational problems are constrained sequential decision processes with large, combinatorial action spaces and interdependent feasibility constraints. Mixed-integer linear programs (MILPs) handle such constraints flexibly but scale poorly in stochastic environments. Deep reinforcement learning (DRL) promises scalable decision rules, but existing methods either penalize constraints rather than enforce them, or rely on feasibility mechanisms that break down once constraints interact. We bridge this gap by embedding a differentiable convex optimization module inside the policy: a neural network proposes continuous action targets, a quadratic program projects them onto the relaxed feasible set, and a dual-informed integer mapping restores integrality while preserving feasibility. Given a differentiable simulator, the policy trains end to end from sampled trajectories using pathwise gradients, while handling hard constraints with similar flexibility to MILPs. We show that our feasibility enforcement has bounded error relative to an exact integer projection and ensures the entire feasible action space is reachable. We apply the method to multi-echelon production-inventory planning under shared resource and material constraints. Our policy attains an average optimality gap below 1% on small instances. It further outperforms state-of-the-art echelon base-stock policies by up to 9.75% and a rolling-horizon multi-stage stochastic program by at least 7.7% in larger networks. On an industry-scale case study from ASML, it reduces average cost by up to 3.22% relative to the best-known benchmark policy. The savings are largest where planning is hardest: in tightly capacitated systems with high demand variability. More broadly, our work shows that DRL can deliver economically significant savings in sequential decision problems with interdependent hard constraints, which are widespread in practice.",
+      "date": "2026-08-03",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.02343v1",
+      "tags": [
+        "cs.AI",
+        "integer-programming",
+        "ml-for-or",
+        "supply-chain",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.02343",
+      "arxiv_id": "2608.02343v1",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2608.02391",
+      "title": "Cooperative Coevolution for Resource-Constrained Agentic LLM Post-Training",
+      "authors": [
+        "Zhiyuan Wang",
+        "Shengcai Liu",
+        "Jiahao Wu",
+        "Ning Lu",
+        "Hui Ouyang",
+        "Shaofeng Zhang",
+        "Haoze Lv",
+        "Ke Tang"
+      ],
+      "abstract": "Tool-using large language model (LLM) agents produce long, multi-turn trajectories, making gradient-based post-training memory-intensive. Evolution strategies (ES) enable memory-efficient full-parameter post-training without backpropagation and can eventually match the performance of gradient-based reinforcement learning (RL). However, resource-constrained settings typically offer only a few GPUs, so the high GPU-hour requirements of ES translate into prohibitively long training times. To address this, we introduce Cooperative Parameter-subspace Evolution Strategy (CoPES), a cooperative coevolutionary method that decomposes the full parameter space into lower-dimensional subspaces and searches over them cooperatively to improve optimization efficiency. We post-train a Qwen3.5-4B tool-using agent for the math task and evaluate it on five benchmarks of varying difficulty. Under the GPU-hour budget of full-parameter GRPO's best validation checkpoint, CoPES recovers 92% of GRPO's validation-accuracy gain, versus 67% for standard ES, while its theoretical GPU memory requirement is less than one-eighth that of full-parameter GRPO. It consistently outperforms standard ES and LoRA-based GRPO on all evaluated pass@k metrics across the five benchmarks. Additional experiments further show the advantage of CoPES on the question-answering task. These results demonstrate an improved trade-off between memory requirements and training time for agentic LLM post-training under resource constraints. The code is open-sourced in https://github.com/MetaronWang/CoPES",
+      "date": "2026-08-03",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.02391v1",
+      "tags": [
+        "cs.AI",
+        "metaheuristics",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.02391",
+      "arxiv_id": "2608.02391v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.02351",
+      "title": "KC-Agent: A Dual-Process Cognitive Architecture for Efficient ML Model Improvement",
+      "authors": [
+        "Gusseppe Bravo-Rocca",
+        "Jordi Guitart",
+        "Ajay Dholakia",
+        "David Ellison",
+        "Puneet Jain"
+      ],
+      "abstract": "Data drift poses significant challenges for machine learning systems in production, requiring continuous model updates to maintain performance. We present KC-Agent, a dual-process cognitive architecture for automated ML model improvement that combines fast pattern recognition (System 1) with deliberate incremental updates (System 2). Our approach implements structured memory systems enabling System 1 to leverage successful solutions previously discovered by System 2, achieving efficient pattern-based responses without costly re-computation. KC-Agent incorporates atomic change principles and rollback capabilities to ensure reliable, verifiable updates in production environments. We evaluate our method on five datasets including real-world NASA turbofan data with authentic temporal degradation and synthetic datasets with controlled drift scenarios. KC-Agent achieves state-of-the-art performance (76.8% accuracy) while maintaining optimal efficiency (13.2s execution time), outperforming established cognitive architectures: CodeAct (+2.4%), Tree of Thoughts (+3.6%), ReAct (+8.0%), and Reflexion (+8.9%). Consensus evaluation by a panel of state-of-the-art LLMs confirms superior strategic efficacy (8.33/10 Smartness score), significantly outperforming baseline agents. The knowledge consolidation mechanism delivers 91% speedup over the slow variant while maintaining higher accuracy. Our approach demonstrates both theoretical foundations and practical viability for cognitive-inspired automated ML improvement systems capable of handling complex real-world data drift scenarios.",
+      "date": "2026-08-03",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.02351v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.02351",
+      "arxiv_id": "2608.02351v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.02274",
+      "title": "A Multi-Objective AutoML-based Efficient Intrusion Detection System for EV Charging Networks",
+      "authors": [
+        "Li Yang"
+      ],
+      "abstract": "Electric Vehicle Charging Systems (EVCSs) are increasingly connected with Internet of Things (IoT) devices, which improves charging intelligence but also expands their exposure to cyber-attacks. Intrusion Detection Systems (IDSs) are essential for securing EV charging networks; however, conventional Machine Learning (ML)-based IDSs often rely on manual model design and mainly optimize detection performance without fully considering inference latency and model size. In this paper, a Multi-Objective Automated ML (MOO-AutoML)-based efficient IDS is proposed for EVCS security. The proposed framework uses a lightweight training strategy and a LightGBM-based automated feature selection method to select compact feature subsets based on accumulated feature importance. Then, Non-dominated Sorting Genetic Algorithm III (NSGA-III) jointly optimizes the feature selection threshold and key LightGBM hyperparameters under three objectives: maximizing weighted F1-score, minimizing 99th percentile inference latency ratio, and minimizing model size ratio. Experiments on CICEVSE2024 and CICIDS2017 show that the proposed MOO-AutoML IDS achieves competitive weighted F1-scores, lower P99 inference latency, and smaller model sizes than the compared methods. Overall, the results indicate that the proposed method can support accurate and efficient intrusion detection for EVCS and IoT security under practical deployment constraints.",
+      "date": "2026-08-03",
+      "source": "arXiv",
+      "source_detail": "cs.CR",
+      "url": "http://arxiv.org/abs/2608.02274v1",
+      "tags": [
+        "cs.CR",
+        "metaheuristics",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.02274",
+      "arxiv_id": "2608.02274v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.02238",
+      "title": "Trustworthy AI in Digital Health: A Comprehensive Review of Robustness and Explainability",
+      "authors": [
+        "Abdullah Mamun",
+        "Shovito Barua Soumma",
+        "Hassan Ghasemzadeh"
+      ],
+      "abstract": "Ensuring trust in AI systems is essential for the safe and ethical integration of machine learning systems into high-stakes domains such as digital health. Key dimensions, including robustness, explainability, fairness, accountability, and privacy, need to be addressed throughout the AI lifecycle, from problem formulation and data collection to model deployment and human interaction. While various contributions address different aspects of trustworthy AI, a focused synthesis on robustness and explainability, especially tailored to the healthcare context, remains limited. This review addresses that need by organizing recent advancements into an accessible framework, highlighting both technical and practical considerations. We present a structured overview of methods, challenges, and solutions, aiming to support researchers and practitioners in developing reliable and explainable AI solutions for digital health. This review article is organized into three main parts. First, we introduce the pillars of trustworthy AI and discuss the technical and ethical challenges, particularly in the context of digital health. Second, we explore application-specific trust considerations across domains such as intensive care, neonatal health, and metabolic health, highlighting how robustness and explainability support trust. Lastly, we present recent advancements in techniques aimed at improving robustness under data scarcity and distributional shifts, as well as explainable AI methods ranging from feature attribution to gradient-based interpretations and counterfactual explanations. This paper is further enriched with detailed discussions of the contributions toward robustness and explainability in digital health, the development of trustworthy AI systems in the era of LLMs, and various evaluation metrics for measuring trust and related parameters such as validity, fidelity, and diversity.",
+      "date": "2026-08-03",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.02238v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1088/2516-1091/ae4e74",
+      "arxiv_id": "2608.02238v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2024.1003",
+      "title": "On the Use of Regular Languages to Model Personnel Scheduling Problems",
+      "authors": [
+        "Ghienne, G.",
+        "Bellenguez, O.",
+        "Massonnet, G.",
+        "Restrepo, M."
+      ],
+      "abstract": "Personnel scheduling problems (PSPs) often involve multiple working rules that are difficult to integrate into mixed-integer programs (MIPs). Recent works have proposed to overcome this limitation by representing the set of valid schedules as words of a formal language. A set of linear constraints can be derived from this language to obtain an efficient MIP formulation. A significant drawback of this methodology is the absence of a generic or automated approach for incorporating some classical working rules into a formal language. In this paper, we propose a generic modeling approach to address this gap and represent a wide variety of working rules in PSPs with regular languages. More precisely, we formalize four standard rules and show how to obtain a deterministic finite automaton (DFA) representation for each of them. Then, we introduce four specific operations on DFA and present their practical computation. The standard rules, combined with the operations on DFA, allow us to integrate most of the classic working rules found in the PSP literature. In addition to allowing efficient formulations for many PSPs, this framework also offers an easy way to automatize the modeling of such problems. We finally discuss the practical use of this formalism and illustrate its performance with numerical experiments on a nurse scheduling problem (NSP).\n                  History: Accepted by Pascal Van Hentenryck, Area Editor for Computational Modeling: Methods &amp; Analysis.\n                  Funding: This work was supported by Agence Nationale de la Recherche [Grant ANR-21-CE22-0002]. This research also used resources of the GLiCID Computing Facility (Ligerien Group for Intensive Distributed Computing, Pays de la Loire, France).\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2024.1003 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2024.1003 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-08-03",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2024.1003",
+      "tags": [
+        "integer-programming",
+        "scheduling",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2024.1003",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1080-01605682.2025.2542549",
+      "title": "Efficiency assessment of two-stage systems with fixed-sum outputs: a bi-objective DEA model with application to green innovation development",
+      "authors": [
+        "Zhang, X.",
+        "Wei, F.",
+        "Xia, Q.",
+        "Wang, D."
+      ],
+      "abstract": "",
+      "date": "2026-08-03",
+      "source": "Journal of the Operational Research Society",
+      "source_detail": "Journal of the Operational Research Society",
+      "url": "https://doi.org/10.1080/01605682.2025.2542549",
+      "tags": [
+        "stochastic",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1080/01605682.2025.2542549",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1080-01605682.2025.2539491",
+      "title": "Flexible job shop scheduling with peak power consumption constraints: mathematical models and an improved memetic algorithm",
+      "authors": [
+        "Yuan, S.",
+        "Zhu, X.",
+        "Gao, J.",
+        "Zhang, R."
+      ],
+      "abstract": "",
+      "date": "2026-08-03",
+      "source": "Journal of the Operational Research Society",
+      "source_detail": "Journal of the Operational Research Society",
+      "url": "https://doi.org/10.1080/01605682.2025.2539491",
+      "tags": [
+        "metaheuristics",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.1080/01605682.2025.2539491",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.02073",
+      "title": "Accelerating Evolutionary Strategy via Rao-Blackwellizing Realization of Uncertain Input",
+      "authors": [
+        "So Nakashima",
+        "Tetsuya J. Kobayashi"
+      ],
+      "abstract": "We investigate Optimization under Input Uncertainty (OIU), in which the input to the objective function, rather than the objective function itself, is subject to uncertainty. OIU appears in manufacturing processes with production tolerance, control of physical systems with actuation noise, Mixture of Experts, and Reinforcement Learning (RL). Most of the existing approaches solve OIU by using the value of the objective function but discard the information of the realized input, even though the realized input is observable in various applications. The question here is whether the discarded information of the realized input is useful to accelerate the optimization process. We affirmatively answer this question for Evolutionary Strategy (ES) by theoretically showing that the information of the realized input can reduce the variance of the gradient estimator via Rao-Blackwellization. Using the Rao-Blackwellized gradient estimator, we propose Phenotype-Accelerated Evolutionary Strategy (PAES), which is a refinement of ES for OIU. Numerical experiments show that PAES converges faster than the usual ES from simple continuous optimization problems to RL benchmarks.",
+      "date": "2026-08-03",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.02073v1",
+      "tags": [
+        "math.OC",
+        "metaheuristics",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.02073",
+      "arxiv_id": "2608.02073v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.02599",
+      "title": "Bridging Artificial Intelligence and Power Systems Education Using a Hands-On Executable Framework",
+      "authors": [
+        "Junjie Yin",
+        "Buxin She",
+        "Xinyu Feng",
+        " Fangxing",
+        " Li"
+      ],
+      "abstract": "Artificial intelligence (AI) is increasingly central to power and energy systems, supporting modeling, forecasting, optimization, and control. Yet most existing works emphasize specialized applications and offer little reusable material for newcomers or interdisciplinary learners, who increasingly rely on large language models rather than building their own. This gap points to a need for engineering-grounded AI (EGAI), in which AI workflows follow established engineering and power-system domain rules rather than acting as task-agnostic black boxes. Motivated by a community survey of researchers and practitioners, which shows 92% report at least one barrier before running an AI model and 94% want a power-specific hands-on course. This paper presents a framework consisting of open, executable module library that lowers the entry barrier for AI in power systems. The modules follow a progressive difficulty ladder that maps core AI concepts onto representative power-system tasks: (i) foundational deep neural network (DNN) templates for function approximation and load-curve fitting; (ii) a domain-coupled convolutional neural network (CNN) power-flow surrogate for a 5-bus system; and (iii) frontier modules on DNN-assisted optimization, deep reinforcement learning (DRL) for battery storage control, and physics-informed neural networks (PINNs) for the swing equation. All modules are released as Jupyter notebooks that run locally or on Google Colab and are delivered through an IEEE online course and IEEE Power & Energy Society (PES) webinar series. The webinar drew more than 590 live attendees, which is among the ten most-attended IEEE PES webinars, and over 344 repository visits within two weeks, reinforcing the survey-based motivation.",
+      "date": "2026-08-03",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2608.02599v1",
+      "tags": [
+        "eess.SY",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.02599",
+      "arxiv_id": "2608.02599v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "cordis-101114748",
+      "title": "[HORIZON-SESAR-2022-DES-IR-01] NETWORK TBO: Network Trajectory Based Operations",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101114748",
+      "deadline": "2026-08-31",
+      "date": "2026-05-13",
+      "project_start": "2023-09-01",
+      "project_end": "2026-08-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "general-or"
+      ],
+      "description": "The NETWORK Trajectory based operations (NETWORK TBO) project proposes to validate TBO SESAR Solutions covers all aspects of Trajectory management processes involving – but not limited to - Network actors. It covers both planning and execution phases. The proposed SESAR Solutions, with an indication of the Technology Readiness Levels (with the associated EOCVM level) at the end of the project, are:\n            * Solution #1: TBO Planning and Impact on Execution. Taking as baseline FF-ICE/1 imple",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "cordis-101114748",
+      "title": "[HORIZON-SESAR-2022-DES-IR-01] NETWORK TBO: Network Trajectory Based Operations",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101114748",
+      "deadline": "2026-08-31",
+      "date": "2026-05-13",
+      "project_start": "2023-09-01",
+      "project_end": "2026-08-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "general-or"
+      ],
+      "description": "The NETWORK Trajectory based operations (NETWORK TBO) project proposes to validate TBO SESAR Solutions covers all aspects of Trajectory management processes involving – but not limited to - Network actors. It covers both planning and execution phases. The proposed SESAR Solutions, with an indication of the Technology Readiness Levels (with the associated EOCVM level) at the end of the project, are:\n            * Solution #1: TBO Planning and Impact on Execution. Taking as baseline FF-ICE/1 imple",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
