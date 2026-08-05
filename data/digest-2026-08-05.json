@@ -1,0 +1,334 @@
+{
+  "date": "2026-08-05",
+  "generated_at": "2026-08-05T09:42:55.946139+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2608.03149",
+      "title": "Process-Knowledge-Embedded Safe DRL for Real-Time Dispatch of Process Loads in Industrial Microgrids",
+      "authors": [
+        "Daniyaer Paizulamu",
+        "Lin Cheng",
+        "Fashun Shi",
+        "Yuchi Zhang",
+        "Zhaoyang Dong"
+      ],
+      "abstract": "Steelmaking process loads (SPLs) are flexible resources that enhance local renewable-energy utilization and reduce electricity procurement costs in industrial microgrids. However, strong multistage coupling makes current decisions affect subsequent feasibility, challenging conventional deep reinforcement learning to reduce costs while maintaining process feasibility throughout production. This paper proposes a process-knowledge-embedded safe deep reinforcement learning framework for the real-time dispatch of SPLs in industrial microgrids. Specifically, a lossless active-frontier action space is constructed, and a process-distance-guided action-processing mechanism reallocates excluded-action probabilities according to process distance and the actor's safe-action preference. Recursive process feasibility is established to guarantee admissible execution and feasible continuation. Furthermore, the expected process-correction distance is incorporated into PPO through a correction budget and a primal-dual update to internalize process knowledge into the raw policy, while a derived bound quantifies the raw policy's dependence on safety processing. Case studies using real-world data demonstrate zero process losses, electricity-cost reductions of 49.2% and 25.9% relative to rule-based scheduling and rolling MILP, respectively, within an acceptable computation time.",
+      "date": "2026-08-04",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2608.03149v1",
+      "tags": [
+        "eess.SY",
+        "integer-programming",
+        "scheduling",
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.03149",
+      "arxiv_id": "2608.03149v1",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2608.03674",
+      "title": "DiagLoop: A Counterfactual Data Flywheel with Stage-Localized Reinforcement for Diagnostic LLMs",
+      "authors": [
+        "Jian Zhang",
+        "Bingyi Wang",
+        "Yizhi Liu"
+      ],
+      "abstract": "Causal diagnostic models must explain how conclusions follow from evidence because diagnoses guide repairs and treatments. Yet serious cases are scarce, records rarely contain reasoning paths, and data transfer poorly across configurations, complicating local deployment. We present DiagLoop, a counterfactual data flywheel that converts codified physical relations or clinical guidelines, authored once per mechanism family, into training supervision beyond recorded cases. A training-only teacher proposes counterfactual worlds by varying causes, contexts, and observations, while an independent hybrid checker admits only valid worlds. The student reasons through symptom abstraction, causal-chain construction, and root-cause attribution. Stage-specific criteria identify its earliest failure. For nonterminal failures, a bounded repair probes downstream competence, and the resulting weakness profile guides subsequent data generation. Stage-localized reinforcement learning updates only the model-generated continuation, while replay and preservation reduce forgetting. The same criteria govern admission, attribution, reward, and regeneration through checks separate from the proposer. Using only synthesized scenarios and no case-level expert reasoning annotations, the resulting 8B model improves strict path correctness over the strongest conventional baseline. Gains are 11.6 points across eight industrial systems and 5.5 points across ten disease categories. Gains over a deranged-routing control are 3.9 and 2.3 points, respectively. The model also exceeds the evaluated proprietary references in both domains, even when they receive few-shot examples or the specification in context.",
+      "date": "2026-08-04",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.03674v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.03674",
+      "arxiv_id": "2608.03674v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.03673",
+      "title": "CausalOPD: First-Wrong-Step Supervision for Distilling Causal Chain Reasoning",
+      "authors": [
+        "Jian Zhang",
+        "Bingyi Wang",
+        "Yizhi Liu"
+      ],
+      "abstract": "Many critical reasoning tasks, including clinical diagnosis, legal judgment, and industrial fault diagnosis, require step-dependent causal chains in which early errors propagate and correct conclusions can mask invalid reasoning. Although large language models perform well on such tasks, privacy, latency, and controllability motivate distillation into locally deployable models. Standard trajectory imitation does not correct process errors on the student's own rollout distribution. We propose CausalOPD, a curriculum online process distillation framework. A knowledge-augmented teacher first provides trajectories grounded in domain-specific causal rules, entity relations, and structural constraints. The student then generates on-policy trajectories, and the teacher identifies the first wrong step, defined as the earliest transition that verifiably violates available constraints. Starting from the verified prefix, short-horizon reinforcement learning repairs this localized failure. A causal-stage curriculum advances from evidence-level to mechanism-level and conclusion-level errors, following their propagation order. Across three domains, CausalOPD improves average path correctness by 23.4 percentage points over sequence-level online process distillation and reduces the right-label-wrong-reasoning rate from 15.7% to 4.4%. The domain-specific 8B students also surpass both evaluated proprietary references in path correctness across all domains.",
+      "date": "2026-08-04",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.03673v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "healthcare-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.03673",
+      "arxiv_id": "2608.03673v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.03931",
+      "title": "A Robust Chance Constrained Approach to Surgery Scheduling",
+      "authors": [
+        "Marco Caserta",
+        "Antonio García Romero",
+        "Miguel Vaquero"
+      ],
+      "abstract": "We study elective surgery scheduling under uncertain procedure durations. Schedules based on mean durations or fixed buffering rules may appear efficient ex ante but become fragile in execution, as early overruns propagate through the day and expose later surgeries to accumulated delay. We propose a robust chance-constrained framework that separates uncertainty quantification from schedule optimization. A buffer engine converts distributional information into reliability-dependent buffered durations, while the scheduling model jointly selects assignments, sequences, start times, and surgery-level reliability levels from a discrete menu. Reliability therefore becomes an endogenous scheduling decision rather than a fixed service-level parameter. The framework accommodates average-reliability, worst-day, and hard-target risk postures. Comparisons with common-reliability and uniform proportional-buffer benchmarks show that the menu derives its value from exploiting surgery-level heterogeneity, allocating protection where it has the greatest operational value while avoiding unnecessary conservatism. In a rolling-origin case study at HLA Moncloa Hospital in Madrid, covering 10 instances with 45 to 227 surgeries, the approach reduces delays exceeding 90 minutes by 97%, lowers the 95th-percentile delay by approximately 620 minutes, and reduces total overtime by 42% relative to a deterministic mean-based baseline. By allocating buffers according to uncertainty and operational exposure, the framework translates heterogeneous duration data and risk preferences into schedules that are more reliable in execution and less conservatively buffered than one-size-fits-all rules.",
+      "date": "2026-08-04",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.03931v1",
+      "tags": [
+        "math.OC",
+        "scheduling",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.03931",
+      "arxiv_id": "2608.03931v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.03075",
+      "title": "Oracle-Based Distributionally Robust Optimization under Optimal Transport Ambiguity Sets",
+      "authors": [
+        "Guixian Chen",
+        "Salar Fattahi",
+        "Soroosh Shafiee"
+      ],
+      "abstract": "Distributionally robust optimization (DRO) with optimal transport ambiguity sets is traditionally solved by reformulating the minimax problem into a single-level convex program. While theoretically tractable, these reformulations introduce numerous auxiliary variables and demanding conic constraints that scale poorly in practice. In this paper, we address this challenge by reducing the inner worst-case expectation problem exactly to a scalar budget allocation task. This structural insight yields an efficient algorithm that bypasses large lifted reformulations, alongside a fast post-processing scheme to recover an optimal worst-case distribution supported on at most $N+1$ points, where $N$ denotes the sample size. We embed this procedure within an oracle-based distributional best-response framework to directly compute an approximate primal-dual solution to the overall DRO problem. Furthermore, we extend our analysis to the dual DRO formulation, proving the existence of a least-favorable distribution supported on at most $\\min\\{N+n+1, KN\\}$ atoms, where $n$ and $K$ denote the decision dimension and number of loss components, respectively, and provide an efficient convex programming reduction to extract it from the solution of the primal DRO. Numerical experiments demonstrate that the proposed approach significantly outperforms state-of-the-art reformulation-based solvers.",
+      "date": "2026-08-04",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.03075v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.03075",
+      "arxiv_id": "2608.03075v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.04007",
+      "title": "TurnSight: Turn-Level Hindsight Self-Distillation for Tool-Integrated Reasoning",
+      "authors": [
+        "Changle Qu",
+        "Sunhao Dai",
+        "Hengyi Cai",
+        "Yuqi Zhou",
+        "Xinran Chen",
+        " Simon",
+        "Jun Xu"
+      ],
+      "abstract": "Tool-Integrated Reasoning (TIR) enables LLMs to solve complex tasks through iterative tool interactions. However, existing reinforcement learning methods often rely on trajectory-level supervision, limiting fine-grained credit assignment in long-horizon TIR scenarios. On-policy self-distillation offers denser signals through teacher branches with privileged context, but existing approaches typically derive such context from ground-truth answers or retrieved skills, which may not reflect the states actually visited by the agent. Moreover, token-level supervision fails to capture the turn-level structure of tool interactions. To address this, we propose TurnSight, a turn-level hindsight self-distillation framework that derives supervision directly from execution-conditioned hindsight. It then constructs multiple hindsight views with different lookahead horizons and selects reliable supervision through cross-horizon directional agreement. Finally, the selected hindsight signal is normalized across sibling rollouts and used to adaptively modulate RL advantages while preserving their original optimization direction. Extensive experiments on three benchmarks demonstrate the effectiveness of TurnSight. Our codes are available at https://github.com/quchangle1/TurnSight.",
+      "date": "2026-08-04",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2608.04007v1",
+      "tags": [
+        "cs.CL",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.04007",
+      "arxiv_id": "2608.04007v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.03979",
+      "title": "Video-DeepResearch: Towards the Next-Generation Multimodal Deepresearch Agent",
+      "authors": [
+        "Zhen Fang",
+        "Yu Zeng",
+        "Wenxuan Huang",
+        "Yiming Zhao",
+        "Shiting Huang",
+        "Tianfei Ren",
+        "Qi Lu",
+        "Qingnan Ren",
+        "Qisheng Su",
+        "Lionel Z. Wang",
+        "Qingyu Yin",
+        "Shuang Chen",
+        "Zehui Chen",
+        "Lin Chen",
+        "Zhenfei Yin",
+        "Yao Hu",
+        "Shaohui Lin",
+        "Wanli Ouyang",
+        "Shaosheng Cao",
+        "Feng Zhao"
+      ],
+      "abstract": "We introduce Video-DeepResearch (Video-DR), extending multimodal agents from static images to continuous video streams, a setting that demands dense spatiotemporal grounding coupled with open-web exploration. Preliminary evaluations reveal two critical bottlenecks in current models: (1) modality bias, where agents bypass visual tools in favor of textual search, and (2) parametric knowledge leakage, where models rely on internal memory rather than genuine tool-augmented execution. To address these challenges, we propose Video-DR, featuring a decoupled perception-exploration pipeline with stage-wise tool unlocking that compels exhaustive cross-frame visual grounding prior to web retrieval. Our framework adopts a two-stage training recipe: supervised fine-tuning followed by Group Relative Policy Optimization (GRPO), enabling autonomous exploration that breaks the imitation-learning ceiling. Furthermore, we curate Video-DR-Bench, a human-AI collaborative benchmark comprising 200 complex, multi-hop VQA instances. Empirical results demonstrate that our Video-DeepResearch-35B-A3B establishes a new state-of-the-art of 64.0% average accuracy, surpassing proprietary Claude-4.5-Sonnet (59.0%) by 5.0 points and significantly outperforming GPT-5 (52.5%) and Gemini 2.5 Pro (57.5%). The 30B-A3B variant achieves 59.3%, competitive with Claude-4.5-Sonnet and demonstrating the effectiveness of our training paradigm even at compact scale. Code: https://github.com/Osilly/Vision-DeepResearch.",
+      "date": "2026-08-04",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2608.03979v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.03979",
+      "arxiv_id": "2608.03979v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.03890",
+      "title": "CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement",
+      "authors": [
+        "Mercy Prasanna Ranjit",
+        "Anirban Porya",
+        "Sathvik Joel",
+        "Niharika Vadlamudi",
+        "Nikhilesh Chowdary Eathamukkala",
+        "Prasanth V",
+        "Abhyuday Kumara Swamy",
+        "Pranay Narhari Umredkar",
+        "Pradeep Narayan",
+        "Vivek Rajagopal",
+        "Tanuja Ganu"
+      ],
+      "abstract": "A clinically useful chest X-ray system must go beyond fluent report generation: it should classify findings with tunable decision thresholds, localize them spatially, and derive the anatomical measurements upon which many diagnoses depend. Today's Vision-Language Models (VLMs) treat these as separate problems, if they address them at all, leaving a gap between what radiologists need and what generative models provide. We introduce CARE-X, a chest X-ray VLM that narrows this gap by unifying auxiliary discriminative supervision with reward-aligned generation. CARE-X augments its generative backbone with focal-loss classification and composite-loss grounding heads, co-trained alongside the language-modeling objective. This auxiliary supervision produces discriminative diagnostic predictions with tunable decision thresholds and precise spatial localization while also improving report quality, providing evidence that structured prediction and generation reinforce one another. Building on this foundation, Decoupled Clip and Dynamic Sampling Policy Optimization (DAPO) leverages task-specific reward signals for report generation, visual question answering (VQA), and spatial grounding, directly optimizing the clinical quality metrics that matter in practice. The result is state-of-the-art performance on the majority of metrics across four report-generation benchmarks, 94.0% VQA accuracy on ReXVQA (+6.0 pp over the next-best baseline), and generative spatial decoding that reaches near parity with dedicated detection heads. Separately, to address measurement-dependent diagnoses, we couple Qwen3-VL-4B-Instruct with native tool-calling capabilities for invoking deterministic measurement tools, while retaining full visual access to the image. This hybrid inference yields +43.6 pp average F1 over perception-only baselines across five measurement-dependent conditions.",
+      "date": "2026-08-04",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2608.03890v1",
+      "tags": [
+        "cs.CV",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.03890",
+      "arxiv_id": "2608.03890v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.03791",
+      "title": "Does Forgetting Transfer Across Modalities? A Real-World Benchmark for Cross-Modal Knowledge Unlearning Evaluation",
+      "authors": [
+        "Chunlin Liu",
+        "Junnian Chen",
+        "Haitong Jiang",
+        "Jianyu Zhao",
+        "Yingsen Pang",
+        "Jingchen Li",
+        "Jiabiao He",
+        "Youming Lu",
+        "Jinhe Bi",
+        "Yuntao Du"
+      ],
+      "abstract": "Vision-Language Models (VLMs), like Large Language Models (LLMs), may memorize sensitive, copyrighted, or harmful knowledge from their pretraining corpora. Removing such knowledge is essential for building trustworthy AI systems. However, existing studies primarily focus on forgetting within individual modalities. Although recent work has begun to explore cross-modal consistency in unlearning, the cross-modal transfer of real-world knowledge unlearning remains insufficiently studied. To address this gap, we introduce UNLINK-VL, a real-world benchmark for cross-modal knowledge unlearning in VLMs. Under a post-hoc unlearning setting in which the original forget and retain corpora are unavailable, UNLINK-VL selects visually identifiable real-world entities as unlearning targets and associates them with corresponding images and one-hop and multi-hop facts derived from Wikidata. The benchmark comprises four complementary subsets that evaluate direct forgetting of target knowledge, the propagation of forgetting through relational knowledge, the preservation of related non-target knowledge, and robustness to semantically equivalent queries. We train models under text-only and multimodal unlearning settings and evaluate forgetting effectiveness and retained utility across textual, visual, and cross-modal scenarios. Extensive experiments reveal a pronounced asymmetry in cross-modal transfer: multimodal unlearning remains effective under textual evaluation, whereas text-only unlearning transfers poorly to visual and cross-modal scenarios. Meanwhile, the evaluated methods largely preserve the models' general capabilities. These findings demonstrate that relying solely on intra-modal evaluation, particularly text-only evaluation, may substantially overestimate the effectiveness of knowledge unlearning in VLMs, underscoring the need for cross-modal unlearning and evaluation.",
+      "date": "2026-08-04",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.03791v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.03791",
+      "arxiv_id": "2608.03791v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.03772",
+      "title": "Computing Actual Causes for Neural Network Predictions under Structured Causal Inputs",
+      "authors": [
+        "Jannick Strobel",
+        "Muqsit Azeem",
+        "Stefan Leue"
+      ],
+      "abstract": "Explaining the predictions of neural networks is a central challenge in trustworthy AI. Existing explanation methods, such as those based on feature attribution or minimal sufficient sets, typically treat input features as independent, which can yield misleading explanations when inputs exhibit structured dependencies. We address this by formalizing explanations as Halpern-Pearl (HP) actual causes, modeling input dependencies using Boolean Structural Causal Models (SCMs). We compute HP causes by applying bound propagation and branch-and-bound techniques, while providing formal guarantees of completeness and minimality. Our experiments show that we substantially outperform brute-force and ILP baselines in scalability, and outperform heuristic search as graph size grows, computing all minimal actual causes on instances with search spaces of up to $2.3\\times10^{13}$ candidate (cause, contingency) pairs, on SCMs with up to 28 nodes, within a 180s per-instance budget. In a case study, we further show that ignoring input dependencies inflates the number of reported causes, 14.9% of which are spurious under our SCM.",
+      "date": "2026-08-04",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.03772v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.03772",
+      "arxiv_id": "2608.03772v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "cordis-101114748",
+      "title": "[HORIZON-SESAR-2022-DES-IR-01] NETWORK TBO: Network Trajectory Based Operations",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101114748",
+      "deadline": "2026-08-31",
+      "date": "2026-05-13",
+      "project_start": "2023-09-01",
+      "project_end": "2026-08-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "general-or"
+      ],
+      "description": "The NETWORK Trajectory based operations (NETWORK TBO) project proposes to validate TBO SESAR Solutions covers all aspects of Trajectory management processes involving – but not limited to - Network actors. It covers both planning and execution phases. The proposed SESAR Solutions, with an indication of the Technology Readiness Levels (with the associated EOCVM level) at the end of the project, are:\n            * Solution #1: TBO Planning and Impact on Execution. Taking as baseline FF-ICE/1 imple",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "cordis-101114748",
+      "title": "[HORIZON-SESAR-2022-DES-IR-01] NETWORK TBO: Network Trajectory Based Operations",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101114748",
+      "deadline": "2026-08-31",
+      "date": "2026-05-13",
+      "project_start": "2023-09-01",
+      "project_end": "2026-08-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "general-or"
+      ],
+      "description": "The NETWORK Trajectory based operations (NETWORK TBO) project proposes to validate TBO SESAR Solutions covers all aspects of Trajectory management processes involving – but not limited to - Network actors. It covers both planning and execution phases. The proposed SESAR Solutions, with an indication of the Technology Readiness Levels (with the associated EOCVM level) at the end of the project, are:\n            * Solution #1: TBO Planning and Impact on Execution. Taking as baseline FF-ICE/1 imple",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
