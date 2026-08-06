@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T09:42:55.574920+00:00",
+  "generated_at": "2026-08-06T09:45:12.874988+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -347,11 +347,11 @@
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
       "github_open_issues": 172,
       "github_recent_prs": [
+        "`HighsRunData` now correct when presolve is not used, or no reductions are achieved",
+        "Parallel solves in HiPO",
         "Bazel: do not try to get cuda if option is not specified",
         "Remove `std::vector<bool>`",
-        "Add extra safety net for relaxing out bounds",
-        "Certify simplex optimality only from a refactorized basis",
-        "Guard conflict-analysis walks over prevboundval_ against running past the chain start"
+        "Add extra safety net for relaxing out bounds"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 622,
+      "github_stars": 623,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- fixed statistic on added linear constraints in propagation\r\n- keep flag `rangedrowpropagated` of linear and exactlinear constraints for probing bound changes to avoid dupli",
-      "github_open_issues": 27,
+      "github_open_issues": 28,
       "github_recent_prs": [
         "Fix objective offset dropped when writing the transformed problem (MPS/LP)",
         "Fix typo in MSVC version number",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13855,
+      "github_stars": 13864,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -571,11 +571,11 @@
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
       "github_open_issues": 116,
       "github_recent_prs": [
+        "export glop and lp_data from google3",
+        "cmake: bump zlib to v1.3.2",
         "sat: export from google3",
         "cmake: use consistent export names",
-        "cleanup",
-        "clean from google3 (bop, flatzinc)",
-        "[ENH] set_cover Python: expose the lower bound accessors directly"
+        "cleanup"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -604,7 +604,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 1005,
+      "github_stars": 1007,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -1130,7 +1130,7 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6293,
+      "github_stars": 6294,
       "github_open_issues": 190,
       "github_recent_prs": [
         "Bump github/codeql-action/upload-sarif from 4.37.3 to 4.37.4",
@@ -1318,7 +1318,7 @@
         "metaheuristic"
       ],
       "recent_changes": "More Solvery goodness! This time, we have spent a lot of our energy on the service module and on our documentation, especially regarding how solver services work. But we haven't forgotten about the so",
-      "github_stars": 1741,
+      "github_stars": 1743,
       "github_open_issues": 104,
       "github_recent_prs": [
         "chore: regenerate test model openapi",
@@ -1383,14 +1383,14 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2498,
-      "github_open_issues": 375,
+      "github_stars": 2499,
+      "github_open_issues": 376,
       "github_recent_prs": [
-        "Revert pypy pin",
+        "URL Checker: resolve failure checking PLY documentation",
+        "Revert pypy pin and skip stalled tests",
         "Support trivial constraints in SCIP interfaces",
         "Update (usage of) PyROS `UncertaintySet` validation routines",
-        "Enable More Complex Error Structures in ParmEst and Pyomo.DoE",
-        "Use scaling factors in solve_strongly_connected_components [Depends on #3993]"
+        "Enable More Complex Error Structures in ParmEst and Pyomo.DoE"
       ],
       "pypi_monthly_downloads": -28
     },

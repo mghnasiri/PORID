@@ -1,0 +1,336 @@
+{
+  "date": "2026-08-06",
+  "generated_at": "2026-08-06T09:45:13.230739+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2608.04978",
+      "title": "A Two-Stage Operating Room Allocation Framework for Reducing Surgical Waiting Lists in Public Hospitals",
+      "authors": [
+        "Jhoan Báez",
+        "Juan Hoyos",
+        "Víctor Riquelme",
+        "Michel Royer",
+        "Héctor Ramírez"
+      ],
+      "abstract": "Operating-room allocation is a major challenge for public hospitals with limited surgical capacity and large elective waiting lists. This work proposes a two-stage operating-room allocation framework for specialty-block scheduling environments. The methodology combines a mixed-integer linear programming model for medical specialty block allocation with a priority-based patient allocation procedure. The framework was evaluated through one-week and multi-week simulation scenarios using parameters estimated from historical surgical and waiting-list data. The proposed methodology was compared against an integrated mixed-integer linear programming baseline adapted from the literature under realistic operational disruptions, including failed patient confirmations and surgery suspensions. Results show that the proposed framework achieves a more balanced distribution between offered and demanded surgical time across specialties while maintaining high operating-room utilization and substantially lower computational times than the integrated baseline. In the 20-week scenario, the proposed methodology achieved lower waiting times and operated a larger number of patients while preserving operational flexibility. These results suggest that decomposition-based operating-room allocation strategies provide a practical and computationally efficient alternative for reducing surgical waiting lists in public hospitals.",
+      "date": "2026-08-05",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.04978v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming",
+        "scheduling",
+        "stochastic",
+        "healthcare-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.04978",
+      "arxiv_id": "2608.04978v1",
+      "score": 70.0
+    },
+    {
+      "id": "arxiv-2608.05107",
+      "title": "CoPlan: A Trustworthy Co-Intelligence Interface for Care Planning through Role-Based Contestable Argument Graphs",
+      "authors": [
+        "Hung Truong Thanh Nguyen",
+        "Hélène Fournier",
+        "Piper Jackson",
+        "Makoto Itoh",
+        "Shannon Freeman",
+        "Rene Richard",
+        "Hung Cao"
+      ],
+      "abstract": "AI-supported care planning can help clinicians, patients, caregivers, and care teams coordinate complex decisions across clinical, functional, psychosocial, and environmental needs. However, many AI systems present recommendations as fixed outputs, limiting stakeholders' ability to inspect, challenge, and revise plans when they conflict with clinical judgment, patient values, or real-world feasibility. We present CoPlan - a Co-Intelligent and Contestable Interface for Human-AI Care Planning. CoPlan uses a multi-agent workflow in which specialized AI agents generate candidate interventions and supporting or challenging arguments, while human care planners can accept, reject, modify, or add arguments before final plan generation. Through this design, CoPlan combines co-intelligence, in which humans and AI agents contribute complementary expertise, with contestability, where recommendations remain open to inspection, revision, and justification. We demonstrate CoPlan in an aging-in-place care planning scenario. The system supports adaptive care team recruitment, role-based argument review, final care plan generation, and practical follow-up through scheduling agents. This work contributes a contestable care planning interface and a design framing for trustworthy human-AI care planning that preserves human agency and clinical accountability.",
+      "date": "2026-08-05",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.05107v1",
+      "tags": [
+        "cs.AI",
+        "scheduling",
+        "stochastic",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.05107",
+      "arxiv_id": "2608.05107v1",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1002-net.70066",
+      "title": "A Two‐Stage Optimization Approach for Selecting Electric‐Flight Airports",
+      "authors": [
+        "Joormann, I.",
+        "Kroner, F.",
+        "Tillmann, A."
+      ],
+      "abstract": "ABSTRACT\n                  The decarbonization of short‐haul air transport has gained increasing attention, with electric aircraft emerging as a promising alternative to conventional short‐haul aviation. However, given the substantial investment anticipated for the necessary infrastructure, a strategic and globally coordinated selection of airports is imperative. The aim of this paper is to address this problem and determine the best possible selection of airports within a given network. To this end, we develop a bilevel optimization model that incorporates airline decision‐making in response to infrastructure deployment. The first stage determines which airports to electrify under budget and technical constraints, while the second stage models airline routing choices based on cost‐minimization. The problem is reduced to a single‐stage mixed‐integer programming framework and solved using a cutting‐plane procedure together with a column generation approach, in which the pricing problem can be solved using Dijkstra's algorithm. We tested our algorithm in two infrastructure expansion scenarios in Germany. For each scenario, we consider the results for electric aircraft with ranges of 300 and 1480 km. The results indicate that the differences in emission savings between the two range scenarios are marginal. Simultaneously, the optimal solutions demonstrate robustness to fluctuations in kerosene and electricity prices. Additionally, based on the given assumptions and parameters, using routes that are partly operated by electric and conventional aircraft does not appear to be economically viable for short‐haul air traffic from an airline's perspective.",
+      "date": "2026-08-05",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70066",
+      "tags": [
+        "integer-programming",
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70066",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.05076",
+      "title": "MultiPathFormer: Towards a Foundation Model for Multipath Wireless Propagation",
+      "authors": [
+        "Blessed Guda",
+        "Kayley Sze",
+        "Carlee Joe-Wong"
+      ],
+      "abstract": "Recent advances in machine learning have enabled training of wireless foundation models, which aim to support tasks such as channel estimation, beam prediction, and localization based on wireless signals. Existing wireless foundation models typically pretrain on channel tensors using masked reconstruction over subcarriers, antennas, or time but ignore the physical characteristics of wireless propagation. In this work, we propose to instead use multipath propagation as the fundamental pretraining object. We present MultiPathFormer, an autoregressive foundation model that represents each transmitter-receiver link as an ordered sequence of continuous-valued path tokens and pretrains with next-path prediction. We introduce an Environmental RAG (retrieval-augmented generation) mechanism and a first-path codebook on top of the transformer backbone, leveraging environment knowledge to improve path statistics estimation like delay and power by up to 59%. MultiPathFormer pretrained on 27 environments transfers to unseen users and, after scenario-specific fine-tuning, outperforms training the corresponding models from scratch in new environments. Across downstream tasks, it outperforms SOTA channel-based foundation models, achieving 5.57 m mean localization error, 0.914 top-3 beam accuracy, 0.994 line-of-sight classification accuracy, and 0.561 channel estimation NMSE. These results show that path-level pretraining can learn reusable representations of wireless propagation.",
+      "date": "2026-08-05",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.05076v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.05076",
+      "arxiv_id": "2608.05076v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.04999",
+      "title": "ORACLE: A Multi-Objective Reinforcement Learning-Based Analog Circuit Design Optimizer with Large Language Models-Guided Exploration",
+      "authors": [
+        "Osei Brempong",
+        "Mohammed Ayman Habib",
+        "Vivan Poddar",
+        "Morteza Fayazi"
+      ],
+      "abstract": "Analog circuit design automation using reinforcement learning (RL) has emerged as a promising approach for reducing manual effort. However, many existing RL-based methods focus on single-objective optimization. Even methods designed for multi-objective (MO) problems often reduce multiple design specifications to a single scalar reward. This simplification limits the ability to capture the true Pareto trade-off among competing objectives and often leads to suboptimal designs. Moreover, requiring the model to be retrained from scratch whenever the desired MO specifications change remains a key limitation. To address these challenges, we present ORACLE, an open-source RL-based framework for MO analog circuit design optimization that replaces scalar reward optimization with vector-valued learning and preference-aware conditioning. ORACLE represents a true MO analog circuit design optimizer that uses a preference vector to specify the relative weights of multiple objectives, enabling a single trained model to generate designs across diverse trade-off settings without retraining. We further propose two preference-guidance strategies, namely normalized-weight guidance and cosine-aligned guidance, to improve convergence. In addition, we incorporate a large language model (LLM)-guided action selection mechanism to filter actions that are likely to lead to suboptimal designs or increased runtime. Our results show that, on multiple circuit topologies with 2,000 test cases, ORACLE reduces runtime by 20.4x - 104.4x compared to state-of-the-art approaches. It also meets 99.9% of the 2,000 target specifications, and achieves 5.1x - 318.6x better figure of merit in the resulting output specs.",
+      "date": "2026-08-05",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2608.04999v1",
+      "tags": [
+        "eess.SY",
+        "ml-for-or",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.04999",
+      "arxiv_id": "2608.04999v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.04474",
+      "title": "Local Violation Certification for Linear Predict-Then-Optimize Pipelines",
+      "authors": [
+        "Ş. İlker Birbil",
+        "Wenhao Chi"
+      ],
+      "abstract": "Data-driven decision pipelines combining predictive machine learning models with downstream optimization software are increasingly used to make high-stakes operational decisions. Certifying the safety, fairness, and reliability of these decisions is essential, yet traditional scenario generation methods rely on repeated random testing, which becomes computationally prohibitive when failure events are rare and offers little insight into why failures occur. We present a framework for local violation certification designed specifically for linear decision pipelines under input uncertainty. We mathematically demonstrate that standard sampling methods fail efficiently for rare violations, motivating a direct structural approach. By analyzing the fixed decision boundary of a deployed pipeline, we show that the local risk of failure can be calculated directly in closed form using a single optimization solve. Furthermore, we introduce an exact sampling procedure and closed-form risk statistics that provide feature-level attributions (identifying which input characteristics contribute most to potential non-compliance) without requiring repetitive random trials or complex sampling algorithms. We demonstrate our approach on an economic power dispatch system subject to emissions regulations, delivering precise, auditable risk assessments at a fraction of the traditional computational cost.",
+      "date": "2026-08-05",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.04474v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.04474",
+      "arxiv_id": "2608.04474v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.05144",
+      "title": "Argus: A General-Purpose Agentic Runtime for Long-Horizon Reasoning",
+      "authors": [
+        "Boxiu Li",
+        "Zimo Wen",
+        "Yijia Fan",
+        "Junxiang Lei",
+        "Sufeng Guo",
+        "Jiaao Wu",
+        "Ruize Tang",
+        "Mukai Li",
+        "Yifei Shen",
+        "Xiaoyu Chen",
+        "Wanbo Zhang",
+        "Runjing Gu",
+        "Yifei Gao",
+        "Yuheng Wu",
+        "Xuyao Huang",
+        "Zelong Zhao",
+        "Jiachen Zhang",
+        "Shibo Hu",
+        "Hangxi Guo",
+        "Yilin Chen",
+        "Yuzhe Zhang",
+        "Fan Yang",
+        "Chuan Wen",
+        "Xian Zhang",
+        "Xuanhe Zhou",
+        "Zhijie Deng"
+      ],
+      "abstract": "Long-horizon reasoning requires an agentic runtime that can persist when evidence supports its current approach and pivot when measurements reveal failure, hidden constraints, or a misspecified objective. We present Argus, a persistent, self-evolving runtime in which Manager, Planner, Engineer, and Reviewer execute bounded missions over durable project state. Argus separates stable user intent from operational objectives, constraints, and verification criteria, and admits memories, skills, procedures, verifiers, routing decisions, and rejected routes only after role-owned review and, when available, task-native verification. Model weights remain fixed; self-evolution occurs through persistent runtime state and control policy, with autonomous execution between operator-owned escalation points. Across seven GPT-5.5 benchmark arenas, Argus achieves about 78% on SWE-Bench Pro versus 59% for Direct Copilot while using 1.41 times the aggregate tokens. After verification-gated self-evolution, mature SWE-Bench waves use 21% fewer solve-input tokens and 15% less active workflow time per task than startup waves, while recording 34 verifier recoveries and 22 strict review-loop rescues. Argus also reaches 76.8% on AARRI-Bench and a 28.0-point gap on mathematical data synthesis, with competitive GPU-kernel and language-model-training results. Beyond benchmarks, an optimized RWKV6 kernel was merged upstream; a multi-day mathematics campaign retained falsified routes and proof-backed frontier updates; and six paper pipelines completed 254 missions with 16 stage rollbacks. These results show that a fixed-weight, self-evolving harness can revise, recover, and accumulate verified approaches while producing structured trajectories for future supervised and reinforcement learning.",
+      "date": "2026-08-05",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.05144v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.05144",
+      "arxiv_id": "2608.05144v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.05141",
+      "title": "OctoLong: Mid-Training On Cross-Repository Code Contexts Enhances Long-Context Modeling",
+      "authors": [
+        "Indraneil Paul",
+        "Falko Helm",
+        "Goran Glavaš",
+        "Iryna Gurevych"
+      ],
+      "abstract": "Context lengths of language models (LMs) have dramatically increased, driven by the demands for in-context learning, self-improvement, and long-horizon agentic workflows. Existing long-context corpora, however, are dominated by books, academic articles, and code repositories, which are finite resources and often scarce in long-distance dependencies. In this work, we introduce OctoLong, a context engineering pipeline that instruments an AST parser, a language server backend, and a package manager to facilitate the recursive retrieval of code references, enabling the curation of dependency-rich code contexts of millions of tokens in length. We then train OctoLong-Instruct, a suite of capable long-context open LMs, derived from base models ranging in size from 600M to 14B parameters, via context-extension mid-training on a ~50B-token mixture containing ~6.2B tokens of OctoLong code contexts, followed by ~10B tokens of instruction tuning. Our training ablations and experimental evaluations against 18 state-of-the-art open-weight long-context LMs show that supplanting just 12% of traditional context-extension corpora with OctoLong data yields substantial gains in long-range retrieval, long-term state tracking, repository-level code understanding, and downstream agentic tasks, while also enhancing API usage in short-context coding scenarios.",
+      "date": "2026-08-05",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.05141v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.05141",
+      "arxiv_id": "2608.05141v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.05054",
+      "title": "MarsCast: Transfer Learning of AI Weather Foundation Models to Planetary Atmospheres",
+      "authors": [
+        "M. L. Carroll",
+        "J. Li",
+        "S. D. Guzewich",
+        "G. Villanueva",
+        "J. A. Caraballo-Vega",
+        "M. J. Frost"
+      ],
+      "abstract": "We investigate the transferability of Earth weather foundation models to planetary atmospheres by adapting the GraphCast graph neural weather forecasting model to Mars. While GraphCast achieves state-of-the-art performance for terrestrial forecasting, its applicability to non-Earth environments remains unexplored. Using the Mars Climate Database (MCD), which provides global atmospheric fields across vertical altitude levels (similar to Earth pressure levels), we evaluate zero-shot and fine-tuned GraphCast predictions of Martian temperature and wind fields. Zero-shot forecasts produce a surprisingly accurate depiction of current conditions but fail to reproduce diurnal variability and rapidly decay toward climatological mean states. To address this limitation, we fine-tune GraphCast using MCD variables and top-of-atmosphere solar radiation forcing while holding humidity constant. Fine-tuning enables rapid learning of Martian thermal variability. Within as few as 10 training epochs, the model begins to capture the diurnal cycle and forecasts up to 10 days reproduce seasonal and vertical temperature structure. Prediction quality improves with training sample size and exhibits sensitivity to seasonal initialization. These results demonstrate that Earth-trained AI weather models can be adapted to simulate Martian atmospheric dynamics, providing a pathway toward rapid planetary weather prediction to support mission operations, dust storm risk mitigation, and future human exploration.",
+      "date": "2026-08-05",
+      "source": "arXiv",
+      "source_detail": "astro-ph.EP",
+      "url": "http://arxiv.org/abs/2608.05054v1",
+      "tags": [
+        "astro-ph.EP",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.05054",
+      "arxiv_id": "2608.05054v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.04776",
+      "title": "NSF-HRPT: Neural Semantic Field meets Hierarchical Risk Perception Tree for Safety-Critical Scenario Assessment",
+      "authors": [
+        "Yu Zhao",
+        "Jiangyu Pan",
+        "Tao Hu",
+        "Ming Yin",
+        "Fan Yang",
+        "Jiangfan Liu",
+        "Xiubo Liang"
+      ],
+      "abstract": "The ability to accurately assess and anticipate risks in safety-critical scenarios is crucial for autonomous driving systems. While existing research has made progress in collision prediction, accurately quantifying risk levels from monocular vision inputs remains challenging due to the complex dynamics of multi-agent interactions and the inherent uncertainty in real-world environments. To address these challenges, we present NSF-HRPT, a novel framework that combines learning-based perception with structured reasoning for quantitative risk assessment. Our approach features a Neural Semantic Field (NSF) that learns to model scene semantics, trajectory predictions, and probabilistic Time-to-Collision (TTC) distributions from simulation data. During inference, the pre-trained NSF serves as a prior for our Hierarchical Risk Perception Tree (HRPT), which enables efficient parallel computation and spatial reasoning about multi-agent risks. Additionally, we introduce a Sim2Real enhancement strategy that improves real-world applicability without retraining by incorporating priors from foundation models. Extensive evaluations demonstrate that our framework achieves state-of-the-art performance on synthetic benchmarks and delivers competitive, near-state-of-the-art results on real-world datasets for both TTC estimation accuracy and risk localization precision. The proposed method provides an effective solution for real-time risk awareness from monocular camera inputs.",
+      "date": "2026-08-05",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.04776v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.04776",
+      "arxiv_id": "2608.04776v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "cordis-101114748",
+      "title": "[HORIZON-SESAR-2022-DES-IR-01] NETWORK TBO: Network Trajectory Based Operations",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101114748",
+      "deadline": "2026-08-31",
+      "date": "2026-05-13",
+      "project_start": "2023-09-01",
+      "project_end": "2026-08-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "general-or"
+      ],
+      "description": "The NETWORK Trajectory based operations (NETWORK TBO) project proposes to validate TBO SESAR Solutions covers all aspects of Trajectory management processes involving – but not limited to - Network actors. It covers both planning and execution phases. The proposed SESAR Solutions, with an indication of the Technology Readiness Levels (with the associated EOCVM level) at the end of the project, are:\n            * Solution #1: TBO Planning and Impact on Execution. Taking as baseline FF-ICE/1 imple",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "cordis-101114748",
+      "title": "[HORIZON-SESAR-2022-DES-IR-01] NETWORK TBO: Network Trajectory Based Operations",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101114748",
+      "deadline": "2026-08-31",
+      "date": "2026-05-13",
+      "project_start": "2023-09-01",
+      "project_end": "2026-08-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "general-or"
+      ],
+      "description": "The NETWORK Trajectory based operations (NETWORK TBO) project proposes to validate TBO SESAR Solutions covers all aspects of Trajectory management processes involving – but not limited to - Network actors. It covers both planning and execution phases. The proposed SESAR Solutions, with an indication of the Technology Readiness Levels (with the associated EOCVM level) at the end of the project, are:\n            * Solution #1: TBO Planning and Impact on Execution. Taking as baseline FF-ICE/1 imple",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
