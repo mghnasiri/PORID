@@ -1,0 +1,307 @@
+{
+  "date": "2026-08-07",
+  "generated_at": "2026-08-07T08:21:18.323239+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2608.06110",
+      "title": "ECHO: A Locally-Deployable Agentic Health Assistant with Temporal Memory, Safety Guardrails, and Speech Assessment",
+      "authors": [
+        "Abdulkadir Külçe",
+        "Alihan Esen",
+        "Cağla Fikir",
+        "Berke Kurt",
+        "Kuzey Arar",
+        "Gökhan Ercan",
+        "Faik Boray Tek"
+      ],
+      "abstract": "This paper presents ECHO (Enhanced Care \\& Health Observer), a locally-deployable conversational health assistant for long-term chronic care management. ECHO integrates three complementary software modules developed under shared supervision as a unified system. The core module is an agentic chatbot built on a ReAct loop orchestrated via LangGraph, equipped with 17 clinical tools and a temporal knowledge graph for persistent cross-session memory; it achieves a 94.9\\% tool-execution pass rate across a 59-scenario benchmark with GPT-5 Mini. A two-stage hybrid safety layer intercepts all incoming queries: a rule-based layer handles explicit crisis signals and jailbreak attempts in under 1ms, while a signed graph neural network (GNN) with APPNP-style propagation classifies boundary cases by clinical intent, achieving 88.8\\% accuracy and 90.6\\% unsafe recall on a 2,537-query annotated Turkish health dataset while outperforming zero-shot LLM baselines including Llama 3.3 70B. A multimodal speech assessment module combining Whisper acoustic encoding and BERT text encoding with cross-attention fusion estimates emotion, depression, and pain, reaching a mean macro F1 of 0.652. The full system is implemented as a web application that can run entirely on consumer hardware, with no patient data transmitted to external services, supporting compliance with GDPR and KVKK.",
+      "date": "2026-08-06",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.06110v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "ml-for-or",
+        "healthcare-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.06110",
+      "arxiv_id": "2608.06110v1",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2608.05922",
+      "title": "Exact Anchoring and a Dualization-Based Matheuristic for Bi-Level Dual-Defense Network Interdiction",
+      "authors": [
+        "Wei-Chang Yeh"
+      ],
+      "abstract": "Bi-level interdiction models are frequently solved by metaheuristics whose solution quality cannot be assessed, because exact optima are unavailable at the scales tested. We supply them for the bi-level dual-defense attacker model (BDAM), which couples node interdiction, edge destruction and capacitated supply support, and which we previously solved by a hybrid metaheuristic. First, BDAM's dominant attacker-path term admits an exact single-level reformulation by lower-level dualization, a reduction available whenever arc lengths are linear in the defender's binary decisions; the resulting mixed-integer program certifies optimality on all eighteen three-row and five-row configurations of our earlier benchmark, seventeen in under ten seconds, with strong uncertified incumbents out to 15*30 grids. Our published averages sit 3.55% below that frontier, and the gap widens with scale. Second, the supply rule, like any rule priced on a single attacker shortest path, is ill-posed under ties, and our threat-corridor formulation is tie-invariant by construction. The tie-break moves the objective by under 10^(-3) but the realized supply cost by up to 0.83 units, so the defect is suppressed by the objective weight rather than absent. Third, MILP-DA pairs the exact anchor with the corridor decode and a feasibility repair; compared against our published figures with no re-implementation on either side, it wins on thirteen of eighteen certified configurations and on all eighteen larger ones, every loss falling on a three-row grid.",
+      "date": "2026-08-06",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.05922v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "metaheuristics",
+        "network-optimization"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.05922",
+      "arxiv_id": "2608.05922v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.05502",
+      "title": "An Inertial Block Proximal Linearized Method with Adaptive Momentum for Nonconvex and Nonsmooth Optimization",
+      "authors": [
+        "Weifeng Yang"
+      ],
+      "abstract": "In this paper, we consider a class of multiblock nonconvex nonsmooth optimization problems, which covers many applications such as the analysis of pre-earthquake anomalies and machine learning. To solve this class of problems, we propose the inertial block proximal linearized method with two-phase adaptive momentum (IBPL$^+$-TP). Compared to the current methods, our method possesses three main advantages: (1) it introduces a two-phase adaptive momentum strategy to effectively update the extrapolation parameters, (2) it allows using two different extrapolation points to accelerate the convergence, (3) it allows the extrapolation parameters of these two extrapolation points to be independent of and unconstrained by all other parameters. While maintaining the above advantages, we prove that our method ensures the monotonic convergence of the objective function of this class of problems, and we also prove that the sequence generated by our method globally converges to a critical point, as well as establish the convergence rate of our method. To demonstrate the effectiveness of our method, we apply it to solve two nonconvex and nonsmooth machine learning problems, namely sparse nonnegative matrix factorization with $\\ell_0$-constraints and sparse nonnegative CP decomposition with $\\ell_0$-constraints. The numerical experimental results on solving these problems show that our method outperforms several state-of-the-art methods.",
+      "date": "2026-08-06",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.05502v1",
+      "tags": [
+        "math.OC",
+        "ml-for-or",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.05502",
+      "arxiv_id": "2608.05502v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.06135",
+      "title": "LLM Inference Under Bursty Workload Distribution: Modifying the WAIT Algorithm",
+      "authors": [
+        "Anjali Gangadhar Katageria",
+        "Shobha Rani",
+        "Raghu Nandan Sengupta"
+      ],
+      "abstract": "Large Language Models (LLMs) such as ChatGPT and Claude are widely used for information retrieval and problem-solving. Recent work has focused on improving scheduling algorithms to boost throughput while maintaining low latency. However, these approaches often assume Poisson request arrivals with constant rates - an assumption that fails to reflect the inherently bursty and dynamic nature of real-world traffic. We propose a lightweight extension to the state-of-the-art WAIT algorithm [1], which adapts to time-varying arrival rates without prior traffic knowledge. The proposed algorithm performs online estimation of request intensity based on observed interarrival times. Using Markov Modulated Poisson Process (MMPP)-based synthetic workloads with diverse request types, we conduct a simulation-based evaluation demonstrating that the proposed method achieves higher throughput than Sarathi-Serve [2], ORCA [3], and vLLM [4] in the evaluated low arrival-rate shift scenarios while maintaining comparable latency.",
+      "date": "2026-08-06",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.06135v1",
+      "tags": [
+        "cs.LG",
+        "scheduling",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.06135",
+      "arxiv_id": "2608.06135v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.06025",
+      "title": "Hybrid-Adaptive Thread Tuning to Mitigate Simulation Execution Bottlenecks in High-Performance Reinforcement Learning Inference",
+      "authors": [
+        "Jiming Su",
+        "Hantao Hua",
+        "Lujia Yin",
+        "Yiping Yao",
+        "Feng Zhu"
+      ],
+      "abstract": "In simulation-in-the-loop decision-making systems, reinforcement learning (RL) inference is often constrained by simulator-side execution overhead, where workloads are highly dynamic and sensitive to runtime thread configurations. Existing multithreaded strategies struggle to match thread resources before or during execution, causing resource contention, scheduling overhead, and reduced throughput. Through empirical analysis, we identify the ratio of task execution time to scheduling time as the key factor determining the optimal thread count. Building on this insight, we propose AutoThread, a hybrid adaptive thread-tuning method for mitigating simulation bottlenecks in RL inference. AutoThread employs a Physics-Informed Neural Operator (PINO) as a thread-count predictor and incorporates a finite-source M/M/1 queueing model to constrain and guide prediction, enabling fast and accurate estimation under dynamic workloads. It further performs load-aware online fine-tuning to compensate for prediction errors and refine resource allocation. Experiments show that AutoThread improves average speedup by 18.4\\% over static strategies, achieves average throughput of 1.7x and 1.8x that of XGBoost and Reinforcer, respectively, and reduces execution time by up to 83.8\\% compared with state-of-the-art methods. Our code and dataset are publicly available at https://github.com/suchenjm/AutoThread.",
+      "date": "2026-08-06",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.06025v1",
+      "tags": [
+        "cs.LG",
+        "scheduling",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.06025",
+      "arxiv_id": "2608.06025v1",
+      "score": 55.0
+    },
+    {
+      "id": "s2-1eaf589d7761",
+      "title": "Closed-Loop Decision-Focused Learning for User-Aware Cloud Orchestration under Uncertainty",
+      "authors": [
+        "Dongbin Jiao",
+        "Xubo Zhang",
+        "Huakang Lin",
+        "Kequan Shang",
+        "Shi Yan"
+      ],
+      "abstract": "Time-varying cloud workloads often cause resource under-utilization during off-peak periods and resource contention during peak periods. Existing prediction-then-optimization (PTO) frameworks suffer from two-stage decoupling, hindering the balance among violation rate, user satisfaction, and resource utilization. We formulate heterogeneous job scheduling as a multi-objective combinatorial optimization problem (MOCOP) under uncertain constraints and propose a closed-loop decision-focused learning (CL-DFL) framework for cloud orchestration. CL-DFL integrates a Multivariate Time-series Graph Neural Network (MTGNN)-based spatio-temporal predictor with a zeroth-order decision-focused learning (DFL) mechanism based on the tree-structured Parzen estimator (TPE). This integration establishes an end-to-end (E2E) feedback pathway between resource perception and scheduling decisions. Furthermore, we develop the GNeuro-PLS strategy by incorporating group relative policy optimization (GRPO) into cooperative local search to improve robustness under heterogeneous workloads. Extensive experiments on four real-world datasets demonstrate that CL-DFL achieves superior trade-offs among violation rate, user satisfaction, and resource utilization. It effectively controls overload risks under regular workloads and maintains resilience under highly saturated scenarios compared with state-of-the-art baselines.",
+      "date": "2026-08-06",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://www.semanticscholar.org/paper/1eaf589d7761160f97762fff4249055303f45de1",
+      "tags": [
+        "scheduling",
+        "stochastic",
+        "ml-for-or",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "",
+      "arxiv_id": "2608.05735",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s11081-026-10117-1",
+      "title": "Robust topology optimization of electric machines using topological derivatives",
+      "authors": [
+        "Gangl, P.",
+        "Komann, T.",
+        "Krenn, N.",
+        "Ulbrich, S."
+      ],
+      "abstract": "Abstract\n                  Designing high-performance electric machines that maintain their efficiency and reliability under uncertain material and operating conditions is crucial for industrial applications. In this paper, we present a novel framework for robust topology optimization with partial differential equation constraints to address this challenge. The robust optimization problem is formulated as a min-max optimization problem, where the inner maximization is the worst case with respect to predefined uncertainties, while the outer minimization aims to find an optimal topology that remains robust under these uncertainties using the topological derivative. The shape of the domain is represented by a level set function, which allows for arbitrary perturbation of the domain. The robust optimization problem is solved using a theorem of Clarke to compute subgradients of the worst case function. This allows the min-max problem to be solved efficiently and ensures that we find a design that performs well even in the presence of uncertainty. Finally, numerical results for a two-material permanent magnet synchronous machine demonstrate both the effectiveness of the method and the improved performance of robust designs under uncertain conditions.",
+      "date": "2026-08-07",
+      "source": "Optimization and Engineering",
+      "source_detail": "Optimization and Engineering",
+      "url": "https://doi.org/10.1007/s11081-026-10117-1",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11081-026-10117-1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.06295",
+      "title": "Fault Diagnosis and Prognosis in Partially-Observed Discrete Event Systems with Delayed Observations",
+      "authors": [
+        "Jiwei Wang",
+        "Simone Baldi",
+        "Wenwu Yu",
+        "Xiang Yin"
+      ],
+      "abstract": "Fault diagnosis and prognosis in discrete event systems are studied in the scenario where the observations are possibly received with delay. To address this scenario, two conditions for diagnosis and prognosis with delayed observations are proposed, where we show that the state-of-the-art notion of prognosability must be revised to avoid conservativeness. Diagnosability and prognosability conditions are then verified by introducing a delay observer and a new verification function. Theoretical analysis indicates the effectiveness of the verification method for fault diagnosis and prognosis in the system.",
+      "date": "2026-08-06",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.06295v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1109/CDC56724.2024.10886825",
+      "arxiv_id": "2608.06295v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.05559",
+      "title": "A Recentered-Domain Yau-Yau Filter for Target Tracking",
+      "authors": [
+        "Lei Ma",
+        "Yuzhong Hu",
+        "Xiaoming Zhang"
+      ],
+      "abstract": "The Yau-Yau filter reformulates nonlinear state estimation as probability-density propagation governed by the Forward Kolmogorov equation (FKE). Applying it to target tracking, however, requires efficient FKE approximation on a finite computational domain. This paper proposes a Recentered-Domain Yau-Yau Filter (RD-YYF), which solves the FKE within a fixed-size local window centered at the latest state estimate. This design concentrates numerical resolution near the dominant posterior density. Offline, physics-informed neural networks (PINNs) generate FKE solution snapshots, while principal component analysis constructs a low-dimensional representation of density evolution. A lightweight residual surrogate maps the initial-condition coefficients and domain center to the terminal-solution coefficients. Online, the pretrained surrogate predicts density evolution within the recentered window, followed by observation update and state estimation. Experiments on two geometrically constrained target-tracking examples show that RD-YYF achieves lower tracking errors than the extended Kalman filter (EKF) and particle filter (PF), while retaining efficient per-timestep inference. Ablation results indicate that domain recentering improves density approximation in high-probability regions and accelerates offline PINN convergence. These results demonstrate the potential of RD-YYF for efficient nonlinear target tracking",
+      "date": "2026-08-06",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.05559v1",
+      "tags": [
+        "math.OC",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.05559",
+      "arxiv_id": "2608.05559v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.06294",
+      "title": "QuanTiMedAI: Quantum-Enhanced Time-Series Model guided by Agentic AI for Cardiac Arrest Mortality Prediction",
+      "authors": [
+        "Mutasim Fuad Sarker",
+        "Adiba Rahman Namira",
+        "Wafa Binte Alam",
+        "Md Adnan Arefeen",
+        "Mahzabeen Emu",
+        "Sumaiya Tabassum Nimi"
+      ],
+      "abstract": "Cardiac arrest remains one of the most lethal conditions encountered in intensive care units. Despite the growing availability of electronic health record data, existing mortality prediction studies in this population largely depend on static summaries derived from early admission. Such approaches ignore the temporal progression of physiological deterioration and recovery that unfolds throughout a patient's ICU stay. To address this limitation, we introduce QuanTiMedAI, a quantum-agentic framework developed for cardiac arrest mortality prediction using agentic AI guided quantum enhancement time series model. The proposed system combines an agentic large language model (LLM) for clinically informed feature discovery with a compact quantum recurrent network for temporality aware mortality prediction. Our findings demonstrate that agentic LLM-guided feature selection consistently outperforms conventional feature selection approaches, and the proposed quantum architecture achieves competitive predictive performance through nonlinear feature enhancement while keeping the number of parameters very low. Through extensive experimentation on a MIMIC-IV cohort of cardiac arrest patients, QuanTiMedAI's quantum-enhanced architecture attains an AUROC of 0.852 using only 605 parameters, an improvement of approximately 2.9\\% over a current state-of-the-art baseline for this task. A structured ablation study systematically validates the contribution of each architectural design choice. These results show that quantum-enhanced sequential modeling can exceed classical recurrent networks while using substantially fewer parameters.",
+      "date": "2026-08-06",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.06294v1",
+      "tags": [
+        "cs.AI",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.06294",
+      "arxiv_id": "2608.06294v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "cordis-101114748",
+      "title": "[HORIZON-SESAR-2022-DES-IR-01] NETWORK TBO: Network Trajectory Based Operations",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101114748",
+      "deadline": "2026-08-31",
+      "date": "2026-05-13",
+      "project_start": "2023-09-01",
+      "project_end": "2026-08-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "general-or"
+      ],
+      "description": "The NETWORK Trajectory based operations (NETWORK TBO) project proposes to validate TBO SESAR Solutions covers all aspects of Trajectory management processes involving – but not limited to - Network actors. It covers both planning and execution phases. The proposed SESAR Solutions, with an indication of the Technology Readiness Levels (with the associated EOCVM level) at the end of the project, are:\n            * Solution #1: TBO Planning and Impact on Execution. Taking as baseline FF-ICE/1 imple",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "cordis-101114748",
+      "title": "[HORIZON-SESAR-2022-DES-IR-01] NETWORK TBO: Network Trajectory Based Operations",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101114748",
+      "deadline": "2026-08-31",
+      "date": "2026-05-13",
+      "project_start": "2023-09-01",
+      "project_end": "2026-08-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "general-or"
+      ],
+      "description": "The NETWORK Trajectory based operations (NETWORK TBO) project proposes to validate TBO SESAR Solutions covers all aspects of Trajectory management processes involving – but not limited to - Network actors. It covers both planning and execution phases. The proposed SESAR Solutions, with an indication of the Technology Readiness Levels (with the associated EOCVM level) at the end of the project, are:\n            * Solution #1: TBO Planning and Impact on Execution. Taking as baseline FF-ICE/1 imple",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}

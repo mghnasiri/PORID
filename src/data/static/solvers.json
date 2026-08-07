@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T09:45:12.874988+00:00",
+  "generated_at": "2026-08-07T08:21:17.900129+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1769,
+      "github_stars": 1771,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 172,
+      "github_open_issues": 154,
       "github_recent_prs": [
+        "fix(presolve): clamp singleton row bound tolerance to machine epsilon",
+        "fix(presolve): prevent floating-point underflow in dynamism-scaled tolerances",
         "`HighsRunData` now correct when presolve is not used, or no reductions are achieved",
         "Parallel solves in HiPO",
-        "Bazel: do not try to get cuda if option is not specified",
-        "Remove `std::vector<bool>`",
-        "Add extra safety net for relaxing out bounds"
+        "Bazel: do not try to get cuda if option is not specified"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13864,
+      "github_stars": 13867,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,7 +569,7 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 116,
+      "github_open_issues": 115,
       "github_recent_prs": [
         "export glop and lp_data from google3",
         "cmake: bump zlib to v1.3.2",
@@ -1130,7 +1130,7 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.1\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 8 PRs from 3 contributors.\n\n- @brunoficoxpress | #3334\n- @PTNobel |",
-      "github_stars": 6294,
+      "github_stars": 6295,
       "github_open_issues": 190,
       "github_recent_prs": [
         "Bump github/codeql-action/upload-sarif from 4.37.3 to 4.37.4",
@@ -1255,7 +1255,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1774,
+      "github_stars": 1776,
       "github_open_issues": 15,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1318,7 +1318,7 @@
         "metaheuristic"
       ],
       "recent_changes": "More Solvery goodness! This time, we have spent a lot of our energy on the service module and on our documentation, especially regarding how solver services work. But we haven't forgotten about the so",
-      "github_stars": 1743,
+      "github_stars": 1745,
       "github_open_issues": 104,
       "github_recent_prs": [
         "chore: regenerate test model openapi",
@@ -1383,7 +1383,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2499,
+      "github_stars": 2498,
       "github_open_issues": 376,
       "github_recent_prs": [
         "URL Checker: resolve failure checking PLY documentation",
@@ -1449,7 +1449,7 @@
       ],
       "recent_changes": "## JuMP v1.31.1\n\n[Diff since v1.31.0](https://github.com/jump-dev/JuMP.jl/compare/v1.31.0...v1.31.1)\n\n\n**Merged pull requests:**\n- Revert #4032 because it is subject to hash collisions (#4205) (@odow)",
       "github_stars": 2460,
-      "github_open_issues": 11,
+      "github_open_issues": 12,
       "github_recent_prs": [
         "Fix formatting of return value in tests",
         "Fix test of MOI.UnsupportedConstraint to use type instead of value",
