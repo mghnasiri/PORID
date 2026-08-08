@@ -1,0 +1,277 @@
+{
+  "date": "2026-08-08",
+  "generated_at": "2026-08-08T07:53:49.312682+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s12532-026-00333-2",
+      "title": "Kernel pump",
+      "authors": [
+        "Assunção, L.",
+        "Urrutia, S.",
+        "Santos, A."
+      ],
+      "abstract": "Abstract\n                  Feasibility Pump (FP) is a well-studied mixed integer linear programming primal heuristic that sequentially guides fractional solutions into integer feasibility by minimizing their distance to given target integer points, while preserving the linear constraints of the original problem. Due to its effectiveness and simplicity, FP has been embedded in most commercial solvers, and several variants of the basic method have been proposed, aiming at improving its convergence and the quality of the solutions obtained. This work introduces Kernel Pump (KP), a novel FP speed-up technique that relies on the intuition that not all binary variables are active (i.e., set to one) in a feasible solution, and can, thus, be sub-divided in a kernel search fashion. Precisely, KP identifies a subset of promising binary variables (the kernel) and distributes the rest into buckets ranked by their likelihood of composing a feasible/optimal solution. FP sub-problems are then solved iteratively, focusing on the current kernel and progressively adding variables from the buckets whenever necessary. Extensive computational experiments on benchmark instances from MIPLIB 2017, as well as two additional problems from the literature of vehicle routing and scheduling, reveal a considerable boost in success rate, also decreasing running times for the majority of instances tested. Notably, aside from outperforming FP, the new method was able to find feasible solutions in cases where CPLEX failed within an hour of search. To our knowledge, this is also the first study to introduce a decomposition approach within the FP framework.",
+      "date": "2026-08-07",
+      "source": "Mathematical Programming Computation",
+      "source_detail": "Mathematical Programming Computation",
+      "url": "https://doi.org/10.1007/s12532-026-00333-2",
+      "tags": [
+        "linear-programming",
+        "scheduling",
+        "vehicle-routing",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s12532-026-00333-2",
+      "score": 60.0,
+      "mentions_solvers": [
+        "CPLEX"
+      ]
+    },
+    {
+      "id": "crossref-10.1007-s11081-026-10117-1",
+      "title": "Robust topology optimization of electric machines using topological derivatives",
+      "authors": [
+        "Gangl, P.",
+        "Komann, T.",
+        "Krenn, N.",
+        "Ulbrich, S."
+      ],
+      "abstract": "Abstract\n                  Designing high-performance electric machines that maintain their efficiency and reliability under uncertain material and operating conditions is crucial for industrial applications. In this paper, we present a novel framework for robust topology optimization with partial differential equation constraints to address this challenge. The robust optimization problem is formulated as a min-max optimization problem, where the inner maximization is the worst case with respect to predefined uncertainties, while the outer minimization aims to find an optimal topology that remains robust under these uncertainties using the topological derivative. The shape of the domain is represented by a level set function, which allows for arbitrary perturbation of the domain. The robust optimization problem is solved using a theorem of Clarke to compute subgradients of the worst case function. This allows the min-max problem to be solved efficiently and ensures that we find a design that performs well even in the presence of uncertainty. Finally, numerical results for a two-material permanent magnet synchronous machine demonstrate both the effectiveness of the method and the improved performance of robust designs under uncertain conditions.",
+      "date": "2026-08-07",
+      "source": "Optimization and Engineering",
+      "source_detail": "Optimization and Engineering",
+      "url": "https://doi.org/10.1007/s11081-026-10117-1",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11081-026-10117-1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s11590-026-02331-8",
+      "title": "Pricing semi-cooperation in unstable linear–linear bilevel programs via strictly convex tie-breaking and stability contracts",
+      "authors": [
+        "Caramia, M."
+      ],
+      "abstract": "Abstract\n                  \n                    When the follower problem in a bilevel program admits multiple optimal solutions, the leader’s outcome depends on how ties are resolved. This yields the classical optimistic/pessimistic ambiguity and makes the model\n                    unstable\n                    (ill-posed) from a predictive viewpoint. We study linear–linear bilevel programs without additional upper-level coupling constraints involving the follower variables and propose a stabilization mechanism that preserves the follower’s linear objective as a primary criterion, while resolving ties within the follower optimal set through a strictly convex quadratic rule. This tie-break selects a unique follower reaction and can be anchored to implement any prescribed follower optimum (e.g., a leader-favorable one). We then interpret stabilization as a semi-cooperation contract: in the presence of a (possibly unknown) secondary preference used by the follower to break ties, the leader may need to compensate the follower to accept the leader-chosen tie-break. We define the price of semi-cooperation as the minimal transfer ensuring acceptance, and we derive explicit formulas and robust bounds under preference uncertainty. A computational illustration highlights stabilization and pricing behavior on randomly generated instances.",
+      "date": "2026-08-08",
+      "source": "Optimization Letters",
+      "source_detail": "Optimization Letters",
+      "url": "https://doi.org/10.1007/s11590-026-02331-8",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11590-026-02331-8",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2021.0699",
+      "title": "Certifiable Deep Importance Sampling for Rare-Event Simulation of Black Box Systems",
+      "authors": [
+        "Arief, M.",
+        "Bai, Y.",
+        "Ding, W.",
+        "He, S.",
+        "Huang, Z.",
+        "Lam, H.",
+        "Zhao, D."
+      ],
+      "abstract": "AI-Enhanced Monte Carlo Methodology Achieves More Reliable Testing and Efficiency Certificate for Safety-Critical Systems\n                  As artificial intelligence (AI) increasingly drives human-interacting intelligent physical systems such as self-driving vehicles, ensuring their safety against rare catastrophic events has also become a critical challenge. Traditional simulation-based testing methods are powerful in quantifying risks before real deployment. However, for black box systems that generically arise in AI-embedded applications, these methods can consistently underestimate the probabilities of rare failures and, dangerously, without diagnostically detectable signals. To address this perilous gap, the paper \"Certifiable Deep Importance Sampling for Rare-Event Simulation of Black Box Systems,\" by Arief, Bai, Ding, He, Huang, Lam, and Zhao, introduces a framework based on an integration of neural networks into importance sampling, a variance reduction technique that has been found useful in rare-event simulation. This framework, which is called deep probabilistic accelerated evaluation (Deep-PrAE), uses deep neural network classifiers to learn rare-event geometries, which then calibrates importance samplers to estimate rare events with certifiable statistical guarantees. Moreover, these guarantees are designed to go beyond the conventional certifiable notions in rare-event simulation to effectively balance the applicability to black box settings with the required sampling efficiency gain that pertains to rare-event computation. These findings demonstrate a vital step forward in the reliable and certifiable deployment of complex autonomous technologies.",
+      "date": "2026-08-07",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2021.0699",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2021.0699",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2026.00184",
+      "title": "Fighting Fire with Fire: Infusing Artificial Intelligence into Peer Review to Sustain Quality Scholarship",
+      "authors": [
+        "Bhargava, H.",
+        "Bana, S.",
+        "Zhang, Z.",
+        "Brandimarte, L.",
+        "Choudhary, V.",
+        "Li, J.",
+        "Loupos, P.",
+        "Zantedeschi, D."
+      ],
+      "abstract": "Adoption of artificial intelligence (AI) by authors has accelerated production of academic articles and increased submission rates to journals, thereby straining review capacity and hurting journal outcome metrics, such as turnaround time and decision accuracy. Academic journals face an imperative to improve review quality and productivity by incorporating generative AI tools in the review workflow. As a concrete first step toward this idea, we outline a particular workflow that deploys large language models as a structured, trained, frontline reviewer. The workflow underlines that AI-produced evaluations must be transparent and contestable by authors. We emphasize the need for AI-infused peer review to be journal specific, designed for efficiency, accuracy, and accountability, within a human-in-the-loop oversight framework. We build a mathematical model of journal operations to compare outcomes under a status quo no-AI workflow and the proposed AI-infused workflow. The model captures how governed AI reconfigures human reviewer effort and illuminates conditions under which the AI-infused workflow can improve vital metrics, such as turnaround time and decision accuracy. Our essential point is that journals need to adopt a deliberate and institutionally governed approach for using AI in the review process. We recognize that identifying an “optimal” AI-infused peer review workflow or even definitively projecting the consequences of one will require substantial experimentation to calibrate and configure the workflow across multiple alternative designs.\n                  This discussion paper was This paper was accepted by Christoph Loch.\n                  Funding: D. Zantedeschi acknowledges support for this research from the Muma College of Business Dean’s Research Fund.\n                  Supplemental Material: The online appendix is available at https://doi.org/10.1287/mnsc.2026.00184 .",
+      "date": "2026-08-07",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2026.00184",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2026.00184",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2022.02682",
+      "title": "Crowdsourcing from Hackers: Strategic Coopetition and Governance in Bug Bounty Programs",
+      "authors": [
+        "Zhou, J.",
+        "Hui, K."
+      ],
+      "abstract": "In a bug bounty program (BBP), organizations incentivize hackers—who could otherwise be “enemies”—to report security vulnerabilities by publicly offering monetary rewards. This paper develops an analytical framework to characterize BBPs and their strategic and economic impacts. Strategically, BBPs induce some hackers to self-select into cooperative vulnerability discovery and reporting, diverting them away from attacking (attack diversion) and delegating part of the protection effort to them (protection delegation). We show that (i) BBPs can be beneficial even when hackers are inefficient at vulnerability identification, yet more participants might make BBPs less attractive to firms. (ii) Although BBPs improve security, they might encourage competitive hackers (i.e., attackers) to exert more efforts. (iii) The coopetition dynamics can render a firm’s provision of rewards and in-house efforts socially inefficient. Common cybersecurity regulations, such as breach penalties and bounty reward subsidies, may exacerbate the inefficiency. We find complementarity between bounty subsidies and breach penalties, suggesting that combining and customizing them according to firm characteristics could enhance BBP efficiency. (iv) Contrary to the conventional wisdom that crowdsourcing rewards increase with participant size, we identify scenarios in which a firm should reduce or make nonmonotonic adjustments to a bounty reward as participant size increases. (v) Legal safe harbor for security testing or policies that reduce duplicate report submissions can lower firm payoffs under BBPs. We draw related implications for research and practice in information security and crowdsourcing.\n                  This paper was accepted by Hemant Bhargava, information systems.\n                  Funding: This research is supported in part by the HKSAR General Research Fund Project 16503620.\n                  Supplemental Material: The online appendix is available at https://doi.org/10.1287/mnsc.2022.02682 .",
+      "date": "2026-08-07",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2022.02682",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2022.02682",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2026.02443",
+      "title": "Don’t Build a Better Fax Machine: A Commentary on “Fighting Fire with Fire: Infusing AI into Peer Review to Sustain Quality Scholarship”",
+      "authors": [
+        "Terwiesch, C."
+      ],
+      "abstract": "Artificial intelligence is increasingly being proposed as a tool to improve the efficiency of academic peer review. While such applications may alleviate reviewer shortages and enhance productivity, they largely preserve the existing architecture of scientific publishing. In this commentary I propose that AI also creates an opportunity to reimagine more fundamental aspects of how knowledge is evaluated and disseminated. Drawing on concepts from operations management and innovation, I propose disruptive alternatives that challenge the underlying design of the current process. Rather than simply helping referees review papers faster, AI may enable new models of scientific communication that are more open, timely, and adaptive to the needs of modern scholarship.\n                  This commentary was accepted by Christoph Loch.",
+      "date": "2026-08-07",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2026.02443",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2026.02443",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1007-s11081-026-10116-2",
+      "title": "An efficient iterative algorithm for approximate projections onto the non-convex quasi-norm ball",
+      "authors": [
+        "An, Q.",
+        "Wang, J.",
+        "Niu, Z.",
+        "Zhang, N."
+      ],
+      "abstract": "",
+      "date": "2026-08-07",
+      "source": "Optimization and Engineering",
+      "source_detail": "Optimization and Engineering",
+      "url": "https://doi.org/10.1007/s11081-026-10116-2",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11081-026-10116-2",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07363-y",
+      "title": "Forecast reconciliation of agricultural GHG emissions in Europe with fuzzy clustering",
+      "authors": [
+        "Mattera, R.",
+        "Maranzano, P.",
+        "Morelli, C.",
+        "Scepi, G."
+      ],
+      "abstract": "Abstract\n                  We propose a novel statistical procedure which combines forecasting reconciliation techniques and unsupervised clustering algorithms to forecast annual greenhouse gases emissions at the territorial level. Specifically, we aim at predicting future emissions from the agricultural sector for Europe by aggregating bottom-level regional forecasts to the national and continental levels. Fuzzy clustering is used to define aggregations of bottom and middle-level series into clusters based on the similarity of emissions patterns; then, the fuzzy hierarchies are combined with the original administrative aggregation structure to improve the prediction accuracy of forecasting models. Empirical results show that fuzzy clustering aggregation, by leveraging uncertainty compared to crisp approaches, enhances forecast reconciliation accuracy at all levels of the hierarchy. Our approach offers a scalable solution to enhance forecast accuracy and reliability, particularly for short time series characterized by complex hierarchical structures.",
+      "date": "2026-08-07",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07363-y",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07363-y",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07369-6",
+      "title": "Improving futures market predictions with sentiment using a pre-trained robustly-optimized bidirectional encoder representations from transformers approach in China",
+      "authors": [
+        "Hu, W.",
+        "Zhang, X.",
+        "Billio, M.",
+        "Maillet, B.",
+        "Yuan, Z."
+      ],
+      "abstract": "",
+      "date": "2026-08-08",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07369-6",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07369-6",
+      "score": 40.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "cordis-101114748",
+      "title": "[HORIZON-SESAR-2022-DES-IR-01] NETWORK TBO: Network Trajectory Based Operations",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101114748",
+      "deadline": "2026-08-31",
+      "date": "2026-05-13",
+      "project_start": "2023-09-01",
+      "project_end": "2026-08-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "general-or"
+      ],
+      "description": "The NETWORK Trajectory based operations (NETWORK TBO) project proposes to validate TBO SESAR Solutions covers all aspects of Trajectory management processes involving – but not limited to - Network actors. It covers both planning and execution phases. The proposed SESAR Solutions, with an indication of the Technology Readiness Levels (with the associated EOCVM level) at the end of the project, are:\n            * Solution #1: TBO Planning and Impact on Execution. Taking as baseline FF-ICE/1 imple",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "cordis-101114748",
+      "title": "[HORIZON-SESAR-2022-DES-IR-01] NETWORK TBO: Network Trajectory Based Operations",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101114748",
+      "deadline": "2026-08-31",
+      "date": "2026-05-13",
+      "project_start": "2023-09-01",
+      "project_end": "2026-08-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "general-or"
+      ],
+      "description": "The NETWORK Trajectory based operations (NETWORK TBO) project proposes to validate TBO SESAR Solutions covers all aspects of Trajectory management processes involving – but not limited to - Network actors. It covers both planning and execution phases. The proposed SESAR Solutions, with an indication of the Technology Readiness Levels (with the associated EOCVM level) at the end of the project, are:\n            * Solution #1: TBO Planning and Impact on Execution. Taking as baseline FF-ICE/1 imple",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
