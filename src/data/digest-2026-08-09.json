@@ -1,0 +1,281 @@
+{
+  "date": "2026-08-09",
+  "generated_at": "2026-08-09T07:56:59.719420+00:00",
+  "publications": [
+    {
+      "id": "s2-6642e7d28841",
+      "title": "Learning to Handle Constrained Routing Problems From a Decoupling Perspective",
+      "authors": [
+        "Rui Cao",
+        "Zhiguang Cao",
+        "Yihan Huang",
+        "Jiaqi Wang",
+        "Yuan Jiang",
+        "Yubin Xiao",
+        "You Zhou"
+      ],
+      "abstract": "Neural Combinatorial Optimization (NCO) has emerged as a promising paradigm for solving Vehicle Routing Problems (VRPs), offering a compelling alternative to traditional heuristics. However, extending NCO to VRPs with complex constraints remains a significant challenge, as existing methods largely rely on hand-crafted feasibility masks, thereby bypassing the core difficulty of intrinsic constraint reasoning. In this paper, we identify a critical phenomenon in constrained VRPs termed the Global Cascading Effect: myopic local decisions can irreversibly lead to the collapse of the future feasible space, resulting in severe constraint violations. We systematically analyze why the prevailing Heavy Encoder Light Decoder (HELD) paradigm, typically trained via reinforcement learning, fails to capture this effect, attributing the failure to three critical couplings: static architectural embeddings, ambiguous trajectory-level feedback, and entangled feature representations. To address these issues, we propose DeCo (Decoupled Constrained Optimization), a streamlined end-to-end framework designed to systematically dismantle these couplings. DeCo leverages a heavy decoder architecture to achieve real-time feasibility perception through step-wise re-embedding, incorporates dense supervised learning for precise credit assignment, and introduces a Decoupled Attention Block with a dual-stream structure to eliminate feature interference. Extensive experiments on complex constrained benchmarks, such as Traveling Salesman Problem with Time Windows (TSPTW) and Draft Limits (TSPDL), demonstrate that DeCo achieves state-of-the-art (SOTA) performance under a pure end-to-end paradigm without any auxiliary masking mechanisms.",
+      "date": "2026-08-09",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.1145/3770855.3817954",
+      "tags": [
+        "vehicle-routing",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1145/3770855.3817954",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1007-s11590-026-02331-8",
+      "title": "Pricing semi-cooperation in unstable linear–linear bilevel programs via strictly convex tie-breaking and stability contracts",
+      "authors": [
+        "Caramia, M."
+      ],
+      "abstract": "Abstract\n                  \n                    When the follower problem in a bilevel program admits multiple optimal solutions, the leader’s outcome depends on how ties are resolved. This yields the classical optimistic/pessimistic ambiguity and makes the model\n                    unstable\n                    (ill-posed) from a predictive viewpoint. We study linear–linear bilevel programs without additional upper-level coupling constraints involving the follower variables and propose a stabilization mechanism that preserves the follower’s linear objective as a primary criterion, while resolving ties within the follower optimal set through a strictly convex quadratic rule. This tie-break selects a unique follower reaction and can be anchored to implement any prescribed follower optimum (e.g., a leader-favorable one). We then interpret stabilization as a semi-cooperation contract: in the presence of a (possibly unknown) secondary preference used by the follower to break ties, the leader may need to compensate the follower to accept the leader-chosen tie-break. We define the price of semi-cooperation as the minimal transfer ensuring acceptance, and we derive explicit formulas and robust bounds under preference uncertainty. A computational illustration highlights stabilization and pricing behavior on randomly generated instances.",
+      "date": "2026-08-08",
+      "source": "Optimization Letters",
+      "source_detail": "Optimization Letters",
+      "url": "https://doi.org/10.1007/s11590-026-02331-8",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11590-026-02331-8",
+      "score": 50.0
+    },
+    {
+      "id": "s2-1e9b1c3e1dbc",
+      "title": "Disagreement-Aware Subgraph Federated Learning via Uncertainty-Guided Local-Global Alignment",
+      "authors": [
+        "Keao Xi",
+        "Nannan Wu",
+        "Yiming Zhao",
+        "Wenjun Wang"
+      ],
+      "abstract": "Subgraph federated learning (subgraph FL) enables collaborative graph neural network training without sharing raw graph data, but suffers from severe Non-IID distributions and structural fragmentation. In such settings, Non-IID distributions induce pronounced client specialization, where each client excels in a subset of nodes but remains insufficiently trained on others. However, existing similarity-based aggregation and distillation methods fail to balance client specialization and global generalization, often reinforcing dominant local representations and impairing generalization on under-represented nodes, or over-incorporating global knowledge and thereby disrupting well-optimized local specialization. In this paper, we propose FedDUA, a novel disagreement-aware and uncertainty-guided framework for subgraph FL. Specifically, FedDUA first models cross-client semantic disagreement via a lightweight semantic anchor graph and derives adaptive aggregation weights for reliable global federated knowledge. On the client side, FedDUA introduces an uncertainty-aware local-global semantic alignment mechanism that selectively reinforces representations of confident nodes while guiding uncertain nodes with aggregated global knowledge, thereby balancing local specialization and global generalization. Extensive experiments on six real-world datasets demonstrate that FedDUA consistently outperforms the state-of-the-art subgraph FL methods across varying numbers of clients. Further analyses validate the robustness and effectiveness of the proposed disagreement modeling and uncertainty-aware local-global semantic alignment strategies.",
+      "date": "2026-08-08",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1145/3770855.3818126",
+      "tags": [
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1145/3770855.3818126",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1007-s11081-026-10103-7",
+      "title": "Home battery dispatch under a tiered peak power tariff",
+      "authors": [
+        "Pérez-Piñeiro, D.",
+        "Skogestad, S.",
+        "Boyd, S."
+      ],
+      "abstract": "Abstract\n                  \n                    We consider the problem of operating a battery in a home connected to the grid to minimize electricity cost, which combines an energy charge and a tiered peak power charge based on the average of the\n                    N\n                    largest daily peak powers in each billing month. With perfect foresight of loads and prices, the minimum cost is the solution of a mixed-integer linear program (MILP), which provides a lower bound on the cost of any implementable policy. We propose a model predictive control (MPC) policy that uses simple forecasts of loads and prices and solves a small MILP at each time step. Numerical experiments on one year of data from a home in Trondheim, Norway, show that the MPC policy attains a cost within\n                    \n                      \n                        $$1.7\\%$$\n                        \n                          \n                            1.7\n                            %\n                          \n                        \n                      \n                    \n                    of the prescient bound, and saves close to three times as much as the best rule-based policy we consider.",
+      "date": "2026-08-08",
+      "source": "Optimization and Engineering",
+      "source_detail": "Optimization and Engineering",
+      "url": "https://doi.org/10.1007/s11081-026-10103-7",
+      "tags": [
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11081-026-10103-7",
+      "score": 45.0
+    },
+    {
+      "id": "s2-ba8187a59906",
+      "title": "A Data-driven Route Segmentation Framework for Time-of-Arrival Estimation Service",
+      "authors": [
+        "Jiangyi Fang",
+        "Liyue Chen",
+        "Yinfeng Xiang",
+        "Xi Sun",
+        "Hui Zhong",
+        "Leye Wang"
+      ],
+      "abstract": "Estimated Time of Arrival (ETA) is a core service for ride-hailing, public transit, and map-based navigation platforms. While prior studies have extensively explored model architectures and learning algorithms, route segmentation remains largely underexplored. Predefined spatial markers in existing approaches often obscure fine-grained traffic variations by aggregating route data. Consequently, distinct local patterns are mapped to similar features, introducing ambiguity that limits ETA accuracy. Leveraging large-scale, fine-grained vehicle trajectories, we reformulate route segmentation as a function approximation problem. By projecting trajectories into a distance–time space, we model route-level traffic evolution as an underlying piecewise linear function, where segment boundaries correspond to stable traffic regimes. We propose RouteSeg, a dynamic programming–based segmentation algorithm that optimizes this formulation using uniformly sampled spatial points and a trajectory repair module to handle anomalous trajectories. Experiments on real-world datasets spanning multiple cities and millions of trajectories show that our method consistently outperforms ad-hoc and adapted state-of-the-art segmentation strategies. Moreover, online evaluation of our system on the Chelaile Bus ETA service across two cities demonstrates a 90% reduction in storage and a 25% decrease in CPU utilization while maintaining equivalent performance. These results support an anticipated nationwide deployment across over 460 cities, expected to reduce operational costs by approximately 5,000 USD per month.",
+      "date": "2026-08-08",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.1145/3770855.3818309",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1145/3770855.3818309",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07369-6",
+      "title": "Improving futures market predictions with sentiment using a pre-trained robustly-optimized bidirectional encoder representations from transformers approach in China",
+      "authors": [
+        "Hu, W.",
+        "Zhang, X.",
+        "Billio, M.",
+        "Maillet, B.",
+        "Yuan, Z."
+      ],
+      "abstract": "",
+      "date": "2026-08-08",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07369-6",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07369-6",
+      "score": 40.0
+    },
+    {
+      "id": "optim-online-fa121a4ad285",
+      "title": "A Domain-Specific Harness for End-to-End Automation of Optimization Research",
+      "authors": [],
+      "abstract": "We present AutoOPT, a domain-specific harness for end-to-end automation of optimization research. AutoOPT organizes the discovery of optimal first-order methods into four stages: numerical design through the BnB-PEP methodology; symbolic discovery of the analytic description and a convergence proof through frontier large language models (LLMs); formal verification in the Lean 4 proof assistant; and human ... Read more",
+      "date": "2026-08-08",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/08/a-domain-specific-harness-for-end-to-end-automation-of-optimization-research/?utm_source=rss&utm_medium=rss&utm_campaign=a-domain-specific-harness-for-end-to-end-automation-of-optimization-research",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "score": 40.0
+    },
+    {
+      "id": "s2-048e9db75b83",
+      "title": "LENS-SFL: Learning-Driven Contracts Framework for Personalized Split Federated Learning under Strong Uncertainty",
+      "authors": [
+        "Jianfeng Lu",
+        "Yitian Huang",
+        "Yun Xin",
+        "Zhongbo Wu",
+        "Weigang Li",
+        "Guanghui Wen"
+      ],
+      "abstract": "Split Federated Learning (SFL) enables collaborative training of deep models by partitioning computation across distributed system components while preserving data locality at clients. Existing SFL systems typically rely on static split configurations or assume obedient clients with known capability distributions, which limits their effectiveness in heterogeneous environments. In practice, however, clients exhibit heterogeneous and privately held computational, communication, and data characteristics, and behave as rational and self-interested agents that strategically respond to server policies, rendering such assumptions invalid. In this paper, we propose LENS-SFL, a learning-driven framework for personalized SFL under strong incomplete information. LENS-SFL formulates personalized model splitting as an incentive-aware online learning problem, where the server jointly designs model split points and rewards as contract items. Through this contract-based abstraction, unobservable client heterogeneity is mapped to observable contract-selection behaviors, enabling the server to learn the latent client-type distributions purely from data, despite strategic client responses and the absence of prior knowledge. To support effective personalization, LENS-SFL integrates an online learning mechanism that adaptively optimizes contracts based on observed behavioral feedback. We show that the resulting learning framework guarantees behavior-consistent participation and voluntary client engagement regardless of the underlying client distribution, ensuring safe learning throughout the process. Furthermore, we establish a sublinear regret bound with respect to the complete-information oracle, demonstrating that the performance loss induced by learning vanishes asymptotically. Extensive experiments on benchmark datasets validate the effectiveness of LENS-SFL, showing that it achieves near-oracle model performance, exhibits stable learning dynamics under heterogeneous settings, and significantly outperforms static and non-adaptive baselines. These results show that transforming strategic client behaviors into learnable signals provides a principled and effective pathway toward robust and personalized SFL.",
+      "date": "2026-08-08",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1145/3770855.3817868",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1145/3770855.3817868",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07374-9",
+      "title": "Multi-Criteria traffic network equilibrium problems with flexible demands and capacity constraints of arcs",
+      "authors": [
+        "Xu, Y.",
+        "Ma, X.",
+        "Li, Y."
+      ],
+      "abstract": "",
+      "date": "2026-08-08",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07374-9",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07374-9",
+      "score": 30.0
+    },
+    {
+      "id": "crossref-10.1080-01605682.2026.2712971",
+      "title": "A multiobjective framework for optimising Home Health Care districts",
+      "authors": [
+        "Emiliano, W.",
+        "do Sameiro Carvalho, M.",
+        "Costa, L.",
+        "Molina Junior, V.",
+        "Dranka, G.",
+        "Telhada, J."
+      ],
+      "abstract": "",
+      "date": "2026-08-08",
+      "source": "Journal of the Operational Research Society",
+      "source_detail": "Journal of the Operational Research Society",
+      "url": "https://doi.org/10.1080/01605682.2026.2712971",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1080/01605682.2026.2712971",
+      "score": 30.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "cordis-101114748",
+      "title": "[HORIZON-SESAR-2022-DES-IR-01] NETWORK TBO: Network Trajectory Based Operations",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101114748",
+      "deadline": "2026-08-31",
+      "date": "2026-05-13",
+      "project_start": "2023-09-01",
+      "project_end": "2026-08-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "general-or"
+      ],
+      "description": "The NETWORK Trajectory based operations (NETWORK TBO) project proposes to validate TBO SESAR Solutions covers all aspects of Trajectory management processes involving – but not limited to - Network actors. It covers both planning and execution phases. The proposed SESAR Solutions, with an indication of the Technology Readiness Levels (with the associated EOCVM level) at the end of the project, are:\n            * Solution #1: TBO Planning and Impact on Execution. Taking as baseline FF-ICE/1 imple",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "cordis-101114748",
+      "title": "[HORIZON-SESAR-2022-DES-IR-01] NETWORK TBO: Network Trajectory Based Operations",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101114748",
+      "deadline": "2026-08-31",
+      "date": "2026-05-13",
+      "project_start": "2023-09-01",
+      "project_end": "2026-08-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "general-or"
+      ],
+      "description": "The NETWORK Trajectory based operations (NETWORK TBO) project proposes to validate TBO SESAR Solutions covers all aspects of Trajectory management processes involving – but not limited to - Network actors. It covers both planning and execution phases. The proposed SESAR Solutions, with an indication of the Technology Readiness Levels (with the associated EOCVM level) at the end of the project, are:\n            * Solution #1: TBO Planning and Impact on Execution. Taking as baseline FF-ICE/1 imple",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
