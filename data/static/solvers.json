@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09T07:56:59.353303+00:00",
+  "generated_at": "2026-08-10T08:46:10.369150+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1774,
+      "github_stars": 1778,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 154,
+      "github_open_issues": 151,
       "github_recent_prs": [
+        "Fix HighsRunData",
         "Create SECURITY.md for security policy",
         "Added `static_cast<Int>` to remove compiler warning in line 226 of `ipm/hipo/factorhighs/HybridSolveHandler.cpp`",
         "fix(presolve): clamp singleton row bound tolerance to machine epsilon",
-        "fix(presolve): prevent floating-point underflow in dynamism-scaled tolerances",
-        "`HighsRunData` now correct when presolve is not used, or no reductions are achieved"
+        "fix(presolve): prevent floating-point underflow in dynamism-scaled tolerances"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 624,
+      "github_stars": 628,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13872,
+      "github_stars": 13878,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1131,13 +1131,13 @@
       ],
       "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
       "github_stars": 6296,
-      "github_open_issues": 191,
+      "github_open_issues": 192,
       "github_recent_prs": [
+        "DOC: add user guide page for MATLAB and CVX users",
         "Make support function lifting solver-independent and defer it to canonicalization time",
         "Bump github/codeql-action/upload-sarif from 4.37.3 to 4.37.4",
         "Bump ossf/scorecard-action from 2.4.3 to 2.4.4",
-        "Bump github/codeql-action/upload-sarif from 4.37.1 to 4.37.3",
-        "Bump pypa/cibuildwheel from 4.1.0 to 4.1.1"
+        "Bump github/codeql-action/upload-sarif from 4.37.1 to 4.37.3"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1255,7 +1255,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1777,
+      "github_stars": 1778,
       "github_open_issues": 15,
       "github_recent_prs": [
         "Fix data-race global variables with atomics",
@@ -1318,14 +1318,14 @@
         "metaheuristic"
       ],
       "recent_changes": "More Solvery goodness! This time, we have spent a lot of our energy on the service module and on our documentation, especially regarding how solver services work. But we haven't forgotten about the so",
-      "github_stars": 1745,
-      "github_open_issues": 104,
+      "github_stars": 1746,
+      "github_open_issues": 105,
       "github_recent_prs": [
-        "chore: regenerate test model openapi",
-        "feat: add support for moveCountLimit",
-        "chore: return null when the solution is invalid in calculate score",
-        "docs: Document the model visualization contract (service-module + platform layers)",
-        "fix(bavet): close stale-activity race across all nodes"
+        "fix(bavet): prevent stale join+ifExists filtering on all cardinalities",
+        "chore: Only redeploy model with same registration key",
+        "deps: bump org.graalvm.buildtools:native-maven-plugin from 1.1.5 to 1.1.8 in the patch group",
+        "deps: bump the quarkus-patch group with 6 updates",
+        "deps: bump the actions group with 3 updates"
       ]
     },
     {
@@ -1448,14 +1448,14 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.31.1\n\n[Diff since v1.31.0](https://github.com/jump-dev/JuMP.jl/compare/v1.31.0...v1.31.1)\n\n\n**Merged pull requests:**\n- Revert #4032 because it is subject to hash collisions (#4205) (@odow)",
-      "github_stars": 2460,
-      "github_open_issues": 15,
+      "github_stars": 2461,
+      "github_open_issues": 12,
       "github_recent_prs": [
+        "[docs] add DocumenterCodeBlocks.jl",
         "[Containers] fix error when indexing with wrong number of arguments",
         "[docs] improve docstrings for getting various result attributes",
         "Fix formatting of return value in tests",
-        "Fix test of MOI.UnsupportedConstraint to use type instead of value",
-        "Fix formatting for latest JuliaFormatter version"
+        "Fix test of MOI.UnsupportedConstraint to use type instead of value"
       ]
     },
     {
