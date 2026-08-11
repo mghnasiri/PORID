@@ -1,0 +1,328 @@
+{
+  "date": "2026-08-11",
+  "generated_at": "2026-08-11T08:14:15.281333+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2608.09707",
+      "title": "Input convex neural networks as surrogates in mathematical optimisation",
+      "authors": [
+        "Yu Liu",
+        "Jan Kronqvist",
+        "Fabricio Oliveira"
+      ],
+      "abstract": "Embedding trained neural networks as surrogates within optimisation problems is an established practice in operations research. The prevailing approach uses feedforward neural networks (FNNs) with ReLU activations, whose piecewise-linear structure admits an exact but computationally intensive mixed-integer programming (MIP) reformulation as the networks grow. We advocate input convex neural networks (ICNNs) as structurally superior surrogates when the underlying response is approximately convex or concave. The convex architecture offers two computational advantages. First, the ICNN-MIP formulation tends to yield a tighter linear programming (LP) relaxation than its FNN-MIP counterpart, with no integrality gap in favourable instances. Second, ICNNs uniquely admit an LP-based reformulation via epigraph representations of ReLU activations, though this embedding is not always exact. When it is not, we exploit the properties of ICNNs to construct the strongest continuous relaxation over box domains, namely, the convex hull of the ICNN's graph, bounded below by the epigraph and above by the concave envelope; this construction is tractable under input convexity but hard for general ReLU networks. On this basis, we develop a branch-and-bound algorithm that builds this relaxation at each node, branches directly on input variables rather than intermediate variables as in MIP reformulations, and terminates at the root node whenever the epigraph embedding is valid. Case studies on humanitarian food aid, oil well routing, and wine blending show that ICNN surrogates match FNN accuracy and deliver gains in solve time and scalability, supporting ICNN as the default surrogate when the underlying function is convex, concave, or well-approximated as such.",
+      "date": "2026-08-10",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.09707v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.09707",
+      "arxiv_id": "2608.09707v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.09036",
+      "title": "Decision-Focused Learning in Network Interdiction Games",
+      "authors": [
+        "Luca M. Hartmann",
+        "Parinaz Naghizadeh"
+      ],
+      "abstract": "We study decision-focused learning (DFL) in shortest-path network interdiction (SPNI) games, a Stackelberg game where an interdictor (leader) strengthens the networks' arcs against attacks, while an evader (follower) who is uncertain about costs of attacking network arcs relies on a machine-learned predictor to identify the shortest path. While DFL is highly effective as an end-to-end optimization framework, we show that it faces a fundamental structural failure when employed in this game setting: its training objective admits a broad decision-equivalence class of cost estimators that achieve zero nominal loss yet fail under interdiction, reversing DFL's usual advantage over a naive prediction-focused learning (PFL) approach. To address this, we propose Adversarial DFL (A-DFL), which replaces nominal training samples with interdicted scenarios to collapse the harmful equivalence class. Experiments on synthetic and real-world networks confirm that A-DFL restores DFL's advantage in this game setting, enabling effective end-to-end optimization.",
+      "date": "2026-08-10",
+      "source": "arXiv",
+      "source_detail": "cs.GT",
+      "url": "http://arxiv.org/abs/2608.09036v1",
+      "tags": [
+        "cs.GT",
+        "network-optimization",
+        "stochastic",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.09036",
+      "arxiv_id": "2608.09036v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.09775",
+      "title": "AirFlow: Context Preserving and Multi-Rate State Modeling for Air Quality Forecasting",
+      "authors": [
+        "Fan Yang",
+        "Nan Chen",
+        "Yijie Dong",
+        "Yuchen Zhang",
+        "Wei Zhang"
+      ],
+      "abstract": "Accurate air quality forecasting is essential for public health and urban environmental management, but remains challenging because pollutant channels differ in periodicity and distribution drift, while their concentration trajectories contain both multi-scale dependencies and rapid changes. Recent methods have improved spatial dependency learning and meteorological covariate modeling. However, pollutant channels are still passed through the same normalization rule and temporal backbone, using a shared latent representation for channel-specific distributions and changes at different rates. To address this limitation, we propose AirFlow, a pollutant-aware dual-stream framework that operates on station multivariate observations without additional graph propagation or predefined signal decomposition. Specifically, AirFlow designs two novel blocks: (1) a statistic-guided normalization routing mechanism that selects a normalization path for each pollutant according to its 24-hour autocorrelation and distribution drift; and (2) a hierarchical dual-stream state model that combines multi-scale state space propagation with learnable response coefficients, where gated bidirectional cross-attention exchanges information and adaptively fuses the resulting representations. Experiments on real-world data from multiple cities show that AirFlow achieves the best performance in 34 of 36 metrics comparisons, with reductions of up to 11.11% root mean square error over the state-of-the-art baseline. AirFlow also requires only 0.0483M parameters and 0.0215G FLOPs, achieving high forecasting accuracy with low computational overhead.",
+      "date": "2026-08-10",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.09775v1",
+      "tags": [
+        "cs.AI",
+        "decomposition",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.09775",
+      "arxiv_id": "2608.09775v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.09752",
+      "title": "Disentangling Co-Occurring Retinal Pathologies with Saliency-Guided Sparse Expert Routing",
+      "authors": [
+        "Nagur Shareef Shaik",
+        "Jeongwoo Park",
+        "Yeong-Jin Kim",
+        "Jaeuk Jung",
+        "Hyunjung Oh",
+        "Dong Hye Ye"
+      ],
+      "abstract": "Retinal fundus images frequently exhibit multiple co-occurring pathologies, yet standard deep learning classifiers apply static, identical computation to every image regardless of the underlying disease distribution. We propose a novel architecture that resolves this via sparse conditional computation, pairing a Guided Context Gating (GCG) spatial attention front-end with a sparsely-routed Mixture-of-Experts (MoE) block operating over feature tokens. Crucially, this routing yields an interpretable, data-driven decomposition. Expert allocation is significantly disease-dependent (p < 0.001), with the healthy Normal state and morphologically distinct pathologies (e.g., ERM, AMD) isolating to dedicated experts. On a five-class, patient-disjoint 5-fold cross-validation benchmark, our model achieves 0.912 +/- 0.008 macro AUC and 0.653 +/- 0.014 macro F1. Furthermore, Grad-CAM++ and post-MoE t-SNE visualizations confirm that expert routing aligns with localized lesions and geometrically maps co-occurring cases between their constituent clusters, positioning sparse MoE as an interpretable approach to multi-disease retinal screening.",
+      "date": "2026-08-10",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2608.09752v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "healthcare-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.09752",
+      "arxiv_id": "2608.09752v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.09483",
+      "title": "Hierarchical rank-evolving representation for physics-informed neural networks",
+      "authors": [
+        "Ruoyang Su",
+        "Xi-Le Zhao",
+        "Kun Li",
+        "Liang Li"
+      ],
+      "abstract": "Recently, tensor-based physics-informed neural networks (T-PINNs) have received increasing attention. However, existing T-PINNs still face a fundamental challenge: they mainly rely on pre-specified low-rank tensor decompositions with manually tuned ranks, which limits their ability to capture the underlying structures of multivariate solution functions and hinders their practical deployment. To address this challenge, we propose a hierarchical rank-evolving (abbreviated as HRE) representation for multivariate functions, which endows us to faithfully capture the underlying structure of the targeted multivariate function accompanying with automatic rank determination. Concretely, in the hierarchical design of HRE representation, the target multivariate function is decomposed as a small-scale inner tensor with a set of univariate functions along each mode, where a customized tensor network decomposition can be readily deployed to capture the underlying structure of the small-scale inner tensor. In HRE representation, the crucial hyperparameters, ranks, can be adaptively revealed during the decomposition, freeing us from manual rank tuning and making HRE practically applicable to real-world problems. Besides, we build the HRE-PINNs correspondingly. Extensive numerical experiments, including high-dimensional static problems (Helmholtz equation and Poisson equation), nonlinear time-dependent problems (Klein-Gordon equation), and complex fluid-dynamics problems (flow mixing equation and Navier-Stokes equation), demonstrate that HRE-PINNs consistently outperform existing state-of-the-art approaches in terms of accuracy.",
+      "date": "2026-08-10",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.09483v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.09483",
+      "arxiv_id": "2608.09483v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2024.1450",
+      "title": "Learning to Simulate from Heavy-Tailed Distribution via Diffusion Model",
+      "authors": [
+        "Liu, H.",
+        "Zhu, T.",
+        "Jia, N.",
+        "He, J.",
+        "Zheng, Z."
+      ],
+      "abstract": "Generative AI Learns to Sample Extreme Events\n                  Many rarest events often carry highest stakes, such as a market crash, a supply-chain rupture, or an extreme clinical outcome. Today’s leading generative AI models (e.g., diffusion models) have shown excessive power to simulate high-dimensional distributions, but they are incapable of capturing rare events in the heavy tails of a distributions. Liu, Zhu, Jia, He, and Zheng show that this mismatch is structural rather than incidental: standard diffusion models systematically fail to capture tail behavior, both when learning from heavy-tailed data and when generating from it. In Learning to Simulate from Heavy-Tailed Distribution via Diffusion Model, the authors pinpoint why standard diffusion models break down on heavy-tailed targets and propose a Student-t-based heavy-tailed diffusion (SHD) framework that fixes both ends of the pipeline. Across synthetic Pareto data, vector autoregressive systems, queueing networks, bike-sharing demand, and stock equity returns, SHD beats Gaussian-noise baselines, particularly in the tails where operations research decisions hinge.",
+      "date": "2026-08-10",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2024.1450",
+      "tags": [
+        "healthcare-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2024.1450",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.09738",
+      "title": "Stochastic Multistage Constellation Reconfiguration Problem: Stochastic Dual Dynamic Integer Programming Approach",
+      "authors": [
+        "Brycen D. Pearl",
+        "Hang Woon Lee"
+      ],
+      "abstract": "Observation tasking is critical to satellite operations, enabling observation of planetary phenomena, orbital debris monitoring, and space domain awareness. To improve the effectiveness of satellite operations, orbital maneuverability is introduced as a leading-edge concept of operations within constellation reconfigurability for response to dynamic events. Previous investigations regarding constellation reconfigurability consist of deterministic mission environments, in which the formulations consider a priori knowledge of the environment; however, observation objectives inherently involve uncertainty at any given time. As such, scheduling satellite operations must account for uncertainties to ensure adequate observation tasking. In response, we present a stochastic variant of the Multistage Constellation Reconfiguration Problem (MCRP) which is solved using Stochastic Dual Dynamic Integer Programming (SDDiP). We additionally explore other stochastic problem-solving techniques for solution quality comparison. To demonstrate each solution method, two computational experiments with stochastic target properties are conducted. The first concerns random orbital targets, and the second concerns simulated hurricanes. The results of the experiments demonstrate the effectiveness of the SDDiP solution approach over other stochastic problem-solving methods. Overall, the stochastic MCRP accounts for target stochasticity while obeying visible time windows and maneuver feasibility.",
+      "date": "2026-08-10",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.09738v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.09738",
+      "arxiv_id": "2608.09738v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.09513",
+      "title": "Faster Algorithms for Multimarginal Optimal Transport",
+      "authors": [
+        "Brandon Augustino",
+        "Yue Sun",
+        "Atithi Acharya",
+        "Shouvanik Chakrabarti",
+        "Junhyung Lyle Kim",
+        "Shree Hari Sureshbabu",
+        "Charlie Che"
+      ],
+      "abstract": "We study algorithms for approximating the multimarginal optimal transport (MOT) distance, a generalization of the classic optimal transport distance, between $m$ discrete probability distributions each supported on at most $n$ points. We give a classical algorithm that computes a coupling between these marginals whose expected transportation cost is within an additive $\\varepsilon > 0$ of the MOT distance in time $O(m^2 n^m \\varepsilon^{-1}\\mathrm{polylog}(m,n,\\varepsilon^{-1}))$. This is, to our knowledge, the first bound for general MOT problems with simultaneous linear dependence on the dimension $n^m$ and on the accuracy parameter $\\varepsilon^{-1}$, improving the prior state of the art.   On the quantum side, we give two algorithms that achieve speedups in dimension, though with worse accuracy dependence than classical approaches. First, we construct a quantum projected subgradient method for estimating the MOT distance within an additive $\\varepsilon >0$ with runtime $O( m^3 n^{\\frac{m}{2}+1} \\varepsilon^{-2} \\mathrm{polylog}(m,n,\\varepsilon^{-1}))$. This algorithm works with the linear programming dual of the MOT problem, and does not return a coupling. We also give a quantum multimarginal Sinkhorn algorithm for entropy-regularized MOT. This algorithm returns an implicit description of an approximately optimal coupling with runtime $O(m^8n^{\\frac{m+1}{2}} \\varepsilon^{-5} \\mathrm{polylog}(m,n,\\varepsilon^{-1})))$ after the usual reduction from entropic MOT to unregularized MOT. We also record query lower bounds: for any precision $\\varepsilon<1/2$, randomized classical algorithms require $Ω(n^m/(1+\\varepsilon n))$ queries and quantum algorithms require $Ω(\\sqrt{n^m/(1+\\varepsilon n)})$ queries.",
+      "date": "2026-08-10",
+      "source": "arXiv",
+      "source_detail": "quant-ph",
+      "url": "http://arxiv.org/abs/2608.09513v1",
+      "tags": [
+        "quant-ph",
+        "linear-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.09513",
+      "arxiv_id": "2608.09513v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.09921",
+      "title": "GENCO - A Unified Neural Solver Embedded in a Development Framework for Steady-State Grid Analysis",
+      "authors": [
+        "Alban Puech",
+        "Matteo Mazzonelli",
+        "Tamara R. Govindasamy",
+        "Mangaliso Mngomezulu",
+        "Héctor Maeso-García",
+        "Thomas Tolhurst",
+        "Javad Bayazi",
+        "Ali Moeini",
+        "Naomi Simumba",
+        "Celia Cintas",
+        "David Nelischer",
+        "Romeo Kienzler",
+        "Jonas Weiss",
+        "Anna Varbella",
+        "Florian Dörfler",
+        "Gabriela Hug",
+        "Martin Mevissen",
+        "Juan Bernabé-Moreno",
+        "François Mirallès",
+        "Hendrik F. Hamann",
+        "Etienne Vos",
+        "Thomas Brunschwiler"
+      ],
+      "abstract": "Foundation models are transforming business workflows and boosting productivity, yet they remain largely absent from engineering domains such as power system analysis, where strict physical consistency must be enforced.   We present GENCO (GEometric Neural Corrective Optimizer), a unified neural solver for steady-state transmission grid analysis that handles power flow (PF), optimal power flow (OPF), and state estimation (SE) within a single architecture and shared network representation. To support advances in neural power system solvers, we introduce the open-source GridFM Development Framework, which standardizes synthetic data generation and training in a low-code environment. We also release large-scale datasets with millions of PF and OPF scenarios across diverse grid topologies to support reproducible benchmarking.   We evaluate GENCO on the PFDelta and OPFData benchmarks against state-of-the-art neural solvers and classical solvers, including Newton-Raphson and IPOPT, as well as on real-world Hydro-Québec SCADA data. For large-scale PF, GENCO recovers the full AC operating state, including voltage magnitudes and reactive power that DC-PF cannot provide, while matching DC-PF-level active power-balance residuals. It achieves up to 30x speedups over Newton-Raphson at only 2x the runtime of DC-PF. For OPF, it achieves up to 85x speedups over IPOPT while improving feasibility, optimality, and runtime over DC-OPF. For SE, GENCO is more robust than classical weighted least squares to noisy measurements and network parameter errors, and always returns a high-quality estimate even when weighted least squares fails to converge.   Together, the unified architecture and development framework provide a new approach to large-scale steady-state grid analysis, lowering the barrier to entry for power system engineers and marking a step toward Grid Foundation Models.",
+      "date": "2026-08-10",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.09921v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.09921",
+      "arxiv_id": "2608.09921v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Ipopt"
+      ]
+    },
+    {
+      "id": "arxiv-2608.09902",
+      "title": "DSLE: A Learning Environment for Dark Souls Boss Encounters",
+      "authors": [
+        "Derin Gezgin",
+        "Jim O'Connor",
+        "Tanner Goodwin",
+        "Gary B. Parker"
+      ],
+      "abstract": "We introduce the Dark Souls Learning Environment (DSLE), a containerized platform that presents all 22 boss encounters of Dark Souls: Remastered as game-playing agent benchmarks through a Gymnasium-style interface. DSLE combines real-time combat, high-dimensional visual input, and sparse terminal rewards, with each environment step being a real action executed against the running game. To support controlled comparison, we define DSLE-5, a representative five-boss subset, spanning a melee fight, a spatially constrained arena, an environmental-hazard fight, a multi-target fight, and a fast final-boss fight, that we recommend as the starting suite for agents built on DSLE. On DSLE-5 we evaluate a random policy, an expert system, an evolutionary baseline, and PPO and DQN agents trained from visual input. The expert system and the evolutionary baseline each defeat the Asylum Demon, the game's tutorial boss (63% and 43% peak win rates), but none of the five methods defeats the other four DSLE-5 bosses; PPO and DQN show no measurable learning (at most 0.33% win rate on the tutorial boss, 0% elsewhere) within a budget that already costs tens of wall-clock hours per run. A broader study running the evolutionary baseline across all 22 encounters under advantaged all level-50 stats yields wins on only a handful of additional early-game bosses and leaves the rest unwon. The failure cases range from sub-10-second deaths in cramped, multi-target encounters to minute-long stalemates that inflict almost no damage, and we report them through survival time and damage dealt rather than win rate alone.",
+      "date": "2026-08-10",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.09902v1",
+      "tags": [
+        "cs.AI",
+        "metaheuristics",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.09902",
+      "arxiv_id": "2608.09902v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "cordis-101114748",
+      "title": "[HORIZON-SESAR-2022-DES-IR-01] NETWORK TBO: Network Trajectory Based Operations",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101114748",
+      "deadline": "2026-08-31",
+      "date": "2026-05-13",
+      "project_start": "2023-09-01",
+      "project_end": "2026-08-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "general-or"
+      ],
+      "description": "The NETWORK Trajectory based operations (NETWORK TBO) project proposes to validate TBO SESAR Solutions covers all aspects of Trajectory management processes involving – but not limited to - Network actors. It covers both planning and execution phases. The proposed SESAR Solutions, with an indication of the Technology Readiness Levels (with the associated EOCVM level) at the end of the project, are:\n            * Solution #1: TBO Planning and Impact on Execution. Taking as baseline FF-ICE/1 imple",
+      "score": 30.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "cordis-101114748",
+      "title": "[HORIZON-SESAR-2022-DES-IR-01] NETWORK TBO: Network Trajectory Based Operations",
+      "type": "opportunity",
+      "subtype": "project",
+      "institution": "European Commission",
+      "location": "EU",
+      "url": "https://cordis.europa.eu/project/id/101114748",
+      "deadline": "2026-08-31",
+      "date": "2026-05-13",
+      "project_start": "2023-09-01",
+      "project_end": "2026-08-31",
+      "source": "CORDIS/OpenAIRE",
+      "tags": [
+        "funded-project",
+        "eu",
+        "general-or"
+      ],
+      "description": "The NETWORK Trajectory based operations (NETWORK TBO) project proposes to validate TBO SESAR Solutions covers all aspects of Trajectory management processes involving – but not limited to - Network actors. It covers both planning and execution phases. The proposed SESAR Solutions, with an indication of the Technology Readiness Levels (with the associated EOCVM level) at the end of the project, are:\n            * Solution #1: TBO Planning and Impact on Execution. Taking as baseline FF-ICE/1 imple",
+      "score": 30.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}

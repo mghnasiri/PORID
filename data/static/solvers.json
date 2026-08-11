@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T08:46:10.369150+00:00",
+  "generated_at": "2026-08-11T08:14:14.910053+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1778,
+      "github_stars": 1779,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 151,
+      "github_open_issues": 154,
       "github_recent_prs": [
-        "Fix HighsRunData",
-        "Create SECURITY.md for security policy",
-        "Added `static_cast<Int>` to remove compiler warning in line 226 of `ipm/hipo/factorhighs/HybridSolveHandler.cpp`",
-        "fix(presolve): clamp singleton row bound tolerance to machine epsilon",
-        "fix(presolve): prevent floating-point underflow in dynamism-scaled tolerances"
+        "Add two new presolve techniques in combining probing and dual fixing",
+        "Update CONTRIBUTING.md",
+        "Changes to presolve initial sweep",
+        "Keep implications between restarts",
+        "Fix HighsRunData"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13878,
+      "github_stars": 13882,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,7 +569,7 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 116,
+      "github_open_issues": 117,
       "github_recent_prs": [
         "routing: test AllowedVehicles in Java and .Net",
         "glop: fix windows build",
@@ -1130,14 +1130,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
-      "github_stars": 6296,
-      "github_open_issues": 192,
+      "github_stars": 6298,
+      "github_open_issues": 193,
       "github_recent_prs": [
+        "Bump pypa/cibuildwheel from 4.1.1 to 4.2.0",
+        "Bump github/codeql-action/upload-sarif from 4.37.4 to 4.37.6",
         "DOC: add user guide page for MATLAB and CVX users",
         "Make support function lifting solver-independent and defer it to canonicalization time",
-        "Bump github/codeql-action/upload-sarif from 4.37.3 to 4.37.4",
-        "Bump ossf/scorecard-action from 2.4.3 to 2.4.4",
-        "Bump github/codeql-action/upload-sarif from 4.37.1 to 4.37.3"
+        "Bump github/codeql-action/upload-sarif from 4.37.3 to 4.37.4"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1318,14 +1318,14 @@
         "metaheuristic"
       ],
       "recent_changes": "More Solvery goodness! This time, we have spent a lot of our energy on the service module and on our documentation, especially regarding how solver services work. But we haven't forgotten about the so",
-      "github_stars": 1746,
-      "github_open_issues": 105,
+      "github_stars": 1748,
+      "github_open_issues": 108,
       "github_recent_prs": [
-        "fix(bavet): prevent stale join+ifExists filtering on all cardinalities",
-        "chore: Only redeploy model with same registration key",
-        "deps: bump org.graalvm.buildtools:native-maven-plugin from 1.1.5 to 1.1.8 in the patch group",
-        "deps: bump the quarkus-patch group with 6 updates",
-        "deps: bump the actions group with 3 updates"
+        "feat: Ensure enterprise profile is active on Maven deploy plugin exec…",
+        "feat: Maven plugin progress upload for model descriptor",
+        "Draft/transport type aware location",
+        "test: disable a flaky test",
+        "fix(bavet): prevent stale join+ifExists filtering on all cardinalities"
       ]
     },
     {
@@ -1383,7 +1383,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2500,
+      "github_stars": 2502,
       "github_open_issues": 376,
       "github_recent_prs": [
         "URL Checker: resolve failure checking PLY documentation",
@@ -1451,11 +1451,11 @@
       "github_stars": 2461,
       "github_open_issues": 12,
       "github_recent_prs": [
+        "[docs] NLPModels-based solvers",
+        "Add Algencan to solvers",
+        "docs: fix some typos",
         "[docs] add DocumenterCodeBlocks.jl",
-        "[Containers] fix error when indexing with wrong number of arguments",
-        "[docs] improve docstrings for getting various result attributes",
-        "Fix formatting of return value in tests",
-        "Fix test of MOI.UnsupportedConstraint to use type instead of value"
+        "[Containers] fix error when indexing with wrong number of arguments"
       ]
     },
     {
