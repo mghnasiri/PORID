@@ -1,0 +1,314 @@
+{
+  "date": "2026-08-12",
+  "generated_at": "2026-08-12T08:25:10.035206+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2608.10881",
+      "title": "Enhanced Filtering Algorithms for the Euclidean Traveling Salesperson Problem and its variants in Constraint Logic Programming",
+      "authors": [
+        "Alessandro Bertagnon",
+        "Marco Gavanelli"
+      ],
+      "abstract": "The Traveling Salesperson Problem (TSP) is one of the best-known problems in computer science and arises in many engineering applications, such as smart vehicles and intelligent transportation systems. In the \"Euclidean\" case, each node is defined by its coordinates in the plane and distances are computed using the Euclidean metric. In the Constraint Programming (CP) literature, the Euclidean TSP is typically addressed by computing the full distance matrix and treating it as a general case; however this approach ignores the geometric information carried by the points' coordinates. In this work, we propose new filtering algorithms, implemented in Constraint Logic Programming (CLP), that exploit such geometric information to achieve stronger constraint propagation than existing approaches. Moreover, we show how this methodology can be extended to other Euclidean variants of the TSP, including the Euclidean Generalized Traveling Salesperson Problem (EGTSP), which is relevant in practical routing and logistics applications. Experimental results demonstrate the computational advantages of the proposed approach.",
+      "date": "2026-08-11",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.10881v1",
+      "tags": [
+        "cs.AI",
+        "vehicle-routing",
+        "supply-chain",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.10881",
+      "arxiv_id": "2608.10881v1",
+      "score": 55.0
+    },
+    {
+      "id": "s2-25e2dc2573e5",
+      "title": "Goal-directed synergistic fusion navigation for robust localization under cross-scenario spatial uncertainty",
+      "authors": [
+        "Jiaqiao Tang",
+        "Kai Shen",
+        "Tengfei Wang",
+        "Bo Liu",
+        "Qinglan Tu"
+      ],
+      "abstract": "A goal-directed synergistic fusion navigation framework is essential for enabling accurate and reliable navigation of autonomous unmanned systems across diverse operational scenario environments, especially under challenging conditions such as Global Navigation Satellite System (GNSS)-denied and visual-degraded/Light Detection and Ranging (LiDAR)-degraded environments. However, it is almost inevitable to encounter spatial uncertainty arising from the spatiotemporal heterogeneity of perceptual information, which may lead to the degradation and the unreliability of navigation. To address this issue, this article proposes a synergistic fusion navigation method against spatial uncertainty inspired by human navigation. Within a unified framework, the system transforms multi-source sensor observations into navigation landmarks, and an online quantitative assessment of sensor availability analysis is performed by analyzing their effective quantity and distribution to define the Degree of Sufficiency (DoS). Based on this, we further design an adaptive state estimation strategy that dynamically adjusts the filtering and optimization processes according to the DoS. To improve the fusion performance, Degree of Observability (DoO)-driven information credibility analysis, opinion dynamics modeling, and factor graph optimization are integrated for the optimal fusion of multi-source navigation information. Real-world experiments show that in complex cross-scenario environments, the proposed method achieves localization Root Mean Square (RMS) errors ranging from 0.32 m to 0.97 m over test trajectories spanning 419.91–1429.80 m. It outperforms State of the Art (SOTA) algorithms and ablation models in both accuracy and reliability.",
+      "date": "2026-08-11",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1186/s43020-026-00208-w",
+      "tags": [
+        "network-optimization",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1186/s43020-026-00208-w",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.11200",
+      "title": "ConVAWG: A Retrieval-Grounded Framework for Controlled Synthetic Dialogue Generation in Violence Against Women and Girls",
+      "authors": [
+        "Chen Lyu",
+        "Xingwei Tan",
+        "Simon Cullen",
+        "Shelley Wilson",
+        "Lois Arthurs",
+        "Arshad Jhumka",
+        "Gabriele Pergola"
+      ],
+      "abstract": "Synthetic dialogue generation offers a way to study conversational dynamics in sensitive domains where real data are difficult to access, release, or annotate. The underlying abuse may occur online or offline: threats and coercion can appear directly in messages, while behaviours such as surveillance, isolation, stalking, and physical violence may be planned, disclosed, or referred to conversationally. Privacy and legal constraints make it difficult the release of large-scale real conversation datasets; existing work has mostly focused on sentence-level toxicity of online abuses, leaving a gap in modelling abuse as a relational and temporally unfolding phenomenon. In this work, we focus on modelling Violence Against Women and Girls (VAWG) scenarios as multi-turn dialogues. We introduce ConVAWG, a retrieval-grounded framework for generating CPS-aligned synthetic VAWG chat dialogues. ConVAWG builds scenarios from persona seeds, demographic patterns reported by the UK Office for National Statistics, official crime definitions, and retrieved Domestic Homicide Review cases; converts them into hierarchical event timelines; generates multi-scene role-play dialogues; and applies targeted activation-steered toxicity control to appropriate utterances. We release over 6,000 multi-turn dialogue events across 200 scenarios with rich scenario-, event-, and turn-level metadata. Extensive human evaluation, LLM-as-Judge assessment, ablations, and downstream tasks show strong dialogue quality and domain fidelity.",
+      "date": "2026-08-11",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2608.11200v1",
+      "tags": [
+        "cs.CL",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.11200",
+      "arxiv_id": "2608.11200v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.11114",
+      "title": "Two-stage Odd Residual Flows for Mean-Preserving Probabilistic Time Series Forecasting",
+      "authors": [
+        "Kiran Madhusudhanan",
+        "Christian Klötergens",
+        "Lars Schmidt-Thieme",
+        "Vijaya Krishna Yalavarthi"
+      ],
+      "abstract": "Probabilistic forecasting plays an essential role in risk-sensitive decision-making, particularly in long-horizon settings. However, existing approaches often face a fundamental trade-off between distributional flexibility and accurate mean prediction. Traditional parametric methods, such as Mean Variance Estimation (MVE), can suffer from degraded point accuracy when trained under joint Negative Log-Likelihood (NLL) objectives, while modern-flexible generative models, including Normalizing Flows and Diffusion Models, typically rely on costly Monte Carlo sampling and may yield suboptimal mean estimates. To address this limitation, we propose Two-stage Odd Residual Flows (TORF), a framework that decouples mean forecasting from uncertainty estimation. In the first stage, a pre-trained deterministic model is used to produce an accurate mean prediction. In the second stage, a Restricted Normalizing Flow, with strictly odd functions learns flexible residual distributions around the point forecast, guaranteeing mean preservation from the first stage without sampling. Experiments show that TORF achieves state-of-the-art deterministic accuracy (NMAE) while providing strong density estimation performance (CRPS) on short and long-horizon forecasting.",
+      "date": "2026-08-11",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.11114v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.11114",
+      "arxiv_id": "2608.11114v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.11050",
+      "title": "3D Weighted Geometric Graph Neural Networks for Sheep Facial Pain Assessment",
+      "authors": [
+        "Alam Noor",
+        "Luis Almeida",
+        "Mohamed Daoudi"
+      ],
+      "abstract": "Deep learning systems perform mainly within the 2D for a single image domain and take the face as a single-dimension representation, losing sight of the 3D anatomy of sheep and cross-landmark spatial relationships that are intrinsic to the clinically proven Sheep Pain Facial Expression Scale (SPFES). This paper presents the \\textbf{3D Sheep Pain Facial Expression System (3D-SPFES)}, a novel, monocular depth-aware geometric graph neural network system that integrates each SPFES facial landmark, such as the ears, eyes, and nose, into 3D Euclidean space estimated from a single RGB camera by using VideoDepthAnything, thus preventing the need for specialized depth hardware. Each landmark node includes a feature vector containing its 3D spatial coordinates, estimated surface normal, and facial attribute class embedding. Edges linked to nodes are assigned weights based on an aggregate metric that combines both Euclidean distance and surface co-planarity in a 3D space. A Weighted Geometric Graph Neural Network (WG-GNN) studies this graph using $\\mathcal{K} = 3$ geometry-aware message-passing layers enhanced by a scaled dot-product attention method that selectively enhances anatomically relevant inter-landmark messages. The resultant node embeddings are combined into $\\mathcal{O} = 3$ pain-level clusters and integrated into a Normalized Pain Score (NPS) within the range of $[0, 100%]$ a confidence-weighted, SPFES-derived scoring method.",
+      "date": "2026-08-11",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2608.11050v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.11050",
+      "arxiv_id": "2608.11050v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2608.10954",
+      "title": "Evidence-Grounded Trustworthy Multimodal Reasoning and Evaluation Benchmark in Complex Urban Scenes",
+      "authors": [
+        "Zhaoyang Wei",
+        "Bowen Jiang",
+        "Xumeng Han",
+        "Jiashu Li",
+        "Xuehui Yu",
+        "Yuling Liu",
+        "Guorong Li",
+        "Zhenjun Han",
+        "Jianbin Jiao"
+      ],
+      "abstract": "While Multimodal Large Language Models (MLLMs) demonstrate impressive performance in benign scenarios, their cognitive reliability deteriorates significantly in complex scenes under adverse conditions. In these settings, models often rely on implicit inference without sufficient visual evidence, leading to a disconnect between perception and reasoning. Meanwhile, existing outcome-oriented benchmarks evaluate only final predictions and fail to diagnose failures in the underlying reasoning process. To address this gap, the authors propose AD2-Bench, which introduces a Hierarchical Visual Diagnosis framework that decomposes reasoning into a structured Chain of Evidence (CoE). This fine-grained diagnosis reveals that robust multimodal reasoning fundamentally depends on accurate evidence acquisition. Building on this perspective, the authors formulate reasoning from a probabilistic viewpoint and identify two primary causes of reasoning failure: Spatial Ambiguity, where models fail to distinguish target objects from background clutter, resulting in localization errors; and Semantic Uncertainty, where degraded visual features lead to incorrect semantic interpretation, resulting in understanding errors. To overcome these evidence deficiencies, they further propose Evidence-grounded Visual Reasoning (EGVOR), which replaces implicit reasoning with the explicit generation of Evidence Atoms - structured spatial-semantic triplets that enforce tight alignment between localization and semantic understanding. The model is trained through a hierarchical curriculum that progresses from reflective supervision construction to reinforcement learning, where reducing reasoning variance is explicitly rewarded. Extensive experiments demonstrate that EGVOR substantially improves reasoning stability under adverse conditions, providing a more robust framework for trustworthy multimodal cognition.",
+      "date": "2026-08-11",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2608.10954v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.10954",
+      "arxiv_id": "2608.10954v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.10827",
+      "title": "MIRA: Medical Image Reflection for Agentic Diagnosis",
+      "authors": [
+        "Shengzhi Wang",
+        "Jun Yang",
+        "Kai Wu",
+        "Xiaozhong Ji",
+        "Yiwen Ye",
+        "Ziyang Chen",
+        "Mingliang Xiong",
+        "Wen Fang",
+        "Mingqing Liu",
+        "Mengyuan Xu",
+        "Miaoxuan Shan",
+        "Caiyan Liu",
+        "Bin He",
+        "Qingwen Liu"
+      ],
+      "abstract": "Medical visual agents can use tools to inspect images and retrieve external knowledge, but indiscriminate tool use may introduce noisy or misleading evidence. Reliable diagnosis therefore requires not only acquiring additional observations, but also verifying whether tool actions are necessary and whether the resulting evidence supports the current hypothesis. We introduce MIRA (Medical Image Reflection for Agentic Diagnosis), a medical visual diagnostic framework for autonomous evidence search and reflective verification. MIRA dynamically invokes image-processing operations, including zooming, grounding, pointing, rotation, and measurement, as well as web search, while evaluating the relevance and consistency of the acquired evidence. We develop MIRA through a two-stage training strategy. First, a tool-augmented Monte Carlo Tree Search data engine explores diverse diagnostic hypotheses and jointly verifies visual grounding accuracy and semantic consistency to construct supervised fine-tuning trajectories. Second, reinforcement learning further improves decision-making through online reflective principle evolution: failure cases are distilled into candidate principles, and only principles that improve held-out rollout rewards are retained. Across nine medical visual reasoning benchmarks, MIRA achieves an average score of 64.73, improving its Qwen3-VL-8B backbone by 7.44 points. It also increases useful tool-use judgments from 56.2% to 73.8% and reduces harmful judgments from 8.9% to 1.6%. Qualitative analyses show that MIRA can re-examine evidence, correct premature conclusions, and adapt its tool-use strategy. Project page: https://MIRA-VL.github.io/",
+      "date": "2026-08-11",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2608.10827v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.10827",
+      "arxiv_id": "2608.10827v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.10804",
+      "title": "BPG: Balancing Plasticity and Generalization for Domain Incremental Learning",
+      "authors": [
+        "Qiang Wang",
+        "Songlin Dong",
+        "Shaokun Wang",
+        "Jizhou Han",
+        "Xiang Song",
+        "Chenhao Ding",
+        "Yuhang He",
+        "Yihong Gong"
+      ],
+      "abstract": "Deep neural networks excel in various tasks but struggle to generalize across evolving data distributions, leading to significant performance degradation under domain shifts. Domain incremental learning (DIL) addresses this challenge by enabling models to continuously adapt while retaining prior knowledge. Among existing DIL approaches, the parameter-isolation paradigm achieves state-of-the-art performance. However, these methods often adopt a one-size-fits-all approach to adapt to new domains, resulting in either insufficient learning capacity or redundant parameters. In this work, we propose BPG, a unified framework that addresses both challenges through two complementary components: BPG-Adapter, which dynamically determines each domain's adapter hidden dimension based on domain-specific feature separability, and BPG-Inference, a soft domain mixture strategy that integrates multiple domain-specific models at test time, mitigating domain ID misselection. Experimental results on DomainNet, CDDB, and CORe50 demonstrate that BPG consistently outperforms uniform adapter-based approaches and hard domain selection strategies, achieving state-of-the-art average accuracy while reducing forgetting to as low as 0.22% on DomainNet.",
+      "date": "2026-08-11",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2608.10804v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.10804",
+      "arxiv_id": "2608.10804v1",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2025.2047",
+      "title": "New Approximation Guarantees for the Inventory Staggering Problem",
+      "authors": [
+        "Alon, N.",
+        "Segev, D."
+      ],
+      "abstract": "Optimizing Warehouse Space: Algorithmic Advances in Inventory Staggering\n                  Since the mid-1960s, the inventory staggering problem has challenged supply chain experts and logisticians aiming to minimize peak storage requirements across multiple periodic replenishment policies. Despite its practical prevalence in warehousing, aerospace, and production planning, foundational computational questions have remained largely unresolved.\n                  In their newly accepted paper in Operations Research, Noga Alon and Danny Segev provide major methodological advances. They develop novel algorithmic techniques that significantly improve currently known approximation guarantees for synchronizing inventory replenishments. By leveraging combinatorics and number theory, the authors design polynomial-time approximation schemes for multiple operational settings—including nested and pairwise coprime instances—resolving several long-standing open questions. Furthermore, their research uncovers surprising impossibility results, proving that localized, groupwise synchronization strategies cannot guarantee global optimality. These findings expand the analytical toolbox for warehouse stock control, offering robust frameworks to reduce peak inventory costs.",
+      "date": "2026-08-11",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2025.2047",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2025.2047",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2025.1527",
+      "title": "A Trilevel Programming Model and Nested Generalized Benders Decomposition for the Bus Line Contracting Problem",
+      "authors": [
+        "Hu, Z.",
+        "Liu, Z.",
+        "Huang, D.",
+        "Wang, S.",
+        "Mo, P."
+      ],
+      "abstract": "Contracting bus services to private operators has become a prominent strategy for improving efficiency and reducing costs in urban transit systems. However, existing research largely overlooks the fact that different bus lines exhibit heterogeneity in demand, operating cost, and profitability, which critically affects contracting decisions. This study investigates how the government can strategically determine which bus lines to contract in order to minimize total social cost while accounting for the behavioral responses of the private operator and passengers. We formulate this decision-making problem as a trilevel programming model that integrates three layers of strategic interaction: line contracting by the government, frequency setting by a profit-maximizing private operator, and route choice by passengers under a transit equilibrium assignment model. To solve the trilevel model exactly, we develop a nested generalized Benders decomposition algorithm with logic-based cuts, and we further enhance it through a relaxation-based acceleration strategy. The computational experiments demonstrate the effectiveness of the proposed algorithm and reveal valuable managerial insights; selectively contracting bus lines outperforms several alternative contracting schemes, and the resulting system equilibrium is highly sensitive to exogenous parameters. These findings highlight the importance of coordinated, system-level regulation in the design of public-private partnerships for transit planning.\n                  History: Accepted by Andrea Lodi, Area Editor for Design &amp; Analysis of Algorithms–Discrete.\n                  Funding: This research was supported by the National Natural Science Foundation of China [Grants T2525020, 72371221] and the Postgraduate Research &amp; Practice Innovation Program of Jiangsu Province [Grant KYCX24_0462].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2025.1527 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2025.1527 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-08-11",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2025.1527",
+      "tags": [
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2025.1527",
+      "score": 45.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}

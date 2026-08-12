@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T08:14:14.910053+00:00",
+  "generated_at": "2026-08-12T08:25:09.664143+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1779,
+      "github_stars": 1781,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 154,
+      "github_open_issues": 152,
       "github_recent_prs": [
+        "Reduce strong branching budget before two restarts",
         "Add two new presolve techniques in combining probing and dual fixing",
         "Update CONTRIBUTING.md",
         "Changes to presolve initial sweep",
-        "Keep implications between restarts",
-        "Fix HighsRunData"
+        "Keep implications between restarts"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13882,
+      "github_stars": 13889,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,7 +569,7 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 117,
+      "github_open_issues": 118,
       "github_recent_prs": [
         "routing: test AllowedVehicles in Java and .Net",
         "glop: fix windows build",
@@ -604,7 +604,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 1007,
+      "github_stars": 1008,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -1130,14 +1130,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
-      "github_stars": 6298,
-      "github_open_issues": 193,
+      "github_stars": 6299,
+      "github_open_issues": 194,
       "github_recent_prs": [
+        "Modify type annotation for constraints argument of Problem constructor.",
         "Bump pypa/cibuildwheel from 4.1.1 to 4.2.0",
         "Bump github/codeql-action/upload-sarif from 4.37.4 to 4.37.6",
         "DOC: add user guide page for MATLAB and CVX users",
-        "Make support function lifting solver-independent and defer it to canonicalization time",
-        "Bump github/codeql-action/upload-sarif from 4.37.3 to 4.37.4"
+        "Make support function lifting solver-independent and defer it to canonicalization time"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,13 +1319,13 @@
       ],
       "recent_changes": "More Solvery goodness! This time, we have spent a lot of our energy on the service module and on our documentation, especially regarding how solver services work. But we haven't forgotten about the so",
       "github_stars": 1748,
-      "github_open_issues": 108,
+      "github_open_issues": 105,
       "github_recent_prs": [
-        "feat: Ensure enterprise profile is active on Maven deploy plugin exec…",
+        "chore: introduce structural component to score",
+        "feat(neighborhoods): iterator-based paradigm",
+        "feat: Ensure enterprise profile is active on Maven deploy plugin execution",
         "feat: Maven plugin progress upload for model descriptor",
-        "Draft/transport type aware location",
-        "test: disable a flaky test",
-        "fix(bavet): prevent stale join+ifExists filtering on all cardinalities"
+        "Draft/transport type aware location"
       ]
     },
     {
@@ -1448,14 +1448,14 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.31.1\n\n[Diff since v1.31.0](https://github.com/jump-dev/JuMP.jl/compare/v1.31.0...v1.31.1)\n\n\n**Merged pull requests:**\n- Revert #4032 because it is subject to hash collisions (#4205) (@odow)",
-      "github_stars": 2461,
-      "github_open_issues": 12,
+      "github_stars": 2462,
+      "github_open_issues": 13,
       "github_recent_prs": [
+        "[docs] update to DocumenterCodeBlocks@1.2.0",
         "[docs] NLPModels-based solvers",
         "Add Algencan to solvers",
         "docs: fix some typos",
-        "[docs] add DocumenterCodeBlocks.jl",
-        "[Containers] fix error when indexing with wrong number of arguments"
+        "[docs] add DocumenterCodeBlocks.jl"
       ]
     },
     {
