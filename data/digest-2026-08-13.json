@@ -1,0 +1,301 @@
+{
+  "date": "2026-08-13",
+  "generated_at": "2026-08-13T08:28:01.803434+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2608.12220",
+      "title": "SCOUT: Unlocking Enhanced Spatial Reasoning via Structured Chain-of-Thought and Multi-Objective Process Reward",
+      "authors": [
+        "Zile Zhou",
+        "Huining Yuan",
+        "Weichen Zhang",
+        "Xinlei Chen",
+        "Xiao-ping Zhang"
+      ],
+      "abstract": "Existing Vision-Language Models (VLMs) exhibits a critical bottleneck in robust spatial reasoning. Recent reinforcement learning (RL) methods aim to close this gap with verifiable outcomes, yet they suffer from poor credit assignment across intermediate reasoning steps. Concurrently, structured reasoning approaches overlook the critical depth perception necessary for comprehensive 3D understanding. To address these challenges, we propose SCOUT (Structured Chain-Of-Thought Utilizing Process-Supervised RL Training). Specifically, we design a structured Chain-of-Thought (CoT) framework that explicitly models 3D environmental perception to ensure robust spatial understanding and reasoning. Furthermore, we introduce a novel RL algorithm featuring multi-objective process rewards and a tailored advantage estimation method, facilitating fine-grained credit assignment across distinct segments of the reasoning trajectory. To support our framework, we develop SCOUT-24k, a structured spatial reasoning CoT dataset synthesized through a customized pipeline. Extensive evaluations demonstrate that SCOUT-3B improves upon baseline models by 16.85% and 6.3% on general spatial benchmarks and complex spatial reasoning tasks respectively. Notably, our larger SCOUT-7B even outperforms GPT-4o by a margin of 4.28%. Moreover, despite being trained exclusively on single image, SCOUT-7B exhibits robust out-of-domain generalization to multi-image and video scenarios. These empirical results render SCOUT as a critical step towards next generation of spatially-aware VLMs.",
+      "date": "2026-08-12",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2608.12220v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.12220",
+      "arxiv_id": "2608.12220v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.12290",
+      "title": "Beyond Trial-and-Error: Agentic Optimization for Image-to-Video Adherence",
+      "authors": [
+        "Aman Tyagi",
+        "Hemanth Boinpally",
+        "Jonathan Chen",
+        "Douglas Gebert",
+        "Steven Hickson"
+      ],
+      "abstract": "Modern black-box Image-to-Video (I2V) models offer powerful capabilities in automated content creation, yet their lack of fine-grained control and reliability presents significant challenges in professional workflows. Their inherent stochasticity causes minor variations in textual prompts or hyperparameters to yield drastically different outputs often necessitating inefficient, brute-force trial-and-error processes. To address these limitations, we introduce the ``Agentic Self-Improvement\" framework, which reframes video synthesis into a closed-loop, goal-directed optimization. Our framework systematically navigates the generation parameter space using a novel two-stage approach. In the first stage, an iterative prompt optimization loop uses a multimodal Large Language Model (mLLM) to refine the input prompt. This refinement implements two automated evaluations: Davidsonian Scene Graph (DSG) queries ensure semantic adherence, and Common Mistake Questions (CMQ) for artifact detection. At the second stage, we use Bayesian optimization to efficiently co-optimize stochastic seeds and CFG scales. This search is guided by a suite of quality metrics, including the novel Video-Text Adherence (VTA) score derived from the DSG and CMQ evaluations. Our framework significantly outperforms unguided search methods: in human preference studies, videos generated via our agentic approach were strongly preferred over baseline outputs, achieving win rates up to 69\\%. This work provides a practical and extensible methodology for enhancing the predictability and control of state-of-the-art video generation models, moving the field beyond speculative curiosities toward reliable, production-ready tools.",
+      "date": "2026-08-12",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2608.12290v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.12290",
+      "arxiv_id": "2608.12290v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.12035",
+      "title": "How Far from Clinical Deployment? Evaluating the Complete Unsupervised Domain Adaptation Pipeline in Medical Imaging",
+      "authors": [
+        "Yiheng Xiong",
+        "Luisa Gallée",
+        "Daniel Santak Wolf",
+        "Heiko Hillenhagen",
+        "Michael Götz"
+      ],
+      "abstract": "Deploying unsupervised domain adaptation (UDA) in clinical practice requires choosing which algorithm to use and which of its trained models to ship. However, the deployment (target) domain is unlabeled, so models cannot be evaluated directly on it, leaving it unclear which to select. We address this by evaluating the complete UDA pipeline, considering both adaptation and label-free selection together. Our study covers eleven clinically relevant cross-domain scenarios from nine medical imaging datasets, with ten UDA algorithms and 13 label-free selection methods (validators), evaluating over 80,000 trained models in total. By this, we find that a capable adapted model usually exists, but identifying it without target labels is difficult: the validator-selected models leave a large and structural target performance gap to the best available one, with no evaluated validator consistently reliable. Towards closing it, we explore two strategies, ensembling and a small target-labeling budget; both narrow this gap but do not close it entirely. Overall, deployable UDA depends on the complete pipeline; addressing the less explored selection step could bring much of current UDA closer to clinical use.",
+      "date": "2026-08-12",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2608.12035v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.12035",
+      "arxiv_id": "2608.12035v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.12007",
+      "title": "Dual-Model Sentiment Analysis of Consumer Reviews in the Retail Coffee Sector Using Machine Learning and Deep Learning Approaches",
+      "authors": [
+        "Muntasir Hasan Kanchan",
+        "Md. Alamgir Hossain",
+        "Md. Samiul Islam",
+        "Muhammad Masud Tarek"
+      ],
+      "abstract": "Consumer reviews play an important role in shaping brand perception and business strategies, particularly in service-driven industries such as retail coffee. This study presents a comparative sentiment analysis framework for Starbucks customer reviews using classical machine learning and deep learning approaches. The dataset, collected from ConsumerAffairs, contains more than 700 reviews and was analyzed through preprocessing and exploratory data analysis to identify temporal and geographic patterns. Sentiment labels were generated by binarizing star ratings, with ratings of 4 and 5 classified as positive and ratings of 1 to 3 as negative. The resulting dataset was substantially imbalanced toward negative sentiment. Five machine learning classifiers, including Logistic Regression, Support Vector Machine (SVM), Decision Tree, Random Forest, and Naive Bayes, were evaluated alongside five deep learning models: LSTM, RNN, Bidirectional LSTM, GRU, and CNN. Model performance was assessed using accuracy, precision, recall, and F1-score. SVM achieved the highest accuracy among the machine learning models at 91.0 percent, while Bidirectional LSTM showed the strongest performance among the deep learning models and demonstrated good generalization on unseen data. The findings also show that class imbalance negatively affected positive sentiment recall across several models. Overall, this study provides a comparative evaluation of machine learning and deep learning approaches for real-world consumer sentiment analysis and highlights the importance of appropriate model selection and preprocessing for customer experience analytics in the retail coffee sector.",
+      "date": "2026-08-12",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.12007v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.12007",
+      "arxiv_id": "2608.12007v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.12224",
+      "title": "Faster Exponential Algorithms for Multi-Machine Scheduling Problems",
+      "authors": [
+        "Anubhav Dhar",
+        "Anita Dürr",
+        "Ahmed Ghazy",
+        "Jakob Greilhuber",
+        "Karol Węgrzycki"
+      ],
+      "abstract": "Minimizing the weighted completion times ($P \\mid \\mid Σw_j C_j$) and weighted number of tardy jobs ($P \\mid \\mid Σw_j U_j$) on multiple identical machines are two classical NP-hard scheduling problems. As shown by Lenté et al. (2014), both problems can be solved in time ${O}^{\\star}(3^n)$. In this paper, we improve these bounds to ${O}(2.755^n)$ and ${O}^{\\star}(2^n)$, respectively. Our algorithm for $P \\mid \\mid Σw_j C_j$ exploits the meet-in-the-middle paradigm and an efficient data structure answering linear programming queries. Additionally, when the number of machines is at most $6$, we show that the running time for $P \\mid \\mid Σw_j C_j$ can further be improved.   Both scheduling problems are generalizations of the classical Bin Packing problem, which can be solved in ${O}^{\\star}(2^n)$ time. Improving this running time is an important open question. We show that, when assuming the Asymptotic Rank Conjecture (ARC), Bin Packing can be solved in time ${O}((2-\\varepsilon)^n)$ for some $\\varepsilon >0$. Our algorithm makes use of two main ingredients: the recent ${O}((2-\\varepsilon)^n)$-time algorithm of Nederlof et al. [SICOMP'23] for Bin Packing when the number of bins is a fixed constant, and the ${O}((2-\\varepsilon)^n)$-time algorithm of Björklund et al. [SODA'25] for special instances of the $3$-way Partitioning problem when assuming ARC.",
+      "date": "2026-08-12",
+      "source": "arXiv",
+      "source_detail": "cs.DS",
+      "url": "http://arxiv.org/abs/2608.12224v1",
+      "tags": [
+        "cs.DS",
+        "linear-programming",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.4230/LIPIcs.ESA.2026.53",
+      "arxiv_id": "2608.12224v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.11831",
+      "title": "Kernel Methods for Learning Operators with Multiple Inputs and Outputs",
+      "authors": [
+        "Adrien Weihs",
+        "Chunyang Liao",
+        "Jingmin Sun",
+        "Hayden Schaeffer"
+      ],
+      "abstract": "Learning mappings between infinite-dimensional objects is a central challenge in scientific machine learning. We introduce a general kernel-based encoder-decoder framework for operator learning that separates observation, representation, learning, and reconstruction. We develop this framework for multi-input, multi-output operator learning, where operators map between products of potentially distinct function spaces. Our approximation theory shows that, although the number of inputs and outputs can increase, the convergence rate is governed by the most challenging constituent approximation problem rather than the overall problem dimension. The framework leads to practical kernel methods with closed-form training and inference, combining mathematical tractability with computational efficiency. We further specialize the approach to multiple operator learning by introducing KernelMO, a family of kernel methods with complementary operator-valued and product-space formulations. Across five families of parametric partial differential equations, the proposed methods achieve competitive or state-of-the-art predictive accuracy while reducing training and inference costs relative to neural operator architectures and deep learning based models, offering an efficient and lightweight alternative.",
+      "date": "2026-08-12",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.11831v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.11831",
+      "arxiv_id": "2608.11831v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.12267",
+      "title": "Digital Twin Networks for 6G Wireless Systems: Architecture, Enabling Technologies, Intelligent Control, and Open Challenges",
+      "authors": [
+        "Charalampos Oikonomidis",
+        "Emmanouel T. Michailidis",
+        "Nikolaos I. Miridakis"
+      ],
+      "abstract": "The transition to the Sixth Generation (6G) of mobile networks requires proactive and deterministic orchestration to satisfy the stringent key performance indicators of future services, including ultra-reliable low-latency communications, enhanced mobile broadband, and massive machine-type communications. Digital Twin Networks (DTN) have recently emerged as a foundational technology to meet these demands, offering real-time and high-fidelity virtual replicas of the physical network. Although the current literature explores DTNs conceptually, a gap exists in the coverage of technical classification and computational feasibility evaluations. This survey addresses this gap by formally categorizing state-of-the-art DTN architectures into passive monitoring twins and active control twins. We provide an in-depth evaluation of their underlying enabling technologies, specifically ray-tracing, reconfigurable intelligent surfaces, artificial intelligence, and mobile edge computing. Importantly, this paper conducts a detailed mathematical and computational complexity analysis of state-of-the-art solutions to assess hardware scalability and inference bottlenecks. These architectures are then linked to various forthcoming 6G use cases, including smart cities, Industry 5.0, healthcare, and smart grids. Finally, we synthesize crucial unresolved challenges, highlighting graphics processing unit hardware limitations, cyber-physical actuation latency, and the need for a zero-trust security paradigm, offering strategic research directions to realize the unified internet of everything.",
+      "date": "2026-08-12",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2608.12267v1",
+      "tags": [
+        "eess.SY",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.12267",
+      "arxiv_id": "2608.12267v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.12256",
+      "title": "SelectLight: Learning to Select Signal Plans Generated by Distributed Model Predictive Control for Urban Traffic Networks",
+      "authors": [
+        "Lyuzhou Luo",
+        "Chaopeng Tan",
+        "Zhengyong Gao",
+        "Hong Zhu",
+        "Andrea D'Ariano",
+        "Keshuang Tang"
+      ],
+      "abstract": "Coordinated traffic signal control across urban networks must adapt to changing demand while satisfying operational constraints. Multi-objective distributed model predictive control (DMPC) can construct feasible signal plans online, but prescribed rules for selecting among trade-off solutions cannot learn from realized closed-loop outcomes. We propose SelectLight, which implements post-optimization selection by allowing a multi-agent reinforcement learning (MARL) policy to choose directly from plans generated online by DMPC. At each control update, state-pruned multi-objective dynamic programming (SP-MODP) evaluates plans with a Newellian point--spatial queue model and returns a bounded set of mutually nondominated candidate signal plans for total queueing delay, peak queue accumulation, and total number of stops. A topology-aware attention policy trained with independent proximal policy optimization (IPPO) selects one unmodified plan from each variable-size set. This confines learning to candidate selection, preserves the prescribed signal timing constraints, and leaves the selected plan and its predicted objective trade-offs available for inspection. Experiments on two 28-intersection SUMO networks show that SelectLight achieves the best delay-related performance and that its advantage widens with demand. At twice the baseline demand, it reduces queueing delay and waiting time by 5.57% and 6.44%, respectively, relative to the strongest baseline. SelectLight also incurs the lowest transfer loss under every tested demand shift. With a 120 s prediction horizon, the per-intersection 99th-percentile SP-MODP solution time is 5.408 ms, well below the 5 s control interval.",
+      "date": "2026-08-12",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2608.12256v1",
+      "tags": [
+        "eess.SY",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.12256",
+      "arxiv_id": "2608.12256v1",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2025.1992",
+      "title": "Online Rack Placement in Large-Scale Data Centers: Online Sampling Optimization and Deployment",
+      "authors": [
+        "Baxi, S.",
+        "Cummings, K.",
+        "Jacquillat, A.",
+        "Lo, S.",
+        "McDonald, R.",
+        "Mellou, K.",
+        "Menache, I.",
+        "Molinaro, M."
+      ],
+      "abstract": "Online Rack Placement in Large-Scale Data Centers: Online Sampling Optimization and Deployment\n                  Data centers have grown into major components of global supply chains. This paper develops, deploys, and assesses an optimization algorithm to improve how large-scale data centers place incoming server racks dynamically while balancing space, power, cooling, and reliability constraints. Poor placement decisions can leave valuable resources stranded, leading to high costs and reduced operating resilience. This paper formulates a large-scale online discrete optimization model and develops a new online sampling optimization (OSO) algorithm that anticipates future demand by repeatedly simulating future arrivals and reoptimizing decisions over time. Theoretical results provide performance guarantees, and computational results show its benefits against state-of-the-art reoptimization methods. The system was implemented as a decision-support tool and deployed across Microsoft’s global fleet of data centers. Using postdeployment data, the paper shows that adoption of the tool reduced power stranding by one to three percentage points. At Microsoft’s scale, these improvements translate into substantial financial savings and meaningful reductions in greenhouse gas emissions, demonstrating the real-world impact of optimization in cloud infrastructure management.",
+      "date": "2026-08-12",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2025.1992",
+      "tags": [
+        "supply-chain",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2025.1992",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.12087",
+      "title": "Parallel Machine Scheduling with a Singler Server and Loading-Unloading Operations",
+      "authors": [
+        "Keramat Hasani",
+        "Frank Werner"
+      ],
+      "abstract": "This paper investigates a parallel machine scheduling problem featuring a single common server responsible for both loading and unloading operations. Each job consists of a unit-time loading operation, non-preemptive processing on one of \\(m\\) identical machines, and a unit-time unloading operation executed by the same server. The objective is to minimize the makespan. Unlike classical loading-only common-server models, our setting requires the server to handle an unloading operation immediately after a job's processing phase concludes. We prove that the corresponding decision problem is strongly NP-complete when the number of machines is given as part of the input. Furthermore, we analyse the worst-case performance of the List Scheduling (LS) and Longest Processing Time (LPT) heuristics. For three machines, we establish that Algorithm LS achieves an approximation ratio of at most \\(5/2\\). For an arbitrary fixed \\(m \\ge 3\\), we show that the general LS bound approaches \\(4-3/m\\) as the number of jobs grows, whereas for Algorithm LPT, we prove the finite-instance ratio $3-\\frac{2}{m}+\\frac{(m-1)(m-2)}{mn}.$ Thus, for each fixed \\(m\\), the LPT bound approaches \\(3-2/m\\) as the number of jobs grows.",
+      "date": "2026-08-12",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.12087v1",
+      "tags": [
+        "math.OC",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.12087",
+      "arxiv_id": "2608.12087v1",
+      "score": 45.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
