@@ -1,0 +1,308 @@
+{
+  "date": "2026-08-14",
+  "generated_at": "2026-08-14T08:22:49.186936+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2608.13059",
+      "title": "Optimizing Multi-Stakeholder Fairness in Computed Tomography Appointment Scheduling with Predicted Scan and Reporting Duration",
+      "authors": [
+        "Ludovico Ambrosi",
+        "Chandra Bortolotto",
+        "Sara Cambiaghi",
+        "Luisa Carone",
+        "Davide Duma",
+        "Lorenzo Preda"
+      ],
+      "abstract": "Scheduling follow-up Computed Tomography (CT) examinations requires balancing two competing objectives: assigning patients as close as possible to their recommended examination dates while ensuring an equitable distribution of radiologists' workload. Existing approaches optimize scanner utilization or patient waiting times, overlooking reporting activities and the need to balance fairness across multiple stakeholders. This paper proposes a predictive-prescriptive framework for fairness-aware follow-up CT scheduling. Patient-specific Machine Learning (ML) models are first developed to predict both examination and reporting durations. These predictions are then embedded into a multi-objective Mixed-Integer Linear Programming (MILP) model that simultaneously minimizes deviations from patients' preferred examination dates and balances radiologists' reporting workloads through a lexicographic min-max fairness criterion. We derive a dominance reduction property within an $ε$-constraint framework that substantially reduces the number of optimization problems required to generate the Pareto frontier. Computational experiments based on data from a real-world emergency radiology department show that allowing patients a scheduling flexibility of only one to two days is sufficient to substantially improve workload equity among radiologists while preserving timely access to follow-up examinations. The proposed dominance reduction strategy eliminates most $ε$-constraint evaluations without affecting the Pareto frontier. Finally, evaluating predictive models through downstream optimization regret demonstrates that XGBoost provides the most effective support for scheduling decisions, outperforming models that achieve lower prediction errors according to conventional predictive metrics.",
+      "date": "2026-08-13",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.13059v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming",
+        "scheduling",
+        "ml-for-or",
+        "healthcare-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.13059",
+      "arxiv_id": "2608.13059v1",
+      "score": 70.0
+    },
+    {
+      "id": "arxiv-2608.13465",
+      "title": "Concept Drift Detection and Adaptive Retraining of Malware Classification Models",
+      "authors": [
+        "Christofer Washington Berruz Chungata",
+        "Martin Jurecek",
+        "Katerina Potika",
+        "William B. Andreopoulos",
+        "Mark Stamp"
+      ],
+      "abstract": "Concept drift refers to changes over time in the statistical properties of data, as compared to the data that was used to train a learning model. Machine learning models for malware detection or classification are particularly susceptible to performance degradation caused by concept drift, as attackers constantly modify existing malware. In this chapter, we analyze two machine learning-based approaches to automated concept drift detection-a novel approach based on One-Class Support Vector Machines (OCSVM) and a previously-studied technique based on Minibatch K-Means (MK-Means). For comparison we also consider Maximum Mean Discrepancy (MMD), a statistical technique for detecting changes in multidimensional data. We conduct an extensive series of experiments comparing the effectiveness of four learning models, namely, Multilayer Perceptron, Random Forest, Support Vector Machines, and eXtreme Gradient Boosting. For each of these models, we consider three distinct scenarios: A static scenario where no model retraining occurs, a periodic scenario where models are constantly retrained irrespective of concept drift, and a drift-aware scenario where models are only retrained when concept drift is detected. Under the drift-aware scenario, we analyze the tradeoff between accuracy and training efficiency using Pareto Front analysis. We find that all three concept drift detection techniques achieve classification accuracy comparable to periodic retraining, while offering substantially greater efficiency in terms of the number of models that must be retrained. In addition, drift-aware retraining based on our OCSVM technique generally outperforms the MK-Means and MMD approaches. Overall, these results provide strong evidence that we can accurately detect concept drift in malware classification models.",
+      "date": "2026-08-13",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.13465v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.13465",
+      "arxiv_id": "2608.13465v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.13345",
+      "title": "Rules or Character? Scaling Laws for AI Safety Design",
+      "authors": [
+        "Satoshi Takahashi",
+        "Nobuji Kouno",
+        "Masaaki Komatsu",
+        "Ryuji Hamamoto"
+      ],
+      "abstract": "Artificial Intelligence (AI) safety systems combine character shaping (e.g., Reinforcement Learning from Human Feedback [RLHF], Constitutional AI), which modifies behavioral distributions at training time, with rule enforcement (e.g., output filters, safety classifiers), which blocks harmful outputs at inference time, yet little formal analysis exists on how their optimal balance should change as deployment scales increase. We introduce a stylized comparative-statics model that parameterizes safety design as a resource allocation alpha in [0,1] between these two approaches, incorporating scale-dependent filter degradation, common-mode failures, and character fragility -- the risk that shaped behavior degrades or collapses under novel conditions. Under a multiplicative Pareto damage model, we derive closed-form expected harm and supplement it with tail-risk (CVaR) analysis via Monte Carlo simulation. Across three scenarios (optimistic, moderate, pessimistic), the optimal alpha* is interior or at the rules-only boundary and shifts weakly toward character shaping as deployment scale T grows, from negligible (Delta alpha* = +0.01) to pronounced (Delta alpha* = +0.21) depending on scenario. The dominant parameter is the baseline character fragility rate p^(0)_frag, which shifts alpha* by 0.50 across its range -- far exceeding the effect of tail severity, filter quality, or common-mode failure probability. CVaR and expected-harm optima converge at large T. These results suggest that safety architecture decisions depend less on deployment scale per se than on the reliability of character shaping under distributional shift.",
+      "date": "2026-08-13",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.13345v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.13345",
+      "arxiv_id": "2608.13345v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.13215",
+      "title": "History-informed Lagrangian Neural Networks",
+      "authors": [
+        "Tianshuo Zhang",
+        "Xianglei Xing",
+        "Wenzhe Zhai",
+        "Jia Gao",
+        "He Cao"
+      ],
+      "abstract": "Forecasting the long-horizon evolution of mechanical systems from position-only observations is a pivotal yet difficult task, as hidden velocities and trajectory-specific physical properties must be inferred simultaneously. Although physics-guided neural networks like Lagrangian Neural Networks (LNNs) guarantee physical plausibility, they generally require complete state inputs and lack adaptability to changing system parameters. To break these limitations, we introduce History-informed Lagrangian Neural Networks (HiLNN). Grounded in the insight that temporal position sequences implicitly encode underlying dynamics, HiLNN employs a recurrent encoder to extract a latent context from history. This context not only reconstructs the unobserved initial velocity but also adaptively modulates the mass matrix, potential energy, and damping coefficients of a structured Lagrangian system. By leveraging a differentiable RK4 rollout scheme, the entire pipeline is optimized end-to-end under multi-step trajectory supervision and energy-consistency regularization. Empirical evaluations across conservative, dissipative, and heterogeneous variable-parameter systems show that HiLNN delivers superior long-term prediction accuracy and maintains precise energy profiles compared to state-of-the-art baselines. The source code is publicly available at https://github.com/yingtian22/History-informed-LNN.",
+      "date": "2026-08-13",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.13215v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.13215",
+      "arxiv_id": "2608.13215v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.13419",
+      "title": "Distributed and Dynamic Hub Network Operation Planning in a Hyperconnected Less-Than-Truckload Operating System",
+      "authors": [
+        "Tiankuo Zhang",
+        "Jihye Jung",
+        "Paria Nourmohammadi",
+        "Benoit Montreuil",
+        "Alan Erera",
+        "Sahrish Jaleel Shaikh"
+      ],
+      "abstract": "The less-than-truckload (LTL) industry plays a vital role in enhancing the efficiency and sustainability of logistics systems, as LTL shipments offer greater consolidation opportunities than full-truckload shipments. Despite of this flexibility, the average cost of LTL shipments remains considerably higher due to less efficient operations and highly fragmented networks of small and medium-sized carriers. Building on our ongoing effort to develop a distributed and dynamic logistics hub network system grounded in the Physical Internet (PI) principles of modular containers and open resource sharing, this study focuses specifically on inter-hub and in-hub operations, with cooperation among multiple regional hub networks. Therefore, a shipment may traverse multiple cooperating hub networks. With respect to each hub network each shipment enters, it is defined by its expected arrival time at the entry hub and its latest arrival time at the exit hub. Based on the defined shipment information, we design a set of multi-hub operation planning protocols for distributed hub operators. In their operating networks, operators use our smartly designed protocol separately to plan in-hub shipments' assignments to destination-specific trailers and inter-hub trailers' dispatch schedules. With carefully designed interconnections between hub networks, the aggregated hub network system is well-positioned to achieve cooperative outcomes and fulfill shipment requests. We evaluate the effectiveness of the proposed protocol through a simulation-based experiment under multiple scenarios in an operator's multi-hub network. Overall, this research improves the practicality and robustness of PI-based networks and supports greater cooperation among hub networks toward more efficient and sustainable logistics systems.",
+      "date": "2026-08-13",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.13419v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.13419",
+      "arxiv_id": "2608.13419v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.13087",
+      "title": "Sampling Luck Masquerades as Allocation Gain: Auditing Test-Time Budget Allocation for Neural Combinatorial Optimization",
+      "authors": [
+        "Jinhyung Bae"
+      ],
+      "abstract": "Neural combinatorial optimization (NCO) solvers report the best of many sampled solutions per instance, and the sample count is, by convention, identical for every instance. Whether a non-uniform allocation of a fixed total budget would buy anything has not been measured. We measure it, and we audit the measurement itself.   First, on in-distribution workloads the allocation headroom is not detectable. Across three pretrained solvers (POMO, AM, SymNCO) on uniform TSP-100, an oracle allocation computed and evaluated on the same stored samples reports a 2.2-2.6% gain with intervals excluding zero; measured out of sample the same gain is indistinguishable from zero (0.457, 0.015, -0.512 percent). Following the customary in-sample procedure, all three solvers would have supported a published 2%-level gain that does not exist. We calibrate this bias against an instance-wise null in which the true gain is zero by construction; over the ranges we test it does not shrink with more samples or more instances.   Second, the same correction that removes the phantom gains preserves a real one. Under distribution shift (a workload mixing uniform and clustered instances), a pre-registered confirmatory experiment finds that allocation guided by held-out sample statistics improves best-of-k by 11.5% (AM, primary endpoint; 95% CI [7.4, 19.7]) and 12.0% (SymNCO, replication) at equal evaluation budget, with the signal-acquisition cost not charged; a pre-registered negative control (POMO, an order of magnitude more robust to shift) shows -0.3% [-0.7, 0.24]. The gain exceeds a frozen distribution-label baseline by 4.2 points [1.9, 7.7]. An exploratory policy charging a 20-sample probe against the same budget retains 3.4% (AM) and 4.6% (SymNCO).   We give a correction procedure and a reporting checklist, and release all data, code, and the pre-registration record.",
+      "date": "2026-08-13",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.13087v1",
+      "tags": [
+        "cs.LG",
+        "vehicle-routing",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.13087",
+      "arxiv_id": "2608.13087v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.13060",
+      "title": "VALG: An Agentic System for ML Theory Research",
+      "authors": [
+        "Dechen Zhang",
+        "Xuan Tang",
+        "Xinxiang Yin",
+        "Xingwu Chen",
+        "Jian Qian",
+        "Difan Zou"
+      ],
+      "abstract": "Machine learning theory studies learning procedures through mathematical setups in which the data model, training protocol, oracle access, loss, metric, and randomness define the phenomenon that a theorem is meant to explain. Solving an open problem therefore requires the problem formulation, theorem target, and proof mechanism to be developed in concert. Researchers formulate hypotheses, test them through preliminary theoretical or empirical analysis, and refine both assumptions and proofs. We investigate whether this process can be organized as an autonomous agentic workflow for ML theory research.   We develop VALG, an agentic system that combines multi-level Verification, Adaptive formulation of Learning-theory problems, and Graph-structured proof development. Within each source-relative theorem branch, VALG maintains a fixed mathematical specification, checks the theorem-level composition of a typed proof-dependency graph, and constructs and reviews local proofs in dependency order. When a proof attempt fails, VALG identifies whether the obstruction lies in a derivation, the proof structure, or the theorem formulation and routes the next attempt accordingly. Formulation-level obstructions initiate an explicitly related variant or relaxation, preserving the mathematical relation between the resulting theorem and the source problem.   We evaluate VALG on nine subproblems from five COLT 2026 open problems. Two runs produce internally finalized theorem candidates that match the scope of their source briefs; the remaining seven yield restricted-method results, special cases, or conditional theorems. These case studies show how VALG keeps source-scope matches, relaxations, conditional results, and blocked attempts mathematically distinct. VALG is open source at https://github.com/DechenZhang/VALG-ML-Theory-Agent.",
+      "date": "2026-08-13",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.13060v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.13060",
+      "arxiv_id": "2608.13060v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.12760",
+      "title": "Genetic Fuzzy System-based Control for Final Approach of Spacecraft Rendezvous and Proximity Operations",
+      "authors": [
+        "Daegyun Choi",
+        "Donghoon Kim",
+        "Henzeh Leeghim"
+      ],
+      "abstract": "In-space servicing has been receiving great attention to extend the operation of spacecraft with defective components. This requires rendezvous and proximity operations for a chaser to provide service to a target. This work constructs a fuzzy inference system-based controller for the chaser to reach the cooperative target on a circular orbit in the final approach phase while minimizing the energy consumption of the chaser. The offline training process performed by a genetic algorithm deals with multiple initial relative positions of the chaser, and the trained controller is validated using a testing environment with disturbances, which differs from the training scenarios.",
+      "date": "2026-08-13",
+      "source": "arXiv",
+      "source_detail": "physics.space-ph",
+      "url": "http://arxiv.org/abs/2608.12760v1",
+      "tags": [
+        "physics.space-ph",
+        "metaheuristics",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.12760",
+      "arxiv_id": "2608.12760v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.12688",
+      "title": "Stochastic Mixed-Integer Optimization of Dynamic Electricity Tariffs with Consumer Protection",
+      "authors": [
+        "Ananya Kale",
+        "Mohit Apte",
+        "Chhaya Gosavi"
+      ],
+      "abstract": "Day-ahead residential tariffs must be posted before demand is observed. Aggressive high prices can cut peaks in simulation, but they can also raise customer bills. This paper measures how much peak reduction is lost when a tariff design problem is required to keep revenue near a flat-tariff baseline and to limit bill increases. Using half-hourly data from 5,566 Low Carbon London households (167.8 million validated readings), we estimate quasi-experimental price response against the standard-tariff comparison group, form bootstrap demand scenarios, and solve stochastic mixed-integer programs with HiGHS. On all 73 eligible held-out test days, a segment-protected stochastic tariff reduces simulated peak demand by 2.29% on average (95% day-bootstrap CI [2.11, 2.48]), with revenue change -2.26% and mean worst-segment bill increase 2.48%. Removing the segment bill cap raises peak reduction only to 2.37%, while the worst segment bill increase rises to 6.81%: in this sample, substantial average protection costs little peak-shaving performance. The same schedules leave a household 95th-percentile bill increase of 8.61% (CVaR95 14.76%), so segment-average caps do not bound household tails. We report the full price-of-protection frontier under consistent household simulation and compare segment protection with a representative-household (tail-aware) variant: the latter cuts household p95 from 8.61% to 7.05% while changing mean peak reduction only from 2.29% to 2.28%. All optimized outcomes are model-based counterfactuals under an opt-in trial; wholesale costs are unavailable, so we do not optimize profit.",
+      "date": "2026-08-13",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.12688v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.12688",
+      "arxiv_id": "2608.12688v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "HiGHS"
+      ]
+    },
+    {
+      "id": "arxiv-2608.13428",
+      "title": "RAIL: An Automatic Classifier of the Artificial Intelligence Readiness Level",
+      "authors": [
+        "Juan Irving Vasquez",
+        "Juan Terven",
+        "Laura-Ivoone Garay-Jimenez"
+      ],
+      "abstract": "Assessing the maturity of artificial intelligence technologies is essential for investment decisions, project management, and policy monitoring, yet the available readiness frameworks are heterogeneous and difficult to apply automatically: the adaptation of Technology Readiness Levels to AI lacks AI-specific gating criteria, the Machine Learning Technology Readiness Levels presuppose access to internal process artifacts, and AI/data readiness dimension models employ scales that resist direct comparison. This paper makes two contributions. First, we unify these three frameworks into the Unified AI Readiness Level (AIRL), a nine-level ordinal scale built on an environmental evidence ladder and complemented by dimensional caps (covering specification, data existence, data quality, data legality, expert knowledge, and algorithmic maturity) together with a generality-anchoring rule and explicit assignment disciplines, so that a readiness level becomes decidable from a natural-language description of the work alone. Second, we propose RAIL (Readiness Assessment via Independent LLM-experts), a panel-of-experts classifier that operationalizes the scale: one evidence agent and six independent dimension agents, each a large language model with a narrowly scoped mandate, deliver verdicts that a deterministic minimum rule aggregates and a chief expert reviews under asymmetric authority, confirming or lowering the panel's recommendation but never raising it above the caps. The method was tested in the analysis of several research works showing consistency and avoiding overestimation from monolithic LLM classifiers.",
+      "date": "2026-08-13",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.13428v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.13428",
+      "arxiv_id": "2608.13428v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T08:28:01.457956+00:00",
+  "generated_at": "2026-08-14T08:22:48.891872+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1783,
+      "github_stars": 1785,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 628,
+      "github_stars": 634,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13892,
+      "github_stars": 13894,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -585,8 +585,8 @@
       "vendor": "COIN-OR Foundation",
       "website": "https://github.com/coin-or/Cbc",
       "docs_url": "https://coin-or.github.io/Cbc/",
-      "current_version": "2.930",
-      "release_date": "2026-07-25",
+      "current_version": "2.932",
+      "release_date": "2026-08-14",
       "license_type": "open-source",
       "license_spdx": "EPL-2.0",
       "open_source": true,
@@ -1130,14 +1130,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
-      "github_stars": 6298,
-      "github_open_issues": 192,
+      "github_stars": 6300,
+      "github_open_issues": 195,
       "github_recent_prs": [
+        "Keep parameters symbolic on the ignore_dpp/non-DPP DIFFENGINE path",
+        "Add MIP start support to the SCIP interface",
+        "Add cp.block with NumPy-compatible nesting",
         "Modify type annotation for constraints argument of Problem constructor.",
-        "Bump pypa/cibuildwheel from 4.1.1 to 4.2.0",
-        "Bump github/codeql-action/upload-sarif from 4.37.4 to 4.37.6",
-        "DOC: add user guide page for MATLAB and CVX users",
-        "Make support function lifting solver-independent and defer it to canonicalization time"
+        "Bump pypa/cibuildwheel from 4.1.1 to 4.2.0"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,13 +1319,13 @@
       ],
       "recent_changes": "Summer or not, we've been busy bringing you an even faster and even more stable solver. \r\n\r\n# Changelog\r\n\r\n## 🚀 Features\r\n- 8e1948f Support sourcing declarative shadow variables from planning list var",
       "github_stars": 1749,
-      "github_open_issues": 109,
+      "github_open_issues": 110,
       "github_recent_prs": [
+        "docs: clarify service termination options",
         "feat: Allow to set random-seed for solver in the RunConfiguration",
         "chore: Validate accountId can be resolved",
         "feat: add goal to show permissions of configured token",
-        "deps: bump org.junit:junit-bom from 6.1.2 to 6.1.3 in the patch group",
-        "feat: Add configured cores and memory to solver worker event"
+        "deps: bump org.junit:junit-bom from 6.1.2 to 6.1.3 in the patch group"
       ]
     },
     {
@@ -1384,13 +1384,13 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2504,
-      "github_open_issues": 374,
+      "github_open_issues": 372,
       "github_recent_prs": [
+        "Model viewer -- Fix issue where expressions that evaluate to numpy scalars don't display right",
         "Support evaluating PiecewiseLinearExpression objects",
         "Model viewer -- Add menu items to set font.",
         "URL Checker: resolve failure checking PLY documentation",
-        "Revert pypy pin and skip stalled tests",
-        "Support trivial constraints in SCIP interfaces"
+        "Revert pypy pin and skip stalled tests"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1448,7 +1448,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.31.1\n\n[Diff since v1.31.0](https://github.com/jump-dev/JuMP.jl/compare/v1.31.0...v1.31.1)\n\n\n**Merged pull requests:**\n- Revert #4032 because it is subject to hash collisions (#4205) (@odow)",
-      "github_stars": 2463,
+      "github_stars": 2464,
       "github_open_issues": 12,
       "github_recent_prs": [
         "[docs] update to DocumenterCodeBlocks@1.2.0",
