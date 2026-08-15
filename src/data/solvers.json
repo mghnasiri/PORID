@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T08:22:48.891872+00:00",
+  "generated_at": "2026-08-15T07:36:23.869929+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1785,
+      "github_stars": 1786,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,7 +345,7 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 154,
+      "github_open_issues": 153,
       "github_recent_prs": [
         "Reduce amount of duplicate code in `HighsSymmetry`",
         "Callbacks for QP active set method",
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 634,
+      "github_stars": 637,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13894,
+      "github_stars": 13899,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,7 +569,7 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 119,
+      "github_open_issues": 120,
       "github_recent_prs": [
         "sat: do not remove an enforcement literal from incomplete activity bounds",
         "routing: test AllowedVehicles in Java and .Net",
@@ -585,7 +585,7 @@
       "vendor": "COIN-OR Foundation",
       "website": "https://github.com/coin-or/Cbc",
       "docs_url": "https://coin-or.github.io/Cbc/",
-      "current_version": "2.932",
+      "current_version": "2.933",
       "release_date": "2026-08-14",
       "license_type": "open-source",
       "license_spdx": "EPL-2.0",
@@ -1318,14 +1318,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Summer or not, we've been busy bringing you an even faster and even more stable solver. \r\n\r\n# Changelog\r\n\r\n## 🚀 Features\r\n- 8e1948f Support sourcing declarative shadow variables from planning list var",
-      "github_stars": 1749,
-      "github_open_issues": 110,
+      "github_stars": 1750,
+      "github_open_issues": 111,
       "github_recent_prs": [
+        "fix: restore working solution score",
+        "feat: add environment mode per phase",
+        "docs: extend mixed model docs",
         "docs: clarify service termination options",
-        "feat: Allow to set random-seed for solver in the RunConfiguration",
-        "chore: Validate accountId can be resolved",
-        "feat: add goal to show permissions of configured token",
-        "deps: bump org.junit:junit-bom from 6.1.2 to 6.1.3 in the patch group"
+        "feat: Allow to set random-seed for solver in the RunConfiguration"
       ]
     },
     {
@@ -1383,8 +1383,8 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2504,
-      "github_open_issues": 372,
+      "github_stars": 2506,
+      "github_open_issues": 373,
       "github_recent_prs": [
         "Model viewer -- Fix issue where expressions that evaluate to numpy scalars don't display right",
         "Support evaluating PiecewiseLinearExpression objects",
@@ -1449,13 +1449,13 @@
       ],
       "recent_changes": "## JuMP v1.31.1\n\n[Diff since v1.31.0](https://github.com/jump-dev/JuMP.jl/compare/v1.31.0...v1.31.1)\n\n\n**Merged pull requests:**\n- Revert #4032 because it is subject to hash collisions (#4205) (@odow)",
       "github_stars": 2464,
-      "github_open_issues": 12,
+      "github_open_issues": 13,
       "github_recent_prs": [
+        "[docs] disable minted using custom.sty",
+        "Relax depwarn=error to depwarn=yes on Julia nightly",
+        "[docs] set line_counter = :named in CodeBlocks",
         "[docs] update to DocumenterCodeBlocks@1.2.0",
-        "[docs] NLPModels-based solvers",
-        "Add Algencan to solvers",
-        "docs: fix some typos",
-        "[docs] add DocumenterCodeBlocks.jl"
+        "[docs] NLPModels-based solvers"
       ]
     },
     {
