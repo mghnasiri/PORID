@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T07:36:23.869929+00:00",
+  "generated_at": "2026-08-16T07:37:02.542303+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1786,
+      "github_stars": 1785,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13899,
+      "github_stars": 13904,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1130,8 +1130,8 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
-      "github_stars": 6300,
-      "github_open_issues": 195,
+      "github_stars": 6301,
+      "github_open_issues": 194,
       "github_recent_prs": [
         "Keep parameters symbolic on the ignore_dpp/non-DPP DIFFENGINE path",
         "Add MIP start support to the SCIP interface",
@@ -1256,13 +1256,13 @@
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
       "github_stars": 1778,
-      "github_open_issues": 15,
+      "github_open_issues": 16,
       "github_recent_prs": [
+        "Increment filter reset counter on reset",
         "Fix data-race global variables with atomics",
         "Remove unnecessary <iostream> includes",
         "IpJournalist: Missing override keyword",
-        "Draft at NVIDIA cuDSS (GPU sparse linear solver) integration in Ipopt.",
-        "Fix rare use-after-free in IpSpralSolverInterface"
+        "Draft at NVIDIA cuDSS (GPU sparse linear solver) integration in Ipopt."
       ]
     },
     {
@@ -1318,7 +1318,7 @@
         "metaheuristic"
       ],
       "recent_changes": "Summer or not, we've been busy bringing you an even faster and even more stable solver. \r\n\r\n# Changelog\r\n\r\n## 🚀 Features\r\n- 8e1948f Support sourcing declarative shadow variables from planning list var",
-      "github_stars": 1750,
+      "github_stars": 1751,
       "github_open_issues": 111,
       "github_recent_prs": [
         "fix: restore working solution score",
@@ -1384,13 +1384,13 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2506,
-      "github_open_issues": 373,
+      "github_open_issues": 377,
       "github_recent_prs": [
-        "Model viewer -- Fix issue where expressions that evaluate to numpy scalars don't display right",
-        "Support evaluating PiecewiseLinearExpression objects",
-        "Model viewer -- Add menu items to set font.",
-        "URL Checker: resolve failure checking PLY documentation",
-        "Revert pypy pin and skip stalled tests"
+        "Fix non-rigorous crossed bound results",
+        "Add LBB relaxed NLP node solver",
+        "Fix GLOA convex affine cut slope",
+        "Fix GDPopt LBB time-limit results",
+        "Model viewer -- Fix issue where expressions that evaluate to numpy scalars don't display right"
       ],
       "pypi_monthly_downloads": -28
     },
