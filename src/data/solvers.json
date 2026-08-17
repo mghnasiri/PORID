@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-16T07:37:02.542303+00:00",
+  "generated_at": "2026-08-17T07:57:35.147803+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -347,11 +347,11 @@
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
       "github_open_issues": 153,
       "github_recent_prs": [
+        "explicitly cast size_t to HighsInt in getNumLinearObjectives()",
         "Reduce amount of duplicate code in `HighsSymmetry`",
         "Callbacks for QP active set method",
         "Reduce strong branching budget before two restarts",
-        "Add two new presolve techniques in combining probing and dual fixing",
-        "Update CONTRIBUTING.md"
+        "Add two new presolve techniques in combining probing and dual fixing"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13904,
+      "github_stars": 13902,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1133,11 +1133,11 @@
       "github_stars": 6301,
       "github_open_issues": 194,
       "github_recent_prs": [
+        "Clarify that warm_start initial-guess support is not yet implemented …",
         "Keep parameters symbolic on the ignore_dpp/non-DPP DIFFENGINE path",
         "Add MIP start support to the SCIP interface",
         "Add cp.block with NumPy-compatible nesting",
-        "Modify type annotation for constraints argument of Problem constructor.",
-        "Bump pypa/cibuildwheel from 4.1.1 to 4.2.0"
+        "Modify type annotation for constraints argument of Problem constructor."
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1318,14 +1318,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Summer or not, we've been busy bringing you an even faster and even more stable solver. \r\n\r\n# Changelog\r\n\r\n## 🚀 Features\r\n- 8e1948f Support sourcing declarative shadow variables from planning list var",
-      "github_stars": 1751,
+      "github_stars": 1754,
       "github_open_issues": 111,
       "github_recent_prs": [
+        "deps: bump the patch group with 4 updates",
+        "deps: bump org.openrewrite.recipe:rewrite-recipe-bom from 3.36.0 to 3.37.0 in the minor group",
+        "deps: bump the quarkus-patch group with 6 updates",
         "fix: restore working solution score",
-        "feat: add environment mode per phase",
-        "docs: extend mixed model docs",
-        "docs: clarify service termination options",
-        "feat: Allow to set random-seed for solver in the RunConfiguration"
+        "feat: add environment mode per phase"
       ]
     },
     {
@@ -1383,14 +1383,14 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2506,
-      "github_open_issues": 377,
+      "github_stars": 2505,
+      "github_open_issues": 385,
       "github_recent_prs": [
+        "Remove link to sciencedirect.com as it has become unverifiable",
         "Fix non-rigorous crossed bound results",
         "Add LBB relaxed NLP node solver",
         "Fix GLOA convex affine cut slope",
-        "Fix GDPopt LBB time-limit results",
-        "Model viewer -- Fix issue where expressions that evaluate to numpy scalars don't display right"
+        "Fix GDPopt LBB time-limit results"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1449,13 +1449,13 @@
       ],
       "recent_changes": "## JuMP v1.31.1\n\n[Diff since v1.31.0](https://github.com/jump-dev/JuMP.jl/compare/v1.31.0...v1.31.1)\n\n\n**Merged pull requests:**\n- Revert #4032 because it is subject to hash collisions (#4205) (@odow)",
       "github_stars": 2464,
-      "github_open_issues": 13,
+      "github_open_issues": 15,
       "github_recent_prs": [
+        "[docs] remove tectonic_jll and switch to Docker for LaTeX build",
+        "Prep for v1.31.2",
+        "Add support for OrderedCollections@2",
         "[docs] disable minted using custom.sty",
-        "Relax depwarn=error to depwarn=yes on Julia nightly",
-        "[docs] set line_counter = :named in CodeBlocks",
-        "[docs] update to DocumenterCodeBlocks@1.2.0",
-        "[docs] NLPModels-based solvers"
+        "Relax depwarn=error to depwarn=yes on Julia nightly"
       ]
     },
     {
