@@ -1,0 +1,344 @@
+{
+  "date": "2026-08-18",
+  "generated_at": "2026-08-18T07:45:00.697119+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2608.16435",
+      "title": "Drive, Pack, Fly: The Travelling Thief Problem with Drone",
+      "authors": [
+        "Kabir Murjani",
+        "Abhay Sobhanan"
+      ],
+      "abstract": "In collection operations, accumulating payload progressively slows the vehicle, imposing a cumulative penalty on routing efficiency. An onboard drone can offset this penalty by retrieving outlying items, thereby shortening the makespan and increasing operational profit. However, travel time remains load-dependent, and each item collected by the ground vehicle shifts the arrival times that govern the drone's launch and rendezvous points. This paper introduces the Travelling Thief Problem with Drone (TTP-D), which maximises the collected profit, net of a time-based rental cost, by jointly optimising item selection, vehicle routing, and flight synchronisation. We formulate a mixed-integer linear program that solves small instances to optimality, and develop both metaheuristics and an attention-based Deep Reinforcement Learning (DRL) policy for larger instances. We further propose a learner-initialised hybrid solver, in which the DRL policy constructs an initial solution that a short annealing run subsequently refines. On two benchmark sets, this hybrid recovers most of the metaheuristic baseline's quality at a fraction of its computational budget, although the largest instances still require the baseline at its full budget. Finally, a sensitivity analysis reveals that the rental ratio is the primary driver of profitability, whereas the fleet parameters affect profit only at the margin.",
+      "date": "2026-08-17",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.16435v1",
+      "tags": [
+        "cs.AI",
+        "integer-programming",
+        "metaheuristics",
+        "scheduling",
+        "vehicle-routing",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.16435",
+      "arxiv_id": "2608.16435v1",
+      "score": 65.0
+    },
+    {
+      "id": "arxiv-2608.16475",
+      "title": "A Two-Stage Learning PINN Approach for Solving the Inverse Problem of the 1D Porous Medium Equation",
+      "authors": [
+        "Noura Al Helwani",
+        "Sophie Moufawad",
+        "Nabil Nassif"
+      ],
+      "abstract": "The Porous Medium Equation (PME), given by $u_t = Δ(u^m)$ for $m > 1$, is a degenerate nonlinear parabolic partial differential equation that arises in various physical applications such as fluid flow in porous media, heat transfer in plasmas, and population dynamics. It is known for its nonlinear diffusion and finite propagation speed. In this paper, we study numerical solutions of the one-dimensional direct and inverse PME using Physics-Informed Neural Networks (PINNs), and compare them with classical numerical methods and available analytical and manufactured solutions. While PINNs provide a flexible framework for solving both forward and inverse problems, we show that the standard inverse formulation suffers from a strong sensitivity to the initial guess, leading to only local convergence. To address this issue, we propose a novel two-stage PINN training framework for the inverse problem, which significantly improves convergence stability and allows reliable recovery of the unknown parameter even for poor initial guesses. Overall, the proposed approach demonstrates that PINNs are a flexible and accurate alternative to classical methods for the 1D PME, and the introduced two-stage training strategy substantially improves their robustness in inverse problems, providing a solid basis for extensions to more complex geometries and higher-dimensional cases.",
+      "date": "2026-08-17",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.16475v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.16475",
+      "arxiv_id": "2608.16475v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.16241",
+      "title": "Convolution-Free Holistic Multivariance Decomposition Layer for Efficient Hyperspectral Image Classification Tensor Networks",
+      "authors": [
+        "Süha Tuna",
+        "Ülker Başar"
+      ],
+      "abstract": "Feature extraction for hyperspectral image classification is conventionally addressed using rigid tensor decompositions that fail to capture complex spatio-spectral interdependencies, or heavily parameterized convolutional neural networks that are computationally expensive. To overcome these limitations, this work introduces the Holistic Multivariance Decomposition (HMD) framework as a novel, end-to-end differentiable neural network layer. By explicitly separating independent single mode variations from cooperative higher dimensional interactions via learnable, matrix valued supports, the proposed HMD-0, HMD-1 and HMD-2 approximants are optimized jointly with a downstream classifier via backpropagation. Comprehensive evaluations across three benchmark HS datasets demonstrate that the higher level HMD layers achieve superior classification accuracy compared to classical learnable tensor baselines, including Tucker, Canonical Polyadic, and Tensor Train decompositions. Furthermore, HMD-1 and HMD-2 achieve a generalization capacity and training stability comparable to standard 2D and 3D-CNNs while requiring significantly fewer feature extractor parameters. These results demonstrate that the HMD framework provides a structurally robust substitute for traditional convolution in multidimensional HS image classification, offering high parameter efficiency and stability throughout the optimization process.",
+      "date": "2026-08-17",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2608.16241v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "decomposition",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.16241",
+      "arxiv_id": "2608.16241v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.16538",
+      "title": "Consistent Path Selection for Bi-objective Median Location Problems on Graphs",
+      "authors": [
+        "Renée Lamsfuß",
+        "Kathrin Klamroth",
+        "Michael Stiglmayr",
+        "Julia Sudhoff Santos"
+      ],
+      "abstract": "We consider single-facility median location problems on graphs where two conflicting cost values are associated with the edges. As an example, suppose that a decision maker wants to locate one new facility, e. g., a pizza delivery place, which uses bicycles for delivery. The two objective functions could then be the total traveling time and the total number of left turns, as the latter are very risky. Path choices then depend on the preferences of the decision maker, and in general, there may not exist a unique optimal path between a customer and a new facility location. In this paper, we consider the location decision and the routing decision in a coupled problem, i. e., we search for an optimal location and for consistent delivery paths simultaneously. We introduce the concept of consistent paths, where we assume that the choice of a path from the facility to a demand node implies certain preferences. All paths of a solution are consistent if the preferences of all paths do not contradict each other. We present an algorithm that computes a minimum complete set of efficient solutions with consistent path choices and illustrate the results at example instances in the city of Wuppertal in Germany.",
+      "date": "2026-08-17",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.16538v1",
+      "tags": [
+        "math.OC",
+        "facility-location",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.16538",
+      "arxiv_id": "2608.16538v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.16852",
+      "title": "What Do Compliance Detectors Read? An Audit of Activation Probes and Guard Models",
+      "authors": [
+        "Saisab Sadhu",
+        "Aadit Sengupta",
+        "Vinay Kumar Sankarapu",
+        "Pratinav Seth"
+      ],
+      "abstract": "Regulatory compliance monitoring in deployed language models is increasingly implemented as a legal and audit control, checking model outputs against written rules spanning data protection, healthcare, financial regulation, and platform policy. Such monitoring is meaningful only if a detector's verdict depends on the stated rule rather than on surface features of the scenario. We show this condition fails across the current class of compliance detectors, a failure we call rule blindness. Deleting, permuting, or substituting the governing rule leaves detection accuracy unchanged for every guard and activation probe we test, including a policy-conditioned guard that correctly cites the governing clause yet barely changes its verdict when that clause is swapped for its permissive counterpart. A purpose-built benchmark crossing two rules with two scenarios, so that neither alone predicts the label, confirms the failure under a design no prior benchmark rules out, and shows that step by step reasoning, not any fast detector we test, is what escapes it. Auditing at scale requires a retraining-free detector, so we introduce the Internal Compliance Score (ICS): a training-free activation readout calibrated from ten labelled pairs and scored by a single projection. We hold ICS to the same scrutiny as the guards it audits: a pre-registered criterion for beating trivial baselines is not met, and a bag-of-words model matches its pooled generalisation exactly. It remains useful because it is inexpensive, letting us audit four deployed guard models, an 8B zero-shot judge, and thirteen benchmarks, and it raises the mechanically verified pass rate when used to rank candidate responses, though an adaptive white-box attack removes this gain. We release the counterfactual protocol and crossed-rule benchmark so rule blindness can be tested in future probe and guard claims.",
+      "date": "2026-08-17",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.16852v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.16852",
+      "arxiv_id": "2608.16852v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.16844",
+      "title": "Proteus: Incremental Memory Activation for Long-Context Sequence Modeling",
+      "authors": [
+        "Reza Bayat",
+        "Ali Behrouz",
+        "Vahab Mirrokni",
+        "Aaron Courville"
+      ],
+      "abstract": "The quadratic cost of attention-based sequence models for long contexts has motivated a growing line of research on memory-based models that can compress context into a compact state. However, most existing memory models expose a static memory throughout the entire sequence. Because early tokens face no compression pressure, they occupy too many degrees of freedom and \"pollute\" the memory state, leaving little capacity for later context and increasing interference between what is stored and what arrives next. We study a new paradigm of incremental memory activation, where the effective capacity of memory is progressively expanded as the context grows. Imposing an early bottleneck forces the model to compress history more effectively, while unlocking fresh capacity over time reduces interference and improves retention of later context. We instantiate this paradigm in Proteus, a straightforward mechanism that can be incorporated into a broad class of neural memory architectures at no additional cost. We apply Proteus to state-of-the-art models, including SWLA, Comba, Titans, and Hope-Attention, and observe consistent improvements on standard language modeling and reasoning, as well as on long-context retrieval and understanding, with gains that grow at longer context lengths. Overall, our results show that static memory is suboptimal and that scheduling effective capacity is a simple and broadly applicable tool for sequence modeling.",
+      "date": "2026-08-17",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.16844v1",
+      "tags": [
+        "cs.LG",
+        "scheduling",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.16844",
+      "arxiv_id": "2608.16844v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.16831",
+      "title": "Policy Iteration with Human Feedback: Bringing Post-Training RL to In-context Learning",
+      "authors": [
+        "Minh-Ha Nguyen",
+        "Cathy Shyr"
+      ],
+      "abstract": "Generative pretraining established reusable task representations; later work on language-based task conditioning and in-context learning showed that a fixed model could adapt its behavior from instructions and demonstrations. Policy Iteration with Human Feedback (PIHF) builds on this development and the recurrent evaluate-and-improve structure of generalized policy iteration. PIHF uses a pretrained language model as its execution substrate and moves persistent revision to a versioned natural-language policy and tool set. A language-model critic and clinical expert review complete-panel reasoning and tool-use trajectories to localize recurrent failures and form candidate revisions; the expert may reinterpret the evidence and retains authority over admission and rollback, while Recall@1 and Recall@5 validate outcomes after candidate execution.   Across cumulative ablations and ultra-rare-disease benchmarks, a PIHF-derived policy improved Recall@1 in one proprietary executor and three open-weight executors spanning 3 to 49 billion active parameters. Gains were 32.7 percentage points for GPT-5.4 and 31.1 points for Qwen3.6-35B, a difference of 1.7 points. These results support the feasibility of using pretrained language models as fixed-weight execution substrates for expert-guided policy development in rare-disease diagnosis.",
+      "date": "2026-08-17",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.16831v1",
+      "tags": [
+        "cs.AI",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.16831",
+      "arxiv_id": "2608.16831v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.16791",
+      "title": "Steering the Flow: Inverting Face Recognition Models via Gradient-Guided Flow Matching",
+      "authors": [
+        "Ye Lu",
+        "Shen Wang",
+        "Zhaoyang Zhang",
+        "Yihan Yan",
+        "Li Liu",
+        "Runze Liu",
+        "Fanghui Sun"
+      ],
+      "abstract": "Model Inversion Attacks (MIAs) aim to reconstruct representative training samples of target identities from face recognition models, exposing critical security vulnerabilities. Existing methods typically rely on indirect guidance or highly stochastic guidance, making it difficult to stably optimize generation trajectories toward target facial images. In this paper, we propose Steering Flow Model Inversion (SFMI), a novel two-stage white-box model inversion method that reformulates inversion as a trajectory-steering task. Specifically, Step I, Learning a Generic Flow Matching Prior, pre-trains a generic unconditional Flow Matching model to encode the manifold of human faces as a robust prior. Step II, Attacking with Progressive Guidance Scheduler (PGS), injects time-dependent target-specific gradients during sampling. By backpropagating through the target model to obtain gradients from intermediate generated states, PGS progressively injects adaptive guidance signals into the vector field. This process effectively steers the current generative flow from random noise toward the high-density regions of the target class. Under an identity-disjoint cross-evaluation setting using the CelebA dataset, SFMI achieves an ACC of 0.9248, an FID of 22.61, and an LPIPS of 0.3874 on the ArcFace target. Extensive experiments on multiple target models demonstrate that SFMI achieves competitive state-of-the-art performance in attack success and visual fidelity under the evaluated white-box protocol.",
+      "date": "2026-08-17",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2608.16791v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.16791",
+      "arxiv_id": "2608.16791v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.16700",
+      "title": "Learning to Unlearn: Machine Unlearning via Learning the Unlearning Behaviors",
+      "authors": [
+        "Hang Zhang",
+        "Kaifeng Zhang",
+        "Yixiao Ma",
+        "Weijie Xu",
+        "Ye Zhu",
+        "Kai Ming Ting"
+      ],
+      "abstract": "Various machine unlearning techniques have been developed in response to privacy legislation requirements, enabling individuals to exercise their legal right to have their data $D_f$ removed from a machine learning model. This process is typically accomplished via the use of an unlearning function denoted as $U$. Existing methods focus on designing an intricate $U$ to unlearn $D_f \\subset D$ from a previous model $A(D)$, so that the unlearned model performs as closely as possible to the retrained model $A(D \\setminus D_f)$. However, these methods often suffer from high computational costs when dealing with massive training data, as the complex structures of $U$ become a bottleneck even for models with fewer parameters.   Inspired by Learning to Optimize, we introduce the first learning-based model-agnostic approach, Learning-to-UnLearn (L2UL). Our core insight is to shift from manually designing $U$ to learning the unlearning behaviors from a distribution perspective, thereby acquiring a simple and efficient $U$ via learning. Our experimental results demonstrate that the accuracy achieved by L2UL is comparable to that of retraining while exhibiting impressive efficiency, particularly in data-intensive scenarios. Furthermore, we validate the performance and scalability of our method on larger models ResNet.",
+      "date": "2026-08-17",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.16700v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.16700",
+      "arxiv_id": "2608.16700v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.16697",
+      "title": "FabriMAE I Trust Myself? Self-Evaluating VLA Action Generation with Markov Attention Entropy",
+      "authors": [
+        " Aniri",
+        "Chen Yilin",
+        "Jinhe Bi",
+        "Junfei Guo",
+        "Donglai Ran",
+        "Xu Bian",
+        "Zengjie Jin",
+        "Yujun Wang",
+        "Yijun Tian",
+        "Volker Tresp",
+        "Fei Shen",
+        "Tat-Seng Chua",
+        "Yunpu Ma"
+      ],
+      "abstract": "Vision-Language-Action models (VLAs) integrate visual perception, language instruction, and action generation into end-to-end policies across heterogeneous architectures. However, enabling VLAs to self-evaluate their action generation reliability without external supervision remains a major challenge. Existing methods either rely on expert annotations or estimate uncertainty only from output statistics, largely ignoring internal signals. In this work, we observe that internal visual modality entropy exhibits consistent distinctions between successful and failed tasks across heterogeneous VLAs. Although VLAs' architectures differ in their action generation, we show that they share a common latent action generation abstraction evolving under visual perception, language instruction, and state input, which we formulate as a Conditional Generative Markov Chain. Based on this formulation, we propose MAE (Markov Attention Entropy), a self-evaluation framework that directly converts internal attention signals into architecture-aware reliability scores, and introduce LIBERO-Reflect, a 4,000-episode benchmark combining 2,000 standard episodes and 2,000 challenging episodes across four subsets. Extensive experiments across heterogeneous VLA architectures and diverse scenarios show that MAE consistently outperforms state-of-the-art baselines on AUPR, AUROC, and FPR@95. We further instantiate FabriMAE for verifier-free test-time action selection, showing that MAE-guided multiple sampling improves PI-family robustness on LIBERO-Plus with small observed runtime overhead.",
+      "date": "2026-08-17",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.16697v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.16697",
+      "arxiv_id": "2608.16697v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 2,
+    "conferences": 0,
+    "opportunities": 2,
+    "total": 12
+  }
+}
