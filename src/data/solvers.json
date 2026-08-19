@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T07:45:00.400278+00:00",
+  "generated_at": "2026-08-19T07:44:56.607967+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1786,
+      "github_stars": 1791,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 154,
+      "github_open_issues": 153,
       "github_recent_prs": [
+        "Fix #3216",
         "Presolve/postsolve debug utilities",
         "Presolve infrastructure for adding rows/columns",
         "explicitly cast size_t to HighsInt in getNumLinearObjectives()",
-        "Reduce amount of duplicate code in `HighsSymmetry`",
-        "Callbacks for QP active set method"
+        "Reduce amount of duplicate code in `HighsSymmetry`"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13908,
+      "github_stars": 13915,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1130,14 +1130,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
-      "github_stars": 6302,
-      "github_open_issues": 193,
+      "github_stars": 6304,
+      "github_open_issues": 194,
       "github_recent_prs": [
+        "Vectorize Gurobi conic interface model building, drop pre-9.5 code paths",
         "Bump github/codeql-action/upload-sarif from 4.37.4 to 4.37.7",
         "Bump JamesIves/github-pages-deploy-action from 4.8.0 to 4.9.0",
         "Clarify that warm_start initial-guess support is not yet implemented …",
-        "Keep parameters symbolic on the ignore_dpp/non-DPP DIFFENGINE path",
-        "Add MIP start support to the SCIP interface"
+        "Keep parameters symbolic on the ignore_dpp/non-DPP DIFFENGINE path"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1318,14 +1318,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Summer or not, we've been busy bringing you an even faster and even more stable solver. \r\n\r\n# Changelog\r\n\r\n## 🚀 Features\r\n- 8e1948f Support sourcing declarative shadow variables from planning list var",
-      "github_stars": 1755,
-      "github_open_issues": 109,
+      "github_stars": 1759,
+      "github_open_issues": 108,
       "github_recent_prs": [
+        "fix: sdk model visualisation detection",
         "ci: restrict `java_full` workflow token permissions",
         "fix: normalize mvnw.cmd line endings",
         "fix(benchmarker): correct ID used for single metric results",
-        "deps: bump the patch group with 4 updates",
-        "deps: bump org.openrewrite.recipe:rewrite-recipe-bom from 3.36.0 to 3.37.0 in the minor group"
+        "deps: bump the patch group with 4 updates"
       ]
     },
     {
@@ -1383,7 +1383,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2506,
+      "github_stars": 2507,
       "github_open_issues": 385,
       "github_recent_prs": [
         "Remove expression `_args_` tuple",
@@ -1400,8 +1400,8 @@
       "vendor": "JuMP Community",
       "website": "https://jump.dev",
       "docs_url": "https://jump.dev/JuMP.jl/stable/",
-      "current_version": "1.31.1",
-      "release_date": "2026-07-22",
+      "current_version": "1.31.2",
+      "release_date": "2026-08-18",
       "license_type": "open-source",
       "license_spdx": "MPL-2.0",
       "open_source": true,
@@ -1447,9 +1447,9 @@
         "julia",
         "algebraic"
       ],
-      "recent_changes": "## JuMP v1.31.1\n\n[Diff since v1.31.0](https://github.com/jump-dev/JuMP.jl/compare/v1.31.0...v1.31.1)\n\n\n**Merged pull requests:**\n- Revert #4032 because it is subject to hash collisions (#4205) (@odow)",
-      "github_stars": 2464,
-      "github_open_issues": 13,
+      "recent_changes": "## JuMP v1.31.2\n\n[Diff since v1.31.1](https://github.com/jump-dev/JuMP.jl/compare/v1.31.1...v1.31.2)\n\n\n**Merged pull requests:**\n- Fix formatting for latest JuliaFormatter version (#4208) (@odow)\n- Fi",
+      "github_stars": 2466,
+      "github_open_issues": 12,
       "github_recent_prs": [
         "[docs] remove tectonic_jll and switch to Docker for LaTeX build",
         "Prep for v1.31.2",

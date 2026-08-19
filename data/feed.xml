@@ -5,7 +5,7 @@
     <link>https://mghnasiri.github.io/PORID/</link>
     <description>Latest publications in Operations Research — aggregated from arXiv, Crossref, OpenAlex, and Semantic Scholar.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Aug 2026 07:45:03 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 07:44:59 +0000</lastBuildDate>
     <generator>PORID Pipeline</generator>
     <atom:link href="https://mghnasiri.github.io/PORID/data/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
@@ -36,581 +36,573 @@
       <source url="https://doi.org/10.1007/s11081-026-10119-z">Optimization and Engineering</source>
     </item>
     <item>
-      <title>Lyapunov Constructions for System Interconnections Arising from Adaptation in Some Optimization Methods</title>
-      <link>http://arxiv.org/abs/2608.16851v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16851v1</guid>
-      <description>Qixu Wang, Patrick McNamee, Zahra Nili Ahmadabadi, Miroslav Krstić
+      <title>Global Optimization of Flexible District Heating Networks</title>
+      <link>http://arxiv.org/abs/2608.18046v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.18046v1</guid>
+      <description>Marc E. Pfetsch, Lea Rehlich, Florian Steinke, Stefan Ulbrich
 
-Interconnected systems have been widely studied, with a focus on interconnected systems whose subsystems are solely input-to-state stable (ISS) or passive systems. The focus of this work is on the interconnected systems that appear in adaptive gradient methods. In adaptive gradient methods, one subsystem seeks to move parameters of a cost function towards a minimizer while the other subsystem works to estimate some derivative information about the cost function to help determine the direction of</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>math.OC</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16851v1">arXiv</source>
-    </item>
-    <item>
-      <title>Nonnegative Quadratics over a Quadrant with a Bilinear Constraint</title>
-      <link>http://arxiv.org/abs/2608.16836v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16836v1</guid>
-      <description>Yipeng Zhang, Yuyuan Ouyang, Boshi Yang
-
-We study quadratic polynomials that are nonnegative on the non-compact set \[ F:=\{(x_1,x_2)\in\mathbb R^2:\ x_1\ge 0,\ x_2\ge 0,\ x_1x_2\le 1\}. \] All extreme rays of the cone of nonnegative quadratic polynomials are characterized on this set. The characterization allows us to study parameterized valid inequalities for quadratic convexifications involving $F$, which yields a semidefinite representation of its lifted convex hull in the quadratic space. Our analysis on extreme ray characterizati</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>math.OC</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16836v1">arXiv</source>
-    </item>
-    <item>
-      <title>Battery-Swapping Station Operation Under Forecast Uncertainty: A Scenario-Based Stochastic MPC Framework</title>
-      <link>http://arxiv.org/abs/2608.16820v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16820v1</guid>
-      <description>Zhiyuan Guo, Siyang Gao, Zhichao Chen, Zhankun Sun, Jiaze Ma
-
-Battery-swapping stations (BSSs) can shorten electric-vehicle energy replenishment while using centrally managed battery inventories as flexible grid-connected storage. Realizing both benefits requires the station to schedule charging, grid discharge, and swapping service before future customer demand and electricity prices are known. This paper develops a forecast-aware rolling-horizon operating framework for this problem. A lightweight DLinear model predicts 24-hour price and demand trajectori</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>math.OC</category>
-      <category>stochastic</category>
-      <source url="http://arxiv.org/abs/2608.16820v1">arXiv</source>
-    </item>
-    <item>
-      <title>Doubling the dimension yields a benign landscape for the squared-stress</title>
-      <link>http://arxiv.org/abs/2608.16799v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16799v1</guid>
-      <description>Christopher Criscitiello
-
-We consider the Euclidean distance geometry problem (EDG): given a subset of the pairwise distances of an unknown cloud of $n$ points in $\mathbb{R}^\ell$, recover the point cloud up to rigid motions. When $n$ is large, a popular practical approach is to minimize a nonconvex quartic, known as the squared-stress or s-stress, over point clouds in $\mathbb{R}^k$, with $k$ potentially larger than $\ell$. It is a long-standing open problem to understand the optimization landscape of the s-stress when</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>math.OC</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16799v1">arXiv</source>
-    </item>
-    <item>
-      <title>On the Principles Behind Neural Network Optimizers</title>
-      <link>http://arxiv.org/abs/2608.16760v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16760v1</guid>
-      <description>Yushun Zhang
-
-Reliable optimization is central to neural network (NN) training, yet Adam, the default optimizer for modern LLMs, rests on a fragile foundation. This thesis develops a principled grounding for Adam and motivates new designs. First, we revisit Adam's divergence--convergence debate and show the existence of a problem-dependent phase transition: with properly chosen, batch-size-dependent hyperparameters, Adam converges, whereas under small-$β_2$ regimes it can diverge. Second, we investigate why A</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.LG</category>
-      <category>ml-for-or</category>
-      <source url="http://arxiv.org/abs/2608.16760v1">arXiv</source>
-    </item>
-    <item>
-      <title>On the Absence of Identifiable Manifolds in Finite-Max Composite Optimization</title>
-      <link>http://arxiv.org/abs/2608.16684v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16684v1</guid>
-      <description>Yifan Wang, Jianhao Ma, Salar Fattahi
-
-In nonsmooth optimization, identifiable sets describe the local region eventually reached by sequences converging to a prescribed critical point. When such a set is a $C^2$ manifold on which the objective restricts to a $C^2$ function, it is called an identifiable manifold. Their appeal lies in what they enable: many first-order methods identify these manifolds in finitely many iterations, after which the iterates enter a region in which the problem is effectively smooth. Consequently, many powe</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>math.OC</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16684v1">arXiv</source>
-    </item>
-    <item>
-      <title>ADMM Fails to Achieve an $O(K^{-1})$ Ergodic KKT Residual Bound</title>
-      <link>http://arxiv.org/abs/2608.16610v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16610v1</guid>
-      <description>Kaihuang Chen, Defeng Sun, Yancheng Yuan, Guojun Zhang, Xinyuan Zhao
-
-The Karush--Kuhn--Tucker (KKT) residual is a fundamental measure of first-order optimality and, under an error bound condition, is comparable to the distance to the KKT solution set up to constant factors. Despite the $O(K^{-1})$ ergodic rates known for objective error and feasibility violations, we show that the KKT residual of classical ADMM cannot, in general, satisfy a uniform $O(K^{-1})$ bound. Specifically, we construct a fixed-dimensional, horizon-dependent family of two-block convex opti</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>math.OC</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16610v1">arXiv</source>
-    </item>
-    <item>
-      <title>A Splitting Framework for Composite Semimonotone Inclusions</title>
-      <link>http://arxiv.org/abs/2608.16609v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16609v1</guid>
-      <description>Jan Harold Alcantara, Minh N. Dao, Akiko Takeda
-
-We introduce a general framework for composite inclusion problems with affine constraints, covering both monotone and semimonotone regimes. The central idea is a new interpretation of the constrained inclusion through an operator-vector pair that separates the implicit inclusion from the affine constraint: the former is handled through possibly preconditioned resolvent evaluations, while the latter is handled through an explicit forward step in an auxiliary variable. This yields a single abstrac</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+District heating networks are a central tool to achieve low-carbon heat supplies. In this realm, they face the challenge of dealing with increasingly heterogeneous, partially time-varying renewable sources, thermal storage, and meshed topologies. This paper examines global optimization of the operation of such district heating networks over multiple time steps, based on a stationary, yet realistical nonlinear network model.   To accelerate the solution performance of a spatial branch-and-bound a</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
       <category>math.OC</category>
       <category>decomposition</category>
-      <source url="http://arxiv.org/abs/2608.16609v1">arXiv</source>
+      <source url="http://arxiv.org/abs/2608.18046v1">arXiv</source>
     </item>
     <item>
-      <title>Consistent Path Selection for Bi-objective Median Location Problems on Graphs</title>
-      <link>http://arxiv.org/abs/2608.16538v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16538v1</guid>
-      <description>Renée Lamsfuß, Kathrin Klamroth, Michael Stiglmayr, Julia Sudhoff Santos
+      <title>The geometric Laplace transform: Definition, existence and properties of the Geometric Algebra Laplace transform</title>
+      <link>http://arxiv.org/abs/2608.18043v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.18043v1</guid>
+      <description>Manel Velasco, Arnau Dòria-Cerezo, Isiah Zaplana
 
-We consider single-facility median location problems on graphs where two conflicting cost values are associated with the edges. As an example, suppose that a decision maker wants to locate one new facility, e. g., a pizza delivery place, which uses bicycles for delivery. The two objective functions could then be the total traveling time and the total number of left turns, as the latter are very risky. Path choices then depend on the preferences of the decision maker, and in general, there may no</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+Recent publications have started to explore the application of Geometric Algebra (GA) to the modeling, analysis and control of dynamical systems and, in particular, electrical circuits. Since a crucial element there is to transform the ordinary differential equations governing the dynamical system which models the systems' behavior from the real domain to the Laplace domain, a definition of the Laplace transform in GA is needed. In the present work, we extend previous works dealing with extensio</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>eess.SY</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.18043v1">arXiv</source>
+    </item>
+    <item>
+      <title>Overlap-free multi-material topology optimization for minimum compliance in two and three dimensions by level-set-based negative-mapping interpolation</title>
+      <link>http://arxiv.org/abs/2608.17963v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17963v1</guid>
+      <description>Dong Wang, Qianglin Ran, Xuanliang Wang, Wei Xiang, Wenming Cheng et al.
+
+To address challenges such as gray elements and material overlaps, this paper extends the level set-based negative-mapping interpolation method to the multi-material proportional topology optimization of macro-scale structures in two and three dimensions. The approach utilizes an alternating active-phase algorithm to decompose M-phase problems into simplified two-phase subproblems described by level set functions. By integrating an evolutionary strategy, the method circumvents complex sensitivit</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>cs.CE</category>
+      <category>metaheuristics</category>
+      <source url="http://arxiv.org/abs/2608.17963v1">arXiv</source>
+    </item>
+    <item>
+      <title>Stochastic Robust Linear W-infinity Control via Dynamic Output Feedback</title>
+      <link>http://arxiv.org/abs/2608.17910v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17910v1</guid>
+      <description>Daniel Neri Cardoso
+
+This paper introduces a robust W-infinity optimal control framework for linear Itô diffusions using a weighted Sobolev-space performance measure. Because the sample paths of Itô diffusions are nondifferentiable, the formulation leverages the weak derivative of the expected state. An LMI-based semidefinite program is developed for dynamic output-feedback synthesis, and a rigorous stability analysis guarantees mean-square ultimate boundedness with minimized ultimate bound. A numerical example demo</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
       <category>math.OC</category>
-      <category>facility-location</category>
-      <category>multi-objective</category>
-      <source url="http://arxiv.org/abs/2608.16538v1">arXiv</source>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.17910v1">arXiv</source>
     </item>
     <item>
-      <title>A Two-Stage Learning PINN Approach for Solving the Inverse Problem of the 1D Porous Medium Equation</title>
-      <link>http://arxiv.org/abs/2608.16475v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16475v1</guid>
-      <description>Noura Al Helwani, Sophie Moufawad, Nabil Nassif
+      <title>Exact and Heuristic Methods for $Γ$-Robust Min-Max Problems</title>
+      <link>http://arxiv.org/abs/2608.17876v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17876v1</guid>
+      <description>Yasmine Beck
 
-The Porous Medium Equation (PME), given by $u_t = Δ(u^m)$ for $m &gt; 1$, is a degenerate nonlinear parabolic partial differential equation that arises in various physical applications such as fluid flow in porous media, heat transfer in plasmas, and population dynamics. It is known for its nonlinear diffusion and finite propagation speed. In this paper, we study numerical solutions of the one-dimensional direct and inverse PME using Physics-Informed Neural Networks (PINNs), and compare them with c</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+Bilevel optimization is a powerful tool for modeling hierarchical decision-making processes, which arise in various real-world applications. Due to their nested structure, however, bilevel problems are intrinsically hard to solve, even if all variables are continuous and all parameters of the problem are exactly known. Further challenges arise if mixed-integer aspects and problems under uncertainty are considered. In this article, we summarize selected results from the author's dissertation. We </description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
       <category>math.OC</category>
-      <category>stochastic</category>
-      <category>ml-for-or</category>
-      <category>constraint-programming</category>
-      <source url="http://arxiv.org/abs/2608.16475v1">arXiv</source>
+      <category>integer-programming</category>
+      <source url="http://arxiv.org/abs/2608.17876v1">arXiv</source>
     </item>
     <item>
-      <title>Convergence and variational structure of a staggered scheme for mean field games with individual noise on graphs</title>
-      <link>http://arxiv.org/abs/2608.16474v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16474v1</guid>
-      <description>Jianbo Cui, Tonghe Dang
+      <title>Duality-Based $\textit{A Posteriori}$ Error Identities for Subgradient Flows Based on the Brézis-Ekeland-Nayroles Principle</title>
+      <link>http://arxiv.org/abs/2608.17845v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17845v1</guid>
+      <description>Harbir Antil, Alex Kaltenbach, Keegan L. A. Kirk
 
-We propose and analyze a time-staggered numerical scheme for mean field game (MFG) systems with individual noise on finite graphs. Numerically solving such coupled forward--backward systems is delicate because the density evolves in the open probability simplex and the coefficients may degenerate at its boundary. The scheme preserves mass and satisfies a discrete fundamental identity compatible with the Lasry--Lions monotonicity argument, leading to uniqueness of the numerical solution. By estab</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+We derive duality-based $\textit{a posteriori}$ error identities for a broad class of subgradient flows induced by time-dependent convex integral functionals. Starting from the Brézis-Ekeland-Nayroles principle, we identify an unsteady primal energy functional and derive its Fenchel dual formulation, including strong duality and the corresponding optimality system under general normal-integrand assumptions. This Fenchel duality framework is used to derive $\textit{a posteriori}$ error identities</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
       <category>math.NA</category>
       <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16474v1">arXiv</source>
+      <source url="http://arxiv.org/abs/2608.17845v1">arXiv</source>
     </item>
     <item>
-      <title>Drive, Pack, Fly: The Travelling Thief Problem with Drone</title>
-      <link>http://arxiv.org/abs/2608.16435v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16435v1</guid>
-      <description>Kabir Murjani, Abhay Sobhanan
+      <title>Toward the Optimal Regret-Instability Trade-off in Multi-Armed Bandits</title>
+      <link>http://arxiv.org/abs/2608.17841v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17841v1</guid>
+      <description>Kaifei Wang, Yinyu Ye, Han Zhong
 
-In collection operations, accumulating payload progressively slows the vehicle, imposing a cumulative penalty on routing efficiency. An onboard drone can offset this penalty by retrieving outlying items, thereby shortening the makespan and increasing operational profit. However, travel time remains load-dependent, and each item collected by the ground vehicle shifts the arrival times that govern the drone's launch and rendezvous points. This paper introduces the Travelling Thief Problem with Dro</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.AI</category>
-      <category>integer-programming</category>
-      <category>metaheuristics</category>
-      <category>scheduling</category>
-      <category>vehicle-routing</category>
-      <category>ml-for-or</category>
-      <source url="http://arxiv.org/abs/2608.16435v1">arXiv</source>
-    </item>
-    <item>
-      <title>An Inexact Riemannian Proximal Momentum Variance-Reduced Method: Complexity Bounds and KL Sequential Convergence</title>
-      <link>http://arxiv.org/abs/2608.16355v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16355v1</guid>
-      <description>Na Zhang
-
-We develop a unified analysis of inexact stochastic Riemannian proximal optimization for finite-sum nonsmooth composite problems over compact embedded submanifolds. The framework accommodates variance-reduced gradient estimators, projected momentum, and inexact tangent-space proximal solves under a single conditional error-dissipation condition, verified for projection-based SVRG, SARAH/SPIDER, SAGA, and SAG. A computable Fenchel-dual residual criterion, with tolerance prescribed before sampling</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>math.OC</category>
+Multi-armed bandit algorithms are evaluated by regret, yet comparable regret can coexist with different allocations across independent runs. We study the trade-off between worst-case regret $\mathcal{R}_{K,T}$ and instability $\mathcal S_{K,T}$, defined as the largest standard deviation of a terminal pull count, for $K$ arms and $T$ rounds. We prove the finite-time lower bound $\mathcal R_{K,T}\mathcal S_{K,T}\ge C T^{3/2}$, where $C$ is independent of $K$ and $T$, under a finite-time regret con</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>stat.ML</category>
       <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16355v1">arXiv</source>
+      <source url="http://arxiv.org/abs/2608.17841v1">arXiv</source>
     </item>
     <item>
-      <title>Readiness Barrier Functions: Forward-Invariant Control Authority for Overactuated Multirotor Allocation</title>
-      <link>http://arxiv.org/abs/2608.16335v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16335v1</guid>
-      <description>Giuseppe Silano
+      <title>A single loop method for quadratic minmax optimization</title>
+      <link>http://arxiv.org/abs/2608.17830v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17830v1</guid>
+      <description>Stefano Cipolla, Oliver Stein, Alain Zemkoho
 
-Allocation schemes that greedily maximize a readiness metric over the actuator fiber bundle of an overactuated multirotor produce commands that jump between disconnected optimal strata, demanding actuator rates no motor can deliver; effort-minimizing schemes are continuous but cannot guarantee that wrench-rate authority stays above any certified level. We reconcile the two by treating authority as a forward-invariant quantity: a control barrier function on the log-determinant of the drag-aware a</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.RO</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16335v1">arXiv</source>
-    </item>
-    <item>
-      <title>PANDA:A Matrix-Free Differentiable NMPC Solver via Proximal Averaged Quasi-Newton with Adaptive Linesearch Algorithm</title>
-      <link>http://arxiv.org/abs/2608.16280v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16280v1</guid>
-      <description>Yuankun Chen, Zifei Nie, Xun Gong, Yunfeng Hu, Hong Chen
-
-Differentiable nonlinear model predictive control (NMPC) provides a principled way to embed optimal control structure into end-to-end learning paradigms, but its practical use is often limited by the computational and memory costs of both forward optimization and backward sensitivity propagation. This brief proposes PANDA, a matrix-free solver for differentiable NMPC. In the forward pass, PANDA combines proximal-gradient iterations with quasi-Newton acceleration and introduces an adaptive stepsi</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>eess.SY</category>
-      <category>constraint-programming</category>
-      <source url="http://arxiv.org/abs/2608.16280v1">arXiv</source>
-    </item>
-    <item>
-      <title>Stochastic Gradient Tracking over Time-Varying Networks: One-Step Lyapunov Analysis</title>
-      <link>http://arxiv.org/abs/2608.16271v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16271v1</guid>
-      <description>Sulaiman A. Alghunaim
-
-We study decentralized stochastic gradient tracking over a time-varying network of $N$ agents under a uniform window-mixing condition. Products of $τ$ consecutive doubly stochastic mixing matrices contract disagreement by a factor $λ&lt;1$, although individual matrices need not contract disagreement strictly and individual communication graphs may be disconnected. We construct a time-varying quadratic norm that turns this window contraction into an exact one-step Lyapunov identity. This leads to co</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>math.OC</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16271v1">arXiv</source>
-    </item>
-    <item>
-      <title>ExaModels.jl: an Algebraic Modeling System for Nonlinear Programming on GPUs</title>
-      <link>http://arxiv.org/abs/2608.16265v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16265v1</guid>
-      <description>Sungho Shin, Michel Schanen, François Pacaud, Alexis Montoison, Mihai Anitescu
-
-Large-scale nonlinear programs almost always exhibit partially separable and repetitive structure, yet most existing algebraic modeling systems do not take advantage of it. A nonlinear optimization solver queries the objective, the constraints, and their derivatives at every iteration, so the speed of these evaluations bears directly on the overall solution time. We present ExaModels.jl, a Julia-based algebraic modeling system that exploits this structure to evaluate the objective, the constrain</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+We consider a quadratic minmax problem with coupled inner constraints and propose a method to compute a class of stationary points. To motivate the need to compute such stationary points, we first show that they are meaningful, in the sense that they can be locally optimal for our problem under suitable{non-degeneracy} conditions. Then based on a suitable log barrier function, we build an infeasible interior point-type {single loop method} (which does not explicitly distinguish between the outer</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
       <category>math.OC</category>
       <category>linear-programming</category>
-      <source url="http://arxiv.org/abs/2608.16265v1">arXiv</source>
+      <source url="http://arxiv.org/abs/2608.17830v1">arXiv</source>
     </item>
     <item>
-      <title>The Price of Relearning: Ambiguity Provenance in Dynamic Decisions</title>
-      <link>http://arxiv.org/abs/2608.16255v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16255v1</guid>
-      <description>Han Yanç
+      <title>Integer Quadratic Programming is W[1]-Hard Parameterized by the Number of Variables</title>
+      <link>http://arxiv.org/abs/2608.17818v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17818v1</guid>
+      <description>Anton Herrmann
 
-Dynamic robust systems often rebuild ambiguity sets as data arrive. The new set need not be the Bayesian continuation of the models that justified earlier actions: relearning can change the evaluator, not merely the estimate. Within the continuous compact-valued class, a likelihood quotient characterizes provenance-preserving constructors. When provenance fails, a selection-free triangular vintage representation is exact, and its directed welfare gap defines the Price of Relearning. Endpoint and</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+We show that Integer Quadratic Programming is W[1]-hard parameterized by the number of variables. Thus, under standard complexity assumptions, Integer Quadratic Programming cannot be solved in f(n)|I|^{O(1)} time for any computable function f where |I| is the size of the encoding and n is the number of variables.</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>cs.CC</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.17818v1">arXiv</source>
+    </item>
+    <item>
+      <title>Self-Consistent Adjoint Policy Iteration for Constrained Dynamic Portfolio Choice</title>
+      <link>http://arxiv.org/abs/2608.17808v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17808v1</guid>
+      <description>Jeonggyu Huh, Yeoneung Kim, Seungwon Jeong
+
+We develop simulation-based policy iteration for continuous-time portfolio choice with predictable returns and convex constraints. Each outer step re-evaluates a fixed-latent OL-BPTT adjoint after deployment and solves the constrained update. Shifted-adjoint cancellation controls the adjoint--HJB Hamiltonian-gradient discrepancy by the policy-improvement residual. For CRRA portfolios, exact HJB policy iteration identifies the optimal reduced value factor, while population OL-BPTT iteration conve</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
       <category>math.OC</category>
       <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16255v1">arXiv</source>
+      <source url="http://arxiv.org/abs/2608.17808v1">arXiv</source>
     </item>
     <item>
-      <title>Convolution-Free Holistic Multivariance Decomposition Layer for Efficient Hyperspectral Image Classification Tensor Networks</title>
-      <link>http://arxiv.org/abs/2608.16241v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16241v1</guid>
-      <description>Süha Tuna, Ülker Başar
+      <title>A geometric reformulation of the bilevel parameter optimization problem to a single level non-linear programming problem with applications to phase equilibria</title>
+      <link>http://arxiv.org/abs/2608.17806v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17806v1</guid>
+      <description>Stefan C. Endres, Lutz Mädler
 
-Feature extraction for hyperspectral image classification is conventionally addressed using rigid tensor decompositions that fail to capture complex spatio-spectral interdependencies, or heavily parameterized convolutional neural networks that are computationally expensive. To overcome these limitations, this work introduces the Holistic Multivariance Decomposition (HMD) framework as a novel, end-to-end differentiable neural network layer. By explicitly separating independent single mode variati</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.CV</category>
-      <category>ml-for-or</category>
-      <category>decomposition</category>
-      <category>constraint-programming</category>
-      <source url="http://arxiv.org/abs/2608.16241v1">arXiv</source>
-    </item>
-    <item>
-      <title>Towards discrete convex analysis over classical root systems</title>
-      <link>http://arxiv.org/abs/2608.16090v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16090v1</guid>
-      <description>Yuni Iwamasa
-
-Discrete Convex Analysis (DCA) is a discrete analog of continuous convex analysis, originally proposed as a unified theoretical framework for efficiently solvable combinatorial optimization problems. Recently, DCA has proven to be a powerful tool across diverse fields, ranging from operations research to economics and pure mathematics.   Motivated by the broad applicability of DCA, this paper establishes a unified theory of discrete convex analysis over discrete structures arising from classical</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>math.CO</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16090v1">arXiv</source>
-    </item>
-    <item>
-      <title>On the Local Linear Convergence of Operator Splitting Methods for Conic Programming</title>
-      <link>http://arxiv.org/abs/2608.16054v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16054v1</guid>
-      <description>Lijun Ding, Haihao Lu, Jinwen Yang
-
-Operator-splitting methods such as the primal-dual hybrid gradient method (PDHG) and the alternating direction method of multipliers (ADMM) often exhibit linear convergence on conic programs, although general theory guarantees only sublinear rates. We identify two geometric conditions -- strict complementarity and quadratic facial violation -- that explain this local behavior: under these conditions, PDHG and ADMM converge linearly to an optimal solution when initialized sufficiently close to th</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+Phase equilibrium problems are central to chemical engineering, underpinning tasks ranging from separation process design to the development of thermodynamic models. A particularly challenging computational task is the generation of phase envelopes: rigorously fitting thermodynamic models to real world data with well behaved predictions requires solving a computationally expensive bilevel optimization problem. We present a geometric reformulation of this parameter estimation problem that restate</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
       <category>math.OC</category>
-      <category>decomposition</category>
-      <source url="http://arxiv.org/abs/2608.16054v1">arXiv</source>
+      <category>linear-programming</category>
+      <source url="http://arxiv.org/abs/2608.17806v1">arXiv</source>
     </item>
     <item>
-      <title>Mean-Field Oscillator Ising Machines: Gradient Flows and Classification of Limit Solutions</title>
-      <link>http://arxiv.org/abs/2608.16025v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16025v1</guid>
-      <description>Arvind R. Venkatakrishnan, Max Emerick, Bassam Bamieh, Francesco Bullo
+      <title>Optimal W-infinity Control of Prandtl-Ishlinskii Hysteresis Model via Weak Derivatives</title>
+      <link>http://arxiv.org/abs/2608.17791v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17791v1</guid>
+      <description>Daniel Neri Cardoso, Petrus Emmanuel Oliveira Gomes Brant Abreu, Guilherme Vianna Raffo
 
-Oscillator Ising Machines (OIMs) have emerged as promising computational architectures for approximating solutions to combinatorial optimization problems. We derive and analyze the mean-field limit of an OIM model and show that it inherits the gradient-flow structure of the finite-dimensional dynamics. We identify conditions under which this mean-field evolution admits an Eulerian formulation as a gradient flow on the Wasserstein space of probability measures, and contrast this with a Lagrangian</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>math.OC</category>
-      <category>decomposition</category>
-      <source url="http://arxiv.org/abs/2608.16025v1">arXiv</source>
-    </item>
-    <item>
-      <title>On the Complexity of BFGS Method for Smooth Convex Optimization</title>
-      <link>http://arxiv.org/abs/2608.16009v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16009v1</guid>
-      <description>Lijun Ding, Jinwen Yang, Baoyu Zhou
-
-We study the BFGS method with an Armijo-Wolfe line search for minimizing convex functions with Lipschitz-continuous gradients, without assuming strong convexity. We establish a global iteration complexity bound of $\mathcal{O}(k^{-1/2})$ for the smallest gradient norm among the first $k$ iterates. Moreover, when the initial sublevel set is bounded, we show that the function value gap converges at a rate of $\mathcal{O}(k^{-1})$. Our analysis leverages the classical trace-log-determinant potentia</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+This work proposes a novel robust optimal W-infinity controller for dynamic systems with Prandtl-Ishlinskii hysteresis. By utilizing weighted Sobolev spaces Wm,p,Gamma, the approach uses weak derivatives to rigorously handle the non-differentiable, input non-affine nature of hysteresis. This formulation recasts the Prandtl-Ishlinskii operator as a bounded uncertainty multiplying the input rate, enabling robust optimal controller design via linear matrix inequalities, while guaranteeing W3,2,Gamm</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
       <category>math.OC</category>
       <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16009v1">arXiv</source>
+      <source url="http://arxiv.org/abs/2608.17791v1">arXiv</source>
     </item>
     <item>
-      <title>Dual-Thrust Switching Analytical Guidance Algorithm for Powered Landing with Attitude Smoothness Optimization</title>
-      <link>http://arxiv.org/abs/2608.16000v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16000v1</guid>
-      <description>Wenbo Li, Dai Shen, Shengping Gong
+      <title>Isoperimetric problem for quasi-Finsler metrics and shapes of least aerodynamic resistance</title>
+      <link>http://arxiv.org/abs/2608.17783v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17783v1</guid>
+      <description>Lev Lokutsievskiy, Alexander Plakhov
 
-Traditional numerical guidance methods for powered landing of reusable rockets are typically constrained by high computational complexity and inadequate real-time performance. Moreover, insufficient consideration of attitude smoothness often induces severe fluctuations in control commands; meanwhile, most existing approaches are tailored for single-thrust scenarios, failing to accommodate the guidance requirements of multi-engine thrust switching. To mitigate these limitations, this paper propos</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+We consider the following model in the framework of Newtonian aerodynamics: a 2D convex body moves forward and slowly oscillates in a rarefied medium on the plane. The law of oscillations is given. The problem is to find a body of fixed area that has the smallest resistance. We solve this problem by reducing it to an isoperimetric problem for quasi-Finsler metrics. Further, we introduce two criteria of smallness of oscillations. We show that the optimal body has singularity at the front (back) p</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
       <category>math.OC</category>
-      <category>stochastic</category>
-      <source url="http://arxiv.org/abs/2608.16000v1">arXiv</source>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.17783v1">arXiv</source>
     </item>
     <item>
-      <title>Don't Drop the BATON: Long-Horizon Robot Manipulation via Agentic Subtask Exploration and Transition-aware Memory</title>
-      <link>http://arxiv.org/abs/2608.16889v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16889v1</guid>
-      <description>Bingxin Xu, Yuzhang Shang, Emilio Ferrara
+      <title>Resource Extraction from a Stochastic Population with Harvesting Quotas</title>
+      <link>http://arxiv.org/abs/2608.17778v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17778v1</guid>
+      <description>Erik Ekström, Dante Mata, Harto Saarinen
 
-Long-horizon robot manipulation chains many contact-rich skills into one multi-stage task. Vision-language-action (VLA) models increasingly master the individual skills, yet the chain still fails: errors compound beyond the policy's ability to correct, and one subtask silently constrains the next. A promising recipe freezes the VLA and puts an LLM agent in charge: it plans in language, moves in free space with analytic primitives, invokes the VLA only for contact-rich segments, and writes adapta</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+We study a resource extraction problem of ergodic type, where harvesting quotas are imposed that restrict the harvesting rate by a function of the current biomass. In a setting with diffusive dynamics, we provide conditions under which the optimal harvesting strategy is of threshold type. In contrast with the unrestricted case with singular controls, the optimal threshold may be 0, which corresponds to harvesting at the maximal possible rate at all times. Furthermore, we establish the convergenc</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.17778v1">arXiv</source>
+    </item>
+    <item>
+      <title>Application of the Shape Design Method to Hidden Regularity of Degenerate Hyperbolic Equations with Degenerate Boundary</title>
+      <link>http://arxiv.org/abs/2608.17767v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17767v1</guid>
+      <description>Dong-Hui Yang, Hongli Sun
+
+This paper investigates the well-posedness and hidden regularity of boundary-degenerate hyperbolic equations in a two-dimensional setting. The shape design method is employed, which approximates the original degenerate problem by a family of uniformly elliptic problems on truncated subdomains and passes to the limit through uniform estimates. Within this framework, the existence and uniqueness of weak solutions are established in suitable weighted Sobolev spaces. A hidden regularity estimate for</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>math.AP</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.17767v1">arXiv</source>
+    </item>
+    <item>
+      <title>Does the grand coalition form? Persistence, arrival, and the role of the sharing rule in a dynamic process of nested binding agreements</title>
+      <link>http://arxiv.org/abs/2608.17766v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17766v1</guid>
+      <description>Jobst Heitzig
+
+We study a dynamic coalition-formation process in the tradition of Konishi and Ray (2003): players repeatedly form and dissolve binding agreements, evaluate states by discounted long-term expected payoffs, and hold self-confirming beliefs about the process. States and payoff sharing follow Heitzig and Kornek (2018): a state is a hierarchy of nested agreements; agreements are formed by merging existing top-level coalitions, and are terminated together with all agreements containing them; and the </description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>econ.TH</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.17766v1">arXiv</source>
+    </item>
+    <item>
+      <title>Recovering protein conformations from single-particle cryo-EM data via indirect shape matching gradient flows</title>
+      <link>http://arxiv.org/abs/2608.17759v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17759v1</guid>
+      <description>Erik Jansson, Jonathan Krook, Ozan Öktem, Carola-Bibiane Schönlieb
+
+Single-particle cryo-electron microscopy images a macromolecule as many noisy tomographic projections of its electrostatic potential. We reconstruct the protein backbone directly from such projections, as an atomic point cloud, without the intermediate step of reconstructing the 3D electrostatic potential map. We formulate this as an indirect shape matching problem: a point-cloud template of the backbone is deformed until its simulated projections agree with the data, with the structure observed</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>q-bio.BM</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.17759v1">arXiv</source>
+    </item>
+    <item>
+      <title>Dijkstra as an Oracle for Online Stochastic Shortest Path Navigation with Provable Guarantees</title>
+      <link>http://arxiv.org/abs/2608.17703v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17703v1</guid>
+      <description>Mansur M. Arief, Ali Akarma, Ahmad Alfan Alfian Irfan
+
+Mobile robots that operate in side by side with humans and critical facilities must reach their goals at low cost, despite often unknown true traversal costs of the map apriori and imperfect actuation. Planners that solve the underlying stochastic shortest path problem exactly, such as value iteration, require computation that grows with the diameter of the map, whereas Dijkstra's algorithm is fast but is usually considered inexact once transitions are stochastic. This study shows that Dijkstra'</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
       <category>cs.RO</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16889v1">arXiv</source>
+      <category>network-optimization</category>
+      <source url="http://arxiv.org/abs/2608.17703v1">arXiv</source>
     </item>
     <item>
-      <title>Improving the matrix multiplication exponent with modern optimization and AlphaEvolve</title>
-      <link>http://arxiv.org/abs/2608.16884v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16884v1</guid>
-      <description>Emilien Dupont, Marvin Eisenberger, Borislav Kozlovskii, Abbas Mehrabian, Francisco J. R. Ruiz et al.
+      <title>Mixed-integer programming formulations for optimal reconfiguration of supply chains</title>
+      <link>http://arxiv.org/abs/2608.17667v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17667v1</guid>
+      <description>Lavinia M. P. Ghilardi, Olga Walz, Steffen Klosterhalfen, Calvin Tsay
 
-The current best bounds on the matrix multiplication exponent $ω$ are obtained through a refinement of the laser method called combination loss analysis (Duan et al., 2022; Williams et al., 2024; Alman et al., 2025). In this note, we address the optimization problem at the core of this approach and propose several improvements. First, we reformulate the optimization problem allowing us to solve it in a larger setting than was previously possible. Second, we leverage recent advances in machine le</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.DS</category>
-      <category>ml-for-or</category>
-      <source url="http://arxiv.org/abs/2608.16884v1">arXiv</source>
-    </item>
-    <item>
-      <title>AutoSR: Automatic Symbolic Regression by Searching Research States</title>
-      <link>http://arxiv.org/abs/2608.16876v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16876v1</guid>
-      <description>Kejia Zhang, Youran Sun, Xinyu Ren, Chugang Yi, Haizhao Yang
-
-We introduce Automatic Symbolic Regression (AutoSR), a fully automated system that instantiates Research-Space Symbolic Regression by searching persistent scientific investigations rather than isolated equations. Finite, noisy data often yield numerically competitive expressions that imply very different behavior outside the observed regime, making numerical fit and syntactic complexity insufficient measures of scientific credibility. Existing approaches largely focus on improving expressions, y</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.SC</category>
-      <category>survey</category>
-      <source url="http://arxiv.org/abs/2608.16876v1">arXiv</source>
-    </item>
-    <item>
-      <title>Towards Computational Provenance: Carrying Causal-State Evidence in Generated Text</title>
-      <link>http://arxiv.org/abs/2608.16868v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16868v1</guid>
-      <description>Benjamin Belay
-
-A language model's output does not by itself provide verifiable evidence about the internal computation that produced it. We study computational provenance: whether generated text can carry detectable evidence of which causally relevant internal state occurred. We test a bounded form of this idea in two controlled architectures: a modular feed-forward neural network and a transformer-based model. Both architectures are trained on the same arithmetic task with a mandatory pathway through two disc</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.CL</category>
-      <category>ml-for-or</category>
-      <source url="http://arxiv.org/abs/2608.16868v1">arXiv</source>
-    </item>
-    <item>
-      <title>What Do Compliance Detectors Read? An Audit of Activation Probes and Guard Models</title>
-      <link>http://arxiv.org/abs/2608.16852v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16852v1</guid>
-      <description>Saisab Sadhu, Aadit Sengupta, Vinay Kumar Sankarapu, Pratinav Seth
-
-Regulatory compliance monitoring in deployed language models is increasingly implemented as a legal and audit control, checking model outputs against written rules spanning data protection, healthcare, financial regulation, and platform policy. Such monitoring is meaningful only if a detector's verdict depends on the stated rule rather than on surface features of the scenario. We show this condition fails across the current class of compliance detectors, a failure we call rule blindness. Deletin</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.AI</category>
+Supply chains are interconnected networks of processes and operations producing and delivering high-value products. These chains are increasingly subjected to structural changes from the energy transition and other external factors. To address this, this work develops mixed-integer programming formulations to identify optimal reconfigurations that preserve industrial operations and profitability. We propose products and spatial neighborhoods to restrict the feasible search space and enable fast </description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>integer-programming</category>
       <category>stochastic</category>
-      <category>healthcare-or</category>
-      <source url="http://arxiv.org/abs/2608.16852v1">arXiv</source>
+      <category>supply-chain</category>
+      <source url="http://arxiv.org/abs/2608.17667v1">arXiv</source>
     </item>
     <item>
-      <title>Proteus: Incremental Memory Activation for Long-Context Sequence Modeling</title>
-      <link>http://arxiv.org/abs/2608.16844v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16844v1</guid>
-      <description>Reza Bayat, Ali Behrouz, Vahab Mirrokni, Aaron Courville
+      <title>Operator-based data embedding for data-driven control of continuous-time systems from noisy data</title>
+      <link>http://arxiv.org/abs/2608.17518v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17518v1</guid>
+      <description>Masashi Wakaiki
 
-The quadratic cost of attention-based sequence models for long contexts has motivated a growing line of research on memory-based models that can compress context into a compact state. However, most existing memory models expose a static memory throughout the entire sequence. Because early tokens face no compression pressure, they occupy too many degrees of freedom and &quot;pollute&quot; the memory state, leaving little capacity for later context and increasing interference between what is stored and what</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+We propose a data-driven method for designing state-feedback gains that achieve stabilization, $H_2$-control, and $H_\infty$-control for continuous-time systems. The state-input data are assumed to be corrupted by process noise, measurement noise, and input disturbances. We first characterize the set of all systems consistent with the noisy data using operator-based data embedding. This characterization yields necessary and sufficient conditions for data informativity under a certain class of no</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.17518v1">arXiv</source>
+    </item>
+    <item>
+      <title>Infinite-Horizon Sparse Optimal Control: Solution through a Finite-Horizon Subproblem and Its Receding-Horizon Implementation</title>
+      <link>http://arxiv.org/abs/2608.17464v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17464v1</guid>
+      <description>Yasuaki Oishi, Takumi Iwata, Masaaki Nagahara
+
+Sparse optimal control is considered in the infinite horizon. In the literature, sparse control has been considered mostly in a finite horizon for its formulation into a finite-dimensional optimization problem. It is shown in this paper that an optimal solution of the infinite-horizon sparse control problem can be obtained through a solution of some finite-horizon subproblem. This is due to sparsity of the optimal solution in the sense that the optimal control input is constantly equal to zero a</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>eess.SY</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.17464v1">arXiv</source>
+    </item>
+    <item>
+      <title>Optimal control of a swimming robot based on Purcell's microswimmer model</title>
+      <link>http://arxiv.org/abs/2608.17455v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17455v1</guid>
+      <description>Noam Berkovich Lahav, Oren Wiezel, Yizhar Or
+
+Purcell's swimmer is a well-known planar model of a swimming microorganism, governed by low Reynolds number hydrodynamics, which is comprised of three rigid links connected by actuated rotary joints. This model has been analyzed as a robotic locomotion system governed by first-order nonlinear dynamics with a periodic input (gait) of the two joint angles. In this work, we present a robotic macro-scale realization of this three-link swimmer moving in a highly viscous fluid. We propose a simple var</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>physics.flu-dyn</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.17455v1">arXiv</source>
+    </item>
+    <item>
+      <title>A note on the complexity of random subspace model-based methods for derivative-free optimization</title>
+      <link>http://arxiv.org/abs/2608.17307v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17307v1</guid>
+      <description>Coralia Cartis, Lindon Roberts
+
+We demonstrate that, with a suitable rescaling, using Johnson-Lindenstrauss transforms (JLTs) in the random subspace model-based derivative-free optimization (DFO) algorithm from [Cartis &amp; Roberts, Math. Prog. 199 (2023)] achieves an improved worst-case evaluation complexity bound compared to 'unscaled' JLTs. This improved bound does not require any modification to the original algorithm or complexity analysis, and matches the best-known bound in terms of dimension dependence for model-based DFO</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.17307v1">arXiv</source>
+    </item>
+    <item>
+      <title>Universal Approximation of Maximal Lyapunov Functions with Anchored Neural Networks</title>
+      <link>http://arxiv.org/abs/2608.17290v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17290v1</guid>
+      <description>Jun Liu
+
+Maximal Lyapunov functions encode the entire domain of attraction of an asymptotically stable equilibrium, but preserving strict decrease under neural approximation is difficult because its margin vanishes at the equilibrium. For systems locally dominated by an asymptotically stable homogeneous vector field, we construct a continuously differentiable maximal target and an anchored, positivity-preserving neural family. We prove semiglobal universal approximation: strict neural Lyapunov functions </description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>eess.SY</category>
+      <category>ml-for-or</category>
+      <source url="http://arxiv.org/abs/2608.17290v1">arXiv</source>
+    </item>
+    <item>
+      <title>Nonadaptive Learning in Robust Nonlinear Output Regulation</title>
+      <link>http://arxiv.org/abs/2608.17262v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17262v1</guid>
+      <description>Shimin Wang, Martin Guay, Richard D. Braatz
+
+This paper considers robust nonadaptive regulation for general nonlinear systems in an output-feedback setting with arbitrarily high relative degree. We develop a nonadaptive design that combines an input-driven filter and a generic internal model with a recursive backstepping law, thereby recasting the regulation problem as the robust input-to-state stabilization of an augmented error system. Unlike adaptive schemes, the proposed method does not rely on linearly parameterized regressors and doe</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>eess.SY</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.17262v1">arXiv</source>
+    </item>
+    <item>
+      <title>Mirror Polyak and a Primal-Dual Lifting</title>
+      <link>http://arxiv.org/abs/2608.17252v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17252v1</guid>
+      <description>Frederik Kunstner, Ryan D'Orazio, Victor S. Portella, Adrien Taylor
+
+First-order methods typically require a specific step-size that depends on the regularity conditions of the objective function, such as the smoothness, Lipschitz continuity, or strong convexity constants. The Polyak step-size is a classical alternative for subgradient descent on convex functions that only uses knowledge of the optimal value of the objective function and automatically adapts to the above-mentioned regimes. However, many optimization problems are better described by non-Euclidean </description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.17252v1">arXiv</source>
+    </item>
+    <item>
+      <title>Maximum Tsallis Entropy Distributions for Robust and Efficient Sparse Learning from Correlated Data</title>
+      <link>http://arxiv.org/abs/2608.17244v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17244v1</guid>
+      <description>Kai Yang, Masoud Asgharian, Celia M. T. Greenwood
+
+This paper addresses the limitations of Gaussian distribution assumptions in statistical sparse learning, particularly in modeling correlated and heterogeneous data. Conventional Gaussian models often lack robustness towards outliers and underlying distribution assumptions. To overcome these limitations, we propose the use of the $q$Gaussian distribution, derived from Tsallis entropy maximization, as a robust alternative. This is notably relevant in biostatistics, where the presence of correlate</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.17244v1">arXiv</source>
+    </item>
+    <item>
+      <title>Feedback approaches for set-point stabilization of interacting particle systems</title>
+      <link>http://arxiv.org/abs/2608.17222v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17222v1</guid>
+      <description>Daniel Jannik Happ, Birgit Jacob, Claudia Totzeck
+
+We explore the problem of asymptotically stabilizing a class of interacting particle systems to a prescribed particle configuration with zero velocity. The class of interacting particle systems is motivated by the Cucker-Smale model on the mean-field level. Rather than designing a feedback by manually solving an IDA-PBC matching equation, we derive a feedback using an instantaneous rolling horizon control algorithm. We show that this feedback preserves the port-Hamiltonian structure of the inter</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.17222v1">arXiv</source>
+    </item>
+    <item>
+      <title>From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation</title>
+      <link>http://arxiv.org/abs/2608.18076v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.18076v1</guid>
+      <description>Xingjian Wang, Zhao Wang, Taihang Hu, Jun Zheng, Qing Jin et al.
+
+Large-scale image generation has benefited from advances in data scale, quality, rebalancing, and recaptioning, yet conventional pipelines typically optimize task-specific datasets in isolation. A central challenge is not only how to curate each task-specific corpus, but also how to organize heterogeneous supervision according to the dependencies among generative capabilities. We present a \textbf{capability-driven data infrastructure} that couples capability-specific supervision construction wi</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>cs.CV</category>
+      <category>scheduling</category>
+      <category>stochastic</category>
+      <source url="http://arxiv.org/abs/2608.18076v1">arXiv</source>
+    </item>
+    <item>
+      <title>On the Fragility of Self-Improving Agents: Variance, Task Order, and Underspecification</title>
+      <link>http://arxiv.org/abs/2608.18066v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.18066v1</guid>
+      <description>Qinyuan Ye, Yu Li, Yada Pruksachatkun, Jiaxin Zhang, Chien-Sheng Wu
+
+Memory-based self-improving agents--those that learn from an online stream of tasks and improve over time by maintaining a textual memory bank--have shown great promise in recent literature. However, the reliability aspects of these methods have been critically overlooked. In this work, we conduct a comprehensive re-evaluation of two memory-based methods, broadening the scope of evaluation along two axes: (1) including multiple runs to quantify variance, and (2) randomly shuffling the tasks to i</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>cs.AI</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.18066v1">arXiv</source>
+    </item>
+    <item>
+      <title>Delegation Asymmetry in Agentic Recommender Systems: Measuring Two-Sided Receptivity in Online Dating</title>
+      <link>http://arxiv.org/abs/2608.18058v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.18058v1</guid>
+      <description>Daria Leshchikova, Valentina V. Kuskova, Dmitry Zaytsev, Valerii Klimov
+
+Autonomous LLM agents that converse on a user's behalf are an emerging design pattern in matching platforms, yet their viability depends on a condition rarely examined: users must accept not only delegating conversation to an agent, but also receiving agent-mediated communication from others. We study this condition using two large-scale surveys of active users of a major dating platform (N=2,894 on generative profile features; N=2,617 on autonomous conversational agents, fielded in two language</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>cs.AI</category>
+      <category>survey</category>
+      <source url="http://arxiv.org/abs/2608.18058v1">arXiv</source>
+    </item>
+    <item>
+      <title>HLSR: Hybrid Live Forecast Selective Dynamic Vehicle Rerouting for Real-Time Congestion Avoidance</title>
+      <link>http://arxiv.org/abs/2608.18056v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.18056v1</guid>
+      <description>Xiao Wang, Shun Ren Yang, Hui Nien Hung
+
+Urban traffic congestion reduces productivity and increases travel cost and emissions. Network-wide live travel-time shortest-path rerouting can be highly effective in simulation, but assumes that essentially every on-road vehicle is replanned every decision period. We propose HLSR, a selective hybrid live--forecast vehicle rerouting framework that fuses live edge speeds with short-horizon forecasts under limited intervention scope. Building on dual-threshold congestion detection, calibrated ups</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>cs.AI</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.18056v1">arXiv</source>
+    </item>
+    <item>
+      <title>StagedWorkspace: A Versioned Workspace for Knowledge-Work Agents</title>
+      <link>http://arxiv.org/abs/2608.18050v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.18050v1</guid>
+      <description>Yining Hua, Hongbin Na, Yifan Zhou, Akshay Kalose, Cyrus Ayubcha et al.
+
+AI agents increasingly perform knowledge work (i.e., produce and modify persistent digital artifacts such as code repositories, documents, spreadsheets, slides, reports), yet the parsed views they search, the native files they edit, the changes they review, and the artifacts they submit can refer to different versions of the same work product. We formulate this as a workspace-state contract: every view should be explicitly tied to a version of the evolving workspace state. Coding agents partly a</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>cs.AI</category>
+      <category>survey</category>
+      <source url="http://arxiv.org/abs/2608.18050v1">arXiv</source>
+    </item>
+    <item>
+      <title>Harnessing Magnitude-Only and Complex Measurements for Improved Dynamic MRI Reconstruction with Learned Priors</title>
+      <link>http://arxiv.org/abs/2608.18036v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.18036v1</guid>
+      <description>Mahdi Saberi, Yaşar Utku Alçalar, Merve Gülle, Chetan Shenoy, Mehmet Akçakaya
+
+MRI reconstruction methods for undersampled k-space data naturally utilize complex-valued measurements. Parallel developments in sparse phase retrieval have shown that magnitude-only measurements may provide complementary information for signal recovery. However, their use in MRI reconstruction remains largely unexplored, due to lack of practical settings where informative magnitude measurements can be obtained without additional scan time. In this work, we investigate the use of auxiliary k-spa</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>eess.IV</category>
+      <category>ml-for-or</category>
+      <source url="http://arxiv.org/abs/2608.18036v1">arXiv</source>
+    </item>
+    <item>
+      <title>Why GPT-Style Models Do Not Directly Transfer to Symbolic Music: Compression in the Wrong Coordinate System</title>
+      <link>http://arxiv.org/abs/2608.18025v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.18025v1</guid>
+      <description>Yi Wang
+
+GPT-style models achieve strong performance by representing language with finite vocabularies of reusable discrete tokens. This success has motivated symbolic music tokenizations to treat recurring musical structures, such as chords, motifs, and phrases, as reusable units analogous to linguistic tokens. However, tokenization derives its advantage not from reusable combinations alone, but from compression: effective compression requires coordinates in which recurring regularities form stable and </description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>cs.LG</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.18025v1">arXiv</source>
+    </item>
+    <item>
+      <title>Can Large Language Models Explain Flight Safety Events? A Prior-Guided Semantic LLM-based Approach</title>
+      <link>http://arxiv.org/abs/2608.18017v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.18017v1</guid>
+      <description>Lu Xu, Xu Li, Linjiang Zheng, Fan Li, Riquan Zhang et al.
+
+Improving flight safety with flight data requires not only accurate detection of risk events, but more importantly, clear interpretation of their underlying causes at the level of pilot control behavior. Existing explainable AI techniques, such as feature importance maps, often require considerable domain knowledge to translate them into operationally meaningful explanations. Large Language Models (LLMs), which excel at language reasoning, bring a promising solution to this issue. However, apply</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>cs.AI</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.18017v1">arXiv</source>
+    </item>
+    <item>
+      <title>Policy-Invariant Reward Shaping from LLM Feedback: A Framework for Hybrid RL Agents</title>
+      <link>http://arxiv.org/abs/2608.18008v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.18008v1</guid>
+      <description>Christophe D. Hounwanou, John Emeka Eze, Yaé U. Gaba
+
+Combining large language models with reinforcement learning is increasingly explored, yet the theoretical status of LLM-derived reward signals is often left implicit. We formalize the hybrid LLM-planner and RL-controller architecture as a Goal-Augmented Markov Decision Process and show that when the LLM per-state progress score is used as a bounded potential function, the resulting shaping term preserves the optimal policy set even when the LLM scores are inaccurate. This guarantee is stronger t</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>cs.LG</category>
+      <category>ml-for-or</category>
+      <source url="http://arxiv.org/abs/2608.18008v1">arXiv</source>
+    </item>
+    <item>
+      <title>Traceable Trust for action-ready artificial intelligence in bioscience</title>
+      <link>http://arxiv.org/abs/2608.17997v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17997v1</guid>
+      <description>Huayu Xin, Yizhi Cai, Mukilan Deivarajan Suresh, Gavin Michael Farrell, Iwona Gajda et al.
+
+Artificial intelligence (AI) is becoming part of the working infrastructure of the biosciences. AI models can predict biomolecular structures, design proteins, rank variants, annotate images, recommend strains and optimise experimental conditions. We argue that the decision to use an AI output to guide laboratory action is a key juncture for trustworthy research and should follow a defined, reviewable process. We propose Traceable Trust as a proportionate assessment-and-design framework for this</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>cs.CY</category>
+      <category>survey</category>
+      <source url="http://arxiv.org/abs/2608.17997v1">arXiv</source>
+    </item>
+    <item>
+      <title>Against Political Polarization: A Unified Framework for Tracing Evolving Political Ideologies on Social Media</title>
+      <link>http://arxiv.org/abs/2608.17987v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17987v1</guid>
+      <description>Yijie Xu, Chao Wang, Hui Xiong
+
+The rapid growth of social media has greatly influenced political discourse, highlighting the need to understand individual political ideologies and their temporal dynamics. This task faces challenges such as data scarcity, abundant non-political content, costly and bias-prone manual annotation, and difficulty in modeling future ideological inclinations. To address these issues, we propose TSN4PI, a unified framework for tracking the evolution of political ideologies on social media. It includes</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>cs.SI</category>
+      <category>ml-for-or</category>
+      <source url="http://arxiv.org/abs/2608.17987v1">arXiv</source>
+    </item>
+    <item>
+      <title>Dual Co-Train: Cross-Dataset Ultrasound Tongue Segmentation Under Extreme Data Scarcity</title>
+      <link>http://arxiv.org/abs/2608.17983v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17983v1</guid>
+      <description>Alisher Myrgyyassov, Zhen Song, Bruce Xiao Wang, Yu Sun, Min Ney Wong et al.
+
+Ultrasound tongue contour segmentation remains challenging under cross-dataset domain shift, where limited annotations, probe variability, and acquisition noise often degrade model generalization. We present a source-free domain adaptation framework for robust ultrasound tongue segmentation built on a lightweight UltraUNet backbone. Starting from a checkpoint pretrained on only five labeled source images, simulating an underfitted constrained source model, the proposed method adapts to a fully-u</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>cs.CV</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.17983v1">arXiv</source>
+    </item>
+    <item>
+      <title>Too Sure to Be Safe: Model Calibration for Reliable Log Anomaly Detection</title>
+      <link>http://arxiv.org/abs/2608.17965v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17965v1</guid>
+      <description>Bin Li, Dongdong Wang, Siyang Lu
+
+Online log anomaly detection is critical for maintaining the reliability of large-scale computing systems. Although recent language model-based log anomaly detectors achieve strong detection performance, their confidence estimates remain poorly calibrated. We show that these detectors frequently assign excessive confidence to incorrect predictions, particularly for anomalous logs under severe class imbalance. Moreover, confidence on erroneous predictions remains persistently high even when conve</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>cs.LG</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.17965v1">arXiv</source>
+    </item>
+    <item>
+      <title>Towards Zero-Shot Task Transfer with Neurosymbolic World Models</title>
+      <link>http://arxiv.org/abs/2608.17959v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17959v1</guid>
+      <description>Isidoro Tamassia, Lennert De Smet, Giuseppe Marra
+
+State-of-the-art model-based reinforcement learning methods learn neural world models that allow policy improvement by planning in a latent space, without assumptions on the structure of the underlying environment. While expressive, these models are generally task-dependent: they learn uninterpretable latent representations that are tied to the training task and thus hard to generalize to new tasks. In this work, we present a novel world model formulation where the reward prediction only depends</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>cs.AI</category>
+      <category>ml-for-or</category>
+      <category>survey</category>
+      <source url="http://arxiv.org/abs/2608.17959v1">arXiv</source>
+    </item>
+    <item>
+      <title>An Omitted Mode Is a Rare Rule: The Sampling-Verification Danger Law in Continuous Code World Models</title>
+      <link>http://arxiv.org/abs/2608.17956v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17956v1</guid>
+      <description>Javier Aguilar Martín
+
+In the Code World Model paradigm an LLM synthesizes an executable world model that a classical planner searches, and the model is accepted when it reproduces sampled transitions. We ask what that acceptance certifies in continuous control. We define the pipeline's danger as an expected risk and isolate its exact factor: the probability that N i.i.d. gate rollouts all miss a critical event of probability r is exactly (1-r)^N; an independent acceptance sample adds its budget to the exponent. On th</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>cs.LG</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2608.17956v1">arXiv</source>
+    </item>
+    <item>
+      <title>SIGMA: SHAP-Guided Implicit-Trajectory Generation for Metadata-Free LLM-Based AutoFE</title>
+      <link>http://arxiv.org/abs/2608.17948v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17948v1</guid>
+      <description>Xuan Zheng, Kento Uchida, Shinichi Shirakawa
+
+Recent research has leveraged Large Language Models (LLMs) to enhance Automated Feature Engineering (AutoFE) through semantic descriptions and trajectory-based prompting. However, there exist two challenges that limit their applicability and scalability in long-horizon optimization: (1) semantic metadata is unavailable in many practical settings, and (2) trajectory accumulation increases the risk of exceeding the context window, while without it, the generation process can become unstable, leadi</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>cs.LG</category>
+      <category>survey</category>
+      <source url="http://arxiv.org/abs/2608.17948v1">arXiv</source>
+    </item>
+    <item>
+      <title>Procedural Content Metageneration via Program Search and Continual Abstraction Discovery</title>
+      <link>http://arxiv.org/abs/2608.17947v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17947v1</guid>
+      <description>Matthew Siper, Ahmed Khalifa, Julian Togelius
+
+Large language models can generate executable programs, which makes it possible to search directly over procedural content generators rather than individual levels. We study this approach in Sokoban, Zelda, Dangerous Dave, and Lode Runner. Each run evolves complete Python generators through language-model mutation and crossover. We introduce Continual Abstraction Discovery, or CAD, which extracts reusable primitives from high-fitness programs into a run-specific helper module. A 2x2 experiment c</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>cs.AI</category>
+      <category>metaheuristics</category>
+      <source url="http://arxiv.org/abs/2608.17947v1">arXiv</source>
+    </item>
+    <item>
+      <title>Efficient RLVR Scheduling via Graph-Structured Online Difficulty Estimation</title>
+      <link>http://arxiv.org/abs/2608.17941v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17941v1</guid>
+      <description>Zhizhao Liu, Zhiliang Tian, Xi Wang, Zhihua Wen, Yihang Xiong et al.
+
+Reinforcement learning with verifiable rewards (RLVR) improves the reasoning capabilities of large language models but relies on costly rollout exploration. Assigning the same exploration budget to samples with different difficulty levels is inefficient: easy samples may receive redundant rollouts, whereas difficult but learnable samples may receive too little exploration. Existing adaptive schedulers address this mismatch through curriculum-based sample selection or non-uniform rollout allocati</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
       <category>cs.LG</category>
       <category>scheduling</category>
-      <category>survey</category>
-      <source url="http://arxiv.org/abs/2608.16844v1">arXiv</source>
-    </item>
-    <item>
-      <title>HAF: Adapting Generalist VLAs to Humanoid Whole-Body Loco-manipulation via Hierarchical Action Flow and Spectral Latent RL</title>
-      <link>http://arxiv.org/abs/2608.16837v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16837v1</guid>
-      <description>Langzhe Gu, Chengkai Hou, Meng Li, Xinhua Wang, Jiaming Liu et al.
-
-Humanoid robots hold great promise as general-purpose agents in human-centered environments, yet generalist vision-language-action (VLA) foundation models are not readily applicable to humanoid whole-body loco-manipulation. The high dimensionality and interdependence of humanoid motions make it challenging for conventional single-stage VLA architectures to coordinate locomotion, waist posture, and dual-arm manipulation effectively. Moreover, policies trained through offline behavior cloning can </description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.RO</category>
       <category>ml-for-or</category>
-      <source url="http://arxiv.org/abs/2608.16837v1">arXiv</source>
+      <source url="http://arxiv.org/abs/2608.17941v1">arXiv</source>
     </item>
     <item>
-      <title>Model Hypnosis: Strong control of AI via additive subliminal effects</title>
-      <link>http://arxiv.org/abs/2608.16834v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16834v1</guid>
-      <description>Enric Boix-Adsera, Benedict Tessler
+      <title>Grading Needs a Rubric, Not Intelligence</title>
+      <link>http://arxiv.org/abs/2608.17938v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2608.17938v1</guid>
+      <description>Jhen-Ke Lin
 
-We demonstrate that AI models are broadly susceptible to a phenomenon we call model hypnosis, in which individually weak and seemingly irrelevant cues in the prompt can be systematically combined to strongly control model behavior. Model hypnosis occurs across model families and scales, including in frontier reasoning models, and hypnotic prompts can transfer between models. Because the model is controlled by inconspicuous textual choices, such as paraphrases and typos, model hypnosis presents n</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+Small language models can grade open-ended examination answers as reliably as substantially more expensive models when they grade against an explicit rubric. We test this claim as the design principle behind any-to-bench: a frontier model reads source documents once, at ingestion, to extract each question and its rubric; lower-cost models then perform all repeated grading work. We evaluate six cost-efficient model configurations from two model families at three reasoning-effort levels. Each conf</description>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
       <category>cs.CL</category>
       <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16834v1">arXiv</source>
-    </item>
-    <item>
-      <title>Policy Iteration with Human Feedback: Bringing Post-Training RL to In-context Learning</title>
-      <link>http://arxiv.org/abs/2608.16831v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16831v1</guid>
-      <description>Minh-Ha Nguyen, Cathy Shyr
-
-Generative pretraining established reusable task representations; later work on language-based task conditioning and in-context learning showed that a fixed model could adapt its behavior from instructions and demonstrations. Policy Iteration with Human Feedback (PIHF) builds on this development and the recurrent evaluate-and-improve structure of generalized policy iteration. PIHF uses a pretrained language model as its execution substrate and moves persistent revision to a versioned natural-lan</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.AI</category>
-      <category>healthcare-or</category>
-      <category>survey</category>
-      <source url="http://arxiv.org/abs/2608.16831v1">arXiv</source>
-    </item>
-    <item>
-      <title>CaliBench: Are the Stochastic Dynamics of Video World Models Physically Calibrated?</title>
-      <link>http://arxiv.org/abs/2608.16829v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16829v1</guid>
-      <description>Jonathan Sadeghi, Jenny Seidenschwarz, Jesse Allardice, Sirish Srinivasan, Benjamin Graham et al.
-
-Video world models approximate the stochastic distribution of physical outcomes through generative sampling, but existing benchmarks score individual generations or compare distributions coarsely over a whole dataset, leaving the fine-grained aleatoric uncertainty of specific phenomena untested. We introduce CaliBench, which scores outcomes in a physically interpretable discrete space - a bin index, a die face, a suit, a colour - rather than a learned feature space such as in FID, so the distanc</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.LG</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16829v1">arXiv</source>
-    </item>
-    <item>
-      <title>Quipu: A Governed Bitemporal Knowledge Graph Store</title>
-      <link>http://arxiv.org/abs/2608.16813v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16813v1</guid>
-      <description>Steve Brown
-
-Agents now write knowledge graphs, but knowledge-graph stores still carry defaults set when humans curated them: accept writes now and clean later, keep one time axis or none, treat every writer's facts as equally trustworthy, and leave governance to dashboards and middleware. These four defaults are individually convenient and jointly untenable under agent workloads. We present Quipu, an embeddable store that inverts all four: no fact enters except through a gate whose predicates evaluate the p</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.AI</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16813v1">arXiv</source>
-    </item>
-    <item>
-      <title>When State Becomes an Attack Surface: State-Semantic Injection in LLM-Driven Embodied Agents</title>
-      <link>http://arxiv.org/abs/2608.16806v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16806v1</guid>
-      <description>Jiawei Liu, Jiacheng Guo, Tian Zhang, Yiwei Xu, Juan Wang et al.
-
-Large Language Models (LLMs) have demonstrated capabilities in in-context learning, task decomposition, step-by-step reasoning, and code generation, driving their gradual evolution from text generation models into the core of agents capable of perceiving environments, invoking tools, and executing tasks. Traditional LLM Agents typically obtain information through webpages, documents, databases, or external tools and generate corresponding invocation sequences according to user goals; when this t</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.RO</category>
-      <category>decomposition</category>
-      <source url="http://arxiv.org/abs/2608.16806v1">arXiv</source>
-    </item>
-    <item>
-      <title>Diagnosing Dense Same-Class Attribute Misbinding in Large Vision-Language Models</title>
-      <link>http://arxiv.org/abs/2608.16805v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16805v1</guid>
-      <description>Yuanzhi Xu, Qian Gao, Jun Fan, Guohui Ding, Zhenyu Yang et al.
-
-Large vision-language models can recognize the objects and attributes in a crowded scene yet assign an attribute to the wrong same-class instance. Generic visual-question-answering accuracy marks the response as wrong, while object-hallucination metrics may regard both the object and attribute as image-supported; neither reveals the transfer. This study formalizes this blind spot as Dense Same-Class Attribute Misbinding (DSCAM) and presents InstaBind-Lite, a controlled benchmark that makes it di</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.CV</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16805v1">arXiv</source>
-    </item>
-    <item>
-      <title>Cross-Sign Language Transfer Learning Using Domain Adaptation with Multi-scale Temporal Alignment</title>
-      <link>http://arxiv.org/abs/2608.16804v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16804v1</guid>
-      <description>Keren Artiaga, Yang Li, Ercan Engin Kuruoglu, Wai Kin,  Chan
-
-Sign language serves as a vital means of communication for individuals with hearing impairments, yet recognition resources for the over 100 distinct sign languages are severely lacking. In response, we present our work on sign language recognition using transfer learning and the domain adaptation method TA3N, which utilizes the Temporal Relational Network (TRN) module for aligning multi-scale temporal relations. Our findings highlight the superior performance of Domain Adaptation to neural netwo</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.AI</category>
-      <category>ml-for-or</category>
-      <source url="http://arxiv.org/abs/2608.16804v1">arXiv</source>
-    </item>
-    <item>
-      <title>When Agents Coordinate: Measuring Coordination in Multi-Agent AI Coding</title>
-      <link>http://arxiv.org/abs/2608.16801v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16801v1</guid>
-      <description>Giuseppe Destefanis, Tomaso Aste
-
-We study how teams of AI coding agents coordinate while solving programming tasks. Current evaluations usually report whether the agents complete the task and how much the run costs, leaving the coordination inside the team largely unmeasured. We introduce an instrument to measure this coordination. Each run is represented as a temporal network in which agents and files are nodes, and messages, file writes, and file reads are timestamped directed edges with an associated cost. We apply this inst</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.AI</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16801v1">arXiv</source>
-    </item>
-    <item>
-      <title>ClawGym II: Exploring Black-Box RL on Agent Harness</title>
-      <link>http://arxiv.org/abs/2608.16798v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16798v1</guid>
-      <description>Huatong Song, Fei Bai, Ming Yang, Renyuan Li, Jia Deng et al.
-
-Agent harnesses have substantially improved performance on long-horizon tasks by coordinating agent interactions with the environment. However, reinforcement learning through complex harnesses remains largely unexplored, as scaling such training to long-horizon agent tasks introduces fundamental challenges. In this work, we present a unified black-box RL framework for stable and scalable optimization of general agents through complex harnesses. Concretely, we first build a sandbox-based executio</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.CL</category>
-      <category>ml-for-or</category>
-      <source url="http://arxiv.org/abs/2608.16798v1">arXiv</source>
-    </item>
-    <item>
-      <title>UniDot: A Unified Network for Sequence Modeling and Feature Interaction in Large-scale Recommendation</title>
-      <link>http://arxiv.org/abs/2608.16797v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16797v1</guid>
-      <description>Rongcheng Lin, Yan Sun, Jamey Zhang, Guanglei Xiong, Ivan Ji et al.
-
-Industrial recommenders rely on two model families that have evolved largely independently: feature-interaction models over multi-field user/item features, and sequential models over user-behavior histories. Production systems couple them only loosely. To unify the two, we present UniDot, a novel architecture for post-click conversion prediction built from the factorization-machine (FM) point of view: the embedding inner product---which powers collaborative filtering and lets a recommender gener</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.IR</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16797v1">arXiv</source>
-    </item>
-    <item>
-      <title>Historical Backtesting for Scientific Question Discovery: A Protocol and Astronomy Pilot</title>
-      <link>http://arxiv.org/abs/2608.16795v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16795v1</guid>
-      <description>Hui Mao
-
-Systems that generate scientific research questions are evaluated today by expert scores, LLM-as-judge ratings, or curated case studies -- all subjective, none falsifiable. We formalize historical backtesting as an alternative: a system generates questions from a corpus frozen at a historical cutoff, the questions are frozen before any access to later literature, and a temporally isolated future corpus then determines whether each question was subsequently answered, partially addressed, independ</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.CE</category>
-      <category>decomposition</category>
-      <source url="http://arxiv.org/abs/2608.16795v1">arXiv</source>
-    </item>
-    <item>
-      <title>Neurosymbolic Embodied Agents</title>
-      <link>http://arxiv.org/abs/2608.16794v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16794v1</guid>
-      <description>Mohammad Albinhassan, Yuming Feng, Alessandra Russo, Pranava Madhyastha
-
-Language and vision-language models generate plausible embodied plans but do not guarantee executability, as their outputs can violate environment dynamics or act on incorrectly grounded entities. We present a neurosymbolic agent that factors long-horizon household tasks into task-directed visual exploration and constrained symbolic planning. In the first phase, a vision-language model and exploration harness acquire goal-relevant predicates and instance bindings from egocentric observations and</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.RO</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16794v1">arXiv</source>
-    </item>
-    <item>
-      <title>Steering the Flow: Inverting Face Recognition Models via Gradient-Guided Flow Matching</title>
-      <link>http://arxiv.org/abs/2608.16791v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16791v1</guid>
-      <description>Ye Lu, Shen Wang, Zhaoyang Zhang, Yihan Yan, Li Liu et al.
-
-Model Inversion Attacks (MIAs) aim to reconstruct representative training samples of target identities from face recognition models, exposing critical security vulnerabilities. Existing methods typically rely on indirect guidance or highly stochastic guidance, making it difficult to stably optimize generation trajectories toward target facial images. In this paper, we propose Steering Flow Model Inversion (SFMI), a novel two-stage white-box model inversion method that reformulates inversion as a</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.CV</category>
-      <category>stochastic</category>
-      <category>survey</category>
-      <source url="http://arxiv.org/abs/2608.16791v1">arXiv</source>
-    </item>
-    <item>
-      <title>GRIP: Grounded Reasoning via Information-Restricted Premises</title>
-      <link>http://arxiv.org/abs/2608.16776v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16776v1</guid>
-      <description>Lirui Teng
-
-High-capacity encoders in retrieval-augmented generation (RAG) can let the query dominate the latent state, leaving retrieved evidence functionally irrelevant. We call this failure mode query dominance. To address it, we introduce \textbf{GRIP} (Grounded Reasoning via Information-Restricted Premises), which imposes capacity asymmetry: the decoder keeps full-dimensional access to the query, while retrieved evidence passes through a severe stochastic bottleneck. This forces the evidence channel to</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.AI</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16776v1">arXiv</source>
-    </item>
-    <item>
-      <title>Topological Attribution Distance (TAD): Revealing Segment-Level RAG Influence on LLM Output Geometry for Incident Log Analysis</title>
-      <link>http://arxiv.org/abs/2608.16775v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16775v1</guid>
-      <description>Reza Fayyazi, Michael Zuzak, Shanchieh Jay Yang
-
-Large Language Models (LLMs) are increasingly being deployed in cybersecurity operations to assist cybersecurity analysts with rapid decision-making against emerging threats. However, there is a main criteria that must be met when using LLMs in cybersecurity, that is, trust in the generated outputs. As Agentic AI is integrated into operational systems, a robust evidence attribution and provenance tracking technique is essential to trace the origins of model generations. When autonomous agents ma</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.CR</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16775v1">arXiv</source>
-    </item>
-    <item>
-      <title>TRACE-Bench: Decomposing and Diagnosing Multi-Reference Image Generation</title>
-      <link>http://arxiv.org/abs/2608.16765v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2608.16765v1</guid>
-      <description>Haoran Wang, Chaofan Ma, Ran Yi, Lizhuang Ma
-
-Despite recent advances in unified multimodal models for multi-reference image generation, existing benchmarks remain organized around predefined task types (e.g., &quot;subject composition&quot;), which are ill-suited to this combinatorial setting and lead to fragmented coverage, uncontrolled complexity, and little diagnostic value. Recognizing that diverse multi-reference tasks share a common set of atomic operations, we adopt a capability-oriented perspective and formalize four operators: Anchor ($f$),</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>cs.CV</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2608.16765v1">arXiv</source>
+      <source url="http://arxiv.org/abs/2608.17938v1">arXiv</source>
     </item>
   </channel>
 </rss>
