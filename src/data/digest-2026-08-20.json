@@ -1,0 +1,333 @@
+{
+  "date": "2026-08-20",
+  "generated_at": "2026-08-20T07:50:27.617044+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2608.18442",
+      "title": "Optimization of the Railcar Assignment Problem Using Zone-based Double Deep Reinforcement Learning",
+      "authors": [
+        "Ruonan Zhao",
+        "Joseph Geunes"
+      ],
+      "abstract": "Railcar switching, or shunting operations decisions play a significant role in the efficient operation of railyard systems, which are in turn critical to the fast and effective movement of goods. In flat yards, switching operations are primarily performed using locomotives to push and pull railcars in order to assemble and disassemble trains. In such settings, railcars with predefined destinations are located across multiple parallel rail tracks, and must be moved, or switched, in order to form desired outbound trains. This study addresses the Railcar Assignment Problem (RAP) in flat yards with an objective of minimizing the total number of switching movements. We present a novel mixed-integer programming (MIP) model for this problem that incorporates practical operational constraints in rail yards, and demonstrate its NP-hardness. To solve large-scale instances, we propose a comprehensive Zone-based Double Deep Q-Network (Zone-DDQN) heuristic method that integrates railway structure, yard-zone decomposition, and a Double Deep Q-Network (DDQN). The yard-zone decomposition strategy partitions the yard into multiple parallel yard zones, after which the DDQN is applied to solve the problem within each zone individually and sequentially. Computational experiments across small-, medium-, and large-scale yards were conducted on a series of RAP instances. Average results show that the Zone-DDQN heuristic achieves an average optimality gap of $5.71\\%$ across small-scale yard instances. For large-scale yard instances containing more than 150 railcars and 30 tracks, the MIP model was not able to obtain solutions within 24 hours. In contrast, the Zone-DDQN heuristic was able to solve these instances with an average running time of 214.42 seconds.",
+      "date": "2026-08-19",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.18442v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.18442",
+      "arxiv_id": "2608.18442v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.18429",
+      "title": "Multi-Objective Optimization Under Uncertainty of Part Quality in Fused Filament Fabrication",
+      "authors": [
+        "Berkcan Kapusuzoglu",
+        "Paromita Nath",
+        "Matthew Sato",
+        "Sankaran Mahadevan",
+        "Paul Witherell"
+      ],
+      "abstract": "This work presents a data-driven methodology for multi-objective optimization under uncertainty of process parameters in the fused filament fabrication (FFF) process. The proposed approach optimizes the process parameters with the objectives of minimizing the geometric inaccuracy and maximizing the filament bond quality of the manufactured part. First, experiments are conducted to collect data pertaining to the part quality. Then, Bayesian neural network (BNN) models are constructed to predict the geometric inaccuracy and bond quality as functions of the process parameters. The BNN model captures the model uncertainty caused by the lack of knowledge about model parameters (neuron weights) and the input variability due to the intrinsic randomness in the input parameters. Using the stochastic predictions from these models, different robustness-based design optimization formulations are investigated, wherein process parameters such as nozzle temperature, nozzle speed, and layer thickness are optimized under uncertainty for different multi-objective scenarios. Epistemic uncertainty in the prediction model and the aleatory uncertainty in the input is considered in the optimization. Finally, Pareto surfaces are constructed to estimate the tradeoffs between the objectives. Both the BNN models and the effectiveness of the proposed optimization methodology are validated using the actual manufacturing of the parts.",
+      "date": "2026-08-19",
+      "source": "arXiv",
+      "source_detail": "cs.CE",
+      "url": "http://arxiv.org/abs/2608.18429v1",
+      "tags": [
+        "cs.CE",
+        "stochastic",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1115/1.4053181",
+      "arxiv_id": "2608.18429v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.18915",
+      "title": "Simple, Safe, and Overlooked: Reclaiming Sustainable Domain Generalization with Statistical Color Matching",
+      "authors": [
+        "Sebastian Doerrich",
+        "Francesco Di Salvo",
+        "Shyam Nandan Rai",
+        "Marco Lents",
+        "Christian Ledig"
+      ],
+      "abstract": "Hardware shifts, color variations, and changing patient characteristics between development and deployment routinely break trained medical image classifiers. Existing remedies fall short: standard color jittering provides insufficient diversity, while deep generative style transfer algorithms hallucinate features, destroy clinically relevant structures, and waste massive compute resources. To address this, we revisit classical statistical color matching and repurpose it as Colorist, a highly efficient data augmentation strategy that applies global mean-standard deviation matching directly in the RGB color space. We demonstrate that this training-free, fully interpretable approach safely generates structurally intact domain variations, outperforming deep generative models in structural fidelity and color alignment. Across out-of-distribution histopathology, peripheral blood, dermatology, and retinal datasets, it improves balanced accuracy by up to +9% over state-of-the-art domain generalization regularizers and by +13% over an unaugmented baseline. Moreover, by avoiding neural networks in the augmentation loop, Colorist preserves anatomical structure, minimizes carbon footprint, and integrates seamlessly into standard dataloaders. Together, these findings establish statistical matching as a safe, interpretable, yet overlooked alternative to deep architectures for clinical robustness. Source code is available at https://github.com/sdoerrich97/colorist.",
+      "date": "2026-08-19",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2608.18915v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.18915",
+      "arxiv_id": "2608.18915v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.18774",
+      "title": "MIFR: A Modality-Invariant and Fair Representation Framework for Skin Disease Classification",
+      "authors": [
+        "Asonyu Senge Njih",
+        "Yvan Guifo Fodjo",
+        "Vianney Kengne Tchendji",
+        "Jerry Lacmou Zeutouo",
+        "Kerol Djoumessi"
+      ],
+      "abstract": "Skin diseases represent a major global public health burden, yet machine learning tools developed to assist in their diagnosis suffer from two critical limitations: reliance on only one modality for diagnosis and systematic performance disparities across skin tones. While existing approaches address each challenge separately, this work proposes a modality-invariant framework with fair representation (MIFR) for skin disease classification. The architecture pairs clinical photographs with dermoscopic images using ViT-based encoders, projecting each input into a high-dimensional embedding space via modality-specific projection heads. The resulting model is trained with a five-component multi-objective loss including weighted cross-entropy for classification, confusion and skin-type classification losses for fairness, per-modality supervised contrastive loss for class alignment, and a modality-invariance loss for clinical and dermoscopic modality alignment. Experiments on the HIBA+Derm7pt paired dataset and the external PAD-UFES-20 and ISIC 2019 datasets showed that modality-invariant representation learning provides competitive predictive performance compare to relevant baseline models and competitive fairness on the internal dataset. t-SNE visualizations confirmed that clinical and dermoscopic embeddings of the same disease are geometrically aligned, validating the joint objectives.",
+      "date": "2026-08-19",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2608.18774v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "healthcare-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.18774",
+      "arxiv_id": "2608.18774v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.18844",
+      "title": "Robust Joint Planning of EV and eBus Charging Infrastructure with PV Self-Consumption under Demand Uncertainty",
+      "authors": [
+        "Biswarup Mukherjee"
+      ],
+      "abstract": "This paper presents a mixed-integer linear programming (MILP) framework for joint electric vehicle (EV) and electric bus (eBus) charging-infrastructure planning with photovoltaic (PV) self-consumption. The model co-optimizes charger siting, sizing, technology selection, eBus-to-depot assignment, and hourly charging schedules. A deterministic MILP is first formulated as a nominal benchmark and then extended to a scenario-based robust min--max formulation under vehicle energy-demand uncertainty. The robust model uses shared first-stage infrastructure decisions and scenario-specific operating decisions, and minimizes infrastructure cost plus the worst-case scenario operating cost through an epigraph reformulation. Soft-feasibility penalties quantify unmet charging energy, terminal state-of-charge (SOC) shortfall, and capacity violations under stressed scenarios. A 50-node case study shows that route-segment eBus demand and PV weighting alter charger deployment, technology mix, and grid import, while V2G enables hard-feasible robust operation at sufficiently large penalty weights. These results highlight that effective long-term infrastructure planning must simultaneously account for diverse vehicle fleets, operational strategies that adapt to different scenarios, and node-level constraints on charging capacity.",
+      "date": "2026-08-19",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2608.18844v1",
+      "tags": [
+        "eess.SY",
+        "linear-programming",
+        "integer-programming",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.18844",
+      "arxiv_id": "2608.18844v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.18494",
+      "title": "Power Estimation and Optimal Work-Charging Scheduling of Construction Electric Vehicles via Mobile Charging Stations",
+      "authors": [
+        "Avik Ghosh",
+        "Akın Taşcıkaraoğlu",
+        "Daniela Rojas",
+        "Muhammed A. Beyazıt",
+        "Mohammad Reza Salehizadeh",
+        "Keaton Chia",
+        "Sasha Doppelt",
+        "Michael Ferry",
+        "Jan Kleissl",
+        "Sujit Dey",
+        "Yuanyuan Shi"
+      ],
+      "abstract": "Construction electric vehicles (CEVs) are a promising clean alternative to diesel-powered construction equipment, but their adoption is constrained by sparse onsite charging infrastructure, limited CEV mobility, and insufficient understanding of their power consumption. We address these gaps through a field-data-driven framework coupling CEV power estimation with mobile-charging-aware work scheduling. First, using a real-world construction demonstration at the University of California, San Diego, we develop and validate a per-subactivity power estimation model for a compact electric excavator. Manually labeled video is synchronized with coarse battery state-of-charge (SOC) telematics, and constrained nonnegative least squares is used to recover each subactivity's average power consumption. The model predicts held-out test data within $17\\%$ normalized mean absolute error (NMAE), and the accompanying dataset is released publicly. Second, leveraging the subactivity power estimates, we formulate a mixed-integer program that jointly optimizes CEV work and charging schedules together with the location, timing, and charging/discharging of mobile charging stations (MCSs) serving the CEVs. The optimization accounts for energy and demand charges, carbon emissions, unmet work penalties, MCS travel, and the physical and operational constraints of the CEVs and MCSs. Across realistic scenarios drawn from the demonstration, the proposed co-optimization attains the lowest operating cost in every case, being $7$--$96\\%$ below the best-performing baseline, while solving most instances to proven optimality within an hour. Dataset and scripts are available at https://github.com/ghosh-avik/CEV-MCS-Power-Estimation-and-Joint-Scheduling.",
+      "date": "2026-08-19",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2608.18494v1",
+      "tags": [
+        "eess.SY",
+        "integer-programming",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.18494",
+      "arxiv_id": "2608.18494v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07332-5",
+      "title": "A mathematical framework and optimization approach for strategically configuring hospitals to accommodate diverse patient caseloads",
+      "authors": [
+        "Burdett, R.",
+        "Corry, P."
+      ],
+      "abstract": "Abstract\n                  In many hospitals, treatment areas are typically dedicated to a single medical or surgical specialty. While shared use by multiple specialties is uncommon, it can be necessary, or even advantageous in certain situations. This article introduces a proof-of-concept mathematical framework for strategically reorganizing treatment-area functions to enhance resilience and operational flexibility. We focus on configuring a hospital so it can robustly treat a selected repertoire of patient caseloads (a.k.a., case mix) should they arise. Using mixed-integer programming and metaheuristic optimization, our solution approach determines which patient types should share each treatment area, maximizing the number of targeted caseloads that can be accommodated. When caseloads vary greatly or are infeasible, the model seeks a best-fit configuration that maximizes fulfilment across all caseload profiles. Because solving the exact model is computationally intractable, we propose and evaluate two matheuristics, one that utilises Simulated Annealing and the other Variable Neighbourhood Search. Numerical testing on a large, real-world instance demonstrates their effectiveness in finding near-optimal, practical solutions, providing strong motivation for further research and validation across diverse healthcare settings.",
+      "date": "2026-08-19",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07332-5",
+      "tags": [
+        "integer-programming",
+        "metaheuristics",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07332-5",
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7202185294",
+      "title": "NEXUS Personalized Health, One platform to make your biomedical research possible",
+      "authors": [
+        "Daniel J. Stekhoven",
+        "Franziska Singer"
+      ],
+      "abstract": "We are NEXUS Personalized Health at the ETH Zurich. Our friends call us NEXUS. We offer highly customizable services and collaborations in the field of biomedical research and development. A pool of professional scientists in bioinformatics, data science, statistics, software engineering, screening, and lab automation allows us to adapt to any experimental or analytical setting. At the interface between fundamental research and clinical routine, we catalyze bench-to-bedside projects and translate your scientific ideas into clinical tools. Whether fee-for-service or joint collaboration, we deliver tailor-made full services for our users.",
+      "date": "2026-08-20",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.21890575",
+      "tags": [
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.21890575",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s11081-026-10122-4",
+      "title": "Discrete adjoint gradient computation for multiclass traffic flow models on road networks",
+      "authors": [
+        "Goatin, P.",
+        "Klar, A.",
+        "Mezquita-Nieto, C."
+      ],
+      "abstract": "Abstract\n                  This paper applies a discrete adjoint gradient computation method for a multi-class traffic flow model on road networks. Vehicle classes are characterized by their specific velocity functions, which depend on the total traffic density, resulting in a coupled hyperbolic system of conservation laws. The system is discretized using a Godunov-type finite volume scheme based on demand and supply functions, extended to handle complex junction coupling conditions—such as merges and diverges—and boundary conditions with buffer lengths to account for congestion spillback. The optimization of different travel-related performance metrics, including total travel time and total travel distance, is formulated as a constrained minimization problem and is accomplished through the use of an adjoint gradient approach, allowing for an efficient computation of sensitivities with respect to the chosen time-dependent control variables. Numerical simulations on a sample network demonstrate the efficiency of the proposed framework, particularly as the number of control parameters increases. This approach provides a robust and computationally efficient solution, making it suitable for large-scale traffic network optimization. Additionally, we explore a multi-objective optimization problem to assess the trade-off between conflicting traffic metrics.",
+      "date": "2026-08-20",
+      "source": "Optimization and Engineering",
+      "source_detail": "Optimization and Engineering",
+      "url": "https://doi.org/10.1007/s11081-026-10122-4",
+      "tags": [
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11081-026-10122-4",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.19015",
+      "title": "Constrained Spatial Pricing of On-Street Parking with Bayesian Demand Calibration",
+      "authors": [
+        "Ananya Kale",
+        "Mohit Apte"
+      ],
+      "abstract": "Occupancy-targeted curb pricing, including San Francisco's SFpark pilot, often relies on local threshold rules that do not account for spatial substitution or uncertainty in demand response. We estimate parking-price elasticities from disaggregated SFpark data using a hierarchical Bayesian demand model and use the resulting posterior distribution in a spatially coupled constrained pricing model. Partial pooling across districts gives a posterior mean elasticity of -0.241 with a 95% credible interval of [-0.325, -0.176]. The pricing problem is formulated as a constrained nonlinear program with spatial coupling, temporal price-change limits, neighbor price gaps, and a soft revenue floor, and is solved with Ipopt. Expected-loss and CVaR objectives are evaluated over joint posterior draws rather than a fixed elasticity. On held-out posterior scenarios, the posterior-based CVaR policy has a lower objective than the SFpark threshold rule and historical tariff with posterior probability 1.00, and than a literature-calibrated robust policy with probability 0.85. Epsilon-constraint frontiers show that posterior calibration changes the efficient pricing set. Results from 60 district-windows across Fillmore, Mission, and Marina also report the associated tradeoffs in occupancy-band performance, revenue, and spatial disparity.",
+      "date": "2026-08-19",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.19015v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.19015",
+      "arxiv_id": "2608.19015v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Ipopt"
+      ]
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 2,
+    "conferences": 0,
+    "opportunities": 2,
+    "total": 12
+  }
+}
