@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T07:50:27.350724+00:00",
+  "generated_at": "2026-08-21T07:49:58.631973+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 151,
+      "github_open_issues": 150,
       "github_recent_prs": [
+        "Enforces epsilon minimum bound checks",
+        "Fix traininstance6 bug",
         "Add issues and PR templates",
         "Fix #3216",
-        "Presolve/postsolve debug utilities",
-        "Presolve infrastructure for adding rows/columns",
-        "explicitly cast size_t to HighsInt in getNumLinearObjectives()"
+        "Presolve/postsolve debug utilities"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13920,
+      "github_stars": 13926,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 121,
+      "github_open_issues": 123,
       "github_recent_prs": [
+        "Update action.yml",
+        "Update log_severity.h",
         "[md] Make links relative to project root",
         "sat: do not remove an enforcement literal from incomplete activity bounds",
-        "routing: test AllowedVehicles in Java and .Net",
-        "glop: fix windows build",
-        "export glop and lp_data from google3"
+        "routing: test AllowedVehicles in Java and .Net"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1130,14 +1130,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
-      "github_stars": 6305,
-      "github_open_issues": 193,
+      "github_stars": 6307,
+      "github_open_issues": 196,
       "github_recent_prs": [
-        "Add MIP start support to the HiGHS interface",
-        "Vectorize Gurobi conic interface model building, drop pre-9.5 code paths",
-        "Bump github/codeql-action/upload-sarif from 4.37.4 to 4.37.7",
-        "Bump JamesIves/github-pages-deploy-action from 4.8.0 to 4.9.0",
-        "Clarify that warm_start initial-guess support is not yet implemented …"
+        "Draft: Add constraint-level complementarity checks",
+        "Read a 3-D value in tv as channels",
+        "Accept any shape in geo_mean, and fix row vectors along the way",
+        "Fix trace canonicalization for scalar and elementwise products",
+        "Fixed PSD and NSD check to allow for complex coefficients"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,13 +1319,13 @@
       ],
       "recent_changes": "Summer or not, we've been busy bringing you an even faster and even more stable solver. \r\n\r\n# Changelog\r\n\r\n## 🚀 Features\r\n- 8e1948f Support sourcing declarative shadow variables from planning list var",
       "github_stars": 1760,
-      "github_open_issues": 107,
+      "github_open_issues": 102,
       "github_recent_prs": [
+        "chore: Maven plugin unify error handling to use MojoExecutionException",
         "docs: mention the default moves",
         "feat: Allow to use PAT from Maven encrypted settings",
         "chore: Rename accountId to namespace",
-        "fix: sdk model visualisation detection",
-        "ci: restrict `java_full` workflow token permissions"
+        "fix: sdk model visualisation detection"
       ]
     },
     {
@@ -1384,13 +1384,13 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2508,
-      "github_open_issues": 386,
+      "github_open_issues": 388,
       "github_recent_prs": [
+        "Extend pwl approximation init method to support higher initial points and single solve.",
+        "Fix cuOpt solver name formatting for versions with != 3 components",
+        "Fix cuOpt solver name formatting for versions with != 3 components",
         "Add pixi environment directory to .gitignore",
-        "Remove expression `_args_` tuple",
-        "Remove link to sciencedirect.com as it has become unverifiable",
-        "Fix non-rigorous crossed bound results",
-        "Add LBB relaxed NLP node solver"
+        "Remove expression `_args_` tuple"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1448,7 +1448,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.31.2\n\n[Diff since v1.31.1](https://github.com/jump-dev/JuMP.jl/compare/v1.31.1...v1.31.2)\n\n\n**Merged pull requests:**\n- Fix formatting for latest JuliaFormatter version (#4208) (@odow)\n- Fi",
-      "github_stars": 2466,
+      "github_stars": 2467,
       "github_open_issues": 12,
       "github_recent_prs": [
         "[docs] remove tectonic_jll and switch to Docker for LaTeX build",

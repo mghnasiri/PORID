@@ -1,0 +1,346 @@
+{
+  "date": "2026-08-21",
+  "generated_at": "2026-08-21T07:49:58.979007+00:00",
+  "publications": [
+    {
+      "id": "openalex-W7202185294",
+      "title": "NEXUS Personalized Health, One platform to make your biomedical research possible",
+      "authors": [
+        "Daniel J. Stekhoven",
+        "Franziska Singer"
+      ],
+      "abstract": "We are NEXUS Personalized Health at the ETH Zurich. Our friends call us NEXUS. We offer highly customizable services and collaborations in the field of biomedical research and development. A pool of professional scientists in bioinformatics, data science, statistics, software engineering, screening, and lab automation allows us to adapt to any experimental or analytical setting. At the interface between fundamental research and clinical routine, we catalyze bench-to-bedside projects and translate your scientific ideas into clinical tools. Whether fee-for-service or joint collaboration, we deliver tailor-made full services for our users.",
+      "date": "2026-08-20",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.21890575",
+      "tags": [
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.21890575",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s11081-026-10122-4",
+      "title": "Discrete adjoint gradient computation for multiclass traffic flow models on road networks",
+      "authors": [
+        "Goatin, P.",
+        "Klar, A.",
+        "Mezquita-Nieto, C."
+      ],
+      "abstract": "Abstract\n                  This paper applies a discrete adjoint gradient computation method for a multi-class traffic flow model on road networks. Vehicle classes are characterized by their specific velocity functions, which depend on the total traffic density, resulting in a coupled hyperbolic system of conservation laws. The system is discretized using a Godunov-type finite volume scheme based on demand and supply functions, extended to handle complex junction coupling conditions—such as merges and diverges—and boundary conditions with buffer lengths to account for congestion spillback. The optimization of different travel-related performance metrics, including total travel time and total travel distance, is formulated as a constrained minimization problem and is accomplished through the use of an adjoint gradient approach, allowing for an efficient computation of sensitivities with respect to the chosen time-dependent control variables. Numerical simulations on a sample network demonstrate the efficiency of the proposed framework, particularly as the number of control parameters increases. This approach provides a robust and computationally efficient solution, making it suitable for large-scale traffic network optimization. Additionally, we explore a multi-objective optimization problem to assess the trade-off between conflicting traffic metrics.",
+      "date": "2026-08-20",
+      "source": "Optimization and Engineering",
+      "source_detail": "Optimization and Engineering",
+      "url": "https://doi.org/10.1007/s11081-026-10122-4",
+      "tags": [
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11081-026-10122-4",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.20320",
+      "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
+      "authors": [
+        "Narges Ahmadi",
+        "Yubo Jiao",
+        "Jônatas Augusto Manzolli",
+        "Jiangbo Yu",
+        "Luis Miranda-Moreno"
+      ],
+      "abstract": "Travel behavior research increasingly combines digital data collection with predictive modeling, yet these stages are often developed and evaluated separately. This study proposes a three-agent workflow integrating conversational data collection, structured data processing, and behavioral prediction. A chatbot-administered, image-augmented stated-preference survey collected mode choices from student commuters across five predefined weather scenarios, yielding 454 respondent-scenario observations. Weather-related associations were analyzed using a multinomial logit model, while logistic regression and random forest provided machine-learning benchmarks. Nine locally deployed large language models (LLMs), ranging from 2 to 35 billion parameters, were evaluated across four zero-shot prompt-and-context conditions and extended through persona, few-shot, and vision-based configurations. Random forest achieved 69.6% five-class accuracy, while the best text-only zero-shot LLM reached 69.9% without task-specific fitting. Habitual travel information produced the most consistent gains, Expert framing generally outperformed Role-Play, and persona information was most useful when habitual travel information was unavailable. Few-shot prompting improved prediction for several models, with gains stabilizing after a small number of examples. Using the same weather images shown to respondents, the best vision-based configuration reached 71.5% five-class accuracy, indicating that visual context may provide additional predictive information for selected models. Overall, the study shows how conversational surveys, structured data processing, conventional behavioral modeling, machine learning, and multimodal LLM prediction can be coordinated within an auditable multi-agent workflow.",
+      "date": "2026-08-20",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.20320v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.20320",
+      "arxiv_id": "2608.20320v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.19953",
+      "title": "Learning Early-to-Final Solution Consistency for MILP Acceleration",
+      "authors": [
+        "Guanlin Li",
+        "Chengrui Gao",
+        "Chenguang Wang",
+        "Haopu Shang",
+        "Zherong Zhang",
+        "Ke Xue",
+        "Jixiang Lu",
+        "Weiyong Yang",
+        "Chao Qian"
+      ],
+      "abstract": "Mixed-Integer Linear Programming (MILP) is a fundamental problem class in operations research and combinatorial optimization, with broad applications to industrial decision-making. Owing to their NP-hardness, however, modern solvers may struggle to find high-quality solutions for challenging MILP instances within practical time limits. Recent learning-based approaches seek to accelerate MILP solving by directly predicting high-quality solutions from static instance-level features, such as variable-constraint bipartite graphs. Yet accurate solution prediction from instance features alone is difficult, and these methods largely overlook the information revealed during the solver's search process. In this paper, we find that solutions produced at the early search stage of MILP solvers, which are computationally cheap to obtain, are often structurally close to the solutions found after full-budget search. Motivated by this observation, we propose a new solver-informed paradigm that shifts the learning target from variable assignment to early-to-final consistency: for each variable, we predict whether its early-stage assignment should persist in full-budget solutions. The predicted consistency naturally guides downstream search, for instance by fixing the assignments deemed consistent. At inference time, we further ensemble consistency predictions across multiple early-stage solutions to improve robustness. Experiments across four MILP benchmarks show our method improves prediction-guided search across diverse downstream pipelines. With Gurobi, our proposed method reduces the primal gap by 56.9% on average and closes it completely on combinatorial auction instances. Besides, we transferred the Gurobi-trained model zero-shot to SCIP without adaptation, achieving a 36.4% average gap reduction across benchmarks.",
+      "date": "2026-08-20",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.19953v1",
+      "tags": [
+        "cs.AI",
+        "linear-programming",
+        "integer-programming",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.19953",
+      "arxiv_id": "2608.19953v1",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Gurobi",
+        "SCIP"
+      ]
+    },
+    {
+      "id": "arxiv-2608.20044",
+      "title": "End-to-end Early Classification of Time Series in Non-Stationary Environments",
+      "authors": [
+        "Aurélien Renault",
+        "Alexis Bondu",
+        "Antoine Cornuéjols",
+        "Vincent Lemaire"
+      ],
+      "abstract": "Early Classification of Time Series (ECTS) requires making accurate decisions as early as possible in inherently online and evolving environments. Yet, most existing methods assume stationarity and rely on separable designs, where classification and triggering are optimized independently, an assumption that fundamentally limits their adaptability under drift. In this work, we challenge this paradigm and study ECTS under non-stationary conditions. We provide the first systematic comparison between separable and end-to-end approaches across controlled drifting scenarios. Building on Reinforcement Learning, we introduce DQeND, a unified architecture that jointly learns representation, classification, and triggering decisions, while remaining directly comparable to state-of-the-art separable baselines. Across a wide range of drifts, DQeND demonstrates strong robustness across various non-stationary scenarios, consistently outperforming separable baselines. An ablation study further highlights that jointly updating representation and decision modules is critical to these gains. Overall, our results indicate that end-to-end learning can offer improved adaptation capabilities for ECTS in dynamic environments, and motivate further investigation of alternatives to separable designs.",
+      "date": "2026-08-20",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.20044v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.20044",
+      "arxiv_id": "2608.20044v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.19965",
+      "title": "Flow Matching Meets 3D Curvilinear Structure Segmentation in Medical Imaging",
+      "authors": [
+        "Sidi Mohamed Sid'El Moctar",
+        "Nicolas Vitry",
+        "Hélène Bouvrais"
+      ],
+      "abstract": "Segmentation of curvilinear anatomical structures in 3D medical images remains challenging due to complex topology, severe class imbalance, weak contrast, and large variations in structure morphology. While deep learning approaches for 3D curvilinear segmentation have been proposed, they are often tailored to specific anatomies or modalities, limiting generalization across clinical settings and leaving room for improvement. Recent generative models have shown the benefits of iterative prediction for structured segmentation tasks, yet diffusion-based methods suffer from computationally expensive sampling, hindering their use on high-resolution 3D volumes. We present 3D-CurvSegFlow, a flow matching-based model for 3D curvilinear structure segmentation. The model learns a continuous transformation from a simple source distribution to the target vascular representation, enabling progressive refinement of complex curvilinear geometries with efficient inference. We evaluate our method on Three public challenging datasets covering distinct anatomies and modalities: portal vein, cerebral vessel, and coronary arteries. Using a common architecture and training strategy across all tasks, our method outperforms general-purpose and vessel-specific approaches, with strong preservation of thin branches and vascular continuity. This work not only advances the state-of-the-art in 3D curvilinear segmentation but also opens new avenues for efficient, generalizable, and clinically applicable methods in medical image analysis.",
+      "date": "2026-08-20",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2608.19965v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.19965",
+      "arxiv_id": "2608.19965v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2025.1130",
+      "title": "Coluna.jl: A Branch-Cut-and-Price Framework in Julia",
+      "authors": [
+        "Vanderbeck, F.",
+        "Marques, G.",
+        "Sadykov, R.",
+        "Nesello, V.",
+        "Javerzat, N.",
+        "Pessoa, A.",
+        "Bulhões, T.",
+        "Bentes, C.",
+        "de Lima, V.",
+        "Subramanian, A."
+      ],
+      "abstract": "Mixed-integer programming (MIP) models are highly successful in both academic and industrial settings, but they often suffer from scalability issues and weak relaxations. These issues have been effectively addressed by Dantzig-Wolfe decomposition and branch-cut-and-price (BCP) approaches in many different applications. Such approaches are among the most successful for solving large-scale MIP models; however, their complex and sophisticated implementations might not be practical for nonspecialists. This has prompted the development of generic BCP frameworks, which aim to simplify the implementation process while maintaining a high level of efficiency and flexibility. The present paper introduces Coluna.jl, an innovative BCP framework developed in Julia, a language known for its high computational performance and ease of use. Coluna.jl is an open-source package that enhances user experience by enabling more accessible coding and rapid prototyping without compromising computational efficiency. Among its key advantages, Coluna.jl provides a framework for advanced features like state-of-the-art column generation with dual stabilization, strong branching, and a comprehensive presolve routine. This combination of enabling advanced features and user-friendly implementation establishes Coluna.jl as a significant contribution to the field of optimization software.\n                  History: Accepted by Ted Ralphs, Area Editor for Software Tools.\n                  Funding: This work was supported by Fundação de Apoio à Pesquisa do Estado da Paraíba [Grants 041/2023, 2021/3182, and 261/2020], Universidade Federal da Paraíba [Grants PVL13395-2020 and PVL13400-2020], and Conselho Nacional de Desenvolvimento Científico e Tecnológico [Grants 309580/2021-8, 314088/2021-0, 311654/2023-1, and 406245/2021-5].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2025.1130 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2025.1130 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-08-20",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2025.1130",
+      "tags": [
+        "integer-programming",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2025.1130",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.19711",
+      "title": "High-Multiplicity Flexible Job Shops: From Exact Recurrent Fluid Attainment to Structure-Guided Finite-Horizon Scheduling",
+      "authors": [
+        "Wenjun Zheng",
+        "Wei Qu",
+        "Weilin Cai",
+        "Jianfeng Mao"
+      ],
+      "abstract": "High-multiplicity flexible job shops involve many copies of a small set of job types that must be scheduled on alternative machines. Fluid relaxations provide scalable workload lower bounds, but their fractional machine allocations do not define feasible schedules for individual jobs. We show that, after a suitable finite scaling, an optimal fluid allocation can be realized exactly by a feasible repeating discrete schedule. The construction scales the fluid allocation to integer operation counts, places the resulting operations in nonoverlapping machine intervals, repeats this arrangement, and links operations across repetitions into individual jobs without moving any interval, thereby enforcing job precedence while preserving machine feasibility. For growing finite instances with the same job-type composition, even with a fixed number of extra jobs, the gap between the optimal makespan and the fluid lower bound remains bounded by a constant; hence the relative gap vanishes as the instance grows. Guided by this repeated structure, we develop type-based cyclic template replay (TCTR), which searches job-type templates using an optimization model whose size does not grow with the number of job copies and replays the selected template on the full instance. On 676 multiplicity-expanded public flexible-job-shop instances, TCTR is feasible in every case and achieves a 1.54% mean gap to the fluid lower bound, compared with 5.32% for a job-indexed adaptive large-neighborhood search and 6.18% for a hybrid genetic algorithm.",
+      "date": "2026-08-20",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.19711v1",
+      "tags": [
+        "math.OC",
+        "metaheuristics",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.19711",
+      "arxiv_id": "2608.19711v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.20331",
+      "title": "G-CARL: Grounded Checklist-Aligned Reward Learning for Patient-Oriented Medical Report Interpretation",
+      "authors": [
+        "Shiao Xie",
+        "Siyu Chen",
+        "Jianwei Lv",
+        "Bo Yuan",
+        "Yujin Wang",
+        "Xiandong Li"
+      ],
+      "abstract": "Personalized interpretation of medical reports has emerged as an increasingly important need among patients. Addressing this need requires both evidence-grounded medical factuality and context-dependent patient communication, yet existing medical vision-language tasks do not adequately capture these dual requirements. To bridge this gap, we introduce Patient-oriented Medical Report Interpretation (PMRI), a novel open-ended multimodal generation task that requires models to explain medical reports in accurate and accessible language based on a user's query and dialogue history. These two objectives differ fundamentally in their verifiability, yet remain tightly coupled, making them difficult to optimize jointly under conventional supervised fine-tuning and holistic reinforcement learning paradigms. To address this challenge, we propose G-CARL, a grounded, checklist-aligned reinforcement learning framework that combines multi-source retrieval for atomic claim verification with context-aware, instance-specific weighted checklists for response coverage, providing structured supervision for factuality, user-demand satisfaction, and expression quality without constraining response diversity. We further construct MMedReport, a real-world PMRI benchmark, along with a clinician-designed three-dimensional evaluation protocol. Extensive experiments demonstrate that G-CARL consistently outperforms existing post-training baselines in overall quality, claim-level precision, and checklist recall. Pairwise preference evaluation by clinicians further confirms that G-CARL produces interpretations that are more accurate and better aligned with patient needs.",
+      "date": "2026-08-20",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2608.20331v1",
+      "tags": [
+        "cs.CL",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.20331",
+      "arxiv_id": "2608.20331v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2608.20240",
+      "title": "QUASAR: A Quantum-Classical Neural Network for SAR Satellite Physical-Layer Authentication",
+      "authors": [
+        "Vincenzo Sammartino",
+        "Nathanael Denis",
+        "Roberto Di Pietro"
+      ],
+      "abstract": "X-band SAR satellites (8-12 GHz) play a critical role in disaster response, environmental monitoring, and military intelligence. Yet, they lack robust physical-layer authentication (PLA), a security layer orthogonal to cryptographic solutions. Existing PLA systems, typically based on radio-frequency fingerprinting, are often limited to sub-6 GHz frequencies and rely on classical deep learning. However, this approach underfits the IQ phase nonlinearities that distinguish satellite hardware. In this paper, we present QUASAR, to the best of our knowledge the first quantum-classical hybrid architecture that fuses a CNN spectrogram encoder with a variational quantum circuit (VQC) to provide PLA to X-band SAR signals. Our solution enjoys two distinctive features: (i) it is markedly more data-efficient than classical machine learning, requiring only 10% of the training data to match the accuracy of classical baselines -- data collection being notoriously the most time-consuming phase of PLA; and, (ii) at an equal data budget, it improves classification accuracy over those baselines. In detail, we test our solution under three adversarial scenarios: replay, crafted-IQ injection, and space-borne spoofing. QUASAR rejects spoofed transmissions in 89.7%, 94.1%, and 81.3% of attempts, respectively, establishing the first quantum-enhanced physical-layer classifier for satellite constellations. The fully detailed framework and the supporting results, other than being interesting on their own, show a novel research avenue for physical-layer authentication.",
+      "date": "2026-08-20",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.20240v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.20240",
+      "arxiv_id": "2608.20240v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 2,
+    "conferences": 0,
+    "opportunities": 2,
+    "total": 12
+  }
+}
