@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T07:49:58.631973+00:00",
+  "generated_at": "2026-08-22T07:37:49.660300+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1791,
+      "github_stars": 1794,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 150,
+      "github_open_issues": 140,
       "github_recent_prs": [
+        "Fixed error in not setting `max_abs_cost = 1` in `HEkk::initialiseCost` when objective is zero and `output_flag` is false",
         "Enforces epsilon minimum bound checks",
         "Fix traininstance6 bug",
         "Add issues and PR templates",
-        "Fix #3216",
-        "Presolve/postsolve debug utilities"
+        "Fix #3216"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13926,
+      "github_stars": 13935,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,7 +569,7 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 123,
+      "github_open_issues": 124,
       "github_recent_prs": [
         "Update action.yml",
         "Update log_severity.h",
@@ -1130,14 +1130,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
-      "github_stars": 6307,
+      "github_stars": 6308,
       "github_open_issues": 196,
       "github_recent_prs": [
+        "Support broader axis handling in stats atoms",
         "Draft: Add constraint-level complementarity checks",
         "Read a 3-D value in tv as channels",
         "Accept any shape in geo_mean, and fix row vectors along the way",
-        "Fix trace canonicalization for scalar and elementwise products",
-        "Fixed PSD and NSD check to allow for complex coefficients"
+        "Fix trace canonicalization for scalar and elementwise products"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1321,11 +1321,11 @@
       "github_stars": 1760,
       "github_open_issues": 102,
       "github_recent_prs": [
+        "chore: add docs, fail fast on execute for structural flawed solutions, make ScoreAnalysis not fail fact on structural flawed input",
+        "docs: correct import in guide",
         "chore: Maven plugin unify error handling to use MojoExecutionException",
         "docs: mention the default moves",
-        "feat: Allow to use PAT from Maven encrypted settings",
-        "chore: Rename accountId to namespace",
-        "fix: sdk model visualisation detection"
+        "feat: Allow to use PAT from Maven encrypted settings"
       ]
     },
     {
@@ -1383,7 +1383,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2508,
+      "github_stars": 2510,
       "github_open_issues": 388,
       "github_recent_prs": [
         "Extend pwl approximation init method to support higher initial points and single solve.",
