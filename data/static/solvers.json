@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T07:37:49.660300+00:00",
+  "generated_at": "2026-08-23T07:39:36.717771+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -345,7 +345,7 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 140,
+      "github_open_issues": 139,
       "github_recent_prs": [
         "Fixed error in not setting `max_abs_cost = 1` in `HEkk::initialiseCost` when objective is zero and `output_flag` is false",
         "Enforces epsilon minimum bound checks",
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- fixed statistic on added linear constraints in propagation\r\n- keep flag `rangedrowpropagated` of linear and exactlinear constraints for probing bound changes to avoid dupli",
-      "github_open_issues": 28,
+      "github_open_issues": 27,
       "github_recent_prs": [
         "Fix objective offset dropped when writing the transformed problem (MPS/LP)",
         "Fix typo in MSVC version number",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13935,
+      "github_stars": 13938,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -604,7 +604,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 1007,
+      "github_stars": 1008,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -1131,7 +1131,7 @@
       ],
       "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
       "github_stars": 6308,
-      "github_open_issues": 196,
+      "github_open_issues": 194,
       "github_recent_prs": [
         "Support broader axis handling in stats atoms",
         "Draft: Add constraint-level complementarity checks",
@@ -1319,13 +1319,13 @@
       ],
       "recent_changes": "Summer or not, we've been busy bringing you an even faster and even more stable solver. \r\n\r\n# Changelog\r\n\r\n## 🚀 Features\r\n- 8e1948f Support sourcing declarative shadow variables from planning list var",
       "github_stars": 1760,
-      "github_open_issues": 102,
+      "github_open_issues": 103,
       "github_recent_prs": [
+        "feat(neighborhoods): Implement pillars+subpillars for basic vars",
         "chore: add docs, fail fast on execute for structural flawed solutions, make ScoreAnalysis not fail fact on structural flawed input",
         "docs: correct import in guide",
         "chore: Maven plugin unify error handling to use MojoExecutionException",
-        "docs: mention the default moves",
-        "feat: Allow to use PAT from Maven encrypted settings"
+        "docs: mention the default moves"
       ]
     },
     {
