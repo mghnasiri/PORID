@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T07:39:36.717771+00:00",
+  "generated_at": "2026-08-24T08:01:07.320088+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1794,
+      "github_stars": 1797,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 124,
+      "github_open_issues": 123,
       "github_recent_prs": [
+        "Route add_enforced_linear_constraint through the enforced helper setters",
         "Update action.yml",
         "Update log_severity.h",
         "[md] Make links relative to project root",
-        "sat: do not remove an enforcement literal from incomplete activity bounds",
-        "routing: test AllowedVehicles in Java and .Net"
+        "sat: do not remove an enforcement literal from incomplete activity bounds"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,7 +1131,7 @@
       ],
       "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
       "github_stars": 6308,
-      "github_open_issues": 194,
+      "github_open_issues": 188,
       "github_recent_prs": [
         "Support broader axis handling in stats atoms",
         "Draft: Add constraint-level complementarity checks",
@@ -1318,14 +1318,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Summer or not, we've been busy bringing you an even faster and even more stable solver. \r\n\r\n# Changelog\r\n\r\n## 🚀 Features\r\n- 8e1948f Support sourcing declarative shadow variables from planning list var",
-      "github_stars": 1760,
+      "github_stars": 1761,
       "github_open_issues": 103,
       "github_recent_prs": [
-        "feat(neighborhoods): Implement pillars+subpillars for basic vars",
-        "chore: add docs, fail fast on execute for structural flawed solutions, make ScoreAnalysis not fail fact on structural flawed input",
-        "docs: correct import in guide",
-        "chore: Maven plugin unify error handling to use MojoExecutionException",
-        "docs: mention the default moves"
+        "deps: bump the patch group with 4 updates",
+        "deps: bump com.diffplug.spotless:spotless-maven-plugin from 3.9.0 to 3.10.0 in the minor group",
+        "deps: bump the spring-patch group with 2 updates",
+        "deps: bump the quarkus-patch group with 6 updates",
+        "feat(neighborhoods): introduce coarse-grained generic moves"
       ]
     },
     {
@@ -1386,11 +1386,11 @@
       "github_stars": 2510,
       "github_open_issues": 388,
       "github_recent_prs": [
+        "GAMS writer: map non-finite float values to GAMS special values (NA / INF)",
         "Extend pwl approximation init method to support higher initial points and single solve.",
         "Fix cuOpt solver name formatting for versions with != 3 components",
         "Fix cuOpt solver name formatting for versions with != 3 components",
-        "Add pixi environment directory to .gitignore",
-        "Remove expression `_args_` tuple"
+        "Add pixi environment directory to .gitignore"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1449,7 +1449,7 @@
       ],
       "recent_changes": "## JuMP v1.31.2\n\n[Diff since v1.31.1](https://github.com/jump-dev/JuMP.jl/compare/v1.31.1...v1.31.2)\n\n\n**Merged pull requests:**\n- Fix formatting for latest JuliaFormatter version (#4208) (@odow)\n- Fi",
       "github_stars": 2467,
-      "github_open_issues": 12,
+      "github_open_issues": 11,
       "github_recent_prs": [
         "[docs] remove tectonic_jll and switch to Docker for LaTeX build",
         "Prep for v1.31.2",
