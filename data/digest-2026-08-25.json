@@ -1,0 +1,339 @@
+{
+  "date": "2026-08-25",
+  "generated_at": "2026-08-25T07:50:29.422569+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2608.23562",
+      "title": "Physics-Constrained Deep Learning Model for Contactless Blood Pressure Monitoring from Triaxial Bodyseismography",
+      "authors": [
+        "Yuanyuan Zhang",
+        "Yida Zhang",
+        "Jiahui Li",
+        "Yuyan Wu",
+        "Fei Dou",
+        "Xiao Yin",
+        "Zhenlin An",
+        "Hae Young Noh",
+        "Wenzhan Song"
+      ],
+      "abstract": "Ballistocardiography (BCG) is promising for unobtrusive long-term blood pressure (BP) monitoring in laboratory settings, but traditional BCG signals are vulnerable to the variations in body-bed interaction with shifted fiducial points in temporal or amplitude axis, and BP varies with personal hemodynamic changes, causing misaligned representations that affect model generalizability and robustness. In this work, we propose a non-invasive BP estimation framework, Phy-BP, based on triaxial bodyseismography (BSG) as an extension of BCG. Firstly, an adaptive quality-control algorithm is designed to select BSG segments enriched with cardiogenic components by jointly considering neighboring beat patterns and universal cardiogenic templates. Furthermore, a physical model is established to describe 3D wave propagation in the body-bed system and is subsequently embedded into the deep learning model to characterize the intrinsic coupling among triaxial BSG signals driven by a single cardiogenic excitation. Thus, multi-axis features are aligned during model training, improving robustness against distortions in real scenarios. Experiments on a 162-hour hospital dataset collected from 21 subjects reveal that the proposed Phy-BP can dynamically filter out low-quality measurements, and the deep learning model training is constrained by physical consistency across different axes to provide faithful BP monitoring, especially when training samples are limited.",
+      "date": "2026-08-24",
+      "source": "arXiv",
+      "source_detail": "eess.SP",
+      "url": "http://arxiv.org/abs/2608.23562v1",
+      "tags": [
+        "eess.SP",
+        "stochastic",
+        "ml-for-or",
+        "healthcare-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.23562",
+      "arxiv_id": "2608.23562v1",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2608.23480",
+      "title": "Primal--Dual Alternating Neural Learning for Timely Classification with Performance Guarantees",
+      "authors": [
+        "Jiaming Qiu",
+        "Yingye Zheng",
+        "Ying-Qi Zhao"
+      ],
+      "abstract": "Timely risk classification is essential in many clinical monitoring settings, where decisions must balance the benefit of classifying patients early for subsequent intervention against the value of observing additional data. Yet most existing statistical and machine-learning methods are designed for fully observed trajectories and offer limited control over key operating characteristics such as sensitivity, specificity, and monitoring cost. We cast the sequential classification problem within a multi-objective optimization framework targeting these three criteria. We characterize the optimal decision rule through a value recursion that quantifies, at each time point, the trade-off between immediate classification and continued monitoring. To estimate the rule from data, we formulate a constrained optimization problem that maximizes specificity while enforcing prespecified sensitivity and monitoring-cost constraints. We then develop an estimation procedure that employs a recurrent neural network to approximate the evolving value processes and a primal--dual updating scheme to satisfy the performance constraints. Through simulation studies and an application to continuous glucose monitoring for hypoglycemia risk prediction, we demonstrate that the proposed method yields accurate and timely sequential decision rules that adhere to the desired operating characteristics.",
+      "date": "2026-08-24",
+      "source": "arXiv",
+      "source_detail": "stat.ML",
+      "url": "http://arxiv.org/abs/2608.23480v1",
+      "tags": [
+        "stat.ML",
+        "ml-for-or",
+        "healthcare-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.23480",
+      "arxiv_id": "2608.23480v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.23440",
+      "title": "Temporal Property-driven Design Space Exploration with Reinforcement Learning for Cyber-Physical Systems",
+      "authors": [
+        "Tagir Fabarisov",
+        "Maxime Cordy"
+      ],
+      "abstract": "Design-space exploration of configurable Cyber-Physical Systems (CPS) requires executable evaluation when design choices affect timing, fault propagation, recovery behavior, and temporal-property satisfaction. Repeated stochastic executions make exhaustive exploration impractical for large design spaces. This paper presents a temporal-property-driven CPS design workflow using Reinforcement Learning (RL). At design time, the RL agent selects subsystem alternatives to assemble a candidate system model. The model is then evaluated through simulation, during which online temporal-property monitors observe runtime traces and produce functional-property violation indicators. These indicators are combined with evaluated non-functional terms for budget, recoverability, sustained compliance, and operational use to calculate the reward used for subsequent candidate selection. The workflow is evaluated on a methane-sensitive mine-pump CPS. The corresponding executable case-study model is provided as additional contribution. RL-guided search identifies the highest-reward design observed in the experiments after 26 episodes (corresponds to 130 executable simulations). These designs were reached with fewer simulations than surrogate-guided Bayesian Optimization and population-based Genetic Algorithm baselines under the same executable model and reward formulation. Ablation study results indicate that value-based feedback and reuse of previous simulation traces contribute to this reduction.",
+      "date": "2026-08-24",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2608.23440v1",
+      "tags": [
+        "eess.SY",
+        "metaheuristics",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.23440",
+      "arxiv_id": "2608.23440v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s12532-026-00330-5",
+      "title": "A decision diagram approach for the parallel machine scheduling problem with chance constraints",
+      "authors": [
+        "Casassus, N.",
+        "Castro, M.",
+        "Angulo, G."
+      ],
+      "abstract": "",
+      "date": "2026-08-24",
+      "source": "Mathematical Programming Computation",
+      "source_detail": "Mathematical Programming Computation",
+      "url": "https://doi.org/10.1007/s12532-026-00330-5",
+      "tags": [
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s12532-026-00330-5",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2023.03696",
+      "title": "Training Frontline Health Workers in Low- and Middle-Income Countries to Reduce Contraceptive Stock-Outs: Evidence from Indonesia",
+      "authors": [
+        "Karimi, A.",
+        "Mishra, A.",
+        "Natarajan, K.",
+        "Sinha, K.",
+        "Balsara, O.",
+        "Lamphere, B."
+      ],
+      "abstract": "Frontline health workers are an indispensable asset in the healthcare ecosystem of low- and middle-income countries (LMICs). They not only provide clinical care to patients but also frequently shoulder nonclinical responsibilities such as inventory management. However, many lack the necessary skills to effectively manage inventories, leading to the pervasive problem of health commodity stock-outs. To address this problem, several LMICs have launched training programs aimed at enhancing the inventory management skills and capabilities of frontline health workers. Leveraging fine-grained data over a five-year period (2015–2019) from approximately 17,000 health facilities across Indonesia—where the public health supply chain operates as a hybrid push–pull model—we evaluate the impact of a large-scale inventory management training program on contraceptive stock-outs. Applying difference-in-differences estimations, we find that the training program is associated with a significant reduction in stock-outs (i.e., 6.52 percentage points, or approximately 30%). Our numerical calculations suggest that the training program prevents, on average, more than 800 unintended pregnancies and saves 4.25 maternal and newborn lives per 100,000 women of reproductive age within the catchment area of a treated health facility. A counterfactual benefit–cost analysis shows that on-site delivery of the training program (i.e., on the job within a health facility) yields operational and public health benefits that significantly exceed those achieved through off-site delivery (i.e., outside the health facility in a classroom). Our research highlights the practicality and scalability of human-capital-focused interventions in improving health commodity availability and public health outcomes in LMICs.\n                  This paper was accepted by Stefan Scholtes, healthcare management.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2023.03696 .",
+      "date": "2026-08-24",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2023.03696",
+      "tags": [
+        "healthcare-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2023.03696",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.22945",
+      "title": "A Momentum-Based Variance-Reduced Algorithm for Federated Multiobjective Optimization",
+      "authors": [
+        "Yong Zhao",
+        "Chunlin You",
+        "Minh N. Dao",
+        "Zai-Yun Peng"
+      ],
+      "abstract": "Federated learning has traditionally been formulated as a single-objective optimization problem, primarily focused on maximizing model utility. In real-world applications, however, machine learning models often need to optimize multiple and potentially conflicting objectives simultaneously. This motivates federated multiobjective optimization (FMOO), which provides a natural framework for jointly handling multiple task-specific objectives in federated learning. In this paper, we propose a momentum-based variance-reduced algorithm for federated multiobjective optimization. The method incorporates a momentum-driven gradient estimator into the local updates to reduce the variance of stochastic updates, leading to an improved convergence rate. We establish theoretical guarantees showing that the expected Pareto stationarity measure of a randomly selected output iterate decays at a rate of $\\mathcal{O}(T^{-2/3})$, improving upon the $\\mathcal{O}(T^{-1/2})$ rates established for existing methods such as FSMGDA and FedCMOO. Numerical experiments on federated multiobjective optimization benchmarks demonstrate the effectiveness and competitive performance of the proposed algorithm.",
+      "date": "2026-08-24",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.22945v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.22945",
+      "arxiv_id": "2608.22945v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.23473",
+      "title": "MetaCaster: Meta-Harness-Optimized Agent for End-to-End Few-Shot Learning of Lightweight Time Series Forecasters",
+      "authors": [
+        "ChengAo Shen",
+        "Wenchao Yu",
+        "Fangyu Wu",
+        "Dongjin Song",
+        "Hanghang Tong",
+        "Dongsheng Luo",
+        "Wei Cheng",
+        "Haifeng Chen",
+        "Jingchao Ni"
+      ],
+      "abstract": "Time series forecasting (TSF) is evolving toward multimodal and agentic settings, yet using foundation models remains uneconomical in resource-constrained scenarios, where compact, specialized forecasters are more desirable. However, lightweight forecasters typically require substantial training data, limiting their use in domains with scarce, slowly accumulated, or privacy-sensitive time series. To address this dilemma, we investigate the challenging problem of few-shot learning for lightweight forecasters. We propose MetaCaster, a meta-harness-optimized multi-agent framework that uses agentic data generation to automatically train specialized lightweight forecasters from only a few examples and textual contexts. Our work highlights a new TSF paradigm in which agents act not as forecasters but as intermediary engineers that prepare efficient, task-specific forecasters for deployment. Experiments on 18 datasets, 23 state-of-the-art lightweight forecasters, and 14 baselines demonstrate that MetaCaster achieves both data efficiency and computational efficiency while maintaining high-quality TSF performance.",
+      "date": "2026-08-24",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.23473v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.23473",
+      "arxiv_id": "2608.23473v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.23400",
+      "title": "Adaptive Item-based Collaborative Structures via Noise Rescheduling in Diffusion for Generative Recommendation",
+      "authors": [
+        "Jiaqi Wang",
+        "Tianying Liu",
+        "Heng Chang",
+        "Jihong Guan",
+        "Wengen Li",
+        "Shuigeng Zhou"
+      ],
+      "abstract": "Discrete Diffusion Models (DDMs) have recently been introduced to recommendation systems, modeling user history as a token generation process via iterative denoising. However, while effective at capturing user-level sequential patterns, these methods often fail to explicitly integrate item-based collaborative filtering information, a critical component for accurate recommendation. This deficiency manifests in two key aspects: (1) the item representation is often semantic-focused, lacking collaborative priors for diffusion training; and (2) the denoising process employs a uniform noise schedule, treating all tokens indiscriminately and ignoring item-level adaptive structural dependencies. To bridge this gap, we propose ANR-DiffRec, a unified framework designed to encode item-based collaborative structures into discrete diffusion for generative recommendation. First, we explicitly incorporate an item co-occurrence matrix to guide semantic ID generation, providing a structured collaborative prior for discrete diffusion training. Second, we introduce an item-based adaptive noise rescheduling mechanism that dynamically adjusts denoising weights according to both local contextual recoverability and behavior-aware item dependencies. Specifically, the proposed strategy jointly models intra-item structural context and inter-item collaborative signals, enabling structure-aware denoising during diffusion training. Extensive experiments on multiple benchmarks demonstrate that our method consistently outperforms state-of-the-art generative recommendation models. Code: https://github.com/CalmaQi/ANR-DiffRec.",
+      "date": "2026-08-24",
+      "source": "arXiv",
+      "source_detail": "cs.IR",
+      "url": "http://arxiv.org/abs/2608.23400v1",
+      "tags": [
+        "cs.IR",
+        "scheduling",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.23400",
+      "arxiv_id": "2608.23400v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.23395",
+      "title": "Right-Sizing LLM-Agent Decomposition in VAT Determination: A Pilot Controlled Sweep",
+      "authors": [
+        "Pedro Santos"
+      ],
+      "abstract": "Recent LLM-agent systems make conflicting design bets: decompose work across many narrow agents, or use one strong tool-using agent. This pilot studies that choice on bounded cross-border VAT determination with reverse charge, where every case has an oracle label and each intermediate decision is independently scoreable. We hold the activity surface fixed (subtasks, tools, I/O schemas, validation checks, orchestrator, base model, and merge policy) and vary only the assignment of subtasks to workers across four orchestrated configurations, from one wide worker to five narrow ones, against S0, a tuned no-orchestrator single agent, with a deterministic rule engine as oracle. The program spans 4,400 runs: a 40-case, five-repeat main sweep, matched-token arms separating prompt-budget from agent-count effects, and three failure-injection arms, all judged against pre-registered falsification criteria. The two intermediate configurations lead on accuracy (0.830, against endpoints at 0.720 and 0.770) but miss the pre-stated bar against the fine endpoint, so the intermediate-optimum hypothesis remains unsupported at pilot scale. The single agent does not Pareto-dominate the orchestrated set. The matched-token criterion fires: the budget-matched single agent lands 6.5 points below the leader, but the interval includes zero, so any advantage is consistent with a prompt-budget explanation. Under injection, availability faults are absorbed at every granularity, with wide-scope restart over-recovering its baseline by +0.160, while one schema-conforming hallucinated record degrades every configuration and inverts the ordering, hitting fragmented configurations hardest. The contribution is a bounded, preregistered pilot heuristic for right-sizing decomposition (place one partition boundary at the dependency-layer midpoint), released with oracle, dataset, harness, raw traces, and analysis pipeline.",
+      "date": "2026-08-24",
+      "source": "arXiv",
+      "source_detail": "cs.MA",
+      "url": "http://arxiv.org/abs/2608.23395v1",
+      "tags": [
+        "cs.MA",
+        "multi-objective",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.23395",
+      "arxiv_id": "2608.23395v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.23264",
+      "title": "Hidden in the Request: Explaining Unethical LLM Compliance through Token Relevance",
+      "authors": [
+        "Or Biton",
+        "Tomer Krichli",
+        "Itai Allouche",
+        "Joseph Keshet"
+      ],
+      "abstract": "Although Large Language Models (LLMs) are aligned to optimize for both helpfulness and harmlessness, these dual objectives may conflict, inevitably leading to alignment failures. This work systematically investigates instances where LLMs fail to exhibit ethical behavior. To understand the underlying mechanics of these vulnerabilities, we introduce a probing methodology that presents unethical scenarios to LLMs in three distinct structural modalities: objective classification tasks, subjective first-person statements, and direct requests for assistance. We find that model performance degrades in the request-for-assistance-based form. Using Layer-wise Relevance Propagation (LRP), we trace this discrepancy to an attribution bias: the model places greater emphasis on benign task-framing tokens (e.g., \"Can you help me...\") than on tokens signaling the underlying unethical behavior (e.g., \"without getting caught\"), which we term cue-tokens. We hypothesize that this under-attribution contributes to harmful compliance. To test this, we introduce two LRP-guided decoding methods that steer generation toward trajectories more relevant to cue tokens. Empirical evaluations show that these interventions promote safer responses, supporting cue-token attribution's role in compliance failures.",
+      "date": "2026-08-24",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2608.23264v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.23264",
+      "arxiv_id": "2608.23264v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 2,
+    "conferences": 0,
+    "opportunities": 2,
+    "total": 12
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T08:01:07.320088+00:00",
+  "generated_at": "2026-08-25T07:50:29.084240+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1797,
+      "github_stars": 1799,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 139,
+      "github_open_issues": 136,
       "github_recent_prs": [
+        "[docs] update to Documenter@1 and Clang@0.19",
+        "Make Xcode 26.6 happy. Move HMW destructor to .cpp",
         "Fixed error in not setting `max_abs_cost = 1` in `HEkk::initialiseCost` when objective is zero and `output_flag` is false",
         "Enforces epsilon minimum bound checks",
-        "Fix traininstance6 bug",
-        "Add issues and PR templates",
-        "Fix #3216"
+        "Fix traininstance6 bug"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13938,
+      "github_stars": 13937,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 123,
+      "github_open_issues": 121,
       "github_recent_prs": [
-        "Route add_enforced_linear_constraint through the enforced helper setters",
-        "Update action.yml",
-        "Update log_severity.h",
-        "[md] Make links relative to project root",
-        "sat: do not remove an enforcement literal from incomplete activity bounds"
+        "[md] make remaining links relative to repo",
+        "Fix constinit mismatch in non_streamable_solver_init_arguments_test.cc",
+        "dependencies: bump abseil-cpp to 20260817.0",
+        "cmake: bump ZLIB to v1.3.2",
+        "Route add_enforced_linear_constraint through the enforced helper setters"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1130,14 +1130,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
-      "github_stars": 6308,
-      "github_open_issues": 188,
+      "github_stars": 6309,
+      "github_open_issues": 189,
       "github_recent_prs": [
+        "Patch/1.9.3",
+        "Bump github/codeql-action/upload-sarif from 4.37.7 to 4.37.8",
         "Support broader axis handling in stats atoms",
         "Draft: Add constraint-level complementarity checks",
-        "Read a 3-D value in tv as channels",
-        "Accept any shape in geo_mean, and fix row vectors along the way",
-        "Fix trace canonicalization for scalar and elementwise products"
+        "Read a 3-D value in tv as channels"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1318,7 +1318,7 @@
         "metaheuristic"
       ],
       "recent_changes": "Summer or not, we've been busy bringing you an even faster and even more stable solver. \r\n\r\n# Changelog\r\n\r\n## 🚀 Features\r\n- 8e1948f Support sourcing declarative shadow variables from planning list var",
-      "github_stars": 1761,
+      "github_stars": 1763,
       "github_open_issues": 103,
       "github_recent_prs": [
         "deps: bump the patch group with 4 updates",
