@@ -1,0 +1,322 @@
+{
+  "date": "2026-08-26",
+  "generated_at": "2026-08-26T07:52:21.832970+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2608.24859",
+      "title": "Improving Cross-Problem Vehicle Routing with Locally Augmented Preferences and Representation Disentanglement",
+      "authors": [
+        "Arthur Corrêa",
+        "Paulo Nascimento",
+        "Samuel Moniz"
+      ],
+      "abstract": "Multi-task vehicle routing problem (VRP) solvers seek to handle multiple VRP variants within a single unified model, avoiding the need to train a separate model for every variant. In spite of recent progress, current approaches remain limited on two fronts. On the training side, reinforcement learning suffers from reward-scale disparities and shrinking advantage signals as policies improve, whereas preference optimization stagnates once sampled tours become near-identical and thus fundamentally limited by the quality of the policy's own generated solutions, leaving both paradigms with weak supervision as training progresses. On the architecture side, existing fully shared encoders entangle constraint-dependent representations across heterogeneous variants, which limits generalization. We address these gaps with two model-agnostic contributions. First, we propose Preference Optimization with Locally Augmented Refinement (POLAR), a novel training algorithm that applies a local search refinement pass to the best decoded tour before forming preference pairs, yielding much more informative pairwise margins. Second, a Progressive Layered Extraction (PLE) encoder routes each encoder layer through one shared expert and a set of task-specific experts via a gating mechanism, progressively separating common routing structure from constraint-specific encodings. Through extensive experiments on various VRP variants, we show that POLAR and PLE together elevate the current state-of-the-art among neural multi-task solvers. We reduce the average gap to reference solutions by 21.3% relative to the strongest published baseline on 16 in-distribution variants, and outperform prior neural methods on 27 out of 32 unseen variants. Ablation studies confirm the efficacy of each contribution, showing that both improve cross-problem generalization across multiple backbone model architectures.",
+      "date": "2026-08-25",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.24859v1",
+      "tags": [
+        "cs.LG",
+        "vehicle-routing",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.24859",
+      "arxiv_id": "2608.24859v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.24284",
+      "title": "Cognitive Energy Management: Concept,Framework, and Demonstration in Smart Port Energy Systems",
+      "authors": [
+        "Hafiz Majid Hussain",
+        "Wajiha Samer",
+        "Juhaa Haakana"
+      ],
+      "abstract": "Modern energy management systems, even within advanced energy internet (EI) infrastructures, remain fundamentally reactive, optimization-bound, and incapable of reasoning about context, intent, or uncertainty. While the EI paradigm has established a powerful cyber-physical architecture for interconnecting distributed energy resources via software-defined packetized networks, the question of how such systems should think, adapt, and govern energy decisions intelligently remains an open challenge. This paper introduces cognitive energy management (CEM); a new conceptual framework that addresses this gap by redefining how energy systems perceive, reason, learn, and act within complex operational environments. Grounded in the EI cyber-physical foundation, CEM extends beyond conventional optimization by embedding goal-directed reasoning and continuous adaptation into the energy management loop, positioning itself as the cognitive governance layer of EI-based infrastructures. We formally define CEM, distinguish it from rule-based and optimization-based paradigms through structured comparison, and articulate its core architectural layers. To demonstrate the framework's practical value, we develop a toy problem grounded in smart port energy management; one of the most operationally demanding EI node environments in modern infrastructure. Specifically, we model a predictive vessel turnaround scenario in which a CEM-enabled system plans energy procurement, storage pre-charging, and load scheduling across a six-hour operational horizon. The demonstration illustrates how CEM moves the EI beyond feasibility-seeking toward intelligent, anticipatory energy governance.",
+      "date": "2026-08-25",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2608.24284v1",
+      "tags": [
+        "eess.SY",
+        "scheduling",
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.24284",
+      "arxiv_id": "2608.24284v1",
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7203480491",
+      "title": "ME'MORIY OBIDALAR BEZAKLARINI RAQAMLI VOSITALARDA QAYTA YARATISH: \"TRADIGITAL\" YONDASHUV",
+      "authors": [
+        "Xudoyberdiyeva Xulkar Zoxid qizi"
+      ],
+      "abstract": "Maqolada me'moriy obidalar bezaklari asosida talabalarda naqsh kompozitsiyasini tuzishga oid kompetensiyani rivojlantirishning metodlari va vositalari tahlil qilinadi. Konstruktiv idrok etish yetakchi metod sifatida asoslanadi hamda an'anaviy va raqamli vositalarni uygʻunlashtiruvchi \"Tradigital\" konsepsiya yoritiladi. Muallif tomonidan Adobe Illustrator dasturida bajarilgan Oqsaroy, Goʻri Amir va Ulugʻbek madrasasi naqsh rekonstruksiyalari misolida metodikaning amaliy natijalari koʻrsatiladi. Kalit soʻzlar: naqsh kompozitsiyasi, me'moriy obida, girih, konstruktiv idrok, \"Tradigital\" konsepsiya, Adobe Illustrator, kompetensiya",
+      "date": "2026-08-25",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.21933030",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.21933030",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "openalex-W7203459612",
+      "title": "RASMIY VA NORASMIY TELEGRAM MULOQOTIDA MULTIMODAL BIRLIKLARNING DIFFERENSIAL XUSUSIYATLARI",
+      "authors": [
+        "Choriyeva Charos Salomovna"
+      ],
+      "abstract": "Ushbu maqolada o'zbek tilining raqamli segmenti, xususan, Telegram ijtimoiy tarmog'idagi rasmiy va norasmiy muloqotda multimodal birliklarning (emoji, stiker, GIF) differensial va lingvopragmatik xususiyatlari tahlil qilingan. Internet tilshunosligi doirasida an'anaviy matn yaratish me'yorlarining o'zgarishi, emotsional va hissiy bo'shliqlarni to'ldirishda vizual vositalarning o'rni yoritilgan. Shuningdek, foydalanuvchilarning yosh toifasi hamda o'zbek milliy mentalitetidan kelib chiqib, vizual vossitalarning semantikasi tadqiq etilgan.",
+      "date": "2026-08-25",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.21934085",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.21934085",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.24629",
+      "title": "Dual-Based Weight Selection for Approximate Linear Programming",
+      "authors": [
+        "Su Li",
+        "Andre A. Cire",
+        "Adam Diamant",
+        "Vahid Sarhangian"
+      ],
+      "abstract": "Approximate Linear Programming (ALP) is widely used for large-scale Markov Decision Processes (MDPs), but its performance can be sensitive to the choice of state-relevance weights, which are typically selected heuristically. Performance bounds suggest aligning these weights with the discounted occupancy measure of the induced policy, and existing primal approaches address this through repeated greedy-policy construction. Nonetheless, they lack convergence guarantees and are computationally expensive. We propose a dual-based method that uses projected occupancy information from the ALP dual solution to construct a smooth stochastic policy and update the state-relevance weights, which avoids separate greedy-action calculations. We establish conditions under which the weights match the discounted occupancy of the induced policy and prove uniqueness and global convergence under appropriate smoothing. We also derive an a posteriori policy-loss bound that separates error from the weighted Bellman residual, occupancy mismatch, and stochastic-versus-greedy disagreement. Experiments on classical queueing and multi-priority scheduling problems show that the proposed approach reduces sensitivity to fixed weights and achieves comparable or better policy quality than primal updates at lower computational cost. Finally, we show that adaptive weighting is most valuable when the basis functions are sufficiently expressive for occupancy information to influence the resulting policy.",
+      "date": "2026-08-25",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2608.24629v1",
+      "tags": [
+        "eess.SY",
+        "linear-programming",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.24629",
+      "arxiv_id": "2608.24629v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2608.24542",
+      "title": "A constraint dissolving inexact penalty method for optimization problems with geometric constraints",
+      "authors": [
+        "Xiaoxi Jia",
+        "Leander Lerch",
+        "Stefan Streif",
+        "Manuel Schaller"
+      ],
+      "abstract": "Optimization problems with geometric constraints have a broad range of applications, including machine learning, finance, and control. A powerful algorithmic tool to resolve these geometric constraints are constraint dissolving methods. To this end, we propose a framework for constraint dissolving mappings for nonconvex geometric constraints. Leveraging these, we develop a constraint dissolving inexact penalty method to solve optimization problems with general set-membership constraints and possibly nonconvex geometric constraints. We establish the convergence of the proposed algorithm and prove that every feasible accumulation point is Mordukhovich stationary. Notably, we rely only on mild asymptotic Mordukhovich regularity, which is significantly weaker than the constraint qualifications adopted in the existing literature on constraint dissolving methods. Numerical experiments addressing classical equality-, complementarity-, sparsity-, and low-rank constrained optimization problems demonstrate that the proposed method is competitive with the safeguarded augmented Lagrangian method in terms of solution quality and significantly outperforms the penalty decomposition method.",
+      "date": "2026-08-25",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.24542v1",
+      "tags": [
+        "math.OC",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.24542",
+      "arxiv_id": "2608.24542v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.24464",
+      "title": "Modelling Renewable Curtailment and Constraints in Ireland's Electricity System",
+      "authors": [
+        "Richard Nayer",
+        "Sam Hodges",
+        "Waqquas Bukhsh",
+        "Claver Chitambo",
+        "Chanura Wijeratne"
+      ],
+      "abstract": "This paper describes the electricity markets and operational processes in the Irish power system and translates them into a Mixed Integer Linear Programming (MILP) model. The model is designed to estimate renewable generation Curtailment and Constraint. A full mathematical formulation is presented and tested on both a simple example and a realistic model of the Irish transmission network. The results show that the proposed formulation works as intended, capturing curtailment and constraint effects, while also highlighting model limitations and directions for future improvement.",
+      "date": "2026-08-25",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2608.24464v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.24464",
+      "arxiv_id": "2608.24464v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.24771",
+      "title": "Ensemble of Convolutional Neural Networks for StrokePrediction: Towards Improved Diagnostic Accuracy",
+      "authors": [
+        "Md Shahriar Sajid"
+      ],
+      "abstract": "Brain stroke, known for its high mortality and incidence rates, poses significant health risks and requires rapid intervention for survival. Early diagnosis and preventive measures can greatly reduce life loss and disabilities. Recent advancements in deep learning have led to novel computer-aided diagnostic techniques for early stroke detection. This study proposes an intelligent system that predicts potential strokes using eleven features, evaluated through seven supervised machine learning algorithms. The process includes a literature review, dataset visualization, data preprocessing, and model evaluation. Ensemble methods like Random Forest, Stacking Classifier, and Bagging Classifier achieved high accuracies of 99.52%, while Decision Tree reached 98.24%. Other models, including KNN and TabNet, demonstrated reliable performance, achieving accuracies of 96.73% and 96.49%, respectively. The custom feedforward model achieved 94.91%, while SVC and logistic regression had lower accuracies at 88.06% and 77.03%. The results highlight the effectiveness of ensemble methods in stroke classification.",
+      "date": "2026-08-25",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2608.24771v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.24771",
+      "arxiv_id": "2608.24771v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.24727",
+      "title": "Parameter-Efficient Self-Supervised Adaptation for EEG-FM under Fixed Computational Budgets",
+      "authors": [
+        "Meghal Dani",
+        "Stefanie Liebe"
+      ],
+      "abstract": "EEG foundation models pretrained via self-supervised learning promise transferable representations, but their generalization remains limited, especially across diverse clinical datasets. Full fine-tuning is impractical for resource-constrained clinical settings due to high computational requirements. In this work, we investigate whether parameter-efficient self-supervised adaptation, updating only 9% of parameters suffices to align representations to target tasks. We evaluate our method on two state-of-the-art models with different pretraining objectives: BIOT (contrastive) and CBraMod (masked reconstruction), and evaluate on three clinical EEG datasets for abnormality detection (TUAB), event classification (TUEV), and seizure detection (CHB-MIT) under both in-distribution and out-of-distribution conditions. SSL adaptation yields consistent gains over linear probing, up to 20x AUCPR. Under a fixed compute budget, peak performance requires only 20--50% of available unlabeled data. Critically, when total window count is fixed, performance remains invariant to patient count, suggesting that performance is dependent on overall temporal window diversity only. Our findings demonstrate that parameter-efficient adaptation enables effective deployment of EEG Foundation models (EEG-FM) with minimal computational overhead and data collection burden. Code available at: https://github.com/c3n-group/efficient-eeg-adapt",
+      "date": "2026-08-25",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.24727v1",
+      "tags": [
+        "cs.LG",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.24727",
+      "arxiv_id": "2608.24727v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.24721",
+      "title": "Enhancing Bayesian Optimization and Active Learning Through Kernel Diversity",
+      "authors": [
+        "Heng Zhang",
+        "Haotian Xiang",
+        "Qin Lu",
+        "Konstantinos D. Polyzos",
+        "Tara Javidi"
+      ],
+      "abstract": "Hyperparameter selection remains a key challenge in Bayesian optimization (BO) and Bayesian active learning (AL), as model misspecification can lead to suboptimal performance, while more accurate fully Bayesian treatments typically rely on computationally expensive MCMC sampling. This paper proposes a unified framework, KENDO (Kernel ENsemble Disagreement-aware Operator), that integrates Ensemble Gaussian Processes (EGP) with disagreement-aware acquisition strategies. The central idea is to replace hyperparameter sampling with a kernel ensemble and adaptive Bayesian weighting, combined with disagreement-aware acquisition strategies. Within this unified framework, we instantiate KENDO-BO for BO and KENDO-AL for Bayesian AL, demonstrating that both arise from a common self-correcting mechanism with task-specific acquisition objectives. We further extend the approach to multi-objective optimization via random scalarization that preserves the single-optimizer conditioning structure. Thorough numerical tests on synthetic and real-world benchmarks across single-objective optimization, multi-objective optimization, and active learning demonstrate that (i) KENDO-BO achieves competitive or superior optimization performance compared to state-of-the-art methods while reducing computational overhead by up to $5\\times$ and (ii) KENDO-AL achieves superior predictive calibration over MCMC-based active learning baselines with up to $27\\times$ speedup.",
+      "date": "2026-08-25",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.24721v1",
+      "tags": [
+        "cs.LG",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.24721",
+      "arxiv_id": "2608.24721v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 2,
+    "conferences": 0,
+    "opportunities": 2,
+    "total": 12
+  }
+}

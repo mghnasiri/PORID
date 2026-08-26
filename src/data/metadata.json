@@ -1,44 +1,44 @@
 {
-  "last_fetch": "2026-08-25T07:50:23.546038+00:00",
+  "last_fetch": "2026-08-26T07:52:11.630346+00:00",
   "counts": {
-    "publications": 11979,
+    "publications": 12071,
     "software": 0,
     "conferences": 0,
     "opportunities": 172
   },
-  "total": 12151,
+  "total": 12243,
   "sources_checked": [
     "Conferences",
     "Optimization Online",
     "OpenAlex",
     "Semantic Scholar",
+    "arXiv",
     "GitHub",
     "HigherEdJobs",
     "OperationsAcademia",
-    "Crossref",
-    "arXiv"
+    "Crossref"
   ],
   "errors": [],
   "merge_stats": {
-    "publications_added": 1009,
+    "publications_added": 664,
     "software_added": 0,
     "opportunities_added": 0,
-    "total_dropped_stale": 958
+    "total_dropped_stale": 572
   },
   "timings": {
-    "fetch": 42.471,
-    "classify": 0.486,
+    "fetch": 47.871,
+    "classify": 0.35,
     "validate": 0.001,
-    "dedup": 0.763,
-    "merge": 0.792,
-    "write": 0.614
+    "dedup": 0.447,
+    "merge": 0.849,
+    "write": 0.618
   },
   "source_yield_history": {
     "Conferences": [
       58,
       58,
       58,
-      58,
+      59,
       59,
       59,
       59
@@ -53,22 +53,22 @@
       10
     ],
     "OpenAlex": [
-      0,
       20,
       21,
       13,
       10,
       8,
-      13
+      13,
+      22
     ],
     "Semantic Scholar": [
-      369,
       271,
       12,
       364,
       358,
       250,
-      366
+      366,
+      23
     ],
     "GitHub": [
       11,
@@ -80,32 +80,34 @@
       11
     ],
     "arXiv": [
-      272,
       287,
       284,
       233,
       151,
       122,
-      232
+      232,
+      284
     ],
     "Opportunities": [
-      123,
       124,
       123,
       123,
       123,
       124,
-      124
+      124,
+      123
     ],
     "Crossref": [
-      741,
       743,
       746,
       746,
       746,
       750,
+      748,
       748
     ]
   },
-  "degraded_sources": []
+  "degraded_sources": [
+    "Semantic Scholar"
+  ]
 }

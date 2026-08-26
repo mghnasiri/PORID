@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T07:50:29.084240+00:00",
+  "generated_at": "2026-08-26T07:52:21.469893+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1799,
+      "github_stars": 1802,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 136,
+      "github_open_issues": 133,
       "github_recent_prs": [
+        "Fix 3140",
+        "Initialize optimal objective value",
+        "Increase MIP code coverage",
         "[docs] update to Documenter@1 and Clang@0.19",
-        "Make Xcode 26.6 happy. Move HMW destructor to .cpp",
-        "Fixed error in not setting `max_abs_cost = 1` in `HEkk::initialiseCost` when objective is zero and `output_flag` is false",
-        "Enforces epsilon minimum bound checks",
-        "Fix traininstance6 bug"
+        "Make Xcode 26.6 happy. Move HMW destructor to .cpp"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 639,
+      "github_stars": 640,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13937,
+      "github_stars": 13940,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 121,
+      "github_open_issues": 117,
       "github_recent_prs": [
+        "Use constexpr if instead of macros for DEBUG_MODE",
         "[md] make remaining links relative to repo",
         "Fix constinit mismatch in non_streamable_solver_init_arguments_test.cc",
         "dependencies: bump abseil-cpp to 20260817.0",
-        "cmake: bump ZLIB to v1.3.2",
-        "Route add_enforced_linear_constraint through the enforced helper setters"
+        "cmake: bump ZLIB to v1.3.2"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1256,13 +1256,13 @@
       ],
       "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
       "github_stars": 1778,
-      "github_open_issues": 16,
+      "github_open_issues": 14,
       "github_recent_prs": [
+        "remove unnecessary include of iostream; avoid using namespace std",
         "Increment filter reset counter on reset",
         "Fix data-race global variables with atomics",
         "Remove unnecessary <iostream> includes",
-        "IpJournalist: Missing override keyword",
-        "Draft at NVIDIA cuDSS (GPU sparse linear solver) integration in Ipopt."
+        "IpJournalist: Missing override keyword"
       ]
     },
     {
@@ -1318,14 +1318,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Summer or not, we've been busy bringing you an even faster and even more stable solver. \r\n\r\n# Changelog\r\n\r\n## 🚀 Features\r\n- 8e1948f Support sourcing declarative shadow variables from planning list var",
-      "github_stars": 1763,
-      "github_open_issues": 103,
+      "github_stars": 1765,
+      "github_open_issues": 105,
       "github_recent_prs": [
+        "fix: false positive warnings for new properties",
         "deps: bump the patch group with 4 updates",
         "deps: bump com.diffplug.spotless:spotless-maven-plugin from 3.9.0 to 3.10.0 in the minor group",
         "deps: bump the spring-patch group with 2 updates",
-        "deps: bump the quarkus-patch group with 6 updates",
-        "feat(neighborhoods): introduce coarse-grained generic moves"
+        "deps: bump the quarkus-patch group with 6 updates"
       ]
     },
     {
@@ -1383,14 +1383,14 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2510,
+      "github_stars": 2511,
       "github_open_issues": 388,
       "github_recent_prs": [
+        "Initialize mutable Params after DAE discretization",
         "GAMS writer: map non-finite float values to GAMS special values (NA / INF)",
         "Extend pwl approximation init method to support higher initial points and single solve.",
         "Fix cuOpt solver name formatting for versions with != 3 components",
-        "Fix cuOpt solver name formatting for versions with != 3 components",
-        "Add pixi environment directory to .gitignore"
+        "Fix cuOpt solver name formatting for versions with != 3 components"
       ],
       "pypi_monthly_downloads": -28
     },
