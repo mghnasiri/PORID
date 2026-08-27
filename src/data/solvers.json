@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T07:52:21.469893+00:00",
+  "generated_at": "2026-08-27T18:12:37.368622+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1802,
+      "github_stars": 1804,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 133,
+      "github_open_issues": 131,
       "github_recent_prs": [
-        "Fix 3140",
-        "Initialize optimal objective value",
-        "Increase MIP code coverage",
-        "[docs] update to Documenter@1 and Clang@0.19",
-        "Make Xcode 26.6 happy. Move HMW destructor to .cpp"
+        "Embedding Dual-Fixing into Probing",
+        "Now mapping to `kHighsInf`, any bounds on (semi-)integer variables that are not less than 1e9",
+        "HiPO build user choice of BLAS on Apple",
+        "Avoid stalling in `HighsRedcostFixing::addRootRedcost`",
+        "Remove printf"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 640,
+      "github_stars": 641,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13940,
+      "github_stars": 13956,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 117,
+      "github_open_issues": 116,
       "github_recent_prs": [
+        "Fix for #5302 and test for #5301",
+        "sat : export from google3",
+        "bazel: bump protobuf java maven package to 4.35.1",
         "Use constexpr if instead of macros for DEBUG_MODE",
-        "[md] make remaining links relative to repo",
-        "Fix constinit mismatch in non_streamable_solver_init_arguments_test.cc",
-        "dependencies: bump abseil-cpp to 20260817.0",
-        "cmake: bump ZLIB to v1.3.2"
+        "[md] make remaining links relative to repo"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1130,14 +1130,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
-      "github_stars": 6309,
-      "github_open_issues": 189,
+      "github_stars": 6312,
+      "github_open_issues": 190,
       "github_recent_prs": [
+        "Give cvar the same axis behavior as var",
+        "Eliminates identity cones for solvers with variable in cone support",
         "Patch/1.9.3",
         "Bump github/codeql-action/upload-sarif from 4.37.7 to 4.37.8",
-        "Support broader axis handling in stats atoms",
-        "Draft: Add constraint-level complementarity checks",
-        "Read a 3-D value in tv as channels"
+        "Support broader axis handling in stats atoms"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1205,8 +1205,8 @@
       "vendor": "COIN-OR Foundation",
       "website": "https://coin-or.github.io/Ipopt/",
       "docs_url": "https://coin-or.github.io/Ipopt/",
-      "current_version": "3.14.19",
-      "release_date": "2025-07-30",
+      "current_version": "3.14.20",
+      "release_date": "2026-08-27",
       "license_type": "open-source",
       "license_spdx": "EPL-2.0",
       "open_source": true,
@@ -1254,9 +1254,9 @@
         "nlp",
         "interior-point"
       ],
-      "recent_changes": "- Fixed call to `getenv_s` on Windows, introduced with 3.14.17.\r\n  An invalid use of this call made the Pardiso interfaces unusable on Windows.\r\n\r\nThe attached Windows builds include the interface to ",
-      "github_stars": 1778,
-      "github_open_issues": 14,
+      "recent_changes": "- Fixed issue where Ipopt exceptions could not been caught from other libraries on macOS with clang when Ipopt or the other library was build with `-fvisibility=hidden`.\r\n- Call `MPI_Init()` with NULL",
+      "github_stars": 1780,
+      "github_open_issues": 11,
       "github_recent_prs": [
         "remove unnecessary include of iostream; avoid using namespace std",
         "Increment filter reset counter on reset",
@@ -1319,13 +1319,13 @@
       ],
       "recent_changes": "Summer or not, we've been busy bringing you an even faster and even more stable solver. \r\n\r\n# Changelog\r\n\r\n## 🚀 Features\r\n- 8e1948f Support sourcing declarative shadow variables from planning list var",
       "github_stars": 1765,
-      "github_open_issues": 105,
+      "github_open_issues": 104,
       "github_recent_prs": [
+        "docs: document updating multiple fields with custom shadow variables",
+        "fix: false positive warnings for new properties (#2617)",
         "fix: false positive warnings for new properties",
         "deps: bump the patch group with 4 updates",
-        "deps: bump com.diffplug.spotless:spotless-maven-plugin from 3.9.0 to 3.10.0 in the minor group",
-        "deps: bump the spring-patch group with 2 updates",
-        "deps: bump the quarkus-patch group with 6 updates"
+        "deps: bump com.diffplug.spotless:spotless-maven-plugin from 3.9.0 to 3.10.0 in the minor group"
       ]
     },
     {
@@ -1383,8 +1383,8 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2511,
-      "github_open_issues": 388,
+      "github_stars": 2513,
+      "github_open_issues": 385,
       "github_recent_prs": [
         "Initialize mutable Params after DAE discretization",
         "GAMS writer: map non-finite float values to GAMS special values (NA / INF)",
@@ -1448,7 +1448,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.31.2\n\n[Diff since v1.31.1](https://github.com/jump-dev/JuMP.jl/compare/v1.31.1...v1.31.2)\n\n\n**Merged pull requests:**\n- Fix formatting for latest JuliaFormatter version (#4208) (@odow)\n- Fi",
-      "github_stars": 2467,
+      "github_stars": 2466,
       "github_open_issues": 11,
       "github_recent_prs": [
         "[docs] remove tectonic_jll and switch to Docker for LaTeX build",

@@ -1,0 +1,341 @@
+{
+  "date": "2026-08-27",
+  "generated_at": "2026-08-27T18:12:37.720191+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2608.26094",
+      "title": "MyoMechanix: Biomechanically-Grounded Compositional Skilled Activity Understanding and Coaching",
+      "authors": [
+        "Hao Yin",
+        "Paritosh Parmar",
+        "Lijun Gu",
+        "Lin Xu",
+        "Tianxiao Guo",
+        "Xiujin Liu",
+        "Tianyou Zheng",
+        "Yang Zhang",
+        "Weiwei Fu"
+      ],
+      "abstract": "Existing action quality assessment (AQA) datasets and methods rely primarily on visual inputs such as RGB and pose, overlooking physiological dynamics such as muscle mechanics and often modeling actions as monolithic patterns. These limitations hinder fine-grained, biomechanically grounded feedback. We introduce MyoMechanix, a multimodal ecosystem for weight-loaded actions that aligns motion with muscle activity. Expert-annotated, it contains 7,500+ samples of 20 actions from 38 subjects, with synchronized multiview RGB video, 3D pose, sEMG, and additional physiological signals, forming the largest multimodal AQA benchmark to date. We further construct the Fitness Knowledge Graph (FKG), which organizes expert annotations into structured relationships among actions, phases, key steps, errors, and corrective feedback, enabling compositional scoring and interpretable assessment. Building on these representations, we develop CUBIST (Compositional Ontological Reasoning Engine), which performs decomposition-analysis-recomposition for fine-grained error attribution and feedback generation. We also establish MyoMechanix-AQA, MyoMechanix-VideoQA, and a novel MyoMechanix-Video2EMG task. Experiments show that multimodal sensing and structured representations improve performance, interpretability, and error attribution, with CUBIST achieving state-of-the-art results; VideoQA enhances language-grounded action understanding; and Video2EMG suggests video-based alternatives to costly EMG sensing. MyoMechanix advances skilled activity understanding toward biomechanically grounded, multimodal, and compositional reasoning for Physical AI applications in fitness, rehabilitation, healthcare, and machine learning. Project page: https://haoyin116.github.io/MyoMechanix/",
+      "date": "2026-08-26",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2608.26094v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "healthcare-or",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.26094",
+      "arxiv_id": "2608.26094v1",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2608.26083",
+      "title": "ICON Decomposition: Multivariate Concept-Level Explanations of Deep Representations for Model Auditing",
+      "authors": [
+        "Roshan Prakash Rane",
+        "Marco Simnacher",
+        "Manuel Pfeuffer",
+        "Marc-Andre Schulz",
+        "Nys Tjade Siegel",
+        "Maximilian Dreyer",
+        "Frederik Pahde",
+        "Wojciech Samek",
+        "Sonja Greven",
+        "Kerstin Ritter"
+      ],
+      "abstract": "Deep neural networks often exploit spurious associations in their training data, a failure known as shortcut learning. Concept-based explainability methods screen for shortcuts by testing whether concepts such as a patient's sex or scanner settings can be decoded from a network layer. Because each concept is evaluated in isolation, these methods can mistake correlations between concepts as evidence that the model uses them. We introduce ICON decomposition, which instead quantifies how much of a layer's variance each concept explains after accounting for all other concepts and the outcome. On synthetic data with known ground truth, ICON recovers concept importance more accurately than seven alternative baseline methods. On skin-lesion and brain-imaging models, it isolates the concepts on which a model genuinely relies, quantifies the representation unexplained by any of the supplied concepts, and yields sparse explanations that we validate by retraining and out-of-distribution testing.",
+      "date": "2026-08-26",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.26083v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "healthcare-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.26083",
+      "arxiv_id": "2608.26083v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2608.25703",
+      "title": "The Impact of PV Generation Forecast and Multi-Objective Control Policy on Optimal Operation of Grid Connected PV-BESS Microgrid",
+      "authors": [
+        "Berhane Darsene Dimd",
+        "Steve Voller",
+        "Ole-Morten Midtgård"
+      ],
+      "abstract": "The variability of photovoltaic (PV) generation poses significant challenges to the reliable and efficient operation of grid-connected microgrids. Accurate PV output power forecasting and efficient energy scheduling strategies are essential not only for optimizing PV system operation but also for improving the overall performance and reliability of the system. This study proposes a long short-term memory (LSTM)-based PV power forecasting model integrated with a multi-objective scheduling framework for a grid-connected PV-battery energy storage system (BESS). The proposed approach enables detailed performance monitoring and assessment by quantifying how PV forecast accuracy influences key operational metrics, including PV self-consumption ratio, grid energy cost, grid injection, and battery utilization. Three forecasting scenarios (perfect forecast, persistence model, and LSTM-based forecast) are compared to evaluate their impact on system performance and operational reliability. Results show that the LSTM-based forecast reduces root mean squared error (RMSE) by 6% compared with the persistence model, increases the PV self-consumption ratio from 78.1% to 84.5%, and reduces grid injections by 82%. The analysis also highlights trade-offs, as higher battery throughput associated with improved performance may contribute to accelerated aging. These findings demonstrate the importance of accurate PV forecasting in improving system performance and ensuring reliable operation. Future work will focus on probabilistic forecasting to properly quantify uncertainties, incorporate load prediction, and develop smart control strategies that allow grid-support functionalities from the PV side.",
+      "date": "2026-08-26",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2608.25703v1",
+      "tags": [
+        "eess.SY",
+        "scheduling",
+        "stochastic",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.25703",
+      "arxiv_id": "2608.25703v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2024.0884",
+      "title": "Integrating Data Cleaning and Robustification: A Study on Linear Regression",
+      "authors": [
+        "Bilgiç, U.",
+        "Qian, X.",
+        "Zeng, B."
+      ],
+      "abstract": "In this study, we propose a general framework that integrates both optimistic and pessimistic optimization approaches in solving the regression problem to address outlier cleaning and robustification in a unified fashion. Although data cleaning aims to down-weight the outliers, robustification renders the regression models to heavily rely on extreme data. The main objective of this framework is to construct a new optimization scheme capable of withstanding the influence of outliers without harming the robustness level, by combining these two rather contrasting concepts and operations. In addition to showing its generalization to a few well-known regression models, a set of structural properties of our framework is derived to ensure its statistical significance and to understand its computational demand. Then, we develop solution methods, including mixed integer formulations, alternating direction method of multipliers algorithms, and computation enhancement techniques, that can be applied to handle data sets of different scales. Numerical results on both synthetic and benchmark data sets from the University of California, Irvine (UCI) Machine Learning Repository verify the superiority of our new framework and demonstrate the unified strength to handle complex data sets.\n                  History: Accepted by Ram Ramesh, Area Editor for Data Science &amp; Machine Learning.\n                  Funding: X. Qian received financial support from the U.S. National Science Foundation (NSF) [Grants SHF-2215573 and IIS-2212419].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2024.0884 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2024.0884 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-08-27",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2024.0884",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2024.0884",
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7204247932",
+      "title": "Pemanfaatan Media Sosial Instagram Sebagai Strategi Promosi Destinasi Wisata Situ Rawa Gede di Kecamatan Sukamakmur Kabupaten Bogor",
+      "authors": [
+        "Riky Kurniawan",
+        "Emmelia Nadira Satiti",
+        "Muhlis Muhlis"
+      ],
+      "abstract": "This study was initiated by the less-than-optimal management of the official Instagram account of the Situ Rawa Gede tourist destination in Sukamakmur District, Bogor Regency. Although the destination has strong natural appeal, interaction on its official account remains lower than that of several comparable tourism accounts. The study describes how Instagram is used as a promotional strategy and identifies the factors that support or hinder its implementation. The analysis draws on Davis and Adam's utilization concept, social media as a marketing communication channel, and the AISAS model (Attention, Interest, Search, Action, Share). A descriptive qualitative case-study approach was applied. Data were collected through interviews with destination managers, the social-media administrator, and visitors, supported by observation, documentation, and a literature review. The findings indicate that Instagram is utilized through visual-content presentation, interaction with followers, posting-frequency management, and audience targeting. Its implementation is still constrained by limited human resources and supporting facilities. Instagram has therefore contributed to the promotion of Situ Rawa Gede, although more consistent, measurable, and structured management is required to optimize promotional outcomes.",
+      "date": "2026-08-27",
+      "source": "OpenAlex",
+      "source_detail": "Jurnal Manajemen Pariwisata dan Perhotelan",
+      "url": "https://doi.org/10.59581/jmpp-widyakarya.v4i3.6640",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.59581/jmpp-widyakarya.v4i3.6640",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7203756835",
+      "title": "Empowering Large Language Models with Common European Data Spaces",
+      "authors": [
+        "Soumya Kanti Datta"
+      ],
+      "abstract": "The convergence of data space architectures with AI training requirements opens new possibilities for collaborative AI development. This paradigm shift from centralized data aggregation to sovereign data spaces enables AI development patterns previously infeasible due to privacy, regulatory, or competitive constraints. The Eclipse Dataspace Connector (EDC), built on the specifications of the International Data Spaces Association (IDSA) and GAIA-X Trust Framework, provides a foundation for implementing DataSpaces that enable cross-organisational, trustworthy data sharing while maintaining data sovereignty and compliance with European regulatory frameworks like GDPR and emerging data governance regulations. DS2's capabilities in streaming diverse data sources with policy enforcement directly address these concerns, enabling more practical federated learning deployments across organizational and jurisdictional boundaries.",
+      "date": "2026-08-26",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.22004874",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.22004874",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.26053",
+      "title": "$R^3$: Training Robots to Reason in Natural Language via Reinforcement Learning",
+      "authors": [
+        "Lehong Wu",
+        "Yuxiao Qu",
+        "Zheyuan Hu",
+        "Ivan Zhang",
+        "Limin Wei",
+        "Zackory Erickson",
+        "Aviral Kumar"
+      ],
+      "abstract": "Reasoning in language allows foundation models to spend more test-time compute on hard problems, such as those requiring decomposition, constraint tracking, and prediction of future consequences. Whether this mechanism can improve robotic manipulation remains unclear, where long-horizon tasks require tracking partial progress, reasoning about object relations, recovering from mistakes, and steering noisy low-level policies. In this paper, we study whether VLMs can be trained to reason directly in natural language to guide low-level manipulation policies. We introduce $R^3$, a simple post-training recipe that turns off-the-shelf VLMs into robotic reasoners: it first mid-trains a VLM on expert-generated reasoning traces to initialize the desired reasoning style, then improves the reasoner with single-step rubric-based RL from offline action data. Unlike prior robotic reasoning methods that mostly use structured traces as auxiliary supervision, $R^3$ trains free-form language reasoning to produce test-time guidance for action. We instantiate $R^3$ on Language Table and simulated bimanual grocery packing, two controlled testbeds for studying robotic reasoning and long-horizon manipulation. $R^3$ improves exploration and generalization across unseen tasks and significantly outperforms instruction-only imitation learning baselines on both benchmarks. Our analyses suggest that free-form language reasoning can function as a test-time compute mechanism for steering low-level policies. Our project page is available at https://robotic-reasoner.github.io/.",
+      "date": "2026-08-26",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2608.26053v1",
+      "tags": [
+        "cs.RO",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.26053",
+      "arxiv_id": "2608.26053v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.25936",
+      "title": "One Symptom, Three Levers: A Critical Review of On-Policy Self-Distillation",
+      "authors": [
+        "Justin Robert",
+        "Raheel Qader"
+      ],
+      "abstract": "On-policy distillation trains a language model on its own generations while a teacher scores them token by token. It combines the dense supervision of imitation learning with the on-policy sampling of reinforcement learning. But it requires a second, larger model to act as teacher. On-Policy Self-Distillation (OPSD) removes that cost. The teacher is the model itself, conditioned on privileged information the student will not have at test time, such as a reference solution, a plan, or environment feedback. The teacher is no stronger than the student, only better informed. Early results were promising, with accuracy comparable to reinforcement learning at a fraction of the generated tokens. But the same asymmetry that produces the signal also biases it. One failure mode now dominates the field: collapse, the progressive narrowing of the set of reasoning paths the model can produce. Collapse is not specific to OPSD, though privileged information aggravates it. This review treats collapse as a symptom governed by three levers: (i) where the signal is applied, that is, how tokens are weighted; (ii) what the teacher is shown, that is, the nature of the privileged information; and (iii) when the signal changes, that is, the teacher's dynamics and the decay of guidance. We restrict our scope to mathematical reasoning, where the method originated and where its failure modes are best documented. We report no new experiments. The contribution is structural: a shared vocabulary for phenomena named differently across papers, and a clear line between what is settled and what is still disputed.",
+      "date": "2026-08-26",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.25936v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.25936",
+      "arxiv_id": "2608.25936v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.25897",
+      "title": "Towards A Unified Information Bottleneck Framework for Time Series Explanations",
+      "authors": [
+        "Xu Zheng",
+        "Zichuan Liu",
+        "Zhuomin Chen",
+        "Mayur Akewar",
+        "Janki Bhimani",
+        "Jason Liu",
+        "Mo Sha",
+        "Jingchao Ni",
+        "Wei Cheng",
+        "Dongsheng Luo"
+      ],
+      "abstract": "Explaining deep learning models operating on time series data is crucial in various applications that require transparent and interpretable insights into model behavior. {Existing explanation methods generally fall into two categories: attribution-based explanations, which identify the temporal regions most responsible for a prediction, and counterfactual explanations, which reveal how an input should be modified to alter the model's decision.} {Despite valuable insights, these two fields are largely studied independently. This disconnect leaves attribution methods lacking causal validation, while counterfactual methods suffer from severe instability, producing adversarial-like noise instead of meaningful explanations.} In this work, we revisit time-series explainability from an information-theoretic perspective and show that existing explainers are vulnerable to trivial solutions and distributional shifts. To address these limitations, we propose a unified objective function for explainable time series learning that bridges attribution and counterfactual reasoning within a single framework. Building upon the Information Bottleneck principle, our formulation explicitly prevents trivial explanations and out-of-distribution counterfactuals. {Based on this objective function, we introduce {\\modelname}, a novel explanation framework that learns a parametric transformation network to construct explanation-embedded instances, where preserved information yields attribution explanations and controlled information removal produces stable counterfactual explanations.} We evaluate {\\modelname} on synthetic and real-world benchmarks against state-of-the-art baselines. Extensive quantitative and qualitative results show that {\\modelname} consistently outperforms competing methods, yielding faithful attributions and stable counterfactual explanations.",
+      "date": "2026-08-26",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2608.25897v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.25897",
+      "arxiv_id": "2608.25897v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2608.25846",
+      "title": "Why ML-based cough models do not generalize: a systematic cross-dataset evaluation for tuberculosis screening",
+      "authors": [
+        "Wensi Zhang",
+        "Tomas Teijeiro",
+        "Jérôme Thevenot",
+        "David Atienza"
+      ],
+      "abstract": "Cough acoustics are promising for non-invasive tuberculosis (TB) screening, yet whether machine learning (ML) models capture disease-related acoustics or artifacts of data collection remains unresolved. We evaluated the cross-dataset generalizability of classical ML and deep learning (DL) cough-based TB classifiers across three independent datasets. Despite moderate within-dataset performance (ROC-AUC up to $0.755 \\pm 0.056$), both pipelines fail to generalize, with external performance frequently below 0.6, indicating a possible limitation of the data. We further observed audio representations are organized by recording device and dataset rather than TB status, predicted TB probability tracks country-level prevalence in CODA, and device mismatch degrades transfer while device-diverse training improves it. Additionally, a clinical-variable baseline generalizes more consistently (ROC-AUC $0.655 - 0.711$), indicating acquisition-specific variability is a stronger driver of poor generalizability than population shift. High within-dataset performance is not enough. External validation is essential before cough-based TB models are clinically ready.",
+      "date": "2026-08-26",
+      "source": "arXiv",
+      "source_detail": "eess.AS",
+      "url": "http://arxiv.org/abs/2608.25846v1",
+      "tags": [
+        "eess.AS",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2608.25846",
+      "arxiv_id": "2608.25846v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 2,
+    "conferences": 0,
+    "opportunities": 2,
+    "total": 12
+  }
+}
