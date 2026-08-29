@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T19:22:55.739127+00:00",
+  "generated_at": "2026-08-29T13:07:18.400732+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1807,
+      "github_stars": 1808,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 130,
+      "github_open_issues": 131,
       "github_recent_prs": [
+        "docs: fix typo acheived -> achieved",
+        "Fix compiler warnings",
         "Embedding Dual-Fixing into Probing",
         "Now mapping to `kHighsInf`, any bounds on (semi-)integer variables that are not less than 1e9",
-        "HiPO build user choice of BLAS on Apple",
-        "Avoid stalling in `HighsRedcostFixing::addRootRedcost`",
-        "Remove printf"
+        "HiPO build user choice of BLAS on Apple"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 641,
+      "github_stars": 642,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13961,
+      "github_stars": 13964,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1319,7 +1319,7 @@
         "metaheuristic"
       ],
       "recent_changes": "Summer or not, we've been busy bringing you an even faster and even more stable solver. \r\n\r\n# Changelog\r\n\r\n## 🚀 Features\r\n- 8e1948f Support sourcing declarative shadow variables from planning list var",
-      "github_stars": 1768,
+      "github_stars": 1770,
       "github_open_issues": 103,
       "github_recent_prs": [
         "docs: document updating multiple fields with custom shadow variables",
@@ -1385,13 +1385,13 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2513,
-      "github_open_issues": 387,
+      "github_open_issues": 389,
       "github_recent_prs": [
+        "Fix LinearRepnVisitor to substitute fixed vars already in var_map",
+        "GAMS writer: map non-finite float values to GAMS special values (NA / INF)",
         "Fix GDPopt LBB solver error handling",
         "Make GDP enumeration lazy",
-        "Initialize mutable Params after DAE discretization",
-        "GAMS writer: map non-finite float values to GAMS special values (NA / INF)",
-        "Extend pwl approximation init method to support higher initial points and single solve."
+        "Initialize mutable Params after DAE discretization"
       ],
       "pypi_monthly_downloads": -28
     },
