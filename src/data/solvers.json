@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T12:44:48.828535+00:00",
+  "generated_at": "2026-08-31T15:00:01.422149+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -345,7 +345,7 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 131,
+      "github_open_issues": 129,
       "github_recent_prs": [
         "docs: fix typo acheived -> achieved",
         "Fix compiler warnings",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13967,
+      "github_stars": 13971,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 114,
+      "github_open_issues": 115,
       "github_recent_prs": [
+        "Update graph libraries",
+        "tools: remove pkg_resources from check_python_deps.py",
         "algorithms: export from google3",
         "export from google3 (PyLong_AsLong)",
-        "linear_solver: use glop instead of cbc in pywraplp_test.py",
-        "Update presubmit.yml",
-        "Make vendoring pybind11_abseil optional"
+        "linear_solver: use glop instead of cbc in pywraplp_test.py"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -604,7 +604,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 1008,
+      "github_stars": 1009,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -1134,11 +1134,11 @@
       "github_stars": 6315,
       "github_open_issues": 193,
       "github_recent_prs": [
+        "Bump github/codeql-action/upload-sarif from 4.37.8 to 4.37.9",
         "Support tuple axes in std",
         "Raise on an axis with the fro and nuc norms",
         "Give cvar the same axis behavior as var",
-        "Eliminates identity cones for solvers with variable in cone support",
-        "Patch/1.9.3"
+        "Eliminates identity cones for solvers with variable in cone support"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1322,11 +1322,11 @@
       "github_stars": 1770,
       "github_open_issues": 103,
       "github_recent_prs": [
-        "docs: document updating multiple fields with custom shadow variables",
-        "fix: false positive warnings for new properties (#2617)",
-        "fix: false positive warnings for new properties",
-        "deps: bump the patch group with 4 updates",
-        "deps: bump com.diffplug.spotless:spotless-maven-plugin from 3.9.0 to 3.10.0 in the minor group"
+        "docs: improve validation section for service module.",
+        "deps: bump version.io.quarkus from 3.38.3 to 3.39.1",
+        "deps: bump the patch group with 3 updates",
+        "deps: bump the minor group with 2 updates",
+        "deps: bump actions/setup-java from 5.7.0 to 6.0.0 in the actions group"
       ]
     },
     {
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2514,
+      "github_stars": 2515,
       "github_open_issues": 389,
       "github_recent_prs": [
         "Fix LinearRepnVisitor to substitute fixed vars already in var_map",
@@ -1449,7 +1449,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.31.2\n\n[Diff since v1.31.1](https://github.com/jump-dev/JuMP.jl/compare/v1.31.1...v1.31.2)\n\n\n**Merged pull requests:**\n- Fix formatting for latest JuliaFormatter version (#4208) (@odow)\n- Fi",
-      "github_stars": 2467,
+      "github_stars": 2468,
       "github_open_issues": 11,
       "github_recent_prs": [
         "[docs] remove tectonic_jll and switch to Docker for LaTeX build",
