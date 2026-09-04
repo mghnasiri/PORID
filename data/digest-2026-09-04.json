@@ -1,0 +1,457 @@
+{
+  "date": "2026-09-04",
+  "generated_at": "2026-09-04T12:05:04.446729+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s10479-026-07406-4",
+      "title": "Agents of collaborative adaptation: modelling temporal resilience in supply chains",
+      "authors": [
+        "Prasetia, A."
+      ],
+      "abstract": "Abstract\n                  Supply-chain disruptions vary in intensity, scale, and frequency, producing temporally heterogeneous impacts on network viability. The emphasis on exposure and topology has anchored resilience in network structure, obscuring how collaboration and trust govern its phase-specific temporal dynamics, including resistive capabilities, adaptation speed, containment, and recovery. This study thus develops an agent-based simulation of the Netherlands logistics network, in which nodes operate as autonomous agents that redistribute load under capacity, link, and trust constraints. Cascading failures are simulated with trust-gated, capacity-aware, and collaboration-dependent load reallocation, capturing both immediate contagion and multi-step redistribution dynamics. The framework compares rule-based heuristics with adaptive AI agents trained using supervised imitation, online multiplicative adaptation, and cross-entropy policy search. Temporal resilience is then measured across each phase specific metrics of absorptive, adaptive, and recovery phases across the collaboration structure. This points to the main contribution of this article, in which AI agents improve adaptation and cascade containment through targeted use of high-trust, high-capacity links, while recovery dynamics remain bounded by structural and exogenous constraints. This points to a layered view of resilience, where performance depends on the interaction between network configuration, trust-mediated coordination, and agent-level adaptation.",
+      "date": "2026-09-03",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07406-4",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07406-4",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s12532-026-00340-3",
+      "title": "A Frank-Wolfe-based primal heuristic for quadratic mixed-integer optimization",
+      "authors": [
+        "Mexi, G.",
+        "Hendrych, D.",
+        "Designolle, S.",
+        "Besançon, M.",
+        "Pokutta, S."
+      ],
+      "abstract": "Abstract\n                  We propose a primal heuristic for quadratic mixed-integer problems. Our method extends the Boscia framework – originally a mixed-integer convex solver leveraging a Frank-Wolfe-based branch-and-bound approach – to address nonconvex quadratic objective functions and constraints. We reformulate nonlinear constraints, introduce preprocessing steps, and a suite of heuristics including rounding strategies, gradient-guided selection, and large neighborhood search techniques that exploit integer-feasible vertices generated during the Frank-Wolfe iterations. Computational results demonstrate the effectiveness of our method in solving challenging MIQCQPs, achieving improvements on QPLIB instances within minutes and winning first place in the Land-Doig MIP Computational Competition 2025.",
+      "date": "2026-09-03",
+      "source": "Mathematical Programming Computation",
+      "source_detail": "Mathematical Programming Computation",
+      "url": "https://doi.org/10.1007/s12532-026-00340-3",
+      "tags": [
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s12532-026-00340-3",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2023.01823",
+      "title": "The Nonstationary Newsvendor: Data-Driven Nonparametric Learning",
+      "authors": [
+        "Keskin, N.",
+        "Min, X.",
+        "Song, J."
+      ],
+      "abstract": "We study a newsvendor problem with unknown demand distribution in a nonstationary demand environment over a multiperiod time horizon. The demand in each period consists of a time-varying demand level and an additive random shock. Neither the demand level nor the random shock is separately observable. The amount of change in the demand level over the time horizon is measured by a cumulative variation metric. The problem has widespread applications, such as perishable inventory planning, staffing, and medical resource capacity planning in the wake of COVID-19. We design a family of nonparametric dynamic ordering policies, termed two-stage estimation (2SE) policies, that track the shifts in the unknown demand level while accounting for the unobservable random demand shocks. To compute the order quantity in each period, these policies only need the past demand observations, without any access to the underlying demand distribution. For a finite variation “budget,” we prove that our ordering policies are first-order optimal in the sense that their regret grows at the smallest possible rate. We also extend our analysis to the case of asymptotically large variation budgets. Through case studies based on real-life data, we show that our policies can save more than 20% of overage and underage costs, relative to policies widely used for perishable inventory replenishment and nurse staffing. Moreover, our simulation experiments indicate that our policies consistently maintain superior performance across diverse patterns of nonstationary demand environments.\n                  This paper was accepted by David Simchi-Levi, operations management.\n                  Funding: N. B. Keskin and J.-S. Song were supported by the Duke University Fuqua School of Business, and X. Min was supported by the National Natural Science Foundation of China [Grant 72401195] and the China Postdoctoral Science Foundation [2025T180216].\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2023.01823 .",
+      "date": "2026-09-03",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2023.01823",
+      "tags": [
+        "stochastic",
+        "healthcare-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2023.01823",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-net.70065",
+      "title": "Exact Methods for the Cumulative Capacitated Vehicle Routing Problem With Time Windows",
+      "authors": [
+        "Osorio‐Mora, A.",
+        "Gschwind, T."
+      ],
+      "abstract": "ABSTRACT\n                  This article studies the cumulative capacitated vehicle routing problem with time windows (CCVRPTW). The CCVRPTW consists of deciding the routing schedules for a set of homogeneous capacitated vehicles such that the latency, that is, the sum of the service start times at the customers, is minimized and the time windows as well as the vehicle capacities are respected. Two new formulations are considered—a compact two‐index formulation (solved using a general‐purpose MIP solver) and a path‐based formulation. A branch‐price‐and‐cut (BPC) algorithm is developed for solving the path‐based formulation. The methods are compared against an existing compact three‐index formulation. Computational results indicate that the proposed two‐index formulation outperforms the three‐index one in terms of bounds (upper and lower) and computation times. The BPC stands as the state‐of‐the‐art method, being able to solve to proven optimality 84% of the benchmark instances in reasonable computation times. Moreover, the structural differences of the CCVRPTW compared to the classical cost‐based vehicle routing problem with time windows are analyzed, exploring the trade‐off between cost and latency through the constrained method. We observe that regardless of the geographical distribution and width of the time windows: (i) optimal latency‐based solutions generally lead to poor‐quality solutions in terms of cost (and vice versa), and this effect is much more pronounced for wide time windows, and (ii) it is possible to find relatively dense Pareto fronts. Finally, additional managerial insights related to the number of available vehicles as well as the effect of neglecting the time windows and vehicle capacities are presented.",
+      "date": "2026-09-03",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70065",
+      "tags": [
+        "integer-programming",
+        "vehicle-routing",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70065",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.04161",
+      "title": "Minimizing the makespan in job shop scheduling under conflict graph constraints",
+      "authors": [
+        "Nour Elhouda Tellache",
+        "Abdenour Azerine"
+      ],
+      "abstract": "We study the job shop scheduling problem with a conflict graph (JSC), in which adjacent jobs in the conflict graph cannot be processed simultaneously on different machines, with the objective of minimizing the makespan. The problem models settings where jobs share additional resources while retaining their individual machine routings. We first investigate its computational complexity and establish a polynomial equivalence between JSC and a variant of the resource-constrained job shop problem with unit-capacity resources. Although the general problem on two machines is NP-hard, we identify a polynomially solvable special case. For the general problem, we develop precedence-based and time-indexed mixed-integer linear formulations, along with lower bounds on the makespan. We also propose a genetic algorithm using permutation-with-repetition encoding and active, non-delay, and hybrid schedule evaluation procedures. Computational experiments on instances derived from the Lawrence and Taillard benchmarks, as well as randomly generated generalized job shop instances, are conducted to evaluate the performance of the proposed formulations, lower bounds, and genetic algorithm.",
+      "date": "2026-09-03",
+      "source": "arXiv",
+      "source_detail": "cs.DM",
+      "url": "http://arxiv.org/abs/2609.04161v1",
+      "tags": [
+        "cs.DM",
+        "integer-programming",
+        "metaheuristics",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.04161",
+      "arxiv_id": "2609.04161v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.03531",
+      "title": "Beyond Higher-Pulse Rectification: Operational Harmonic Coordination in Renewable P2H Systems",
+      "authors": [
+        "Yangjun Zeng",
+        "Yiwei Qiu",
+        "Jie Zhu",
+        "Yi Zhou",
+        "Tao Wu",
+        "Xin Meng",
+        "Shi Chen",
+        "Buxiang Zhou",
+        "Kaigui Xie"
+      ],
+      "abstract": "Thyristor rectifiers (TRs) are cost-effective electrolysis power supplies for renewable power-to-hydrogen (ReP2H) systems, but their harmonics may violate grid-code limits. In contrast to conventional solutions that rely on higher-pulse (such as 24-pulse) rectifiers, this paper proposes an operational harmonic coordination scheme that enables low-cost 12-pulse TRs to meet harmonic requirements through coordinated operation. First, a harmonic model quantifies the effects of rectifier transformer (RCT) tap positions and electrolytic currents, enabling harmonic cancellation among multiple electrolyzers (ELZs). A two-layer framework then coordinates hydrogen production and harmonic mitigation. Hourly scheduling determines ELZ commitment within the harmonic feasible region under renewable uncertainty using stochastic programming and a modified progressive hedging algorithm, while minute-level dispatch tracks renewable power and mitigates harmonics. A decomposition algorithm separates production dispatch from harmonic mitigation to improve computational efficiency. Case studies based on real-life projects show that the proposed method increases profit by 31% over current-only regulation. Annual simulations further show that coordinated 12-pulse TRs can replace 24-pulse rectifiers for harmonic compliance by exchanging additional RCT tap actions for lower transformer investment, reducing rectification-stage cost by 37.5%.",
+      "date": "2026-09-03",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.03531v1",
+      "tags": [
+        "math.OC",
+        "scheduling",
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.03531",
+      "arxiv_id": "2609.03531v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.04009",
+      "title": "The Blind Spot in 2D Infants' Pose Estimation:Robust Learning from Noisy Annotations",
+      "authors": [
+        "Emanuele Cardinale",
+        "Marco Proietti",
+        "Alessandro Cacciatore",
+        "Maria Francesca Spadea",
+        "Lucia Migliorelli",
+        "Sara Moccia"
+      ],
+      "abstract": "Noisy annotations pose a significant challenge for supervised deep learning, as neural networks rely on large-scale, high-quality labeled data whose corruption can severely impair model performance. Although robustness to label noise has been extensively studied for classification tasks, it remains relatively underexplored in Pose Estimation (PE). This limitation becomes critical in clinical contexts, including neonatology, where PE of preterm infants is used to support the assessment of spontaneous motility, a key indicator of neurodevelopmental trajectories. In such settings, infants' images labeling is further hindered by visual challenges (e.g., keypoint self-occlusions, caregiver interference), making the annotation process inherently susceptible to errors. To tackle noisy annotations in PE, we introduce REliable keypoint selection via Memory of traINing Dynamics (REMIND), a clustering-based keypoint-selection strategy that exploits keypoint-wise training dynamics to identify noisy labels without assuming any prior knowledge of the noise distribution, thus enabling noise-free model training. When evaluated on the proprietary NeoPose dataset, comprising 46 videos of 46 preterm infants recorded in real clinical settings, REMIND correctly identifies noisy annotations across multiple corruption scenarios, achieving up to 93\\% Area Under the Curve (AUC) with three different PE architectures used in the relevant literature. To our knowledge, this is the first study to explicitly address label noise in preterm infants' PE, paving the way for the design of trustworthy learning-based algorithms for infants'monitoring support when data quality cannot be guaranteed.",
+      "date": "2026-09-03",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2609.04009v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.04009",
+      "arxiv_id": "2609.04009v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.03851",
+      "title": "Pushing the (Decision) Boundaries: Dynamically Calibrating Differentially Private Noise to Explainability in Federated Learning",
+      "authors": [
+        "Michael Khavkin",
+        "Kichang Lee",
+        "Jaeho Jin",
+        "JeongGil Ko",
+        "Eran Toch"
+      ],
+      "abstract": "Federated Learning (FL) with Differential Privacy (DP) is increasingly adopted to preserve data confidentiality in distributed machine learning. However, DP noise distorts learned representations and degrades explanation fidelity, limiting differentially private FL where trustworthy explanations are required, such as assistive clinical diagnosis. Prior work adapted DP noise with static feature-importance signals, restricting explainability to post hoc analysis and precluding noise calibration to explanation quality during training. We propose XCal-FL, a closed-loop, explainability-driven local training algorithm for image classification in cross-silo FL that dynamically calibrates DP noise from three complementary signals: (1) prediction logit variations, measuring causal influence on model confidence, (2) counterfactual margins, capturing decision-boundary sensitivity, and (3) saliency concentration, quantifying spatial coherence of model attention, while enforcing formal DP guarantees via adaptive privacy accounting. Experiments on three medical imaging datasets across varying FL configurations show that XCal-FL yields more accurate and interpretable global models, improving predictive performance by over 10\\% and explanation fidelity by up to 5$\\times$ over static-noise FL, and outperforming state-of-the-art adaptive DP methods in fidelity. XCal-FL also achieves higher privacy-budget efficiency, turning each unit of cumulative privacy loss into larger gains in both accuracy and explanation fidelity. Our analysis further reveals that, unlike predictive performance, which scales roughly linearly with privacy loss, explanation fidelity exhibits non-linear dynamics. These findings suggest explainability is a distinct dimension of the privacy trade-off that cannot be inferred from utility alone, with implications for training and privacy-budget allocation in decision-critical applications.",
+      "date": "2026-09-03",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.03851v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.03851",
+      "arxiv_id": "2609.03851v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.03762",
+      "title": "Projected Riemannian Gradient Descent for the Bures-Wasserstein Barycenter: Dimension-Independent Linear Convergence at Unit Step Size",
+      "authors": [
+        "A. Afham"
+      ],
+      "abstract": "The computation of the Bures-Wasserstein (BW) barycenter of an ensemble of positive definite matrices arises throughout machine learning, optimal transport, and quantum information. Riemannian gradient descent (RGD) at unit step size -- the fixed-point iteration used in practice -- converges rapidly, yet existing analyses present a dichotomy: unit-step guarantees carry worst-case exponential dependence on the dimension, while dimension-independent guarantees require small step sizes that forfeit the empirical speed. We resolve this dichotomy, not by improving the guarantees for unit-step RGD, but by proposing a Projected RGD algorithm that achieves dimension-independent linear convergence at unit step size. The achieved rate, $(1 - κ^{-3/2})$, where $κ$ is the condition number of the ensemble, also polynomially improves on the best small-step guarantee ($κ^{3/2}$ versus $κ^{5/2}$ iteration complexity). The crux is a novel Projection Lemma: clipping the eigenvalues of a positive matrix to an interval $[α, β]$ is the closed-form, non-expansive (1-Lipschitz) BW-metric projection onto the set $\\{S : αI \\leq S \\leq βI\\}$ -- a statement which, unlike its known one-sided counterpart, does not follow from convexity. The projection is moreover free: it reuses an eigendecomposition the next iteration must perform in any case, so the projected and unprojected iterations cost the same per step. The same analysis covers the invariant matrix projection problem of Brahmachari et al. (2025), whose fixed-point algorithm we identify as unit-step RGD on a totally geodesic submanifold, thereby extending the dimension-independent guarantee to that setting verbatim.",
+      "date": "2026-09-03",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.03762v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.03762",
+      "arxiv_id": "2609.03762v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.03754",
+      "title": "Automated Priority Rule Design for the Resource-Constrained Project Scheduling Problem: A Large Language Model-Guided Population-Based Search",
+      "authors": [
+        "Jingyu Luo",
+        "Mario Vanhoucke",
+        "José Coelho"
+      ],
+      "abstract": "The objective of the resource-constrained project scheduling problem (RCPSP) is to minimize makespan while satisfying precedence and renewable-resource constraints. Priority-rule heuristics construct feasible schedules with low computational cost and explicit decision logic, making them widely used in practice and an attractive alternative to more computationally intensive methods. However, no traditional rule performs consistently well across projects, and researchers have therefore investigated automated priority-rule design. Genetic programming (GP) hyper-heuristics have been the predominant approach to this task, but evolving a high-performing rule may require evaluating many candidate rules on the training projects. Recent advances in large language models (LLMs) make it possible to generate and iteratively revise priority rules using performance feedback.   This paper presents an LLM-guided population-based framework for automated priority-rule design. During the offline search, an LLM generates and revises candidate rules, while schedule quality on training projects determines candidate fitness and guides subsequent revisions. At the end of the search, the best rule is returned and applied directly to unseen projects without further search or LLM calls.   Experiments show that the LLM-designed rules outperform traditional single rules across the test sets and outperform GP-designed rules obtained under comparable search effort, while remaining competitive with rules obtained from a substantially larger GP search. On large projects, selected LLM-designed rules outperform all considered traditional rules and two genetic algorithm configurations on highly parallel projects. An ablation study examines how changes to the main search components affect performance, while rule analyses describe the structure and decision behavior of the LLM-designed rules.",
+      "date": "2026-09-03",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.03754v1",
+      "tags": [
+        "math.OC",
+        "metaheuristics",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.03754",
+      "arxiv_id": "2609.03754v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 5,
+    "conferences": 0,
+    "opportunities": 5,
+    "total": 15
+  }
+}
