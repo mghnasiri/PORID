@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T12:05:04.132407+00:00",
+  "generated_at": "2026-09-05T11:14:19.611912+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1819,
+      "github_stars": 1820,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13991,
+      "github_stars": 13996,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 117,
+      "github_open_issues": 118,
       "github_recent_prs": [
+        "port: export from google3",
+        "export some windows build fix",
         "glop: rework test",
         "SAT: Allow disabling NoOverlap to AllDiff presolve conversion",
-        "build(deps): bump the pip group across 1 directory with 10 updates",
-        "Remove exports from constraint_solver/python/BUILD.bazel",
-        "ortools: export julia change from google3"
+        "build(deps): bump the pip group across 1 directory with 10 updates"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -604,7 +604,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 1012,
+      "github_stars": 1013,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
-      "github_stars": 6319,
-      "github_open_issues": 195,
+      "github_stars": 6321,
+      "github_open_issues": 196,
       "github_recent_prs": [
+        "Extract PSD cones from unrestricted matrix variables",
         "CI: isolate OR-Tools tests from HiGHS to prevent native symbol conflicts",
         "Fix 3.14t and windows-2022 builds in GH actions",
         "cvxcore: Regenerate files using SWIG 4.5.0",
-        "Add dual variables to ConstantSolver for feasible constant problems",
-        "Bump github/codeql-action/upload-sarif from 4.37.8 to 4.37.9"
+        "Add dual variables to ConstantSolver for feasible constant problems"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,7 +1319,7 @@
         "metaheuristic"
       ],
       "recent_changes": "In this release, we have focused a lot on the service module and accompanying documentation.\r\nBut we have also fixed several important bugs and if you look very closely, you will find out that Neighbo",
-      "github_stars": 1773,
+      "github_stars": 1775,
       "github_open_issues": 106,
       "github_recent_prs": [
         "docs: new nav structure",
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2520,
+      "github_stars": 2521,
       "github_open_issues": 387,
       "github_recent_prs": [
         "August 2026 typos update",
@@ -1449,7 +1449,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.31.2\n\n[Diff since v1.31.1](https://github.com/jump-dev/JuMP.jl/compare/v1.31.1...v1.31.2)\n\n\n**Merged pull requests:**\n- Fix formatting for latest JuliaFormatter version (#4208) (@odow)\n- Fi",
-      "github_stars": 2470,
+      "github_stars": 2471,
       "github_open_issues": 11,
       "github_recent_prs": [
         "Fix incorrect Base.imag(::GenericQuadExpr{<:Real})",
