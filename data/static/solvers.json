@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T11:14:19.611912+00:00",
+  "generated_at": "2026-09-06T11:37:09.918347+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1820,
+      "github_stars": 1822,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 13996,
+      "github_stars": 13998,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
-      "github_stars": 6321,
-      "github_open_issues": 196,
+      "github_stars": 6322,
+      "github_open_issues": 203,
       "github_recent_prs": [
+        "Fix six test failures under SCS 3.3.1 and tighten suppfunc value accuracy",
+        "Fix SCS 3.3 compatibility and CI accuracy assumptions",
+        "Preserve NumPy scalar axes in sum shape inference",
         "Extract PSD cones from unrestricted matrix variables",
-        "CI: isolate OR-Tools tests from HiGHS to prevent native symbol conflicts",
-        "Fix 3.14t and windows-2022 builds in GH actions",
-        "cvxcore: Regenerate files using SWIG 4.5.0",
-        "Add dual variables to ConstantSolver for feasible constant problems"
+        "CI: isolate OR-Tools tests from HiGHS to prevent native symbol conflicts"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1384,8 +1384,8 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2521,
-      "github_open_issues": 387,
+      "github_stars": 2523,
+      "github_open_issues": 388,
       "github_recent_prs": [
         "August 2026 typos update",
         "Fix LinearRepnVisitor to substitute fixed vars already in var_map",
