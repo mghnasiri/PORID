@@ -1,0 +1,423 @@
+{
+  "date": "2026-09-07",
+  "generated_at": "2026-09-07T13:27:49.983107+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1177-10591478261484829",
+      "title": "Joint planning and operations of wind power under decision-dependent uncertainty",
+      "authors": [
+        "Chen, Z.",
+        "Xu, W.",
+        "Chen, C.",
+        "Cui, J.",
+        "Hu, Q."
+      ],
+      "abstract": "We study a joint wind farm planning and operational scheduling problem under decision-dependent uncertainty. Geographic heterogeneity in wind power resources induces stochastic fluctuations that can partially offset one another—a phenomenon known as the smoothing effect. Capturing this effect requires strategic capacity allocation, which introduces decision-dependent uncertainty. At the same time, joint planning and operations must address long-term complexity, where traditional stochastic optimization faces a trade-off between statistical robustness and computational burden. To address these challenges, we propose a two-stage distributionally robust optimization model with a decision-dependent Wasserstein ambiguity set, where both the distribution and the radius adapt to planning decisions. The resulting decision-dependent radius contracts at the\n                    \n                      \n                        \n                          O\n                        \n                        (\n                        \n                          N\n                          \n                            −\n                            1\n                            /\n                            2\n                          \n                        \n                        )\n                      \n                    \n                    rate and avoids the dimensionality dependence. The model is reformulated as a mixed-integer second-order cone programming, incorporating an empirical approximation and a regularization term that includes variance-covariance estimates for the wind power resource of each farm. We further establish finite-sample guarantees on both cost and power stability under the theoretically calibrated radius. These theoretical insights motivate an asymmetric sampling strategy that leverages large datasets for variance-covariance estimation while using smaller datasets for optimization. To improve computational efficiency, we develop a constraint generation based solution framework that accelerates the solution procedure by hundreds of times. Numerical experiments using different datasets validate the effectiveness of the solution framework and demonstrate the superior performance of the proposed model in risk management. Our results offer clear managerial implications for renewable energy planning under uncertainty: (i) information quality outweighs quantity—covariance information should be incorporated only when it is sufficiently reliable; otherwise, it may compromise power stability; and (ii) effective data utilization is more valuable than simply increasing data quantity—the asymmetric sampling strategy can achieve comparable performance with substantially lower computational effort.",
+      "date": "2026-09-07",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261484829",
+      "tags": [
+        "integer-programming",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261484829",
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261485796",
+      "title": "Targeted service improvement for individualized providers",
+      "authors": [
+        "Qin, J.",
+        "Zheng, P.",
+        "Wang, X.",
+        "Xia, Y."
+      ],
+      "abstract": "Online reviews offer valuable insights for service improvement, especially with the increasing availability of multimodal data (e.g., text and images). However, most existing research has primarily focused on industry- or group-level analyses, often overlooking individual business contexts (e.g., performance and competition), the interaction effects between different service attributes, and the full potential of image information. This study fills these gaps by developing a novel multimodal framework that leverages machine learning and optimization theory to generate targeted service improvement recommendations for individual service providers. The three-stage framework begins with extracting and clustering aspect-opinion pairs from review texts and matching them with corresponding image features. Subsequently, we use a feature distribution smoothing-based Bayesian iterative algorithm to address biases from data imbalance and estimate attribute-level interaction effects. Finally, we construct an interaction effect network, propose a probability-based stepwise optimization algorithm, and integrate image features with large language models to generate specific and actionable recommendations for individual providers. Through a large-scale case study of hotel service improvement, we validate the effectiveness of the proposed framework and demonstrate enhanced predictive accuracy and management insights. A user study with practitioners showed that our method outperformed the best baseline by\n                    \n                      \n                        19.5\n                        %\n                      \n                    \n                    in practitioner satisfaction.",
+      "date": "2026-09-07",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261485796",
+      "tags": [
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261485796",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261483354",
+      "title": "A practical guide to causal inference in healthcare operations using single-world intervention graphs (SWIGs)",
+      "authors": [
+        "Cochran, A.",
+        "Alvarez-Avendaño, S.",
+        "Acosta-Perez, F.",
+        "Kocher, K.",
+        "Patterson, B.",
+        "Zayas-Cabán, G."
+      ],
+      "abstract": "Observational studies in operations management (OM) increasingly guide managerial, clinical, and policy decisions in healthcare. To strengthen their rigor, empirical OM research has turned toward causal inference. However, reliably attributing specific effects to interventions using observational data remains challenging. This tutorial describes a causal inference approach for healthcare OM, centered on single-world intervention graphs, which unify the potential outcomes and do-calculus frameworks. We emphasize constructing precise causal questions and determining when causal effects can be identified from observed variables. We present a detailed case study examining whether a longer treatment time in the emergency department can reduce unnecessary admissions without adversely affecting downstream patient outcomes. The example shows what applying the proposed framework looks like in practice, from defining causal questions and encoding assumptions graphically to walking through the identification process, thereby illustrating how structured causal reasoning can inform healthcare OM.",
+      "date": "2026-09-07",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261483354",
+      "tags": [
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261483354",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261484823",
+      "title": "Collateral damage: Environmental risk shocks and process innovation",
+      "authors": [
+        "Zhou, Y.",
+        "Dhanorkar, S.",
+        "Song, J."
+      ],
+      "abstract": "Unforeseen events such as accidents and disasters cause substantial economic losses to firms worldwide each year. It is, therefore, crucial for firms to make targeted adjustments to their processes to effectively manage operational risks from such events. We examine whether and how firms engage in process innovation in response to elevated environmental risk. By exploiting exogenous shifts in environmental risk created by nearby spill and pollution (SP) accidents, we investigate the impact of such environmental risk exposure on the non-offending (i.e. victim) firms’ environmental process innovation (EPI). Using a stacked difference-in-differences (DiD) design, we find that higher risk exposure results in a substantial increase in firms’ EPI, exhibiting a 23.06% increment compared to the control group. Next, we find that the main effect is contingent on the non-offending firms’ degree of risk tolerance stemming from (i) political, (ii) local regulatory, and (iii) market-based factors. Interestingly, we also find evidence that higher risk exposure propagates through the non-offending firms’ supply chain, giving more credibility to the hypothesized mechanism. We further explore mechanisms (e.g. managerial attention and risk awareness) underlying this relationship and document the role of the severity of environmental accidents. To policymakers, our results highlight that heightened risk exposure can motivate firms’ sustainability efforts even at non-offending firms which, if leveraged (e.g. through timely nudges), could mitigate future environmental accidents.",
+      "date": "2026-09-07",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261484823",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261484823",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s11590-026-02332-7",
+      "title": "Nonsmooth local optimization via direct search",
+      "authors": [
+        "Price, C.",
+        "Robertson, B."
+      ],
+      "abstract": "Abstract\n                  A direct search method for local unconstrained optimization of nonsmooth functions is presented. The method performs forward tracking line searches along a sequence of poll directions, where the lengths of many poll directions are bounded away from zero. Convergence is shown under mild conditions when the poll directions are generated from any scrambled Halton sequence. An arbitrary step is incorporated into the method, allowing other line searches to be used to accelerate the convergence rate. This paper compares the performance of the Sobol, standard Halton and a scrambled Halton poll sequences with no arbitrary step. Numerical trials show the latter performs similarly to the Sobol sequence and outperforms the standard Halton sequence.",
+      "date": "2026-09-06",
+      "source": "Optimization Letters",
+      "source_detail": "Optimization Letters",
+      "url": "https://doi.org/10.1007/s11590-026-02332-7",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11590-026-02332-7",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1007-s11590-026-02333-6",
+      "title": "Polynomial-time algorithms for setting tight big-M coefficients in transmission expansion planning with disconnected buses",
+      "authors": [
+        "Jabbari-Marand, B.",
+        "Escobedo, A."
+      ],
+      "abstract": "Abstract\n                  The increasing penetration of renewable energy and rising electricity demand are driving the need to integrate new buses and transmission lines into transmission grids. These trends are reshaping transmission expansion planning (TEP), motivating the development of effective methodologies to manage the resulting complexity. This paper introduces the longest shortest-path connection (LSPC) algorithm, a graph-based method to enhance the mixed-integer linear programming disjunctive formulation of TEP using valid inequalities (VIs). Traditional approaches for determining big-M coefficients in disconnected TEP networks typically rely on solving the computationally intensive longest path problem (LPP). In contrast, LSPC circumvents these limitations by efficiently identifying relevant power-flow paths between disconnected buses within the expansion network. We demonstrate that the VIs generated from these identified paths dominate those derived from LPP-based methods and other existing approaches.",
+      "date": "2026-09-06",
+      "source": "Optimization Letters",
+      "source_detail": "Optimization Letters",
+      "url": "https://doi.org/10.1007/s11590-026-02333-6",
+      "tags": [
+        "linear-programming",
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11590-026-02333-6",
+      "score": 50.0
+    },
+    {
+      "id": "optim-online-5f01909dc3e2",
+      "title": "Stable and Unstable Singularities in Navier-Stokes ?",
+      "authors": [],
+      "abstract": "This document provides an extended and rigorous framework dedicated to the geometric analysis of the 3D incompressible Navier-Stokes equations \\cite{ESS2003}. We comprehensively develop geometric proofs related to decay estimates, blow-up profiles, and the foundational partial regularity theory of Caffarelli, Kohn, and Nirenberg (CKN). We examine in detail the Hausdorff dimension of potential singular sets, local ... Read more",
+      "date": "2026-09-07",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/09/stable-and-unstable-singularities-in-navier-stokes/?utm_source=rss&utm_medium=rss&utm_campaign=stable-and-unstable-singularities-in-navier-stokes",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07396-3",
+      "title": "BERT-based twitter sentiment analysis for stock return prediction and portfolio optimization",
+      "authors": [
+        "Golabzaei, M.",
+        "Sadjadi, S.",
+        "Noorossana, R.",
+        "Amiri, B."
+      ],
+      "abstract": "",
+      "date": "2026-09-07",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07396-3",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07396-3",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1080-01605682.2026.2724047",
+      "title": "Reverse scheduling on a single machine with adjustable release and processing times: optimal algorithms and applications",
+      "authors": [
+        "Ying, K.",
+        "Chen, X."
+      ],
+      "abstract": "",
+      "date": "2026-09-06",
+      "source": "Journal of the Operational Research Society",
+      "source_detail": "Journal of the Operational Research Society",
+      "url": "https://doi.org/10.1080/01605682.2026.2724047",
+      "tags": [
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.1080/01605682.2026.2724047",
+      "score": 35.0
+    },
+    {
+      "id": "optim-online-cf806617084a",
+      "title": "An Algebraic Shape-Optimization Barrier",
+      "authors": [
+        "Rooting Out Self-Intersection"
+      ],
+      "abstract": "Self-intersection is a fundamental feasibility constraint in shape optimization: a self-crossing boundary leaves its interior, normal field, and finite-element mesh ill-defined, yet most existing barriers rely on heuristic geometric-proximity measures rather than certifying self-intersection directly. We propose a self-intersection barrier grounded in algebraic detection. We derived two bivariate polynomials from a curve&#8217;s Fourier coefficients whose ... Read more",
+      "date": "2026-09-06",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/09/rooting-out-self-intersection-an-algebraic-shape-optimization-barrier/?utm_source=rss&utm_medium=rss&utm_campaign=rooting-out-self-intersection-an-algebraic-shape-optimization-barrier",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "score": 30.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 5,
+    "conferences": 0,
+    "opportunities": 5,
+    "total": 15
+  }
+}
