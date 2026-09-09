@@ -1,0 +1,467 @@
+{
+  "date": "2026-09-09",
+  "generated_at": "2026-09-09T12:16:57.127924+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s10479-026-07414-4",
+      "title": "Models, constructive heuristics, and benchmark instances for the flexible job shop scheduling problem with nonlinear routes and position-based learning",
+      "authors": [
+        "Araujo, K.",
+        "Birgin, E.",
+        "Ronconi, D."
+      ],
+      "abstract": "Abstract\n                  This paper addresses the flexible job shop scheduling problem with nonlinear routes and position-based learning effect. In this variant of the flexible job shop scheduling problem, precedence constraints of the operations constituting a job are given by an arbitrary directed acyclic graph, generalizing the classical case in which a total order is imposed. Additionally, it is assumed that a worker performing an operation at a machine undergoes a learning process: the more times a worker has performed an operation, the faster he or she will be able to complete it on subsequent repetitions. Mixed integer programming and constraint programming models are presented and compared in the present work. In addition, sets of benchmark instances and constructive heuristics are introduced. The problem we study here corresponds to modern problems of great relevance in the printing industry. The framework we introduce aims to assist authors in the design of novel, effective, and efficient methods. Instances with optimal solutions provide a means to evaluate the quality of solutions found by other methods. Constructive heuristics serve two purposes. First, they provide an initial solution to off-the-shelf exact methods, offering a warm start when addressing instances of the proposed models. They also lay the groundwork for developing algorithms, such as list scheduling, neighborhoods, local searches, and ultimately, metaheuristics.",
+      "date": "2026-09-09",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07414-4",
+      "tags": [
+        "integer-programming",
+        "metaheuristics",
+        "scheduling",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07414-4",
+      "score": 70.0
+    },
+    {
+      "id": "arxiv-2609.08992",
+      "title": "Physics-Informed Deep Learning for False Ventricular Tachycardia Alarm Reduction in the ICU",
+      "authors": [
+        "Athanasios Papastathopoulos-Katsaros",
+        "Alexandra Stavrianidi",
+        "Zhandong Liu"
+      ],
+      "abstract": "False ventricular tachycardia (VT) alarms are a leading contributor to alarm fatigue in intensive care units. We propose a deep learning framework combining a 1D SE-ResNet with ICU-realistic data augmentations and a physics-informed auxiliary reconstruction task based on the three-element Windkessel hemodynamic model, implemented as a differentiable forward simulation. By requiring the network's latent representation to produce physiologically plausible arterial pressure waveforms, artifact-driven ECG patterns are penalized while true VT remains coherent across modalities. Evaluated on the VTaC benchmark under a strict real-time protocol (10-second pre-alarm window), our method achieves a 5-point Challenge Score improvement over prior state-of-the-art. Ablation studies confirm that the physics-informed objective is the primary performance driver, providing gains in accuracy, 2x label efficiency, and more localized and clinically meaningful ECG segments.",
+      "date": "2026-09-08",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.08992v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.08992",
+      "arxiv_id": "2609.08992v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.08685",
+      "title": "HOPE: Heterophily-Aware Open-Set Node Classification with Pseudo-Extrapolation",
+      "authors": [
+        "Yumeng Dai",
+        "Yue Tan",
+        "Yixin Liu",
+        "Chenxu Wang",
+        "Pinghui Wang",
+        "Tao Qin"
+      ],
+      "abstract": "Standard open-set node classification methods rely on the homophily assumption, where connected nodes share labels. However, real-world graphs are often heterophilic, exposing the limitations of current methods and posing new challenges to open-set node classification. On the one hand, cross-class connectivity causes representations from different known or unknown classes to become intertwined after aggregation, undermining their discriminative capacity. On the other hand, structural mixture invalidates threshold-based open-set methods and cross-class feature interpolation, leading to unreliable unknown-class rejection. To address these challenges, we propose HOPE, a Heterophily-aware Open-set node classification method with Pseudo-Extrapolation. To adapt open-set graph neural networks (GNNs) to heterophilic scenarios, HOPE uses a structure-augmented feature initialization layer to capture multi-hop structural patterns. Meanwhile, we design a trustworthy neighborhood aggregation mechanism for standard GNNs to dynamically filter noisy cross-class neighbors. To enhance unknown-class rejection, we introduce a heterophily-guided pseudo-extrapolation strategy. It dynamically maintains known-class centers and extrapolates along cross-class neighborhood displacement directions, synthesizing pseudo-unknown proxies near structurally ambiguous regions. Finally, we optimize the network with joint classification and logit margin regularization, routing synthetic proxies into a dedicated rejection slot without imposing geometric margin constraints in the representation space. Extensive experiments on multiple datasets show that HOPE consistently outperforms state-of-the-art models, validating its effectiveness, robustness, and efficiency.",
+      "date": "2026-09-08",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.08685v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.08685",
+      "arxiv_id": "2609.08685v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.08436",
+      "title": "A Two-Stage, Model-Based Reinforcement Learning Approach for Active Flow Control of Bluff Body Wakes",
+      "authors": [
+        "Aayushman Sharma",
+        "Suman Chakravorty"
+      ],
+      "abstract": "This paper develops a data-driven, output-feedback approach to the infinite-horizon optimal control of high-dimensional nonlinear systems with unknown and unstable equilibria, using sparse partial observations. The approach builds on the transfer-plus-regulation decomposition of the infinite-horizon problem: a finite-horizon nonlinear transfer drives the system into a region where the dynamics are well-approximated by a linear model about the unknown operating point, and an infinite-horizon linear regulator identified within that region completes stabilization. We extend this framework to the partially observed setting by combining an ARMA-based information-state construction with a two-stage control architecture: an iterative linear quadratic regulator (iLQR) approach on the information state drives the system to the equilibrium neighborhood, discovered implicitly without prior knowledge of the target, and a locally identified time-invariant ARMA model provides the infinite-horizon regulator for asymptotic stabilization. The method requires no adjoint solver, reduced-order model, or full-state access. We validate the approach on high-fidelity Navier-Stokes simulations of the cylinder wake at $\\mathrm{Re}=100$ using only eight surface pressure sensors, an order of magnitude fewer than recent model-based RL methods. The controller achieves complete suppression of vortex-shedding-induced lift oscillations and a $44\\%$ reduction in total drag relative to the uncontrolled baseline.",
+      "date": "2026-09-08",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2609.08436v1",
+      "tags": [
+        "eess.SY",
+        "stochastic",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.08436",
+      "arxiv_id": "2609.08436v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1080-01605682.2026.2712994",
+      "title": "Implementation of OR in healthcare services: a systematic review",
+      "authors": [
+        "Lamé, G.",
+        "Newton, C.",
+        "Grieco, L.",
+        "Crowe, S.",
+        "Bashford, T.",
+        "Hinrichs-Krapels, S."
+      ],
+      "abstract": "",
+      "date": "2026-09-08",
+      "source": "Journal of the Operational Research Society",
+      "source_detail": "Journal of the Operational Research Society",
+      "url": "https://doi.org/10.1080/01605682.2026.2712994",
+      "tags": [
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1080/01605682.2026.2712994",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2025.1233",
+      "title": "Landscape-Aware Hybrid Metaheuristic for Cross-Dock Door Assignment",
+      "authors": [
+        "Yang, W.",
+        "Wang, Y.",
+        "Punnen, A.",
+        "Martí, R."
+      ],
+      "abstract": "The cross-dock door assignment problem (CDAP) is a critical challenge in optimizing cargo transshipment in logistics, where each inbound door serves multiple origins and each outbound door serves multiple destinations, subject to capacity constraints on the volume of goods processed at each door. To address this problem, we propose a novel metaheuristic (LA-HM) that integrates landscape-aware iterated tabu search and large neighborhood search within a unified framework. The proposed algorithm begins with a model-driven procedure to generate a diverse set of initial solutions, which are then refined using an iterated tabu search procedure, enhanced by an innovative landscape-aware detection mechanism. This mechanism dynamically monitors the search landscape at regular intervals to identify plain regions characterized by slow local improvement. Based on the detected plain level, the algorithm adaptively adjusts the interval length in the tabu search and applies targeted perturbations to escape local optima, thereby exploring more promising regions. Additionally, we introduce a reformulation of the original problem, consolidating all trucks at a door into a single “consolidated truck.” This reformulation enables the use of an alternating local search method to further refine solutions efficiently. Evaluated on two widely used data sets, the proposed algorithm sets new best known records for 39 out of 99 benchmark instances, and surpasses the leading algorithms in the literature. Moreover, a comprehensive analysis of the landscape-aware detection mechanism and the large neighborhood search highlights their contributions to solution quality. Notably, the search strategies proposed in this work are generalizable and applicable to a wide range of combinatorial optimization problems, particularly those characterized by flat landscapes where traditional methods often struggle to navigate effectively.\n                  History: Accepted by Erwin Pesch, Area Editor for Heuristic Search &amp; Approximation Algorithms.\n                  Funding: This work was supported by National Natural Science Foundation of China [Grant 72371200]; Spanish government-Ministerio de Ciencia e Innovación [Grants PID2021-125709OB-C21, PID2024-160226OB-C21].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2025.1233 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2025.1233 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-09-08",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2025.1233",
+      "tags": [
+        "metaheuristics",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2025.1233",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.09119",
+      "title": "DeCAL: Towards Physically-Grounded Dexterous Vision-Language-Action Models via Contact-Aware Latent Co-Imagination",
+      "authors": [
+        "Yankai Fu",
+        "Ning Chen",
+        "Junkai Zhao",
+        "Heng Zhang",
+        "Guocai Yao",
+        "Pengwei Wang",
+        "Zhongyuan Wang",
+        "Shanghang Zhang"
+      ],
+      "abstract": "Dexterous manipulation involves contact-rich and fine-grained interactions with the physical world, posing significant challenges for existing vision-language-action (VLA) models due to severe visual occlusions and complex contact dynamics. While recent works have incorporated tactile sensing into robotic manipulation, most approaches still rely on homogeneous multimodal fusion, lacking adaptive tactile integration and explicit modeling of physical dynamics. In this work, we present DeCAL, a physically-grounded dexterous vision-language-action model that unifies understanding, imagination and action generation for contact-rich dexterous manipulation. Built upon a Mixture-of-Transformers (MoT) architecture, DeCAL leverages specialized experts for each capability while enabling efficient information flow among them. To effectively leverage tactile information, we introduce Adaptive Visuo-Tactile Fusion that dynamically regulates tactile interactions via a contact-aware gating strategy. Furthermore, we propose Visuo-Tactile Latent Co-Imagination to jointly model visual and tactile dynamics, equipping the policy with implicit physical world knowledge. Experimental results show that DeCAL consistently achieves state-of-the-art performance across all tasks, attaining a 71% average success rate and an 83.4% progress success rate, while also demonstrating strong generalization to unseen scenarios. The website is available at https://aureleopku.github.io/DeCAL.",
+      "date": "2026-09-08",
+      "source": "arXiv",
+      "source_detail": "cs.RO",
+      "url": "http://arxiv.org/abs/2609.09119v1",
+      "tags": [
+        "cs.RO",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.09119",
+      "arxiv_id": "2609.09119v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.08796",
+      "title": "Hi-FLoop: Hierarchical State-Feedback Loops for Multi-Timescale World Modeling",
+      "authors": [
+        "Rx Fan",
+        "Zhan H"
+      ],
+      "abstract": "Multi-agent traffic simulation seeks diverse, coordinated, and physically realistic futures from maps and observed history. Long-horizon closed-loop generation must reconcile multiple decision time scales while its context evolves with generated states. Existing methods often unfold long futures from the initial scene and resolve intent, interaction, and motion monolithically, weakening cross-scale consistency and adaptation. We present HI-FLOOP, a branch-consistent multi-timescale state-feedback framework. Eight scene-level Worlds represent joint hypotheses, and all agents share the selected World identity throughout an 8-second rollout. Within the branch, an 8-second Goal anchors intent, a 2-second Preview coordinates interactions, and 1-second Control produces physical motion. Every 0.5-second commit feeds back only its executed prefix as new facts, while unexecuted hypotheses never enter factual memory. Joint Preview Interaction (JPI) induces a sparse directed future graph from Preview and uses conflict probabilities and signed arrival-time differences to gate interaction refinement. For generated-state recovery, a prefix-frozen A-to-B cascade lets frozen Model A generate 0-1 seconds, then transfers typed physical state, admissible context, and the branch index, but no latent state, to an independent Model B for re-encoding and 1-2-second recovery. On the full H-D public-validation split of 955 scenarios, one complete S1 run yields an Overall score of 0.689987 with the official evaluator. Under agent-centric oracle evaluation, HI-FLOOP achieves oracle-minADE@8 of 1.196636 m over the 8-second horizon and 0.526 m over the 6-second horizon.",
+      "date": "2026-09-08",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2609.08796v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.08796",
+      "arxiv_id": "2609.08796v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.09062",
+      "title": "Multi-Task Learning for Sparsely-Labeled Time Series: A Case Study on Cold-Hardiness Modeling",
+      "authors": [
+        "Aseem Saxena",
+        "Paola Pesántez-Cabrera",
+        "Jonathan Magby",
+        "Markus Keller",
+        "Alan Fern"
+      ],
+      "abstract": "We present a real-world case study of multi-task learning (MTL) for temporal process modeling from limited data with temporally sparse labels. Specifically, we investigate multi-task learning for the important agricultural problem of predicting grape cold hardiness, which is the temperature at which lethal freezing occurs. Cold hardiness changes in response to weather and is difficult to measure directly in the field. Thus, growers rely on predictions to decide when to apply costly frost mitigation measures. We apply recurrent neural networks (RNNs) for daily cold-hardiness prediction from time series weather data. A major challenge is that the cold hardiness response varies across plant cultivars and ground-truth data for each cultivar is temporally sparse and limited. To address this challenge, we investigate multi-task learning (MTL) approaches for combining data, where different tasks correspond to different cultivars. We develop a variety of MTL architectures and evaluate them in both MTL and transfer learning settings. Our results show significant differences between architectures and that certain architectures are able to consistently outperform single-task learning and state-of-the-art scientific models. Additionally, we show similar results for the qualitatively different, but related, task of budbreak prediction. Further, improved accuracy for budbreak and cold hardiness is achieved by a single MTL model that simultaneously learns both tasks.",
+      "date": "2026-09-08",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.09062v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.09062",
+      "arxiv_id": "2609.09062v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.08642",
+      "title": "SUN: Reaching for Novelty in Reinforcement Learning",
+      "authors": [
+        "Wenyan Yang",
+        "Arsenii Mustafin",
+        "Dominik Baumann",
+        "Joni Pajarinen",
+        "Simone Parisi"
+      ],
+      "abstract": "Exploration in reinforcement learning (RL) remains a fundamental challenge. Recent goal-conditioned RL strategies (which select goals to encourage broader state coverage) have shown promising results, but none scores a goal by novelty and reachability jointly: the two signals are traded off by hand, applied in sequence, or one is neglected outright. In this paper, we introduce a reachability-aware goal-selection framework that explicitly integrates these two aspects, and that can be seamlessly incorporated into any off-policy RL algorithm. To this aim, we propose SUccessor-to-Novelty (SUN), an indicator derived from successor value functions to identify goals that are both novel and reachable. We prove that SUN recovers count-based bonuses in the limit, bounds short-horizon hitting probabilities, and provably rejects unreachable goals. We further present an adaptive goal-selection strategy that leverages these properties, and an accurate yet lightweight pseudocount to avoid the overhead of classic methods. We back up all our claims with thorough benchmarks: SUN consistently outperforms state-of-the-art methods in standard and novel environments with unreachable or hard-to-reach states, irreversible transitions, obstacles, mazes, and unbounded spaces.",
+      "date": "2026-09-08",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.08642v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.08642",
+      "arxiv_id": "2609.08642v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 5,
+    "conferences": 0,
+    "opportunities": 5,
+    "total": 15
+  }
+}

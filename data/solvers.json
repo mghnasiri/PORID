@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T12:06:00.832401+00:00",
+  "generated_at": "2026-09-09T12:16:56.820440+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1825,
+      "github_stars": 1826,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 116,
+      "github_open_issues": 118,
       "github_recent_prs": [
+        "Add snapshot so detection values match substituted values",
+        "Track row origins for clique merging",
         "Various improvements for highspy",
         "Fourier-Motzkin presolve",
-        "Fix some typos",
-        "Fix some typos",
-        "Fixed various errors and style issues prompted by #3249"
+        "Fix some typos"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14011,
+      "github_stars": 14017,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -571,11 +571,11 @@
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
       "github_open_issues": 119,
       "github_recent_prs": [
-        "[ci] Enable bazel Remote Compression",
-        "Propagate Bazel compile options",
-        "sat: format fix",
-        "cleanup",
-        "Add back Windows Bazel presubmit"
+        "export from google3 (linear_solver, port, routing)",
+        "glop: Replace number of iterations by time limits in revised_simplex_…",
+        "cmake: docker platform archlinux ci fixup",
+        "ci: disable remote_cache action if actor is dependabot",
+        "cmake: fix platform docker ci"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
-      "github_stars": 6325,
-      "github_open_issues": 199,
+      "github_stars": 6328,
+      "github_open_issues": 200,
       "github_recent_prs": [
+        "Reassociate matmul chains that end in a constant factor",
+        "Share the constant-P quad_form binding routing, drop stored zeros",
         "cvxcore: Build in python namespace and remove hack to import _cxvcore",
         "Retag README fences",
-        "Fix six test failures under SCS 3.3.1 and tighten suppfunc value accuracy",
-        "Fix SCS 3.3 compatibility and CI accuracy assumptions",
-        "Preserve NumPy scalar axes in sum shape inference"
+        "Fix six test failures under SCS 3.3.1 and tighten suppfunc value accuracy"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed issue where Ipopt exceptions could not been caught from other libraries on macOS with clang when Ipopt or the other library was build with `-fvisibility=hidden`.\r\n- Call `MPI_Init()` with NULL",
-      "github_stars": 1781,
+      "github_stars": 1782,
       "github_open_issues": 11,
       "github_recent_prs": [
         "remove unnecessary include of iostream; avoid using namespace std",
@@ -1320,13 +1320,13 @@
       ],
       "recent_changes": "In this release, we have focused a lot on the service module and accompanying documentation.\r\nBut we have also fixed several important bugs and if you look very closely, you will find out that Neighbo",
       "github_stars": 1779,
-      "github_open_issues": 105,
+      "github_open_issues": 109,
       "github_recent_prs": [
-        "refactor: standardize handling of BigDecimal in scores",
-        "docs: link Vehicle Routing Problem on first mention in VRP quickstart",
-        "fix: prevent overriding the solver version by models",
-        "ci: add a docs drift detector agentic workflow",
-        "perf: decrease allocations in shadow variable processing"
+        "refactor: improve RNG",
+        "fix: use the same tag keyset everywhere",
+        "perf: recording fewer, cheaper move undo steps",
+        "chore: remove demand-supply logic of basic and list variables",
+        "refactor: standardize handling of BigDecimal in scores"
       ]
     },
     {
@@ -1450,7 +1450,7 @@
       ],
       "recent_changes": "## JuMP v1.31.2\n\n[Diff since v1.31.1](https://github.com/jump-dev/JuMP.jl/compare/v1.31.1...v1.31.2)\n\n\n**Merged pull requests:**\n- Fix formatting for latest JuliaFormatter version (#4208) (@odow)\n- Fi",
       "github_stars": 2473,
-      "github_open_issues": 13,
+      "github_open_issues": 12,
       "github_recent_prs": [
         "[doc] use DiffOpt to compute dydx in Nested problem tutorial",
         "[docs] fix use of T_max in rocket control tutorial",
