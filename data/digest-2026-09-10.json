@@ -1,0 +1,467 @@
+{
+  "date": "2026-09-10",
+  "generated_at": "2026-09-10T12:11:51.121950+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s10479-026-07414-4",
+      "title": "Models, constructive heuristics, and benchmark instances for the flexible job shop scheduling problem with nonlinear routes and position-based learning",
+      "authors": [
+        "Araujo, K.",
+        "Birgin, E.",
+        "Ronconi, D."
+      ],
+      "abstract": "Abstract\n                  This paper addresses the flexible job shop scheduling problem with nonlinear routes and position-based learning effect. In this variant of the flexible job shop scheduling problem, precedence constraints of the operations constituting a job are given by an arbitrary directed acyclic graph, generalizing the classical case in which a total order is imposed. Additionally, it is assumed that a worker performing an operation at a machine undergoes a learning process: the more times a worker has performed an operation, the faster he or she will be able to complete it on subsequent repetitions. Mixed integer programming and constraint programming models are presented and compared in the present work. In addition, sets of benchmark instances and constructive heuristics are introduced. The problem we study here corresponds to modern problems of great relevance in the printing industry. The framework we introduce aims to assist authors in the design of novel, effective, and efficient methods. Instances with optimal solutions provide a means to evaluate the quality of solutions found by other methods. Constructive heuristics serve two purposes. First, they provide an initial solution to off-the-shelf exact methods, offering a warm start when addressing instances of the proposed models. They also lay the groundwork for developing algorithms, such as list scheduling, neighborhoods, local searches, and ultimately, metaheuristics.",
+      "date": "2026-09-09",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07414-4",
+      "tags": [
+        "integer-programming",
+        "metaheuristics",
+        "scheduling",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07414-4",
+      "score": 70.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07397-2",
+      "title": "A sustainability-aware optimization framework for port-hinterland truck scheduling",
+      "authors": [
+        "Mokhtari-Moghadam, A.",
+        "Nguyen, T.",
+        "Mohsendokht, M.",
+        "Wang, J.",
+        "Yang, Z."
+      ],
+      "abstract": "Abstract\n                  \n                    Ports are critical gateways for trade and regional growth but also generate substantial externalities such as emissions, congestion, and safety risks. Growing maritime transport and port throughput intensify long-haul diesel truck traffic on hinterland access roads, causing peak-hour bottlenecks, long queues, and higher environmental impacts. Despite many proposed operational strategies, these challenges remain insufficiently addressed. This paper develops a mixed-integer linear programming (MILP) model for sustainable port-hinterland truck scheduling within an integrated chassis-based remote gate (CRG) and battery-electric trucks (BET) framework for short-haul transport. Using a major UK port case study with real traffic data, the model minimizes total logistics costs, including fixed investments, transport, waiting and idling times for short- and long-haul trucks, and\n                    \n                      \n                        $$\\hbox {CO}_2$$\n                        \n                          \n                            CO\n                            2\n                          \n                        \n                      \n                    \n                    emissions. To handle large-scale instances, a two-stage adaptive genetic algorithm (TS-AGA) is proposed and benchmarked against the MILP and a two-stage simulated annealing approach. Collaborative and non-collaborative scheduling strategies are compared to assess the benefits of coordinated decision-making. Results show that collaborative scheduling reduces total system costs by about 13.6% by better synchronizing long-haul diesel truck arrivals with short-haul battery-electric truck operations. Sensitivity analysis further examines how long-haul travel-time uncertainty affects congestion and economic performance. Overall, the proposed MILP model and TS-AGA solution approach demonstrate that coordinated truck scheduling can substantially improve the operational efficiency and sustainability of CRG-BET-based port-hinterland systems. By jointly optimizing long-haul and short-haul operations under collaborative and uncertainty-aware strategies, the study offers a practical and scalable scheduling methodology to reduce logistics costs, congestion, and emissions while supporting sustainable port-city connectivity.",
+      "date": "2026-09-09",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07397-2",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "metaheuristics",
+        "scheduling",
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07397-2",
+      "score": 70.0
+    },
+    {
+      "id": "arxiv-2609.10099",
+      "title": "A Systematic Evaluation of Molecule Generation Models for De Novo Drug Design: From Benchmarks to Practical Insights",
+      "authors": [
+        "Xinrui Xu",
+        "Xueer Wang",
+        "Dan Luo",
+        "Sisi Yuan",
+        "Xuan Lin"
+      ],
+      "abstract": "Molecule generation has emerged as a powerful computational tool for de novo drug design, enabling the exploration of chemical space beyond the limits of conventional virtual screening. The field has progressed rapidly, driven by advances in molecular representations, generative architectures, and target-aware modeling strategies. However, existing reviews typically address specific model families or application scenarios in isolation, rather than offering an integrated perspective on how these components collectively form a coherent generation workflow. In this review, we present a comprehensive evaluation of molecule generation models for de novo drug design, covering 82 methods across five deep generative frameworks, including recurrent neural network (RNN)- and Transformer-based models, variational autoencoders (VAEs), generative adversarial networks (GANs), flow-based models, and diffusion models. We first summarize widely used benchmarks and molecular representations, and then examine the methodological principles underlying both general and pocket-conditioned generation. A central contribution of this work is a systematic synthesis and comparative analysis of reported performance across commonly used benchmarks and evaluation metrics. We also summarize representative experimentally validated case studies. Looking ahead, we discuss future directions in standardized 3D data, interaction-aware generation, receptor flexibility, and multi-objective molecular design, with the aim of improving the reliability and experimental relevance of molecule generation. All collected benchmark resources, evaluation metrics, and model references are provided in a publicly accessible repository at https://github.com/JacklinGroup/molecule-generation-review.",
+      "date": "2026-09-09",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.10099v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.10099",
+      "arxiv_id": "2609.10099v1",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2609.10233",
+      "title": "On the Tightness of Standard Relaxations for Mixed-Integer Bilevel Linear Programs",
+      "authors": [
+        "Sergey S. Ketkov",
+        "Oleg A. Prokopyev"
+      ],
+      "abstract": "Exact algorithms for solving mixed-integer bilevel linear programs (MIBLPs) typically rely on sequences of lower and upper bounds that converge to the optimal value. These procedures are commonly initialized using the single-level relaxation (SLR), obtained by omitting the follower's optimality condition and solving the resulting single-level optimization problem. In this paper, we investigate whether, for broad classes of MIBLPs, the resulting standard bounds admit uniform improvements that can be computed within the same computational complexity regime. For pure continuous bilevel linear programs, we show that, unless $P = NP$, neither the SLR-based lower bound nor its associated upper bound can be uniformly improved in polynomial time, even for the class of min-max problems. We then extend this analysis to the class of pure integer min-max bilevel linear programs under the assumption that the polynomial hierarchy does not collapse. First, we show that the continuous relaxation of the SLR admits no uniform polynomial-time computable improvement. We then prove that neither the SLR itself nor its associated upper bound admits a uniform improvement by a polynomial-time algorithm with access to a mixed-integer linear programming (MILP) oracle. Importantly, this rules out uniform improvements by iterative MILP-based approaches, including cutting-plane-based and decomposition algorithms. Overall, our results demonstrate that the SLR-based bounds are, in a complexity-theoretic sense, unimprovable systematically within their natural computational regimes.",
+      "date": "2026-09-09",
+      "source": "arXiv",
+      "source_detail": "cs.CC",
+      "url": "http://arxiv.org/abs/2609.10233v1",
+      "tags": [
+        "cs.CC",
+        "linear-programming",
+        "integer-programming",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.10233",
+      "arxiv_id": "2609.10233v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.09602",
+      "title": "The Car Resequencing Problem with Makespan Minimization",
+      "authors": [
+        "Xinyi Guo",
+        "Jean-François Côté"
+      ],
+      "abstract": "Problem definition: The car resequencing problem involves rearranging the sequence of cars between two adjacent production shops via an intermediate buffer. This study explores a new variant that aims to minimize the resequencing makespan when the buffer features several forward lanes and a return lane (RL). Both types of lanes follow first-in-first-out rules, but operate in opposite directions. Through the RL, cars can circulate between forward lanes, thereby increasing resequencing flexibility and complexity. The goal is to position cars over time to complete the target sequence change in the shortest possible time. Methodology/results: We prove the problem is NP-complete and develop an exact two-stage branch-and-price approach integrated with constraint programming (BP-CP). Three versions of the master problem (MP) are proposed for the first stage, each paired with a subproblem defined on a specific graph. Using partial integer solutions from branching, a constraint-programming model built in the second stage yields either a feasible solution to the problem or a feasibility cut added to the MP. Experimental results indicate that BP-CP greatly increases the scale of solvable instances for a production batch, especially with a moderately relaxed MP. A comparative analysis shows that the RL markedly enhances resequencing flexibility, enabling smaller buffers to attain makespans comparable to those of larger buffers without the RL across varying resequencing complexities. Managerial implications: Expanding lane capacity alone yields limited gains in resequencing performance and may even reduce efficiency. The RL acts as several forward lanes, supporting a smaller and cost-effective buffer design while maintaining efficient just-in-time operations.",
+      "date": "2026-09-09",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.09602v1",
+      "tags": [
+        "math.OC",
+        "scheduling",
+        "stochastic",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.09602",
+      "arxiv_id": "2609.09602v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07411-7",
+      "title": "Sim-approaches for the stochastic clustered team orienteering problem",
+      "authors": [
+        "Ferone, D.",
+        "Festa, P.",
+        "Pastore, T."
+      ],
+      "abstract": "Abstract\n                  This paper introduces the Stochastic Clustered Team Orienteering Problem (SCTOP), a variant of the recently defined CluTOP where travel times are non-negative random variables. This problem aligns with the growing interest in prize-collecting problems and the challenge of optimizing routes under uncertainty. To address the Stochastic CluTOP, we propose a Simheuristic method integrating Monte Carlo simulations within an Adaptive Large Neighborhood Search (SimALNS). Additionally, we incorporate two policies, Continuous and Reactive, to adaptively manage the maximum route length in route generation process. The proposed approaches are validated on a well-established benchmark of the scientific literature to test the benefits of including Monte Carlo simulations in the route-design process and to evaluate the possible contributions of the two policies in case of higher profit variances. The results demonstrate that the Monte Carlo simulation allows SimALNS to consistently achieve higher stochastic performance compared to its deterministic counterpart. Moreover, the results highlight that across all algorithms tested, the Reactive strategy is the most effective.",
+      "date": "2026-09-09",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07411-7",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07411-7",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.10145",
+      "title": "A Robust Binary Nonlinear Solver for Multi-stage Decisions",
+      "authors": [
+        "Kashif Rashid"
+      ],
+      "abstract": "This document describes two developments. The first is a Multi-stage Decision Framework that permits the formulation of various sequential decision-making problems in a generic manner. The second concerns a robust stochastic solution procedure designed to handle the binary nonlinear optimization problem stemming from the proposed decision framework. The method adopts Monte-Carlo search with incremental probabilistic learning with reinforcement. The two developments are described herein along with a demonstrative application example.   Key words: Multi-stage, decisions, binary, nonlinear systems, probabilistic and reinforcement learning",
+      "date": "2026-09-09",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.10145v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.10145",
+      "arxiv_id": "2609.10145v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.09683",
+      "title": "Primal-Dual Inexact Newton-MR for Nonconvex Optimization with Equality Constraints",
+      "authors": [
+        "Oscar Smee",
+        "Fred Roosta"
+      ],
+      "abstract": "Optimization problems with nonlinear equality constraints arise throughout science, engineering, and increasingly in machine learning. Prominent methods for solving such problems include sequential quadratic programming and, more broadly, primal-dual Newton methods. Classical analyses of these methods typically rely on strong assumptions, perhaps most notably positive definiteness of the Lagrangian Hessian on the null space of the constraint Jacobian. In practice, this assumption often necessitates strong regularization or the use of a positive definite Hessian surrogate. Moreover, in large-scale settings, solving the primal-dual Newton subproblem exactly is often computationally infeasible. To address these issues, we propose an inexact primal-dual Newton method with an inner solver based on the conjugate residual (CR) method. Exploiting recently established properties of CR, including negative-curvature detection, iterate monotonicity, and descent guarantees, our method handles indefiniteness in the subproblem directly as it arises. Our method thereby avoids detrimental regularization of the Lagrangian Hessian while naturally accommodating inexact solves. We establish worst-case global convergence guarantees and demonstrate strong empirical performance on large-scale, nonconvex problems.",
+      "date": "2026-09-09",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.09683v1",
+      "tags": [
+        "math.OC",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.09683",
+      "arxiv_id": "2609.09683v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.10441",
+      "title": "ConvMem: Convolutional Memory for Long-Context Reasoning",
+      "authors": [
+        "Hongming Zhang",
+        "Zhaozhen Gu",
+        "Fengshuo Bai",
+        "Ming Hao",
+        "Qingyang Zhang",
+        "Yuanyuan Wang",
+        "Shiyang Tang",
+        "Yanna Wang",
+        "Bo Xu"
+      ],
+      "abstract": "While Large Language Models (LLMs) have demonstrated impressive capabilities, they often struggle with extremely long contexts due to fixed context limits. To address this, sequential approaches like MemAgent extend the effective context by reading text in segments and iteratively updating a fixed-size memory. However, this sequential paradigm suffers from high latency and requires costly reinforcement learning (RL) training, which can lead to overfitting on specific datasets. To overcome these limitations, we propose ConvMem, a training-free, highly parallelizable framework that reformulates long-context reasoning as a hierarchical convolution. Inspired by CNNs, ConvMem treats an LLM prompted with a specific query as a convolutional kernel. This kernel summarizes text segments hierarchically, shortening the reasoning path from a linear chain into a logarithmic tree. Specifically, ConvMem integrates \\textit{Configurable Strides} and \\textit{Skip Connections} to ensure robust evidence capture and propagation, while employing \\textit{Multi-Kernel Convolution} to decompose complex queries into disentangled semantic channels. This design not only mitigates error accumulation but also enables massive parallelization across both text segments and reasoning threads. Experiments on RULER-HotpotQA and RULER-2WikiMultiHopQA demonstrate that ConvMem outperforms training-free baselines and avoids the risk of overfitting to parametric priors often observed in RL-trained models on out-of-distribution tasks.",
+      "date": "2026-09-09",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2609.10441v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.10441",
+      "arxiv_id": "2609.10441v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.10421",
+      "title": "Emergency Department Revisit Quality Review Screening: Exploring Human Decision-Making and Artificial Intelligence Support",
+      "authors": [
+        "Jonathan A. Handler",
+        "Marlene I. Robles-Granda",
+        "Jacob E. Mefford",
+        "Jeremy S. McGarvey",
+        "Gregory S. Podolej",
+        "Colleen J. Klein",
+        "Matthew D. Dalstrom",
+        "William F. Bond"
+      ],
+      "abstract": "Background: Emergency Department (ED) return visits are commonly reviewed for quality assurance, but are often limited (e.g., to revisits within 48-72 hours) to increase actionable finding yield while minimizing chart review burden. Those limitations may lead to missed quality improvement opportunities.   Methods: We conducted an exploratory, retrospective study of randomly selected ED visits to a multihospital health system having an ED revisit within 1-14 days to the same health system. Given only each visit's primary diagnosis, raters (2-3 clinicians and GPT-4 large language model [LLM]) assessed characteristics of the diagnosis pairs, including the \"target\": whether a pair warranted further assessment. Informed by rater response analyses, an algorithm leveraging an LLM-populated knowledge graph (\"KGA\") was created to automatically screen for potentially concerning pairs, then preliminarily assessed.   Results: 99 diagnosis pairs were included. GPT-4 responses poorly correlated to clinician raters, rating nearly all (94%) pairs as warranting follow-up (4.4-13.3 times more than clinicians). However, prompt engineering was minimal. Among clinician raters, revisit medical gravity was consistently significantly associated with the target, while a differential diagnosis/complication composite was significantly associated on unadjusted, but not adjusted (though less powered) analysis. The KGA achieved 83-100% positive predictive value for at least one clinician rater determining further assessment was warranted based on the diagnosis pair.   Conclusion: These results can inform next steps for improving screening with LLMs like ChatGPT. Further research is warranted to validate this preliminary work's finding that the KGA may enable enhancing the scope and yield of screening without substantially increasing reviewer workload.",
+      "date": "2026-09-09",
+      "source": "arXiv",
+      "source_detail": "cs.CY",
+      "url": "http://arxiv.org/abs/2609.10421v1",
+      "tags": [
+        "cs.CY",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.10421",
+      "arxiv_id": "2609.10421v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 5,
+    "conferences": 0,
+    "opportunities": 5,
+    "total": 15
+  }
+}
