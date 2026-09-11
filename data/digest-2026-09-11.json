@@ -1,0 +1,464 @@
+{
+  "date": "2026-09-11",
+  "generated_at": "2026-09-11T12:09:31.257930+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s11081-026-10113-5",
+      "title": "The integrated vehicle and pollster routing problem",
+      "authors": [
+        "Gutiérrez, S.",
+        "Miniguano-Trujillo, A.",
+        "Recalde, D.",
+        "Torres, L.",
+        "Torres, R."
+      ],
+      "abstract": "Abstract\n                  The National Statistics Bureau of Ecuador conducts monthly price surveys to monitor the evolution of the Consumer Price Index, a metric that measures the consumer prices of essential commodities. These surveys are administered across a designated set of stores, with a fleet of vehicles transporting pollsters from the bureau headquarters to the chosen locations. Additionally, pollsters move between stores using walking paths or vehicles to reduce travel time. This paper introduces the Integrated Vehicle and Pollster Routing Problem and presents an integer programming model to effectively schedule pollster visits to selected stores while optimizing the routing of the vehicle fleet. A three-phase algorithm is proposed, and computational experience with real-world instances is presented.",
+      "date": "2026-09-11",
+      "source": "Optimization and Engineering",
+      "source_detail": "Optimization and Engineering",
+      "url": "https://doi.org/10.1007/s11081-026-10113-5",
+      "tags": [
+        "integer-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11081-026-10113-5",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2609.11636",
+      "title": "MAPLE: Memory-Augmented Planning with Language and Evolution",
+      "authors": [
+        "Kesheng Chen",
+        "Yamin Hu",
+        "Wenjian Luo"
+      ],
+      "abstract": "Domain practitioners understand their business constraints but may lack operations-research expertise or dedicated support. LLM-based optimization agents translate natural-language requirements into models or solver programs that established optimization tools can execute. This progress makes optimization more accessible, but real-world operations are dynamic: changing demand, resources, and priorities require updates to data, constraints, and objectives. Methods centered on isolated requests offer limited support for rapid adaptation that preserves earlier decisions and reuses useful search results. We introduce MAPLE (Memory-Augmented Planning with Language and Evolution), an agent for maintaining optimization problems through successive natural-language requests. MAPLE combines language-based problem construction with mathematical programming and evolutionary search. It retains the optimization program, accepted plans, earlier updates, and candidate solutions for subsequent requests. We introduce NLDO, a benchmark of 15 trajectories and 180 updates spanning selection, scheduling, rostering, routing, and cloud-resource placement. In the main evaluation, MAPLE completes all trajectories and achieves online scalar quality of 0.951 and a Pareto hypervolume ratio of 0.875. Controlled comparisons further show that maintaining executable state improves update validity and can preserve useful search information across substantial revisions.",
+      "date": "2026-09-10",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2609.11636v1",
+      "tags": [
+        "cs.AI",
+        "metaheuristics",
+        "scheduling",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.11636",
+      "arxiv_id": "2609.11636v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2025.03155",
+      "title": "From Trees to Treewidth: Inventory Management in Complex Supply Chain Networks",
+      "authors": [
+        "Blaettchen, P.",
+        "Calmon, A.",
+        "Hall, G.",
+        "Tawarmalani, M."
+      ],
+      "abstract": "We propose an exact linear programming (LP)-based solution approach to the Guaranteed Service Model (GSM), one of the most widely applied models for optimizing safety stock placement in supply chain networks. Our approach handles any directed acyclic network and any cost function that depends on a stage’s incoming and outgoing service times. It scales polynomially in the number of nodes n in the network, pseudo-polynomially with respect to the bit size of the maximum replenishment time M, and (for fixed M) exponentially in its treewidth, which quantifies how “tree-like” a network is and can be much smaller than n. This contrasts with existing approaches, which scale exponentially in n. The proof of exactness relies crucially on showing that the join of transportation-like polytopes remains integral and is more broadly applicable to other Operations Management problems. In addition to an exact formulation, our LP-based approach enables a practical solution strategy for the GSM built on a hierarchy of LP relaxations. These relaxations provide valid lower bounds, certify optimality when integral, and can strengthen existing exact methods. In our computational study, the smallest relaxation already recovers an optimal GSM solution on every real-world benchmark instance, leading to substantial speed-ups over the state-of-the-art exact algorithm and commercial general-purpose solvers. The framework also supports sensitivity analysis and accommodates additional operational constraints. Overall, our approach builds a new bridge between Operations Management and Computer Science, providing new theoretical foundations and practical tools for managing safety stocks in complex modern supply chain networks.\n                  This paper was accepted by Jeannette Song, operations management.\n                  Funding: A. P. Calmon acknowledges financial support provided by the Ray C. Anderson Center for Sustainable Business.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2025.03155 .",
+      "date": "2026-09-10",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2025.03155",
+      "tags": [
+        "linear-programming",
+        "supply-chain",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2025.03155",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.11829",
+      "title": "WFDroneBench: A Benchmark for Sensor Placement and Drone Routing for Wildfire Detection",
+      "authors": [
+        "Romain Puech",
+        "Danique de Moor",
+        "Ana Trisovic",
+        "Dimitris Bertsimas"
+      ],
+      "abstract": "Increasingly frequent and severe wildfires threaten ecosystems, public health, and infrastructure. Early detection is vital but limited by existing monitoring systems. Drones offer mobile, real-time coverage, but optimizing sensor placement and drone routing in dynamic fire zones remains challenging. To address this, we introduce WFDroneBench, an open-source Python benchmarking library for early wildfire detection that integrates machine-learned risk maps with optimization-based deployment strategies for sensors, charging stations, and drones. It evaluates risk maps, optimization strategies, and monitoring equipment using standardized metrics and realistic wildfire simulations. The framework supports benchmarking across predictive and decision-making components: machine learning researchers can assess risk models and compare routing strategies. WFDroneBench includes 7746 scenarios across 49 locations, built from historical ignitions, real-world wildfire risk maps, and simulated fire spread, along with two ground detector and three drone routing strategies. Our experiments show that the risk-aware strategy Max-Coverage significantly outperforms other baselines when risk maps are sufficiently accurate, achieving the fastest detection on the most difficult fires. We further find that risk-aware static infrastructure helps even under an imperfect risk map and drone-based detection outperforms ground sensors. Finally, our results reveal two key open challenges: (i) detecting small fires rapidly and reliably, and (ii) improving risk-map prediction, where the gap between ground-truth ignition patterns and available risk maps highlights a significant opportunity for ML innovation. We openly release all code, data, and documentation.",
+      "date": "2026-09-10",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.11829v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.11829",
+      "arxiv_id": "2609.11829v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.11710",
+      "title": "Mixed-integer optimization for multi-year military aircraft fleet management",
+      "authors": [
+        "Matteo Vescovi",
+        "Raffaele Giuseppe Cestari",
+        "Roberto Valdambrini",
+        "Andrea Mercurio",
+        "Valentina Breschi",
+        "Mara Tanelli"
+      ],
+      "abstract": "While existing strategies for Flight and Maintenance Planning for the defense sector generally address idealized conditions, real-world planning often involve non-nominal initial fleet states and complex inspection schemes. To address these challenges, we propose a multi-year planning strategy that maximizes long-term fleet availability. The formulation incorporates multiple competing objectives capturing the tight coupling between aircraft usage and maintenance, while enforcing cyclic inspection requirements and limited maintenance-dock capacity. To enhance practical applicability, we introduce three complementary strategies: a receding-horizon approach to reduce computational burden, a Bayesian Optimization routine to automatically tune cost-function coefficients, and an aircraft-specific weighting scheme that adapts model priorities based on fleet-condition statistics. Results on three realistic benchmark scenarios demonstrate the effectiveness of the approach.",
+      "date": "2026-09-10",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2609.11710v1",
+      "tags": [
+        "eess.SY",
+        "integer-programming",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.11710",
+      "arxiv_id": "2609.11710v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.11213",
+      "title": "Optimal chemo-immunotherapy scheduling: A hybrid QPSO-SQP approach with Michaelis-Menten pharmacodynamics",
+      "authors": [
+        "Bereket Sitotaw Kidane",
+        "Md Samiul Haque Motayed",
+        "Shuo Wang"
+      ],
+      "abstract": "Optimal scheduling of combined chemo-immunotherapy is often formulated as a control-affine optimal control problem, which generically yields boundary-selected (bang-bang-type) protocols unless singular arcs occur. This structure, while convenient, neglects saturating pharmacodynamics at high dose rates. We incorporate Michaelis-Menten saturation directly into the therapy channels, making the dynamics non-control-affine and the Hamiltonian nonlinear in each control. With strictly positive exposure penalties, the Hamiltonian admits an explicit three-regime pointwise minimization law: each input is chosen at the lower bound, the upper bound, or as a unique interior minimizer. On interior intervals the strict Legendre condition holds, so continuously modulated dosing arises as a regular interior extremal rather than a singular-arc or smoothing artifact. The resulting transcription is nonconvex; we therefore use a hybrid Quantum Particle Swarm Optimization (QPSO)-Sequential Quadratic Programming (SQP) pipeline, where QPSO provides a constraint-aware warm start and SQP enforces feasibility and Karush-Kuhn-Tucker (KKT) optimality on a collocation grid. Costate reconstruction corroborates the Pontryagin Minimum Principle (PMP) structure and the predicted boundary/interior regime transitions.",
+      "date": "2026-09-10",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.11213v1",
+      "tags": [
+        "math.OC",
+        "metaheuristics",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.3934/dcdsb.2026072",
+      "arxiv_id": "2609.11213v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.11116",
+      "title": "Cooperative Integer Programming Games: Core Stability and Optimal Coalition Structures",
+      "authors": [
+        "Hyunwoo Lee",
+        "Robert Hildebrand",
+        "I. Esra Buyuktahtakin"
+      ],
+      "abstract": "We introduce cooperative integer programming games (CIPGs), in which agents pool budget constraints to accomplish indivisible tasks jointly and the characteristic function maps every coalition to the optimal value of a pooled integer program. Our goal is to identify an optimal coalition structure (OCS) and a stable one (OSCS). We derive a stability inequality that keeps each formed coalition in the Core with respect to itself, and present two mixed-integer OCS formulations, aggregated and disaggregated, proving that the disaggregated formulation is integer-equivalent yet yields a tighter LP relaxation. Building on the stability inequality we develop lifted stability cuts, several separation strategies inside a cutting-plane algorithm, an SCS-feasible primal heuristic that constructs warm starts with guaranteed stability, and a payoff-refinement step computing the Shapley value and the nucleolus of every formed coalition. On benchmark cooperative knapsack games, the method certifies optimality with up to 16 players and reaches MIP gaps below 1% at 30 players while evaluating 766 of the roughly $10^9$ coalition values.",
+      "date": "2026-09-10",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.11116v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.11116",
+      "arxiv_id": "2609.11116v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.11805",
+      "title": "Understanding Operator Attitudes Toward AI-Supported Decision Making in Maritime Operations",
+      "authors": [
+        "Doreen Jirak",
+        "Armeen Saroukanoff",
+        "Dirk van Rooy"
+      ],
+      "abstract": "Maritime Autonomous Surface Ships (MASS) and AI- supported decision assistants are expected to transform maritime operations, but their safe integration depends on how maritime professionals perceive and trust such systems. This paper presents a survey study on maritime stakeholders' attitudes toward an AI-supported assistant in collision-avoidance scenarios. Participants evaluated technology anxiety, trust in automation, and explanation quality using established and adapted questionnaires, complemented by sentiment and thematic analysis of open-ended responses Results indicate a generally positive disposition toward maritime technology, no clear age-related differences in openness, stable trust across scenarios, and more scenario-sensitive, multidimensional explanation ratings. Open responses showed that participants valued support for decision-making, situation awareness, and confidence-building, while raising concerns about AI reliability, over- reliance and loss of expertise. The findings suggest that maritime AI systems should not focus solely on increasing automation or trust, but on supporting calibrated reliance through transparent, reliable, and operationally meaningful design with domain experts in the loop.",
+      "date": "2026-09-10",
+      "source": "arXiv",
+      "source_detail": "cs.HC",
+      "url": "http://arxiv.org/abs/2609.11805v1",
+      "tags": [
+        "cs.HC",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.11805",
+      "arxiv_id": "2609.11805v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.11801",
+      "title": "Thinking with Looped Flows",
+      "authors": [
+        "Ayhan Suleymanzade",
+        "Chanhyuk Lee",
+        "Floor Eijkelboom",
+        "Nicholas M. Boffi",
+        "İsmail İlkan Ceylan",
+        "Jinwoo Kim"
+      ],
+      "abstract": "Humans and machines often solve harder problems by spending more time on computation. In deep learning, looped models implement this idea during inference by recurrently updating a hidden state. In practice, however, their training backpropagates through only one or a few updates, making it hard to train early updates to support future ones. We propose looped flows, an approach that sidesteps this issue by training the recurrence with local denoising objectives. By imposing temporal association across denoising objectives through progressively decreasing noise levels and shared noise, the model is incentivized to learn recurrent states that transfer useful computation over time, even when gradients cover only a few updates. We then formulate inference as integrating the velocity of a probability flow parameterized by the learned denoiser, coupled with recurrent states. This allows solving harder problems by spending more computation through a finer temporal grid and enables multiple valid predictions from different initial noise samples. Across six reasoning benchmarks including two multi-solution benchmarks, looped flows outperform prior state-of-the-art looped models overall, achieving 58.8% test accuracy on ARC-AGI-1 and 12.2% on ARC-AGI-2.",
+      "date": "2026-09-10",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.11801v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.11801",
+      "arxiv_id": "2609.11801v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.11708",
+      "title": "Language-Augmented Semantic Priors for B-Spline Surface Fitting",
+      "authors": [
+        "Yunzhong Lou",
+        "Yusheng Luo",
+        "Jiahao Li",
+        "Yu Song",
+        "Xiangdong Zhou"
+      ],
+      "abstract": "The use of B-splines and Non-Uniform Rational B-Splines surfaces constitutes the mathematical foundation of contemporary computer-aided design (CAD) systems. Despite long-term progress, geometric kernels in traditional CAD still rely heavily on predetermined heuristic initialization for surface fitting and parameterization. Meanwhile, the procedural semantics and design intent encoded in modeling histories are largely ignored during geometry generation. This disconnect creates a gap between high-level design intent and solver-executable geometric configuration, often leading to suboptimal and semantically inconsistent fitting results. To bridge this gap, we introduce LASP, a Language-Augmented Semantic Priors framework that leverages large language models (LLMs) to infer structured, solver-usable B-spline priors from procedural modeling histories. Rather than modifying the geometric kernel itself, LASP operates as a semantic reasoning layer above existing solvers. It first translates modeling histories into rich textual descriptions that capture design intent, geometric context, and functional relationships, and then uses a fine-tuned LLM to predict structured B-spline prior parameters. LASP is trained through a two-stage scheme that combines local geometric regularities with long-range contextual dependencies, producing priors that are both interpretable and semantically coherent. This approach furnishes inductive signals that direct the conventional B-spline fitting process toward solutions that more accurately encapsulate the intended design objectives and demonstrate heightened semantic coherence. Compared to traditional machine learning schemes, the experiments demonstrate that language-driven reasoning can serve as a powerful inductive bias for geometric solving, establishing a new paradigm of language-guided geometric optimization in modern CAD systems.",
+      "date": "2026-09-10",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2609.11708v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.11708",
+      "arxiv_id": "2609.11708v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-msca-postdoc-2026",
+      "title": "Marie Sklodowska-Curie Postdoctoral Fellowship 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "deadline": "2026-09-11",
+      "location": "EU (mobility required)",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Prestigious EU-funded postdoctoral fellowship with mobility allowance and research costs. Must move to a different country. PhD required, max 8 years post-PhD.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 5,
+    "conferences": 0,
+    "opportunities": 5,
+    "total": 15
+  }
+}
