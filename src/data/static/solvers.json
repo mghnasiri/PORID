@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T12:09:30.792345+00:00",
+  "generated_at": "2026-09-12T11:34:43.439555+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 121,
+      "github_open_issues": 124,
       "github_recent_prs": [
+        "Reset dual-implied bounds when upgrading equalities",
+        "Make feasibility jump code more robust (Fix #3262)",
+        "Fix lost integrality",
         "Protect large int bounds",
-        "Fix highspy test_user_interrupts",
-        "Aggregate implications",
-        "Minor refactoring of `HighsOptions`",
-        "Add fix"
+        "Fix highspy test_user_interrupts"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14028,
+      "github_stars": 14031,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 123,
+      "github_open_issues": 124,
       "github_recent_prs": [
-        "export from google3 (license, packing, pdlp, sat doc)",
-        "export from google3 (graph_base, base:unique_array)",
-        "math_opt: cleanup",
-        "cmake(ci): docker cleanup",
-        "bazel: Fix Protobuf python setup"
+        "[bazel] Add copts/linkopts to pybind",
+        "Add Windows ARM64 Python build",
+        "math_opt: export labs tests",
+        "export cleanup from google3 (mathopt, java)",
+        "export from google3 (license, packing, pdlp, sat doc)"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,13 +1131,13 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
-      "github_stars": 6330,
-      "github_open_issues": 188,
+      "github_stars": 6331,
+      "github_open_issues": 182,
       "github_recent_prs": [
         "Record and enforce docstring coverage with interrogate",
         "Fix stale docstring examples; make power curvature follow the rational approximation",
         "Callback param fold",
-        "New reduction for formatting A depending on cone types",
+        "Cone restructuring: apply it as a chain reduction, and as a permutation instead of a matrix product",
         "Reassociate matmul chains that end in a constant factor"
       ],
       "pypi_monthly_downloads": -25
@@ -1319,7 +1319,7 @@
         "metaheuristic"
       ],
       "recent_changes": "In this release, we have focused a lot on the service module and accompanying documentation.\r\nBut we have also fixed several important bugs and if you look very closely, you will find out that Neighbo",
-      "github_stars": 1782,
+      "github_stars": 1783,
       "github_open_issues": 106,
       "github_recent_prs": [
         "test: fix a flaky test in test-model",
@@ -1385,13 +1385,13 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2522,
-      "github_open_issues": 389,
+      "github_open_issues": 391,
       "github_recent_prs": [
+        "GDP: simple disjunction reverse-polar enumeration cuts",
+        "Fixing bug in piecewise/factorable with math domain and range error, plus named expressions",
         "MindtPy: maintain a valid dual bound in each iteration when no-good c…",
         "contrib.cp interface to Google OR-Tools CP-SAT solver",
-        "August 2026 typos update",
-        "Fix LinearRepnVisitor to substitute fixed vars already in var_map",
-        "GAMS writer: map non-finite float values to GAMS special values (NA / INF)"
+        "August 2026 typos update"
       ],
       "pypi_monthly_downloads": -28
     },
