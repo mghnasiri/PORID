@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T11:34:43.439555+00:00",
+  "generated_at": "2026-09-13T12:47:08.032944+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1828,
+      "github_stars": null,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,14 +345,6 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 124,
-      "github_recent_prs": [
-        "Reset dual-implied bounds when upgrading equalities",
-        "Make feasibility jump code more robust (Fix #3262)",
-        "Fix lost integrality",
-        "Protect large int bounds",
-        "Fix highspy test_user_interrupts"
-      ],
       "pypi_monthly_downloads": -61
     },
     {
@@ -382,7 +374,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 650,
+      "github_stars": null,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -458,14 +450,6 @@
         }
       ],
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- fixed statistic on added linear constraints in propagation\r\n- keep flag `rangedrowpropagated` of linear and exactlinear constraints for probing bound changes to avoid dupli",
-      "github_open_issues": 27,
-      "github_recent_prs": [
-        "check primal bound only if optimal solution found",
-        "Fix objective offset dropped when writing the transformed problem (MPS/LP)",
-        "Fix typo in MSVC version number",
-        "[docs] Add Conan entry in installation documentation",
-        "Add MSVC flag /bigobj when compiling LPS=spx in debug mode"
-      ],
       "pypi_monthly_downloads": -41
     },
     {
@@ -498,7 +482,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14031,
+      "github_stars": null,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,14 +553,6 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 124,
-      "github_recent_prs": [
-        "[bazel] Add copts/linkopts to pybind",
-        "Add Windows ARM64 Python build",
-        "math_opt: export labs tests",
-        "export cleanup from google3 (mathopt, java)",
-        "export from google3 (license, packing, pdlp, sat doc)"
-      ],
       "pypi_monthly_downloads": -34
     },
     {
@@ -604,7 +580,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 1014,
+      "github_stars": null,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -665,15 +641,7 @@
           "source": "r/OperationsResearch"
         }
       ],
-      "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_open_issues": 167,
-      "github_recent_prs": [
-        "fix: use the solver's objective sense when a MIP start sets the cutoff",
-        "Update Homebrew installation instructions for Cbc",
-        "Mistaken PR",
-        "Update windows-ci for action update for Node.js 24 to set up msvc for stable",
-        "Update windows-ci for action update for Node.js 24 to set up msvc"
-      ]
+      "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings"
     },
     {
       "id": "xpress",
@@ -1131,15 +1099,6 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
-      "github_stars": 6331,
-      "github_open_issues": 182,
-      "github_recent_prs": [
-        "Record and enforce docstring coverage with interrogate",
-        "Fix stale docstring examples; make power curvature follow the rational approximation",
-        "Callback param fold",
-        "Cone restructuring: apply it as a chain reduction, and as a permutation instead of a matrix product",
-        "Reassociate matmul chains that end in a constant factor"
-      ],
       "pypi_monthly_downloads": -25
     },
     {
@@ -1255,16 +1214,7 @@
         "nlp",
         "interior-point"
       ],
-      "recent_changes": "- Fixed issue where Ipopt exceptions could not been caught from other libraries on macOS with clang when Ipopt or the other library was build with `-fvisibility=hidden`.\r\n- Call `MPI_Init()` with NULL",
-      "github_stars": 1782,
-      "github_open_issues": 11,
-      "github_recent_prs": [
-        "remove unnecessary include of iostream; avoid using namespace std",
-        "Increment filter reset counter on reset",
-        "Fix data-race global variables with atomics",
-        "Remove unnecessary <iostream> includes",
-        "IpJournalist: Missing override keyword"
-      ]
+      "recent_changes": "- Fixed issue where Ipopt exceptions could not been caught from other libraries on macOS with clang when Ipopt or the other library was build with `-fvisibility=hidden`.\r\n- Call `MPI_Init()` with NULL"
     },
     {
       "id": "optaplanner",
@@ -1318,16 +1268,7 @@
         "constraint",
         "metaheuristic"
       ],
-      "recent_changes": "In this release, we have focused a lot on the service module and accompanying documentation.\r\nBut we have also fixed several important bugs and if you look very closely, you will find out that Neighbo",
-      "github_stars": 1783,
-      "github_open_issues": 106,
-      "github_recent_prs": [
-        "test: fix a flaky test in test-model",
-        "docs: improve enterprise license docs",
-        "fix: instantiate ModelConfigOverrides records without no-arg ctor (#2493)",
-        "refactor: improve RNG",
-        "fix: use the same tag keyset everywhere"
-      ]
+      "recent_changes": "In this release, we have focused a lot on the service module and accompanying documentation.\r\nBut we have also fixed several important bugs and if you look very closely, you will find out that Neighbo"
     },
     {
       "id": "pyomo",
@@ -1384,15 +1325,6 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2522,
-      "github_open_issues": 391,
-      "github_recent_prs": [
-        "GDP: simple disjunction reverse-polar enumeration cuts",
-        "Fixing bug in piecewise/factorable with math domain and range error, plus named expressions",
-        "MindtPy: maintain a valid dual bound in each iteration when no-good c…",
-        "contrib.cp interface to Google OR-Tools CP-SAT solver",
-        "August 2026 typos update"
-      ],
       "pypi_monthly_downloads": -28
     },
     {
@@ -1448,16 +1380,7 @@
         "julia",
         "algebraic"
       ],
-      "recent_changes": "## JuMP v1.31.2\n\n[Diff since v1.31.1](https://github.com/jump-dev/JuMP.jl/compare/v1.31.1...v1.31.2)\n\n\n**Merged pull requests:**\n- Fix formatting for latest JuliaFormatter version (#4208) (@odow)\n- Fi",
-      "github_stars": 2473,
-      "github_open_issues": 12,
-      "github_recent_prs": [
-        "[doc] use DiffOpt to compute dydx in Nested problem tutorial",
-        "[docs] fix use of T_max in rocket control tutorial",
-        "[docs] fix links with redirects",
-        "Remove unneeded parse_ref_sets in `@NLexpression` macro",
-        "Prep for v1.32.0"
-      ]
+      "recent_changes": "## JuMP v1.31.2\n\n[Diff since v1.31.1](https://github.com/jump-dev/JuMP.jl/compare/v1.31.1...v1.31.2)\n\n\n**Merged pull requests:**\n- Fix formatting for latest JuliaFormatter version (#4208) (@odow)\n- Fi"
     },
     {
       "id": "ampl",
