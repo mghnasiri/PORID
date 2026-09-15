@@ -1,0 +1,467 @@
+{
+  "date": "2026-09-15",
+  "generated_at": "2026-09-15T12:40:00.271128+00:00",
+  "publications": [
+    {
+      "id": "s2-6f6a89f3f778",
+      "title": "Joint Resource Allocation and Task Scheduling for LAWN-Enabled Emergency Response",
+      "authors": [
+        "Jia He",
+        "Ziye Jia",
+        "Can Cui",
+        "Yuan-Hao Cui",
+        "Qiu-Ming Zhu",
+        "Qihui Wu"
+      ],
+      "abstract": "The low-altitude wireless network (LAWN), mainly composed of uncrewed aerial vehicles (UAVs), is a promising paradigm for emergency response. However, the implementation of LAWN requires achieving efficient and reliable coordination among multifunctional UAVs. Therefore, how to guarantee communication reliability and realize coordination among heterogeneous UAVs in unpredictable environments remains a key issue. In this article, we propose a novel LAWN framework, where reconnaissance UAVs first collect situational information, relay UAVs forward the sensed data to the fire station for decision-making, and firefighting UAVs execute material delivery according to the returned commands, thereby forming a closed-loop emergency response. Then, we formulate the optimization problem to minimize the total response delay while ensuring the fairness of multipath routing. To tackle the NP-hard problem, we decompose it into two subproblems of the route construction problem (RCP) and firefighting scheduling problem (FSP). We design the regular geometric topology for the UAV deployment, derive the transmission power in closed form to establish feasible links, and RCP is reformulated into a tractable integer linear programming problem. Then, the gray wolf optimization-based firefighting scheduling algorithm (GWO-FSA) is proposed for the task assignment, resource allocation, and path planning of UAVs. Extensive simulation results demonstrate the effectiveness of the proposed scheme in enhancing the emergency response efficiency.",
+      "date": "2026-09-15",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.1109/JIOT.2026.3715809",
+      "tags": [
+        "linear-programming",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.1109/JIOT.2026.3715809",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1002-net.70059",
+      "title": "Simultaneous Network Design With Restricted Link Usage",
+      "authors": [
+        "Kakimura, N.",
+        "Madarasi, P.",
+        "Matuschke, J.",
+        "Varga, K."
+      ],
+      "abstract": "ABSTRACT\n                  Given a digraph with two terminal vertices  and  as well as a conservative cost function and several not necessarily disjoint color classes on its arc set, our goal is to find a minimum‐cost subset of the arcs such that its intersection with each color class contains an ‐ dipath. Problems of this type arise naturally in multi‐commodity network design settings where each commodity is restricted to use links of its own color only. We also consider undirected versions and stricter exact variants, in which the intersection with each color class must itself be the required ‐ dipath or path. We study several variants of the problem, deriving strong hardness results even for restricted cases, but we also identify cases that can be solved in polynomial time. The latter ones include the cases where the color classes form a laminar family, or where the underlying digraph is acyclic and the number of color classes is constant. We also present FPT algorithms parameterized by the number of multi‐colored arcs or edges: for the superset variants in general, for the undirected exact‐existence variant, and for the directed exact‐existence variant on planar digraphs.",
+      "date": "2026-09-14",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70059",
+      "tags": [
+        "network-optimization"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70059",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.15669",
+      "title": "Benchmarking Intra-Patient 3D Deformable Multimodal Image Registration",
+      "authors": [
+        "Matteo Barbieri",
+        "Giammarco La Barbera",
+        "Juan Pablo De La Plata",
+        "Sabine Sarnacki",
+        "Isabelle Bloch",
+        "Pietro Gori"
+      ],
+      "abstract": "Multimodal image registration is a key component of many clinical workflows, yet it remains challenging because corresponding anatomical structures often exhibit substantially different image intensities across modalities. In this work, we present a comprehensive benchmark of intra-patient 3D multimodal deformable registration methods across three datasets covering different anatomical regions and difficulty levels, including both synthetic deformation recovery and real clinical scenarios. We evaluate classical optimization-based approaches and modern learning-based methods, including recent deep learning and foundation models, using complementary metrics: Average Dice similarity coefficient (DSC), average 95th-percentile Hausdorff distance (HD95), and a modality-independent structural similarity measure based on the MIND self-similarity context (MIND-SSC). Results show high variability across datasets, with learning-based methods demonstrating superior performance on large synthetic benchmarks, while only limited improvements are observed in real pelvic registration. A key finding of this study is the consistent disagreement between geometric metrics (DSC, HD95) and image-based similarity metrics (MIND-SSC), highlighting that improved overlap does not necessarily imply better global multimodal correspondence. Furthermore, anatomy-guided approaches achieve the highest overlap scores but exhibit degraded performance outside of segmented regions, revealing a trade-off between label-driven alignment and global structural coherence. Overall, our results indicate that no current method achieves robust performance across anatomies and modalities. We demonstrate that intra-patient 3D multimodal registration requires multi-criteria evaluation, including deformation-based metrics, and remains an open problem.",
+      "date": "2026-09-14",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2609.15669v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.15669",
+      "arxiv_id": "2609.15669v1",
+      "score": 55.0
+    },
+    {
+      "id": "s2-268733684fba",
+      "title": "An Improved Sparse-Aware Efficient Bayesian Convolutional Neural Networks via Optimized Weight Sampling and Pruning",
+      "authors": [
+        "Gang Wu",
+        "Cheng-Fang Ling",
+        "Ruo-Tong Niu",
+        "Cai-Die Zhu",
+        "Sheng-Yi Ji",
+        "Chubo Liu"
+      ],
+      "abstract": "Convolutional neural networks (CNNs) achieve strong performance in many tasks, but their reliability often declines under uncertainty or limited training data. Bayesian CNNs (BCNNs) improve robustness by modeling weights probabilistically, yet repeated sampling during inference causes substantial computational overhead. To address this issue, we propose IS-BCNN, which delays sampling and directly convolves the mean and variance of weight distributions, reducing the number of convolutions from s to two while preserving the Gaussian form of the output. We further introduce piecewise pruning, weight reordering, and index mapping to skip insignificant weights and improve sparsity. Experiments show that IS-BCNN reduces training time by up to 8.2%, limits accuracy loss to within 0.5%, and improves accuracy by 3%–6%.",
+      "date": "2026-09-15",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/JIOT.2026.3696465",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1109/JIOT.2026.3696465",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.15885",
+      "title": "Privacy-enhanced federated learning via asynchronous aggregation and local differential perturbation",
+      "authors": [
+        "Zhen Zhong",
+        "Shini Yang",
+        "Liesheng Wei"
+      ],
+      "abstract": "This study proposes a privacy-enhanced federated learning framework to address secure collaborative training in distributed data environments. The framework integrates Dynamic Differential Privacy (DDP), lightweight Homomorphic Encryption (HE), and Local Differential Privacy (LDP) mechanisms to ensure data privacy protection during model training. Additionally, the framework employs an asynchronous aggregation strategy with version control to support distributed training in asynchronous environments. Experimental validation on the CIFAR-10 and Purchase-100 benchmark datasets demonstrates that the method maintains high classification accuracy (up to 82.6%) even under stringent privacy constraints (ε = 0.1), while reducing communication overhead by 21.3% compared to FedAvg. Experimental results demonstrate that this framework effectively balances privacy protection and model performance in distributed machine learning scenarios, providing a scalable technical foundation for large-scale distributed collaborative computing.",
+      "date": "2026-09-14",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.15885v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1117/12.3106592",
+      "arxiv_id": "2609.15885v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.15820",
+      "title": "AlgoEvo: Self-Evolving Agentic Search for Automated Algorithm Discovery",
+      "authors": [
+        "Junhao Qiu",
+        "Qinglong Hu",
+        "Xialiang Tong",
+        "Mingxuan Yuan",
+        "Liyong Lin",
+        "Qingfu Zhang"
+      ],
+      "abstract": "Large language models have advanced automated algorithm discovery by synthesizing executable code, but existing frameworks trap them in rigid search pipelines with pre-defined control flows. This limitation restricts adaptive reasoning, blocks cross-paradigm transfer, and discards valuable execution feedback. We propose AlgoEvo, a unified agentic framework that transforms automated algorithm discovery into an interactive, knowledge-accumulating process. An autonomous agent dynamically inspects, diagnoses, and edits code based on runtime feedback. A design skill hub decouples paradigm-specific knowledge from the core discovery engine, allowing a single workflow to seamlessly handle single-objective, multi-objective, and multi-component design. Meanwhile, a hierarchical experience mechanism organizes search trajectories into a task-level tree to guide exploration and consolidates cross-task patterns into reusable skills. Across six representative benchmark tasks, AlgoEvo matches or surpasses specialized methods with substantially fewer evaluations and reduced token consumption, demonstrating strong intra-task accumulation, cross-task transfer, and the ability to reproduce or exceed existing state-of-the-art performance through flexible skill activation.",
+      "date": "2026-09-14",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2609.15820v1",
+      "tags": [
+        "cs.AI",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.15820",
+      "arxiv_id": "2609.15820v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.15803",
+      "title": "Delegating Authorization to Misaligned Agents: Coalitional Alignment and Safe Control",
+      "authors": [
+        "Natalie Collina",
+        "Surbhi Goel",
+        "Aaron Roth",
+        "Sikata Bela Sengupta"
+      ],
+      "abstract": "Long-running AI agents create a control problem: each action they take changes the state, which in turn affects the trajectory of future actions. If the agent is not fully aligned, then guaranteeing safety requires approving consequential actions before allowing them to be executed. But requiring human approval at every step makes attention a bottleneck. Delegating review to other AI agents raises the same alignment problem: the reviewers may themselves be misaligned. We identify a condition on a reviewing panel that is weaker than individual alignment yet necessary and sufficient for a guarantee that the principal fares at least as well in expectation as under a designated baseline policy.   Each reviewer agent reports whether an action proposal made by a proposer agent improves its own utility relative to the baseline. We show that a threshold rule tolerating $k$ disapprovals is safe exactly when, after any $k$ reviewers are removed, the principal's utility can be written as a nonnegative combination of the remaining reviewers' utilities, plus a term that is nonnegative on every feasible proposal. We call this property $k$-robust coalitional alignment. The characterization lifts to sequential control: in a discounted MDP with an arbitrary proposer agent, safety at every state is both necessary and sufficient for the induced policy to match or improve on the baseline.   When reviewers vote strategically, full-panel coverage in reward-function space guarantees that every Nash equilibrium is safe under the unanimous approval rule; in contrast, more permissive thresholds can admit unsafe equilibria even when reviewers are individually aligned.   Experiments with existing reviewer models show that collective review can remain sound without an aligned individual, even when some disapprovals are tolerated.",
+      "date": "2026-09-14",
+      "source": "arXiv",
+      "source_detail": "cs.GT",
+      "url": "http://arxiv.org/abs/2609.15803v1",
+      "tags": [
+        "cs.GT",
+        "game-theory",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.15803",
+      "arxiv_id": "2609.15803v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.15794",
+      "title": "KnowBench: Effort Reduction as a Unified, Deployment-Grounded Benchmark for Clinical AI",
+      "authors": [
+        "Jocelyn Kang",
+        "Caroline Zhang"
+      ],
+      "abstract": "Clinical AI systems are evaluated with instruments built for research settings (reference-based similarity metrics and expert rubric panels) that measure resemblance to an artifact rather than reduction of a burden. We introduce KnowBench, pioneered by Knowtex, whose unifying metric is Effort Reduction (ER): the proportion of system-generated clinical work product accepted by the responsible clinician under expert and safety review. ER is defined once and instantiated per task across the administrative workload clinical AI automates: visit notes, diagnosis and billing codes, orders, EHR chart summarization, patient after-visit summaries, and clinical decision support. In every instantiation the construction is identical: the clinician's review-and-attestation event is the ground truth, every accepted unit is work the system completed, and every correction is residual effort returned to the clinician. The primary contribution of this paper is the benchmark itself: the metric, its degenerate cases, and a reporting protocol under which ER claims are auditable and cross-system comparable. Alongside it we report an initial headline measurement from the documentation instantiation: over one million signed encounters across a production window exceeding six months and thirteen medical specialties, Knowtex's proprietary fine-tuned clinical foundation models operating inside a closed feedback architecture achieve an aggregate ER of 97.99%, with per-specialty aggregates spanning 96.8-98.9%. This release reports the protocol's checklist partially, and states which companion statistics are withheld; the benchmark is offered so that this figure, and every figure reported after it, can be held to the same standard.",
+      "date": "2026-09-14",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2609.15794v1",
+      "tags": [
+        "cs.AI",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.15794",
+      "arxiv_id": "2609.15794v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.15773",
+      "title": "Transfer Learning for Socioeconomic Estimation in Forced-Displacement Settings",
+      "authors": [
+        "Steven Ndung'u",
+        "Adel Daoud",
+        "Ismael Yacoubou Djima",
+        "Hai-Anh H. Dang",
+        "Patrick Michael Brock"
+      ],
+      "abstract": "Progress in inclusive household surveys has strengthened socioeconomic evidence for forcibly displaced populations, providing indispensable benchmarks on living conditions and welfare. However, these surveys remain resource-intensive and periodic, while conditions can change between rounds, particularly in settings affected by fragility, conflict, and violence. More frequently updated, spatially granular complementary evidence is therefore needed to identify where socioeconomic conditions may be changing between survey rounds and to inform operational prioritization. Earth observation and machine learning offer a scalable source of spatially explicit socioeconomic information. However, tools developed for general populations have not been systematically adapted and evaluated in forced displacement settings, where living conditions, settlement patterns, and displacement impacts may differ substantially. We address this gap by adapting a multimodal spatiotemporal vision transformer, pretrained on Demographic and Health Survey data from approximately 1.2 million households across 36 African countries, to forced displacement and host community settings in South Sudan, Cameroon, and Zambia. We develop and evaluate the updated, adapted model using socioeconomic indices derived from UNHCR FDS and RMS data. Our results show that satellite-derived geospatial covariates explain up to 66% of the variation in socioeconomic outcomes in camp-intersecting grids, with a mean absolute error (MAE) of 4.37 index points, and 41% in non-camp-intersecting areas, with an MAE of 5.41. The framework complements and adds value to periodic household surveys by filling critical spatial and temporal data gaps with regularly updated, model-based socioeconomic estimates. These estimates sustain insight between survey rounds and support timely humanitarian prioritization and field verification.",
+      "date": "2026-09-14",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.15773v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.15773",
+      "arxiv_id": "2609.15773v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.15710",
+      "title": "Predicting build orientation for SLM dental parts: a comparison of rotation representations and direct vector regression",
+      "authors": [
+        "Felix Schmalzel",
+        "Reimar Waitz",
+        "Moritz Kronberger",
+        "Thorsten Schöler"
+      ],
+      "abstract": "Build orientation for selective laser melting (SLM) manufacturing of dental parts is usually chosen manually by technicians. We treat orientation prediction as supervised machine learning of the part's up-axis from technician-labeled production data, and test which rotation representations produce the best results. Using $n\\approx2400$ patient-specific dental parts, we trained a ResNet-50 multi-view image backbone and a PointNeXt-S point-cloud backbone, both pretrained and fine-tuned end-to-end, on 13 up-axis representations spanning six classical $SO(3)$ parameterizations and seven representations defined directly on the unit sphere $S^2$. We report the geodesic angular error between predicted and ground-truth up-axis on a test set, with and without test-time augmentation (TTA) over $K=21$ known rotations. With TTA, the octahedral map achieves the lowest mean angular error ($10.6^\\circ$, ResNet-50). The three lowest-error results overall are direct $S^2$ representations, though this may reflect label noise in the unsupervised in-plane component of the $SO(3)$ targets rather than a topological advantage. von Mises-Fisher collapses to a near-constant prediction when trained with PointNeXt-S but not with ResNet-50. TTA reduces mean angular error by 31-73 % across almost every representation and backbone. Overall, test-time augmentation over a small set of known rotations is the most consistent driver of accuracy, whereas the best-performing representation is strongly backbone-dependent.",
+      "date": "2026-09-14",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2609.15710v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.15710",
+      "arxiv_id": "2609.15710v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-daad-postdoc-2026",
+      "title": "DAAD Postdoctoral Researchers International Mobility Experience",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "DAAD",
+      "url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+      "deadline": "2026-09-15",
+      "location": "Germany",
+      "tags": [
+        "funding",
+        "postdoc",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Funding for postdoctoral research stays in Germany. 12-24 months.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 5,
+    "conferences": 0,
+    "opportunities": 5,
+    "total": 15
+  }
+}
