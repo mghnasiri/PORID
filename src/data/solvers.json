@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T12:39:59.892405+00:00",
+  "generated_at": "2026-09-16T12:33:58.900254+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1832,
+      "github_stars": 1835,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 119,
+      "github_open_issues": 116,
       "github_recent_prs": [
-        "Fix bug in strengthen coefficients",
-        "Enhance clique extraction",
-        "Add fix for dominatedColumns and DuplicateColumn::undo",
-        "Do not discard hipo status if ipx refinement fails",
-        "Added warning about constant LHS entries in LP file constraints"
+        "Add test for number of threads of OpenBLAS",
+        "FindHipoDeps: deliver the intended OpenBLAS flags (FetchContent ignores CMAKE_ARGS)",
+        "Fix 3288",
+        "Immediately return after fixing column",
+        "Fix bug in strengthen coefficients"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 650,
+      "github_stars": 654,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -460,11 +460,11 @@
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- fixed statistic on added linear constraints in propagation\r\n- keep flag `rangedrowpropagated` of linear and exactlinear constraints for probing bound changes to avoid dupli",
       "github_open_issues": 28,
       "github_recent_prs": [
+        "Remove redefinitions of min from windows.h",
         "check primal bound only if optimal solution found",
         "Fix objective offset dropped when writing the transformed problem (MPS/LP)",
         "Fix typo in MSVC version number",
-        "[docs] Add Conan entry in installation documentation",
-        "Add MSVC flag /bigobj when compiling LPS=spx in debug mode"
+        "[docs] Add Conan entry in installation documentation"
       ],
       "pypi_monthly_downloads": -41
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14048,
+      "github_stars": 14052,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 121,
+      "github_open_issues": 122,
       "github_recent_prs": [
+        "export from google3 (bazel, tool, routing variable_transit)",
+        "Fix ccall for Julia v1.13",
+        "[bazel] manage flags globally",
         "[sat] update",
-        "math_opt: export labs test",
-        "[bazel] Fix missing flags for sat",
-        "math_opt and java cleanup",
-        "update tools/docker for release v10.0 RC1"
+        "math_opt: export labs test"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
-      "github_stars": 6333,
-      "github_open_issues": 184,
+      "github_stars": 6335,
+      "github_open_issues": 185,
       "github_recent_prs": [
+        "Add Moreau solver reuse, warm starts, and native duals; remove commercial classification",
         "Bump pypa/cibuildwheel from 4.2.0 to 4.2.1",
         "Bump github/codeql-action/upload-sarif from 4.37.8 to 4.38.0",
         "Fix implicit Optional annotations",
-        "Record and enforce docstring coverage with interrogate",
-        "Fix stale docstring examples; make power curvature follow the rational approximation"
+        "Record and enforce docstring coverage with interrogate"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed issue where Ipopt exceptions could not been caught from other libraries on macOS with clang when Ipopt or the other library was build with `-fvisibility=hidden`.\r\n- Call `MPI_Init()` with NULL",
-      "github_stars": 1782,
+      "github_stars": 1783,
       "github_open_issues": 11,
       "github_recent_prs": [
         "remove unnecessary include of iostream; avoid using namespace std",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "In this release, we have focused a lot on the service module and accompanying documentation.\r\nBut we have also fixed several important bugs and if you look very closely, you will find out that Neighbo",
-      "github_stars": 1785,
+      "github_stars": 1786,
       "github_open_issues": 109,
       "github_recent_prs": [
-        "feat: Create profile set custom seed",
-        "chore: introduce revapi check for solver-service",
-        "fix: define timefold-maven-plugin version in parent pom.xml",
-        "perf(bavet): speed up ifExists+join preload",
-        "chore: rename Example maturity level to Template"
+        "fix: revapi check should include all reference types",
+        "ci: standardize JDK usage",
+        "chore: add a marker interface to identify precompute streams",
+        "fix: LocalSearchForager can never add a structurally flawed move as a finalist",
+        "feat: Create profile set custom seed"
       ]
     },
     {
@@ -1385,13 +1385,13 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2526,
-      "github_open_issues": 392,
+      "github_open_issues": 393,
       "github_recent_prs": [
+        "contrib.solver GAMS: pass logfile to GAMS",
         "Fix GDPopt LBB solver error handling",
         "GDP: simple disjunction reverse-polar enumeration cuts",
         "Fixing bug in piecewise/factorable with math domain and range error, plus named expressions",
-        "MindtPy: maintain a valid dual bound in each iteration when no-good c…",
-        "contrib.cp interface to Google OR-Tools CP-SAT solver"
+        "MindtPy: maintain a valid dual bound in each iteration when no-good c…"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1449,14 +1449,14 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.31.2\n\n[Diff since v1.31.1](https://github.com/jump-dev/JuMP.jl/compare/v1.31.1...v1.31.2)\n\n\n**Merged pull requests:**\n- Fix formatting for latest JuliaFormatter version (#4208) (@odow)\n- Fi",
-      "github_stars": 2473,
+      "github_stars": 2474,
       "github_open_issues": 15,
       "github_recent_prs": [
+        "Fix test_assert_is_solved_and_feasible to not depend on printing",
         "Fix error when some functions are called on AffExpr with non-zero constant",
         "Fix fix_discrete_values when an integer variable is already fixed",
         "Fuse check_belongs_to_model with moi_function",
-        "Fix reduced_cost for GenericVariableRef",
-        "Fix setting bounds and starting values to non-finite values"
+        "Fix reduced_cost for GenericVariableRef"
       ]
     },
     {

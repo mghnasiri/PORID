@@ -1,0 +1,437 @@
+{
+  "date": "2026-09-16",
+  "generated_at": "2026-09-16T12:33:59.235742+00:00",
+  "publications": [
+    {
+      "id": "s2-6f6a89f3f778",
+      "title": "Joint Resource Allocation and Task Scheduling for LAWN-Enabled Emergency Response",
+      "authors": [
+        "Jia He",
+        "Ziye Jia",
+        "Can Cui",
+        "Yuan-Hao Cui",
+        "Qiu-Ming Zhu",
+        "Qihui Wu"
+      ],
+      "abstract": "The low-altitude wireless network (LAWN), mainly composed of uncrewed aerial vehicles (UAVs), is a promising paradigm for emergency response. However, the implementation of LAWN requires achieving efficient and reliable coordination among multifunctional UAVs. Therefore, how to guarantee communication reliability and realize coordination among heterogeneous UAVs in unpredictable environments remains a key issue. In this article, we propose a novel LAWN framework, where reconnaissance UAVs first collect situational information, relay UAVs forward the sensed data to the fire station for decision-making, and firefighting UAVs execute material delivery according to the returned commands, thereby forming a closed-loop emergency response. Then, we formulate the optimization problem to minimize the total response delay while ensuring the fairness of multipath routing. To tackle the NP-hard problem, we decompose it into two subproblems of the route construction problem (RCP) and firefighting scheduling problem (FSP). We design the regular geometric topology for the UAV deployment, derive the transmission power in closed form to establish feasible links, and RCP is reformulated into a tractable integer linear programming problem. Then, the gray wolf optimization-based firefighting scheduling algorithm (GWO-FSA) is proposed for the task assignment, resource allocation, and path planning of UAVs. Extensive simulation results demonstrate the effectiveness of the proposed scheme in enhancing the emergency response efficiency.",
+      "date": "2026-09-15",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.1109/JIOT.2026.3715809",
+      "tags": [
+        "linear-programming",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.1109/JIOT.2026.3715809",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261490953",
+      "title": "EXPRESS: Let Clickstream Talk: A Graph Neural Network Approach to Sales Forecasting",
+      "authors": [
+        "Liu, R.",
+        "Chen, Z.",
+        "Zhang, D.",
+        "Mai, F.",
+        "Zhao, X."
+      ],
+      "abstract": "Abstract\n                  This paper proposes ForecastClickGraph, a deep learning framework that extracts cross-product relationships and demand information from clickstream data for probabilistic sales forecasting. ForecastClickGraph models stages in consumer shopping journeys as a dynamic graph, where nodes represent individual product-stage combinations, such as product A viewed or added to cart, and directed edges capture the transitions between stages. A customized graph neural network learns product representations that incorporate both product-level temporal patterns and cross-product associations. Another graph-based module further detects demand spikes using early signals from related products. ForecastClickGraph cross-learns demand patterns across large-scale products and estimates demand distributions through quantile regression. Extensive experiments on a real-world dataset show that ForecastClickGraph outperforms state-of-the-art benchmark models by 10-28% in forecast accuracy, with particularly strong performance in predicting promotional sales bursts. It also yields superior probabilistic forecasts with substantially lower quantile loss and improved calibration relative to benchmarks.",
+      "date": "2026-09-16",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261490953",
+      "tags": [
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261490953",
+      "score": 60.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "s2-268733684fba",
+      "title": "An Improved Sparse-Aware Efficient Bayesian Convolutional Neural Networks via Optimized Weight Sampling and Pruning",
+      "authors": [
+        "Gang Wu",
+        "Cheng-Fang Ling",
+        "Ruo-Tong Niu",
+        "Cai-Die Zhu",
+        "Sheng-Yi Ji",
+        "Chubo Liu"
+      ],
+      "abstract": "Convolutional neural networks (CNNs) achieve strong performance in many tasks, but their reliability often declines under uncertainty or limited training data. Bayesian CNNs (BCNNs) improve robustness by modeling weights probabilistically, yet repeated sampling during inference causes substantial computational overhead. To address this issue, we propose IS-BCNN, which delays sampling and directly convolves the mean and variance of weight distributions, reducing the number of convolutions from s to two while preserving the Gaussian form of the output. We further introduce piecewise pruning, weight reordering, and index mapping to skip insignificant weights and improve sparsity. Experiments show that IS-BCNN reduces training time by up to 8.2%, limits accuracy loss to within 0.5%, and improves accuracy by 3%–6%.",
+      "date": "2026-09-15",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/JIOT.2026.3696465",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1109/JIOT.2026.3696465",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.17171",
+      "title": "A unified framework for global and local interpretability using adaptive derivative-ordered random explanation",
+      "authors": [
+        "Lemen Chao",
+        "Ming Lei",
+        "Anran Fanga"
+      ],
+      "abstract": "The interpretability of complex machine learning models is of paramount importance, especially in real-world high-stakes domains such as healthcare and finance. However, existing post-hoc interpretability methods suffer from inherent limitations: fragmented analytical processes, inadequate capacity to model nonlinear feature interactions, computational inefficiencies, and over-reliance on specific model architectures. To address these challenges, this paper provides a novel method - Adaptive Derivative-Ordered Random Explanation (ADORE) - that leverages first- and second-order derivatives to accommodate nonlinear model complexities, while enabling effective capture of feature-sample interactions within a unified analytical framework. ADORE integrates global feature importance with local sample contributions, precisely quantifying feature impact by capturing both magnitude and direction, and identifying critical samples influencing model decisions. Furthermore, it achieves computational efficiency through randomized singular value decomposition (SVD) and dynamic sparsity detection, making it scalable to large, high-dimensional datasets. Experiments across three data modalities - tabular, text, and image - demonstrate that ADORE outperforms existing methods such as LIME and SHAP in handling complex interactions and computational efficiency, while providing detailed and reliable explanations. To facilitate adoption and reproducibility, ADORE has been released as an open-source Python package, hosted on GitHub, enabling researchers and practitioners to readily adapt and apply our approach to their specific tasks, models, and datasets.",
+      "date": "2026-09-15",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.17171v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "healthcare-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.17171",
+      "arxiv_id": "2609.17171v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.17101",
+      "title": "High-Fidelity Digital Twin Data Models by Randomized Dynamic Mode Decomposition and Deep Learning with Applications in Fluid Dynamics",
+      "authors": [
+        "Diana A. Bistrian"
+      ],
+      "abstract": "The purpose of this paper is the identification of high-fidelity digital twin data models from numerical code outputs by non-intrusive techniques (i.e., not requiring Galerkin projection of the governing equations onto the reduced modes basis). In this paper the author defines the concept of the digital twin data model (DTM) as a model of reduced complexity that has the main feature of mirroring the original process behavior. The significant advantage of a DTM is to reproduce the dynamics with high accuracy and reduced costs in CPU time and hardware for settings difficult to explore because of the complexity of the dynamics over time. This paper introduces a new framework for creating efficient digital twin data models by combining two state-of-the-art tools: randomized dynamic mode decomposition and deep learning artificial intelligence. It is shown that the outputs are consistent with the original source data with the advantage of reduced complexity. The DTMs are investigated in the numerical simulation of three shock wave phenomena with increasing complexity. The author performs a thorough assessment of the performance of the new digital twin data models in terms of numerical accuracy and computational efficiency.",
+      "date": "2026-09-15",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.17101v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.3390/modelling3030020",
+      "arxiv_id": "2609.17101v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.17002",
+      "title": "From Consensus-Based Optimization to Particle Swarm Optimization: Convergence Guarantees under Drift-Diffusion Coupling",
+      "authors": [
+        "Franca Hoffmann",
+        "Dohyeon Kim",
+        "Ritvik Teegavarapu"
+      ],
+      "abstract": "Particle swarm optimization (PSO) is a widely used algorithm featured in many state-of-the-art optimization tool-kits. However, rigorous performance guarantees are still lacking. The standard PSO dynamics do not admit a natural mean-field description, which would provide an avenue for theoretical analysis. By modifying the PSO formulation, one can recover the consensus-based optimization (CBO) algorithm with memory, which admits a mean-field limit and facilitates rigorous convergence analysis. These theoretical guarantees rely heavily on the fact that for CBO, the drift and noise strengths can be chosen independently, whereas they are coupled for PSO. We analyze how the PSO parameter coupling affects existing convergence guarantees for CBO and its variant with memory effect. We show, by an explicit construction, that the coupling still leaves a non-empty set of admissible parameters for these convergence guarantees to hold. However, the admissible parameter ranges shrink in the limits used to recover PSO. The resulting convergence guarantees from CBO therefore do not directly extend to the classical PSO model. We provide numerical simulations illustrating the parameter tradeoffs shown in the theoretical analysis.",
+      "date": "2026-09-15",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.17002v1",
+      "tags": [
+        "math.OC",
+        "metaheuristics",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.17002",
+      "arxiv_id": "2609.17002v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.17325",
+      "title": "Intrinsic Motivation in Reinforcement Learning: A Research Agenda for Adaptive Self-Organisation",
+      "authors": [
+        "Anatoly Belikov"
+      ],
+      "abstract": "Biological cells can be viewed as individual, interacting agents whose collective dynamics give rise to adaptive behaviour at multiple levels of organisation, from individual cells through tissues to whole multicellular organisms. In this perspective and tutorial article we discuss whether intrinsic rewards in artificial neural systems can support adaptation, functional specialisation and higher-level self-organisation without a shared external objective. We review empowerment, curiosity, learning progress, information gain, unsupervised skill discovery, mutual information estimation and the use of world models for intrinsic reward computation. Particular attention is given to failure modes showing when such objectives do not produce sustained exploration or increasingly complex behaviour. We argue that more capable systems may require complementary objectives, communication, memory, learning at multiple temporal scales and environmental constraints. Based on this perspective, we outline three experimental directions. These include a resource-constrained environment in which otherwise stable behavioural attractors become unsustainable, allowing us to test whether environmental constraints can mitigate characteristic failure modes of intrinsic objectives. The network of recurrent agents with per-agent intrinsic rewards, and a hierarchical world-model agent in which exploratory motor competence develops before goal-directed behaviour. These experiments are intended to test whether intrinsic learning can lead to adaptive organisation at progressively higher levels.",
+      "date": "2026-09-15",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2609.17325v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.17325",
+      "arxiv_id": "2609.17325v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.17180",
+      "title": "MOCC-R1: Reinforcing Reasoning-Response Consistency for Multimodal Counselor Response Generation",
+      "authors": [
+        "Wenjie Zheng",
+        "Qiming Xie",
+        "Jianfei Yu",
+        "Rui Xia"
+      ],
+      "abstract": "Multimodal counselor response generation (MCRG) aims to generate an appropriate counselor response from multimodal dialogue histories. Progress is limited by two gaps: first, existing datasets rarely capture sustained, human-recorded counseling interactions conducted by qualified counselors; Second, existing methods do not explicitly optimize consistency between counseling reasoning and the generated response, potentially undermining the reliability of MCRG systems. Thus, we introduce MOCC, a multimodal counseling conversation corpus containing over 200 hours of interactions involving 154 credential-verified counselors. Based on MOCC, we propose MOCC-R1, a two-stage framework for optimizing reasoning-response consistency. Cold-start supervised fine-tuning trains the model to generate a structured trajectory consisting of client-state understanding, a response intent that links a counseling principle to a planned action, and the final response. Reinforcement learning (RL) then rewards grounded plan coherence and plan execution, encouraging the inferred state and plan to be supported by the dialogue context and the response to realize that plan. Experiments demonstrate the effectiveness of the proposed MOCC-R1.",
+      "date": "2026-09-15",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2609.17180v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.17180",
+      "arxiv_id": "2609.17180v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.17169",
+      "title": "MUMINS: Metadata-conditioned Uncertainty-aware Medical Image Next-state Synthesis",
+      "authors": [
+        "Anna Oliveras",
+        "Roger Marí",
+        "Rafael Redondo",
+        "Oriol Guardià",
+        "Cynthia Ifeyinwa Ugwu",
+        "Ana Tost",
+        "Bhalaji Nagarajan",
+        "Carolina Migliorelli",
+        "Vicent Ribas",
+        "Petia Radeva"
+      ],
+      "abstract": "Forecasting anatomical changes such as tumor growth and neurodegeneration is a challenging generative vision task. Morphological evolution is subtle relative to static anatomy, highly patient-specific, and inherently stochastic. Existing methods struggle with several issues: deterministic networks ignore biological stochasticity, while standard diffusion models require computationally prohibitive multi-pass sampling to quantify uncertainty. We propose MUMINS (Metadata-conditioned Uncertainty-aware Medical Image Next-state Synthesis), an efficient diffusion framework that jointly diffuses a baseline scan and its follow-up residual, summed to synthesize the follow-up scan, while concurrently predicting a spatial uncertainty map, in a single reverse diffusion process. Conditioned on the time interval and relevant metadata, it preserves fine-grained anatomy by dynamically re-injecting the baseline as a soft anchor at every denoising step, and a negative-log-likelihood head learns the uncertainty map to explicitly flag error-prone regions. Designed without organ-specific heuristics, the same architecture is reused across anatomies via separate, dataset-specific retraining. Extensive evaluations demonstrate that dataset-specific retraining of MUMINS matches or outperforms dedicated, domain-specific state-of-the-art methods on lung CT (PNG) and brain MRI (OASIS-3). Project page: https://github.com/aolivtous/MUMINS.",
+      "date": "2026-09-15",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2609.17169v1",
+      "tags": [
+        "cs.CV",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.17169",
+      "arxiv_id": "2609.17169v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.17088",
+      "title": "Interactive Memory Learning for Long-Term Conversations",
+      "authors": [
+        "Cai Ke",
+        "Jiangyue Yan",
+        "Han Zhang",
+        "Xin Liu",
+        "Zike Yuan",
+        "Yue Yu",
+        "Hui Wang",
+        "Ruifeng Xu"
+      ],
+      "abstract": "Recent advancements in large language models have significantly enhanced the capabilities of agents in modeling long-term conversations. Despite these successes, existing approaches typically adopt a static heuristic paradigm, where information is passively archived without adaptive memory valuation. Consequently, these methods fail to self-evolve or align their memory management with evolving user needs. To address this, we propose ICML (InteraCtive Memory Learning), a multi-agent framework that transforms the memory mechanism from a passive archive into a learnable, interactive memory policy. Specifically, we first employ a session synthesis pipeline to generate expert data, facilitating rapid test-time adaptation in unseen scenarios. Building on this, ICML utilizes an online reinforcement learning mechanism where a Planner agent selectively encodes high-value information and a Trigger agent dynamically retrieves it to optimize response quality, whereby the two agents co-evolve through continuous interaction feedback. Crucially, both agents are synchronized through a delayed reward mechanism that propagates future feedback back to earlier storage decisions, ensuring memory policies are precisely aligned with user expectations. Experimental results demonstrate that ICML significantly outperforms strong baselines, exhibiting the unique capability to continuously improve response quality as interactions accumulate.",
+      "date": "2026-09-15",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2609.17088v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.17088",
+      "arxiv_id": "2609.17088v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 14
+  }
+}
