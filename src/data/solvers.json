@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T12:33:58.900254+00:00",
+  "generated_at": "2026-09-17T12:34:10.070145+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -345,7 +345,7 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 116,
+      "github_open_issues": 114,
       "github_recent_prs": [
         "Add test for number of threads of OpenBLAS",
         "FindHipoDeps: deliver the intended OpenBLAS flags (FetchContent ignores CMAKE_ARGS)",
@@ -458,13 +458,13 @@
         }
       ],
       "recent_changes": "Fixed bugs\r\n----------\r\n\r\n- fixed statistic on added linear constraints in propagation\r\n- keep flag `rangedrowpropagated` of linear and exactlinear constraints for probing bound changes to avoid dupli",
-      "github_open_issues": 28,
+      "github_open_issues": 29,
       "github_recent_prs": [
+        "Fix exact objective ordering in primal solution storage",
         "Remove redefinitions of min from windows.h",
         "check primal bound only if optimal solution found",
         "Fix objective offset dropped when writing the transformed problem (MPS/LP)",
-        "Fix typo in MSVC version number",
-        "[docs] Add Conan entry in installation documentation"
+        "Fix typo in MSVC version number"
       ],
       "pypi_monthly_downloads": -41
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14052,
+      "github_stars": 14055,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 122,
+      "github_open_issues": 121,
       "github_recent_prs": [
+        "cmake: cleanup",
         "export from google3 (bazel, tool, routing variable_transit)",
         "Fix ccall for Julia v1.13",
         "[bazel] manage flags globally",
-        "[sat] update",
-        "math_opt: export labs test"
+        "[sat] update"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1132,13 +1132,13 @@
       ],
       "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
       "github_stars": 6335,
-      "github_open_issues": 185,
+      "github_open_issues": 187,
       "github_recent_prs": [
+        "Document Windows build tools workaround for source install",
+        "Fix HiGHS reporting a solution when a limit is reached before any solution exists",
         "Add Moreau solver reuse, warm starts, and native duals; remove commercial classification",
         "Bump pypa/cibuildwheel from 4.2.0 to 4.2.1",
-        "Bump github/codeql-action/upload-sarif from 4.37.8 to 4.38.0",
-        "Fix implicit Optional annotations",
-        "Record and enforce docstring coverage with interrogate"
+        "Bump github/codeql-action/upload-sarif from 4.37.8 to 4.38.0"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "In this release, we have focused a lot on the service module and accompanying documentation.\r\nBut we have also fixed several important bugs and if you look very closely, you will find out that Neighbo",
-      "github_stars": 1786,
-      "github_open_issues": 109,
+      "github_stars": 1787,
+      "github_open_issues": 106,
       "github_recent_prs": [
+        "docs: add draft for maps service",
         "fix: revapi check should include all reference types",
         "ci: standardize JDK usage",
         "chore: add a marker interface to identify precompute streams",
-        "fix: LocalSearchForager can never add a structurally flawed move as a finalist",
-        "feat: Create profile set custom seed"
+        "fix: do not add a structurally flawed move as a finalist"
       ]
     },
     {
@@ -1450,13 +1450,13 @@
       ],
       "recent_changes": "## JuMP v1.31.2\n\n[Diff since v1.31.1](https://github.com/jump-dev/JuMP.jl/compare/v1.31.1...v1.31.2)\n\n\n**Merged pull requests:**\n- Fix formatting for latest JuliaFormatter version (#4208) (@odow)\n- Fi",
       "github_stars": 2474,
-      "github_open_issues": 15,
+      "github_open_issues": 14,
       "github_recent_prs": [
+        "Remove _isfinite",
         "Fix test_assert_is_solved_and_feasible to not depend on printing",
         "Fix error when some functions are called on AffExpr with non-zero constant",
         "Fix fix_discrete_values when an integer variable is already fixed",
-        "Fuse check_belongs_to_model with moi_function",
-        "Fix reduced_cost for GenericVariableRef"
+        "Fuse check_belongs_to_model with moi_function"
       ]
     },
     {

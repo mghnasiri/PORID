@@ -1,0 +1,422 @@
+{
+  "date": "2026-09-17",
+  "generated_at": "2026-09-17T12:34:10.372321+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1177-10591478261490953",
+      "title": "EXPRESS: Let Clickstream Talk: A Graph Neural Network Approach to Sales Forecasting",
+      "authors": [
+        "Liu, R.",
+        "Chen, Z.",
+        "Zhang, D.",
+        "Mai, F.",
+        "Zhao, X."
+      ],
+      "abstract": "Abstract\n                  This paper proposes ForecastClickGraph, a deep learning framework that extracts cross-product relationships and demand information from clickstream data for probabilistic sales forecasting. ForecastClickGraph models stages in consumer shopping journeys as a dynamic graph, where nodes represent individual product-stage combinations, such as product A viewed or added to cart, and directed edges capture the transitions between stages. A customized graph neural network learns product representations that incorporate both product-level temporal patterns and cross-product associations. Another graph-based module further detects demand spikes using early signals from related products. ForecastClickGraph cross-learns demand patterns across large-scale products and estimates demand distributions through quantile regression. Extensive experiments on a real-world dataset show that ForecastClickGraph outperforms state-of-the-art benchmark models by 10-28% in forecast accuracy, with particularly strong performance in predicting promotional sales bursts. It also yields superior probabilistic forecasts with substantially lower quantile loss and improved calibration relative to benchmarks.",
+      "date": "2026-09-16",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261490953",
+      "tags": [
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261490953",
+      "score": 60.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2609.18859",
+      "title": "Learning to Solve Two-Stage Stochastic Unit Commitment Problems with Quality Guarantees",
+      "authors": [
+        "Andrea Fusco",
+        "Andrea Lodi",
+        "Lavanya Marla"
+      ],
+      "abstract": "Two-stage stochastic Mixed-Integer Linear Programs are a canonical modeling tool to optimize power system operations under uncertainty, yet their extensive-form counterparts scale linearly with the number of scenarios and quickly become computationally prohibitive under day-ahead time constraints. We propose an Input Convex Neural Network architecture to learn a convex surrogate of the second-stage value function, enabling fast first-stage optimization while preserving convexity by construction. We couple the surrogate with a Neural-Benders correction loop that refines the first-stage solution a posteriori, recovering the exact optimum whether the network overestimates or underestimates the recourse cost, and certifying solution quality independently of surrogate accuracy. We evaluate the method on IEEE Stochastic Unit Commitment benchmarks (case9-case118) under both continuous and integer recourse. The proposed approach achieves solutions with zero optimality gap on the $K$-scenario instance across all test cases and scenario dimensions $K \\in \\{10, 50, 100\\}$, with speedups up to $214\\times$ over the Extensive Form in the integer setting. Solve times are stable across scenario realizations and compatible with day-ahead time windows on the tested benchmark instances.",
+      "date": "2026-09-16",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2609.18859v1",
+      "tags": [
+        "eess.SY",
+        "integer-programming",
+        "stochastic",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.18859",
+      "arxiv_id": "2609.18859v1",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2609.19077",
+      "title": "Probabilistic Linear Explanations",
+      "authors": [
+        "Frederic Koriche",
+        "Jean-Marie Lagniez",
+        "Chi Tran"
+      ],
+      "abstract": "Formal explainability provides mathematically grounded justifications for individual predictions. However, abductive explanations often exceed human cognitive limits by involving too many features, while probabilistic relaxations have remained largely limited to categorical classification. We present a unified framework for probabilistic explainability based on sparse, anchored linear models, applicable to both binary classification and continuous regression. By mapping instances to the Boolean hypercube, our linear explanations strictly generalize subset-based approaches: they capture both the magnitude and direction of feature contributions while enforcing a prescribed sparsity budget $k$. We show that minimizing the relevance error for such explanations is \\ClassNPPP-hard when the underlying model is a neural network, and we relate this intractable objective to a tractable surrogate---the fidelity error. For a parameterized family of local distributions, the relevance error of any $k$-sparse explanation is bounded by its fidelity error up to a multiplicative factor that remains small locally. We address the resulting empirical problem using two complementary approaches: a Mixed Integer Programming (MIP) formulation that yields provably optimal empirical solutions while maintaining polynomial sample complexity, and a polynomial-time Iterative Hard Thresholding (IHT) algorithm with provable approximation guarantees. Empirical evaluations show that, unlike state-of-the-art baselines such as LIME and MAPLE, our explanations satisfy both the anchoring and sparsity constraints by construction, while consistently achieving lower relevance error.",
+      "date": "2026-09-16",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.19077v1",
+      "tags": [
+        "cs.LG",
+        "integer-programming",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.19077",
+      "arxiv_id": "2609.19077v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.18679",
+      "title": "GNN-Accelerated Mixed-Integer Dual MPC for Interactive Driving",
+      "authors": [
+        "Yidan Zhu",
+        "Shuhao Qi",
+        "Luyao Zhang",
+        "Sofie Haesaert",
+        "Jonas Mårtensson"
+      ],
+      "abstract": "In interactions with uncertain opponents, dual model predictive control (MPC) can improve performance through information-seeking actions that reduce uncertainty about opponents' behavior. Its recent applications to autonomous driving, however, are limited to scenarios involving a single opponent on a single lane. This paper presents a mixed-integer dual MPC for multiple reactive opponents on multi-lane roads, jointly optimizing integer-valued maneuver decisions (lane changes and safe-region selections), and continuous motion over a scenario tree that samples plausible interactions with the opponents. As interaction complexity increases, solving the resulting mixed-integer nonlinear program becomes increasingly expensive. To reduce this computational burden, a graph neural network (GNN) predicts the optimal maneuver decisions, and high-confidence predictions are fixed before the reduced problem is solved. Simulations show that active probing behavior emerges in complex interactive scenarios, and that GNN guidance fixes $76.3\\%$ of the integer decisions and reduces the solve time by $2.5\\times$ on average, with negligible degradation of optimality.",
+      "date": "2026-09-16",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2609.18679v1",
+      "tags": [
+        "eess.SY",
+        "integer-programming",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.18679",
+      "arxiv_id": "2609.18679v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07426-0",
+      "title": "Parameterized Local Search for Max c-Cut",
+      "authors": [
+        "Garvardt, J.",
+        "Grüttemeier, N.",
+        "Komusiewicz, C.",
+        "Morawietz, N."
+      ],
+      "abstract": "Abstract\n                  \n                    In the NP-hard\n                    Max \n                    c\n                    -Cut\n                    problem, one is given an undirected edge-weighted graph \n                    G\n                    and aims to color the vertices of \n                    G\n                    with \n                    c\n                    colors such that the total weight of edges with distinctly colored endpoints is maximal. The case with \n                    \n                      \n                        $$c=2$$\n                        \n                          \n                            c\n                            =\n                            2\n                          \n                        \n                      \n                    \n                    is the famous\n                    Max Cut\n                    problem. To deal with the NP-hardness of this problem, we study parameterized local search algorithms. More precisely, we study\n                    LS Max\n                    c\n                    -Cut\n                    where we are also given a vertex coloring and an integer \n                    k\n                    and the task is to find a better coloring that changes the color of at most \n                    k\n                    vertices, if such a coloring exists; otherwise, the given coloring is\n                    k\n                    -optimal. We show that, for all \n                    \n                      \n                        $$c\\ge 2$$\n                        \n                          \n                            c\n                            ≥\n                            2\n                          \n                        \n                      \n                    \n                    ,\n                    LS Max \n                    c\n                    -Cut\n                    presumably cannot be solved in \n                    \n                      \n                        $$f(k)\\cdot n^{\\mathcal {O}(1)}$$\n                        \n                          \n                            f\n                            \n                              (\n                              k\n                              )\n                            \n                            ·\n                            \n                              n\n                              \n                                O\n                                (\n                                1\n                                )\n                              \n                            \n                          \n                        \n                      \n                    \n                     time even on bipartite graphs. We then present an algorithm for\n                    LS Max \n                    c\n                    -Cut\n                    with running time \n                    \n                      \n                        $$\\mathcal {O}((3e\\Delta )^k\\cdot c\\cdot k^3\\cdot \\Delta \\cdot n)$$\n                        \n                          \n                            O\n                            (\n                            \n                              \n                                (\n                                3\n                                e\n                                Δ\n                                )\n                              \n                              k\n                            \n                            ·\n                            c\n                            ·\n                            \n                              k\n                              3\n                            \n                            ·\n                            Δ\n                            ·\n                            n\n                            )\n                          \n                        \n                      \n                    \n                    , where \n                    \n                      \n                        $$\\Delta $$\n                        \n                          Δ\n                        \n                      \n                    \n                    is the maximum degree of the input graph. Finally, we evaluate the practical performance of this algorithm in a hill-climbing approach as a post-processing for a state-of-the-art heuristic for \n                    Max \n                    c\n                    -Cut\n                    . We show that using parameterized local search, the results of this state-of-the-art heuristic can be further improved on a set of standard benchmark instances.",
+      "date": "2026-09-17",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07426-0",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07426-0",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261492009",
+      "title": "EXPRESS: Focused versus Diversified Nonprofit Organizations: Aligning Operations Strategies with Donor Types",
+      "authors": [
+        "Urrea, G.",
+        "Villa, S.",
+        "Quintane, E."
+      ],
+      "abstract": "Nonprofit organizations (NPOs) typically adopt either a focused or diversified operations strategy to deliver their services. While the operational implications of these strategies are well studied, their effects on fundraising outcomes remain unexplored. We argue that NPOs operating under resource constraints face a fundamental tradeoff between operational efficiency and funding uncertainty, and that aligning operations strategy with institutional donor relationships can improve fundraising outcomes. We propose a compensatory alignment framework: focused NPOs benefit more from new donors who help reduce funding uncertainty, while diversified NPOs benefit more from stable donors who help maintain operational efficiency. We test this framework in the high-stakes setting of humanitarian emergency funding, where NPOs have limited financial resources to operate and conduct their fundraising campaigns. We use panel data on over 3,000 global NPOs from 2000 to 2020, combining grant-level donation records with organizational and donor characteristics. Results from a dynamic panel model support the proposed alignment: diversified NPOs receive significantly higher donation amounts from stable donors, while focused NPOs receive significantly higher donation amounts from new donors. Interviews with NPO fundraising managers around the world indicate that our empirical findings resonate with practitioners' experience. For instance, focused NPO managers view new donor acquisition as a way to mitigate funding concentration risk, whereas diversified NPO managers emphasize stable donors as a means of managing the complexity of multiple programs. This research advances theory by linking NPOs’ operations strategies to donor engagement and fundraising performance and offers practical guidance to NPO managers.",
+      "date": "2026-09-16",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261492009",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261492009",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1177-10591478261491419",
+      "title": "EXPRESS: To Cooperate or Not? A Finite-Capacity Manufacturer’s Decision to Enter the Sharing Market",
+      "authors": [
+        "Jin, K.",
+        "Chen, Y.",
+        "Zhou, Y.",
+        "Lin, X."
+      ],
+      "abstract": "Recently, more manufacturers have embraced peer-to-peer product sharing by complementing their traditional sales channels with direct cooperation with sharing platforms to supply products for rental. Unlike prior studies, this paper considers a manufacturer with\n                    finite production capacity\n                    and investigates whether and under what conditions it chooses to cooperate with a sharing platform, as well as how such cooperation affects capacity utilization. We find that cooperation may arise under both high and low capacity regimes, but for fundamentally different reasons. When the commission rate is high, cooperation is driven by scarcity monetization: the manufacturer cooperates when either marginal production cost is high or capacity is limited, as product scarcity can be sustained and sharing-channel revenue is substantial. When the commission rate is low, cooperation becomes a capacity-utilization strategy and occurs only when marginal production cost is low and capacity is sufficiently large, so that the benefit from absorbing idle capacity outweighs sales cannibalization. We further show that cooperation does not necessarily increase the selling price or reduce the rental price, as pricing and allocation responses depend critically on the commission environment. Finally, cooperation is not a universal remedy for capacity waste. It improves capacity utilization only when the sharing channel effectively absorbs excess capacity under a low commission rate. In contrast, when cooperation is driven by scarcity preservation under a high commission rate, its ability to reduce idle capacity is limited. Moreover, the per-unit idle cost plays an asymmetric role: it discourages cooperation under scarcity-driven regimes but encourages cooperation under capacity-utilization regimes.",
+      "date": "2026-09-16",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261491419",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261491419",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2024.04540",
+      "title": "Sequential Search Transformer: A Deep Structural Econometric Model",
+      "authors": [
+        "Song, Y.",
+        "Sun, T."
+      ],
+      "abstract": "Modeling and leveraging consumers’ dynamic search behaviors presents significant business opportunities. Although deep learning methods excel at processing vast consumer data for predictive tasks, their opaque nature limits interpretability and fails to explicitly model consumer decision making. In contrast, economic theory suggests that consumers follow a sequential search strategy, evaluating alternatives until they find the best match for their preferences. To bridge this gap, we propose the sequential search transformer (SST), a deep structural econometric model that integrates deep learning with sequential search theory to model search and purchase decisions. SST unifies these two approaches into an end-to-end trainable model, improving both predictive accuracy and policy evaluation capabilities. Unlike conventional deep learning models, SST explicitly models consumer decision making, and unlike existing sequential search models, it enables consumer behavior modeling across sessions and sequentially resolves utility uncertainty for searched items. We provide a theoretical analysis of the identification strategy for the SST model and show that all parameters can be identified under the proposed framework. Then, we apply SST to a data set with detailed clickstream data collected from a U.S. e-commerce website. Empirical evaluations show that SST outperforms state-of-the-art deep learning and structural models in predicting consumer searches and purchases. Moreover, policy experiments demonstrate SST’s effectiveness in optimizing product recommendations and new product promotion strategies, ultimately enhancing consumers experience and driving revenue growth.\n                  This paper was accepted by Hemant Bhargava, information systems.\n                  Supplemental Material: The online appendices and data files are available at https://doi.org/10.1287/mnsc.2024.04540 .",
+      "date": "2026-09-16",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2024.04540",
+      "tags": [
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2024.04540",
+      "score": 50.0
+    },
+    {
+      "id": "s2-824b1d3b1439",
+      "title": "Calibrated predictive regions for static hedging of piecewise-affine claims with option portfolios",
+      "authors": [
+        "Nikolaos Halidias"
+      ],
+      "abstract": "We develop a modular forecast-to-construction framework for static option-portfolio design with piecewise-affine contingent claims. The forecasting layer is treated as a replaceable front-end: any statistical, econometric, machine-learning, expert-based, or scenario-based method may be used, provided that it produces a predictive region for the future underlying-price vector. For concreteness, the empirical illustration predicts the future log-return vector \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$ Y_{t,\\Delta }:=\\log (S_{t+\\Delta }/S_t) =F(z_t)+\\xi _{t+\\Delta }, $$\\end{document}where the logarithm and division are coordinatewise. A fitted member of a small sigmoidal family approximates \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$F$$\\end{document}, and absolute residuals on a chronologically later calibration block determine a finite-sample corrected empirical quantile. The resulting return region is mapped back to the positive price space by the exponential transformation. Training, calibration, and test blocks are separated by prediction-horizon embargoes, so that every response needed for fitting or calibration is observed before the next evaluation block begins. In the construction layer, the investor combines a static market payoff \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$\\Pi $$\\end{document} with a target claim payoff \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$f$$\\end{document}, allowing either sign according to whether the claim is held long or short, and studies \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$H=\\Pi +\\eta f$$\\end{document}. In one dimension, if \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$f$$\\end{document} is piecewise affine with finitely many branches, then \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$H$$\\end{document} is piecewise affine with finitely many breakpoints. Hence statewise constraints over intervals, finite unions of intervals, or scenario sets admit finite certification. In the multi-asset case, an analogous vertex certificate applies after the predictive region is refined into boxes on which the net payoff is affine. The resulting portfolio problems reduce to linear or mixed-integer linear programs. The numerical section gives an end-to-end frozen-data HTZ illustration. After leakage-free evaluation, a separate deployment fit produces the raw price interval \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$[4.0258,8.3385]$$\\end{document}, which is enlarged outward to \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$[4.0,8.5]$$\\end{document}. The construction selects option strikes from that boundary and produces a region-binding writer hedge with nonnegative profit on the certified interval and the global loss bound \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$\\textrm{Profit}(x)\\ge -1$$\\end{document} for every \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$x\\ge 0$$\\end{document}.",
+      "date": "2026-09-16",
+      "source": "Semantic Scholar",
+      "source_detail": "integer programming branch and bound",
+      "url": "https://doi.org/10.1007/s11147-026-09248-5",
+      "tags": [
+        "integer-programming",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11147-026-09248-5",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.18416",
+      "title": "Gradient Descent with Stochastic Subspaces via Persistence of Memory",
+      "authors": [
+        "Subhroshekhar Ghosh",
+        "Clement Z. Q. Ng",
+        "Pierre-Louis Poirion",
+        "Akiko Takeda"
+      ],
+      "abstract": "Stochastic subspace methods have gained popularity as gradient descent based techniques for large scale optimisation problems, especially in distributed settings. In this paper, we introduce the technique of \"persistence of memory\" to greatly extend and improve the random subspace methods. To this end, we leverage a vector that is only weakly correlated with the gradient in order to provide a guiding structure to the generative process of the random subspace along which the descent is going to take place. This guidance vector may be fixed for a large number of iterations, only to be refreshed at wide intervals (on whose size we can provide guarantees in terms of problem parameters). In important machine learning settings, such as optimisation problems embodying sparsity or a minibatch structure, we show that the guidance vector can be obtained in an effective and computationally inexpensive manner by leveraging the structured properties of the problem. En route, we establish to our knowledge the first theoretical analysis of classical SSD methods for sparse functions. In a local neighbourhood of the optimum, we demonstrate an alignment phenomenon of our gradient estimates with a low-lying eigenvector of the Hessian, allowing a once-for-all computation of the guidance vector which renders the method computationally favourable even in scenarios with unstructured objectives.",
+      "date": "2026-09-16",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.18416v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.18416",
+      "arxiv_id": "2609.18416v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 14
+  }
+}
