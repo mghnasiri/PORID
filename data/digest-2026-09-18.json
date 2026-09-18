@@ -1,0 +1,437 @@
+{
+  "date": "2026-09-18",
+  "generated_at": "2026-09-18T12:12:58.613865+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s10479-026-07426-0",
+      "title": "Parameterized Local Search for Max c-Cut",
+      "authors": [
+        "Garvardt, J.",
+        "Grüttemeier, N.",
+        "Komusiewicz, C.",
+        "Morawietz, N."
+      ],
+      "abstract": "Abstract\n                  \n                    In the NP-hard\n                    Max \n                    c\n                    -Cut\n                    problem, one is given an undirected edge-weighted graph \n                    G\n                    and aims to color the vertices of \n                    G\n                    with \n                    c\n                    colors such that the total weight of edges with distinctly colored endpoints is maximal. The case with \n                    \n                      \n                        $$c=2$$\n                        \n                          \n                            c\n                            =\n                            2\n                          \n                        \n                      \n                    \n                    is the famous\n                    Max Cut\n                    problem. To deal with the NP-hardness of this problem, we study parameterized local search algorithms. More precisely, we study\n                    LS Max\n                    c\n                    -Cut\n                    where we are also given a vertex coloring and an integer \n                    k\n                    and the task is to find a better coloring that changes the color of at most \n                    k\n                    vertices, if such a coloring exists; otherwise, the given coloring is\n                    k\n                    -optimal. We show that, for all \n                    \n                      \n                        $$c\\ge 2$$\n                        \n                          \n                            c\n                            ≥\n                            2\n                          \n                        \n                      \n                    \n                    ,\n                    LS Max \n                    c\n                    -Cut\n                    presumably cannot be solved in \n                    \n                      \n                        $$f(k)\\cdot n^{\\mathcal {O}(1)}$$\n                        \n                          \n                            f\n                            \n                              (\n                              k\n                              )\n                            \n                            ·\n                            \n                              n\n                              \n                                O\n                                (\n                                1\n                                )\n                              \n                            \n                          \n                        \n                      \n                    \n                     time even on bipartite graphs. We then present an algorithm for\n                    LS Max \n                    c\n                    -Cut\n                    with running time \n                    \n                      \n                        $$\\mathcal {O}((3e\\Delta )^k\\cdot c\\cdot k^3\\cdot \\Delta \\cdot n)$$\n                        \n                          \n                            O\n                            (\n                            \n                              \n                                (\n                                3\n                                e\n                                Δ\n                                )\n                              \n                              k\n                            \n                            ·\n                            c\n                            ·\n                            \n                              k\n                              3\n                            \n                            ·\n                            Δ\n                            ·\n                            n\n                            )\n                          \n                        \n                      \n                    \n                    , where \n                    \n                      \n                        $$\\Delta $$\n                        \n                          Δ\n                        \n                      \n                    \n                    is the maximum degree of the input graph. Finally, we evaluate the practical performance of this algorithm in a hill-climbing approach as a post-processing for a state-of-the-art heuristic for \n                    Max \n                    c\n                    -Cut\n                    . We show that using parameterized local search, the results of this state-of-the-art heuristic can be further improved on a set of standard benchmark instances.",
+      "date": "2026-09-17",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07426-0",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07426-0",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.20518",
+      "title": "Advances in Modeling Techniques for Ventricular Assist Devices: A Comprehensive Review and Future Directions",
+      "authors": [
+        "Muhammad Adel Yusuf",
+        "Nezar M. Alyazidi",
+        "Hamna Saleem",
+        "Ali Nasir",
+        "Mojeed Oyedeji"
+      ],
+      "abstract": "Ventricular Assist Devices (VADs), particularly rotary Left Ventricular Assist Devices (LVADs), are essential for patients with advanced heart failure who are ineligible for transplantation. Despite advances in cardiovascular modeling and control, clinical translation of proposed LVAD control methods remains limited. This review examines the evolution of LVAD modeling and control and argues that the gap results not from insufficiently sophisticated algorithms, but from mismatches between modeling assumptions, sensing limitations, and real-world cardiovascular variability.   A systematized review of more than 100 peer-reviewed studies covers mathematical cardiovascular models, lumped-parameter and reduced-order representations, classical and advanced control strategies, and emerging data-driven and machine learning approaches. The literature is synthesized using a problem-driven framework linking modeling and control choices to clinical challenges, including physiological observability, parameter identifiability, patient variability, and prevention of adverse events such as ventricular suction and thrombosis.   The analysis shows that high-fidelity models and intelligent controllers can perform well in simulation, but their dependence on unmeasurable states, extensive parameter tuning, and dense sensing limits clinical implementation. Simpler control approaches often provide greater robustness under clinical constraints. Adaptive and data-driven techniques may help bridge this gap, but only if they account for implantable sensing limitations and interpretability requirements.   By identifying structural barriers to adoption, this review synthesizes LVAD modeling and control paradigms and outlines research directions for physiologically adaptive, clinically implementable, and patient-safe LVAD systems.",
+      "date": "2026-09-17",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2609.20518v1",
+      "tags": [
+        "eess.SY",
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.20518",
+      "arxiv_id": "2609.20518v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.20812",
+      "title": "Quantifying Overclaiming Propensity in Frontier LLM Agents",
+      "authors": [
+        "Nolan Smyth",
+        "Yorguin-Jose Mantilla-Ramos",
+        "Pascal Jr Tikeng Notsawo",
+        "Saskia Helbling",
+        "Alberto Tosato",
+        "Mohamed Amine Merzouk",
+        "Nouha Dziri",
+        "Gauthier Gidel",
+        "Tommaso Tosato"
+      ],
+      "abstract": "Frontier coding agents are increasingly trusted to work autonomously for long periods, yet an agent's final response is often the only account of that work a user sees. We quantify the propensity of frontier agents to \\emph{overclaim} task completion, a misrepresentation that can mislead the user. An agent overclaims when its final response contradicts information in its context. This definition requires no inference about intent and is independent of task success. We introduce \\emph{OverclaimBench}, an evaluation suite composed of five file-review scenarios, transcript-based coverage measurements, and registered planted defects. We evaluate eight proprietary frontier models in their own production command-line interfaces, and four open-weight models under a single fixed harness on OverclaimBench and find that 1) agents do not read all the files they were asked to review in 67.9\\% of runs; 2) among runs where not all files are read, agents are \\emph{misleading} 80.4\\% of the time (59--96\\% per model), either falsely claiming to have read all files or omitting that coverage is incomplete; 3) requiring delegation to subagents increased reading coverage, but among reviews that remained incomplete, a large majority were still misleading; and 4) agents that falsely claimed a complete review missed planted defects at about 1.8 times the rate of agents that read every file, showing that claims of completion can conceal substantive failures. Together, these results show that agents' final responses are not reliable accounts of their actions.",
+      "date": "2026-09-17",
+      "source": "arXiv",
+      "source_detail": "cs.SE",
+      "url": "http://arxiv.org/abs/2609.20812v1",
+      "tags": [
+        "cs.SE",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.20812",
+      "arxiv_id": "2609.20812v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.20548",
+      "title": "Mitigating Retaliatory Algorithmic Collusion in Repeated Games",
+      "authors": [
+        "Karthik Sivachandran",
+        "Rohan Paleja"
+      ],
+      "abstract": "Reinforcement learning agents trained to maximize their own reward in repeated interactions can converge to supra-competitive outcomes resembling explicit collusion, without communication or shared design. Existing mitigation approaches are largely tied to specific economic settings, like two-sided platforms and auctions, leaving open how to design interventions for general repeated games. We address this gap by formalizing the connection between empirical observations from prior work on Q-learning collusion and classical theory of Simple Penal Codes (SPCs). We show any non-trivial SPC induces a quantifiable conditional dependence in agents' policies, detectable via the total variation distance between an agent's action distributions across cooperation and defection histories. Building on this connection, we propose CURB (Collusion Unwinding via Reward shaping and Belief injection), a reward-shaping framework that penalizes this Total Variation (TV) distance signal during Q-learning and is guaranteed to convert any SPC fixed point of the dynamics into a trivial one, thus precluding collusive equilibria sustained by punishment threats. Empirically, CURB substantially reduces collusion by Q-learning agents in both Bertrand and Cournot Competition Repeated Games. We further demonstrate that CURB extends to deep Q-network agents in Bertrand competition, suggesting the mechanism generalizes beyond tabular Q-learning.",
+      "date": "2026-09-17",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.20548v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.20548",
+      "arxiv_id": "2609.20548v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.20061",
+      "title": "Emergency Vertex Cover",
+      "authors": [
+        "Eric Angel",
+        "Evangelos Bampas",
+        "Evripidis Bampis",
+        "Vincent Chau",
+        "Johanne Cohen",
+        "Alexander Kononov",
+        "Yizheng Zhang"
+      ],
+      "abstract": "The Minimum Vertex Cover problem is a fundamental combinatorial optimization problem, aiming to identify a minimum subset of vertices in a graph such that every edge is incident to at least one vertex in this subset. Among its variants, the Min-Power-Cover problem stands out due to its practical applications, such as camera placement at intersections: in an edge-weighted graph, an edge is covered if one of its endpoints is assigned a power value at least as large as the edge's weight.   In this paper, we introduce the Emergency Vertex Cover (Em-VC) problem where an edge may be covered not only by its endpoints, but also by a distant vertex, provided the vertex is given sufficient power to \"cover\" the cumulative weight of the edges along a shortest path to one of the edge's endpoints plus the weight of the edge. Em-VC is motivated by different practical scenarios, e.g. the need for urban disaster response, where ensuring accessibility to all road segments (edges of the graph) is crucial for effective aid delivery.   We prove that Em-VC is NP-hard, derive lower bounds, and design a polynomial-time algorithm for its continuous version. Moreover, we present a 4/3-approximation algorithm for the discrete case and identify several special graph classes for which the problem can be solved in polynomial time.",
+      "date": "2026-09-17",
+      "source": "arXiv",
+      "source_detail": "cs.DS",
+      "url": "http://arxiv.org/abs/2609.20061v1",
+      "tags": [
+        "cs.DS",
+        "network-optimization",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.20061",
+      "arxiv_id": "2609.20061v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.19967",
+      "title": "Integrality gap preserving reductions",
+      "authors": [
+        "Koppány István Encz",
+        "Monaldo Mastrolilli",
+        "Eleonora Vercesi"
+      ],
+      "abstract": "We propose a framework for the systematic study of integrality gaps of combinatorial optimization problems with respect to a fixed linear programming formulation. The method, called \\emph{integrality gap preserving reduction}, consists of iteratively shrinking the input universe of the problem while guaranteeing that gap-maximizing instances remain selected. When the subset of remaining instances becomes specific enough, we calculate the integrality gap explicitly.   Besides applying integrality gap preserving reductions to three well-known optimization problems via their standard linear programming formulations (weighted vertex cover problem, multiple knapsack problem, and unrelated machine scheduling problem), we analyse the restricted assignment problem via its configuration LP relaxation. We prove that the integrality gap is equal to $1$ for three ``easy'' subclasses of the problem that are either solvable in polynomial time or admit a PTAS (e.g., the all-one processing time case). For some remaining cases, we improve the current lower bound using our technique.",
+      "date": "2026-09-17",
+      "source": "arXiv",
+      "source_detail": "cs.DM",
+      "url": "http://arxiv.org/abs/2609.19967v1",
+      "tags": [
+        "cs.DM",
+        "linear-programming",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.19967",
+      "arxiv_id": "2609.19967v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.19642",
+      "title": "Improving Sample Efficiency in Peptide-HLA Binding Prediction with Hybrid Quantum-Classical Neural Networks",
+      "authors": [
+        "Chenyan Jia",
+        "Cong Guo",
+        "Siyue Chen",
+        "Pengpeng Ye",
+        "Xiaochun Chen"
+      ],
+      "abstract": "Peptide-HLA binding prediction is a critical step in neoantigen identification for personalized cancer immunotherapy and holds significant clinical value. However, the training data available for many HLA alleles are extremely limited, which severely constrains the performance of conventional methods on this task. Parameterized quantum circuits are hypothesized to induce inductive biases beneficial for learning from small datasets, yet their application to biological sequence prediction remains underexplored. To address this, we propose a hybrid quantum-classical neural network (HQNN) specifically designed for peptide-HLA binding prediction. HQNN integrates multi-source biological feature encoding with parallel quantum feature extractors and a quantum-enhanced classifier. On two HLA alleles (A*02:01 and B*07:02), HQNN outperforms a parameter-matched classical CNN baseline across all training sizes, with the performance gap widening as training data decreases. Ablation studies confirm the respective contributions of the quantum feature extraction module and the quantum classifier. In noise-aware simulations, performance degrades only mildly, and such degradation is reasonable and acceptable under realistic quantum hardware noise levels. These results suggest that hybrid quantum-classical architectures can provide practical sample-efficiency gains for immunoinformatics tasks in low-data regimes.",
+      "date": "2026-09-17",
+      "source": "arXiv",
+      "source_detail": "quant-ph",
+      "url": "http://arxiv.org/abs/2609.19642v1",
+      "tags": [
+        "quant-ph",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.19642",
+      "arxiv_id": "2609.19642v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.20765",
+      "title": "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
+      "authors": [
+        "Tariq Abdul-Quddoos",
+        "Xiangfang Li",
+        "Lijun Qian"
+      ],
+      "abstract": "Radio Frequency(RF)-Fingerprinting is a spectrum monitoring technique that identifies specific transmitters based on hardware impairments imprinted within the emitted signal. Although widely researched, studies almost exclusively consider scenarios where only one transmitter is emitting at a time, limiting real world applicability. In this work, we further the study of RF-Fingerprinting by considering co-channel interference, with multiple emitted signals interfering with each other, overlapping in time and frequency. Specifically, we formulate this problem as a multi-label classification problem and employ a 1D convolutional neural network (CNN). Furthermore, the models are calibrated such that the confidence thresholds for the label probabilities are derived, with guarantees on the upper bound on the average number of False Negatives, providing a degree of confidence in not missing a true spectrum policy violation. The proposed method is validated using real world data from the POWDER 5G testbed on devices transmitting 802.11a(Wi-Fi), 4G LTE, and 5G NR waveforms. The results show accuracy as high as 97% and as low as 73% after calibration depending on channel conditions. Also calibrating for various average false negatives upper bounds achieves micro recall scores of approximately (1 - calibrated false negatives) with the calibration robust to out-of-distribution interference, demonstrating the potential of the proposed method in a realistic high contention wireless environment",
+      "date": "2026-09-17",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.20765v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.20765",
+      "arxiv_id": "2609.20765v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.20677",
+      "title": "RISC-V and machine learning: a survey",
+      "authors": [
+        "Shriman Keshri",
+        "Apparna Singh",
+        "Chinmaya Kumar Palo",
+        "Shreya Adya",
+        "Subhankar Mishra"
+      ],
+      "abstract": "The intersection of open-source processor architectures and machine learning is driving the demand for customizable, efficient, and accessible hardware. This survey examines the state of the RISC-V ISA in machine learning applications, analyzing current capabilities, challenges, and future directions based on recent research. The analysis covers academic and commercial implementations, software frameworks, and real-world applications. The RISC-V machine learning ecosystem is evaluated, from instruction set extensions and core implementations to compiler optimizations and deployment strategies. Key contributions include a unified taxonomy of RISC-V ML implementations, a comparative analysis of performance and design trade-offs, an evaluation of software toolchain maturity, and the identification of emerging trends in instruction set extensions and specialized accelerators. Findings reveal progress in energy efficiency, specialized instruction development, and framework integration, while highlighting challenges in standardization, verification complexity, and ecosystem fragmentation. The analysis proposes four research directions to address current limitations: specialized neural processing extensions, adaptive and modular processor architectures, security frameworks, and energy-efficient multi-domain architectures. These directions provide a roadmap for advancing RISC-V as a foundational platform for next-generation machine learning systems.",
+      "date": "2026-09-17",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.20677v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11227-026-08463-z",
+      "arxiv_id": "2609.20677v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.20578",
+      "title": "NS3Learn: Transferring 5G NR Mode-2 Reception Realism from ns-3 to the Veins/SUMO Stack for Connected-Vehicle Safety Assessment",
+      "authors": [
+        "Rasheed Bello",
+        "Arthur Mukwaya",
+        "Gurcan Comert",
+        "Varghese Vaidyan",
+        "Vijay Bendigeri",
+        "Anthony Dontoh",
+        "Jagruti Sahoo",
+        "Judith Mwakalonge"
+      ],
+      "abstract": "Connected-vehicle safety evaluations rely on coupled traffic and network simulations, but standard channel models ignore radio resource competition in 5G NR sidelink Mode-2, reporting unrealistically high message delivery in dense traffic. This study introduces resource-competition losses without requiring full protocol reimplementation. We labeled 10.5 million reception outcomes from ns-3 5G-LENA traces (calibrated on 3GPP scenarios and driven by SUMO trajectories) to fit NS3Learn - a closed-form model capturing half-duplex loss, scheduling collisions, receiver capture, and decoding. Evaluation spanned two signalized urban networks, six penetration levels (1-100%), and five random seeds per condition. NS3Learn achieved a mean absolute deviation of 0.06 in per-instant delivery compared to ns-3 5G-LENA, outperforming alternative models (0.44 and 0.55 deviation). Fitted parameters transferred to a distinct intersection with only 20% additional error. Crucially, using realistic communication models reversed simulated traffic speed trends and more than doubled predicted hard-braking events. The framework transfers reception realism between simulators via model distillation instead of full reimplementation. Every stage maps directly to an explicit physical mechanism. Researchers and transportation agencies can maintain existing simulation pipelines while accurately accounting for dense-traffic packet loss and denial-of-service impacts. Adapting to new radio configurations requires only offline refitting rather than code modification.",
+      "date": "2026-09-17",
+      "source": "arXiv",
+      "source_detail": "cs.NI",
+      "url": "http://arxiv.org/abs/2609.20578v1",
+      "tags": [
+        "cs.NI",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.20578",
+      "arxiv_id": "2609.20578v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 14
+  }
+}
