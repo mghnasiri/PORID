@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T12:12:58.231801+00:00",
+  "generated_at": "2026-09-19T11:54:19.095262+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1839,
+      "github_stars": 1841,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 118,
+      "github_open_issues": 115,
       "github_recent_prs": [
+        "HFactor: portable vectorized pre-inversion and branchless substitutio…",
         "Non stop initial sweep",
         "Now identifying the active costs for an LP solution using the effective costs after all free column singletons have been substituted (possibly recursively)",
         "Fix initial sweep interrupt",
-        "Test 3295",
-        "Perf/unit diagonal pivots"
+        "Test 3295"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14063,
+      "github_stars": 14071,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 122,
+      "github_open_issues": 123,
       "github_recent_prs": [
+        "remove pywrapcp and pywraprouting",
         "build(deps): bump the pip group across 1 directory with 11 updates",
         "cmake: cleanup",
         "export from google3 (bazel, tool, routing variable_transit)",
-        "Fix ccall for Julia v1.13",
-        "[bazel] manage flags globally"
+        "Fix ccall for Julia v1.13"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -666,13 +666,13 @@
         }
       ],
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_open_issues": 167,
+      "github_open_issues": 170,
       "github_recent_prs": [
+        "Keep the postprocessed solution when the final resolve does not finish (2.10)",
+        "Keep the postprocessed solution when the final resolve does not finish",
         "fix: use the solver's objective sense when a MIP start sets the cutoff",
         "Update Homebrew installation instructions for Cbc",
-        "Mistaken PR",
-        "Update windows-ci for action update for Node.js 24 to set up msvc for stable",
-        "Update windows-ci for action update for Node.js 24 to set up msvc"
+        "Mistaken PR"
       ]
     },
     {
@@ -1134,11 +1134,11 @@
       "github_stars": 6338,
       "github_open_issues": 185,
       "github_recent_prs": [
+        "Allow configuring support-function value solves at construction",
         "Document Windows build tools workaround for source install",
         "Fix HiGHS reporting a solution when a limit is reached before any solution exists",
         "Add Moreau solver reuse, warm starts, and native duals; remove commercial classification",
-        "Bump pypa/cibuildwheel from 4.2.0 to 4.2.1",
-        "Bump github/codeql-action/upload-sarif from 4.37.8 to 4.38.0"
+        "Bump pypa/cibuildwheel from 4.2.0 to 4.2.1"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "In this release, we have focused a lot on the service module and accompanying documentation.\r\nBut we have also fixed several important bugs and if you look very closely, you will find out that Neighbo",
-      "github_stars": 1789,
-      "github_open_issues": 107,
+      "github_stars": 1788,
+      "github_open_issues": 108,
       "github_recent_prs": [
+        "fix: update every element unassigned in the same shadow variable pass",
         "perf: fixed graph update once",
         "docs: add draft for maps service",
         "fix: revapi check should include all reference types",
-        "ci: standardize JDK usage",
-        "chore: add a marker interface to identify precompute streams"
+        "ci: standardize JDK usage"
       ]
     },
     {
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2526,
+      "github_stars": 2528,
       "github_open_issues": 393,
       "github_recent_prs": [
         "contrib.solver GAMS: pass logfile to GAMS",
