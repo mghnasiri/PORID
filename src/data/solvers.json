@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T11:54:19.095262+00:00",
+  "generated_at": "2026-09-20T12:12:56.653534+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1841,
+      "github_stars": 1845,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 115,
+      "github_open_issues": 120,
       "github_recent_prs": [
+        "Use the thread-safe aliases in the kZeroObjSingletonContinuousCol undo case",
         "HFactor: portable vectorized pre-inversion and branchless substitutio…",
         "Non stop initial sweep",
         "Now identifying the active costs for an LP solution using the effective costs after all free column singletons have been substituted (possibly recursively)",
-        "Fix initial sweep interrupt",
-        "Test 3295"
+        "Fix initial sweep interrupt"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 655,
+      "github_stars": 656,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14071,
+      "github_stars": 14075,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -1085,8 +1085,8 @@
       "vendor": "Stanford University",
       "website": "https://www.cvxpy.org",
       "docs_url": "https://www.cvxpy.org/tutorial/index.html",
-      "current_version": "1.9.2",
-      "release_date": "2026-08-08",
+      "current_version": "1.9.3",
+      "release_date": "2026-09-19",
       "license_type": "open-source",
       "license_spdx": "Apache-2.0",
       "open_source": true,
@@ -1130,9 +1130,9 @@
         "convex",
         "python"
       ],
-      "recent_changes": "# CVXPY 1.9.2\n\nThis patch release contains bug fixes and follow-up improvements for CVXPY 1.9.\n\n## Summary\n\nThis new release totaled 34 PRs from 7 contributors.\n\n- @ghackebeil | #3363\n- @govindchari |",
-      "github_stars": 6338,
-      "github_open_issues": 185,
+      "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
+      "github_stars": 6339,
+      "github_open_issues": 184,
       "github_recent_prs": [
         "Allow configuring support-function value solves at construction",
         "Document Windows build tools workaround for source install",
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed issue where Ipopt exceptions could not been caught from other libraries on macOS with clang when Ipopt or the other library was build with `-fvisibility=hidden`.\r\n- Call `MPI_Init()` with NULL",
-      "github_stars": 1784,
+      "github_stars": 1785,
       "github_open_issues": 11,
       "github_recent_prs": [
         "remove unnecessary include of iostream; avoid using namespace std",
@@ -1319,7 +1319,7 @@
         "metaheuristic"
       ],
       "recent_changes": "In this release, we have focused a lot on the service module and accompanying documentation.\r\nBut we have also fixed several important bugs and if you look very closely, you will find out that Neighbo",
-      "github_stars": 1788,
+      "github_stars": 1789,
       "github_open_issues": 108,
       "github_recent_prs": [
         "fix: update every element unassigned in the same shadow variable pass",
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2528,
+      "github_stars": 2527,
       "github_open_issues": 393,
       "github_recent_prs": [
         "contrib.solver GAMS: pass logfile to GAMS",
@@ -1449,7 +1449,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.31.2\n\n[Diff since v1.31.1](https://github.com/jump-dev/JuMP.jl/compare/v1.31.1...v1.31.2)\n\n\n**Merged pull requests:**\n- Fix formatting for latest JuliaFormatter version (#4208) (@odow)\n- Fi",
-      "github_stars": 2474,
+      "github_stars": 2475,
       "github_open_issues": 13,
       "github_recent_prs": [
         "Remove _isfinite",
