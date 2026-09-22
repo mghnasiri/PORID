@@ -1,0 +1,425 @@
+{
+  "date": "2026-09-22",
+  "generated_at": "2026-09-22T12:32:26.937508+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2609.24741",
+      "title": "An Exact Junction-Tree Extended Formulation for Optimal Classification Trees",
+      "authors": [
+        "Jiancheng TU",
+        " WenqiFan"
+      ],
+      "abstract": "We develop an exact linear programming (LP) formulation for bounded-depth classification trees with binary features, using a junction-tree representation. The formulation is integral and supports recursive subtree optimization. Exact reductions make the model smaller while preserving the optimal value and recovery of an optimal tree. The reduced model supports two solution methods: column generation and message passing. Column generation solves integral restricted LPs and uses bounds over the full feasible domain to certify optimality. Message passing recursively combines optimal subtree costs. Both methods solve common subtree problems that, once the preceding tree decisions are fixed, can be evaluated independently and in parallel. Computational experiments show that the exact reductions substantially reduce the size of the junction-tree formulation. The resulting linear programming formulation certifies instances for which the tested mixed-integer formulation does not establish optimality within the same computational budget, while the column-generation and message-passing methods certify more instances and achieve an order-of-magnitude reduction in geometric-mean runtime relative to an existing state-of-the-art exact method for optimal classification trees.",
+      "date": "2026-09-21",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.24741v1",
+      "tags": [
+        "cs.LG",
+        "linear-programming",
+        "integer-programming",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.24741",
+      "arxiv_id": "2609.24741v1",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2609.24480",
+      "title": "Fathom-Vaidya: Advancing Medical Reasoning with Rubric-Based Rewards",
+      "authors": [
+        "Kalash Shah",
+        "Kunal Singh",
+        "Snehan J",
+        "Shreyas Singh"
+      ],
+      "abstract": "Deploying Large Language Models (LLMs) in healthcare requires robust performance across two complementary dimensions - diagnostic reasoning: the convergent, evidence-driven task of inferring a patient's condition from clinical data to produce a diagnosis, and clinical healthcare reasoning: the broader, navigational judgment required to communicate, plan, and adapt across multi-turn clinical interactions where a single correct answer may not exist. Recent benchmarks such as HealthBench and MedXpertQA reveal persistent weaknesses in both areas, exposing failures in complex diagnostic scenarios and limitations in contextual, patient-centered dialogue. We introduce a sequential training framework that targets these facets using synthetic data and rubric-based reinforcement learning. First, we improve diagnostic reasoning using MedBullets-derived questions with rule- and rubric-guided Reinforcement Learning (RL). We then shift to clinical reasoning by generating 5.3k synthetic multi-turn scenarios, each paired with multi-dimensional rubrics to comprehensively assess the response. This approach yields over 10% improvement on MedXpertQA, and our 30B model achieves 50.1% accuracy on HealthBench-Hard, surpassing proprietary baselines including GPT-5 (thinking). Our results show that targeted synthetic datasets and rubric-based training can systematically improve both diagnostic and interactive clinical reasoning in medical LLMs.",
+      "date": "2026-09-21",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2609.24480v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.24480",
+      "arxiv_id": "2609.24480v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261489979",
+      "title": "When small costs make big impacts: Vertical contracts with menu costs",
+      "authors": [
+        "Dong, C.",
+        "Li, X.",
+        "Shi, X."
+      ],
+      "abstract": "Retailers incur price-adjustment costs called menu costs when changing the prices of their products over time. These products are often sourced from upstream suppliers, who endogenously determine wholesale prices, which have cascading effects on retail prices. In this paper, we consider the pricing strategies of supply chain members in the presence of menu costs. Our analysis suggests that even a minuscule menu cost can substantially affect pricing strategies and the equilibrium outcome. Upstream manufacturers always benefit from a menu cost whereas downstream retailers benefit from only a moderate menu cost and are hurt by both high and low menu costs. Meanwhile, menu costs always alleviate the issue of double marginalization, thereby improving supply chain profits, consumer surplus, and social welfare. This study provides channel members with guidance on how to set prices in the presence of menu costs. It also recommends retailers to optimally maintain a moderate menu cost.",
+      "date": "2026-09-22",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261489979",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261489979",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-nav.70092",
+      "title": "Batch Scheduling on Parallel Machines With Submodular Costs",
+      "authors": [
+        "Sun, T.",
+        "Agnetis, A.",
+        "Detti, P.",
+        "Wang, J."
+      ],
+      "abstract": "ABSTRACT\n                  This paper is motivated by the characteristics in the quenching and tempering process of steel workpieces, where the batch processing time is increasing and exhibits diminishing marginal returns. We model the batch processing time using submodular functions and study batch scheduling problems on identical parallel machines with bounded machine capacity. When the batch processing time is characterized by a submodular function, we provide a counterexample for the single‐machine problem, showing that the full batch strategy is not always optimal. We then focus on the parallel‐machine problem, where we establish the worst‐case performance ratio of the full‐batch longest processing time (FBLPT) algorithm and present a corresponding tight instance. When the batch processing time is characterized by a value‐monotone submodular function, we establish the worst‐case performance ratio of Algorithm FBLPT and provide a tight instance, and further design a modified version of this algorithm and analyze its performance. Finally, when the batch processing time is characterized by a nondecreasing concave function of the total processing time of the jobs in a batch, we design the longest processing time first‐full batch‐batch moving algorithm. We then analyze its worst‐case performance ratios for both unbounded and bounded machine capacity cases, where the result for the unbounded case serves as a theoretical foundation for the analysis of the bounded case. The effectiveness of the proposed algorithms is verified through computational experiments.",
+      "date": "2026-09-22",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70092",
+      "tags": [
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70092",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261492947",
+      "title": "EXPRESS: Launching “what” versus “when”: Pacing successive new product releases",
+      "authors": [
+        "Pangburn, M.",
+        "Stavrulaki, E."
+      ],
+      "abstract": "We consider a monopolist that over time offers its customers new versions of an evolving product. Given uncertainty in the rate of product development over time, we consider the alternatives of planning new-product releases based on time intervals versus development increments, i.e., performance targets. These policy regimes are referred to in the literature as event pacing versus time pacing. With uncertainty and strategic consumers, we prove that the time paced regime optimally engenders a faster rate of product releases, yielding both strictly higher revenues for the seller and surplus for consumers. The revenue gains from time paced releases stem from two drivers that we refer to as innovation option-value and duration risk. The former reflects that, unlike event pacing which releases upon reaching development goals, time pacing continues R&amp;D over its planned time interval, yielding potential upside development increments across release epochs. Time pacing's duration-risk benefit is that it allows consumers to accurately assess the decision of whether to purchase a given release, knowing not only the quality of the product but also the timeframe before it will be superseded. Event paced releases, in contrast, benefit the seller in managing cost risk. That cost-risk benefit stems from not committing to launch potentially costly releases during times with lackluster development improvements. We show that this benefit of event pacing results in higher profits when fixed or variable costs are high. We also show that a dynamic hybrid policy that can switch between the two release regimes generates only small gains, given the underlying regimes' already-strong performance when costs are either low or high. We also analyze a generalized setting with new-customer arrivals with heterogeneity in outside options, as well as customer attrition over time. We prove that when serving heterogeneous consumers, the firm's release pacing and pricing optimally accommodate “version skipping” by consumers, over a wide range of heterogeneity levels. Collectively, our findings provide a theoretical basis for contrasting the time versus event paced release regimes for multi-generational products and explain the prevalence of these strategies in practice.",
+      "date": "2026-09-21",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261492947",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261492947",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2609.24750",
+      "title": "Reinforcement Learning in Operational Research: A Technical Review and Practical Roadmap",
+      "authors": [
+        "Yahan Lu",
+        "Dongyang Xia",
+        "Nursen Aydin",
+        "Shadi Sharif Azadeh"
+      ],
+      "abstract": "The growing demand for real-time, data-driven decision-making in complex and dynamic systems is placing increasing pressure on traditional Operational Research (OR) methodologies. Reinforcement learning (RL) has emerged as a complementary approach, offering strong learning and computational capabilities for sequential decision-making in dynamic and uncertain environments. Recent research shows an increasing interest in integrating RL with OR to address dynamic decision-making problems, enhance heuristic and exact methods for combinatorial optimization, and support the development of digital replicas of operational systems. The overarching goal across these efforts is to leverage the learning capabilities of RL to strengthen traditional OR algorithms, improving solution quality, computational efficiency, and robustness. Given the diversity of integration approaches and application settings, there is a clear need for a systematic and technically detailed review of how RL empowers OR methods. To address this gap, this paper presents a structured review of three key roles that RL plays in empowering OR: (i) solving sequential decision-making problems in dynamic environments, (ii) serving as an end-to-end solution method or as a component integrated within heuristic and exact OR methods for combinatorial optimization problems, and (iii) facilitating extended reality analysis through integration with digital twin systems. We critically synthesize recent advances across these roles, highlighting their advantages, implementation requirements, limitations, and challenges. Finally, based on these insights, we outline a roadmap for future research to further advance the methodological and practical integration of RL and OR.",
+      "date": "2026-09-21",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.24750v1",
+      "tags": [
+        "math.OC",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.24750",
+      "arxiv_id": "2609.24750v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.24593",
+      "title": "Polyhedral Methods for Cooperative Games: Small Lifts and Hard Faces",
+      "authors": [
+        "Hans Raj Tiwary",
+        "Michel Grabisch"
+      ],
+      "abstract": "We study the computational complexity of fundamental algorithmic problems -- membership testing, separation, valid-inequality testing, and linear optimization -- over polytopes and cones arising from cooperative games (also known as pseudo-Boolean functions). A central obstacle in the study of such problems is that a general cooperative game on $n$ players requires $2^n$ values, so the input size is $2^n$ for a game with $n$ players, making these computational tasks theoretically trivial. Restricting to $k$-additive games reduces the input size to $O(n^k)$, making such games a natural target for meaningful questions about the existence of efficient algorithms.   On the positive side, we give an explicit extended formulation of size $O(n^k)$ for the core of $k$-additive $k$-monotone games, allowing all four problems to be solved by a single polynomial-size linear program -- in particular, circumventing the ellipsoid method that is needed when building from earlier tractability results of Deng and Papadimitriou, or of Edmonds. For the cone of $k$-additive $(k{-}1)$-monotone games, we give a complete characterization of its extreme rays and derive the same $O(n^k)$ bound on extension complexity, yielding a geometry-based proof and generalization of a result of Billionnet and Minoux.   On the negative side, we show that for $l \\leq k-2$ the cone of $k$-additive $l$-monotone games is computationally intractable: membership testing is not in NP (unless NP\\,=\\,coNP), valid-inequality testing is NP-complete, and extension complexity is at least $1.5^n$. Our hardness results yield, as a special case, a result of Crama and of Gallo and Simone. Furthermore, our hardness results also explain the lack of any good characterization of the extreme rays of the cone of $k$-additive $(k{-}2)$-monotone games.",
+      "date": "2026-09-21",
+      "source": "arXiv",
+      "source_detail": "cs.GT",
+      "url": "http://arxiv.org/abs/2609.24593v1",
+      "tags": [
+        "cs.GT",
+        "linear-programming",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.24593",
+      "arxiv_id": "2609.24593v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.24185",
+      "title": "General Leader-Follower Linear-Quadratic Stochastic Graphon Games with Indefinite Control Weights",
+      "authors": [
+        "Weijia Chen",
+        "Jingtao Shi"
+      ],
+      "abstract": "This paper studies general leader-follower linear-quadratic stochastic graphon games with indefinite control weights. The model consists of one leader and a continuum of followers, where the followers interact through graphon aggregate terms and are coupled with the leader through their dynamics and cost functionals. Compared with existing related models, the state equations considered here allow more general diffusion terms, including diffusion coefficients depending on the states, controls, leader variables, and graphon aggregate terms. Using the stochastic maximum principle, we characterize the followers' Nash response and the leader's optimal control through coupled forward-backward stochastic systems with graphon aggregate terms. Under suitable Riccati solvability and convexity conditions, we construct a Stackelberg-Nash equilibrium for the limiting graphon game. We further design decentralized strategies for the associated finite-player network game and prove that they form an approximate Stackelberg-Nash equilibrium, which yields a propagation of chaos result. The framework covers, as special cases, indefinite linear-quadratic stochastic graphon games, Stackelberg mean field games, and stochastic graphon games with random effects.",
+      "date": "2026-09-21",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.24185v1",
+      "tags": [
+        "math.OC",
+        "constraint-programming",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.24185",
+      "arxiv_id": "2609.24185v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.24942",
+      "title": "Exactness at Inference: A Representational Criterion for Out-of-Distribution Generalization",
+      "authors": [
+        "Filipe Marinho Rocha",
+        "Inês Dutra",
+        "Vítor Santos Costa",
+        "Luís Paulo Reis"
+      ],
+      "abstract": "A model generalizes outside its training distribution only when it computes a representation structurally equivalent to the generating mechanism, not an approximation fitted to it. Such equivalence is necessary for exactness in and out of distribution, and extrapolation is governed by this exactness at inference, whatever its realization. Tensor Logic shows this: a zero-temperature contraction is equivalent to discrete logic, deducing in place with no artefact extracted, its tensors Boolean, its embeddings orthonormal, only its arithmetic continuous. Lacking infinite recursion it reaches Datalog, not Prolog, and though exact over closed domains it needs external memory to bind a novel entity. The criterion needs neither a discrete representation nor an extracted expression, and constrains inference, not training: an exact marginal in $[0,1]$ passes, a Neural Network thresholded to a hard label does not. Logic Tensor Networks fail it, while differentiable ILP and Tensor Logic at $T=0$ pass. Piecewise-affine extrapolation divergence and an inability to bind novel entities are two faces of a shortfall in exact representability. For hybrid architectures, a propagation rule follows: the output inherits the bounds of every fitted estimator on its path, explaining which axes fail in equivariant models and the ARC-AGI induction/transduction split. Only an exact hypothesis class certifies what the training data leave underdetermined: on a law-derived partition it finds the $56.3\\%$ of distant queries that are answerable, which ensembles meet with false confidence and distance metrics rank backwards. Common inductive biases, from symmetries to memory, reach exactness only because humans inject them, an argument for inducing exact representations rather than fitting surrogates whose residuals, even at the arithmetic floor in training, diverge outside the data and compound under composition.",
+      "date": "2026-09-21",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.24942v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.24942",
+      "arxiv_id": "2609.24942v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2609.24814",
+      "title": "Mobile Imaging Solutions for Medical Diagnosis: Trends and Applications",
+      "authors": [
+        "Syed Muhammad Ibne Zulfiker",
+        "Tanzima Hashem",
+        "Fariha Tabassum Islam",
+        "Md Sultanul Arifin",
+        "Khandker Aftarul Islam",
+        "Nishat Anjum Bristy",
+        "Faria Huq",
+        "Priyeta Saha",
+        "Syeda Nahida Akter",
+        "Arpita Saha"
+      ],
+      "abstract": "Advances in processing power, camera technologies, and mobile image analysis have made smartphones and other mobile devices, such as laptops, increasingly suitable for medical diagnosis and healthcare applications. Researchers have developed low-cost solutions for the early detection and monitoring of various health conditions, including eye and ENT diseases, malnutrition, heart rate variability, skin and oral conditions, and injuries, using images captured by non-medical devices such as smartphones and webcams. This survey examines existing research on mobile image-based medical diagnosis, with an emphasis on its potential to enable low-cost and accessible healthcare. We comparatively analyze state-of-the-art solutions across different healthcare application categories, examining their advantages and limitations. Based on this analysis, we identify desirable characteristics of mobile image-based diagnostic tools and highlight areas where existing approaches have made progress as well as areas requiring further research. We also discuss application-specific and common challenges and outline directions for future research. Overall, this study provides a comprehensive overview of mobile image-based healthcare solutions and their potential to support low-cost disease diagnosis and monitoring, particularly for underserved populations in remote and resource-constrained settings.",
+      "date": "2026-09-21",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2609.24814v1",
+      "tags": [
+        "cs.CV",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.24814",
+      "arxiv_id": "2609.24814v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2608359",
+      "title": "NSF Award: AF: Small: Towards New Relaxations for Online Algorithms",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "New York University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2608359",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-12-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "We all are regularly asked to make decisions in the face of uncertainty: we decide how best to drive to work or how and at what prices to buy and sell things (everything from houses to groceries). And our computers make such choices as well to give good performance to their users: which order to process tasks q to maximize the throughput or minimize user delay, or which pages to keep in fast memory (because they will be accessed again soon) and which others moved to slower memory. These question",
+      "funding_amount": "$249,899",
+      "pi": "Anupam Gupta",
+      "program": "Algorithmic Foundations",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-06-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 4,
+    "conferences": 0,
+    "opportunities": 4,
+    "total": 14
+  }
+}
