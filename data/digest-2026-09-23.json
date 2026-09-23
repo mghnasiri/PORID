@@ -1,0 +1,321 @@
+{
+  "date": "2026-09-23",
+  "generated_at": "2026-09-23T12:43:01.192541+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1177-10591478261489979",
+      "title": "When small costs make big impacts: Vertical contracts with menu costs",
+      "authors": [
+        "Dong, C.",
+        "Li, X.",
+        "Shi, X."
+      ],
+      "abstract": "Retailers incur price-adjustment costs called menu costs when changing the prices of their products over time. These products are often sourced from upstream suppliers, who endogenously determine wholesale prices, which have cascading effects on retail prices. In this paper, we consider the pricing strategies of supply chain members in the presence of menu costs. Our analysis suggests that even a minuscule menu cost can substantially affect pricing strategies and the equilibrium outcome. Upstream manufacturers always benefit from a menu cost whereas downstream retailers benefit from only a moderate menu cost and are hurt by both high and low menu costs. Meanwhile, menu costs always alleviate the issue of double marginalization, thereby improving supply chain profits, consumer surplus, and social welfare. This study provides channel members with guidance on how to set prices in the presence of menu costs. It also recommends retailers to optimally maintain a moderate menu cost.",
+      "date": "2026-09-22",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261489979",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261489979",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-nav.70092",
+      "title": "Batch Scheduling on Parallel Machines With Submodular Costs",
+      "authors": [
+        "Sun, T.",
+        "Agnetis, A.",
+        "Detti, P.",
+        "Wang, J."
+      ],
+      "abstract": "ABSTRACT\n                  This paper is motivated by the characteristics in the quenching and tempering process of steel workpieces, where the batch processing time is increasing and exhibits diminishing marginal returns. We model the batch processing time using submodular functions and study batch scheduling problems on identical parallel machines with bounded machine capacity. When the batch processing time is characterized by a submodular function, we provide a counterexample for the single‐machine problem, showing that the full batch strategy is not always optimal. We then focus on the parallel‐machine problem, where we establish the worst‐case performance ratio of the full‐batch longest processing time (FBLPT) algorithm and present a corresponding tight instance. When the batch processing time is characterized by a value‐monotone submodular function, we establish the worst‐case performance ratio of Algorithm FBLPT and provide a tight instance, and further design a modified version of this algorithm and analyze its performance. Finally, when the batch processing time is characterized by a nondecreasing concave function of the total processing time of the jobs in a batch, we design the longest processing time first‐full batch‐batch moving algorithm. We then analyze its worst‐case performance ratios for both unbounded and bounded machine capacity cases, where the result for the unbounded case serves as a theoretical foundation for the analysis of the bounded case. The effectiveness of the proposed algorithms is verified through computational experiments.",
+      "date": "2026-09-22",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70092",
+      "tags": [
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70092",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-net.70077",
+      "title": "Maximum Number of Requests on a Path With a Given Grooming Factor",
+      "authors": [
+        "Bermond, J.",
+        "Cosnard, M.",
+        "Coudert, D.",
+        "Perennes, S."
+      ],
+      "abstract": "ABSTRACT\n                  We give an optimal solution to the Maximum All Request Path Grooming (MARPG) problem motivated by a traffic grooming application and by its interest in computing lower bounds on the cutwidth of a graph. We are given a directed path on  vertices and a positive integer capacity  (grooming factor). The MARPG problem consists of determining a maximum‐cardinality set of pairwise‐different simple sub‐dipaths (requests) subject to the constraint that each arc is contained in at most  of these dipaths. This problem can be solved in polynomial time using a reduction to a minimum cost flow problem in a directed graph. In this paper, we fully characterize the set of requests of an optimal solution to the MARPG problem and show how to compute in constant time its cardinality . Furthermore, we fix an unfortunate error in the formula of  that appears in the preliminary conference version of this paper. We first show that the solution obtained by greedily taking the requests of the smallest size (length) is not always optimal, disproving a claim from previous work. We then characterize optimal solutions and show that they are obtained by a different greedy algorithm based on a weight order. We characterize the so‐called “anomalies” which roughly correspond to the set of requests belonging to an optimal solution but not to the smallest‐size greedy algorithm. Then, we establish a formula returning in constant time the value of the number of anomalies and therefore the exact cardinality of  of an optimal solution to the MARPG problem. Finally, we establish upper bounds on the number of anomalies, in particular, the general one that the number of anomalies is at most . These bounds have been used to get new lower bounds on the cutwidth of a graph.",
+      "date": "2026-09-22",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70077",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70077",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.26017",
+      "title": "Sample-Based Prophet Inequalities for Random Walks",
+      "authors": [
+        "Pieter Kleer",
+        "Johan van Leeuwaarden",
+        "Daan Noordenbos"
+      ],
+      "abstract": "We study prophet inequalities for a random walk reward stopping problem with sample-based information. The goal is to stop as close as possible to the maximum of a random walk with i.i.d. increments, measuring performance by the ratio between the expected reward when stopping and the expected true maximum. We consider a sample-based model in which the increment distribution is unknown and the decision maker has access to $K$ independent sample paths of the reward process.   For the infinite-horizon setting, we establish a sharp prophet inequality with constant $(K/(K+1))^{K+1}$. The guarantee is attained by a randomised stopping rule based on the ladder height decomposition of random walks. As $K\\to\\infty$, this recovers the classical $1/e$ prophet inequality from the full-information setting. For the finite-horizon setting, where the process terminates after $n$ steps, we first prove a tight no-information prophet inequality with constant $1/H_n$, where $H_n$ is the $n$-th harmonic number. For $K\\ge1$ samples, we show that a prophet constant of $1/4$ is attainable. Finally, we prove that, with $K$ samples, the prophet constant is at most $(K/(K+1))^{K+1}+(6+6H_K)/H_n$ for $n\\ge 2K^2$, implying convergence to the infinite-horizon constant as $n\\to\\infty$.   Our approach combines random walk theory, including ladder heights and Spitzer's identity, with linear programming duality. Our results contribute to random walk stopping theory and to sample-based prophet inequalities for correlated rewards, an area that remains largely unexplored. To the best of our knowledge, our tight sample-based prophet inequalities are the first whose performance is parameterised exactly, rather than only up to constants, by the number of available samples.",
+      "date": "2026-09-22",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.26017v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.26017",
+      "arxiv_id": "2609.26017v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.26474",
+      "title": "PP-Net: A Hybrid Physical-Prior Neural Network for Scattered Light Removal in Biomedical Images on Embedded Devices",
+      "authors": [
+        "Yongfei Guo",
+        "Tingjin Chu",
+        "Mengzhuo Liu",
+        "Hongwei Lou",
+        "Yuanhao Gong"
+      ],
+      "abstract": "Scattered light is common in biomedical images, yet its removal remains challenging. The difficulty arises from three aspects: first, aligned scattered-light-free biomedical ground truth is often unavailable; second, scattering is coupled with weak illumination and sensor-induced noise; and third, many learning-based restoration models are computationally expensive for embedded devices in Internet of Medical Things (IoMT) scenarios. To address these issues, this paper proposes PP-Net, a hybrid physical-prior neural network for biomedical scattered light removal. The proposed method consists of three components: DFN-Net suppresses sensor-induced noise, ASAP estimates the scattering map and recovers a physics-based prior map, and GF-Net refines the prior map by fusing it with the denoised observation. To reduce the dependence on paired biomedical ground truth, a progressive synthetic training and cross-domain transfer strategy is developed. Experiments show that the physical-prior branch improves the peak signal-to-noise ratio (PSNR) by up to 1.26 dB on paired synthetic benchmarks. Under joint noise-and-scattering degradation, PP-Net improves PSNR by more than 10.8 dB and the structural similarity index measure (SSIM) by more than 0.62 compared with representative baseline methods. On real W2S biomedical images, the proposed method reduces the average Natural Image Quality Evaluator (NIQE) score by 43.3\\%. Edge deployment with RKNN conversion and INT8 quantization achieves an average inference latency of approximately 200 ms per $512\\times512$ image over 360 test images. These results demonstrate that PP-Net provides an effective and deployable solution for microscopic imaging, endoscopic inspection, and edge-assisted biomedical analysis in IoMT scenarios.",
+      "date": "2026-09-22",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2609.26474v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.26474",
+      "arxiv_id": "2609.26474v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.26426",
+      "title": "DeepFEAv2: Deep Learning for Transient Finite Element Analysis Beyond Structured Meshes",
+      "authors": [
+        "Georgios Triantafyllou",
+        "Panagiotis G. Kalozoumis",
+        "Dimitris K. Iakovidis"
+      ],
+      "abstract": "Finite Element Analysis (FEA) is widely used for transient mechanical simulations, but its high computational cost limits real-time and high-resolution applications. Deep learning surrogate models can reduce this cost; however, many existing approaches are restricted to steady-state prediction or cannot jointly predict Node- and Element-based Outputs (NEO) over time. The state-of-the-art DeepFEA framework has addressed these issues but remains limited to structured finite element (FE) meshes. To overcome this limitation, this study proposes DeepFEAv2, a deep learning surrogate framework that enables prediction of transient FEA simulations across different FE mesh topologies and element types. The main contributions of DeepFEAv2 are: (a) a module that uses the FE connectivity matrix to organize input features by element and arrange them into an input sequence guided by the mesh topology; (b) a novel neural network architecture designed to process the input sequence and jointly predict NEO over time; and (c) a FEA-informed optimization strategy for regularizing these NEO predictions. DeepFEAv2 was evaluated on structured and unstructured 3D linear elastic datasets, as well as on a pressure-driven aortic valve dataset. DeepFEAv2 achieved R^2 values up to 0.99 and normalized errors as low as 0.38%. Compared with DeepFEA, it achieved up to 38.0% relative increase in R^2 and up to 87.1% reduction in normalized error. DeepFEAv2 also performed inference up to three orders of magnitude faster than traditional FEA. These results demonstrate that DeepFEAv2 can efficiently model transient FEA simulations across increasingly complex FE settings, providing a scalable surrogate framework for transient FEA.",
+      "date": "2026-09-22",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.26426v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.26426",
+      "arxiv_id": "2609.26426v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.26707",
+      "title": "Optimal Sequential Annotations for Off-Policy Evaluation",
+      "authors": [
+        "Woojin Chae",
+        "Ezinne Nwankwo",
+        "Haitong Qin",
+        "Angela Zhou"
+      ],
+      "abstract": "Offline reinforcement learning and off-policy evaluation evaluates dynamic treatment rules based on retrospectively collected data prior to deployment. In recent AI applications, state and reward information is recorded as complex text or image, which recent AI advancements such as LLM-as-a-judge can label with unknown bias. Expert annotation may be available but at a higher cost. For example, safety classification via cheap but imperfect classifiers vs. expensive expert review. We show how a limited budget for ground-truth data-annotation can be used via doubly-robust OPE with missing rewards, and we optimize variance-optimal annotation probabilities for sequential off-policy evaluation, where the target policy value is estimated from annotated data. We characterize the optimal annotation probabilities for sequential forward-monotone annotation protocols, and provide a feasible batch-adaptive implementation. Our work is motivated by a collaboration with a homelessness services nonprofit that writes casenotes for individuals over time. Our method can be used to unlock trustworthy inference from casenote data and answer new inferential questions such as: how does expanding outreach effort over time affect progress towards a housing application and improvement in housing placement? In simulations and on two real datasets - casenotes from the nonprofit and human-preference votes from LMArena - we see reductions in RMSE of 34-65% for housing placement and 17-68% for progress towards a housing application at budgets of 40% of full annotation and above, and by 55-62% at every budget on LMArena.",
+      "date": "2026-09-22",
+      "source": "arXiv",
+      "source_detail": "stat.ME",
+      "url": "http://arxiv.org/abs/2609.26707v1",
+      "tags": [
+        "stat.ME",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.26707",
+      "arxiv_id": "2609.26707v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.26652",
+      "title": "Context-Adaptive Thresholding for Conditionally Representative Monitoring and Classification",
+      "authors": [
+        "Ansgar Steland"
+      ],
+      "abstract": "Commonly, classifiers and monitoring procedures are trained from labeled data by optimizing an objective such as the misclassification rate. This may lead to unrepresentative conditional distributions of the outcome (the labels) given important external variables, different from the conditional laws in the population. We show how to modify any given threshold-type classifier resp. monitoring rule to achieve representative conditional label prediction by using adapting the threshold to a covariate $Z$ (the context) to distribute sensitivity while maintaining the false alarm rate. In case that the alarm event is unknown, this approach also allows to (approximately) infer the event in terms of a thresholding rule. The approach is implemented by a computationally cheap nonparametric estimation procedure, and its properties are studied in terms of nonasymptotic error bounds and asymptotic distribution theory including empirical process theory. These results allow to construct uniform confidence bands, functional hypothesis tests and change-detection procedures. For the well known FICOS credit scoring example, often used in interpretable machine learning, threshold adaptation leads to an easily interpretable decision rule which can compete with state of the art methods including transformers, in terms of common classification metrics.",
+      "date": "2026-09-22",
+      "source": "arXiv",
+      "source_detail": "math.ST",
+      "url": "http://arxiv.org/abs/2609.26652v1",
+      "tags": [
+        "math.ST",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.26652",
+      "arxiv_id": "2609.26652v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.26667",
+      "title": "MAGIC: Mixed-Granularity Agent Graphs via Incremental Construction with Dense-Reward Reinforcement Learning",
+      "authors": [
+        "Kairui Yang",
+        "Ziheng Yi",
+        "Xunkai Li",
+        "Minghao An",
+        "Zhanke Liu",
+        "Zekai Chen",
+        "Rong-Hua Li"
+      ],
+      "abstract": "Collaboration topology shapes both the performance and execution cost of LLM-based multi-agent systems. Because tasks differ in complexity and required capabilities, recent approaches generate task-specific collaboration graphs that specify agent participation and information flow. However, representative topology generators use either individual agents or predefined groups throughout an organization, overlooking differing collaboration needs across subtasks. Our key insight is to select granularity locally for each functional role, combining fine-grained control with reusable collaboration patterns within one organization. Learning such organizations requires exploring a combinatorial construction space with limited intermediate feedback from final-answer rewards. Therefore, we propose MAGIC, a dense-reward reinforcement learning framework for mixed-granularity graph generation. Specifically, MAGIC constructs a mixed-granularity agent graph by sequentially selecting a functional role, instantiating it as a single agent or reusable group, and connecting it to existing units. We directly optimize the construction policy using returns from trajectories sampled under the current policy and use potential-based reward shaping to provide intermediate feedback from probe-based utility and structural signals while preserving the cumulative task reward. MAGIC outperforms state-of-the-art baselines across eight benchmarks and demonstrates strong inference efficiency in our efficiency study.",
+      "date": "2026-09-22",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.26667v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.26667",
+      "arxiv_id": "2609.26667v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.26402",
+      "title": "OMatG-flash: An All-Atom Flow Map with Reinforce Adjoint Matching for Scalable Materials Discovery",
+      "authors": [
+        "Thomas Egg",
+        "Harry Winston Sullivan",
+        "Ellad B. Tadmor",
+        "Stefano Martiniani"
+      ],
+      "abstract": "The discovery of novel inorganic materials drives technological breakthroughs in critical fields such as computing and energy storage. Generative AI has promised to accelerate the materials discovery pipeline, but state-of-the-art flow and diffusion models remain bottlenecked by the cost of proposing candidate materials. To address this, we introduce OMatG-flash, an all-atom flow map for inorganic crystal structure prediction (CSP) and de novo generation (DNG). OMatG-flash is a Pareto-optimal inference engine for materials, sampling candidate materials with an order of magnitude fewer inference steps and less wall-clock time than existing flow and diffusion models while demonstrating benchmark performance on par with the state-of-the-art. To enable post-training fine-tuning we apply Reinforce Adjoint Matching to flow maps, further improving match rates and RMSE on the unconditional CSP task. OMatG-flash showcases the potential of flow maps to accelerate generation of high-quality candidate inorganic materials and demonstrates a step forward in sample throughput necessary for data-hungry materials discovery workflows.",
+      "date": "2026-09-22",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.26402v1",
+      "tags": [
+        "cs.LG",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.26402",
+      "arxiv_id": "2609.26402v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 2,
+    "conferences": 0,
+    "opportunities": 2,
+    "total": 12
+  }
+}

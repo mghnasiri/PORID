@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T12:32:26.551232+00:00",
+  "generated_at": "2026-09-23T12:43:00.948001+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1846,
+      "github_stars": 1847,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 116,
+      "github_open_issues": 113,
       "github_recent_prs": [
+        "Clique table through presolve",
+        "Option `use_implied_bounds_from_presolve` is now redundant",
         "Feasibility jump: fix #3302 and #3303",
         "Remove `removeSlacks`",
-        "Remove `presolve_time_limit_`",
-        "Use the thread-safe aliases in the kZeroObjSingletonContinuousCol undo case",
-        "HFactor: portable vectorized pre-inversion and branchless substitutio…"
+        "Remove `presolve_time_limit_`"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14082,
+      "github_stars": 14088,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 123,
+      "github_open_issues": 124,
       "github_recent_prs": [
-        "Mizux/dev",
+        "util: rework fp utils",
+        "Streamline compilation flags",
+        "cmake: Rework java sample (used to test mvn package)",
         "Xpress: Fix empty bound check",
-        "export from google3",
-        "tools/docker: fix ubuntu-26.04 dotnet test",
-        "Remove two contrib Java classes because of BSD 3 Clause licence."
+        "export from google3"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,8 +1131,8 @@
         "python"
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
-      "github_stars": 6344,
-      "github_open_issues": 182,
+      "github_stars": 6345,
+      "github_open_issues": 181,
       "github_recent_prs": [
         "Bump github/codeql-action/upload-sarif from 4.37.8 to 4.38.1",
         "Allow configuring support-function value solves at construction",
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed issue where Ipopt exceptions could not been caught from other libraries on macOS with clang when Ipopt or the other library was build with `-fvisibility=hidden`.\r\n- Call `MPI_Init()` with NULL",
-      "github_stars": 1786,
+      "github_stars": 1787,
       "github_open_issues": 11,
       "github_recent_prs": [
         "remove unnecessary include of iostream; avoid using namespace std",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "In this release, we have focused a lot on the service module and accompanying documentation.\r\nBut we have also fixed several important bugs and if you look very closely, you will find out that Neighbo",
-      "github_stars": 1790,
-      "github_open_issues": 108,
+      "github_stars": 1791,
+      "github_open_issues": 109,
       "github_recent_prs": [
-        "feat: solver console",
-        "perf: less PositionInList allocations",
-        "deps: upgrade to JAXB2 plugin 4.2.0",
-        "deps: upgrade to latest OpenRewrite",
-        "deps: bump the patch group with 5 updates"
+        "docs: [docs-drift] document service run options (create_profile_set_custom_seed)",
+        "docs: [docs-drift] feat-729 indictment score analysis",
+        "docs: [docs-drift] Document feat/seed RunConfiguration options",
+        "docs: [docs-drift] feat/729: document score analysis indictments",
+        "fix: polish map service API"
       ]
     },
     {
@@ -1384,14 +1384,14 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2530,
-      "github_open_issues": 393,
+      "github_stars": 2532,
+      "github_open_issues": 394,
       "github_recent_prs": [
+        "Update PyROS Uncertainty Set Implementations",
         "contrib.solver GAMS: pass logfile to GAMS",
         "Fix GDPopt LBB solver error handling",
         "GDP: simple disjunction reverse-polar enumeration cuts",
-        "Fixing bug in piecewise/factorable with math domain and range error, plus named expressions",
-        "MindtPy: maintain a valid dual bound in each iteration when no-good c…"
+        "Fixing bug in piecewise/factorable with math domain and range error, plus named expressions"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1449,7 +1449,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.31.2\n\n[Diff since v1.31.1](https://github.com/jump-dev/JuMP.jl/compare/v1.31.1...v1.31.2)\n\n\n**Merged pull requests:**\n- Fix formatting for latest JuliaFormatter version (#4208) (@odow)\n- Fi",
-      "github_stars": 2476,
+      "github_stars": 2477,
       "github_open_issues": 13,
       "github_recent_prs": [
         "Allow compilation with JuliaC",
