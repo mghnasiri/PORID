@@ -1,0 +1,379 @@
+{
+  "date": "2026-09-24",
+  "generated_at": "2026-09-24T12:41:48.317809+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2609.27664",
+      "title": "Evolutionary Stability Does Not Guarantee Learning Accessibility: A Multi-Agent Reinforcement Learning Perspective on Cooperation Emergence",
+      "authors": [
+        "Yijie Wang"
+      ],
+      "abstract": "Cooperation emergence is a central problem in multi-agent systems because decentralized agents must coordinate while adapting to the changing behavior of others. Evolutionary game theory identifies strategically stable outcomes, but stability under a population adjustment dynamic need not imply that finite-sample learning agents can reach the same outcome through local reward feedback.   We study this distinction in a transparent three-agent governance-motivated game involving a government, a platform firm, and users. We derive replicator dynamics for the fixed stage-game incentives, evaluate the cooperative evolutionary basin on a symmetric initial-condition grid, and compare it with learning-basin estimates for three decentralized value-based learners. The learning analysis uses independent Q-learning with $\\varepsilon$-greedy action selection, scaled Boltzmann exploration, and SA--EA BQL under the same payoff environment and outcome criterion.   The evolutionary basin has volume $V_E=1.00$ on the sampled grid. The empirical learning basin is $0.88$ for $\\varepsilon$-IQL and $0.00$ for both scaled Boltzmann and SA--EA BQL. Diagnostic traces show that broader action diversity and nonzero value separation can coexist with failure to sustain the cooperative joint action in this fixed configuration.   These results indicate that evolutionary stability and learning accessibility are distinct properties of a coupled game--learning system. The shared-bike setting is a motivating application; the broader contribution is a framework for comparing population-level stability with the finite-sample accessibility of cooperation under specified multi-agent learning dynamics.",
+      "date": "2026-09-23",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2609.27664v1",
+      "tags": [
+        "cs.AI",
+        "metaheuristics",
+        "ml-for-or",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.27664",
+      "arxiv_id": "2609.27664v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.28263",
+      "title": "Resource-Adaptive Stochastic Gradient Descent for Online Linear Programming without Re-solving",
+      "authors": [
+        "Jiameng Lyu"
+      ],
+      "abstract": "The growth of large language model (LLM) inference and search services increases the scale of online linear programming problems, motivating computationally efficient algorithms. We develop resource-adaptive stochastic gradient descent (RASGD) for stochastic online linear programming. The algorithm uses one request and current inventory to update resource prices, requiring O(m) operations for m resources and memory per arrival and no LP or sample-average optimization. The central idea is to express the current-resource pricing logic of re-solving through a first-order SGD update: each arrival refreshes the remaining-inventory allowance in the dual objective, while the stepsize decreases for early learning and increases later to match the speed of inventory adjustment. Under standard non-degeneracy conditions, our algorithm is feasible on every sample path and achieves O(\\log T) expected regret against the realized fractional hindsight optimum, which matches the lower bound, even for policies that know the distribution and have unrestricted computation. The analysis converts curvature around the fixed reference price into inventory stability without tracking optimal prices at changing resource levels. Numerical experiments show that RASGD achieves regret competitive with per-arrival LP re-solving and improves upon the tested first-order baselines, while retaining the computational efficiency of first-order methods. These results establish RASGD as a computationally efficient approach to achieving high allocation quality in large-scale OLP.",
+      "date": "2026-09-23",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.28263v1",
+      "tags": [
+        "cs.LG",
+        "linear-programming",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.28263",
+      "arxiv_id": "2609.28263v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2609.27495",
+      "title": "A New Upper Bound for the Turán Density of the Tetrahedron",
+      "authors": [
+        "Gyeongwon Jeong",
+        "Seonghun Park",
+        "Seonghyuk Im",
+        "Joonkyung Lee",
+        "Hongseok Yang"
+      ],
+      "abstract": "We prove that the Turán density of the tetrahedron $K_4^{(3)}$ satisfies $π(K_4^{(3)}) \\le 312372062889819/560000000000000 < 0.557808$, improving Baber's upper bound of $0.5615$ and closing about $62\\%$ of the gap to the conjectured value $5/9$. The proof uses an exact seven-vertex flag-algebra certificate incorporating degree-stationarity from Razborov's differential method. To find the certificate, we combine the established techniques of cutting planes and column generation to optimize jointly over flag families whose types have at most five vertices. We give a complete formal proof of this Turán density bound in Lean 4.",
+      "date": "2026-09-23",
+      "source": "arXiv",
+      "source_detail": "math.CO",
+      "url": "http://arxiv.org/abs/2609.27495v1",
+      "tags": [
+        "math.CO",
+        "integer-programming",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.27495",
+      "arxiv_id": "2609.27495v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.27229",
+      "title": "Data-Assimilation-Assisted Reinforcement Learning for Power Grid Control under Load Uncertainty",
+      "authors": [
+        "Ruoyu Hu",
+        "Feng Bao",
+        "Zezhong Zhang",
+        "Yanzhao Cao",
+        "Guannan Zhang"
+      ],
+      "abstract": "Reliable power grid control requires sequential decisions under transmission constraints, time-varying demand, renewable variability, and imperfect load information. We investigate how load information quality affects control in a customized transmission network simulator inspired by Grid2Op and based on a DC power flow model. The environment includes stochastic spatial loads, temporally correlated renewable-like generation, energy storage, line protection, generator dispatch, and line reconnection. An Ensemble Score Filter (EnSF) corrects noisy load information before it is passed to the controller. A heuristic study first isolates the effect of this correction under a fixed feedback rule. Proximal policy optimization (PPO) agents are then trained for sequential generator and reconnection control, frozen, and evaluated with Forward, EnSF-corrected, and Truth load information on paired stochastic scenarios. EnSF consistently lowers load estimation error. Under heuristic control, the correction extends survival and reduces warning and overload exposure. With frozen PPO policies, it increases cumulative return and keeps performance closer to the Truth benchmark, with a larger advantage when load uncertainty is amplified beyond the nominal training distribution. In both experiments, EnSF reduces load-estimation error and improves the resulting control performance in the simplified transmission network.",
+      "date": "2026-09-23",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.27229v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.27229",
+      "arxiv_id": "2609.27229v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.28358",
+      "title": "MicroQonv: Reshaping Convolution Tensors for Efficient Microscaling in Training and Inference",
+      "authors": [
+        "Romain Facq",
+        "Sami Ben Ali",
+        "Olivier Sentieys"
+      ],
+      "abstract": "Microscaling quantization techniques are increasingly used to represent neural network parameters with 8 bits or fewer while preserving near-full precision accuracy. However, applying these methods efficiently in convolutional layers is not straightforward. A naive approach transfers full-precision weights and activations to processing units and quantizes each tensor twice, resulting in much more memory movement than expected. Additional overhead comes from the activation tensors, whose sizes grow substantially because of the im2col transformation applied before quantization. We propose MicroQonv, a way to combine microscaling with convolutional layers' forward and backward operations by quantizing each tensor only once and quantizing the activation tensor before applying a modified version of im2col: channel-batch-first im2col. MicroQonv reduces the quantization cost by a factor of $\\times2$ for weights and gradients, and by up to $\\times9$ for activations, at a negligible accuracy cost. It reduces memory movement and storage by up to $\\times7.53$ compared to their full-precision counterparts. This way, MicroQonv reduces microscaling-quantized activation memory movement by $\\times3.5$ for state-of-the-art object detection models YOLOV8nano and $\\times2.2$ for YOLOV26nano. It also enables 4-bit microscaling in a quantized latent replay strategy for continual learning at the edge, improving accuracy by +5.7% to +11%.",
+      "date": "2026-09-23",
+      "source": "arXiv",
+      "source_detail": "cs.AR",
+      "url": "http://arxiv.org/abs/2609.28358v1",
+      "tags": [
+        "cs.AR",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.28358",
+      "arxiv_id": "2609.28358v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.28322",
+      "title": "Learning the Cost of Reliable Inference",
+      "authors": [
+        "Dimitrios Rontogiannis",
+        "Ander Artola Velasco",
+        "Manuel Gomez Rodriguez"
+      ],
+      "abstract": "Benchmarking and routing platforms increasingly act as intermediaries connecting large language model providers with end-users. However, providers on these platforms typically use a fixed price per token, preventing users from achieving the most competitive price for their tasks. % workloads. In this work, we design a procurement platform where token prices for each task are driven by provider competition, enabling users to secure competitive pricing for guaranteed quality levels. To this end, the platform sequentially routes queries via a reverse second-price auction that incentivizes model providers to truthfully bid their best estimate of the average cost to serve a user's query. As it routes queries, the platform learns the quality offered by each provider and progressively routes queries to the most cost-competitive provider among those meeting a desired quality threshold. To validate our design, we conduct experiments with multiple LLMs from the \\texttt{Llama} and \\texttt{Qwen} families on popular mathematical reasoning and question-answering benchmarks. The results show that the pricing margin of the most cost-competitive provider on our platform varies significantly---from $10\\%$ to $71\\%$---depending on the task and quality threshold. This suggests a substantial inefficiency in the current fixed-price market, and it demonstrates that our platform may enable users to capture maximum savings whenever competitive market conditions permit.",
+      "date": "2026-09-23",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2609.28322v1",
+      "tags": [
+        "cs.AI",
+        "supply-chain",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.28322",
+      "arxiv_id": "2609.28322v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.28182",
+      "title": "Finite-Sample Probabilistic Safety Certification for AI-Based Grid-Edge Coordination",
+      "authors": [
+        "Yihong Zhou",
+        "Hanbin Yang",
+        "Thomas Morstyn"
+      ],
+      "abstract": "Coordinating large population of flexible grid-edge devices can alleviate the need for time-consuming and capital-intensive network upgrades, and AI-based control methods such as multi-agent reinforcement learning or imitation learning are promising in their real-time decision scalability. However, system operators still need an independent and rigorous way to decide whether a given AI system is safe enough for deployment. This paper develops a finite-sample probabilistic safety certification framework for black-box AI decision models in closed-loop grid operation. The central idea is to reduce the complete input--AI--grid evaluator workflow to a binary unsafe outcome under an operator-defined safety specification, and then use exact binomial inference to certify the corresponding unsafe operation probability. Given a set of held-out calibration scenarios, the framework returns the tightest one-sided upper certificate and an accept/reject deployment criterion that controls the probability of false safety certification. Because the certification is for the calibration distribution that may deviate from the future operation, we further combine the nominal certificate with physically interpretable sample-space adversarial attacks, a concept widely used in AI to investigate the fragility of AI models. Case studies on grid-edge flexibility coordination with 1{,}000-agent AI models (independent parameters) verify the finite-sample safety guarantee and the value of integrating adversarial attacks into a rolling-window training-certification-deployment flow.",
+      "date": "2026-09-23",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2609.28182v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.28182",
+      "arxiv_id": "2609.28182v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.28105",
+      "title": "Fed-ReMasker: Federated Tabular Imputation under Feature-Level Missingness",
+      "authors": [
+        "Ioannis Papathanail",
+        "Rooholla Poursoleymani",
+        "Lubnaa Abdur Rahman",
+        "Stavroula Georgia Mougiakakou"
+      ],
+      "abstract": "Multi-center clinical studies and biomedical research collaborations increasingly seek to utilize data across centers to build models that generalize beyond any single center. This creates two distinct challenges: data protection regulations may restrict the sharing of raw patient data across institutions, while centers may collect only partially overlapping sets of features under different protocols. Federated learning enables collaborative model training without centralizing raw data. However, existing federated imputation methods rarely evaluate feature-level missingness, in which entire features are unobserved at some centers. To address this setting, we adapt the ReMasker masked autoencoder to federated learning (Fed-ReMasker), enabling centers to impute features never observed locally by leveraging knowledge learned across collaborating centers. We evaluate Fed-ReMasker in a benchmark spanning synthetic datasets with linear and nonlinear relationships and real-world tabular datasets, including clinical data. The benchmark varies the number of centers, the missingness ratios, and client heterogeneity. Fed-ReMasker achieves the lowest imputation error in 93.2% of value-level and 96.7% of feature-level scenarios in the homogeneous benchmark. It also remains robust to client heterogeneity using simple federated averaging, outperforming all baselines in all 36 value-level scenarios and each baseline in at least 35 of 36 feature-level scenarios, and comes within 3.0% on average of a centralized model trained on the pooled data.",
+      "date": "2026-09-23",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.28105v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.28105",
+      "arxiv_id": "2609.28105v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.28085",
+      "title": "Curriculum Learning with GNN-based Reinforcement Learning for Job Shop Scheduling",
+      "authors": [
+        "Jayakrishnan K. Vasudevan",
+        "Jonathan Hoss",
+        "Noah Klarmann"
+      ],
+      "abstract": "The job shop scheduling problem is a challenging combinatorial optimization problem, and recent reinforcement learning approaches using graph neural networks have shown promise for learning scheduling policies directly from problem instances. However, training on large instances remains computationally expensive, and generalization across instance sizes remains challenging. This paper studies curriculum learning for graph neural network-based reinforcement learning in the job shop scheduling problem by comparing it with single-size training across three target sizes: 20 x 20, 25 x 25, and 30 x 30. In the curriculum setting, the policy is first trained on smaller instances and then progressively adapted to larger target sizes, allowing scheduling behavior learned in earlier stages to support learning on larger instances. Models are evaluated on unseen instances from 8 x 8 to 30 x 30 using the optimality gap, considering both generalization across all evaluation sizes and specialization on the target size. Results show that curriculum learning consistently reduces wall-clock training time, with larger benefits as the target size increases. The strongest advantage is observed at 30 x 30, where curriculum learning reduces the mean optimality gap across all evaluation sizes by approximately 8.1 percentage points, reduces the target-size mean optimality gap by approximately 8.6 percentage points, and saves approximately 50 hours of training time.",
+      "date": "2026-09-23",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.28085v1",
+      "tags": [
+        "cs.LG",
+        "scheduling",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.28085",
+      "arxiv_id": "2609.28085v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.28048",
+      "title": "TEMPS: Temporal Sentence Embeddings for Temporal Information Retrieval",
+      "authors": [
+        "Mourad Hassani",
+        "Julien Romero",
+        "Amel Bouzeghoub",
+        "Christian Jacquelinet"
+      ],
+      "abstract": "Modern information retrieval (IR) systems rarely represent time, yet many information needs depend on it: in clinical, journalistic, and legal search, when an event occurred can decide whether a document is relevant. Dense retrievers and Retrieval-Augmented Generation (RAG) pipelines match queries to documents well on topic but poorly on time, so they surface content that is on-topic yet temporally wrong. We introduce Temporal Textual Similarity (TTS), a task that measures how well two anchored texts align in time, independent of their topical similarity. We then present TEMPS (Temporal Embedding Model for Precise Search), a modular temporal branch that attaches to a frozen semantic retriever and trains on that signal. It resolves anchored temporal expressions to intervals and moment-matches each one to a Gaussian; the resulting ordering supervises an anchor-date-conditioned encoder, whose score we fuse with the semantic score at inference. Grounding supplies the supervision, so training uses no hand-labeled temporal data. The temporal score itself is the Gaussian-KL inclusion measure from distributional embeddings; what TEMPS adds is the grounding and the moment-matched supervision. On three temporal benchmarks, TEMPS improves MRR for every semantic backbone tested and, on TS- Retriever, lifts R@1 from 19.92 to 25.39 over the prior temporal state of the art.",
+      "date": "2026-09-23",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2609.28048v1",
+      "tags": [
+        "cs.CL",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.28048",
+      "arxiv_id": "2609.28048v1",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-09-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-09-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 3,
+    "conferences": 0,
+    "opportunities": 3,
+    "total": 13
+  }
+}
