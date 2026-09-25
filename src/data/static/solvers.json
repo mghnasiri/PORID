@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T12:41:47.914576+00:00",
+  "generated_at": "2026-09-25T12:42:47.562328+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1851,
+      "github_stars": 1854,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 114,
+      "github_open_issues": 117,
       "github_recent_prs": [
+        "Account for empty rows in IPX solution",
+        "Fix presolve regression",
         "For parallel row postsolve, fixed rare error in basis case, and syste…",
         "Clique table through presolve",
-        "Option `use_implied_bounds_from_presolve` is now redundant",
-        "Feasibility jump: fix #3302 and #3303",
-        "Remove `removeSlacks`"
+        "Option `use_implied_bounds_from_presolve` is now redundant"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Features\r\n--------\r\n\r\n- added command line option `-t` to specify the number of threads, which triggers concurrent solving via `SCIPsolveConcurrent()`\r\n\r\nPerformance improvements\r\n--------------------",
-      "github_open_issues": 32,
+      "github_open_issues": 33,
       "github_recent_prs": [
         "Move PaPILO header includes up to avoid boost issue on ppc64el",
         "Fix exact objective ordering in primal solution storage",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14096,
+      "github_stars": 14101,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 124,
+      "github_open_issues": 126,
       "github_recent_prs": [
-        "util: rework fp utils",
-        "Streamline compilation flags",
-        "cmake: Rework java sample (used to test mvn package)",
-        "Xpress: Fix empty bound check",
-        "export from google3"
+        "tools/release: add build_julia to build_delivery_linux",
+        "glop: fix flakiness in revised_simplex_test.cc",
+        "examples: fix cgc_test_solution on fedora",
+        "java: enable native access in pom-test.xml",
+        "fix(routing): allow dropped/unassigned nodes with vehicle dimension transit drops (#5283)"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
-      "github_stars": 6344,
+      "github_stars": 6345,
       "github_open_issues": 182,
       "github_recent_prs": [
+        "Add power cone support to SuppFunc",
+        "ENH : support tuple axes in norm() and fix N-D p=2 SOC canonicalization",
         "Warn when an optimal solution violates constraints beyond tolerance",
         "Bump github/codeql-action/upload-sarif from 4.37.8 to 4.38.1",
-        "Allow configuring support-function value solves at construction",
-        "Document Windows build tools workaround for source install",
-        "Fix HiGHS reporting a solution when a limit is reached before any solution exists"
+        "Allow configuring support-function value solves at construction"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1272,8 +1272,8 @@
       "vendor": "Timefold",
       "website": "https://timefold.ai",
       "docs_url": "https://docs.timefold.ai/",
-      "current_version": "2.6.0",
-      "release_date": "2026-09-01",
+      "current_version": "2.7.0",
+      "release_date": "2026-09-24",
       "license_type": "open-source",
       "license_spdx": "Apache-2.0",
       "open_source": true,
@@ -1318,15 +1318,15 @@
         "constraint",
         "metaheuristic"
       ],
-      "recent_changes": "In this release, we have focused a lot on the service module and accompanying documentation.\r\nBut we have also fixed several important bugs and if you look very closely, you will find out that Neighbo",
+      "recent_changes": "We've really been cooking this time! With so much goodness available in this release, an upgrade may just be worth the few seconds it will take.\r\n\r\n- **Coarse-grained moves in Neighborhoods**: With th",
       "github_stars": 1793,
-      "github_open_issues": 111,
+      "github_open_issues": 113,
       "github_recent_prs": [
+        "chore: solver service byom security improvements - refactor to not in…",
+        "perf: allow bavet score calculation to exit early if it can prove the move cannot be accepted",
+        "perf: cache the location index when the distance matrix is filled first",
         "feat: add DemoMetaData constructor without empty config list (#2652)",
-        "docs: update vehicle routing use case guide",
-        "chore: fix LS termination logging",
-        "fix: update all unassigned values when multiple were unassigned",
-        "docs: [docs-drift] document service run options (create_profile_set_custom_seed)"
+        "docs: update vehicle routing use case guide"
       ]
     },
     {
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2534,
+      "github_stars": 2536,
       "github_open_issues": 394,
       "github_recent_prs": [
         "Update PyROS Uncertainty Set Implementations",

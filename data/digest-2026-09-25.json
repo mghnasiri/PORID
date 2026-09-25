@@ -1,0 +1,403 @@
+{
+  "date": "2026-09-25",
+  "generated_at": "2026-09-25T12:42:47.985278+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2609.29404",
+      "title": "Unit commitment constrained Nash equilibrium in power markets",
+      "authors": [
+        "Trine Krogh Boomsma",
+        "Mel T. Devine",
+        "Miguel F. Anjos"
+      ],
+      "abstract": "Equilibrium modeling for power markets usually assumes convexity of each players' optimization problem. Although the importance of accounting for fixed generation costs and start-up costs, minimum generation levels and/or minimum up-time and down-time restrictions in production scheduling is widely acknowledged, such modeling does not allow for discrete decisions. This paper considers unit commitment constrained Nash equilibria. First, we derive novel optimality conditions tailored for the mixed-integer convex programming problem of joint unit commitment and economic dispatch of a self-scheduling profit-maximizing producer. Next, we use these to formulate a Nash equilibrium as a mixed-integer complementarity problem, which facilitates the development of a procedure to obtain multiple equilibria. The approach can be adapted to both perfectly and imperfectly competitive market settings. While an equilibrium may not always exist, we give sufficient conditions under which a Cournot-Nash equilibrium can be obtained by mixed-integer convex programming under the standard assumption of an affine inverse demand curve and convex generating costs, and use this to establish existence. A case study demonstrates the feasibility of using optimisation to obtain a Cournot-Nash equilibrium for unit commitment constrained market clearing. Our results confirm that ignoring unit commitment creates significant welfare losses, although these vary substantially across equilibria.",
+      "date": "2026-09-24",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.29404v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "scheduling",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.29404",
+      "arxiv_id": "2609.29404v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.30147",
+      "title": "GRASP: Generating, Revising, and Assessing for Strategic Planning with Agentic AI",
+      "authors": [
+        "Arunabh Srivastava",
+        "Mohammad A.",
+        " Khojastepour",
+        "Srimat Chakradhar",
+        "Sennur Ulukus"
+      ],
+      "abstract": "Large Language Models (LLMs) typically exhibit a performance profile where reliability degrades as task complexity increases. We address the challenge of generating high-quality natural language executable plans for complex tasks by introducing $\\textbf{GRASP}$, a strategy-aware, multi-stage planning framework. GRASP decouples the planning pipeline across specialized, context-isolated modules: it pre-compiles global macro-guidelines (GenPlan), explores alternative localized strategies within isolated context windows (RevPlan), and independently evaluates trajectories using a multi-criteria discriminator (VerPlan). Empirical evaluations show that GRASP consistently establishes a new state-of-the-art frontier across diverse datasets, yielding substantial accuracy gains over direct LLM planners on Natural Plan Calendar Scheduling ($\\sim$12.4$\\%$$\\uparrow$), ZebraLogic ($\\sim$30.8$\\%$$\\uparrow$), and SciBench Math. Crucially, under multi-task scaling-where standard planners suffer immediate performance collapse-GRASP completely flattens the multi-task degradation penalty. In interleaved dual-task environments, GRASP achieves an absolute accuracy gain of up to 16.7$\\%$ over direct LLM planners. Furthermore, by isolating context and enforcing strict macro-regularization, GRASP outperforms frontier reasoning models (such as GPT-5-mini) by a margin of 14.5$\\%$.",
+      "date": "2026-09-24",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2609.30147v1",
+      "tags": [
+        "cs.AI",
+        "metaheuristics",
+        "scheduling",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.30147",
+      "arxiv_id": "2609.30147v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.29412",
+      "title": "System Strength-Constrained Scheduling with Switchable Grid-Forming and Grid-Following Generation Resources",
+      "authors": [
+        "Jiaxin Wang",
+        "Fei Teng",
+        "Huanhai Xin",
+        "Jing Dai",
+        "Tomislav Capuder",
+        "Ning Zhang"
+      ],
+      "abstract": "Inverter-based resources (IBRs) are increasingly dominating modern power systems, posing significant challenges to cost-effectively maintain system strength for stability. At the same time, the operating behaviors of IBRs are software-defined, including both their steady-state power outputs and control modes, e.g. grid-forming (GFM) and grid-following (GFL). Such flexibility has not been fully explored to efficiently operate future power systems. This paper develops a novel framework that simultaneously optimizes IBR operating behaviors and ensures adequate system strength. A comprehensive solution is provided to integrate system strength constraints into scheduling models, despite their inherent strong non-convexities. We derive a rigorous linear-matrix-inequality (LMI) reformulation of the system strength constraint, effectively addressing non-explicit formulations and dimension variation issues caused by GFM/GFL mode switching of IBRs. Then, we equivalently convert the original non-convex implicit system strength-constrained scheduling problem into an explicit mixed-integer semi-definite programming (MISDP) problem by incorporating the reformulated system strength constraint along with other operational constraints. We further provide a Rayleigh Cut method, which is compatible with standard mixed-integer linear programming (MILP) solvers, to solve this system strength-constrained scheduling problem. Case studies on a modified IEEE 118-bus system and a practical Jiangsu power system demonstrate the performance of the proposed methods.",
+      "date": "2026-09-24",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2609.29412v1",
+      "tags": [
+        "eess.SY",
+        "linear-programming",
+        "integer-programming",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.29412",
+      "arxiv_id": "2609.29412v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s11081-026-10128-y",
+      "title": "A hybrid approximation algorithm for convex multi-parametric quadratically constrained quadratic programs",
+      "authors": [
+        "Lipow, A.",
+        "Kenefake, D.",
+        "Abraham, E.",
+        "Pistikopoulos, E."
+      ],
+      "abstract": "Abstract\n                  We present a solution method for convex multi-parametric quadratically constrained quadratic programs (mpQCQPs) with a single quadratic constraint. Past contributions have either approached these problems by treating the problem as a multi-parametric nonlinear program (mpNLP) and approximating the solution, or solving the mpQCQP exactly using symbolic computations. In this article, we develop a hybrid method that builds on these contributions and attempts to preserve nonlinearity in the solution where possible, while simultaneously avoiding the need for symbolic computations. We achieve this by computing the exact multi-parametric solution in all critical regions whose active set does not include the quadratic constraint. When the active set contains the quadratic constraint, we linearize the quadratic constraint and use the linearization to approximate the multi-parametric solution. By iteratively refining the linearization, our approach is able to approximate the solution up to a user-defined tolerance. Results indicate that our method is able to obtain high-quality solutions to instances whose exact solution is currently intractable.",
+      "date": "2026-09-24",
+      "source": "Optimization and Engineering",
+      "source_detail": "Optimization and Engineering",
+      "url": "https://doi.org/10.1007/s11081-026-10128-y",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11081-026-10128-y",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1002-net.70073",
+      "title": "Shelters and Multiple Shots in a Hunters and Rabbit Game",
+      "authors": [
+        "Bang‐Jensen, J.",
+        "Ben‐Ameur, W.",
+        "Maddaloni, A."
+      ],
+      "abstract": "ABSTRACT\n                  This paper studies the number of capture attempts required in several generalizations of the hunters and rabbit game played on a digraph , where the rabbit is given additional opportunities to escape. We consider three variants. In the first, some vertices act as shelters where shots have no effect, while the rabbit cannot remain within the set of shelters for more than  consecutive time steps. In the second variant, the rabbit must be shot at least  times before it is captured. In the third variant, these  shots must be consecutive. For the shelter variant with , we show that the minimum number of shots required to capture the rabbit can be computed in polynomial time, and that the capture time is bounded by . We further prove that the case  can be reduced to the unrestricted case by means of a layered digraph construction, leading to corresponding bounds on the capture time. For the variant in which the rabbit must be shot at least  times, we prove that the minimum number of attempts equals , where  denotes the capture attempt number of the original game and that this quantity can be computed in polynomial time. We also establish a connection with the ‐disjoint ‐cuts problem, which enables the computation of optimal capture strategies under time or shot constraints. Finally, for the variant where the rabbit must be shot  consecutive times, we show that the minimum number of attempts can also be computed in polynomial time via a reduction to the shelter variant.",
+      "date": "2026-09-24",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70073",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70073",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.29977",
+      "title": "Accelerating Branch MPC with Two-Level Parallel Direct Solves on GPUs",
+      "authors": [
+        "Fenglong Song",
+        "Luyao Zhang",
+        "Liang Wu",
+        "Ján Drgoňa",
+        "Colin N. Jones"
+      ],
+      "abstract": "Branch model predictive control optimizes multiple future trajectories coupled through shared decisions, with computational demands increasing as the number of scenarios and prediction horizon grow. We present a GPU-accelerated direct linear solver for branch MPC formulations in which all trajectories share a single root decision node and evolve independently thereafter. By operating at the linear-algebra level, the solver provides a reusable backend for multiple optimization algorithms whose reduced systems have the required symmetric positive-definite structure. The solver exploits two levels of parallelism: across scenarios and along each prediction horizon. A tailored variable ordering enables horizon-parallel Cholesky factorization while preserving a single root-tail coupling block per scenario in the factor. Numerical experiments demonstrate substantial speedups over state-of-the-art sparse direct solvers, achieving factorization speedups of up to 6.0$\\times$ over cuDSS and 27.6$\\times$ over eight-thread PARDISO, with triangular solve speedups of up to 3.5$\\times$ and 15.8$\\times$, respectively.",
+      "date": "2026-09-24",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2609.29977v1",
+      "tags": [
+        "eess.SY",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.29977",
+      "arxiv_id": "2609.29977v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.29888",
+      "title": "Randomized Branch Methods with Inexact Subproblems for Bouligand Stationarity in Linear and Quadratic Programs with Complementarity Constraints",
+      "authors": [
+        "Ziyin Hu",
+        "Xin Liu",
+        "Shangzhi Zeng",
+        "Jin Zhang"
+      ],
+      "abstract": "We develop randomized branch methods for finding Bouligand-stationary (B-stationary) points of linear and quadratic programs with complementarity constraints (LPCCs and QPCCs) using only linear programming subproblems. The methods exploit the finite-union geometry of the feasible set and search for first-order descent on randomly selected compatible branches. For LPCCs, an exact method optimizes over sampled branches, while an inexact simplex method can accept an improving branch-feasible vertex before solving the sampled penalty problem to optimality. For QPCCs, including problems with indefinite quadratic objectives, branch quadratic programs are replaced by linearized trust-region subproblems; a ratio test ensures actual decrease, and thresholded sampling detects branches that emerge only at accumulation points. Under the stated assumptions, the LPCC methods stabilize after finitely many changes at B-stationary points almost surely. For the QPCC method, finite termination yields a B-stationary point, and every accumulation point of an infinite run is B-stationary almost surely. Experiments on bilevel-induced instances, instances arising from inverse quadratic programming, and sparse affine generalized Nash equilibrium instances, together with 129 MacMPEC embedding tests, show that the methods return points with competitive objective quality and runtimes on large-scale complementarity systems.",
+      "date": "2026-09-24",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.29888v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.29888",
+      "arxiv_id": "2609.29888v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.29790",
+      "title": "Budget-Constrained Graph Augmentation for Robust Network Design via Kirchhoff Index Minimization",
+      "authors": [
+        "Omkar Bhoite",
+        "V Sateeshkrishna Dhuli",
+        "Stefan Werner",
+        "Kimmo Kansanen"
+      ],
+      "abstract": "Enhancing the robustness of deployed networks against failures and disruptions is critical for reliable operation. This requires deciding which new links to install and how strongly to weight them under limited resources. We study this problem through the Kirchhoff index, or total effective resistance, a spectral measure of global connectivity. The resulting augmentation problem couples discrete candidate-edge selection with continuous weight allocation under heterogeneous per-unit deployment costs, a total budget, and an exact-cardinality constraint. For a fixed weighted base graph, this yields a mixed-integer formulation and a semidefinite relaxation whose optimum lower-bounds the mixed-integer optimum. We cast the relaxation as a cone program and solve it numerically using a homogeneous self-dual embedding and first-order operator splitting. Feasible discrete designs are recovered through rounding-and-repair procedures and assessed by \\emph{a posteriori} gap estimates relative to the numerical semidefinite program (SDP) benchmark. As a scalable alternative, we develop an exact-$k$, budget-feasible greedy heuristic built on rank-one Laplacian updates and biharmonic-distance caching, and interpret its progress through a Bellman value-to-go benchmark with a conservative spectral lower bound on the local policy ratio. Experiments on synthetic and real infrastructure networks across graph sizes, budgets, weight distributions, and cost regimes show that, under fixed budgets, distance-proportional costs limit the achievable resistance reduction and shift installed conductance toward shorter links relative to uniform per-unit costs.",
+      "date": "2026-09-24",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.29790v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "network-optimization"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.29790",
+      "arxiv_id": "2609.29790v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.30205",
+      "title": "A Living Benchmark for Information Retrieval from Electronic Health Records",
+      "authors": [
+        "Jordan L. Cahoon",
+        "Chloe O. Stanwyck",
+        "Sulaiman Somani",
+        "Philip Chung",
+        "Kevin R Keet",
+        "Kameron C. Black",
+        "Andrea T. Fisher",
+        "Sarita Khemani",
+        "Jerry Liu",
+        "Stephen Ma",
+        "Saloni K. Maharaj",
+        "Rita M. Pandya",
+        "Eduardo Perez-Guerrero",
+        "Priyanka Pillai",
+        "Lisa Shieh",
+        "David J. H. Wu",
+        "James Xie",
+        "James C. McAvoy",
+        "Teresa Nguyen",
+        "Jessica Tran",
+        "Lucy Yin",
+        "Bridget Lin",
+        "Alison Callahan",
+        "Jason A. Fries",
+        "Nigam H. Shah",
+        "Emily Alsentzer"
+      ],
+      "abstract": "Large language model (LLM)-based clinical assistants are increasingly being integrated into electronic health record (EHR) systems, transforming how clinicians retrieve and synthesize information from patient records. Their safety and utility depend on rigorous evaluation, yet existing benchmarks are manually curated, costly to update, and rapidly become obsolete with evolving technological advancements. We present a scalable framework that automatically generates question--answer pairs from longitudinal EHR notes. Nineteen clinicians validate the benchmark generator, producing the Benchmark for Retrieving Information in EHRs (BRIE), a continuously maintainable evaluation dataset. Across nine LLMs and five inference strategies, state-of-the-art systems frequently omit clinically important information, particularly for questions requiring synthesis across multiple documents and encounters. Because the generator itself is validated, BRIE supports evaluations that static benchmarks cannot, including the generation of multiple answers that reflect variation in clinician reasoning for robust performance assessment and continuously refreshing benchmark content to guard against leakage. Our results demonstrate that scalable benchmark generation enables rigorous, up-to-date evaluation of clinical LLMs as they are deployed in rapidly evolving healthcare settings.",
+      "date": "2026-09-24",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2609.30205v1",
+      "tags": [
+        "cs.AI",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.30205",
+      "arxiv_id": "2609.30205v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.30079",
+      "title": "Reachability-Based Formal Verification of Graph Neural Networks with Node and Edge Features",
+      "authors": [
+        "Anne M. Tumlin",
+        "Ben Wooding",
+        "Zhenxuan Shao",
+        "Diego Manzanas Lopez",
+        "Tyler Derr",
+        "Taylor T. Johnson"
+      ],
+      "abstract": "Graph neural networks (GNNs) have become a prominent approach for developing fast, topology-aware surrogates in electric power systems, supporting tasks such as power flow (PF) analysis, optimal power flow (OPF) estimation, and cascading failure analysis (CFA). Despite this growing use, formally verifying GNN-based models remains challenging, with existing methods limited in scope. We extend the neural network verification (NNV) framework to graph-structured inputs through GraphStar sets, a generalization of Star sets that captures uncertainty over both node and edge features. This extension enables the propagation of linear message-passing operations and the sound approximation of ReLU nonlinearities for GNN architectures, including graph convolutional network (GCN) and graph isomorphism network with edge features (GINE) layers. We evaluate GNNV across three power system tasks, PF, OPF, and CFA, on the IEEE-24, IEEE-39, and IEEE-118 test cases, as well as two standard graph classification benchmarks, ENZYMES and PROTEINS. Our results show that GNNV provides tighter robustness guarantees than CORA on graph classification models with ReLU-based activations and, for the first time, delivers edge-aware robustness guarantees for GINE-based PF and OPF models under joint node and edge perturbations.",
+      "date": "2026-09-24",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.30079v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1007/978-3-032-32357-6_13",
+      "arxiv_id": "2609.30079v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-09-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-09-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 3,
+    "conferences": 0,
+    "opportunities": 3,
+    "total": 13
+  }
+}
