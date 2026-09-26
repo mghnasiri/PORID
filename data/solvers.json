@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T12:42:47.562328+00:00",
+  "generated_at": "2026-09-26T12:17:22.654082+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1854,
+      "github_stars": 1858,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 117,
+      "github_open_issues": 121,
       "github_recent_prs": [
+        "Fixed primal dual postsolve bug for sparsify",
+        "Extend HiGHS solution file definition to accommodate a partial solution",
+        "Make sure upgraded bounds from VB are integer for int cols",
         "Account for empty rows in IPX solution",
-        "Fix presolve regression",
-        "For parallel row postsolve, fixed rare error in basis case, and syste…",
-        "Clique table through presolve",
-        "Option `use_implied_bounds_from_presolve` is now redundant"
+        "Fix presolve regression"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14101,
+      "github_stars": 14106,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 126,
+      "github_open_issues": 127,
       "github_recent_prs": [
+        "routing: Fix bug for dimensions with multiple unary transit evaluator…",
         "tools/release: add build_julia to build_delivery_linux",
         "glop: fix flakiness in revised_simplex_test.cc",
         "examples: fix cgc_test_solution on fedora",
-        "java: enable native access in pom-test.xml",
-        "fix(routing): allow dropped/unassigned nodes with vehicle dimension transit drops (#5283)"
+        "java: enable native access in pom-test.xml"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,7 +1131,7 @@
         "python"
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
-      "github_stars": 6345,
+      "github_stars": 6346,
       "github_open_issues": 182,
       "github_recent_prs": [
         "Add power cone support to SuppFunc",
@@ -1319,7 +1319,7 @@
         "metaheuristic"
       ],
       "recent_changes": "We've really been cooking this time! With so much goodness available in this release, an upgrade may just be worth the few seconds it will take.\r\n\r\n- **Coarse-grained moves in Neighborhoods**: With th",
-      "github_stars": 1793,
+      "github_stars": 1794,
       "github_open_issues": 113,
       "github_recent_prs": [
         "chore: solver service byom security improvements - refactor to not in…",
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2536,
+      "github_stars": 2537,
       "github_open_issues": 394,
       "github_recent_prs": [
         "Update PyROS Uncertainty Set Implementations",
@@ -1449,10 +1449,10 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.31.2\n\n[Diff since v1.31.1](https://github.com/jump-dev/JuMP.jl/compare/v1.31.1...v1.31.2)\n\n\n**Merged pull requests:**\n- Fix formatting for latest JuliaFormatter version (#4208) (@odow)\n- Fi",
-      "github_stars": 2477,
+      "github_stars": 2478,
       "github_open_issues": 13,
       "github_recent_prs": [
-        "Allow compilation with JuliaC",
+        "Allow compilation with --trim in JuliaC",
         "Fix querying DualObjectiveValue in test_generate_solve_QCQP",
         "Remove _isfinite",
         "Fix test_assert_is_solved_and_feasible to not depend on printing",

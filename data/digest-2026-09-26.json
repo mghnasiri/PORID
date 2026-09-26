@@ -1,0 +1,343 @@
+{
+  "date": "2026-09-26",
+  "generated_at": "2026-09-26T12:17:23.055182+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1002-net.70070",
+      "title": "Maximizing SDN Resilience to Node‐Targeted Attacks—A Game‐Theoretic Approach",
+      "authors": [
+        "Pióro, M.",
+        "Mycek, M.",
+        "Tomaszewski, A.",
+        "Junosza‐Szaniawski, K.",
+        "Nogalski, D."
+      ],
+      "abstract": "ABSTRACT\n                  This paper studies a strategic conflict between two players—a telecommunications network operator seeking to maximize network availability after an attack and an attacker seeking to minimize it—using a game‐theoretic framework. The analysis focuses on software‐defined networking (SDN), where the separation of the transport and control planes introduces a critical vulnerability: transport switches must maintain connectivity to controllers located at selected nodes in order to operate. Following an attack, switches (and any co‐located controllers) at targeted nodes are disabled together with their transport links. As a consequence, not only directly attacked switches fail, but also those that lose connectivity to operational controllers, further reducing network availability. This setting gives rise to a zero‐sum matrix game in which the operator selects controller placements while the attacker chooses attack targets, with each player unaware of the other's decision. The payoff of the game is the number of surviving switches (for the operator) and the number of disabled switches (for the attacker), and both players adopt mixed strategies, represented by optimized decision probability distributions. To compute these strategies, we develop a column‐generation optimization framework based on a primal–dual pair of non‐compact linear programming formulations. Controller placements and attack sets are generated via integer programming pricing problems. The resulting method remains computationally efficient even for large‐scale networks with a vast number of possible placement and attack combinations. The proposed approach has been implemented and tested on two representative network instances. The results demonstrate both the effectiveness of the game model and the computational efficiency and scalability of the solution method.",
+      "date": "2026-09-26",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70070",
+      "tags": [
+        "linear-programming",
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70070",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2023.03234",
+      "title": "The Power of Data: Assessing Primary Care Performance Using Routinely Collected Emergency Department Data",
+      "authors": [
+        "Savva, N.",
+        "Sülz, S.",
+        "Kinirons, M.",
+        "Sutherland, E.",
+        "Leach, R."
+      ],
+      "abstract": "This paper develops and validates an approach to assess the impact of individual primary care practices (PCPs) on demand for emergency department (ED) services. Using operational data from two geographically adjacent EDs in England, we focus on attendances for ambulatory care-sensitive (ACS) conditions, which are more appropriately and cost-effectively treated outside the ED. We employ a variance-decomposition approach that controls for observed and unobserved heterogeneity and explicitly accounts for socioeconomic differences. The analysis shows that approximately 52% of the variation in ACS attendance proportions is attributable to systematic differences across PCPs and that these differences are operationally meaningful. Using this methodology, we construct a PCP-level measure of systematic variation in ACS attendances and show that it correlates with patient feedback from National Health Service surveys, Quality and Outcomes Framework scores, and PCP staffing decisions. This measure outperforms existing metrics based on ACS admissions in identifying PCP-level variation and is robust to alternative modeling choices. The modular nature of the approach allows it to be applied to data from one or multiple hospitals, providing policymakers with a practical tool to evaluate PCP-level interventions and their downstream effects on ED demand.\n                  This paper was accepted by Carri Chan, healthcare management.\n                  Funding: The authors acknowledge financial support from the London Business School Research and Materials Development Fund and from the Erasmus School of Health Policy &amp; Management Career Development Research Fund.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2023.03234 .",
+      "date": "2026-09-25",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2023.03234",
+      "tags": [
+        "healthcare-or",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2023.03234",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07420-6",
+      "title": "Transition from a fund-based to a lifecycle-oriented EPR system: the evolution of extended producer responsibility for electrical and electronic equipment in China",
+      "authors": [
+        "Chu, T.",
+        "Govindan, K.",
+        "Zhong, Y.",
+        "Jia, W."
+      ],
+      "abstract": "Abstract\n                  The Extended Producer Responsibility (EPR) system for electrical and electronic equipment in China has evolved from a “fund-based” to a “special fund” model. To transcend conventional end-of-pipe governance, we propose an “EPR 3.0” framework that extends environmental responsibility to the consumption stage. The model centers on consumer responsibility and is operationalized through an advance disposal fee (ADF) with transfer payments, complemented by carbon taxation and subsidy mechanisms. Using a tri‑party evolutionary game model and system dynamics simulation, we identify two evolutionary stable states: a government‑led collaborative governance phase and a market‑driven circular endogenous phase. Results show that consumer preferences drive producers’ adoption of eco-design, and the policy mix of the ADF and transfer payments significantly enhances producer compliance, while consumer responsiveness to public education campaign exhibits an optimal sensitivity range. Based on the analysis of system feedback mechanisms, we further propose a four-stage evolutionary framework of EPR development (EPR 1.0–4.0), revealing the transition of the EPR system from exogenous policy-driven development to endogenous market-driven evolution. The proposed evolutionary pathway and integrated policy framework provide valuable insights for developing countries seeking to establish effective e-waste management systems.",
+      "date": "2026-09-26",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07420-6",
+      "tags": [
+        "metaheuristics"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07420-6",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-net.70074",
+      "title": "Fault‐Tolerant Mutual‐Visibility: Complexity and Solutions for Grid‐Like Networks",
+      "authors": [
+        "Cicerone, S.",
+        "Di Stefano, G.",
+        "Klavžar, S.",
+        "Zhang, G."
+      ],
+      "abstract": "ABSTRACT\n                  Networks are often modeled using graphs, and within this setting we introduce the notion of ‐fault‐tolerant mutual visibility. Informally, a set of vertices  in a graph  is a ‐fault‐tolerant mutual‐visibility set (‐ftmv set) if any two non‐adjacent vertices in  are connected by a bundle of  shortest paths such that: () each shortest path contains no other vertex of , and () these paths are internally disjoint. The cardinality of a largest ‐ftmv set is denoted by . The classical notion of mutual visibility corresponds to the case . This generalized concept is motivated by applications in communication networks, where agents located at vertices must communicate both efficiently (i.e., via shortest paths) and confidentially (i.e., without messages passing through the location of any other agent). The original notion of mutual visibility may fail in unreliable networks, where vertices or links can become unavailable. Several properties of ‐ftmv sets are established, including a natural relationship between  and , as well as a characterization of graphs for which  is large. It is shown that computing  is NP‐hard for any positive integer , whether  is fixed or not. Exact formulae for  are derived for several specific graph topologies, including grid‐like networks such as cylinders and tori, and for diameter‐two networks defined by Hamming graphs and by the direct product of complete graphs.",
+      "date": "2026-09-26",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70074",
+      "tags": [
+        "network-optimization"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70074",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-trsc.2025.0523",
+      "title": "Return of the Robots: The Truck-and-Robot Routing Problem with Robot Reuse and Reallocation",
+      "authors": [
+        "Huf, T.",
+        "Ostermeier, M."
+      ],
+      "abstract": "Retailers and logistics providers must adapt and extend their delivery systems to address the constantly increasing challenges in last-mile delivery. Reverse logistics tasks add to these challenges as about 45% of orders involve product returns. Consequently, efficient integration of delivery solutions with innovative return strategies is becoming a basic requirement for ensuring sustainable and resilient operations. Such delivery systems must enhance customer experience while mitigating delivery costs, congestion, and emissions in urban areas. This study proposes a concept that addresses key challenges in last-mile delivery using the innovative setting of collaborative truck and robot operations. The proposed concept fully leverages the collaborative system’s advantages and enables efficient handling of deliveries and return shipments. It extends existing frameworks by incorporating new features, such as robot reallocations and reuse, while also addressing practical limitations, such as limited robot depot capacities and robot return routing strategies. We formalize the arising routing problem that integrates truck and robot routing, requiring synchronization between both vehicle types while determining stop locations, visit frequencies, and robot movements. We develop a recombination-based matheuristic based on a genetic algorithm and a compact integer program for robot routing referred to as the robot routing problem with autonomous reallocation, reuse, and returns. Numerical experiments demonstrate the algorithm’s efficiency, reducing runtime by up to 93% compared with a benchmark while also improving solution quality. Furthermore, the advanced robot movements ensure feasible operations where previous concepts made simplifying assumptions. Operational costs can be reduced by up to 27% by reallocating and reusing more than half of the robots deployed. The extended and independent robot movements within the collaborative system substantially increase flexibility, constituting a promising alternative for sustainable and efficient last-mile delivery in the future.\n                  History: This paper has been accepted for the Transportation Science Special Issue on Climate-Resilient, Smart Transportation of People and Goods.\n                  Supplemental Material: The online appendix is available at https://doi.org/10.1287/trsc.2025.0523 .",
+      "date": "2026-09-25",
+      "source": "Transportation Science",
+      "source_detail": "Transportation Science",
+      "url": "https://doi.org/10.1287/trsc.2025.0523",
+      "tags": [
+        "metaheuristics",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1287/trsc.2025.0523",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1080-02331934.2026.2736664",
+      "title": "A new three-operator splitting method for the monotone inclusion problem",
+      "authors": [
+        "Wang, M.",
+        "Xia, Z.",
+        "Cai, X."
+      ],
+      "abstract": "",
+      "date": "2026-09-25",
+      "source": "Optimization",
+      "source_detail": "Optimization",
+      "url": "https://doi.org/10.1080/02331934.2026.2736664",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1080/02331934.2026.2736664",
+      "score": 40.0
+    },
+    {
+      "id": "optim-online-7b8e43720172",
+      "title": "A quadratic upper bound on the Chvátal rank of polytopes in the 0/1-cube",
+      "authors": [],
+      "abstract": "We show that every polytope $P\\subseteq[0,1]^n$, and more generally every compact convex set, has Chv\\&#8217;atal rank at most $12.22n^2+n\\log_2 n+2n+4$. This improves the $O(n^2\\log n)$ bound of Eisenbrand and Schulz and, together with the $\\Omega(n^2)$ lower bound of Rothvo{\\ss} and Sanit\\`a, shows that the maximum Chv\\&#8217;atal rank of a polytope in $[0,1]^n$ is $\\Theta(n^2)$. More ... Read more",
+      "date": "2026-09-26",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/09/a-quadratic-upper-bound-on-the-chvatal-rank-of-polytopes-in-the-0-1-cube/?utm_source=rss&utm_medium=rss&utm_campaign=a-quadratic-upper-bound-on-the-chvatal-rank-of-polytopes-in-the-0-1-cube",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1080-01605682.2026.2709008",
+      "title": "Conditional facility location problems in the rectilinear plane with piecewise polynomial demand",
+      "authors": [
+        "Byrne, T.",
+        "Kalcsics, J."
+      ],
+      "abstract": "",
+      "date": "2026-09-25",
+      "source": "Journal of the Operational Research Society",
+      "source_detail": "Journal of the Operational Research Society",
+      "url": "https://doi.org/10.1080/01605682.2026.2709008",
+      "tags": [
+        "facility-location"
+      ],
+      "type": "publication",
+      "doi": "10.1080/01605682.2026.2709008",
+      "score": 35.0
+    },
+    {
+      "id": "crossref-10.1080-01605682.2026.2729546",
+      "title": "Parallel-batch scheduling with release dates and rejection on identical parallel machines",
+      "authors": [
+        "Wu, H.",
+        "Miao, C.",
+        "Zhang, Y."
+      ],
+      "abstract": "",
+      "date": "2026-09-25",
+      "source": "Journal of the Operational Research Society",
+      "source_detail": "Journal of the Operational Research Society",
+      "url": "https://doi.org/10.1080/01605682.2026.2729546",
+      "tags": [
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.1080/01605682.2026.2729546",
+      "score": 35.0
+    },
+    {
+      "id": "crossref-10.1080-03155986.2026.2732658",
+      "title": "On greening ship recycling in a circular economy: a closed-loop supply chain optimization model",
+      "authors": [
+        "ElMenshawy, O.",
+        "Ülkü, M.",
+        "Engau, A.",
+        "Venkatadri, U."
+      ],
+      "abstract": "",
+      "date": "2026-09-25",
+      "source": "INFOR",
+      "source_detail": "INFOR",
+      "url": "https://doi.org/10.1080/03155986.2026.2732658",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1080/03155986.2026.2732658",
+      "score": 35.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-09-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-09-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 3,
+    "conferences": 0,
+    "opportunities": 3,
+    "total": 13
+  }
+}
