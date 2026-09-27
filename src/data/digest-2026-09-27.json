@@ -1,0 +1,219 @@
+{
+  "date": "2026-09-27",
+  "generated_at": "2026-09-27T13:02:51.179122+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1002-net.70070",
+      "title": "Maximizing SDN Resilience to Node‐Targeted Attacks—A Game‐Theoretic Approach",
+      "authors": [
+        "Pióro, M.",
+        "Mycek, M.",
+        "Tomaszewski, A.",
+        "Junosza‐Szaniawski, K.",
+        "Nogalski, D."
+      ],
+      "abstract": "ABSTRACT\n                  This paper studies a strategic conflict between two players—a telecommunications network operator seeking to maximize network availability after an attack and an attacker seeking to minimize it—using a game‐theoretic framework. The analysis focuses on software‐defined networking (SDN), where the separation of the transport and control planes introduces a critical vulnerability: transport switches must maintain connectivity to controllers located at selected nodes in order to operate. Following an attack, switches (and any co‐located controllers) at targeted nodes are disabled together with their transport links. As a consequence, not only directly attacked switches fail, but also those that lose connectivity to operational controllers, further reducing network availability. This setting gives rise to a zero‐sum matrix game in which the operator selects controller placements while the attacker chooses attack targets, with each player unaware of the other's decision. The payoff of the game is the number of surviving switches (for the operator) and the number of disabled switches (for the attacker), and both players adopt mixed strategies, represented by optimized decision probability distributions. To compute these strategies, we develop a column‐generation optimization framework based on a primal–dual pair of non‐compact linear programming formulations. Controller placements and attack sets are generated via integer programming pricing problems. The resulting method remains computationally efficient even for large‐scale networks with a vast number of possible placement and attack combinations. The proposed approach has been implemented and tested on two representative network instances. The results demonstrate both the effectiveness of the game model and the computational efficiency and scalability of the solution method.",
+      "date": "2026-09-26",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70070",
+      "tags": [
+        "linear-programming",
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70070",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07420-6",
+      "title": "Transition from a fund-based to a lifecycle-oriented EPR system: the evolution of extended producer responsibility for electrical and electronic equipment in China",
+      "authors": [
+        "Chu, T.",
+        "Govindan, K.",
+        "Zhong, Y.",
+        "Jia, W."
+      ],
+      "abstract": "Abstract\n                  The Extended Producer Responsibility (EPR) system for electrical and electronic equipment in China has evolved from a “fund-based” to a “special fund” model. To transcend conventional end-of-pipe governance, we propose an “EPR 3.0” framework that extends environmental responsibility to the consumption stage. The model centers on consumer responsibility and is operationalized through an advance disposal fee (ADF) with transfer payments, complemented by carbon taxation and subsidy mechanisms. Using a tri‑party evolutionary game model and system dynamics simulation, we identify two evolutionary stable states: a government‑led collaborative governance phase and a market‑driven circular endogenous phase. Results show that consumer preferences drive producers’ adoption of eco-design, and the policy mix of the ADF and transfer payments significantly enhances producer compliance, while consumer responsiveness to public education campaign exhibits an optimal sensitivity range. Based on the analysis of system feedback mechanisms, we further propose a four-stage evolutionary framework of EPR development (EPR 1.0–4.0), revealing the transition of the EPR system from exogenous policy-driven development to endogenous market-driven evolution. The proposed evolutionary pathway and integrated policy framework provide valuable insights for developing countries seeking to establish effective e-waste management systems.",
+      "date": "2026-09-26",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07420-6",
+      "tags": [
+        "metaheuristics"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07420-6",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-net.70074",
+      "title": "Fault‐Tolerant Mutual‐Visibility: Complexity and Solutions for Grid‐Like Networks",
+      "authors": [
+        "Cicerone, S.",
+        "Di Stefano, G.",
+        "Klavžar, S.",
+        "Zhang, G."
+      ],
+      "abstract": "ABSTRACT\n                  Networks are often modeled using graphs, and within this setting we introduce the notion of ‐fault‐tolerant mutual visibility. Informally, a set of vertices  in a graph  is a ‐fault‐tolerant mutual‐visibility set (‐ftmv set) if any two non‐adjacent vertices in  are connected by a bundle of  shortest paths such that: () each shortest path contains no other vertex of , and () these paths are internally disjoint. The cardinality of a largest ‐ftmv set is denoted by . The classical notion of mutual visibility corresponds to the case . This generalized concept is motivated by applications in communication networks, where agents located at vertices must communicate both efficiently (i.e., via shortest paths) and confidentially (i.e., without messages passing through the location of any other agent). The original notion of mutual visibility may fail in unreliable networks, where vertices or links can become unavailable. Several properties of ‐ftmv sets are established, including a natural relationship between  and , as well as a characterization of graphs for which  is large. It is shown that computing  is NP‐hard for any positive integer , whether  is fixed or not. Exact formulae for  are derived for several specific graph topologies, including grid‐like networks such as cylinders and tori, and for diameter‐two networks defined by Hamming graphs and by the direct product of complete graphs.",
+      "date": "2026-09-26",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70074",
+      "tags": [
+        "network-optimization"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70074",
+      "score": 55.0
+    },
+    {
+      "id": "optim-online-7b8e43720172",
+      "title": "A quadratic upper bound on the Chvátal rank of polytopes in the 0/1-cube",
+      "authors": [],
+      "abstract": "We show that every polytope $P\\subseteq[0,1]^n$, and more generally every compact convex set, has Chv\\&#8217;atal rank at most $12.22n^2+n\\log_2 n+2n+4$. This improves the $O(n^2\\log n)$ bound of Eisenbrand and Schulz and, together with the $\\Omega(n^2)$ lower bound of Rothvo{\\ss} and Sanit\\`a, shows that the maximum Chv\\&#8217;atal rank of a polytope in $[0,1]^n$ is $\\Theta(n^2)$. More ... Read more",
+      "date": "2026-09-26",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/09/a-quadratic-upper-bound-on-the-chvatal-rank-of-polytopes-in-the-0-1-cube/?utm_source=rss&utm_medium=rss&utm_campaign=a-quadratic-upper-bound-on-the-chvatal-rank-of-polytopes-in-the-0-1-cube",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "score": 40.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-09-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-09-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 4,
+    "software": 0,
+    "deadlines": 3,
+    "conferences": 0,
+    "opportunities": 3,
+    "total": 7
+  }
+}
