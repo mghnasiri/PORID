@@ -1,0 +1,413 @@
+{
+  "date": "2026-09-29",
+  "generated_at": "2026-09-29T13:56:54.767322+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2609.35654",
+      "title": "Guided Uncertainty-Aware Robust Domain Transfer",
+      "authors": [
+        "Xin Xiong",
+        "Zijian Guo",
+        "Tianxi Cai"
+      ],
+      "abstract": "Artificial intelligence models deployed as clinical decision support tools often suffer substantial performance degradation over time and across institutions due to covariate shift, concept drift, and cross-system heterogeneity. Fully retraining complex models is frequently infeasible, particularly in EHR settings where labeled outcome data are scarce and regulatory constraints limit model modification. We propose GUARD (Guided and Uncertainty-Aware Robustness to Domain shift), a unified statistical framework for updating an existing deployed model using limited labeled target data and multiple heterogeneous source populations while guarding against future distributional shifts. GUARD formulates robust multi-source transfer learning as a semi-supervised, adversarial optimization problem anchored at the current model, and employs double machine learning with cross-fitting to obtain debiased, efficient estimates that leverage abundant unlabeled target covariates. It then constructs an uncertainty-aware, guided group DRO estimator that combines source and target information while accounting for sampling variability in the source models. Our framework jointly provides principled robustness to domain shift, efficient semi-supervised estimation, and valid statistical inference for multi-source transfer of clinical prediction models. We demonstrate the utility of GUARD via extensive simulation experiments and a real world application to predicting future disease activity in rheumatoid arthritis from EHR data spanning more than a decade. GUARD recalibrates a pretrained model with only a small number of labeled records per year and remains accurate over multi-year horizons where target-only and standard transfer estimators degrade sharply.",
+      "date": "2026-09-28",
+      "source": "arXiv",
+      "source_detail": "stat.ME",
+      "url": "http://arxiv.org/abs/2609.35654v1",
+      "tags": [
+        "stat.ME",
+        "stochastic",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.35654",
+      "arxiv_id": "2609.35654v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.34275",
+      "title": "A One-Factorization Predictor-Corrector Long-Step Arc-Search Method and a Curvature-Amplified Variant for Semidefinite Programming with a Homogeneous Self-Dual Embedding",
+      "authors": [
+        "Makoto Yamashita",
+        "Yaguang Yang"
+      ],
+      "abstract": "In a predictor-corrector arc-search method, a point on the predictor arc is first selected and a corrector is then computed at that point. Since the Karush-Kuhn-Tucker (KKT) matrix changes with the selected point, this correction may require a second factorization in each iteration. We propose a one-factorization arc-search method (OFAS) for semidefinite programming (SDP) that avoids this second factorization, retains the corrector after the arc step, and uses only one KKT factorization per iteration. The key is a three-term decomposition of the complementarity mismatch at the selected point on the arc, which allows the correction to be assembled from linear-system solutions using the factorization at the current iterate. We also propose a curvature-amplified variant (CA-OFAS) that amplifies the second-order arc term. The proposed methods are formulated with a homogeneous self-dual embedding. For a wide long-step neighborhood, we prove that both methods reduce the homogeneous complementarity and residuals below $\\varepsilon$ in $O(n \\log(1/\\varepsilon))$ iterations for an $n$-by-$n$ SDP matrix variable. Numerical experiments show that the one-factorization structure and the correction after the arc step are associated with reductions in computation time. Compared with the Mehrotra-type method, CA-OFAS reduces the geometric-mean computation time by 17% on SDPLIB and 13% on neural network verification SDP problems.",
+      "date": "2026-09-28",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.34275v1",
+      "tags": [
+        "math.OC",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.34275",
+      "arxiv_id": "2609.34275v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.35715",
+      "title": "X-Reset: Scaling Object-Centric Reinforcement Learning via Cross-Embodiment Resets",
+      "authors": [
+        "Prithwish Dan",
+        "Chenyang Ma",
+        "Wei Zhan"
+      ],
+      "abstract": "Reinforcement learning (RL) in simulation can train dexterous manipulation policies without robot demonstrations, but training a single generalist policy with task-agnostic rewards faces a severe exploration problem: approaching, grasping, and reorienting diverse objects with many degrees of freedom is difficult to discover from scratch. Prior works make exploration tractable with high-quality robot demonstrations, per-task reward shaping, or by restricting policies to narrow modes of behavior. We propose X-Reset, a framework that instead resolves exploration with human hand-object demonstrations. Rather than imitating or tracking retargeted human motion, X-Reset kinematically retargets hand-object states to noisy robot states, filters out states that are unstable in simulation, and samples the remainder as resets during RL training with general-purpose object-centric rewards. The resulting policy depends only on object state and goal, with demonstrations entering training through the reset distribution. We show that X-Reset trains generalist policies on 20 objects across three embodiments---a 22-DoF hand on two different arms and a parallel-jaw gripper---and resolves the exploration challenges of RL from scratch. X-Reset scales with the number of training objects, generalizes to unseen objects, can learn from imperfect hand-pose estimates, and transfers behaviors zero-shot from sim-to-real.",
+      "date": "2026-09-28",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.35715v1",
+      "tags": [
+        "cs.LG",
+        "metaheuristics",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.35715",
+      "arxiv_id": "2609.35715v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.35699",
+      "title": "Distillation Defenses Easily Break After Reinforcement Learning",
+      "authors": [
+        "Shidan Javaheri",
+        "Alexander Panfilov",
+        "Oliver Britton",
+        "Yarin Gal",
+        "Yonatan Gideoni"
+      ],
+      "abstract": "Distillation attacks copy the reasoning capabilities of closed-source large language models, allowing bad actors to replicate state-of-the-art performance at low cost. Attackers systematically collect a large volume of frontier model reasoning traces and then train (i.e., \"distill\") their own models on these traces. Existing defenses against distillation attacks are typically evaluated immediately after distillation, implicitly assuming attackers do not train their models any further. In this paper, we argue that a more realistic threat model includes further training with reinforcement learning after distillation. A misspecified threat model can give a false sense of security -- some defenses that seem effective after distillation can be broken after subsequent reinforcement learning. Practically, reinforcement learning lowers the bar for a distillation attack to be effective. We show that simple attacks can steal reasoning capabilities from existing closed-source language models using data easily obtainable from current APIs, yielding reasoning improvements equivalent to more sophisticated attacks that extract the full hidden traces. Results indicate that any distillation defense that leaks sufficient information to reconstruct approximate reasoning traces is likely ineffective. We conclude by discussing broader implications and batch-level distillation defenses which could be more effective.",
+      "date": "2026-09-28",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.35699v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.35699",
+      "arxiv_id": "2609.35699v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.35615",
+      "title": "Behavioral Foundation Models for Quality Diversity",
+      "authors": [
+        "Nazim Bendib",
+        "Nicolas Perrin-Gilbert",
+        "Olivier Sigaud"
+      ],
+      "abstract": "Behavioral Foundation Models (BFMs) are an emerging paradigm in reinforcement learning, playing a role analogous to large language models in natural language processing: they have shown remarkable versatility, enabling zero-shot performance, fast imitation, and online adaptation, all by exploiting the structure of a latent space. In this work, we investigate whether the latent behavioral space induced by BFMs can serve as an effective search space to discover large repertoires of behaviorally diverse and high-performing policies through Quality-Diversity (QD) methods. While QD methods generally search directly in high-dimensional policy parameter space, in this paper, we present BFM-QD, a framework that performs QD search in the compact latent space of a BFM. We further show that the BFM-QD framework provides a closed-form, gradient-free policy improvement operator that approximates a policy gradient update, but requires no critic training and no backpropagation. Across continuous-control benchmarks spanning dense locomotion, sparse navigation, and contact-rich manipulation, BFM-QD consistently outperforms parameter-space baselines, with particularly stark gains in sparse and deceptive settings, where all tested parameter-space QD methods collapse to near-zero performance. These results show the effectiveness of the BFM-QD framework, benefiting from the synergy between dimensionality reduction of the search space and offline pretraining from diverse behavioral data. This positions BFMs as a general-purpose backbone for QD optimization, extending their utility beyond zero-shot task solving to the discovery of diverse behavioral repertoires.",
+      "date": "2026-09-28",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.35615v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.35615",
+      "arxiv_id": "2609.35615v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.35564",
+      "title": "Almieyar: A Culturally Grounded Benchmark for Multi-Dialect Arabic Speech Recognition",
+      "authors": [
+        "Omid Ghahroodi",
+        "Anas Madkoor",
+        "Dima Faris Al Saudi",
+        "Fagr Tahir",
+        "Malak Annan",
+        "Talha shahid javad allah rakha",
+        "Omar Al-Busaidi",
+        "Zineb El Kahla",
+        "Iheb Zouari",
+        "Essa Ahmed Abou Jabal",
+        "Ahmed Ezzat",
+        "Hind AL-Merekhi",
+        "Aisha Hamad M A Al-Naimi",
+        "Hadi Wazni",
+        "Bushra Alnajjar",
+        "Omar Amin",
+        "Haya Al-Thani",
+        "Houssam Eddine-Othman Lachemat",
+        "Marwa Elwakedy",
+        "Sundus Abdulmalik Al Nahari",
+        "Elahe Zahiri",
+        "Osamah Sarraj",
+        "Raghad Mousa",
+        "Mckeen Assi",
+        "Ahd Al Jumah",
+        "Heyam Salman",
+        "Alhanouf Abdulraqib",
+        "Sara Benoumhani",
+        "Alia Hamwi",
+        "Ayaat Al-Yasseri",
+        "Rim Ibrahim Ghazal",
+        "Lamia Ben hiba",
+        "Mohamed Eltabakh",
+        "Fatima Al-Raisi",
+        "Yassine El Kheir",
+        "Mohammed Abdulrahman",
+        "Hamdy Mubarak",
+        "Ayah Hashem",
+        "Lefkir Meriem",
+        "Ehsaneddin Asgari"
+      ],
+      "abstract": "Arabic speech technology has largely focused on Modern Standard Arabic, leaving the living dialects spoken by hundreds of millions under-served. We introduce ALMIEYAR, a culturally grounded ASR benchmark covering 17 Arabic dialects across six families, built entirely from newly recorded speech unseen by existing models. Dialect-community coordinators selected culturally relevant images across 10 topics, and native speakers described them through five structured scenarios, yielding approximately 50 minutes per dialect (13.7 hours total). We benchmark 12 state-of-the-art ASR systems zero-shot, including GPT-4o-transcribe, Voxtral-Mini-4B, Fanar-STT-LF, Whisper, SeamlessM4T-v2, and wav2vec2-based models. GPT-4o-transcribe achieves the lowest overall WER at 35.0%, followed by Voxtral-Mini-4B, Fanar-STT-LF, and Whisper-Large-v3 at 41.1%, 45.9%, and 49.5%, respectively, indicating substantial remaining errors across Arabic dialect communities. Performance varies considerably across dialect groups, with no model performing uniformly best across all groups. WER alone also obscures dialectal ASR behaviour: wav2vec2-based models show large WER/CER gaps, where character-level agreement remains much higher than word-level accuracy, motivating joint WER/CER reporting. ALMIEYAR provides a unified benchmark for culturally grounded Arabic ASR evaluation, including the first published benchmark for Ahwazi Arabic.",
+      "date": "2026-09-28",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2609.35564v1",
+      "tags": [
+        "cs.CL",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.35564",
+      "arxiv_id": "2609.35564v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.35136",
+      "title": "Low-Stretch Spanning Trees via Smoothed Analysis of Dijkstra's Algorithm",
+      "authors": [
+        "Ioannis Dorkofikis",
+        "Bernhard Haeupler",
+        "Maximilian Probst Gutenberg",
+        "Antti Roeyskoe",
+        "Aurelio Sulser",
+        "Gernot Zöcklein"
+      ],
+      "abstract": "Given an undirected weighted graph $G$, a $γ$-approximate low-stretch spanning tree (LSST) $T \\subseteq G$ is a tree that approximates the distance metric of $G$ up to a $γ$-factor in expectation. Currently, existing algorithms to find a provably good LSST carefully construct an approximate shortest-path tree from an arbitrary source. The resulting algorithms are intricate. In contrast, practitioners observed that a much simpler heuristic performs surprisingly well: choose an arbitrary root, run Dijkstra's algorithm, and use the resulting shortest-path tree as an LSST.   In this paper, we give a smoothed analysis of shortest-path tree algorithms, such as Dijkstra's algorithm, that explains this behavior. We show that adding a small perturbation to the weights of the input graph suffices to turn the shortest path tree rooted at an arbitrary node in the resulting graph into an $\\tilde{O}(1)$-approximate LSST.   We further show that the set of perturbations can be computed efficiently from few low-diameter decompositions (LDDs). Thus, our proof is also constructive in the sense of giving a novel approach to computing LSSTs.",
+      "date": "2026-09-28",
+      "source": "arXiv",
+      "source_detail": "cs.DS",
+      "url": "http://arxiv.org/abs/2609.35136v1",
+      "tags": [
+        "cs.DS",
+        "network-optimization",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.35136",
+      "arxiv_id": "2609.35136v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.35217",
+      "title": "A Hierarchy of Entropy-Shapley Games for Multivariate Predictive Uncertainty",
+      "authors": [
+        "Niklas Koenen",
+        "Claudia Battistin",
+        "Jeriek Van den Abeele",
+        "Martin Jullum"
+      ],
+      "abstract": "Modern probabilistic machine learning models increasingly produce multivariate outputs with complex dependence structure, from multi-step time-series forecasts to sample path predictions. Understanding which input features drive the predictive uncertainty is important for risk-aware decisions, model diagnostics, and deciding whether the uncertainty should be mitigated or hedged against. This attribution problem requires a choice of how dependencies between output components are treated. Existing approaches reduce the output to a scalar through aggregation or projection before attribution, thereby obscuring whether features affect marginal uncertainty, dependence structure, or both, while component-wise analyses can miss dependence effects entirely. We close this gap by introducing a hierarchy of three entropy-based Shapley games that make this output-side choice explicit for any ordered multivariate outcome, ranging from per-component marginal entropy to fully joint entropy. The hierarchy isolates a cross-component attribution term that captures how each feature shifts the dependence between output components, a quantity invisible to component-wise methods. We establish a chain-rule decomposition of the joint attribution and characterize the cross-component term through conditional total correlation, providing both closed-form and sample-based estimators. Finally, we demonstrate how the framework captures differences in learned joint structure across probabilistic models from distributional regression to a zero-shot time series foundation model.",
+      "date": "2026-09-28",
+      "source": "arXiv",
+      "source_detail": "stat.ML",
+      "url": "http://arxiv.org/abs/2609.35217v1",
+      "tags": [
+        "stat.ML",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.35217",
+      "arxiv_id": "2609.35217v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.35080",
+      "title": "Propagate, Then Sharpen: Post-Hoc Refinement of Frozen Node Classifiers",
+      "authors": [
+        "Preben Johnsen Bentdal",
+        "Nello Blaser",
+        "Xue-Cheng Tai"
+      ],
+      "abstract": "We study post-hoc refinement of frozen node classifiers: given only the graph $G$ and class distributions $Q$ predicted by a frozen model, can we improve accuracy without access to node features, model parameters, or gradients? APPNP answers this by propagating logits with a restart towards the initial predictions, minimizing the anchored Dirichlet energy. Instead, we consider the Potts energy, and decompose it into a Dirichlet term, which penalizes disagreement between neighbouring nodes, and a Gini term, which penalizes indecision within each node. This decomposition motivates Propagate, Then Sharpen (PtS), which alternates between propagation of class probabilities and node-wise, mass-preserving sharpening, with only one additional hyperparameter selected using labelled validation nodes. Across nine homophilic graphs, with a frozen MLP backbone, PtS improves mean test accuracy over independently tuned APPNP by $1.71$ percentage points on clean inputs and $3.90$ under severe Gaussian feature corruption. Gains over APPNP become smaller, but remain positive with frozen GCN and GraphSAGE backbones. Sharpening also removes most of the accuracy loss of deep propagation: on clean inputs without restart, accuracy falls by $2.2$ points between $2$ and $100$ propagation steps under PtS, compared with $33.8$ for APPNP.",
+      "date": "2026-09-28",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.35080v1",
+      "tags": [
+        "cs.LG",
+        "decomposition",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.35080",
+      "arxiv_id": "2609.35080v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.34188",
+      "title": "AlphaPareto: Formulaic Alpha Discovery with LLM-Guided Multi-Objective Reinforcement Learning",
+      "authors": [
+        "Yingbo Zhao",
+        "Zeyu Yang",
+        "Zhoufan Zhu"
+      ],
+      "abstract": "Formulaic alpha discovery is a core challenge in quantitative trading, as identifying alphas that work well together remains difficult. Recent reinforcement learning (RL) methods formulate this task as a Markov decision process (MDP), but two important issues remain unresolved. First, as the alpha pool evolves, the reward function changes accordingly, making the MDP inherently non-stationary. Second, most existing methods optimize a single objective, typically predictive power, while ignoring other important properties of a high-quality alpha pool. Motivated by these challenges, we propose AlphaPareto, an RL method for formulaic alpha discovery. To address non-stationarity, AlphaPareto augments the state to include both the alpha under construction and the current alpha pool, and applies a large language model (LLM) to encode the pool. This design allows the agent to adapt to the evolving search environment. To overcome the limitation of single-objective reward design, AlphaPareto replaces the scalar reward with a multi-objective vector-valued reward that simultaneously captures predictive power, temporal stability, perturbation robustness, and diversity, and optimizes these objectives through a Pareto-regularized learning procedure. Empirical applications to real-world datasets show that our AlphaPareto method outperforms its competitors.",
+      "date": "2026-09-28",
+      "source": "arXiv",
+      "source_detail": "stat.ML",
+      "url": "http://arxiv.org/abs/2609.34188v1",
+      "tags": [
+        "stat.ML",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.34188",
+      "arxiv_id": "2609.34188v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-09-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-09-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 3,
+    "conferences": 0,
+    "opportunities": 3,
+    "total": 13
+  }
+}
