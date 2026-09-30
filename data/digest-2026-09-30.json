@@ -1,0 +1,388 @@
+{
+  "date": "2026-09-30",
+  "generated_at": "2026-09-30T13:33:31.616755+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s00291-026-00875-w",
+      "title": "Solution methods for the dynamic and probabilistic profitable tour problem",
+      "authors": [
+        "Caspar, M.",
+        "Schermer, D.",
+        "Wendt, O."
+      ],
+      "abstract": "Abstract\n                  \n                    Sequential decision-making under uncertainty plays a fundamental role in domains such as finance, healthcare, and supply chain management. Multistage stochastic programming and stochastic dynamic programming provide powerful mathematical frameworks for optimizing multistage decisions, but their practicality is often limited by the curse of dimensionality. To overcome this limitation, scalable approximate methods, such as reinforcement learning, have gained prominence. A central area of application is revenue management, historically used in the airline industry and now increasingly relevant in digital commerce, where demand management and logistics are closely intertwined. Motivated by these challenges, this paper studies the\n                    Dynamic and Probabilistic Profitable Tour Problem\n                    (DPPTP), a sequential decision-making problem involving two interdependent phases: an online phase, in which requests arrive dynamically and must be accepted or rejected in real-time, and an offline phase, in which accepted requests must be fulfilled by solving a Traveling Salesman Problem. We formulate the DPPTP as a Markov Decision Process and derive a stochastically optimal decision-making policy. Given the computational intractability of computing optimal policies for larger instances, we investigate heuristic and approximate solution methods, with a particular focus on Proximal\n                    Policy Optimization\n                    (PPO), a reinforcement learning algorithm. Our computational study provides a comprehensive evaluation of PPO’s performance relative to optimal and heuristic benchmarks, demonstrating that it achieves near-optimal performance while scaling effectively to problem instances with up to 96 distinct requests.",
+      "date": "2026-09-30",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00875-w",
+      "tags": [
+        "vehicle-routing",
+        "stochastic",
+        "ml-for-or",
+        "healthcare-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00875-w",
+      "score": 75.0
+    },
+    {
+      "id": "crossref-10.1002-nav.70096",
+      "title": "Dual‐Sourcing Logistics Network Design Considering Time‐Based Service Levels",
+      "authors": [
+        "Zhang, Y.",
+        "Zhang, L.",
+        "Wang, T.",
+        "Zhuang, X.",
+        "Gao, Z."
+      ],
+      "abstract": "ABSTRACT\n                  Effective logistics networks drive cost efficiency, reliable delivery, and customer satisfaction for e‐commerce companies. Motivated by JD Logistics' regional warehouse network operations problem under uncertain customer demand and delivery times, this paper proposes a dual‐sourcing location‐inventory model with time‐based service levels (DSLI‐T). We formulate the problem within a scenario‐wise distributionally robust optimization framework that incorporates continuous delay times via a conditional value‐at‐risk measure to address tail risks. By deriving tractable closed‐form expressions for the worst‐case risk‐adjusted costs and for distributionally robust cycle service‐level constraints, we reformulate the DSLI‐T model as an equivalent mixed‐integer nonlinear programming (MINLP) model with submodular objective costs. To solve this model efficiently, we propose improved extended polymatroid inequalities (I‐EPIs) that jointly exploit submodularity and generalized upper bound constraints. We prove that the I‐EPIs are facet‐defining for the corresponding polyhedron and, under mild conditions, strictly dominate classical extended polymatroid inequalities (EPIs). Based on these I‐EPIs, we develop an enhanced branch‐and‐cut (B&amp;C) algorithm accelerated by a two‐phase implementation framework. Case studies on JD Logistics demonstrate that the dual‐sourcing strategy reduces the total cost by 12.01%. Numerical experiments show that the proposed enhanced B&amp;C algorithm with I‐EPIs achieves reductions of 77.7% and 98.4% relative to EPIs and MINLP, respectively.",
+      "date": "2026-09-30",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70096",
+      "tags": [
+        "linear-programming",
+        "network-optimization",
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70096",
+      "score": 70.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1007-s00291-026-00877-8",
+      "title": "Energy-aware planning of continuous casting and hot rolling considering steel grade upgrades",
+      "authors": [
+        "Gärtner, N.",
+        "Schulz, C.",
+        "Volling, T."
+      ],
+      "abstract": "Abstract\n                  \n                    Continuous casting (CC) and hot rolling (HR) are the key processes in steel production for turning liquid steel into solidified coils with order-specific properties and dimensions. Due to different process restrictions, planning and scheduling of both processes is traditionally completely separated. As a result, the intermediate products after CC, so-called slabs, are stored temporarily for further processing, where they cool down considerably. However, for HR slabs have to be reheated to a process temperature of approximately\n                    \n                      $$1,200^\\circ $$\n                    \n                    C, making the CC-HR interface one of the most energy-intensive stages in steel production. Integrated CC-HR planning could help minimize slab waiting times and maximize energy efficiency. To address this issue, we formulate a mixed-integer non-linear program (MINLP) that utilizes flexibility stemming from steel grade upgrades to improve coordination. We investigate the potential of integrated CC-HR planning and its dependence on upgrade flexibility and product variety through a numerical study. Problem instances with increasing planning horizons are considered to assess scalability. As larger instances cannot be solved by an exact solver within practical time limits, a GRASP-based heuristic enhanced by a local branching improvement phase is employed. The findings indicate considerable improvement potential at the CC-HR interface, with most benefits attainable under moderate flexibility. These effects remain stable across different planning horizons.",
+      "date": "2026-09-30",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00877-8",
+      "tags": [
+        "integer-programming",
+        "metaheuristics",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00877-8",
+      "score": 65.0
+    },
+    {
+      "id": "arxiv-2609.37528",
+      "title": "A Spatial Benders Algorithm for Delay Constrained Routing",
+      "authors": [
+        "Antonio Frangioni",
+        "Laura Galli",
+        "Luca Mencarelli",
+        "Enrico Sorbera"
+      ],
+      "abstract": "We study the Delay Constrained Routing (DCR) problem arising in IP computer networks to support high bandwidth applications. The goal is to route IP packets, from source to destination, subject to quality of service constraints -- in particular, bounding the worst case delay -- while minimizing the total allocated bandwidth in the network. DCR can be formulated as a Mixed-Integer Second-Order Cone Program, and solved using standard solvers; while generally efficient, this hinges on off-the-shelf tools and does not scale to large instances. We devise a solver-free bespoke approach that uses nested Benders-Lagrange, namely, a double decomposition approach that exploits the special structure of the problem. In particular, we use a nonconvex nonlinear formulation of the problem, that results in a nonconvex Benders value function whose optimization we tackle with a bespoke Spatial Branch-and-Bound approach using custom piecewise-convex cuts. We show that our approach provides very tight upper and lower bounds in competitive running times w.r.t. previous state-of-the-art approaches.",
+      "date": "2026-09-29",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.37528v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.37528",
+      "arxiv_id": "2609.37528v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.37356",
+      "title": "Teaching LLMs to Generate Challenging MILP Instances via Solver Feedback",
+      "authors": [
+        "Jitin Singla",
+        "Parikshit Pareek",
+        "Pratik Jawanpuria",
+        "Parag Singla"
+      ],
+      "abstract": "Generating optimization instances that are both feasible and computationally challenging is crucial for benchmarking solvers and training learning-based optimization algorithms. Existing non-LLM generators rely on seed instances or parameter tuning, resulting in high test-time computational cost, while existing LLM generators lack explicit hardness measures. Recent reinforcement learning methods with verifier feedback evaluate only binary correctness, which is misaligned with generating challenging problems. We note that an optimization solver reports the cost of solving at several stages of its pipeline, and leverage this to design a reward that scores both the solvability and the hardness of generated problems, measured by branch-and-bound nodes and post-cut relaxation gaps. Our key idea is a challenger-solver asymmetric self-play approach, where an LLM challenger generates progressively harder instances and the solver verifies feasibility and hardness, so no seed or training MILP instances are required. We fine-tune Gemma-4-12B and Qwen3.5-4B with GRPO and a size curriculum into OptiScribe-12B and OptiScribe-4B, which generate feasible yet challenging MILP problems from natural language instructions. On capacitated facility location and max-cut, OptiScribe-12B raises median SCIP search nodes by 1.7-5x and post-cut gaps by 1.1-1.7x over its base model and improves the feasibility rate on facility location by 9-19 points, while OptiScribe-4B raises median nodes by up to 15.6x. The problems cover a wider difficulty range than public benchmarks of the same size, follow instructions on density and difficulty, and can tune solver settings for families that public libraries lack. These results indicate that optimization-specific rewards, used in self-play mode, can teach LLMs to generate high-difficulty optimization benchmarks. We will release our code and models publicly on acceptance.",
+      "date": "2026-09-29",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2609.37356v1",
+      "tags": [
+        "cs.AI",
+        "integer-programming",
+        "ml-for-or",
+        "facility-location"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.37356",
+      "arxiv_id": "2609.37356v1",
+      "score": 55.0,
+      "mentions_solvers": [
+        "SCIP"
+      ]
+    },
+    {
+      "id": "arxiv-2609.37972",
+      "title": "Dagger: Decoupling-based Model Stealing Attack against Graph Neural Networks",
+      "authors": [
+        "Ying Song",
+        "Xiaowei Jia",
+        "Balaji Palanisamy"
+      ],
+      "abstract": "As Graph Neural Networks (GNNs) are widely deployed as Machine Learning-as-a-Service (MLaaS) APIs, model stealing attacks have emerged as a critical security threat. By querying a victim model's black-box API, an adversary can construct a functionally equivalent surrogate model, compromising proprietary intellectual property and downstream security. Existing GNN stealing attacks, however, rely on overly permissive assumptions, such as soft-label outputs, large query budgets, full-graph query access, and prior knowledge of victim backbones that rarely hold in real-world deployments. In this work, we formalize a strictly constrained black-box, hard-label and backbone-agnostic threat model for GNN stealing attacks under a tight query budget. Given these realistic restrictions, we identify four fundamental challenges: sparse local structures and isolated nodes that degrade victim label quality, insufficient supervision signals, systematic imbalance with incomplete class coverage, and backbone mismatch. To address these interlocking barriers, we propose Dagger, a novel two-phase decoupling-based attack framework. Specifically, in Phase 1, Dagger pre-trains a surrogate using decoupled information propagation to preserve structural context over sparse local subgraphs while handling isolated nodes, combined with manifold-level node mixup to synthesize continuous supervision signals and smooth decision boundaries. In Phase 2, Dagger freezes the encoder and fine-tunes the classifier head via class-balanced sampling paired with logit adjustment to rectify severe query imbalance without requiring extra victim queries. Extensive experiments across four benchmark graphs and four GNN backbones demonstrate that Dagger consistently outperforms state-of-the-art GNN stealing attacks, achieving up to 18.16\\% higher fidelity while only utilizing 12.23$\\times$ fewer queries than the strongest baseline.",
+      "date": "2026-09-29",
+      "source": "arXiv",
+      "source_detail": "cs.CR",
+      "url": "http://arxiv.org/abs/2609.37972v1",
+      "tags": [
+        "cs.CR",
+        "ml-for-or",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.37972",
+      "arxiv_id": "2609.37972v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.36771",
+      "title": "Beyond Conditional Independence: Root Cause Analysis with Deep Causal Models",
+      "authors": [
+        "Md Musfiqur Rahman",
+        "Kenneth Lee",
+        "Ziwei Jiang",
+        "Padmaja Jonnalagedda",
+        "Ruocheng Guo",
+        "Murat Kocaoglu"
+      ],
+      "abstract": "Root cause analysis (RCA) is a critical problem in many real-world scenarios. RCA enables the identification of faulty or failing mechanisms in a system by comparing anomalous observations with corresponding reference (i.e., regular) observations. However, existing approaches rely either on heuristic methods or on conditional independence tests with a strong unconfoundedness assumption, and thus fail to exploit other complicated distributional constraints in the presence of latent variables. To relax these assumptions, we model the underlying system as a causal model and the anomalous system as a change in the structural functions of the same causal model. Specifically, to handle unobserved confounders, we establish an implicit connection between distributional constraint testing and root cause analysis. To adapt our approach to data generated from arbitrary causal models, we employ the deep causal model (DCM) framework, in which we design the causal model using neural networks. Finally, we illustrate how our method, RCA-DCM, can utilize different levels of partial graphical knowledge to perform RCA. We evaluate RCA-DCM against state-of-the-art baselines on simulated datasets, a physics-based causal chamber and two micro-service applications. RCA-DCM improves top-1 accuracy over the strongest baseline on both Sock Shop (0.880 vs. 0.752) and Online Boutique (0.776 vs. 0.712), and when the true root cause in the causal chamber is unobserved and acts as a latent confounder, it recovers the exact root-cause set more often than any competing method (perfect recovery rate (PRR) 0.846 vs. 0.731).",
+      "date": "2026-09-29",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.36771v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.36771",
+      "arxiv_id": "2609.36771v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.38095",
+      "title": "Probe-Space Preconditioning for Fast and Stable Zero-Order Training",
+      "authors": [
+        "Francois Chaubard",
+        "Mykel J. Kochenderfer",
+        "Chris Ré"
+      ],
+      "abstract": "Backpropagation (BP) dominates deep learning but imposes a massive memory tax. For example, training OPT-30B with Adam requires $\\approx$ 600GB of GPU memory (assuming batch size 8 and sequence length 2048). Alternatively, zero-order optimization (ZOO) trains in inference-mode (requiring only $\\approx$ 60GB for the same model): no stored activations, no gradients, and no optimizer states. However, ZOO convergence has lagged behind BP. In this work, we evaluate two methods to close this gap. First, we show that reallocating training compute budget from many steps to large effective batch sizes with many perturbations (or probes) but fewer steps, allows 1SPSA (Spall, 1992) to outperform zero order methods like MeZO (Malladi et al., 2023) with less training compute. Next, we introduce 1.5-SPSA, adding a single \"clean\" forward-pass per step to 1SPSA to calculate a cheap diagonal preconditioner in probe-space, which improves convergence rate and convergence by down-weighting high curvature directions. Benchmarking on 6 post-training datasets on both Qwen3 and OPT model families, we show that 1.5-SPSA achieves State-of-the-Art results over previous ZOO solvers with much less optimization steps. For example, we train OPT-13B (for direct comparison to MeZO) and find 1.5-SPSA achieves +3.1% accuracy on SST-2 over both MeZO and BP in only 70 steps vs. MeZO's 100,000 steps. Finally, we combine an 8-bit-packing random generator, triton fused unpack/apply kernels, and distributed parallelism to achieve fast and stable training of models as large as OPT-30B in-place on commodity GPUs (e.g. A100).",
+      "date": "2026-09-29",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2609.38095v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.38095",
+      "arxiv_id": "2609.38095v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.36997",
+      "title": "Acceleration for Affine-coupling problems",
+      "authors": [
+        "Clement Lezane",
+        "Sophie Langer",
+        "Wouter M. Koolen"
+      ],
+      "abstract": "Saddle-point problems play an important role in modern machine learning, including robust optimization and algorithmic fairness. We investigate structured convex--concave minimax problems where the primal variable lies in a high-dimensional, unconstrained space $\\mathbb{R}^d$, while the dual variable is confined to a constrained, low-dimensional space $\\mathbb{R}^J$, with $J\\ll d$. Although existing theoretical frameworks establish that an accelerated rate of $\\mathcal{O}(L/T^2)$ is possible, solving the associated subproblems efficiently can become a computational bottleneck in high dimensions. To address this, we introduce a decoupling technique. By restricting second-order updates to the low-dimensional dual space and employing first-order methods in the high-dimensional primal space, our framework combines Newton methods with Nesterov acceleration. For simplex-constrained dual variables and regularizers compatible with a self-concordant barrier, the resulting algorithm achieves a convergence rate of $\\mathcal{O}(L/T^2)$ in primal objective suboptimality after $T$ outer iterations, without strong dual concavity. The additional linear-algebra cost per outer iteration is $\\widetilde{\\mathcal{O}}(dJ^2+J^{3.5})$, alongside one evaluation of the component losses and their Jacobian.",
+      "date": "2026-09-29",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.36997v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.36997",
+      "arxiv_id": "2609.36997v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2609.36963",
+      "title": "Fused ultrametric Gromov-Wasserstein for Scenario Tree generation in Multistage Stochastic Programming",
+      "authors": [
+        "Antonio Candelieri",
+        "Iman Seyedi",
+        "Francesco Archetti"
+      ],
+      "abstract": "Multistage Stochastic Programming requires scenario trees that accurately approximate the unknown underlying uncertainty process without violating the non-anticipativity constraint. Most of the existing method for scenario tree generation usually target just one of the two goals at the expense of the other, and just some recent methods try to simultaneously address both. In this paper, we propose to combine two recent distances from Optimal Transport Theory, specifically the ultrametric Gromov-Wasserstein and the Fused Gromov-Wasserstein, into a unique measure to simultaneously deal with the two goals. Our main result is a stability theorem showing that the optimal value of a Multistage Stochastic Programming problem changes by an amount controlled by a Holder-type power of the proposed distance between the true process and its scenario tree approximation, extending Wasserstein-based stability results to control marginal fidelity and non-anticipativity, simultaneously. We propose a block coordinate descent algorithm for the our scenario tree generation based on the proposed distance, and evaluate it on different inventory management test cases.",
+      "date": "2026-09-29",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.36963v1",
+      "tags": [
+        "math.OC",
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.36963",
+      "arxiv_id": "2609.36963v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-09-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2526465",
+      "title": "NSF Award: Conference: 2025 Midwest Optimization Meeting",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "University of North Dakota Main Campus",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2526465",
+      "deadline": "2026-09-30",
+      "date": "2026-09-24",
+      "award_start": "2025-10-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "The 2025 Midwest Optimization Meeting (Recent Advances in Optimization, Control Theory, and Applications) will be the latest instance of an annual conference that began at Western Michigan University in 1997, and which for many years has provided a unique educational opportunity for graduate students, postdoctoral fellows, and early-career faculty.  Optimization is one of the major branches of applied mathematics, and has significant applications in different parts of science and engineering.  T",
+      "funding_amount": "$31,200",
+      "pi": "Ryan Zerr",
+      "program": "APPLIED MATHEMATICS",
+      "end_date": "2026-09-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-euro-doc-dissertation-2026",
+      "title": "EURO Doctoral Dissertation Award 2026",
+      "type": "opportunity",
+      "subtype": "award",
+      "institution": "EURO",
+      "url": "https://www.euro-online.org/web/pages/1/awards",
+      "deadline": "2026-09-30",
+      "location": "Europe",
+      "tags": [
+        "award",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Annual award for the best doctoral dissertation in OR defended in the past year.",
+      "score": 10.0
+    },
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 3,
+    "conferences": 0,
+    "opportunities": 3,
+    "total": 13
+  }
+}

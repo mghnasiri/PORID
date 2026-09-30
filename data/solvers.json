@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29T13:56:54.523979+00:00",
+  "generated_at": "2026-09-30T13:33:31.266093+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1858,
+      "github_stars": 1860,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -347,11 +347,11 @@
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
       "github_open_issues": 108,
       "github_recent_prs": [
+        "Add limit to dive length",
         "Now clearing column and row name hash before solving model",
         "Presolve rules off",
         "Reset row-dual-implied-bounds when column bound changes",
-        "Speed-up debug mode tests",
-        "No weakly dominated presolve without basis postsolve"
+        "Speed-up debug mode tests"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 659,
+      "github_stars": 661,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -458,13 +458,13 @@
         }
       ],
       "recent_changes": "Features\r\n--------\r\n\r\n- added command line option `-t` to specify the number of threads, which triggers concurrent solving via `SCIPsolveConcurrent()`\r\n\r\nPerformance improvements\r\n--------------------",
-      "github_open_issues": 33,
+      "github_open_issues": 34,
       "github_recent_prs": [
+        "def.h: Fix mingw long formating",
         "Move PaPILO header includes up to avoid boost issue on ppc64el",
         "Fix exact objective ordering in primal solution storage",
         "Remove redefinitions of min from windows.h",
-        "check primal bound only if optimal solution found",
-        "Fix objective offset dropped when writing the transformed problem (MPS/LP)"
+        "check primal bound only if optimal solution found"
       ],
       "pypi_monthly_downloads": -41
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14125,
+      "github_stars": 14130,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 122,
+      "github_open_issues": 123,
       "github_recent_prs": [
+        "python: fix cmake sample (pywralp migration fixup)",
+        "Fix Python bindings for absl::Span RoutingModel APIs (fixes #5415)",
         "java: rework pom.xml",
         "cmake: use eigen github mirror instead (Fix #5414)",
-        "export from g3 (cp, glop, routing, tooling)",
-        "sat: export from google3",
-        "[bazel] update module versions and bazelrc"
+        "export from g3 (cp, glop, routing, tooling)"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,7 +1131,7 @@
         "python"
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
-      "github_stars": 6350,
+      "github_stars": 6351,
       "github_open_issues": 184,
       "github_recent_prs": [
         "Pass the full symmetric P to CuClarabel (fixes #3544)",
@@ -1320,13 +1320,13 @@
       ],
       "recent_changes": "We've really been cooking this time! With so much goodness available in this release, an upgrade may just be worth the few seconds it will take.\r\n\r\n- **Coarse-grained moves in Neighborhoods**: With th",
       "github_stars": 1798,
-      "github_open_issues": 116,
+      "github_open_issues": 113,
       "github_recent_prs": [
+        "docs: add missing link in migration guide",
+        "docs: add missing link in migration guide",
+        "[2.7.x] Update versions in antora.yml",
         "docs: fix links for new antora version",
-        "docs: fix links for new antora version",
-        "deps: bump the patch group with 5 updates",
-        "deps: bump the minor group with 2 updates",
-        "deps: remove unnecesssary jakarta.enterprise:jakarta.enterprise.cdi-api"
+        "docs: fix links for new antora version"
       ]
     },
     {
@@ -1385,7 +1385,7 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2537,
-      "github_open_issues": 394,
+      "github_open_issues": 392,
       "github_recent_prs": [
         "Update PyROS Uncertainty Set Implementations",
         "contrib.solver GAMS: pass logfile to GAMS",
@@ -1401,8 +1401,8 @@
       "vendor": "JuMP Community",
       "website": "https://jump.dev",
       "docs_url": "https://jump.dev/JuMP.jl/stable/",
-      "current_version": "1.31.2",
-      "release_date": "2026-08-18",
+      "current_version": "1.32.0",
+      "release_date": "2026-09-30",
       "license_type": "open-source",
       "license_spdx": "MPL-2.0",
       "open_source": true,
@@ -1448,9 +1448,9 @@
         "julia",
         "algebraic"
       ],
-      "recent_changes": "## JuMP v1.31.2\n\n[Diff since v1.31.1](https://github.com/jump-dev/JuMP.jl/compare/v1.31.1...v1.31.2)\n\n\n**Merged pull requests:**\n- Fix formatting for latest JuliaFormatter version (#4208) (@odow)\n- Fi",
-      "github_stars": 2481,
-      "github_open_issues": 12,
+      "recent_changes": "## JuMP v1.32.0\n\n[Diff since v1.31.2](https://github.com/jump-dev/JuMP.jl/compare/v1.31.2...v1.32.0)\n\n\n**Merged pull requests:**\n- Use WeakKeyDict for the subexpression dictionary (#4207) (@odow)\n- Ad",
+      "github_stars": 2482,
+      "github_open_issues": 11,
       "github_recent_prs": [
         "Fix type of dividing by GenericAffExpr with no terms",
         "Let division by an AffExpr stay an AffExpr when it has all-0 coefficients",
