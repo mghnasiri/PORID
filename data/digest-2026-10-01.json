@@ -1,0 +1,299 @@
+{
+  "date": "2026-10-01",
+  "generated_at": "2026-10-01T14:23:39.354107+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s00291-026-00875-w",
+      "title": "Solution methods for the dynamic and probabilistic profitable tour problem",
+      "authors": [
+        "Caspar, M.",
+        "Schermer, D.",
+        "Wendt, O."
+      ],
+      "abstract": "Abstract\n                  \n                    Sequential decision-making under uncertainty plays a fundamental role in domains such as finance, healthcare, and supply chain management. Multistage stochastic programming and stochastic dynamic programming provide powerful mathematical frameworks for optimizing multistage decisions, but their practicality is often limited by the curse of dimensionality. To overcome this limitation, scalable approximate methods, such as reinforcement learning, have gained prominence. A central area of application is revenue management, historically used in the airline industry and now increasingly relevant in digital commerce, where demand management and logistics are closely intertwined. Motivated by these challenges, this paper studies the\n                    Dynamic and Probabilistic Profitable Tour Problem\n                    (DPPTP), a sequential decision-making problem involving two interdependent phases: an online phase, in which requests arrive dynamically and must be accepted or rejected in real-time, and an offline phase, in which accepted requests must be fulfilled by solving a Traveling Salesman Problem. We formulate the DPPTP as a Markov Decision Process and derive a stochastically optimal decision-making policy. Given the computational intractability of computing optimal policies for larger instances, we investigate heuristic and approximate solution methods, with a particular focus on Proximal\n                    Policy Optimization\n                    (PPO), a reinforcement learning algorithm. Our computational study provides a comprehensive evaluation of PPO’s performance relative to optimal and heuristic benchmarks, demonstrating that it achieves near-optimal performance while scaling effectively to problem instances with up to 96 distinct requests.",
+      "date": "2026-09-30",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00875-w",
+      "tags": [
+        "vehicle-routing",
+        "stochastic",
+        "ml-for-or",
+        "healthcare-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00875-w",
+      "score": 75.0
+    },
+    {
+      "id": "crossref-10.1002-nav.70096",
+      "title": "Dual‐Sourcing Logistics Network Design Considering Time‐Based Service Levels",
+      "authors": [
+        "Zhang, Y.",
+        "Zhang, L.",
+        "Wang, T.",
+        "Zhuang, X.",
+        "Gao, Z."
+      ],
+      "abstract": "ABSTRACT\n                  Effective logistics networks drive cost efficiency, reliable delivery, and customer satisfaction for e‐commerce companies. Motivated by JD Logistics' regional warehouse network operations problem under uncertain customer demand and delivery times, this paper proposes a dual‐sourcing location‐inventory model with time‐based service levels (DSLI‐T). We formulate the problem within a scenario‐wise distributionally robust optimization framework that incorporates continuous delay times via a conditional value‐at‐risk measure to address tail risks. By deriving tractable closed‐form expressions for the worst‐case risk‐adjusted costs and for distributionally robust cycle service‐level constraints, we reformulate the DSLI‐T model as an equivalent mixed‐integer nonlinear programming (MINLP) model with submodular objective costs. To solve this model efficiently, we propose improved extended polymatroid inequalities (I‐EPIs) that jointly exploit submodularity and generalized upper bound constraints. We prove that the I‐EPIs are facet‐defining for the corresponding polyhedron and, under mild conditions, strictly dominate classical extended polymatroid inequalities (EPIs). Based on these I‐EPIs, we develop an enhanced branch‐and‐cut (B&amp;C) algorithm accelerated by a two‐phase implementation framework. Case studies on JD Logistics demonstrate that the dual‐sourcing strategy reduces the total cost by 12.01%. Numerical experiments show that the proposed enhanced B&amp;C algorithm with I‐EPIs achieves reductions of 77.7% and 98.4% relative to EPIs and MINLP, respectively.",
+      "date": "2026-09-30",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70096",
+      "tags": [
+        "linear-programming",
+        "network-optimization",
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70096",
+      "score": 70.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1007-s00291-026-00877-8",
+      "title": "Energy-aware planning of continuous casting and hot rolling considering steel grade upgrades",
+      "authors": [
+        "Gärtner, N.",
+        "Schulz, C.",
+        "Volling, T."
+      ],
+      "abstract": "Abstract\n                  \n                    Continuous casting (CC) and hot rolling (HR) are the key processes in steel production for turning liquid steel into solidified coils with order-specific properties and dimensions. Due to different process restrictions, planning and scheduling of both processes is traditionally completely separated. As a result, the intermediate products after CC, so-called slabs, are stored temporarily for further processing, where they cool down considerably. However, for HR slabs have to be reheated to a process temperature of approximately\n                    \n                      $$1,200^\\circ $$\n                    \n                    C, making the CC-HR interface one of the most energy-intensive stages in steel production. Integrated CC-HR planning could help minimize slab waiting times and maximize energy efficiency. To address this issue, we formulate a mixed-integer non-linear program (MINLP) that utilizes flexibility stemming from steel grade upgrades to improve coordination. We investigate the potential of integrated CC-HR planning and its dependence on upgrade flexibility and product variety through a numerical study. Problem instances with increasing planning horizons are considered to assess scalability. As larger instances cannot be solved by an exact solver within practical time limits, a GRASP-based heuristic enhanced by a local branching improvement phase is employed. The findings indicate considerable improvement potential at the CC-HR interface, with most benefits attainable under moderate flexibility. These effects remain stable across different planning horizons.",
+      "date": "2026-09-30",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00877-8",
+      "tags": [
+        "integer-programming",
+        "metaheuristics",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00877-8",
+      "score": 65.0
+    },
+    {
+      "id": "arxiv-2609.40157",
+      "title": "EndoWake: Modeling Wind by Linear Programming for Wind Farm Layout Optimization",
+      "authors": [
+        "Martina Fischetti",
+        "Matteo Fischetti"
+      ],
+      "abstract": "The Wind Farm Layout Optimization problem consists of placing a given number of turbines within a given area so as to maximize energy production. One of its main challenges is the wake effect between turbines, which can strongly affect production and is a cumbersome function to evaluate and to embed in an optimization framework. In this paper we introduce a new endogenous wake model (EndoWake), based on the idea of treating the wind speed at every grid point as a decision variable, linked to its upwind neighbors through linear propagation constraints. This makes it possible to incorporate the wake equations directly into a Mixed-Integer Linear Programming (MILP) model. We then develop such a MILP model and, in particular, introduce a new class of valid \"band\" inequalities, showing that they substantially strengthen the root bound. Building on this, we design a branch-and-check scheme: the master problem retains only the site variables together with one hypograph variable per cell and scenario, integer solutions are evaluated by an exact linear-time oracle, and the optimality cuts are problem-specific \"upwind cuts\". Computational results are reported on a ladder of square grids under a four-sector axial wind rose, demonstrating the effectiveness of the proposed improvements.",
+      "date": "2026-09-30",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.40157v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming",
+        "stochastic",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.40157",
+      "arxiv_id": "2609.40157v1",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2609.40201",
+      "title": "Nonlinear Trajectory Optimization Models for Uncrewed Aerial Vehicles with Mobile Charging Support",
+      "authors": [
+        "Minsen Yuan",
+        "Amanuel Adane",
+        "James Humann",
+        "Yue Yu"
+      ],
+      "abstract": "Supporting Uncrewed Aerial Vehicles (UAVs) with mobile charging stations enables persistent UAV autonomy in infrastructure-sparse environments. In this setting, trajectory optimization for UAVs is challenging because it couples task scheduling with when and where to recharge, as well as terrain-access constraints on where charging is available. We propose a smooth nonlinear trajectory optimization model for UAV with mobile charging support. Compared with existing results, the proposed model allows nonlinear charging dynamics mode via a unified battery dynamics model with disjunctive constraints on the time allocated to each mode. Furthermore, it provides smooth approximations of the disjunctive constraints with bounded approximation errors. By avoiding integer variables, these approximations enable efficient solution using smooth nonlinear optimization algorithms. We evaluate the proposed model on UAV missions with multiple spatially distributed tasks, nonlinear constant-current--constant-voltage charging dynamics, and terrain-access constraints on mobile charging support. Compared with mixed-integer nonlinear programs, the proposed model provides high-quality approximate solutions while reducing the computation time by orders of magnitude.",
+      "date": "2026-09-30",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.40201v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.40201",
+      "arxiv_id": "2609.40201v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.39269",
+      "title": "Optimal Refinement in Dynamic Discretisation Discovery for Continuous-Time Service Network Design",
+      "authors": [
+        "Alexander Helber",
+        "Oliver Bachtler",
+        "Tom Wüllner"
+      ],
+      "abstract": "Dynamic Discretisation Discovery (DDD) is a framework for solving a problem by iteratively solving and refining a relaxed version of the problem. DDD is the basis for state-of-the-art algorithms for various problems, including the continuous-time service network design problem (CTSNDP), which we study here. In the refinement step, such algorithms must identify conflicts in the relaxation solution that make it infeasible for the original problem and then apply fixes to the relaxation to prevent them from recurring. We study the optimal refinement problem of selecting from a set of fixes a subset that fixes all conflicts and yields a relaxation of minimum size, with the aim of making it easier to solve. We demonstrate that while the number of conflicts may be exponential in the instance parameters, we can represent them more compactly, using only pseudo-polynomial space and time. Based on our more compact representation, we develop exact methods for solving the refinement problem. The best method allows us to find small relaxations in negligible amounts of time, more than 100 times faster than a natural integer programming formulation for some instance classes. Using this refinement approach in a DDD algorithm for the CTSNDP, we observe reductions in model sizes and running times of about 10 to 20 % compared to existing approaches.",
+      "date": "2026-09-30",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2609.39269v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "network-optimization",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.39269",
+      "arxiv_id": "2609.39269v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.39052",
+      "title": "A Robustified Greedy Algorithm for Online Transportation with Improved Competitive Guarantees",
+      "authors": [
+        "Ritesh Seth",
+        "Syamantak Das",
+        "Sharath Raghvendra"
+      ],
+      "abstract": "We study the \\emph{online transportation problem}, in which $n$ requests arriving sequentially in a metric space must be irrevocably assigned to $k$ capacitated facilities. Beyond classical logistics applications, this problem models resource-allocation tasks arising in machine learning, including online facility assignments, recommender systems, and mixture-of-experts routing.   We introduce \\emph{Robustified Greedy} (RG), a deterministic generalization of the Robust Matching algorithm that achieves a competitive ratio of $6.6604k-2.89$, improving upon the state-of-the-art bounds of $8k-7$ (Arndt et al., SOSA 2026) and $8k-5$ (Harada and Itoh, ICALP 2025). RG also retains the metric-sensitive guarantee established for Robust Matching (RM) (Nayyar and Raghvendra, FOCS 2017), achieving a competitive ratio of $O(k^{1-1/d}\\log^2 n)$ in $d$-dimensional Euclidean spaces for fixed $d>1$. No comparable metric-sensitive guarantee is known for the transportation algorithms of Arndt et al.\\ or Harada and Itoh.   Beyond these competitive guarantees, RG provides a simple explanation for its decisions. It favors the natural nearest-neighbor assignment and, for suitable parameters, departs from this choice only when it identifies a reassignment that reduces the cost of its maintained auxiliary matching, thereby correcting accumulated assignment costs. We also prove that nearest-neighbor assignments account for a guaranteed fraction of RG's total cost, approaching one-half for appropriate parameters, even under adversarial arrivals. Experiments on real-world datasets corroborate the theory: RG achieves lower cost-to-\\textsc{Opt} ratios than the competing algorithms while retaining a substantial nearest-neighbor component in its cost.",
+      "date": "2026-09-30",
+      "source": "arXiv",
+      "source_detail": "cs.DS",
+      "url": "http://arxiv.org/abs/2609.39052v1",
+      "tags": [
+        "cs.DS",
+        "ml-for-or",
+        "supply-chain",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.39052",
+      "arxiv_id": "2609.39052v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.39397",
+      "title": "Towards Optimal Inventory Control under Censored Demand: A Biased Sample-Average Approximation Approach",
+      "authors": [
+        "Yuxuan Han",
+        "Xiaoyu Fan",
+        "Jiawei Zhang",
+        "Zhengyuan Zhou"
+      ],
+      "abstract": "We study data-driven multi-period lost-sales inventory control under censored demand, where a stockout reveals only that demand exceeded the stocking level. We develop a unified, model-based framework for policy learning from censored data, built on a new cost decomposition for base-stock policies and a biased sample-average approximation (SAA) approach. The cost decomposition allows us to propose a new coverage condition under which censored observations are informative enough for sample-efficient policy learning. Guided by this coverage condition, we design two biased SAA algorithms: an upper-biased one that achieves near-optimal sample complexity under the offline coverage condition, and a lower-biased one that actively generates the required coverage and achieves near-optimal regret online. More broadly, this biased SAA approach provides a general principle for implementing pessimism and optimism under censored feedback, which may be of independent interest.",
+      "date": "2026-09-30",
+      "source": "arXiv",
+      "source_detail": "stat.ML",
+      "url": "http://arxiv.org/abs/2609.39397v1",
+      "tags": [
+        "stat.ML",
+        "stochastic",
+        "supply-chain",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.39397",
+      "arxiv_id": "2609.39397v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2609.39396",
+      "title": "Learning to Fix: Optimisation-Aware Machine Learning for Accelerated Unit Commitment",
+      "authors": [
+        "Benjamin Fritz",
+        "Andreas Makrides",
+        "Maryam Fetanat",
+        "Pierre Pinson"
+      ],
+      "abstract": "Unit Commitment is a computationally demanding mixed-integer linear optimisation problem requiring many binary commitment decisions across a scheduling horizon. To reduce this computational burden, machine learning approaches can predict a subset of these decisions, thereby shrinking the search space explored by the optimisation solver. Existing confidence-based approaches determine which variables to fix based on user-defined probability thresholds, which are agnostic to the downstream optimisation problem. We address this limitation by introducing an optimisation-aware framework that yields generator-specific confidence thresholds based on the impact of fixing errors on Unit Commitment solution quality. This approach won first place in the 2025 EPRI AI-ccelerating Unit Commitment competition. The proposed framework achieves a mean optimality gap below 0.5% while also delivering an average speed-up of more than 20x. It therefore provides a general mechanism for translating probabilistic predictions into controlled reductions of mixed-integer search spaces, directly linking learning decisions to their downstream computational and economic consequences.",
+      "date": "2026-09-30",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2609.39396v1",
+      "tags": [
+        "eess.SY",
+        "integer-programming",
+        "scheduling",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2609.39396",
+      "arxiv_id": "2609.39396v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-net.70062",
+      "title": "A Decomposition Approach for Large Virtual Network Embedding",
+      "authors": [
+        "Benhamiche, A.",
+        "Fouilhoux, P.",
+        "Létocart, L.",
+        "Perrot, N.",
+        "Schneider, A."
+      ],
+      "abstract": "ABSTRACT\n                  Virtual Network Embedding (VNE) is the core combinatorial problem of Network Slicing, a 5G technology which enables telecommunication operators to propose diverse service‐dedicated virtual networks, embedded onto a common substrate network. VNE asks for a minimum‐cost mapping of a virtual network on a substrate network, encompassing simultaneous node placement and edge routing decisions. On a benchmark of large virtual networks with realistic topologies we compiled, the state‐of‐the art heuristics often provide expensive solutions, or even fail to find a solution when resources are sparse. We introduce a new integer linear formulation together with a decomposition scheme based on an automatic partition of the virtual network. This results in a column generation approach whose pricing problems are also VNE problems. This method allows us to compute better lower bounds than state‐of‐the‐art methods. Finally, we devise an efficient Price‐and‐Branch heuristic for large instances.",
+      "date": "2026-10-01",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70062",
+      "tags": [
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70062",
+      "score": 55.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
