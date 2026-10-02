@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T14:23:39.041122+00:00",
+  "generated_at": "2026-10-02T13:45:50.014700+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1860,
+      "github_stars": 1861,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 108,
+      "github_open_issues": 109,
       "github_recent_prs": [
-        "Remove stale line from code-coverage.yml",
-        "Update Visual Studio 17 to Visual Studio 18 in CI",
-        "Add limit to dive length",
-        "Now clearing column and row name hash before solving model",
-        "Presolve rules off"
+        "Clear up redundant dev kkt code",
+        "Remove error messages define in highs_bindings to avoid ODR break for other sources using pybind",
+        "Fix 3323",
+        "Fix LP reader silently reading invalid files",
+        "No dual fixing when primal-dual postsolve may be required"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Features\r\n--------\r\n\r\n- added command line option `-t` to specify the number of threads, which triggers concurrent solving via `SCIPsolveConcurrent()`\r\n\r\nPerformance improvements\r\n--------------------",
-      "github_open_issues": 32,
+      "github_open_issues": 31,
       "github_recent_prs": [
         "Preserve problem arrays and ownership after allocation failure",
         "def.h: Fix mingw long formating",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14133,
+      "github_stars": 14136,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -571,11 +571,11 @@
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
       "github_open_issues": 123,
       "github_recent_prs": [
+        "update release script support",
         "python: fix cmake sample (pywralp migration fixup)",
         "Fix Python bindings for absl::Span RoutingModel APIs (fixes #5415)",
         "java: rework pom.xml",
-        "cmake: use eigen github mirror instead (Fix #5414)",
-        "export from g3 (cp, glop, routing, tooling)"
+        "cmake: use eigen github mirror instead (Fix #5414)"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -604,7 +604,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 1015,
+      "github_stars": 1016,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
-      "github_stars": 6352,
-      "github_open_issues": 184,
+      "github_stars": 6355,
+      "github_open_issues": 187,
       "github_recent_prs": [
+        "Start testing Python 3.15",
+        "Add CVXPY Workshop 2027 page",
         "Pass the full symmetric P to CuClarabel (fixes #3544)",
         "Skip diff-engine tests when sparsediffpy is not installed",
-        "Bump github/codeql-action/upload-sarif from 4.37.8 to 4.38.2",
-        "Add power cone support to SuppFunc",
-        "ENH : support tuple axes in norm() and fix N-D p=2 SOC canonicalization"
+        "Bump github/codeql-action/upload-sarif from 4.37.8 to 4.38.2"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "We've really been cooking this time! With so much goodness available in this release, an upgrade may just be worth the few seconds it will take.\r\n\r\n- **Coarse-grained moves in Neighborhoods**: With th",
-      "github_stars": 1800,
-      "github_open_issues": 114,
+      "github_stars": 1803,
+      "github_open_issues": 116,
       "github_recent_prs": [
+        "docs: state that the License Manager uses Timefold Platform credentials",
+        "fix: Handle null planning values in ValueTabuAcceptor",
         "feat: Add execution profile to generate thread dumps on OOMs",
         "feat: Add verbose-logging execution profile",
-        "docs: add missing link in migration guide",
-        "docs: add missing link in migration guide",
-        "[2.7.x] Update versions in antora.yml"
+        "docs: add missing link in migration guide"
       ]
     },
     {
@@ -1385,13 +1385,13 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2538,
-      "github_open_issues": 393,
+      "github_open_issues": 394,
       "github_recent_prs": [
+        "Contrib HiGHS: support partial MIP warm starts",
         "APPSI HiGHS: support partial MIP warm starts",
         "Upgrape actions to newest versions",
         "Update PyROS Uncertainty Set Implementations",
-        "contrib.solver GAMS: pass logfile to GAMS",
-        "Fix GDPopt LBB solver error handling"
+        "contrib.solver GAMS: pass logfile to GAMS"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1450,13 +1450,13 @@
       ],
       "recent_changes": "## JuMP v1.32.0\n\n[Diff since v1.31.2](https://github.com/jump-dev/JuMP.jl/compare/v1.31.2...v1.32.0)\n\n\n**Merged pull requests:**\n- Use WeakKeyDict for the subexpression dictionary (#4207) (@odow)\n- Ad",
       "github_stars": 2482,
-      "github_open_issues": 11,
+      "github_open_issues": 12,
       "github_recent_prs": [
+        "Fix performance of flatten! for large summations",
         "Fix type of dividing by GenericAffExpr with no terms",
         "Let division by an AffExpr stay an AffExpr when it has all-0 coefficients",
         "Clarify behavior of deleting VariableInSetRef",
-        "Allow compilation with --trim in JuliaC",
-        "Fix querying DualObjectiveValue in test_generate_solve_QCQP"
+        "Allow compilation with --trim in JuliaC"
       ]
     },
     {

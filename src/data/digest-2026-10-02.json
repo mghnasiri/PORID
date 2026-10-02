@@ -1,0 +1,311 @@
+{
+  "date": "2026-10-02",
+  "generated_at": "2026-10-02T13:45:50.326215+00:00",
+  "publications": [
+    {
+      "id": "s2-f41b22f86747",
+      "title": "Joint Service Caching and Resource Allocation in DT-Empowered Cloud-Edge Networks via MARL With Hierarchical Knowledge Transfer",
+      "authors": [
+        "Zheyi Chen",
+        "Jia-Yun Zheng",
+        "Hong-Ju Cheng",
+        "Ge-Yong Min",
+        "Zhao-Long Ning",
+        "Jie Li",
+        "Yan Zhang"
+      ],
+      "abstract": "Through bypassing the long-distance transmission of cloud services, Mobile Edge Computing (MEC) reduces response delay and ensures Quality-of-Service (QoS). In resource-constrained MEC, due to the strong coupling between service provisioning and task execution, reasonable service caching and resource allocation face many challenges on 1) coordinating the limited storage resources to improve cache hit rate, 2) allocating limited computing resources under delay constraints, and 3) sample collection and model training in dynamic environments. To address these important challenges, we propose CAMART, a novel service Caching and resource Allocation framework via Multi-Agent Reinforcement learning (MARL) with hierarchical knowledge Transfer in Digital Twin (DT) empowered Cloud-Edge Networks (DTCEN). Specifically, we first construct a new DTCEN to realize the mapping from physical to virtual networks. Next, we decouple the joint optimization of service caching and resource allocation into two sub-problems. For the service caching sub-problem, we design an improved MARL-based method to capture global information via a shared-feature extraction network and optimize caching and offloading decisions via a dual-head feature processing network. For the resource allocation sub-problem, we convert it into 0-1 integer programming and design an improved branch-and-bound-based method to reduce computational complexity while guaranteeing a high-quality solution set. Finally, we develop an original DT-driven hierarchical knowledge transfer mechanism to realize cross-scenario knowledge reuse and convergence acceleration. Using real-world datasets, extensive experiments are conducted to validate the superiority of the proposed CAMART. Compared to the state-of-the-art methods, CAMART achieves higher rewards, task completion rate, and cache hit rate in different scenarios.",
+      "date": "2026-10-01",
+      "source": "Semantic Scholar",
+      "source_detail": "integer programming branch and bound",
+      "url": "https://doi.org/10.1109/TMC.2026.3691308",
+      "tags": [
+        "integer-programming",
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TMC.2026.3691308",
+      "arxiv_id": "",
+      "citation_count": 1,
+      "score": 65.0
+    },
+    {
+      "id": "s2-1d5649bf4e32",
+      "title": "Bilevel Optimization for Green Hydrogen-to-Ammonia Synthesis System Considering Complex Dynamic Processes and Uncertainties",
+      "authors": [
+        "Yan-Song Zhang",
+        "Yi-Xin Liu",
+        "Bo Zhao",
+        "Li Guo",
+        "Hong-Kun Lv",
+        "Yuxuan Zhang",
+        "Chou-Wei Ni",
+        "Kang Zhang",
+        "Cheng-Shan Wang"
+      ],
+      "abstract": "The wind-powered green hydrogen-to-ammonia system offers a promising pathway for utilizing marine renewable energy; however, its economic viability is constrained by the strongly nonlinear dynamics of ammonia synthesis and the inherent stochasticity of wind power generation. To address these challenges, this paper proposes a bilevel scheduling framework. In the upper layer, a reduced-order Trend- and Structure-constrained Physics-Informed Neural Network (TS-PINN) model is developed by embedding trend priors and mechanistic constraints, effectively capturing the nonlinear characteristics of the ammonia synthesis process with significantly reduced computational effort. An improved Multi-Objective Particle Swarm Optimization (MOPSO) algorithm is then employed to co-optimize operational strategies and key reactor setpoints, including bed temperature and pressure. In the lower layer, a Wasserstein-distance-based distributionally robust optimization (DRO) model is established to coordinate hydrogen production and storage operations to hedge against wind power uncertainty. Simulation results demonstrate that the proposed framework achieves an effective balance among modeling accuracy, economic performance, and operational robustness, while accounting for coupled reaction–heat-transfer dynamics and renewable generation uncertainty.",
+      "date": "2026-10-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/TSTE.2026.3693213",
+      "tags": [
+        "metaheuristics",
+        "scheduling",
+        "stochastic",
+        "ml-for-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TSTE.2026.3693213",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 65.0
+    },
+    {
+      "id": "s2-6c67a7d9c46d",
+      "title": "Makespan Minimization for Multi-Robot Task Allocation With Balance-Aware Pointerformer",
+      "authors": [
+        "Hak-Mo Son",
+        "Haggi Do",
+        "Jinwhan Kim"
+      ],
+      "abstract": "This paper presents a transformer-based reinforcement learning framework for time-critical multi-robot task allocation, where the objective is to minimize mission completion time (i.e., makespan) by formulating the problem as a min–max multi-depot open vehicle routing problem. In this problem, conventional methods often do not scale well to large instances. Standard transformer policies scale better but are sensitive to the order in which robots are allocated, since early allocations constrain later choices and can produce imbalanced workloads that lead to a prolonged makespan. To address this, we propose Balance-Aware Pointerformer (BAP), which adapts problem augmentation and multi-start decoding into a diverse-order exploration strategy with a shared baseline, supported by a memory-efficient encoder that keeps this exploration tractable. In addition, BAP incorporates a balance-aware context embedding that explicitly encodes global and per-robot progress, guiding the policy toward workload-balanced allocations. Experimental results on uniform and clustered task distributions demonstrate that BAP remains competitive with a time-limited MILP solver on small instances, improves solution quality on larger-scale problems, and achieves lower makespan than representative heuristic and learning-based baselines across nearly all tested settings.",
+      "date": "2026-10-01",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.1109/LRA.2026.3728333",
+      "tags": [
+        "integer-programming",
+        "scheduling",
+        "vehicle-routing",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1109/LRA.2026.3728333",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "s2-0b33e6268fbc",
+      "title": "Advancing Multirobot Task Allocation: A Comprehensive Review of Emerging Trends and Challenges",
+      "authors": [
+        "S. I. D. Bakhat",
+        "Inam Ullah",
+        "Xiaoshan Bai",
+        "Wei-Dong Zhang",
+        "Jianqiang Li",
+        "S. Ge"
+      ],
+      "abstract": "This survey advances understanding of multirobot task allocation (MRTA), a foundational problem in robotics for optimizing fleet performance across diverse scenarios. We propose a unified formulation that integrates taxonomies and equation-level templates, capturing core variants such as instantaneous allocation/time-extended allocation (IA/TA), single-robot/multirobot (SR/MR) tasks, and single-task/multitask (ST/MT) robots, and extending to stochastic and human-aware scenarios. Surveying algorithmic landscapes, we cover optimization-based techniques, market/auction heuristics, and learning innovations (deep reinforcement learning (DRL)/multiagent reinforcement learning (MARL) with centralized training (CT), decentralized execution (DE), and attention encoders), emphasizing post-2021 hybrids for dynamic environments. We provide in-depth analyses of challenges such as scalability in swarms, real-time decision-making under uncertainty, communication robustness, and safety, supported by comparative tables and practitioner cheat sheets. Unlike prior work, our review prioritizes progress metrics, limitations, and deployment selection criteria. Looking forward, we propose directions in artificial intelligence (AI)-augmented MRTA (e.g., large language model (LLM)-driven orchestration and edge-enabled verification), federated learning for decentralization, and human-aware ethics, offering a strategic roadmap for scalable, intelligent MR coordination with societal and industrial impact.",
+      "date": "2026-10-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/JIOT.2026.3699696",
+      "tags": [
+        "stochastic",
+        "ml-for-or",
+        "game-theory",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1109/JIOT.2026.3699696",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1002-net.70062",
+      "title": "A Decomposition Approach for Large Virtual Network Embedding",
+      "authors": [
+        "Benhamiche, A.",
+        "Fouilhoux, P.",
+        "Létocart, L.",
+        "Perrot, N.",
+        "Schneider, A."
+      ],
+      "abstract": "ABSTRACT\n                  Virtual Network Embedding (VNE) is the core combinatorial problem of Network Slicing, a 5G technology which enables telecommunication operators to propose diverse service‐dedicated virtual networks, embedded onto a common substrate network. VNE asks for a minimum‐cost mapping of a virtual network on a substrate network, encompassing simultaneous node placement and edge routing decisions. On a benchmark of large virtual networks with realistic topologies we compiled, the state‐of‐the art heuristics often provide expensive solutions, or even fail to find a solution when resources are sparse. We introduce a new integer linear formulation together with a decomposition scheme based on an automatic partition of the virtual network. This results in a column generation approach whose pricing problems are also VNE problems. This method allows us to compute better lower bounds than state‐of‐the‐art methods. Finally, we devise an efficient Price‐and‐Branch heuristic for large instances.",
+      "date": "2026-10-01",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70062",
+      "tags": [
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70062",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2610.01272",
+      "title": "Forecast-Residual-Based Chance-Constrained Scheduling of Local Energy Communities under PV and Demand Uncertainty",
+      "authors": [
+        "Franco Cárdenas González",
+        "Fernando García-Muñoz"
+      ],
+      "abstract": "Day-ahead operation of local energy communities (LECs) is affected by uncertainty in PV generation and electricity demand, which may compromise the feasibility of committed exchanges with the upstream grid. This paper proposes a forecast-residual-based chance-constrained optimization (CCO) framework that characterizes uncertain parameters through their forecasts and associated residual distributions. Under the adopted zero-mean Gaussian assumption, the resulting chance constraints admit an exact deterministic-equivalent reformulation in which uncertainty is embedded through analytical safety margins, preserving the mixed-integer linear structure of the original scheduling problem. The model jointly coordinates PV and BESS operation, low-voltage distribution network constraints, internal energy sharing, and day-ahead grid-exchange commitments. Once the physical schedule is determined, an ex-post allocation stage distributes the available community energy pool among users according to predefined participation coefficients, identifies post-allocation surpluses and deficits, and maximizes their internal matching while preserving the aggregate grid exchanges obtained from the CCO. The framework is evaluated on a reduced 206-node European low-voltage feeder with up to 55 community users and benchmarked against a two-stage stochastic programming formulation. Results show that, for forecast-error levels close to 5\\%, the proposed CCO achieves operating outcomes comparable to the stochastic benchmark while retaining computational requirements close to the deterministic formulation. The ex-post allocation results further show that internal matching can reduce gross energy exchanges that require settlement with the upstream grid.",
+      "date": "2026-10-01",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2610.01272v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.01272",
+      "arxiv_id": "2610.01272v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2610.01949",
+      "title": "A Hybrid Approach to Malware Detection: Integrating Few-Shot Model-Agnostic Meta-Learning with Autoencoders",
+      "authors": [
+        "Emmanuela Andam",
+        "Yasir Abbas Zaidi",
+        "Abdelali Hadir",
+        "Emmanuel Grant",
+        "Naima Kaabouch"
+      ],
+      "abstract": "Ransomware has emerged as a major cybersecurity threat, with incidents increasing in frequency and impact across critical sectors. These attacks are typically launched through phishing emails, malicious downloads, or exploitation of software vulnerabilities to gain system access. Once inside, the malware encrypts files and demands a ransom, often in cryptocurrency, for the decryption key. Conventional detection methods often struggle with novel or scarce samples, leaving systems vulnerable. To address these challenges, this paper proposes a hybrid deep learning framework that combines an Autoencoder Feature Extractor (AFE) with a Model Agnostic Meta Learning (MAML) classifier for few shot malware detection. The AFE generates compact latent features that reduce noise and dimensionality, while the MAML classifier rapidly adapts to new threats using limited labeled data. Experiments conducted on the Ransomware Dataset 2024 demonstrate the effectiveness of the framework in binary classification tasks. Across one to fifty shot settings, the proposed model consistently achieves high accuracy, F1 score, and Matthews Correlation Coefficient values, maintaining reliable classification even under extreme scarcity. These results highlight the model's robustness and effectiveness in adapting to limited data scenarios, demonstrating the potential of combining feature extraction with meta learning to enhance resilience against malware, particularly in sectors such as healthcare, manufacturing, and public infrastructure, where cyberattacks can cause significant operational and financial disruption.",
+      "date": "2026-10-01",
+      "source": "arXiv",
+      "source_detail": "cs.CR",
+      "url": "http://arxiv.org/abs/2610.01949v1",
+      "tags": [
+        "cs.CR",
+        "stochastic",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.01949",
+      "arxiv_id": "2610.01949v1",
+      "score": 55.0
+    },
+    {
+      "id": "s2-166b29aa9ca4",
+      "title": "Probabilistic Interval Forecasting Method Based on Game-Theoretic Combinations: A Case Study of the Wei River Basin",
+      "authors": [
+        "Yiyang Yang",
+        "Xiangyu Sun"
+      ],
+      "abstract": "\n With global climate change and population growth, water scarcity issues are intensifying, severely limiting the accuracy of hydrological forecasting in river basins. Against this backdrop, this paper addresses key challenges in runoff forecasting-nonlinearity, nonstationarity, and uncertainty quantification by integrating point-interval collaborative learning concepts. It proposes a hybrid modeling framework to systematically enhance model stationarity, generalization capability, and evaluation comprehensiveness. This framework integrates deep learning, decomposition-reconstruction techniques, and multitask learning mechanisms to balance forecasting accuracy with interval stability, forming a probabilistic interval forecasting model. Validation at representative sections like Huaxian and Linjiacun in the Wei River Basin demonstrates that the proposed Pyraformer-BiLSTM-LSS model effectively captures both global and local dynamic characteristics of runoff sequences. The adaptive decomposition method based on a binary local search optimizer with variational modal decomposition (BLSO-VMD) significantly enhances denoising performance and model robustness. The interval forecasting scheme, combining multitask learning with game-theoretic composite weighting evaluation, generates coverage-reasonable and structurally stable forecast intervals at different confidence levels, markedly improving uncertainty quantification capabilities. This study provides a systematic technical pathway for probabilistic runoff forecasting under complex hydrological scenarios, offering significant theoretical value and broad application prospects.",
+      "date": "2026-10-01",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1061/jhyeff.heeng-6859",
+      "tags": [
+        "stochastic",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1061/jhyeff.heeng-6859",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1016-j.cor.2026.107591",
+      "title": "Improving energy efficiency in flexible job-shop scheduling through photovoltaic storage integration: A Q-learning guided evolutionary approach",
+      "authors": [
+        "Zhang, X.",
+        "Rui, Z.",
+        "Liu, M.",
+        "Ling, L.",
+        "Ge, M.",
+        "Hu, J."
+      ],
+      "abstract": "",
+      "date": "2026-10-01",
+      "source": "Computers & Operations Research",
+      "source_detail": "Computers & Operations Research",
+      "url": "https://doi.org/10.1016/j.cor.2026.107591",
+      "tags": [
+        "metaheuristics",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.1016/j.cor.2026.107591",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.01980",
+      "title": "The Curvature of Regret in Contextual Linear Optimization",
+      "authors": [
+        "Konstantinos Ziliaskopoulos",
+        "Alexander Vinel",
+        "Alice E. Smith"
+      ],
+      "abstract": "Decision-focused learning for linear optimization is complicated by the discontinuity of the optimizer, where small cost errors may leave the decision unchanged or move it to a different vertex. We show that this non-smooth pointwise behavior becomes locally quadratic after averaging over the data distribution, and we derive the curvature in closed form, specifically, a matrix-valued measure supported on the walls of the normal fan. This measure depends only on the feasible set, with the data distribution entering only as a weight. We then offer a tractable approximation for this curvature, computable with just one projection to the feasible set. We prove that the approximation weakly converges to the true population curvature. We offer one application of our findings, a decision-aware scenario generation method for expected-cost linear optimization. Our experiments test the quadratic and weak convergence laws and show a 30.8% regret improvement over uniform allocation on battery arbitrage.",
+      "date": "2026-10-01",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2610.01980v1",
+      "tags": [
+        "cs.LG",
+        "linear-programming",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.01980",
+      "arxiv_id": "2610.01980v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}

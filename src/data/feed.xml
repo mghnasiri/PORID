@@ -5,9 +5,18 @@
     <link>https://mghnasiri.github.io/PORID/</link>
     <description>Latest publications in Operations Research — aggregated from arXiv, Crossref, OpenAlex, and Semantic Scholar.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Oct 2026 14:23:44 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 13:45:55 +0000</lastBuildDate>
     <generator>PORID Pipeline</generator>
     <atom:link href="https://mghnasiri.github.io/PORID/data/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>A privacy-preserving distributed credit evaluation model based on blockchain</title>
+      <link>https://doi.org/10.1007/s10479-026-07436-y</link>
+      <guid isPermaLink="true">https://doi.org/10.1007/s10479-026-07436-y</guid>
+      <description>Kuang, X., Ma, C., Baltas, K., Jia, S., Ren, Y.</description>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+      <category>general-or</category>
+      <source url="https://doi.org/10.1007/s10479-026-07436-y">Annals of Operations Research</source>
+    </item>
     <item>
       <title>The conditional higher moment risk measure for extreme risks</title>
       <link>https://doi.org/10.1016/j.ejor.2026.04.039</link>
@@ -76,504 +85,515 @@ ABSTRACT
       <source url="https://doi.org/10.1007/s10957-026-03084-1">Journal of Optimization Theory and Applications</source>
     </item>
     <item>
-      <title>Optimal Transport Geometry for Robust Learning</title>
-      <link>https://optimization-online.org/2026/09/brenier-meets-adversarial-training-optimal-transport-geometry-for-robust-learning/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=brenier-meets-adversarial-training-optimal-transport-geometry-for-robust-learning</link>
-      <guid isPermaLink="true">https://optimization-online.org/2026/09/brenier-meets-adversarial-training-optimal-transport-geometry-for-robust-learning/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=brenier-meets-adversarial-training-optimal-transport-geometry-for-robust-learning</guid>
-      <description>Brenier Meets Adversarial Training
+      <title>TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning</title>
+      <link>http://arxiv.org/abs/2610.02199v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.02199v1</guid>
+      <description>Jichao Jiang, Cristian McGee, El Houcine Bergou, Hanqin Cai, Aritra Dutta
 
-Distributionally robust optimization (DRO) provides a principled framework for learning under distribution shift, but its practical use is hindered by the difficulty of evaluating worst-case risks for nonconvex loss functions. We study a penalized DRO formulation in which the adversary may choose any distribution but incurs a Wasserstein penalty for deviating from the empirical distribution. ... Read more</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>stochastic</category>
-      <source url="https://optimization-online.org/2026/09/brenier-meets-adversarial-training-optimal-transport-geometry-for-robust-learning/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=brenier-meets-adversarial-training-optimal-transport-geometry-for-robust-learning">Optimization Online</source>
-    </item>
-    <item>
-      <title>The Sooner, the Better? Optimal Vaccination Policy with Limited Vaccine Supply</title>
-      <link>https://doi.org/10.1287/opre.2025.1758</link>
-      <guid isPermaLink="true">https://doi.org/10.1287/opre.2025.1758</guid>
-      <description>Bai, M., Chen, Q., Li, C.
-
-We study the optimal single-dose vaccination policy during an infectious disease outbreak, considering both limited vaccine supply and imperfect efficacy, which provides partial immunity to each vaccinated individual. The inclusion of imperfect efficacy introduces an additional compartment to the celebrated Susceptible-Infectious-Recovered (SIR) model, giving rise to an infinite horizon nonlinear optimal control problem. We derive a closed-form expression for the optimal vaccination policy under</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+Full-parameter fine-tuning of large language models (LLMs) incurs substantial optimizer state memory overhead, limiting the model sizes that fit on modern GPUs. Existing approaches either compress optimizer state, abandon first-order gradients, or change the update geometry while retaining dense state. The recently introduced Muon optimizer reduces optimizer memory through matrix-valued updates. Still, its geometry differs from AdamW and can lead to performance degradation when fine-tuning AdamW</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>cs.LG</category>
       <category>general-or</category>
-      <source url="https://doi.org/10.1287/opre.2025.1758">Operations Research</source>
+      <source url="http://arxiv.org/abs/2610.02199v1">arXiv</source>
     </item>
     <item>
-      <title>Quality-driven long-haul routing optimization for perishable products with dynamic freshness decay</title>
-      <link>https://doi.org/10.1007/s10479-026-07428-y</link>
-      <guid isPermaLink="true">https://doi.org/10.1007/s10479-026-07428-y</guid>
-      <description>Wang, X., Shan, W.</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>general-or</category>
-      <source url="https://doi.org/10.1007/s10479-026-07428-y">Annals of Operations Research</source>
-    </item>
-    <item>
-      <title>Solution methods for the dynamic and probabilistic profitable tour problem</title>
-      <link>https://doi.org/10.1007/s00291-026-00875-w</link>
-      <guid isPermaLink="true">https://doi.org/10.1007/s00291-026-00875-w</guid>
-      <description>Caspar, M., Schermer, D., Wendt, O.
+      <title>Trust the Direction, Search the Step: Zero-and-First-Order Methods for LLM Fine-Tuning</title>
+      <link>http://arxiv.org/abs/2610.02190v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.02190v1</guid>
+      <description>Cristian McGee, El Houcine Bergou, Aritra Dutta
 
-Abstract
-                  
-                    Sequential decision-making under uncertainty plays a fundamental role in domains such as finance, healthcare, and supply chain management. Multistage stochastic programming and stochastic dynamic programming provide powerful mathematical frameworks for optimizing multistage decisions, but their practicality is often limited by the curse of dimensionality. To overcome this limitation, scalable approximate methods, such as reinforcement learning, hav</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>vehicle-routing</category>
-      <category>stochastic</category>
+Step-size selection remains a central challenge in large-scale neural network optimization; conservative steps slow convergence, while aggressive steps can destabilize it. We combine \textbf{Z}ero-and-\textbf{F}irst-\textbf{O}rder optimization~(ZFO) and propose a lightweight framework that decouples direction selection from step-size. ZFO uses a trusted first-order optimizer to determine the direction and performs zeroth-order evaluations only along this one-dimensional subspace to choose how fa</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>cs.LG</category>
       <category>ml-for-or</category>
-      <category>healthcare-or</category>
-      <category>supply-chain</category>
-      <source url="https://doi.org/10.1007/s00291-026-00875-w">OR Spectrum</source>
+      <source url="http://arxiv.org/abs/2610.02190v1">arXiv</source>
     </item>
     <item>
-      <title>The Markov switching regime global VAR model (MSR-GVAR)</title>
-      <link>https://doi.org/10.1007/s00291-026-00874-x</link>
-      <guid isPermaLink="true">https://doi.org/10.1007/s00291-026-00874-x</guid>
-      <description>Kotsompolis, G., Konstantakis, K., Xidonas, P., Michaelides, P.</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>general-or</category>
-      <source url="https://doi.org/10.1007/s00291-026-00874-x">OR Spectrum</source>
-    </item>
-    <item>
-      <title>Energy-aware planning of continuous casting and hot rolling considering steel grade upgrades</title>
-      <link>https://doi.org/10.1007/s00291-026-00877-8</link>
-      <guid isPermaLink="true">https://doi.org/10.1007/s00291-026-00877-8</guid>
-      <description>Gärtner, N., Schulz, C., Volling, T.
-
-Abstract
-                  
-                    Continuous casting (CC) and hot rolling (HR) are the key processes in steel production for turning liquid steel into solidified coils with order-specific properties and dimensions. Due to different process restrictions, planning and scheduling of both processes is traditionally completely separated. As a result, the intermediate products after CC, so-called slabs, are stored temporarily for further processing, where they cool down considerably. How</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>integer-programming</category>
-      <category>metaheuristics</category>
-      <category>scheduling</category>
-      <source url="https://doi.org/10.1007/s00291-026-00877-8">OR Spectrum</source>
-    </item>
-    <item>
-      <title>Political districting to maximize whole counties</title>
-      <link>https://doi.org/10.1007/s12532-026-00342-1</link>
-      <guid isPermaLink="true">https://doi.org/10.1007/s12532-026-00342-1</guid>
-      <description>Shahmizad, M., Buchanan, A.</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>general-or</category>
-      <source url="https://doi.org/10.1007/s12532-026-00342-1">Mathematical Programming Computation</source>
-    </item>
-    <item>
-      <title>Dual‐Sourcing Logistics Network Design Considering Time‐Based Service Levels</title>
-      <link>https://doi.org/10.1002/nav.70096</link>
-      <guid isPermaLink="true">https://doi.org/10.1002/nav.70096</guid>
-      <description>Zhang, Y., Zhang, L., Wang, T., Zhuang, X., Gao, Z.
-
-ABSTRACT
-                  Effective logistics networks drive cost efficiency, reliable delivery, and customer satisfaction for e‐commerce companies. Motivated by JD Logistics' regional warehouse network operations problem under uncertain customer demand and delivery times, this paper proposes a dual‐sourcing location‐inventory model with time‐based service levels (DSLI‐T). We formulate the problem within a scenario‐wise distributionally robust optimization framework that incorporates continuous</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>linear-programming</category>
-      <category>network-optimization</category>
-      <category>stochastic</category>
-      <category>supply-chain</category>
-      <source url="https://doi.org/10.1002/nav.70096">Naval Research Logistics</source>
-    </item>
-    <item>
-      <title>Dominates Stochastic Gradient Descent</title>
-      <link>https://optimization-online.org/2026/09/random-reshuffling-for-smooth-convex-optimization-dominates-stochastic-gradient-descent/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=random-reshuffling-for-smooth-convex-optimization-dominates-stochastic-gradient-descent</link>
-      <guid isPermaLink="true">https://optimization-online.org/2026/09/random-reshuffling-for-smooth-convex-optimization-dominates-stochastic-gradient-descent/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=random-reshuffling-for-smooth-convex-optimization-dominates-stochastic-gradient-descent</guid>
-      <description>Random Reshuffling for Smooth Convex Optimization
-
-Stochastic Gradient Descent (\(\textsf{SGD}\)) is one of the most classical optimization algorithms with favorable theoretical guarantees, yet its practical implementation differs subtly from its well-known form and is often referred to as Shuffling Stochastic Gradient Descent (\(\textsf{Shuffling SGD}\)). A particularly popular strategy in \(\textsf{Shuffling SGD}\) is Random Reshuffling (\(\textsf{RR}\)), which has achieved great empirical success. ... Read more</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>general-or</category>
-      <source url="https://optimization-online.org/2026/09/random-reshuffling-for-smooth-convex-optimization-dominates-stochastic-gradient-descent/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=random-reshuffling-for-smooth-convex-optimization-dominates-stochastic-gradient-descent">Optimization Online</source>
-    </item>
-    <item>
-      <title>On the Convergence of Column-and-Constraint Generation Algorithms in Two-Stage Robust Optimization</title>
-      <link>https://optimization-online.org/2026/09/on-the-convergence-of-column-and-constraint-generation-algorithms-in-two-stage-robust-optimization/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=on-the-convergence-of-column-and-constraint-generation-algorithms-in-two-stage-robust-optimization</link>
-      <guid isPermaLink="true">https://optimization-online.org/2026/09/on-the-convergence-of-column-and-constraint-generation-algorithms-in-two-stage-robust-optimization/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=on-the-convergence-of-column-and-constraint-generation-algorithms-in-two-stage-robust-optimization</guid>
-      <description>We study the well-posedness and convergence of column-and-constraint generation algorithms for general two-stage robust optimization problems. The analysis is formulated in terms of regularity properties of the objective, the second-stage feasible region mapping, and the separation value function, without relying on a particular algebraic representation of the second-stage problem. We give sufficient conditions for the ... Read more</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>stochastic</category>
-      <source url="https://optimization-online.org/2026/09/on-the-convergence-of-column-and-constraint-generation-algorithms-in-two-stage-robust-optimization/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=on-the-convergence-of-column-and-constraint-generation-algorithms-in-two-stage-robust-optimization">Optimization Online</source>
-    </item>
-    <item>
-      <title>Signed Budget Uncertainty for Robust Mixed-Integer Optimization</title>
-      <link>https://optimization-online.org/2026/09/signed-budget-uncertainty-for-robust-mixed-integer-optimization/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=signed-budget-uncertainty-for-robust-mixed-integer-optimization</link>
-      <guid isPermaLink="true">https://optimization-online.org/2026/09/signed-budget-uncertainty-for-robust-mixed-integer-optimization/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=signed-budget-uncertainty-for-robust-mixed-integer-optimization</guid>
-      <description>Classical budget uncertainty is widely used in robust optimization. It bounds the aggregate absolute deviation of uncertain parameters from nominal values and yields tractable robust counterparts. In many applications, however, information concerns aggregate signed deviations. We therefore study signed budget uncertainty, in which bounds are imposed on signed aggregates rather than absolute deviations. For robust ... Read more</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>integer-programming</category>
-      <category>stochastic</category>
-      <source url="https://optimization-online.org/2026/09/signed-budget-uncertainty-for-robust-mixed-integer-optimization/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=signed-budget-uncertainty-for-robust-mixed-integer-optimization">Optimization Online</source>
-    </item>
-    <item>
-      <title>A One-Factorization Predictor–Corrector Long-Step Arc-Search Method and a Curvature-Amplified Variant for Semidefinite Programming with a Homogeneous Self-Dual Embedding</title>
-      <link>https://optimization-online.org/2026/09/a-one-factorization-predictor-corrector-long-step-arc-search-method-and-a-curvature-amplified-variant-for-semidefinite-programming-with-a-homogeneous-self-dual-embedding/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=a-one-factorization-predictor-corrector-long-step-arc-search-method-and-a-curvature-amplified-variant-for-semidefinite-programming-with-a-homogeneous-self-dual-embedding</link>
-      <guid isPermaLink="true">https://optimization-online.org/2026/09/a-one-factorization-predictor-corrector-long-step-arc-search-method-and-a-curvature-amplified-variant-for-semidefinite-programming-with-a-homogeneous-self-dual-embedding/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=a-one-factorization-predictor-corrector-long-step-arc-search-method-and-a-curvature-amplified-variant-for-semidefinite-programming-with-a-homogeneous-self-dual-embedding</guid>
-      <description>In a predictor-corrector arc-search method, a point on the predictor arc is first selected and a corrector is then computed at that point. Since the Karush-Kuhn-Tucker (KKT) matrix changes with the selected point, this correction may require a second factorization in each iteration. We propose a one-factorization arc-search method (OFAS) for semidefinite programming (SDP) that ... Read more</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>general-or</category>
-      <source url="https://optimization-online.org/2026/09/a-one-factorization-predictor-corrector-long-step-arc-search-method-and-a-curvature-amplified-variant-for-semidefinite-programming-with-a-homogeneous-self-dual-embedding/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=a-one-factorization-predictor-corrector-long-step-arc-search-method-and-a-curvature-amplified-variant-for-semidefinite-programming-with-a-homogeneous-self-dual-embedding">Optimization Online</source>
-    </item>
-    <item>
-      <title>BDRS Can Fail for Matrix Scaling and Optimal Transport</title>
-      <link>https://optimization-online.org/2026/09/bdrs-can-fail-for-matrix-scaling-and-optimal-transport/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=bdrs-can-fail-for-matrix-scaling-and-optimal-transport</link>
-      <guid isPermaLink="true">https://optimization-online.org/2026/09/bdrs-can-fail-for-matrix-scaling-and-optimal-transport/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=bdrs-can-fail-for-matrix-scaling-and-optimal-transport</guid>
-      <description>We show that the Bregman Douglas&amp;#8211;Rachford splitting method (BDRS) can fail for matrix scaling and unregularized optimal transport. For matrix scaling, we construct a strictly positive \(36\times6\) integer matrix, positive rational marginals of equal mass, and a positive auxiliary initialization for which the matrix iterates enter a nonconstant six-cycle after one iteration. The construction prescribes ... Read more</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>general-or</category>
-      <source url="https://optimization-online.org/2026/09/bdrs-can-fail-for-matrix-scaling-and-optimal-transport/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=bdrs-can-fail-for-matrix-scaling-and-optimal-transport">Optimization Online</source>
-    </item>
-    <item>
-      <title>An AI-Assisted Workflow for Tight Convergence Analysis of Optimization Algorithms</title>
-      <link>https://optimization-online.org/2026/09/peppy-an-ai-assisted-workflow-for-tight-convergence-analysis-of-optimization-algorithms/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=peppy-an-ai-assisted-workflow-for-tight-convergence-analysis-of-optimization-algorithms</link>
-      <guid isPermaLink="true">https://optimization-online.org/2026/09/peppy-an-ai-assisted-workflow-for-tight-convergence-analysis-of-optimization-algorithms/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=peppy-an-ai-assisted-workflow-for-tight-convergence-analysis-of-optimization-algorithms</guid>
-      <description>Peppy
-
-This paper presents Peppy, an AI-assisted workflow for discovering tight, analytic convergence proofs for first-order optimization algorithms. Generic approaches to using LLMs to conduct mathematical research target an unspecified, broad spectrum of problems and sometimes use the Lean 4 proof assistant for formalization. On the other hand, Peppy leverages domain-specific knowledge more heavily and is ... Read more</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>general-or</category>
-      <source url="https://optimization-online.org/2026/09/peppy-an-ai-assisted-workflow-for-tight-convergence-analysis-of-optimization-algorithms/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=peppy-an-ai-assisted-workflow-for-tight-convergence-analysis-of-optimization-algorithms">Optimization Online</source>
-    </item>
-    <item>
-      <title>Projection-Free Algorithms for Nonsmooth Stochastic Convex-Concave Saddle-Point Problems</title>
-      <link>https://optimization-online.org/2026/09/projection-free-algorithms-for-nonsmooth-stochastic-convex-concave-saddle-point-problems/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=projection-free-algorithms-for-nonsmooth-stochastic-convex-concave-saddle-point-problems</link>
-      <guid isPermaLink="true">https://optimization-online.org/2026/09/projection-free-algorithms-for-nonsmooth-stochastic-convex-concave-saddle-point-problems/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=projection-free-algorithms-for-nonsmooth-stochastic-convex-concave-saddle-point-problems</guid>
-      <description>We study nonsmooth convex-concave saddle-point problems over compact convex sets, assuming access to stochastic subgradients of the payoff function. We develop single-loop projection-free algorithms that use linear minimization oracles over the primal and dual domains. Unlike prior projection-free approaches that rely on smoothing, our methods are purely subgradient-based and handle nonsmoothness directly. This design makes ... Read more</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>general-or</category>
-      <source url="https://optimization-online.org/2026/09/projection-free-algorithms-for-nonsmooth-stochastic-convex-concave-saddle-point-problems/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=projection-free-algorithms-for-nonsmooth-stochastic-convex-concave-saddle-point-problems">Optimization Online</source>
-    </item>
-    <item>
-      <title>The Strongly Convex Case</title>
-      <link>https://optimization-online.org/2026/09/silver-rate-is-almost-optimal-for-gradient-descent-the-strongly-convex-case/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=silver-rate-is-almost-optimal-for-gradient-descent-the-strongly-convex-case</link>
-      <guid isPermaLink="true">https://optimization-online.org/2026/09/silver-rate-is-almost-optimal-for-gradient-descent-the-strongly-convex-case/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=silver-rate-is-almost-optimal-for-gradient-descent-the-strongly-convex-case</guid>
-      <description>Silver Rate Is (Almost) Optimal for Gradient Descent
-
-We study gradient descent with predetermined nonnegative stepsizes on smooth strongly convex functions. Let \(p_{\mathrm{sil}}=\log_2(1+\sqrt2)\) and \(\kappa\) be the condition number. We prove the iteration lower bound \(\Omega\left(\kappa^{\frac{1}{p_{\mathrm{sil}}}-o(1)}\log\frac1\delta\right)\)for both relative squared distance and relative function error, uniformly over \(0&amp;#60;\delta&amp;#60;1\) and sufficiently large \(\kappa\). This matches the polynomial exponent of \(\kappa\) for the Silv</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>general-or</category>
-      <source url="https://optimization-online.org/2026/09/silver-rate-is-almost-optimal-for-gradient-descent-the-strongly-convex-case/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=silver-rate-is-almost-optimal-for-gradient-descent-the-strongly-convex-case">Optimization Online</source>
-    </item>
-    <item>
-      <title>Level-Set Geometry and the Theoretical Performance of PDHG for Conic Linear Optimization</title>
-      <link>https://optimization-online.org/2026/09/level-set-geometry-and-the-theoretical-performance-of-pdhg-for-conic-linear-optimization/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=level-set-geometry-and-the-theoretical-performance-of-pdhg-for-conic-linear-optimization</link>
-      <guid isPermaLink="true">https://optimization-online.org/2026/09/level-set-geometry-and-the-theoretical-performance-of-pdhg-for-conic-linear-optimization/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=level-set-geometry-and-the-theoretical-performance-of-pdhg-for-conic-linear-optimization</guid>
-      <description>We consider solving (convex) conic linear optimization problems, at the scale where matrix-factorization-free methods are attractive or necessary. The restarted primal-dual hybrid gradient method (rPDHG) &amp;#8212; with heuristic enhancements and GPU implementation &amp;#8212; has been very successful in solving huge-scale linear optimization problems (LPs). However, its application to more general conic convex optimization problems is ... Read more</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>linear-programming</category>
-      <source url="https://optimization-online.org/2026/09/level-set-geometry-and-the-theoretical-performance-of-pdhg-for-conic-linear-optimization/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=level-set-geometry-and-the-theoretical-performance-of-pdhg-for-conic-linear-optimization">Optimization Online</source>
-    </item>
-    <item>
-      <title>A tight 1/3–approximation algorithm and fully polynomial-time approximation schemes for the Colored Knapsack Problem</title>
-      <link>https://optimization-online.org/2026/09/a-tight-1-3-approximation-algorithm-and-fully-polynomial-time-approximation-schemes-for-the-colored-knapsack-problem/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=a-tight-1-3-approximation-algorithm-and-fully-polynomial-time-approximation-schemes-for-the-colored-knapsack-problem</link>
-      <guid isPermaLink="true">https://optimization-online.org/2026/09/a-tight-1-3-approximation-algorithm-and-fully-polynomial-time-approximation-schemes-for-the-colored-knapsack-problem/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=a-tight-1-3-approximation-algorithm-and-fully-polynomial-time-approximation-schemes-for-the-colored-knapsack-problem</guid>
-      <description>The \(\textit{Colored Knapsack Problem}\) (ColKP) generalizes the classical Knapsack Problem by partitioning the items into color classes and requiring the selected items to admit an ordering in which consecutive items have different colors. The problem is weakly \(\mathcal{NP}\)-hard and admits two pseudo-polynomial dynamic programming (DP) algorithms proposed in the literature. These two DP algorithms have ... Read more</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>general-or</category>
-      <source url="https://optimization-online.org/2026/09/a-tight-1-3-approximation-algorithm-and-fully-polynomial-time-approximation-schemes-for-the-colored-knapsack-problem/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=a-tight-1-3-approximation-algorithm-and-fully-polynomial-time-approximation-schemes-for-the-colored-knapsack-problem">Optimization Online</source>
-    </item>
-    <item>
-      <title>ISS and integral ISS coincide for linear systems with bounded inputs</title>
-      <link>http://arxiv.org/abs/2609.40348v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.40348v1</guid>
-      <description>Sahiba Arora, Philip Preußler, Felix Schwenninger
-
-We show that input-to-state stability (ISS) and integral input-to-state stability (integral ISS) with respect to the space of essentially bounded functions are equivalent properties for linear systems. The proof combines recent results on Orlicz-admissibility and a duality result due to the authors. As a direct consequence, we show that, given an $L^\infty$-admissible control operator, the mild solutions of the linear system are continuous, resolving a question by G.\ Weiss.</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>math.OC</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2609.40348v1">arXiv</source>
-    </item>
-    <item>
-      <title>Open Capacity Pooling in Agentic Supply Chains: Coordination-Directed LLM Discovery and Distributed Re-optimization</title>
-      <link>http://arxiv.org/abs/2609.40296v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.40296v1</guid>
-      <description>Yujia Xu, Walid Klibi, Benoit Montreuil
-
-Disruptions can exhaust a supply chain network's capacity, yet outside capacity is hard to use: incumbent models are private, provider profiles are unstructured, and offers stay hidden until costly engagement. We formulate open capacity pooling, making network membership a disruption-response decision. The alternating direction method of multipliers (ADMM) coordinates incumbents without sharing models, and residual capacity gaps direct search over profiles indexed by a large language model (LLM)</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>math.OC</category>
-      <category>supply-chain</category>
-      <source url="http://arxiv.org/abs/2609.40296v1">arXiv</source>
-    </item>
-    <item>
-      <title>Nonlinear Trajectory Optimization Models for Uncrewed Aerial Vehicles with Mobile Charging Support</title>
-      <link>http://arxiv.org/abs/2609.40201v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.40201v1</guid>
-      <description>Minsen Yuan, Amanuel Adane, James Humann, Yue Yu
-
-Supporting Uncrewed Aerial Vehicles (UAVs) with mobile charging stations enables persistent UAV autonomy in infrastructure-sparse environments. In this setting, trajectory optimization for UAVs is challenging because it couples task scheduling with when and where to recharge, as well as terrain-access constraints on where charging is available. We propose a smooth nonlinear trajectory optimization model for UAV with mobile charging support. Compared with existing results, the proposed model allo</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>math.OC</category>
-      <category>linear-programming</category>
-      <category>integer-programming</category>
-      <category>scheduling</category>
-      <source url="http://arxiv.org/abs/2609.40201v1">arXiv</source>
-    </item>
-    <item>
-      <title>EndoWake: Modeling Wind by Linear Programming for Wind Farm Layout Optimization</title>
-      <link>http://arxiv.org/abs/2609.40157v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.40157v1</guid>
-      <description>Martina Fischetti, Matteo Fischetti
-
-The Wind Farm Layout Optimization problem consists of placing a given number of turbines within a given area so as to maximize energy production. One of its main challenges is the wake effect between turbines, which can strongly affect production and is a cumbersome function to evaluate and to embed in an optimization framework. In this paper we introduce a new endogenous wake model (EndoWake), based on the idea of treating the wind speed at every grid point as a decision variable, linked to its</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>math.OC</category>
-      <category>linear-programming</category>
-      <category>integer-programming</category>
-      <category>stochastic</category>
-      <category>constraint-programming</category>
-      <source url="http://arxiv.org/abs/2609.40157v1">arXiv</source>
-    </item>
-    <item>
-      <title>Policy Iteration Is Not Strongly Polynomial for Deterministic Markov Decision Processes: The Price of Algorithmic Anarchy</title>
-      <link>http://arxiv.org/abs/2609.40147v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.40147v1</guid>
-      <description>Han Zhong, Yinyu Ye
-
-We establish an exponential iteration lower bound in the number of states for Howard's policy iteration on deterministic discounted Markov decision processes, with at most two actions per state. This rules out strong polynomiality of Howard's policy iteration when the discount factor is part of the input and yields an exponential separation from the simplex method with Dantzig's pivoting rule, which is proved to be strongly polynomial on this class. Even when each reward is restricted to logarit</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>cs.LG</category>
-      <category>linear-programming</category>
-      <source url="http://arxiv.org/abs/2609.40147v1">arXiv</source>
-    </item>
-    <item>
-      <title>Scalable Cox Regression via Grouped Risk Sets and Sharper LogSumExp Rates</title>
-      <link>http://arxiv.org/abs/2609.40120v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.40120v1</guid>
-      <description>Elizaveta Iashchinskaia, Egor Gladin
-
-Motivated by the computational challenges of large-scale Cox regression, we study stochastic minimization of LogSumExp objectives over large sets. Mini-batch normalizer estimates generally yield biased gradients. We instead use a softplus surrogate that introduces one auxiliary scalar per normalizer and admits unbiased single-sample gradients. For smooth convex LogSumExp objectives, we prove an $O(T^{-1/2})$ averaged objective bound, improving the previous $T^{-1/4}$ analysis. With a strongly co</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>cs.LG</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2609.40120v1">arXiv</source>
-    </item>
-    <item>
-      <title>Super-Quadratic Quantum Speedups for Combinatorial Optimization via Tilted Walks</title>
-      <link>http://arxiv.org/abs/2609.40088v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.40088v1</guid>
-      <description>Guneykan Ozgul, Shouvanik Chakrabarti
-
-We introduce quantum tilted walks, a quantum algorithmic framework for solving exact combinatorial optimization problems. The framework applies an average of powers of a tilted Hamiltonian that biases the discriminant matrix of a base Markov chain (mixer) with the objective function. Our starting point is quantum short-path algorithms, which prepare the ground state of such a Hamiltonian and obtain super-quadratic speedups over exhaustive search for certain combinatorial optimization problems. R</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>quant-ph</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2609.40088v1">arXiv</source>
-    </item>
-    <item>
-      <title>A Hartman-Grobman theorem on Banach bundles</title>
-      <link>http://arxiv.org/abs/2609.40039v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.40039v1</guid>
-      <description>Benjamin Rogoll, Stefan Siegmund
-
-We provide generalized linearization theorems for skew-product flows on abstract Banach bundles over locally compact metric spaces, allowing for a unified treatment of uniform and nonuniform, exponential and strong exponential dichotomies. This is accomplished by constructing an operator whose fixed points are exactly the conjugacies that are bounded perturbations of the identity, and by giving criteria under which this operator is a contraction. Under stronger assumptions we refine the argument</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>math.DS</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2609.40039v1">arXiv</source>
-    </item>
-    <item>
-      <title>ExactVariance of Random Return in Distributional LQR and Its Application to Mean-Variance Optimal Control</title>
-      <link>http://arxiv.org/abs/2609.39981v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.39981v1</guid>
-      <description>Ruyi Teng, Zifan Wang, Yulong Gao
-
-The classical linear quadratic regulator (LQR) minimizes the expected cumulative return but fails to account for performance variability, rendering it inadequate for risk-aware applications. To address this, we introduce the variance of the cumulative return as a risk measure in LQR. We derive the first exact closed-form expression for the variance of the discounted in?finite horizon return within the discrete-time Distributional LQR framework, for i.i.d. disturbances with symmetric probability </description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>math.OC</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2609.39981v1">arXiv</source>
-    </item>
-    <item>
-      <title>Input-to-state stability of second-order port-Hamiltonian systems under nonlinear dynamic boundary feedback</title>
-      <link>http://arxiv.org/abs/2609.39948v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.39948v1</guid>
-      <description>Bouchra Elghazi, Birgit Jacob, Christophe Prieur
-
-The input-to-state stability of a class of infinite-dimensional second-order port-Hamiltonian systems on a one-dimensional spatial domain is analyzed under nonlinear dynamic boundary feedback and boundary disturbances. Using energy methods in the port-Hamiltonian framework, we obtain sufficient conditions that guarantee uniform input-to-state stability of the closed-loop system.</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>math.OC</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2609.39948v1">arXiv</source>
-    </item>
-    <item>
-      <title>Sharp Quadratic Majorants of Weighted Power Means of Quadratic Forms</title>
-      <link>http://arxiv.org/abs/2609.39921v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.39921v1</guid>
-      <description>Alexey Peregudin
-
-We study when concave weighted power means of positive semidefinite quadratic forms admit sharp quadratic upper bounds. The starting point is the scalar fact that each such mean is the lower envelope of its supporting affine majorants. After the scalar variables are replaced by quadratic forms, the resulting bounds may cease to be extremal among quadratic majorants. We prove that sharpness is preserved under a lower-envelope convexity condition on the joint numerical range. In that case, a nonli</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>math.OC</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2609.39921v1">arXiv</source>
-    </item>
-    <item>
-      <title>Exact Noise Limits for Bounded Scalar Stabilization Experiments</title>
-      <link>http://arxiv.org/abs/2609.39895v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.39895v1</guid>
+      <title>Minimal Experiments for Robust Stabilization: Information, Spectral Geometry, and Duration</title>
+      <link>http://arxiv.org/abs/2610.02187v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.02187v1</guid>
       <description>Alexey Peregudin, Ngoc Tuan Dinh
 
-How much unknown process noise can a bounded experiment tolerate while still establishing that the plant can be stabilized? We answer this question for scalar discrete-time systems with bounded inputs, exact state measurements, and a disturbance-energy budget proportional to the experiment length. We distinguish individual stabilizability of every consistent model, stabilization by one common gain, and a common quadratic certificate. We determine their exact noise ceilings for every drift. The l</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+On broad classes of linear systems, the shortest experiments are almost as good as the best possible ones. For $n$ states and $m$ inputs, the shortest input sequences that support robust data-driven stabilization of every controllable plant have $mn+1$ steps with exact states and $m(n+1)$ with noisy states. We show that, when the spectral radius is bounded and the spectrum is well separated near the unit circle, these sequences tolerate a fixed fraction of the error level achievable by any exper</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
       <category>eess.SY</category>
       <category>general-or</category>
-      <source url="http://arxiv.org/abs/2609.39895v1">arXiv</source>
+      <source url="http://arxiv.org/abs/2610.02187v1">arXiv</source>
     </item>
     <item>
-      <title>Fast Regularized Policy Mirror Descent with One-Step TD Updates</title>
-      <link>http://arxiv.org/abs/2609.39837v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.39837v1</guid>
-      <description>Qipei Chen, Wenye Li, Yule Sun, Ke Wei
+      <title>Muon meets Tamed Langevin: Momentum Preconditioning beyond Convex and gradient-Lipschitz Potentials</title>
+      <link>http://arxiv.org/abs/2610.02158v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.02158v1</guid>
+      <description>Nikolaos Makras, Sotirios Sabanis
 
-Policy mirror descent (PMD) enjoys fast convergence in regularized Markov decision processes (MDPs), but existing guarantees often rely on exact or increasingly accurate policy evaluation. We analyze PMD coupled with a persistent critic advanced by one temporal-difference (TD) update. For finite discounted MDPs, we establish global linear convergence in value for exact coordinate-wise Bellman updates, with any positive constant actor stepsize and arbitrary finite critic initialization. The proof</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+We consider the problem of sampling from Gibbs distributions on matrix spaces whose potential energies are neither convex nor globally gradient-Lipschitz. We introduce a family of non-quadratic kinetic energies that lead to a new underdamped Langevin system with momentum preconditioning, in which the gradient of the kinetic energy acts as a smooth spectral taming of the momentum. We prove that, under these relaxed assumptions on the potential, the resulting dynamics leaves the target Gibbs measu</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
       <category>cs.LG</category>
-      <category>constraint-programming</category>
-      <source url="http://arxiv.org/abs/2609.39837v1">arXiv</source>
-    </item>
-    <item>
-      <title>A Stage-Structured Deterministic Model of Fall Armyworm Infestation on Maize Farming</title>
-      <link>http://arxiv.org/abs/2609.39809v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.39809v1</guid>
-      <description>Donald Okoth Ojwang, Mamadou Pathe Ly, Shaibu Osman
-
-Fall Armyworm (FAW) poses a serious threat to maize production in many regions due to its aggressive feeding habits and rapid development cycle. In this study, we developed and analyzed a stage-structured mathematical model to evaluate the impact of different FAW larval instars on maize dynamics during the vegetative and reproductive stages. Analytical results indicate that the two models have unique and positively bounded solutions for all time $t\geq 0$ and admit four equilibrium points: the t</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>q-bio.PE</category>
       <category>general-or</category>
-      <source url="http://arxiv.org/abs/2609.39809v1">arXiv</source>
+      <source url="http://arxiv.org/abs/2610.02158v1">arXiv</source>
     </item>
     <item>
-      <title>Improved KKT Complexity for First-Order Bilevel Optimization under Weak Lower-Level Convexity</title>
-      <link>http://arxiv.org/abs/2609.39736v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.39736v1</guid>
-      <description>Jan Harold Alcantara, Masahiro Inoue, Akiko Takeda
+      <title>Linear Programming Representations and Strongly Polynomial Algorithms for Robust Markov Decision Processes</title>
+      <link>http://arxiv.org/abs/2610.02131v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.02131v1</guid>
+      <description>Han Zhong, Yinyu Ye
 
-We study deterministic first-order bilevel optimization under weak lower-level convexity, allowing nonconvex lower-level objectives and without assuming strong convexity, the Polyak-Łojasiewicz condition, or an error-bound property. We consider a $δ$-relaxed Moreau-gap constraint, with $δ&gt;0$, for the lower-level stationarity condition and propose an inexact variable-smoothing penalty method (IVSP) for computing its approximate Karush-Kuhn-Tucker (KKT) points. For any fixed relaxation level $δ$, </description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+We study linear programming (LP) representations and strongly polynomial algorithms for robust Markov decision processes (RMDPs) with rational polyhedral state-action rectangular uncertainty in rewards and transitions. By encoding a finite sequence of robust policy-iteration steps, we construct a single LP whose optimal solutions recover the robust optimal value and all optimal stationary randomized policies. At fixed discount, the LP has polynomial dimension and encoding length and can be const</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>cs.LG</category>
+      <category>linear-programming</category>
+      <source url="http://arxiv.org/abs/2610.02131v1">arXiv</source>
+    </item>
+    <item>
+      <title>Randomized Matvec Lower Bounds for Simplex-Based Matrix Games</title>
+      <link>http://arxiv.org/abs/2610.02095v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.02095v1</guid>
+      <description>Wendao Wu, Cong Fang
+
+We prove randomized matrix-vector query lower bounds for two normalized matrix-game geometries: a Euclidean unit ball against a probability simplex, with row norms at most one, and two probability simplices, with entries of absolute value at most one. Each query returns $(Ax,A^\top y)$ for arbitrary real vectors. The algorithm must return a feasible pair with full saddle-point gap at most $\varepsilon$, with probability at least $2/3$ on every admissible matrix. For sufficiently small $\varepsil</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
       <category>math.OC</category>
       <category>general-or</category>
-      <source url="http://arxiv.org/abs/2609.39736v1">arXiv</source>
+      <source url="http://arxiv.org/abs/2610.02095v1">arXiv</source>
     </item>
     <item>
-      <title>Several Accelerated and Stable Pseudo-Energy-Dissipative Lagrange Multiplier Methods based on Second-order Flow and Variable Splitting</title>
-      <link>http://arxiv.org/abs/2609.39695v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.39695v1</guid>
-      <description>Xiaoli Li, Jianghua Liu, Zhiping Mao, Jingrong Wei, Xuan Zhao
+      <title>Geometry and Convergence of Quadratically Regularized Optimal Transport II</title>
+      <link>http://arxiv.org/abs/2610.02077v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.02077v1</guid>
+      <description>Alberto González-Sanz, Marcel Nutz
 
-Based on second-order inertial dynamics, we develop two accelerated Lagrange multiplier (LM)-based optimization methods: Linear LM-based second-order flow method and linear LM-based variable and operator splitting method for unconstrained non-convex optimization problems. Relaxed and adaptive variants of both methods are proposed to prevent degeneration of the Lagrange multiplier and to enable automatic adjustment of the time step size. Within the novel second-order LM-based optimization framewo</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+We study quadratically regularized optimal transport with quadratic cost in the regime of small regularization $\varepsilon$, where the support of the optimal coupling is sparse. For smooth marginal densities in $\mathbb{R}^d$, we show that the support contains the graph of the Brenier map. After centering by the Brenier image and rescaling by $\ell=\varepsilon^{1/(d+2)}$, the sections of the support have explicit ellipsoidal limits for $\varepsilon\to0$, except at boundary points, where the lim</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.AP</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2610.02077v1">arXiv</source>
+    </item>
+    <item>
+      <title>Euclidean Distance Optimization Within the Grassmannian</title>
+      <link>http://arxiv.org/abs/2610.02018v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.02018v1</guid>
+      <description>Hannah Friedman, Serkan Hoşten, Andrea Rosana
+
+Given a subvariety of the Grassmannian and a data point, we seek to find a point on the subvariety minimizing the Euclidean distance to the data point. The number of complex critical points of this optimization problem is the Euclidean distance (ED) degree. We show that the ED discriminant of the whole Grassmannian, that is, the set of data points with a number of critical points different than the ED degree, is the discriminant of the characteristic polynomial of the data as a projection matrix</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.AG</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2610.02018v1">arXiv</source>
+    </item>
+    <item>
+      <title>Approximation and computation of the geodesic Sinkhorn distance</title>
+      <link>http://arxiv.org/abs/2610.02007v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.02007v1</guid>
+      <description>Hugo Lavenant, Jonas Luckhardt, Bernhard Schmitzer
+
+In [H. Lavenant, J. Luckhardt, G. Mordant, B. Schmitzer, L. Tamanini, The Riemannian geometry of Sinkhorn divergences. Ann. Inst. H. Poincaré Anal. Non Linéaire 43 (2026)] we introduced a Riemannian metric $\mathsf{d}_S$ on the space of probability distributions obtained from entropic optimal transport, specifically from the Sinkhorn divergence $S_\varepsilon$. In the present work we discuss how to approximate and compute $\mathsf{d}_S$. Spatially, we prove Gromov--Hausdorff convergence of the m</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.NA</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2610.02007v1">arXiv</source>
+    </item>
+    <item>
+      <title>The Curvature of Regret in Contextual Linear Optimization</title>
+      <link>http://arxiv.org/abs/2610.01980v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01980v1</guid>
+      <description>Konstantinos Ziliaskopoulos, Alexander Vinel, Alice E. Smith
+
+Decision-focused learning for linear optimization is complicated by the discontinuity of the optimizer, where small cost errors may leave the decision unchanged or move it to a different vertex. We show that this non-smooth pointwise behavior becomes locally quadratic after averaging over the data distribution, and we derive the curvature in closed form, specifically, a matrix-valued measure supported on the walls of the normal fan. This measure depends only on the feasible set, with the data di</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>cs.LG</category>
+      <category>linear-programming</category>
+      <category>stochastic</category>
+      <source url="http://arxiv.org/abs/2610.01980v1">arXiv</source>
+    </item>
+    <item>
+      <title>A two-stage approach to satellite constellation optimization: classical and QUBO formulations</title>
+      <link>http://arxiv.org/abs/2610.01885v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01885v1</guid>
+      <description>Carlo Novara
+
+The design of satellite constellations for Earth observation requires balancing spatial coverage, revisit time, cost, and operational complexity. This paper considers the problem of designing the orbits of a given number of Low Earth Orbit (LEO) or Very Low Earth Orbit (VLEO) satellites to maximize the spatial and temporal resolution achieved over a prescribed set of ground targets. This kind of problem is inherently nonconvex and possibly combinatorial, making its solution computationally deman</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>eess.SY</category>
+      <category>stochastic</category>
+      <source url="http://arxiv.org/abs/2610.01885v1">arXiv</source>
+    </item>
+    <item>
+      <title>Optimal Stochastic Bilevel Optimization with First-Order Oracles</title>
+      <link>http://arxiv.org/abs/2610.01843v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01843v1</guid>
+      <description>Linxuan Pan, Junchi Yang
+
+We study nonconvex--strongly-convex bilevel optimization under a stochastic first-order oracle. We introduce MRT-FD, a single-loop first-order method that simultaneously tracks the upper-level variable, the lower-level solution, and the auxiliary response arising from implicit differentiation of the hyperobjective. MRT-FD performs one update of each variable per iteration and approximates the second-order derivative actions using order-$p$ finite differences. For any fixed finite smoothness orde</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2610.01843v1">arXiv</source>
+    </item>
+    <item>
+      <title>Recognizing Signomial Convexity is Hard</title>
+      <link>http://arxiv.org/abs/2610.01812v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01812v1</guid>
+      <description>Rui Zheng, Iosif Sakos, Antonios Varvitsiotis
+
+Signomials---finite sums of generalized monomials with real exponents---are a natural machine learning model, combining parsimonious representations of power laws, inverse relationships, and multiplicative interactions with universal approximation and interpretable parameters. In fact, 45 of the 100 equations in the AI Feynman benchmark admit signomial representations. Moreover, signomial optimization is widely used in engineering design, communications, economics, and machine learning, but is c</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
       <category>math.OC</category>
       <category>ml-for-or</category>
-      <source url="http://arxiv.org/abs/2609.39695v1">arXiv</source>
+      <source url="http://arxiv.org/abs/2610.01812v1">arXiv</source>
     </item>
     <item>
-      <title>The Maximal Robust Positively Invariant Set for Linear Difference Inclusions</title>
-      <link>http://arxiv.org/abs/2609.39499v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.39499v1</guid>
-      <description>Kai Wang, Daniel Axehill
+      <title>Removing spurious minima for planar features by skip connections</title>
+      <link>http://arxiv.org/abs/2610.01728v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01728v1</guid>
+      <description>Jakob Paul Zimmermann, Moritz Grillo, Andrei Balakin, Georg Loho
 
-This article develops a systematic characterization and exact computational framework for the maximal robust positively invariant set of linear difference inclusions subject to hard state constraints. The set is characterized as the greatest fixed point of the robust predecessor operator, leading to three equivalent decreasing set iterations---the standard, self-restricted, and incremental iterations---and exact stopping tests. Under uniform exponential stability of the matrix family and bounded</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>math.OC</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2609.39499v1">arXiv</source>
-    </item>
-    <item>
-      <title>Aligning feature-mapping designs to given density fields, first and second order</title>
-      <link>http://arxiv.org/abs/2609.39472v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.39472v1</guid>
-      <description>Fabian Wein, Patrick Jung, Arash Moradian, Michael Stingl
-
-Feature-mapping methods represent structural designs by explicit geometric primitives on fixed analysis grids, an interpretable and parametric alternative to the density fields of density-based topology optimization (SIMP). In contrast to SIMP, however, feature-mapping optimization is sensitive to the initial design.   We present a gradient-based approach to align a feature-mapping configuration to a given (pseudo) density field, e.g., to initialize a subsequent feature-mapping optimization. The</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>math.OC</category>
-      <category>general-or</category>
-      <source url="http://arxiv.org/abs/2609.39472v1">arXiv</source>
-    </item>
-    <item>
-      <title>T-ARC: Topology-Aware Randomized Clustering via Distributionally Robust Stochastic Block Models</title>
-      <link>http://arxiv.org/abs/2609.39466v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.39466v1</guid>
-      <description>Serena Grazia De Benedictis, Andersen Ang, Nicoletta Del Buono, Flavia Esposito, Laura Selicato
-
-In this work, we introduce a new clustering method, namely T-ARC (Topology-Aware Randomized Clustering), that corrects the geometric bias of K-means by embedding topological information directly into the optimization objective. Building on the assumption that the data admits an underlying hidden structure modeled via a latent graph, the idea is to uncover this information through the interplay between the standard K-means data-fidelity term and a graph-cut penalty, which discourages cluster assi</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+Understanding loss landscapes is central to explaining neural-network training, yet their structure remains only partially understood even in simple models. We study the Gaussian population loss of shallow, bias-free ReLU networks in the teacher--student setting. This provides a simple model for studying essential aspects such as feature learning and overparameterization. For teacher networks with positive output weights and planar features, we show that including a learned linear skip removes a</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
       <category>cs.LG</category>
-      <category>stochastic</category>
-      <source url="http://arxiv.org/abs/2609.39466v1">arXiv</source>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2610.01728v1">arXiv</source>
     </item>
     <item>
-      <title>Robust forms for passive descriptor systems</title>
-      <link>http://arxiv.org/abs/2609.39465v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.39465v1</guid>
-      <description>Peter Benner, Anshul Prajapati, Paul Van Dooren
+      <title>Simplifying the computation of weak-$\star$ second subderivatives of convex functionals via $Γ$-convergence</title>
+      <link>http://arxiv.org/abs/2610.01673v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01673v1</guid>
+      <description>Gerd Wachsmuth
 
-We show how to compute the passivity radius of a given generalized state-space model of a rational transfer function that represents a passive system, both in the continuous-time and discrete-time cases. We then use this to construct robust descriptor realizations. For the continuous-time case, these realizations have a port-Hamiltonian descriptor form. For the discrete-time case a similar result holds for the so-called normalized realizations. The computation of such robust realizations is link</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+We prove (under some mild assumptions) that the strong-strong twice epidifferentiability of a convex functional is equivalent to the weak-$\star$ twice epidifferentiability of its conjugate functional. Further, the corresponding subderivatives are (up to scaling) conjugates of each other. This result can be used to facilitate the computation of weak-$\star$ second subderivatives, which are crucial ingredients in no-gap second-order optimality conditions. We also show that weak-$\star$ second sub</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
       <category>math.OC</category>
       <category>general-or</category>
-      <source url="http://arxiv.org/abs/2609.39465v1">arXiv</source>
+      <source url="http://arxiv.org/abs/2610.01673v1">arXiv</source>
     </item>
     <item>
-      <title>Distributionally robust linear regression through the lens of adversarial training</title>
-      <link>http://arxiv.org/abs/2609.39449v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.39449v1</guid>
-      <description>Elis Stefansson, David Vävinggren, Antônio H. Ribeiro
+      <title>Routing in Line Networks with Handling Times</title>
+      <link>http://arxiv.org/abs/2610.01666v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01666v1</guid>
+      <description>Gabriel Deza, Michal Tzur, Tal Raviv
 
-Distributionally robust optimization (DRO) studies parameter estimation under uncertainty in the underlying probability distribution and has emerged as a principled framework for analyzing robustness and generalization. In particular, Wasserstein DRO, with distributional uncertainty induced by the Wasserstein distance, generalizes several popular regularizers. This paper studies Wasserstein DRO linear regression, unifying square-root Lasso and adversarial linear regression as important special c</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>stat.ML</category>
-      <category>stochastic</category>
-      <source url="http://arxiv.org/abs/2609.39449v1">arXiv</source>
+Motivated by hyperconnected urban parcel networks for same-day and time-sensitive delivery, we study the fixed-line routing problem that arises when evaluating a candidate set of recurring inter-hub vehicle services. Vehicles follow predefined cyclic sequences of service points, or lines, and parcels may transfer between lines. Such transfers expand path choice but require loading and unloading operations that make vehicles dwell at service points. Because handled volumes are routing-dependent, </description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2610.01666v1">arXiv</source>
     </item>
     <item>
-      <title>Awakening of the Buddha: Subspace Learning During Population-Loss Plateaus</title>
-      <link>http://arxiv.org/abs/2609.39408v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.39408v1</guid>
-      <description>Akash Kumar
+      <title>Lower Bounds for Stochastic First-Order Algorithms with Variance Reduction in Nonconvex--Concave Minimax Optimization</title>
+      <link>http://arxiv.org/abs/2610.01662v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01662v1</guid>
+      <description>Jiayi Song, Zi Xu
 
-Population loss can remain nearly constant while a neural network learns a substantially more predictive representation. We establish this separation for two-layer ReLU and leaky-ReLU networks trained on Gaussian inputs by simultaneous fixed-step population gradient descent on all parameters. For structured additive teachers whose links are positive mixtures of Gaussian-damped cubics in $H^1(γ)$, we give explicit conditions under which small IID Gaussian initialization yields a high-probability </description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>cs.LG</category>
+We establish complexity lower bounds for stochastic first-order algorithms in nonconvex--concave minimax optimization, allowing algorithms to use variance reduction. Our main contribution is a lower bound for a zero-respecting algorithm class that permits variance reduction, extending beyond the algorithmic restrictions imposed by some existing lower bounds. We consider objectives with an $L$-Lipschitz continuous joint gradient, a compact convex dual domain of Euclidean radius at most $D_Y$, and</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2610.01662v1">arXiv</source>
+    </item>
+    <item>
+      <title>Structural stability of systems and cycle covers in random graphs</title>
+      <link>http://arxiv.org/abs/2610.01607v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01607v1</guid>
+      <description>Mohamed Ali Belabbas
+
+Structural system theory studies which network topologies can sustain a prescribed system property such as controllability or stability. When the topology is itself random, the relevant question becomes probabilistic: how likely is a graph drawn from a stochastic model to sustain the property? Such probabilities measure the abundance and robustness of the property across topologies, and indicate whether systems requiring it can be reliably deployed in uncertain environments. We address this ques</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2610.01607v1">arXiv</source>
+    </item>
+    <item>
+      <title>Convergence Analysis of STORM Under Different Geometries</title>
+      <link>http://arxiv.org/abs/2610.01599v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01599v1</guid>
+      <description>Wei Jiang, Yibo Wang, Wenhao Yang, Rui Yan, Lijun Zhang et al.
+
+Stochastic recursive momentum (STORM) achieves fast convergence for nonconvex optimization via the variance reduction effect, but existing analyses rely on the strong average smoothness assumption. In this paper, we study the convergence of STORM for different objectives without average smoothness. We first revisit the results under average smoothness, obtaining the $O(T^{-1/3})$ bound for nonconvex objectives and the $O(σ^2/(μT))$ bound for last-iterate output under the $μ$-Polyak--Łojasiewicz~</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2610.01599v1">arXiv</source>
+    </item>
+    <item>
+      <title>Optimal Momentum Methods for Stochastic Multilevel Compositional Optimization</title>
+      <link>http://arxiv.org/abs/2610.01572v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01572v1</guid>
+      <description>Wei Jiang, Rui Yan, Sifan Yang, Yuanyu Wan, Lijun Zhang et al.
+
+This paper investigates stochastic multi-level optimization where the objective is a nested composition of several smooth non-convex functions. We assume that only stochastic estimates of the gradient and function values for each level are accessible. Consequently, obtaining an accurate estimate of the overall gradient is challenging due to the nested structure. To address this, we employ a momentum-based estimator with mini-batches to track the function values of each level, which are subsequen</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2610.01572v1">arXiv</source>
+    </item>
+    <item>
+      <title>Reinforcement Learning to Accelerate Primal-Dual Hybrid Gradient for Linear Programming</title>
+      <link>http://arxiv.org/abs/2610.01546v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01546v1</guid>
+      <description>Jinhwan Sul, Alex Oshin, Evangelos A. Theodorou
+
+Primal-dual hybrid gradient (PDHG) methods solve large-scale linear programs (LPs) using GPU-friendly matrix-vector products and projections, but their practical performance depends on coordinating algorithm parameters, acceleration, and restarts. We introduce GALLOP, which uses reinforcement learning to jointly learn continuous algorithm parameters and discrete restart decisions without differentiating through the solver. Its generalized accelerated PDHG update combines separate primal and dual</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>linear-programming</category>
       <category>ml-for-or</category>
-      <source url="http://arxiv.org/abs/2609.39408v1">arXiv</source>
+      <source url="http://arxiv.org/abs/2610.01546v1">arXiv</source>
     </item>
     <item>
-      <title>Robustifying Asynchronous SGD via Soft Throttling</title>
-      <link>http://arxiv.org/abs/2609.39357v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.39357v1</guid>
-      <description>Kaoru Otsuka, Maxime Meyer, Yuki Takezawa, Makoto Yamada, Anastasia Koloskova
+      <title>Vector- and operator-valued backward stochastic equations with finite-variation drivers and a maximum principle for singular stochastic control in infinite dimensions</title>
+      <link>http://arxiv.org/abs/2610.01545v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01545v1</guid>
+      <description>Ying Hu, Guomin Liu, Shanjian Tang
 
-Asynchronous SGD is a popular algorithm for distributed learning where each client's gradient update is applied on arrival. This leads to a speed-up, but also an increased vulnerability to attacks, as fast clients can dominate the total update. We introduce Throttle, a Byzantine-robust generalization of asynchronous SGD where the key idea is to exponentially down-weight updates from faster clients by a factor $q$. Both asynchronous SGD ($q=1$) and synchronous Byzantine-robust SGD ($q\to\infty$) </description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>cs.LG</category>
+We study a mixed regular--singular control problem for stochastic evolution equations in a Hilbert space with possibly unbounded random linear operators, a nonconvex regular-control domain, and a state-dependent singular coefficient. The singular control is an adapted nondecreasing càdlàg process whose terminal value need not be bounded. We prove well-posedness and weighted moment estimates for the forward and backward equations, and characterize the second-order adjoint by a conditionally expec</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
       <category>general-or</category>
-      <source url="http://arxiv.org/abs/2609.39357v1">arXiv</source>
+      <source url="http://arxiv.org/abs/2610.01545v1">arXiv</source>
     </item>
     <item>
-      <title>Generalized Geometry Block Proximal Linearized Method for Multiblock Nonconvex and Nonsmooth Optimization</title>
-      <link>http://arxiv.org/abs/2609.39301v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.39301v1</guid>
-      <description>Weifeng Yang
+      <title>McADMM: A Multi-Clique Augmented Lagrangian-Based Algorithm for Large-Scale Sparse SDPs with Bound Constraints</title>
+      <link>http://arxiv.org/abs/2610.01503v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01503v1</guid>
+      <description>Kristo Nugraha Lian, Nehal Ahmed Shaikh, Di Hou, Xingyu Xie, Kim-Chuan Toh
 
-This paper considers a class of multiblock nonconvex and nonsmooth optimization problems arising in many applications. Existing methods construct proximal linearized operators or their variants within standard Euclidean geometry to solve this class of problems, forcing their block variable updates to rely on the standard inner product and its induced norm. Nevertheless, this construction fails to capture the geometric structure of the target problem, leading to low numerical efficiency. To overc</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+sGS-PADMM [21, 14, 6] is a powerful and versatile class of convergent multi-block ADMM solvers for implementations on moderate-sized linear semidefinite programming (SDP) problems. In this paper, we further enhance this class of algorithms for solving SDP problems by proposing a new multi-clique decomposition approach, allowing substantial improvements in applications on large-scale sparse SDPs (e.g., where $n &gt; 1000$) with conducive aggregate sparsity patterns. Our SDP decomposition strategy ma</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
       <category>math.OC</category>
       <category>decomposition</category>
       <category>survey</category>
-      <source url="http://arxiv.org/abs/2609.39301v1">arXiv</source>
+      <source url="http://arxiv.org/abs/2610.01503v1">arXiv</source>
     </item>
     <item>
-      <title>An Island-Based Parallel Biased Random-Key Genetic Algorithm for the Three-Dimensional Trailer Loading Problem</title>
-      <link>http://arxiv.org/abs/2609.39272v1</link>
-      <guid isPermaLink="true">http://arxiv.org/abs/2609.39272v1</guid>
-      <description>A. del Río, L. Díaz, L. C. de Vicente, J. Cameselle, B. Fernández
+      <title>Building Seasonal Highways for Residential Energy Hubs: Sizing, planning and operating thermal energy storage</title>
+      <link>http://arxiv.org/abs/2610.01489v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01489v1</guid>
+      <description>Dario Slaifstein, Mohammad Khosravi, Gautham Ram Chandra Mouli, Laura Ramirez-Elizondo, Pavol Bauer
 
-The Three-Dimensional Trailer Loading Problem (3D-TLP) involves determining the optimal placement and orientation of heterogeneous items within the confined space of a trailer while maximizing volume utilization and satisfying a wide range of complex logistical and safety constraints. The 3D-TLP is NP-hard, rendering exact optimization approaches computationally impractical for large-scale industrial applications. To address this challenge, we propose an enhanced Biased Random-Key Genetic Algori</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>cs.NE</category>
-      <category>metaheuristics</category>
-      <category>supply-chain</category>
-      <source url="http://arxiv.org/abs/2609.39272v1">arXiv</source>
+The operation of residential energy hubs with multiple energy carriers (electricity, heat, mobility) poses a significant challenge due to the energy storage differences in time-constants, round-trip efficiencies and self-discharge rates. Usually, thermal storage exhibits flexibility in yearly planning optimizations or long-term scenarios. However, as optimization horizons shrink (1-48hs) so does their supplied value due to the lower round-trip efficiencies. To avoid this early depletion during o</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>eess.SY</category>
+      <category>stochastic</category>
+      <source url="http://arxiv.org/abs/2610.01489v1">arXiv</source>
+    </item>
+    <item>
+      <title>On the Multi-Index, Multi-Rate, and Multi-Phase Dynamics of Decoder-Only Language Models: A Unified Hybrid Framework for Generative and Agentic Systems</title>
+      <link>http://arxiv.org/abs/2610.01478v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01478v1</guid>
+      <description>Ali Pakniyat
+
+Large language models (LLMs) are increasingly deployed as computational engines in autonomous decision-making and planning loops, yet their systems and control treatment remains hindered by architectural simplifications, index conflations, and informal descriptions of tool interactions. This paper presents a control-theoretic formulation of decoder-only language models as multi-index, multi-rate systems, and sets the stage for a stochastic hybrid systems framework to govern the multi-phase dynam</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2610.01478v1">arXiv</source>
+    </item>
+    <item>
+      <title>Least-time Gradient Flow</title>
+      <link>http://arxiv.org/abs/2610.01426v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01426v1</guid>
+      <description>Alessandro Betti, Marco Gori, Stefano Melacci, Jinwei Zhao
+
+Prescribing the speed of gradient flow on the risk itself, by the dynamics $\dot w=-u(E(w))\nabla E(w)/\abs{\nabla E(w)}^{2}$, makes the risk $e(t)=E(w(t))$ obey $\dot e=-u(e)$ exactly, whatever the landscape~$E$; the time needed to reach zero risk from $e_0$ is $\int_0^{e_0}\dd e/u(e)$. Minimizing this time alone is ill posed, and we study the regularized problem $\inf\{\int_0^{e_0}(\tfrac\lambda2\abs{u'}^{2}+1/u)\,\dd e:\ u\in H^{1}(0,e_0),\ u\ge0,\ u(0)=0\}$, $λ&gt;0$. We prove that the minimize</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>cs.LG</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2610.01426v1">arXiv</source>
+    </item>
+    <item>
+      <title>Second-order Wasserstein response for Lévy laws</title>
+      <link>http://arxiv.org/abs/2610.01411v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01411v1</guid>
+      <description>Alexandre Autran
+
+Weak perturbations of equal size can produce terminal Wasserstein errors of different orders. For Gaussian-smoothed infinitely divisible laws, we differentiate distribution functions with respect to variance-weighted Lévy characteristics, including distributional directions generated by moving atoms. We obtain first- and second-order expansions uniform over Lipschitz tests. Gaussian analyticity identifies the signed second coefficient of the Wasserstein-1 distance when the first response is nonz</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.PR</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2610.01411v1">arXiv</source>
+    </item>
+    <item>
+      <title>Constant-Modulus Optimization for Quadratic K-Medoids Graph Clustering</title>
+      <link>http://arxiv.org/abs/2610.01404v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01404v1</guid>
+      <description>Yutong Zheng, Qingna Li, Wenshun Teng
+
+Graph clustering aims to partition the vertices of a graph into groups with dense intra-cluster connections and sparse inter-cluster connections. In this paper, we study a quadratic $K$-medoids formulation for graph clustering from the perspective of CM optimization. By identifying the binary feasible set as a discrete CM set, we establish a connection between the quadratic $K$-medoids model and CM optimization. Rather than solving the original binary problem directly, we consider the convex hul</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>stochastic</category>
+      <source url="http://arxiv.org/abs/2610.01404v1">arXiv</source>
+    </item>
+    <item>
+      <title>Reachability-Informed Reinforcement Learning for Multi-Impulse Interplanetary Transfers</title>
+      <link>http://arxiv.org/abs/2610.01344v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01344v1</guid>
+      <description>Yashdeep Chaudhary, Roberto Armellin, Harry Holt
+
+Reinforcement learning offers the prospect of a reusable sequential decision-making mechanism for spacecraft trajectory design, motivating policy interfaces that connect learned decisions to the underlying maneuver geometry. This paper develops Reachability Analysis-Informed Reinforcement Learning (RARL) for deterministic multi-impulse interplanetary transfers, placing intermediate waypoint selection at the center of the learned decision process. Local first-order reachability maps bounded veloc</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>ml-for-or</category>
+      <source url="http://arxiv.org/abs/2610.01344v1">arXiv</source>
+    </item>
+    <item>
+      <title>P-curve: An improved solution for the single-facility location problem in two regions with $\ell_{p}$- and $\ell_{q}$-norms</title>
+      <link>http://arxiv.org/abs/2610.01340v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01340v1</guid>
+      <description>Luis Franco, Francisco Velasco, Francisco J. Ortega-Irizo, Luis Gonzalez-Abril
+
+The distance between two points is provided by the length of their test connecting path. However, there is no unique way to attain this path in the space $R^2$, which is split by a straight line $L$ into two regions, $Ω_p$ and $Ω_q$, with $\ell_{p}$- and $\ell_q$-norms, respectively, where $1&lt;p\leq q $ and $L\subsetΩ_q$.   In this paper, given a point $P\in Ω_p$, the locus of points $Q\inΩ_p$, called $p$-curve, is found, such that there are two ways to attain the distance between $P$ and $Q$. Fo</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>network-optimization</category>
+      <category>facility-location</category>
+      <source url="http://arxiv.org/abs/2610.01340v1">arXiv</source>
+    </item>
+    <item>
+      <title>Control Allocation with Adaptive Augmentation for Aerodynamic Optimization of Trailing Edge Morphing Aircraft</title>
+      <link>http://arxiv.org/abs/2610.01321v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01321v1</guid>
+      <description>Mark Spiller, Lennart Kracke, Johannes Autenrieb
+
+This paper presents a control allocation framework with adaptive augmentation for a trailing edge morphing aircraft, providing stability guarantees under uncertainty while exploiting the available morphing degrees of freedom to optimize aerodynamic efficiency. A baseline controller is designed using the nominal aircraft model to establish the desired closed-loop reference dynamics. For the aerodynamics, the wing shape is optimized dependent on the flight state to achieve a target elliptical lift</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2610.01321v1">arXiv</source>
+    </item>
+    <item>
+      <title>Petrov-Galerkin operator inference with application to stability-encouraging identification</title>
+      <link>http://arxiv.org/abs/2610.01295v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01295v1</guid>
+      <description>Johannes Rettberg, Jonas Nicodemus, Harsh Sharma, Boris Kramer, Jörg Fehr et al.
+
+Data-driven model order reduction methods such as operator inference enable the efficient construction of reduced-order models directly from high-dimensional time-domain data. Standard operator inference typically seeks a Galerkin-type reduced model in a prescribed low-dimensional subspace by identifying its reduced operators from projected snapshot data. The resulting inference problem is formulated as a least-squares problem admitting an efficient closed-form solution. However, it is well know</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2610.01295v1">arXiv</source>
+    </item>
+    <item>
+      <title>Forecast-Residual-Based Chance-Constrained Scheduling of Local Energy Communities under PV and Demand Uncertainty</title>
+      <link>http://arxiv.org/abs/2610.01272v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01272v1</guid>
+      <description>Franco Cárdenas González, Fernando García-Muñoz
+
+Day-ahead operation of local energy communities (LECs) is affected by uncertainty in PV generation and electricity demand, which may compromise the feasibility of committed exchanges with the upstream grid. This paper proposes a forecast-residual-based chance-constrained optimization (CCO) framework that characterizes uncertain parameters through their forecasts and associated residual distributions. Under the adopted zero-mean Gaussian assumption, the resulting chance constraints admit an exact</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>integer-programming</category>
+      <category>scheduling</category>
+      <category>stochastic</category>
+      <source url="http://arxiv.org/abs/2610.01272v1">arXiv</source>
+    </item>
+    <item>
+      <title>Strategic Optimization of Bus Systems with Stochastic Ridership</title>
+      <link>http://arxiv.org/abs/2610.01264v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01264v1</guid>
+      <description>Haoran Zhao, Andres Fielbaum
+
+In global metropolitan areas, public transport benefits from bus systems. Bus design widely applies theoretical models, which typically assume static ridership. However, ridership randomness exists, and lack of attention to it might lead to wrong design decisions. Moving beyond static ridership, we extend the traditional single-line model with stochastic ridership. Further, to optimize the bus system under various ridership randomness, we introduce a hybrid model that combines conventional buses</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>econ.GN</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2610.01264v1">arXiv</source>
+    </item>
+    <item>
+      <title>Low-Budget Active Learning through Entropic Optimal Transport</title>
+      <link>http://arxiv.org/abs/2610.01199v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01199v1</guid>
+      <description>Rim Hajal, Mathieu Besançon, Jérôme Malick
+
+We consider low-budget active learning, which consists of selecting a limited number of points, the coreset, such that a model can be trained to high accuracy on the selection only. This problem is particularly relevant in contexts where labeling requires costly expert intervention, as in medical applications. We leverage features extracted from a pretrained self-supervised model to represent the data, and perform coreset selection directly in this feature space. In this paper, we use entropic o</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>cs.LG</category>
+      <category>survey</category>
+      <source url="http://arxiv.org/abs/2610.01199v1">arXiv</source>
+    </item>
+    <item>
+      <title>On solving integer bilevel optimization problems with a non-convex quadratic follower objective function using disjunctive cuts</title>
+      <link>http://arxiv.org/abs/2610.01197v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01197v1</guid>
+      <description>Kübra Tanınmış, Elisabeth Gaar, Jon Lee, Ivana Ljubić, Markus Sinnl
+
+In this work, we study bilevel optimization problems where all variables are integer, all constraints and the leader objective function are linear, and the follower objective function is non-convex quadratic. Relying on bilevel-free sets derived from improving directions, we develop a disjunctive cut approach to exclude bilevel-infeasible solutions within a branch-and-cut algorithm. We show that our disjunctive cuts can be obtained by solving a cut generating linear program. Furthermore, we disc</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>survey</category>
+      <source url="http://arxiv.org/abs/2610.01197v1">arXiv</source>
+    </item>
+    <item>
+      <title>Fully Online Decentralized Learning in Stochastic Games with Unknown Independent Chains</title>
+      <link>http://arxiv.org/abs/2610.01181v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01181v1</guid>
+      <description>S. Rasoul Etesami
+
+We consider stochastic games with independent controlled chains and unknown transition kernels, where players observe only their local states and realized payoffs. We develop a fully online, decentralized, and uncoordinated mirror-descent algorithm that operates in the dual space of occupancy measures for approximating stationary Nash equilibrium (NE) policies. The algorithm uses a single transition/reward sample at every primitive time step, relies only on local information, and requires neithe</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>cs.LG</category>
+      <category>game-theory</category>
+      <source url="http://arxiv.org/abs/2610.01181v1">arXiv</source>
+    </item>
+    <item>
+      <title>OrbitTAMP: Grounding Language Models for Task and Motion Planning in Spacecraft Rendezvous</title>
+      <link>http://arxiv.org/abs/2610.01093v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01093v1</guid>
+      <description>Yuji Takubo, Daniele Gammelli, Marco Pavone, Simone D'Amico
+
+Spacecraft rendezvous and proximity operations (RPO) are currently planned through an expertise-intensive process in which engineers translate high-level operational intent into safe, dynamically feasible trajectories, creating a bottleneck to scalable operations. Large language model (LLM)-based agents could offer an intuitive interface for this process, although their outputs are not inherently grounded in orbital dynamics, operational constraints, or the structure of admissible spacecraft man</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>cs.RO</category>
+      <category>general-or</category>
+      <source url="http://arxiv.org/abs/2610.01093v1">arXiv</source>
+    </item>
+    <item>
+      <title>A connectedness result for convex polynomial multi-objective optimization without boundedness</title>
+      <link>http://arxiv.org/abs/2610.01029v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01029v1</guid>
+      <description>Vu Trung Hieu
+
+We prove that the weak Pareto solution set of a multi-objective optimization problem with convex polynomial objectives and constraints is connected, assuming neither boundedness of the constraint set nor a constraint qualification. Since this set is semi-algebraic, its connectedness implies that it is path-connected whenever it is nonempty. In particular, convex quadratic multi-objective optimization problems have connected weak Pareto solution sets; this answers the weak Pareto part of an open </description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>multi-objective</category>
+      <source url="http://arxiv.org/abs/2610.01029v1">arXiv</source>
+    </item>
+    <item>
+      <title>Initial condition recovery in nonlinear damped viscous photoacoustic tomography using a convolutional neural network-guided gradient-free optimization framework</title>
+      <link>http://arxiv.org/abs/2610.01015v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.01015v1</guid>
+      <description>Madhu Gupta, Anwesa Dey, Prapti Tala, Souvik Roy
+
+Photoacoustic tomography (PAT) is a hybrid imaging modality that combines high optical contrast with high ultrasonic resolution for biomedical imaging applications. In this work, we investigate the inverse problem of recovering the initial pressure distribution from boundary measurements in the presence of nonlinear acoustic propagation and viscous attenuation effects. To model these phenomena more accurately, we consider a nonlinear damped viscoelastic wave equation incorporating spatially vary</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>ml-for-or</category>
+      <category>constraint-programming</category>
+      <source url="http://arxiv.org/abs/2610.01015v1">arXiv</source>
+    </item>
+    <item>
+      <title>Exact counterexamples to R-superlinear convergence of cyclic steepest descent</title>
+      <link>http://arxiv.org/abs/2610.00939v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.00939v1</guid>
+      <description>Yu Li, Qihang Wang
+
+Cyclic steepest descent (CSD) recomputes the exact steepest-descent stepsize once per cycle and reuses it for $m$ updates. Dai's ICM 2022 survey describes CSD as likely to converge $R$-superlinearly on $n$-dimensional convex quadratics when $m\ge\lceil(n+1)/2\rceil$. We disprove the universal form of this assertion by two closed-form orbits at the stated threshold. First, for $n=m=2$, $A=\operatorname{diag}(1,3)$, $b=0$, and $x_0=(1,1/3)^{\mathsf{T}}$, the method follows the nonterminating balan</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>math.OC</category>
+      <category>survey</category>
+      <source url="http://arxiv.org/abs/2610.00939v1">arXiv</source>
+    </item>
+    <item>
+      <title>OR for AI That Does OR: Routing LLMs up the Escalator inside the OSCAR Framework</title>
+      <link>http://arxiv.org/abs/2610.00912v1</link>
+      <guid isPermaLink="true">http://arxiv.org/abs/2610.00912v1</guid>
+      <description>Jinzhi Bu, Haixin Tang, Huanan Zhang
+
+Large language models can translate business descriptions into optimization models, but executable code may misrepresent constraints or objectives. A solver can then return an optimal solution to the wrong problem. Even when the solution satisfies the intended operating rules, a better plan may exist. For organizations that repeatedly use optimization modeling, an LLM-based framework should produce accurate formulations at low cost and, ideally, run locally. We study how to verify improvements a</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>cs.AI</category>
+      <category>survey</category>
+      <source url="http://arxiv.org/abs/2610.00912v1">arXiv</source>
     </item>
   </channel>
 </rss>
