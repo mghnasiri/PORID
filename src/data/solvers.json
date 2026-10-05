@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T13:07:58.655248+00:00",
+  "generated_at": "2026-10-05T15:49:19.541956+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1864,
+      "github_stars": 1865,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 105,
+      "github_open_issues": 106,
       "github_recent_prs": [
-        "Correct setting of `mc_min_pivot[iCol]` in `colFixMax`, and tighten assert in `HFactor::zeroCol`",
-        "Fix 2300",
-        "Respect absolute pivot tolerance",
-        "Handle excessive primal value rebuilds",
-        "Adds a check for basis consistency after return from postsolve"
+        "Stop the parallel-row candidate scan after a nearly-parallel row addition",
+        "Always retain branch as reason",
+        "Skip zero dual cost shifts",
+        "Rewrite the LP reader",
+        "Correct setting of `mc_min_pivot[iCol]` in `colFixMax`, and tighten assert in `HFactor::zeroCol`"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Features\r\n--------\r\n\r\n- added command line option `-t` to specify the number of threads, which triggers concurrent solving via `SCIPsolveConcurrent()`\r\n\r\nPerformance improvements\r\n--------------------",
-      "github_open_issues": 34,
+      "github_open_issues": 35,
       "github_recent_prs": [
         "misc bugs",
         "export ObjCloneable types",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14146,
+      "github_stars": 14149,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 125,
+      "github_open_issues": 126,
       "github_recent_prs": [
-        "Preserve intermediate solution objective values when presolving lin_max",
-        "cmake: fixup windows OR_ORTOOLS_PROTO_DLL",
-        "cmake: rework",
-        "update release script support",
-        "python: fix cmake sample (pywralp migration fixup)"
+        "cmake: fix windows z.dll support in python and java",
+        "ci: use ninja x msvc for windows cmake jobs",
+        "java: fix javadoc generation when running mvn package",
+        "build(deps): bump the pip group across 1 directory with 12 updates",
+        "Preserve intermediate solution objective values when presolving lin_max"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,8 +1131,8 @@
         "python"
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
-      "github_stars": 6356,
-      "github_open_issues": 190,
+      "github_stars": 6357,
+      "github_open_issues": 183,
       "github_recent_prs": [
         "Pin development Python version to 3.11",
         "Guard singular LDL factors before quadratic canonicalization",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "We've really been cooking this time! With so much goodness available in this release, an upgrade may just be worth the few seconds it will take.\r\n\r\n- **Coarse-grained moves in Neighborhoods**: With th",
-      "github_stars": 1806,
-      "github_open_issues": 114,
+      "github_stars": 1810,
+      "github_open_issues": 117,
       "github_recent_prs": [
-        "docs: state that the License Manager uses Timefold Platform credentials",
-        "fix: Handle null planning values in ValueTabuAcceptor",
-        "feat: Add execution profile to generate thread dumps on OOMs",
-        "feat: Add verbose-logging execution profile",
-        "docs: add missing link in migration guide"
+        "perf: represent list entity's elements by a single chain node in the declarative graph",
+        "fix: avoid clear() on a large hash map",
+        "perf: fetch waypoints only for changed routes, in parallel",
+        "perf: resolve declarative graph reactions once per variable",
+        "deps: bump version.io.quarkus from 3.39.5 to 3.40.1"
       ]
     },
     {
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2538,
+      "github_stars": 2539,
       "github_open_issues": 394,
       "github_recent_prs": [
         "Contrib HiGHS: support partial MIP warm starts",
@@ -1452,11 +1452,11 @@
       "github_stars": 2482,
       "github_open_issues": 12,
       "github_recent_prs": [
+        "Add PENNON and PENSDP to Penopt",
         "Fix performance of flatten! for large summations",
         "Fix type of dividing by GenericAffExpr with no terms",
         "Let division by an AffExpr stay an AffExpr when it has all-0 coefficients",
-        "Clarify behavior of deleting VariableInSetRef",
-        "Allow compilation with --trim in JuliaC"
+        "Clarify behavior of deleting VariableInSetRef"
       ]
     },
     {

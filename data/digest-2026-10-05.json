@@ -1,0 +1,247 @@
+{
+  "date": "2026-10-05",
+  "generated_at": "2026-10-05T15:49:19.957953+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s10479-026-07433-1",
+      "title": "Interruptible cross-docking scheduling for perishable food supply chains",
+      "authors": [
+        "Pan, F.",
+        "Fu, E.",
+        "Fan, T."
+      ],
+      "abstract": "",
+      "date": "2026-10-05",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07433-1",
+      "tags": [
+        "scheduling",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07433-1",
+      "score": 50.0
+    },
+    {
+      "id": "optim-online-a49edccd4d56",
+      "title": "A Generalized Polynomial Lower Bound for the Weighted Completion Time Variance in a Single Machine",
+      "authors": [],
+      "abstract": "This paper studies the single-machine problem of minimizing the weighted completion time variance (WCTV) and proposes a polynomially computable lower-bounding framework that generalizes the benchmark introduced by Nessah and Chu (2010). We first develop a generalized augmented-sequence decomposition that mathematically connects the weighted problem with the classical unweighted variance setting. Using this decomposition, we derive ... Read more",
+      "date": "2026-10-04",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/10/a-generalized-polynomial-lower-bound-for-the-weighted-completion-time-variance-in-a-single-machine/?utm_source=rss&utm_medium=rss&utm_campaign=a-generalized-polynomial-lower-bound-for-the-weighted-completion-time-variance-in-a-single-machine",
+      "tags": [
+        "decomposition"
+      ],
+      "type": "publication",
+      "score": 45.0
+    },
+    {
+      "id": "optim-online-c8e1d61dedae",
+      "title": "A Data-Driven Linear Programming Model for Energy-Optimal Metro Timetables",
+      "authors": [],
+      "abstract": "We propose a data-driven linear programming model to compute energy-optimal timetables for networks operating under communications-based train control (CBTC); the model was developed in collaboration with Hitachi Rail Canada, the largest provider of CBTC systems worldwide. Our model minimizes the network&#8217;s effective energy consumption, defined as the total traction energy consumed by the trains minus ... Read more",
+      "date": "2026-10-05",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/10/a-data-driven-linear-programming-model-for-energy-optimal-metro-timetables/?utm_source=rss&utm_medium=rss&utm_campaign=a-data-driven-linear-programming-model-for-energy-optimal-metro-timetables",
+      "tags": [
+        "linear-programming"
+      ],
+      "type": "publication",
+      "score": 45.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07440-2",
+      "title": "Building resilient animal husbandry and meat production supply chains",
+      "authors": [
+        "Goswami, A.",
+        "Melamed, B.",
+        "Baveja, A.",
+        "Roberts, F.",
+        "Kiernan, V.",
+        "Egan, D.",
+        "March, P."
+      ],
+      "abstract": "",
+      "date": "2026-10-05",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07440-2",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07440-2",
+      "score": 45.0
+    },
+    {
+      "id": "optim-online-594295bb7bc0",
+      "title": "Equivalence-Based Reduction and Incremental Optimization for Categorical and Ordinal Classification",
+      "authors": [],
+      "abstract": "Exact mathematical programming formulations for estimating classification rules provide guarantees of empirical optimality, but their size grows rapidly with the number of predictive features and model complexity. This paper shows that interpretable classifiers can be estimated by directly maximizing empirical classification accuracy under complexity constraints, using truncation and warm-start strategies compatible with disjunctive normal form ... Read more",
+      "date": "2026-10-04",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/10/equivalence-based-reduction-and-incremental-optimization-for-categorical-and-ordinal-classification/?utm_source=rss&utm_medium=rss&utm_campaign=equivalence-based-reduction-and-incremental-optimization-for-categorical-and-ordinal-classification",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "score": 40.0
+    },
+    {
+      "id": "s2-87854027d841",
+      "title": "RuSMT: An Executable Semantics as Conformance Oracle and Test Suite Synthesizer",
+      "authors": [
+        "Mehrad Haghshenas",
+        "Meng Xu"
+      ],
+      "abstract": "Conformance testing asks whether an implementation agrees with its specification. When the specification is expressed in prose, one established approach is to mechanize it as an executable specification. This executable then serves as the oracle, and an input on which an implementation disagrees with it is a potential bug, either in the implementation or in the mechanized specification itself. How those inputs are obtained matters, because an oracle can only adjudicate the inputs it receives. Inputs can be derived from the specification itself, and coverage-guided generators can drive aggregate coverage high. But aggregate coverage does not provide a way to target a specific condition in the specification and generate an input that reaches it. This matters particularly for error conditions, where implementations are known to diverge and where the code is empirically under-tested. This paper presents RuSMT, a framework for encoding prose specifications as executable oracles using a domain-specific language embedded in Rust. Its DSL provides types denoting Z3 sorts and primitives corresponding to Z3's operations. Concretely, the author writes the specification and marks a branch with a named marker, which identifies a path condition for the backend test synthesizer. In this paper, markers always identify error conditions. The same program is therefore used in two ways: compiled by rustc, it executes as the conformance oracle; lowered to SMT-LIB it yields one reachability query per marker. Z3 then solves each query: a sat model is rendered by a printer into a test program in the specified language, while unsat indicates that the marker is unreachable. If Z3 returns unknown or times out, RuSMT invokes a language model to propose a concrete candidate based on the emitted SMT-LIB and Z3's previous verdicts. The candidate is added to the original query as a single equality, thus constraining the search. If the candidate is rejected, its result is fed back to the language model to propose a new candidate. The process repeats until the fixed budget is exhausted. We write two executable specifications in the DSL: IMP, Winskel's canonical small imperative language as a small end-to-end demonstration, and a TOML 1.1.0 parser, implemented from the published specification. We mark 2 branches in the IMP program and 183 in the TOML parser. Z3 alone solves both IMP queries. It solves none of the 183 TOML queries within our available computational budget: lowering the recursive parser as a whole effectively turns the problem into bounded model checking, whose formula-size blowup is well known. With the language model in the loop, RuSMT reaches 146 of the 183. We ran the TOML-generated test suite against four independent TOML parsers and found divergences on 12 inputs. Of these, 9 test behaviour the specification leaves open, such as integer width and float exponent range, so they are not conformance obligations. The remaining three are implementation defects, 1 of which was previously unreported. The unreported defect was found in smol-toml, which accepts an array-of-tables header closed by a single bracket; we have reported this issue upstream.",
+      "date": "2026-10-04",
+      "source": "Semantic Scholar",
+      "source_detail": "integer programming branch and bound",
+      "url": "https://doi.org/10.1145/3842652.3843196",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1145/3842652.3843196",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 40.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "optim-online-f432fd3b89cc",
+      "title": "Small extended formulations for group-constrained flows and cographic integer hulls",
+      "authors": [],
+      "abstract": "We construct small extended formulations for nonnegative integer flows whose arc labels have a prescribed sum in a finite abelian group. For circulations, the formulation is a single integral network that combines cycles even when they lie in different components. This yields an O(Δn²) bound for strictly Δ-modular cographic integer hulls of translated cones, improving ... Read more",
+      "date": "2026-10-05",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/10/small-extended-formulations-for-group-constrained-flows-and-cographic-integer-hulls/?utm_source=rss&utm_medium=rss&utm_campaign=small-extended-formulations-for-group-constrained-flows-and-cographic-integer-hulls",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07438-w",
+      "title": "The knowledge system of human symbiotic system management in the age of digitization",
+      "authors": [
+        "Zheng, Z.",
+        "Xu, X.",
+        "Li, G.",
+        "Lu, X.",
+        "Zhao, W.",
+        "Tao, X.",
+        "Huang, Y."
+      ],
+      "abstract": "",
+      "date": "2026-10-05",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07438-w",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07438-w",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1080-01605682.2026.2740707",
+      "title": "A decision-support model for productivity upgrading in global value chains",
+      "authors": [
+        "Mertzanis, C.",
+        "Tsioufis, M.",
+        "Vetsikas, A.",
+        "Pavlopoulos, A.",
+        "Shaker Ahmed, M."
+      ],
+      "abstract": "",
+      "date": "2026-10-05",
+      "source": "Journal of the Operational Research Society",
+      "source_detail": "Journal of the Operational Research Society",
+      "url": "https://doi.org/10.1080/01605682.2026.2740707",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1080/01605682.2026.2740707",
+      "score": 40.0
+    },
+    {
+      "id": "crossref-10.1080-02331934.2026.2734738",
+      "title": "An analysis of selected\n                    <b>F</b>\n                    -quantified linear programs",
+      "authors": [
+        "Subramani, A.",
+        "Subramani, K.",
+        "Wojciechowski, P."
+      ],
+      "abstract": "",
+      "date": "2026-10-04",
+      "source": "Optimization",
+      "source_detail": "Optimization",
+      "url": "https://doi.org/10.1080/02331934.2026.2734738",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1080/02331934.2026.2734738",
+      "score": 30.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
