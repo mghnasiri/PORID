@@ -1,0 +1,290 @@
+{
+  "date": "2026-10-06",
+  "generated_at": "2026-10-06T14:06:19.242853+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2610.05963",
+      "title": "Emission-Aware Optimization of Container Handling Vehicles: A HaminaKotka Port Case Study",
+      "authors": [
+        "Hafiz Majid Hussain",
+        "Juha Haakana",
+        "Mehar ullah"
+      ],
+      "abstract": "Smart ports increasingly depend on IoT-enabled digitalization to turn heterogeneous operational processes into measurable, optimizable workflows. Accordingly, this paper first provides a concise review of IoT-enabler technologies for port digital transformation, emphasizing how sensing, connectivity, and data integration capabilities support real-time decision-making in port environments. Motivated by the growing emphasis on operational decarbonization reflected in the European Green Deal and the Sustainable Development Goals (SDGs), we then present a data-driven fleet scheduling framework for landside port operations at the Port of HaminaKotka (Mussalo terminal), Finland. The scheduling framework reallocates vehicle operating hours to minimize total CO2eq emissions while preserving the same aggregate workload. The study uses a two-year dataset from 77 port-operating vehicles, analyzed at monthly and annual aggregation levels, to derive vehicle-specific intensity metrics (CO2eq per operating hour) and identify reallocation opportunities. We formulate the scheduling task as a linear programming workload allocation problem that minimizes the weighted sum of assigned hours while keeping total required hours fixed, enforcing fleet-level caps on CO2eq and energy use, and respecting per-vehicle operating limits. The optimization is solved using the HiGHS linear programming solver via SciPy's linprog. Results show that shifting utilization away from high-intensity vehicles and toward more efficient units yields substantial system-level improvements with no reduction in total operating hours: the optimized schedule achieves an approximately 31% reduction in total CO2eq and a simultaneous 9.4% reduction in total energy consumption.",
+      "date": "2026-10-05",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2610.05963v1",
+      "tags": [
+        "eess.SY",
+        "linear-programming",
+        "scheduling",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.05963",
+      "arxiv_id": "2610.05963v1",
+      "score": 60.0,
+      "mentions_solvers": [
+        "HiGHS"
+      ]
+    },
+    {
+      "id": "crossref-10.1002-net.70079",
+      "title": "A Supervised Learning Framework for Accelerating Solvers and Metaheuristics in Routing Problems",
+      "authors": [
+        "Gückel, J.",
+        "Voigt, S.",
+        "Fontaine, P."
+      ],
+      "abstract": "ABSTRACT\n                  Routing problems such as the traveling salesman problem (TSP) and the capacitated vehicle routing problem (CVRP) are computationally challenging due to the exponential growth of their feasible solution spaces with increasing instance size. Established optimization approaches, including exact algorithms and (meta)heuristics, often face scalability limits as instance size increases. In this study, we introduce a supervised machine learning (ML) framework that assigns a confidence score to each edge, indicating the likelihood of appearing in high‐quality solutions. Using these predictions, we develop systematic strategies to reduce the search space by pruning low‐relevance edges. We integrate the ML‐based edge classifier into a mathematical optimization solver and a metaheuristic as a preprocessing step and evaluate its effectiveness in a comprehensive numerical study on instances with up to 1,000 nodes. On the tested instances, the proposed ML‐based preprocessing removed approximately up to 90% of candidate edges and reduced solver runtimes, while preserving the baseline‐optimal solution in all or nearly all cases for conservative parameter settings. For instances not solved to optimality within the time limit, average optimality gaps decrease by up to 1.7% (TSP) and over 7% (CVRP). Within a state‐of‐the‐art metaheuristic, learned pruning decreases the time required to reach solutions of equal or better quality by up to 20–25 s under a 60‐second time limit, and improves average solution quality by up to 0.75% (TSP) and 0.86% (CVRP) on large‐scale instances.",
+      "date": "2026-10-05",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70079",
+      "tags": [
+        "metaheuristics",
+        "vehicle-routing",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70079",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2610.05746",
+      "title": "Learning to Solve Mixed-Integer Nonlinear Programming with Neural Networks and Sequential Quadratic Programming Refinement",
+      "authors": [
+        "Viet-Anh Le",
+        "Rahul Mangharam"
+      ],
+      "abstract": "We propose a learning-to-optimize framework for solving parametric mixed-integer nonlinear programs arising in model predictive control and trajectory optimization. The proposed method combines neural network prediction with a sequential quadratic programming (SQP) refinement layer. First, neural networks are trained using a combination of supervised and self-supervised losses to predict integer solutions together with compatible continuous warm starts. To account for prediction inaccuracies, the trained predictor generates multiple candidate integer solutions, each paired with a continuous initialization. The integer solutions are then fixed, and a differentiable SQP layer refines the associated continuous variables over a prescribed number of iterations. The SQP-layer parameters, including the curvature regularization and step size, are trained to improve both feasibility and objective value after every iteration. By separating integer prediction from continuous optimization-based refinement, the proposed framework improves robustness to imperfect neural predictions while maintaining a predictable computational budget. We demonstrate the proposed framework on contact and trajectory optimization for a planar box-pushing example.",
+      "date": "2026-10-05",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2610.05746v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.05746",
+      "arxiv_id": "2610.05746v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2610.06517",
+      "title": "GCTAuto-encoder: A Cross modal Framework for Security Flaw Detection in IoT Networks",
+      "authors": [
+        "Najmieh Sadat Safarabadi"
+      ],
+      "abstract": "IoT encompasses diverse physical entities, from smart home devices to autonomous vehicles, creating a complex environment with heterogeneous security models. This heterogeneity makes IoT sub-systems vulnerable to various network attacks. Modern security systems must therefore be more robust to ensure security and privacy for IoT applications. A highly secure IoT system also demands real time insight, requiring data collection at the edge of the computing layer. This diversity calls for a unified security model applied at the foundational level. Edge intelligence offers a direct approach to handling device diversity. A key goal of edge intelligence in IoT is to extract insight from local data; security models can then use this data to build local node protections, and integrating AI models yields an advanced security solution. This research proposes a novel deep learning algorithm for effective intrusion detection at the edge, supported by a cloud-based IoT framework. We evaluate the proposed cross modal deep learning algorithm against baseline models. The contribution is a cross domain Deep Neural Network (DNN) algorithm for intrusion detection. The objective is to assess a multi-method deep learning model to detect intrusions in IoT systems at the edge via community detection with modeled attention. We evaluate GCT auto-encoder, a novel framework integrating edge intelligence to identify security flaws. The model significantly improves performance and efficiency. On a network intrusion IoT dataset covering multiple attack scenarios, it achieved 0.908 accuracy, reduced learning loss to 0.00156, and outperformed existing approaches.",
+      "date": "2026-10-05",
+      "source": "arXiv",
+      "source_detail": "cs.CR",
+      "url": "http://arxiv.org/abs/2610.06517v1",
+      "tags": [
+        "cs.CR",
+        "stochastic",
+        "ml-for-or",
+        "facility-location"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.06517",
+      "arxiv_id": "2610.06517v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07433-1",
+      "title": "Interruptible cross-docking scheduling for perishable food supply chains",
+      "authors": [
+        "Pan, F.",
+        "Fu, E.",
+        "Fan, T."
+      ],
+      "abstract": "",
+      "date": "2026-10-05",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07433-1",
+      "tags": [
+        "scheduling",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07433-1",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2025.1378",
+      "title": "Learning to Simulate: Generative Metamodeling via Quantile Regression",
+      "authors": [
+        "Hong, L.",
+        "Hou, Y.",
+        "Zhang, Q.",
+        "Zhang, X."
+      ],
+      "abstract": "Stochastic simulation models effectively capture complex system dynamics but are often too slow for real-time decision making. Traditional metamodeling techniques learn relationships between simulator inputs and a single output summary statistic, such as the mean or median. These techniques enable real-time predictions without additional simulations. However, they require prior selection of one appropriate output summary statistic, limiting their flexibility in practical applications. We propose a new concept: generative metamodeling. It aims to construct a “fast simulator of the simulator,” generating random outputs significantly faster than the original simulator while preserving approximately equal conditional distributions. Generative metamodels enable rapid generation of numerous random outputs upon input specification, facilitating immediate computation of any summary statistic for real-time decision making. We introduce a new algorithm, quantile-regression-based generative metamodeling (QRGMM), and establish its distributional convergence. Extensive numerical experiments demonstrate QRGMM’s efficacy compared with other state-of-the-art generative algorithms in practical real-time decision-making scenarios.\n                  History: Accepted by Bruno Tuffin, Area Editor for Simulation.\n                  Funding: This research was partially supported by the National Natural Science Foundation of China [Grant 72091211].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2025.1378 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2025.1378 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-10-05",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2025.1378",
+      "tags": [
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2025.1378",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.06266",
+      "title": "Ramp Metering Control via Hybrid State Deep Reinforcement Learning in Partially Observable Connected Vehicle Environments",
+      "authors": [
+        "Youcef Mehamlia",
+        "Nadir Farhi",
+        "Meriem Bouali"
+      ],
+      "abstract": "Freeway on-ramp merges are major sources of congestion, causing significant economic and environmental costs. While Deep Reinforcement Learning (DRL) offers a promising solution for ramp metering, existing approaches rely primarily on aggregated macroscopic data. Connected vehicles (CVs) provide vehicle-level observations that can complement aggregate traffic measurements, but their limited penetration produces incomplete microscopic information. This paper proposes a hybrid observation representation combining macroscopic traffic measurements with a two-channel grid encoding observed CV presence and speed. A Dueling Double Deep Q-Network processes these inputs to select ramp-metering green durations. The controller is trained under varying traffic demands and CV penetration rates and evaluated against ALINEA and macroscopic-only DRL variants in SUMO. Across 50 matched evaluation scenarios, the hybrid controller under partial CV visibility reduces the reported total travel time by 11.4 % and mean spillback duration by 84.9 % relative to ALINEA. Evaluating the same trained policy with full CV visibility yields a further travel-time reduction of approximately 1.6 %. Analysis across penetration rates suggests that the performance gap decreases as microscopic observations become more complete. These results support the use of complementary macroscopic and sparse microscopic observations for learning-based ramp metering. The source code implementation of the model is available at: https://github.com/youcefMehamlia/Multimodal-DRL-RMC",
+      "date": "2026-10-05",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2610.06266v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.06266",
+      "arxiv_id": "2610.06266v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.05650",
+      "title": "Payment Design under Belief Disagreement: Rent Placement, Bid Resolution, and Auction Choice",
+      "authors": [
+        "Lijian Lu",
+        "Ce Zhang"
+      ],
+      "abstract": "When auction bidders misperceive their rivals, a seller can change not only the amount of information rent but also the states in which it is delivered. We ask when this payment-design opportunity survives a finite bidding interface, nonnegative-payment restrictions, and comparison with conventional auctions under the same beliefs. We formulate payment design as a linear program in nonnegative bidder rents. A single state can safely carry a report's rent when it is both cheapest for its intended type and least attractive to potential mimics. We characterize this alignment, bound the cost of a restricted payment architecture when alignment is imperfect, and use shadow prices when the rankings conflict. Own-type projection yields a unique optimal expected-payment rule for a fixed allocation. Contiguous bid bands implement truthful reporting at every value, but create pooling losses and within-band surplus. Under a separate smooth-belief model, feasible truthful rules and revenue upper bounds support comparisons with a first-price equilibrium under the same beliefs. A calibration using 1,000 eBay proof-set auction records illustrates a partition-dependent reversal: first price dominates all exactly truthful, no-subsidy rules on ten equal-probability bands in one scenario, while a richer contingent rule on ten equal-dollar bands outperforms it. An operator should choose interface resolution, payment dependence, and integrity tolerances jointly. Validate the probabilities that support incentives, compare formats under the same beliefs, and distinguish redesign from deployment. Any receipt advantage must cover implementation costs before it can imply a profit advantage.",
+      "date": "2026-10-05",
+      "source": "arXiv",
+      "source_detail": "cs.GT",
+      "url": "http://arxiv.org/abs/2610.05650v1",
+      "tags": [
+        "cs.GT",
+        "stochastic",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.05650",
+      "arxiv_id": "2610.05650v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.06829",
+      "title": "CLIFT: Conformal Self-Verification for Web Agent Training and Test-Time Scaling",
+      "authors": [
+        "Yifan Zhang",
+        "Yutong Dai",
+        "Viraj Prabhu",
+        "Zhiyuan Hu",
+        "Ran Xu",
+        "Zeyuan Chen"
+      ],
+      "abstract": "Open-source web agents are now strong enough to execute realistic browser tasks, but training them with reinforcement learning still depends on weak supervision: binary task success is too sparse for credit assignment, while frontier-language-model judges are too expensive to call at every step and cannot be assumed available at deployment. We introduce CLIFT, a training and test-time scaling method built around conformal self-verification. During training, the agent answers natural-language verification questions about its own rollouts; a Compositional Conformal Certifier keeps only question signals whose URL-conditional evidence agrees with a training-time judge, assigns signed trust weights through polarity-aware lift, and blends the resulting verifier score into per-step rewards in a way that never subtracts from the judge baseline. At test time, the same certified bank is frozen and reused as structured evidence for Conformal Trajectory Selection (CTS): the agent samples a greedy rollout and one or more diverse retries, the self-verifier summarises each URL trace, and a conservative majority-vote rule chooses whether to swap away from the current incumbent without calling any external judge. This single mechanism supports three settings. On WebArena Infinity, CLIFT achieves state-of-the-art performance among open-source web agents. On VisualWebArena, a bank trained with the open model transfers to GPT-5.5 at test time and reaches state-of-the-art performance under the canonical harness. On Online Mind2Web, without training an agent on the benchmark, translating the certified question bank improves a live-web agent in zero-shot evaluation. Together these results position conformal self-verification as a way to turn costly judge feedback into a reusable training signal and a judge-free test-time scaling signal.",
+      "date": "2026-10-05",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2610.06829v1",
+      "tags": [
+        "cs.CL",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.06829",
+      "arxiv_id": "2610.06829v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.06630",
+      "title": "Inverse Cross-spectral Neural Networks for Multivariate Time Series",
+      "authors": [
+        "Lorenzo Marinucci",
+        "Leonardo Di Nino",
+        "Gabriele D'Acunto",
+        "Paolo Di Lorenzo",
+        "Sergio Barbarossa"
+      ],
+      "abstract": "CoVariance Neural Networks and their extensions have emerged as effective tools for processing multivariate data, deriving graph shift operators directly from second-order statistics. These architectures, however, are designed for independent and identically distributed observations and do not fully capture the joint structure of temporal and cross-variable dependencies in multivariate time series. In this work, we introduce Inverse Cross-Spectral Neural Networks (iCSNNs), a class of graph neural networks for stationary multivariate time series whose shift operators are the inverse cross-spectral density (iCSD) matrices. These operators encode frequency-specific conditional relationships among variables, exploiting the decomposition provided by the spectral representation theorem. Leveraging spectral smoothness, frequencies are grouped into bands sharing a single iCSD operator, yielding a compact parametrisation that retains the frequency-dependent structure of the process. We further propose a joint learning procedure to estimate both the Fourier-domain dependence structure and the iCSNN parameters, adapting the iCSD operators to the downstream task. When tested on synthetic data, iCSNN outperforms baselines from different methodological families.",
+      "date": "2026-10-05",
+      "source": "arXiv",
+      "source_detail": "stat.ML",
+      "url": "http://arxiv.org/abs/2610.06630v1",
+      "tags": [
+        "stat.ML",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.06630",
+      "arxiv_id": "2610.06630v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
