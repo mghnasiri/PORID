@@ -1,0 +1,304 @@
+{
+  "date": "2026-10-07",
+  "generated_at": "2026-10-07T14:23:35.693764+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1002-net.70078",
+      "title": "Algorithmic and Optimization Strategies for Efficient Routing and Resource Management in Advanced Elastic Optical Networks",
+      "authors": [
+        "Al‐Jarallah, R.",
+        "Diarrassouba, I.",
+        "Hadhbi, Y.",
+        "Mahjoub, A."
+      ],
+      "abstract": "ABSTRACT\n                  In response to the rapidly increasing demand for higher bandwidth and the necessity for more flexible and efficient resource allocation, elastic optical networks have emerged as a promising solution for next‐generation high‐capacity optical communication systems. These networks leverage flexible spectrum management techniques, such as flexible grid and adaptive modulation formats, to enhance spectral utilization and support fluctuating traffic demands. However, the design and operation of these networks pose significant challenges, particularly in the context of the constrained routing and spectrum assignment (C‐RSA) problem, which involves determining optimal routing paths and spectrum allocations while satisfying various constraints such as spectrum contiguity, continuity, and nonoverlapping requirements. In this paper, we introduce an integer linear programming formulation for the C‐RSA problem and conduct a polyhedral investigation of the associated polytope. We describe several valid inequalities, present necessary and sufficient conditions under which these inequalities are facet‐defining, and then discuss the related separation problems. Based on these results, we develop a Branch‐and‐Cut algorithm to solve the problem. Additionally, we present computational results that demonstrate the effectiveness of our approach using various instances. Moreover, we compare our approach with existing methods from the literature as well as various state‐of‐the‐art MILP solvers.",
+      "date": "2026-10-07",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70078",
+      "tags": [
+        "linear-programming",
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70078",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2610.08645",
+      "title": "Parametrized Exact Hardware-Software Partitioning",
+      "authors": [
+        "Cameron Ibrahim",
+        "S M Ferdous",
+        "Erdal Mutlu",
+        "Ilya Safro",
+        "Mahantesh Halappanavar"
+      ],
+      "abstract": "When optimizing computing architecture for specific computationally intensive tasks, such as evaluating or training a neural network, it is important to identify what computational subtasks will offer the greatest decrease in cost (e.g., wall clock time or energy usage). This problem is known as Hardware-Software (HS) Partitioning, and it has a variety of formulations, many of which are NP-Hard. In this paper, we will define a family of HS Partitioning formulations which admit an exact fixed parameter tractable algorithm based on the directed pathwidth of the given task graph and show that this family of problems contains multiple existing formulations such as makespan minimization. Finally, we examine task graphs with small directed pathwidth that arise in real world applications and show that our algorithm can provide a speed up of up to 200x over a comparable linear programming approach utilizing the Gurobi ILP Library.",
+      "date": "2026-10-06",
+      "source": "arXiv",
+      "source_detail": "cs.DS",
+      "url": "http://arxiv.org/abs/2610.08645v1",
+      "tags": [
+        "cs.DS",
+        "linear-programming",
+        "scheduling",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.08645",
+      "arxiv_id": "2610.08645v1",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Gurobi"
+      ]
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07442-0",
+      "title": "The conditional value relevance of ESG and innovation disclosures: a multi-method analysis of European firms combining panel econometrics and machine learning",
+      "authors": [
+        "Delegkos, A.",
+        "Arsenou, E.",
+        "Cavouras, D.",
+        "Pyrgiotakis, E.",
+        "Kalantonis, P."
+      ],
+      "abstract": "Abstract\n                  This study examines the value relevance of accounting fundamentals, social and governance performance, and innovation-related disclosures for non-financial European firms. Building on the Ohlson (1995) framework, the analysis combines panel-data econometrics with Random Forest machine learning to evaluate both inferential and predictive dimensions of value relevance. We find that non-financial disclosures are not uniformly value relevant. Social-governance performance and environmental innovation exhibit no direct linear association with firm value, while SDG 9 innovation orientation is negatively priced. Environmental innovation, however, emerges as the strongest non-financial predictor in the Random Forest models, revealing predictive content that fixed-effects specifications miss. Value relevance is further conditional on signal interaction: environmental innovation attenuates the valuation effect of social-governance performance, while stronger social-governance performance reduces the negative pricing of SDG 9 disclosure. Overall, our results indicate that disclosure type, signal interaction, and nonlinear predictive structure jointly determine whether sustainability and innovation information is priced by markets.",
+      "date": "2026-10-07",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07442-0",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07442-0",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2610.08053",
+      "title": "An exact algorithm for the pickup and delivery problem with time windows and requests split across multiple stacks",
+      "authors": [
+        "Ali Mehsin Alyasiry",
+        "Michael Forbes",
+        "Ella Wang"
+      ],
+      "abstract": "This paper addresses an extension of the pickup and delivery problem with time windows and multiple stacks (PDPTWMS). We call the new extension the pickup and delivery problem with time windows and requests split across multiple stacks (PDPTWRSMS). Applications of the PDPTWRSMS arise in less-than-truckload transportation systems where loads are packed as pallets or other standardised containers. In the PDPTWRSMS, the vehicle's loading space is divided into compartments of finite capacity. Loading and unloading in each compartment must obey the last-in-first-out (LIFO) policy. Moreover, a request can be split among all compartments, and a single request can also exceed a single compartment's capacity. Thus, each request is only limited to the vehicle's capacity. Computational experiments show that applying this extension can lead to substantial routing cost reductions (the total distance travelled and/or the number of vehicles used), and, compared with versions of the PDPTWMS where compartments are not restricted to a LIFO policy, splitting is worth more once the vehicle has three or more compartments, though less when it has two deep ones. We apply a modified version of the recently proposed method of fragments. Results confirm that this approach can solve many PDPTWRSMS instances and significantly outperforms the current state-of-the-art method for the PDPTWMS.",
+      "date": "2026-10-06",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2610.08053v1",
+      "tags": [
+        "math.OC",
+        "vehicle-routing",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.08053",
+      "arxiv_id": "2610.08053v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.07846",
+      "title": "Scen-Opt: A Scenario Optimization Toolbox for Data-Driven Convex Programming",
+      "authors": [
+        "Ben Wooding",
+        "Simone Garatti",
+        "Marco C. Campi",
+        "Abolfazl Lavaei"
+      ],
+      "abstract": "The scenario approach is a well-established statistical framework for data-driven decision-making. In particular, in data-driven optimization, the scenario approach unveils how the problem structure governs out-of-sample generalization, and offers a principled basis for assessing and certifying the reliability of the optimal solution as per constraint satisfaction. Despite its strong theoretical development and wide applicability, no software toolbox has been available to date that enables user-friendly, data-driven convex optimization within the scenario-approach framework. In this paper, we introduce Scen-Opt, an open-source software tool that integrates convex programming with data samples while providing statistical guarantees grounded in scenario theory. Scen-Opt is implemented in Python, supporting data-driven linear, quadratic, and semidefinite programming, and offers a Python-based web application with an intuitive and reactive graphical user interface (GUI) built using modern web technologies. Scen-Opt can be used directly through its online interface or installed locally, accommodating both manual input and data-file uploads (CSV, JSON, TXT, TSV, MAT, Excel, NPY, NPZ, Parquet). Built on a Python backend with a modern JavaScript frontend, Scen-Opt offers a highly user-friendly experience and efficient usability across desktops, laptops, tablets, and mobile devices. In this paper, Scen-Opt is applied to a set of representative benchmarks, demonstrating its practical effectiveness for data-driven convex optimization with guaranteed performance.",
+      "date": "2026-10-06",
+      "source": "arXiv",
+      "source_detail": "cs.MS",
+      "url": "http://arxiv.org/abs/2610.07846v1",
+      "tags": [
+        "cs.MS",
+        "stochastic",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.07846",
+      "arxiv_id": "2610.07846v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.08782",
+      "title": "4D-HOF: Hand-Object Flow Matching for Feed-Forward 4D Interaction Reconstruction",
+      "authors": [
+        "Shiqi Li",
+        "Sean Cho",
+        "Yijie Li",
+        "Fengzhi Guo",
+        "Bowen Wen",
+        "Cheng Zhang"
+      ],
+      "abstract": "Existing methods for 4D hand-object reconstruction often rely on costly per-sequence optimization, while generative approaches typically synthesize interactions from random noise, which can lead to unstable interaction prediction. We introduce 4D-HOF, a feed-forward framework that reconstructs 4D hand-object interactions from coarse but informative estimates produced by vision foundation models. Concretely, we learn a conditional flow matching model that transports foundation-model-derived hand-object states toward an interaction manifold, allowing the model to correct errors in translation, rotation, and alignment in a feed-forward manner. A key advantage of our generative formulation is that it naturally enables test-time guidance within the transport process. Rather than applying a separate post-hoc optimization after reconstruction, we directly steer the evolving generative states using physical interaction constraints and observed 2D evidence, allowing the reconstruction to be refined as part of the generative process itself. By training the generative model on diverse datasets, 4D-HOF generalizes robustly to challenging in-the-wild scenarios. Experiments on out-of-domain benchmarks show that 4D-HOF achieves state-of-the-art performance, producing more stable and accurate 4D hand-object reconstructions.",
+      "date": "2026-10-06",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2610.08782v1",
+      "tags": [
+        "cs.CV",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.08782",
+      "arxiv_id": "2610.08782v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.08781",
+      "title": "IdeaAnchor: Teaching LLMs to Turn Literature into Research Ideas",
+      "authors": [
+        "Ziyu Chen",
+        "Yilun Zhao",
+        "Jiashuo Sun",
+        "Yiling Ma",
+        "Manasi Patwardhan",
+        "Arman Cohan"
+      ],
+      "abstract": "Scientific research often begins by synthesizing ideas from a set of related papers to identify gaps and formulate new directions. However, training language models to perform this form of literature-grounded ideation remains challenging, as existing approaches based on prompting or feedback lack structured supervision for how papers should be synthesized. We introduce IdeaAnchor, a paradigm for training LLMs to perform research ideation using structured specifications as privileged signals. Each IdeaAnchor instance encodes how each input paper should be synthesized into a successful idea, including their functional roles, relationships, and target synthesis criteria. We build this paradigm by mining instances from published papers, capturing how real ideas emerge from prior literature. We then train models via demonstration, self-distillation, and reinforcement learning, and further enhance generation with retrieval at inference time. Experiments show consistent improvements in ideation quality. Our analysis reveals a functional decomposition: anchor-based training strengthens creative synthesis, retrieval enhances detail elaboration, and combining both yields the best performance.",
+      "date": "2026-10-06",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2610.08781v1",
+      "tags": [
+        "cs.CL",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.08781",
+      "arxiv_id": "2610.08781v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.08760",
+      "title": "WorldSonus: Bringing Sound to Worlds",
+      "authors": [
+        "Pengjun Fang",
+        "Jingyi Fa",
+        "Kam Man Wu",
+        "Jiaming Wang",
+        "Haoyuan Huang",
+        "Yaguang Wu",
+        "Xiangjun Huang",
+        "Ziyang Ma",
+        "Weijia Chen",
+        "Hongyu Liu",
+        "Zeyue Tian",
+        "Qifeng Chen"
+      ],
+      "abstract": "Recent advances in world models have enabled increasingly realistic visual synthesis. However, these generated environments remain largely silent. Bringing sound to world models poses three core challenges: real-time generation to keep pace with interactive video streams, interactive control to respond to mid-stream sound instructions, and spatially aligned stereo to reflect scene geometry and camera motion. To address these demands, we introduce WorldSonus, an interactive video-to-audio framework designed for real-time spatial sound synthesis in world models. For real-time generation, WorldSonus employs a streaming causal autoregressive diffusion architecture that synthesizes audio chunks at a low real-time factor (RTF) of 0.41. For interactive control, we incorporate an audio-centric captioning pipeline with chunk-indexed prompt scheduling, enabling dynamic manipulation of sound events during generation. For spatial alignment, we leverage high-quality stereo supervision curated from diverse stereo and ambisonic data. Extensive experiments demonstrate that while tailored for world models, WorldSonus generalizes effectively to open-domain video-to-audio benchmarks, matching or outperforming state-of-the-art bidirectional models in both acoustic quality and spatial alignment. Project page: https://noizai.github.io/WorldSonus/",
+      "date": "2026-10-06",
+      "source": "arXiv",
+      "source_detail": "cs.SD",
+      "url": "http://arxiv.org/abs/2610.08760v1",
+      "tags": [
+        "cs.SD",
+        "scheduling",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.08760",
+      "arxiv_id": "2610.08760v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.08743",
+      "title": "Reinforcement Learning with Conformal Action Sets: An Application to Sequential Recommendation",
+      "authors": [
+        "Wenwen Si",
+        "Honghao Wei"
+      ],
+      "abstract": "Sequential recommenders typically use a fixed slate size even though the number of useful alternatives changes within a session. We propose Reinforcement Learning with Calibrated Pruning (RLCP), which adapts the retained action set using critic scores and an online threshold. The threshold is updated from binary feedback indicating whether the set contains an action in a proxy target. We prove a deterministic bound on the observed proxy miss rate along adaptive trajectories. To quantify the effect of pruning on reward, we derive an exact decomposition of value loss into filtering and selection losses. Under explicit proxy and critic approximation conditions, this decomposition yields a finite session reward bound that also accounts for imperfect selection and set truncation, without requiring the learning parameters to converge. Experiments on KuaiRand-Pure and MovieLens 1M compare two RLCP implementations with four RL baselines. In each of the 19 configurations, at least one RLCP variant achieves the highest catalog diversity, reaching $1.11\\times$ to $5.21\\times$ that of the strongest baseline, with competitive session depth and no larger retained sets.",
+      "date": "2026-10-06",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2610.08743v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.08743",
+      "arxiv_id": "2610.08743v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.08651",
+      "title": "A Case Study in Assuring AI-Written Software",
+      "authors": [
+        "Lindsey Ferris",
+        "Sierra Bonilla"
+      ],
+      "abstract": "Software-engineering agents can enable people without formal software training to build systems they could not otherwise implement and simultaneously can produce more code than even experts can meaningfully inspect. In both cases, exhaustive code review is not reliable as the sole basis for human control. We report a case study of a production healthcare platform built through coding agents and governed by an operator without formal software-engineering training. Over time, its workflow grew into a human-led meta-agent system where one agent wrote code, other agents supervised and reviewed it, and project rules carried lessons forward. The operator found that tests, monitors and reviewing agents used to supervise the system were fallible. Some monitors measured proxies rather than outcomes, some audits failed silently, missing checks disappeared from reported results and one automated repair caused operational disruption. In this case, human control depended on keeping the intended outcome, the evidence used to judge it, the agents' permissions and the final human decision were all tied to the same underlying objective.",
+      "date": "2026-10-06",
+      "source": "arXiv",
+      "source_detail": "cs.SE",
+      "url": "http://arxiv.org/abs/2610.08651v1",
+      "tags": [
+        "cs.SE",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.08651",
+      "arxiv_id": "2610.08651v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}

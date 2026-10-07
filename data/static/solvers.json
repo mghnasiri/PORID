@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T14:06:18.839737+00:00",
+  "generated_at": "2026-10-07T14:23:35.270910+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1865,
+      "github_stars": 1870,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 106,
+      "github_open_issues": 105,
       "github_recent_prs": [
+        "Add dual-fix-prop mipsolver pointer to domain constructor",
+        "Ensure that `feasibilityRelaxation` minimizes the violation when the model is a maximization",
+        "Introduced calls to `storeRow(i);` and `reinsertEquation(removerow);` to fix bugs exposed in #3359 and #3364",
         "Split up `HPresolve.cpp`",
-        "Add a regression test for the stale row positions in parallel-row detection",
-        "Fix 3360",
-        "Stop the parallel-row candidate scan after a nearly-parallel row addition",
-        "Always retain branch as reason"
+        "Add a regression test for the stale row positions in parallel-row detection"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 662,
+      "github_stars": 664,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -460,11 +460,11 @@
       "recent_changes": "Features\r\n--------\r\n\r\n- added command line option `-t` to specify the number of threads, which triggers concurrent solving via `SCIPsolveConcurrent()`\r\n\r\nPerformance improvements\r\n--------------------",
       "github_open_issues": 33,
       "github_recent_prs": [
+        "Fix inverted avoidmemout check",
         "misc bugs",
         "export ObjCloneable types",
         "Preserve problem arrays and ownership after allocation failure",
-        "def.h: Fix mingw long formating",
-        "Move PaPILO header includes up to avoid boost issue on ppc64el"
+        "def.h: Fix mingw long formating"
       ],
       "pypi_monthly_downloads": -41
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14155,
+      "github_stars": 14157,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 125,
+      "github_open_issues": 124,
       "github_recent_prs": [
+        "release: update scripts",
+        "build(deps): bump the pip group across 1 directory with 13 updates",
         "Fix cmake samples java & migrate to ninja on windows",
         "cmake: fix windows z.dll support in python and java",
-        "ci: use ninja x msvc for windows cmake jobs",
-        "java: fix javadoc generation when running mvn package",
-        "build(deps): bump the pip group across 1 directory with 12 updates"
+        "ci: use ninja x msvc for windows cmake jobs"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,8 +1131,8 @@
         "python"
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
-      "github_stars": 6358,
-      "github_open_issues": 184,
+      "github_stars": 6356,
+      "github_open_issues": 183,
       "github_recent_prs": [
         "Keep ids unique after unpickling in a new process",
         "Backport Workshop 2027 page to stable docs",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "A performance regression on some very large datasets slipped through the cracks.\r\nThis one-off release fixes it.\r\n\r\n# Changelog\r\n\r\n## 🐛 Fixes\r\n- bfd1871 avoid clear() on a large hash map (#2724), clos",
-      "github_stars": 1812,
+      "github_stars": 1813,
       "github_open_issues": 117,
       "github_recent_prs": [
-        "test: use fixed values in the memory use statistic round-trip test",
-        "perf: size the Gizmo clone map after the previous clone",
-        "chore: put back antora.yml to use project version variables",
-        "fix: avoid clear() on a large hash map",
-        "perf: represent list entity's elements by a single chain node in the declarative graph"
+        "chore: simplify LS logging",
+        "docs: [docs-drift] variable-dispatch",
+        "perf: walk declarative successors by list index",
+        "chore: add AGENTS.md",
+        "docs: [docs-drift] document service run options (create_profile_set_custom_seed)"
       ]
     },
     {
@@ -1385,13 +1385,13 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2539,
-      "github_open_issues": 395,
+      "github_open_issues": 394,
       "github_recent_prs": [
+        "Adjust ipopt version tests to be less flaky",
+        "Add GHA dependency for pillow builds on pypy",
         "Resolve dynamic initialization of Param values",
         "Contrib HiGHS: support partial MIP warm starts",
-        "APPSI HiGHS: support partial MIP warm starts",
-        "Upgrape actions to newest versions",
-        "Update PyROS Uncertainty Set Implementations"
+        "APPSI HiGHS: support partial MIP warm starts"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1401,8 +1401,8 @@
       "vendor": "JuMP Community",
       "website": "https://jump.dev",
       "docs_url": "https://jump.dev/JuMP.jl/stable/",
-      "current_version": "1.32.0",
-      "release_date": "2026-09-30",
+      "current_version": "1.32.1",
+      "release_date": "2026-10-07",
       "license_type": "open-source",
       "license_spdx": "MPL-2.0",
       "open_source": true,
@@ -1448,15 +1448,15 @@
         "julia",
         "algebraic"
       ],
-      "recent_changes": "## JuMP v1.32.0\n\n[Diff since v1.31.2](https://github.com/jump-dev/JuMP.jl/compare/v1.31.2...v1.32.0)\n\n\n**Merged pull requests:**\n- Use WeakKeyDict for the subexpression dictionary (#4207) (@odow)\n- Ad",
+      "recent_changes": "## JuMP v1.32.1\n\n[Diff since v1.32.0](https://github.com/jump-dev/JuMP.jl/compare/v1.32.0...v1.32.1)\n\n\n**Merged pull requests:**\n- Fix performance of flatten! for large summations (#4264) (@odow)\n- Ad",
       "github_stars": 2482,
       "github_open_issues": 10,
       "github_recent_prs": [
+        "Prep for v1.32.1",
+        "Fix irrational numbers in VariableInfo",
         "Add PENNON and PENSDP to Penopt",
         "Fix performance of flatten! for large summations",
-        "Fix type of dividing by GenericAffExpr with no terms",
-        "Let division by an AffExpr stay an AffExpr when it has all-0 coefficients",
-        "Clarify behavior of deleting VariableInSetRef"
+        "Fix type of dividing by GenericAffExpr with no terms"
       ]
     },
     {
