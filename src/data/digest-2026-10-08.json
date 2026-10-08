@@ -1,0 +1,297 @@
+{
+  "date": "2026-10-08",
+  "generated_at": "2026-10-08T14:31:00.481296+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2610.10184",
+      "title": "Agentic AI-Assisted Modeling for Production Scheduling: Assessment in Constraint Programming",
+      "authors": [
+        "Ángel Sánchez-Fernández",
+        "Javier Pernas-Álvarez",
+        "Diego Crespo-Pereira"
+      ],
+      "abstract": "Developing optimization models for production scheduling requires substantial expert effort. Research on large language models (LLMs) has followed two directions: specialized approaches for automated modeling, mostly for mixed-integer linear programming, which often rely on dedicated training or problem-specific architectures that limit industrial deployment; and agentic artificial intelligence for operational decision support, which generally assumes that the optimization model already exists. This study bridges both directions by assessing whether general-purpose LLMs, orchestrated as agents without task-specific training, can formulate and implement constraint programming models from natural-language problem descriptions. Singleagent and multi-agent architectures are integrated with a Model Context Protocol server that provides context-aware retrieval of solver documentation to mitigate hallucinations during implementation. Both are compared with a direct LLM baseline on six industry-oriented problems covering flow-shop, job-shop, flexible job-shop and resource-constrained warehouse scheduling, using three LLMs and assessing modeling accuracy, execution success, latency and token consumption. Formulation proves largely within reach of current LLMs, whereas implementation is the main barrier. The multi-agent workflow raises the share of scripts that run correctly as generated from 14.8% with a direct LLM call to 59.3%, reaching 80.6% on the four less complex problems, while tightly coupled intralogistics models remain an open challenge.",
+      "date": "2026-10-07",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2610.10184v1",
+      "tags": [
+        "cs.AI",
+        "linear-programming",
+        "integer-programming",
+        "scheduling",
+        "supply-chain",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.10184",
+      "arxiv_id": "2610.10184v1",
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1002-net.70078",
+      "title": "Algorithmic and Optimization Strategies for Efficient Routing and Resource Management in Advanced Elastic Optical Networks",
+      "authors": [
+        "Al‐Jarallah, R.",
+        "Diarrassouba, I.",
+        "Hadhbi, Y.",
+        "Mahjoub, A."
+      ],
+      "abstract": "ABSTRACT\n                  In response to the rapidly increasing demand for higher bandwidth and the necessity for more flexible and efficient resource allocation, elastic optical networks have emerged as a promising solution for next‐generation high‐capacity optical communication systems. These networks leverage flexible spectrum management techniques, such as flexible grid and adaptive modulation formats, to enhance spectral utilization and support fluctuating traffic demands. However, the design and operation of these networks pose significant challenges, particularly in the context of the constrained routing and spectrum assignment (C‐RSA) problem, which involves determining optimal routing paths and spectrum allocations while satisfying various constraints such as spectrum contiguity, continuity, and nonoverlapping requirements. In this paper, we introduce an integer linear programming formulation for the C‐RSA problem and conduct a polyhedral investigation of the associated polytope. We describe several valid inequalities, present necessary and sufficient conditions under which these inequalities are facet‐defining, and then discuss the related separation problems. Based on these results, we develop a Branch‐and‐Cut algorithm to solve the problem. Additionally, we present computational results that demonstrate the effectiveness of our approach using various instances. Moreover, we compare our approach with existing methods from the literature as well as various state‐of‐the‐art MILP solvers.",
+      "date": "2026-10-07",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70078",
+      "tags": [
+        "linear-programming",
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70078",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07442-0",
+      "title": "The conditional value relevance of ESG and innovation disclosures: a multi-method analysis of European firms combining panel econometrics and machine learning",
+      "authors": [
+        "Delegkos, A.",
+        "Arsenou, E.",
+        "Cavouras, D.",
+        "Pyrgiotakis, E.",
+        "Kalantonis, P."
+      ],
+      "abstract": "Abstract\n                  This study examines the value relevance of accounting fundamentals, social and governance performance, and innovation-related disclosures for non-financial European firms. Building on the Ohlson (1995) framework, the analysis combines panel-data econometrics with Random Forest machine learning to evaluate both inferential and predictive dimensions of value relevance. We find that non-financial disclosures are not uniformly value relevant. Social-governance performance and environmental innovation exhibit no direct linear association with firm value, while SDG 9 innovation orientation is negatively priced. Environmental innovation, however, emerges as the strongest non-financial predictor in the Random Forest models, revealing predictive content that fixed-effects specifications miss. Value relevance is further conditional on signal interaction: environmental innovation attenuates the valuation effect of social-governance performance, while stronger social-governance performance reduces the negative pricing of SDG 9 disclosure. Overall, our results indicate that disclosure type, signal interaction, and nonlinear predictive structure jointly determine whether sustainability and innovation information is priced by markets.",
+      "date": "2026-10-07",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07442-0",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07442-0",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2610.09787",
+      "title": "Sparsity in control problems: Recent trends and open challenges",
+      "authors": [
+        "Luca Ballotta",
+        "Geethu Josephb",
+        "Waseem Abbas",
+        "Sophie M. Fosson",
+        "Chandra R. Murthy",
+        "Masaaki Nagahara",
+        "Alex Olshevsky",
+        "Kyle Poe",
+        "René Vidal"
+      ],
+      "abstract": "As in all fields of engineering, control engineers constantly face a dichotomy between achieving high performance and the limited availability of resources for sensing, actuation, and control. This tension often translates into formalizing design problems with sparsity constraints; that is, the design involves decision variables whose number, spatial reach, temporal spread, or other physical expressions are much smaller than in the ideal scenario of unconstrained optimization of a task-related performance metric. Even though this fundamental limitation underlines a plethora of methodological approaches and application domains, the control literature is fragmented into several lines of work tailored to specific scenarios. This survey fills the gap by bringing together several lines of work on handling sparsity in relevant control problems such as actuator scheduling, minimal-energy controllability, maximum hands-off control, and online convex optimization, and weaving a red thread through theoretical foundations and algorithms. Beyond establishing a coherent, structured narrative of problems and solutions for handling sparsity in control scenarios, we discuss open areas and relevant directions for future research, motivated by the growing complexity of control systems and their relations with key domains such as pervasive computing, distributed learning, cyberphysical security, and ecological footprint.",
+      "date": "2026-10-07",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2610.09787v1",
+      "tags": [
+        "math.OC",
+        "scheduling",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.09787",
+      "arxiv_id": "2610.09787v1",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1002-joom.70060",
+      "title": "<scp>RETRACTION</scp>\n                    : Follow‐Suit or Free‐Ride? A Relational View of\n                    <scp>CSR</scp>\n                    Diffusion in a Supply Chain with Customer–Supplier Closure",
+      "authors": [],
+      "abstract": "RETRACTION\n                      :\n                      \n                        E.C.\n                        Falcone\n                      \n                      ,\n                      \n                        T.\n                        Yan\n                      \n                      , and\n                      \n                        B.S.\n                        Fugate\n                      \n                      , “,”\n                      Journal of Operations Management\n                      70\n                      , no.  (\n                      2024\n                      ):\n                      979\n                      –\n                      1006\n                      ,\n                      https://doi.org/10.1002/joom.1319\n                      .\n                    \n                  \n                  \n                    The above article, published online on 9 June 2024 in Wiley Online Library (\n                    http://onlinelibrary.wiley.com/\n                    ), has been retracted by agreement between the authors; the journal Editors‐in‐Chief, Elliot Bendoly and Rogelio Oliva; the Association for Supply Chain Management; and Wiley Periodicals LLC. The authors contacted the journal editors regarding numerous unintentional errors in the reporting and documentation of the published analyses, which they identified after publication. As the editors consider that these errors are too extensive to be remedied through correction, the article must therefore be retracted. The authors agree with this decision and regret these errors.",
+      "date": "2026-10-08",
+      "source": "Journal of Operations Management",
+      "source_detail": "Journal of Operations Management",
+      "url": "https://doi.org/10.1002/joom.70060",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1002/joom.70060",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2610.10326",
+      "title": "Average-Reward Reinforcement Learning for Multichain MDPs: A Hierarchical Decomposition Approach",
+      "authors": [
+        "Huizhen Yu",
+        "Isaiah Heidt"
+      ],
+      "abstract": "We study learning optimal policies in average-reward multichain Markov decision processes (MDPs), where the optimal gain may depend on the initial state and recurrence structures vary across policies, creating challenges for reinforcement learning (RL) methods. We propose an asynchronous value-iteration-based RL algorithm that requires no model knowledge beyond the MDP's transition graph and leverages Bather's decomposition to hierarchically partition the state space into communicating subsystems and transient states. This decomposition induces a recasting of the global decision problem into structured subproblems, which our algorithm exploits. We show that the algorithm converges to the optimal gain and produces gain-optimal policies after finite time. Building on this base algorithm, we develop two further algorithms: one approximately solves the multichain average optimality equations to obtain near gain-optimal policies, and another targets near bias-optimality by approximating the optimal bias function and solving an induced average-reward multichain MDP using the base algorithm. We provide almost-sure convergence guarantees for all three algorithms and empirically compare their tradeoffs, showing that the latter two also consistently improve transient performance relative to the base algorithm. To our knowledge, these are the first essentially model-free average-reward RL algorithms for general multichain MDPs without reductions to discounted problems.",
+      "date": "2026-10-07",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2610.10326v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.10326",
+      "arxiv_id": "2610.10326v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.10235",
+      "title": "Beyond LLM-GA: Secure Fluid Antenna Systems with ReEvo-Designed Memetic Algorithm",
+      "authors": [
+        "Hanyong Xu",
+        "Zhaolai Dang",
+        "Tong Zhang"
+      ],
+      "abstract": "Fluid antenna systems (FASs) offer significant spatial flexibility, yet securing them against eavesdropping is critical for practical FAS deployment in military, satellite, and internet-of-things networks. Although large language model (LLM)-assisted genetic algorithms (LLM-GAs) can address this secure FAS port selection problem, whether further algorithmic improvement is possible warrants deeper investigation. To this end, we propose a memetic algorithm based on reflective evolution (ReEvo). Unlike the state-of-the-art LLM-GAs, which design only crossover or mutation operators with an LLM, our algorithm leverages an LLM to evolve dedicated crossover, mutation, and local-search operators offline. These operators are then embedded into a memetic search framework, thereby obviating any online LLM queries during execution. Simulation results at equal generation counts demonstrate that our proposed algorithm achieves a higher secure sum-rate than the conventional GA and the state-of-the-art LLM-GAs.",
+      "date": "2026-10-07",
+      "source": "arXiv",
+      "source_detail": "cs.IT",
+      "url": "http://arxiv.org/abs/2610.10235v1",
+      "tags": [
+        "cs.IT",
+        "metaheuristics",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.10235",
+      "arxiv_id": "2610.10235v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.09984",
+      "title": "Extreme Binary Classification: Extreme Value Theory for Extreme Constraint on False Negative",
+      "authors": [
+        "Samuel Gruffaz",
+        "Muhammad Fawad",
+        "Jaakko Nevalainen"
+      ],
+      "abstract": "While binary classification is one of the most extensively studied problems in machine learning,   the regime in which the goal is to learn a classifier with an almost zero false negative rate remains largely unexplored.   In this paper, we introduce the Extreme Binary Classification problem, where the objective is to learn a classifier whose false negative rate $α$ is constrained by $ε_{N_1}=o_{N_1\\to\\infty}(1/N_1)$, with $N_1$ denoting the number of positive examples in the training set.   To address this problem, we propose a threshold adaptation method theoretically grounded in guarantees derived from Extreme Value Theory, together with a feature selection procedure based on a permutation test applied to sample maxima.   Experimental results on four real-world datasets of varying sizes demonstrate that our approach compares favorably with state-of-the-art methods.   In addition, we illustrate its interpretability through an application to a cancer screening dataset.",
+      "date": "2026-10-07",
+      "source": "arXiv",
+      "source_detail": "stat.ML",
+      "url": "http://arxiv.org/abs/2610.09984v1",
+      "tags": [
+        "stat.ML",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.09984",
+      "arxiv_id": "2610.09984v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.10314",
+      "title": "PoreML: A Data-Driven Framework for Learning Multiphase Flow in Porous Media",
+      "authors": [
+        "Chunyang Wang",
+        "Mingrui Zhang",
+        "Yuyan Zhang",
+        "Linqi Zhu",
+        "Xin Ju",
+        "Edo Sicco Boek",
+        "Martin J. Blunt",
+        "Gege Wen"
+      ],
+      "abstract": "Multiphase flow in porous microstructures is central to CO$_2$ storage, fuel-cell operation, and flip-chip packaging. Predicting these flows remains challenging because wettability and complex pore geometry govern the nonlinear evolution of fluid interfaces. Machine learning holds substantial promise for advancing the field, but progress is constrained by scarce time-resolved 3D datasets and a lack of a unified workflow for training and evaluating models. To fill this critical gap, we introduce PoreML, an open-source framework unifying data generation, model training, and evaluation grounded in pore-scale physics. The framework comprises three core components. (a) A modern GPU-native lattice Boltzmann solver, validated against analytical solutions and published experiments, enables reproducible data generation. (b) A 3.3 TB dataset contains 560 simulation runs and 158,546 stored time steps across four application-driven scenarios. These trajectories span synthetic structures and geometries derived from micro-CT scans of real materials, covering diverse wetting conditions and viscosity ratios. (c) A unified learning framework evaluates one-step prediction and autoregressive rollouts. Its domain-specific evaluation protocols assess predictive accuracy and physical consistency. We evaluate five models of diverse architecture under these protocols. Two complementary challenges assess transfer to larger domains and from synthetic to micro-CT-derived structures. PoreML provides a shared foundation for machine-learning research on multiphase flow in porous media, with the aim of empowering the community to develop reliable predictive models and advance the field.",
+      "date": "2026-10-07",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2610.10314v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.10314",
+      "arxiv_id": "2610.10314v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.10302",
+      "title": "Continual Graph Multi-Agent Reinforcement Learning",
+      "authors": [
+        "Tommaso Marzi",
+        "Ahmed Hendawy",
+        "Jan Peters",
+        "Carlo D'Eramo",
+        "Andrea Cini",
+        "Cesare Alippi"
+      ],
+      "abstract": "In Continual Multi-Agent Reinforcement Learning (CMARL), agents learn cooperative policies across sequences of tasks, aiming to adapt effectively to new tasks while preserving the ability to solve previously encountered ones. In many applications, tasks differ in their underlying structure, which can represent, for example, distinct operational conditions or target configurations (e.g., different network topologies in power grids or arrangements in formation control). Existing CMARL methods lack dedicated mechanisms to leverage this structural information when learning new tasks, failing to promote transfer and mitigate forgetting. To fill this gap, we propose Continual Graph Multi-Agent Reinforcement Learning (CGMARL), a novel framework for CMARL problems in which task sequences are mapped into a series of attributed graphs, each modeling a task-specific structure. In CGMARL, each graph determines the environment dynamics (next states and/or rewards) and the number of agents for the corresponding task. Then, we present Graph-based Formation (GRAFO), the first CGMARL benchmark, and show how forgetting arises in this setting. Finally, to address this limitation, we propose Frozen Graph Encoder (FROG), a method that relies on a frozen graph backbone to preserve past structural information in graph-based CMARL policies. Experiments on GRAFO show that pairing FROG with existing CL methods substantially improves performance on multiple CGMARL scenarios.",
+      "date": "2026-10-07",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2610.10302v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.10302",
+      "arxiv_id": "2610.10302v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
