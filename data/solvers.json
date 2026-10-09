@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T14:31:00.056584+00:00",
+  "generated_at": "2026-10-09T14:17:59.778109+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1871,
+      "github_stars": 1874,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 107,
+      "github_open_issues": 110,
       "github_recent_prs": [
-        "cuda build fix",
-        "Fix some issues found by `clang-tidy`",
-        "Issue 3369",
-        "Remove HighsOptions move constructor ",
-        "`Highs::passModel()` and `Highs::passHessian()` now return `HighsStatus::kWarning` if any of the `HighsLp` vectors or `HighsHessian::start_` have greater size than required by `HighsLp::num_col_` and `HighsLp::num_row_`"
+        "Loosen assert",
+        "Corrected error in resolving merge conflict; silenced `[highs_filereader]` tests",
+        "Fix inconsistency in `assessMatrix`",
+        "Fix writing semi-integer variables to LP file",
+        "Check that a file can be opened when writing the model to file"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 664,
+      "github_stars": 665,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14163,
+      "github_stars": 14165,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -571,11 +571,11 @@
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
       "github_open_issues": 127,
       "github_recent_prs": [
+        "tools/docker: fix some images",
+        "sat: check the whole divisor expression when validating int_div",
         "fix(math_opt): skip empty XPRESS branching priorities",
         "lp_parser: don't match int/bin/inf keywords as variable-name prefixes",
-        "release: more fixup",
-        "build(deps): bump the pip group across 1 directory with 13 updates",
-        "release: fix few workflows"
+        "release: more fixup"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -666,13 +666,13 @@
         }
       ],
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_open_issues": 168,
+      "github_open_issues": 172,
       "github_recent_prs": [
-        "Fix stack-buffer-overflow in CbcOutputHandler::print() incumbent parsing",
-        "Keep the postprocessed solution when the final resolve does not finish (2.10)",
-        "Keep the postprocessed solution when the final resolve does not finish",
-        "fix: use the solver's objective sense when a MIP start sets the cutoff",
-        "Update Homebrew installation instructions for Cbc"
+        "next: Bonmin fixes (ports of #797, #798, #799), reallyValid() for OA-type solvers, and point config.yml at next",
+        "CbcHeuristicRandRound: test CBC_SKIP_CLP_TEST by value",
+        "Don't assume LP data in CbcNode's integer-solution safeguards (Bonmin B-BB crashes)",
+        "Don't treat at-solution cut generators as lazy constraints for OA-type solvers (Bonmin)",
+        "Fix stack-buffer-overflow in CbcOutputHandler::print() incumbent parsing"
       ]
     },
     {
@@ -1131,7 +1131,7 @@
         "python"
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
-      "github_stars": 6357,
+      "github_stars": 6359,
       "github_open_issues": 184,
       "github_recent_prs": [
         "Fix two silent wrong-answer paths for mixed-integer problems in CUOPT",
@@ -1320,13 +1320,13 @@
       ],
       "recent_changes": "A performance regression on some very large datasets slipped through the cracks.\r\nThis one-off release fixes it.\r\n\r\n# Changelog\r\n\r\n## 🐛 Fixes\r\n- bfd1871 avoid clear() on a large hash map (#2724), clos",
       "github_stars": 1820,
-      "github_open_issues": 117,
+      "github_open_issues": 119,
       "github_recent_prs": [
+        "docs: [docs-drift] byom-security-improvements",
+        "docs: [docs-drift] feat/score-analysis-constraint-id",
         "chore: reworked stats collector to be based on vertx route handler to be abl…",
         "chore: simplify LS logging",
-        "docs: [docs-drift] variable-dispatch",
-        "perf: walk declarative successors by list index",
-        "chore: add AGENTS.md"
+        "docs: [docs-drift] variable-dispatch"
       ]
     },
     {
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2539,
+      "github_stars": 2541,
       "github_open_issues": 395,
       "github_recent_prs": [
         "Adjust ipopt version tests to be less flaky",
