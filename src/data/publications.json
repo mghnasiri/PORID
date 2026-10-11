@@ -1,5 +1,172 @@
 [
   {
+    "id": "optim-online-e832027fbe28",
+    "title": "Out-of-Distribution Wasserstein Ambiguity Set Construction with Inclusive and Exclusive Evidence",
+    "authors": [],
+    "abstract": "Distributionally robust optimization hedges a decision against an ambiguity set of candidate distributions. In a cold-start setting the target distribution is unobserved and no sample from it is available, so only related source distributions provide evidence for constructing that set. We propose an inclusive-exclusive Wasserstein ball model that jointly learns a center and radius from ... Read more",
+    "date": "2026-10-11",
+    "source": "Optimization Online",
+    "url": "https://optimization-online.org/2026/10/out-of-distribution-wasserstein-ambiguity-set-construction-with-inclusive-and-exclusive-evidence/?utm_source=rss&utm_medium=rss&utm_campaign=out-of-distribution-wasserstein-ambiguity-set-construction-with-inclusive-and-exclusive-evidence",
+    "tags": [
+      "stochastic"
+    ],
+    "type": "publication",
+    "score": 45.0
+  },
+  {
+    "id": "openalex-W7221088005",
+    "title": "Integrasi Workflow Jurnal Keuangan Berbasis Website Menggunakan Analisis Pieces dan Metode Agile Scrum",
+    "authors": [
+      "Andrasatria Dewa",
+      "Dwi Ismiyana Putri"
+    ],
+    "abstract": "Hospital financial governance depends on how well the journal approval workflow is recorded and traced. The desktop-based Financial Information System (SIMKEU) used by the hospital under study supports journal entry and posting, but examination, approval, and endorsement are still handled through physical documents outside the system, so access is inflexible and the process status is not digitally documented. This study analyses the running system and develops a website-based financial information system that integrates the tiered journal workflow. Data were collected through observation, interviews with finance staff, the assistant finance manager, and the finance manager, and a literature study. The running system was analysed using the PIECES framework, while development applied the Agile approach with Scrum over approximately three months, with the researcher acting as a single full-stack developer. The system was built on CodeIgniter 3 and combines the existing Oracle database as the journal data source with MySQL as the workflow, access-rights, and activity-log store, so the legacy schema remains unchanged. Alpha testing of twenty function groups using black-box testing produced conforming results, and User Acceptance Testing with five respondents produced an acceptance rate of 76.89% in the Good category.",
+    "date": "2026-10-11",
+    "source": "OpenAlex",
+    "source_detail": "Jejak digital Jurnal Ilmiah Multidisiplin",
+    "url": "https://doi.org/10.63822/ek7p9543",
+    "tags": [
+      "healthcare-or"
+    ],
+    "type": "publication",
+    "doi": "10.63822/ek7p9543",
+    "citation_count": 0,
+    "score": 55.0
+  },
+  {
+    "id": "openalex-W7221318936",
+    "title": "China Source (中国信源) Structured Dataset — JSON-LD Snapshot v2026-10.2",
+    "authors": [
+      "China Source (中国信源)"
+    ],
+    "abstract": "Full JSON-LD snapshot of the China Source structured dataset: 890 schema.org entities (443 Chinese, 443 English, plus a 4-file trust layer). Supersedes v2026-10.1 (same entity count; publisher semantics + T3 re-run). License is tiered. CC BY 4.0 applies only to the 18 self-produced/compiled entities. The 872 entities derived from official government pages carry no entity-level license; they provide attribution to the original publisher instead. Dataset-level license: CC BY 4.0 for the self-produced structured layer only; the underlying official source documents remain under their respective publishers' terms and are not covered. v2026-10.2 changes: (1) publisher.url restored to the dataset home (https://qianyuan.ltd/china-source/) per Organization semantics, with the trust layer linked at document level via seeAlso; (2) T3 full-fidelity audit re-run on the 890-entity baseline: 886 entities checked, 0 hard failures, 514 warnings (C7 description length 467 / C1 anchor field 53); (3) the v2026-10 related-snapshot link to Hugging Face is effective from v2026-10.1 onward.",
+    "date": "2026-10-11",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23284349",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23284349",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "openalex-W7221321797",
+    "title": "Optimal Context Mapping (Model D): a shared, learning retrieval layer for AI coding agents",
+    "authors": [
+      "Devieswar Kancheti"
+    ],
+    "abstract": "Optimal Context Mapping scans a team's repositories once into a workspace of meaning fingerprints. It ranks the code and docs an AI agent should read first for a question, and it learns from every answered question, so the same research is not paid for twice. It ships as a Python package with hooks for Claude Code and MCP tools for other agents. Measured results include: on SWE-QA (7 public repositories, 336 questions, graded blind) it answered at 2.2x lower cost than Claude Sonnet alone, at 93% of its judged quality, and at 1.9x lower cost and 96.5% of the quality with prompt caching and the same answer instruction for both. On LOCOMO retrieval it ties hybrid search (recall@10 0.657 vs 0.655). On finding the answer file in a full-stack repository, the right file was in the top 5 on 75 of 100 questions, against 28 for Graphify. Where it does not help is recorded too: bug-fix tasks whose issues already name the code showed no saving. Version 0.2.1. Reproducible study: https://github.com/devkancheti4-design/model-d-graphify",
+    "date": "2026-10-11",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23289067",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23289067",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "openalex-W7221327413",
+    "title": "Agent Context Is a Build Input: logs and analysis scripts",
+    "authors": [
+      "Venkata Manikanta Sangaraju"
+    ],
+    "abstract": "Episode logs of open-weight LLM agents on three workloads (a data agent with replayable receipts, a skill library under 16 edits, and context assembly under token budgets), with scripts that recompute every number and figure in the IEEE Software article \"Agent Context Is a Build Input: Evidence-Based Practices for Testing and Budgeting What LLM Agents See.\"",
+    "date": "2026-10-11",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23289212",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23289212",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "openalex-W7221343030",
+    "title": "FAIR Research Data Management with NOMAD and FAIRmat",
+    "authors": [
+      "Ahmed E. Mansour"
+    ],
+    "abstract": "These slides accompanied an invited tutorial presented at TCO 2026 on 28 September 2026 in Leipzig, Germany. The presentation introduces NOMAD, a free, open-source research data management platform developed and operated by FAIRmat, a consortium of the German National Research Data Infrastructure (NFDI). NOMAD enables researchers to upload, organize, explore, analyze, and publish their data. By transforming heterogeneous research data into structured, machine-readable formats, the platform helps make them findable, accessible, interoperable, and reusable (FAIR). The presentation provides an overview of relevant concepts, tools, and practical workflows for managing materials-science data throughout the research lifecycle. It covers data upload and automated processing, metadata extraction and enrichment, schema-based data modelling, data organization, search and exploration, analysis, and publication. It also introduces NOMAD’s support for experimental and computational data and discusses how structured, contextualized datasets can be prepared for machine-learning and artificial-intelligence applications. Both NOMAD deployment options are presented: the publicly accessible central platform and NOMAD Oasis, a customizable infrastructure that research groups and institutions can host and operate independently. The slides are intended for researchers, developers, and research-data professionals interested in interoperable data infrastructures, reproducible research, and applying the FAIR principles to computational and experimental materials science.",
+    "date": "2026-10-11",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23289158",
+    "tags": [
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23289158",
+    "citation_count": 0,
+    "score": 55.0
+  },
+  {
+    "id": "openalex-W7221344058",
+    "title": "e2er (End-to-End Research)",
+    "authors": [
+      "Björn Hanneke"
+    ],
+    "abstract": "e2er is the open infrastructure for publishing, verifying, reproducing and reusing AI-enabled research. Templates describe research processes as a sequence of steps. Each template organizes specialists, i.e., AI agents with defined roles, and each specialist draws on skills, i.e., written descriptions of methods. Researchers can adjust any template, specialist, or skill and publish their version for fellow researchers. Researchers decide at which steps the process pauses for their review. A study produced with e2er comes with a dossier that helps others verify and reproduce the work and attributes everyone whose templates, specialists, and skills it used.",
+    "date": "2026-10-11",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23289229",
+    "tags": [
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23289229",
+    "citation_count": 0,
+    "score": 55.0
+  },
+  {
+    "id": "openalex-W7221352389",
+    "title": "CountryCode-Decide: messy country names to ISO 3166 codes, with calibrated abstention",
+    "authors": [
+      "Ali Ildan"
+    ],
+    "abstract": "A small open-weight model (mmBERT-small, 8-bit ONNX, CPU) that maps a country or US state written as free text in company registers and forms (any language or script, misspelled, abbreviated, historical) to ISO 3166-1 alpha-2 and ISO 3166-2:US codes with calibrated probabilities, and abstains with a short candidate list when a certified error-rate target cannot be met. Training combines Unicode CLDR and Wikidata names, real register strings and generated variants that passed quality gates and a human label audit; answer thresholds are certified by fixed-sequence testing on held-out real register strings; evaluation uses fresh registers read once after a frozen pre-registration.",
+    "date": "2026-10-11",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23289336",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23289336",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "openalex-W7221366253",
+    "title": "Dr. Saeed Ghezelbash Public Knowledge Graph",
+    "authors": [
+      "Saeed Ghezelbash"
+    ],
+    "abstract": "Frozen source and exact deployed distribution of Dr. Saeed Ghezelbash's canonical website. Source commit: 13a102d9a9c5fec86eda886f01bab410e3d7a87c. Website: https://www.ghezelbaash.ir/ The distribution archive contains the production files, including its integrity manifest and deployment provenance. Each of the 183 manifest entries was verified against its SHA-256 and byte length. The source archive is taken directly from this commit. GitHub build and external-publication workflows are disabled for this freeze. The already deployed Cloudflare Pages website remains online. Related public resources: Current dataset: https://huggingface.co/datasets/doctor-ghezelbaash/dr-saeid-ghezelbaash-entity-data Kaggle dataset: https://www.kaggle.com/datasets/saeedghezelbash/dr-saeed-ghezelbash-knowledge-graph-and-nlp-data Kaggle starter: https://www.kaggle.com/code/saeedghezelbash/dr-saeed-ghezelbash-knowledge-graph-starter Preserved historical research archive: https://doi.org/10.5281/zenodo.22838416 (version 1.3.3). Its DOI and archived files are unchanged; this website freeze does not create a new Zenodo version. This release freezes the website delivery and its source. It does not represent a measured search-ranking score or a guarantee of third-party indexing. retired-operational-branches-2026-10-10.bundle is a separate recovery backup of superseded branch commits. It is not part of the frozen source or deployed distribution; its prerequisites remain in this repository's Git history.",
+    "date": "2026-10-11",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.22857496",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.22857496",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
     "id": "openalex-W7221081568",
     "title": "nfdi4plants/Swate: 2.5.0",
     "authors": [
@@ -262,6 +429,127 @@
       "general-or"
     ],
     "type": "publication",
+    "score": 40.0
+  },
+  {
+    "id": "optim-online-dcf10fd07ff3",
+    "title": "Risk-Constrained MPPI Tuning with Update-Aware MA-ES Racing",
+    "authors": [],
+    "abstract": "We formulate offline tuning of Model Predictive Path Integral (MPPI) controllers as a chance-constrained black-box optimization problem and develop an update-aware framework based on Matrix Adaptation Evolution Strategy (MA-ES). We use statistical information from noisy controller evaluations to determine when the evolutionary update is sufficiently reliable. When the recombination direction is certified, a derivative-free nonmonotone ... Read more",
+    "date": "2026-10-10",
+    "source": "Optimization Online",
+    "url": "https://optimization-online.org/2026/10/risk-constrained-mppi-tuning-with-update-aware-ma-es-racing/?utm_source=rss&utm_medium=rss&utm_campaign=risk-constrained-mppi-tuning-with-update-aware-ma-es-racing",
+    "tags": [
+      "metaheuristics"
+    ],
+    "type": "publication",
+    "score": 35.0
+  },
+  {
+    "id": "crossref-10.1007-s10951-026-00892-1",
+    "title": "Theory and practice of dynamic scheduling problems",
+    "authors": [
+      "Gawiejnowicz, S.",
+      "Shabtay, D."
+    ],
+    "abstract": "",
+    "date": "2026-10-10",
+    "source": "Journal of Scheduling",
+    "source_detail": "Journal of Scheduling",
+    "url": "https://doi.org/10.1007/s10951-026-00892-1",
+    "tags": [
+      "scheduling"
+    ],
+    "type": "publication",
+    "doi": "10.1007/s10951-026-00892-1",
+    "score": 35.0
+  },
+  {
+    "id": "crossref-10.1007-s10951-026-00889-w",
+    "title": "Joint resource allocation and adaptive task scheduling in 5G networks using hybrid deep reinforcement with revolution crisscross and quantum supercell optimization",
+    "authors": [
+      "Harikrishnan, R.",
+      "Thangappan, J.",
+      "Velayutham, R."
+    ],
+    "abstract": "",
+    "date": "2026-10-10",
+    "source": "Journal of Scheduling",
+    "source_detail": "Journal of Scheduling",
+    "url": "https://doi.org/10.1007/s10951-026-00889-w",
+    "tags": [
+      "scheduling"
+    ],
+    "type": "publication",
+    "doi": "10.1007/s10951-026-00889-w",
+    "score": 35.0
+  },
+  {
+    "id": "s2-2a1d7b94fad3",
+    "title": "Copula-based multivariate joint drought index (JDI) modeling and nonlinear prediction using PSR–machine learning framework with sobol sensitivity analysis in the Arid Region",
+    "authors": [
+      "Elham Hemmati Golsefidi",
+      "Yahya Esmaeilpour",
+      "Ommolbanin Bazrafshan",
+      "Hossein Zamani",
+      "Mehdi Biniaz"
+    ],
+    "abstract": "",
+    "date": "2026-10-10",
+    "source": "Semantic Scholar",
+    "source_detail": "robust optimization uncertainty",
+    "url": "https://doi.org/10.1007/s00704-026-06620-1",
+    "tags": [
+      "ml-for-or"
+    ],
+    "type": "publication",
+    "doi": "10.1007/s00704-026-06620-1",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 35.0
+  },
+  {
+    "id": "openalex-W1835535788",
+    "title": "Evaluación del impacto de las medidas de conservación del Libro Rojo de peces dulceacuícolas (2002-2012) en Colombia",
+    "authors": [
+      "Paula Sánchez‐Duarte",
+      "Carlos A. Lasso"
+    ],
+    "abstract": "During the last 30 years published books and red lists have been used to draw attention about threatened species at the global, regional and national levels. From the 1980âs Colombia has elaborated books and red lists of species including two assessments for freshwater fish in 2002 and 2012. The first assessment proposed a series of conservation measurements to increase knowledge and to improve speciesâ conditions. Of the 45 species listed in 2002, 23 remain the same category of threat or evaluation, three species increase in the threat category and 19 species decrease their category. Here we analyze the impact and development of those proposals and the evolution of the conservation status of freshwater fish in Colombia. We evaluate the change of threatened species categories and calculate the Red List Index (RLI) for the group.",
+    "date": "2026-10-10",
+    "source": "OpenAlex",
+    "source_detail": "DOAJ (DOAJ: Directory of Open Access Journals)",
+    "url": "https://doi.org/10.48580/d45sl.v3",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.48580/d45sl.v3",
+    "citation_count": 1,
+    "score": 45.0
+  },
+  {
+    "id": "openalex-W7214236926",
+    "title": "ZIN-IN-NGT-animations",
+    "authors": [
+      "Jos Ritmeester",
+      "Lisa Gierman",
+      "Gomèr Otterspeer",
+      "Tobias de Ronde",
+      "Galya Stern",
+      "Floris Roelofsen"
+    ],
+    "abstract": "About the content of the data collectionZIN-IN-NGT-animations is a data collection containing 3D animations of 4,083 sentences in Sign Language of the Netherlands (NGT). These are sentences that are frequently used in the interaction between parents and young children.The name of the data collection, ZIN in NGT, can be translated from Dutch to English either as ‘SENTENCE in NGT’ or ‘APPETITE for NGT’.The present data collection is a companion to the ZIN-IN-NGT-videos data collection (DOI 10.21942/uva.c.8558478), which contains video recordings of the same sentences. To obtain 3D animations, signers watched the video recording of each sentence and then re-performed the same sentence in a motion capture studio.The name of each file includes the name of the original video recording (e.g. M20241216_5634, which includes the video recording date in YYYYMMDD format and a recording ID). This is extended with the motion capture session date in YYMMDD format and the take number, e.g. M20241216_5634_260319_3.fbx. Only the last take of each sentence is included in the data collection. mocap_mapping.csv in ZNNM_codebook lists all takes and links them to the video collection Zin-IN-NGT-videos (DOI 10.21942/uva.c.8558478).The collection contains, for each sentence, the raw Shogun motion capture data (ZNNM_shogun), the Vicon-solved skeleton data (ZNNM_vicon), the retargeted Character Creator animation (ZNNM_cc), the post-processed version of the retargeted CC animation (ZNNM_cc_pp), and the annotations (ZNNM_annotation). The data collection also includes a codebook with the take mapping (ZNNM_codebook).About the creation of the data collectionThis data collection has been created through a collaboration between UvA’s SignLab (www.signlab-amsterdam.nl) and TYD (www.tyd.nl). All 3D animations have been created using SignLab’s motion capture setup at UvA’s Visualisation Lab in 2024-2026. We are currently writing a paper describing in more detail how the data collection was created. A link to the paper will be added here once the paper is published.LicenseAll data is shared under a CC-BY 4.0 license.FundingThe creation of this data collection has been supported by ZonMW, NWO, Stichting Handgebaar, Stichting Vrienden van Effatha, and by the University of Amsterdam through the research programme Language Sciences for Social Good.Related data collectionA related data collection, ZIN-IN-NGT-videos (https://doi.org/10.21942/uva.c.8558478), contains multi-view video recordings of all sentences in the current data collection.",
+    "date": "2026-10-10",
+    "source": "OpenAlex",
+    "source_detail": "Universiteit van Amsterdam",
+    "url": "https://doi.org/10.21942/uva.c.8723797",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.21942/uva.c.8723797",
+    "citation_count": 0,
     "score": 40.0
   },
   {
@@ -739,6 +1027,55 @@
     "type": "publication",
     "doi": "10.1080/02331934.2026.2744282",
     "score": 30.0
+  },
+  {
+    "id": "s2-139aae0baa4b",
+    "title": "Strategic framework for digital marketing localization: advancing the standardization-adaptation debate in international marketing strategy",
+    "authors": [
+      "Samer Elhajjar",
+      "Sam El Nemar",
+      "Giannis Theofanous",
+      "Jean-Pierre Mouline"
+    ],
+    "abstract": "\n \n This conceptual paper responds to the evolving needs of international marketing strategy (IMS) by proposing a theoretically grounded Digital Marketing Localization Framework (DMLF). The framework revisits the standardization versus adaptation debate, emphasizing its relevance in digitally mediated environments.\n \n \n \n A structured literature review was conducted in Scopus, Web of Science and Google Scholar (1983–mid-2025) pertaining to IMS frameworks, digital platforms, cross-cultural behavior and decision-making models. Several peer-reviewed articles and book chapters were included, while studies limited to traditional media or the B2B context were excluded. This synthesis incorporates key classical debates regarding IMS, and advances in digital ecosystems, personalization and cultural engagement. Drawing on an interdisciplinary approach that blends theoretical constructs from interrelated fields, this paper develops a structured, multi-dimensional decision-making framework.\n \n \n \n The study highlights the importance of integrating cultural sensitivity, platform-specific dynamics and algorithmic personalization into IMS theory. It addresses gaps in pre-digital frameworks by offering actionable insights for navigating the complexities introduced by digital platforms and cross-border data governance.\n \n \n \n As a conceptual study, the framework requires empirical validation through future research. Our paper outlines testable propositions and methodologies to evaluate the effectiveness of DMLF across diverse markets. Future researchers need to focus on examining the unresolved tensions between; AI-driven efficiency and culturally embedded authenticity, automation compared to cultural sensitivity, standardization logic compared to adaptive learning, algorithmic optimization compared to managerial judgment and their impact on local decision-making.\n \n \n \n The DMLF provides actionable guidance for marketing executives to balance global coherence with local relevance. It enables organizations to systematically evaluate digital localization options, ensuring decisions are guided by contextual insights rather than intuition.\n \n \n \n This research contributes to IMS by adapting foundational debates to the complexities of digital globalization. It offers a comprehensive framework tailored to internet-enabled international operations and proposes an agenda for empirical research that aligns with IMS’s broader shift toward analytical rigor and theoretical innovation.\n",
+    "date": "2026-10-09",
+    "source": "Semantic Scholar",
+    "source_detail": "operations research optimization",
+    "url": "https://doi.org/10.1108/imr-05-2025-0242",
+    "tags": [
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.1108/imr-05-2025-0242",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 45.0
+  },
+  {
+    "id": "s2-e2638f6285a7",
+    "title": "Optimizing used clothing sustainability through multi-algorithm MILP models for collection, sorting and recycling",
+    "authors": [
+      "Md Hasan al Mamun",
+      "Ya-Ming Jiang",
+      "He Xiao"
+    ],
+    "abstract": "\n \n Sustainable fashion and circular-economy policy have advanced considerably, yet the textile reverse-logistics (TRL) literature has given comparatively little attention to optimizing the three operational stages on which textile circularity depends collection, sorting and up/recycling – or to the cost structures that determine whether those stages are economically viable. This paper develops and solves a multi-objective mixed-integer linear programming (MILP) model that optimizes the three stages jointly rather than in isolation.\n \n \n \n The model maximizes an attainment index crediting sorted and upgrading-weighted output against total collected supply and minimizes total TRL cost across collection, inventory, remanufacturing and inbound and outbound transport, with plant-activation fixed costs carried by binary variables. The two objectives are reconciled by a weighted, range-normalized scalarization whose weight is swept rather than fixed at a single value. Particle swarm optimization (PSO), a genetic algorithm (GA) and the parameter-free Jaya algorithm are benchmarked against the exact branch-and-bound optimum over ten independent seeds at two evaluation budgets. Every coefficient carries an explicit provenance label – reported, derived, modeled or unavailable – and coefficients requiring partner-firm records are declared unavailable rather than imputed.\n \n \n \n In a destination-level application over 957.4 million kg of verified 2024 worn-textile trade, optimized allocation improves the model objective by between 10.0 and 21.8 percent depending on weighting but raises the Herfindahl concentration index from an observed 0.091 to between 0.118 and 0.130 even under a twenty percent per-destination cap. In a supplier-parameterized instance solved to proven optimality, the exact Pareto sweep locates a knee near w = 0.35 and shows the attainment index saturating at 157.2 against finite supply. Measured against that optimum, no metaheuristic seed recovers more than 68 percent of the attainable improvement: Jaya leads under a constrained budget (45.4 percent mean recovery against 37.6 for GA and 20.4 for PSO) and GA overtakes it only when the evaluation budget is roughly quadrupled.\n \n \n \n The solved instance uses six representative plants and a modeled grade structure, making it an allocation illustration rather than a facility-siting study; cost coefficients are labeled modeled throughout, and no empirical cost claim attaches to them. A partner-firm application under a data-use agreement remains the outstanding requirement. The divergent algorithm orderings obtained on two different instances support a reporting standard in which no comparative claim about stochastic optimizers rests on a single configuration or a single seed.\n \n \n \n For the linear core of this problem, the exact solver dominates, so branch-and-bound is the tool of record, and the role of metaheuristics lies in nonlinear extensions where no exact benchmark exists. Reporting a transparent outcome vector rather than a single headline improvement percentage prevents optimization from appearing to deliver a free gain and makes the concentration cost visible to policy readers.\n \n \n \n The paper contributes a fully specified and auditable MILP formulation that integrates collection, sorting and up/recycling in one model; an exact benchmark against which the three metaheuristics are measured; and an evidence-gating discipline under which every reported coefficient is labeled by provenance and no unavailable coefficient is silently imputed.\n",
+    "date": "2026-10-09",
+    "source": "Semantic Scholar",
+    "source_detail": "integer programming branch and bound",
+    "url": "https://doi.org/10.1108/ijcst-05-2026-0117",
+    "tags": [
+      "linear-programming",
+      "integer-programming",
+      "metaheuristics",
+      "supply-chain",
+      "multi-objective"
+    ],
+    "type": "publication",
+    "doi": "10.1108/ijcst-05-2026-0117",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 65.0
   },
   {
     "id": "optim-online-027fc2090b8b",
@@ -5469,6 +5806,73 @@
     ],
     "type": "publication",
     "score": 35.0
+  },
+  {
+    "id": "s2-cef0620b2734",
+    "title": "A memetic algorithm based on niche selection and Q-learning for energy-efficient distributed flexible job shop scheduling",
+    "authors": [
+      "Si-Qi Tang",
+      "Kui-Hua Huang",
+      "Wen-Yin Gong",
+      "Hu Qin"
+    ],
+    "abstract": "",
+    "date": "2026-10-08",
+    "source": "Semantic Scholar",
+    "source_detail": "combinatorial optimization heuristic",
+    "url": "https://doi.org/10.1007/s12293-026-00533-2",
+    "tags": [
+      "metaheuristics",
+      "scheduling"
+    ],
+    "type": "publication",
+    "doi": "10.1007/s12293-026-00533-2",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 35.0
+  },
+  {
+    "id": "s2-01dacffc2930",
+    "title": "Reinforcement Learning Enabed Vehicular Optimal Platoon Control under Uncertainties and Cyberattacks",
+    "authors": [
+      "Zi-Ming Wang",
+      "K. H. Johansson",
+      "Apostolos I. Rikos"
+    ],
+    "abstract": "\n \n This paper proposes a reinforcement learning (RL) based optimal platoon control framework for autonomous vehicles (AVs) subject to uncertainties and cyberattacks. Within the optimized backstepping design, an actor-critic-identifier architecture is employed to improve platoon control performance. A cyberattack compensation mechanism and a fuzzy logic based composite observer are integrated to reconstruct reliable vehicle information and estimate system uncertainties under compromised measurements, including the internal vehicular system states, uncertainties, and cyberattacks. In addition, a second-order tracking differentiator is introduced to smooth transient responses and substantially reduce the computational burden associated with differentiating the virtual controllers generated during the backstepping procedure. Based on the Lyapunov function based theory, the stability of the entire vehicle platoon is established, and all relevant errors in the multi-vehicle system are proven to be semiglobally uniformly ultimately bounded (SGUUB). Finally, numerical simulations of a multi-vehicle platooning system validate the effectiveness of the proposed framework and demonstrate its robustness against the simultaneous presence of uncertainties and cyberattacks. Moreover, a comparative study with a non-optimal control algorithm is conducted, highlighting the superior tracking performance and transient response of the proposed RL-enabled optimal control framework.\n",
+    "date": "2026-10-08",
+    "source": "Semantic Scholar",
+    "source_detail": "robust optimization uncertainty",
+    "url": "https://doi.org/10.26599/jicv.2026.9210101",
+    "tags": [
+      "ml-for-or"
+    ],
+    "type": "publication",
+    "doi": "10.26599/jicv.2026.9210101",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 40.0
+  },
+  {
+    "id": "s2-08378334c35c",
+    "title": "Predictive Risk Identification and Resource Optimization in Social Work: A Hybrid Semi-Supervised Learning Framework",
+    "authors": [
+      "Yih-Chang Chen"
+    ],
+    "abstract": "Social work practice faces critical challenges in accurately identifying high-risk families for timely intervention due to limited labeled data. This research develops an intelligent system integrating supervised and semi-supervised learning for early warning, coupled with uncertainty-aware resource optimization. We propose a hybrid framework combining Self-training and Co-training leveraging 1,200 labeled and 13,800 unlabeled family cases. The proposed method achieves 85.6% accuracy and 82.4% recall on the high-risk class, with 95% confidence intervals, substantially outperforming supervised-only baselines. A multi-objective allocation model balances effectiveness, cost, and equity while incorporating prediction uncertainty via robust optimization. Sensitivity analysis over 500 bootstrap scenarios demonstrates service quality guarantees. Subgroup fairness audits show consistent recall across demographic groups (max gap 1.2%). The optimized allocation reduces manpower by 22% while improving intervention success from 68.5% to 84.2%. SHAP-based explainability and human oversight support ethical deployment in social services.",
+    "date": "2026-10-08",
+    "source": "Semantic Scholar",
+    "source_detail": "robust optimization uncertainty",
+    "url": "https://doi.org/10.5815/ijitcs.2026.05.05",
+    "tags": [
+      "stochastic",
+      "multi-objective"
+    ],
+    "type": "publication",
+    "doi": "10.5815/ijitcs.2026.05.05",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 45.0
   },
   {
     "id": "crossref-10.1007-s10479-026-07442-0",
@@ -11049,6 +11453,73 @@
     "doi": "10.1007/s00453-026-01392-6",
     "arxiv_id": "2610.10632v1",
     "score": 35.0
+  },
+  {
+    "id": "s2-9b7cfd5795c8",
+    "title": "Predictive Rerouting of Connected and Automated Vehicles Using Traffic and Charging Demand Forecasts",
+    "authors": [
+      "Tony Kinchen",
+      "Ting Bai",
+      "Andreas A. Malikopoulos"
+    ],
+    "abstract": "In this paper, we consider the problem of predictive rerouting of connected and automated vehicles (CAVs) in mixed traffic with electric vehicle charging demand. We provide a framework that combines a diffusion convolutional recurrent neural network (DCRNN) with a routing policy that accounts for congestion, CO2 emissions, route length, and charging demand. The DCRNN uses historical network observations to forecast traffic conditions and charging demand. These forecasts are then used to evaluate feasible alternative routes for eligible CAVs. A route change is accepted when the alternative preserves connectivity to the original destination and improves the prescribed route cost. We evaluate the proposed framework in SUMO under controlled traffic disruptions at five CAV penetration levels, ranging from 5% to 45%. We compare its performance with K-shortest-path routing, predictive-density routing, V2X proactive routing, and a reference scenario without rerouting. In the considered scenarios, the proposed framework reduces the average travel-time index by approximately 1.8% relative to the reference scenario and achieves the lowest average travel-time index, highest average speed, and lowest aggregate CO2 emissions among the active routing methods. Across all five penetration levels, it accepts 41 route changes, compared with 146 for K-shortest-path routing and 153 for V2X proactive routing. The reference scenario retains lower aggregate emissions and distance traveled, illustrating the tradeoff between congestion reduction and the additional travel associated with rerouting.",
+    "date": "2026-10-07",
+    "source": "Semantic Scholar",
+    "source_detail": "vehicle routing problem",
+    "url": "https://www.semanticscholar.org/paper/9b7cfd5795c87c807a5e029c6d435662c0590004",
+    "tags": [
+      "stochastic",
+      "ml-for-or"
+    ],
+    "type": "publication",
+    "doi": "",
+    "arxiv_id": "2610.10532",
+    "citation_count": 0,
+    "score": 35.0
+  },
+  {
+    "id": "s2-21a4bcb3e3be",
+    "title": "Calibrating Ambiguity Set via Diagnostic Transport for Distributionally Robust Optimization",
+    "authors": [
+      "Wen-Bin Zhou",
+      "Elizabeth Cucuzzella",
+      "Shi-Xiang Zhu"
+    ],
+    "abstract": "Distributionally robust optimization (DRO) protects decisions against distributional uncertainty by optimizing over an ambiguity set, but poorly aligned set geometry can require large radii and yield overly conservative decisions. We introduce diagnostic-transport DRO (DT-DRO), which uses held-out calibration data to adapt the ambiguity-set geometry to observed predictive errors. DT-DRO uses the conditional probability integral transform cumulative distribution function to diagnose systematic probability misallocation and translates this information into an outcome-level transport that jointly adjusts the ambiguity-set center and ground cost. The resulting formulation admits a computationally tractable dual reformulation. Theoretically, we derive valid ambiguity radii and decision-risk guarantees that tighten as estimation and approximation errors vanish, and show that DT-DRO can eliminate the nonvanishing robustness floor caused by model misspecification. Synthetic experiments and a power-outage application demonstrate improved decision quality, particularly under structural and tail misspecification.",
+    "date": "2026-10-07",
+    "source": "Semantic Scholar",
+    "source_detail": "robust optimization uncertainty",
+    "url": "https://www.semanticscholar.org/paper/21a4bcb3e3be105d80412cd0f0920cfdb1f8c722",
+    "tags": [
+      "stochastic"
+    ],
+    "type": "publication",
+    "doi": "",
+    "arxiv_id": "2610.10793",
+    "citation_count": 0,
+    "score": 30.0
+  },
+  {
+    "id": "s2-31364c70996a",
+    "title": "Robust distortion riskmetrics under Wasserstein ambiguity",
+    "authors": [
+      "Yang Liu",
+      "Qiu-Qi Wang",
+      "Yi-Han Wang"
+    ],
+    "abstract": "Risk evaluation under distributional ambiguity is central to decision making in finance, economics, and operations research. Wasserstein balls provide a natural way to describe uncertainty around a reference distribution. We solve a natural yet open problem of robust optimization for the class of distortion riskmetrics with Wasserstein distance as the sole ambiguity constraint. This chosen objective class does not require convexity, monotonicity, and continuity of distortion functions, encompassing many common risk measures and deviation measures. First, we characterize conditions under which direct convexification preserves the worst-case value. Second, we develop a constructive method for exact worst-case evaluation when the direct convexification conditions fail. Third, we construct explicit approximate worst-case distributions and provide computable error bounds to assess their accuracy without solving the exact problem. We apply these results to distributionally robust portfolio selection and use numerical experiments to assess approximation accuracy and the resulting portfolio decisions.",
+    "date": "2026-10-07",
+    "source": "Semantic Scholar",
+    "source_detail": "robust optimization uncertainty",
+    "url": "https://www.semanticscholar.org/paper/31364c70996a83146d719b357b983d3d25fcc0b6",
+    "tags": [
+      "stochastic"
+    ],
+    "type": "publication",
+    "doi": "",
+    "arxiv_id": "2610.09622",
+    "citation_count": 0,
+    "score": 30.0
   },
   {
     "id": "crossref-10.1007-s11081-026-10125-1",
@@ -21680,6 +22151,53 @@
     "score": 45.0
   },
   {
+    "id": "s2-32a1fb55bea8",
+    "title": "Weather-Conditioned Small-Target Detection in Low-Resolution Aerial Imagery: A Review of Robust YOLO Strategies",
+    "authors": [
+      "Amisha Varia",
+      "Shashang Degadwala",
+      "Dharvi Soni"
+    ],
+    "abstract": "The number of pixels required for representing small military objects in aerial im-ages is minimal, and down sampling, background complexity and weak texture can reduce the information necessary to accurately localize and classify these ob-jects. The appearance and contrast is further changed by haze, fog and rain, which results in a domain shift that may not be represented by clear weather bench-marks. This review consolidates recent work on aerial small-object detection, ad-verse-weather robustness and YOLO-based real-time detection, with emphasis on their intersection under low spatial resolution. Existing methods are organized into data-centric augmentation, input restoration and attenuation modelling, fea-ture-preserving network design, and training or deployment optimization. Com-parisons emphasize methodological trade-offs rather than raw performance values because datasets, input scales, thresholds and hardware differ. A review-derived reference architecture is synthesized from the literature and the supplied source presentation. The principal gap is the limited standardization of joint evaluation across object size, resolution and weather severity. Research priorities include weather-stratified benchmarks, domain generalization, small-target-aware high-resolution features, uncertainty estimation and edge-efficient deployment.",
+    "date": "2026-10-05",
+    "source": "Semantic Scholar",
+    "source_detail": "robust optimization uncertainty",
+    "url": "https://doi.org/10.32628/ijsraiml2624118",
+    "tags": [
+      "network-optimization",
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.32628/ijsraiml2624118",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 45.0
+  },
+  {
+    "id": "s2-33702238371d",
+    "title": "Adversarial Training for Deep Hedging in Nonstationary Markets",
+    "authors": [
+      "Philipp J. Schneider",
+      "Lukas Looser",
+      "Antoine Garin",
+      "Shu-Hang Liu",
+      "Daniel Kuhn"
+    ],
+    "abstract": "Deep hedging learns trading policies from historical or simulated market trajectories, yet under nonstationarity these training paths may not represent future market conditions. We propose WRAP (Wasserstein-Reweighting Adversarial Perturbation), a drift-aware adversarial training framework derived from a two-budget distributionally robust optimization (DRO) formulation. The formulation is anchored to a weighted empirical reference distribution whose fixed baseline weights are chosen to balance sampling uncertainty against temporal drift. Around this reference distribution, the ambiguity set addresses two complementary forms of distributional misspecification by allowing an adversary to reweight the observed trajectories subject to a $\\phi$-divergence constraint and perturb their paths subject to an optimal-transport (OT) constraint. We derive a joint first-order expansion in which the leading-order increase over the nominal expected loss decomposes into a reweighting contribution determined by the dispersion of hedging losses across trajectories and a transport contribution determined by the sensitivity of the loss to path perturbations. This expansion yields an explicit finite-dimensional adversarial attack that replaces the distributional inner supremum with a tractable first-order approximation. Across stationary and nonstationary Heston dynamics and a generalized affine diffusion (GAD), the experiments show complementary benefits from reweighting and transport, with joint adversarial training providing the largest gains under nonstationarity.",
+    "date": "2026-10-05",
+    "source": "Semantic Scholar",
+    "source_detail": "robust optimization uncertainty",
+    "url": "https://www.semanticscholar.org/paper/33702238371d1e8152694a0609be22896df424bd",
+    "tags": [
+      "stochastic"
+    ],
+    "type": "publication",
+    "doi": "",
+    "arxiv_id": "2610.07162",
+    "citation_count": 0,
+    "score": 30.0
+  },
+  {
     "id": "optim-online-a49edccd4d56",
     "title": "A Generalized Polynomial Lower Bound for the Weighted Completion Time Variance in a Single Machine",
     "authors": [],
@@ -23043,6 +23561,30 @@
     ],
     "type": "publication",
     "doi": "10.47467/reslaj.v8i10.13377",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 45.0
+  },
+  {
+    "id": "s2-102afdbfaf6b",
+    "title": "Multi-Objective Optimization in the Digital and AI Eras: A Review of Methodological Evolution and Cross-Domain Applications",
+    "authors": [
+      "Hung-Lung Lin",
+      "Hong-Xi Shen",
+      "Yu-Yu Ma"
+    ],
+    "abstract": "With the rapid advancement of digitalization, data-intensive computing, and artificial intelligence (AI), multi-objective optimization (MOO) has shifted from traditional mathematical modeling and algorithmic solving toward integrated decision-support frameworks that incorporate data-driven learning, decision-maker preferences, and complex contextual factors. However, existing literature reviews still exhibit four major gaps: a lack of integrated cross-period evolutionary perspectives, insufficient links between methodological advances and cross-domain decision values, an incomplete synthesis of emerging challenges in AI-driven MOO, and a scarcity of comprehensive frameworks encompassing resilience, sustainability, equity, and public value. To bridge these gaps, this review synthesizes 140 core analytical publications (2000–2026) indexed in the Web of Science Core Collection to establish a cross-period evolutionary framework, integrate major methodological approaches, evaluate decision values across diverse fields, and outline future research directions in the AI era. We trace the development of MOO across three analytical stages: Information-Based Computing (2000–2010), Data-Intensive Decision-Making (2011–2015), and AI-Driven Optimization (2016–present). Furthermore, we examine the evolution of five core paradigms—mathematical programming, evolutionary multi-objective optimization, multi-criteria decision-making, uncertainty and robust modeling, and AI-assisted and data-driven optimization—across seven application domains. Our findings reveal that the research paradigm of MOO has shifted from computational efficiency and solution-set quality toward data-driven adaptability, dynamic response, trustworthy decision-making, and cross-domain value balance. The primary contribution of this study lies in proposing an integrated “Technology Evolution–Mathematical Methods–Application Value” review framework that aligns methodological features with domain-specific needs, facilitates cross-domain comparisons, and highlights future avenues emphasizing interpretability, reliability, human preferences, and public value.",
+    "date": "2026-10-04",
+    "source": "Semantic Scholar",
+    "source_detail": "robust optimization uncertainty",
+    "url": "https://doi.org/10.3390/math14193602",
+    "tags": [
+      "metaheuristics",
+      "multi-objective",
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.3390/math14193602",
     "arxiv_id": "",
     "citation_count": 0,
     "score": 45.0
@@ -32900,6 +33442,26 @@
     "type": "publication",
     "doi": "10.1016/j.ijpe.2026.110221",
     "score": 25.0
+  },
+  {
+    "id": "crossref-10.1016-j.cor.2026.107699",
+    "title": "Generalized fractional order momentum for deep reinforcement learning in dynamic flexible job shop scheduling",
+    "authors": [
+      "Huang, M.",
+      "Zheng, J."
+    ],
+    "abstract": "",
+    "date": "2026-10-01",
+    "source": "Computers & Operations Research",
+    "source_detail": "Computers & Operations Research",
+    "url": "https://doi.org/10.1016/j.cor.2026.107699",
+    "tags": [
+      "scheduling",
+      "ml-for-or"
+    ],
+    "type": "publication",
+    "doi": "10.1016/j.cor.2026.107699",
+    "score": 30.0
   },
   {
     "id": "optim-online-407b14664c6f",
@@ -290518,1188 +291080,5 @@
     "arxiv_id": "",
     "citation_count": 0,
     "score": 45.0
-  },
-  {
-    "id": "crossref-10.1007-s10479-026-07342-3",
-    "title": "Approximating end-of-life electric vehicle battery flows: surrogate modeling of a discrete event and agent-based simulation model",
-    "authors": [
-      "Huster, S.",
-      "Faraji-Niri, M.",
-      "Rudi, A.",
-      "Schultmann, F."
-    ],
-    "abstract": "Abstract\n                  Decision support tools are essential for planning end-of-life pathways of electric vehicle (EV) batteries, including recycling, repurposing, and reconditioning. As large volumes of EV batteries reach end-of-life in the coming decades, estimating material flows under different scenarios becomes increasingly important. Detailed simulation models, such as those based on discrete event and agent-based modeling, can capture the complex dynamics of battery life cycles. However, their high computational cost limits their applicability in decision-making contexts that require extensive scenario analysis. To overcome this challenge, machine learning-based surrogate models are evaluated for approximating the outputs of a simulation model that estimates future end-of-life quantities of EV batteries. The simulation model uses static input configurations and produces time-dependent outputs, for which no historical time series exist. Two surrogate modeling strategies are compared: an all-at-once approach that predicts all time steps simultaneously, and a recursive approach that predicts them sequentially. Several machine learning algorithms are evaluated, including neural networks, Gaussian process regression, random forests, and XGBoost. Results show that neither approach consistently outperforms the other, and model performance varies strongly across key performance indicators. While surrogate models can substantially accelerate analysis, predictive accuracy is limited for outputs with sparse or highly variable data. The results underline the importance of selecting surrogate modeling approaches based on the specific characteristics of the output indicators and the analytical needs of the decision context.",
-    "date": "2026-07-12",
-    "source": "Annals of Operations Research",
-    "source_detail": "Annals of Operations Research",
-    "url": "https://doi.org/10.1007/s10479-026-07342-3",
-    "tags": [
-      "stochastic",
-      "ml-for-or"
-    ],
-    "type": "publication",
-    "doi": "10.1007/s10479-026-07342-3",
-    "score": 60.0
-  },
-  {
-    "id": "crossref-10.1177-10591478261471260",
-    "title": "EXPRESS: Joint Admission and Aggregate Service Rate Control of an Unobservable Queue",
-    "authors": [
-      "Liu, W.",
-      "Kulkarni, V."
-    ],
-    "abstract": "We consider a joint admission and aggregate service rate control problem in a service system. Admission control involves deciding which arriving customers to admit and which to reject. Aggregate service rate control focuses on determining the staffing level and/or service rate for the system. We consider a general reward structure and a convex service cost structure to capture many variations that arise in practice. We show that, under specific structural properties of the revenue and cost functions, the joint optimization of admission and aggregate service rate decisions can be analyzed to produce interesting and implementable policies. Specifically, for systems with a linear service cost structure, we identify a critical operational threshold for the arrival rate. For arrival rates below this threshold, the optimal policy is to close the system and reject all customers. Above this threshold, the optimal policy is to admit all customers and choose an aggregate service rate that depends on the actual arrival rate. In contrast, for systems with a strictly convex service cost structure, under certain conditions, we identify two operational thresholds for the arrival rate. When the arrival rate is below the lower threshold, it is optimal to close the system. It is optimal to admit all customers and choose an arrival-rate-dependent aggregate service rate for arrival rates between the two thresholds. Above the higher threshold, the optimal admission rate and the optimal aggregate service rate do not change any further. We further demonstrate the value of joint optimization by comparing it with two natural benchmarks—optimizing admission rate alone and optimizing aggregate service alone. In stationary arrival settings, we show that joint optimization not only informs the critical decision of whether to operate but also shows that optimizing admission rate or aggregate service rate alone can lead to significant profit losses. We then extend the analysis to nonstationary arrivals with real-world call center data, which further demonstrates the practical value of joint optimization.",
-    "date": "2026-07-12",
-    "source": "M&SOM",
-    "source_detail": "M&SOM",
-    "url": "https://doi.org/10.1177/10591478261471260",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.1177/10591478261471260",
-    "score": 40.0,
-    "mentions_solvers": [
-      "Xpress"
-    ]
-  },
-  {
-    "id": "crossref-10.1080-01605682.2026.2696433",
-    "title": "Partnership with a local agent for bidding in procurement auctions",
-    "authors": [
-      "Lorentziadis, P."
-    ],
-    "abstract": "",
-    "date": "2026-07-12",
-    "source": "Journal of the Operational Research Society",
-    "source_detail": "Journal of the Operational Research Society",
-    "url": "https://doi.org/10.1080/01605682.2026.2696433",
-    "tags": [
-      "supply-chain",
-      "game-theory"
-    ],
-    "type": "publication",
-    "doi": "10.1080/01605682.2026.2696433",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10959",
-    "title": "WSqD: A Horizon-Free Learning Rate Schedule for Large Model Training",
-    "authors": [
-      "Jianhao Ma",
-      "Yuxin Chen"
-    ],
-    "abstract": "Standard learning rate schedules such as cosine annealing are tied to a fixed training horizon, limiting their ability to accommodate post hoc horizon extension. Warmup-stable-decay (WSD) partially addresses this issue by maintaining a long constant-rate phase before a short linear cooldown, allowing training to resume from a pre-decay checkpoint. However, its peak learning rate is still tuned based on the original training horizon and can become suboptimal when training is extended. Motivated by stochastic convex optimization, we propose WSqD (Warmup with Square-root base and linear Decay), a learning rate schedule that replaces WSD's constant stable phase with a shifted inverse-square-root base while retaining the final linear cooldown. In the stochastic convex setting, WSqD provably attains the minimax-optimal $O(1/\\sqrt{T})$ last-iterate convergence rate. Importantly, its base learning rate schedule is horizon-independent, and the training horizon is needed only to determine when to begin the final cooldown. Empirically, on language-model pretraining using the SlimPajama corpus, WSqD matches or outperforms carefully tuned WSD and other baselines across multiple training horizons while reusing a single peak learning rate.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2607.10959v1",
-    "tags": [
-      "cs.LG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10959",
-    "arxiv_id": "2607.10959v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10957",
-    "title": "Stochastic Dynamic Barrier Perturbed Gradient Methods for Nonconvex Simple Bilevel Optimization",
-    "authors": [
-      "Mohammad Mahdi Ahmadi",
-      "Jincheng Cao",
-      "Aryan Mokhtari",
-      "Erfan Yazdandoost Hamedani"
-    ],
-    "abstract": "We study stochastic simple bilevel optimization with smooth, possibly nonconvex upper- and lower-level objectives accessed only through stochastic gradient oracles. A key challenge is that the dual multiplier induced by the lower-level constraint may become unbounded near lower-level stationary points, invalidating bounded-dual analyses and destabilizing stochastic gradient estimates. To address this, we propose \\emph{Stochastic Dynamic Barrier Perturbed Gradient} (SDBPG), a single-loop method that adaptively perturbs the dual formulation to regularize this degeneracy. The perturbation stabilizes the multiplier and yields controlled bias and variance even near the lower-level stationarity region. Under a mild rare-visit assumption, SDBPG finds an $(ε_f,ε_g)$-stationary point in $\\mathcal{O}(\\max\\{ε_f^{-2},ε_g^{-2}\\})$ iterations, with sample gradient complexities $\\mathcal{O}(ε^{-4})$ and $\\mathcal{O}(ε^{-6})$ for the upper- and lower-level objectives where $ε=\\max\\{ε_f,ε_g\\}$. We further develop PR-SDBPG, a penalty-regularized variant that eliminates the rare-visit assumption, and VR-PR-SDBPG, which improves the resulting sample complexities entirely through variance reduction. To our knowledge, these are the first explicit $(ε_f,ε_g)$-stationarity guarantees for stochastic nonconvex-nonconvex simple bilevel optimization.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2607.10957v1",
-    "tags": [
-      "math.OC",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10957",
-    "arxiv_id": "2607.10957v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10893",
-    "title": "Streaming Contraction Certificates for Nonlinear Networks: Topology-Aware Data Sufficiency with Partial Observation",
-    "authors": [
-      "Faegheh K. Moazeni"
-    ],
-    "abstract": "Certifying the safety of a control action in real time, from streaming partial observations of a nonlinear, interconnected system under non-stationary disturbances, is a problem no existing data-driven framework solves. Batch methods such as data-enabled predictive control require a pre-collected dataset and offer no stability certificate for nonlinear dynamics; informativity-based approaches characterize data sufficiency offline and non-recursively; neither exploits the known graph topology of networked systems as a structural prior. This paper addresses both limitations. First, we develop a streaming contraction certificate beta_cert(t) = beta_hat(t) - rho(t), where beta_hat(t) is estimated recursively via integral regression on a sliding window of partial input-output observations, and rho(t) is a data-dependent uncertainty radius mapping estimation error to a conservative bound on the true closed-loop contraction rate. The certificate issues a provably safe deployment signal the moment beta_cert(t) crosses and sustains above zero. Second, we introduce a topology-aware estimator enforcing known graph adjacency as exact zero constraints on the Jacobian, reducing the effective parameter count per row from O(N) to O(d_max) for maximum node degree d_max. On a five-node nonlinear benchmark under heavy-tailed Laplace disturbances with two observed nodes, the streaming certificate achieves certified deployment at t*=2.6s from 130 samples, 17 seconds earlier than an offline batch baseline, with 16x lower accumulated error during the unprotected window. The topology-aware estimator cuts certification time by 59% (1.62s vs 3.98s) and accumulated disturbance cost by 58%, with the advantage persisting across all window sizes below 40 samples. The framework is domain-agnostic and applies to any large-scale nonlinear networked system under streaming data and partial observations.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2607.10893v1",
-    "tags": [
-      "eess.SY",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10893",
-    "arxiv_id": "2607.10893v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10888",
-    "title": "Stellar Observation Scheduling Optimization for Distributed Space Interferometry Missions",
-    "authors": [
-      "Ethan Foss",
-      "Antonio Rizza",
-      "Simone D'Amico"
-    ],
-    "abstract": "Growing interest in space interferometry for detecting bio-signatures of exoplanets has led to the development of several low-cost mission concepts involving Earth-orbiting formation flying techniques to perform nulling interferometry of incoming light from exoplanetary systems. Pursuing these developments, this work proposes a multi-objective dynamic programming scheme to optimize the balance between fuel expenditure and scientific outcomes of low-cost formation flying space interferometry missions by leveraging several insights from mission design. This scheme accounts for nominal concept of operations constraints, fuel expenditure, and observability conditions to produce a globally optimal Pareto front policy for exoplanetary system observation, and represents one of the first applications of multi-objective optimization to distributed space telescope astronomy.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "astro-ph.EP",
-    "url": "http://arxiv.org/abs/2607.10888v1",
-    "tags": [
-      "astro-ph.EP",
-      "scheduling",
-      "multi-objective"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10888",
-    "arxiv_id": "2607.10888v1",
-    "score": 50.0
-  },
-  {
-    "id": "arxiv-2607.10869",
-    "title": "Singular perturbations and hierarchical learning in two-layer neural networks",
-    "authors": [
-      "Cédric Gerbelot",
-      "Jean-Christophe Mourrat"
-    ],
-    "abstract": "We study the population gradient flow of an infinitely wide two-layer neural network learning a misspecified single-index model in high dimension. The two layers are optimized jointly, with a perturbative parameter tuning the relative training speed between the first and second layer. This setting was considered by Berthier, Montanari and Zhou in \\cite{berthier2024learning}, who conjectured a hierarchical learning scenario with explicit timescales as the second layer is trained faster than the first. In this paper, we prove that the constant and linear components of the hidden link function are indeed recovered within the predicted timescales, at sharp explicit thresholds. We then analyze the onset of learning of the quadratic component and show that the components learned at earlier stages continue to influence the dynamics in an essential way. Our proof is based on quantitative approximation results for singularly perturbed flows evolving near a manifold defined by integral constraints. At a phenomenological level, we also show that the empirical measure of the weights displays singular behaviour when reaching the quadratic component of the hidden link, with a small fraction of neurons growing significantly while the remaining ones rearrange to preserve the components already learned.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2607.10869v1",
-    "tags": [
-      "cs.LG",
-      "stochastic",
-      "ml-for-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10869",
-    "arxiv_id": "2607.10869v1",
-    "score": 50.0
-  },
-  {
-    "id": "arxiv-2607.10861",
-    "title": "Optimization on Affine-Transversal Hilbert Submanifolds: Part I -- Theoretical Foundations",
-    "authors": [
-      "Yongcun Song",
-      "Luhao Xue",
-      "Xiaoming Yuan",
-      "Hangrui Yue"
-    ],
-    "abstract": "In this paper, we establish the theoretical foundations for the generic optimization problem in a Hilbert space whose feasible set is an affine-transversal Hilbert submanifold given by the intersection of a nonlinear manifold and an affine subspace. We develop the geometric and analytical toolkit, such as the tangent-space characterization, projection operators, and implicit retraction operators, to essentially ensure the feasibility of iterates for algorithmic design. We also derive weak-form expressions for the derivatives of lifted objective functionals. In particular, we introduce a projection-induced Riemannian metric whose induced norm is uniformly equivalent to the ambient norm, under which the projection-induced gradient becomes an exact Riemannian gradient with an explicit formula. This construction replaces the implicit tangent-space Riesz representation underlying classical Riemannian optimization with directly computable operator evaluations, yielding a practical variable-metric framework for algorithmic design while preserving the geometric structure required for convergence analysis. With these theoretical foundations, it becomes possible to apply standard techniques in Euclidean spaces to design algorithms with strictly feasible iterates for the optimization problem on an affine-transversal Hilbert submanifold. We also propose the theoretical frameworks for algorithmic design on affine-transversal Hilbert submanifolds by showcasing the Riemannian line-search and trust-region algorithms with rigorous convergence analysis.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2607.10861v1",
-    "tags": [
-      "math.OC",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10861",
-    "arxiv_id": "2607.10861v1",
-    "score": 40.0,
-    "mentions_solvers": [
-      "Xpress"
-    ]
-  },
-  {
-    "id": "arxiv-2607.10838",
-    "title": "On the Existence of Almost Periodic Solutions with Applications to Global Entrainment",
-    "authors": [
-      "Iasson Karafyllis",
-      "Miroslav Krstic"
-    ],
-    "abstract": "This paper provides two results that are useful in the study of the existence and the stability properties of almost periodic solutions for a given dynamical system. The obtained results are generalizations of recent results for periodic systems and are applied to the global entrainment problem in nonlinear time-invariant control systems. It is shown that local exponential stability for the unforced system and input-to-state stability with respect to small inputs can guarantee global entrainment to small almost periodic inputs. In this way, global entrainment is shown in Lotka-Volterra systems with a Volterra-Lyapunov stable interaction matrix. All results can be extended to the uniformly recurrent case.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2607.10838v1",
-    "tags": [
-      "math.OC",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10838",
-    "arxiv_id": "2607.10838v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10791",
-    "title": "RED-SEGA:Resilient Decentralized Stochastic Proximal Optimization with Gradient Sketching over Time-Varying Networks",
-    "authors": [
-      "Jinhui Hu",
-      "Guo Chen",
-      "Huaqing Li",
-      "Liang Ran",
-      "Hexi Liang",
-      "Tao Han",
-      "Tingwen Huang"
-    ],
-    "abstract": "Variance reduction is indispensable in Byzantine-resilient decentralized stochastic optimization over multi-agent systems (MASs) for its ability to mitigate gradient noise and thereby enhance the resilient aggregation process. However, most existing Byzantine-resilient decentralized variance-reduced (VR) stochastic gradient algorithms rely on random data sampling, which proves inefficient in data-scarce yet high-dimensional tasks, for instance, image deblurring. This paper pursues an alternative technical line that achieves variance reduction via gradient sketching. To this end, we first formulate a class of structural risk minimization (SRM) problems, where the local objectives are not necessarily decomposable and their gradients may be unavailable. To solve the SRM problems in a decentralized manner, we integrate a gradient-sketching technique into decentralized stochastic proximal gradient descent with gossip communication to propose a decentralized VR stochastic gradient algorithm, dubbed Gossip-SEGA.Since Gossip-SEGA does not provide any resilience against Byzantine attacks, a resilient extension of Gossip-SEGA,namely RED-SEGA,is developed via replacing the weighted average in Gossip-SEGA by a norm-penalized approximation. Theoretically, we derive sufficient conditions for both consensus (among reliable agents) and linear convergence rate of RED-SEGA over time-varying networks. The effectiveness and resilience of the proposed algorithms are validated through numerical experiments.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2607.10791v1",
-    "tags": [
-      "math.OC",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10791",
-    "arxiv_id": "2607.10791v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10767",
-    "title": "Enhancing Presolve in Mixed Integer Programming by Combining Probing and Dual Fixing",
-    "authors": [
-      "Zhao-Wei Wang",
-      "Wei-Kun Chen",
-      "Yu-Hong Dai"
-    ],
-    "abstract": "Probing and dual fixing are two powerful presolve techniques in mixed integer programming (MIP) solvers. Probing tentatively sets some binary variables to 0 or 1, applies linear constraint based domain propagation techniques to derive better variable bounds, and extracts useful information such as stronger variable implications and better global variable bounds. Dual fixing attempts to fix variables to lower or upper bounds while ensuring that at least one optimal solution is retained, as long as the problem was feasible. In this paper, we investigate how to combine the two approaches in MIP solvers to achieve a better performance. In particular, we first embed dual fixing into the probing framework, deriving more useful variables' implications for enhancing the capability of probing. Then, we develop an improved dual fixing technique where more variable fixings can be applied, and use the probing framework to detect the reductions. Computational results on the MIPLIB 2017 benchmark instances demonstrate the potential of the two proposed techniques in combining probing and dual fixing on the open-source MIP solver HiGHS.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2607.10767v1",
-    "tags": [
-      "math.OC",
-      "integer-programming",
-      "constraint-programming"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10767",
-    "arxiv_id": "2607.10767v1",
-    "score": 50.0,
-    "mentions_solvers": [
-      "HiGHS"
-    ]
-  },
-  {
-    "id": "arxiv-2607.10741",
-    "title": "Parameter-Free Cubic-Regularized Newton Method: Sharp Complexity and Generalized Smoothness",
-    "authors": [
-      "Shaoying Fang",
-      "Naoki Marumo",
-      "Akiko Takeda"
-    ],
-    "abstract": "We analyze a variant of the cubic-regularized Newton method for nonconvex optimization. This variant is parameter-free in that it requires no prior knowledge of problem-dependent parameters. Under the generalized smoothness condition $\\|\\nabla^3 f(x)\\| \\leq L_0 + L_1 \\|\\nabla f(x)\\|$, we derive an oracle complexity bound for finding an $(\\varepsilon, δ)$-second-order stationary point. This assumption is weaker than the generalized smoothness conditions used in existing analyses of second-order methods, while the complexity bound improves upon existing guarantees for parameter-free second-order methods. In particular, when $L_1 = 0$, the bound matches the optimal dependence on $L_0$ as well as on $\\varepsilon$, $δ$, and the initial function value gap, up to additive logarithmic terms. To establish this bound, we derive Taylor-type inequalities and prove their equivalence to the generalized smoothness condition.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2607.10741v1",
-    "tags": [
-      "math.OC",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10741",
-    "arxiv_id": "2607.10741v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10727",
-    "title": "Separation of Regular Co-Radiant Sets via Inner Approximating Sequences, Radial Profile Functions and Applications to Optimization",
-    "authors": [
-      "Fernando García-Castaño",
-      "Miguel Angel Melguizo-Padial"
-    ],
-    "abstract": "We develop a new framework for the analysis of co-radiant sets based on a new notion of regularity. This framework extends the classical theory beyond co-radiant sets admitting a norm-base and provides a unified setting for separation and optimization. We introduce two new tools: inner approximating sequences and the radial profile function. The former provides a sequential approach to regularity and is the key ingredient in the proof of a general separation theorem for regular co-radiant sets, extending the existing separation theory. The latter is defined for arbitrary co-radiant sets and yields new characterizations of the existence of norm-bases, together with sequence-based characterizations of regularity under a solidness assumption on the associated cone. It also gives rise to a scalar function leading to scalarization results for approximate efficiency without additional structural assumptions on the underlying co-radiant set. Finally, we provide a variational interpretation of the separation residual by establishing radial-depth and metric error bounds. These yield sufficient conditions for approximate radial feasibility in equilibrium problems and variational inequalities, and an exact penalization principle on the zero level set of the residual.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2607.10727v1",
-    "tags": [
-      "math.OC",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10727",
-    "arxiv_id": "2607.10727v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10641",
-    "title": "Optimal class scheduling with minimum distributed vacant seats using binary linear programming",
-    "authors": [
-      "Ohmchana Klinsod",
-      "Parin Chaipunya"
-    ],
-    "abstract": "In this paper, we propose a mathematical model for class scheduling using binary linear programming with the aims to automate the tedious task and to minimize the leftover seats distributed over all the classrooms. A case study at the Department of Mathematics, King Mongkut's University of Technology Thonburi (KMUTT), Thailand, is also presented. The result from our model is shown to have improved significantly over the current manual scheduling method.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2607.10641v1",
-    "tags": [
-      "math.OC",
-      "linear-programming",
-      "scheduling"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10641",
-    "arxiv_id": "2607.10641v1",
-    "score": 50.0
-  },
-  {
-    "id": "arxiv-2607.10941",
-    "title": "Neighborhood Complexity and Radius-1 Merge-Width in Monadically Dependent Graph Classes",
-    "authors": [
-      "Jan Dreier",
-      "Nikolas Mählmann",
-      "Rose McCarty",
-      "Michał Pilipczuk",
-      "Szymon Toruńczyk"
-    ],
-    "abstract": "Monadic dependence is a proposed structural dividing line for fixed-parameter tractability of first-order model checking on hereditary graph classes. A graph class is \\emph{monadically dependent} if the class of all graphs cannot be interpreted in its vertex-colored members using a fixed first-order formula. We prove two structural consequences of monadic dependence. First, every monadically dependent class has \\emph{almost linear neighborhood complexity}: for every graph $G$ in the class and every set $A\\subseteq V(G)$, the family $\\{N_G(v)\\cap A : v\\in V(G)\\}$ has size $|A|^{1+o(1)}$. Second, every $n$-vertex graph in a monadically dependent class has radius-1 merge-width $n^{o(1)}$. Here, merge-width is the decomposition parameter of Dreier and Toruńczyk based on construction sequences; its radius-$r$ version measures local reachability among parts through already resolved pairs. This settles the radius-1 case of the conjectured connection between monadic dependence and almost bounded merge-width and provides the first decomposition-based structural description of monadically dependent graph classes. Our proof is algorithmic: we give an $\\mathcal{O}(n^5)$-time algorithm that, given an $n$-vertex graph $G$ such that $|\\{N_G(v)\\cap A : v\\in V(G)\\}|\\le O(|A|^d)$ for every $A\\subseteq V(G)$, computes a construction sequence witnessing radius-1 merge-width $\\mathcal{O}(n^{1-1/d}\\log n)$.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.DM",
-    "url": "http://arxiv.org/abs/2607.10941v1",
-    "tags": [
-      "cs.DM",
-      "decomposition"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10941",
-    "arxiv_id": "2607.10941v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.10731",
-    "title": "On the upper bound of the generalization of $\\mathsf{FFD}$ to solve $q$BP for some special cases",
-    "authors": [
-      "Dinesh Kumar Baghel"
-    ],
-    "abstract": "We consider a variant of the bin packing problem with constraints on the number of copies of each item and their placement in the packing. The input $D_q := DD\\ldots$ is defined as $q$ consecutive copies of the multiset $D$, with a fixed bin capacity $S$. Note that, for each item in $D$, there are $q$ copies in $D_q$. The goal is to pack all the items in $D_q$ into the minimum number of bins, such that each bin contains at most one copy of each item and the total size of all items in a bin does not exceed the bin capacity $S$. We call this problem $q$BP. First Fit Decreasing ($\\mathsf{FFD}$) is a classical bin packing algorithm: it first orders the items in nonincreasing order, then packs the next item into the first bin where it fits. In the literature, $\\mathsf{FFD}$ proofs rely on the assumption that the last bin in the $\\mathsf{FFD}$ packing contains only a single item. This assumption does not naturally extend to the $q$BP problem. In this paper, we circumvent this difficulty by analyzing $\\mathsf{FFDq(D_q)}$ on a carefully chosen subinstance ${D'}_q \\subseteq D_q$ ($q$ consecutive copies of $D$, each copy sorted in non-increasing order) while preserving the same upper bound for the original input $D_q$. We show that the approximation ratio of $\\mathsf{FFDq(D_q)}$ for some special cases is   \\begin{align*}   \\mathsf{FFDq(D_q)} \\leq \\frac{11}{9}\\mathsf{OPT(D_q)} + 3q   \\end{align*} where $\\mathsf{FFDq}$ and $\\mathsf{OPT}$ denote the number of bins used by the $\\mathsf{FFD}$ generalization and by an optimal algorithm, respectively.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.DS",
-    "url": "http://arxiv.org/abs/2607.10731v1",
-    "tags": [
-      "cs.DS",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10731",
-    "arxiv_id": "2607.10731v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10703",
-    "title": "Rectilinear Matching to the Integer Grid in Nearly-Linear Time",
-    "authors": [
-      "Yu Gao"
-    ],
-    "abstract": "Rectilinear matching to the integer grid asks to assign each of $n$ points in $\\mathbb R^2$ to a distinct point of $\\mathbb Z^2$, minimizing total $\\ell_1$ movement. The main difficulty is that the target set is infinite: one must first identify a finite set of relevant grid points without losing optimality.   We prove a geometric compression theorem for this infinite-target problem. In $O(n\\log^2 n)$ time, we construct a set $\\mathcal{C}$ of asymptotically optimal size $O(n)$ such that, simultaneously for every $p\\in[1,\\infty]$, some optimal $\\ell_p$ assignment uses only points of $\\mathcal{C}$. The construction is independent of the subsequent optimization algorithm and of the coordinate spread.   For the rectilinear case, we combine this candidate set with a linear-size sparse network representation of $\\ell_1$ distances. In the word-RAM model with $O(1)$-word dyadic coordinates and $O(\\log n)$ fractional bits, a nearly-linear time minimum-cost flow algorithm then gives a randomized exact algorithm with expected running time $\\widetilde O(n)$. This improves the standard $\\widetilde O(n^2)$ approach. Combined with existing finite geometric matching algorithms, the same candidate set also gives an $\\widetilde O(n\\sqrt n\\log(1/\\varepsilon))$-time $(1+\\varepsilon)$ approximation for every fixed integer $p\\ge1$.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.CG",
-    "url": "http://arxiv.org/abs/2607.10703v1",
-    "tags": [
-      "cs.CG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10703",
-    "arxiv_id": "2607.10703v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10697",
-    "title": "A Better Analysis For PPSZ For 3-SAT",
-    "authors": [
-      "Tao Jiang",
-      "Shaowei Cai"
-    ],
-    "abstract": "We revisit Scheder's analysis of the original PPSZ algorithm. Keeping his regular and irregular estimates unchanged, we express them in common structural coordinates and replace only their final recombination by an explicit linear-programming dual certificate. The old and new running-time bounds are \\[ \\begin{array}{c|cc}   & \\text{Unique-$3$-SAT} & \\text{general $3$-SAT} \\\\ \\hline \\text{Scheder's analysis} & O^*(1.306972377^n) & O^*(1.307031594^n) \\\\ \\text{this work} & O^*(1.306969598^n) & O^*(1.307031578^n). \\end{array} \\] In both rows, the general-case bound is obtained by applying the same existing Scheder--Steinberger unique-to-general lifting theorem to the corresponding Unique-$3$-SAT analysis. To the best of our knowledge, $O^*(1.307031578^n)$ is the best currently known worst-case randomized running-time bound for general $3$-SAT. Neither PPSZ nor the lifting theorem is modified. The numerical inequalities are certified by exact rational interval computation.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.DS",
-    "url": "http://arxiv.org/abs/2607.10697v1",
-    "tags": [
-      "cs.DS",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10697",
-    "arxiv_id": "2607.10697v1",
-    "score": 40.0,
-    "mentions_solvers": [
-      "Xpress"
-    ]
-  },
-  {
-    "id": "arxiv-2607.10689",
-    "title": "Fully Dynamic Edge Connectivity in $\\tilde{O}(n^{12/13})$ Time",
-    "authors": [
-      "Yotam Kenneth-Mordoch",
-      "Robert Krauthgamer"
-    ],
-    "abstract": "In the (fully) dynamic edge connectivity problem, the goal is to maintain the edge connectivity $λ_G$ of an $n$-vertex graph $G$ that undergoes edge insertions and deletions. Our main result is a randomized algorithm for maintaining edge connectivity in dynamic simple graphs using worst-case update and query time $\\tilde{O}(n^{12/13})$, for all values of $λ_G$. This is the first algorithm that has $o(n)$ update and query time, as all existing algorithms achieve this only when $λ_G$ is below $n^{1/11}$ or above $n^{1/2}$ (up to polylogarithmic factors). We then use the tools developed for this purpose to design two additional algorithms. The first one is a deterministic algorithm for the exact same task, that uses $n^{1+o(1)}$ worst-case update and query time or $\\tilde{O}(n)$ amortized update and query time; this gives a polynomial improvement over existing deterministic algorithms. The second one is a deterministic algorithm for the same task but in dynamic unweighted multigraphs, that uses $\\tilde{O}(n^{3/2})$ worst-case update and query time.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.DS",
-    "url": "http://arxiv.org/abs/2607.10689v1",
-    "tags": [
-      "cs.DS",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10689",
-    "arxiv_id": "2607.10689v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10667",
-    "title": "Constant-factor approximation of MinCostCSP with a conservative majority polymorphism",
-    "authors": [
-      "Marcin Kozik",
-      "Stanislav Živný"
-    ],
-    "abstract": "For a relational structure A, the Minimum Cost Constraint Satisfaction Problem is the following problem denoted by MinCostCSP(A): Given an instance of CSP(A) with rational costs on variable-value pairs, find a solution to the instance minimizing the sum of the chosen costs. For the exact minimization, a classification of MinCostCSP(A) in terms of A was established by Takhanov [STACS'10].   We focus on constant-factor approximations of MinCostCSP(A). DeHaan, Huang, and Lee recently showed that if A fails to admit a conservative near-unanimity polymorphism then MinCostCSP(A) is not constant-factor approximable [APPROX'25]. We provide a first step towards a classification, by proving a dichotomy for structures A admitting a conservative majority (also known as 3-near-unanimity) polymorphism. Our dichotomy criterion is not in terms of an algebraic condition on A but we show that this is unavoidable. We include a simple argument proving that no such condition exists.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.CC",
-    "url": "http://arxiv.org/abs/2607.10667v1",
-    "tags": [
-      "cs.CC",
-      "constraint-programming"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10667",
-    "arxiv_id": "2607.10667v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.10629",
-    "title": "Independent Set Reconfiguration on Threshold Signed Graphs",
-    "authors": [
-      "Ziad Ismaili Alaoui"
-    ],
-    "abstract": "The Token Jumping and Sliding Token problems are fundamental reconfiguration problems defined on the independent sets of an undirected graph. Given two independent sets $I$ and $J$, each of size $k$, these problems ask whether there exists a sequence of elementary operations transforming $I$ into $J$ such that every intermediate configuration is also an independent set of size $k$. In Sliding Token, an operation moves a token from a vertex $u \\in I$ to an adjacent vertex $v \\notin I$; in Token Jumping, the token may instead move to any vertex $v \\notin I$. While both problems are PSPACE-complete on general graphs, polynomial-time algorithms have been developed for several graph classes, including trees, block graphs, cacti, bipartite permutation graphs, cographs, $P_4$-tidy graphs, and interval graphs.   In this paper, we prove that both problems are solvable in polynomial time on threshold signed graphs, also known as Dilworth-2 graphs. A graph $G=(V,E)$ is a threshold signed graph if there exist a mapping $a:V\\to\\mathbb{R}$ and positive real constants $S$ and $T$ such that, for any distinct vertices $u,v\\in V$, $\\{u,v\\}\\in E$ if and only if $|a(u)+a(v)|\\ge S$ or $|a(u)-a(v)|\\ge T$. This graph class is a subclass of permutation graphs, for which the complexity of these problems remains open, and is incomparable with the class of bipartite permutation graphs studied by Fox-Epstein et al. (ISAAC, 2015). The algorithm is based on the inclusion-chain structure that characterises threshold signed graphs, a structural property that may be of independent interest.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.DS",
-    "url": "http://arxiv.org/abs/2607.10629v1",
-    "tags": [
-      "cs.DS",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10629",
-    "arxiv_id": "2607.10629v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10624",
-    "title": "Deterministic Online Embedding of Metric Spaces into Low Dimensional Spaces",
-    "authors": [
-      "Noam Licht",
-      "Ilan Newman",
-      "Yuri Rabinovich"
-    ],
-    "abstract": "We study online embeddings of metric spaces into Euclidean spaces of a constant dimension $d>1$, against an adaptive adversary. While the case of $d=1$ is well understood, for higher dimensions little is known. In particular, even for $d=2$ it remains unknown whether the worst-case distortion grows exponentially with the number of exposed points, as it does in the case for the line, or whether it is polynomial, as in the case for unbounded $d$.   Our first result is about fixed {\\em solid} graphs, i.e., $K_5$, whose edges are solid intervals, equipped with the shortest-path metric. We show that if the input points arrive from such a metric space, they can indeed be online-embedded into ${\\mathbb R}^2$ with a polynomial distortion. This refutes the previously believed conjecture that the topological non-embeddability of $K_5$ into the plane could be exploited for establishing exponential lower bounds.   The second results is about online embeddings of tree metrics of a certain type, including, e.g., ultrametrics and HST's. Somewhat surprisingly, we show that for metrics from this class the worst-case online embedding into ${\\mathbb R}^d$ is not much worse that the offline embedding, both being $n^{Θ(1/d)}$, and this holds even when $d = Θ(\\log n)$. This is in a stark contrast to the more common situation where the online-offline gap is typically huge, and even exponential. This result allows us to transfer results about probabilistic embeddings of metrics into HST's to low-dimensional Euclidean spaces, in an almost optimal possible manner.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.DS",
-    "url": "http://arxiv.org/abs/2607.10624v1",
-    "tags": [
-      "cs.DS",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10624",
-    "arxiv_id": "2607.10624v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10564",
-    "title": "The Power of Arrival Times in Random-Order Online Facility Location",
-    "authors": [
-      "Yichen Huang",
-      "Shaofeng H. -C. Jiang"
-    ],
-    "abstract": "We study online metric facility location with uniform opening costs in the random-order model (Meyerson FOCS'01). The best previous upper bound was a $3$-competitive randomized algorithm (Kaplan, Naori, Raz SODA'23), leaving a gap to the best known lower bound of $2$. In this work, we give two algorithms with improved competitive ratios: (i) a deterministic algorithm with a competitive ratio below $2.42$ and (ii) a randomized algorithm with a competitive ratio below $2.59$ and the additional property that it retains the asymptotically optimal $O(\\log n/\\log \\log n)$ competitive ratio in the adversarial-order model. A key improvement is to take the arrival time of the request into consideration when making opening decisions: The arrival time carries geometric information about the local density around the request, which fundamentally helps the algorithm.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.DS",
-    "url": "http://arxiv.org/abs/2607.10564v1",
-    "tags": [
-      "cs.DS",
-      "facility-location"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10564",
-    "arxiv_id": "2607.10564v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.10960",
-    "title": "Reinforcement Learning for Execution under Dynamic Fees in a Closed-Loop DEX Simulator",
-    "authors": [
-      "Wen-Ting Wang"
-    ],
-    "abstract": "Trader-facing dynamic fees are increasingly proposed for automated market makers (AMMs), but historical data do not identify how order flow would respond: trader-facing fees do not vary, trader types are latent, and a replayed tape is not a sequential decision environment. We therefore construct a minimal closed-loop simulator in which the missing signal exists by construction: two constant-product pools repriced by an equilibrium-inspired dynamic-fee rule, fee-sensitive noise flow, and closed-form CEX--AMM arbitrage. Equilibrium is used as a closure principle, not as an object the trader learns. Against a tuned benchmark ladder of schedule, planning, lookahead, and tabular policies, a small DQN is the only evaluated valid policy whose paired improvement over tuned one-step routing excludes zero. On a reserved final block of 1{,}000 seeds with completion forced to 1.0 for every policy, it reduces implementation shortfall under every tested intra-step ordering, by $13.3\\bps$ of order notional under the pre-specified agent-last ordering, and the edge is concentrated in, and learned from, dynamic-fee environments: under constant fees the paired difference is indistinguishable from zero. The result is model-conditioned counterfactual evidence about execution control in AMMs, not evidence about historical traders, equilibrium play, or deployable profit.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2607.10960v1",
-    "tags": [
-      "cs.LG",
-      "ml-for-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10960",
-    "arxiv_id": "2607.10960v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.10951",
-    "title": "Sticky Jump Diffusions: A Unifying View of Masked, Continuous, and Hybrid Diffusion",
-    "authors": [
-      "Pascal Jutras-Dubé",
-      "Patrick Pynadath",
-      "Jeremy Lu",
-      "Yuan Gao",
-      "Ruqi Zhang"
-    ],
-    "abstract": "We introduce Sticky Jump Diffusions (SJDs), continuous-time Markov processes on $\\mathbb R^d$ whose discrete anchors are token embeddings. In forward time, anchors release their mass at a hazard rate and the released mass diffuses in the continuous ambient space; time reversal couples a score-driven SDE with a sticky jump kernel whose rate and destination are fixed by flux balance with the forward law. We estimate the score and the per-anchor reverse hazards from a single denoising classifier via Denoising Hazard Matching, the hazard analogue of denoising score matching, with simulation-free cross-entropy training. SJD recovers masked diffusion, continuous diffusion, and hybrid diffusion as limits. Its reversal explains features that each family treats as given: the mask of masked diffusion carries no evidence about the source token because the unsticking kernel of every anchor collapses to the same absorbing point; the terminal projection of continuous diffusion is required due to the absence of atoms in its forward marginal, without which flux balance yields no reverse jumps; and the update rules of hybrid diffusion (commit rate, destination, and drift) all follow from flux balance rather than from separate design. Beyond these limits, the unsticking kernel becomes a design space: a cross-position blending corrupts each position toward a blend of its neighbors' clean values or embeddings, turning dependency structure such as spatial locality or a constraint graph into an inductive bias of the corruption itself, and improves over the identity-kernel hybrid on CIFAR-10, Text8, and Sudoku.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2607.10951v1",
-    "tags": [
-      "cs.LG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10951",
-    "arxiv_id": "2607.10951v1",
-    "score": 40.0,
-    "mentions_solvers": [
-      "JuMP"
-    ]
-  },
-  {
-    "id": "arxiv-2607.10936",
-    "title": "Bandit PCA with Minimax Optimal Regret",
-    "authors": [
-      "Moïse Blanchard",
-      "Dmitrii Ostrovskii",
-      "Aadirupa Saha"
-    ],
-    "abstract": "We study the bandit-feedback version of online principal component analysis (Bandit PCA): in each round $t = 1,\\dots,T$, the adversary selects a $d \\times d$ symmetric gain matrix $G_t$ with spectrum in $[0,1]$ and rank at most $r$; the learner simultaneously selects a unit vector $w_t \\in S^{d-1}$ and receives the reward $w_t^\\top G_t w_t$. The learner receives no other feedback, and aims to minimize the regret against the best unit vector in hindsight. This problem was introduced by Kotlowski and Neu (2019), who gave an algorithm with regret $O(d\\sqrt{rT \\log T})$ and showed the lower bound of $Ω(r\\sqrt{T/\\log T})$. We improve upon both of these bounds and essentially bridge the gap between them, establishing the minimax regret of order $r\\sqrt{dT}$ up to polylogarithmic factors in $d$ and $T$. The upper bound is attained by a novel algorithm, which combines online mirror descent on the spectrahedron of (real) density matrices with a multiscale exploration scheme in which the eigenspaces with different spectral magnitudes are updated at different rates. For the lower bound, we construct an adaptive adversary that refines a hidden large-reward subspace based on the learner's actions, in such a way that low regret is impossible without estimating the subspace; as a result, lower-bounding the regret reduces to studying the arising subspace estimation problem. Finally, we discuss connections of Bandit PCA with adaptive-measurement quantum tomography.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2607.10936v1",
-    "tags": [
-      "cs.LG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10936",
-    "arxiv_id": "2607.10936v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10931",
-    "title": "Fast Whole-Brain, Geometry-Aware Functional Alignment for Cross-Subject Decoding",
-    "authors": [
-      "Pierre-Louis Barbarant",
-      "Florent Meyniel",
-      "Bertrand Thirion"
-    ],
-    "abstract": "Decoding brain activity is useful for characterizing brain processes and understanding the functional architecture underlying cognition. However, the inter-individual variability in brain response patterns limits the development of decoders that generalize across individuals. A solution to this challenge is functional alignment: aligning functional data across individuals before training population-level decoders. The core issue is to strike the balance between aligning functional features and preserving the anatomical structure, while maintaining computational efficiency. We introduce a new functional alignment method for fMRI, SpectralOT, that embeds cortical geometry into Laplace-Beltrami eigenmodes along functional data to regularize the alignment.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "q-bio.NC",
-    "url": "http://arxiv.org/abs/2607.10931v1",
-    "tags": [
-      "q-bio.NC",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.32470/gn6tuko",
-    "arxiv_id": "2607.10931v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10926",
-    "title": "The Spectral Structure of Latent Treatment Effects",
-    "authors": [
-      "Hamza Virk",
-      "Bijan Mazaheri",
-      "Yihren Wu"
-    ],
-    "abstract": "Identifying heterogeneous treatment effects under unobserved confounding is central in observational causal inference. In proxy models with a discrete latent confounder, prior Synthetic Potential Outcomes (SPO) [Mazaheri-Squires-Uhler '25] recover the mixture of treatment effects through recursively constructed scalar moments. We show that this sequence is one projection of a more fundamental object. Under the same population factorization assumptions, there is an exact compressed observable operator: after projecting onto the shared proxy signal subspace, the difference of two treatment-arm quotient operators is similar to the diagonal matrix of latent treatment effects. Its eigenvalues are the latent effects; its lifted left eigenvectors, after anchor normalization, recover the target-proxy feature matrix and then the latent mixture proportions. Every scalar SPO moment is a bilinear functional of a power of this operator. The resulting estimator handles overcomplete proxy systems, replaces high-order scalar inversion with finite-dimensional spectral analysis, and admits high-probability first-order perturbation bounds for treatment effects, feature rows, and simplex-projected mixture weights.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2607.10926v1",
-    "tags": [
-      "cs.LG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10926",
-    "arxiv_id": "2607.10926v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10896",
-    "title": "Incremental Transformer for Surrogate-Based Inverse Design of Geopolymer Mixtures",
-    "authors": [
-      "Giansalvo Cirrincione",
-      "Filippo Grassia"
-    ],
-    "abstract": "Small-data inverse design is challenging in engineering informatics when observations are heterogeneous, mixed-type, and constrained by physical relations among design variables. This work proposes a topology-aware surrogate framework guided by an Incremental Transformer (INCRT) for physics-constrained inverse design, applied to geopolymer mixture design. The method integrates intrinsic-dimensionality analysis, mixed-variable design-space representation, tabular surrogate prediction, INCRT-based manifold rationalisation, and constrained inverse optimisation. Using a public benchmark of fly-ash and slag-based geopolymer concrete mixtures with compressive-strength and carbon-emission targets, the high-dimensional design space proves strongly redundant, organising around fewer effective mixture regimes. Compressive strength requires nonlinear tabular surrogates, while carbon emission is largely determined by composition and well recovered by regularised linear models. INCRT thus acts not as a replacement for tabular predictors but as a rationalisation layer providing prototype regimes and a manifold-support score for inverse design. Three strategies are compared: unconstrained surrogate optimisation, physics-constrained optimisation, and topology-aware physics-constrained optimisation. Unconstrained optimisation can match target strength but may yield physically invalid or off-manifold candidates; physics-only constraints do not always ensure data support. The topology-aware strategy yields candidates balancing target compliance, carbon reduction, physical admissibility, and proximity to the learned feasible manifold. The framework aims not to replace experimental validation but to support screening of credible candidate mixtures from small, mixed, physically constrained engineering datasets.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.AI",
-    "url": "http://arxiv.org/abs/2607.10896v1",
-    "tags": [
-      "cs.AI",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10896",
-    "arxiv_id": "2607.10896v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10735",
-    "title": "GNet: A scalable and flexible Gaussian process network with nonparametric neurons",
-    "authors": [
-      "Mengyang Gu"
-    ],
-    "abstract": "We develop GNet, a scalable and flexible Gaussian process network with nonparametric activation functions modeled by Gaussian processes. To reduce computational and storage costs, we introduce the jointly inverse Kalman filter, a fast algorithm together with closed-form expressions of gradients for accelerating model training and predictions without the need to form covariance matrices. Using a unified optimization setting, GNet shows competitive performance across a diverse range of test problems, including predicting nonlinear functions, nonparametric regression of real-world data, and predicting one-body direct correlation functions with high-dimensional inputs in classical density function theory. The strong performance of GNet, accelerated by the jointly inverse Kalman filter, suggests broad applicability to large-scale predictive modeling with substantially reduced computational and storage costs.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "stat.ME",
-    "url": "http://arxiv.org/abs/2607.10735v1",
-    "tags": [
-      "stat.ME",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10735",
-    "arxiv_id": "2607.10735v1",
-    "score": 40.0,
-    "mentions_solvers": [
-      "Xpress"
-    ]
-  },
-  {
-    "id": "arxiv-2607.10700",
-    "title": "An Extreme Value Perspective on Learning Stress Laws",
-    "authors": [
-      "Mantu Gupta",
-      "Anand Deo"
-    ],
-    "abstract": "We introduce Self-Similar Generative Estimation (SS-GEN), a method for simulating multivariate tail events and estimating rare-event probabilities in both heavy and light-tailed settings. SS-GEN exploits asymptotic tail structure to decompose the tail distribution into an explicit radial component and a nonparametric angular component, reducing tail learning to a compact-domain problem that can be handled by off-the-shelf deep generative models. The resulting sampler generates representative extreme scenarios and supports probability estimation far beyond the observed data. Under mild nonparametric tail assumptions, we show that the SS-GEN density is asymptotically exact in the tail, with vanishing uniform relative error for regularly varying distributions and vanishing uniform log-relative error for Weibull-type distributions. Unlike existing approaches that rely on specialized architectures or parametric tail specifications, SS-GEN leverages asymptotic tail structure to enable standard generative models to generate representative extreme samples and estimate rare-event probabilities beyond the observed data.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "q-fin.RM",
-    "url": "http://arxiv.org/abs/2607.10700v1",
-    "tags": [
-      "q-fin.RM",
-      "stochastic"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10700",
-    "arxiv_id": "2607.10700v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.10664",
-    "title": "Edge Cluster Expansion with Radial Rotary Attention for Interatomic Potentials",
-    "authors": [
-      "Zemin Xu",
-      "Wenbo Xie",
-      "P. Hu"
-    ],
-    "abstract": "In this paper, we provide a systematic investigation of SO(2) theory to machine learning interatomic potentials (MLIPs) and identify the limitations of conventional SO(2) Linear architectures relative to SO(3) Clebsch-Gordan Tensor Products (CGTP). Building on these insights, we propose direct Cartesian construction and recursive Clebsch-Gordan construction of Wigner D-matrices and introduce two novel interaction building blocks. First, we propose the Edge Complex Product Basis based on Generalized Asymmetric Contraction, a new formulation for many-body expansion that directly constructs higher-order interactions on edges through complex-valued equivariant multiplications. Second, we introduce Radial Rotary Complex Attention(RRA), which enhances extrapolation performance and surpasses existing attention vector formulations. We also introduce several improvements to the Atomic Cluster Expansion module. Building on these advances, we train our models on OMat24, sAlex, and MPTrj, and introduce TECE-OAM-RRA-1.0, which achieve state-of-the-art (SOTA) performance on the Matbench Discovery.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "stat.ML",
-    "url": "http://arxiv.org/abs/2607.10664v1",
-    "tags": [
-      "stat.ML",
-      "ml-for-or",
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10664",
-    "arxiv_id": "2607.10664v1",
-    "score": 50.0
-  },
-  {
-    "id": "arxiv-2607.10618",
-    "title": "Demixing Sparse Signals from Nonlinear Observations using Generalized Non-convex Regularization",
-    "authors": [
-      "Raziyeh Takbiri"
-    ],
-    "abstract": "We consider the recovery of a pair of sparse vectors from a limited number of nonlinear observations of their superposition: $y_i=g(\\inner{\\ba_i}{\\bPhi\\bw^\\ast+\\bPsi\\bz^\\ast})+e_i$, $i=1,\\dots,m$, with $m\\ll n$, incoherent orthonormal bases $\\bPhi,\\bPsi$, a scalar link $g$, and noise $e_i$ that may be heavy-tailed or contaminated. We propose a regularization-based framework combining a Huberized data fidelity with generalized folded-concave penalties (SCAD, MCP), and a two-block proximal alternating algorithm with backtracking (NLD-PALM) whose whole iterate sequence provably converges to critical points under the Kurdyka--Łojasiewicz property, with local linear rates. On the statistical side we establish restricted strong convexity of the Huberized nonlinear loss through an exact sign-definite decomposition, and derive estimation error bounds of order $σ\\sqrt{s\\log(n)/m}$ that hold at \\emph{every} localized stationary point, an oracle rate $σ\\sqrt{s/m}$ free of $\\log n$ and shrinkage bias under a beta-min condition, and a co-equal recovery theorem for \\emph{unknown} monotone links via a linear surrogate and a clipped Plan--Vershynin decoupling. The estimator requires no knowledge of the sparsity levels, and its guarantees hold under symmetric noise with only finite variance. Experiments at $n=512$ under a frozen data-driven regularization rule show an earlier phase transition than convex $\\ell_1$ demixing and greedy hard-thresholding baselines, a $35\\times$ accuracy advantage over squared-loss estimation under $5\\%$ gross outliers, and successful demixing of spike-plus-background signals observed through a saturating amplifier.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "stat.ML",
-    "url": "http://arxiv.org/abs/2607.10618v1",
-    "tags": [
-      "stat.ML",
-      "decomposition"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10618",
-    "arxiv_id": "2607.10618v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.10589",
-    "title": "Approximation of Analytic Functions by ReLU Neural Networks with Adjustable Depth and Width",
-    "authors": [
-      "Yanming Lai",
-      "Defeng Sun",
-      "Yang Wang"
-    ],
-    "abstract": "In contrast to most studies on neural network approximation theory that characterize results through a single parameter, such as the total number of network parameters, \\cite{shen2020deep} pioneered the characterization of approximation rates as a joint function of the width parameter $N$ and the depth parameter $L$, thereby granting greater architectural flexibility. Existing works using the $(N,L)$-characterization focus on function classes with finite smoothness $s$, establishing a typical approximation rate of $\\mathcal{O}\\left(N^{-2s/d}L^{-2s/d}\\right)$ with $d$ denoting the input dimension, which indicates that network depth and width play symmetric roles for these classes. In contrast, this paper establishes upper bounds for the approximation of analytic functions, which possess infinite smoothness, via ReLU networks under the $(N,L)$-characterization. Specifically, we derive approximation rates of $\\mathcal{O}\\left(N^{-C L^τ}\\right)$, where $C>0$ is some constant and $τ>0$ is a parameter influenced by the relation between $L$ and $N$. In particular, $τ=1$ if $N$ scales roughly as $L^d$. Our findings reveal that depth plays a more critical role than width in the context of analytic function approximation. The main technical difficulty of obtaining such upper bounds lies in the trade-off between the smoothness parameters and the approximation accuracy. To overcome this difficulty, we employ refined constructions of several ReLU networks to approximate power functions, multivariate multiplication, and polynomials, which may be of independent interest.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "stat.ML",
-    "url": "http://arxiv.org/abs/2607.10589v1",
-    "tags": [
-      "stat.ML",
-      "ml-for-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10589",
-    "arxiv_id": "2607.10589v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.10571",
-    "title": "Learning from Local Walks on Dynamic Graphs with Bandit Feedback",
-    "authors": [
-      "Sourav Chakraborty",
-      "Amit Kiran Rege",
-      "Claire Monteleoni",
-      "Lijun Chen"
-    ],
-    "abstract": "We study stochastic multi-armed bandits on dynamic graphs, where arms correspond to the vertices of a network with time-varying edges. In this setting, the learner is restricted to local movement, selecting only its current node or an immediate neighbor at each round. This constraint decouples best-arm identification from exploitation: even after the optimal arm is identified, the learner may remain unable to reach it through the evolving topology. We identify a process-agnostic structural condition, based on sliding-window mixing, that ensures the graph's intrinsic walk remains stable for both exploration and navigation. Under this regime, we analyze a family of local explore-then-commit algorithms and establish sublinear expected regret. Our framework includes a reward-aware strategy, for which we prove a worst-case safety theorem and a separate performance gain theorem.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2607.10571v1",
-    "tags": [
-      "cs.LG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10571",
-    "arxiv_id": "2607.10571v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10548",
-    "title": "Beyond Looking Up, Try Looking Around: Harmonizing Global Structure and Local Consistency in Optimal Transport for Short Text Clustering",
-    "authors": [
-      "Zhihao Yao",
-      "Yuxuan Gu",
-      "Jixuan Yin",
-      "Bo Li"
-    ],
-    "abstract": "Pseudo-labeling based on Optimal Transport (OT) has become an effective mechanism for enhancing short text clustering. Existing OT methods are short in modeling semantic consistencies between samples, which may assign different pseudo-labels to semantically similar samples. These erroneous pseudo-labels can cause the model to produce inferior clusters. This paper proposes a novel short text clustering framework, which remedies the neglect of semantic consistency in existing OT methods, generating reliable pseudo-labels to facilitate clustering. Specifically, the proposed approach first designs an instance-level attention mechanism to capture semantic relationships between samples, which are then integrated into the OT formulation to endow the transport process with neighborhood semantic awareness. By solving the proposed OT formulation, reliable pseudo-labels are obtained that simultaneously account for sample-to-sample semantic consistency and sample-to-cluster global structure information. These pseudo-labels are then used as supervisory signals to guide the model to achieve accurate clustering. Extensive experiments demonstrate that the proposed approach outperforms state-of-the-art methods. The code is available at: \\href{https://github.com/YZH0905/CAOT-STC}{https://github.com/YZH0905/CAOT-STC}.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "stat.ML",
-    "url": "http://arxiv.org/abs/2607.10548v1",
-    "tags": [
-      "stat.ML",
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10548",
-    "arxiv_id": "2607.10548v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.10540",
-    "title": "Representation Learning for Semiparametric Causal Mediation Analysis under No Essential Heterogeneity",
-    "authors": [
-      "Roberto Faleh",
-      "Sofia Morelli",
-      "Holger Brandt"
-    ],
-    "abstract": "We propose a two-stage estimator for structural mediation parameters that combines deep representation learning with G-estimation under the \"no essential heterogeneity\" (NEH) assumption. We call the method UNIT. In the first stage,TARNet estimates the heterogeneous effect of a randomized treatment on a mediator by learning a shared covariate representation across treatment arms.The resulting conditional average treatment effect (CATE) estimate provides a plug-in approximation to the heterogeneity-dependent component of the weight function entering the G-estimating equation of Zheng and Zhou (2015), which identifies the structural parameters even in the presence of unmeasured mediator-outcome confounding. We show that more accurate first-stage representation learning can yield a more informative plug-in weight and thereby improve the precision of the structural parameter estimator. In simulations with non-Gaussian covariates and nonlinear mediator effects, TARNet weights reduce the Stage-2 standard error of the mediation coefficient by a factor of $1.45$ to $1.51$ (median across replications, $n \\ge 2000$) relative to the classical approach, at no cost to bias or coverage.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "stat.ML",
-    "url": "http://arxiv.org/abs/2607.10540v1",
-    "tags": [
-      "stat.ML",
-      "stochastic"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10540",
-    "arxiv_id": "2607.10540v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.10948",
-    "title": "Reinforcement Learning versus Optimization for Optimal Transmission Switching: A Comparative Study",
-    "authors": [
-      "Yuanrui Sang",
-      "Israel Abiala",
-      "Rachel Gerdes"
-    ],
-    "abstract": "Optimal Transmission Switching (OTS) reduces generation cost by strategically opening transmission lines, but its mixed-integer linear program (MILP) formulation scales poorly for large-scale transmission networks. Reinforcement learning (RL) offers a computationally efficient alternative, but existing RL-based OTS approaches rely on soft penalties that permit physical constraint violations. This paper presents a comparison between an RL framework and an MILP-based optimization method for OTS. Case studies were carried out on the IEEE RTS-96 24-bus system; results show that the agent was able to produce near-optimal solutions at low switching budgets and tended to yield suboptimal solutions at high switching budgets. However, the RL agent was able to generate feasible solutions two-to-three orders of magnitude faster than the optimization solver.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2607.10948v1",
-    "tags": [
-      "eess.SY",
-      "integer-programming",
-      "ml-for-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10948",
-    "arxiv_id": "2607.10948v1",
-    "score": 50.0
-  },
-  {
-    "id": "arxiv-2607.10933",
-    "title": "Rigidity-Based Multi-UAV Trajectory Optimization for Rapid Cooperative Emergency Target Localization",
-    "authors": [
-      "Halim Lee",
-      "Jiwon Seo"
-    ],
-    "abstract": "Reducing the response time for accurate emergency-caller localization is critical in vehicular and public-safety networks. Although mobile devices commonly use GNSS, Wi-Fi, or cellular positioning, their accuracy and availability can degrade because of poor signal reception, limited infrastructure, and regulatory constraints. UAV-based localization offers a promising alternative by using airborne sensors to cooperatively estimate the target position. However, existing Fisher information matrix (FIM)-based trajectory optimization methods depend on the current target estimate and can perform poorly in the early mission stage, when measurements are limited and uncertainty is high. We propose a rigidity-based UAV trajectory optimization method that maximizes the smallest nonzero singular value of the rigidity matrix associated with the UAV-target sensing graph, improving geometric conditioning and reducing position ambiguity. We also introduce a pruning-based matrix reduction strategy for efficient real-time implementation. Simulations show that the proposed method reduces search time by 32.9% compared with FIM-based methods and satisfies the FCC horizontal emergency-localization requirement sooner. Further results demonstrate scalability, robustness to UAV positioning errors and NLOS path loss, low sensitivity to heading parameters, practical computation and communication costs, and more stable degradation than PPO-based baselines under severe sensing and navigation perturbations.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2607.10933v1",
-    "tags": [
-      "eess.SY",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.1109/TVT.2026.3713188",
-    "arxiv_id": "2607.10933v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10918",
-    "title": "Learning Linear Temporal Specifications from Demonstrations with Uncertainty",
-    "authors": [
-      "Parastou Fahim",
-      "Constantino Lagoa",
-      "Rômulo Meira-G'oes"
-    ],
-    "abstract": "Learning temporal logic specifications from system demonstrations is essential for tasks such as formal verification and controller synthesis, especially in safety-critical domains. Existing approaches typically assume demonstrations are correct or only affected by misclassification errors. In practice, however, system traces are often uncertain or incomplete due to sensor faults, measurement errors, or data loss. We present a framework for learning minimal Linear Temporal Logic (LTL) formulas from demonstrations with uncertainty. Our approach models uncertainty via Hamming distance to generate possible estimates around each observed trace, which are grouped with constraints requiring that at least one trace per group is consistent with the learned formula. Our problem is then reduced to an equivalent Pseudo-Boolean Optimization. We evaluate our method against state-of-the-art LTL learning approaches and show that it recovers specifications that more closely align with ground-truth formulas under uncertainty.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.AI",
-    "url": "http://arxiv.org/abs/2607.10918v1",
-    "tags": [
-      "cs.AI",
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10918",
-    "arxiv_id": "2607.10918v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.10883",
-    "title": "Model-Free Detection and Accommodation of Sensor Faults for a PEM Electrolyzer",
-    "authors": [
-      "Meziane Ait Ziane",
-      "Michel Zasadzinski",
-      "Cédric Join",
-      "Michel Fliess"
-    ],
-    "abstract": "We investigate the detection and accommodation of sensor faults for a proton exchange membrane electrolyzer coupled to a DC/DC converter powered by renewable energy sources. The proposed method for detecting and accommodating the sensor fault is model-free and is based on the concept of ultra-local model that is becoming classic in control engineering. The existing literature on active control tolerant to sensor fault dedicated to this question shows that no previous work has addressed this topic. Our approach mitigates the effect of sensor fault on closed-loop behavior and guarantees the stability and performance of the overall system. Numerical simulations under variations in renewable energy sources validate our approach.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2607.10883v1",
-    "tags": [
-      "eess.SY",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10883",
-    "arxiv_id": "2607.10883v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10872",
-    "title": "Model Predictive Coolant Allocation for Integrated Tab-Surface Cooling of Battery Cells",
-    "authors": [
-      "Godwin K. Peprah",
-      "Torsten Wik",
-      "Masood Tamadondar",
-      "Changfu Zou"
-    ],
-    "abstract": "Battery electrical tab cooling is effective at reducing internal thermal gradients by exploiting the high thermal conductivity of the current collectors, whereas surface cooling is effective at reducing temperature rise because of its large heat transfer area. Using either strategy alone, however, limits the achievable trade-off between thermal uniformity and temperature rise reduction. This work proposes an integrated tab-surface cooling (ITSC) system in which coolant is dynamically allocated among the lateral surface and tab channels. The allocation is formulated as an optimal control problem in which the battery temperature is regulated towards a desired reference and thermal gradients are minimised. To support this formulation, a first-principles coolant model is developed and coupled with battery and valve-actuation models. The resulting optimal coolant-allocation problem is solved using a computationally efficient real-time iteration model predictive control (RTI-MPC) scheme, with a nonlinear MPC serving as a closed-loop performance benchmark. Evaluation results under realistic driving conditions showed that RTI-MPC reproduces the nonlinear MPC thermal response with absolute errors below 0.0035 degC while reducing the computational cost from several seconds to 19.3 ms, indicating strong potential for real-time implementation. Additionally, evaluation of the proposed ITSC system against conventional cooling configurations demonstrates that ITSC achieves the best overall trade-off between temperature regulation and thermal gradient reduction.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2607.10872v1",
-    "tags": [
-      "eess.SY",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10872",
-    "arxiv_id": "2607.10872v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10866",
-    "title": "Dynamic analysis and control design for the gas distribution and storage system of the tritium fuel cycle in EU-DEMO",
-    "authors": [
-      "C. A. Gomez-Perez",
-      "Matthijs van Berkel",
-      "Leyla Ozkan"
-    ],
-    "abstract": "This work is concerned with the development of control strategies for the Direct Internal Recycling Loop (DIRL) system, which is an essential part of the Tritium Fuel Cycle (TFC) for the fueling of fusion reactors. As a first step, a control-oriented model is developed that describes dynamic behavior of DIRL with interactions between the torus reactor, buffer and fuel units, and recirculation streams. This model is used to evaluate the controllability, stability of the DIRL, and interactions between input and output variables. Moreover, the direct recycling of isotopes from the exhaust gases is discussed from a control perspective. It is observed that Gas Distribution and Storage (GDS) within the DIRL is associated with significant control challenges due to input-output interactions and competing process objectives. Three control strategies are developed and evaluated for the GDS of the European Demonstration fusion power plant (EU-DEMO): a Multiple Input Multiple Output (MIMO) control scheme, a redesigned GDS configuration with extended input variables enabling decentralised Single Input Single Output (SISO) control, and an extended-input MIMO control scheme addressing protium dilution. All strategies are assessed against three control objectives: maintaining GDS pressure around a prescribed set-point to ensure process safety; regulating the tritium-deuterium fuelling ratio for optimal reactor operation; and managing protium concentration to prevent fuelling dilution.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2607.10866v1",
-    "tags": [
-      "eess.SY",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10866",
-    "arxiv_id": "2607.10866v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10842",
-    "title": "D-SafeMPC: Diffusion-Driven Safe Model Predictive Control with Discrete-Time Control Barrier Functions",
-    "authors": [
-      "Erdi Sayar",
-      "Ersin Daş",
-      "Joel W. Burdick",
-      "Alois Knoll",
-      "Erdal Kayacan"
-    ],
-    "abstract": "A key limitation on the use of diffusion models in robotic planning is their inability to inherently enforce safety or dynamical constraints, which often results in physically infeasible or unsafe outputs. Hybrid approaches that employ model predictive control (MPC) to address this problem can be unstable, as poor trajectory initializations from the diffusion model prevent the MPC from converging to a safe and feasible solution. To overcome these challenges, we propose D-SafeMPC, which enhances the interaction between diffusion and control. Our method guides the reverse diffusion process with control barrier functions (CBFs) and control Lyapunov functions (CLFs) and employs an iterative-projection scheme where an MPC refines the trajectory at each denoising step. This steers sampling toward safe, goal-directed regions and provides reliable MPC warm starts. In simulations on a Franka manipulator across four scenarios (one static-obstacle and three dynamic-obstacle settings) and in a sim-to-real experiment on a physical Franka robot, D-SafeMPC improves safety, task success rates, and planning efficiency over state-of-the-art baselines. To facilitate reproducibility, our source code and experimental configurations are available in a repository at https://github.com/erdiphd/D-SafeMPC",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.RO",
-    "url": "http://arxiv.org/abs/2607.10842v1",
-    "tags": [
-      "cs.RO",
-      "stochastic",
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10842",
-    "arxiv_id": "2607.10842v1",
-    "score": 50.0
-  },
-  {
-    "id": "arxiv-2607.10653",
-    "title": "Open-Source Python Tool for Grid Converter Output Admittance Identification",
-    "authors": [
-      "Juho Määttä",
-      "Jarno Kukkola",
-      "Janne Seppänen",
-      "Marko Hinkkanen"
-    ],
-    "abstract": "Frequency-domain analysis based on converter output admittance is a key tool for studying converter-driven stability in power grids. This paper presents a Python-based identification tool built on a completely open-source simulator, eliminating the need for commercial licenses such as MATLAB or PSCAD and improving configurability through an MIT-licensed stack. The identification method uses steady-state signal injection with a sinusoidal sweep, deriving frequency-domain admittance from time-domain simulations. Analytical output-admittance models are developed for both grid-forming (disturbance-observer-based) and grid-following (phase-locked-loop-based) control to verify the numerical results. The tool's results are compared against a commercial PSCAD-based alternative, demonstrating accurate admittance identification across control methods. Code and examples are available online to support reproducibility.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2607.10653v1",
-    "tags": [
-      "eess.SY",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10653",
-    "arxiv_id": "2607.10653v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10597",
-    "title": "Underwater Dead Reckoning with Deployable Situation-Triggered Covariance Scheduling",
-    "authors": [
-      "Akshay Naik",
-      "Ramavarapu S. Sreenivas",
-      "Dustin Nottage",
-      "Ahmet Soylemezoglu"
-    ],
-    "abstract": "Underwater dead reckoning estimates vehicle position when vision is unavailable and external positioning cannot be assumed. A single set of filter parameters can work well in many situations, but fixed tuning may be poorly matched during turns, motion transitions, or periods when sensor measurements are less reliable. This paper presents the Situation-Triggered Calibrated Adaptive Robust Extended Kalman Filter for a BlueROV2. An onboard probabilistic trigger identifies the current motion situation while one error-state filter runs continuously. When the trigger is confident, the filter changes only to the corresponding pre-calibrated process- and measurement-noise matrices; the state estimate, covariance history, dynamics, and measurement models are not reset or replaced. The trigger, noise profiles, and a one-time Doppler velocity log yaw-alignment correction are calibrated offline using sparse AprilTag-supervised pool runs. A separate validation set selects the scheduling policy, which is then fixed before held-out testing. Across four held-out pool runs, the method reduces label-weighted mean per-run translation root-mean-square error from 0.488 m to 0.471 m relative to the same filter backbone with one global noise profile, and every held-out run favors the scheduled method. A paired bootstrap over 10-second segments gives a candidate-minus-baseline difference of -0.017 m with a 95% confidence interval of [-0.024, -0.008] m, while orientation error remains essentially unchanged. These results indicate that situation-aware covariance scheduling provides a modest but consistent vision-free dead-reckoning improvement without switching estimators or resetting the filter.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "cs.RO",
-    "url": "http://arxiv.org/abs/2607.10597v1",
-    "tags": [
-      "cs.RO",
-      "scheduling"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10597",
-    "arxiv_id": "2607.10597v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.10939",
-    "title": "Hereditary 2-WQO Graph Classes Have Bounded Clique-Width",
-    "authors": [
-      "Julien Duron",
-      "Nikolas Mählmann",
-      "Szymon Toruńczyk"
-    ],
-    "abstract": "A graph class is $k$-WQO if its $k$-labeled graphs are well-quasi-ordered under label-preserving induced subgraph embeddings. We show that every hereditary graph class that is $2$-WQO has bounded clique-width. Combined with the recent result of Dumas and Lopez, this confirms a long-standing conjecture of Pouzet: A hereditary graph class is $2$-WQO if and only if it is $k$-WQO for all $k\\geq 2$, if and only if it is $\\forall$-WQO, that is, its labeled graphs are well-quasi-ordered for every possible well-quasi-ordered label set.   Our proof builds on a recent structure/non-structure dichotomy for the model theoretic notion of monadic dependence by Dreier, Mählmann, and Toruńczyk. Through the non-structure characterization by forbidden induced subgraphs, we show that every hereditary $2$-WQO graph class is monadically dependent. Leveraging the Ramsey-theoretic structural properties provided by monadic dependence, we then establish bounded clique-width by ruling out the existence of large well-linked sets, which are the canonical obstructions for clique-width.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "math.CO",
-    "url": "http://arxiv.org/abs/2607.10939v1",
-    "tags": [
-      "math.CO",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10939",
-    "arxiv_id": "2607.10939v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.10739",
-    "title": "Edge transmission irregular graphs",
-    "authors": [
-      "Kexiang Xu",
-      "Ivan Damnjanović",
-      "Uroš Milivojević",
-      "Sandi Klavžar"
-    ],
-    "abstract": "The transmission of a vertex $v$ in a connected graph $G$ is the sum of distances from $v$ to all vertices in $G$. A transmission irregular (TI) graph is a connected graph in which any two distinct vertices have different transmissions. We extend the concept of transmission to edges by defining the transmission of an edge as the sum of the transmissions of its two endpoints. A connected graph can now be called edge transmission irregular (ETI) if any two distinct edges have different transmissions. We show that almost all graphs are not ETI and then investigate several related order realizability problems involving chemical ETI graphs. In particular, we prove that for every $n \\ge 15$, there exists a subcubic tree of order $n$ that is both TI and ETI.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "math.CO",
-    "url": "http://arxiv.org/abs/2607.10739v1",
-    "tags": [
-      "math.CO",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.10739",
-    "arxiv_id": "2607.10739v1",
-    "score": 40.0
-  },
-  {
-    "id": "s2-2c0bf5ab6f9c",
-    "title": "O impacto da tecnologia no desenvolvimento das atividades ostensivas da Polícia Militar do estado do Pará",
-    "authors": [
-      "Italo Sousa dos Santos",
-      "Raimundo Gilberto Gama Alves",
-      "Wilson Luís Rodrigues da Silva",
-      "Genival Baia dos Santos"
-    ],
-    "abstract": "Public security systems in Brazil are facing profound challenges due to major contemporary shifts, the rise of organized crime, and the exponential increase in the use of technology by individuals and groups involved in criminal activities. In this context, police officers need to continuously improve their actions and professional conduct procedures to respond more effectively to public demands. This discussion gives rise to the following research question: how has the use of technological tools contributed to the development of operational activities carried out by the Military Police of the State of Pará (PMPA)? The general objective of this study is to analyze the importance of technology in the development of operational actions performed by the PMPA. Methodologically, this is a qualitative study based on bibliographic research. The results indicate that the adoption of technology has enhanced PMPA’s proactive policing operations, consolidating the effectiveness of military police work and optimizing incident response by facilitating more accurate decision-making. The study concludes that technological development is essential for the institutional advancement of security forces, although its effectiveness depends on ongoing investments in infrastructure, professional training, and inter-institutional dialogue.",
-    "date": "2026-07-12",
-    "source": "Semantic Scholar",
-    "source_detail": "operations research optimization",
-    "url": "https://doi.org/10.69849/ja7txg53",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.69849/ja7txg53",
-    "arxiv_id": "",
-    "citation_count": 0,
-    "score": 35.0
-  },
-  {
-    "id": "s2-ab962af7da7e",
-    "title": "The vehicle routing problem with cross-docking for perishable products under freshness-life and travel time uncertainties",
-    "authors": [
-      "Vincent F. Yu",
-      "Vo Nguyen Truc Quyen",
-      "Pham Tuan Anh",
-      "Chau Tuan Cuong"
-    ],
-    "abstract": "",
-    "date": "2026-07-12",
-    "source": "Semantic Scholar",
-    "source_detail": "vehicle routing problem",
-    "url": "https://doi.org/10.1080/19427867.2026.2695845",
-    "tags": [
-      "vehicle-routing"
-    ],
-    "type": "publication",
-    "doi": "10.1080/19427867.2026.2695845",
-    "arxiv_id": "",
-    "citation_count": 0,
-    "score": 30.0
-  },
-  {
-    "id": "arxiv-2607.11969",
-    "title": "Did We Actually Fix It? An Independent Adversarial Stress-Test of Post-Point-Adjustment Evaluation Metrics for Time-Series Anomaly Detection",
-    "authors": [
-      "Zongye Lyu"
-    ],
-    "abstract": "Point-adjustment (PA), long the default scoring protocol in time-series anomaly detection (TSAD), was shown by Kim et al. (2022) to award near-perfect F1 to random scores. The field migrated to replacement metrics: PA%K, range-based precision/recall, affiliation precision/recall, and Volume-Under-the-Surface (VUS) ROC/PR. But did the fix work? Every robustness check to date is proposer-run or theoretical; no independent, adversarial, SOTA-relative audit on real benchmarks exists. We provide one. We stress-test 12 adopted metrics against trivial and adversarial no-skill score generators on the 250-series UCR Anomaly Archive (primary) plus five further benchmarks (SMD, SMAP, MSL, NAB, PSM), under a pre-registered SOTA-relative gameability criterion (a metric is gamed on a series if a no-skill generator reaches >=90% of the best real detector's score). The fix is only partial: affiliation-F1 (gamed on 99% of series) and every ROC-based metric tested (all roughly 62-64%) are gamed by no-skill detectors, genuinely so (real detectors score 0.97-1.00 on the very series they game), while the PR-based metrics and PA%K resist (14-18%). A decisive, one-directional McNemar split: VUS-ROC is gamed on 119 series where its sibling VUS-PR is not, and the reverse on none. The ROC-over-PR direction replicates across all five further benchmarks and never reverses, but the absolute gameability rate is benchmark-dependent and no single metric stays safe on all six (even VUS-PR is gamed on NAB). We release a pip-installable stress-test harness with all metric implementations vendored at frozen commits, plus a metric-selection decision protocol: prefer a PR-based metric or PA%K, treat affiliation-F1 and the ROC-AUC variants as gameable, and verify per benchmark rather than assuming robustness.",
-    "date": "2026-07-12",
-    "source": "arXiv",
-    "source_detail": "stat.ML",
-    "url": "http://arxiv.org/abs/2607.11969v1",
-    "tags": [
-      "stat.ML",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.11969",
-    "arxiv_id": "2607.11969v1",
-    "score": 35.0
-  },
-  {
-    "id": "s2-2e8301902ab7",
-    "title": "A Comprehensive Energy System\n P2P\n Trading Strategy Based on Blockchain Technology with Multiple Time Scales and Subject Reputation Ratings",
-    "authors": [
-      "Jun Qi",
-      "Keke Ding",
-      "Lin Qiao",
-      "Zhen Luo",
-      "Junyou Yang",
-      "Haixin Wang",
-      "Biqi Liu",
-      "Yubo Liu"
-    ],
-    "abstract": "\n Although Existing research has reduced system uncertainty to some extent through prediction‐based integrated energy output optimization, but has still failed to completely eliminate risks caused by prosumer default behaviors and prediction errors. Therefore, this paper has proposed an integrated peer to peer energy trading strategy based on blockchain technology, multi‐timescale coordination and entity reputation, aiming to significantly reduce system volatility caused by prosumer output uncertainty in regional integrated energy systems. First, this paper has elaborated the operation mode of integrated energy systems and has established a mathematical model for regional integrated energy system clusters. Then, to address default behaviors in energy trading, a contract fulfillment rate‐based reputation evaluation model for systems has been proposed. Furthermore, a multi‐timescale risk management strategy has been developed: in the day‐ahead multi‐energy market, risk‐averse approaches have been adopted to determine optimal trading strategies; in the intraday multi‐energy market, dynamic adjustments have been made based on day‐ahead market decisions; while in the real‐time multi‐energy market, specific trading arrangements among systems have been further refined. Finally, simulation analysis of smart contracts has been conducted on MATLAB and IDE‐Remix platforms, and case study results have demonstrated the rationality and effectiveness of the proposed integrated energy trading mechanism. © 2026 Institute of Electrical Engineers of Japan and Wiley Periodicals LLC.",
-    "date": "2026-07-12",
-    "source": "Semantic Scholar",
-    "source_detail": "operations research optimization",
-    "url": "https://doi.org/10.1002/tee.70362",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.1002/tee.70362",
-    "arxiv_id": "",
-    "citation_count": 0,
-    "score": 35.0
   }
 ]

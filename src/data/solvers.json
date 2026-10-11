@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T13:38:27.307239+00:00",
+  "generated_at": "2026-10-11T13:55:24.073474+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1877,
+      "github_stars": 1878,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 113,
+      "github_open_issues": 114,
       "github_recent_prs": [
+        "Now checking for dual infeasibility in `HPresolve::rowPresolve`",
+        "Fix mps semi fixed bounds",
         "Handle a missing GPU gracefully in HiPDLP",
         "No modification of `Highs::model_` when data supplied yields an error",
-        "Loosen assert",
-        "Corrected error in resolving merge conflict; silenced `[highs_filereader]` tests",
-        "Fix inconsistency in `assessMatrix`"
+        "Loosen assert"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14169,
+      "github_stars": 14173,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -666,7 +666,7 @@
         }
       ],
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_open_issues": 172,
+      "github_open_issues": 171,
       "github_recent_prs": [
         "next: Bonmin fixes (ports of #797, #798, #799), reallyValid() for OA-type solvers, and point config.yml at next",
         "CbcHeuristicRandRound: test CBC_SKIP_CLP_TEST by value",
@@ -1131,7 +1131,7 @@
         "python"
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
-      "github_stars": 6362,
+      "github_stars": 6361,
       "github_open_issues": 184,
       "github_recent_prs": [
         "MAINT: Remove obsolete SciPy compatibility branches",
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed issue where Ipopt exceptions could not been caught from other libraries on macOS with clang when Ipopt or the other library was build with `-fvisibility=hidden`.\r\n- Call `MPI_Init()` with NULL",
-      "github_stars": 1790,
+      "github_stars": 1791,
       "github_open_issues": 11,
       "github_recent_prs": [
         "Fix segfault when eval_g returns false with check_derivatives_for_naninf on",
