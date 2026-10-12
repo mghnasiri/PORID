@@ -1,0 +1,251 @@
+{
+  "date": "2026-10-12",
+  "generated_at": "2026-10-12T16:39:48.350977+00:00",
+  "publications": [
+    {
+      "id": "openalex-W7221471482",
+      "title": "农科(蔬菜学·茶学)学术英语语料库 v1.2 · 文档与代码包 / Agricultural English Corpus v1.2 (Horticulture & Tea Science) · Documentation and Scripts",
+      "authors": [
+        "浩 余"
+      ],
+      "abstract": "本记录为该语料库 v1.2 的文档与代码包;语料数据包以受限访问发布,见关联记录(概念 DOI 10.5281/zenodo.23066607)。 内容:字段字典、Data Statements、句级表说明、标注库说明、语步标注覆盖率/合并/全量重跑审计报告与未匹配清单、CN-1280 缺陷复核与处置建议、方案 B 语料复核报告、数据来源与生成方式声明、机器翻译痕迹检测方案与结果、结构化摘要分层报告、语料残留标记排查报告、v1.2 冻结清单(逐文件 SHA256 与包级哈希)、打包校验报告、基础库期刊×年份×学科聚合统计、处理与核查脚本及脚本清单。本记录为文档与脚本,不含语料正文。 规模(v1.2):中文期刊论文 2,765 篇、中英句对 13,028 对、英文单语 1,783 篇、中文单语 56 篇、文献主表 4,604 条;句级表 53,303 行;语步标注 53,303 行(覆盖率 99.9%)。 本版(v1.2)修订——自 v1.0.3 起累计两批改动,均在此如实披露: 一、v1.1(语料层,本版一并发布) ① 剔除 EN-1601(Horticulture Research 2023,DOI 10.1093/hr/uhad149):该篇源件的 abstract 字段实为整篇通信(Letter)正文 10,629 字符(开头 Dear Editor,无 Abstract 段),按本库\"语料单元=摘要\"的口径整篇剔除并留档;全库复扫此类声明块标记仅此 1 篇。⇒ 文献主表 4,605→4,604、摘要表 7,370→7,369、英文单语 1,784→1,783、英文句数 40,016→39,935;中英句对 13,028 不变。② 正式并入\"句级全量表\"(一个句子一行、覆盖全部摘要):53,304 行(中文 13,369+英文 39,935)。句级统计一律以它为分母;句对表是\"配对视图\"(只收配对得上的句子),不等于全库句数。 二、v1.2(本版新增) ① 修复 CN-1280 的\"中英摘要粘连\"(《中国蔬菜》2025):该篇源件的英文字段实为\"中文摘要 432 字+英文摘要 1,477 字\"粘连成一行(1,910 字符、汉字占比 0.1272),被当作英文摘要入库,并在句级表里切出一句中文的\"英文句序1\",使该篇 5 个句对整体错位一格。已剥离为纯英文(1,477 字符,SHA256 前 16 位 604a77c7f4665a96),并以差量核对证明全库只有该篇英文侧变动。⇒ 句级表 53,304→53,303(英文 39,935→39,934)、该篇英文句数 8→7;句对表 13,028 不变、摘要表 7,369 与主表 4,604 不变。② 新增\"语步标注表\"(立项书\"标注库\"的语步层):用 SciAIEngine(move_recognition_cn/_en)对全部摘要做全量重跑(中文 2,821 篇+英文 4,547 篇=148 次调用,未沿用任何旧批标注),53,303 行、覆盖率 99.9%;未匹配 61 行(0.11%)留空并列明清单。四级匹配口径(精确→继承(引擎合并)→继承(引擎拆分)/多标签-取最长→近似≥0.6)会造成标签一对多,方法节须披露。 三、本版规模:文献主表 4,604 条/中英句对 13,028 /摘要表 7,369 行/句级表 53,303 行/语步标注 53,303 行。 说明:v1.0.3 与 v1.2 之间的 v1.1 未单独发布到 Zenodo,其改动已并入本版;上一版(v1.0.3)及其之前版本仍可访问,用于追溯修订过程。 English This record is the documentation and scripts package for version v1.2 of the corpus. The corpus data package is released with restricted access — see the related record (concept DOI 10.5281/zenodo.23066607). Contents: field dictionary; Data Statements; sentence-table note; annotation-library note; move-annotation coverage, merge and audit reports with the unmatched-rows list; CN-1280 defect review; corpus verification report; data-source and generation statement; machine-translation-trace detection report; structured-abstract stratification report; residue-marker audit report; v1.2 freeze list (per-file SHA256 and package-level hash); packaging verification report; aggregated basic-library statistics; processing and verification scripts with an inventory. Documentation and code only, not the corpus text. Changes in v1.2 — two cumulative batches of changes since v1.0.3, both disclosed here: (1) v1.1 (corpus layer, released together with this version) (1a) Removal of EN-1601 (Horticulture Research 2023, DOI 10.1093/hr/uhad149): its source `abstract` field was in fact the full text of a Letter (10,629 characters, beginning with `Dear Editor`, with no abstract paragraph); the record was removed entirely and archived, in line with this corpus's unit-of-analysis definition (abstract, not full text). A corpus-wide rescan found this class of marker in this one record only. ⇒ master table 4,605→4,604, abstract table 7,370→7,369, English-only records 1,784→1,783, English sentences 40,016→39,935; aligned pairs unchanged at 13,028.(1b) The sentence-level full table was formally added (one sentence per row, covering all abstracts): 53,304 rows (13,369 Chinese + 39,935 English). Sentence-level statistics use this table as denominator; the pair table is a paired view only and does not represent all sentences. (2) v1.2 (added in this version) (2a) Repair of a Chinese–English abstract concatenation in CN-1280 (《China Vegetables》2025): the English field actually contained the Chinese abstract (432 characters) concatenated with the English abstract (1,477 characters) in a single string (1,910 characters, 12.7% Chinese characters). It had been indexed as an English abstract and produced a Chinese \"English sentence #1\", shifting all five sentence pairs of that record by one. The field was split to pure English (1,477 characters; SHA256 prefix 604a77c7f4665a96); a differential audit confirms that no other record changed. ⇒ sentence table 53,304→53,303 (English 39,935→39,934), that record's English sentence count 8→7; pairs unchanged at 13,028; abstract table (7,369) and master table (4,604) unchanged.(2b) Move-annotation table added (the move layer of the annotation library): a complete re-run with SciAIEngine (`move_recognition_cn` / `_en`) over all abstracts (2,821 Chinese + 4,547 English = 148 API calls; no labels carried over from earlier batches): 53,303 rows, 99.9% coverage; 61 rows (0.11%) could not be matched reliably, are left empty and are listed in the unmatched-rows file. The four-level matching scheme (exact → inherited from a merged engine segment → inherited from split segments / longest label → approximate ≥0.6) produces one-to-many labels, which must be disclosed in the methods section. (3) Size of this version: master table 4,604 records / aligned pairs 13,028 / abstract table 7,369 rows / sentence table 53,303 rows / move annotations 53,303 rows. Note: the intermediate v1.1 was not released separately on Zenodo; its changes are included here. Previous versions remain accessible for provenance.",
+      "date": "2026-10-12",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23301345",
+      "tags": [
+        "supply-chain",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23301345",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "openalex-W7221088005",
+      "title": "Integrasi Workflow Jurnal Keuangan Berbasis Website Menggunakan Analisis Pieces dan Metode Agile Scrum",
+      "authors": [
+        "Andrasatria Dewa",
+        "Dwi Ismiyana Putri"
+      ],
+      "abstract": "Hospital financial governance depends on how well the journal approval workflow is recorded and traced. The desktop-based Financial Information System (SIMKEU) used by the hospital under study supports journal entry and posting, but examination, approval, and endorsement are still handled through physical documents outside the system, so access is inflexible and the process status is not digitally documented. This study analyses the running system and develops a website-based financial information system that integrates the tiered journal workflow. Data were collected through observation, interviews with finance staff, the assistant finance manager, and the finance manager, and a literature study. The running system was analysed using the PIECES framework, while development applied the Agile approach with Scrum over approximately three months, with the researcher acting as a single full-stack developer. The system was built on CodeIgniter 3 and combines the existing Oracle database as the journal data source with MySQL as the workflow, access-rights, and activity-log store, so the legacy schema remains unchanged. Alpha testing of twenty function groups using black-box testing produced conforming results, and User Acceptance Testing with five respondents produced an acceptance rate of 76.89% in the Good category.",
+      "date": "2026-10-11",
+      "source": "OpenAlex",
+      "source_detail": "Jejak digital Jurnal Ilmiah Multidisiplin",
+      "url": "https://doi.org/10.63822/ek7p9543",
+      "tags": [
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.63822/ek7p9543",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7221343030",
+      "title": "FAIR Research Data Management with NOMAD and FAIRmat",
+      "authors": [
+        "Ahmed E. Mansour"
+      ],
+      "abstract": "These slides accompanied an invited tutorial presented at TCO 2026 on 28 September 2026 in Leipzig, Germany. The presentation introduces NOMAD, a free, open-source research data management platform developed and operated by FAIRmat, a consortium of the German National Research Data Infrastructure (NFDI). NOMAD enables researchers to upload, organize, explore, analyze, and publish their data. By transforming heterogeneous research data into structured, machine-readable formats, the platform helps make them findable, accessible, interoperable, and reusable (FAIR). The presentation provides an overview of relevant concepts, tools, and practical workflows for managing materials-science data throughout the research lifecycle. It covers data upload and automated processing, metadata extraction and enrichment, schema-based data modelling, data organization, search and exploration, analysis, and publication. It also introduces NOMAD’s support for experimental and computational data and discusses how structured, contextualized datasets can be prepared for machine-learning and artificial-intelligence applications. Both NOMAD deployment options are presented: the publicly accessible central platform and NOMAD Oasis, a customizable infrastructure that research groups and institutions can host and operate independently. The slides are intended for researchers, developers, and research-data professionals interested in interoperable data infrastructures, reproducible research, and applying the FAIR principles to computational and experimental materials science.",
+      "date": "2026-10-11",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23289158",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23289158",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7221344058",
+      "title": "e2er (End-to-End Research)",
+      "authors": [
+        "Björn Hanneke"
+      ],
+      "abstract": "e2er is the open infrastructure for publishing, verifying, reproducing and reusing AI-enabled research. Templates describe research processes as a sequence of steps. Each template organizes specialists, i.e., AI agents with defined roles, and each specialist draws on skills, i.e., written descriptions of methods. Researchers can adjust any template, specialist, or skill and publish their version for fellow researchers. Researchers decide at which steps the process pauses for their review. A study produced with e2er comes with a dossier that helps others verify and reproduce the work and attributes everyone whose templates, specialists, and skills it used.",
+      "date": "2026-10-11",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23289229",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23289229",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7221434123",
+      "title": "Sentiment Analysis of YouTube Comments: A Review and a Case Study on Uzbek Minecraft Comments.",
+      "authors": [
+        "Shaxriyor Latipov"
+      ],
+      "abstract": "This paper reviews ten studies (2013–2025) on sentiment analysis of YouTube comments and presents a small case study on 600 comments from a Minecraft channel run by the author, written mostly in Latin-script Uzbek mixed with English and gaming slang. Testing on held-out videos, logistic regression on word and character n-grams reached a macro-F1 of 0.69, while fine-tuned XLM-RoBERTa and multilingual BERT reached 0.40. No model exceeded an F1 of 0.30 on negative comments. Sentiment labels were generated by an AI model and not verified by a human, which is the main limitation of the case study. The upload includes the paper, the Google Colab notebooks used for data collection and analysis, and aggregated results; raw comments are not included to protect viewer privacy.",
+      "date": "2026-10-12",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23303297",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23303297",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7221474572",
+      "title": "Development of a Google Sites-Based Learning Resource for Self-Organized Learning Environments (SOLE) on Acids and Bases",
+      "authors": [
+        "Ika Budyaningsih",
+        "Nuni Widiarti",
+        "Woro Sumarni",
+        "Sri Kadarwati"
+      ],
+      "abstract": "This study aims to develop, determine the validity of, and assess the readability of a Google Sites-based learning resource using the Self-Organized Learning Environment (SOLE) model for acid-base material. The study employed the Research and Development (R&D) method using Plomp’s model, limited to the preliminary research and development (or prototyping) stages. The research subjects consisted of 8 media experts, 8 content experts, and 20 11th-grade students who had already studied acids and bases. The instruments included an interview guide, an expert validation sheet, and a readability questionnaire. Data was analyzed using Aiken’s V, the Intraclass Correlation Coefficient (ICC), and percentages. The results showed that the teaching material was highly valid, with an average Aiken’s V of 0.8958 from the media experts and 0.8993 from the content experts. The readability test yielded an average of 92.50%, falling into the “very good” category. The instructional material integrates the SOLE stages through big questions, investigation, review, E-LKPD, practical simulations, and a digital discussion forum on Google Sites. Thus, the instructional material was deemed highly valid and has excellent readability. The effectiveness of the instructional material on independent learning and cognitive learning outcomes has not yet been tested, so further research is needed.",
+      "date": "2026-10-12",
+      "source": "OpenAlex",
+      "source_detail": "IJCER (International Journal of Chemistry Education Research)",
+      "url": "https://doi.org/10.20885/ijcer.vol10.iss2.art5",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.20885/ijcer.vol10.iss2.art5",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2026.2623",
+      "title": "Convexity of Inverse Blocking Curves in Loss Systems",
+      "authors": [
+        "Legros, B."
+      ],
+      "abstract": "Why Larger Service Systems Benefit More from Scale\n                  How much extra demand can a service system handle when capacity is increased while keeping the same target level of customer blocking? In the paper “Convexity of Inverse Blocking Curves in Loss Systems,” Benjamin Legros establishes an exact economies-of-scale result for loss systems.\n                  The paper proves that the maximum supportable demand is an increasing and globally convex function of the number of servers. In practical terms, as a system becomes larger, each additional server can support progressively more additional demand while maintaining the same blocking target. Equivalently, the extra capacity required to accommodate additional demand decreases as the system grows.\n                  The result provides a rigorous mathematical foundation for resource pooling in capacity-constrained services. It applies to the classical Erlang-B loss model and extends to systems with a finite waiting room, with potential relevance for telecommunications, healthcare, emergency response, and other service operations.",
+      "date": "2026-10-12",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2026.2623",
+      "tags": [
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2026.2623",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2024.08081",
+      "title": "The Effect of Small Quasi-Cash Rewards on Prosocial Behavior: The Case of Voluntary Plasma Donations",
+      "authors": [
+        "Bruers, S.",
+        "Ooghe, E.",
+        "Schokkaert, E."
+      ],
+      "abstract": "To better understand how prosocial behavior can be effectively encouraged, we study four unresolved issues: whether small rewards also motivate prosocial behavior, how short-term effects differ from longer-run behavioral adjustments, whether incentives induce substitution away from other prosocial activities, and whether reminders about existing rewards meaningfully influence behavior. We examine these issues in a long-run randomized field experiment across 12 donation centers of the Belgian Red Cross-Flanders. Donors normally receive one thank-you-coupon (worth €1.5) for a blood donation and two coupons for a plasma donation. Informing donors about the existing rewards increases plasma donations by 4.6% during the nine-month information period, although this effect fades with repeated reminders. Rewarding plasma donors with an extra coupon raises plasma donations by an additional 7.1% during the six-month reward period; this effect grows during the reward period but disappears immediately afterward. We also document a substitution effect; the plasma reward reduces blood donations by 3.3%. Survey evidence suggests that small rewards act as signals of increased need or as gifts eliciting reciprocity and that our findings may extend to volunteering decisions more broadly.\n                  This paper was accepted by Marie Claire Villeval, Behavioral Economics and Decision Analysis.\n                  Funding: This paper is based on research funded by the Belgian Red Cross-Flanders; the content reflects solely the views of the authors and not those of the Red Cross.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.08081 .",
+      "date": "2026-10-12",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2024.08081",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2024.08081",
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7221318936",
+      "title": "China Source (中国信源) Structured Dataset — JSON-LD Snapshot v2026-10.2",
+      "authors": [
+        "China Source (中国信源)"
+      ],
+      "abstract": "Full JSON-LD snapshot of the China Source structured dataset: 890 schema.org entities (443 Chinese, 443 English, plus a 4-file trust layer). Supersedes v2026-10.1 (same entity count; publisher semantics + T3 re-run). License is tiered. CC BY 4.0 applies only to the 18 self-produced/compiled entities. The 872 entities derived from official government pages carry no entity-level license; they provide attribution to the original publisher instead. Dataset-level license: CC BY 4.0 for the self-produced structured layer only; the underlying official source documents remain under their respective publishers' terms and are not covered. v2026-10.2 changes: (1) publisher.url restored to the dataset home (https://qianyuan.ltd/china-source/) per Organization semantics, with the trust layer linked at document level via seeAlso; (2) T3 full-fidelity audit re-run on the 890-entity baseline: 886 entities checked, 0 hard failures, 514 warnings (C7 description length 467 / C1 anchor field 53); (3) the v2026-10 related-snapshot link to Hugging Face is effective from v2026-10.1 onward.",
+      "date": "2026-10-11",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23284349",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23284349",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "openalex-W7221321797",
+      "title": "Optimal Context Mapping (Model D): a shared, learning retrieval layer for AI coding agents",
+      "authors": [
+        "Devieswar Kancheti"
+      ],
+      "abstract": "Optimal Context Mapping scans a team's repositories once into a workspace of meaning fingerprints. It ranks the code and docs an AI agent should read first for a question, and it learns from every answered question, so the same research is not paid for twice. It ships as a Python package with hooks for Claude Code and MCP tools for other agents. Measured results include: on SWE-QA (7 public repositories, 336 questions, graded blind) it answered at 2.2x lower cost than Claude Sonnet alone, at 93% of its judged quality, and at 1.9x lower cost and 96.5% of the quality with prompt caching and the same answer instruction for both. On LOCOMO retrieval it ties hybrid search (recall@10 0.657 vs 0.655). On finding the answer file in a full-stack repository, the right file was in the top 5 on 75 of 100 questions, against 28 for Graphify. Where it does not help is recorded too: bug-fix tasks whose issues already name the code showed no saving. Version 0.2.1. Reproducible study: https://github.com/devkancheti4-design/model-d-graphify",
+      "date": "2026-10-11",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23289067",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23289067",
+      "citation_count": 0,
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
