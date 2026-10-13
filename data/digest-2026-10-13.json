@@ -1,0 +1,254 @@
+{
+  "date": "2026-10-13",
+  "generated_at": "2026-10-13T14:59:17.793914+00:00",
+  "publications": [
+    {
+      "id": "openalex-W7221471482",
+      "title": "农科(蔬菜学·茶学)学术英语语料库 v1.2 · 文档与代码包 / Agricultural English Corpus v1.2 (Horticulture & Tea Science) · Documentation and Scripts",
+      "authors": [
+        "浩 余"
+      ],
+      "abstract": "本记录为该语料库 v1.2 的文档与代码包;语料数据包以受限访问发布,见关联记录(概念 DOI 10.5281/zenodo.23066607)。 内容:字段字典、Data Statements、句级表说明、标注库说明、语步标注覆盖率/合并/全量重跑审计报告与未匹配清单、CN-1280 缺陷复核与处置建议、方案 B 语料复核报告、数据来源与生成方式声明、机器翻译痕迹检测方案与结果、结构化摘要分层报告、语料残留标记排查报告、v1.2 冻结清单(逐文件 SHA256 与包级哈希)、打包校验报告、基础库期刊×年份×学科聚合统计、处理与核查脚本及脚本清单。本记录为文档与脚本,不含语料正文。 规模(v1.2):中文期刊论文 2,765 篇、中英句对 13,028 对、英文单语 1,783 篇、中文单语 56 篇、文献主表 4,604 条;句级表 53,303 行;语步标注 53,303 行(覆盖率 99.9%)。 本版(v1.2)修订——自 v1.0.3 起累计两批改动,均在此如实披露: 一、v1.1(语料层,本版一并发布) ① 剔除 EN-1601(Horticulture Research 2023,DOI 10.1093/hr/uhad149):该篇源件的 abstract 字段实为整篇通信(Letter)正文 10,629 字符(开头 Dear Editor,无 Abstract 段),按本库\"语料单元=摘要\"的口径整篇剔除并留档;全库复扫此类声明块标记仅此 1 篇。⇒ 文献主表 4,605→4,604、摘要表 7,370→7,369、英文单语 1,784→1,783、英文句数 40,016→39,935;中英句对 13,028 不变。② 正式并入\"句级全量表\"(一个句子一行、覆盖全部摘要):53,304 行(中文 13,369+英文 39,935)。句级统计一律以它为分母;句对表是\"配对视图\"(只收配对得上的句子),不等于全库句数。 二、v1.2(本版新增) ① 修复 CN-1280 的\"中英摘要粘连\"(《中国蔬菜》2025):该篇源件的英文字段实为\"中文摘要 432 字+英文摘要 1,477 字\"粘连成一行(1,910 字符、汉字占比 0.1272),被当作英文摘要入库,并在句级表里切出一句中文的\"英文句序1\",使该篇 5 个句对整体错位一格。已剥离为纯英文(1,477 字符,SHA256 前 16 位 604a77c7f4665a96),并以差量核对证明全库只有该篇英文侧变动。⇒ 句级表 53,304→53,303(英文 39,935→39,934)、该篇英文句数 8→7;句对表 13,028 不变、摘要表 7,369 与主表 4,604 不变。② 新增\"语步标注表\"(立项书\"标注库\"的语步层):用 SciAIEngine(move_recognition_cn/_en)对全部摘要做全量重跑(中文 2,821 篇+英文 4,547 篇=148 次调用,未沿用任何旧批标注),53,303 行、覆盖率 99.9%;未匹配 61 行(0.11%)留空并列明清单。四级匹配口径(精确→继承(引擎合并)→继承(引擎拆分)/多标签-取最长→近似≥0.6)会造成标签一对多,方法节须披露。 三、本版规模:文献主表 4,604 条/中英句对 13,028 /摘要表 7,369 行/句级表 53,303 行/语步标注 53,303 行。 说明:v1.0.3 与 v1.2 之间的 v1.1 未单独发布到 Zenodo,其改动已并入本版;上一版(v1.0.3)及其之前版本仍可访问,用于追溯修订过程。 English This record is the documentation and scripts package for version v1.2 of the corpus. The corpus data package is released with restricted access — see the related record (concept DOI 10.5281/zenodo.23066607). Contents: field dictionary; Data Statements; sentence-table note; annotation-library note; move-annotation coverage, merge and audit reports with the unmatched-rows list; CN-1280 defect review; corpus verification report; data-source and generation statement; machine-translation-trace detection report; structured-abstract stratification report; residue-marker audit report; v1.2 freeze list (per-file SHA256 and package-level hash); packaging verification report; aggregated basic-library statistics; processing and verification scripts with an inventory. Documentation and code only, not the corpus text. Changes in v1.2 — two cumulative batches of changes since v1.0.3, both disclosed here: (1) v1.1 (corpus layer, released together with this version) (1a) Removal of EN-1601 (Horticulture Research 2023, DOI 10.1093/hr/uhad149): its source `abstract` field was in fact the full text of a Letter (10,629 characters, beginning with `Dear Editor`, with no abstract paragraph); the record was removed entirely and archived, in line with this corpus's unit-of-analysis definition (abstract, not full text). A corpus-wide rescan found this class of marker in this one record only. ⇒ master table 4,605→4,604, abstract table 7,370→7,369, English-only records 1,784→1,783, English sentences 40,016→39,935; aligned pairs unchanged at 13,028.(1b) The sentence-level full table was formally added (one sentence per row, covering all abstracts): 53,304 rows (13,369 Chinese + 39,935 English). Sentence-level statistics use this table as denominator; the pair table is a paired view only and does not represent all sentences. (2) v1.2 (added in this version) (2a) Repair of a Chinese–English abstract concatenation in CN-1280 (《China Vegetables》2025): the English field actually contained the Chinese abstract (432 characters) concatenated with the English abstract (1,477 characters) in a single string (1,910 characters, 12.7% Chinese characters). It had been indexed as an English abstract and produced a Chinese \"English sentence #1\", shifting all five sentence pairs of that record by one. The field was split to pure English (1,477 characters; SHA256 prefix 604a77c7f4665a96); a differential audit confirms that no other record changed. ⇒ sentence table 53,304→53,303 (English 39,935→39,934), that record's English sentence count 8→7; pairs unchanged at 13,028; abstract table (7,369) and master table (4,604) unchanged.(2b) Move-annotation table added (the move layer of the annotation library): a complete re-run with SciAIEngine (`move_recognition_cn` / `_en`) over all abstracts (2,821 Chinese + 4,547 English = 148 API calls; no labels carried over from earlier batches): 53,303 rows, 99.9% coverage; 61 rows (0.11%) could not be matched reliably, are left empty and are listed in the unmatched-rows file. The four-level matching scheme (exact → inherited from a merged engine segment → inherited from split segments / longest label → approximate ≥0.6) produces one-to-many labels, which must be disclosed in the methods section. (3) Size of this version: master table 4,604 records / aligned pairs 13,028 / abstract table 7,369 rows / sentence table 53,303 rows / move annotations 53,303 rows. Note: the intermediate v1.1 was not released separately on Zenodo; its changes are included here. Previous versions remain accessible for provenance.",
+      "date": "2026-10-12",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23301345",
+      "tags": [
+        "supply-chain",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23301345",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s10951-026-00894-z",
+      "title": "The automated valet parking problem for parking garage service provision",
+      "authors": [
+        "Schmidt, M.",
+        "Staudt, P."
+      ],
+      "abstract": "Abstract\n                  Automated valet parking is a use case for autonomous driving. It allows customers to leave their vehicles at the entrance of a parking garage. The vehicles then independently steer to a parking space. Besides increasing comfort, automated valet parking also enables parking garage operators to provide additional services, such as charging an electric vehicle, to which the vehicle can be autonomously routed. We formulate automated valet parking service provision as a scheduling problem and propose solution methods that focus on runtime and quality of results. The results show that the proposed optimization approach is capable of slightly outperforming heuristic benchmarks in many scenarios. However, we also find that the First-Come-First-Served and Earliest-Due-Date-First heuristics are often satisfying scheduling approaches. In addition, the potential of optimizing automated valet parking service provision is compared to traditional parking garages, showing at least a 46.4% increase in charging and other services scheduled.",
+      "date": "2026-10-13",
+      "source": "Journal of Scheduling",
+      "source_detail": "Journal of Scheduling",
+      "url": "https://doi.org/10.1007/s10951-026-00894-z",
+      "tags": [
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10951-026-00894-z",
+      "score": 60.0
+    },
+    {
+      "id": "openalex-W7221434123",
+      "title": "Sentiment Analysis of YouTube Comments: A Review and a Case Study on Uzbek Minecraft Comments.",
+      "authors": [
+        "Shaxriyor Latipov"
+      ],
+      "abstract": "This paper reviews ten studies (2013–2025) on sentiment analysis of YouTube comments and presents a small case study on 600 comments from a Minecraft channel run by the author, written mostly in Latin-script Uzbek mixed with English and gaming slang. Testing on held-out videos, logistic regression on word and character n-grams reached a macro-F1 of 0.69, while fine-tuned XLM-RoBERTa and multilingual BERT reached 0.40. No model exceeded an F1 of 0.30 on negative comments. Sentiment labels were generated by an AI model and not verified by a human, which is the main limitation of the case study. The upload includes the paper, the Google Colab notebooks used for data collection and analysis, and aggregated results; raw comments are not included to protect viewer privacy.",
+      "date": "2026-10-12",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23303297",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23303297",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7221474572",
+      "title": "Development of a Google Sites-Based Learning Resource for Self-Organized Learning Environments (SOLE) on Acids and Bases",
+      "authors": [
+        "Ika Budyaningsih",
+        "Nuni Widiarti",
+        "Woro Sumarni",
+        "Sri Kadarwati"
+      ],
+      "abstract": "This study aims to develop, determine the validity of, and assess the readability of a Google Sites-based learning resource using the Self-Organized Learning Environment (SOLE) model for acid-base material. The study employed the Research and Development (R&D) method using Plomp’s model, limited to the preliminary research and development (or prototyping) stages. The research subjects consisted of 8 media experts, 8 content experts, and 20 11th-grade students who had already studied acids and bases. The instruments included an interview guide, an expert validation sheet, and a readability questionnaire. Data was analyzed using Aiken’s V, the Intraclass Correlation Coefficient (ICC), and percentages. The results showed that the teaching material was highly valid, with an average Aiken’s V of 0.8958 from the media experts and 0.8993 from the content experts. The readability test yielded an average of 92.50%, falling into the “very good” category. The instructional material integrates the SOLE stages through big questions, investigation, review, E-LKPD, practical simulations, and a digital discussion forum on Google Sites. Thus, the instructional material was deemed highly valid and has excellent readability. The effectiveness of the instructional material on independent learning and cognitive learning outcomes has not yet been tested, so further research is needed.",
+      "date": "2026-10-12",
+      "source": "OpenAlex",
+      "source_detail": "IJCER (International Journal of Chemistry Education Research)",
+      "url": "https://doi.org/10.20885/ijcer.vol10.iss2.art5",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.20885/ijcer.vol10.iss2.art5",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2026.2623",
+      "title": "Convexity of Inverse Blocking Curves in Loss Systems",
+      "authors": [
+        "Legros, B."
+      ],
+      "abstract": "Why Larger Service Systems Benefit More from Scale\n                  How much extra demand can a service system handle when capacity is increased while keeping the same target level of customer blocking? In the paper “Convexity of Inverse Blocking Curves in Loss Systems,” Benjamin Legros establishes an exact economies-of-scale result for loss systems.\n                  The paper proves that the maximum supportable demand is an increasing and globally convex function of the number of servers. In practical terms, as a system becomes larger, each additional server can support progressively more additional demand while maintaining the same blocking target. Equivalently, the extra capacity required to accommodate additional demand decreases as the system grows.\n                  The result provides a rigorous mathematical foundation for resource pooling in capacity-constrained services. It applies to the classical Erlang-B loss model and extends to systems with a finite waiting room, with potential relevance for telecommunications, healthcare, emergency response, and other service operations.",
+      "date": "2026-10-12",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2026.2623",
+      "tags": [
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2026.2623",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2024.08081",
+      "title": "The Effect of Small Quasi-Cash Rewards on Prosocial Behavior: The Case of Voluntary Plasma Donations",
+      "authors": [
+        "Bruers, S.",
+        "Ooghe, E.",
+        "Schokkaert, E."
+      ],
+      "abstract": "To better understand how prosocial behavior can be effectively encouraged, we study four unresolved issues: whether small rewards also motivate prosocial behavior, how short-term effects differ from longer-run behavioral adjustments, whether incentives induce substitution away from other prosocial activities, and whether reminders about existing rewards meaningfully influence behavior. We examine these issues in a long-run randomized field experiment across 12 donation centers of the Belgian Red Cross-Flanders. Donors normally receive one thank-you-coupon (worth €1.5) for a blood donation and two coupons for a plasma donation. Informing donors about the existing rewards increases plasma donations by 4.6% during the nine-month information period, although this effect fades with repeated reminders. Rewarding plasma donors with an extra coupon raises plasma donations by an additional 7.1% during the six-month reward period; this effect grows during the reward period but disappears immediately afterward. We also document a substitution effect; the plasma reward reduces blood donations by 3.3%. Survey evidence suggests that small rewards act as signals of increased need or as gifts eliciting reciprocity and that our findings may extend to volunteering decisions more broadly.\n                  This paper was accepted by Marie Claire Villeval, Behavioral Economics and Decision Analysis.\n                  Funding: This paper is based on research funded by the Belgian Red Cross-Flanders; the content reflects solely the views of the authors and not those of the Red Cross.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.08081 .",
+      "date": "2026-10-12",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2024.08081",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2024.08081",
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7221435218",
+      "title": "Content Convergence and Audience Engagement on Platform X: A Study of the @RadioElshinta Account",
+      "authors": [
+        "Muhammad Rayyan Najiyah",
+        "Muhammad Anshar Akil"
+      ],
+      "abstract": "Background: Digital platforms enable radio stations to distribute information beyond conventional broadcasts and provide observable indicators of audience response. Understanding how a news radio account organizes its content on social media can help describe its digital communication practices. Objective: This study describes the content presented by Radio Elshinta through its @RadioElshinta account on Platform X and maps observable audience responses across content categories. Methods: A descriptive quantitative approach using social media content analysis was applied to all 2,175 posts recorded from 1 April to 31 May 2026. Each post was assigned to one primary content category. Presentation formats, likes, reposts, replies, and views were documented, and the data were summarized using counts, percentages, and descriptive comparisons. Results: The findings show that 2,175 posts were published during the observation period, with real-time traffic updates representing the largest content category with 790 posts (36.32%), followed by talk-show summaries with 547 posts (25.15%) and national news and politics with 383 posts (17.61%). Content was presented through various formats, including text, images, videos, audio clips, and links. Audience engagement varied across content categories, with category-specific engagement rates ranging from 0.16% to 0.58%, while the overall average engagement rate ranged from 0.18% to 0.35%. Conclusion: The findings indicate that the @RadioElshinta account functioned as a digital distribution channel that presented diverse information formats and content categories during the observation period. The observed differences in engagement across content categories provide a descriptive basis for understanding audience responses to radio-related content distributed through Platform X.",
+      "date": "2026-10-12",
+      "source": "OpenAlex",
+      "source_detail": "Journal of Business Social and Technology",
+      "url": "https://doi.org/10.59261/bustechno.v7i4.772",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.59261/bustechno.v7i4.772",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "openalex-W7221440384",
+      "title": "Data and code for: Online Search Interest in Facial Aesthetic Procedures Across Nine Countries From 2004 to 2026: A 22-Year Google Trends Analysis",
+      "authors": [
+        "Abdullah A. Al Qurashi",
+        "Elise L. Lupon",
+        "Sydney Ch’ng"
+      ],
+      "abstract": "This deposit contains the Google Trends export files exactly as downloaded, the download verification record, the cleaned analysis dataset, and all analysis code for the study named above. It allows an independent reader to reproduce every number, table and figure in the article from the original downloads. Study design. Retrospective infodemiological study of Google Trends relative search volume (RSV) for five facial aesthetic search entities across nine countries and a worldwide aggregate, from January 2004 to August 2026. Each series holds 272 consecutive monthly observations, giving 13,600 observations in total. Rhinoplasty, blepharoplasty, rhytidectomy and injectable filler were queried as Google Trends Topics; Botox was queried as a literal search term. All five were queried together in one panel per area so that they share a single internal normalisation. Contents.- raw_google_trends_exports/final_panel/: the 10 files used in the analysis, byte for byte as downloaded on 5 September 2026.- raw_google_trends_exports/pilot_and_excluded/: 6 pilot files that are not analysed. They document two protocol changes the article discloses: chin augmentation and the botulinum toxin Topic were replaced by injectable filler and the Botox search term, and Nigeria was replaced by South Africa under a prespecified exclusion rule.- raw_google_trends_exports/download_verification.csv: per-file record made at download time, including SHA-256, extraction timestamp, row count and structural checks.- data/: the cleaned analysis dataset in long and wide format, plus the cleaning notes.- Seven Python scripts covering the main analysis, the seasonal and correlation analyses, figure generation, article-format tables, and an independent verification script.- CHECKSUMS.sha256: SHA-256 for every deposited file.- README.md: file-by-file descriptions, exact software versions, and the order in which to run the scripts. Provenance. The SHA-256 of all 10 analysed files was recomputed when this deposit was assembled and matches the value recorded at download time for every file. No relative search volume was altered, imputed or rescaled during cleaning, and zeros were kept as the platform reported them. Software. Python 3.9.6 with pandas 2.3.3, numpy 2.0.2, scipy 1.13.1, statsmodels 0.14.6, scikit-posthocs 0.16.1, matplotlib 3.9.4 and openpyxl 3.1.5. Exact versions are pinned in requirements.txt. The scripts resolve all paths relative to their own location, so the deposit runs from any directory. The one stochastic step, a moving-block bootstrap, is seeded and reproduces exactly. Reproduction. The deposit was unpacked into an empty directory and run end to end before release. All seven scripts completed and the regenerated tables are identical to those behind the article. Note on relative search volume. Google Trends does not report counts. It scales searches against total search activity in the selected place and period, then sets 100 at the peak of that scaled series for the leading term in the panel. Values are comparable within an area and not comparable in absolute magnitude between areas. A zero means search volume fell below the reporting threshold. Google Trends is a live service and a later download can return slightly different historical values, which is why dated files and checksums are deposited rather than a download instruction.",
+      "date": "2026-10-12",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23305916",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23305916",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "openalex-W7221458871",
+      "title": "OCR/HTR Models for Postwar Japanese Student and Social Movement Documents",
+      "authors": [
+        "Shumpei Katakura"
+      ],
+      "abstract": "This release provides fine-tuned OCR/HTR model components for postwar Japanese student and related social movement documents held by Tohoku University Archives. The package combines a fine-tuned NDL-OCR text-line detector (B′, iteration 990) with a Qwen3.6-35B-A3B-based LoRA text recognizer (D). Page-level processing uses the external NDL-OCR reading-order module. The release includes trained model weights, inference code, configuration files, installation instructions, license notices, and reproducibility documentation. Original archival images, ground-truth transcriptions, and upstream foundation-model weights are not included. Reproducibility. On the tested s118 workstation, the packaged pipeline processed 49 text lines from a regression-test page. Both the transcription and reading-order XML matched previously archived outputs byte-for-byte. All 26 locally cached Qwen base-model weight shards were verified against upstream SHA-256 values. Independent installation on a different machine has not yet been verified. These regression tests do not establish transcription accuracy against ground truth. Download and reconstruction. Because of upload transfer limitations, the original 342,528,241-byte ZIP archive is distributed in 11 numbered parts (.part-001 to .part-011). Download all parts and combine them in numerical order using the accompanying README_REASSEMBLE.txt. The reconstructed ZIP must have the following SHA-256: 3adb536083eee5068444b74f163c4812ab238799ace77a8cd10883cd53e63424 Related dataset. The underlying image and annotation collection is available on Zenodo as v1.0.0 (DOI: 10.5281/zenodo.18592517) and v1.1.0 (DOI: 10.5281/zenodo.21798820). The source dataset does not supply the complete reading-order information used in this research. Usage and licenses. The models are intended for research and preliminary transcription. Outputs should be verified against the original document images before scholarly quotation. The package contains components under different licenses; consult LICENSE_MAP.md, NOTICE.md, and MODEL_CARD.md inside the reconstructed archive.",
+      "date": "2026-10-12",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23291037",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23291037",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "openalex-W7221459372",
+      "title": "Search Readiness and Direct-Booking Infrastructure on Independent Restaurant Websites in the United Kingdom: A Cross-Sectional Audit of 1,000 Sites",
+      "authors": [
+        "Kailun Zheng"
+      ],
+      "abstract": "Background. Independent restaurants depend on being found and chosen online, yet little measured evidence exists on how their own websites present the information that search engines and diners use. Methods. We drew a seeded random sample of 1,000 independent UK restaurants with a listed website from OpenStreetMap-derived records covering 106 UK areas, excluding chains. Each homepage was audited on 11 October 2026 with a 16-check instrument covering crawlability, machine-readable description and diner actions, reading the HTML as delivered. On 12 October 2026 the 755 homepages that loaded were re-read at field level, one menu link was followed, and each page was rendered in a headless browser at phone width. Shares are reported with 95% Wilson intervals; subgroup differences were tested with Fisher's exact and chi-squared tests with Holm adjustment. Results. 17.9% of sampled domains no longer resolved, could not be reached or returned an error. Among loaded homepages, generic web hygiene was close to web-wide benchmarks (meta description present on 69.0%, mobile viewport on 95.4%), but the restaurant-specific layer was largely absent: 77.1% (95% CI 74.0–79.9) carried no usable Restaurant or LocalBusiness structured data, and among the 212 homepages that did, 26.9% declared a menu and 36.3% a cuisine. 21.9% linked to no menu and 10.4% linked directly to a PDF; of 471 menu web pages, 32.5% displayed at least three prices as text. 25.6% had no booking link, 18.4% sent bookings to a third-party domain and 54.7% had no telephone link. The median homepage did not pass 4 of the 16 core checks; 1.6% passed all. London homepages were more likely than those elsewhere to route bookings to a third party (odds ratio 2.89, 95% CI 1.98–4.21, Holm-adjusted p < 0.001) and less likely to lack a readable sitemap (OR 0.52, 0.35–0.78). Rendering JavaScript changed the structured-data result for 2.1% of pages without it. Conclusions. The main deficit is not general website quality but the absence of domain-specific, machine-readable restaurant information and of direct booking and menu pathways on the restaurant's own site. We release anonymised site-level data and analysis code. This deposit contains the preprint (PDF and LaTeX source), anonymised site-level data (no domains or names), a codebook, aggregate results, the analysis and figure scripts, and the source code of the measurement instrument and data-collection scripts.",
+      "date": "2026-10-12",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23306546",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23306546",
+      "citation_count": 0,
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
