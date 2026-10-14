@@ -1,0 +1,292 @@
+{
+  "date": "2026-10-14",
+  "generated_at": "2026-10-14T12:49:09.278418+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1287-opre.2024.0711",
+      "title": "Learning Optimal Classification Trees Robust to Distribution Shifts",
+      "authors": [
+        "Justin, N.",
+        "Aghaei, S.",
+        "Gomez, A.",
+        "Vayanos, P."
+      ],
+      "abstract": "We consider the problem of learning classification trees that are robust to distribution shifts between training and testing/deployment data. This problem arises frequently in high stakes settings such as public health and social work where data is often collected using self-reported surveys which are highly sensitive to e.g., the framing of the questions, the time when and place where the survey is conducted, and the level of comfort the interviewee has in sharing information with the interviewer. We propose a method for learning optimal robust classification trees based on mixed-integer robust optimization technology. In particular, we demonstrate that the problem of learning an optimal robust tree can be cast as a single-stage mixed-integer robust optimization problem with a highly nonlinear and discontinuous objective. We reformulate this problem equivalently as a two-stage linear robust optimization problem for which we devise a tailored solution procedure based on constraint generation. We evaluate the performance of our approach on numerous publicly available datasets, and compare the performance to a regularized, non-robust optimal tree. We show an increase of up to 12.48 percentage points in worst-case accuracy and of up to 4.85 percentage points in average-case accuracy across several datasets and distribution shifts from using our robust solution in comparison to the non-robust one.",
+      "date": "2026-10-14",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2024.0711",
+      "tags": [
+        "integer-programming",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2024.0711",
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2024.0824",
+      "title": "Stochastic Dual Dynamic Programming for Log-linear Autoregressive Uncertainty in the Right-hand Side",
+      "authors": [
+        "Füllner, C.",
+        "Rebennack, S."
+      ],
+      "abstract": "We consider the generation of cuts in stochastic dual dynamic programming (SDDP) for multistage stochastic linear programming problems with stagewise dependent uncertainty in the right-hand side described by a nonlinear autoregressive process. We first derive cut formulas for the general nonlinear autoregressive process. For these general cuts, the computational tractability becomes a major challenge for SDDP-type algorithms. We are, however, able to develop tractable closed-form cut formulas for the special case of log-linear autoregressive processes. The obtained cuts are in general non-convex in the history of the stochastic process, but still linear in all decision variables, and thus can be directly incorporated into the subproblems in SDDP without compromising their linearity. If solvers do not allow for this, our formulas can be used to adapt the intercept of a given cut to a scenario at hand in a computationally tractable way. In this sense, cuts generated for one specific scenario are shared with other scenarios. Our findings are supported by a computational study of a hydrothermal scheduling problem, which demonstrates a favorable performance of our proposed version of SDDP compared to approaches from the literature.",
+      "date": "2026-10-14",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2024.0824",
+      "tags": [
+        "linear-programming",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2024.0824",
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1007-s10951-026-00894-z",
+      "title": "The automated valet parking problem for parking garage service provision",
+      "authors": [
+        "Schmidt, M.",
+        "Staudt, P."
+      ],
+      "abstract": "Abstract\n                  Automated valet parking is a use case for autonomous driving. It allows customers to leave their vehicles at the entrance of a parking garage. The vehicles then independently steer to a parking space. Besides increasing comfort, automated valet parking also enables parking garage operators to provide additional services, such as charging an electric vehicle, to which the vehicle can be autonomously routed. We formulate automated valet parking service provision as a scheduling problem and propose solution methods that focus on runtime and quality of results. The results show that the proposed optimization approach is capable of slightly outperforming heuristic benchmarks in many scenarios. However, we also find that the First-Come-First-Served and Earliest-Due-Date-First heuristics are often satisfying scheduling approaches. In addition, the potential of optimizing automated valet parking service provision is compared to traditional parking garages, showing at least a 46.4% increase in charging and other services scheduled.",
+      "date": "2026-10-13",
+      "source": "Journal of Scheduling",
+      "source_detail": "Journal of Scheduling",
+      "url": "https://doi.org/10.1007/s10951-026-00894-z",
+      "tags": [
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10951-026-00894-z",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2610.18851",
+      "title": "MFG: Multi-turn Feedback Guided Molecular Optimization",
+      "authors": [
+        "Trieu Nguyen",
+        "Frazier N. Baker",
+        "Ruoxi Gao",
+        "Daniel Adu-Ampratwum",
+        "Xia Ning"
+      ],
+      "abstract": "Multi-objective molecular optimization is a critical process in drug discovery that aims to modify a given molecule to simultaneously improve multiple properties while maintaining a similar overall structure. This process often requires iterative modifications guided by computational or experimental feedback. Recent large language model (LLM)-based methods have begun to explore this iterative approach; however, these methods are not explicitly trained to leverage such feedback, while existing approaches primarily focus on single-turn molecular optimization. To address this gap, we introduce Multi-turn Feedback Guided (MFG) molecular optimization, a reinforcement learning framework that trains an LLM to progressively optimize molecules using feedback from previous turns. MFG introduces a feedback vector capturing both property improvements and source molecule similarity, alongside a feedback-aligned reward function that promotes progressive improvement across turns. We apply MFG over $\\text{GeLLM}^{3}\\text{O}$, a state-of-the-art LLM model for multi-objective molecular optimization, evaluate $\\text{GeLLM}^{3}\\text{O-MFG}$ on ten multi-objective molecular optimization tasks. The results demonstrate that $\\text{GeLLM}^{3}\\text{O-MFG}$ achieves the highest average similarity-constrained success rate ($81.50%$), outperforming the base model $\\text{GeLLM}^{3}\\text{O}$ ($70.81%$).",
+      "date": "2026-10-13",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2610.18851v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "multi-objective",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.18851",
+      "arxiv_id": "2610.18851v1",
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7221577320",
+      "title": "Impact in 2025",
+      "authors": [
+        "Consortium of European Social Science Data Archives"
+      ],
+      "abstract": "The Consortium of European Social Science Data Archives (CESSDA ERIC) is a distributed research infrastructure that operates through a network of 22 Service Providers and 12 partners across Europe. In 2025, the consortium worked collectively to deliver on its strategic priorities: Data, People, and Landscape. It preserved, curated, and archived 46,000 primary digital objects, including datasets, that were downloaded or viewed 793,000 times. It supported 842,000 publications, of which an estimated 40% were peer-reviewed publications. It engaged over 14,000 participants in 558 training events. By preserving and enabling the reuse of social science data, this brief highlights how CESSDA has turned public investments in data collection into long-term data assets for research, policy, and society.",
+      "date": "2026-10-14",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23161306",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23161306",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2610.18683",
+      "title": "ProAS: A Progress-Aware Advantage Shaping Framework for Multi-Turn Agentic Reinforcement Learning",
+      "authors": [
+        "Bowen Ding",
+        "Mingda Wan",
+        "Yuhan Chen",
+        "Jiyao Yuan",
+        "Qi Zhu",
+        "Futing Wang",
+        "Heyuan Deng",
+        "Fei Mi",
+        "Lifeng Shang",
+        "Tao Lin"
+      ],
+      "abstract": "Reinforcement learning (RL) has emerged as the primary paradigm for optimizing Large Language Model (LLM) agents, yet efficient critic-free algorithms (e.g., GRPO) suffer from a fundamental uniform credit assignment dilemma that broadcasts trajectory-level advantages equally to all actions. Our analysis reveals that this uniformity inherently reinforces structurally invalid actions in preferred trajectories and ignores the downstream cascading influence of early pivotal deviations in unpreferred ones. To resolve this without introducing critic overhead, we propose Progress-Aware Advantage Shaping (ProAS), a plug-and-play framework that leverages a dynamically evolving Agentic Reference Graph (ARG) to achieve fine-grained credit assignment via Masking Unreasonable Incentives (MUI) and Asymmetric Penalty Redistribution (APR). Extensive experiments across Qwen2.5-1.5B-Instruct and Qwen2.5-7B-Instruct demonstrate that ProAS universally elevates mainstream group-based baselines to new state-of-the-art performance, achieving peak success rates of 91.9\\% and 94.3\\% on ALFWorld, alongside 66.7\\% and 70.8\\% on WebShop, respectively. Furthermore, it accelerates training convergence by up to $2.44\\times$ while maintaining strong robustness against imperfect or distilled ARGs. Codes: https://github.com/LINs-lab/ProAS.",
+      "date": "2026-10-13",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2610.18683v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.18683",
+      "arxiv_id": "2610.18683v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.18677",
+      "title": "Model-Based Online Decision Making via Generative Trajectory Planning",
+      "authors": [
+        "Haldun Balim",
+        "Yilun Du",
+        "Na Li"
+      ],
+      "abstract": "Online decision-making faces a tension between efficient inference and long-horizon reasoning. Value-based methods rely on short-horizon bootstrapping that limits the propagation of long-term information, while trajectory optimization methods plan explicitly but must solve a high-dimensional optimization problem at every decision step. We propose Generative Trajectory Planning (GTP), a model-based framework that addresses this tension by learning a generative model as a proposal distribution over action sequences. Instead of optimizing sequences from scratch, GTP samples candidate sequences from a diffusion prior and refines them using learned dynamics, reward, and value models, enabling efficient trajectory-level reasoning. Across continuous control and long-horizon manipulation tasks, GTP matches or exceeds state-of-the-art model-free, diffusion-policy, and model-based baselines, and remains stable in regimes where strong baselines degrade. Our results suggest that generative models are best understood not as policies, but as structured proposal distributions for planning, offering a new perspective on how to integrate generative modeling with model-based decision-making.",
+      "date": "2026-10-13",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2610.18677v1",
+      "tags": [
+        "cs.LG",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.18677",
+      "arxiv_id": "2610.18677v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.18828",
+      "title": "Settling the Approximability of Submodular Facility Location",
+      "authors": [
+        "Adam N. Elmachtoub",
+        "Bento Natura",
+        "Meike Neuwohner"
+      ],
+      "abstract": "In submodular facility location (SFL), introduced by Svitkina and Tardos (SODA 2006), clients $\\cal C$ in a metric space are assigned to facilities $\\cal F$. A facility serving a set $S \\subseteq \\cal C$ of clients incurs cost $g(S)$, where $g$ is a monotone submodular function common to all facilities. The best known approximation factor for SFL is $O(\\log\\log|\\cal C|)$, due to Abbasi, Adamczyk, Bosch-Calvo, Byrka, Grandoni, Sornat, and Tinguely (ICALP 2024), improving on the $O(\\log|\\cal C|)$-approximation of Svitkina and Tardos. We show that this is best possible up to a constant factor in the value-oracle model by showing that there exists no algorithm with only polynomially many queries to $g$ with approximation ratio $o(\\log\\log|\\cal C|)$. This bound holds for algorithms with unlimited computation time, and when $g$ is restricted to matroid rank functions. We also show that the natural linear programming relaxation has an integrality gap of $Θ(\\log\\log|\\cal C|)$. Our lower bound follows by constructing an extension of Vondrák's symmetry-gap approach (FOCS 2009) for matroid rank functions.",
+      "date": "2026-10-13",
+      "source": "arXiv",
+      "source_detail": "cs.DS",
+      "url": "http://arxiv.org/abs/2610.18828v1",
+      "tags": [
+        "cs.DS",
+        "linear-programming",
+        "facility-location"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.18828",
+      "arxiv_id": "2610.18828v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.18144",
+      "title": "A Better-than-2 Approximation for k-Median Part I: The Power of General Bids",
+      "authors": [
+        "Rares-Darius Buhai",
+        "Vincent Cohen-Addad",
+        "Henry Fleischmann",
+        "Anupam Gupta",
+        "Antoni Jubés Monforte",
+        "Madhusudhan Reddy Pittu",
+        "Miltiadis Stouras",
+        "Ola Svensson",
+        "Lukas Vogl"
+      ],
+      "abstract": "The Greedy algorithm of Jain, Mahdian, Markakis, Saberi, and Vazirani was the best Lagrangian-multiplier-preserving (LMP) approximation algorithm for facility location, and thus the engine behind the best $k$-median guarantees, for over two decades. Its $2$-LMP guarantee was only recently broken by a small amount ($(2-η)$-LMP where $η\\approx 2.25 \\cdot 10^{-7}$) through local-search post-processing. That analysis relies on the structure of worst-case instances, and it appears difficult to obtain substantial further improvements along those lines.   We take a different approach and change the algorithm itself: we introduce general bidding functions, replacing the classical linear bid with a richer family of rules and prove a polynomial-time $1.95$-LMP approximation, a large improvement over the long-standing factor of~$2$.   We further show that these generalized bidding rules can be made smooth (log-adaptive), building on the recent framework developed for the classical Greedy algorithm by Cohen-Addad, Grandoni, Lee, Schwiegelshohn, and Svensson. This yields a polynomial-time $1.95$-approximation that opens $k+O_\\varepsilon(\\log n)$ centers. Combined with a $(1.89+\\varepsilon)$-approximation algorithm for stable instances in our companion work \\cite{stableinstances}, we achieve a better-than-2 approximation for the $k$-median problem in polynomial-time.",
+      "date": "2026-10-13",
+      "source": "arXiv",
+      "source_detail": "cs.DS",
+      "url": "http://arxiv.org/abs/2610.18144v1",
+      "tags": [
+        "cs.DS",
+        "facility-location",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.18144",
+      "arxiv_id": "2610.18144v1",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.17517",
+      "title": "Improved Combinatorial Auctions with and without Samples",
+      "authors": [
+        "Aviad Rubinstein",
+        "Sahil Singla"
+      ],
+      "abstract": "We give new mechanisms for combinatorial auctions in the offline, secretary, and prophet-with-samples models. Specifically, we obtain the following guarantees for social welfare maximization with $m$ items and $n$ XOS buyers:   * In the prophet-with-samples version, buyers arrive in adversarial order and draw their values from independent distributions. We give a universally truthful, polynomial-time $(2+\\eps)$-approximation mechanism using $O(\\log\\!\\log m)$ samples from each distribution. The approximation factor is tight even for a single item and without the incentive constraints, due to the classic prophet inequality. Compared to the previous state-of-the-art with the same guarantees [Dütting--Kesselheim--Lucier--Reiffenhäuser--Singla (FOCS 2024)], our running time is exponentially faster, and our sample complexity is doubly-exponentially lower, resolving two explicit open problems by Dütting et al.   * Using the same techniques, we also obtain improved mechanisms in the secretary and offline versions, where the values are worst-case, and buyers are processed in either random order (secretary) or without any timing restrictions (offline). After a long line of works, the state of the art in both models is an $O((\\log\\!\\log m)^2)$-approximation due to [Assadi--Kesselheim--Singla (SODA 2021)], who explicitly ask whether it can be improved to $O(\\log\\!\\log m)$. We indeed obtain an $O(\\log\\!\\log m)$-approximate universally truthful mechanism for the secretary and offline models.",
+      "date": "2026-10-13",
+      "source": "arXiv",
+      "source_detail": "cs.GT",
+      "url": "http://arxiv.org/abs/2610.17517v1",
+      "tags": [
+        "cs.GT",
+        "game-theory",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.17517",
+      "arxiv_id": "2610.17517v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T14:59:17.470425+00:00",
+  "generated_at": "2026-10-14T12:49:08.896081+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1880,
+      "github_stars": 1882,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 104,
+      "github_open_issues": 102,
       "github_recent_prs": [
-        "Fix build warning",
-        "Use clang-cl for HiPO on Windows",
-        "Restrict fixings from analytic center",
-        "Enable parallel MIP by default",
-        "Add early stop detection for dual subtitution. Add large row size limit."
+        "Update status line",
+        "Fix slowdown on ctests",
+        "Fix compilation warning in LP reader",
+        "Fix rounding of worst-case bounds",
+        "Fix build warning"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14188,
+      "github_stars": 14197,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 129,
+      "github_open_issues": 130,
       "github_recent_prs": [
+        "cmake: bump pybind11 to v3.1.0",
+        "bitset_benchmark and Python3.14 constraint solver fix",
+        "cmake: Windows fix",
         "bazel update",
-        "Use `@pip_deps//` Bzlmod labels directly instead of `requirement()` w…",
-        "Export from google3 (glop, math_opt, util)",
-        "google3 sync",
-        "util: export test from google3"
+        "Use `@pip_deps//` Bzlmod labels directly instead of `requirement()` w…"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
-      "github_stars": 6364,
-      "github_open_issues": 184,
+      "github_stars": 6365,
+      "github_open_issues": 183,
       "github_recent_prs": [
+        "Fix upper_tri value to match its declared column shape",
         "Bump github/codeql-action/upload-sarif from 4.37.8 to 4.38.3",
         "Bump pypa/cibuildwheel from 4.2.1 to 4.3.1",
         "MAINT: Remove obsolete SciPy compatibility branches",
-        "Add cp.nlp.atan2",
-        "Fix two silent wrong-answer paths for mixed-integer problems in CUOPT"
+        "Add cp.nlp.atan2"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "A performance regression on some very large datasets slipped through the cracks.\r\nThis one-off release fixes it.\r\n\r\n# Changelog\r\n\r\n## 🐛 Fixes\r\n- bfd1871 avoid clear() on a large hash map (#2724), clos",
-      "github_stars": 1828,
+      "github_stars": 1830,
       "github_open_issues": 115,
       "github_recent_prs": [
-        "chore: remove the MapEnrichmentContext bean from definition",
-        "chore: improve handling of intermediate evnets to avoid failing completely i…",
-        "deps: bump com.diffplug.spotless:spotless-maven-plugin from 3.10.3 to 3.10.4 in the patch group",
-        "deps: bump the minor group with 6 updates",
-        "docs: [docs-drift] byom-security-improvements"
+        "docs: [docs-drift] draft/transport-type-aware-location",
+        "feat: solve run metadata on a finished run",
+        "docs: [docs-drift] chore/incrementalize-vehicle-routing",
+        "perf: index variable descriptors by a global ordinal",
+        "chore: update partitioned search docs"
       ]
     },
     {
@@ -1385,7 +1385,7 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2543,
-      "github_open_issues": 397,
+      "github_open_issues": 396,
       "github_recent_prs": [
         "Add support/testing for Python 3.15",
         "Updates to support new MUMPS versions",
