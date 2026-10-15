@@ -1,0 +1,274 @@
+{
+  "date": "2026-10-15",
+  "generated_at": "2026-10-15T12:35:20.722130+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1002-nav.70099",
+      "title": "Machine Learning‐Assisted Optimization for Dynamic Supply Network Design in the Additive Manufacturing Platform",
+      "authors": [
+        "Bootaki, B.",
+        "Zhang, G."
+      ],
+      "abstract": "ABSTRACT\n                  Distributed manufacturing enabled by additive manufacturing (AM) allows supply chains to rapidly adapt to changing market conditions through flexible facility relocation and capacity adjustment. However, existing studies largely overlook the logistical aspects of AM‐based supply chains and typically treat facility location and logistics decisions separately. This study addresses this gap by developing a novel AM supply network design model that simultaneously considers the dynamic relocation of AM facilities, the adjustment of production capacities, and delivery routing decisions over multiple periods. We formulate the problem as a mixed‐integer linear programming model (MILP). Given the computational challenges associated with the delivery routing component, we propose a machine learning genetic algorithm (MLGA) approach to solve the problem efficiently. MLGA incorporates a machine learning surrogate to estimate the cost of the capacitated vehicle routing subproblem (CVRP), thereby significantly accelerating the convergence of the genetic algorithm (GA). We train two different machine learning surrogates: One based on a neural network model and the other on an XGBoost model. The MLGA solution methodology, under both surrogate models, performs satisfactorily in terms of solution quality and computation time across a set of randomly generated instances. Extensive sensitivity analyses are also conducted on a realistic use case to evaluate the model's applicability under varying service area, demand, and cost scenarios, offering valuable managerial insights and practical implications.",
+      "date": "2026-10-14",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70099",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "metaheuristics",
+        "network-optimization",
+        "vehicle-routing",
+        "stochastic",
+        "ml-for-or",
+        "supply-chain",
+        "facility-location"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70099",
+      "score": 80.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2024.0711",
+      "title": "Learning Optimal Classification Trees Robust to Distribution Shifts",
+      "authors": [
+        "Justin, N.",
+        "Aghaei, S.",
+        "Gomez, A.",
+        "Vayanos, P."
+      ],
+      "abstract": "We consider the problem of learning classification trees that are robust to distribution shifts between training and testing/deployment data. This problem arises frequently in high stakes settings such as public health and social work where data is often collected using self-reported surveys which are highly sensitive to e.g., the framing of the questions, the time when and place where the survey is conducted, and the level of comfort the interviewee has in sharing information with the interviewer. We propose a method for learning optimal robust classification trees based on mixed-integer robust optimization technology. In particular, we demonstrate that the problem of learning an optimal robust tree can be cast as a single-stage mixed-integer robust optimization problem with a highly nonlinear and discontinuous objective. We reformulate this problem equivalently as a two-stage linear robust optimization problem for which we devise a tailored solution procedure based on constraint generation. We evaluate the performance of our approach on numerous publicly available datasets, and compare the performance to a regularized, non-robust optimal tree. We show an increase of up to 12.48 percentage points in worst-case accuracy and of up to 4.85 percentage points in average-case accuracy across several datasets and distribution shifts from using our robust solution in comparison to the non-robust one.",
+      "date": "2026-10-14",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2024.0711",
+      "tags": [
+        "integer-programming",
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2024.0711",
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2024.0824",
+      "title": "Stochastic Dual Dynamic Programming for Log-linear Autoregressive Uncertainty in the Right-hand Side",
+      "authors": [
+        "Füllner, C.",
+        "Rebennack, S."
+      ],
+      "abstract": "We consider the generation of cuts in stochastic dual dynamic programming (SDDP) for multistage stochastic linear programming problems with stagewise dependent uncertainty in the right-hand side described by a nonlinear autoregressive process. We first derive cut formulas for the general nonlinear autoregressive process. For these general cuts, the computational tractability becomes a major challenge for SDDP-type algorithms. We are, however, able to develop tractable closed-form cut formulas for the special case of log-linear autoregressive processes. The obtained cuts are in general non-convex in the history of the stochastic process, but still linear in all decision variables, and thus can be directly incorporated into the subproblems in SDDP without compromising their linearity. If solvers do not allow for this, our formulas can be used to adapt the intercept of a given cut to a scenario at hand in a computationally tractable way. In this sense, cuts generated for one specific scenario are shared with other scenarios. Our findings are supported by a computational study of a hydrothermal scheduling problem, which demonstrates a favorable performance of our proposed version of SDDP compared to approaches from the literature.",
+      "date": "2026-10-14",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2024.0824",
+      "tags": [
+        "linear-programming",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2024.0824",
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1002-nav.70103",
+      "title": "Note on Stochastic Vehicle Routing With Delivery Choice Under Recourse Options",
+      "authors": [
+        "Venkateshan, P.",
+        "Mathur, K."
+      ],
+      "abstract": "ABSTRACT\n                  In this paper, we consider the stochastic vehicle routing problem with delivery choice, where, upon reaching a particular customer, the driver has the choice of how much to deliver once the customer demand is revealed. In our earlier work, a basic version of the problem was considered, in which the driver cannot return to the depot midway in a route to replenish the cargo on board (see Venkateshan and Mathur 2025). In the present work, we expand on the choices that the driver has by allowing the driver to return to the depot to replenish before returning to the same customer or to proceed to the next customer. We prove the optimality of different threshold‐based fulfillment policies. Tests show that these policies significantly reduce the computational effort needed to determine the optimal fulfillment policy along a route, as well as its associated expected profit. We also show that a single‐vehicle tour that visits all customers is optimal even if multiple vehicles are allowed.",
+      "date": "2026-10-15",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70103",
+      "tags": [
+        "vehicle-routing",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70103",
+      "score": 60.0
+    },
+    {
+      "id": "openalex-W7221760669",
+      "title": "Agentic Synthesis of Open-Source Biomedical Repositories and Clinical Literature into Interactive Diagnostic & Medical Learning Tools for Low-Resource Healthcare Settings",
+      "authors": [
+        "Keshav Gautam"
+      ],
+      "abstract": "Frontline community health workers (CHWs) and rural clinics in low-resource settings—particularly across underserved municipalities in South Asia and rural regions of the United States—face a severe clinical knowledge bottleneck. While peer-reviewed biomedical literature, genomic variant databases, and open-source clinical calculators expand exponentially, these resources remain fragmented across unstructured texts and incompatible software repositories that require high-bandwidth connectivity and specialized bioinformatics literacy. This research protocol introduces **`gwf-clinical-synthesis`**, a non-commercial, computational dry-lab framework developed at GoWithFund Inc. Leveraging long-context multi-agent reasoning in **Google Antigravity** powered by **Gemini 4 Argon** (1M-token unified context window) and the **Google DeepMind (GDM) Science Skills** ecosystem, our pipeline orchestrates parallel literature retrieval across PubMed/NCBI Entrez, OpenAlex, ClinVar, and ChEMBL, fuses fragmented open-source clinical simulation repositories into lightweight offline-capable web applications, and executes automated multi-agent citation-verification loops to eliminate large language model (LLM) hallucinations. Concurrently, we integrate geospatial and socio-economic vulnerability indicators via AlphaEarth Foundations to model optimal healthcare resource allocation across high-burden districts. All resulting datasets, verification benchmarks, and interactive medical learning modules are released open-source under Apache 2.0 and CC BY 4.0 licenses.",
+      "date": "2026-10-15",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23381678",
+      "tags": [
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23381678",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "openalex-W7221577320",
+      "title": "Impact in 2025",
+      "authors": [
+        "Consortium of European Social Science Data Archives"
+      ],
+      "abstract": "The Consortium of European Social Science Data Archives (CESSDA ERIC) is a distributed research infrastructure that operates through a network of 22 Service Providers and 12 partners across Europe. In 2025, the consortium worked collectively to deliver on its strategic priorities: Data, People, and Landscape. It preserved, curated, and archived 46,000 primary digital objects, including datasets, that were downloaded or viewed 793,000 times. It supported 842,000 publications, of which an estimated 40% were peer-reviewed publications. It engaged over 14,000 participants in 558 training events. By preserving and enabling the reuse of social science data, this brief highlights how CESSDA has turned public investments in data collection into long-term data assets for research, policy, and society.",
+      "date": "2026-10-14",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23161306",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23161306",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-net.70080",
+      "title": "Exact Solution of Picker Routing Problems in Zoned Warehouses With Scattered Storage",
+      "authors": [
+        "Lüke, L."
+      ],
+      "abstract": "ABSTRACT\n                  We present two picker routing problems in a warehouse split into multiple disjoint zones with a picker assigned to each zone. Scattered storage is applied, meaning an article can be stored at several pick positions in one or more zones, and capacity restrictions limit the number of collected articles for each picker. Both problems seek picker tours that collect all requested articles, with each tour operating within one zone. While the multi‐zone picker routing problem (MZPRP) minimizes the total length of all picker tours, the balanced multi‐zone picker routing problem (BMZPRP) balances the tour lengths by minimizing the length of the longest picker tour. Both problems constitute a three‐level optimization problem. While on the higher levels, zone assignment decisions and the selection of pick positions must be made, on the lower level, picker tours for each zone are determined. To solve both problems, we use a network‐flow model with covering constraints and varying objectives. This type of model was recently presented for the single picker routing problem with scattered storage, building on an extended state space of the dynamic‐programming approach by Ratliff and Rosenthal. Our model contains a network for each zone, and demand‐covering constraints across all zones ensure that the requested articles are collected. Computational experiments, including large instances with up to 200 articles, show that our solution approach efficiently solves the two problems within (milli‐)seconds. An analysis of the number of zones demonstrates that in larger warehouse layouts, zoning reduces routing costs compared to single‐zone picker routing.",
+      "date": "2026-10-15",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70080",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70080",
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7220681015",
+      "title": "Digital Forensic Analysis of a Case of Pornographic Content Dissemination on WhatsApp Using the National Institute of Standards and Technology (NIST) Method",
+      "authors": [
+        "A. Abdi Fahrul Islam",
+        "Muh Ichlasul Amal Syam",
+        "Ramdan Satra",
+        "Erick Irawadi Alwi"
+      ],
+      "abstract": "The dissemination of pornographic content through instant messaging applications such as WhatsApp is becoming increasingly widespread. A major obstacle to establishing legal proof in these cases is that perpetrators frequently use the \"Delete for Everyone\" feature to eliminate digital evidence. This study aims to apply the National Institute of Standards and Technology (NIST) method to obtain digital artifacts from messages deleted on the perpetrator's device. A simulated scenario was conducted between the victim's device (Xiaomi Redmi 10C) and the perpetrator's device (a rooted Xiaomi Redmi S2). The investigation used MOBILedit Forensic Express for physical acquisition and Belkasoft Evidence Center for data analysis. The results show that the NIST framework successfully overcame anti-forensic obstacles. The recovered digital evidence included metadata from 3 deleted text messages with logical deletion status, 3 image files containing pornographic content (.tmp/.jpeg), and 2 video files (.mp4). Cross-validation between fragments from the perpetrator's msgstore.db database and the victim's screenshots demonstrates that this method can produce legally valid and compelling electronic evidence for court proceedings.",
+      "date": "2026-10-15",
+      "source": "OpenAlex",
+      "source_detail": "Indonesian Journal of Networking and Internet of Things",
+      "url": "https://doi.org/10.56705/ijonit.v2i2.407",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.56705/ijonit.v2i2.407",
+      "citation_count": 0,
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1287-opre.2023.0305",
+      "title": "Competition for Customer Attention is Creating Oversupply Pockets in US Micromobility",
+      "authors": [
+        "Erkan, H.",
+        "Agarwal, A.",
+        "Muthuraman, K.",
+        "Stamatopoulos, I."
+      ],
+      "abstract": "We present analytical and empirical arguments that competition over a nearly homogeneous service forces operators to oversupply scooters in urban centers. First, using deployment and ride data from operator APIs and city transportation departments, as well as telemetry data from one of the top three U.S. operators, we estimate average daily scooter utilization across nine major U.S. cities at 3.9%—half the 7.7% minimum utilization target set by transportation departments. Second, using a parsimonious game-theoretic model, we argue that if riders choose among available scooters roughly at random (e.g., the closest one), then in equilibrium all operators need to inflate their fleet sizes to preserve their market shares. Third, using granular data on riders’ choice sets and choices from Kansas City, MO, we provide evidence that these choices are indeed roughly random. Fourth, using our structurally estimated game-theoretic model, we find that in Kansas City, MO: (i) there is a 406% oversupply of scooters, (ii) the interaction between rider choice and competition accounts for 81% of this oversupply, and (iii) if the transportation department issued one more operator permit, oversupply would increase by an additional 82 pp. We conclude that transportation departments should be frugal with the number of permits they issue, and should welcome the consolidation of the scooter market.",
+      "date": "2026-10-14",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2023.0305",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2023.0305",
+      "score": 50.0
+    },
+    {
+      "id": "arxiv-2610.20126",
+      "title": "New Modelling and Solution Frameworks for Multiple Objectives, Decomposability and Impulsivity in Continuous-time Markov Decision Processes",
+      "authors": [
+        "Luke Fairley",
+        "Rob Shone",
+        "Peter Jacko",
+        "Jefferson Huang"
+      ],
+      "abstract": "Impulsive control, in the context of continuous-time Markov decision processes (CTMDPs), refers to actions that instantaneously update the state of the process, leading to theoretical complications. Previous work has overcome these complications, but at the expense of approachability and ease of implementation: those models are mathematically complex and incompatible with pre-existing solution methods. This paper presents an alternative formulation of impulsive control for CTMDPs that is easier to employ in the modelling of real-world problems and can be solved by pre-existing solution methods. This formulation is then extended to allow for multiple objectives and decomposability. A decomposition-based heuristic method is developed that leverages Dantzig-Wolfe decomposition to find approximate Pareto fronts for large multi-objective decomposable impulsive CTMDPs. The modelling framework and solution methodology are applied to a dynamic maintenance problem to demonstrate their computational efficiency, solution space coverage, and solution quality.",
+      "date": "2026-10-14",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2610.20126v1",
+      "tags": [
+        "math.OC",
+        "multi-objective",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.20126",
+      "arxiv_id": "2610.20126v1",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-erc-starting-2026",
+      "title": "ERC Starting Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "deadline": "2026-10-15",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 1.5M EUR for 5 years. For researchers 2-7 years after PhD. Any nationality, must work in EU/associated country.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
