@@ -1,0 +1,235 @@
+{
+  "date": "2026-10-16",
+  "generated_at": "2026-10-16T12:21:59.612763+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1002-nav.70103",
+      "title": "Note on Stochastic Vehicle Routing With Delivery Choice Under Recourse Options",
+      "authors": [
+        "Venkateshan, P.",
+        "Mathur, K."
+      ],
+      "abstract": "ABSTRACT\n                  In this paper, we consider the stochastic vehicle routing problem with delivery choice, where, upon reaching a particular customer, the driver has the choice of how much to deliver once the customer demand is revealed. In our earlier work, a basic version of the problem was considered, in which the driver cannot return to the depot midway in a route to replenish the cargo on board (see Venkateshan and Mathur 2025). In the present work, we expand on the choices that the driver has by allowing the driver to return to the depot to replenish before returning to the same customer or to proceed to the next customer. We prove the optimality of different threshold‐based fulfillment policies. Tests show that these policies significantly reduce the computational effort needed to determine the optimal fulfillment policy along a route, as well as its associated expected profit. We also show that a single‐vehicle tour that visits all customers is optimal even if multiple vehicles are allowed.",
+      "date": "2026-10-15",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70103",
+      "tags": [
+        "vehicle-routing",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70103",
+      "score": 60.0
+    },
+    {
+      "id": "openalex-W7221760669",
+      "title": "Agentic Synthesis of Open-Source Biomedical Repositories and Clinical Literature into Interactive Diagnostic & Medical Learning Tools for Low-Resource Healthcare Settings",
+      "authors": [
+        "Keshav Gautam"
+      ],
+      "abstract": "Frontline community health workers (CHWs) and rural clinics in low-resource settings—particularly across underserved municipalities in South Asia and rural regions of the United States—face a severe clinical knowledge bottleneck. While peer-reviewed biomedical literature, genomic variant databases, and open-source clinical calculators expand exponentially, these resources remain fragmented across unstructured texts and incompatible software repositories that require high-bandwidth connectivity and specialized bioinformatics literacy. This research protocol introduces **`gwf-clinical-synthesis`**, a non-commercial, computational dry-lab framework developed at GoWithFund Inc. Leveraging long-context multi-agent reasoning in **Google Antigravity** powered by **Gemini 4 Argon** (1M-token unified context window) and the **Google DeepMind (GDM) Science Skills** ecosystem, our pipeline orchestrates parallel literature retrieval across PubMed/NCBI Entrez, OpenAlex, ClinVar, and ChEMBL, fuses fragmented open-source clinical simulation repositories into lightweight offline-capable web applications, and executes automated multi-agent citation-verification loops to eliminate large language model (LLM) hallucinations. Concurrently, we integrate geospatial and socio-economic vulnerability indicators via AlphaEarth Foundations to model optimal healthcare resource allocation across high-burden districts. All resulting datasets, verification benchmarks, and interactive medical learning modules are released open-source under Apache 2.0 and CC BY 4.0 licenses.",
+      "date": "2026-10-15",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23381678",
+      "tags": [
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23381678",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2610.22336",
+      "title": "Robust Reinforcement Learning for Dynamic Treatment Regimes under Model and Measurement Uncertainty",
+      "authors": [
+        "Chengze Xie",
+        "Xuan Wang",
+        "Ying Ding",
+        "Hairong Wang",
+        "Yan Li"
+      ],
+      "abstract": "We develop a robust reinforcement learning (RL) framework for learning adaptive treatment policies that generalize across patients and remain reliable under errors in the measured biomarker and shifts in the disease dynamics. By modeling the patient as a hidden context, we address generalization and robustness in a unified manner through robust contextual Markov decision processes. Applying our framework to adaptive therapy for metastatic prostate cancer in a simulator calibrated to clinical data, we obtain generalizable and robust policies that substantially outperform the existing adaptive therapy method. In particular, we attain robustness with almost no loss of performance when the biomarker is accurate and the disease evolves as anticipated, and find that the resulting policy Pareto-dominates the existing method across a diverse array of scenarios. Our findings suggest that robust RL holds great promise as a principled methodology for learning reliable adaptive treatment policies.",
+      "date": "2026-10-15",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2610.22336v1",
+      "tags": [
+        "cs.LG",
+        "stochastic",
+        "ml-for-or",
+        "healthcare-or",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.22336",
+      "arxiv_id": "2610.22336v1",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1002-net.70080",
+      "title": "Exact Solution of Picker Routing Problems in Zoned Warehouses With Scattered Storage",
+      "authors": [
+        "Lüke, L."
+      ],
+      "abstract": "ABSTRACT\n                  We present two picker routing problems in a warehouse split into multiple disjoint zones with a picker assigned to each zone. Scattered storage is applied, meaning an article can be stored at several pick positions in one or more zones, and capacity restrictions limit the number of collected articles for each picker. Both problems seek picker tours that collect all requested articles, with each tour operating within one zone. While the multi‐zone picker routing problem (MZPRP) minimizes the total length of all picker tours, the balanced multi‐zone picker routing problem (BMZPRP) balances the tour lengths by minimizing the length of the longest picker tour. Both problems constitute a three‐level optimization problem. While on the higher levels, zone assignment decisions and the selection of pick positions must be made, on the lower level, picker tours for each zone are determined. To solve both problems, we use a network‐flow model with covering constraints and varying objectives. This type of model was recently presented for the single picker routing problem with scattered storage, building on an extended state space of the dynamic‐programming approach by Ratliff and Rosenthal. Our model contains a network for each zone, and demand‐covering constraints across all zones ensure that the requested articles are collected. Computational experiments, including large instances with up to 200 articles, show that our solution approach efficiently solves the two problems within (milli‐)seconds. An analysis of the number of zones demonstrates that in larger warehouse layouts, zoning reduces routing costs compared to single‐zone picker routing.",
+      "date": "2026-10-15",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70080",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70080",
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7220681015",
+      "title": "Digital Forensic Analysis of a Case of Pornographic Content Dissemination on WhatsApp Using the National Institute of Standards and Technology (NIST) Method",
+      "authors": [
+        "A. Abdi Fahrul Islam",
+        "Muh Ichlasul Amal Syam",
+        "Ramdan Satra",
+        "Erick Irawadi Alwi"
+      ],
+      "abstract": "The dissemination of pornographic content through instant messaging applications such as WhatsApp is becoming increasingly widespread. A major obstacle to establishing legal proof in these cases is that perpetrators frequently use the \"Delete for Everyone\" feature to eliminate digital evidence. This study aims to apply the National Institute of Standards and Technology (NIST) method to obtain digital artifacts from messages deleted on the perpetrator's device. A simulated scenario was conducted between the victim's device (Xiaomi Redmi 10C) and the perpetrator's device (a rooted Xiaomi Redmi S2). The investigation used MOBILedit Forensic Express for physical acquisition and Belkasoft Evidence Center for data analysis. The results show that the NIST framework successfully overcame anti-forensic obstacles. The recovered digital evidence included metadata from 3 deleted text messages with logical deletion status, 3 image files containing pornographic content (.tmp/.jpeg), and 2 video files (.mp4). Cross-validation between fragments from the perpetrator's msgstore.db database and the victim's screenshots demonstrates that this method can produce legally valid and compelling electronic evidence for court proceedings.",
+      "date": "2026-10-15",
+      "source": "OpenAlex",
+      "source_detail": "Indonesian Journal of Networking and Internet of Things",
+      "url": "https://doi.org/10.56705/ijonit.v2i2.407",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.56705/ijonit.v2i2.407",
+      "citation_count": 0,
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2610.22214",
+      "title": "GNN-Guided Local Refinement for Efficient Layout Decomposition with DSA-MP",
+      "authors": [
+        "Yu Feng",
+        "Liyi Zhou",
+        "Haoyu Wang",
+        "Yiming Xu",
+        "Hao Geng",
+        "Shaozhi Deng",
+        "Ningsheng Xu",
+        "Shisheng Xiong"
+      ],
+      "abstract": "Multiple patterning lithography (MPL) has been widely used to improve lithography resolution in advanced nodes, but it faces cost limits as feature sizes shrink. Directed self-assembly (DSA) offers a cost-effective complement, extending the resolution of optical lithography to sub-10 nm and beyond. Integrating DSA into MPL (DSA-MP) further enhances the resolution of contact/via patterning. Nevertheless, growing design complexity exposes the limits of existing decomposition methods, which struggle to balance solution quality and runtime, and neglect edge-to-edge spacing constraints of DSA templates, compromising manufacturability. To address these issues, we introduce a new conflict graph model capturing the previously overlooked constraints and develop a local refinement strategy powered by the graph neural network, enabling efficient and scalable layout decomposition. Experiments demonstrate that our method achieves higher solution quality with faster convergence than state-of-the-art methods, while maintaining robustness across layout scales, design styles, technology nodes, and varying mask counts.",
+      "date": "2026-10-15",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2610.22214v1",
+      "tags": [
+        "cs.AI",
+        "ml-for-or",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.22214",
+      "arxiv_id": "2610.22214v1",
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7221984674",
+      "title": "PD Ontology curation rounds — term-review adjudications and merge records (autumn 2026)",
+      "authors": [
+        "Johannes Keizer"
+      ],
+      "abstract": "Durable records of the autumn-2026 vocabulary-curation rounds of the Parkinson's Disease Ontology (sciai-lab): the 293-group term-review adjudications (three rounds, including keep-separate explanations and misregistration repoints), the Hoehn & Yahr family consolidation (167 to 26 canonicals), and the 44-group merge round (incl. the alpha-synuclein state merges). All merges were applied with rollback exports; these documents record the decisions and their justifications.",
+      "date": "2026-10-16",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23406191",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23406191",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7222044379",
+      "title": "Website release review — measured findings corpus for one storefront (311 rows before fixes, 301 rows after, own engineering reference)",
+      "authors": [
+        "OpenYuri (sole operator)"
+      ],
+      "abstract": "What this is. The complete row-level output of a mechanical website release review run five times against our own storefront (https://svc.openyuri.com) while we were fixing it. Published as an own-engineering reference: this is not client work, and there is no client here. Who. OpenYuri — a personal operation / unregistered working brand. No company, no team, one sole operator. The tool. review.mjs v1.0.0: one entry point, zero third-party runtime dependencies. It fetches each URL in the agreed list and evaluates a fixed check-set (transport status, redirects, response headers, title / meta / canonical, heading structure, links and anchors, images and alt text, robots and sitemap, cache and compression signals, page weight). Each row keeps the check, the severity the tool assigns, pass / fail status, the string it actually observed, why the check exists, and the fix wording. Numbers. Run 1: 311 rows measured, 40 needing action (0 High, 25 Medium, 15 Info), 211 passing, 60 not checked, 21 requests, 33,564 bytes. Fixes applied between runs: a _headers file (HSTS, X-Content-Type-Options, Referrer-Policy, X-Frame-Options, CSP in Report-Only mode), Open Graph and Twitter card tags plus an og.png, and inlining the stylesheet at build time. Run 4 and run 5: 301 rows measured, 0 needing action, 241 passing, 60 not checked, 20 requests, 54,311 bytes. What is deliberately not claimed. Nothing here is a claim about search rankings, traffic, revenue, conversion, or being cited by AI systems — the tool measures structural and header-level facts only. The 60 not checked rows stay reported as not checked in every run and are never presented as passing. verification.handVerified = false. The row count change 311 → 301 comes from two checks (asset-compression, cache-validators) that stopped applying after the page changed; all 10 rows removed by that change had passed, so the change conceals nothing. Severity counts are this tool's own rubric applied to our own site, not a general benchmark. Files. summary-runs.json (five-run progression + honesty notes), rows-run1-before-311.csv and rows-run5-after-301.csv (every row), RESULT-svc-self.json / RESULT-svc-self5.json (result envelopes: scope, URL list, outcome, network, verification state, limitations), report-svc-self.md / report-svc-self5.md (the full human-readable reports), README.md. Method as offered. The same tool, the same report format and the same honesty rules are what we offer as a fixed-scope service (USD 99, up to 25 URLs, one round). Public description of what the review does and does not cover: https://svc.openyuri.com/checklist.",
+      "date": "2026-10-16",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23401882",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23401882",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7222285866",
+      "title": "De-identified Research Materials Family Communication Patterns, Technology Expectations and Unregulated Internet and Smartphone Use",
+      "authors": [
+        "John Davies",
+        "Steven Holiday",
+        "Bahareh Amini"
+      ],
+      "abstract": "De-identified research materials for a survey study examining family communication, technology expectations, and unregulated internet and smartphone use. This document describes the study population, survey administration, measures, response scales, and sources for published measurement instruments. The complete survey instrument is not reproduced because it contains items from and adapted from previously published measurement instruments. No participant-level research data are included in this record.",
+      "date": "2026-10-16",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23406366",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23406366",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7221641272",
+      "title": "Principles of Good Scientific Practice in Geoinformatics: From Data Management to Reproducible Code",
+      "authors": [
+        "Alexander Dunkel"
+      ],
+      "abstract": "Principles of Good Scientific Practice in Geoinformatics: From Data Management to Reproducible Code Trial lecture (Probevorlesung, § 13 HabilO) for the Venia Legendi in Geovisual Analytics at the Faculty of Environmental Sciences, Technische Universität Dresden (October 15, 2026, Dresden, Germany). Reflecting the core principles discussed, this lecture and its underlying pipeline are openly archived as a version-controlled, persistent resource to demonstrate reproducible scientific practice in action. Abstract Spatial data science occupies a uniquely vulnerable position in the ongoing reproducibility crisis. Below high-level Python libraries lies a complex stack of compiled C/C++ system libraries (GDAL, GEOS, PROJ) where unannounced datum shifts or compiler updates silently alter coordinates without throwing errors. Concurrently, spatial planning practice frequently relies on GUI-based desktop GIS workflows and binary office documents (`.docx`), leaving zero audit trail for legal scrutiny or scientific verification. Grounded in the normative framework of the DFG Code of Conduct (Guidelines 7, 10, 11, and 12) and Mayer's principles of multimedia learning, this lecture outlines four foundational pillars to transition from fragile ad-hoc scripts to resilient, verifiable scholarship: Part I • Diagnose (The Reality Check): Identifying the root failure modes of spatial data science—from the \"spatial curse\" of compiled system dependencies and unrecorded point-and-click operations to the administrative friction of managing 22,000+ data cells across municipal Word documents. Part II • Structure (The Resilient Archive): Establishing core architectural principles: Separation of Concerns (SoC), Single Source of Truth (SSOT), and Knowledge Longevity. Demonstrating that tools (Typora, QGIS, Zotero) are merely disposable viewing lenses, whereas disciplined plain text (Markdown) and open formats (GeoPackage, GeoParquet) constitute the permanent archive of thought. Addressing the FAIR vs. ELSA dilemma through synthetic twins and probabilistic hashing. Part III • Construct (Freezing the Computation): Demonstrating parameterized, headless GIS batch pipelines. Using an authentic planning case study (1,500 wind turbine viewsheds calculated via headless GRASS GIS inside JupyterLab for regional planning), the lecture illustrates literate provenance, isolated Docker container layering (Carto-Lab), and automated GitLab CI/CD release pipelines. Part IV • Evaluate (The Generative Frontier): Governing the integration of non-deterministic Large Language Models (LLMs). Establishing Prompts as Code and conversational lineage archiving to maintain human-in-the-loop accountability, separating probabilistic model outputs from verifiable scientific scholarship. The lecture concludes with a pragmatic survival checklist for Master's theses and frames Good Scientific Practice through the lens of Calm Technology: disciplined conventions do not add administrative burden - they liberate researchers from technical friction to focus on intellectual synthesis. Artifacts in this Deposit `presentation.pdf`: Vector slide export rendered directly from the web presentation viewport. `presentation_source.zip`: Complete source repository containing Reveal.js Markdown files, assets, custom CSS, and interactive case study submodules. --- DFG Code of Conduct (Leitlinien zur Sicherung guter wissenschaftlicher Praxis): https://doi.org/10.5281/zenodo.14281892",
+      "date": "2026-10-15",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23335009",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23335009",
+      "citation_count": 0,
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [],
+  "conferences": [],
+  "opportunities": [],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 0,
+    "conferences": 0,
+    "opportunities": 0,
+    "total": 10
+  }
+}
