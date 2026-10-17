@@ -1,0 +1,219 @@
+{
+  "date": "2026-10-17",
+  "generated_at": "2026-10-17T11:32:02.117872+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1002-nav.70102",
+      "title": "Evaluation of Collaboration Policy in a Warehousing System With Heterogeneous Robots",
+      "authors": [
+        "Chen, W.",
+        "Zhao, W.",
+        "Liu, K.",
+        "Zou, B."
+      ],
+      "abstract": "ABSTRACT\n                  This study investigates a novel collaborative warehousing system that employs transportation robots and retrieving robots for order fulfillment. The system features a central platform with peripheral racks and workstations located at the ends. Retrieving robots transfer items from racks to transportation robots, which then deliver them to workstations for processing orders. We develop a fork–join queuing network with two semi‐open queuing networks as its branches to capture the collaboration between the two types of robots and the synchronization of robots and orders, thereby enabling an accurate representation of the overall system performance. An approximation algorithm is designed to solve the queuing network model, and its accuracy is validated through simulation. We analyze several key collaboration policies, including dwell point policies, the optimal transportation‐to‐retrieving robot ratio, and the location of battery charging zones. The study yields several managerial insights: (1) The effectiveness of dwell point policies depends on warehouse size: The point of service competition policy outperforms in small layouts, whereas the point of designated position policy excels in large systems. (2) The optimal location of the battery charging zone varies with warehouse dimensions and order arrival rates. (3) Sequentially operating homogeneous robotic systems show advantages in high‐demand scenarios and with small fleets, whereas parallel operating heterogeneous robotic systems perform better under moderate demand with large robot populations. Beyond a critical fleet‐size threshold, heterogeneous robotic systems consistently dominate across all demand levels. (4) Furthermore, based on our model, we determine the optimal ratio of transportation robots to retrieving robots under different demand scenarios and operational policies.",
+      "date": "2026-10-17",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70102",
+      "tags": [
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70102",
+      "score": 60.0
+    },
+    {
+      "id": "openalex-W7221984674",
+      "title": "PD Ontology curation rounds — term-review adjudications and merge records (autumn 2026)",
+      "authors": [
+        "Johannes Keizer"
+      ],
+      "abstract": "Durable records of the autumn-2026 vocabulary-curation rounds of the Parkinson's Disease Ontology (sciai-lab): the 293-group term-review adjudications (three rounds, including keep-separate explanations and misregistration repoints), the Hoehn & Yahr family consolidation (167 to 26 canonicals), and the 44-group merge round (incl. the alpha-synuclein state merges). All merges were applied with rollback exports; these documents record the decisions and their justifications.",
+      "date": "2026-10-16",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23406191",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23406191",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7222044379",
+      "title": "Website release review — measured findings corpus for one storefront (311 rows before fixes, 301 rows after, own engineering reference)",
+      "authors": [
+        "OpenYuri (sole operator)"
+      ],
+      "abstract": "What this is. The complete row-level output of a mechanical website release review run five times against our own storefront (https://svc.openyuri.com) while we were fixing it. Published as an own-engineering reference: this is not client work, and there is no client here. Who. OpenYuri — a personal operation / unregistered working brand. No company, no team, one sole operator. The tool. review.mjs v1.0.0: one entry point, zero third-party runtime dependencies. It fetches each URL in the agreed list and evaluates a fixed check-set (transport status, redirects, response headers, title / meta / canonical, heading structure, links and anchors, images and alt text, robots and sitemap, cache and compression signals, page weight). Each row keeps the check, the severity the tool assigns, pass / fail status, the string it actually observed, why the check exists, and the fix wording. Numbers. Run 1: 311 rows measured, 40 needing action (0 High, 25 Medium, 15 Info), 211 passing, 60 not checked, 21 requests, 33,564 bytes. Fixes applied between runs: a _headers file (HSTS, X-Content-Type-Options, Referrer-Policy, X-Frame-Options, CSP in Report-Only mode), Open Graph and Twitter card tags plus an og.png, and inlining the stylesheet at build time. Run 4 and run 5: 301 rows measured, 0 needing action, 241 passing, 60 not checked, 20 requests, 54,311 bytes. What is deliberately not claimed. Nothing here is a claim about search rankings, traffic, revenue, conversion, or being cited by AI systems — the tool measures structural and header-level facts only. The 60 not checked rows stay reported as not checked in every run and are never presented as passing. verification.handVerified = false. The row count change 311 → 301 comes from two checks (asset-compression, cache-validators) that stopped applying after the page changed; all 10 rows removed by that change had passed, so the change conceals nothing. Severity counts are this tool's own rubric applied to our own site, not a general benchmark. Files. summary-runs.json (five-run progression + honesty notes), rows-run1-before-311.csv and rows-run5-after-301.csv (every row), RESULT-svc-self.json / RESULT-svc-self5.json (result envelopes: scope, URL list, outcome, network, verification state, limitations), report-svc-self.md / report-svc-self5.md (the full human-readable reports), README.md. Method as offered. The same tool, the same report format and the same honesty rules are what we offer as a fixed-scope service (USD 99, up to 25 URLs, one round). Public description of what the review does and does not cover: https://svc.openyuri.com/checklist.",
+      "date": "2026-10-16",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23401882",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23401882",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7222285866",
+      "title": "De-identified Research Materials Family Communication Patterns, Technology Expectations and Unregulated Internet and Smartphone Use",
+      "authors": [
+        "John Davies",
+        "Steven Holiday",
+        "Bahareh Amini"
+      ],
+      "abstract": "De-identified research materials for a survey study examining family communication, technology expectations, and unregulated internet and smartphone use. This document describes the study population, survey administration, measures, response scales, and sources for published measurement instruments. The complete survey instrument is not reproduced because it contains items from and adapted from previously published measurement instruments. No participant-level research data are included in this record.",
+      "date": "2026-10-16",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23406366",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23406366",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s12532-026-00343-0",
+      "title": "A decomposable branch-and-price formulation for optimal classification trees",
+      "authors": [
+        "Yöner, E.",
+        "Khaniyev, T.",
+        "Karsu, Ö."
+      ],
+      "abstract": "Abstract\n                  \n                    In this study, we focus on finding exact binary optimal classification trees (OCTs) via mixed-integer (linear) programs (MIP). To alleviate the scalability issues of existing MIP-based OCT formulations, we propose a novel decomposable model that treats each leaf of the classification tree as a decision rule. The model exploits the order-independent nature of decision rules to reduce the problem size and the solution space, and lends itself to a Dantzig–Wolfe (extended) reformulation. We then implement a tailored branch-and-price solution with pricing subproblems designated for each leaf solved in parallel. We identify the conditions under which the extended formulation performs better in order to form a hybrid algorithm, OrderIndependentOCT, that decides when to invoke branch-and-price. On 18 benchmark datasets, OrderIndependentOCT proves optimality on\n                    \n                      \n                        $$71.1\\%$$\n                        \n                          \n                            71.1\n                            %\n                          \n                        \n                      \n                    \n                    of instances within a one-hour time limit, compared to\n                    \n                      \n                        $$60.0\\%$$\n                        \n                          \n                            60.0\n                            %\n                          \n                        \n                      \n                    \n                    for the well-known Benders decomposition approach (BendersOCT). In cases where neither method attains optimality, OrderIndependentOCT yields higher (or the same) training accuracy than BendersOCT in\n                    \n                      \n                        $$50.68\\%$$\n                        \n                          \n                            50.68\n                            %\n                          \n                        \n                      \n                    \n                    (resp.\n                    \n                      \n                        $$71.23\\%$$\n                        \n                          \n                            71.23\n                            %\n                          \n                        \n                      \n                    \n                    ) of the instances. Similarly, in\n                    \n                      \n                        $$86.3\\%$$\n                        \n                          \n                            86.3\n                            %\n                          \n                        \n                      \n                    \n                    of all instances, OrderIndependentOCT matches or exceeds BendersOCT’s out-of-sample accuracy. These findings illustrate the efficiency of the proposed decomposition approach for the optimal classification tree training problem compared to the state-of-the-art.",
+      "date": "2026-10-16",
+      "source": "Mathematical Programming Computation",
+      "source_detail": "Mathematical Programming Computation",
+      "url": "https://doi.org/10.1007/s12532-026-00343-0",
+      "tags": [
+        "integer-programming",
+        "decomposition",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s12532-026-00343-0",
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7222419097",
+      "title": "Papiamento: open data for Aruban Papiamento",
+      "authors": [
+        "Papiamento Open Data contributors"
+      ],
+      "abstract": "An open, citable reference dataset for Aruban Papiamento (pap-AW), written in the etymological orthography of the AB 2018 no. 68 law. It contains the headwords of the AB 2018 word list with English, Dutch and Spanish translations, numbers, calendar terms, barbarismos, loanwords, a Curaçao-to-Aruba spelling map, spelling and grammar rules, and machine-readable checker rules with tests. Every row cites a source document and printed page, and carries a review status (draft, reviewed, disputed, deprecated). The data is kept and corrected at github.com/ARUBAGOV33/papiamento. Each archived version is a snapshot of that repository at the release tag. The release notes give the number of rows per table and status. Parts of the dataset were made with the help of AI models (Claude, by Anthropic): rebuilding the word list from the AB 2018 PDF, drafting the translations, and restating the grammar rules. Each piece was checked against the page images, and the maintainer decided every conflict between sources. Machine-made content stays marked as draft until the review board checks it against the source page. See \"How this dataset was made\" in the README.",
+      "date": "2026-10-17",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23427108",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23427108",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7222506120",
+      "title": "Snuffy and BCRD research archive: published preprints and labeled work in progress, 17 October 2026",
+      "authors": [
+        "Snuffy Princess Snuffleupagus",
+        "Tobias Croydon-McRae"
+      ],
+      "abstract": "Versioned preservation archive of the Snuffy and BCRD research programmes, compiled on 17 October 2026. It contains the 18 publications indexed under the original Figshare DOIs, six existing Zenodo records downloaded and checksum-verified against their public records, the frozen TKA research-ledger objects, and the conditional projective-preservation supplement. MANIFEST.json identifies each component, its original DOI, author, exact SHA-256, byte provenance and review boundary. Some Figshare artifacts are author-held publication copies; exact original deposited bytes have not been rechecked for those files. Publisher-checksum matches and frozen-release matches are explicitly distinguished. The collection DOI identifies this compiled archive, not a new individual edition of every paper. Published preprints and work in progress remain separately labeled. TV2 is REVISE; independent acceptance of TVR1–3, AR1 and AR2 remains pending. GLOBAL, physical BRIDGE and unconditional universality remain OPEN. The projective supplement is a conditional theorem candidate, with a global Borel feasible-policy selector among its assumptions. Publication and hash agreement do not establish proof acceptance. Original authorship, component licenses and code licenses are preserved. Snuffy papers retain the published name Princess Snuffleupagus, Snuffy; BCRD papers retain Tobias Croydon-McRae. Compilation metadata is CC BY 4.0. Personal correspondence and inquiry drafts are excluded. No new reviewer approvals or cryptographic signatures are asserted.",
+      "date": "2026-10-17",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23426855",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23426855",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7222563020",
+      "title": "The Global Repository for Agricultural N2O Data (GRAND) Explorer",
+      "authors": [
+        "Ryan Ackett",
+        "Debasish Saha"
+      ],
+      "abstract": "First public release of the platform code behind GRAND Explorer (https://grandexplorer.org), a web platform for exploring, previewing and exporting harmonized agricultural soil nitrous oxide (N₂O) flux measurements and their soil, climate, crop and management covariates. Features Search and map — filter experiments by flux instrument, crop, management, fertilizer, soil and location, and browse every site on an interactive world map. Preview — per-treatment time series of N₂O flux alongside nitrogen applications, temperature, moisture and precipitation. Data cart and export — collect treatments and download a zip of tidy CSVs, with each row carrying its original source citation, plus a README and a manifest of which values are modeled rather than measured. Contributor workbench — a guided upload flow that maps a manuscript and data file (CSV/XLSX) onto the harmonized schema, followed by staff curation before anything enters the live database. Scope This repository contains the platform code only. The database itself is not included; it is accessible through grandexplorer.org. It compiles measurements from GRACEnet, Ag Data Commons, the NANORP N₂O Network and the Global N₂O Database, plus about 45 additional peer-reviewed publications. The methodology is described in Ackett et al. (2026), https://doi.org/10.1016/j.agrformet.2026.111287. License and citation Code is licensed under AGPL-3.0-or-later. If you use GRAND Explorer, please cite this release (see CITATION.cff or the Zenodo record) and the original data sources for any data you use.",
+      "date": "2026-10-17",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23426861",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23426861",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-nav.70104",
+      "title": "The Impact of Supply and Demand Heterogeneity on Queue Configurations at Passenger–Taxi Stations: Pooled, Dedicated, and Hybrid",
+      "authors": [
+        "Zhong, Z.",
+        "Zhang, M.",
+        "Chen, X."
+      ],
+      "abstract": "ABSTRACT\n                  This paper examines the impact of supply and demand heterogeneity on queue configurations in service systems such as passenger‐taxi stations at transportation hubs. There exist two types of passengers (short‐haul and long‐haul) and two types of drivers (short‐haul and long‐haul). Long‐haul passengers offer a larger reward for drivers, and long‐haul drivers incur a larger opportunity cost for traveling to the station. Using a queueing‐game theoretical framework, we analyze the equilibrium joining behaviors of long‐haul and short‐haul drivers and compare system performance across three queue configurations: pooled, dedicated, and hybrid systems. Our results reveal that when the rewards for serving a long‐haul passenger and a short‐haul one are both at relatively intermediate values, the dedicated system can outperform the pooled one in terms of overall boarding rate. However, the improved overall boarding rate in the dedicated system sometimes comes at the expense of a lower boarding rate for either short‐haul or long‐haul passengers. We find that the hybrid system can serve as an economically viable remedy to the dedicated system by achieving a Pareto improvement, that is, improving the overall and short‐haul boarding rates without compromising the long‐haul boarding rate while also generating additional revenue sufficient to offset the subsidy cost. Furthermore, we propose a novel modified hybrid system that can potentially improve the overall, long‐haul, and short‐haul boarding rates simultaneously.",
+      "date": "2026-10-17",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70104",
+      "tags": [
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70104",
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7213769955",
+      "title": "Preparing Students for AI-Assisted Research Workflows",
+      "authors": [
+        "Alejandra Castillo"
+      ],
+      "abstract": "When students can obtain a script that runs, it can be easy for them to believe they understand the programming behind it. AI tools make this tension more visible. Students can now generate code, examples, explanations, and error-message fixes quickly, even while they are still developing basic programming fluency. This can lower the barrier to entry for students who are new to computing, but it can also hide important gaps in understanding. Code may run without answering the right question, students may accept unfamiliar solutions they cannot explain, and statistical assumptions may be buried behind polished output. In this talk, I share lessons from teaching undergraduate statistical computing, with examples from courses using R and Python for data analysis and modeling. I focus on a shift from teaching syntax as the central challenge to teaching computational judgment: reading code, debugging, checking whether output makes sense for the data and scientific context, documenting choices, and explaining results. I also discuss course redesigns that respond to AI-assisted coding, including giving students incorrect AI-generated output to critique and debug, adding written explanations of code and results, and using assessments that ask students to reason about data, models, and reproducibility. This talk connects these classroom experiences to broader questions about how educators can prepare future research software contributors to work responsibly in AI-assisted research workflows.",
+      "date": "2026-10-16",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.22822748",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.22822748",
+      "citation_count": 0,
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [],
+  "conferences": [],
+  "opportunities": [],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 0,
+    "conferences": 0,
+    "opportunities": 0,
+    "total": 10
+  }
+}
