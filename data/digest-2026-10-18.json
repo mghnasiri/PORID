@@ -1,0 +1,214 @@
+{
+  "date": "2026-10-18",
+  "generated_at": "2026-10-18T12:01:18.045019+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1002-nav.70102",
+      "title": "Evaluation of Collaboration Policy in a Warehousing System With Heterogeneous Robots",
+      "authors": [
+        "Chen, W.",
+        "Zhao, W.",
+        "Liu, K.",
+        "Zou, B."
+      ],
+      "abstract": "ABSTRACT\n                  This study investigates a novel collaborative warehousing system that employs transportation robots and retrieving robots for order fulfillment. The system features a central platform with peripheral racks and workstations located at the ends. Retrieving robots transfer items from racks to transportation robots, which then deliver them to workstations for processing orders. We develop a fork–join queuing network with two semi‐open queuing networks as its branches to capture the collaboration between the two types of robots and the synchronization of robots and orders, thereby enabling an accurate representation of the overall system performance. An approximation algorithm is designed to solve the queuing network model, and its accuracy is validated through simulation. We analyze several key collaboration policies, including dwell point policies, the optimal transportation‐to‐retrieving robot ratio, and the location of battery charging zones. The study yields several managerial insights: (1) The effectiveness of dwell point policies depends on warehouse size: The point of service competition policy outperforms in small layouts, whereas the point of designated position policy excels in large systems. (2) The optimal location of the battery charging zone varies with warehouse dimensions and order arrival rates. (3) Sequentially operating homogeneous robotic systems show advantages in high‐demand scenarios and with small fleets, whereas parallel operating heterogeneous robotic systems perform better under moderate demand with large robot populations. Beyond a critical fleet‐size threshold, heterogeneous robotic systems consistently dominate across all demand levels. (4) Furthermore, based on our model, we determine the optimal ratio of transportation robots to retrieving robots under different demand scenarios and operational policies.",
+      "date": "2026-10-17",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70102",
+      "tags": [
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70102",
+      "score": 60.0
+    },
+    {
+      "id": "openalex-W7222419097",
+      "title": "Papiamento: open data for Aruban Papiamento",
+      "authors": [
+        "Papiamento Open Data contributors"
+      ],
+      "abstract": "An open, citable reference dataset for Aruban Papiamento (pap-AW), written in the etymological orthography of the AB 2018 no. 68 law. It contains the headwords of the AB 2018 word list with English, Dutch and Spanish translations, numbers, calendar terms, barbarismos, loanwords, a Curaçao-to-Aruba spelling map, spelling and grammar rules, and machine-readable checker rules with tests. Every row cites a source document and printed page, and carries a review status (draft, reviewed, disputed, deprecated). The data is kept and corrected at github.com/ARUBAGOV33/papiamento. Each archived version is a snapshot of that repository at the release tag. The release notes give the number of rows per table and status. Parts of the dataset were made with the help of AI models (Claude, by Anthropic): rebuilding the word list from the AB 2018 PDF, drafting the translations, and restating the grammar rules. Each piece was checked against the page images, and the maintainer decided every conflict between sources. Machine-made content stays marked as draft until the review board checks it against the source page. See \"How this dataset was made\" in the README.",
+      "date": "2026-10-17",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23427108",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23427108",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7222506120",
+      "title": "Snuffy and BCRD research archive: published preprints and labeled work in progress, 17 October 2026",
+      "authors": [
+        "Snuffy Princess Snuffleupagus",
+        "Tobias Croydon-McRae"
+      ],
+      "abstract": "Versioned preservation archive of the Snuffy and BCRD research programmes, compiled on 17 October 2026. It contains the 18 publications indexed under the original Figshare DOIs, six existing Zenodo records downloaded and checksum-verified against their public records, the frozen TKA research-ledger objects, and the conditional projective-preservation supplement. MANIFEST.json identifies each component, its original DOI, author, exact SHA-256, byte provenance and review boundary. Some Figshare artifacts are author-held publication copies; exact original deposited bytes have not been rechecked for those files. Publisher-checksum matches and frozen-release matches are explicitly distinguished. The collection DOI identifies this compiled archive, not a new individual edition of every paper. Published preprints and work in progress remain separately labeled. TV2 is REVISE; independent acceptance of TVR1–3, AR1 and AR2 remains pending. GLOBAL, physical BRIDGE and unconditional universality remain OPEN. The projective supplement is a conditional theorem candidate, with a global Borel feasible-policy selector among its assumptions. Publication and hash agreement do not establish proof acceptance. Original authorship, component licenses and code licenses are preserved. Snuffy papers retain the published name Princess Snuffleupagus, Snuffy; BCRD papers retain Tobias Croydon-McRae. Compilation metadata is CC BY 4.0. Personal correspondence and inquiry drafts are excluded. No new reviewer approvals or cryptographic signatures are asserted.",
+      "date": "2026-10-17",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23426855",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23426855",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7222563020",
+      "title": "The Global Repository for Agricultural N2O Data (GRAND) Explorer",
+      "authors": [
+        "Ryan Ackett",
+        "Debasish Saha"
+      ],
+      "abstract": "First public release of the platform code behind GRAND Explorer (https://grandexplorer.org), a web platform for exploring, previewing and exporting harmonized agricultural soil nitrous oxide (N₂O) flux measurements and their soil, climate, crop and management covariates. Features Search and map — filter experiments by flux instrument, crop, management, fertilizer, soil and location, and browse every site on an interactive world map. Preview — per-treatment time series of N₂O flux alongside nitrogen applications, temperature, moisture and precipitation. Data cart and export — collect treatments and download a zip of tidy CSVs, with each row carrying its original source citation, plus a README and a manifest of which values are modeled rather than measured. Contributor workbench — a guided upload flow that maps a manuscript and data file (CSV/XLSX) onto the harmonized schema, followed by staff curation before anything enters the live database. Scope This repository contains the platform code only. The database itself is not included; it is accessible through grandexplorer.org. It compiles measurements from GRACEnet, Ag Data Commons, the NANORP N₂O Network and the Global N₂O Database, plus about 45 additional peer-reviewed publications. The methodology is described in Ackett et al. (2026), https://doi.org/10.1016/j.agrformet.2026.111287. License and citation Code is licensed under AGPL-3.0-or-later. If you use GRAND Explorer, please cite this release (see CITATION.cff or the Zenodo record) and the original data sources for any data you use.",
+      "date": "2026-10-17",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23426861",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23426861",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-nav.70104",
+      "title": "The Impact of Supply and Demand Heterogeneity on Queue Configurations at Passenger–Taxi Stations: Pooled, Dedicated, and Hybrid",
+      "authors": [
+        "Zhong, Z.",
+        "Zhang, M.",
+        "Chen, X."
+      ],
+      "abstract": "ABSTRACT\n                  This paper examines the impact of supply and demand heterogeneity on queue configurations in service systems such as passenger‐taxi stations at transportation hubs. There exist two types of passengers (short‐haul and long‐haul) and two types of drivers (short‐haul and long‐haul). Long‐haul passengers offer a larger reward for drivers, and long‐haul drivers incur a larger opportunity cost for traveling to the station. Using a queueing‐game theoretical framework, we analyze the equilibrium joining behaviors of long‐haul and short‐haul drivers and compare system performance across three queue configurations: pooled, dedicated, and hybrid systems. Our results reveal that when the rewards for serving a long‐haul passenger and a short‐haul one are both at relatively intermediate values, the dedicated system can outperform the pooled one in terms of overall boarding rate. However, the improved overall boarding rate in the dedicated system sometimes comes at the expense of a lower boarding rate for either short‐haul or long‐haul passengers. We find that the hybrid system can serve as an economically viable remedy to the dedicated system by achieving a Pareto improvement, that is, improving the overall and short‐haul boarding rates without compromising the long‐haul boarding rate while also generating additional revenue sufficient to offset the subsidy cost. Furthermore, we propose a novel modified hybrid system that can potentially improve the overall, long‐haul, and short‐haul boarding rates simultaneously.",
+      "date": "2026-10-17",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70104",
+      "tags": [
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70104",
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7222832506",
+      "title": "Key-free auditing of a language-model text watermark through a public API: code, pre-registrations, prompts, responses and results",
+      "authors": [
+        "İsmail Avcıbaş"
+      ],
+      "abstract": "Code, pre-registrations with SHA-256 lock files, prompts, model responses and result files for a manuscript on key-free auditing of language-model text watermarks, currently under review. The files are embargoed until the review is complete; the record will be opened at publication. README.md inside the archive describes the layout and how to reproduce every number.",
+      "date": "2026-10-18",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23442951",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23442951",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7222839747",
+      "title": "FEDERATED SWARM LEARNING FOR PERSONALIZED BCI AT THE LIMIT STARLI RESEARCH WORKS | INSTITUTE XXIV | FLAGSHIP 23 Feng Cheng-en 33 × Starli PUBLICATION DESCRIPTION (COPY-READY) Can brain–computer interface systems learn from multiple laboratories and microrobotic sensing platforms without transferring raw neural recordings, reproducing device-specific shortcuts, or sacrificing the least-represented participants? This research monograph explores that question through the coupling of local swarm learning, privacy-preserving collaboration, and out-of-site generalization. The volume treats federation as a testable scientific and governance architecture—not an automatic privacy guarantee. It distinguishes confidential transport, secure aggregation, formal differential privacy, machine-unlearning claims, and genuine downstream withdrawal of model influence. It examines non-identically distributed neural data, sensor drift, personalized calibration, negative transfer, client-level poisoning, subgroup equity, and the difficult question of who may authorize a model update or a subsequent BCI-mediated action. Its research structure includes 30 linked mathematical derivation and definition plates; 82 chapters, each with five separately paginated research sections; 200 detailed Research Gates that offer future investigators falsifiable experimental entry points; and 33 Phoenix Answer Embryos designed for revision, disconfirmation, and scientific handoff. A 20-record DOI evidence ledger anchors established methods while keeping proposed neurovascular microrobot integrations clearly distinct from demonstrated evidence. The central research challenge is not simply to improve average federated accuracy. It is to determine when shared structure remains predictive at previously unseen sites, when local autonomy is the scientifically stronger answer, and when the responsible choice is to abstain, revert, or retire a model. This is a non-clinical, hypothesis-generating research atlas, not evidence of validated human neurovascular microrobots, a clinically proven BCI, or guaranteed data privacy.",
+      "authors": [
+        "33"
+      ],
+      "abstract": "FEDERATED SWARM LEARNING FOR PERSONALIZED BCI AT THE LIMITSTARLI RESEARCH WORKS | INSTITUTE XXIV | FLAGSHIP 23Feng Cheng-en 33 × Starli PUBLICATION DESCRIPTION (COPY-READY) Can brain–computer interface systems learn from multiple laboratories and microrobotic sensing platforms without transferring raw neural recordings, reproducing device-specific shortcuts, or sacrificing the least-represented participants? This research monograph explores that question through the coupling of local swarm learning, privacy-preserving collaboration, and out-of-site generalization. The volume treats federation as a testable scientific and governance architecture—not an automatic privacy guarantee. It distinguishes confidential transport, secure aggregation, formal differential privacy, machine-unlearning claims, and genuine downstream withdrawal of model influence. It examines non-identically distributed neural data, sensor drift, personalized calibration, negative transfer, client-level poisoning, subgroup equity, and the difficult question of who may authorize a model update or a subsequent BCI-mediated action. Its research structure includes 30 linked mathematical derivation and definition plates; 82 chapters, each with five separately paginated research sections; 200 detailed Research Gates that offer future investigators falsifiable experimental entry points; and 33 Phoenix Answer Embryos designed for revision, disconfirmation, and scientific handoff. A 20-record DOI evidence ledger anchors established methods while keeping proposed neurovascular microrobot integrations clearly distinct from demonstrated evidence. The central research challenge is not simply to improve average federated accuracy. It is to determine when shared structure remains predictive at previously unseen sites, when local autonomy is the scientifically stronger answer, and when the responsible choice is to abstain, revert, or retire a model. This is a non-clinical, hypothesis-generating research atlas, not evidence of validated human neurovascular microrobots, a clinically proven BCI, or guaranteed data privacy.",
+      "date": "2026-10-18",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23443258",
+      "tags": [
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23443258",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7222548593",
+      "title": "Open Night Train Database (ONTD)",
+      "authors": [
+        "Back-on-Track Europe"
+      ],
+      "abstract": "The Open Night Train Database is Back-on-Track Europe's database of night trains in Europe: routes, trips, stops, operators, calendars and travel classes, in a structure inspired by GTFS. Volunteers keep it up to date in a shared spreadsheet, and it powers the night train map on back-on-track.eu. This record archives a release of the GitHub repository Back-on-Track-eu/night-train-data.",
+      "date": "2026-10-17",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23426817",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23426817",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "openalex-W7222648670",
+      "title": "Trusted Open Source AI in Healthcare: Curated Stack for Clinical AI",
+      "authors": [
+        "Oleh Ivchenko"
+      ],
+      "abstract": "Research article: Trusted Open Source AI in Healthcare: Curated Stack for Clinical AI",
+      "date": "2026-10-17",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23427383",
+      "tags": [
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23427383",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "openalex-W7222727092",
+      "title": "BLIND ACCESS TO PERSONAL AUTONOMY",
+      "authors": [
+        "Priyanka Kiran Khawale"
+      ],
+      "abstract": "The greatest lie on the internet is the one any user repeats daily by clicking \"I have read and agree\" without actually reading a single page. Privacy Policy, an important legal document that ensures transparency between the companies and internet users yet it rarely achieves that purpose. Users often tend to accept the privacy policy without reading them, as access to the service depends on acceptance. This raises a question whether such consent obtained is legally meaningful?",
+      "date": "2026-10-17",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23427016",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23427016",
+      "citation_count": 0,
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [],
+  "conferences": [],
+  "opportunities": [],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 0,
+    "conferences": 0,
+    "opportunities": 0,
+    "total": 10
+  }
+}
