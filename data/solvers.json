@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T12:01:17.622418+00:00",
+  "generated_at": "2026-10-19T14:33:11.397550+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1889,
+      "github_stars": null,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,14 +345,6 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 103,
-      "github_recent_prs": [
-        "Detect substitution candidates when a ranged row becomes dual implied free",
-        "Fix the iis_strategy description: 4 finds a true IIS, 8 prioritises columns",
-        "Now ensuring that IPM isn't used to try to get a basic solution when computing rays",
-        "Introduced `HighsOptions::getMipPrimalFeasibilityTolerance()` and `HighsOptions::getMipDualFeasibilityTolerance()`",
-        "Now logging he objective bound and MIP relative gap in the pretty and raw solution files"
-      ],
       "pypi_monthly_downloads": -61
     },
     {
@@ -382,7 +374,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 668,
+      "github_stars": null,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -458,14 +450,6 @@
         }
       ],
       "recent_changes": "Features\r\n--------\r\n\r\n- added command line option `-t` to specify the number of threads, which triggers concurrent solving via `SCIPsolveConcurrent()`\r\n\r\nPerformance improvements\r\n--------------------",
-      "github_open_issues": 36,
-      "github_recent_prs": [
-        "Fix original objective offset in exact solution conversion",
-        "fix loss of explicit upper bounds in MPS reader",
-        "Fix inverted avoidmemout check",
-        "misc bugs",
-        "export ObjCloneable types"
-      ],
       "pypi_monthly_downloads": -46
     },
     {
@@ -498,7 +482,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14224,
+      "github_stars": null,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,14 +553,6 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 131,
-      "github_recent_prs": [
-        "export google3",
-        "CP and Routing export from google3",
-        "tools/release: update scripts",
-        "google3 export",
-        "tools/release: cleanup"
-      ],
       "pypi_monthly_downloads": -34
     },
     {
@@ -604,7 +580,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 1020,
+      "github_stars": null,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -665,15 +641,7 @@
           "source": "r/OperationsResearch"
         }
       ],
-      "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_open_issues": 175,
-      "github_recent_prs": [
-        "Cbc_solve: let parameters set by name override the typed defaults",
-        "next: Remove CBC_SKIP_CLP_TEST",
-        "Remove CBC_SKIP_CLP_TEST",
-        "Set the model status when bound propagation proves infeasibility",
-        "[next] Don't restrict cuts for models with branching objects from another solver"
-      ]
+      "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings"
     },
     {
       "id": "xpress",
@@ -1131,15 +1099,6 @@
         "python"
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
-      "github_stars": 6370,
-      "github_open_issues": 188,
-      "github_recent_prs": [
-        "fix(bmat): accept symmetric constant block matrices",
-        "Fix perspective recession function evaluation at zero scale",
-        "Add Windows ARM64 wheels",
-        "DOC: correct tutorial examples and modeling contracts",
-        "Reuse SCS workspaces for compatible warm starts"
-      ],
       "pypi_monthly_downloads": -25
     },
     {
@@ -1206,8 +1165,8 @@
       "vendor": "COIN-OR Foundation",
       "website": "https://coin-or.github.io/Ipopt/",
       "docs_url": "https://coin-or.github.io/Ipopt/",
-      "current_version": "3.14.20",
-      "release_date": "2026-08-27",
+      "current_version": "3.14.14",
+      "release_date": "2024-04-01",
       "license_type": "open-source",
       "license_spdx": "EPL-2.0",
       "open_source": true,
@@ -1254,16 +1213,6 @@
         "coin-or",
         "nlp",
         "interior-point"
-      ],
-      "recent_changes": "- Fixed issue where Ipopt exceptions could not been caught from other libraries on macOS with clang when Ipopt or the other library was build with `-fvisibility=hidden`.\r\n- Call `MPI_Init()` with NULL",
-      "github_stars": 1792,
-      "github_open_issues": 13,
-      "github_recent_prs": [
-        "Fix scaling of initial bound multipliers in a warm start with scaled variables",
-        "Fix segfault when eval_g returns false with check_derivatives_for_naninf on",
-        "remove unnecessary include of iostream; avoid using namespace std",
-        "Increment filter reset counter on reset",
-        "Fix data-race global variables with atomics"
       ]
     },
     {
@@ -1272,8 +1221,8 @@
       "vendor": "Timefold",
       "website": "https://timefold.ai",
       "docs_url": "https://docs.timefold.ai/",
-      "current_version": "2.7.1",
-      "release_date": "2026-10-06",
+      "current_version": "1.8.0",
+      "release_date": "2024-10-01",
       "license_type": "open-source",
       "license_spdx": "Apache-2.0",
       "open_source": true,
@@ -1317,16 +1266,6 @@
         "routing",
         "constraint",
         "metaheuristic"
-      ],
-      "recent_changes": "A performance regression on some very large datasets slipped through the cracks.\r\nThis one-off release fixes it.\r\n\r\n# Changelog\r\n\r\n## 🐛 Fixes\r\n- bfd1871 avoid clear() on a large hash map (#2724), clos",
-      "github_stars": 1834,
-      "github_open_issues": 117,
-      "github_recent_prs": [
-        "chore: add OpenAPI schema to Waypoints record.",
-        "feat: report termination in run summary",
-        "deps: upgrade to latest where possible",
-        "deps: upgrade Quarkus to 3.40.1 LTS",
-        "feat: add execution profile to record distance matrix and implement DM mocking in maps service client"
       ]
     },
     {
@@ -1384,15 +1323,6 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2546,
-      "github_open_issues": 396,
-      "github_recent_prs": [
-        "New z3-solver version fix",
-        "Add support/testing for Python 3.15",
-        "Updates to support new MUMPS versions",
-        "Adjust ipopt version tests to be less flaky",
-        "Add GHA dependency for pillow builds on pypy"
-      ],
       "pypi_monthly_downloads": -28
     },
     {
@@ -1448,16 +1378,7 @@
         "julia",
         "algebraic"
       ],
-      "recent_changes": "## JuMP v1.32.1\n\n[Diff since v1.32.0](https://github.com/jump-dev/JuMP.jl/compare/v1.32.0...v1.32.1)\n\n\n**Merged pull requests:**\n- Fix performance of flatten! for large summations (#4264) (@odow)\n- Ad",
-      "github_stars": 2484,
-      "github_open_issues": 11,
-      "github_recent_prs": [
-        "Prep for v1.32.1",
-        "Fix irrational numbers in VariableInfo",
-        "Add PENNON and PENSDP to Penopt",
-        "Fix performance of flatten! for large summations",
-        "Fix type of dividing by GenericAffExpr with no terms"
-      ]
+      "recent_changes": "## JuMP v1.32.1\n\n[Diff since v1.32.0](https://github.com/jump-dev/JuMP.jl/compare/v1.32.0...v1.32.1)\n\n\n**Merged pull requests:**\n- Fix performance of flatten! for large summations (#4264) (@odow)\n- Ad"
     },
     {
       "id": "ampl",
