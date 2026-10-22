@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T12:51:37.488915+00:00",
+  "generated_at": "2026-10-22T12:53:55.622096+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1894,
+      "github_stars": 1897,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 99,
+      "github_open_issues": 102,
       "github_recent_prs": [
+        "Centring status",
+        "Add zero-cost-singleton for implied integers",
+        "Fix cuPDLP-C time limit",
         "Parallel scheduler documentation",
-        "Small bugs in HiPO",
-        "Use precise FP model on intel",
-        "LP reader: reduce memory use and speed up reading small files",
-        "Limit nodes in the RENS/RINS depth-first search"
+        "Small bugs in HiPO"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Features\r\n--------\r\n\r\n- added command line option `-t` to specify the number of threads, which triggers concurrent solving via `SCIPsolveConcurrent()`\r\n\r\nPerformance improvements\r\n--------------------",
-      "github_open_issues": 33,
+      "github_open_issues": 35,
       "github_recent_prs": [
         "Add CMake option CUSTOMIO to route stdout/stderr, exit and abort to the program that links SCIP",
         "Portability fixes for 10.1.1: strerror_r on macOS, (void) in tpi_openmp.c, <cstdlib> in multiprecision.hpp",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14241,
+      "github_stars": 14246,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,7 +569,7 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 129,
+      "github_open_issues": 131,
       "github_recent_prs": [
         "tools/release: cleanup manylinux scripts",
         "Remove unused Python SWIG files, build targets, and SWIGPYTHON guards",
@@ -666,13 +666,13 @@
         }
       ],
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_open_issues": 175,
+      "github_open_issues": 179,
       "github_recent_prs": [
-        "Report the gap when the reduced-cost restart stops on it",
-        "Report the gap when the reduced-cost restart stops on it",
-        "README: regenerate with the fixed generate_readme (binary packages, Homebrew trust, links)",
-        "README: regenerate with the fixed generate_readme (binary packages, Homebrew trust, links)",
-        "Don't use the end-of-search output handler if there is none (port from next)"
+        "Log a ctrl-c as `Result - User ctrl-c`",
+        "Log a ctrl-c as `Result - User ctrl-c`",
+        "Log a ctrl-c as `Result - User ctrl-c`",
+        "CI: retry dnf installs in the manylinux containers, then use EPEL's master site",
+        "LP parameter scorer: make the leaf vectors static (MSVC stack overflow)"
       ]
     },
     {
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
-      "github_stars": 6371,
+      "github_stars": 6373,
       "github_open_issues": 186,
       "github_recent_prs": [
+        "MAINT: Remove compatibility code for SCS < 3.0",
         "Route the conic quadratic objective's constant P by density in DIFFENGINE",
         "Lower products with a vector of ones to sums in the DIFFENGINE converter",
         "Bump ossf/scorecard-action from 2.4.4 to 2.5.0",
-        "Bump github/codeql-action/upload-sarif from 4.37.8 to 4.39.0",
-        "Typeset math after instant navigation in the docs"
+        "Bump github/codeql-action/upload-sarif from 4.37.8 to 4.39.0"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1320,13 +1320,13 @@
       ],
       "recent_changes": "A performance regression on some very large datasets slipped through the cracks.\r\nThis one-off release fixes it.\r\n\r\n# Changelog\r\n\r\n## 🐛 Fixes\r\n- bfd1871 avoid clear() on a large hash map (#2724), clos",
       "github_stars": 1836,
-      "github_open_issues": 117,
+      "github_open_issues": 119,
       "github_recent_prs": [
+        "feat: expose SolverRunSummary in the FinalBestSolutionEvent",
+        "test: compare the declarative shadow variable graph structures against the arbitrary graph",
         "feat: report unique resource IDs",
         "docs: [docs-drift] termination-metadata",
-        "docs: [docs-drift] chore/migrate-school-timetabling",
-        "chore: fix multi-entity swap move",
-        "deps: bump the minor group with 4 updates"
+        "docs: [docs-drift] chore/migrate-school-timetabling"
       ]
     },
     {
@@ -1384,8 +1384,8 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2548,
-      "github_open_issues": 397,
+      "github_stars": 2550,
+      "github_open_issues": 398,
       "github_recent_prs": [
         "FIMExternalGreyBox: convert complex jac/hes to float if possible",
         "New z3-solver version fix",
@@ -1449,7 +1449,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.32.1\n\n[Diff since v1.32.0](https://github.com/jump-dev/JuMP.jl/compare/v1.32.0...v1.32.1)\n\n\n**Merged pull requests:**\n- Fix performance of flatten! for large summations (#4264) (@odow)\n- Ad",
-      "github_stars": 2484,
+      "github_stars": 2485,
       "github_open_issues": 12,
       "github_recent_prs": [
         "Fix result type of broadcasting between sparse matrices",
