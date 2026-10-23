@@ -1,0 +1,269 @@
+{
+  "date": "2026-10-23",
+  "generated_at": "2026-10-23T12:32:54.295743+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1287-opre.2024.0991",
+      "title": "Real-Time Solution of Quadratic Optimization Problems with Banded Matrices and Indicator Variables",
+      "authors": [
+        "Gomez, A.",
+        "Han, S.",
+        "Lozano, L."
+      ],
+      "abstract": "We consider mixed-integer quadratic optimization problems with banded matrices and indicator variables. These problems arise pervasively in statistical inference problems with time-series data, where the banded matrix captures the temporal relationship of the underlying process. In particular, the problem studied arises in monitoring problems, where the decision-maker wants to detect changes or anomalies. We propose to solve these problems using decision diagrams. In particular we show how to exploit the temporal dependencies to construct exact and approximate decision diagrams. For problems over matrices with bandwidth equal to one, the proposed method runs in polynomial time. Moreover, if the bandwidth and condition number of the matrix is fixed, then we show that the proposed method can be modified to run into an additive approximation scheme. We also describe how to construct the convex hull of the set under study from the decision diagrams, and how to deploy the method online to solve the problems via a shortest path algorithm. Computational experiments show that, for problems with bandwidths less or equal than three, our proposed algorithm compares favorably to a state-of-the-art off-the-shelf solver in the offline setting, and that we are able to solve problems in milliseconds for the online setting.",
+      "date": "2026-10-23",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2024.0991",
+      "tags": [
+        "integer-programming",
+        "network-optimization",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2024.0991",
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261504131",
+      "title": "EXPRESS: What Drives Physician Efficiency? Evidence from Emergency Department Operations",
+      "authors": [
+        "Imanirad, R.",
+        "Saghafian, S.",
+        "Traub, S.",
+        "Hodgson, N."
+      ],
+      "abstract": "Emergency department (ED) physicians play a critical role in healthcare, serving on the frontline of acute care delivery. Yet increasing demand, resource constraints, and growing patient complexity pose significant challenges to physician efficiency. In this study, we investigate the determinants of ED physician efficiency using a multi-stage framework. First, we apply Data Envelopment Analysis (DEA) to measure individual physician efficiency based on data from 110,325 patient visits at a leading U.S. hospital. Second, we use a Tobit regression model to analyze how physician experience, shift familiarity, and patient severity influence physician efficiency. Third, we conduct comprehensive robustness checks, including omitted variable bias sensitivity analyses, permutation tests, and machine learning-based classification analyses, to address concerns regarding endogeneity and potential model misspecification.\n                  Our results show that physician efficiency increases with experience at a diminishing rate. Efficiency also varies with shift familiarity, with the estimated association weakening as physician experience increases. In addition, higher patient severity is associated with lower physician efficiency, consistent with the greater resource demands of caring for more clinically complex patients. This negative association is attenuated for more experienced physicians, suggesting that experienced physicians are better able to maintain efficiency when managing more demanding clinical conditions. Our findings offer actionable recommendations for improving ED operations. Staffing strategies that assign relatively more experienced physicians to higher-severity patients may help maintain physician efficiency, while shift familiarity may inform a scheduling strategy that emphasizes greater scheduling consistency for relatively less experienced physicians and greater flexibility for relatively more experienced physicians. Simulation results further illustrate the potential reductions in physician resource use associated with these strategies. Together, these findings highlight the value of evidence-based physician staffing and scheduling to improve physician efficiency in EDs.",
+      "date": "2026-10-23",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261504131",
+      "tags": [
+        "scheduling",
+        "ml-for-or",
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261504131",
+      "score": 65.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "openalex-W7223140954",
+      "title": "Guarding the Clinical Narrative: A Practitioner-Contributor's Retrospective Analysis of Open-Source Contributions to Clinical Natural Language Processing and Health-Data De-identification (2025-2026)",
+      "authors": [
+        "Raphael T. Malikian"
+      ],
+      "abstract": "Background. Clinical natural language processing (NLP) software extracts structured facts from free-text notes. De-identification software removes protected health information (PHI) so that text can be shared for research. A missed name or a broken date pattern can expose a patient or corrupt a dataset. Much of this software is open source, and outside contributors write part of it. Purpose. This study describes what one practitioner-contributor did in this area, what got merged, what did not, and what the review process taught about working well with maintainers. Methods. The data source was the author's public pull request (PR) record on GitHub, extracted with the GitHub REST API on 21 October 2026 (search: author:rtmalikian, type:pr). The full record held 213 PRs across 94 repositories. This paper analyses the clinical NLP and de-identification subset: 15 PRs in 5 repositories. Each PR was classed as merged, open, or closed unmerged. Seven cases were selected for close reading for their privacy or language point, or for a hard review lesson. Results. Eight of the 15 subset PRs merged, which is 61.5% of the 13 resolved PRs. Five closed unmerged. Two remained open. Merged work included a fix for placeholder collisions in a de-identification function, Italian and Spanish PHI locale packs, a date-pattern fix in a French hospital NLP library, and a change that stopped PHI entering version control. The hardest case, a Spanish locale pack, survived a blocking review that found real damage in a follow-up commit. A fix-forward commit repaired it, and the PR merged the next day. Conclusions. The record points to a plain finding. PHI safety in this software rests on ordinary engineering habits: reproduction before repair, small scope, tests run before submission, and calm correction when a reviewer finds a fault. Language coverage is part of safety. De-identification that works only in English leaves other patients less protected.",
+      "date": "2026-10-22",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23549060",
+      "tags": [
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23549060",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261504130",
+      "title": "EXPRESS: Harnessing Renewable Portfolio Standards for Sustainable Futures: An Empirical Examination of Spillover Effects",
+      "authors": [
+        "Zhao, C.",
+        "Wu, A.",
+        "Subramanyam, R."
+      ],
+      "abstract": "Given the importance of managing industrial energy consumption, setting standards and implementing policies that encourage renewable energy use is crucial for incentivizing sustainable firm practices. Public policy designs must align closely with firms’ environmental policies to help mitigate greenhouse gas (GHG) emissions and support a sustainable future. While research on policy impacts on firm environmental performance and the supply chain's role in sustainability is growing, a critical, understudied effect is the spillover of government rules to supply chain partners and peer firms, especially those outside the direct purview of environmental regulations. This paper presents a novel approach that integrates data from the Carbon Disclosure Project (CDP) and the Renewable Portfolio Standards (RPS). The latter refers to state-driven initiatives that incentivize electricity consumption from eligible renewable resources. We examine the causal effects of state-level policies on firm-level GHG emission intensity, with particular emphasis on the spillover effects of policies on unregulated firms across markets. We break down emission intensity into Scope 1 and Scope 2 and capture facility-level data to analyze spillover effects in granular detail. Using a staggered difference-in-differences methodology, our analysis finds a promising negative association between RPS introduction and GHG emission intensity among unregulated firms across industries. Interestingly, firms headquartered in states with more conservative initial targets during RPS adoption and progressive, milestone-based implementation strategies have significantly lower GHG emission intensity than those headquartered in states with more aggressive initial targets or long-term absolute targets. Our findings have significant implications for developing environmental regulations and public policies aimed at reducing GHG emission intensity.",
+      "date": "2026-10-23",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261504130",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261504130",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1177-10591478261503688",
+      "title": "EXPRESS: Participation Governance in Consumer and AI Co-creation: Whether to Intervene and How to Design It",
+      "authors": [
+        "Zhang, M.",
+        "Han, B.",
+        "Sun, T.",
+        "Luo, L.",
+        "Golden, J."
+      ],
+      "abstract": "Artificial intelligence reshapes digital mass customization by altering the structure of consumer co-creation. When consumers start from a draft generated by artificial intelligence rather than a blank canvas, outcomes are jointly determined by two stages: whether consumers initiate co-creation and, conditional on participation, how much refinement effort they exert. This separation makes participation a governable design margin—an issue that is largely muted in traditional blank-canvas customization, where participation and effort are tightly bundled. Partnering with a leading United States online retailer of personalized photo products, we study whether and how firm interventions at the participation stage shape downstream purchase outcomes. We develop a two-stage model in which, relative to a baseline with organic participation, a nudge lowers start-up frictions and expands voluntary entry, whereas a mandate serves as a strong boundary-case intervention that guarantees entry but can weaken how participation translates into purchase, generating a reach–efficiency trade-off. We examine these predictions in two randomized experiments. In Study 1, a light-touch nudge increases participation by 5.98 percentage points and raises revenue and order frequency. The evidence is consistent with gains arising primarily through expanded entry into consumer co-creation with artificial intelligence. In Study 2, mandates increase participation relative to nudges, but we find no clear evidence of additional gains in purchase or revisit intentions. Instead, mandates increase low-value participation, in which consumers exert minimal effort and report low purchase intention. Together, these findings show that in mass customization enabled by artificial intelligence, participation governance is a consequential design choice: firms must consider not only how many consumers initiate co-creation, but also whether the participation they induce creates downstream value.",
+      "date": "2026-10-23",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261503688",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261503688",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "openalex-W7223218696",
+      "title": "ARCHITECTURE OF A HOSPITAL INFORMATION SYSTEM BASED ON ELECTRONIC HEALTH RECORDS",
+      "authors": [
+        "Xusnobod Xudayberdieva Urmonovna",
+        "Worldly Knowledge Publishing Centre"
+      ],
+      "abstract": "Information technologies have become an integral part of healthcare, and the hospital information system (HIS) is their core. Paper records are slow, hard to share and prone to loss and errors. This article proposes a layered architecture of a hospital information system built around a single electronic health record (EHR). The architecture has four levels: user access, functional modules, integration services and a central database. The main modules are patient registration, the electronic health record, laboratory, radiology with image archiving, pharmacy, and management and statistics. Data exchange between modules and with external systems is based on the HL7 FHIR and DICOM standards. Information security is ensured by role-based access, encryption and an audit log. The proposed architecture can serve as a basis for introducing information systems in medical institutions and for teaching medical informatics to students.",
+      "date": "2026-10-23",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23576409",
+      "tags": [
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23576409",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7223254170",
+      "title": "SILT Core v0.1: Delegation and Revocation Semantics for Federated Research Infrastructure — AUT CISRC Research Pilot",
+      "authors": [
+        "Gareth Farry"
+      ],
+      "abstract": "This research release documents a constrained proof of concept applying SILT Core v0.1 delegation and revocation semantics to federated research infrastructure. Using a synthetic university research-governance workflow associated with the Auckland University of Technology Computer and Information Sciences Research Centre (AUT CISRC), the implementation represents an asserted institutional authority chain, a time-bound delegation, a scoped research-data request and applicable revocation events as machine-readable JSON artefacts. A lightweight Python reference validator evaluates delegation conditions including issuer-chain relationships, actor, permitted action, resource, purpose, temporal validity, expiry and revocation. The Phase 3 automated regression suite passed 21 of 21 tests, including positive and negative scenarios, malformed-input handling and representative JSON Schema validation. The release includes the original SILT Core v0.1 delegation and revocation specifications, a non-normative AUT CISRC implementation profile, five profile-specific JSON Schemas, synthetic example artefacts, the reference validator, automated tests, and the Phase 3 pilot evaluation report. The implementation demonstrates reproducible structural evaluation of asserted delegated authority. It does not establish the legal or institutional validity of that authority, authenticate cryptographic evidence, represent officially approved AUT governance architecture, or demonstrate integration with live university identity and access-management systems. The AUT CISRC implementation-profile schemas differ from the original SILT Core v0.1 JSON Schemas and should not be interpreted as direct normative schema conformance. This research output is separate from the historical SILT Core v0.1 release of April 2026 and the subsequent SILT Core v0.2 Semantic Architecture. Funding acknowledgement: This open research project was supported by Stichting Vietsch (Vietsch Foundation). Project lead: Gareth Farry. Source repository and versioned release: https://github.com/Sugarlicks/silt-identity-core/releases/tag/aut-cisrc-v0.1-pilot-2026",
+      "date": "2026-10-23",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23579724",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23579724",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7223111452",
+      "title": "castle-py3: casTLE for Python 3",
+      "authors": [
+        "Jimmy Kim",
+        "David W. Morgens"
+      ],
+      "abstract": "castle-py3 is a Python 3 port of casTLE (Cas9 high-Throughput maximum Likelihood Estimator) version 1.0, by David W Morgens, for analyzing pooled CRISPR and shRNA screens. It gives the same results as the original Python 2 scripts; the only change to output files is that genes are listed from highest to lowest casTLE score. If you use casTLE, please also cite: Morgens DW, Deans RM, Li A, Bassik MC (2016) Systematic comparison of CRISPR/Cas9 and RNAi screens for essential genes. Nat Biotechnol 34:634-636. For a protocol covering how to generate count files, see: Kim J, Kovacs H, Wisnovsky S (2026) CRISPR screens to identify and characterize ligands for glycan-binding proteins. Methods Enzymol. 219-263. https://doi.org/10.1016/bs.mie.2026.03.005",
+      "date": "2026-10-22",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23548289",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23548289",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "openalex-W7223120492",
+      "title": "Agent Incident Atlas",
+      "authors": [
+        "Nitin Gupta"
+      ],
+      "abstract": "An open dataset and failure taxonomy for anonymized agentic AI incidents, organized for research and AI governance postmortems in enterprise AI. The taxonomy defines 14 governance failure types grouped under three questions: what a system is authorized to do, what evidence says it deserves that authority, and how that authority is revoked. Version 0.1.0 contains 20 illustrative composite seed records, each marked seed: true. They are not real events. Community-contributed records will be added in later versions. The dataset, schema, taxonomy, and documentation are licensed CC-BY-4.0. Code and notebook code are licensed MIT. See LICENSE-NOTE.md in the repository.",
+      "date": "2026-10-22",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23548949",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23548949",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "openalex-W7223130411",
+      "title": "The Impact of Digital Humanities Implementation On the Transformation of Access To Information Resources At Library of UIN Sunan Ampel Surabaya",
+      "authors": [
+        "Hary Supriyatno"
+      ],
+      "abstract": "Research Objective. Digital humanities practices in libraries expand access reach, increase variety, and facilitate information dissemination. Digital humanities targets collections of historical, linguistic, cultural, and artistic value, integrating them with technology through digital presentation. The research aims to find the types of collections that are the target of digital humanities practices and analyze the impact of technology integration on ancient and rare collections in digital humanities practices on information source access patterns at the Library of UIN Sunan Ampel Surabaya. Research Method. This study employs a descriptive qualitative method using a case study approach, allowing for an in-depth and comprehensive examination of real-world conditions and specific characteristics. Qualitative data will be gathered through documentation, observation, and interviews relevant to the research theme. Data Analysis. Data will be analyzed using data reduction, data presentation, and conclusion drawing in descriptive form to facilitate understanding. Results. Five types of ancient and rare collections manuscripts, calligraphy, wayang golek (wooden puppets), vintage photographs, and certificates undergo technological intervention through digital humanities practices. The technologies utilized include websites, online catalogs, and Quick Response (QR) codes. Digital humanities practices in libraries have created three typologies of information access procedures: static, dynamic, and transactional. Static information is characterized by online access with slow information updates, exemplified by websites. Dynamic information is represented by online catalogs, which offer more varied access and faster updates. Transactional information entails a mandatory physical visit to the collection site to scan a QR code for information access. Conclusions. Digital humanities influences public information-seeking behavior. This shift stems from the transformation of how collection information is visually presented moving from conventional formats to digital ones. The presentation of information regarding ancient and rare collections has evolved from simple descriptions to more diverse formats incorporating images and links to online media. Further research is recommended regarding digital inclusion based on digital humanities. Keywords: Digital Humanities, Ancient and Rare Collections, Manuscripts, Transactional Information",
+      "date": "2026-10-22",
+      "source": "OpenAlex",
+      "source_detail": "Tibanndaru Jurnal Ilmu Perpustakaan dan Informasi",
+      "url": "https://doi.org/10.30742/tb.v10i2.5942",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.30742/tb.v10i2.5942",
+      "citation_count": 0,
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
