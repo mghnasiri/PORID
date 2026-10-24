@@ -1,5 +1,420 @@
 [
   {
+    "id": "optim-online-f4cdd4af759f",
+    "title": "Mixed-Integer Linear Reformulations of Pessimistic Bilinear Bilevel Infima",
+    "authors": [],
+    "abstract": "We study pessimistic bilevel optimization with bilinear objectives and linear constraints. Assuming a compact polyhedral leader domain, nonempty follower solution sets, and a finite pessimistic infimum, we derive mixed-integer linear optimization formulations that attain this infimum, even when the original problem has no optimal solution. This setting has applications such as pricing, security and decision-focused ... Read more",
+    "date": "2026-10-24",
+    "source": "Optimization Online",
+    "url": "https://optimization-online.org/2026/10/mixed-integer-linear-reformulations-of-pessimistic-bilinear-bilevel-infima/?utm_source=rss&utm_medium=rss&utm_campaign=mixed-integer-linear-reformulations-of-pessimistic-bilinear-bilevel-infima",
+    "tags": [
+      "linear-programming",
+      "integer-programming"
+    ],
+    "type": "publication",
+    "score": 50.0
+  },
+  {
+    "id": "crossref-10.1007-s10951-026-00897-w",
+    "title": "Near-optimal universal scheduling for moldable tasks: the Fair algorithm",
+    "authors": [
+      "Perotin, L.",
+      "Verrecchia, T.",
+      "Raghavan, P."
+    ],
+    "abstract": "Abstract\n                  The problem of scheduling moldable tasks on multiprocessor systems with the goal of minimizing the makespan has received significant attention, especially in contexts where tasks have dependence constraints (task graphs) or arrive dynamically (online scheduling). However, the combined setting—online scheduling of moldable task graphs—remains less explored. Prior studies have addressed this problem by designing algorithms specifically tailored to particular speedup models, such as Amdahl, Communication, or Roofline. Although these specialized algorithms achieve constant competitive ratios under their respective models, their applicability is limited in practice: Each requires tasks to adhere to a predefined speedup model. In this paper, we introduce a novel, universal online algorithm capable of handling arbitrary monotonic moldable tasks without assumptions about their speedup behavior. Remarkably, when applied to the specific speedup models previously studied, our algorithm achieves competitive ratios comparable to—or better than—those obtained by the specialized algorithms. For the General and Power Communication models, we further show that the optimal simultaneous time-and-area factor is 2, matching the Amdahl case.",
+    "date": "2026-10-24",
+    "source": "Journal of Scheduling",
+    "source_detail": "Journal of Scheduling",
+    "url": "https://doi.org/10.1007/s10951-026-00897-w",
+    "tags": [
+      "scheduling"
+    ],
+    "type": "publication",
+    "doi": "10.1007/s10951-026-00897-w",
+    "score": 55.0
+  },
+  {
+    "id": "openalex-W7212462806",
+    "title": "How Reliable Are LLM Annotators for Online Manipulation? Evidence from Phishing and Abuse Corpora",
+    "authors": [
+      "Senaid Popovic",
+      "Yannick Parmentier",
+      "Fabien Lauer",
+      "Damien Riquet",
+      "Maxime Meyer"
+    ],
+    "abstract": "In this paper, we evaluate an LLM-assisted process for annotating persuasion intent in the context of online manipulation. We focus on the DIDECO taxonomy, a two-tier framework of explicit and implicit manipulation categories based on Speech Act Theory and Cialdini's influence principles. Our question is not whether such annotations support a downstream classifier, but whether they are reliable enough to be used as labels in the first place. We measure reliability as Cohen's κ between a model and human gold labels, and between models, evaluating GPT-4o, Claude Sonnet 4.5, and Llama 3.3-70B on a synthetic corpus. On DIDECO, models agree more with one another than with human gold, suggesting shared annotation heuristics that diverge from human judgement. On an unlabeled real-world corpus, hierarchical prompting increases inter-model agreement for two of three model pairs, but this result establishes consistency rather than correctness. On a separate human-annotated real-world corpus, we evaluate Claude Sonnet 4.5, Gemma 3-27B, and Qwen 2.5-7B at both top-level and sub-label resolution. Claude and Gemma exceed human agreement at the top level, whereas Claude is the only model to exceed held-out human benchmarks across the full 23-label taxonomy; Gemma also does so when sparse sub-labels are excluded. These results tend to show that LLM annotation reliability depends on the corpus and label granularity, and that inter-model agreement cannot substitute for human validation. We release the prompts, code, and sub-label definitions.",
+    "date": "2026-10-24",
+    "source": "OpenAlex",
+    "source_detail": "INRIA a CCSD electronic archive server",
+    "url": "https://openalex.org/W7212462806",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "",
+    "citation_count": 0,
+    "score": 40.0
+  },
+  {
+    "id": "openalex-W7223154164",
+    "title": "Building ETD Visibility and Impact with PIDs: DataCite Use Cases from Australia, Tunisia, and Côte d'Ivoire",
+    "authors": [
+      "Mohamad Mostafa"
+    ],
+    "abstract": "Mohamad Mostafa participated in the 29th International Symposium on Electronic Theses and Dissertations (ETD 2026), held at the Central Library, IIT Delhi, and organized by NDLTD from October 23–25, 2026. He presented “Building ETD Visibility, Usage, and Impact with Persistent Identifiers and Open Metadata: Use Cases from Australia, Tunisia, and Côte d’Ivoire.” The presentation explored how DataCite DOIs and open metadata can improve the discoverability, accessibility, and impact of electronic theses and dissertations, drawing on practical use cases and insights from Australia, Tunisia, and Côte d’Ivoire.",
+    "date": "2026-10-24",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23547937",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23547937",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "openalex-W7223264035",
+    "title": "Using digital twins as a shared information model for secure software lifecycle management in IoT",
+    "authors": [
+      "Rustem Dautov",
+      "Hui Song",
+      "Arda Göknil",
+      "Adela Nedisan Videsjorden"
+    ],
+    "abstract": "",
+    "date": "2026-10-24",
+    "source": "OpenAlex",
+    "source_detail": "Discover Computing",
+    "url": "https://doi.org/10.1007/s10791-026-10753-2",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1007/s10791-026-10753-2",
+    "citation_count": 0,
+    "score": 40.0
+  },
+  {
+    "id": "openalex-W7223266195",
+    "title": "Knowledge-distilled decentralized federated learning for privacy-preserving medical image analysis",
+    "authors": [
+      "Shiraz Ali Wagan",
+      "Mitra Ghergherehchi",
+      "Hyojeong Choi",
+      "Muhammad Junaid"
+    ],
+    "abstract": "",
+    "date": "2026-10-24",
+    "source": "OpenAlex",
+    "source_detail": "Ain Shams Engineering Journal",
+    "url": "https://doi.org/10.1016/j.asej.2026.104504",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1016/j.asej.2026.104504",
+    "citation_count": 0,
+    "score": 40.0
+  },
+  {
+    "id": "openalex-W7223271982",
+    "title": "New York City Language Access Plans (2023–2025): Collected Policy Documents and Analytical Framework",
+    "authors": [
+      "Javier Moreno-Rivero"
+    ],
+    "abstract": "Collected repository of 43 New York City Language Access Plans / Language Access Implementation Plans, with original PDFs, text derivatives, compilation metadata and the analytical framework described in Javier Moreno-Rivero’s JoSTrans manuscript, “Institutionalising Mediation: Translation Policies and Language Access Asymmetries in New York City Public Agencies”. The collection brings together plans dated 2023–2025. The analytical framework covers translation scope and prioritisation, interpreting modalities and mediation arrangements, technology and machine translation, and the infrastructural organisation of language services. The framework is transcribed from the manuscript; no original coding log or document-level coded dataset is included. Two contextual reports in the source archive are excluded. Working bibliographic years and text derivatives require checking against the original PDFs. See README.md for provenance, processing and limitations. CC BY 4.0 applies to newly authored documentation and compilation metadata only; rights in agency source documents and their derivatives remain with their respective rights holders.",
+    "date": "2026-10-24",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23606834",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23606834",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "openalex-W7223277638",
+    "title": "“Why Do Women Steal Away Men's Joy?\" – A Qualitative Content Analysis of Manfluencers’ Discourse on YouTube Short Content",
+    "authors": [
+      "Matteo Rinaldi",
+      "Freya De Keyzer",
+      "Simone Driessen",
+      "Julia Kneer"
+    ],
+    "abstract": "The rise of social media platforms has facilitated both positive democratic engagement and the spread of toxic, gendered-divisive discourse. Within this landscape, the \"manosphere\" has evolved into an ecosystem where influencers, or \"manfluencers,\" share misogynistic, polarizing, views. While prior research has examined manosphere discourse mostly in text-based forms, limited attention has been paid to how it is articulated in short video content (SVC), such as YouTube Shorts. To investigate this, this study employed a qualitative content analysis via a Visual-Verbal Video Analysis (VVVA) and a discourse analysis of speech and design alike. Findings were analyzed to explore, describe, and organize the various general, visual, multimodal, character, and compositional elements of manfluencers’ content, increasing engagement and virality on social media platforms. Results indicated that manfluencers expressed toxicity through discourse, using SVC multimodal design phenomena to maximize the sharing of their values and ideas. They used not only specific language, elements (e.g. win/lose and business-lingo), and styles (e.g. podcast debates, sketch comedy, etc.) to convey their messages, but also strategically combined them with specific multimodal design phenomena (e.g. zoom, cuts, music, etc.) to reinforce certain views over others.",
+    "date": "2026-10-24",
+    "source": "OpenAlex",
+    "source_detail": "",
+    "url": "https://doi.org/10.31235/osf.io/kts4z_v1",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.31235/osf.io/kts4z_v1",
+    "citation_count": 0,
+    "score": 50.0,
+    "mentions_solvers": [
+      "Xpress"
+    ]
+  },
+  {
+    "id": "openalex-W7223287746",
+    "title": "Laboratory Web Performance Benchmarking of React.js, SvelteKit, and Nuxt.js SPA/MPA Implementations on an Academic Conference Website",
+    "authors": [
+      "Muhammad Ariq Fadhil",
+      "Riska Dhenabayu",
+      "Hafid Kholidi Hadi",
+      "Thwin Htoo Aung"
+    ],
+    "abstract": "Framework and architecture choices can determine whether academic conference systems remain discoverable, responsive, and accessible for bandwidth-diverse users. This study identifies the framework-architecture combination best suited for comparable deployments. It benchmarks laboratory Core Web Vitals-aligned metrics across six implementations of React.js, SvelteKit, and Nuxt.js, deployed as Single- and Multi-Page Application (SPA/MPA) variants reconstructed from the ICONBIT UNESA conference website. Because Interaction to Next Paint (INP) requires field data unavailable on these low-traffic subdomains, Total Blocking Time (TBT) was adopted as a laboratory proxy for interactivity. Lighthouse, PageSpeed Insights, and JMeter measurements were analyzed using Kruskal-Wallis and Dunn-Bonferroni tests, showing significant differences across all five metrics (p < 0.001). SvelteKit achieved the lowest Largest Contentful Paint (LCP) (mean 1.606–1.617 s) with zero TBT for its SSR-MPA variant, but SSR-based MPA deployments showed mobile cold-start penalties (mean LCP 17–18 s), while Nuxt SPA showed weak Slow 4G interactivity (TBT 554 ms). SvelteKit SSR-MPA is recommended only when this risk is mitigated through pre-warming or provisioned compute, with SvelteKit SPA as the safer static alternative otherwise. Findings are bounded by the single reconstructed website and Netlify free-tier environment evaluated.",
+    "date": "2026-10-24",
+    "source": "OpenAlex",
+    "source_detail": "Journal of Information Systems and Informatics",
+    "url": "https://doi.org/10.63158/journalisi.v8i5.1757",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.63158/journalisi.v8i5.1757",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "openalex-W7223301464",
+    "title": "From hardware to software: in-vehicle interface complaints in China, 2019-2026 (dataset and code)",
+    "authors": [
+      "Chuanjie Cheng",
+      "Hua Liu"
+    ],
+    "abstract": "This repository contains the aggregated data, validation labels, analysis code, and figure code for the study \"From hardware to software: a seven-year computational analysis of in-vehicle interface complaints in China.\" The study examines how owner complaints about in-vehicle interfaces changed between 2019 and 2026. We assembled 23,699 owner reviews of 120 vehicle models from 41 brands in the Chinese market and coded each review for the presence and category of interface complaint using a large language model, validated against 150 independently human-coded reviews (Cohen's kappa = 0.757). Contents:- data/model_level_aggregates.csv: model-by-period aggregates (review counts, interface complaint counts by category, median screen size, mean purchase price)- data/validation_150.csv: human and model labels for the validation sample (no review text)- data/sample_120_models.csv: the sampled models and their metadata- code/: retrieval, coding, and analysis scripts, including the full coding prompt- figures/: source data, plotting code, and 300-dpi figures All files are deposited at the top level of this record: the paths data/, code/, and figures/ in README.md correspond to the file names listed above. Raw review text is not redistributed because it is user-generated content owned by its authors. The retrieval scripts allow the corpus to be reconstructed from the public source, subject to the platform's terms of service. Code is released under the MIT License; data and figures under CC BY 4.0.",
+    "date": "2026-10-24",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23603560",
+    "tags": [
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23603560",
+    "citation_count": 0,
+    "score": 55.0
+  },
+  {
+    "id": "openalex-W7223330584",
+    "title": "Cloud Registry",
+    "authors": [
+      "Alexander Kanitz",
+      "Kushagra Nagori",
+      "Christina Herrmann",
+      "Anita Arora",
+      "Tristan Perard"
+    ],
+    "abstract": "Cloud Registry is a registry of web services for projects, networks and infrastructures that implements the GA4GH Service Registry API, so that clients can discover services and their API types, versions and operators in one place. Anyone can read the entries; users authenticated with a trusted OpenID Connect provider can register and manage services, and admins can verify them. It is built with FOCA and deployed with Docker Compose or its Helm chart.",
+    "date": "2026-10-24",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23606856",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23606856",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "openalex-W7223334339",
+    "title": "Sovereign Biophysical Dataset: The Daqian Cipher Series No 12 Broadcast Chronicles on Zhang Daqian's Sovereign Replications of Hong-Fu Nv",
+    "authors": [
+      "Francis C.  (于士傑) Yu"
+    ],
+    "abstract": "English] An upgraded, permanently registered, and DOI-linked cross-disciplinary open-science dataset (Series No. 12, Part 1 by Dr. Francis C. Yu) preserving the official multimedia broadcast chronicle, metadata matrices, and textual validation scripts for the academic television program titled \"The Daqian Cipher Series No. 12: Revealing the Ten-Year Mountain and River Romance Between a Korean Kisaeng and Zhang Daqian! Painting Hong-Fu Nv Multiple Times to Commemorate the Most Heartbreaking Love... Part 1\" (Scientific Serial Repository Link: https://youtu.be/uArqLA377P8). This dataset anchors a critical empirical baseline for the Zhonghe Tang Centennial Archive, verified via global ORCID iD Registry infrastructure (0009-0009-8924-6598) to guarantee absolute data neutrality, international legal-medical compliance, and asset-ledger permanence. The core research paradigm implements non-destructive diagnostic imaging, multi-wavelength mineral stratigraphy, and computational neuromuscular kinetic analytics to evaluate the biophysical properties of master Zhang Daqian’s rarest somatic character and portrait masterpieces. The underlying ledger documents the structural tracking of the traditional Han-Tang Medical Tradition established across a dual-generation lineage by Dr. Ren-Ping Yu and Dr. Francis C. Yu, mapping how precise fine motor calligraphic trajectories and multi-layered mineral sedimentations function as tangible phenotypic expressions of autonomic nervous system (ANS) stability and microvascular cardiovascular homeostasis. The broadcast record hardcodes primary textual and oral verification detailing the 1927 historical encounter at Mount Kumgang (Diamond Mountain) under the invitation of Japanese artist friend Itō, systematically executing a chronological revisionism that corrects popular lore regarding the companion Spring Red (春紅 / Chun-Hong), establishing her true developmental index between 24 and 29 years of age in 1931. It records the rigid geopolitical boundary point of July 1931 during the catastrophic Wanbaoshan Incident (萬寶山事件), documenting her life-saving intervention where she and her brother organized a small wooden boat to evacuate Zhang Daqian, who was walking publicly in traditional Changshan robes and long beard resembling Su Dongpo, attracting high-risk physical hostility from local populations under colonial tensions. Following this forced dislocation and the subsequent outbreak of the Second Sino-Japanese War, Zhang Daqian was permanently barred from returning to her. The ledger documents that his multiple historical replications of the Tang Dynasty heroine \"Hong-Fu Nv\" (紅拂女) function as profound psychosomatic somatic projections executed out of intense psychological longing and a deep sense of life-saving gratitude (\"念春紅救命之恩畫寄情\"). The hyper-precise neuromuscular control profiles required to balance intense mineral reds and continuous, non-tremor calligraphic outlines serve as active markers of his autonomic regulation during periods of severe emotional stress, fully complying with U.S. National Library of Medicine (NLM) and MeSH data ingestion standards.",
+    "date": "2026-10-24",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23605873",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23605873",
+    "citation_count": 0,
+    "score": 50.0,
+    "mentions_solvers": [
+      "Xpress"
+    ]
+  },
+  {
+    "id": "openalex-W7223356801",
+    "title": "MoleculeFinder: the molecules in everyday foods, drinks and products",
+    "authors": [
+      "MoleculeFinder"
+    ],
+    "abstract": "915 molecules from everyday life (coffee, chili, chocolate, sweeteners, medicines, cleaning products, PFAS) and the 405 foods, drinks and products they are in, from MoleculeFinder (https://moleculefinder.com). Each molecule carries its PubChem identity and computed properties (formula, weight, SMILES, InChI, descriptors), its Wikidata item and names, MoleculeFinder's one-line description and everyday group, and, where a US government source reports it, one LD50 with species, route and source. Product ingredient lists are read from DailyMed labels, Wikidata and MoleculeFinder's curated food lists, matched to molecules by code, never by name. Also included: curated relationships, structural neighbours, the ten everyday worlds and FDA approval records. Every column states its source; every field is public domain or CC0, and the whole dataset is released under CC0 1.0. Snapshot of 2026-10-21.",
+    "date": "2026-10-24",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23605767",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23605767",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "openalex-W7223361568",
+    "title": "Decentralizing Cybersecurity across Artificial Intelligence, Internet of Things, Blockchain, Machine Learning, and Agentic AI: A Systematic Literature Review",
+    "authors": [
+      "Rezvan Abouzadeh"
+    ],
+    "abstract": "",
+    "date": "2026-10-24",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23605889",
+    "tags": [
+      "ml-for-or",
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23605889",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "openalex-W7223372233",
+    "title": "Forensic Reconstruction of Web-Based Social Media Account Takeover via Credential Phishing",
+    "authors": [
+      "Zulki Yanto Rivai",
+      "Anton Yudhana",
+      "Imam Riadi"
+    ],
+    "abstract": "Credential phishing against browser-authenticated accounts can produce fragmented digital traces across browser storage, phishing infrastructure, network traffic, and account activity records. This study aims to reconstruct a Discord Web account takeover caused by credential phishing through multi-source forensic correlation. Evidence was obtained from Chrome browser artifacts, phishing server logs, Wireshark network captures, and documentation of attacker-side account activity within a controlled experimental scenario. The forensic analysis recovered 10 of 12 expected artifacts, resulting in an Artifact Recovery Rate (ARR) of 83.3%, while 4 of 6 incident stages were supported by at least two evidence items or source layers, producing an Evidence Corroboration Score (ECS) of 66.7%. The reconstructed timeline covers six stages of the incident, from the delivery of a phishing link to the confirmation of account access. The study introduces ARR and ECS as quantitative measures for evaluating artifact recovery and cross-source evidence corroboration. The findings further demonstrate that browser artifacts alone are insufficient to establish a complete account takeover sequence, and that correlation among browser, server, network, and account activity evidence is necessary to construct a coherent and verifiable forensic timeline. These results provide a practical basis for incident responders and forensic examiners to correlate heterogeneous evidence sources when investigating browser-mediated credential phishing.",
+    "date": "2026-10-24",
+    "source": "OpenAlex",
+    "source_detail": "Journal of Information Systems and Informatics",
+    "url": "https://doi.org/10.63158/journalisi.v8i5.1968",
+    "tags": [
+      "stochastic"
+    ],
+    "type": "publication",
+    "doi": "10.63158/journalisi.v8i5.1968",
+    "citation_count": 0,
+    "score": 55.0
+  },
+  {
+    "id": "openalex-W7223376925",
+    "title": "SlangLane Diachronic Internet Linguistics, Early Web Jargon to Gen-Alpha Sociolects Dataset (2026 — Volume 97)",
+    "authors": [],
+    "abstract": "",
+    "date": "2026-10-24",
+    "source": "OpenAlex",
+    "source_detail": "",
+    "url": "https://doi.org/10.14428/dvn/92xyhq",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.14428/dvn/92xyhq",
+    "citation_count": 0,
+    "score": 40.0
+  },
+  {
+    "id": "openalex-W7223383934",
+    "title": "PENGEMBANGAN KOLEKSI BUKU KEAGAMAAN DI PERPUSTAKAAN MBS KERTEK WONOSOBO UNTUK MENDUKUNG PEMBELAJARAN PAI",
+    "authors": [
+      "Nur Farida",
+      "Fani Asti",
+      "Elisa Nur Viana",
+      "Fahri Susta Pria Dani"
+    ],
+    "abstract": "Penelitian ini bertujuan untuk menganalisis pengembangan koleksi buku keagamaan di Perpustakaan MBS Kertek Wonosobo dalam mendukung proses pembelajaran Pendidikan Agama Islam (PAI). Pengembangan koleksi merupakan salah satu aspek penting dalam pengelolaan perpustakaan karena berperan dalam menyediakan sumber informasi yang relevan dengan kebutuhan pengguna. Metode penelitian yang digunakan adalah pendekatan kualitatif dengan teknik pengumpulan data melalui observasi, wawancara, dan dokumentasi. Hasil penelitian menunjukkan bahwa pengembangan koleksi buku keagamaan dilakukan melalui proses seleksi, pengadaan, pengelolaan, dan evaluasi koleksi yang disesuaikan dengan kebutuhan peserta didik dan guru. Keberadaan koleksi buku keagamaan yang memadai memberikan kontribusi positif terhadap peningkatan kualitas pembelajaran PAI, terutama dalam memperluas wawasan keislaman dan mendukung kegiatan belajar mandiri siswa. Dengan demikian, pengembangan koleksi buku keagamaan di Perpustakaan MBS Kertek Wonosobo memiliki peran yang penting dalam menunjang efektivitas pembelajaran Pendidikan Agama Islam.",
+    "date": "2026-10-24",
+    "source": "OpenAlex",
+    "source_detail": "JOIN Journal of Indonesian Education and Learning",
+    "url": "https://doi.org/10.67421/jiel.v2i3.323",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.67421/jiel.v2i3.323",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "openalex-W7223402579",
+    "title": "MicroVuln-Bench: From CVE Disclosures to Execution-Validated Vulnerable Microservice Applications",
+    "authors": [
+      "Mostafa Anouar Ghorab",
+      "Ali Ouni",
+      "Mohammed Sayagh",
+      "Mohamed Aymen Saied"
+    ],
+    "abstract": "MicroVuln-Bench is a curated vulnerability dataset and execution-validated benchmark of vulnerable microservice applications. It links microservice-related CVEs to executable vulnerable projects and proof-of-concept (PoC) reproductions. Microservice-related CVEs were identified from the National Vulnerability Database (NVD) with an LLM-assisted pipeline, yielding 816 manually verified CVEs. For each, an executable vulnerable microservice project was built — by reusing, modifying, or generating an application — together with a dedicated PoC; the project was then deployed and the PoC executed to trigger the vulnerability. A reproduction was accepted only when it produced an observable security impact consistent with the CVE (unauthorized access, information disclosure, integrity compromise, or service disruption) and was confirmed by manual verification. This yielded 752 execution-validated reproductions, which this release contains. Contents:- metadata/CVEs.csv — one row per CVE (identifier, description, affected component and versions, fix, CWE, CVSS score/vector, severity, project and PoC paths).- vulnerable_projects/ — 752 executable vulnerable microservice projects (one per CVE), with source, dependencies, Dockerfiles, Docker Compose and Kubernetes manifests.- pocs/ — 752 PoCs (one per CVE). Distributed under controlled access: because PoCs are working exploits, access is reviewed individually to mitigate misuse.- figures/, README.md, LICENSE. Use: for developing and evaluating vulnerability detection and remediation techniques for microservices. Vulnerable applications must be built and run only in isolated, disposable environments. License: Research & Educational Use (non-commercial, attribution). Third-party upstream components embedded in the projects remain under their own licenses. Citation: Mostafa Anouar Ghorab, Ali Ouni, Mohammed Sayagh, and Mohamed Aymen Saied, \"MicroVuln-Bench: From CVE Disclosures to Execution-Validated Vulnerable Microservice Applications,\" ICSE 2027 Data Showcase.",
+    "date": "2026-10-24",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23605641",
+    "tags": [
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23605641",
+    "citation_count": 0,
+    "score": 55.0
+  },
+  {
+    "id": "openalex-W7223410746",
+    "title": "Replication Data and Code for \"A Reproducible Audit of the Amendment Record of Kazakhstan's Criminal Code, 2015–2026: Provenance, Execution and Terminological Substitutions\"",
+    "authors": [
+      "Sholpan Baltabekovna Malikova",
+      "Omarova Aiman Bekmuratovna",
+      "Серик Маликов",
+      "Ainash Seitzhan",
+      "Rustem Korzhumbayev"
+    ],
+    "abstract": "This repository provides the research data and computational code supporting the manuscript “A Reproducible Audit of the Amendment Record of Kazakhstan’s Criminal Code, 2015–2026: Provenance, Execution and Terminological Substitutions”. The package includes Python analysis scripts, source manifests and SHA-256 checksums, frozen research protocols, derived datasets, statistical results, validation reports, figures, and an independent post hoc expert-assessment workbook. The study examines the amendment record and terminological substitutions in the Criminal Code of the Republic of Kazakhstan using official legal information from the Adilet system. The README provides instructions, documentation of the computational workflow, data provenance, and known limitations. Funding: Committee of Science of the Ministry of Science and Higher Education of the Republic of Kazakhstan, grant BR24993217.",
+    "date": "2026-10-24",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23606745",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23606745",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "openalex-W7223411028",
+    "title": "Eduuolvera: guía de apps Android y tecnología móvil para México",
+    "authors": [
+      "Eduuolvera"
+    ],
+    "abstract": "Guía breve de apps Android y tecnología móvil para usuarios en México. Más recursos y recomendaciones en https://eduuolvera.com.mx/",
+    "date": "2026-10-24",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23605812",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23605812",
+    "citation_count": 0,
+    "score": 45.0
+  },
+  {
     "id": "crossref-10.1287-opre.2024.0991",
     "title": "Real-Time Solution of Quadratic Optimization Problems with Banded Matrices and Indicator Variables",
     "authors": [
@@ -401,6 +816,439 @@
     "doi": "10.5281/zenodo.23579724",
     "citation_count": 0,
     "score": 55.0
+  },
+  {
+    "id": "optim-online-c64374749dd1",
+    "title": "Proximity Theorem and FPT Algorithm for Minimum Group-labeled Matroid Bases",
+    "authors": [],
+    "abstract": "Let \\(M\\) be a matroid, let \\(\\ell:E(M)\\to G\\) be a labeling of its elements by an abelian group, and let \\(F\\subseteq G\\) be finite. A base is \\emph{\\(F\\)-avoiding} if the label sum of its elements is not in $F$. We prove that, for arbitrary costs, a min-cost \\(F\\)-avoiding base can be obtained from any min-cost ... Read more",
+    "date": "2026-10-23",
+    "source": "Optimization Online",
+    "url": "https://optimization-online.org/2026/10/proximity-theorem-and-fpt-algorithm-for-minimum-group-labeled-matroid-bases/?utm_source=rss&utm_medium=rss&utm_campaign=proximity-theorem-and-fpt-algorithm-for-minimum-group-labeled-matroid-bases",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "score": 30.0
+  },
+  {
+    "id": "optim-online-b91ad3bf43b9",
+    "title": "A Constraint Programming Approach to Real-Time Electric Vehicle Itinerary Planning with Simultaneous Activities",
+    "authors": [],
+    "abstract": "This article introduces the Electric Vehicle Itinerary Planning with Activities (EV-IPA) problem, which jointly optimizes vehicle routing, parallel activity scheduling, non-linear charging decisions, and time-window constraints. This tight coupling is increasingly relevant as conversational in-car assistants let drivers negotiate itineraries in natural language. However, directly embedding continuous, non-linear state-of-charge dynamics into a discrete decision space ... Read more",
+    "date": "2026-10-23",
+    "source": "Optimization Online",
+    "url": "https://optimization-online.org/2026/10/a-constraint-programming-approach-to-real-time-electric-vehicle-itinerary-planning-with-simultaneous-activities/?utm_source=rss&utm_medium=rss&utm_campaign=a-constraint-programming-approach-to-real-time-electric-vehicle-itinerary-planning-with-simultaneous-activities",
+    "tags": [
+      "scheduling",
+      "vehicle-routing",
+      "constraint-programming"
+    ],
+    "type": "publication",
+    "score": 45.0
+  },
+  {
+    "id": "optim-online-1bb786009a97",
+    "title": "Primal-dual forward-reflected splitting with linesearch for distributed min-max problems under local Lipschitz smoothness",
+    "authors": [],
+    "abstract": "We consider a network of finitely many agents aiming to cooperatively solve a convex-concave min-max problem combining nonsmooth terms with a smooth saddle function whose partial gradients are only locally Lipschitz continuous. Without requiring prior knowledge of the local Lipschitz moduli of the partial gradients, we propose a distributed proximal-reflected-gradient algorithm which incorporates a distributed ... Read more",
+    "date": "2026-10-23",
+    "source": "Optimization Online",
+    "url": "https://optimization-online.org/2026/10/primal-dual-forward-reflected-splitting-with-linesearch-for-distributed-min-max-problems-under-local-lipschitz-smoothness/?utm_source=rss&utm_medium=rss&utm_campaign=primal-dual-forward-reflected-splitting-with-linesearch-for-distributed-min-max-problems-under-local-lipschitz-smoothness",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "score": 30.0
+  },
+  {
+    "id": "optim-online-b7ad08f1aca7",
+    "title": "A heuristic framework for a class of vehicle routing problems",
+    "authors": [],
+    "abstract": "We propose GenericILS, a general-purpose heuristic framework for generating high-quality upper bounds for Vehicle Routing Problems whose pricing subproblems are modeled, in column-generation-based exact algorithms, as resource-constrained shortest path problems described through Resource Extension Functions (REFs), the standard device for encoding constraints in branch-and-price algorithms. GenericILS reuses REFs implemented for the exact method, without a ... Read more",
+    "date": "2026-10-23",
+    "source": "Optimization Online",
+    "url": "https://optimization-online.org/2026/10/a-heuristic-framework-for-a-class-of-vehicle-routing-problems/?utm_source=rss&utm_medium=rss&utm_campaign=a-heuristic-framework-for-a-class-of-vehicle-routing-problems",
+    "tags": [
+      "network-optimization",
+      "vehicle-routing"
+    ],
+    "type": "publication",
+    "score": 40.0
+  },
+  {
+    "id": "optim-online-1143ad8bda91",
+    "title": "A particle swarm optimization with a reduced-subspace trust-region safeguard for contact-rich controller tuning",
+    "authors": [],
+    "abstract": "Contact-rich robotic insertion is challenging because uncertainty in alignment, friction, and contact conditions can lead to unsuccessful assembly, excessive contact forces,  and jamming. Designing a reliable controller therefore requires balancing insertion performance, robustness, and recovery from unexpected contact. In this paper, we propose PSO+TR, a derivative-free optimization (DFO) method that combines the exploratory search of ... Read more",
+    "date": "2026-10-23",
+    "source": "Optimization Online",
+    "url": "https://optimization-online.org/2026/10/a-particle-swarm-optimization-with-a-reduced-subspace-trust-region-safeguard-for-contact-rich-controller-tuning/?utm_source=rss&utm_medium=rss&utm_campaign=a-particle-swarm-optimization-with-a-reduced-subspace-trust-region-safeguard-for-contact-rich-controller-tuning",
+    "tags": [
+      "metaheuristics"
+    ],
+    "type": "publication",
+    "score": 35.0
+  },
+  {
+    "id": "optim-online-878f7a2a988a",
+    "title": "The Strength of Root Cuts in an Extended Abstract Branch-and-Cut Model",
+    "authors": [],
+    "abstract": "The branch-and-cut paradigm has led to effective solvers for a wide range of mathematical optimization problems. Despite significant theoretical work on pure branching and pure cutting, less is known about their interaction. We study an extended abstract branch-and-cut model to investigate tradeoffs between branching and cutting, including the time to generate cuts. We prove that, ... Read more",
+    "date": "2026-10-23",
+    "source": "Optimization Online",
+    "url": "https://optimization-online.org/2026/10/the-strength-of-root-cuts-in-an-extended-abstract-branch-and-cut-model/?utm_source=rss&utm_medium=rss&utm_campaign=the-strength-of-root-cuts-in-an-extended-abstract-branch-and-cut-model",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "score": 30.0
+  },
+  {
+    "id": "crossref-10.1287-opre.2024.1196",
+    "title": "Online Allocation with Heterogeneous Supply and Minimum Workload Guarantees",
+    "authors": [
+      "Iyengar, G.",
+      "Singal, R."
+    ],
+    "abstract": "Keeping Gig Workers Working\n                  How should platforms allocate jobs when workers need a minimum amount of work to stay engaged? In their accepted paper, “Online Allocation with Heterogeneous Supply and Minimum Workload Guarantees,” Garud Iyengar and Raghav Singal study this question in online labor marketplaces, where workers differ in quality, capacity, and desired workload. The authors show that intuitive allocation rules can perform poorly. A first-come-first-served policy can favor lower-quality workers, whereas a quality-based greedy policy can cause high-capacity workers to leave when their workload requirements are not met. They develop Tracker, an online policy that combines admission control with a simple target-tracking rule: Each worker is assigned a target workload, and arriving jobs are directed toward workers who are most under their targets. Despite the stochastic nature of demand, the authors establish that Tracker is optimal. Computational experiments calibrated to a real labor marketplace show substantial improvements in allocation quality relative to standard policies, while maintaining workers’ minimum workload guarantees.",
+    "date": "2026-10-23",
+    "source": "Operations Research",
+    "source_detail": "Operations Research",
+    "url": "https://doi.org/10.1287/opre.2024.1196",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1287/opre.2024.1196",
+    "score": 40.0
+  },
+  {
+    "id": "crossref-10.1287-opre.2025.1811",
+    "title": "On the Maximization of Long-Run Conditional Value-at-Risk for Markov Decision Processes",
+    "authors": [
+      "Xia, L.",
+      "Yu, Z.",
+      "Wu, H."
+    ],
+    "abstract": "Optimizing Risk-Seeking Sequential Decisions via Conditional Value-at-Risk\n                  Decision makers may exhibit risk-seeking preferences in finance, energy operations, and stochastic resource management, yet corresponding Markov decision process (MDP) theories remain underdeveloped. In this paper, “On the Maximization of Long-Run CVaR for Markov Decision Processes,” Xia, Yu, and Wu investigate infinite-horizon MDPs maximizing long-run conditional value-at-risk (CVaR) for instantaneous rewards. They prove optimality for stationary randomized policies and show deterministic policies may fail; an optimal policy randomizes over at most two actions. By converting the original problem into a minimax saddle point formulation, the authors develop solvable linear programming and globally convergent gradient descent algorithms. Results are further extended to joint mean-CVaR optimization and validated on real-world microgrid scheduling data. This work fills gaps for risk-seeking MDPs and delivers practical computation tools for tail-oriented sequential decision making.",
+    "date": "2026-10-23",
+    "source": "Operations Research",
+    "source_detail": "Operations Research",
+    "url": "https://doi.org/10.1287/opre.2025.1811",
+    "tags": [
+      "linear-programming",
+      "scheduling"
+    ],
+    "type": "publication",
+    "doi": "10.1287/opre.2025.1811",
+    "score": 50.0
+  },
+  {
+    "id": "crossref-10.1287-mnsc.2024.07249",
+    "title": "Looking Under the Hood of Commodity Currency Predictability",
+    "authors": [
+      "Jeanneret, A.",
+      "Sokolovski, V."
+    ],
+    "abstract": "This paper revisits the exchange rate predictability of commodity currencies through the lens of market efficiency. Focusing on currencies with strong contemporaneous exposure to commodity prices, we show that changes in country-specific commodity export or import prices predict exchange rate fluctuations both in sample and out of sample. We establish four empirical facts: (i) the sign of the predictive relationship runs counter to standard risk-based explanations; (ii) predictability is concentrated at short horizons; (iii) predictability is driven by a small set of thinly traded currencies; and (iv) even sophisticated speculative traders adjust positions sluggishly in response to commodity price shocks in these currencies. Together, these findings suggest that predictability arises from the slow incorporation of information in less actively traded currencies, which is likely due to liquidity and position-building constraints, rather than from compensation for risk. The results also clarify the sources of commodity-based predictability in carry trade returns.\n                  This paper was accepted by Lukas Schmid, finance.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.07249 .",
+    "date": "2026-10-23",
+    "source": "Management Science",
+    "source_detail": "Management Science",
+    "url": "https://doi.org/10.1287/mnsc.2024.07249",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1287/mnsc.2024.07249",
+    "score": 40.0
+  },
+  {
+    "id": "crossref-10.1287-mnsc.2025.03426",
+    "title": "Bargaining and Contract Forms in Distribution Channels: Why Do Slotting Fees Arise and Linear Contracts Persist?",
+    "authors": [
+      "Foros, Ø.",
+      "Kind, H.",
+      "Shaffer, G."
+    ],
+    "abstract": "Two empirical patterns emerge in business-to-business settings, particularly in retail distribution channels such as grocery markets. First, linear contracts are widely observed alongside nonlinear contracts with fixed payments, despite the claimed efficiency advantages of the latter. Second, when fixed payments arise, they often flow from suppliers to retailers (slotting fees) rather than the reverse. We develop and analyze a model of multilateral bargaining in which a supplier negotiates separately with competing retailers to explain these patterns. The key mechanism is a trade-off between two distortions: under linear contracts, wholesale prices reflect bargaining power and can be either above or below the channel-profit-maximizing level, whereas under two-part tariffs, wholesale prices are set to maximize bilateral surplus independently of bargaining power but are systematically too low from an overall channel perspective because of rent shifting across relationships. As a result, neither contractual form uniformly dominates; instead, relative performance depends on how bargaining shapes gains from trade across firms. When bargaining leads to slotting fees, two-part tariffs yield higher channel profits than linear contracts, whereas when it would imply payments from retailers to suppliers, linear contracts may perform better. These findings offer a unified explanation for the persistence of linear contracts alongside two-part tariffs, the direction of fixed payments, and the conditions under which each contractual form is likely to arise.\n                  This paper was accepted by Miguel Villas-Boas, marketing.\n                  Supplemental Material: The online appendix is available at https://doi.org/10.1287/mnsc.2025.03426 .",
+    "date": "2026-10-23",
+    "source": "Management Science",
+    "source_detail": "Management Science",
+    "url": "https://doi.org/10.1287/mnsc.2025.03426",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1287/mnsc.2025.03426",
+    "score": 40.0
+  },
+  {
+    "id": "crossref-10.1287-trsc.2025.0407",
+    "title": "Towards Maximum Throughput in Generalized Automated Transport Networks",
+    "authors": [
+      "Chen, X.",
+      "Lin, X.",
+      "He, F.",
+      "Li, M.",
+      "Shen, Z."
+    ],
+    "abstract": "Leveraging the connectivity and automation of vehicles to enhance traffic and logistic control is an important yet challenging topic in future city operations and industrial settings. One of the central questions is how to characterize and optimize the capacity of automated transport systems, a problem complicated by network topology, demand heterogeneity, and stochastic dynamics. Rhythmic control (RC) is a recently proposed scheme that integrates performance guarantees, generality, and conceptual simplicity, thereby enabling a tractable analysis of network-level capacity. This paper undertakes a rigorous theoretical investigation into the capacity of generalized automated transport networks, covering both one-way and two-way configurations. By abstracting infrastructures such as road networks, warehouse aisle systems, and port yard lanes into rhythmic networked systems, RC provides a unified analytical framework for evaluating throughput and stability across diverse automated transport domains. Within a static analytical setting, we formally characterize the notion of demand accommodation associated with a rhythm design. Under a stationary stochastic framework, we establish that RC achieves throughput optimality; however, accommodation alone does not guarantee stabilization under the same rhythm design, and stabilizing certain demand patterns may require excessively long cycle lengths. To mitigate this drawback, we introduce a variant of RC that incorporates strategic holdings. We demonstrate that, under mild conditions, this extension guarantees the stabilization of any accommodatable demand and achieves approximate throughput optimality under finite cycle lengths, with explicit throughput and stability guarantees that support refined rhythm design and capacity analysis. Extensive simulation studies are conducted to evaluate the performances of the proposed RC. The results verify its core effectiveness, demonstrate that a period-wise design enables adaptation to time-varying flows, and show that strategic holdings significantly enhance overall system efficiency.\n                  Funding: This research was supported by the National Natural Science Foundation of China [Grant 72371141].\n                  Supplemental Material: The online appendices are available at https://doi.org/10.1287/trsc.2025.0407 .",
+    "date": "2026-10-23",
+    "source": "Transportation Science",
+    "source_detail": "Transportation Science",
+    "url": "https://doi.org/10.1287/trsc.2025.0407",
+    "tags": [
+      "supply-chain"
+    ],
+    "type": "publication",
+    "doi": "10.1287/trsc.2025.0407",
+    "score": 45.0
+  },
+  {
+    "id": "crossref-10.1287-ijoc.2025.1423",
+    "title": "Exact Algorithms for Two-Dimensional Knapsack Problems: A Unified Framework with New Benchmark Results",
+    "authors": [
+      "Wang, S.",
+      "Baldacci, R.",
+      "Furini, F.",
+      "Wei, L.",
+      "Liu, Q."
+    ],
+    "abstract": "This paper investigates two-dimensional knapsack problems modeled as the Generalized Two-Dimensional Knapsack Problem (G2KP), a variant not previously studied in the literature. The importance of the G2KP lies in its crucial role in designing Branch-Price-and-Cut (BPC) algorithms for the classical Two-Dimensional Bin-Packing Problem. We propose a novel and effective exact solution framework that incorporates both nonnumerically exact and numerically exact algorithms tailored to G2KP. The framework also achieves state-of-the-art performance on the well-known Two-Dimensional Knapsack Problem (with and without item conflicts) and the Two-Dimensional Orthogonal Packing Problem, solving several previously unsolved instances and establishing new benchmark results. These findings highlight the framework’s potential to inspire algorithmic developments for pricing problems in related BPC methods and higher-dimensional packing problems. To support future research, we make the algorithm code, instance data, and detailed results publicly available.\n                  History: Accepted by Andrea Lodi, Area Editor for Design &amp; Analysis of Algorithms–Discrete.\n                  Funding: This study was supported by the Natural Science Foundation of China [Grants 72271062, 72671084, and 52575565], Science and Technology Projects in Guangzhou [Grant 2024A04J01019], and the Province Natural Science Fund of Guangdong [Grants 2025A1515011297 and 2024A1515010246].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2025.1423 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2025.1423 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+    "date": "2026-10-23",
+    "source": "INFORMS Journal on Computing",
+    "source_detail": "INFORMS Journal on Computing",
+    "url": "https://doi.org/10.1287/ijoc.2025.1423",
+    "tags": [
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.1287/ijoc.2025.1423",
+    "score": 45.0
+  },
+  {
+    "id": "crossref-10.1007-s10479-026-07457-7",
+    "title": "Learning Dominant States in Elementary Resource Constrained Shortest Path Problems",
+    "authors": [
+      "Basso, S.",
+      "Minoli, A.",
+      "Salani, M."
+    ],
+    "abstract": "Abstract\n                  In this work, we investigate whether machine learning can be leveraged to identify promising states in dynamic programming algorithms, focusing on Elementary Resource Constrained Shortest Path Problems (ERCSPP). More in detail, we solved 41 single resource instances from SPPRCLIB using iterative relaxation techniques through the PathWyse library, systematically collecting all generated states (i.e. labels). We designed ad-hoc features computable in constant time and constructed two datasets: one containing all generated labels (G) and another with only those inserted into data pools (I), totaling several hundred million labels. Machine learning tools are then employed to explore these datasets, revealing significant patterns between successive relaxations. Leveraging these insights, we propose a normalization approach and apply supervised learning techniques to distinguish dominating states, both within subsequent relaxations of the same problem and in previously unseen instances. Our results demonstrate the effectiveness of this approach on Dataset G, while for Dataset I, performance varies, showing strong results within the same instance but declining for unseen ones. We therefore propose a data-driven policy that leverages trained models to prioritize the extension of promising labels during dynamic programming. Preliminary evaluation shows consistent reductions in the number of extended states across almost all instances, with speedups emerging on larger ones, supporting the viability of data-driven dynamic programming algorithms.",
+    "date": "2026-10-23",
+    "source": "Annals of Operations Research",
+    "source_detail": "Annals of Operations Research",
+    "url": "https://doi.org/10.1007/s10479-026-07457-7",
+    "tags": [
+      "network-optimization",
+      "ml-for-or"
+    ],
+    "type": "publication",
+    "doi": "10.1007/s10479-026-07457-7",
+    "score": 50.0
+  },
+  {
+    "id": "crossref-10.1002-net.70072",
+    "title": "Branch‐and‐Cut POPMUSIC for the Electric Vehicle Routing Problem With Time Windows",
+    "authors": [
+      "Bijiga, L.",
+      "Warwicker, J.",
+      "Rebennack, S."
+    ],
+    "abstract": "ABSTRACT\n                  Advancements in computer hardware and commercial software have enabled the use of branch‐and‐cut (BC) methodologies to address medium‐scale vehicle routing problems (VRPs). Despite the introduction of efficient heuristics in the literature, tailoring these approaches to suit various VRP variants, such as the electric vehicle routing problem with time windows (EVRPTW), remains a difficult task. EVRPTW is an extension of the classic VRP with time windows in which internal combustion engine vehicles are replaced by electric vehicles. In this study, we develop a POPMUSIC matheuristic to solve the EVRPTW that relies solely on BC (termed BC‐POPMUSIC), and can be implemented using commercial optimisation software such as Gurobi. We introduce new battery infeasibility inequalities, along with capacity cuts, reachability cuts, ‐path cuts and polar cuts, and incorporate them into Gurobi to tighten the linear programming (LP) relaxation of the mixed integer linear program (MILP) model. Through extensive experiments, we show that this tightening can improve the quality of solutions. Since the EVRPTW requires visits to recharging stations when the battery is depleted, we propose an improvement heuristic to efficiently manage these recharging stops. We demonstrate the effectiveness of BC‐POPMUSIC on known benchmark instances of EVRPTW and compare it with state‐of‐the‐art exact solutions. Our result shows that the approach achieves comparable or better performance, especially on larger problems. In addition, we present new best known solutions for several benchmark instances.",
+    "date": "2026-10-23",
+    "source": "Networks",
+    "source_detail": "Networks",
+    "url": "https://doi.org/10.1002/net.70072",
+    "tags": [
+      "linear-programming",
+      "integer-programming",
+      "vehicle-routing"
+    ],
+    "type": "publication",
+    "doi": "10.1002/net.70072",
+    "score": 55.0,
+    "mentions_solvers": [
+      "Gurobi"
+    ]
+  },
+  {
+    "id": "openalex-W2954306818",
+    "title": "Introduction to Open Educational Resources",
+    "authors": [
+      "Abbey Elder"
+    ],
+    "abstract": "",
+    "date": "2026-10-23",
+    "source": "OpenAlex",
+    "source_detail": "",
+    "url": "https://doi.org/10.31274/isudp.2026.261/1321",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.31274/isudp.2026.261/1321",
+    "citation_count": 0,
+    "score": 30.0
+  },
+  {
+    "id": "openalex-W7170145739",
+    "title": "Querying Multimodal Scientific Papers with AI: Practices and Preferences Across Blind, Low-Vision, and Sighted Scientists",
+    "authors": [
+      "Arnavi Chheda-Kothary",
+      "Lucy Lu Wang",
+      "Joseph Chee Chang",
+      "Jonathan Bragg"
+    ],
+    "abstract": "Visual diagrams, figures, and tables are central to scientific papers, and convey information beyond what is captured in text. While blind or low-vision (BLV) scientists have traditionally relied on static alternative text to access figures in papers, the rise of artificial intelligence (AI) has made interactive question-answering (QA) a feasible paradigm for visual exploration; yet little is known about how scientists use visual QA in practice or how to improve its accessibility. In this work, we interview five BLV and five sighted scientists across different STEM fields to understand how they use two AI tools, ChatGPT and Gemini, to query multimodal scientific documents. Our findings characterize how scientists review multimodal content, including existing practices (along with accessibility workarounds) for engaging with visuals, and feedback on the suitability of AI-generated responses to multimodal queries. We further find that vague or incomplete image descriptions, as well as incorrect AI outputs more broadly, can cause both BLV and sighted scientists to abandon AI workflows. To support future research, we additionally contribute a dataset of 115 queries and responses from our participants’ interactions with the AI tools for papers in their field. We close by discussing implications for AI-powered scientific QA systems, emphasizing considerations for access across abilities and domains.",
+    "date": "2026-10-23",
+    "source": "OpenAlex",
+    "source_detail": "International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS)",
+    "url": "https://doi.org/10.1145/3797867.3829024",
+    "tags": [
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.1145/3797867.3829024",
+    "citation_count": 0,
+    "score": 45.0
+  },
+  {
+    "id": "openalex-W7202351538",
+    "title": "QUARTZ: Qualitative Understanding via Accessible Representation and Visualization",
+    "authors": [
+      "Omar Khan",
+      "JooYoung Seo"
+    ],
+    "abstract": "Qualitative data visualizations – concept maps, network graphs, Sankey diagrams, and coding stripes – are integral to research practice, yet remain entirely inaccessible to blind and low-vision (BLV) researchers. While visualization has seen advanced multimodal solutions for quantitative charts, qualitative visualizations, and their non-linear, semantically rich structures have received no attention. We present QUARTZ, a web-based system that provides screen-reader-accessible, multimodal representations of qualitative data visualizations. Using the Rapid Iterative Testing and Evaluation (RITE) method, we conducted a formative user study with 8 BLV participants who completed 12 tasks across four visualization types. Our findings expose accessibility barriers unique to qualitative visualizations, non-linear navigation breakdowns and semantic comprehension gaps absent from quantitative chart research, and document how iterative co-design with BLV users progressively addressed them across sessions. We contribute empirical evidence and design guidelines for an underexplored visualization domain, advancing the infrastructure BLV researchers need to participate independently in qualitative inquiry.",
+    "date": "2026-10-23",
+    "source": "OpenAlex",
+    "source_detail": "International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS)",
+    "url": "https://doi.org/10.1145/3797867.3829019",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1145/3797867.3829019",
+    "citation_count": 0,
+    "score": 40.0
+  },
+  {
+    "id": "openalex-W7203532885",
+    "title": "Reconfiguration of Ability: An Autoethnography of LLM-Mediated Development by a Developer with Severe Physical Disability",
+    "authors": [
+      "Katsuki Ono"
+    ],
+    "abstract": "What does it mean to be a “developer” when one cannot type, speak, or move one’s limbs? This paper presents an autoethnographic inquiry into how the concept of ability is reconfigured through collaboration between a person with severe physical disability and large language models (LLMs). The author operates a tablet exclusively through a single head-mounted switch. Yet through natural-language-driven development (“vibe coding”), the author iterated through eleven versions of a personalized communication model—including building an auxiliary data-synthesis model—as part of Project VOICE, published 23 AI models on Hugging Face, and led a 10-person team. Drawing on contemporaneous development logs and first-person reflective narratives, the paper introduces the concept of reconfiguration of ability: neither the “restoration” of function nor the “removal” of barriers, but a continuous reshaping of what counts as ability through the connection between humans and technology. The paper grounds the concept in three constitutive features—persistence of impairment, non-removal of barriers, and redefinition of the ability itself—distinguishes it from compensation and accommodation, and derives implications for the design of assistive and development technologies.",
+    "date": "2026-10-23",
+    "source": "OpenAlex",
+    "source_detail": "International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS)",
+    "url": "https://doi.org/10.1145/3797867.3828990",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1145/3797867.3828990",
+    "citation_count": 0,
+    "score": 40.0
+  },
+  {
+    "id": "openalex-W7204378057",
+    "title": "Designing TIBBL: A Tangible Inclusive Block-Based Language for Widening Access to Programming",
+    "authors": [
+      "Alexandre Nevsky",
+      "Xinyun; id_orcid 0009-0002-9211-2351 He",
+      "Samantha Callaghan",
+      "Elliott Hall",
+      "Zihao Lu",
+      "Tiffany Ong",
+      "Timothy Neate",
+      "Alex Hadwen-Bennett"
+    ],
+    "abstract": "Access to early programming education is essential yet challenging for blind and low-vision (BLV) learners, especially in mainstream classrooms where introductory tools are often highly visual. Although tangible programming systems show promise for supporting early learning, less attention has been paid to how these systems should be designed for real-world contexts, such as mixed-ability classrooms and their social and practical constraints. Here we describe the design of TIBBL (Tangible Inclusive Block Based Language), a tangible programming toolkit combining physical programming tiles with a web based interface, designed to support early programming learning for BLV and sighted learners alike. Through a five-phase research-through-design process, involving key stakeholders, we surface insights around tangible representations, pedagogical scaffolding, and the social and infrastructural conditions that shape whether access is sustained. We reframe accessible tangible programming as a matter of inclusive classroom infrastructure rather than isolated assistive provision, informing future accessible programming pedagogy.",
+    "date": "2026-10-23",
+    "source": "OpenAlex",
+    "source_detail": "International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS)",
+    "url": "https://doi.org/10.1145/3797867.3829009",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1145/3797867.3829009",
+    "citation_count": 0,
+    "score": 40.0
+  },
+  {
+    "id": "openalex-W7204500158",
+    "title": "ColorA11Y: Enhancing Creative Design Workflows with Just-in-Time Color Accessibility Recommendations",
+    "authors": [
+      "Alexa Siu",
+      "Rekha Jain",
+      "Abhinav Kannan",
+      "José Echevarría",
+      "Mary Ann",
+      "Jawili",
+      "Rick Treitman",
+      "Garreth W. Tigwell",
+      "Jonathan K. Lazar"
+    ],
+    "abstract": "Effective color contrast in visual design is essential for content accessibility. While existing tools can identify contrast issues, they often operate in isolation from design workflows or are used as an afterthought. We present ColorA11Y, a system that supports designers in creating accessible content by providing just-in-time feedback and actionable recommendations throughout the authoring process to meet accessibility color contrast guidelines. Our system analyzes the visual properties of text and background elements and offers recommended changes, including text color adjustments, background modifications, and opacity changes. Through two user studies, we evaluate ColorA11Y’s effectiveness. A user preference study (n=40) revealed varying effectiveness of different recommendations based on design context, while a qualitative study with designers (n=8) indicated a more seamless workflow experience in comparison to a baseline using a color contrast checker. This work advances a born-accessible approach to design, where accessibility considerations are seamlessly integrated into the creative process rather than treated as an afterthought.",
+    "date": "2026-10-23",
+    "source": "OpenAlex",
+    "source_detail": "International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS)",
+    "url": "https://doi.org/10.1145/3797867.3829049",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1145/3797867.3829049",
+    "citation_count": 0,
+    "score": 40.0
+  },
+  {
+    "id": "openalex-W7204548731",
+    "title": "Q&A or Document-Based? The Effects of Interface Type on How Screen Reader Users Access Interconnected Documents",
+    "authors": [
+      "Colleen F. Cipriano",
+      "Yichun Zhao",
+      "Miguel A. Nacenta",
+      "Kotaro Hara",
+      "Jaylee Soh"
+    ],
+    "abstract": "Blind and low-vision (BLV) users are increasingly engaging with large language model (LLM) interfaces to access documents, but it is unclear how such systems support or hinder their ability to build interconnected knowledge. To examine this gap, we compared a Question-Answer Interface (QAI) that supports open-ended conversational inquiry, with a Document Interface (DI) based mostly on traditional structured text document navigation. We recruited 16 BLV screen reader users where they used both interfaces to explore two fictional worlds. Data from interaction logs, concept maps, decision-based tasks, and semi-structured interviews provide comparative insights into how interface design supports knowledge construction. Findings show that participants visited more distinct documents with the DI and formed larger and more correct mental models with the DI than with the QAI. They were also more able to apply knowledge they had gained. Simultaneously, many still preferred the QAI and often estimated that they had explored more, formed better mental models and applied their models better when acquiring the information with the QAI, despite this not being the case. Our analysis suggests possible interface design reasons for these differences and highlights some of the risks introduced by using question-answer interfaces to access information spaces.",
+    "date": "2026-10-23",
+    "source": "OpenAlex",
+    "source_detail": "International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS)",
+    "url": "https://doi.org/10.1145/3797867.3829036",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1145/3797867.3829036",
+    "citation_count": 0,
+    "score": 40.0
+  },
+  {
+    "id": "openalex-W7212025177",
+    "title": "Quantifying the Engagement Trap: Impact of Short-form Video Recommender Systems on Users with ADHD",
+    "authors": [
+      "Vedad Misirlić",
+      "Gregor Mayr",
+      "Elisabeth Lex"
+    ],
+    "abstract": "Short-form video platforms use recommender systems to maximize engagement through highly efficient personalized recommendations. However, the impact of these recommendations on users with ADHD compared to users without ADHD remains underexplored. Through this study, we introduce and operationalize the Engagement Trap, illustrating how recommender systems, while successfully optimizing for engagement, disproportionately disadvantage users with ADHD. This stratified study of 302 participants, recruited via the online platform Prolific, compares experiences between participants with and without ADHD. Our results show that while recommendations are perceived as relevant across groups, participants with ADHD report significantly higher levels of time blindness, post-usage regret, and emotional distress when consuming recommendations. Moreover, we collect feedback for several proof-of-concept, theoretical design interventions for neuro-inclusive design principles. These findings provide quantitative evidence of systemic differences in engagement-optimized recommender systems and highlight the unbalanced negative effects and interactions these systems create for participants with ADHD. We argue for neurodiversity-aware, human-centered design approaches that mitigate such algorithmic harms and support more equitable experiences.",
+    "date": "2026-10-23",
+    "source": "OpenAlex",
+    "source_detail": "International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS)",
+    "url": "https://doi.org/10.1145/3797867.3828987",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1145/3797867.3828987",
+    "citation_count": 0,
+    "score": 40.0
   },
   {
     "id": "openalex-W7213992415",
@@ -4862,6 +5710,59 @@
     "doi": "10.48550/arXiv.2610.31362",
     "arxiv_id": "2610.31362v1",
     "score": 40.0
+  },
+  {
+    "id": "s2-eb9a01b4d3fc",
+    "title": "Directing to Diversify: Multi-Directional Search for Automatic Heuristic Design",
+    "authors": [
+      "Jiang-Han Zhu",
+      "Jianan Zhou",
+      "Fei Liu",
+      "Ni Zhang",
+      "Yao-Xin Wu",
+      "Zhuo-Yi Lin",
+      "Zhi-Guang Cao"
+    ],
+    "abstract": "Large language models (LLMs) have demonstrated strong potential to automate heuristic design for NP-hard combinatorial optimization (CO) tasks without human intervention. Recent methods predominantly rely on evolutionary computation (EC) frameworks, where heuristic diversification is mainly induced through EC-like operators or downstream selection, while the direction of heuristic transformation remains largely unharnessed. In this paper, we propose a multi-directional Perturbation-Rewrite Search (PRS) framework for automatic heuristic design that factorizes heuristic transformation through directional search primitives at the generation level. Specifically, PRS operates on heuristic ideas through three complementary directions: expansion toward richer and more expressive designs, compression toward simpler and less specialized designs, and steering for fine-grained refinement, together enabling broader and more sustained exploration of diverse regions in the heuristic design space. PRS further organizes candidate exploration within a breadth-first search-based process with adaptive operator control, which ensures thorough candidate utilization and sustained exploration, and maintains strong search dynamics while preventing premature convergence. Extensive empirical results across diverse CO tasks show that PRS consistently discovers high-quality heuristics, demonstrating the effectiveness and generality of explicitly directional exploration design.",
+    "date": "2026-10-22",
+    "source": "Semantic Scholar",
+    "source_detail": "combinatorial optimization heuristic",
+    "url": "https://www.semanticscholar.org/paper/eb9a01b4d3fcdcf8b7c10c7dac7ac7bf9bce47ba",
+    "tags": [
+      "metaheuristics"
+    ],
+    "type": "publication",
+    "doi": "",
+    "arxiv_id": "2610.31048",
+    "citation_count": 0,
+    "score": 35.0,
+    "mentions_solvers": [
+      "Xpress"
+    ]
+  },
+  {
+    "id": "s2-efc908450a93",
+    "title": "Beyond Binary Encoding: Qudit-Based QAOA Framework for ML Detection in $M$-QAM MIMO Systems",
+    "authors": [
+      "C. Siriwardena",
+      "C. Luckshan",
+      "S. Gayan",
+      "Hazer Inaltekin",
+      "W. Shin"
+    ],
+    "abstract": "Maximum likelihood (ML) detection in massive multiple-input multiple-output (MIMO) systems is an NP-hard combinatorial problem whose complexity grows exponentially with the number of transmit antennas and the modulation order. The Quantum Approximate Optimization Algorithm (QAOA) has recently emerged as a promising near-term quantum heuristic for such problems; however, existing qubit-based formulations require $\\log_2 M$ qubits per $M$-QAM symbol, inflating both circuit width and depth. In this paper, we propose a qudit-based QAOA framework that encodes each $M$-QAM symbol directly into a pair of $d$-dimensional quantum states, where $d=\\sqrt{M}$. We derive a Hermitian cost Hamiltonian via a real-imaginary decomposition of the constellation, and introduce a generalized cyclic-shift mixer that ensures ergodic exploration of the search space without binary encoding. The proposed formulation reduces the number of quantum carriers from $\\mathcal{O}(N_t \\log_2 M)$ to $\\mathcal{O}(N_t)$ and the Hamiltonian interaction complexity from $\\mathcal{O}((N_t \\log_2 M)^2)$ to $\\mathcal{O}(N_t^2)$, while preserving the geometric structure of the constellation. Bit-error-rate (BER) simulations for $2\\times 2$ MIMO systems employing 4-QAM and 16-QAM over Rayleigh fading channels, with circuit depth $p=3$, demonstrate that the proposed detector closely approximates the performance of the optimal classical maximum-likelihood (ML) detector, while consistently outperforming the conventional minimum mean square error (MMSE) detector.",
+    "date": "2026-10-22",
+    "source": "Semantic Scholar",
+    "source_detail": "combinatorial optimization heuristic",
+    "url": "https://www.semanticscholar.org/paper/efc908450a9310b89731fe6d99521d630be0e37b",
+    "tags": [
+      "decomposition"
+    ],
+    "type": "publication",
+    "doi": "",
+    "arxiv_id": "2610.30925",
+    "citation_count": 0,
+    "score": 35.0
   },
   {
     "id": "openalex-W7212076670",
@@ -9938,6 +10839,30 @@
     "doi": "10.48550/arXiv.2610.30345",
     "arxiv_id": "2610.30345v1",
     "score": 45.0
+  },
+  {
+    "id": "s2-835b88f94fea",
+    "title": "An Integrated Job Assignment and Multiple Traveling Salesman Problem with Capacity and Delivery-Time Constraints for Land Logistics Providers in the International Supply Chain",
+    "authors": [
+      "Jarun Bootdachi",
+      "S. Nonthapot"
+    ],
+    "abstract": "Cross-border land logistics in international supply chains presents a complex decision-making challenge, as a logistics provider must simultaneously allocate jobs to vehicles and determine efficient delivery routes under strict capacity constraints and customer time windows. In this study, the linked job assignment and multiple traveling salesmen problem (mTSP) is formulated as a multiple objective optimization model that minimizes total travel distance, total travel time, and the number of late deliveries. To solve this problem, an adaptive goal-constrained genetic algorithm (AGCGA) is developed. First, a time-window-aware K-means clustering approach is used to generate feasible initial job assignments and estimate the required vehicle fleet. Next, a genetic algorithm with an embedded goal-programming fitness function is applied, where aspiration levels and penalty weights are adaptively adjusted during evolution to better explore the Pareto frontier. The proposed method is evaluated using a real-world-inspired dataset of 34 cross-border delivery locations between Thailand and Malaysia, with distance and travel-time matrices derived from Google Maps via web platforms. The results show that AGCGA outperforms NSGA-II and a greedy heuristic in terms of hypervolume, goal achievement, and computational stability. Overall, the framework provides a robust decision-support tool for balancing cost, service time, and delivery punctuality in international logistics.",
+    "date": "2026-10-21",
+    "source": "Semantic Scholar",
+    "source_detail": "vehicle routing problem",
+    "url": "https://doi.org/10.3390/analytics5040046",
+    "tags": [
+      "metaheuristics",
+      "vehicle-routing",
+      "supply-chain",
+      "multi-objective"
+    ],
+    "type": "publication",
+    "doi": "10.3390/analytics5040046",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 55.0
   },
   {
     "id": "openalex-W7214337464",
@@ -15308,6 +16233,74 @@
     ],
     "type": "publication",
     "doi": "10.3390/automation7050168",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "s2-3da0f5370665",
+    "title": "A Unified Degradation-Aware Optimization Framework for Lithium-Ion Battery Pack Selection in Shared E-Scooters",
+    "authors": [
+      "Ali Toprak",
+      "A. R. Boynueğri",
+      "Altuğ Bozkurt"
+    ],
+    "abstract": "Shared e-scooter systems are a key component of urban micromobility; however, battery pack selection still relies on nominal cell specifications or isolated performance metrics. This creates a design gap because existing energy, cost, and life-cycle-oriented assessments do not provide a pack level selection method that jointly accounts for rider heterogeneity, route severity, experimentally observed load profiles, and degradation-driven lifetime cost. To address this need, this study proposes a real-driving-data-informed degradation-aware optimization framework for selecting the cost-optimal battery pack by minimizing the levelized service cost per kilometer over battery lifetime. Real-world driving data, including vehicle speed, route position, battery voltage, and current, were collected using a GPS-enabled data acquisition system and incorporated into the proposed lithium-ion battery management and pack selection framework. Battery degradation was predicted using a literature-based aging model, and the agreement between the model-generated capacity trajectories and their piecewise OLS approximations was evaluated. The framework captures capacity fade, efficiency degradation, rider-dependent loading, slope-induced route severity, and economic factors, including electricity, maintenance, and aging costs. Battery selection is formulated as a unified cost-minimization problem across candidate lithium-ion chemistries and series-parallel pack configurations, enabling objective comparison under realistic constraints. Sensitivity analyses quantify the effects of rider mass, route slope, and cell-price variation on the optimal design. The results show that the optimal configuration depends strongly on both operating and market conditions, indicating that battery selection is context dependent rather than a fixed design choice. By linking capacity fade, current stress, efficiency degradation, and levelized service cost, the framework provides a transferable and degradation-aware lithium-ion battery management perspective for cost-effective battery deployment in shared micromobility applications.",
+    "date": "2026-10-20",
+    "source": "Semantic Scholar",
+    "source_detail": "vehicle routing problem",
+    "url": "https://doi.org/10.3390/en19204987",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.3390/en19204987",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 35.0
+  },
+  {
+    "id": "s2-56fbb6a9b9bb",
+    "title": "When does learning-guided operator selection fail in electric vehicle routing?",
+    "authors": [
+      "Jin-Yi Liang"
+    ],
+    "abstract": "Replacing the hand-tuned operator-weight adaptation of adaptive large neighborhood search (ALNS) with a learner is an increasingly popular way to bring machine learning into operations-research metaheuristics. For the electric vehicle routing problem with time windows (EVRPTW), we compare, within one ALNS solver, the classical adaptive roulette wheel against a contextual bandit (LinUCB) driven by search-state features. Against the best-known solutions on Schneider's standard instances, learning-guided selection yields no robust improvement and is significantly worse than the roulette wheel on small, loose-budget instances; early single-seed gains vanish under multi-seed replication. A controlled comparison of six selection strategies, a sensitivity analysis, a per-family analysis, the addition of cross-route local search, and a partial-recharge model all confirm the null result and isolate the real levers: a diverse operator portfolio, route consolidation, and charging time, never the rule used to select operators. We distill an actionable diagnostic: verify that operator selection is the bottleneck before adding a learner; in a well-tuned EVRPTW-ALNS it is not.",
+    "date": "2026-10-20",
+    "source": "Semantic Scholar",
+    "source_detail": "vehicle routing problem",
+    "url": "https://doi.org/10.1117/12.3132483",
+    "tags": [
+      "metaheuristics",
+      "vehicle-routing",
+      "ml-for-or"
+    ],
+    "type": "publication",
+    "doi": "10.1117/12.3132483",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "s2-60a900dcdd77",
+    "title": "Massive AI Model Orchestration for 6G Networks: Architecture, Optimization, and Energy-Efficient Deployment",
+    "authors": [
+      "Evelio Astaiza-Hoyos",
+      "H. F. Bermúdez-Orozco",
+      "Nasly Cristina Rodríguez-Idrobo"
+    ],
+    "abstract": "Sixth-generation (6G) networks will serve large pre-trained artificial intelligence (AI) foundation models from cloud, edge and device tiers, but placing, compressing and scheduling them under latency, energy and accuracy constraints remains open. This paper proposes Massive AI Model Orchestration (MAIMO), a three-tier framework that manages model residency and request routing inside the radio access and core networks. The orchestration problem is formulated as a mixed-integer multi-objective program for which a Pareto-optimal solution is proved to exist and whose offline placement-routing version is shown to be NP-hard. An online controller couples a bidirectional long short-term memory (BiLSTM) traffic predictor with proximal policy optimization (PPO). The evaluation is simulation-only, in a purpose-built system-level simulator calibrated to standardized urban-macrocell channel models. Over 20 paired replications, MAIMO halves the mean end-to-end latency of cloud-only service (11.3 ms against 22.7 ms), serves ultra-reliable low-latency vehicle-to-everything requests in 2.1 ms on average with warm caches and attains the lowest service-level-agreement violation rate among schemes meeting the accuracy floor, while tying deep Q-network and contextual-bandit controllers on mean latency. A transparent analytic energy model gives 5.46 J per inference against 16.73 J for cloud-only service, and constrained carbon-aware workload shifting reduces operational carbon by 27.2%.",
+    "date": "2026-10-20",
+    "source": "Semantic Scholar",
+    "source_detail": "vehicle routing problem",
+    "url": "https://doi.org/10.3390/fi18100572",
+    "tags": [
+      "integer-programming",
+      "scheduling",
+      "multi-objective"
+    ],
+    "type": "publication",
+    "doi": "10.3390/fi18100572",
     "arxiv_id": "",
     "citation_count": 0,
     "score": 50.0
@@ -69699,6 +70692,27 @@
     "score": 20.0
   },
   {
+    "id": "crossref-10.1080-01605682.2025.2577774",
+    "title": "A regulated many-to-one two-sided matching model for emergency teams: a university case study",
+    "authors": [
+      "Şimşek, A.",
+      "Göktekin, Z.",
+      "Şimşek, T.",
+      "Tunçer, D."
+    ],
+    "abstract": "",
+    "date": "2026-10-03",
+    "source": "Journal of the Operational Research Society",
+    "source_detail": "Journal of the Operational Research Society",
+    "url": "https://doi.org/10.1080/01605682.2025.2577774",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1080/01605682.2025.2577774",
+    "score": 20.0
+  },
+  {
     "id": "crossref-10.1007-s10479-026-07436-y",
     "title": "A privacy-preserving distributed credit evaluation model based on blockchain",
     "authors": [
@@ -80523,6 +81537,106 @@
     ],
     "type": "publication",
     "doi": "10.1007/s10951-025-00866-9",
+    "score": 20.0
+  },
+  {
+    "id": "crossref-10.1016-j.ejor.2026.10.030",
+    "title": "Accepting returns from competing e-tailer: The role of selling mode",
+    "authors": [
+      "Chen, Y.",
+      "Su, Q.",
+      "Li, G.",
+      "Zhou, F."
+    ],
+    "abstract": "",
+    "date": "2026-10-01",
+    "source": "EJOR",
+    "source_detail": "EJOR",
+    "url": "https://doi.org/10.1016/j.ejor.2026.10.030",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1016/j.ejor.2026.10.030",
+    "score": 20.0
+  },
+  {
+    "id": "crossref-10.1016-j.ejor.2026.10.023",
+    "title": "Secretary problems with random number of candidates: How prior distributional information helps",
+    "authors": [
+      "Zhang, J.",
+      "Jaillet, P."
+    ],
+    "abstract": "",
+    "date": "2026-10-01",
+    "source": "EJOR",
+    "source_detail": "EJOR",
+    "url": "https://doi.org/10.1016/j.ejor.2026.10.023",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1016/j.ejor.2026.10.023",
+    "score": 20.0
+  },
+  {
+    "id": "crossref-10.1016-j.cor.2026.107556",
+    "title": "Online multiple resource allocation problems with departures via the primal–dual approach",
+    "authors": [
+      "Amidu, Y.",
+      "Elbassioni, K.",
+      "Gabor, A."
+    ],
+    "abstract": "",
+    "date": "2026-10-01",
+    "source": "Computers & Operations Research",
+    "source_detail": "Computers & Operations Research",
+    "url": "https://doi.org/10.1016/j.cor.2026.107556",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1016/j.cor.2026.107556",
+    "score": 20.0
+  },
+  {
+    "id": "crossref-10.1016-j.orl.2026.107552",
+    "title": "Second-order characterizations of the egalitarian non-separable contribution value",
+    "authors": [
+      "Guo, J.",
+      "Lin, J."
+    ],
+    "abstract": "",
+    "date": "2026-10-01",
+    "source": "Operations Research Letters",
+    "source_detail": "Operations Research Letters",
+    "url": "https://doi.org/10.1016/j.orl.2026.107552",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1016/j.orl.2026.107552",
+    "score": 20.0
+  },
+  {
+    "id": "crossref-10.1016-j.orl.2026.107553",
+    "title": "Improved Rounding Algorithms for Set Cover via Exponential Clocks",
+    "authors": [
+      "Gowda, K.",
+      "Ma, W.",
+      "Srinivasan, A.",
+      "Valieva, R."
+    ],
+    "abstract": "",
+    "date": "2026-10-01",
+    "source": "Operations Research Letters",
+    "source_detail": "Operations Research Letters",
+    "url": "https://doi.org/10.1016/j.orl.2026.107553",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1016/j.orl.2026.107553",
     "score": 20.0
   },
   {
@@ -182387,6 +183501,71 @@
     "score": 30.0
   },
   {
+    "id": "crossref-10.1007-s11081-025-09992-x",
+    "title": "Simulated annealing-based nonmonotone conjugate gradient method for unconstrained optimization with applications",
+    "authors": [
+      "Hu, Y.",
+      "Zhang, X.",
+      "Deng, K.",
+      "Peng, Z."
+    ],
+    "abstract": "",
+    "date": "2026-09-01",
+    "source": "Optimization and Engineering",
+    "source_detail": "Optimization and Engineering",
+    "url": "https://doi.org/10.1007/s11081-025-09992-x",
+    "tags": [
+      "metaheuristics"
+    ],
+    "type": "publication",
+    "doi": "10.1007/s11081-025-09992-x",
+    "score": 25.0
+  },
+  {
+    "id": "crossref-10.1007-s11081-025-10002-3",
+    "title": "Stochastic haul rate planning using two-stage stochastic programming and model predictive control",
+    "authors": [
+      "Chamanbaz, M.",
+      "Seiler, K.",
+      "Trpkovski, S."
+    ],
+    "abstract": "Abstract\n                  Optimising the scheduling of shovels and trucks is a critical task in open-pit mining, significantly impacting production efficiency and operational costs. Traditional models often assume ideal conditions without accounting for disturbances; however, in this paper, we address this gap by incorporating multiple uncertainties. These uncertainties are categorised into contingencies and variations. Contingencies are binary events that may or may not happen, such as shovel breakdowns. Variations are continuous factors such as fluctuations in mineral composition, truck travel time, maximum loading rate of shovels and maximum processing rate of crushers. We develop and test a robust mixed-integer programming (MILP) model for computing the optimal loading rate of shovels in open-pit mines. The problem is formulated as a two-stage stochastic optimisation problem which is then solved and executed in a receding horizon fashion. The proposed methodology is simulated for an open-pit mine in Australia’s Pilbara region and the results confirm the effectiveness of the proposed stochastic optimisation approach in minimising the effect of uncertainty on the operation.",
+    "date": "2026-09-01",
+    "source": "Optimization and Engineering",
+    "source_detail": "Optimization and Engineering",
+    "url": "https://doi.org/10.1007/s11081-025-10002-3",
+    "tags": [
+      "integer-programming",
+      "scheduling",
+      "stochastic"
+    ],
+    "type": "publication",
+    "doi": "10.1007/s11081-025-10002-3",
+    "score": 45.0
+  },
+  {
+    "id": "crossref-10.1007-s11081-025-09993-w",
+    "title": "Multi-view Partially Shared Subspace Learning",
+    "authors": [
+      "Ma, X.",
+      "Wang, L.",
+      "Zhang, L.",
+      "Shen, C.",
+      "Li, R."
+    ],
+    "abstract": "",
+    "date": "2026-09-01",
+    "source": "Optimization and Engineering",
+    "source_detail": "Optimization and Engineering",
+    "url": "https://doi.org/10.1007/s11081-025-09993-w",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1007/s11081-025-09993-w",
+    "score": 20.0
+  },
+  {
     "id": "openalex-W7133298561",
     "title": "StubHub Ticket Marketplace Dataset",
     "authors": [
@@ -278704,6 +279883,26 @@
     "score": 20.0
   },
   {
+    "id": "crossref-10.1287-mnsc.2023.04276",
+    "title": "Factor Models of Asset Returns and Bear Market Risk",
+    "authors": [
+      "Massacci, D.",
+      "Sarno, L.",
+      "Trapani, L."
+    ],
+    "abstract": "We propose a conditional model of asset returns that allows for good and bad states of the world, depending on bear market risk. Specifically, we generalize existing latent factor models in three ways: we show how to estimate the threshold that identifies the “disappointment” event triggering the bad state of the world, we permit different factor structures for asset returns in good and bad states, and we show how to estimate consistently the conditional risk premia of observable factors from the estimated latent factors. The usefulness of the conditional model is illustrated with an empirical application to a broad cross-section of stock portfolio excess returns.\n                  This paper was accepted by Kay Giesecke, finance.\n                  Supplemental Material: The internet appendix and data files are available at https://doi.org/10.1287/mnsc.2023.04276 .",
+    "date": "2026-08-01",
+    "source": "Management Science",
+    "source_detail": "Management Science",
+    "url": "https://doi.org/10.1287/mnsc.2023.04276",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1287/mnsc.2023.04276",
+    "score": 30.0
+  },
+  {
     "id": "s2-1af4e4bca4d6",
     "title": "Intelligent process optimization for global logistics and fulfillment systems using advanced analytics and automation",
     "authors": [
@@ -299625,562 +300824,5 @@
     "arxiv_id": "",
     "citation_count": 0,
     "score": 35.0
-  },
-  {
-    "id": "crossref-10.1007-s10479-026-07323-6",
-    "title": "Risk-aware trading portfolio optimization",
-    "authors": [
-      "Bianchetti, M.",
-      "D’Acunto, G.",
-      "De Francisci Morales, G.",
-      "Kuroki, Y.",
-      "Scaringi, M.",
-      "Vitale, F."
-    ],
-    "abstract": "",
-    "date": "2026-07-25",
-    "source": "Annals of Operations Research",
-    "source_detail": "Annals of Operations Research",
-    "url": "https://doi.org/10.1007/s10479-026-07323-6",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.1007/s10479-026-07323-6",
-    "score": 30.0
-  },
-  {
-    "id": "crossref-10.1002-nav.70090",
-    "title": "Seeing Beauty in Ugly Produce: Do Ugly Produce Retailers Reduce Food Waste?",
-    "authors": [
-      "Han, Z.",
-      "Hu, B.",
-      "Dawande, M."
-    ],
-    "abstract": "ABSTRACT\n                  Ugly produce refers to cosmetically unconventional yet taste‐ and nutrition‐wise perfectly edible produce. Advocates of ugly produce retailers claim that they help reduce food waste, but skeptics argue that ugly produce is often not wasted but meets alternative demands such as from restaurants and processed food manufacturers. Given such complications, it is necessary to model the entire produce supply chain to properly evaluate the impact of ugly produce retailers on food waste. We model an agricultural cooperative producing, pricing, and selling produce to a retailer and an alternative buyer and find that the retailer selling ugly produce indeed strictly reduces food waste. However, doing so also weakly reduces the retailer's profit, which explains traditional grocery chains' hesitancy to carry ugly produce. Fortunately, we find that a dedicated ugly produce retailer competing with a traditional retailer yields the same food waste reduction. This research reveals supply‐chain level insights into the debate about ugly produce retailers and alludes to the sustainability value of dedicated ugly produce startups.",
-    "date": "2026-07-25",
-    "source": "Naval Research Logistics",
-    "source_detail": "Naval Research Logistics",
-    "url": "https://doi.org/10.1002/nav.70090",
-    "tags": [
-      "supply-chain"
-    ],
-    "type": "publication",
-    "doi": "10.1002/nav.70090",
-    "score": 45.0
-  },
-  {
-    "id": "crossref-10.1002-net.70063",
-    "title": "A Clustering Approach for\n                    <scp>NSGA</scp>\n                    ‐\n                    <scp>II</scp>\n                    in Political Redistricting",
-    "authors": [
-      "Splitter, B.",
-      "Saltzman, M.",
-      "Kurz, M."
-    ],
-    "abstract": "ABSTRACT\n                  Political redistricting is a complex, multi‐objective problem that has been extensively studied. One approach to solve this geographical partitioning problem is to use multiobjective genetic algorithms applied to the adjacency graph of precincts. Following the work of Vanneschi et al., we develop an algorithm using a Non‐Dominated Sorting Genetic Algorithm (NSGA‐II) to build electoral plans in the state of South Carolina. Our work (which we name Cluster‐NSGA‐II) utilizes a novel clustering approach to breed children rather than the standard crossover step. We find that this approach is competitive with other similar algorithms in terms of both solution diversity and Pareto optimality.",
-    "date": "2026-07-25",
-    "source": "Networks",
-    "source_detail": "Networks",
-    "url": "https://doi.org/10.1002/net.70063",
-    "tags": [
-      "metaheuristics",
-      "multi-objective"
-    ],
-    "type": "publication",
-    "doi": "10.1002/net.70063",
-    "score": 50.0
-  },
-  {
-    "id": "s2-48b85d5e9082",
-    "title": "Integrating electric vehicles into the pickup and delivery problem with crossdock and time window constraints",
-    "authors": [
-      "Emmanouil Nisyrios",
-      "Athanasios Dimopoulos",
-      "Konstantinos Gkiotsalitis"
-    ],
-    "abstract": "Pickup and delivery operations with cross-docking play a critical role in urban freight logistics by enabling rapid consolidation and synchronization of goods flows. The increasing adoption of electric vehicles in such systems is motivated by environmental targets but introduces operational challenges related to limited driving range, battery charge feasibility, and charging constraints under strict time-window requirements. This study investigates whether crossdock-based pickup and delivery systems can be operated feasibly and efficiently when vehicle routing decisions must also satisfy battery-related constraints. To address this question, a mixed-integer linear programming model is developed that integrates battery charge dynamics and opportunistic recharging directly into the crossdock handling process, ensuring energy feasibility across multiple routing phases. Numerical experiments show that, while the use of electric vehicles leads to moderately higher operating costs compared to conventional fleets, feasible and operationally consistent solutions can be achieved without additional routing detours. Overall, the proposed formulation provides an optimization framework for assessing the trade-offs between energy constraints, synchronization requirements, and routing efficiency in sustainable urban logistics systems.",
-    "date": "2026-07-25",
-    "source": "Semantic Scholar",
-    "source_detail": "vehicle routing problem",
-    "url": "https://doi.org/10.1007/s12351-026-01076-7",
-    "tags": [
-      "linear-programming",
-      "integer-programming",
-      "vehicle-routing",
-      "supply-chain"
-    ],
-    "type": "publication",
-    "doi": "10.1007/s12351-026-01076-7",
-    "arxiv_id": "",
-    "citation_count": 0,
-    "score": 60.0
-  },
-  {
-    "id": "arxiv-2607.23390",
-    "title": "When Can Depth Replace Precision? A Resource Theory of Quantized Neural Computation",
-    "authors": [
-      "Mojtaba Soltanalian"
-    ],
-    "abstract": "When can additional low-bit residual computation replace missing numerical precision for a fixed input-output map? We model a quantized residual system over a fixed horizon as a pure schedule selecting fields from a declared low-bit operation library, and use relaxed controls to characterize its infinite-depth limit. The distance from the target to the closed relaxed reachable set is the exact structural floor: no increase in depth can remove it for that library. Pure schedules approach the relaxed class at rate $O(D^{-1})$ under bounded-variation time dependence and $O(D^{-\\vartheta}+D^{-1})$ under Holder dependence of exponent $\\vartheta$. Execution arithmetic can reverse this conclusion: full-state write-back introduces a $Dρ_z$ penalty and can freeze residual updates, whereas increment error feedback replaces this growth by a bounded carry term and obeys an exact common-lattice conservation law. A fixed-teacher converse makes this rate sharp: for coherent depth-$L$ first-order high-precision comparators, accuracy matching requires $D=Θ(L)$. Learned codebooks add a metadata resource, while state-dependent routing introduces hybrid event conditions. Verified primal and dual bounds yield feasible, impossible, or unresolved decisions before training. Companion software implements the workflow, and Lean 4 machine-checks the exact discrete core. Depth replaces precision only relative to a declared library, horizon, execution semantics, and routing model.",
-    "date": "2026-07-25",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2607.23390v1",
-    "tags": [
-      "cs.LG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23390",
-    "arxiv_id": "2607.23390v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2607.23320",
-    "title": "Support profiles of full-capacity Pareto spectra of order three",
-    "authors": [
-      "Samir Adly"
-    ],
-    "abstract": "For a given real matrix $A\\in\\R^{n\\times n}$ of order $n\\geq 1$, a Pareto eigenvalue is a scalar $λ\\in\\R$ for which there exists a nonzero vector $x\\in\\R^n_+$ such that $Ax-λx\\in\\R^n_+$ and $\\langle x,Ax-λx\\rangle=0$. It is knwon that a real matrix of order $n=3$ can have at most $9$ distinct Pareto eigenvalues. We study the matrices for which this maximal number is attained and classify the way in which the $9$ Pareto eigenvalues are produced by their supports.   A Pareto eigenvalue may be produced by more than one support. We therefore choose one producing support for each distinct values. The main contribution of this paper is to prove that, for every such choice, the numbers of values assigned to supports of sizes $1$, $2$, and $3$ are necessarily $$   (1,5,3),\\qquad (2,4,3),\\qquad\\text{or}\\qquad (2,5,2). $$ The proof uses bounds from the order $n=2$ problem and several restrictions on singleton, pair, and full supports. In particular, the graph formed by the pair supports producing $2$ values contains no triangle. These arguments also gives anohter proof that the maximum Pareto capacity in order $3$ is equal to $9$.   For each of the $3$ profiles, we give an explicit full-capacity matrix with $9$ regular Pareto eigenvalues. We also prove that each profile occurs on a nonempty Euclidean-open set where every Pareto eigenvalue has a unique producing support.",
-    "date": "2026-07-25",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2607.23320v1",
-    "tags": [
-      "math.OC",
-      "multi-objective"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23320",
-    "arxiv_id": "2607.23320v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23361",
-    "title": "Hallucination Rates in Language Generation",
-    "authors": [
-      "Debmalya Panigrahi",
-      "Fan Wei",
-      "Ian Zhang"
-    ],
-    "abstract": "Language generation in the limit is an elegant model introduced by Kleinberg and Mullainathan [KM24] to formally study language generation by an algorithm that learns solely based on example strings. In this model, an algorithm is said to correctly generate from a language if it never makes an error after some finite time. In contrast, even sophisticated language models are known to regularly hallucinate in practice. In this paper, we initiate the study of language generation in the limit with (infinite) hallucination, i.e., the algorithm may generate incorrect strings infinitely often, but the errors occur at a limited rate (possibly even with 0-measure).   We first show that hallucination, even at rate 0, makes generation in the limit strictly more powerful: there are language collections that cannot be generated with finite error but can be generated with infinite error, even when errors occur on a 0-measure set of time-steps. Furthermore, while all countable collections are generatable with finite error, we show a strict hierarchy of (uncountable) language collections characterized by the hallucination rate. This hierarchy extends to breadth, the fraction of the target language generated. While all countable collections can attain the optimal breadth of 1/2 [KW26b], we show strict separation at every breadth and hallucination rate.   Finally, we study generation in the limit without repetition, where the algorithm may not repeat strings. This lets us compare the sets of correct and incorrect strings generated, rather than the fractions of correct and incorrect time-steps. Once again, we demonstrate a strict hierarchy at every hallucination rate and breadth. Taken together, these results reveal rich structure in language collections generatable in the limit with hallucination and establish hallucination rate as an important parameter in the theoretical study of language generation.",
-    "date": "2026-07-25",
-    "source": "arXiv",
-    "source_detail": "cs.DS",
-    "url": "http://arxiv.org/abs/2607.23361v1",
-    "tags": [
-      "cs.DS",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23361",
-    "arxiv_id": "2607.23361v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2607.23359",
-    "title": "Pricing Pandora's Boxes: Revenue Maximization in Sequential Information Acquisition",
-    "authors": [
-      "Shuchi Chawla",
-      "Dimitris Christou",
-      "Trung Dang",
-      "Zhiyi Huang"
-    ],
-    "abstract": "We study a mechanism design problem in which a seller controls access to information about a set of stochastic alternatives, and a buyer sequentially acquires information in order to choose a single alternative with high value. The value distributions of the alternatives are known to both parties. The seller posts non adaptive prices for revealing each alternative's realized value, and the buyer responds optimally by following a Pandora's Box strategy: deciding which alternatives to inspect and when to stop by accepting the best inspected alternative. The seller's goal is to maximize his expected revenue, i.e. the total payment collected from all inspections.   We study the revenue objective through the lens of simplicity versus optimality. Our main result is that a simple and efficiently computable pricing scheme obtains a 4 approximation in the worst case to the optimal revenue. This pricing rule equalizes the Weitzman indices across all alternatives. In contrast, we show that equalizing the prices themselves can be an unbounded factor worse than the optimum. Furthermore, for several natural special cases, including identically distributed alternatives and monotone hazard rate distributions, we fully characterize the optimal pricing.   Finally, we also study a variant of our model under optional inspection, where the buyer may select an alternative without observing its realization. In this setting, we obtain an n/(n-1) approximation for the special case of n identically distributed alternatives, as well as a 2 approximation for the special case where each alternative's value distribution has support size two.   Overall, our results highlight both the computational challenges and the power of simple pricing schemes in selling information to a sequential searcher.",
-    "date": "2026-07-25",
-    "source": "arXiv",
-    "source_detail": "cs.DS",
-    "url": "http://arxiv.org/abs/2607.23359v1",
-    "tags": [
-      "cs.DS",
-      "game-theory"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23359",
-    "arxiv_id": "2607.23359v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23188",
-    "title": "On the diversity problems parameterized by the size of the solutions",
-    "authors": [
-      "Julien Baste",
-      "Cléophée Robin",
-      "Marie-Emilie Voge"
-    ],
-    "abstract": "Diversity optimization seeks multiple high-quality solutions that are sufficiently different from one another, providing a richer representation of the solution space than a single optimum while avoiding the prohibitive cost of complete enumeration. In this work, we introduce the notion of natural diversity, a general condition that connects a combinatorial problem $Π$ and a diversity measure $\\texttt{dist}$. We show that if a pair $(Π,\\texttt{dist})$ is naturally diverse and we have in hand a completion algorithm that, from a partial solution of $Π$, can complete it into a solution of $Π$, then we can produce a parameterized algorithm solving the diversity variant of $Π$ with regard to the distance $\\texttt{dist}$ when parameterized by the size of the solutions and the number of expected solutions. Furthermore, we show that several widely used diversity measures, including pairwise disjointness, Hamming distance, Jaccard distance, and the Otsuka-Ochiai coefficient (under both minimum and sum aggregation), satisfy the natural diversity property for problems in which all the solutions have the same size. Finally, we demonstrate the applicability of our framework by deriving fixed-parameter algorithms for diverse variants of Minimum Vertex Cover and Minimum Steiner Tree. Our results broaden the scope of parameterized diversity algorithms by accommodating natural solution-size parameterizations and a wider class of diversity measures.",
-    "date": "2026-07-25",
-    "source": "arXiv",
-    "source_detail": "cs.DS",
-    "url": "http://arxiv.org/abs/2607.23188v1",
-    "tags": [
-      "cs.DS",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23188",
-    "arxiv_id": "2607.23188v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2607.23348",
-    "title": "Logit-Coordinate Generative Models for Mixed Continuous-Categorical Tabular Data",
-    "authors": [
-      "Yuefei Shen",
-      "Xiaotong Shen"
-    ],
-    "abstract": "Mixed continuous--categorical data pose a representation problem for continuous generative models. Flow Matching and Gaussian diffusion operate in Euclidean spaces, whereas categorical laws lie on probability simplices and may be highly imbalanced. We study a logit-coordinate framework that encodes categorical variables as smoothed natural parameters and combines them with transformed numerical variables. This yields common formulations of Logit Flow Matching and Logit Diffusion. We introduce a mixed-distribution discrepancy separating categorical marginal error from conditional continuous Wasserstein error, and derive stability bounds and imbalance-aware nonparametric rates linking vector-field or drift error to decoded mixed-distribution error. Controlled simulations show that scaled-logit coordinates improve or match one-hot coordinates, especially under severe rare-cell imbalance. Across four real-data benchmarks and ten splits per dataset, Logit FM improves the primary distributional metrics on three datasets and is comparable on Churn2; Block-Conditional Logit FM consistently improves the flat model; and Logit Diffusion generally improves over or matches One-Hot Diffusion.",
-    "date": "2026-07-25",
-    "source": "arXiv",
-    "source_detail": "stat.ML",
-    "url": "http://arxiv.org/abs/2607.23348v1",
-    "tags": [
-      "stat.ML",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23348",
-    "arxiv_id": "2607.23348v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2607.23304",
-    "title": "Context-Adaptive Inference: A Unified Statistical and Foundation-Model View",
-    "authors": [
-      "Yue Yao",
-      "Caleb N. Ellington",
-      "Jingyun Jia",
-      "Baiheng Chen",
-      "Dong Liu",
-      "Rikhil Rao",
-      "Jiaqi Wang",
-      "Samuel Wales-McGrath",
-      "Yixin Yang",
-      "Zhiyuan Li",
-      "Eric P. Xing",
-      "Ben Lengerich"
-    ],
-    "abstract": "Modern predictive systems are expected to adapt their behavior to the specific situation they are facing. A clinical model should not treat every patient the same; a retrieval-augmented model should change its answer when given different evidence; a mixture-of-experts model should route different inputs to different experts. We call this capability context-adaptive inference: before predicting, the system uses information about the current context to specialize its parameters or computation for that instance.   This article provides a unified view of context-adaptive inference across three traditions that are usually treated separately: (i) explicit adaptation in statistics (e.g. varying-coefficient models, local regression, hierarchical sharing), (ii) rapid task-specific adaptation in meta-learning and transfer, and (iii) implicit adaptation in large foundation models via prompting, retrieval, and expert routing. We formalize these approaches under a common objective: to map context $c$ to adapted parameters $θ(c)$, then to predict via $f(x; θ(c))$. Under squared loss, linear prediction heads, and fixed features, we prove that explicit parameter adaptation and implicit routing are mathematically equivalent to kernel ridge regression on joint features of inputs and context. Building on this bridge, we propose practical design principles and evaluation metrics including adaptation-efficiency, routing stability, and context-specific robustness to guide when to specialize, how to constrain that specialization, and how to audit context-adaptive models in deployment. Finally, we identify open problems in identifiability, robustness under distribution shift, and efficient large-scale adaptation, outlining design principles for methods that are scalable, reliable, and transparent in real-world settings.",
-    "date": "2026-07-25",
-    "source": "arXiv",
-    "source_detail": "stat.ML",
-    "url": "http://arxiv.org/abs/2607.23304v1",
-    "tags": [
-      "stat.ML",
-      "healthcare-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23304",
-    "arxiv_id": "2607.23304v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23287",
-    "title": "Learning Asymptotics with Convergence-Rate Guarantees using Linear Least Squares",
-    "authors": [
-      "Christos N. Efrem"
-    ],
-    "abstract": "We introduce a new research area that is called Asymptotics Learning Theory (ALT) and combines optimization with asymptotic analysis. In particular, ALT provides a unified approach for computing unknown constants/parameters in proven asymptotic expansions using optimization theory. In this paper, we focus on a general asymptotic form which includes a broad class of asymptotics. Furthermore, we study two powerful numerical methods, namely, sliding Linear Least Squares (sLLSQ) and sliding Tikhonov Linear Least Squares (sT-LLSQ). For these techniques we rigorously prove asymptotic estimates that lead to sufficient conditions for convergence (to the correct values of unknown parameters) and convergence-rate guarantees. Despite their strengths, both methods have also limitations, e.g., slow convergence---or even, counterintuitively, divergence---in some cases. Moreover, we present fundamental applications in analytic combinatorics, a beautiful field of mathematics that deals with asymptotic enumeration of discrete structures using complex analysis. The proposed techniques complement existing approaches, such as the ratio method and its variants. Numerical examples also verify the theoretical results. Finally, we discuss interesting research directions in ALT.",
-    "date": "2026-07-25",
-    "source": "arXiv",
-    "source_detail": "stat.ML",
-    "url": "http://arxiv.org/abs/2607.23287v1",
-    "tags": [
-      "stat.ML",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23287",
-    "arxiv_id": "2607.23287v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2607.23236",
-    "title": "FedSLIM: Privacy-Preserving Federated MDL-Based Descriptive Pattern Mining Across Data Silos",
-    "authors": [
-      "Samar Samir Khalil",
-      "Noha S. Tawfik",
-      "Marco Spruit"
-    ],
-    "abstract": "Federated learning has achieved considerable success for predictive modelling, yet federated descriptive analytics remains largely unexplored. Existing federated pattern mining approaches are predominantly support-based and do not optimise a principled global objective such as Minimum Description Length (MDL). We introduce FedSLIM, the first federated MDL-based framework for descriptive pattern mining. Building on the SLIM principle, FedSLIM enables collaborative optimisation of compact pattern models across distributed databases without sharing raw transactions. We propose two complementary variants that balance privacy, communication, and optimisation fidelity under different deployment assumptions. To evaluate federated MDL mining, we introduce fidelity and discovery-oriented metrics that quantify agreement with a centralised baseline and assess recovery of globally informative patterns. Experiments on multiple real-world datasets under IID and non-IID partitioning show that both variants preserve high-quality compression structure while requiring orders of magnitude less search than the centralised baseline. We further reveal a local-global discovery gap in distributed MDL mining, where globally compressive patterns may be undiscoverable through isolated local optimisation. Both variants recover globally informative patterns absent from all standalone local models, demonstrating the benefits of federated optimisation beyond independent local mining. These results establish federated MDL mining as a practical foundation for privacy-preserving descriptive analytics across distributed data silos.",
-    "date": "2026-07-25",
-    "source": "arXiv",
-    "source_detail": "stat.ML",
-    "url": "http://arxiv.org/abs/2607.23236v1",
-    "tags": [
-      "stat.ML",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23236",
-    "arxiv_id": "2607.23236v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2607.23182",
-    "title": "Beyond ICA: Identifiability by Symmetry Breaking",
-    "authors": [
-      "Pengzhou Wu"
-    ],
-    "abstract": "We prove the identifiability of deep generative models (DGMs) with piecewise-affine (PWA) decoders and Gaussian mixture model (GMM) priors, in a purely unsupervised setting. We introduce three algebraic contrast principles for symmetry breaking: domain contrast, which trivializes the mixture symmetry group; mechanism contrast, which ensures every decoder branch is witnessed by a unique boundary; and interaction contrast, which forbids parameter conspiracies between latent components and decoder branches. Together they exploit the interplay between the discrete combinatorics of the PWA map and the continuous symmetry structure of the latent GMM. Continuity is replaced by algebraic symmetry conditions; injectivity is decoupled from structural identification and required only for pointwise inversion. Our results form a hierarchy: from law identifiability (LID; latent distribution up to a global affine map) through map identifiability (MID; decoder up to the same map) to posterior and pointwise identifiability. The ICA-form ambiguity emerges under conditions on diagonal component covariances. Assumptions are only on the data-generating process, not on learning methods, except for the interaction contrast. To our knowledge this is the first to make algebraic symmetry-breaking the engine of nonlinear identifiability, the first to admit discontinuous decoders, and the first to handle fully non-injective decoders, where every observation admits multiple latent codes.",
-    "date": "2026-07-25",
-    "source": "arXiv",
-    "source_detail": "stat.ML",
-    "url": "http://arxiv.org/abs/2607.23182v1",
-    "tags": [
-      "stat.ML",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23182",
-    "arxiv_id": "2607.23182v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2607.23165",
-    "title": "Adaptive Multi-Scale Forecasting and Gate-Localized Conformal Prediction for Multivariate Nonstationary Time Series",
-    "authors": [
-      "Ziling Ma",
-      "Junshu Jiang",
-      "Ángel López-Oriona",
-      "Ying Sun",
-      "Hernando Ombao"
-    ],
-    "abstract": "We propose ABF-T-GLCP, a model-agnostic framework for forecasting and uncertainty quantification in nonstationary multivariate time series. The central idea is to learn an adaptive predictive state representation for point forecasting and reuse it for conformal calibration. The forecasting module combines horizon-specific temporal experts through a learned gate and refines predictions using sparse predictive transfer across related series. The uncertainty module, Gate-Localized Conformal Prediction (GLCP), uses the learned gate state, together with temporal recency, to select locally relevant calibration residuals, thereby coupling uncertainty calibration to the predictive regimes used by the forecasting model. This shared representation allows point forecasts and prediction intervals to adapt consistently under evolving temporal dynamics while retaining the model-agnostic nature of conformal prediction and yielding approximate local coverage under mild stability conditions. Experiments on a large-scale high-frequency commodity forecasting benchmark show consistent gains in point forecasting accuracy and substantially narrower prediction intervals with empirical coverage close to the nominal level. Additional results indicate that the framework extends beyond the motivating financial application.",
-    "date": "2026-07-25",
-    "source": "arXiv",
-    "source_detail": "stat.ML",
-    "url": "http://arxiv.org/abs/2607.23165v1",
-    "tags": [
-      "stat.ML",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23165",
-    "arxiv_id": "2607.23165v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2607.23157",
-    "title": "Anytime-Valid Confirmation of Covariate Balance for Prespecified Corrections",
-    "authors": [
-      "Seungjin Choi"
-    ],
-    "abstract": "Many covariate-shift adaptation methods construct a correction $w(x)$, but users must still determine whether the corrected distribution is sufficiently balanced for the target stream. We study anytime-valid confirmation of prespecified corrections from sequential unlabeled target inputs. Our primary contribution is a procedure for confirming covariate balance. For a prespecified class of balancing functions and tolerances, time-uniform confidence sequences permit continuous monitoring and data-dependent stopping once all plausible target moments lie within their tolerance bands. If the correction is out of tolerance for at least one function, the probability of ever incorrectly confirming balance is at most the prescribed level. Upon stopping, the procedure yields a certificate local to the chosen functions and tolerances, yet providing an absolute downstream-adequacy statement that ordinary shift diagnostics generally do not. With finite source data, contracted bands preserve this guarantee while accounting for uncertainty in weighted source moments, whereas expanded bands support only compatibility diagnostics. As complementary information, we study a source-calibrated likelihood-ratio e-process whose KL-drift identity characterizes correction directions relative to the source. Under the source-reference distribution, the probability of ever crossing its evidence threshold is controlled, but crossing does not confirm balance. We also give an exponential-tilt test for departures beyond an acceptable correction region and deploy balance-confirmed corrections in weighted conformal prediction. Experiments illustrate false-confirmation control, locality to the balancing-function class, KL-drift diagnostics, acceptable-region monitoring, finite-source effects, and downstream conformal coverage under covariate shift.",
-    "date": "2026-07-25",
-    "source": "arXiv",
-    "source_detail": "stat.ME",
-    "url": "http://arxiv.org/abs/2607.23157v1",
-    "tags": [
-      "stat.ME",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23157",
-    "arxiv_id": "2607.23157v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2607.23130",
-    "title": "Identification and Learning of Semantic Observation Kernels: Partial Observation, Uniform Recovery, & Minimax Limits",
-    "authors": [
-      "Matthew Francis Dixon"
-    ],
-    "abstract": "Probabilistic text generators supply conditional distributions over tokens and complete verbal continuations, whereas scientific use often requires a posterior over a finite state. Large language models are the leading example: phrase probabilities depend on prompt wording, and model-printed percentages are generated text rather than state posteriors. More generally, we ask when an observable language law can support a reproducible posterior over declared states. A semantic map groups meaning-equivalent continuations; held-out cases with reference posteriors identify a semiparametric inverse from grouped language probabilities to state probabilities. The language law remains nonparametric and no hidden model quantity is used.   This is principally a theory and methods paper and makes several contributions. On the theoretical side, we derive conditions for existence, identification, stable recovery, and sequential updating; concentration, asymptotic, and nonparametric rates; identified sets under truncated probabilities; and a minimax boundary for uniform stability. On the empirical side, theorem- directed simulations verify recovery rates, compatible-set coverage, and stability gates, while two frozen language-model studies illustrate held-out recovery and conformal coverage. The results specify when observable language probabilities can provide an auditable state measurement without being interpreted as internal belief.",
-    "date": "2026-07-25",
-    "source": "arXiv",
-    "source_detail": "stat.ME",
-    "url": "http://arxiv.org/abs/2607.23130v1",
-    "tags": [
-      "stat.ME",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23130",
-    "arxiv_id": "2607.23130v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2607.23220",
-    "title": "Embedded Firmware Development for Flight Control, Telemetry, and Video Streaming for DIY UAV Research",
-    "authors": [
-      "Ad-Deen Mahbub",
-      "Indroneel Roy",
-      "Mohammad Kamruzzaman Khan Prince"
-    ],
-    "abstract": "This paper presents the design and optimization of quadcopter firmware for a low-cost UAV based on the dual-core ESP32-S3 microcontroller, targeting real-time flight control, telemetry, and video transmission within stringent embedded resource constraints. The firmware leverages dedicated task allocation across the two cores: 400Hz control loop on Core 1 implements sensor fusion with a Madgwick filter, a hybrid fixed-point PID controller enhanced by selective derivative scaling and feedforward braking. Core 2 handles 50 Hz telemetry encoding and UDP-based video and data streaming at 25FPS VGA frames, ensuring separation of control and communication workloads to prevent latency interference. Inter-core communication employs zero-copy buffers with mutex protection for minimal overhead and deterministic execution. Custom event-driven threading and RTOS-inspired static scheduling guarantee real-time responsiveness and jitter-free operation despite ESP32-S3's limited memory and floating-point performance. Experimental evaluation confirms that this firmware architecture provides precise, stable flight stabilization and robust telemetry support, enabling resource-constrained ESP32-S3 platforms to handle DIY projects and research with minimal investment and full customization capability.",
-    "date": "2026-07-25",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2607.23220v1",
-    "tags": [
-      "eess.SY",
-      "scheduling"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23220",
-    "arxiv_id": "2607.23220v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23202",
-    "title": "jaxdae: A JAX-native Differentiable Solver for Differential-Algebraic Equations in Coupled Multi-physics",
-    "authors": [
-      "Chengyuan Li",
-      "Shanfang Huang",
-      "Jian Deng"
-    ],
-    "abstract": "Many engineered models begin as partial differential equations. Spatial discretization converts them into ordinary differential equations coupled to algebraic constraints---conservation closures, constitutive laws, network topology---whose joint evolution is a differential-algebraic equation (DAE). Parameter inversion, uncertainty quantification, Bayesian inference, and optimal control all require gradients of this solve. The two software traditions that should supply them have not met: industrial acausal modeling tools simulate DAEs forward but stop at reverse-mode differentiation, while differentiable-physics frameworks in JAX handle explicit ODEs and PDEs but leave the algebraic-constraint layer untouched. Here we show that the forward DAE solve and its reverse-mode sensitivity can be unified in one JAX-native suite. jaxdae pairs adaptive BDF, Radau, and Rosenbrock integration with Pantelides index reduction and dummy derivatives, and makes the adaptive BDF path differentiable by freezing the accepted step grid and re-solving a variable-step BDF-2 on it for the backward pass. The full pipeline differentiates under one $\\texttt{jax.grad}$ call, XLA fuses a batched parameter sweep into one program whose wall time stays nearly flat from batch~1 to~1000, and the DAE becomes a differentiable primitive for inference, control, and design.",
-    "date": "2026-07-25",
-    "source": "arXiv",
-    "source_detail": "cs.MS",
-    "url": "http://arxiv.org/abs/2607.23202v1",
-    "tags": [
-      "cs.MS",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23202",
-    "arxiv_id": "2607.23202v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2607.23176",
-    "title": "An Adjoint-Based Differentiable Physics Framework for Online Parameter Inversion in Closed-Brayton Gas-Cooled Reactor Digital Twins",
-    "authors": [
-      "Chengyuan Li",
-      "Shanfang Huang",
-      "Jian Deng"
-    ],
-    "abstract": "Digital twins for advanced reactors must invert physical parameters online from noisy, partial sensor streams while the plant is rarely at steady state. Gradient-based inversion is the natural tool for this task, but the forward models in routine use are seldom differentiable end to end, so practitioners fall back on derivative-free filters. We present an end-to-end-differentiable digital twin of a closed-Brayton gas-cooled reactor that propagates reverse-mode automatic differentiation through an implicit differential-algebraic plant model, exposing exact parameter sensitivities. The twin drives an AD-Hessian incremental 4D-Var estimator, benchmarked against ensemble, unscented, and finite-difference variational baselines over a two-by-two matrix that crosses steady with transient excitation and full with partial observation. No single estimator wins everywhere: the unscented filter keeps its best-linear-unbiased advantage on the controlled steady-state corner, while the proposed estimator attains the lowest mean error on the reflector coefficient on the other three corners --- reaching \\SI{0.43}{\\percent} under transient full observation, roughly an order of magnitude below the unscented filter, and matching the ensemble filter at low-to-moderate noise on the combined transient-partial corner. Every estimator's variance sits within a small factor of the Cramér--Rao bound, so the residual error reflects a deterministic bias floor from the twin's differentiability simplifications rather than statistical inefficiency, and the advantage is one of robustness to the resulting multi-modal loss landscape, which a component ablation localises by regime. Differentiating a first-principles plant model thus makes gradient-based inversion competitive with established filters across a reactor's operating range.",
-    "date": "2026-07-25",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2607.23176v1",
-    "tags": [
-      "eess.SY",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23176",
-    "arxiv_id": "2607.23176v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2607.23134",
-    "title": "Diffusion-Guided Search via Exponential Tilting (DiffTilt): An Application to Falsification of Safety-Critical Systems",
-    "authors": [
-      "Tanmay Khandait",
-      "Preetom Biswas",
-      "Hideki Okamoto",
-      "Bardh Hoxha",
-      "Georgios Fainekos",
-      "Giulia Pedrielli"
-    ],
-    "abstract": "Discovering rare safety-critical failures in autonomous and cyber-physical systems is a fundamental challenge in verification and validation. Existing falsification approaches rely on conditional sampling strategies that factor the joint distribution over environments and system executions, and therefore suffer from multiplicative rarity effects: the simultaneous scarcity of failure-inducing inputs and failure-inducing traces makes exhaustive search prohibitively expensive.   This paper develops DiffTilt, a distributional framework that exponentially tilts a diffusion model-induced joint distribution over environments and executions. We show that diffusion-guided sampling admits an exact interpretation as importance sampling in the joint space, where guidance scores induce a KL-optimal reallocation of probability mass towards failure-relevant behaviors. We further show that tilting provably amplifies failure probability and strictly outperforms conditional sampling, which is limited by multiplicative rarity. In this framework, the joint generative model serves as a reusable prior over scenarios and need not faithfully represent the system under test. Expensive system simulations are instead limited to learning a scoring function that characterizes scenario quality, enabling their selective and adaptive use.   We study DiffTilt on ARCH-COMP benchmarks, and we propose an additional tractor-trailer benchmark showing the behavior of several approaches when scenario generation is guided by a well-defined specification rather than a reward. The proposed method achieves competitive or improved falsification performance compared to state-of-the-art approaches, with larger gains when specification definition is not limited to STL formulas.",
-    "date": "2026-07-25",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2607.23134v1",
-    "tags": [
-      "cs.LG",
-      "stochastic",
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23134",
-    "arxiv_id": "2607.23134v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.23356",
-    "title": "How to Draw a Planar Graph: An Experimental Evaluation",
-    "authors": [
-      "Sergey Pupyrev"
-    ],
-    "abstract": "Planar graphs are central to graph drawing, with extensive results on planar layouts and related structures. Every planar graph admits a planar straight-line drawing, and algorithms can guarantee additional geometric or combinatorial properties. However, it is unclear which algorithms work best in practice. Even for small graphs with near-perfect manual drawings, standard algorithms might produce poor spacing, distorted faces, or small angles.   We present an experimental evaluation of planar graph drawing algorithms on a large benchmark collection of small and medium-sized planar graphs (\\(10\\)--\\(400\\) vertices). The study compares established algorithms from the graph drawing literature, practical force-directed and pressure-based heuristics, and new optimization-based methods that directly improve visual properties such as edge-length uniformity, face-area balance, and angular resolution. The results show that no evaluated algorithm is best across all aesthetic criteria, and optimizing one visual property often worsens another. Directly optimizing visual criteria improves targeted scores, and score-guided combination of several methods gives the best aggregate results, but no simple algorithm emerges as a clear universal default. Designing a simple, robust algorithm that performs well across graph families and aesthetic criteria therefore remains an open practical problem.",
-    "date": "2026-07-25",
-    "source": "arXiv",
-    "source_detail": "cs.CG",
-    "url": "http://arxiv.org/abs/2607.23356v1",
-    "tags": [
-      "cs.CG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23356",
-    "arxiv_id": "2607.23356v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2607.23155",
-    "title": "Eternal Vertex Cover Problem on Halin Graphs",
-    "authors": [
-      "Jasine Babu",
-      "Pratik Ghosal",
-      "Cipriyano Simoes"
-    ],
-    "abstract": "Eternal vertex cover problem is a graph protection problem which is a dynamic two player game variant of the classical vertex cover problem. In this game, the minimum number of guards required to protect a graph $G$ is called the eternal vertex cover number of $G$, denoted by $evc(G)$.   It is known that for any graph $G$, $\\ mvc(G) \\le evc(G) \\le 2mvc(G)$, where $mvc(G)$ is the vertex cover number of $G$, and that these bounds are generally tight. However, no biconnected graph $G$ achieves $evc(G) = 2mvc(G)$ and no better lower bounds are known for them. In this work, we focus on biconnected graphs in graph families. For infinite graph families $\\mathcal{F}$, consider the parameter $ρ(\\mathcal{F})=\\sup\\{r \\in \\mathbb{R}:\\text{ for infinitely many graphs }G \\in \\mathcal{F},\\frac{evc(G)}{mvc(G)}\\ge r\\}$. No class of biconnected graphs $\\mathcal{F}$ is known yet, for which $1 < ρ(\\mathcal{F})<2$.   In this paper, we show that when $\\mathcal{F}$ is the family of Halin graphs, $\\frac{7}{6} \\le ρ(\\mathcal{F}) \\le \\frac{3}{2}$. Halin graphs are $3$-connected and they have treewidth three. To show the lower bound, we construct a family of Halin graphs for which the ratio tends to $\\frac{7}{6}$ with increasing graph size. For the upper bound, we give two algorithms. Our first algorithm gives a defense strategy with $\\frac{3}{2} mvc(G)$ guards and serves as a $\\frac{3}{2}$ factor approximation algorithm to compute the eternal vertex cover number of Halin graphs. This algorithm also gives an upper bound of $\\frac{4}{3}$ for $ρ$ for several subclasses of Halin graphs. Our second algorithm attains the upper bound of $\\frac{4}{3}$ for caterpillar Halin graphs. Whether computing eternal vertex cover number is NP-hard for Halin graphs remains an open problem, as is the case with treewidth two graphs.",
-    "date": "2026-07-25",
-    "source": "arXiv",
-    "source_detail": "cs.DM",
-    "url": "http://arxiv.org/abs/2607.23155v1",
-    "tags": [
-      "cs.DM",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23155",
-    "arxiv_id": "2607.23155v1",
-    "score": 35.0
-  },
-  {
-    "id": "s2-7668c466457d",
-    "title": "KAYROS: An Anytime and Exact Open-Source Solver for Duration-Minimization Time-Dependent Vehicle Routing. A Technical Report and a Case Study in Human-AI Engineering",
-    "authors": [
-      "Florian Rascoussier"
-    ],
-    "abstract": "KAYROS is an open-source solver for duration-minimization time-dependent vehicle routing problems, with or without time windows (TDVRPTW, TDVRP). In these variants, travel times change with departure time, and each route's dispatch time is a decision. To the best of the author's knowledge, it is the first openly available solver that is both anytime, streaming improving solutions from the first seconds, and exact, proving optimality with publicly verifiable certificates, for these problems over rich piecewise-linear travel- time functions rather than a time discretization. It has no proprietary dependency and installs with one command. It builds on the state of the art for time-dependent function composition and exact solving, extending the open-source branch-price-and-cut solver of Lera-Romero, Miranda Bront and Soulignac (2020) with an open LP backend, anytime and warm- start behavior, checker-exact pricing, and exact treatment of stepwise travel times. On the MAMUT-routing benchmark collection, KAYROS stands behind 468 published optimality certificates, each requiring agreement among four independent solves, and five certificates strictly improve published reference values. The report also introduces Poryos2026, a benchmark family designed and generated by the author from real OpenStreetMap city road networks. Its 1,080 paired CVRP, VRPTW, TDVRP and TDVRPTW instances combine real road geometries with controlled synthetic demands, time windows and congestion. Every instance carries a checker-validated best-known solution. This report presents the solver, its certification protocol, the benchmark's generation and feasibility guarantees, and their experimental connection for a broad technical audience. It is also a case study in the intensive human-AI collaboration that made this body of work feasible while keeping its claims independently verifiable.",
-    "date": "2026-07-25",
-    "source": "Semantic Scholar",
-    "source_detail": "vehicle routing problem",
-    "url": "https://www.semanticscholar.org/paper/7668c466457db6794cfcd05f4e3b90810ea051ca",
-    "tags": [
-      "vehicle-routing",
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "",
-    "arxiv_id": "2607.23116",
-    "citation_count": 0,
-    "score": 35.0
-  },
-  {
-    "id": "s2-addf0a8b8dc0",
-    "title": "Adaptive Large Neighborhood Search Algorithm for Electric Vehicle Routing Problem with Capacitated Charging Stations and Queueing",
-    "authors": [
-      "Zhuoti Huang",
-      "Senlai Zhu",
-      "Yuming Wang"
-    ],
-    "abstract": "With growing emphasis on green and low-carbon development and rising urban delivery demand, electric vehicles (EVs) have been increasingly adopted in logistics distribution systems. However, their limited driving range, relatively long charging durations, and the limited capacity of charging stations pose substantial challenges to real-world electric delivery operations. When multiple vehicles arrive at a station with a limited number of chargers, queueing delays may disrupt subsequent customer service and increase total operating costs. To address this issue, this study investigates an electric vehicle routing problem with capacitated charging stations and queueing delays. A mixed-integer linear programming model is formulated, and an enhanced adaptive large neighborhood search (ALNS) algorithm is developed to efficiently solve medium- and large-scale instances. In the proposed model, each vehicle visit to a charging station is represented as a charging event, while finite station capacity is enforced through charging-event assignment and temporal non-overlap constraints. Computational results show that the enhanced ALNS matches the proven optimal solution for the 10-customer instance. For the 15- and 20-customer instances, the best objective values obtained by the enhanced ALNS were 0.39% and 4.84% lower than the corresponding time-limited Gurobi incumbents, respectively. For the 30-, 50-, and 100-customer instances, the enhanced ALNS consistently generates feasible solutions within the prescribed computational budget, whereas Gurobi does not obtain a feasible incumbent within substantially longer time limits. Compared with the baseline ALNS, the enhanced version generally achieves lower mean objective values and more favorable convergence behavior. Sensitivity analyses further show that increasing the number of chargers and improving the charging rate can reduce queueing delays and total charging duration. The proposed approach provides practical decision support for reliable and sustainable urban electric freight operations.",
-    "date": "2026-07-25",
-    "source": "Semantic Scholar",
-    "source_detail": "vehicle routing problem",
-    "url": "https://doi.org/10.3390/su18157580",
-    "tags": [
-      "linear-programming",
-      "integer-programming",
-      "vehicle-routing",
-      "supply-chain"
-    ],
-    "type": "publication",
-    "doi": "10.3390/su18157580",
-    "arxiv_id": "",
-    "citation_count": 0,
-    "score": 55.0,
-    "mentions_solvers": [
-      "Gurobi"
-    ]
   }
 ]
