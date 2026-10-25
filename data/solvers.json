@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T11:56:41.789617+00:00",
+  "generated_at": "2026-10-25T12:28:18.699380+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 100,
+      "github_open_issues": 102,
       "github_recent_prs": [
+        "Generalised `Highs::crossover`",
         "Add helper functions to compute centring ratio and num of bounds near…",
         "Fix test",
         "Ensured that `new_k_max` is at least 1 in `resize` of QP ASM `factor.hpp`",
-        "Centring status",
-        "Add zero-cost-singleton for implied integers"
+        "Centring status"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Features\r\n--------\r\n\r\n- added command line option `-t` to specify the number of threads, which triggers concurrent solving via `SCIPsolveConcurrent()`\r\n\r\nPerformance improvements\r\n--------------------",
-      "github_open_issues": 42,
+      "github_open_issues": 41,
       "github_recent_prs": [
         "Add CMake option CUSTOMIO to route stdout/stderr, exit and abort to the program that links SCIP",
         "Portability fixes for 10.1.1: strerror_r on macOS, (void) in tpi_openmp.c, <cstdlib> in multiprecision.hpp",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14258,
+      "github_stars": 14263,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,7 +569,7 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 138,
+      "github_open_issues": 139,
       "github_recent_prs": [
         "release update",
         "java: bump maven-surefire-plugin to 3.6.0",
@@ -604,7 +604,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 1020,
+      "github_stars": 1021,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -1132,7 +1132,7 @@
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
       "github_stars": 6375,
-      "github_open_issues": 188,
+      "github_open_issues": 189,
       "github_recent_prs": [
         "Use sparse arrays for reduced problem data tensors",
         "Raise Gurobi's own error message when it fails before finding a solution",
@@ -1319,7 +1319,7 @@
         "metaheuristic"
       ],
       "recent_changes": "A performance regression on some very large datasets slipped through the cracks.\r\nThis one-off release fixes it.\r\n\r\n# Changelog\r\n\r\n## 🐛 Fixes\r\n- bfd1871 avoid clear() on a large hash map (#2724), clos",
-      "github_stars": 1840,
+      "github_stars": 1841,
       "github_open_issues": 117,
       "github_recent_prs": [
         "perf: do not split the graph node of a variable whose groups are empty",

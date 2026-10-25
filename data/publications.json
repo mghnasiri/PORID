@@ -1,5 +1,467 @@
 [
   {
+    "id": "openalex-W7214134234",
+    "title": "Knowledge Graphs as External Memory for LLM-based Scientific Assistants",
+    "authors": [
+      "Benjamin Navet"
+    ],
+    "abstract": "Scientific assistants must remember the questions, observations, parameters, and intermediate results that accumulate across days or weeks of inquiry, and trace each conclusion back to its evidence. Large Language Models (LLMs) lack such a structured, persistent memory, which causes contextual degradation, hallucinations, and excessive cost from overusing the context window. This thesis proposes a neuro-symbolic architecture that couples an LLM-based agent with a knowledge graph (KG) built on standardized formal languages (RDF, RDFS, OWL 2 RL, SHACL, SPARQL) and reusing existing ontologies (e.g. PROV-O) whenever possible. In contrast to state-of-the-art memory systems, which rely on schemaless or proprietary property graphs, our hypothesis is that grounding agent memory in open standards improves the six memory operations (consolidation, indexing, updating, forgetting, retrieval, compression) through formal reasoning and declarative validation, at a latency overhead that stays negligible relative to the LLM call. We present the problem, three research questions and their hypotheses, a first experimental prototype that implements an end-to-end store-and-retrieve pipeline, and an evaluation plan combining the LongMemEval and LoCoMo benchmarks with a test case in metabolomics.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "HAL",
+    "url": "https://openalex.org/W7214134234",
+    "tags": [
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "",
+    "citation_count": 0,
+    "score": 45.0
+  },
+  {
+    "id": "openalex-W7222735645",
+    "title": "The Agent Internet A New Evolutionary Phase of the Web and Its Global Impact",
+    "authors": [
+      "A. Shaji George",
+      "B.Roshini",
+      "Dr.T.Baskar"
+    ],
+    "abstract": "Large language model (LLM) based software agents are transitioning from one shot assistants to long term actors that plan, negotiate and accomplish tasks with multiple services. This transformation is resulting in what researchers call the Agent Internet, the Agentic Web or the Internet of Agents, in which programs are full-fledged players alongside people. This article summarizes academic surveys, industry studies and public market data from 2025 to 2026 to outline the multi-layered nature of this setup and to consider its pros and cons. According to market estimates, the revenue for agent software is estimated to be around eight billion dollars in 2025 and up to 35-53 billion dollars in 2030. Adoption statistics tell a tale of much experimentation and few pilots taking it to scale. We discuss communication protocols that enable agents to find and trust each other, the as yet undeveloped identity and payment layers and the burden of agent traffic on advertising supported content. But the challenges that we see are not just capabilities, but security, accountability, interoperability, and who pays for content and compute. Finally, we highlight some of the current research and policy gaps and suggest avenues for a responsible construction.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23425885",
+    "tags": [
+      "metaheuristics",
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23425885",
+    "citation_count": 0,
+    "score": 60.0
+  },
+  {
+    "id": "openalex-W7223072793",
+    "title": "Structured Agentic Retrieval over Knowledge Graphs with MCP and Query Containers",
+    "authors": [
+      "Simone Fassio",
+      "Dario Gosmar",
+      "Fanfu Wei",
+      "Thibault Ehrhart",
+      "Pasquale Lisena",
+      "Raphaël Troncy A"
+    ],
+    "abstract": "Integrating Large Language Models (LLMs) with Knowledge Graphs (KGs) remains challenging due to the difficulty of translating natural language questions into valid and semantically grounded graph-based queries. Free-form SPARQL generation is particularly prone to hallucinations and errors when operating over complex and domain-specific schemas. In this paper, we propose a framework for structured agentic retrieval over KGs based on the Model Context Protocol (MCP). Our approach replaces unconstrained generation with a tool-driven workflow in which queries are incrementally constructed through low-granularity operations. Central to this design is the Query Container, a stateful abstraction that maintains a consistent query state and enforces structural validity throughout the process. We further introduce a hybrid decision mechanism combining constrained tool usage with model-guided selection via micro-sampling, coupled with execution-based validation. Experimental results show improved robustness and a reduction in hallucination-related errors compared to standard generation approaches.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "HAL",
+    "url": "https://openalex.org/W7223072793",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "",
+    "citation_count": 0,
+    "score": 40.0
+  },
+  {
+    "id": "openalex-W7223075771",
+    "title": "STAR-Q: A Web-Based Platform for Annotating Qualified Knowledge Graph Statements in Texts and Tables",
+    "authors": [
+      "Thibault Ehrhart",
+      "Yoan Chabot",
+      "Raphaël Troncy A"
+    ],
+    "abstract": "The construction and evaluation of knowledge graph (KG) population systems depend on high-quality, entitygrounded annotated corpora. However, producing such corpora remains a laborious task: general-purpose annotation tools do not often support the grounding of annotations to KG identifiers, rarely handle tabular content, and provide little support for corpus-level quality control. In this paper, we present STAR-Q (Span and Table Annotation for RDF with Qualifiers), an open-source, web-based annotation platform designed to facilitate the annotation of both texts and tables with knowledge graph entities. STAR-Q lets users highlight mentions corresponding to subjects, predicates, objects, and ordered qualifier predicate-value pairs directly in documents, and then disambiguate them to entities and properties defined in a reference knowledge graph through a configurable lookup interface targeting any Wikibase instance. Wikidata is supported out of the box, with its large set of QIDs and PIDs. Private Wikibase deployments, such as enterprise knowledge graphs, can also be registered and selected per corpus. Annotations use a unified component schema covering both textual spans and character ranges within table cells; resolved values may be KG resources, corpus-local entities and relations, or typed literals. Beyond annotation, STAR-Q provides corpus management and import adapters for structured JSON/JSONL, archive-based corpus formats, Label Studio exports, and its own versioned full-corpus JSON. Annotations generated by the tool can be exported in RDF 1.2, either in a \"truthy\" statement mode or in a \"full\" mode preserving component-level text and table evidence using well-known ontologies (DCAT, PROV, NIF, CSVW, Web Annotations). Wikidata-grounded statements can additionally be exported as QuickStatements 3.0 commands for direct submission to Wikidata. We demonstrate STAR-Q through two scenarios: a didactic scenario based on Wookieepedia texts annotated with Wikidata entities curated by the WikiProject Star Wars community effort, and an industrial in-use scenario, where technical telecommunications documents are annotated against an enterprise knowledge graph. The tool is open source at https://github.com/ecladatta/star-q.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "HAL",
+    "url": "https://openalex.org/W7223075771",
+    "tags": [
+      "stochastic"
+    ],
+    "type": "publication",
+    "doi": "",
+    "citation_count": 0,
+    "score": 45.0
+  },
+  {
+    "id": "openalex-W7223192481",
+    "title": "Combining PageRank Modularization and Ontology Verbalization for LLM-Based Complex Ontology Matching",
+    "authors": [
+      "Igor Nascimento",
+      "Rinaldo Lima",
+      "Cassia Trojahn"
+    ],
+    "abstract": "Complex matching remains a challenge in the ontology matching field. Existing approaches are constrained by strong assumptions on their input: instance-based and rule-mining systems require populated ontologies and reliable links between their instances, while systems built on pre-trained encoders operate at the schema level but target primarily simple correspondences. Recent approaches based on Large Language Models (LLMs) are promising, yet they either rely on manually built ontology modules or feed formal serializations directly to the model. This paper proposes a schema-only pipeline that addresses these limitations by integrating (i) an automatic modularization strategy combining the PageRank and Personalized PageRank algorithms, which reduces the search space while controlling the specificity of the extracted context; and (ii) a verbalization module that turns ontology modules into natural language descriptions, exploited both for embedding-based candidate generation and as context in LLM prompts. The approach is evaluated on four datasets of the OAEI Complex track. Relying solely on schema-level information, our matcher achieves competitive performance compared with state-of-the-art complex matching systems.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "HAL",
+    "url": "https://openalex.org/W7223192481",
+    "tags": [
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "",
+    "citation_count": 0,
+    "score": 45.0
+  },
+  {
+    "id": "openalex-W7223260647",
+    "title": "A Love Story in Patterns: Twenty years of ontology design patterns, continued with language models",
+    "authors": [
+      "Valentina Presutti A"
+    ],
+    "abstract": "Twenty years ago, a group of Semantic Web researchers set out to do for ontologies what the Gang of Four did for software. This talk retraces that love story, from NeOn and eXtreme Design to WOP, through an analysis of 788 papers. Language models now generate and match patterns, solving what we could not, while the bottleneck moves to trust. I argue that patterns matter more than ever, as the unit linking models, people and knowledge graphs, and outline the challenges ahead.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23591732",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23591732",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "openalex-W7223440840",
+    "title": "Making the Invisible Visible",
+    "authors": [
+      "Sarah Binta Alam Shoilee"
+    ],
+    "abstract": "Colonial collections hold objects whose histories are often incomplete, fragmented, and shaped by the context in which they were collected and documented. Reconstructing these object biography or provenance requires connecting information dispersed across museum databases, archives, and historical documents. However, these sources contain data gaps, inconsistencies, and conflicting information that influence what can be discovered. This thesis investigates how Semantic Web technologies can support knowledge discovery in provenance research on colonial heritage objects while making the origins and limitations of knowledge visible. The thesis explores four interconnected activities: knowledge representation, integration, mining, and enrichment. First, it develops provenance-aware semantic modelling approaches that preserve the context and sources of assertions, allowing different perspectives to coexist. Second, it investigates entity alignment across fragmented cultural heritage datasets, addressing incomplete, ambiguous, and unevenly distributed data and evaluating alignment in relation to downstream knowledge discovery. Third, it examines how knowledge graphs and interactive visual analytics can support exploratory discovery and reveal unexpected connections. Fourth, it investigates the extraction of structured information from historical archival tables using handwriting recognition, table structure recognition, and information extraction techniques, with particular attention to traceability and error identification. Together, these contributions demonstrate how computational methods can connect fragmented data sources, uncover relationships, and make previously inaccessible information available for provenance research. They also highlight the need to preserve source context and acknowledge the influence of data gaps and algorithmic choices on the knowledge produced. Rather than treating computational outputs as neutral or complete representations of historical reality, this thesis advocates a reflective approach to knowledge discovery in which both emerging insights and the limitations of the underlying data remain visible. The resulting methods contribute to provenance research in colonial collections and offer potential applications in other cultural heritage domains when data sources are characterised as incomplete, bias, and context-sensitive.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "",
+    "url": "https://doi.org/10.5463/thesis.1880",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.5463/thesis.1880",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "openalex-W7223441765",
+    "title": "EticaHub Labs computational protein-design dataset — COVID-19 — run 40ce0440-15f9-448a-aa75-5720016be705",
+    "authors": [
+      "Deaven Mabry"
+    ],
+    "abstract": "Computational dataset / research audit record, not a validated treatment. This individual run contains 9 archived candidates from 3 reported iterations. The pipeline-selected candidate is #5; its internal automated grade is verified. Proposed research question (not a demonstrated outcome): Engineer affinity-matured CDR loop libraries guided by cryo-EM conserved epitope maps and screen against a pseudovirus panel spanning 15+ sarbecovirus RBDs to quantify pan-neutralization breadth and potency. Evidence and limitations Computational predictions only. No experimental or clinical evidence is supplied. Scores, automated checks and resolved identifiers do not establish binding, novelty, efficacy, safety or medical benefit. The stored \"verified\" grade is an internal automated check, not peer review or independent scientific validation. Hypothesis, approach and success criteria below are proposed research, not experiments performed. Checkpoint versions, random seeds and complete tool inputs are not established by this archive export; exact rerun reproducibility is not claimed. Internal publication gate: no PubMed citation resolved Internal publication gate: no named target resolved in UniProt Internal publication gate: unresolved target symbols: COVID, RBD, CDR, DYFDY Files: evidence report, original JSON, all candidate sequences, provenance manifest, license and SHA-256 checksums. Available predicted coordinate exports are included and explicitly labelled; missing structures are not reconstructed. AI-assisted research generated by the EticaHub Labs autopilot. Deaven Mabry is credited as responsible project creator, with EticaHub Labs affiliation. Cited literature remains the work of its original authors; identifier resolution is not claim support.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23628644",
+    "tags": [
+      "healthcare-or",
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23628644",
+    "citation_count": 0,
+    "score": 60.0
+  },
+  {
+    "id": "openalex-W7223445116",
+    "title": "LabPaperHarvester: Scholarly Literature Collection through Official Services",
+    "authors": [
+      "Yuxing Gong",
+      "Zechen Li",
+      "Hailun Xu",
+      "Jingtong Yu",
+      "Wei Zhang",
+      "Zhuoqi Zeng",
+      "Baoyin Yuan",
+      "Huijun Yang",
+      "Masaki Matsui",
+      "Ruijie Zhu"
+    ],
+    "abstract": "LabPaperHarvester is the software accompanying the manuscript \"An Automated Scholarly Literature Collection Workflow Using Official Services for AI for Science\". The package contains a PMC command-line downloader and Chinese/English/Japanese desktop interface, optional official Elsevier and Wiley API scripts, configuration examples, and validation records. Article-file acquisition defaults to 600 seconds (10 minutes). No downloaded article full text or API credentials are included. Validation comprises 38 offline checks and one Chemical Science PDF retrieval; the Mg/mg keyword ambiguity and the limits of the one-file test are documented in the archive. Publisher API access remains dependent on the operator's permissions. The date-based release identifies the complete package snapshot; individual components retain their own version numbers. This release changes licensing documentation only; all 14 Python files are unchanged from the verified source package. The project-level PolyForm Noncommercial 1.0.0 license applies only to author-owned files without a separate license. Existing component licenses, including the PMC module's MIT license, remain applicable. See LICENSE_SCOPE.md for the precise scope.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23620909",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23620909",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "openalex-W7223445738",
+    "title": "Scientific Editor — AI Protocol (Agent Skill)",
+    "authors": [
+      "Rigjita Baldanova"
+    ],
+    "abstract": "An Agent Skill for editing and pre-submission auditing of scientific manuscripts in Russian and English. It verifies claims against sources and sources against reality, runs four gates (sources, internal facts, provenance and conflicts of interest, falsifiability), scores the text on a venue-calibrated rubric and returns an editorial recommendation. Bundled standard-library tools: a GOST-aware formatting linter and a version diff for reviewing edits.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23627928",
+    "tags": [
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23627928",
+    "citation_count": 0,
+    "score": 55.0
+  },
+  {
+    "id": "openalex-W7223445746",
+    "title": "iPhone Duo (2026) published specifications: manufacturer ratings, EU declared values and open items — a compiled note",
+    "authors": [
+      "Duo Guide"
+    ],
+    "abstract": "This note compiles the publicly available specifications for iPhone Duo, Apple's first foldable iPhone (announced September 9, 2026). It keeps three kinds of information apart: (1) Apple's published technical specifications; (2) values from Apple's EU product information sheet for model A3720, which are measured under a different method; and (3) items that no public source checked here establishes, which are left open. It was written as a reading aid. The compiler did no measurements or device testing. Values are as of 22 October 2026 and follow the specs compilation on iPhone Duo Guide, which links to each underlying Apple document.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23626746",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23626746",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "openalex-W7223446977",
+    "title": "EticaHub Labs computational protein-design dataset — COVID-19 — run 84f76c9a-1182-4c48-82da-6fb4927a7426",
+    "authors": [
+      "Deaven Mabry"
+    ],
+    "abstract": "Computational dataset / research audit record, not a validated treatment. This individual run contains 9 archived candidates from 3 reported iterations. The pipeline-selected candidate is #7; its internal automated grade is verified. Proposed research question (not a demonstrated outcome): Engineer CDR1/2/3 loops via structure-guided combinatorial libraries informed by multi-RBD cryo-EM interfaces to maximize conserved epitope engagement across sarbecoviruses Evidence and limitations Computational predictions only. No experimental or clinical evidence is supplied. Scores, automated checks and resolved identifiers do not establish binding, novelty, efficacy, safety or medical benefit. The stored \"verified\" grade is an internal automated check, not peer review or independent scientific validation. Hypothesis, approach and success criteria below are proposed research, not experiments performed. Checkpoint versions, random seeds and complete tool inputs are not established by this archive export; exact rerun reproducibility is not claimed. Internal publication gate: no PubMed citation resolved Internal publication gate: unresolved target symbols: COVID, CDR, RBD, CDR3 Files: evidence report, original JSON, all candidate sequences, provenance manifest, license and SHA-256 checksums. Available predicted coordinate exports are included and explicitly labelled; missing structures are not reconstructed. AI-assisted research generated by the EticaHub Labs autopilot. Deaven Mabry is credited as responsible project creator, with EticaHub Labs affiliation. Cited literature remains the work of its original authors; identifier resolution is not claim support.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23627903",
+    "tags": [
+      "healthcare-or",
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23627903",
+    "citation_count": 0,
+    "score": 60.0
+  },
+  {
+    "id": "openalex-W7223449524",
+    "title": "EticaHub Labs computational protein-design dataset — COVID-19 — run 8f72cb97-a7b5-479c-9fc1-d1475f47db1c",
+    "authors": [
+      "Deaven Mabry"
+    ],
+    "abstract": "Computational dataset / research audit record, not a validated treatment. This individual run contains 9 archived candidates from 3 reported iterations. The pipeline-selected candidate is #4; its internal automated grade is verified. Proposed research question (not a demonstrated outcome): Validate cross-variant neutralization of the 116-aa nanobody against a panel of SARS-CoV-2 variants including XBB.1.5, JN.1, and KP.2 using pseudovirus and authentic virus assays. Evidence and limitations Computational predictions only. No experimental or clinical evidence is supplied. Scores, automated checks and resolved identifiers do not establish binding, novelty, efficacy, safety or medical benefit. The stored \"verified\" grade is an internal automated check, not peer review or independent scientific validation. Hypothesis, approach and success criteria below are proposed research, not experiments performed. Checkpoint versions, random seeds and complete tool inputs are not established by this archive export; exact rerun reproducibility is not claimed. Internal publication gate: no PubMed citation resolved Internal publication gate: target has no reviewed UniProt entry Internal publication gate: unresolved target symbols: COVID, RBD, XBB, CDR3 Files: evidence report, original JSON, all candidate sequences, provenance manifest, license and SHA-256 checksums. Available predicted coordinate exports are included and explicitly labelled; missing structures are not reconstructed. AI-assisted research generated by the EticaHub Labs autopilot. Deaven Mabry is credited as responsible project creator, with EticaHub Labs affiliation. Cited literature remains the work of its original authors; identifier resolution is not claim support.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23628332",
+    "tags": [
+      "healthcare-or",
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23628332",
+    "citation_count": 0,
+    "score": 60.0
+  },
+  {
+    "id": "openalex-W7223458117",
+    "title": "Title: Epistemic Safety Protocol (ESP) v2.2: Core Engine, Conformance Suite, and Multi-Model Integration Packs Paper 11 .5",
+    "authors": [
+      "Dervis Kadunic"
+    ],
+    "abstract": "This archive contains the official release package for the Epistemic Safety Protocol (ESP) v2.2, designed for deterministic claim validation, JSON schema envelope validation, structured message typing, and execution gate management across multi-agent AI workflows. Package Contents: Core Engine & CLI (esp_v2.py, esp_cli.py): Python implementation for protocol enforcement, command-line operations, and command parsing. Conformance & Test Suite (esp_v2_conformance.py & fixtures/): Automated verification scripts and test fixtures (v2.2/v2.3) ensuring strict compliance with schema specifications. Multi-Model Starter Packs (v2.2_model_packs/): Tailored prompt engineering bundles and integration guides for major language models, including ChatGPT, Claude, DeepSeek, Grok, Kimi, and Qwen. Documentation & Compendium: Comprehensive guides (ESP_v2.2_START_HERE.txt, the protocol compendium, chat kits, and release notes) detailing execution gate protocols and deployment instructions.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23628523",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23628523",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "openalex-W7223461419",
+    "title": "EticaHub Labs computational protein-design dataset — COVID-19 — run 470bb32e-2543-49eb-a341-96eaa6dfde5e",
+    "authors": [
+      "Deaven Mabry"
+    ],
+    "abstract": "Computational dataset / research audit record, not a validated treatment. This individual run contains 9 archived candidates from 3 reported iterations. The pipeline-selected candidate is #5; its internal automated grade is verified. Proposed research question (not a demonstrated outcome): Or: \"Engineer Fc-fusion of the validated nanobody and assess in vivo pharmac Evidence and limitations Computational predictions only. No experimental or clinical evidence is supplied. Scores, automated checks and resolved identifiers do not establish binding, novelty, efficacy, safety or medical benefit. The stored \"verified\" grade is an internal automated check, not peer review or independent scientific validation. Hypothesis, approach and success criteria below are proposed research, not experiments performed. Checkpoint versions, random seeds and complete tool inputs are not established by this archive export; exact rerun reproducibility is not claimed. Internal publication gate: no PubMed citation resolved Internal publication gate: no named target resolved in UniProt Internal publication gate: unresolved target symbols: COVID, RBD, VHH, CDR3 Files: evidence report, original JSON, all candidate sequences, provenance manifest, license and SHA-256 checksums. Available predicted coordinate exports are included and explicitly labelled; missing structures are not reconstructed. AI-assisted research generated by the EticaHub Labs autopilot. Deaven Mabry is credited as responsible project creator, with EticaHub Labs affiliation. Cited literature remains the work of its original authors; identifier resolution is not claim support.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23627992",
+    "tags": [
+      "healthcare-or",
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23627992",
+    "citation_count": 0,
+    "score": 60.0
+  },
+  {
+    "id": "openalex-W7223462219",
+    "title": "Evidence-Aware LLM Auditing of Commercial Promotion in Health Videos: De-identified Data and Reproducibility Materials",
+    "authors": [
+      "Yunkun Song"
+    ],
+    "abstract": "De-identified data and offline reproducibility materials for Evidence-Aware LLM Auditing of Commercial Promotion in Health Videos: An Empirical Study. This single-platform study concerns a Chinese open social media platform and publication windows of September 10–23 in 2025 and 2026 (Beijing time). Contents: 260 evaluation records (20 calibration; 240 formal), 520 independent coder records, 67 nonblind error-review cells, and 633 linked-video records. The two video samples overlap and must not be added as independent cases. Only 96/633 linked records received frame screening. The package includes the joined analytic table, human coding manual v1.2, Chinese prompt templates with English translations, portable Python scripts, ten reference result tables, data dictionary, checksums and verification report. Fresh offline recomputation matches the ten reference tables and the joined analytic table. Raw video identifiers, creator names, URLs, source text, transcripts, quotations, precise timestamps, private linkage key, sampling seed and raw screening scores are withheld. This permits numerical recomputation, not sampling reconstruction, hosted-model reruns, classifier retraining or independent source interpretation. Historical gold_* fields are resolved reference labels, not error-free truth. Disease-claim fields are retained for transparency and excluded from primary analyses because independent kappa was zero. The 421 evaluation quotations and separate 490-quotation repair cohort are distinct. Repair outcomes are historical aggregates, not released quotation-level observations. Selective-review accuracy is retrospective agreement with an imperfect reference. See README.md for limitations and code/verify.py for reproduction checks. Version 1.0.0; CC BY 4.0. No external funding declared.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23622577",
+    "tags": [
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23622577",
+    "citation_count": 0,
+    "score": 55.0
+  },
+  {
+    "id": "openalex-W7223463233",
+    "title": "EticaHub Labs computational protein-design dataset — COVID-19 — run 7f99bef9-0014-4353-b6ed-c0de02daa762",
+    "authors": [
+      "Deaven Mabry"
+    ],
+    "abstract": "Computational dataset / research audit record, not a validated treatment. This individual run contains 9 archived candidates from 3 reported iterations. The pipeline-selected candidate is #6; its internal automated grade is verified. Proposed research question (not a demonstrated outcome): Engineer CDR3 loop diversity via structure-guided deep mutational scanning and multiplexed yeast display against phylogenetically diverse sarbecovirus RBDs to identify ultra-broad neutralizing motifs with picomolar affinity and enhanced developability. Evidence and limitations Computational predictions only. No experimental or clinical evidence is supplied. Scores, automated checks and resolved identifiers do not establish binding, novelty, efficacy, safety or medical benefit. The stored \"verified\" grade is an internal automated check, not peer review or independent scientific validation. Hypothesis, approach and success criteria below are proposed research, not experiments performed. Checkpoint versions, random seeds and complete tool inputs are not established by this archive export; exact rerun reproducibility is not claimed. Internal publication gate: no PubMed citation resolved Internal publication gate: no named target resolved in UniProt Internal publication gate: unresolved target symbols: COVID, CDR3, RBD Files: evidence report, original JSON, all candidate sequences, provenance manifest, license and SHA-256 checksums. Available predicted coordinate exports are included and explicitly labelled; missing structures are not reconstructed. AI-assisted research generated by the EticaHub Labs autopilot. Deaven Mabry is credited as responsible project creator, with EticaHub Labs affiliation. Cited literature remains the work of its original authors; identifier resolution is not claim support.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23628744",
+    "tags": [
+      "healthcare-or",
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23628744",
+    "citation_count": 0,
+    "score": 60.0
+  },
+  {
+    "id": "openalex-W7223465174",
+    "title": "Auditable LLM-assisted screening: code, hashes, logs and results (release v1.0)",
+    "authors": [
+      "Sushanta Paul"
+    ],
+    "abstract": "Code, hashes, logs and results for a run-level audit of one LLM-assisted title/abstract screen (15,308 OpenAlex records, 2020-01-01 to 2026-09-08; review of AI decision support in tax and customs administration). Contents: registration updates U1 to U5 (OSF registration osf.io/6wb2a), run-accounting, screening and add-on scripts, the sampling and validation design, Option A (external reference sets R1 to R3 from published reviews and citations, matched to the frame), Option C (a pinned re-run of the specified open-weight model), run logs, and a SHA-256 manifest of every file. Every LLM output is non-human. No human gold set exists: the registered two-rater pilot was not run, and nothing here supports an accuracy, recall, precision or agreement claim about an LLM. R2 and R3 are citation sets, not inclusion decisions. Not deposited: publishers' abstracts and every file that contains them, rater workbooks and keys, credential-bearing launch scripts, and the September 2026 run archives (their SHA-256 hashes are included; the files are available from the author on request). See README.md.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23624441",
+    "tags": [
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23624441",
+    "citation_count": 0,
+    "score": 55.0
+  },
+  {
+    "id": "openalex-W7223470278",
+    "title": "EticaHub Labs computational protein-design dataset — COVID-19 — run 83d414cd-aa6c-46b0-b939-45d82643f21d",
+    "authors": [
+      "Deaven Mabry"
+    ],
+    "abstract": "Computational dataset / research audit record, not a validated treatment. This individual run contains 6 archived candidates from 2 reported iterations. The pipeline-selected candidate is #0; its internal automated grade is verified. Proposed research question (not a demonstrated outcome): Leverage cryo-EM epitope maps to design conformationally constrained CDR3 libraries that engage cryptic conserved RBD pockets across sarbecoviruses, screening via yeast display against bat-CoV chimeras. Evidence and limitations Computational predictions only. No experimental or clinical evidence is supplied. Scores, automated checks and resolved identifiers do not establish binding, novelty, efficacy, safety or medical benefit. The stored \"verified\" grade is an internal automated check, not peer review or independent scientific validation. Hypothesis, approach and success criteria below are proposed research, not experiments performed. Checkpoint versions, random seeds and complete tool inputs are not established by this archive export; exact rerun reproducibility is not claimed. Internal publication gate: no PubMed citation resolved Internal publication gate: no named target resolved in UniProt Internal publication gate: unresolved target symbols: COVID, CDR, CDR3, RBD, VHH Files: evidence report, original JSON, all candidate sequences, provenance manifest, license and SHA-256 checksums. Available predicted coordinate exports are included and explicitly labelled; missing structures are not reconstructed. AI-assisted research generated by the EticaHub Labs autopilot. Deaven Mabry is credited as responsible project creator, with EticaHub Labs affiliation. Cited literature remains the work of its original authors; identifier resolution is not claim support.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23628256",
+    "tags": [
+      "healthcare-or",
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23628256",
+    "citation_count": 0,
+    "score": 60.0
+  },
+  {
+    "id": "openalex-W7223473774",
+    "title": "Field-Level Protection for Hybrid-Cloud Event-Driven Systems: Prototype, Infrastructure Code and Evaluation Evidence",
+    "authors": [
+      "Osama Orabi",
+      "Shahbaz Pervez",
+      "Seyed Ebrahim Hosseini"
+    ],
+    "abstract": "Prototype, infrastructure code and evaluation evidence for a policy-driven field-level encryption framework for event-driven systems. Producers encrypt policy-selected fields of JSON events with AES-256-GCM under per-event content keys wrapped with RSA-OAEP-256 for consumer-owned key-encryption keys, so that broker operators see only ciphertext for protected fields. The record contains the .NET encryption library and its unit tests; Terraform code for the producer, messaging and consumer trust domains on Microsoft Azure and a second producer on Amazon Web Services; the analysis, census and security-test scripts; and the performance and security evidence reported in the accompanying article. All payloads are synthetic ISO 20022 pain.001 messages; no personal data is included. Cloud identifiers have been redacted.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23616023",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23616023",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
+    "id": "openalex-W7223474329",
+    "title": "Living NPCs: Zero-Script LLM Characters on a Shared Engine — Live Results from a 2D Village and a 3D Mage Isle",
+    "authors": [
+      "Oleh Ivchenko"
+    ],
+    "abstract": "Research article: Living NPCs: Zero-Script LLM Characters on a Shared Engine — Live Results from a 2D Village and a 3D Mage Isle",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23627898",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23627898",
+    "citation_count": 0,
+    "score": 45.0
+  },
+  {
+    "id": "openalex-W7223475803",
+    "title": "Replication package of an anonymous submission (double-blind review)",
+    "authors": [
+      "Anonymous"
+    ],
+    "abstract": "Replication package of an anonymous submission under double-blind review. It contains the source of the layer at the build the paper measures (with the three bundle files it measured), the per-commit diffs that led to that build and the descriptions of the application-driven repairs, the derived records and analysis scripts behind every number of the evaluation, compact per-page results of the Khronos WebGL conformance runs, the records and final frames of the agent-written programs and of the applications, and the conformance pages the paper adds or corrects. README.md maps each claim of the paper to its record and to the script that recomputes it. Identifying strings were replaced for review (REDACTIONS.json); third-party application code and assets are referenced by URL and SHA-256, not redistributed.",
+    "date": "2026-10-25",
+    "source": "OpenAlex",
+    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+    "url": "https://doi.org/10.5281/zenodo.23622743",
+    "tags": [
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.5281/zenodo.23622743",
+    "citation_count": 0,
+    "score": 55.0
+  },
+  {
+    "id": "optim-online-73880bbf8259",
+    "title": "Constraint Learning by Optimizing over Trained Neural Networks: A Pragmatic Tutorial",
+    "authors": [],
+    "abstract": "Constraint learning is an emerging paradigm of modeling optimization problems with the help of machine learning. In this paradigm, trained machine learning models are embedded into the optimization model. For example, we can learn constraints empirically from available data, or we can avoid using a nonlinear objective function by learning a simpler approximation for it. ... Read more",
+    "date": "2026-10-25",
+    "source": "Optimization Online",
+    "url": "https://optimization-online.org/2026/10/constraint-learning-by-optimizing-over-trained-neural-networks-a-pragmatic-tutorial/?utm_source=rss&utm_medium=rss&utm_campaign=constraint-learning-by-optimizing-over-trained-neural-networks-a-pragmatic-tutorial",
+    "tags": [
+      "ml-for-or",
+      "survey"
+    ],
+    "type": "publication",
+    "score": 50.0
+  },
+  {
     "id": "optim-online-f4cdd4af759f",
     "title": "Mixed-Integer Linear Reformulations of Pessimistic Bilinear Bilevel Infima",
     "authors": [],
@@ -413,6 +875,26 @@
     "doi": "10.5281/zenodo.23605812",
     "citation_count": 0,
     "score": 45.0
+  },
+  {
+    "id": "openalex-W7214071447",
+    "title": "MatchCake: A Python Simulator for Non-Interacting Fermionic Quantum Circuits with Machine Learning Applications",
+    "authors": [
+      "Jérémie Gince"
+    ],
+    "abstract": "What's Changed Opt mpf by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/145 Add chunking support for Pfaffian computations by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/147 Joss by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/149 Polish the utilization of the probability strategy dispatcher by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/153 Make kwargs explicit by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/154 Pennylane dev registry by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/155 Add CITATION.cff by @goelakash in https://github.com/MatchCake/MatchCake/pull/157 Add available DOIs to two paper.bib entries by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/159 fix contributing and license links in docs by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/170 check docs cross-references and links in CI by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/174 Fix tutorials TOC in docs by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/173 Document supported Python versions and platforms by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/172 Fix GitHub math rendering in docs/expectation_values_theory.md by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/148 fix contributing guidelines by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/171 Remove dead docs refs by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/175 Point every tutorial button at the notebook that carries it by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/176 Render the math the documentation shows as LaTeX source by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/177 Remove the duplicated README include from the docs index by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/178 Build versioned docs for release tags by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/179 Fix installation instructions and packaging metadata by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/181 Fix Figure 1 and references in the JOSS paper by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/182 Release 1.0.0 (JOSS publication version) #major by @JeremieGince in https://github.com/MatchCake/MatchCake/pull/183 New Contributors @goelakash made their first contribution in https://github.com/MatchCake/MatchCake/pull/157 Full Changelog: https://github.com/MatchCake/MatchCake/compare/0.2.3...1.0.0",
+    "date": "2026-10-24",
+    "source": "OpenAlex",
+    "source_detail": "The Journal of Open Source Software",
+    "url": "https://doi.org/10.21105/joss.11033",
+    "tags": [
+      "ml-for-or",
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.21105/joss.11033",
+    "citation_count": 0,
+    "score": 50.0
   },
   {
     "id": "crossref-10.1287-opre.2024.0991",
@@ -1249,6 +1731,20 @@
     "doi": "10.1145/3797867.3828987",
     "citation_count": 0,
     "score": 40.0
+  },
+  {
+    "id": "optim-online-37ea55429833",
+    "title": "On Modified Newton Methods for Unconstrained Optimization Based on Lanczos Tridiagonalization",
+    "authors": [],
+    "abstract": "For a strongly convex unconstrained minimization problem, Newton’s method with a line search offers rapid convergence to a minimizer by incorporating second-order infor- mation. However, for a general unconstrained problem the Hessian need not be positive definite, which can lead to the inability to find a search direction or to search directions that fail to ... Read more",
+    "date": "2026-10-23",
+    "source": "Optimization Online",
+    "url": "https://optimization-online.org/2026/10/on-modified-newton-methods-for-unconstrained-optimization-based-on-lanczos-tridiagonalization/?utm_source=rss&utm_medium=rss&utm_campaign=on-modified-newton-methods-for-unconstrained-optimization-based-on-lanczos-tridiagonalization",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "score": 30.0
   },
   {
     "id": "openalex-W7213992415",
@@ -81638,6 +82134,46 @@
     "type": "publication",
     "doi": "10.1016/j.orl.2026.107553",
     "score": 20.0
+  },
+  {
+    "id": "crossref-10.1016-j.ejor.2026.10.032",
+    "title": "A DeepSets-guided scheduling framework for total tardiness minimization in single-machine scheduling",
+    "authors": [
+      "Zhu, D.",
+      "Maravelias, C."
+    ],
+    "abstract": "",
+    "date": "2026-10-01",
+    "source": "EJOR",
+    "source_detail": "EJOR",
+    "url": "https://doi.org/10.1016/j.ejor.2026.10.032",
+    "tags": [
+      "scheduling"
+    ],
+    "type": "publication",
+    "doi": "10.1016/j.ejor.2026.10.032",
+    "score": 25.0
+  },
+  {
+    "id": "crossref-10.1016-j.cor.2026.107574",
+    "title": "A multi-commodity two-echelon vehicle routing problem with commodity-wise split delivery and supply–demand mismatch",
+    "authors": [
+      "Gao, R.",
+      "Wang, L.",
+      "Zhu, J.",
+      "Wang, J."
+    ],
+    "abstract": "",
+    "date": "2026-10-01",
+    "source": "Computers & Operations Research",
+    "source_detail": "Computers & Operations Research",
+    "url": "https://doi.org/10.1016/j.cor.2026.107574",
+    "tags": [
+      "vehicle-routing"
+    ],
+    "type": "publication",
+    "doi": "10.1016/j.cor.2026.107574",
+    "score": 25.0
   },
   {
     "id": "optim-online-407b14664c6f",
@@ -299689,1140 +300225,5 @@
     "type": "publication",
     "doi": "10.1080/02331934.2025.2551250",
     "score": 20.0
-  },
-  {
-    "id": "s2-253f4655a516",
-    "title": "A Quantitative Framework for Comparing Classical and Quantum Algorithms for the Traveling Salesman Problem",
-    "authors": [
-      "Krit Grover",
-      "Marcelo Ponce"
-    ],
-    "abstract": "The Traveling Salesman Problem is a classical NP-hard problem with significant implications in logistics, circuit design, and operations research. This paper presents a comparative study of four approaches to solving the Traveling Salesman Problem: brute-force enumeration, a 2-approximation algorithm using minimum spanning trees, simulated annealing, and the Quantum Approximate Optimization Algorithm. We implement each technique and evaluate them on graphs of varying sizes to analyze performance, solution quality, and scalability. In doing so, we have also developed an open-source framework that allows researchers and practitioners to explore, test and extend these methods.",
-    "date": "2026-07-26",
-    "source": "Semantic Scholar",
-    "source_detail": "operations research optimization",
-    "url": "https://doi.org/10.1145/3785462.3815790",
-    "tags": [
-      "metaheuristics",
-      "network-optimization",
-      "vehicle-routing",
-      "supply-chain"
-    ],
-    "type": "publication",
-    "doi": "10.1145/3785462.3815790",
-    "arxiv_id": "",
-    "citation_count": 0,
-    "score": 70.0
-  },
-  {
-    "id": "s2-2a5bfbf50c4f",
-    "title": "Data-driven optimization: efficient adaptive learning for self-driving laboratories",
-    "authors": [
-      "N. Sahinidis"
-    ],
-    "abstract": "Self-driving laboratories promise to compress materials-discovery timelines from years to weeks by replacing trial-and-error experimentation with closed-loop, algorithm-guided campaigns. Yet, despite the rapid proliferation of robotic and automation hardware, today's autonomous labs rely almost exclusively on Bayesian optimization (BO) to decide what experiment to run next. BO is a sensible approach to low-dimensional optimization problems with smooth response surfaces, but it struggles in precisely the regimes that matter most for real materials campaigns: tight experimental budgets, dozens of process parameters, mixed-integer choices, hard physical constraints, and noisy expensive measurements. In this talk, I will show how moving from BO to partitioning-based algorithms can substantially improve data efficiency, scale gracefully to dozens of process variables, and handle the constraints and noise that characterize realistic experimental campaigns. I will summarize a recently completed large-scale black-box optimization (BBO) benchmark in which we compared 42 solvers across 502 problems ranging from one to 300 dimensions and from smooth and convex to nonsmooth and nonconvex. The results overturn several community assumptions: BO solves only about 9% of problems within a 2,500-evaluationbudget, while a new branch-and-model (BAM) algorithm reaches an 81% success rate, with GLCCLUSTER, MULTIMIN, MCS, and SNOBFIT also performing strongly. A minimal, irreducible set of eight complementary solvers attains 88% solvability on the full suite. I will then move from in-silico benchmarks to the wet lab, presenting a recent algorithmguided experimental campaign on high-performance perovskite solar cells in which a non- BO solver was used to co-optimize six process variables spanning the perovskite, electrontransport, and hole-transport layers. Time permitting, I will also share early results from applying ensembles of BBO algorithms to digital twins of self-driving labs across additional materials systems. I will close with a forward-looking research vision: accelerating autonomous labs by developing, benchmarking, and experimentally validating data-efficient adaptive algorithms across batteries, semiconductors, catalysts, polymeric membranes, and biomolecules. The benchmarking software will be released as open source, with BAM and most BBO software available free to academic users, so that experimental groups can deploy these tools on their own self-driving platforms. Bio: Nick Sahinidis is the Butler Family Chair and Professor in the H. Milton Stewart School of Industrial and Systems Engineering and the School of Chemical and Biomolecular Engineering at Georgia Tech. His current research activities are at the interface between computer science and operations research, with applications in various engineering and scientific areas, including: global optimization of mixed-integer nonlinear programs: theory, algorithms, and software; informatics problems in chemistry and biology; process and energy systems engineering. Professor Sahinidis teaches mathematical optimization, process systems engineering, and scientific computing. He has developed a bioinformatics M.S. program and has taught courses ranging from thermodynamics and metabolic engineering to approximation algorithms and GPU computing. Sahinidis has served on the editorial boards of many leading journals and in various positions within AIChE (American Institute of Chemical Engineers). He received an NSF CAREER award, the INFORMS Computing Society Prize, the MOS Beale-Orchard-Hays Prize, the Computing in Chemical Engineering Award, the Constantin Carathéodory Prize, and the National Award and Gold Medal from the Hellenic Operational Research Society. Sahinidis is a member of the U.S. National Academy of Engineering and a fellow of AIChE and INFORMS.",
-    "date": "2026-07-26",
-    "source": "Semantic Scholar",
-    "source_detail": "operations research optimization",
-    "url": "https://doi.org/10.69997/pse.147800",
-    "tags": [
-      "integer-programming"
-    ],
-    "type": "publication",
-    "doi": "10.69997/pse.147800",
-    "arxiv_id": "",
-    "citation_count": 0,
-    "score": 55.0
-  },
-  {
-    "id": "s2-2e89adbc2847",
-    "title": "Beyond Data Science: Driving Industrial Value through Data-Driven Decisions",
-    "authors": [
-      "Zhenyu Wang"
-    ],
-    "abstract": "Artificial intelligence is increasingly delivering measurable impact in the chemicalindustry, moving from isolated pilots toward embedded analytics across operations,supply chain, and Research & Development. At the same time, a clear industry shift isemerging: while developing accurate models remains important, there is a growingemphasis on realizing sustained value from AI investments. This talk presents apractitioner’s perspective on applied AI in the chemical industry, focusing on what isworking, what is challenging, and where future opportunities lie. We begin with examples of AI applications that have demonstrated value in industrialsettings, including process monitoring, demand forecasting, and computervision–enabled inspection and automation. These successes highlight a criticalprinciple, i.e. value is not created by models alone, but by extracting actionable insightsfrom data and enabling datadriven decisions informed by those insights. It is ultimatelythe decisions that drive the measurable business impact. We then examine key challenges that continue to limit broader adoption. These includeinconsistent data quality, lack of contextualization across systems, and modeldegradation under changing environment. Additional barriers arise from difficulties ininterpreting model outputs, translating insights into decisions, and embedding analyticsinto real operational workflows. Finally, the talk explores emerging directions in industrial AI, including hybrid modelingthat combines physics and data-driven insights, scalable data infrastructures, andtighter integration between analytics, optimization, and automation technologies. Thesession concludes by outlining a forward-looking path toward more adaptive, integrated,and decision-centric AI systems that can reliably translate data into sustained industrialvalue at scale.",
-    "date": "2026-07-26",
-    "source": "Semantic Scholar",
-    "source_detail": "operations research optimization",
-    "url": "https://doi.org/10.69997/pse.110684",
-    "tags": [
-      "supply-chain"
-    ],
-    "type": "publication",
-    "doi": "10.69997/pse.110684",
-    "arxiv_id": "",
-    "citation_count": 0,
-    "score": 55.0
-  },
-  {
-    "id": "s2-45d21f01a4b8",
-    "title": "A Deepsets-Guided Framework for Learning Job Priorities In Single-Machine Scheduling",
-    "authors": [
-      "Daniel Zhu"
-    ],
-    "abstract": "Scheduling is a fundamental decision-making problem in chemical engineering as well as numerous other sectors, arising in manufacturing, energy systems, and supply chains. Many scheduling problems are NP-hard [1], meaning that even small problems are computationally hard to solve deterministically. As a result, existing exact and heuristic methods face trade-offs between scalability, solution quality, and generalizability. This work addresses these limitations through a hybrid machine learning–optimization framework for the single-machine total tardiness scheduling problem (SMTTP). We introduce the DeepSets-Guided Scheduling Framework (DGSF), a hybrid methodology that integrates data-driven priority learning with structured optimization for single-machine scheduling. First, we propose a geometric instance classification rule that characterizes scheduling instances through aggregate structural parameters, enabling models trained on small instances to generalize to larger instances within the same structural class. Second, we develop a modified DeepSets [2] machine learning (ML) architecture that processes variable-sized sets of jobs and produces job-aligned priority scores. The model combines job-level feature transformations with an attention-based aggregation mechanism to incorporate instance-level context, allowing priority estimation to depend jointly on job and instance characteristics. Input features are constructed to retain interpretability and include normalized processing, release and due times, slack-based measures, and features derived from classical heuristics. Third, we introduce a two-stage post-processing step. A fast local pairwise-swap heuristic improves the predicted sequence, which is then used to warm-start a neighborhood-restricted continuous-time mixed-integer programming formulation. By explicitly limiting the search space around the learned solution, this formulation achieves high-quality refinement while controlling combinatorial complexity. Computational experiments indicate that the learned priority structure aligns with classical one-shot dispatching heuristics while improving solution quality. On instances with up to 120 jobs, DGSF consistently outperforms these heuristics, achieving optimality gaps of 3–6% compared to 26–31% for the best-performing one-shot heuristic. Furthermore, DGSF maintains high-quality solutions across different instance structures, time discretizations, and product catalogues.",
-    "date": "2026-07-26",
-    "source": "Semantic Scholar",
-    "source_detail": "combinatorial optimization heuristic",
-    "url": "https://doi.org/10.69997/pse.115708",
-    "tags": [
-      "integer-programming",
-      "scheduling",
-      "stochastic",
-      "ml-for-or",
-      "supply-chain"
-    ],
-    "type": "publication",
-    "doi": "10.69997/pse.115708",
-    "arxiv_id": "",
-    "citation_count": 0,
-    "score": 75.0
-  },
-  {
-    "id": "s2-317aca40d61b",
-    "title": "From Insight to Action: AI-Powered Decisions in the Chemical Industry",
-    "authors": [
-      "Ivan Castillo"
-    ],
-    "abstract": "Decision-making in the chemical industry is difficult because operators must choose actions under uncertainty: plant behavior is nonlinear and time-varying, measurements are noisy and incomplete, operating constraints and safety margins are strict, and economic objectives often conflict with each other. Data-driven AI methods can help turn high-frequency process data into predictions and recommendations, but in highstakes settings they are most useful when they leverage prior domain knowledge rather than treating the plant as a black box. In this work, prior knowledge is incorporated in two general ways. First, we use hybrid modeling, where deterministic structure from first principles (e.g., balances, thermodynamics, kinetics) is combined with data-driven learning to improve extrapolation, robustness, and interpretability. Second, we use preference-based learning, where expert judgment is captured qualitatively through pairwise comparisons or rankings of candidate options, enabling optimization even when a single numerical objective is hard to define. We illustrate these ideas with industrial decision-making examples that span physics-grounded monitoring of gradual degradation and preference-driven tuning of operational and control choices. In the hybrid modeling examples, mechanistic knowledge such as mass and energy balances and reaction kinetics is embedded alongside data-driven models to yield physically consistent predictions that remain reliable even when data are sparse or subject to drift. This work focuses on industrial systems that undergo gradual deterioration over time. Three representative case studies are considered: catalyst deactivation monitoring in continuous reactors, where an adiabatic reactor model is used to compute catalyst activity as a health indicator that is integrated into an empirical lifetime model; heat exchanger fouling forecasting in an ethylene oxide plant, where physics-informed features enable month-ahead prediction of fouling surrogates to support cleaning decisions; and remaining useful life prediction for pollutant scrubbers, where hybrid models capture slow degradation trends to inform maintenance planning. Together, these examples show that combining first-principles understanding with datadriven methods enables accurate characterization of degradation dynamics using limited data, improves extrapolation to unseen operating conditions, and increases confidence in maintenance-related decisions (Sansana et al., 2024; Venegas et al., 2024; Bui et al., 2022).",
-    "date": "2026-07-26",
-    "source": "Semantic Scholar",
-    "source_detail": "robust optimization uncertainty",
-    "url": "https://doi.org/10.69997/pse.105983",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.69997/pse.105983",
-    "arxiv_id": "",
-    "citation_count": 0,
-    "score": 50.0,
-    "mentions_solvers": [
-      "HiGHS"
-    ]
-  },
-  {
-    "id": "crossref-10.1002-nav.70087",
-    "title": "The 2‐D Orthogonal Packing Problem With Multiple Levels of Prioritization: A Spatial Optimization Perspective",
-    "authors": [
-      "Kirschenman, W.",
-      "Heese, H.",
-      "Kay, M.",
-      "King, R.",
-      "McConnell, B."
-    ],
-    "abstract": "ABSTRACT\n                  This paper addresses two‐dimensional orthogonal packing within a confined space, integrating bin packing principles with facility layout concepts to address scenarios in which items must not only fit but also be arranged according to spatial priorities. We embed a prioritization matrix into the bin packing framework, enabling items to be clustered with one another or pulled toward certain bin access points based on assigned priority weights. Unlike traditional bin packing, which often minimizes bin count or unused space, our approach balances proximity to bin access points and adjacency among functionally related items already assigned to a given bin, extending the utility of bin packing to applications requiring more nuanced layout preferences. We introduce a single mixed‐integer linear programming (MILP) model and a complementary sliding‐window matheuristic that scales effectively to larger problem instances. Numerical experiments illustrate that this matheuristic approach consistently outperforms a direct MILP solve with a commercial solver in both runtime and solution quality, and also performs best among the adapted heuristic and metaheuristic alternatives considered in our study. This computational study underscores the flexibility and effectiveness of embedding multilevel priorities into orthogonal packing.",
-    "date": "2026-07-26",
-    "source": "Naval Research Logistics",
-    "source_detail": "Naval Research Logistics",
-    "url": "https://doi.org/10.1002/nav.70087",
-    "tags": [
-      "linear-programming",
-      "integer-programming",
-      "metaheuristics",
-      "stochastic"
-    ],
-    "type": "publication",
-    "doi": "10.1002/nav.70087",
-    "score": 60.0
-  },
-  {
-    "id": "optim-online-93b66ac19b24",
-    "title": "A Python Library for Post-Optimality Analysis and Explanation of Optimization Models",
-    "authors": [
-      "pyoptexplain"
-    ],
-    "abstract": "Optimization models are built in a variety of modeling languages and solved by a variety of solvers, but once a solution exists, the information needed to understand it is fragmented: each solver exposes a partial, differently named set of native diagnostics, and the modeling language has already canonicalized the formulation the user wrote. We present ... Read more",
-    "date": "2026-07-26",
-    "source": "Optimization Online",
-    "url": "https://optimization-online.org/2026/07/pyoptexplain-a-python-library-for-post-optimality-analysis-and-explanation-of-optimization-models/?utm_source=rss&utm_medium=rss&utm_campaign=pyoptexplain-a-python-library-for-post-optimality-analysis-and-explanation-of-optimization-models",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "score": 30.0
-  },
-  {
-    "id": "optim-online-e9f1b97786aa",
-    "title": "Computing diverse solutions to optimization problems",
-    "authors": [],
-    "abstract": "Classical optimization methods determine a single optimal or near-optimal solution for a decision problem. In many applications, however, the decision maker is interested in evaluating a pool of high-quality solutions, to encode fairness-oriented criteria or to obtain a portfolio of alternatives to use in case of unexpected scenarios. In this paper, we consider the problem ... Read more",
-    "date": "2026-07-26",
-    "source": "Optimization Online",
-    "url": "https://optimization-online.org/2026/07/computing-diverse-solutions-to-optimization-problems/?utm_source=rss&utm_medium=rss&utm_campaign=computing-diverse-solutions-to-optimization-problems",
-    "tags": [
-      "stochastic"
-    ],
-    "type": "publication",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2607.23832",
-    "title": "LiFT-MPC: Language-in-the-Loop Feedback Tuning of Cost Previews for MPC",
-    "authors": [
-      "Xinyi Yi",
-      "Ioannis Lestas"
-    ],
-    "abstract": "In model predictive control (MPC) with time-varying objectives, predicted signals need to be often incorporated in the cost function, such as prices in energy system operation. These are, however, often difficult to predict from the historical trajectory of these signals alone, as they may depend on other contextual events. We propose LiFT-MPC, an MPC framework that integrates a LiFT (Language-in-the-Loop Feedback Tuning) correction scheme to refine such predictions within the MPC loop. The prediction mechanism is updated online via a control-performance loss function, and we establish a performance guarantee for the resulting closed loop system. Numerical experiments using a realistic example of energy-storage management with real prices and news context to improve predictions, demonstrate an improved economic performance",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2607.23832v1",
-    "tags": [
-      "math.OC",
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23832",
-    "arxiv_id": "2607.23832v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.23777",
-    "title": "Scale Weight Decay and Train Better",
-    "authors": [
-      "Anuj Apte"
-    ],
-    "abstract": "The discovery of scaling laws has motivated training neural networks on ever increasing quantities of data. This is typically done with a constant decoupled weight decay which causes the network weights to shrink steadily over the course of training. Taking inspiration from the Robbins--Monro conditions, we propose to scale weight decay by the fraction of the peak learning rate $η/η_{\\max}$. We prove that this scaled weight decay preserves the asymptotic stationarity guarantees of the corresponding unregularized methods for both stochastic gradient descent and the non-Euclidean spectral optimizer Muon, thereby avoiding the additional asymptotic bias introduced by constant decoupled weight decay. This retains the stability benefits of weight decay without changing the asymptotic optimization target. Using a steady-state analysis, we explain why under standard weight decay the weight norm shrinks steadily as training proceeds, whereas under scaled weight decay it settles to a roughly constant value. When applied to the training of mixture-of-experts models, Muon with scaled weight decay (Muon-SW) consistently outpaces Muon with identical hyperparameters, reaching the same validation loss $\\mathbf{30\\%}$ faster at our largest scale across models from $72 - 930$ million parameters trained at $\\sim 600$ tokens per active parameter. If this trend continues to hold, the method promises to substantially accelerate the pre-training of frontier models while requiring only a few lines of code to implement.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2607.23777v1",
-    "tags": [
-      "cs.LG",
-      "ml-for-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23777",
-    "arxiv_id": "2607.23777v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.23707",
-    "title": "Continuous Data Assimilation for the 2D Navier-Stokes Equations from Partial Tangential Boundary Observations",
-    "authors": [
-      "Gianmarco Del Sarto",
-      "Buddhika Priyasad"
-    ],
-    "abstract": "We study continuous data assimilation for the two-dimensional Navier--Stokes equations on a smooth, bounded, connected domain with Navier-slip boundary conditions, using no interior observations. The available data consist only of finite-dimensional measurements of the tangential velocity on a non-empty relatively open subset $Γ\\subset\\partialΩ$. We prove that sufficiently strong boundary feedback, constructed from sufficiently fine observations, generates a coercive spectral gap for the assimilation error. The limiting gap is identified with that of a mixed-boundary problem obtained by imposing a homogeneous Dirichlet condition on $Γ$, and is shown to be of order $ν$. Combining this feedback-induced coercivity with an estimate of the non-linear error production in terms of the long-time averaged symmetric-gradient energy of the reference solution, we obtain a sufficient criterion for exponential synchronisation. We verify this criterion in the unforced case, for sufficiently small forcing when the unnudged Navier-slip form has an $\\mathrm{L}^2$ spectral gap, for sufficiently large viscosity on domains without tangential rigid motions, and for sufficiently large viscosity in the presence of positive boundary friction. We also treat perfect slip on domains admitting tangential rigid motions, where synchronisation follows under a smallness condition on the non-rigid solenoidal component of the forcing.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "math.AP",
-    "url": "http://arxiv.org/abs/2607.23707v1",
-    "tags": [
-      "math.AP",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23707",
-    "arxiv_id": "2607.23707v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23674",
-    "title": "Projected-Gradient Analysis for Open-Domain Convex Optimization under Boundary Blow-Up:Application to Controllability Scoring",
-    "authors": [
-      "Kazuhiro Sato"
-    ],
-    "abstract": "We study convex optimization over a compact convex set when the objective is smooth and convex only on an open domain. Under a boundary-blow-up condition, every feasible initialization yields a compact invariant sublevel set separated from the complement of the objective domain, and an optimal solution exists. For a domain-aware Armijo projected-gradient method, a safe-neighborhood analysis establishes well-defined objective evaluations, finite backtracking, sufficient decrease, and a run-specific but iteration-independent positive lower bound on the accepted step sizes. These properties yield explicit sublinear objective and stationarity guarantees, together with convergence of the full iterate sequence. Positive curvature restricted to feasible displacement directions further guarantees uniqueness and linear convergence. We apply the framework to controllability scoring with prescribed input directions and compact convex allocation constraints. Feasibility is characterized exactly by controllability of the input directions eligible for positive allocation, while restricted injectivity of the Gramian map guarantees uniqueness of the optimal allocation and provides explicit strong-convexity bounds. A directed-network example illustrates how candidate exclusion can preserve or destroy feasibility and alter the optimal allocation in a criterion- and horizon-dependent manner.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2607.23674v1",
-    "tags": [
-      "math.OC",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23674",
-    "arxiv_id": "2607.23674v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23642",
-    "title": "When Rates Are Geometric: Rate-Certificate Transfer for Contact Splittings in Optimization",
-    "authors": [
-      "George A Kevrekidis"
-    ],
-    "abstract": "Discrete optimization algorithms are often analyzed through continuous-time limiting ODEs, but a convergence certificate for the ODE is not automatically one for the discrete algorithm. We develop contact Hamiltonian systems as a setting where the transfer can be made precise. A contact Hamiltonian $H$ on $J^1(\\mathbb{R}^n)$ obeys the intrinsic decay identity $\\dot H = -H\\,\\partial_s H$, so an augmented energy $\\mathcal{E}$ built from $H$, together with the conformal rate $\\partial_s H$, is a continuous-time rate certificate whenever $\\mathcal{E}$ controls the objective gap. Our main theorem states, under three named and independently checkable hypotheses, that an order-$r$ contact splitting with step $h$ transfers this certificate over the finite horizon set by backward error analysis. The discrete decay envelope is governed by the modified conformal factor up to $O(h^r)$ perturbations plus a backward-error shadowing defect, and the mechanism is inherited exactly because the modified Hamiltonian is itself a contact Hamiltonian. Quadratic heavy ball is a fully solvable example: its projected dissipative-leapfrog spectrum agrees with established conformal-symplectic optimization theory, while the augmented contact Hamiltonian yields a sharp objective-to-certificate comparison that verifies the transfer hypotheses. For strongly convex objectives with state-dependent damping, an explicit Bregman-type Lyapunov certificate instead transfers by an auxiliary-shadowing corollary. The decomposition $H=K+V+D$ into kinetic, objective-encoding potential, and dissipation terms serves as a design template, with a catalogue of closed-form sub-flows including contact-specific damping families. Numerical experiments confirm the predicted conformal-factor tracking orders and show competitive performance on ill-conditioned benchmarks and deep-learning tasks.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2607.23642v1",
-    "tags": [
-      "math.OC",
-      "decomposition"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23642",
-    "arxiv_id": "2607.23642v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.23617",
-    "title": "Optimal Reward Shaping: Autonomous Car Parking Case Study",
-    "authors": [
-      "Emre Özkaya",
-      "Nicolas R. Gauger"
-    ],
-    "abstract": "Designing effective reward functions for model-free reinforcement learning under non-holonomic constraints remains a persistent challenge, often resulting in severe local minima such as policy paralysis or over-conservative hazard avoidance. In this work, we present a parameterized reward shaping framework featuring coverage-gated alignment feedback, drive-direction switch regularization, and an aligned episode termination mechanism evaluated on an autonomous parallel parking task. Crucially, we show that environmental reward parameters and algorithmic hyperparameters are deeply co-dependent, requiring joint meta-optimization to achieve stable convergence. By employing surrogate-based Bayesian optimization, our co-optimized Deep Q-Network (DQN) agent resolves characteristic control failure modes, significantly outperforming uncalibrated baselines across both success rate and trajectory smoothness.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2607.23617v1",
-    "tags": [
-      "cs.LG",
-      "ml-for-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23617",
-    "arxiv_id": "2607.23617v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.23601",
-    "title": "Exact Worst-case Convergence Rates of Distributed Gradient Tracking Methods",
-    "authors": [
-      "Qiuchen Tian",
-      "Li Chai",
-      "Jinming Xu"
-    ],
-    "abstract": "Different from most existing literature in the analysis of distributed optimization algorithms that reports sufficient convergence conditions leading to a conservative convergence rate, this work provides the exact worst-case convergence rates for two typical gradient tracking algorithms, DIGing and AugDGM. By eigen-decomposition, we show that two algorithms share the same average-state dynamics, while they differ from each other in the gradient tracking subsystems, which entirely govern algorithm convergence. Exploiting the diagonal structure of this decomposition, we reduce the stability analysis of MIMO systems to that of a set of parameter-varying SISO systems, from which explicit formulas for the exact worst-case convergence rate can be derived. These formulas clearly show that the optimal worst-case convergence rate of DIGing is larger than that of AugDGM under the same assumptions on objective functions and communication networks. Furthermore, we find that there is an inflection point in the graph connectivity, which is $σ=1/3$. For graphs with connectivity better than this inflection point, the optimal convergence rate of centralized gradient descent can be achieved by AugDGM provided the condition number of objective functions is worse enough. On the other hand, for graphs with connectivity worse than this inflection point, the centralized optimal rate can never be achieved. Numerical experiments validate the theoretical results.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2607.23601v1",
-    "tags": [
-      "math.OC",
-      "decomposition"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23601",
-    "arxiv_id": "2607.23601v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.23599",
-    "title": "Existence of stable Lur'e systems for which the O'Shea-Zames-Falb stability test fails",
-    "authors": [
-      "Andrey Kharitenko"
-    ],
-    "abstract": "In this note we show that the well-known stability test proposed by O'Shea, Zames and Falb is not necessary for robust stability of Lur'e systems with slope-restricted nonlinearities and thereby disprove a conjecture by J. Carrasco. Specifically we construct a full-block multiplier which certifies stability of a constructed Lur'e interconnection that does not admit an OZF multiplier.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2607.23599v1",
-    "tags": [
-      "math.OC",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23599",
-    "arxiv_id": "2607.23599v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23480",
-    "title": "A Multi-stage Constrained Optimization Framework for Data-driven Problems",
-    "authors": [
-      "Ye Shi"
-    ],
-    "abstract": "Variational autoencoders (VAEs) transform high-dimensional, often noisy data into a compact latent representation, making downstream optimization more tractable. Three challenges persist in VAE-based constrained optimization: (i) sampling effectively within the latent space, (ii) identifying the active decision variables that actually influence the objective and constraints, and (iii) enforcing constraints without destabilizing training. We propose a Multi-stage Constrained Optimization Framework (MCOF). First, an entropy-constrained VAE (EC-VAE) coupled with a feature selector embeds objective and constraint information into a designated subset of latent variables, so that optimization proceeds over a low-dimensional subspace while the remaining coordinates supply solution diversity. Second, a Uniform Transformation (UT) module applies a per-dimension probability integral transform, replacing the irregular aggregate posterior with a uniform distribution over a bounded box and mitigating posterior collapse and Gaussian mixture bias. Third, a constraint-priority filter method (CPFM) solves the resulting surrogate problem by alternating violation-reduction and objective-reduction steps under a filter acceptance test, returning solutions that are feasible for the learned surrogate to a specified tolerance without requiring multiplier estimation. Finally, unselected latent coordinates are resampled to generate diverse decodings of a single optimized solution. We validate MCOF on a synthetic problem, where we ablate each stage and recover the analytic optimum, and on a ZINC250k drug design task, where the generated molecules satisfy the imposed constraints and are entirely novel relative to the training set.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2607.23480v1",
-    "tags": [
-      "cs.LG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23480",
-    "arxiv_id": "2607.23480v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23476",
-    "title": "Convexity and SOS-Convexity of Sum of Separable and Biquadratic Quartic Polynomials and Optimization",
-    "authors": [
-      "Shaon Naskar",
-      "Sujeet Kumar Singh"
-    ],
-    "abstract": "Determining whether multivariate polynomials of degree four or higher are nonnegative and convex is a strongly NP-hard problem. To mitigate these computational difficulties, sum-of- squares (SOS) convexity has been proposed as a tractable algebraic relaxation that yields a checkable sufficient condition for convexity and can be expressed as a semidefinite program (SDP). In this work, we introduce a structured subclass of quartic polynomials, called the Sum of Separable and Biquadratic (SPBQ) forms, and conduct a systematic analysis of the connection between convexity and SOS-convexity within this class. Specifically, we show that every convex SPBQ polynomial is necessarily SOS-convex when the associated biquadratic form has size n x 2. We then construct an explicit SPBQ example with a 3 x 3 biquadratic form that is convex but fails to be SOS-convex. Finally, we examine both unconstrained and constrained optimization problems involving SPBQ polynomials, demonstrate notable computational benefits compared to general SOS-based methods, and illustrate their use in convex polynomial regression and fluid dynamics.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2607.23476v1",
-    "tags": [
-      "math.OC",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23476",
-    "arxiv_id": "2607.23476v1",
-    "score": 40.0,
-    "mentions_solvers": [
-      "Xpress"
-    ]
-  },
-  {
-    "id": "arxiv-2607.23475",
-    "title": "On the Bellman equation in recursive stochastic dynamic programming with the CES aggregator",
-    "authors": [
-      "Anna Jaśkiewicz",
-      "Andrzej S. Nowak"
-    ],
-    "abstract": "In this paper we investigate discrete-time infinite horizon Markov decision processes (dynamic programming models) with recursive utilities defined by the classical \\emph{CES} aggregator and the certainty equivalent operator being the negative of the entropic risk measure. Under mild conditions on the primitive data we prove existence and uniqueness of a solution to the Bellman equation. Moreover, we show that for any given stationary policy, the Koopmans equation has a unique solution. These two facts imply that a measurable selector of maxima in the Bellman equation is an optimal stationary policy. The methods of our proofs are applied to study solutions to the Bellman equation for other certainty equivalents, including risk-neutral case.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2607.23475v1",
-    "tags": [
-      "math.OC",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23475",
-    "arxiv_id": "2607.23475v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23433",
-    "title": "New Globalized Newton-Type Methods for Nonconvex Optimization Problems",
-    "authors": [
-      "Vo Thanh Phat",
-      "Tuyen Tran"
-    ],
-    "abstract": "Newton's method is one of the most effective second-order algorithms for smooth optimization because of its fast local convergence. However, existing globally convergent Newton-type methods typically require convexity or strong convexity of the objective function, while approaches for nonconvex optimization often rely on Hessian regularization at every iteration. In this paper, we propose a general line-search Newton framework for unconstrained optimization that avoids repeated Hessian regularization by exploiting the Newton direction only when it is well-defined and suitable. The proposed framework encompasses several existing hybrid gradient--Newton methods as special cases and naturally yields a new extragradient Newton method. We establish global convergence under mild assumptions, including the Polyak--Lojasiewicz--Kurdyka (PLK) condition, allowing both isolated and nonisolated accumulation points. We further prove local superlinear and quadratic convergence under appropriate regularity assumptions. Finally, we apply the proposed framework to strongly quasiconvex optimization and provide, to the best of our knowledge, the first Newton-type algorithm together with a comprehensive convergence analysis for this important class of nonconvex optimization problems. Numerical experiments demonstrate the effectiveness of the proposed methods.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2607.23433v1",
-    "tags": [
-      "math.OC",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23433",
-    "arxiv_id": "2607.23433v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23863",
-    "title": "Polynomial-time computation of $\\ell_p$-contraction fixed points for even $p$",
-    "authors": [
-      "Constantinos Daskalakis",
-      "Gabriele Farina",
-      "Brian Hu Zhang"
-    ],
-    "abstract": "We give a $\\text{poly}(d, p, \\log(1/ε))$-time algorithm that computes an $ε$-approximate fixed point of any $\\ell_p$-nonexpansive map $f : \\mathcal{X} \\to \\mathcal{X}$, where $\\mathcal{X} \\subset \\mathbb R^d$ is a convex compact set and $p$ is an even integer. This is the first algorithm with $\\text{poly}(d, \\log(1/ε))$ runtime for any fixed $p \\ne 2$. Our techniques are based on a computationally efficient version of Sion's theorem for non-compact minmax problems, and extend to more general total search problems that admit low-degree polynomial potentials.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "cs.DS",
-    "url": "http://arxiv.org/abs/2607.23863v1",
-    "tags": [
-      "cs.DS",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23863",
-    "arxiv_id": "2607.23863v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23787",
-    "title": "Bitcoin Mempool Linearization",
-    "authors": [
-      "Arman Mollakhani",
-      "Pieter Wuille",
-      "Dongning Guo"
-    ],
-    "abstract": "In the Bitcoin system, transactions arrive continuously at miners' mempools and await inclusion in future blocks. Every non-coinbase transaction must spend one or more unspent outputs created by previous transactions, inducing dependency constraints among transactions in the mempool. At the same time, miners are economically incentivized to prioritize transactions with higher fee rates, measured as transaction fee per unit size. This paper formulates the mempool linearization problem: given a set of transactions with associated fees, sizes, and dependency relationships, compute a dependency-respecting transaction ordering that maximizes fee-rate efficiency while supporting efficient updates as the mempool evolves dynamically. The problem is characterized through a partition of transactions into disjoint dependency-respecting subsets ordered by decreasing aggregate fee rate, together with an equivalent LP formulation. Motivated by structural properties of basic feasible solutions in the simplex method, a new algorithm called spanning forest linearization (SFL) is developed. Operating directly on the transaction dependency graph, SFL iteratively merges and splits chunks of transactions to refine a global ordering, and is guaranteed to terminate at an optimal solution. Evaluation on both synthetic and real-world Bitcoin mempool data shows that SFL consistently computes optimal linearizations with substantially lower runtime than competing approaches, including a method based on the parametric preflow algorithm of Gallo, Grigoriadis, and Tarjan. These results indicate that SFL provides a practical and scalable framework for transaction prioritization by decentralized miners in large and rapidly evolving mempools. SFL has also been incorporated into the Bitcoin Core codebase for transaction cluster linearization.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "cs.DS",
-    "url": "http://arxiv.org/abs/2607.23787v1",
-    "tags": [
-      "cs.DS",
-      "linear-programming"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23787",
-    "arxiv_id": "2607.23787v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.23559",
-    "title": "Paged Geophylogenies: A Coloring Approach to External Labeling with Tree Constraints",
-    "authors": [
-      "Thomas Depian",
-      "Thomas C. van Dijk",
-      "Martin Nöllenburg"
-    ],
-    "abstract": "Geophylogenies are a common type of diagram for visualizing the evolutionary history of species in a geographic context. As a drawing problem, these diagrams are commonly modeled as a rooted binary ''phylogenetic'' tree $T$ where every leaf is associated with a point feature (''site'') in a rectangular map range. The tree is drawn downward planar, its leaves are placed at equidistant positions on the upper boundary of the map, and each leaf is connected to its corresponding site by a straight-line leader. Prior work focuses on minimizing the number of leader crossings, or avoiding leaders altogether. In this paper, we explore paged geophylogenies, where the leaders can be partitioned into multiple pages where only crossings within a page are counted. For the general case, where each page can contain an arbitrary subset of the leaders, we provide an integer linear programming (ILP) formulation for minimizing the number of pages, and a polynomial-time algorithm for a special case that is equivalent to a one-sided tanglegram. We argue that, from a visualization perspective, instead each page must contain only leaders for a single subtree, and provide an $\\mathcal{O}(n^7)$ time algorithm for minimizing pages in this setting - which also involves improving the fastest known algorithm for testing the existence of a crossing-free labeling. Counter to what our worst case bound suggests, our implementation can handle instances with hundreds of sites within a second, as we show in our experimental evaluation, which further investigates the trade-offs between leader crossings and the number of pages.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "cs.CG",
-    "url": "http://arxiv.org/abs/2607.23559v1",
-    "tags": [
-      "cs.CG",
-      "linear-programming",
-      "metaheuristics"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23559",
-    "arxiv_id": "2607.23559v1",
-    "score": 50.0
-  },
-  {
-    "id": "arxiv-2607.23549",
-    "title": "A Fixed-Parameter Algorithm for Extending Upward Planar Drawings",
-    "authors": [
-      "Vera Chekan",
-      "Robert Ganian",
-      "Viktoriia Korchemna"
-    ],
-    "abstract": "An upward planar drawing of a directed acyclic graph is a planar drawing where every edge is pointed upward from its tail to head. Upward planar drawings are among the most natural drawing styles of directed graphs and have been researched in a variety of different settings, recently including that of drawing extension. In the drawing extension setting, one asks: given a graph $G$ and a (typically connected) subgraph $H$ of $G$ with a drawing $Γ(H)$, can we complete $Γ(H)$ to a drawing of $G$?   Drawing extension problems have been studied for numerous drawing styles; the vast majority of these are NP-hard and a typical approach aimed at circumventing their intractability is to design parameterized algorithms where the parameter measures \"how much\" of $G$ is still missing from the pre-drawn graph $H$. Most algorithms obtained within this framework require only a small number of edges to be missing from $H$ in order to remain efficient. In this article, we present a fixed-parameter algorithm for extending upward planar drawings which overcomes this drawback by using the $\\textit{vertex+edge deletion distance}$ as the parameter, thus achieving tractability even for instances with many missing edges. A key ingredient towards our result is a novel characterization of \"canonical\" sets of missing edges which cross a horizontal line segment in the drawing.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "cs.CG",
-    "url": "http://arxiv.org/abs/2607.23549v1",
-    "tags": [
-      "cs.CG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23549",
-    "arxiv_id": "2607.23549v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23460",
-    "title": "A Linear-Time Residue Bound for a One-Dimensional (L,V,W) Block-Cover Problem, and a Sharp Heavy-Base Threshold for its Exactness",
-    "authors": [
-      "Fuwei Xie"
-    ],
-    "abstract": "We study a one-dimensional exact-cover problem parameterized by three integers $(L,V,W)$: given an integer profile $a_0,\\dots,a_{n-1}$, write it as a nonnegative integer combination of a length-$L$ ``horizontal'' block $[1,\\dots,1]$, a value-$V$ ``vertical'' block, and a value-$W$ block, while minimizing the number of value-$W$ blocks. We give an $O(n)$ algorithm that eliminates the horizontal-block coupling by a class-wise difference recurrence and then matches residues modulo $V$ on the last $L$ columns. We prove that its output is always a valid \\emph{lower bound} on the optimum, via a mod-$L$ class invariant. We then prove the main result: once the profile is dense enough --- a \\emph{heavy base} $\\min_c a_c \\ge B(L,V,W)$ with \\[   B(L,V,W)=\\Big\\lceil \\tfrac{(L-1)\\lcm(V,W)}{LW}-1\\Big\\rceil\\,W+(L-1)(V-1), \\] the bound is \\emph{exact}. The exactness proof is a branch-cut argument on the exact dynamic program: two structural equivalences (a horizontal-to-vertical exchange modulo $V$, and a vertical reduction modulo $\\lcm(V,W)/W$) collapse the DP to the residue computation, and the two summands of $B$ are exactly the reserves that keep both equivalences from producing a negative residual. We further show the threshold is sharp: for $(L,V,W)=(3,6,4)$, $B=14$, and the profile $(17,16,13,16,17)$ with $\\min_c a_c=13$ makes the algorithm strictly undercount, so $B-1$ does not suffice. An independent exact dynamic program agrees with the algorithm on every tested profile with $\\min_c a_c\\ge B$ across many parameter triples, and the test harness \\texttt{test\\_general.c} is released for reproduction. The contribution is the algorithm, the branch-cut exactness proof, and the sharp threshold $B(L,V,W)$.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "cs.DS",
-    "url": "http://arxiv.org/abs/2607.23460v1",
-    "tags": [
-      "cs.DS",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23460",
-    "arxiv_id": "2607.23460v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23415",
-    "title": "Fractional Fully Online Matching",
-    "authors": [
-      "Zhiyi Huang",
-      "Zhihao Gavin Tang",
-      "Xiaowei Wu",
-      "Yuhao Zhang"
-    ],
-    "abstract": "This paper studies fractional matching on general graphs in the fully online model of Huang et al. (JACM 2020), in which all vertices arrive online and remain available for only a limited time. The algorithm must make irrevocable fractional matching decisions while the relevant vertices are simultaneously available. We extend the classic Water-Filling algorithm, also known as Balance and originally introduced by Kalyanasundaram and Pruhs (TCS 2000), to the fully online setting. Using an online primal-dual framework, we prove that the generalized Water-Filling algorithm achieves a competitive ratio of $2-\\sqrt{2}\\approx 0.586$ in the fully online model, and that this analysis is tight. To surpass the $2-\\sqrt{2}$ barrier, we incorporate the ideas of eager matching and history-based pricing into Water-Filling. We show that the resulting algorithm achieves an improved competitive ratio of $0.599$, thereby establishing that Water-Filling is not optimal in the fully online setting. On the hardness side, we further improve the known upper bound for fractional fully online matching, reducing the previous best bound of $0.6297$ due to Eckl et al. (ORL 2021) to $0.6132$.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "cs.DS",
-    "url": "http://arxiv.org/abs/2607.23415v1",
-    "tags": [
-      "cs.DS",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23415",
-    "arxiv_id": "2607.23415v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23880",
-    "title": "Physics-Informed Neural Networks for Predicting Nitrous Oxide Flux",
-    "authors": [
-      "Freddy Yu",
-      "Jashanjeet Kaur Dhaliwal",
-      "Subhadeep Chakraborty"
-    ],
-    "abstract": "Nitrous oxide (N$_2$O) is the dominant ozone-depleting substance emitted in the 21st century, and the third largest contributor to anthropogenic greenhouse gases due to its high potency and long atmospheric lifetime, with more than 70% of N$_2$O emissions occurring as a result of agricultural processes. Current approaches to predicting N$_2$O flux emissions include process-based models such as DayCent and Cycles, as well as classical AI models, but the application of Physics-Informed Neural Networks (PINNs) to predicting N$_2$O flux emissions is largely underexplored. Our paper draws upon the mechanistic equations that underlie the DayCent family of process-based models to construct a rigorously derived, literature-traceable physics residual. We then build and train an MLP-based PINN on a multi-site agricultural dataset spanning four geographically distinct US agricultural sites. Across all tested values of the physics loss weighting hyperparameter $λ$, our PINN consistently and substantially outperformed uncalibrated Cycles simulation (R$^2=0.01$), with our MLP baseline achieving mean R$^2=0.411$ across ten random seeds. Physics constraints consistently degrade model performance in holdout validation, with marginal degradation at low $λ$ and significant degradation at high $λ$, but consistently improve model performance and reduce performance variability in leave-one-site-out validation. This suggests that physics constraints sacrifice in-distribution accuracy for out-of-distribution robustness, anchoring the model toward biogeochemically plausible behavior on unfamiliar soil conditions --- though cross-site generalization remains challenging, with negative R$^2$ across all seeds and $λ$ values on our geographically distinct held-out site.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2607.23880v1",
-    "tags": [
-      "cs.LG",
-      "ml-for-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23880",
-    "arxiv_id": "2607.23880v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.23751",
-    "title": "Soft-Constrained Optimization of Latent Space in Variational Autoencoders",
-    "authors": [
-      "Ye Shi"
-    ],
-    "abstract": "The usefulness of a variational autoencoder (VAE) depends on two properties of its latent space that are hard to obtain together: high encoding capacity in the individual latent variables, and a low-dimensional, disentangled organization of those variables. Weakening the Kullback-Leibler regularization raises capacity but degrades disentanglement, while strengthening it prunes latent variables away entirely. We formulate VAE training as a soft-constrained optimization problem that addresses both. First, we impose an entropy-based constraint (EC) on individual latent variables, showing that the entropy of a latent code upper-bounds the mutual information it carries about the generative factors of the data. Second, we propose a weight-filter method that exploits the slack of the soft constraint to prune low-entropy dimensions during downstream training. On dSprites, the EC raises the aggregate latent-variable activation score by 43-62% over a vanilla VAE, attains the highest FactorVAE score among the \\b{eta} \\b{eta}-VAE variants (0.891 vs 0.847), and lowers reconstruction error by up to 38%. On MNIST, the weight filter reduces the latent dimensionality supplied to a downstream classifier from ten to two while holding accuracy above 90%, converging in 37% fewer epochs than the same procedure without the EC. We also find that low-entropy discrete factors tend to merge into a single latent variable, whereas high-entropy continuous factors are distributed across several.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2607.23751v1",
-    "tags": [
-      "cs.LG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23751",
-    "arxiv_id": "2607.23751v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23723",
-    "title": "Recovery of latent inner products from an anisotropic Gaussian random geometric graph",
-    "authors": [
-      "Cheng Mao",
-      "Vidya Muthukumar"
-    ],
-    "abstract": "We study the problem of recovering latent inner products from a random geometric graph with anisotropic Gaussian latent points. More precisely, for an i.i.d. sample $x_1, \\dots, x_n \\sim N(0,Σ)$ where $Σ\\in \\mathbb{R}^{d \\times d}$, an edge $(i,j)$ is present in the graph if and only if $\\langle x_i, x_j \\rangle \\ge ζ$ for a threshold $ζ$. We assume the threshold $ζ$ to be chosen such that the average edge density of the graph is of constant order. To address the undesired degree fluctuations amplified by the anisotropy of the latent points, we consider the doubly centered adjacency matrix of the graph, and estimate the latent inner products using a rank-$d$ spectral approximation of the doubly centered matrix. The estimator obtains a mean squared error with a rate involving the stable rank of the covariance matrix $Σ$. Notably, the rate of estimation matches the state of the art for the isotropic case $Σ= I_d$, and permits an ill-conditioned covariance matrix with a diverging condition number. The analysis of the spectral method proceeds via the entrywise Hermite expansion of the doubly centered adjacency matrix with respect to the latent inner products. Instead of the standard trace method, it uses a decoupling argument recently introduced by Kaushik, Romberg, and Muthukumar (2025) to control nonlinear error terms.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "math.ST",
-    "url": "http://arxiv.org/abs/2607.23723v1",
-    "tags": [
-      "math.ST",
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23723",
-    "arxiv_id": "2607.23723v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.23721",
-    "title": "Distributional Split Criteria for Random Forests: Extensions, Shrinkage, and the Robustness of Mean Splitting",
-    "authors": [
-      "Silas Koemen"
-    ],
-    "abstract": "Distributional random forests replace mean-based CART splitting with criteria that compare the full conditional response distribution in candidate children. We implement and systematically study a family of such criteria inside a single honest-forest implementation: isotropic random-Fourier-feature maximum mean discrepancy (MMD), an anisotropic diagonal-bandwidth variant, an adaptive per-split frequency-selection variant, and a non-kernel sliced-Wasserstein criterion, together with post-hoc kernel-mean shrinkage of the forest weights. Using paired-seed comparisons across synthetic quantile mechanisms, real univariate benchmarks, a California-housing subsample curve, and multivariate synthetic and real responses, we characterize where each extension pays. Three findings recur. First, among distributional criteria ordinary isotropic MMD is already close to best in class: the anisotropic, adaptive-frequency, and sliced-Wasserstein extensions, and post-hoc shrinkage, do not systematically improve on it. Second, on scalar tabular regression mean-based CART splitting remains the robust default and wins many cells. Third, multivariate responses are the regime where distributional splitting clearly earns its keep, most sharply on a pure-dependence copula where the energy score separates the criteria even though marginal CRPS does not. The evidence supports a simple allocation story: distributional splitting helps only when non-location structure is both present and estimable; otherwise it dilutes split-selection power away from the mean. All criteria, the honest forest, and the paired-comparison harness are implemented in the open-source \\texttt{drforest} library, whose Rust-backed split search makes broad criterion sweeps inexpensive.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "stat.ML",
-    "url": "http://arxiv.org/abs/2607.23721v1",
-    "tags": [
-      "stat.ML",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23721",
-    "arxiv_id": "2607.23721v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23711",
-    "title": "The Intruder Threshold: A Spectral Law for LoRA Fine-Tuning",
-    "authors": [
-      "Peng Xie"
-    ],
-    "abstract": "LoRA fine-tuning can create intruder dimensions: new leading singular vectors of the updated weight matrix $W+BA$ that are nearly orthogonal to all pretrained singular vectors and that drive catastrophic forgetting. Since their discovery, no theory has predicted, layer by layer on measured spectra, when they appear. We derive a per-layer critical update strength $s^\\ast=\\barθ/(γσ_1(BA))$, computed from the measured spectrum of $W$ alone through the rectangular spiked-deformation transform, together with an exact secular-equation characterization of the updated spectrum, with no fitted parameters. In a pre-specified study spanning four dense Transformer families, a state-space model, a mixture-of-experts model, and an encoder-decoder (18 adapters, 9{,}840 layer scans), the law localizes the empirical threshold within a factor of two on $82\\%$ of layers, separates intruder-bearing from intruder-free layers at deployment with a mean AUC of $0.89$, holds unchanged on six third-party adapters, and predicts where WikiText-2 perplexity begins to degrade; a combination of the two pre-specified edge evaluations reaches $98\\%$ and is confirmed out-of-bag on the external adapters ($0.997$). Full fine-tuning disperses its update far below the threshold of every layer, which resolves the asymmetry between LoRA and full fine-tuning. Norm-matched interventions confirm that threshold-crossing layers, rather than update magnitude, carry the forgetting, and a spike-budget rule derived from the thresholds, requiring one SVD and no validation sweeps, reduces forgetting by $62\\%$ on the most fragile model at no task cost.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2607.23711v1",
-    "tags": [
-      "cs.LG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23711",
-    "arxiv_id": "2607.23711v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23679",
-    "title": "Breaking the Total Variance Barrier: Sharp Sample Complexity for Linear Heteroscedastic Bandits with Fixed Action Set",
-    "authors": [
-      "Heyang Zhao",
-      "Tianyuan Jin",
-      "Weixin Wang",
-      "Vincent Y. F. Tan",
-      "Pan Xu",
-      "Quanquan Gu"
-    ],
-    "abstract": "Recent years have witnessed increasing interests in tackling heteroscedastic noise in bandits and reinforcement learning. In these works, the cumulative variance of the noise $Λ= \\sum_{t=1}^T σ_t^2$, where $σ_t^2$ is the variance of the noise at round $t$, is used to characterize the statistical complexity of the problem, yielding \\emph{simple regret} bounds of order $\\tilde{\\cal{O}}(d \\sqrt{Λ/ T^2})$ for $d$-dimensional linear bandits with heteroscedastic noise. However, with a closer look, $Λ$ remains the same order even if the noise is close to zero at half of the rounds, which indicates that the $Λ$-dependence is not optimal. In this paper, we revisit the stochastic linear bandit problem with heteroscedastic noise, where the action set is prefixed throughout the learning process. We propose a novel variance-adaptive algorithm \\texttt{VAEE} (Variance-Aware Exploration with Elimination) for large action set, which actively explores actions that maximizes the information gain among a candidate set of actions that are not eliminated. With the active-exploration strategy, we show that \\texttt{VAEE} achieves a \\emph{simple regret} with a nearly \\emph{harmonic-mean} dependent rate. For finitely many actions, we propose a variance-aware variant of G-optimal design based exploration, which achieves a simple regret with sharper dependence on $d$. We also establish a nearly matching lower bound for the fixed action set setting indicating that \\emph{harmonic-mean} dependent rate is unavoidable. To the best of our knowledge, this is the first work that breaks the $\\sqrtΛ$ barrier for stochastic linear bandits with heteroscedastic noise.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2607.23679v1",
-    "tags": [
-      "cs.LG",
-      "ml-for-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23679",
-    "arxiv_id": "2607.23679v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.23509",
-    "title": "Topological Data Analysis and Graph-Theoretic Approaches for Tennis Match Prediction",
-    "authors": [
-      "Jake Schwaderer",
-      "Alexander Bastien",
-      "Omid Khormali",
-      "Alejandro Navarrete",
-      "Mia Pesavento",
-      "Angelika Elderbrook"
-    ],
-    "abstract": "We present two approaches for predicting tennis match outcomes using topological data analysis and graph theory on ATP singles matches from 2000-2025. The first method applies lower-star filtration to player competitive networks, extracting topological features through persistent homology using four summary methods (VAB, HNAV, HWNAV, OW-HNPV) combined with Modified Band Depth analysis. Algorithmic optimizations including ego graph approximations and triangle elimination enable analysis of about 66k matches. Our Random Forest model achieves 66.2% accuracy (AUC = 0.719) using topological, graph-theoretic, and ranking features. Feature importance analysis reveals that rankings contribute 36.3%, centralities 25.5%, and TDA features 24.0%, with topological features providing complementary signal. When rankings are unavailable, the topology-only model maintains 63.56% accuracy, demonstrating that network-derived features alone capture meaningful competitive structure. The second method uses a modified Katz similarity index with temporal edge weighting, achieving 62.48% accuracy on held-out test data. This work represents the first application of lower-star filtration to tennis prediction, provides systematic comparison of four topological summary methods in sports analytics, and demonstrates that TDA can achieve above-chance prediction using network topology alone while providing additional value when combined with traditional features.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2607.23509v1",
-    "tags": [
-      "cs.LG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23509",
-    "arxiv_id": "2607.23509v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23502",
-    "title": "Learning switched non-linear dynamical systems from a single trajectory",
-    "authors": [
-      "Sunny G. W. Wang",
-      "Hemant Tyagi"
-    ],
-    "abstract": "We study empirical risk minimization for learning non-linear dynamical systems whose transition dynamics may switch over time. Under stability assumptions, and i.i.d switching over a set of $K$ modes, we derive non-asymptotic bounds on the prediction risk expressed in terms of the metric entropy of the underlying function class. We instantiate our general result for Hölder and linear function classes, obtaining explicit convergence rates that depend on the effective sample size $Tp_i$, where $T$ is the trajectory length and $p_i$ is the probability of observing mode $i$. Numerical simulations support our theoretical findings. To the best of our knowledge, these results are the first non-asymptotic guarantees for learning switched nonlinear dynamical systems from a single trajectory.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "stat.ML",
-    "url": "http://arxiv.org/abs/2607.23502v1",
-    "tags": [
-      "stat.ML",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23502",
-    "arxiv_id": "2607.23502v1",
-    "score": 40.0,
-    "mentions_solvers": [
-      "Xpress"
-    ]
-  },
-  {
-    "id": "arxiv-2607.23434",
-    "title": "Two-Timescale Hierarchical Reinforcement Learning for Resilient Operations",
-    "authors": [
-      "Young Hyun Cho",
-      "Franz Stoll",
-      "Will Wei Sun",
-      "Guang Lin",
-      "Stephan Biller"
-    ],
-    "abstract": "Unexpected shocks recur in global operations, requiring decision rules that adapt as market and operating conditions change. Many operational systems also have hierarchical structures in which long-term and short-term decisions pursue a shared objective. We study how hierarchical reinforcement learning can strengthen resilience by adapting these interdependent rules jointly. We develop a two-timescale hierarchical reinforcement learning framework that adapts long-term and short-term policies at their respective time scales. Because the policies are interdependent, we synchronize their updates and prove, to our knowledge, the first convergence guarantees for coupled two-timescale learning. Over $T$ periods, our policies' average gap from an optimal policy pair is $O(T^{-1/2})$, improving to $O(\\log T/T)$ when poor decisions produce clearer profit losses. In a used-car case study, inventory replenishment is the long-term decision and customer-arrival pricing the short-term decision. Relative to the strongest partially adaptive benchmark, the framework increases mean profit by $9.2\\%$ under joint demand-supply shocks and by $11.8\\%$ under a prolonged shock scenario, while maintaining a more stable profit trajectory over time. Short-term adaptation addresses routine seasonality and one-sided disruptions by responding immediately to changing conditions. Under joint demand-supply shocks, however, it is insufficient alone; long-term adaptation is also needed to create favorable conditions for short-term decisions. Joint adaptation thus yields higher and more stable profits through disruption and recovery. Because many organizations already use hierarchical planning, the framework strengthens operational resilience without altering existing decision structures.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "stat.ML",
-    "url": "http://arxiv.org/abs/2607.23434v1",
-    "tags": [
-      "stat.ML",
-      "stochastic",
-      "ml-for-or",
-      "supply-chain"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23434",
-    "arxiv_id": "2607.23434v1",
-    "score": 55.0
-  },
-  {
-    "id": "arxiv-2607.23397",
-    "title": "A Statistical Difference between Single-Layer Learning and Hierarchical Learning in Wide Neural Networks",
-    "authors": [
-      "Sumio Watanabe"
-    ],
-    "abstract": "Hierarchical neural networks are widely used in artificial intelligence, yet their mathematical properties remain incompletely understood. In the infinite-width limit, two different theoretical frameworks have been proposed. One reduces deep learning to kernel regression with a fixed kernel by assuming that the parameters remain close to their initialization, whereas the other allows the parameters to move away from their initialization, requiring the kernel itself to be optimized.   In this paper, we study a three-layer neural network with a finite but large number of hidden units. We show that training the input-to-hidden weights yields a smaller generalization error than keeping them fixed. Furthermore, the latter setting exhibits singularities in the parameter space, whereas the former does not. These findings indicate that singularities play an essential role even in wide neural networks.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2607.23397v1",
-    "tags": [
-      "cs.LG",
-      "ml-for-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23397",
-    "arxiv_id": "2607.23397v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.23876",
-    "title": "Learning Input-Constrained Funnel Controllers from State Trajectory Data",
-    "authors": [
-      "Panagiotis S. Trakas",
-      "Omid Mirzaeedodangeh",
-      "Lars Lindemann"
-    ],
-    "abstract": "Designing feedback controllers that satisfy predefined performance specifications while enforcing hard input constraints is a challenging task. Our work is motivated by the idea that state trajectory data, e.g., obtained from an expert controller, often implicitly encode feasible performance attributes and input limitations. We propose an optimization-based framework that uses state trajectory data to jointly learn: (i) a performance funnel that mimics the transient and steady-state behavior encoded within the observed trajectories, and (ii) a feedback controller that enforces the learned performance specifications under hard input constraints. Unlike imitation learning methods, the proposed approach does not rely on control input data and does not reconstruct an expert policy. Instead, it synthesizes a prescribed performance controller by combining nominal model compensation with a learned state-dependent feedback gain. The resulting synthesis problem is nonconvex, for which we develop a feasibility-driven active-set synthesis procedure. Finally, we establish two complementary guarantees: a semi-global conservative actuator-authority-based certificate for prescribed performance and input satisfaction, and a local data-driven certificate ensuring these properties near sufficiently dense demonstrated trajectories.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2607.23876v1",
-    "tags": [
-      "eess.SY",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23876",
-    "arxiv_id": "2607.23876v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23867",
-    "title": "BC-NMPC: Battery-Constrained NMPC with Propulsion Prediction and Replanning for High-Speed Flight",
-    "authors": [
-      "Parakh M. Gupta",
-      "Matej Mihulka",
-      "Matej Novosad",
-      "Robert Penicka",
-      "Martin Saska"
-    ],
-    "abstract": "Trajectory tracking performance of Uncrewed Aerial Vehicles (UAVs) degrades during high-speed and agile flight due to the depletion of the battery and subsequent loss of maximum available thrust. In applications such as drone racing, the consequent trajectory tracking error leads to a collision with obstacles and a subsequent failure to complete the race. In this paper, we present a novel method for integrating battery and propulsion system models into a Nonlinear Model Predictive Controller (NMPC) framework to enable real-time prediction of the voltage, consumed current, power, and maximum available thrust of the platform. This enables our approach to account for the dynamic variations in the maximum available thrust of the UAV caused by battery discharge, allowing it to plan for the depleting thrust and improve trajectory tracking performance. A trajectory planning algorithm is implemented to replan the trajectory in-flight based on evolving thrust limits. The accuracy of the proposed model is verified in real-world flight experiments, while the effectiveness of the replanning algorithm is evaluated in simulation. Compared to an uncompensated flight, our novel approach demonstrates achieves a collision-free flight to achieve a 6-fold decrease in tracking Root Mean Square Error (RMSE), a 46 % increase in flight distance, and a 100 % increase in flight time in an obstacle-ridden environment.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "cs.RO",
-    "url": "http://arxiv.org/abs/2607.23867v1",
-    "tags": [
-      "cs.RO",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23867",
-    "arxiv_id": "2607.23867v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23866",
-    "title": "Bound-Optimized Task Choice for Path Integral Control",
-    "authors": [
-      "Rylie Anderson",
-      "Goutam Das",
-      "Takashi Tanaka"
-    ],
-    "abstract": "Path Integral (PI) control is a powerful sampling-based method for stochastic optimal control, but it requires a restrictive coupling between the noise covariance and the control cost matrix that is rarely satisfied in practice, particularly in aerospace and cyber-physical systems. We propose Bound-Optimized Task Choice (BOTC), a framework that optimizes over the entire space of valid approximations, termed tasks, satisfying the PI coupling constraint. We prove that every task provides an upper bound on the true cost-to-go and that BOTC minimizes this bound. We derive a change-of-measure formulation that enables evaluation of all candidate tasks from a single set of Monte Carlo samples, eliminating the need to resample for each candidate task. The resulting optimization is parameterized by a positive semi-definite matrix. Furthermore, we propose a novel Normal-Inverse-Wishart distribution-based importance sampling scheme to improve global optimization. We validate BOTC on a finite-horizon stochastic linear-quadratic regulator problem, demonstrating that it tracks the constrained optimum.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2607.23866v1",
-    "tags": [
-      "eess.SY",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23866",
-    "arxiv_id": "2607.23866v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23839",
-    "title": "Flight Envelope Protection for a Hypersonic Glide Vehicle Using Adaptive Safety-Critical Control",
-    "authors": [
-      "Johannes Autenrieb",
-      "Peter A. Fisher",
-      "Anuradha Annaswamy"
-    ],
-    "abstract": "This paper presents an adaptive safety-critical control framework for flight envelope protection (FEP) of hypersonic glide vehicles (HGVs) under model uncertainty. The proposed architecture treats input and state constraints through two complementary but distinct mechanisms. At the input end, an adaptive controller with a calibrated closed-loop reference model (CCRM) is designed to accommodate magnitude-limited control inputs and the effects of actuator saturation. Building on this input-constrained adaptive control architecture, flight envelope state constraints are enforced at the state end by an error-based safety filter (EBSF) based on control barrier functions (CBFs). The EBSF modifies the reference command and adapts the admissible safe set online using the measured mismatch between the reference model and the uncertain plant, thereby preserving forward invariance during transient adaptation. Simulation results for the DLR generic hypersonic glide vehicle 2 (GHGV-2) demonstrate stable, high-performance tracking under magnitude-limited control inputs while maintaining flight envelope constraints in the presence of model uncertainty.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2607.23839v1",
-    "tags": [
-      "eess.SY",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23839",
-    "arxiv_id": "2607.23839v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23790",
-    "title": "B-spline shaping for low-thrust interplanetary rendezvous",
-    "authors": [
-      "Julio C. Sanchez"
-    ],
-    "abstract": "Rapid preliminary design of low-thrust interplanetary rendezvous trajectories requires parameterizations that combine computational efficiency, flexibility, and sufficient solution quality. This work presents a shape-based method in which the heliocentric cylindrical coordinates are parameterized using clamped B-splines. The differential flatness of the low-thrust cylindrical dynamics is exploited to recover the control acceleration algebraically from the shaped trajectory and its derivatives. The clamped B-spline parameterization satisfies the endpoint position and velocity conditions analytically, reducing the original fixed-time, minimum delta-v problem to a finite-dimensional nonlinear program in the free interior B-spline control points. The formulation therefore requires no numerical propagation of the equations of motion; numerical quadrature is used only to evaluate the objective function. Numerical campaigns are conducted for low-thrust rendezvous transfers from Earth to Mars, Mercury, the near-Earth asteroid 1989 ML, and comet Tempel 1, and the results are compared with high-order hodographic shaping. Across the tested fine-grid campaigns and among the finite solutions retained, all B-spline configurations reduce the mean, median, and minimum accumulated velocity increment relative to the hodographic benchmark. In particular, a ten control-point quintic B-spline is identified as a favorable compromise between solution quality and computational efficiency, while higher-dimensional parameterizations are effective for refining selected transfer opportunities.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2607.23790v1",
-    "tags": [
-      "eess.SY",
-      "constraint-programming"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23790",
-    "arxiv_id": "2607.23790v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.23772",
-    "title": "Outcome-Fair Restless Multi-Armed Bandits for Stochastic Deadline Scheduling",
-    "authors": [
-      "Shakti Sharma",
-      "Rahul Meshram"
-    ],
-    "abstract": "We study a restless multi-armed bandit (RMAB) problem for a stochastic deadline scheduling application. RMAB problems are solved using the Whittle index policy. The goal in RMAB is to maximize the expected cumulative discounted reward maximization. The Whittle index policy maximizes reward, but is not fair among two classes. In this paper, we introduce fairness criteria and study an outcome-fair model for RMAB which allows fairness for jobs and users structurally disadvantaged demographic classes. We formulate an outcome fair stochastic deadline scheduling problem as RMAB, and we develop the outcome fair Whittle index policy. We define a virtual queue mechanism that dynamically enforces long-term completion rate guaranties across demographic groups.   We analyze a standard Whittle index policy and the outcome-fair index policy. We demonstrate the performance of our algorithms with numerical examples. We compare policies---Whittle index policy (no fairness), input-fairness Whittle index policy, outcome fair Whittle index policy. We observe that the outcome-fair Whittle index policy provides better fairness among classes compared to other policies. We demonstrate a trade off between fairness and profit. This decreases as the server capacity increases.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2607.23772v1",
-    "tags": [
-      "eess.SY",
-      "scheduling"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23772",
-    "arxiv_id": "2607.23772v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.23653",
-    "title": "Observer-Assisted Relative-Velocity Compensation with LPV-$H_\\infty$ Robust Correction for 3D Trajectory Tracking of Underactuated Non-Minimum-Phase AUVs under Ocean Currents",
-    "authors": [
-      "Mohammad Sabouri"
-    ],
-    "abstract": "This paper develops an observer-assisted control architecture for 3D trajectory tracking of torpedo-type underactuated AUVs with non-minimum-phase sway/heave dynamics under unknown ocean currents. A three-stage state-current observer provides relative-velocity estimates to a nonlinear feedforward term for dominant current rejection and to an LMI-certified LPV-$\\mathcal{H}_\\infty$ correction layer. Feedback-linearising cancellation yields a constant input matrix, enabling convex synthesis without pairwise cross terms. A residual-level break-even law shows that the effective surge disturbance depends on current-estimation error, while a singular-perturbation analysis proves local practical uniform ultimate boundedness on the embedded LPV model. REMUS simulations over three trajectories and four current scenarios show 89-96% current-estimation reduction, about 99% translational residual reduction, and RMS tracking-error reduction from 4.04 m to 0.24 m.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2607.23653v1",
-    "tags": [
-      "eess.SY",
-      "stochastic"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23653",
-    "arxiv_id": "2607.23653v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.23546",
-    "title": "Optimal Microgrid Operation with Open-cycle Ocean Thermal Energy Conversion for Islands",
-    "authors": [
-      "Xiaoyu Fu",
-      "Yang Yang",
-      "Yonghua Song"
-    ],
-    "abstract": "Ocean thermal energy conversion (OTEC) is a zero-carbon technology that harnesses the ocean's thermal gradient to generate electricity. Among OTEC variants, open-cycle OTEC is particularly attractive to island communities, as it can co-generate electricity and freshwater. This paper develops an integrated model that captures both the thermodynamic process of open-cycle OTEC and its operational role in an island microgrid. A two-stage robust scheduling model is formulated for the island microgrid, with a budget uncertainty set to capture the renewable output deviations. The resulting model is solved via an inexact column-and-constraint generation algorithm, which accelerates convergence by permitting inexact solutions of the first-stage problem in early iterations. Numerical experiments demonstrate that open-cycle OTEC can fully substitute for conventional generators on island microgrids and provide more reliable and dispatchable output than volatile renewable sources.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2607.23546v1",
-    "tags": [
-      "eess.SY",
-      "scheduling",
-      "stochastic"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23546",
-    "arxiv_id": "2607.23546v1",
-    "score": 50.0
-  },
-  {
-    "id": "arxiv-2607.23536",
-    "title": "Sensitivity Analysis of Dynamic Line Rating for ACSR Conductors using IEEE-738",
-    "authors": [
-      "Shashank Singh",
-      "Ashish Kumar Mishra",
-      "Vinod M. P.",
-      "Christian Romeis"
-    ],
-    "abstract": "Dynamic Line Rating (DLR) is a novel technique that enhances the utilization of transmission line capacity. It is nevertheless unclear how much measurement uncertainty in important environmental parameters affects the DLR calculation. Using the IEEE-738 standard, this paper presents a systematic parametric sensitivity analysis of DLR for a 795 kcmil ACSR Drake conductor. The DLR computation encompasses 832 operating points which includes daytime/nighttime solar scenarios, clear/non-clear atmospheric clearness conditions, wind speeds ranging from 0 to 15.25 m/s, and ambient temperatures between 15 and 50 degrees Celsius. According to sensitivity analysis, wind sensitivity tends to decrease at higher ambient temperatures, whereas temperature sensitivity tends to increase with wind speed. Pearson correlation analysis indicates a strong negative linear association between DLR and ambient temperature, and a strong positive linear association with wind speed. A regression model incorporates both individual and interactive effects of wind and temperature, and explains over 93% of the observed DLR variability across all cases. Finally, the observations serve as a guide for operational planning and uncertainty assessment in DLR-based transmission systems.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2607.23536v1",
-    "tags": [
-      "eess.SY",
-      "stochastic"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23536",
-    "arxiv_id": "2607.23536v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2607.23512",
-    "title": "The Cross-Domain Generalization Cost of Offensive Language Detection",
-    "authors": [
-      "Ruixing Ren",
-      "Junhui Zhao",
-      "Xiaoke Sun",
-      "Qiuping Li"
-    ],
-    "abstract": "Offensive language detection models generally suffer performance degradation when deployed across datasets and across languages, yet most existing studies stop at reporting this phenomenon and lack a systematic methodology for decomposing the causes of degradation into attributable components and quantifying the cost of remediation. This paper proposes a diagnosis and optimization framework composed of three coordinated technical components. First, a zero-shot transfer loss decomposition that separates the performance degradation from OLID to MLMA into two independently measurable components, namely dataset effect and language effect. Second, a controlled fine-tuning protocol that quantifies both adaptation efficiency and the hidden damage inflicted on the source task by comparing few shot learning curves under continued fine-tuning and cold-start starting points. Third, three joint training strategies incorpo rating temperature sampling and experience replay, which offer a controllable Pareto trade-off between improving multilingual capability and preserving source-task performance. Experiments built on this framework show that the dataset effect dominates the zero-shot transfer loss and substantially outweighs the language effect. Few-shot adaptation without a replay mechanism, though data-efficient, inflicts source task damage 4 to 9 times greater than that of the joint training strategies, and its damage magnitude is highly unstable. The three joint training strategies trade 3.2 to 4.1 percentage points of source-task performance for 8.1 to 42.6 percentage points of multilingual capability gain, forming a clear and controllable Pareto trade-off.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "cs.CL",
-    "url": "http://arxiv.org/abs/2607.23512v1",
-    "tags": [
-      "cs.CL",
-      "multi-objective",
-      "decomposition"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23512",
-    "arxiv_id": "2607.23512v1",
-    "score": 50.0
-  },
-  {
-    "id": "arxiv-2607.23778",
-    "title": "Stability in stochastic hypergraph matching I: necessary and sufficient criteria",
-    "authors": [
-      "Doan Dai Nguyen",
-      "Ana Bušić"
-    ],
-    "abstract": "Stochastic matching on hypergraphs is an important topic for its versatility in capturing real-life systems, from living donor transplant to ride-hailing. Nevertheless, finding necessary and sufficient criteria for stability is a long-standing problem. One of the key difficulties is the fact that greedy policies, whilst maximally stable for stochastic matching on graphs, no longer achieve maximal stability region on hypergraphs. So far, no alternative families of policies with similar properties have been known.   In this work, we introduce online assignment policies, in which each item is assigned to a matching hyperedge type upon arrival. We show that this is a good generalisation to greedy policies, by proving that they are maximally stable. Their natural amenability to analysis allow us to derive several necessary and sufficient criteria for stability, which generalise the known criteria for graphs. Furthermore, the constructive proof gives a maximally stable arrival-rate agnostic policy.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "cs.DM",
-    "url": "http://arxiv.org/abs/2607.23778v1",
-    "tags": [
-      "cs.DM",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23778",
-    "arxiv_id": "2607.23778v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2607.23754",
-    "title": "Set-defined graph classes: $χ$-boundedness meets tropical algebra",
-    "authors": [
-      "Sarosh Adenwalla",
-      "Samuel Braunfeld",
-      "Tomáš Hons",
-      "John Sylvester",
-      "Viktor Zamaraev"
-    ],
-    "abstract": "We study set-defined graph classes: hereditary classes whose vertices are assigned fixed-length numerical tuples, with adjacency determined solely by equality patterns among coordinates. These classes arise in structural graph theory, communication complexity, logic, and adjacency labeling schemes. We ask when they are $χ$-bounded, that is, when chromatic number is bounded in terms of clique number throughout the class.   First, we prove a decomposition theorem: every graph in a set-defined class can be partitioned into a number of parts polynomially bounded in its clique number, each inducing a union of a bounded number of shift-colorable graphs, that is, graphs admitting a homomorphism to a shift graph. Thus bounded unions of shift-colorable graphs form the fundamental obstruction to $χ$-boundedness in set-defined classes.   For full set-defined classes, consisting of all graphs realizable by a fixed Boolean rule on equality patterns, we prove a stronger dichotomy: every such class is either polynomially $χ$-bounded or contains shift graphs of arbitrarily large chromatic number. Moreover, we provide an algorithm that, given a Boolean-function description of a full set-defined class, decides $χ$-boundedness of the class. It reduces the problem to feasibility of tropical linear programs, and its correctness follows from a duality with winning strategies in mean-payoff games. Conversely, every integer system of tropical inequalities, and hence every mean-payoff game, can be encoded in strongly polynomial time as a set-defined class whose non-$χ$-boundedness is equivalent to feasibility. This provides a graph-theoretic counterpart of tropical feasibility and mean-payoff-game solvability, linking structural graph theory, tropical algebra, and game-theoretic algorithms.",
-    "date": "2026-07-26",
-    "source": "arXiv",
-    "source_detail": "cs.DM",
-    "url": "http://arxiv.org/abs/2607.23754v1",
-    "tags": [
-      "cs.DM",
-      "decomposition"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2607.23754",
-    "arxiv_id": "2607.23754v1",
-    "score": 45.0
-  },
-  {
-    "id": "s2-01a8f288c184",
-    "title": "Transfer Learning Architectures for Scalable Multi-Fidelity Bayesian Optimization",
-    "authors": [
-      "Jaewook Lee",
-      "Ethan Errington",
-      "Christian D. Lorenz",
-      "Miao Guo"
-    ],
-    "abstract": "Self-driving laboratories increasingly rely on multi-fidelity Bayesian optimization (MFBO) to balance cheap, approximate evaluations against scarce, expensive ones, with a predictive surrogate at its core. Gaussian processes (GPs) are the default choice, but they scale poorly as data accumulate and assume a smooth landscape that molecular and materials search spaces routinely violate. Transfer learning offers an alternative suited to this regime: it learns a representation from abundant cheap data and adapts it to sparse expensive data. Despite its use in property prediction, transfer learning has not been tested as the engine of a closed-loop optimization. Here we benchmark eleven transfer-learning surrogates against four GP methods under an identical selection rule, fidelity budget, and model size, across nine tasks spanning synthetic functions to real chemistry and materials problems. GPs win on smooth, low-dimensional functions but perform worst on molecular and materials problems, where transfer-learning surrogates reach substantially better solutions using far less computation. Because acquisition policy is held fixed across surrogates, this advantage is attributable to the surrogate itself. Uncertainty-driven exploration is not reliably beneficial, and calibration does not predict optimization performance, so greedy exploitation of the transfer-learned mean is the more robust default. Transfer learning is therefore the surrogate of choice for molecular and materials MFBO.",
-    "date": "2026-07-26",
-    "source": "Semantic Scholar",
-    "source_detail": "robust optimization uncertainty",
-    "url": "https://www.semanticscholar.org/paper/01a8f288c18461add92dac662248a295706c821b",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "",
-    "arxiv_id": "2607.23404",
-    "citation_count": 0,
-    "score": 30.0
-  },
-  {
-    "id": "s2-90ee6d02439c",
-    "title": "A Linear-Time Residue Bound for a One-Dimensional (L,V,W) Block-Cover Problem, and a Sharp Heavy-Base Threshold for its Exactness",
-    "authors": [
-      "Fuwei Xie"
-    ],
-    "abstract": "We study a one-dimensional exact-cover problem parameterized by three integers $(L,V,W)$: given an integer profile $a_0,\\dots,a_{n-1}$, write it as a nonnegative integer combination of a length-$L$ ``horizontal''block $[1,\\dots,1]$, a value-$V$ ``vertical''block, and a value-$W$ block, while minimizing the number of value-$W$ blocks. We give an $O(n)$ algorithm that eliminates the horizontal-block coupling by a class-wise difference recurrence and then matches residues modulo $V$ on the last $L$ columns. We prove that its output is always a valid \\emph{lower bound} on the optimum, via a mod-$L$ class invariant. We then prove the main result: once the profile is dense enough --- a \\emph{heavy base} $\\min_c a_c \\ge B(L,V,W)$ with \\[ B(L,V,W)=\\Big\\lceil \\tfrac{(L-1)\\lcm(V,W)}{LW}-1\\Big\\rceil\\,W+(L-1)(V-1), \\] the bound is \\emph{exact}. The exactness proof is a branch-cut argument on the exact dynamic program: two structural equivalences (a horizontal-to-vertical exchange modulo $V$, and a vertical reduction modulo $\\lcm(V,W)/W$) collapse the DP to the residue computation, and the two summands of $B$ are exactly the reserves that keep both equivalences from producing a negative residual. We further show the threshold is sharp: for $(L,V,W)=(3,6,4)$, $B=14$, and the profile $(17,16,13,16,17)$ with $\\min_c a_c=13$ makes the algorithm strictly undercount, so $B-1$ does not suffice. An independent exact dynamic program agrees with the algorithm on every tested profile with $\\min_c a_c\\ge B$ across many parameter triples, and the test harness \\texttt{test\\_general.c} is released for reproduction. The contribution is the algorithm, the branch-cut exactness proof, and the sharp threshold $B(L,V,W)$.",
-    "date": "2026-07-26",
-    "source": "Semantic Scholar",
-    "source_detail": "integer programming branch and bound",
-    "url": "https://www.semanticscholar.org/paper/90ee6d02439cfae932c4d442a5025b4dd48ea259",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "",
-    "arxiv_id": "2607.23460",
-    "citation_count": 0,
-    "score": 25.0
-  },
-  {
-    "id": "s2-342fa008767c",
-    "title": "A review of reliability challenges and countermeasures of biomedical image analysis in surgical robotics",
-    "authors": [
-      "Zeyang Zhang"
-    ],
-    "abstract": "",
-    "date": "2026-07-26",
-    "source": "Semantic Scholar",
-    "source_detail": "robust optimization uncertainty",
-    "url": "https://doi.org/10.1117/12.3117670",
-    "tags": [
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.1117/12.3117670",
-    "arxiv_id": "",
-    "citation_count": 0,
-    "score": 30.0
-  },
-  {
-    "id": "s2-24562f210417",
-    "title": "The Verification, Validation, and Uncertainty Quantification Framework of the EAST Tokamak Diagnostic System",
-    "authors": [
-      "S.Z. Yuan",
-      "Haiqing Liu",
-      "K. Hanada",
-      "M. Isobe",
-      "Yang Zhang",
-      "Ting Lan",
-      "Xiang Liu",
-      "Hui Lian",
-      "YuQi Chu",
-      "Shouxin Wang",
-      "Z. Zou",
-      "Yuan Yao",
-      "Rongjie Zhu",
-      "Yuyang Liu",
-      "Yinxian Jie"
-    ],
-    "abstract": "\n The diagnostic system in a tokamak serves as the foundation for research in plasma physics, plasma operation control, and device protection. The accuracy and reliability of diagnostic data have long been critical considerations in tokamak data analysis and processing. To achieve systematic error assessment, optimized design, and coupling with other systems or simulation modules, the development of a digital diagnostic system module, digital twin, can significantly reduce labor and time costs. Based on a digital diagnostic model, uncertainty quantification and sensitivity analysis are conducted for the diagnostic system, providing a basis for its upgrade. Meanwhile, the engineering design, system hardware, and data processing system of the actual diagnostic system are hierarchically validated to identify uncertainty sources, which are then compared with those of the digital system. This enables complementary validation between the real system and its digital twin. By analyzing uncertainty sources and conducting sensitivity analysis, high-impact uncertainty sources are prioritized for optimization, thereby enhancing the accuracy and reliability of the diagnostic system. This paper quantifies uncertainties and sensitivities of the POINT system and its digital module. The VVUQ analysis yields a total uncertainty of 6.17% and a high confidence coefficient of 0.995. The agreement between experiment and digital module exceeds 97.5% except in the boundary region (≈82.5% due to missing chords). Sensitivity analysis shows that laser frequency stability (≈30%), core channel position (≈23%), and ion mass (≈11%) are the dominant factors. Future devices should improve frequency stabilization, core chord coverage, and fuel calibration to reduce density inversion uncertainty.",
-    "date": "2026-07-26",
-    "source": "Semantic Scholar",
-    "source_detail": "operations research optimization",
-    "url": "https://doi.org/10.1088/1361-6587/ae904c",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.1088/1361-6587/ae904c",
-    "arxiv_id": "",
-    "citation_count": 0,
-    "score": 35.0
   }
 ]
