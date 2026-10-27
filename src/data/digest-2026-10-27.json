@@ -1,0 +1,260 @@
+{
+  "date": "2026-10-27",
+  "generated_at": "2026-10-27T13:09:45.167013+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1007-s10479-026-07461-x",
+      "title": "Even flow in dynamic networks for wastewater treatment",
+      "authors": [
+        "Kasslin, A.",
+        "Berg, J."
+      ],
+      "abstract": "Abstract\n                  Network flow allocation is a central problem within operations research. Arguably, the most classic setting of flow allocation problems is a static one in which the arcs of a directed graph need to be assigned flow values in a way that respects the capacities of each edge and, for example, maximizes the amount of flow that arrives at a sink node. The numerous applications of flow problems have resulted in several variants being proposed and studied. In this paper, we study a variant of dynamic network flow. Dynamic network flow generalizes the static setting by introducing a notion of time and allowing the flow to move over time in the network. In our setting, the sink of the network also has a maximum capacity of flow it can receive at each timestep, and we are interested in computing flow allocations that distribute an even amount of flow to the sink of the network over all timesteps. Additionally, we assume that new flow can be generated at each non-sink node in each timestep, and that the nodes can temporarily store a limited amount of the flow. In a central instantiation of the problem, the non-sink nodes of the network are pumping stations that need to transfer wastewater to a treatment plant, which is the sink of the network. To evaluate our solving approaches in practice, we worked with the Helsinki Region Environmental Services Authority to collect and create a new open-source benchmark set based on wastewater quantities in the Helsinki region. More precisely, we study the applicability of linear programming for solving real-world benchmarks of this dynamic network flow optimization problem. As our main contributions, we: (i) extend and modify a previously proposed constraint model for computing feasible allocations to the dynamic setting and allow more flexible allocations, (ii) introduce several different approaches to even the workload arriving at the sink at each timestep, (iii) collect a new open-source dataset based on real-world wastewater flow quantities, and (iv) report on an extensive experimental evaluation of our model on three differently-sized time spans of the new dataset using state-of-the-art solvers. Our evaluation demonstrates that, among our evenness approaches, minimizing the difference between the maximum and minimum hourly incoming water to the treatment plant consistently yields the highest evenness in the flow arriving at the treatment plant. Additionally, we demonstrate the flexibility of our model by incorporating additional constraints aimed at reducing the energy consumption of the pumps.",
+      "date": "2026-10-26",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07461-x",
+      "tags": [
+        "linear-programming",
+        "network-optimization",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07461-x",
+      "score": 65.0
+    },
+    {
+      "id": "openalex-W7223553273",
+      "title": "Source Traceability and Completeness Validation for Municipal Marriage Records Using RiC-O",
+      "authors": [
+        "Ceyhan Güler"
+      ],
+      "abstract": "Source-linked RiC-O representation of municipal marriage-record retention statements: graph, queries, validation shapes, and reproducibility package (v0.3) This dataset accompanies the manuscript “Source Traceability and Completeness Validation for Municipal Marriage Records Using RiC-O” (C. Güler, Istanbul University), submitted for publication in Data (MDPI). The package contains an executable, source-linked representation of the marriage-records section (Evlendirme Memurluğu) of a Turkish municipal archival records identification and assessment form (Belediyeler Arşiv Belgesi Tespit ve Değerlendirme Formu), together with five document-requirement groups from the official marriage-procedure page of the General Directorate of Population and Citizenship Affairs (NVİ). The model uses the Records in Contexts Ontology (RiC-O) 1.1, RDF, SPARQL, and SHACL. Its design keeps source statements, interpreted retention rules, record categories, and disposal authority as separate resources: no disposal permission is derived from a retention statement. Contents Application graph (RDF/XML and Turtle, 380 triples): 14 retention statements, 5 document-requirement statements, 20 source concepts, 14 interpreted rules, and 7 explicitly synthetic entities, each traceable to a page and row locator. Official RiC-O 1.1 snapshot and a combined OWL file for offline inspection in Protégé. Source transcription, unchanged source PDF, extracted page text, and mapping table. 12 competency queries in SPARQL and SQL, with a normalized SQLite baseline and complete projected outputs. Core SHACL shapes, a dataset-specific completeness profile, validation reports, seven fault-injection tests, and four ablation reports. Python build and evaluation scripts, pinned package versions, a reconstruction (graph-isomorphism) check, and a SHA256 manifest. A blank 20-item expert review instrument and a source-verification log. ReproductionWith Python 3.12 or later, install prototype/requirements.txt (rdflib 7.6.0, pySHACL 0.40.1, owlrl 7.6.2) and run python evaluate.py. No external triple store is required. See README.md for details. Notes and limitationsThe package contains no personal data and no real marriage files; all instance-level examples are explicitly marked as synthetic. Graph–relational parity was evaluated on the same constructed dataset and is not independent validation of the mappings. The publication date and current applicability of the source form were not independently verified, and the represented statements are not legal determinations of retention or disposal. Some working files in prototype/ are in Turkish, the original working language of the project.",
+      "date": "2026-10-26",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23642968",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23642968",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7223561352",
+      "title": "Public opinions on wayfinding challenges in Hong Kong",
+      "authors": [
+        "Yingqi Jia",
+        "Chen Feng"
+      ],
+      "abstract": "Hong Kong's multilevel pedestrian networks require travellers to navigate connections between buildings and floors. This makes wayfinding more complex and difficult. Evidence remains limited on which places and spatial situations are associated with getting lost, and on how spatial conditions, navigation information and personal characteristics explain these difficulties. We examined 3,646 Google Maps reviews and Xiaohongshu and Weibo posts through text mining, and used 40 questionnaire responses to explore the reported problems further. Google Maps reviews described confusing shopping-centre layouts and routes between floors. Xiaohongshu and Weibo posts described unclear exits and difficulty following routes between stations, malls and footbridges, including at familiar places. In the questionnaire, moving between buildings was the most reported difficulty (21 of 40 respondents), especially in shopping centres; street difficulties mainly involved junction choices. Difficulty between buildings occurred among respondents with both lower and higher direction-sense ratings and during repeat visits. Of the 31 respondents who used maps or navigation on their phones during the experience they described, nine could not find the correct entrance even when navigation showed they had arrived. These findings highlight persistent wayfinding challenges in complex three-dimensional environments despite navigation support, and the need for better design of connections between levels.",
+      "date": "2026-10-26",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23645691",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23645691",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7223571709",
+      "title": "LitUbik: an open-source, AI-assisted workbench covering the full systematic-review lifecycle, from registered protocol to PRISMA 2020",
+      "authors": [
+        "Adolphe James Béquet",
+        "Sébastien Laurent"
+      ],
+      "abstract": "LitUbik is a self-hosted web application covering the complete systematic-review lifecycle: import of a pre-registered protocol, construction and multi-database translation of search equations, automated database searching, fuzzy deduplication, blinded multi-reviewer screening of titles/abstracts and full texts, full-text retrieval, citation snowballing, quality appraisal (JBI, MMAT), data extraction, and a live PRISMA 2020 flow diagram. Optional large-language-model assistance is available at every stage, always subject to human validation and recorded with full provenance.",
+      "date": "2026-10-26",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23652583",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23652583",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-nav.70100",
+      "title": "Manufacturer's Agency Selling and Reselling Choices and Online Intermediary's Information Sharing: The Role of Product Quality Decisions",
+      "authors": [
+        "Wu, X.",
+        "Liu, X.",
+        "Lin, X.",
+        "Chen, Y."
+      ],
+      "abstract": "ABSTRACT\n                  Meeting consumers' product‐quality demands is essential. Online intermediaries typically possess more accurate demand information than manufacturers and may share it to support quality adjustments. Manufacturers can adopt two selling formats: agency selling, in which they sell directly to consumers through intermediaries and pay commissions, and reselling, in which intermediaries purchase products from manufacturers at wholesale prices and then resell them to consumers. Manufacturers may also sell to downstream resellers who distribute through intermediaries. We develop a game‐theoretic e‐commerce supply chain model in which a manufacturer adjusts product quality in response to realized demand and chooses between agency selling and reselling, while the intermediary decides whether to disclose demand information to the manufacturer, the reseller, or both. Our results yield several insights. First, sharing demand information only with the manufacturer may reduce product quality under both selling formats. Second, under agency selling, the intermediary may disclose information either only to the manufacturer or to both parties; endogenous quality decisions increase full disclosure while reducing manufacturer‐only sharing. Under reselling, with exogenous quality, the intermediary either shares information only with the reseller or withholds it. However, when quality improvement is sufficiently efficient, it may disclose information to both parties despite higher wholesale‐price uncertainty. Furthermore, anticipating the intermediary's disclosure strategy, the manufacturer may still choose higher product quality under agency selling even when this results in a lower expected wholesale price than under reselling. Thus, the manufacturer's preferred selling format depends on which format better induces the intermediary to restrict information disclosure to the intended party. Finally, we show that agency selling can improve consumer surplus and social welfare and may also benefit all supply chain members with endogenous quality decisions.",
+      "date": "2026-10-26",
+      "source": "Naval Research Logistics",
+      "source_detail": "Naval Research Logistics",
+      "url": "https://doi.org/10.1002/nav.70100",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1002/nav.70100",
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7223550743",
+      "title": "Thai E-commerce Chat Guides 2026: Payment-Slip Verification, Unified Inbox, and Choosing a Chat System (3 Reports, Thai Language)",
+      "authors": [
+        "Chat Team Decha"
+      ],
+      "abstract": "Thai-language practical guides for online shop teams (2026 edition) Payment-slip verification guide — checkpoints before approving an order when a customer sends a bank transfer slip (all figures are illustrative examples). Unified inbox FAQ — bringing LINE OA, Facebook and the sales team into one queue. Choosing a chat system in 2026 — comparison notes for Thai SME shops. Web versions (kept up to date): easyrobin.com/features · easyrobin.com/contact · full article archive (also mirrored at Netlify and Read the Docs) Prepared by the Chat Decha Team. Released under CC BY 4.0.",
+      "date": "2026-10-26",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23652624",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23652624",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "openalex-W7223562028",
+      "title": "DESIGN AND IMPLEMENTATION OF A ROLE-BASED WEB ASSESSMENT PLATFORM FOR NIGERIAN UNIVERSITIES USING THE LARAVEL MVC FRAMEWORK",
+      "authors": [
+        "Innocent Adjaino",
+        "Omolegho A. Ibok"
+      ],
+      "abstract": "In many Nigerian universities, assessment still means printed scripts, long marking weekends and results that reach students weeks after the examination. This paper describes the design and implementation of a web-based student assessment system built to take that burden off lecturers while keeping the process fair and traceable. The system uses Laravel 10, MySQL 8.0 and Bootstrap 5 in a three-tier Model-View-Controller (MVC) architecture, and was developed iteratively following an Agile process. Five modules were implemented: authentication and role management, course and assessment management, a reusable question bank, timed online test delivery with automated grading, and result generation with performance reporting. Administrators, instructors and students each see only what their role permits. The system was verified with 30 structured black-box test cases covering all modules, and every case passed. A pilot with 30 users (5 administrators, 10 instructors, 15 students) returned an overall mean acceptance rating of 4.69 out of 5. The platform runs entirely on open-source components and ordinary hardware, which makes it realistic for institutions with limited budgets. We describe the design decisions, report what worked, and discuss the limits of the current version, including the absence of automated grading for open-ended answers and of proctoring features.",
+      "date": "2026-10-26",
+      "source": "OpenAlex",
+      "source_detail": "Global journal of research in engineering and technology",
+      "url": "https://doi.org/10.58175/gjret.2026.4.2.0017",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.58175/gjret.2026.4.2.0017",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "openalex-W7223567680",
+      "title": "cardargus: Generate SVG Information Cards with Embedded Fonts and Badges (Python)",
+      "authors": [
+        "André Leite Wanderley",
+        "Marcos Wasiliew",
+        "Hugo Augusto Vasconcelos Medeiros",
+        "Carlos Alberto Gomes de Amorim Filho",
+        "Giogo De Carvalho Bezerra",
+        "Júlia Nascimento Barreto"
+      ],
+      "abstract": "Create self-contained SVG information cards with embedded Google Fonts, shields-style badges, sparklines and custom logos. Python port of the R package cardargus (https://github.com/StrategicProjects/cardargus).",
+      "date": "2026-10-26",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23652571",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23652571",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "openalex-W7223570862",
+      "title": "Regenerative Habitation Collection",
+      "authors": [
+        "James Lambdin"
+      ],
+      "abstract": "Aeon Mundi is a collection of adaptive furnishings and robotic tools designed to connect small-plot, rotational food growing with the everyday life of homes, civic buildings, and shared public spaces. Its six pieces support a connected journey from cultivation and habitat care to harvesting, processing, and transport. Workstations, companion seating, and autonomous carts combine adjustable ergonomics with robotic assistance for moving crops, trays, and tools, keeping people involved at each stage. A common material language unites the collection: polished solid-cast mycelium in natural, vegetable-pigmented hues; sustainably loomed bamboo upholstery; rounded, repairable forms; and fine luminescent accents that respond to work phases. Embedded spatial displays offer abstract, user-invoked cues. Together, these elements frame food production as an accessible part of shared daily life and propose a design system for exploring how productive landscapes and human-centered technology can coexist.",
+      "date": "2026-10-26",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23652617",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23652617",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1002-net.70085",
+      "title": "Solving the Capacitated Arc Routing Problem Using Logic‐Based Benders Decomposition",
+      "authors": [
+        "Lindhardt, A.",
+        "Wøhlk, S.",
+        "Sørensen, M."
+      ],
+      "abstract": "ABSTRACT\n                  In this paper, we present a new exact algorithm for solving the capacitated arc routing problem using logic‐based benders decomposition. The master problem is formulated based on variables that measure the number of deadheadings of each edge. These variables have been converted into binary form, which enables the use of both new and stronger inequalities. The subproblem is transformed into a node‐routing feasibility problem, where we exploit that the number of edge traversals is fixed, as this information is provided by the master problem. The computational results show that the proposed algorithm outperforms the current state‐of‐the‐art on about half of the classical instances, in many cases by an order of magnitude. The algorithm is also able to determine the optimal solution for a previously unsolved instance.",
+      "date": "2026-10-26",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70085",
+      "tags": [
+        "vehicle-routing",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70085",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
