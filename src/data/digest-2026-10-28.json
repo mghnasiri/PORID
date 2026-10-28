@@ -1,0 +1,279 @@
+{
+  "date": "2026-10-28",
+  "generated_at": "2026-10-28T13:57:36.349899+00:00",
+  "publications": [
+    {
+      "id": "openalex-W4246443967",
+      "title": "Information Design Journal",
+      "authors": [],
+      "abstract": "Information Design Journal (IDJ) is a peer-reviewed international journal that bridges the gap between research and practice in information design. IDJ is a platform for discussing and improving the design, usability, and overall effectiveness of ‘content put into form’ — of verbal and visual messages shaped to meet the needs of particular audiences. IDJ offers a forum for sharing ideas about the verbal, visual, and typographic design of print and online documents, multimedia presentations, illustrations, signage, interfaces, maps, quantitative displays, websites, and new media. IDJ brings together ways of thinking about creating effective communications for use in contexts such as workplaces, hospitals, airports, banks, schools, or government agencies. On the one hand, IDJ explores the design of information, with a focus on writing, the visual design, structure, format, and style of communications. On the other hand, IDJ seeks to better understand the ways that people understand, interpret, and use communications, with a focus on audiences, cultural differences, readers’ expectations, and differences between populations such as teenagers, elderly or the blind. IDJ publishes research papers, case studies, critiques of information design and related theory, reviews of current literature, research-in-progress, interviews with thought leaders, discussions of practical problems, book reviews, and conference information. Contributions should be relevant to a multi-disciplinary audience from fields such as: communication design, writing, typography, discourse studies, applied linguistics, rhetoric, usability research, instructional design and graphic design. Contributions should be based on appropriate evidence and make clear their implications for practice. IDJ publishes its articles Online First. [Volumes 12 (2004) and 13 (2005) were published under the title Information Design Journal + Document Design]",
+      "date": "2026-10-27",
+      "source": "OpenAlex",
+      "source_detail": "Information Design Journal",
+      "url": "https://doi.org/10.1075/idj",
+      "tags": [
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1075/idj",
+      "citation_count": 61,
+      "score": 70.0
+    },
+    {
+      "id": "arxiv-2610.36526",
+      "title": "Hybridizing 0/1 Knapsack and Priority-Aware TSP for Vehicle Routing: an Applied Variant of the TSP with Profits",
+      "authors": [
+        "Aron da Silva Bezerra",
+        "Francisco Márcio Barboza"
+      ],
+      "abstract": "Distribution logistics with capacity constraints and service priorities can be modeled as a variant of the \\emph{TSP with Profits} (TSPP), in which not all customers need to be visited and the selection of which customers to serve is part of the problem. This paper proposes an applied variant with two adaptations: (i) a 0/1 Knapsack objective function weighted by client priority squared ($v_i \\cdot p_i^2$), and (ii) a priority bias in the Nearest Neighbor heuristic for the TSP, parameterized by $α$. The approach is evaluated on a scenario with 14 customers and a 1,100~kg capacity, complemented by a comparative experimental protocol against the classical greedy heuristic ($v_i/w_i$ ordering) and an integer programming solver. Results on the base scenario show 9 customers served, 96.4\\% capacity utilization, and R\\$~18,392.60 revenue, with all 5 excluded customers being low-priority. A sensitivity analysis of the priority exponent justifies the quadratic choice. The limitations of the hierarchical decomposition are explicitly discussed.",
+      "date": "2026-10-27",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2610.36526v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "vehicle-routing",
+        "stochastic",
+        "supply-chain",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.36526",
+      "arxiv_id": "2610.36526v1",
+      "score": 65.0
+    },
+    {
+      "id": "openalex-W7223855806",
+      "title": "Twenty-One Industries, Twenty-One Rules and 170 Keywords: What to Check Before Licensing Company Data to AI Labs",
+      "authors": [
+        "AI Training Data Broker"
+      ],
+      "abstract": "A freight broker, an accountant and a biotech lab all hold data an AI lab might want, but what is risky inside each one is different. This is a lookup that starts from the industry. For 21 lines of business it lists the records usually held, the sensitive items to search for before anything leaves, the rules and standards a company would normally raise with its counsel, and where cleaning effort tends to go. There are three tables. Industries has one row each, from logistics, construction and legal to healthcare administration, semiconductors, aerospace and air charter. Frameworks has 21 rows that explain a rule or standard in one sentence and say where it tends to come up. Keywords has 170 rows of record types, field names and terms that signal sensitive or restricted content, each tagged as an identifier, a sensitive field, a document type or a restricted term. How it can be used: run the keyword list over a company's records to see where sensitive content sits (a hit is a reason to look, not a verdict), brief counsel with the rules column, or label records by risk. Nothing here makes anyone compliant and it is not a statement of what the law requires, because whether a rule applies depends on the data and on where the people in it live. Files: industries.jsonl, frameworks.jsonl and keywords.jsonl, plus build.py that regenerates them. Plain-language background on cleaning data before it goes to a lab: https://aitrainingdatabroker.com/de-identification/?utm_source=zenodo&utm_campaign=dataset-industry",
+      "date": "2026-10-28",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23716130",
+      "tags": [
+        "healthcare-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23716130",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2610.37411",
+      "title": "Measuring Sudoku Difficulty: Formulation, Propagation and Uniqueness Certification",
+      "authors": [
+        "Aled Williams"
+      ],
+      "abstract": "Finding a Sudoku completion and proving that the completion is unique are different computational tasks. Despite both concerning the same puzzle, their computational effort need not be closely related. In this paper, we investigate how this relationship depends on the mathematical formulation, solver and measure of computational effort. Using 32,000 uniquely solvable puzzles and 64 harder instances, we compare integer programming formulations and CP-SAT. Further, we prove that the raw natural formulation has an extremely weak linear programming relaxation, even with uniqueness exclusions. Computational experiments show that the relationship between completion and certification effort depends on the formulation, puzzle population, solver and effort measure, rather than on the puzzle alone.",
+      "date": "2026-10-27",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2610.37411v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.37411",
+      "arxiv_id": "2610.37411v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2610.37655",
+      "title": "KPPax: preprocess differentiable kinetic ODE for machine learning in atmospheric chemistry",
+      "authors": [
+        "Wenqing Peng",
+        "Michael Boy",
+        "Zhi-Song Liu"
+      ],
+      "abstract": "Atmospheric chemical mechanisms are commonly distributed in the language of the Kinetic PreProcessor (KPP), which generates efficient Fortran or C code but does not fit into the differentiable programming frameworks in which machine-learning models are developed. We present KPPax, a kinetic preprocessor that generates differentiable, just-in-time compiled, and vectorisable chemistry code in JAX from mechanisms written in the KPP language. KPPax evaluates the rate law with sparse operations in log space, which keeps it differentiable, and integrates the stiff system with the implicit solvers and the forward- and reverse-mode adjoints of the \\texttt{diffrax} library, so that exact sensitivities are obtained without hand-derived adjoint code. We demonstrate two applications with the POLLU benchmark mechanism. In the first, the Fisher information matrix computed from an automatically differentiated Jacobian predicts, before any fit, which of the 25 rate coefficients a flow-tube-like design can identify, and noisy synthetic estimation confirms the predicted uncertainties of the nine identifiable rate coefficients to within about 30\\% while revealing clusters of fast reactions of which only ratios are constrained. In the second, a neural-network correction of an emission inventory is trained offline on per-scenario 4D-Var retrievals and then fine-tuned online through the chemical model, which reduces the error of the biogenic correction by a factor of 2.4--5 and recovers information on low-temperature emissions that the individual retrievals lose. KPPax makes KPP mechanisms directly usable for parameter estimation and hybrid physics--machine-learning modelling.",
+      "date": "2026-10-27",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2610.37655v1",
+      "tags": [
+        "cs.AI",
+        "stochastic",
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.37655",
+      "arxiv_id": "2610.37655v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2610.37428",
+      "title": "Joint Antenna Positioning and Pilot Power Allocation for Uplink Fluid Antenna-Aided Cell-Free Massive MIMO Systems",
+      "authors": [
+        "Manobendu Sarker",
+        "Soumaya Cherkaoui"
+      ],
+      "abstract": "This paper investigates joint fluid antenna (FA) position optimization and pilot power allocation for uplink cell-free massive MIMO networks supporting ultra-reliable low-latency communication (URLLC) traffic under pilot contamination. By continuously adjusting FA elements within a prescribed aperture, we adapt the spatial correlation structure to the varying propagation environment. We formulate a joint problem to minimize the average normalized mean-squared error (NMSE) subject to QoS constraints governed by finite blocklength and Markov-modulated Poisson process queueing analyses. To ensure tractability, we establish an analytical quadratic relationship between the NMSE and the effective signal-to-interference-plus-noise ratio through eigenstructure alignment factors. This mapping translates complex latency requirements into explicit NMSE thresholds, maintaining a median absolute approximation error below 0.03 dB and less than 10% relative error for over 90% of practical-regime samples. Given the nonconvex nature of the formulation, we propose an alternating optimization framework. Antenna positions are iteratively updated via successive convex approximation using analytical gradients and closed-form Euclidean projections. Pilot powers are allocated through a block coordinate descent scheme that employs safeguarded Newton steps to guarantee monotonic convergence. Furthermore, we introduce an auto-calibrated regularization variant to navigate the Pareto frontier between estimation accuracy and energy consumption. Numerical results show the proposed positioning yields up to 22% NMSE improvement over fixed uniform arrays while operating 7-8x faster than particle swarm optimization. The power allocation achieves within 0.5% of the global optimum at over two orders of magnitude lower computational cost, providing up to 39% pilot energy reduction with negligible estimation penalty.",
+      "date": "2026-10-27",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2610.37428v1",
+      "tags": [
+        "eess.SY",
+        "metaheuristics",
+        "multi-objective",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.37428",
+      "arxiv_id": "2610.37428v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2610.37288",
+      "title": "A heuristic for optimal coordination of autonomous vehicles: dynamic problems",
+      "authors": [
+        "Saugat Shahi",
+        "Filippo Fabiani",
+        "Mario Zanon"
+      ],
+      "abstract": "The coordination of autonomous vehicles at unsignalized intersections requires deciding both the trajectories of the vehicles and their crossing order, with the additional difficulty that the set of vehicles to be coordinated changes as traffic flows through the intersection. Since the resulting mixed-integer optimal control problem is hard to solve online, we propose an arrival-triggered receding-horizon scheme built around a schedule-refinement heuristic: for a fixed crossing order, a single nonlinear program (NLP) optimizes all trajectories and crossing times, and the first-order sensitivities of the cost with respect to the vehicle schedule are used to select adjacent swaps that are likely to reduce the overall cost. Replanning is triggered only when a new vehicle arrives, the new vehicle is appended at the tail of the current crossing order, and a memory of evaluated swaps that persists across replanning steps avoids redundant computations. Simulations of traffic scenarios involving streams of a few hundred heterogeneous vehicles show that the proposed scheme recovers most of the optimality gap incurred by first-in-first-out scheduling.",
+      "date": "2026-10-27",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2610.37288v1",
+      "tags": [
+        "eess.SY",
+        "integer-programming",
+        "scheduling",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2610.37288",
+      "arxiv_id": "2610.37288v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2610.36555",
+      "title": "Thermal-Mass Coupled Modeling and Optimal Scheduling of Aluminum Smelting Loads for Safe Demand Response Participation",
+      "authors": [
+        "Yan Shen",
+        "Ruike Lyu",
+        "Shuoqi Wang",
+        "Jing Dai",
+        "Hongye Guo",
+        "Chongqing Kang"
+      ],
+      "abstract": "Aluminum smelting loads (ASLs) offer substantial flexibility potential, yet their actual participation in demand response remains conservative owing to the risk of operational failures. Power adjustments disturb the electrolyte temperature and superheat, which may lead to electrolyte freeze-out or yield loss. Existing ASL demand response methods often rely on oversimplified dynamic models of the electrolytic cell's thermal behavior, such as linear models and the Equivalent Thermal Parameter (ETP) model, which may either violate temperature constraints or underestimate the available flexibility. To address this limitation, this paper proposes a Thermal-Mass Coupled (TMC) dynamic model. The model captures the essential physical mechanisms of electrolytic cells, including alumina feed dynamics, ledge phase-change dynamics, and state-dependent current efficiency. The resulting nonlinear relations are reformulated into a tractable mixed-integer linear programming (MILP) model using Taylor approximations and McCormick-envelope reformulations. In the illustrative PBDR and IBDR case studies, the nonlinear reference-model assessment shows that the TMC model achieves net economic improvements 122.4% and 325.1% higher, respectively, than the ETP model. The proposed framework can therefore support deeper demand response participation by aluminum smelters while explicitly assessing adherence to operational safety constraints.",
+      "date": "2026-10-27",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2610.36555v1",
+      "tags": [
+        "eess.SY",
+        "linear-programming",
+        "integer-programming",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TSG.2026.3736640",
+      "arxiv_id": "2610.36555v1",
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7223794329",
+      "title": "Bedas Digital Services as an E-Government Instrument in Population Administration: A Literature Review",
+      "authors": [
+        "Nabila Dwi Putri",
+        "Heru Nurasa",
+        "MD. Enjat Munajat"
+      ],
+      "abstract": "This study examines the implementation of Bedas Digital Service (BDS) in Bandung Regency and identifies priorities for improving digital population administration services. A qualitative library research approach was adopted, drawing on scientific articles, books, regulations, policy documents, and official government publications. The collected information was examined using descriptive and thematic content analysis. During April–December 2024, BDS recorded 75,370 registered accounts and 278,706 service requests, including 178,175 non-booking requests and 100,531 Kartu Tanda Penduduk/KTP printing bookings. The synthesis identified four priorities: strengthening system and network reliability, improving cross-institutional data interoperability, developing human resource capacity, and expanding digital literacy and inclusive access. The reported figures indicate substantial platform utilization but do not independently demonstrate service effectiveness. Optimizing BDS requires coordinated improvements in technology, institutional processes, and citizens’ ability to access digital services. Reliance on secondary sources prevents direct assessment of platform performance, service quality, and user experiences. The findings therefore require validation through primary empirical research. This study contributes to e-government literature by integrating technological, organizational, and community dimensions into a unified analytical framework. It conceptualizes digital service optimization as an interaction among infrastructure reliability, data interoperability, institutional capacity, and citizens’ digital capabilities, offering a foundation for future research and policy development. The framework also emphasizes that inclusion depends on responsive administration alongside accessible digital systems.",
+      "date": "2026-10-28",
+      "source": "OpenAlex",
+      "source_detail": "Jurnal Relevansi Ekonomi Manajemen dan Bisnis",
+      "url": "https://doi.org/10.61401/relevansi.v10i5.670",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.61401/relevansi.v10i5.670",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7223820709",
+      "title": "Invented Workplace Messages with Marked Personal Details: 600 Rows for Testing Redaction Tools",
+      "authors": [
+        "AI Training Data Broker"
+      ],
+      "abstract": "A practice set for anyone who builds or checks software that strips personal details out of business writing. It holds 600 made-up workplace messages: support tickets, emails, chat logs, CRM notes, order notes and internal notes, 100 of each. Every message comes with its original wording, a cleaned rewrite, and a list that says exactly which characters were replaced and what kind of detail each one was (customer or staff name, client company, email, phone number, street address, date, amount or order number). Nobody in these rows exists. Names, companies, addresses and amounts were invented by a script with a fixed seed. Emails use example.com and phone numbers sit in the reserved 555-01xx range, so nothing can be traced to a real customer or business. The cleaning follows a few plain conventions. One person keeps one label inside a message (Customer 1, Employee 2). A client company becomes Client 1. Contact details turn into bracketed tags. A street address becomes a broad region, a date becomes a season and year, and an amount is rounded and marked as approximate. Limits: the rows come from templates, so they read tidier than real company text. English only, with US formats. Use it as a test bench for a redaction tool, not as a stand-in for real, reviewed data. It is not legal advice and not a certification under any privacy rule. Files: train.jsonl holds the 600 rows and generate.py rebuilds them (change the seed or the size). Background on how companies prepare their data before it goes to AI labs: https://aitrainingdatabroker.com/de-identification/?utm_source=zenodo&utm_campaign=dataset-deid",
+      "date": "2026-10-28",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23715245",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23715245",
+      "citation_count": 0,
+      "score": 55.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
