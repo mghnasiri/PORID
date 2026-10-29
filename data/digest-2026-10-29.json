@@ -1,0 +1,264 @@
+{
+  "date": "2026-10-29",
+  "generated_at": "2026-10-29T14:04:32.533000+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1177-10591478261505544",
+      "title": "EXPRESS: A Learning and Searching Method for Integrated Process Planning and Scheduling",
+      "authors": [
+        "Li, H.",
+        "Zhang, H.",
+        "He, Z.",
+        "Hu, J.",
+        "Yuan, H."
+      ],
+      "abstract": "The integrated process planning and scheduling problem combines process route planning and shop scheduling to achieve high efficiency in manufacturing and maximize resource utilization, which is crucial for modern manufacturing systems. Traditional approaches, such as mixed-integer linear programming and heuristic algorithms, often struggle to balance solution quality and computational efficiency, particularly in large-scale scenarios. To address this, we propose learning-then-searching, an efficient framework combining deep reinforcement learning with heuristic search to solve integrated process planning and scheduling problems. We formulate the problem as a Markov decision process and develop a deep reinforcement learning method tailored to capture the complex relationships among operations, machines, and jobs. With the learned policy distributions, Monte Carlo tree search employs learned priors and problem-specific rollouts to further refine scheduling strategies, effectively balancing exploration and exploitation to achieve better solutions. Experimental results show that the proposed framework improves solution efficiency and quality over traditional methods across benchmark and large-scale instances, with pronounced advantages when route ambiguity is high. It also offers practitioners a flexible tradeoff between rapid policy-based decisions and further refinement through tree search when additional computation time is available.",
+      "date": "2026-10-28",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261505544",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "scheduling",
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261505544",
+      "score": 65.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "openalex-W7223855806",
+      "title": "Twenty-One Industries, Twenty-One Rules and 170 Keywords: What to Check Before Licensing Company Data to AI Labs",
+      "authors": [
+        "AI Training Data Broker"
+      ],
+      "abstract": "A freight broker, an accountant and a biotech lab all hold data an AI lab might want, but what is risky inside each one is different. This is a lookup that starts from the industry. For 21 lines of business it lists the records usually held, the sensitive items to search for before anything leaves, the rules and standards a company would normally raise with its counsel, and where cleaning effort tends to go. There are three tables. Industries has one row each, from logistics, construction and legal to healthcare administration, semiconductors, aerospace and air charter. Frameworks has 21 rows that explain a rule or standard in one sentence and say where it tends to come up. Keywords has 170 rows of record types, field names and terms that signal sensitive or restricted content, each tagged as an identifier, a sensitive field, a document type or a restricted term. How it can be used: run the keyword list over a company's records to see where sensitive content sits (a hit is a reason to look, not a verdict), brief counsel with the rules column, or label records by risk. Nothing here makes anyone compliant and it is not a statement of what the law requires, because whether a rule applies depends on the data and on where the people in it live. Files: industries.jsonl, frameworks.jsonl and keywords.jsonl, plus build.py that regenerates them. Plain-language background on cleaning data before it goes to a lab: https://aitrainingdatabroker.com/de-identification/?utm_source=zenodo&utm_campaign=dataset-industry",
+      "date": "2026-10-28",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23716130",
+      "tags": [
+        "healthcare-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23716130",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "openalex-W7223794329",
+      "title": "Bedas Digital Services as an E-Government Instrument in Population Administration: A Literature Review",
+      "authors": [
+        "Nabila Dwi Putri",
+        "Heru Nurasa",
+        "MD. Enjat Munajat"
+      ],
+      "abstract": "This study examines the implementation of Bedas Digital Service (BDS) in Bandung Regency and identifies priorities for improving digital population administration services. A qualitative library research approach was adopted, drawing on scientific articles, books, regulations, policy documents, and official government publications. The collected information was examined using descriptive and thematic content analysis. During April–December 2024, BDS recorded 75,370 registered accounts and 278,706 service requests, including 178,175 non-booking requests and 100,531 Kartu Tanda Penduduk/KTP printing bookings. The synthesis identified four priorities: strengthening system and network reliability, improving cross-institutional data interoperability, developing human resource capacity, and expanding digital literacy and inclusive access. The reported figures indicate substantial platform utilization but do not independently demonstrate service effectiveness. Optimizing BDS requires coordinated improvements in technology, institutional processes, and citizens’ ability to access digital services. Reliance on secondary sources prevents direct assessment of platform performance, service quality, and user experiences. The findings therefore require validation through primary empirical research. This study contributes to e-government literature by integrating technological, organizational, and community dimensions into a unified analytical framework. It conceptualizes digital service optimization as an interaction among infrastructure reliability, data interoperability, institutional capacity, and citizens’ digital capabilities, offering a foundation for future research and policy development. The framework also emphasizes that inclusion depends on responsive administration alongside accessible digital systems.",
+      "date": "2026-10-28",
+      "source": "OpenAlex",
+      "source_detail": "Jurnal Relevansi Ekonomi Manajemen dan Bisnis",
+      "url": "https://doi.org/10.61401/relevansi.v10i5.670",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.61401/relevansi.v10i5.670",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7223820709",
+      "title": "Invented Workplace Messages with Marked Personal Details: 600 Rows for Testing Redaction Tools",
+      "authors": [
+        "AI Training Data Broker"
+      ],
+      "abstract": "A practice set for anyone who builds or checks software that strips personal details out of business writing. It holds 600 made-up workplace messages: support tickets, emails, chat logs, CRM notes, order notes and internal notes, 100 of each. Every message comes with its original wording, a cleaned rewrite, and a list that says exactly which characters were replaced and what kind of detail each one was (customer or staff name, client company, email, phone number, street address, date, amount or order number). Nobody in these rows exists. Names, companies, addresses and amounts were invented by a script with a fixed seed. Emails use example.com and phone numbers sit in the reserved 555-01xx range, so nothing can be traced to a real customer or business. The cleaning follows a few plain conventions. One person keeps one label inside a message (Customer 1, Employee 2). A client company becomes Client 1. Contact details turn into bracketed tags. A street address becomes a broad region, a date becomes a season and year, and an amount is rounded and marked as approximate. Limits: the rows come from templates, so they read tidier than real company text. English only, with US formats. Use it as a test bench for a redaction tool, not as a stand-in for real, reviewed data. It is not legal advice and not a certification under any privacy rule. Files: train.jsonl holds the 600 rows and generate.py rebuilds them (change the seed or the size). Background on how companies prepare their data before it goes to AI labs: https://aitrainingdatabroker.com/de-identification/?utm_source=zenodo&utm_campaign=dataset-deid",
+      "date": "2026-10-28",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23715245",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23715245",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7223821216",
+      "title": "500 Invented Support Tickets Followed from First Message to Final Fix, with Outcomes and Timestamps from 2023 to 2025",
+      "authors": [
+        "AI Training Data Broker"
+      ],
+      "abstract": "A support queue is a good picture of what company records look like when they hold a whole task: a customer writes in, an agent answers, something is tried, and the ticket ends with a result. This dataset imitates that shape with 500 made-up tickets, each one kept as a connected thread with the outcome recorded beside it and timestamps spread over three years, 2023 to 2025. Each ticket has an id, opening and closing times, hours to resolve, one of eight categories (double charge, login failure, export error, shipping delay, feature question, cancellation, slow performance, data correction), a channel (email, chat, web form or phone note), a priority, the product area, and the full list of messages with their timestamps and who wrote them (customer, agent or system). The resolution block records the outcome, the action taken, whether it was fixed on first contact, whether the ticket was reopened and the customer rating, which is sometimes missing, as in real queues. Good uses: testing classifiers for category, outcome or time to resolve; practising how to summarise a whole thread into its result; and showing a reviewer what connected, outcome-bearing records look like before any real data is discussed. Every person and company is a placeholder (Customer 1, Agent 3) and nothing refers to a real customer or product. Because the tickets come from templates they are more regular than real traffic, so treat it as a practice set. Files: train.jsonl and generate.py, which rebuilds the set from a fixed seed. A rough way to see how complete records feed into a data valuation: https://aitrainingdatabroker.com/data-value-calculator?utm_source=zenodo&utm_campaign=dataset-tickets",
+      "date": "2026-10-28",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23716169",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23716169",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7223912983",
+      "title": "Fifty-Five Checklist Items for AI Data Deals, One Row Each: Offer Review, Cleaning, Seller Readiness and Lab Sourcing",
+      "authors": [
+        "AI Training Data Broker"
+      ],
+      "abstract": "Checklists are usually a PDF you read once. This set turns four of them into rows you can sort, count, filter or load into a form builder: 55 items across the four stages of a company data deal with an AI lab. Each item says what to check, ask or watch for, and gives one sentence on why it matters. The four lists are: reading an offer from a lab (18 items, mixing terms to settle, signs to slow down and questions to put to the other side); cleaning data before it leaves the company (15 items, from first steps through review and sign-off); getting ready before approaching any buyer (11 items on what you hold, who owns it, how it can be exported and what a deal looks like); and the lab side, sourcing licensed company data (11 items covering the brief, seller diligence and the contract). Every row carries the checklist name, the section heading inside it, a kind (check, question or warning), who it is written for (seller or buyer), the item and the reason. The wording comes from our own published guidance. It names no buyer, quotes no price and promises no outcome. Limits: a checklist helps you notice what to ask, it does not decide anything for you. It is not legal advice, and a real deal needs your own counsel to read the contract. Files: train.jsonl (the 55 rows) and build.py (rebuilds the file). The same offer checklist in readable form: https://aitrainingdatabroker.com/check-an-offer/?utm_source=zenodo&utm_campaign=dataset-checklists",
+      "date": "2026-10-28",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23716014",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23716014",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7222623995",
+      "title": "Developing Robotic Process Automation (RPA) for Managing Electronic Book (E-book) in Digital Libraries",
+      "authors": [
+        "Rony Baskoro Lukito",
+        "Vilianty Rizki Utami"
+      ],
+      "abstract": "Managing e-book collections in digital libraries requires high efficiency and accuracy to meet library needs. The implementation of Robotic Process Automation (RPA) with UiPath aims to automate manual processes in e-book management, including retrieving e-book descriptions, downloading covers, and uploading to library systems. This research aims to improve operational efficiency and quality of digital library services by developing RPA for e-book management in digital libraries. This research uses the waterfall model, which is a software development model with a systematic and sequential approach. The development stages are Identification, Analysis, Design, Development and Test, and Implementation. RPA E-book management with UiPath automates the download process of e-book covers, data collection of e-book bibliographic descriptions, and the process of managing and uploading e-books to the library system. The automation process succeeded in reducing manual errors in data input, thereby increasing the accuracy and consistency of e-book information. The research results indicate that the application of RPA in managing e-books in digital libraries is effective in increasing operational efficiency. Scenario-based workflow evaluations indicate that the automated system reduces processing duration from 15 minutes to 2 minutes per e-book. Under standard task-allocation modeling, this represents a 600% increase in output productivity (achieving 700% of the manual baseline output). This automation not only increases efficiency and data accuracy but also allows library staff to focus on other strategic tasks.",
+      "date": "2026-10-29",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23412704",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23412704",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7224084220",
+      "title": "HelioFITS Peek",
+      "authors": [
+        "Chris R. Gilly"
+      ],
+      "abstract": "HelioFITS Peek teaches macOS Finder and Quick Look to read solar FITS files. A thumbnail extension renders each file in the colormap its header calls for, a Quick Look extension gives an interactive preview with pixel values, helioprojective coordinates, region statistics and multi-HDU blink comparison, and a Spotlight importer makes header fields searchable. A viewer app shows the full header, exports PNG and copies a sunpy snippet that loads the HDU on screen. It vendors CFITSIO (NASA HEASARC) under its own licence.",
+      "date": "2026-10-29",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23749496",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23749496",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7224089381",
+      "title": "Comparative Analysis of Social Media Discourse Structures on Appearance Management for Women with Disabilities: Focusing on Text Mining of Naver, Instagram, and YouTube",
+      "authors": [
+        "Se-Hee Lee",
+        "Esther Choi"
+      ],
+      "abstract": "This study examined platform-specific structures of social media discourse related to appearance management among women with disabilities across Naver, Instagram, and YouTube. Appearance management among women with disabilities extends beyond beautification to encompass multidimensional issues related to welfare, accessibility, and self-expression. Data were collected over a three-year period (January 2023–December 2025) using combinations of search terms related to women, disability, appearance management, and beauty. The data were analyzed using text mining, keyword analysis, word cloud visualization, semantic network analysis, and CONCOR clustering. After data refinement, 7,411 Naver documents, 1,240 Instagram posts, and text metadata from 302 YouTube videos were collected, and the integrated text metadata of 159 videos were included in the final analysis. Naver showed the highest network density (0.4474), with discourse primarily structured around policy, welfare, support, and education; Instagram (density = 0.3211) showed discourse centered on disability, barrier-free accessibility, welfare centers, beauty practices, and volunteering; and YouTube (density = 0.3000) showed discourse emphasizing disability types, education, welfare, healthcare, and beauty-related support. CONCOR analysis identified four discourse clusters on each platform, although their compositions differed substantially across platforms, with institution- and welfare-oriented clusters on Naver, practice- and accessibility-oriented clusters on Instagram, and a relatively broad education-and-beauty-support cluster on YouTube. Across the three platforms, disability- and beauty-related keywords occupied central positions in the semantic networks, whereas the surrounding keyword structures differed across platforms. The findings suggest that platform-specific content structures and communication affordances may be associated with differences in the organization of online discourse related to disability and beauty, providing empirical insights for the development of platform-specific beauty support programs and digital welfare strategies.",
+      "date": "2026-10-29",
+      "source": "OpenAlex",
+      "source_detail": "Journal of the Korean Society of Cosmetology",
+      "url": "https://doi.org/10.52660/jksc.2026.32.5.1342",
+      "tags": [
+        "healthcare-or"
+      ],
+      "type": "publication",
+      "doi": "10.52660/jksc.2026.32.5.1342",
+      "citation_count": 0,
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "openalex-W7224106428",
+      "title": "Buying an AI MVP: Scope, Ownership and the Costs After Launch",
+      "authors": [
+        "Arcforth"
+      ],
+      "abstract": "What does an AI MVP development quote actually buy? This Arcforth buyer report reviews eight public provider pages and turns their published terms into a practical brief for commissioning software. The review distinguishes discovery from implementation, payment-ready architecture from completed billing, and included support from continuing paid engineering. It examines scope, source-code ownership, account handover, AI acceptance and post-launch operating responsibilities. The five-page report includes a provider comparison, a reusable quote-request brief, a first-90-days budgeting framework and linked primary sources. An accompanying evidence package contains the observation ledger, collection metadata, review method and a Python script that reproduces the reported disclosure counts. Sources were observed on 29 October 2026. The purposive sample comprises five pricing-led discoveries and three consultative providers; one discovered MVP URL now redirects to an agent-services catalog. Findings describe information found on individual pages, not vendor quality or verified delivery performance. This is a public-offer review, not a representative market survey or product benchmark. Publisher: Arcforth, a product development provider with a commercial interest in the topic. Arcforth is discussed separately and excluded from comparative counts. AI tools assisted with organization and writing. See the report for methods, limitations and source links.",
+      "date": "2026-10-29",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23748921",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23748921",
+      "citation_count": 0,
+      "score": 55.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 1,
+    "conferences": 0,
+    "opportunities": 1,
+    "total": 11
+  }
+}
