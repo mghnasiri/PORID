@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T13:31:52.482251+00:00",
+  "generated_at": "2026-11-01T14:17:59.044442+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14307,
+      "github_stars": 14308,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 140,
+      "github_open_issues": 141,
       "github_recent_prs": [
+        "[CP-SAT] Bound variable-shaving neighborhoods",
         "cp-sat: export from google3",
         "constraint_solver: split monolithic library",
         "google3 export (sat deadlock, sat mip cut, glop check)",
-        "release: Fix missing cpack call to generate delivery packages in buil…",
-        "cmake: cleanup"
+        "release: Fix missing cpack call to generate delivery packages in buil…"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -666,7 +666,7 @@
         }
       ],
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_open_issues": 180,
+      "github_open_issues": 182,
       "github_recent_prs": [
         "Add Cbc quick tests for Windows MSVS CI",
         "CbcMain1: copy the limits, solution count and best bound back to the caller",
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
-      "github_stars": 6382,
-      "github_open_issues": 193,
+      "github_stars": 6384,
+      "github_open_issues": 194,
       "github_recent_prs": [
+        "Include CVXOPT's error message in the SolverError",
+        "DOC: Remove outdated SCS 2.0 output from TV inpainting example",
         "Keep keepdims in the norm1 canonicalization",
         "Fix concatenate with axis=None for matrix and N-D arguments",
-        "Remove dead LinOp constraint helpers and stale Problem cache methods",
-        "Clarify that wrap atoms assume properties and document all public wraps",
-        "Fix PSD checks for inaccurate ARPACK eigenpairs"
+        "Remove dead LinOp constraint helpers and stale Problem cache methods"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1320,7 +1320,7 @@
       ],
       "recent_changes": "A performance regression on some very large datasets slipped through the cracks.\r\nThis one-off release fixes it.\r\n\r\n# Changelog\r\n\r\n## 🐛 Fixes\r\n- bfd1871 avoid clear() on a large hash map (#2724), clos",
       "github_stars": 1845,
-      "github_open_issues": 118,
+      "github_open_issues": 116,
       "github_recent_prs": [
         "chore: fix diminished termination",
         "feat: add public API for move evaluation",
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2556,
+      "github_stars": 2557,
       "github_open_issues": 398,
       "github_recent_prs": [
         "contrib.cp: Fix import bug",
