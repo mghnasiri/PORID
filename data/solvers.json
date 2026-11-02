@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T14:17:59.044442+00:00",
+  "generated_at": "2026-11-02T16:58:23.889279+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1902,
+      "github_stars": 1905,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 94,
+      "github_open_issues": 89,
       "github_recent_prs": [
-        "Fix 3512",
-        "Keep small terms big domains lp aggregator",
-        "Fix Markdown syntax of references in solvers.md",
-        "Fix debug solution",
-        "Issue 3499"
+        "Just issue-3510 and fix, not logging in constructor",
+        "Force ipx for analytic centre",
+        "P-D integral calculation is now bounded above by solution time",
+        "Allow small rhs-lhs values after parallel row merge",
+        "New `std::call_once`-based `Highs::logHeader`"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 673,
+      "github_stars": 674,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Features\r\n--------\r\n\r\n- added command line option `-t` to specify the number of threads, which triggers concurrent solving via `SCIPsolveConcurrent()`\r\n\r\nPerformance improvements\r\n--------------------",
-      "github_open_issues": 59,
+      "github_open_issues": 69,
       "github_recent_prs": [
         "Add CMake option CUSTOMIO to route stdout/stderr, exit and abort to the program that links SCIP",
         "Portability fixes for 10.1.1: strerror_r on macOS, (void) in tpi_openmp.c, <cstdlib> in multiprecision.hpp",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14308,
+      "github_stars": 14316,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 141,
+      "github_open_issues": 138,
       "github_recent_prs": [
-        "[CP-SAT] Bound variable-shaving neighborhoods",
-        "cp-sat: export from google3",
-        "constraint_solver: split monolithic library",
-        "google3 export (sat deadlock, sat mip cut, glop check)",
-        "release: Fix missing cpack call to generate delivery packages in buil…"
+        "release: make rc version configurable",
+        "notebook: regenerate all",
+        "g3 export (sat dev, math_opt/glop dual simplex)",
+        "ci: bump swig to 4.5.1",
+        "g3 export (sat fix, routing fix, glop test cleanup)"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,14 +1131,14 @@
         "python"
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
-      "github_stars": 6384,
-      "github_open_issues": 194,
+      "github_stars": 6385,
+      "github_open_issues": 167,
       "github_recent_prs": [
-        "Include CVXOPT's error message in the SolverError",
-        "DOC: Remove outdated SCS 2.0 output from TV inpainting example",
-        "Keep keepdims in the norm1 canonicalization",
-        "Fix concatenate with axis=None for matrix and N-D arguments",
-        "Remove dead LinOp constraint helpers and stale Problem cache methods"
+        "Bump pypa/cibuildwheel from 4.3.4 to 4.3.5",
+        "Support DPP for parameterized Kronecker products",
+        "Don't count a bare directory as an installed solver",
+        "Import cvxopt.glpk in the GLPK_MI interface",
+        "Default to the DIFFENGINE backend for parameter-free problems"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "A performance regression on some very large datasets slipped through the cracks.\r\nThis one-off release fixes it.\r\n\r\n# Changelog\r\n\r\n## 🐛 Fixes\r\n- bfd1871 avoid clear() on a large hash map (#2724), clos",
-      "github_stars": 1845,
-      "github_open_issues": 116,
+      "github_stars": 1846,
+      "github_open_issues": 117,
       "github_recent_prs": [
-        "chore: fix diminished termination",
-        "feat: add public API for move evaluation",
-        "deps: pin brotli4j to 1.24.0 in service parent",
-        "feat: change location of maps auto select logging",
-        "docs: [docs-drift] maps-recording-execution-profile"
+        "chore: merge nodes based on fixed-edge infomation instead of heuristics",
+        "ci: skip visualization build in downstream check",
+        "feat: add execution profile for performance profiling",
+        "chore: Maven plugin offset handling, warning from deployment as logged information",
+        "fix: compute initially every declarative shadow variable in the arbitrary graph"
       ]
     },
     {
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2557,
+      "github_stars": 2558,
       "github_open_issues": 398,
       "github_recent_prs": [
         "contrib.cp: Fix import bug",
