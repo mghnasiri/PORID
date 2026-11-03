@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T16:58:23.889279+00:00",
+  "generated_at": "2026-11-03T14:58:53.861995+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1905,
+      "github_stars": 1907,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 89,
+      "github_open_issues": 84,
       "github_recent_prs": [
-        "Just issue-3510 and fix, not logging in constructor",
-        "Force ipx for analytic centre",
-        "P-D integral calculation is now bounded above by solution time",
-        "Allow small rhs-lhs values after parallel row merge",
-        "New `std::call_once`-based `Highs::logHeader`"
+        "Updates to clang-cl build and vcpkg",
+        "Improve overlap checks in enumeration presolve",
+        "Set CMAKE_BUILD_TYPE=Debug in julia-tests.yml",
+        "Patch CLI11 in the Julia builds because Julia uses an old libc++",
+        "Handle infinite range"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14316,
+      "github_stars": 14321,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 138,
+      "github_open_issues": 140,
       "github_recent_prs": [
+        "routing: Make route constraint evaluators take an absl::Span instead …",
         "release: make rc version configurable",
         "notebook: regenerate all",
         "g3 export (sat dev, math_opt/glop dual simplex)",
-        "ci: bump swig to 4.5.1",
-        "g3 export (sat fix, routing fix, glop test cleanup)"
+        "ci: bump swig to 4.5.1"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1132,13 +1132,13 @@
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
       "github_stars": 6385,
-      "github_open_issues": 167,
+      "github_open_issues": 169,
       "github_recent_prs": [
+        "CI: replace macos-14 runners with macos-15 runners",
+        "Fix quantum_rel_entr value for inputs whose trace is not 1",
+        "Raise CPLEX's and COPT's own error messages when they fail before finding a solution",
         "Bump pypa/cibuildwheel from 4.3.4 to 4.3.5",
-        "Support DPP for parameterized Kronecker products",
-        "Don't count a bare directory as an installed solver",
-        "Import cvxopt.glpk in the GLPK_MI interface",
-        "Default to the DIFFENGINE backend for parameter-free problems"
+        "Support DPP for parameterized Kronecker products"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed issue where Ipopt exceptions could not been caught from other libraries on macOS with clang when Ipopt or the other library was build with `-fvisibility=hidden`.\r\n- Call `MPI_Init()` with NULL",
-      "github_stars": 1795,
+      "github_stars": 1796,
       "github_open_issues": 13,
       "github_recent_prs": [
         "Fix scaling of initial bound multipliers in a warm start with scaled variables",
@@ -1272,8 +1272,8 @@
       "vendor": "Timefold",
       "website": "https://timefold.ai",
       "docs_url": "https://docs.timefold.ai/",
-      "current_version": "2.7.1",
-      "release_date": "2026-10-06",
+      "current_version": "2.8.0",
+      "release_date": "2026-11-03",
       "license_type": "open-source",
       "license_spdx": "Apache-2.0",
       "open_source": true,
@@ -1318,15 +1318,15 @@
         "constraint",
         "metaheuristic"
       ],
-      "recent_changes": "A performance regression on some very large datasets slipped through the cracks.\r\nThis one-off release fixes it.\r\n\r\n# Changelog\r\n\r\n## 🐛 Fixes\r\n- bfd1871 avoid clear() on a large hash map (#2724), clos",
-      "github_stars": 1846,
-      "github_open_issues": 117,
+      "recent_changes": "Indictments are back, and better than before! One of the frequent comments we have received with Timefold Solver 2.0 was that we should not have removed indictments - we listened, and they are now bac",
+      "github_stars": 1849,
+      "github_open_issues": 116,
       "github_recent_prs": [
+        "docs: [docs-drift] feat/json-path-resource-reporting",
+        "fix: give simulated annealing a time gradient",
+        "chore: renormalize mvnw.cmd to CRLF line endings after Dependabot broke it",
         "chore: merge nodes based on fixed-edge infomation instead of heuristics",
-        "ci: skip visualization build in downstream check",
-        "feat: add execution profile for performance profiling",
-        "chore: Maven plugin offset handling, warning from deployment as logged information",
-        "fix: compute initially every declarative shadow variable in the arbitrary graph"
+        "ci: skip visualization build in downstream check"
       ]
     },
     {
@@ -1384,14 +1384,14 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2558,
-      "github_open_issues": 398,
+      "github_stars": 2559,
+      "github_open_issues": 401,
       "github_recent_prs": [
+        "Improve type hints for component constructors, global Sets and common methods",
+        "Track changes to Xpress API from 9.9 and 10.0 releases",
+        "Fix misplaced zero-division guard in GDPopt relative_gap",
         "contrib.cp: Fix import bug",
-        "Keep the threading.Lock when multiprocessing.Lock() cannot be created",
-        "Test updates: `dill` availability, new `pytest` comparison",
-        "CBC: warn about \"**\" infeasibility markers in the solution file",
-        "Fix attribute names in Gurobi persistent error messages"
+        "Keep the threading.Lock when multiprocessing.Lock() cannot be created"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1450,13 +1450,13 @@
       ],
       "recent_changes": "## JuMP v1.32.1\n\n[Diff since v1.32.0](https://github.com/jump-dev/JuMP.jl/compare/v1.32.0...v1.32.1)\n\n\n**Merged pull requests:**\n- Fix performance of flatten! for large summations (#4264) (@odow)\n- Ad",
       "github_stars": 2488,
-      "github_open_issues": 10,
+      "github_open_issues": 11,
       "github_recent_prs": [
+        "Add Unitful extension",
+        "Fix formatting for latest JuliaFormatter",
+        "Prep for v1.33.0",
         "Keep subexpression cache key alive in model emptying test",
-        "Add support for converting an affine expression to a variable",
-        "Add support for complex constraints in primal_feasibility_report",
-        "Fix result type of broadcasting between sparse matrices",
-        "Fix printing of negative scientific numbers in MIME\"text/latex\""
+        "Add support for converting an affine expression to a variable"
       ]
     },
     {

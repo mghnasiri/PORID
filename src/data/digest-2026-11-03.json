@@ -1,0 +1,374 @@
+{
+  "date": "2026-11-03",
+  "generated_at": "2026-11-03T14:58:54.437149+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1287-ijoc.2024.0933",
+      "title": "Robust Meta-Graph Learning: Exploring Multilevel Feature Interrelationships To Enhance Multimodal Time Series Prediction",
+      "authors": [
+        "Liu, Z.",
+        "Chen, G.",
+        "Xiao, S.",
+        "Zhao, H."
+      ],
+      "abstract": "The booming digital economy has provided unprecedented opportunities for enhancing prediction performance with multimodal time series data in a broad range of business analytics scenarios. In this study, we explore multilevel, asynchronous feature interrelationships in multimodal time series data and disentangle the intricate interrelationships with a design artifact named RMGL (for robust meta-graph learning). The design of RMGL is rooted in graph convolutional networks. The core of RMGL is a meta-graph composed of three hierarchically interconnected graphs, representing feature-, modality-, and timestep-wise interrelationships, respectively. The interconnections across the graphs allow feature representations to propagate simultaneously through a graph attention mechanism, thereby quantifying multilevel feature interrelationships with graph structures synchronously and efficiently. Furthermore, capitalizing on the low-pass nature of graph convolutional filters, RMGL introduces a weight regularization scheme to effectively learn the meta-graph for prediction. RMGL outperformed state-of-the-art alternatives in our empirical evaluation involving both regression (financial risk prediction) and classification (sentiment analysis, humor detection, and intent recognition) tasks. Ablation experiments, exploratory analyses, and economic value analysis indicate the utility of every design component in RMGL.\n                  History: Accepted by Ram Ramesh, Area Editor for Data Science and Machine Learning.\n                  Funding: G. Chen was supported by the National Natural Science Foundation of China [Grants 72522010, 72394371, 72301239, and 72550002]. S. Xiao was supported by the National Natural Science Foundation of China [Grants 72671226, 72301194, 72472058, and 72495133].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2024.0933 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2024.0933 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-11-02",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2024.0933",
+      "tags": [
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2024.0933",
+      "score": 65.0
+    },
+    {
+      "id": "openalex-W7214440676",
+      "title": "STMA4KD: Spatio-Temporal Data Management and Analysis for Knowledge Discovery Workshop",
+      "authors": [
+        "Nida Meddouri",
+        "Juba Agoun",
+        "Aurélie Leborgne",
+        "Aurélie Leborgne",
+        "Loïc Salmon",
+        "Assaad Zeghina",
+        "Juba Agoun"
+      ],
+      "abstract": "Spatial, temporal, and spatio-temporal data are central to many CIKM-relevant applications, including mobility analytics, Earth observation, environmental monitoring, maritime intelligence, healthcare, sensor platforms, and distributed information systems. Their increasing volume, diversity, and acquisition frequency create major challenges in heterogeneous data integration, scalable management, uncertainty handling, privacy, explainability, evaluation, and reproducibility. Although these challenges are shared across applications, the corresponding research remains fragmented across communities.STMA4KD is a half-day workshop dedicated to the management and analysis of spatial and temporal data across their full lifecycle, from acquisition and integration to modeling, evaluation, and dissemination. It brings together researchers and practitioners from data management, knowledge discovery, information retrieval, machine learning, and application domains through peer-reviewed papers, lightning talks, poster interactions, and a moderated openproblems session. Building on the GAST workshop series and related thematic events, STMA4KD aims to establish an international venue within CIKM for discussing methods, benchmarks, datasets, reusable evaluation protocols, and future research directions.",
+      "date": "2026-11-03",
+      "source": "OpenAlex",
+      "source_detail": "ACM International Conference on Information and Knowledge Management (CIKM)",
+      "url": "https://doi.org/10.1145/3799682.3839284",
+      "tags": [
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1145/3799682.3839284",
+      "citation_count": 0,
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2025.1654",
+      "title": "Joint Assortment Planning and Inventory Control under General Choice Models",
+      "authors": [
+        "Fu, Q.",
+        "Huh, W.",
+        "Li, Y.",
+        "Wu, T."
+      ],
+      "abstract": "We propose a constant-factor approximation framework for the joint assortment planning and inventory management problem, where customers substitute to less preferred in-stock products if more preferred products are out of stock. The customer arrivals follow an increasing-failure-rate (IFR) distribution, and customer purchasing behavior is governed by a discrete choice model with dynamic inventory availability. Our decision involves determining the initial inventory vector, subject to a capacity constraint. Our algorithm begins with a novel fluid relaxation that identifies at most two candidate assortments with the highest potential profitability. For each assortment, we construct a static-allocation-based lower bound on the expected total revenue for an inventory vector that stocks only the products in the assortment. The final inventory decision is the vector that maximizes the stronger of these two lower bounds. We establish a (κ/4−ε)-approximation guarantee for a broad class of substitutable choice models, in which adding products weakly decreases the choice probabilities of existing items, and for which the cardinality-constrained assortment optimization problem admits a κ-approximation algorithm. Our result provides the first constant-factor approximation ratios for this problem under several important choice models, including the Markov chain choice model and the mixture of MNL models. Moreover, our framework also achieves the state-of-the-art approximation ratio of 0.25 for the MNL choice model. Our guarantees can be further strengthened when the capacity constraint is relatively loose or when the demand distribution is deterministic or Poisson.",
+      "date": "2026-11-02",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2025.1654",
+      "tags": [
+        "supply-chain",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2025.1654",
+      "score": 60.0
+    },
+    {
+      "id": "openalex-W7128072996",
+      "title": "Rich-Media Re-Ranker: A User Satisfaction-Driven LLM Re-ranking Framework for Rich-Media Search",
+      "authors": [
+        "Zihao Guo",
+        "Ligang Zhou",
+        "Zeyang Tang",
+        "Feicheng Li",
+        "Ying Nie",
+        "Zhiming Peng",
+        "Qingyun Sun",
+        "Jianxin Li"
+      ],
+      "abstract": "Re-ranking plays a crucial role in modern information search systems by refining the ranking of initial search results to better satisfy user information needs. However, existing methods show two notable limitations in improving user search satisfaction: inadequate modeling of multifaceted user intents and neglect of rich side information such as visual perception signals. To address these challenges, we propose the Rich-Media Re-Ranker framework, which aims to enhance user search satisfaction through multi-dimensional and fine-grained modeling. Our approach begins with a Query Planner that analyzes the sequence of query refinements within a session, decomposing the query into clear and complementary sub-queries to enable broader coverage of users' potential intents. Subsequently, moving beyond primary text content, we integrate richer side information of candidate results, including signals modeling visual content generated by the VLM-based evaluator. These comprehensive signals are then processed alongside carefully designed re-ranking principle that considers multiple facets, including content relevance and quality, information gain, information novelty, and the visual presentation of cover images. Then, the LLM-based re-ranker performs the holistic evaluation based on these principles and integrated signals. To enhance the scenario adaptability of the VLM-based evaluator and the LLM-based re-ranker, we further enhance their capabilities through multi-task reinforcement learning. The proposed framework has been deployed in a large-scale industrial search system, yielding substantial improvements in online user engagement rates and satisfaction metrics.",
+      "date": "2026-11-03",
+      "source": "OpenAlex",
+      "source_detail": "ACM International Conference on Information and Knowledge Management (CIKM)",
+      "url": "https://doi.org/10.1145/3799682.3841105",
+      "tags": [
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1145/3799682.3841105",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "openalex-W7202290351",
+      "title": "ConnectionMind: Leveraging Social Networks and Large Language Models for Personalized Recommendation at Meta",
+      "authors": [
+        "Haoyu Han",
+        "Yuming Liu",
+        "Lei Huang",
+        "Lizhu Zhang",
+        "Jiliang Tang",
+        "Xiangjun Fan"
+      ],
+      "abstract": "Modern recommendation systems on social media platforms such as Meta must model complex social relationships, including friendships, group memberships, and creator interactions, alongside massive and heterogeneous content such as text and video. Traditional recommendation models, however, often omit these signals or treat them independently, lacking the reasoning capability to integrate multi-relational context for fine-grained personalization. We present ConnectionMind, a production-ready recommendation framework that tightly integrates the social network structure with large language models (LLMs) to enable scalable, interpretable, and reasoning-aware personalization in Meta. ConnectionMind constructs a heterogeneous graph connecting users, items, friends, groups, and creator pages, and formulates recommendation as a graph reasoning problem: discovering personalized paths from users to candidate items. An LLM-based policy is employed to reason over these graph structures and guide recommendation decisions. To train the system at scale, ConnectionMind adopts a two-stage learning strategy. We first perform supervised fine-tuning (SFT) on large-scale user-item interaction trajectories to initialize the reasoning policy, followed by end-to-end reinforcement learning (RL) to refine the model's ability to reason over social graphs for personalized recommendation. Extensive experiments on multiple real-world datasets demonstrate the effectiveness of ConnectionMind compared to representative baselines. More importantly, ConnectionMind has been deployed in Meta's large-scale recommendation pipeline and has been evaluated through online A/B tests, achieving a 0.43% improvement in video watch time. These results demonstrate measurable real-world impact in a production recommendation system.",
+      "date": "2026-11-03",
+      "source": "OpenAlex",
+      "source_detail": "ACM International Conference on Information and Knowledge Management (CIKM)",
+      "url": "https://doi.org/10.1145/3799682.3840157",
+      "tags": [
+        "stochastic",
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1145/3799682.3840157",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "openalex-W7225035297",
+      "title": "Operationalising Generative AI in Subsurface Operations: A Low-Code Well Passport Skill Built by the End User",
+      "authors": [
+        "M. Mohamed Al Hammadi",
+        "M. Ahmad Nazlan",
+        "D. Voilet",
+        "A. Al Raeesi",
+        "M. H. Hammadi",
+        "M. Aldhaheri"
+      ],
+      "abstract": "Abstract Subsurface teams in mature, high-well-count fields routinely spend 30 to 60 minutes per well gathering data before any technical evaluation can start. Across an inventory of more than 2,000 wells, that custodial work pulls scarce petrophysical and engineering time away from interpretation and decision-making. This paper describes the deployment and early field validation of a suite of AI-driven workflow automations on a mature onshore carbonate field. A domain petrophysicist authored them, not a central digital team, and they run on an enterprise generative-AI platform that the organisation had already deployed. The automations are grouped into five operational domains: (1) well intelligence, covering automated retrieval of formation tops, casing configuration, H₂S and CO₂ classification, saturation history and pressure records, together with on-request assembly of well documents; (2) cement integrity, covering automated bond-log interpretation across all casing strings with isolation-risk flagging; (3) petrophysical quick-look, covering real-time logging-while-drilling (LWD) processing from any service provider on the asset, with composite-log and interpretation-software-ready output; (4) logging-program generation for saturation and production programs, annotated with live-condition safety information; and (5) intervention reporting, which consolidates multi-contractor performance into a single management view. In field use, well-data retrieval time fell by more than 90 percent. Logging-program preparation dropped from one to three hours per well to under five minutes. Real-time petrophysical evaluation is now produced automatically at each drilling cycle to support landing decisions. Every output follows the corporate documentation standard, which removes the variation between engineers, and every value can be traced back to the source file it came from. The framework recovers an estimated four or more engineering hours per well event, needs no new infrastructure or software licences, and works with any logging service provider active on the field. It offers a practical and immediately replicable route to AI adoption for operations-intensive subsurface teams.",
+      "date": "2026-11-02",
+      "source": "OpenAlex",
+      "source_detail": "Abu Dhabi International Petroleum Exhibition & Conference (ADIPEC)",
+      "url": "https://doi.org/10.2118/235344-ms",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.2118/235344-ms",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7225035730",
+      "title": "A Multi-Agent Workflow for Structuring Development Planning Knowledge from Unstructured E&P Documents",
+      "authors": [
+        "Mengxin Song",
+        "Yinuo Feng",
+        "Dongmei He",
+        "Zixuan Li",
+        "Wenkuang WU",
+        "Chengci Wang",
+        "Yuxing Chen"
+      ],
+      "abstract": "Abstract Development plans bring together multidisciplinary knowledge needed for reservoir evaluation, development deployment, and engineering decision-making. In practice, however, these documents are often lengthy, heterogeneous in format, and poorly standardized. This makes manual review slow and makes rule-based extraction prone to errors. To address this problem, this paper presents a multi-agent workflow for structuring knowledge from unstructured E&P documents, with private deployment and field application in an enterprise environment. The workflow is built on a customized orchestration engine. It integrates multimodal OCR parsing, long-context semantic understanding, complex table recognition, retrieval-augmented reasoning, and standardized output generation. Word, PDF, PNG, and other heterogeneous files are converted into structured Markdown and JSON formats, allowing semantic information to be extracted from text, tables, figures, merged cells, and embedded attachments. The proposed workflow consists of three task-oriented agents: a document parsing agent for layout recognition and content conversion, an indicator reasoning agent for identifying key indicators across long-document contexts, and a quality validation agent for multi-model cross-checking and rule-based quality control. The system has been deployed and validated in PetroChina's on-premise environment for development planning review. The validation covered more than 30 sets of documents and over 150 files, with the longest report exceeding 700 pages. Compared with manual review and rule-based extraction, the proposed method reduced the key indicator extraction cycle from approximately one week to eight minutes. After verification and quality control, the extraction accuracy reached 92%. The system generates eight categories of standardized outputs, covering geology and reservoir, engineering technology, economic evaluation, and other core planning results. These outputs support JSON export, data lake integration, reservoir modeling, inter-well dynamic analysis, and comparison of historical development plans.",
+      "date": "2026-11-02",
+      "source": "OpenAlex",
+      "source_detail": "Abu Dhabi International Petroleum Exhibition & Conference (ADIPEC)",
+      "url": "https://doi.org/10.2118/235970-ms",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.2118/235970-ms",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7225036615",
+      "title": "Guara: Make AI Knowledge Verifiable",
+      "authors": [
+        "fredsevmartins"
+      ],
+      "abstract": "Guara 0.1.3 Guara 0.1.3 brings the new maned wolf identity, clearer onboarding, reliable connection cleanup, and a tested, complete installation bundle. Python distribution and CLI names remain opentruth. Changes A documentation index and Brazilian Portuguese getting-started guide. Clearer runtime/development installation, Windows activation, and workspace selection. Consolidated current backup, integrity, pagination, and reassessment guidance. Guará, a Brazilian maned wolf mascot, with usage and accessibility guidance. DOI citation metadata: 10.5281/zenodo.23870405. opentruth --version reports the installed distribution version without opening a store. with OpenTruth(workspace) as app: closes the SQLite connection on success and exceptions. Local Markdown/image-link validation and installed-wheel CLI validation. UTF-8 stdout/stderr on all platforms, including Windows redirected scientific text. Complete CLI convenience flags for search filters, evidence links, claim/evidence revisions, reviews, attribution, and comparison tolerances. End-to-end CLI lifecycle and failed-mutation atomicity tests, including restored audit history. Automated complete ZIP and SHA-256 manifest generation from validated wheel/source inputs. Packaging regressions reject mismatched versions, duplicate files, traversal, symlinks, and nested old deliveries. English LinkedIn artwork with a prominent repository link, including white-background and cartoon-scientist variants. Compatibility No schema change: schema 2, evidence statuses, JSON CLI defaults, and the twelve MCP tools are preserved. Python 3.11+ is required. Runtime remains offline after dependency installation. Secure local source ingestion remains POSIX-only; Windows supports metadata workflows. Back up existing evidence before upgrading. Install the supplied wheel with python -m pip install /path/to/opentruth-0.1.3-py3-none-any.whl, then run opentruth --version. See the installation guide. The product and remote repository are named Guara. The owner completed the remote rename, confirmed through GitHub API. See compatibility details. See the local validation results for the checks executed on this deliverable. Downloads Use Guara-0.1.3.zip for the complete product, or install opentruth-0.1.3-py3-none-any.whl in a Python 3.11+ virtual environment. SHA256SUMS covers each downloadable artifact. The ZIP contains a Guara/ directory; open COMECE-AQUI.md after extraction. CI gates publication on Linux, macOS, and Windows with Python 3.11–3.13. PyPI publication is a separate, optional maintainer workflow and is not part of this release.",
+      "date": "2026-11-02",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23871522",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23871522",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7225039582",
+      "title": "Technology-Enhanced Hybrid Service-Learning in Higher Education: Insights from a Bibliometric Study",
+      "authors": [
+        "Irene Tiong Yee Ting",
+        "Noor Azean Atan"
+      ],
+      "abstract": "Technology-Enhanced Hybrid Service-Learning (HSL) has emerged as an innovative pedagogical approach that integrates experiential community engagement with digitally mediated learning environments in higher education. Despite its growing implementation, scholarly knowledge on the intellectual structure, development trajectory, and thematic evolution of HSL remains fragmented. This study presents a comprehensive bibliometric analysis of HSL research in higher education, drawing on 154 peer-reviewed journal articles indexed in the Scopus database between 2010 and 2026. Using PRISMA-guided screening procedures and bibliometric tools including biblioMagika®, VOSviewer, and OpenRefine, the study analyses publication trends, citation patterns, influential contributors, leading institutions and countries, source titles, highly cited documents, and keyword co-occurrence networks. The findings reveal a marked acceleration in research output from 2010 onwards, coinciding with the global expansion of hybrid and online learning models. While early publications were limited in number, they demonstrated high citation impact, forming a strong conceptual foundation for subsequent scholarship. The United States leads in publication volume, whereas Malaysia and Hong Kong demonstrate particularly strong citation performance relative to output. Prominent source titles reflect the interdisciplinary nature of HSL, spanning educational technology, sustainability, and experiential learning domains. Keyword co-occurrence analysis highlights “service learning,” “higher education,” and “student engagement” as central themes, alongside growing emphasis on online learning and e-service learning modalities. Overall, the study demonstrates that Technology-Enhanced Hybrid Service-Learning represents a dynamic and increasingly mature research domain characterised by global participation, collaborative authorship, and evolving thematic integration of pedagogy and technology. By systematically mapping the field’s intellectual structure and scholarly influence, this study provides an updated foundation for future research, pedagogical innovation, and policy development in higher education.",
+      "date": "2026-11-02",
+      "source": "OpenAlex",
+      "source_detail": "International Journal of Technology in Education and Science",
+      "url": "https://doi.org/10.46328/ijtes.8135",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.46328/ijtes.8135",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7225047651",
+      "title": "Cell IO: a database linking single-cell transcriptomes to literature-derived knowledge of cell functions and perturbations",
+      "authors": [
+        "Haruka Ozaki"
+      ],
+      "abstract": "Abstract Single-cell transcriptome databases tell us which genes a cell type expresses, but what a cell type does, and what happens to it when a gene is perturbed, remains scattered across the literature. Cell IO (https://cell-io.riken.jp/) links these two kinds of knowledge through Cell Ontology identifiers. Its transcriptome layer re-processes 10x Chromium single- cell and single-nucleus RNA-seq experiments of human, mouse, and rat from the Sequence Read Archive with a uniform pipeline, annotates clusters with Cell Ontology terms restricted by the tissue of origin, and stores the cell type composition and UMAP embedding of every experiment (currently 14,931 experiments and 82.9 million cells). Its literature layer holds 895,258 claims extracted with a large language model and verified in a second pass from open-access abstracts, review articles, and gene perturbation studies in immunology and neuroscience, each with the verbatim sentence, highlighted entity spans, evidence strength, and ontology-normalized cell, gene, and context. The web interface lets users search cell types by name, synonym, or identifier, find the experiments in which a cell type is most abundant, inspect the composition and embedding of each experiment, read and filter the claims about a cell type by knowledge base, direction, evidence strength, and organism, and identify cell types whose functional characterization is missing from part of the literature. Cell IO is freely available without registration.",
+      "date": "2026-11-02",
+      "source": "OpenAlex",
+      "source_detail": "Research Square",
+      "url": "https://doi.org/10.21203/rs.3.rs-11558063/v1",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.21203/rs.3.rs-11558063/v1",
+      "citation_count": 0,
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 3,
+    "conferences": 0,
+    "opportunities": 3,
+    "total": 13
+  }
+}
