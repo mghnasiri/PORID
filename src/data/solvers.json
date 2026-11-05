@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T15:19:00.059945+00:00",
+  "generated_at": "2026-11-05T15:19:49.641362+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1909,
+      "github_stars": 1910,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 83,
+      "github_open_issues": 80,
       "github_recent_prs": [
-        "Fix lost edges of duplicate size-two cliques in the clique table",
-        "Highspy symbols test fix",
-        "Removed `presolve_light` option, and introduced `presolve_mode` option",
-        "Add time out check for symmetry",
-        "Dry gpu test for bazel build with cuda"
+        "Update docs",
+        "Put all HighsCDouble to one side for singletonColStuffing",
+        "Path-preserving MIP and LP micro-optimizations.",
+        "Cap probing work and store reduced-cost bounds in a flat vector.",
+        "Keep MIP cut-separation changes for tableau separation and root stall."
       ],
       "pypi_monthly_downloads": -61
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 674,
+      "github_stars": 675,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Features\r\n--------\r\n\r\n- added command line option `-t` to specify the number of threads, which triggers concurrent solving via `SCIPsolveConcurrent()`\r\n\r\nPerformance improvements\r\n--------------------",
-      "github_open_issues": 68,
+      "github_open_issues": 67,
       "github_recent_prs": [
         "Add CMake option CUSTOMIO to route stdout/stderr, exit and abort to the program that links SCIP",
         "Portability fixes for 10.1.1: strerror_r on macOS, (void) in tpi_openmp.c, <cstdlib> in multiprecision.hpp",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14328,
+      "github_stars": 14337,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 137,
+      "github_open_issues": 140,
       "github_recent_prs": [
+        "Python: annotate unknown types in generated stubs as Incomplete",
+        "CP-SAT Python: fix only_enforce_if return values and type hints",
+        "CP-SAT: skip the search when the presolved model is empty",
         "routing: Make route constraint evaluators take an absl::Span instead …",
-        "release: make rc version configurable",
-        "notebook: regenerate all",
-        "g3 export (sat dev, math_opt/glop dual simplex)",
-        "ci: bump swig to 4.5.1"
+        "release: make rc version configurable"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -666,7 +666,7 @@
         }
       ],
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_open_issues": 182,
+      "github_open_issues": 181,
       "github_recent_prs": [
         "Move the macOS jobs off the retired macos-14 runner",
         "Add Cbc quick tests for Windows MSVS CI",
@@ -1132,9 +1132,9 @@
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
       "github_stars": 6386,
-      "github_open_issues": 171,
+      "github_open_issues": 170,
       "github_recent_prs": [
-        "perf: certify dense PSD input with an exact eigendecomposition",
+        "perf: certify dense PSD input with a pivoted Cholesky",
         "Fix cp.hstack canonicalization for ndim >= 3",
         "CI: replace macos-14 runners with macos-15 runners",
         "Fix quantum_rel_entr value for inputs whose trace is not 1",
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed issue where Ipopt exceptions could not been caught from other libraries on macOS with clang when Ipopt or the other library was build with `-fvisibility=hidden`.\r\n- Call `MPI_Init()` with NULL",
-      "github_stars": 1796,
+      "github_stars": 1797,
       "github_open_issues": 13,
       "github_recent_prs": [
         "Fix scaling of initial bound multipliers in a warm start with scaled variables",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Indictments are back, and better than before! One of the frequent comments we have received with Timefold Solver 2.0 was that we should not have removed indictments - we listened, and they are now bac",
-      "github_stars": 1849,
-      "github_open_issues": 111,
+      "github_stars": 1854,
+      "github_open_issues": 112,
       "github_recent_prs": [
+        "fix: detect a model UI in the build output as well as the source tree",
+        "fix: K-Opt generates too many no-op moves",
         "docs: [docs-drift] feat/json-path-resource-reporting",
         "fix: give simulated annealing a time gradient",
-        "chore: renormalize mvnw.cmd to CRLF line endings after Dependabot broke it",
-        "chore: merge nodes based on fixed-edge infomation instead of heuristics",
-        "ci: skip visualization build in downstream check"
+        "chore: renormalize mvnw.cmd to CRLF line endings after Dependabot broke it"
       ]
     },
     {
@@ -1384,14 +1384,14 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2559,
-      "github_open_issues": 399,
+      "github_stars": 2558,
+      "github_open_issues": 391,
       "github_recent_prs": [
+        "PyROS: pause the GC so it doesn't impact timing tests",
+        "Fix `Param` default/initialize receiving the `Param` instead of the block",
+        "Move MIS reference URL to point to archival copy in pyomo-tutorials",
         "fix-non-numeric-appsi-cbc-version-crash",
-        "Convert PyROS `UncertaintySet` subclass docstrings to raw strings",
-        "DAE: Update simulator to include newer scipy solver options.",
-        "ParmEst: Add utility to preserve domain during param_to_var conversion.",
-        "ParmEst: Make objectives consistent, add 1/2 to SSE"
+        "Convert PyROS `UncertaintySet` subclass docstrings to raw strings"
       ],
       "pypi_monthly_downloads": -28
     },
