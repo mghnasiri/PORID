@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T13:52:14.197672+00:00",
+  "generated_at": "2026-11-08T14:14:42.237653+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1911,
+      "github_stars": 1913,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 82,
+      "github_open_issues": 83,
       "github_recent_prs": [
+        "Fix 3565",
+        "Allow the packed row-wise matrix to have small values",
         "drop prefix mingw",
         "Corrected inward integer rounding asserts",
-        "Make sure all similar magnitude values are on one side",
-        "Avoid agelim = 0 error",
-        "Patches from various packaging"
+        "Make sure all similar magnitude values are on one side"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14342,
+      "github_stars": 14345,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -604,7 +604,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 1024,
+      "github_stars": 1025,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -666,13 +666,13 @@
         }
       ],
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_open_issues": 186,
+      "github_open_issues": 188,
       "github_recent_prs": [
+        "Root LP and LP-solve tables: switch Clp to the en_tabular language (companion to Clp#361)",
+        "Expose LP reoptimization controls in CBC and its C API",
         "Fix elapsed time in solver statistics",
         "Move the macOS jobs off the retired macos-14 runner",
-        "Add Cbc quick tests for Windows MSVS CI",
-        "CbcMain1: copy the limits, solution count and best bound back to the caller",
-        "SppGrasp: move the heuristic from next to master"
+        "Add Cbc quick tests for Windows MSVS CI"
       ]
     },
     {
@@ -1131,7 +1131,7 @@
         "python"
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
-      "github_stars": 6388,
+      "github_stars": 6389,
       "github_open_issues": 172,
       "github_recent_prs": [
         "Fix identity transpose canonicalization in the C++ backend",
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2559,
+      "github_stars": 2561,
       "github_open_issues": 390,
       "github_recent_prs": [
         "PyROS: pause the GC so it doesn't impact timing tests",
