@@ -1,47 +1,47 @@
 {
-  "last_fetch": "2026-11-08T14:14:34.180730+00:00",
+  "last_fetch": "2026-11-09T17:21:51.379408+00:00",
   "counts": {
-    "publications": 13563,
+    "publications": 13478,
     "software": 0,
     "conferences": 0,
     "opportunities": 124
   },
-  "total": 13687,
+  "total": 13602,
   "sources_checked": [
     "Optimization Online",
+    "Conferences",
     "OpenAlex",
     "Semantic Scholar",
-    "arXiv",
     "GitHub",
     "HigherEdJobs",
     "OperationsAcademia",
-    "Conferences",
+    "arXiv",
     "Crossref"
   ],
   "errors": [],
   "merge_stats": {
-    "publications_added": 639,
+    "publications_added": 787,
     "software_added": 0,
-    "opportunities_added": 1,
-    "total_dropped_stale": 637
+    "opportunities_added": 0,
+    "total_dropped_stale": 872
   },
   "timings": {
-    "fetch": 148.658,
-    "classify": 0.216,
+    "fetch": 52.753,
+    "classify": 0.375,
     "validate": 0.001,
-    "dedup": 0.325,
-    "merge": 0.169,
-    "write": 0.611
+    "dedup": 0.493,
+    "merge": 0.216,
+    "write": 0.668
   },
   "source_yield_history": {
     "Conferences": [
-      60,
       59,
       59,
       15,
       15,
       15,
-      15
+      15,
+      60
     ],
     "Optimization Online": [
       10,
@@ -53,22 +53,22 @@
       10
     ],
     "OpenAlex": [
-      57,
       58,
       63,
       59,
       57,
       56,
-      53
+      53,
+      56
     ],
     "Semantic Scholar": [
-      226,
       0,
       0,
       264,
       51,
       0,
-      132
+      132,
+      270
     ],
     "GitHub": [
       11,
@@ -80,32 +80,34 @@
       11
     ],
     "arXiv": [
-      54,
       316,
       320,
       330,
       322,
       283,
-      150
+      150,
+      50
     ],
     "Opportunities": [
-      107,
       107,
       109,
       110,
       109,
       109,
-      110
+      110,
+      109
     ],
     "Crossref": [
-      746,
       746,
       744,
       746,
       745,
       735,
-      734
+      734,
+      725
     ]
   },
-  "degraded_sources": []
+  "degraded_sources": [
+    "arXiv"
+  ]
 }
