@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T17:21:59.984030+00:00",
+  "generated_at": "2026-11-10T15:33:08.248926+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -122,7 +122,7 @@
           "source": "Gurobi case studies"
         }
       ],
-      "pypi_monthly_downloads": -24
+      "pypi_monthly_downloads": -28
     },
     {
       "id": "cplex",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1914,
+      "github_stars": 1915,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "Patch release v1.15.1 fixes:\r\n\r\nApache release binaries not including HiPO fixed in [PR #3112](https://github.com/ERGO-Code/HiGHS/pull/3112).\r\n\r\nBuild for users with C++20 fixed in [PR #3114](https://",
-      "github_open_issues": 92,
+      "github_open_issues": 94,
       "github_recent_prs": [
+        "Docs and features 1.16",
+        "Fix #3594",
         "fix missing HiPO log output",
         "Track column entires in machine-schedule inequality",
-        "Eliminates the `printf` and assert, in `HighsPostsolveStack::DuplicateColumn::undo`",
-        "Allow the packed row-wise matrix to have small values",
-        "drop prefix mingw"
+        "Eliminates the `printf` and assert, in `HighsPostsolveStack::DuplicateColumn::undo`"
       ],
       "pypi_monthly_downloads": -61
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 676,
+      "github_stars": 677,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -458,13 +458,13 @@
         }
       ],
       "recent_changes": "Features\r\n--------\r\n\r\n- added command line option `-t` to specify the number of threads, which triggers concurrent solving via `SCIPsolveConcurrent()`\r\n\r\nPerformance improvements\r\n--------------------",
-      "github_open_issues": 72,
+      "github_open_issues": 73,
       "github_recent_prs": [
+        "Fix integer log overestimator for reference points below one",
         "Add CMake option CUSTOMIO to route stdout/stderr, exit and abort to the program that links SCIP",
         "Portability fixes for 10.1.1: strerror_r on macOS, (void) in tpi_openmp.c, <cstdlib> in multiprecision.hpp",
         "Fix original objective offset in exact solution conversion",
-        "fix loss of explicit upper bounds in MPS reader",
-        "Fix inverted avoidmemout check"
+        "fix loss of explicit upper bounds in MPS reader"
       ],
       "pypi_monthly_downloads": -46
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14352,
+      "github_stars": 14356,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,7 +569,7 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 139,
+      "github_open_issues": 138,
       "github_recent_prs": [
         "ci(release): stage NuGet packages via Google OSS Exit Gate",
         "sat: export from google3",
@@ -604,7 +604,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 1025,
+      "github_stars": 1026,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -666,13 +666,13 @@
         }
       ],
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_open_issues": 188,
+      "github_open_issues": 190,
       "github_recent_prs": [
+        "Changes to default parameters",
+        "Don't stop the main search when a heuristic sub-MIP stops on its own time limit",
         "CbcHeuristic: make non-CLP isHeuristicInteger const",
         "Root LP and LP-solve tables: switch Clp to the en_tabular language (companion to Clp#361)",
-        "Expose LP reoptimization controls in CBC and its C API",
-        "Fix elapsed time in solver statistics",
-        "Move the macOS jobs off the retired macos-14 runner"
+        "Expose LP reoptimization controls in CBC and its C API"
       ]
     },
     {
@@ -1131,8 +1131,8 @@
         "python"
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
-      "github_stars": 6388,
-      "github_open_issues": 174,
+      "github_stars": 6389,
+      "github_open_issues": 175,
       "github_recent_prs": [
         "Bump github/codeql-action/upload-sarif from 4.37.8 to 4.39.3",
         "Fix the dotsort gradient for matrix arguments",
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed issue where Ipopt exceptions could not been caught from other libraries on macOS with clang when Ipopt or the other library was build with `-fvisibility=hidden`.\r\n- Call `MPI_Init()` with NULL",
-      "github_stars": 1801,
+      "github_stars": 1802,
       "github_open_issues": 14,
       "github_recent_prs": [
         "Refresh constant Hessians when reoptimizing with the same structure",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Indictments are back, and better than before! One of the frequent comments we have received with Timefold Solver 2.0 was that we should not have removed indictments - we listened, and they are now bac",
-      "github_stars": 1861,
-      "github_open_issues": 115,
+      "github_stars": 1863,
+      "github_open_issues": 116,
       "github_recent_prs": [
+        "feat: Add time to best solution into SolverJob",
+        "chore: added solver run summary as log statement in solver worker on complet…",
+        "perf: optimize value range handling of basic variable neighborhoods",
         "Restructure packages of the definition module",
-        "feat: weighted move selection for neighborhoods",
-        "chore: enforce platform provided solver versions during build of the model w…",
-        "deps: bump net.minidev:json-smart from 2.6.0 to 2.6.1 in the patch group",
-        "deps: bump the minor group with 3 updates"
+        "feat: weighted move selection for neighborhoods"
       ]
     },
     {
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2561,
+      "github_stars": 2564,
       "github_open_issues": 391,
       "github_recent_prs": [
         "Use the configurable version timeout in the CBC shell plugin",
@@ -1449,7 +1449,7 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.32.1\n\n[Diff since v1.32.0](https://github.com/jump-dev/JuMP.jl/compare/v1.32.0...v1.32.1)\n\n\n**Merged pull requests:**\n- Fix performance of flatten! for large summations (#4264) (@odow)\n- Ad",
-      "github_stars": 2489,
+      "github_stars": 2490,
       "github_open_issues": 13,
       "github_recent_prs": [
         "Add MFAOA.jl to solver list",
