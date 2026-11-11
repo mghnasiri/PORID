@@ -1,0 +1,381 @@
+{
+  "date": "2026-11-11",
+  "generated_at": "2026-11-11T15:04:44.659083+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2611.13473",
+      "title": "Fragment-Free Constraint Programming for the Preemptive Flexible Job Shop Scheduling Problem",
+      "authors": [
+        "Vincent Boyer",
+        "M. Angélica Salazar-Aguilar"
+      ],
+      "abstract": "This article addresses the preemptive flexible job shop scheduling problem with makespan minimization (FJm | pmtn | C_max). We propose an exact constraint programming approach that completely avoids representing the processing fragments of an operation. Operations are placed in flexible time windows, where Horn's workload condition guarantees feasible preemptive scheduling, and Jackson's preemptive earliest-deadline-first rule reconstructs exact processing segments post-optimization in O(n log n) time per machine. To manage undecided machine assignments, we extend the PreemptiveNoOverlap global constraint to optional intervals within IBM ILOG CP Optimizer, performing overload checking and preemptive edge-finding in O(n log n) time while eliminating infeasible machine alternatives. The CP model is warm-started using a multi-round MILP assignment relaxation with Carlier's head-tail bounds and a window-based greedy heuristic. Extensive computational experiments on 276 pFJSSP benchmark instances and 78 pJSSP instances demonstrate that the proposed method significantly advances the state of the art. Within a 600~s time limit, it improves the upper bounds of the previously published logic-based Benders decomposition by 3.6% on average, increases the number of proven optimal pFJSSP instances from 102 to 180, and closes 74 instances for the first time (including the entire Barnes family). On the pJSSP under identical hardware conditions, it proves 67 of 78 instances optimal (compared to 51 by the baseline solver Mistral) and closes 9 of the 11 long-standing open problems.",
+      "date": "2026-11-10",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2611.13473v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "scheduling",
+        "decomposition",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.13473",
+      "arxiv_id": "2611.13473v1",
+      "score": 65.0
+    },
+    {
+      "id": "arxiv-2611.14426",
+      "title": "Two Communities, One Problem: Branch-and-Bound vs. A* for Resource-Constrained Project Scheduling",
+      "authors": [
+        "Izack Cohen",
+        "Dominik Kress",
+        "Lara Nehrke",
+        "Erwin Pesch",
+        "Shimrit Shtern"
+      ],
+      "abstract": "Branch-and-Bound (B&B) and $A^*$ are popular exact search methods originating from Operations Research and Artificial Intelligence, respectively. Although the two methods share fundamental search principles, their different ways of exploring the search space can lead to substantially different computational performance. We investigate these differences using the Resource-Constrained Project Scheduling Problem (RCPSP) as an exemplary problem setting. We first establish the relationships between mixed-integer linear programming, state-action, and timed Petri-net representations. Since B&B and $A^*$ admit numerous algorithmic enhancements, we focus on relatively basic implementations. This allows us to examine the fundamental differences between the methods rather than compare the performance of state-of-the-art solvers. By using the same lower bound and best-first node selection, we isolate the effects of the search mechanisms, particularly the identification of equivalent states reached through different scheduling decision sequences. Experiments on 480 benchmark RCPSP instances show that graph-based $A^*$ substantially outperforms the B&B variants considered. With additional pruning rules, $A^*$ proves optimality for all 480 instances, compared with 445 for best-first B&B under the same time and memory limits. Depth-first B&B uses less memory and can find feasible solutions even when the search does not finish within the time limit. Stronger linear programming relaxations reduce the search space but introduce considerable computational overhead. Our findings highlight the importance of duplicate-state detection and clarify the computational trade-offs between the search approaches. These insights can help researchers select an appropriate method and identify opportunities to incorporate effective mechanisms from one approach into the other.",
+      "date": "2026-11-10",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2611.14426v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming",
+        "scheduling",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.14426",
+      "arxiv_id": "2611.14426v1",
+      "score": 60.0
+    },
+    {
+      "id": "openalex-W7225760294",
+      "title": "Mitigasi Ancaman Siber pada Aplikasi Web Melalui SIEM: Tinjauan Literatur Sistematis",
+      "authors": [
+        "Muhammad Nabel",
+        "Felix Enrique",
+        "Ahmad Muhammad Taqy",
+        "Yehezkiel Nesta",
+        "Arief Afriandi"
+      ],
+      "abstract": "Web applications have become the backbone of the modern digital ecosystem, yet their openness makes them primary targets for cyberattacks that conventional defense mechanisms often fail to detect. This article presents a systematic literature review of 13 selected publications from the Scopus database from the 2020-2025 period to analyze the effectiveness of Security Information and Event Management (SIEM) in mitigating threats to web applications. The review identifies dominant attack categories including SQL Injection (SQLi), Cross-Site Scripting (XSS), and application-layer Denial of Service (DoS) attacks. Research demonstrates that a hybrid approach integrating SIEM with Web Application Firewalls (WAF) and the application of Machine Learning algorithms is proven to detect zero-day attack anomalies with accuracy rates reaching 97% to 100%. Furthermore, the use of open-source platforms such as Wazuh and ELK Stack enables centralized security visibility monitoring and significant reduction in incident response times. This article recommends the adoption of an integrated security architecture combining rule-based and behavioral log analysis to minimize false positive rates and build robust, adaptive web defenses.",
+      "date": "2026-11-11",
+      "source": "OpenAlex",
+      "source_detail": "Jurnal Riset Informatika dan Teknologi Informasi",
+      "url": "https://doi.org/10.58776/jriti.v4i1.238",
+      "tags": [
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.58776/jriti.v4i1.238",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "openalex-W7225339223",
+      "title": "FAIR Institutional Repository Metrics (FIRM) - Conceptual Requirements",
+      "authors": [
+        "Allyson Lister",
+        "Mary Donaldson",
+        "Jade C. Godsall",
+        "Valerie McCutcheon",
+        "Jason Partridge",
+        "Holly Ranger",
+        "Kellie Snow",
+        "Angus Taggart"
+      ],
+      "abstract": "The FAIR Institutional Repository Metrics (FIRM) project brings together UK universities to define what the FAIR Principles mean in practice for research datasets described by institutional repositories. Building on work by FAIRsharing and the Oxford University Research Archive (ORA), participating institutions reviewed and refined a common set of FAIR metrics against their different repository systems, metadata practices and requirements. This document presents the resulting FAIR Benchmark for Institutional Repository Datasets: a transparent, community-defined approach for assessing dataset metadata and identifying how its FAIRness can be improved. It distinguishes between FAIR features provided by repository infrastructures as standard and those dependent on information supplied for individual records, allowing assessment results to support practical guidance for both repository teams and researchers. The benchmark is designed to be reusable and adaptable. This first release focuses specifically on research datasets, providing a shared starting point for institutional repositories while allowing for different technical implementations and community priorities. Future work will explore extending the approach to additional digital research object types, building on the community-led process established through FIRM. The benchmark can support both automated FAIR evaluation and broader repository improvements.",
+      "date": "2026-11-10",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23978452",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23978452",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7225614336",
+      "title": "Open Scholarly Metadata Across Publication Formats - A Literature Review",
+      "authors": [
+        "Barcelona Declaration on Open Research Information",
+        "Dominic Mitchell",
+        "John Kunze",
+        "Ludo Waltman",
+        "Tobias Steiner"
+      ],
+      "abstract": "Open Scholarly Metadata Across Publication Formats: A Literature Review examines metadata elements identified as required or desirable across publication formats, as well as barriers resource-constrained publishers face in creating and disseminating open metadata. The document was developed by the Task Force for Supporting Resource-Constrained Publishers, part of the Working Group on Journal Article Metadata and Book Metadata of the Barcelona Declaration on Open Research Information. Key findings The literature most frequently identifies the following metadata elements asrequired: bibliographic information, rights and licensing, contributor names and roles,affiliations, dates, work type and publication status, subject classifications, andpersistent identifiers. The literature is less consistent on whether relationshipsbetween outputs should be considered required or desirable. The barriers identified in the literature span four areas of the metadata lifecycle:creation, curation, processing, and interoperability. They range from limited resourcesand technical capacity to incompatible systems, weak coordination, and gaps inknowledge about persistent identifiers and funder metadata. Metadata needs vary by publication format. Journal articles need more complete andconsistent workflows; books require coordination across bibliographic, commercial,and scholarly systems; and chapters need recognition as independent contributionswhile retaining their links to books. Proceedings, datasets, software, preprints, andrepositories also have distinct requirements. Open metadata sources do not yet represent all research outputs equally. Thereviewed literature identifies coverage gaps affecting research from Africa and China,journals using Open Journal Systems, and non-journal outputs. The report also notesthat open databases are developing rapidly, so some findings may change over time Overall conclusion. Scholarly communication needs metadata practices that are open by default while remaining sufficiently differentiated and context-sensitive to reflect the diversity of scholarly outputs. It also highlights the need for more voices from underrepresented contexts in research and discussions about open metadata.What comes next? The Task Force proposes comparing the review’s findings with survey results and exploring community roundtables, practical resources, and recommendations in its next phase.",
+      "date": "2026-11-10",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24084580",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.24084580",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1002-net.70088",
+      "title": "Novel Modeling Approach for Arc Routing Problems",
+      "authors": [
+        "Wang, S.",
+        "Maravelias, C."
+      ],
+      "abstract": "ABSTRACT\n                  This paper introduces a novel modeling approach for arc routing problems (ARPs) which is easily applied to multiple ARP variants (e.g., capacitated ARPs, multiple depot ARPs, heterogeneous fleets). Our approach tracks the order in which arcs are serviced, rather than explicitly tracking deadheading, and couples the sequence of serviced arcs to the cumulative demand collected along the route. As each route is defined solely by the order of serviced arcs, our approach does not use vehicle indices to represent individual vehicles/routes, but rather the vehicle type, which makes our approach agnostic to vehicle fleet size and thereby suitable for solving ARPs with large fleets and capable of solving ARPs with heterogeneous fleets with unknown distributions of vehicle type without significantly increasing model size compared to ARPs on the same graph with a homogeneous fleet. We also propose a novel method of formulating “return‐to‐facility” (RtF) constraints in location arc routing problems (LARPs) by using a “tagging” system built into the flow variables to ensure each vehicle route returns to the depot it departed from. Our “tagging” method does not add depot indices to flow and binary variables, nor does it add constraints with separate binaries assigning arcs to depots, leading to a more compact model for LARPs. Using a proposed four‐step solution algorithm, we can solve several benchmark LARP instances to optimality, and are often able to obtain solutions of comparable or better objective value than those found by heuristics. We demonstrate the application of our modeling approach not only on the basic CARP and LARP, but also on the LARP with capacitated depots, CARP with time windows, and multi‐depot CARP.",
+      "date": "2026-11-10",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70088",
+      "tags": [
+        "vehicle-routing"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70088",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2611.13694",
+      "title": "Decision-Focused Learning via Neural Optimization Layers for Battery-Assisted Grid-Import Smoothing in AI Data Centers",
+      "authors": [
+        "Xinda Zheng",
+        "Canchen Jiang",
+        "Frits de Nijs",
+        "Edward Lam",
+        "Markus Wagner"
+      ],
+      "abstract": "Rapid AI data-center power fluctuations challenge grid integration. Sustained grid-import smoothing requires allocating limited battery power and energy under uncertain demand. We formulate risk-aware BESS scheduling that coordinates advance reserve commitments and demand-responsive dispatch, accounting for operating costs, grid-ramp penalties, and their conditional value-at-risk. We develop battery scheduling decision-focused learning (BS-DFL) with a constraint-aware neural optimization layer trained directly from this objective without optimal-solution labels. The trained layer is then frozen to guide demand-predictor learning through scheduling costs and ramping risk, enabling solver-free rolling-horizon scheduling. In a 10,000-minute simulation using loads derived from measured AI workloads, BS-DFL reduces mean absolute minute-to-minute grid-import changes by 71.70% and total scheduling cost by 18.01% relative to an MSE-trained predictor coupled with a mixed-integer linear programming solver, with an average decision time of 18.77 ms.",
+      "date": "2026-11-10",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2611.13694v1",
+      "tags": [
+        "eess.SY",
+        "linear-programming",
+        "integer-programming",
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.13694",
+      "arxiv_id": "2611.13694v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2611.14174",
+      "title": "Cross-Border Fulfillment Center Selection via Doubly Robust Estimation and Linear Programming",
+      "authors": [
+        "Kriti Mahajan",
+        "Patrick Bloebaum"
+      ],
+      "abstract": "We introduce the cross-border (XB) fulfillment center (FC) Selection Model: a multi-stage optimization framework combining forecasting, doubly robust estimation, and linear programming to select optimal source FCs. For each source-destination shipping arc, the objective is to choose a subset of source-country FCs that minimize delivery time and cost while maximizing profit and shipped units under a fixed domestic network. We evaluate the model on three production-scale international shipping corridors for a large e-commerce company using 12 months of shipment data, employing both aggregate offline replay and shipment-level counterfactual nearest-neighbor matching. Across all shipping corridors, the XB FC Selection Model achieves 8.5-51.1% reductions in delivery time and 4.4-48.3% reductions in logistics cost relative to human expert-defined FC selection policies, with up to 6.5 percentage-point improvements in 5/5 target compliance (5 days, $5 USD). Pareto analysis shows the model consistently dominates single-objective ranking strategies and unconstrained LP on the efficiency-reallocation frontier, with all results statistically significant.",
+      "date": "2026-11-10",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2611.14174v1",
+      "tags": [
+        "cs.AI",
+        "linear-programming",
+        "supply-chain",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.14174",
+      "arxiv_id": "2611.14174v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2611.14059",
+      "title": "HandsOnAid: Building and Evaluating an Offline First-Aid Assistant for Emergency Response Scenarios",
+      "authors": [
+        "Rezwan Islam Salvi",
+        "Saiyma Sittul Muna",
+        "Mushfiqur Rahman Mushfique"
+      ],
+      "abstract": "Emergencies can occur where there is no phone signal and no ambulance nearby. A small language model on a phone can be helpful in such situations, but its advice needs to be safe and accurate. We built HandsOnAid, a 4-bit Gemma 2B model fine-tuned with QLoRA on FirstAidQA dataset, a corpus of 5,550 first-aid question-answer pairs. We compared seven configurations, including the base, 4-bit and 8-bit fine-tuned models, and versions with a length floor, safety gate, or retrieval. We used a 41-pair question-answer bank with medically reviewed references that followed ANZCOR guidelines, and a strict 0-5 score rubric, with twelve safety overrides. Four frontier LLM judges (GPT-5.6 Sol, Claude Opus 5, DeepSeek V4 Pro, GLM-5.3) blindly scored every answer, with 45 hidden controls used to check judge reliability. Fine-tuning improved the mean score by +1.08 over the base model to 2.34. The best configuration scored 2.51 out of 5 which was the fine-tuned 4-bit model with retrieval. A medical professional also conducted a blind evaluation of 40 answers across the base, the 4-bit fine-tuned, and the retrieval configurations, and the scores were similar to the LLM judges' average scores. A keyword audit found limited coverage of several details of ANZCOR guidelines in the training corpus, that are required by the rubric, which suggests that missing information in the training data could be a cause of the low scores. On a smartphone device (Pixel 7 Pro) with six CPU threads and no network connection, the 4-bit fine-tuned model produced its first displayable text in 6.86 seconds and a complete answer in 14.88 seconds on average over ten questions.",
+      "date": "2026-11-10",
+      "source": "arXiv",
+      "source_detail": "cs.CL",
+      "url": "http://arxiv.org/abs/2611.14059v1",
+      "tags": [
+        "cs.CL",
+        "stochastic",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.14059",
+      "arxiv_id": "2611.14059v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2611.14299",
+      "title": "Energy- and Time-Efficient Multi-Vehicle Trajectory Planning Using Augmented DAG Search in Configuration Space",
+      "authors": [
+        "Amirreza Akbari",
+        "Galina Sidorenko",
+        "Johan Thunberg"
+      ],
+      "abstract": "Multi-vehicle trajectory planning for CAV requires balancing energy consumption and travel time while ensuring safety and scalability. While travel-time-optimal methods based on Integer Programming exhibit poor scalability in large-scale multi-vehicle scenarios, existing energy-oriented approaches fail to balance energy consumption and travel time. We extend a configuration-space framework for multi-vehicle trajectory planning to jointly locally optimize travel time and energy consumption. A weighted energy-travel time objective is combined with an efficient augmented DAG search on two-dimensional decompositions of a high-dimensional configuration space, enabling scalable and collision-free coordination of large numbers of vehicles. Although the proposed framework is applicable to other traffic scenarios, such as roundabouts and vehicle-following, we focus on intersections as a representative and challenging planning problem. To further improve performance for our methodology, we also extend the method with an insertion-ordering heuristic that exploits reduced-space geometric information. Combined with nonlinear model predictive control, the proposed framework is shown to scale to 40 vehicles, outperform MILP-based and convex optimization baselines in dense intersections, and reduce energy consumption at equalized travel times relative to time-optimal planning.",
+      "date": "2026-11-10",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2611.14299v1",
+      "tags": [
+        "eess.SY",
+        "integer-programming",
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.14299",
+      "arxiv_id": "2611.14299v1",
+      "score": 55.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 3,
+    "conferences": 0,
+    "opportunities": 3,
+    "total": 13
+  }
+}
