@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T15:04:44.088992+00:00",
+  "generated_at": "2026-11-12T15:56:02.692677+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1917,
+      "github_stars": 1919,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,15 +345,15 @@
         }
       ],
       "recent_changes": "The highlights of v1.16 are the use of parallelism by default in the\r\nMIP solver, a rewritten LP file reader, a Hessian oracle for QP,\r\nsupport for AMD GPUs in HiPDLP, Windows ARM64 Python wheels and ",
-      "github_open_issues": 96,
+      "github_open_issues": 118,
       "github_recent_prs": [
+        "bunch of CI on PR",
+        "Add policy",
         "ubuntu 24 temporarily",
         "Latest in master for release",
-        "Version bump 1.16",
-        "Docs and features 1.16",
-        "Fix #3594"
+        "Version bump 1.16"
       ],
-      "pypi_monthly_downloads": -61
+      "pypi_monthly_downloads": -93
     },
     {
       "id": "scip",
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Features\r\n--------\r\n\r\n- added command line option `-t` to specify the number of threads, which triggers concurrent solving via `SCIPsolveConcurrent()`\r\n\r\nPerformance improvements\r\n--------------------",
-      "github_open_issues": 72,
+      "github_open_issues": 71,
       "github_recent_prs": [
         "Fix integer log overestimator for reference points below one",
         "Add CMake option CUSTOMIO to route stdout/stderr, exit and abort to the program that links SCIP",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14364,
+      "github_stars": 14370,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -571,11 +571,11 @@
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
       "github_open_issues": 139,
       "github_recent_prs": [
+        "sat: various improvement",
+        "release: build python 3.15 wheel for macos and windows",
         "ci(release): stage NuGet packages via Google OSS Exit Gate",
         "sat: export from google3",
-        "routing: export from google3",
-        "g3 export (math_opt cleanup, tests disable cleanup)",
-        "g3 export (glop, examples/cpp)"
+        "routing: export from google3"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -666,13 +666,13 @@
         }
       ],
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_open_issues": 191,
+      "github_open_issues": 192,
       "github_recent_prs": [
-        "Changes to default parameters",
-        "Don't stop the main search when a heuristic sub-MIP stops on its own time limit",
-        "CbcHeuristic: make non-CLP isHeuristicInteger const",
-        "Root LP and LP-solve tables: switch Clp to the en_tabular language (companion to Clp#361)",
-        "Expose LP reoptimization controls in CBC and its C API"
+        "Restore `-unitTest` (MIPLIB 3 and the sample problems)",
+        "Fix `-probingCuts root`/`on` and `-cutsOnOff off`, and show cut generator totals for the tree",
+        "Fix four small output and command problems",
+        "Don't report an unfinished LP's objective as the bound when the time limit stops the root",
+        "Changes to default parameters"
       ]
     },
     {
@@ -1132,13 +1132,13 @@
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
       "github_stars": 6392,
-      "github_open_issues": 180,
+      "github_open_issues": 182,
       "github_recent_prs": [
+        "Fix 2-norm with keepdims=True and no axis",
+        "Fix post-solve problem serialization (Fixes #1438)",
         "Fix matrix_frac for sparse arguments",
         "Evaluate norm1, norm_inf and pnorm of sparse values",
-        "fix(cvxcore): prevent duplicate CONSTANT_ID initialization assertion in ProblemData (#3001)",
-        "fix(cvxcore): make ProblemData::init_id idempotent and avoid assertion failure (#3001)",
-        "feat(diff_engine): support per-solve and context-managed sparse_density_threshold (#3541)"
+        "fix(cvxcore): prevent duplicate CONSTANT_ID initialization assertion in ProblemData (#3001)"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Indictments are back, and better than before! One of the frequent comments we have received with Timefold Solver 2.0 was that we should not have removed indictments - we listened, and they are now bac",
-      "github_stars": 1866,
-      "github_open_issues": 113,
+      "github_stars": 1867,
+      "github_open_issues": 111,
       "github_recent_prs": [
+        "perf: optimize value range handling of neighborhoods",
         "feat: Add time to best solution into SolverJob",
         "chore: added solver run summary as log statement in solver worker on complet…",
         "perf: optimize value range handling of basic variable neighborhoods",
-        "Restructure packages of the definition module",
-        "feat: weighted move selection for neighborhoods"
+        "chore: restructure packages of the definition module"
       ]
     },
     {
@@ -1384,7 +1384,7 @@
         "algebraic"
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
-      "github_stars": 2564,
+      "github_stars": 2565,
       "github_open_issues": 390,
       "github_recent_prs": [
         "Use the configurable version timeout in the CBC shell plugin",
