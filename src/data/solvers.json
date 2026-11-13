@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T15:56:02.692677+00:00",
+  "generated_at": "2026-11-13T15:21:17.279582+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1919,
+      "github_stars": 1922,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlights of v1.16 are the use of parallelism by default in the\r\nMIP solver, a rewritten LP file reader, a Hessian oracle for QP,\r\nsupport for AMD GPUs in HiPDLP, Windows ARM64 Python wheels and ",
-      "github_open_issues": 118,
+      "github_open_issues": 126,
       "github_recent_prs": [
+        "Fix timeout on `mining`",
+        "Add linux-arm (32-bit ARMv7) to the Highs.Native NuGet package",
         "bunch of CI on PR",
         "Add policy",
-        "ubuntu 24 temporarily",
-        "Latest in master for release",
-        "Version bump 1.16"
+        "ubuntu 24 temporarily"
       ],
       "pypi_monthly_downloads": -93
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14370,
+      "github_stars": 14375,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 139,
+      "github_open_issues": 140,
       "github_recent_prs": [
-        "sat: various improvement",
-        "release: build python 3.15 wheel for macos and windows",
-        "ci(release): stage NuGet packages via Google OSS Exit Gate",
-        "sat: export from google3",
-        "routing: export from google3"
+        "routing: Fix potential OOB writes in open-source parsers.",
+        "sat: update",
+        "google3 export",
+        "examples: fix BitSet usage in dobble_ls.cc",
+        "google3 export (routing, sat, proto_solver)"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,7 +1131,7 @@
         "python"
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
-      "github_stars": 6392,
+      "github_stars": 6394,
       "github_open_issues": 182,
       "github_recent_prs": [
         "Fix 2-norm with keepdims=True and no axis",
@@ -1257,7 +1257,7 @@
       ],
       "recent_changes": "- Fixed issue where Ipopt exceptions could not been caught from other libraries on macOS with clang when Ipopt or the other library was build with `-fvisibility=hidden`.\r\n- Call `MPI_Init()` with NULL",
       "github_stars": 1802,
-      "github_open_issues": 14,
+      "github_open_issues": 15,
       "github_recent_prs": [
         "Refresh constant Hessians when reoptimizing with the same structure",
         "Fix scaling of initial bound multipliers in a warm start with scaled variables",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Indictments are back, and better than before! One of the frequent comments we have received with Timefold Solver 2.0 was that we should not have removed indictments - we listened, and they are now bac",
-      "github_stars": 1867,
-      "github_open_issues": 111,
+      "github_stars": 1871,
+      "github_open_issues": 112,
       "github_recent_prs": [
-        "perf: optimize value range handling of neighborhoods",
-        "feat: Add time to best solution into SolverJob",
-        "chore: added solver run summary as log statement in solver worker on complet…",
-        "perf: optimize value range handling of basic variable neighborhoods",
-        "chore: restructure packages of the definition module"
+        "perf(neighborhoods): draw list candidates from the datasets without copying",
+        "perf: refactor list compaction for simpler neighborhoods",
+        "docs: match the license management page to the License Manager",
+        "chore: throw the correct exception when inheriting list variables",
+        "fix: make the ModelDescriptor collections modifiable"
       ]
     },
     {
@@ -1385,13 +1385,13 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2565,
-      "github_open_issues": 390,
+      "github_open_issues": 391,
       "github_recent_prs": [
+        "(Temporarily) Disable MINLP support for Gurobi 14",
         "Use the configurable version timeout in the CBC shell plugin",
         "PyROS: pause the GC so it doesn't impact timing tests",
         "Fix `Param` default/initialize receiving the `Param` instead of the block",
-        "Move MIS reference URL to point to archival copy in pyomo-tutorials",
-        "fix-non-numeric-appsi-cbc-version-crash"
+        "Move MIS reference URL to point to archival copy in pyomo-tutorials"
       ],
       "pypi_monthly_downloads": -28
     },
@@ -1450,13 +1450,13 @@
       ],
       "recent_changes": "## JuMP v1.32.1\n\n[Diff since v1.32.0](https://github.com/jump-dev/JuMP.jl/compare/v1.32.0...v1.32.1)\n\n\n**Merged pull requests:**\n- Fix performance of flatten! for large summations (#4264) (@odow)\n- Ad",
       "github_stars": 2491,
-      "github_open_issues": 12,
+      "github_open_issues": 11,
       "github_recent_prs": [
+        "Fix a type instability in VariableInfo",
         "Set result counts when populating mock solutions in tests",
         "Add MFAOA.jl to solver list",
         "Copy constraint shapes in copy_model",
-        "Add Unitful extension",
-        "Fix formatting for latest JuliaFormatter"
+        "Add Unitful extension"
       ]
     },
     {

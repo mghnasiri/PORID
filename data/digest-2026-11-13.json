@@ -1,0 +1,368 @@
+{
+  "date": "2026-11-13",
+  "generated_at": "2026-11-13T15:21:17.852974+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1287-opre.2026.2625",
+      "title": "The Complexity of Scheduling Pickup and Delivery Jobs",
+      "authors": [
+        "Wang, T.",
+        "Wu, D.",
+        "Olson, D."
+      ],
+      "abstract": "Scheduling pickup and delivery jobs stands as a critical and challenging problem commonly encountered in time-sensitive logistics and transportation. Often, a large number of requests involving shipments from the same location are aggregated into either a fixed number of job queues, referred to as the queueing mode, or into a fixed number of sets, referred to as the pooling mode. Due to the time-sensitive nature, the objective of scheduling jobs by location and routing drivers is to minimize customers’ waiting times. While request aggregation is widely observed in platform economies and related research, the computational complexity of scheduling pickup and delivery jobs has not been studied. This paper presents a comprehensive complexity analysis of this problem. We prove that the problem is strongly NP-hard in the queueing mode, but is polynomially solvable in the pooling mode. Furthermore, we prove that both modes become polynomially solvable when minimizing total distance, as does the queueing mode with fixed number of drivers or scaled-length edges. Finally, we provide approximation guarantees and extend the analysis to bipartite graphs, identifying solvable variants with relaxed map-size constraints to enhance the applicability.",
+      "date": "2026-11-13",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2026.2625",
+      "tags": [
+        "scheduling",
+        "vehicle-routing",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2026.2625",
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2025.1935",
+      "title": "Alternating Methods for Large-Scale AC Optimal Power Flow with Unit Commitment",
+      "authors": [
+        "Brun, M.",
+        "Lee, T.",
+        "Lauinger, D.",
+        "Chen, X.",
+        "Sun, X."
+      ],
+      "abstract": "Security-constrained unit commitment with alternating current optimal power flow (SCUC-ACOPF) is a central problem in power grid operations that optimizes commitment and dispatch of generators under a physically accurate power transmission model while encouraging robustness against component failures. SCUC-ACOPF requires solving large-scale problems that involve multiple time periods and networks with thousands of buses within strict time limits. In this work, we study a detailed SCUC-ACOPF model with a rich set of features of modern power grids, including price-sensitive load, reserve products, transformer controls, and energy-limited devices. We propose a decomposition scheme and a penalty alternating direction method to find high-quality solutions to this model. Our methodology leverages spatial and temporal decomposition, separating the problem into a set of mixed-integer linear programs for each bus and a set of continuous nonlinear programs for each time period. To improve the performance of the algorithm, we introduce a variety of heuristics, including restrictions of temporal linking constraints, a second-order cone relaxation, and a contingency screening algorithm. We quantify the quality of feasible solutions through a dual bound from a second-order cone program. To evaluate our algorithm, we use large-scale test cases from Challenge 3 of the U.S. Department of Energy s Grid Optimization Competition that resemble real power grid data under a variety of operating conditions and decision horizons. The experiments yield feasible solutions with an average optimality gap of 1.33%, demonstrating that this approach generates near-optimal solutions within stringent time limits.",
+      "date": "2026-11-12",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2025.1935",
+      "tags": [
+        "integer-programming",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2025.1935",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1287-trsc.2025.0387",
+      "title": "The Robust Time-Dependent Vehicle Routing Problem with Time Windows and Budget Uncertainty",
+      "authors": [
+        "Malheiros, I.",
+        "Poss, M.",
+        "Subramanian, A.",
+        "Nesello, V."
+      ],
+      "abstract": "The vehicle routing problem with time windows (VRPTW) is a classical problem with many applications. In practice, travel times are time dependent because of traffic and uncertain events, such as accidents, weather, and road work. If these features are ignored, routes planned in advance may become infeasible. Although routing models incorporating time-dependent travel times typically rely on historical traffic data from location service providers, they do not capture uncertainty, and integrating real-time updates during execution remains difficult. This work introduces the robust time-dependent VRPTW, which uses robust optimization to handle uncertainty in time-dependent travel times. We study its computational properties and develop innovative exact approaches, including compact formulations, decomposition strategies, and a branch-and-cut algorithm with lazy cut generation. We also propose a primal heuristic based on iterated local search for larger instances. Experiments on adapted benchmark and real-world instances evaluate the algorithms and the model’s robustness. The best exact method solves about 78% of the instances to optimality within one hour. Simulations on real-world data show that the proposed model reduces infeasibilities compared with existing approaches while maintaining reasonable costs and computational times. These results provide planners and operators with more reliable schedules under uncertain traffic conditions, demonstrating the practical value of robustness in time-dependent vehicle routing.\n                  Funding: This work was supported by the Conselho Nacional de Desenvolvimento Científico e Tecnológico [Grants 309580/2021-8, 406245/2021-5, and 409595/2025-0] and the Association Nationale de la Recherche et de la Technologie [Grant CIFRE: 2021/1269].\n                  Supplemental Material: The online appendix is available at https://doi.org/10.1287/trsc.2025.0387 .",
+      "date": "2026-11-12",
+      "source": "Transportation Science",
+      "source_detail": "Transportation Science",
+      "url": "https://doi.org/10.1287/trsc.2025.0387",
+      "tags": [
+        "metaheuristics",
+        "vehicle-routing",
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1287/trsc.2025.0387",
+      "score": 60.0
+    },
+    {
+      "id": "arxiv-2611.16357",
+      "title": "Optimal Seat Movement Strategies Among Modular Bus Units",
+      "authors": [
+        "Shiyue Wang",
+        "Yuhao Liu",
+        "Zhibin Chen",
+        "Mingyang Pei",
+        "Changhong Lu"
+      ],
+      "abstract": "Movable seats enable passengers to transfer between coupled modular bus units while remaining seated, but require physical reconfiguration that existing modular transit models largely abstract away. We model seat reconfiguration as a colored generalized sliding-tile puzzle on the physical track graph, capturing simultaneous movements, seat indistinguishability within destination groups, and vertex, edge, and corner-following conflicts. A lexicographic objective minimizes makespan first and then the sum of costs (SoC), which penalizes movements and waiting at non-target positions. We develop an exact time-expanded mixed-integer linear programming formulation and a Boundary-Sequence Dynamic Programming (BSDP) algorithm. BSDP decomposes the problem at single-edge module interfaces and coordinates local schedules through compressed boundary-crossing sequences, provably preserving feasibility and optimal costs. On two- and three-module benchmarks, BSDP achieves mean per-instance speedups of 3.24x and 6.30x over Gurobi, respectively. In fixed-horizon tests with four to seven modules, both methods start from identical greedy schedules and receive a 300 s budget. BSDP obtains lower final SoC than Gurobi on 197 of 200 instances and ties on three, reducing mean final SoC by 17.93%-69.07% across the four size classes. Geometry sensitivity and ablation studies further clarify the contribution of boundary compression to computational performance. The framework links seat reconfiguration to the timing and operational cost of modular bus decoupling.",
+      "date": "2026-11-12",
+      "source": "arXiv",
+      "source_detail": "cs.CE",
+      "url": "http://arxiv.org/abs/2611.16357v1",
+      "tags": [
+        "cs.CE",
+        "linear-programming",
+        "integer-programming",
+        "scheduling",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.16357",
+      "arxiv_id": "2611.16357v1",
+      "score": 60.0,
+      "mentions_solvers": [
+        "Gurobi"
+      ]
+    },
+    {
+      "id": "openalex-W7225794796",
+      "title": "Penerapan Microlearning dalam Meningkatkan Literasi Digital dan Kemampuan Pemrograman: Studi Literatur Review",
+      "authors": [
+        "Tiara Siti Nurkolbi",
+        "Dian Rahadian",
+        "Iman Nasrulloh"
+      ],
+      "abstract": "Microlearning, the delivery of content in small units focused on a single learning goal, is increasingly used to build digital competence, yet evidence on its effects on digital literacy and programming ability has rarely been synthesised together. This study maps intervention characteristics, effectiveness, and implementation challenges. A systematic literature review following PRISMA 2020 covered journal articles, proceedings, and theses from 2016-2026, searched through open academic search on 16 October 2026. Of 48 records assessed, 14 primary studies were included (10 on digital literacy or competence, 4 on programming). All five controlled experimental studies favoured the Microlearning group; pre-post studies without comparison groups showed gains but are weak for causal inference. Recurring features were short single-concept units, interactivity with immediate feedback, and repeated access. Main barriers were infrastructure, teachers’ content-production skills, fragmented attention, and evidence quality. Microlearning appears promising as a complement to, not a replacement for, conventional instruction.",
+      "date": "2026-11-12",
+      "source": "OpenAlex",
+      "source_detail": "BLAZE Jurnal Bahasa dan Sastra dalam Pendidikan Linguistik dan Pengembangan",
+      "url": "https://doi.org/10.59841/blaze.v4i4.4374",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.59841/blaze.v4i4.4374",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7225798192",
+      "title": "Retrieval-Augmented Generation Chatbot for Academic Information Services Using GROQ API",
+      "authors": [
+        "Inda Fadila Ainul Hawa",
+        "Gina Purnama Insany"
+      ],
+      "abstract": "Academic information services in universities are still largely carried out manually by administrative staff with limited working hours, making it difficult for students to receive quick responses, especially outside office hours. This study aims to design and implement an academic chatbot using the Retrieval-Augmented Generation (RAG) approach through the Groq API and a Streamlit interface. The system was developed following the Design Science Research (DSR) methodology, which includes problem identification, defining solution objectives, dataset collection, artifact design and development, system demonstration, testing and evaluation, as well as communication of research results. Black-box testing on 20 questions yielded 18 valid answers, while semantic quality evaluation using BERTScore produced a precision of 0.7054, recall of 0.7176, and F1-score of 0.7095. The average system response time was 1.45 seconds, with a median of 0.85 seconds, indicates that the majority of responses were provided in less than one second, despite a single outlier of 12.13 seconds. These results finding suggest that the integration of RAG with the Groq API holds potential for enhancing digital academic information services in higher education. Nevertheless, its operational benefits in real-world scenarios warrant further evaluation through empirical user testing.",
+      "date": "2026-11-12",
+      "source": "OpenAlex",
+      "source_detail": "TEKNOSAINS Jurnal Sains Teknologi dan Informatika",
+      "url": "https://doi.org/10.37373/tekno.v14i1.2526",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.37373/tekno.v14i1.2526",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2611.16778",
+      "title": "Data-Driven Robust Inventory Planning and Advertising under Product Return",
+      "authors": [
+        "Hongyan Zhang",
+        "Yugang Yu",
+        "Qinshen Tang",
+        "Ye Shi",
+        "Li Chen"
+      ],
+      "abstract": "Online advertising is a central marketing lever for e-commerce retailers, yet it complicates operational planning by simultaneously stimulating product demand and increasing product returns. Motivated by the practice of a fashion retailer on Amazon, we study a retailer's joint inventory and advertising problem across multiple products over a single season, in which advertising has both direct and cross-product spillover effects on demand and returns. Using linear net-demand and return models that capture both effects, we formulate a contextual stochastic optimization model that jointly determines inventory levels and advertising decisions before the selling season. Because ad clicks are realized only after the advertising decision, the predictive covariates are partially observable and decision-dependent, and their joint distribution with the demand and return errors is unknown. We therefore develop an estimate-then-robustify (ETR) approach grounded in a data-driven robust satisficing framework. We establish a finite-sample guarantee on the out-of-sample profit of the ETR solution that holds for any parameter estimator, show that the solution is asymptotically optimal when the estimator is consistent and the profit target approaches the empirical optimal profit, and derive a mixed-integer conic approximation via affine recourse adaptation that is exact for a single product. On the retailer's data, ETR improves out-of-sample profit over conventional estimate-then-optimize by 6.39\\% and earns the higher profit in 74.5% of instances, with the largest gains when training data are scarce; the gain falls to 1.02% when the decision model omits cross-product spillovers.",
+      "date": "2026-11-12",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2611.16778v1",
+      "tags": [
+        "math.OC",
+        "integer-programming",
+        "stochastic",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.16778",
+      "arxiv_id": "2611.16778v1",
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7225777359",
+      "title": "Cloud Computing and DevOps Course Syllabus, Saarathi Academy, Kathmandu",
+      "authors": [
+        "Saarathi Academy"
+      ],
+      "abstract": "Week-by-week syllabus of the Cloud Computing and DevOps course taught at Saarathi Academy in Old Baneshwor, Kathmandu, Nepal. It shows what each week covers, the tools used and how the certification exam works. Classes are in person with up to 10 students in the room, and online. Course page, with the fee and the next batch: https://saarathiacademy.com.np/cloud-computing-and-devops-course-in-nepal This is the public short syllabus, the same file the website gives out at https://saarathiacademy.com.np/course-syllabi/cloud-computing-and-devops-syllabus.",
+      "date": "2026-11-12",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24144477",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.24144477",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "openalex-W7225788758",
+      "title": "An APP 1.4 Ontology and Labelled Corpus for Assessing Australian Health Privacy Policies: A Blind Test of Rules and Learning — Research Package",
+      "authors": [
+        "Raza Nowrozy",
+        "Urvashi Rahul Saxena",
+        "Mohammad Tahidul Islam",
+        "Omar Al-Boridi",
+        "Tahsien Al‐Quraishi",
+        "Yogita Khatri"
+      ],
+      "abstract": "Research archive supporting “An APP 1.4 Ontology and Labelled Corpus for Assessing Australian Health Privacy Policies: A Blind Test of Rules and Learning”. Version 1.0.0 preserves the supplied November 2026 archive unchanged. The archive contains 568 research files after excluding macOS metadata. Its bytes were verified against the GitHub release copy. Scientific experiments have not been independently rerun. Research predictions do not establish legal compliance. LICENCE SCOPE: CC BY 4.0 applies only to the authors’ original work and only to rights they are entitled to grant. Third-party policy texts, quotations and other third-party materials are excluded from this licence and retain their original copyright and licensing terms. Public availability does not grant additional rights in those materials. GitHub release: https://github.com/19976717/An_APP_1_4_Ontology_Paper/releases/tag/v1.0.0",
+      "date": "2026-11-12",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24147898",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.24147898",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "openalex-W7225799041",
+      "title": "What Customers Actually Ask Before Hiring: 112 Real Search Questions Across Five Home-Service and Business-Service Trades (2026)",
+      "authors": [
+        "Madison Hoskins"
+      ],
+      "abstract": "A descriptive field study cataloging 112 real questions customers type into search engines before hiring across five trades — gutter cleaning, gutter guard installation, moving services, handyman services, and AI receptionist services — classified by intent (cost, process, problems, comparisons, local/trust). No search-volume data is claimed.",
+      "date": "2026-11-12",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24147847",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.24147847",
+      "citation_count": 0,
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 3,
+    "conferences": 0,
+    "opportunities": 3,
+    "total": 13
+  }
+}
