@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T15:21:17.279582+00:00",
+  "generated_at": "2026-11-14T14:02:24.523558+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1922,
+      "github_stars": 1926,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlights of v1.16 are the use of parallelism by default in the\r\nMIP solver, a rewritten LP file reader, a Hessian oracle for QP,\r\nsupport for AMD GPUs in HiPDLP, Windows ARM64 Python wheels and ",
-      "github_open_issues": 126,
+      "github_open_issues": 154,
       "github_recent_prs": [
+        "Fix loss of precision in `HighsCDouble` division ",
+        "check/TestHipo.cpp: replace ints with HighsInts",
+        "extern/rcm/rcm.h: include <cstdint> for int64_t and uint64_t",
         "Fix timeout on `mining`",
-        "Add linux-arm (32-bit ARMv7) to the Highs.Native NuGet package",
-        "bunch of CI on PR",
-        "Add policy",
-        "ubuntu 24 temporarily"
+        "Add linux-arm (32-bit ARMv7) to the Highs.Native NuGet package"
       ],
       "pypi_monthly_downloads": -93
     },
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Features\r\n--------\r\n\r\n- added command line option `-t` to specify the number of threads, which triggers concurrent solving via `SCIPsolveConcurrent()`\r\n\r\nPerformance improvements\r\n--------------------",
-      "github_open_issues": 71,
+      "github_open_issues": 83,
       "github_recent_prs": [
         "Fix integer log overestimator for reference points below one",
         "Add CMake option CUSTOMIO to route stdout/stderr, exit and abort to the program that links SCIP",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14375,
+      "github_stars": 14377,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 140,
+      "github_open_issues": 141,
       "github_recent_prs": [
+        "[CBC interface] Support interrupting CBC",
+        "cmake: bump re2 to 2025-11-05",
+        "cleanup deps version + add changelog",
         "routing: Fix potential OOB writes in open-source parsers.",
-        "sat: update",
-        "google3 export",
-        "examples: fix BitSet usage in dobble_ls.cc",
-        "google3 export (routing, sat, proto_solver)"
+        "sat: update"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -666,13 +666,13 @@
         }
       ],
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_open_issues": 192,
+      "github_open_issues": 193,
       "github_recent_prs": [
+        "Don't abort on -rootCutFilterScore 0",
         "Restore `-unitTest` (MIPLIB 3 and the sample problems)",
         "Fix `-probingCuts root`/`on` and `-cutsOnOff off`, and show cut generator totals for the tree",
         "Fix four small output and command problems",
-        "Don't report an unfinished LP's objective as the bound when the time limit stops the root",
-        "Changes to default parameters"
+        "Don't report an unfinished LP's objective as the bound when the time limit stops the root"
       ]
     },
     {
@@ -1132,13 +1132,13 @@
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
       "github_stars": 6394,
-      "github_open_issues": 182,
+      "github_open_issues": 184,
       "github_recent_prs": [
+        "Fix NaN bounds from dense matmul turning into fixed auxiliary-variable bounds",
         "Fix 2-norm with keepdims=True and no axis",
         "Fix post-solve problem serialization (Fixes #1438)",
         "Fix matrix_frac for sparse arguments",
-        "Evaluate norm1, norm_inf and pnorm of sparse values",
-        "fix(cvxcore): prevent duplicate CONSTANT_ID initialization assertion in ProblemData (#3001)"
+        "Evaluate norm1, norm_inf and pnorm of sparse values"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1256,7 +1256,7 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed issue where Ipopt exceptions could not been caught from other libraries on macOS with clang when Ipopt or the other library was build with `-fvisibility=hidden`.\r\n- Call `MPI_Init()` with NULL",
-      "github_stars": 1802,
+      "github_stars": 1803,
       "github_open_issues": 15,
       "github_recent_prs": [
         "Refresh constant Hessians when reoptimizing with the same structure",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Indictments are back, and better than before! One of the frequent comments we have received with Timefold Solver 2.0 was that we should not have removed indictments - we listened, and they are now bac",
-      "github_stars": 1871,
-      "github_open_issues": 112,
+      "github_stars": 1872,
+      "github_open_issues": 110,
       "github_recent_prs": [
+        "perf(core): index reachable values by value range",
         "perf(neighborhoods): draw list candidates from the datasets without copying",
         "perf: refactor list compaction for simpler neighborhoods",
         "docs: match the license management page to the License Manager",
-        "chore: throw the correct exception when inheriting list variables",
-        "fix: make the ModelDescriptor collections modifiable"
+        "chore: throw the correct exception when inheriting list variables"
       ]
     },
     {
