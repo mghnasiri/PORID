@@ -1,0 +1,352 @@
+{
+  "date": "2026-11-15",
+  "generated_at": "2026-11-15T14:39:35.078881+00:00",
+  "publications": [
+    {
+      "id": "s2-4c3d21499af0",
+      "title": "Melior, Verifiable Mixed-Integer Programming via zkSNARKs",
+      "authors": [
+        "Wen-Jie Qu",
+        "Yan-Ze Jiang",
+        "Yan-Pei Guo",
+        "Jia-Heng Zhang"
+      ],
+      "abstract": "Mixed-integer linear programming (MILP) is a foundational tool for modeling complex decision-making problems across domains such as logistics, finance, healthcare, and network planning. While modern solvers can efficiently handle large and intricate MILP instances, they are typically deployed as black boxes, offering little transparency or auditability of their outputs. This limitation is particularly problematic in Optimization-as-a-Service settings, where users must trust remote solvers to return correct and optimal solutions. Although zero-knowledge proofs (ZKPs) provide a natural mechanism for verifiable computation without revealing sensitive information, directly applying general-purpose zkSNARKs to prove the full execution of MILP solvers is computationally infeasible due to the complexity and dynamism of solver internals. In this work, we present a specialized zero-knowledge verification framework for MILP solutions that avoids proving the entire solver execution. Instead, we certify optimality by proving solution feasibility, the validity of lower bounds at leaf nodes of a branch-and-bound tree, and the consistency of branching decisions, without revealing the solver's proprietary search strategy. To enable this approach, we introduce new techniques for zero-knowledge certification of linear programming infeasibility, node-bound correctness, and lightweight verification of branch-and-bound tree structure. We implement our system and evaluate it on standard MILP benchmark instances. Experimental results show that proof generation incurs only modest overhead relative to the solver runtime—for example, requiring only 3.1× the solver runtime for an instance with 23,970 variables and 16,765 constraints.",
+      "date": "2026-11-14",
+      "source": "Semantic Scholar",
+      "source_detail": "integer programming branch and bound",
+      "url": "https://doi.org/10.1145/3830454.3832625",
+      "tags": [
+        "linear-programming",
+        "integer-programming",
+        "healthcare-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1145/3830454.3832625",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "s2-1ff4c2ba611d",
+      "title": "Adaptive Gaussian Splatting SLAM: Robust Dense Mapping With Probabilistic Optimization",
+      "authors": [
+        "A. Mirza",
+        "Engr. Dr. Muntazir Hussain",
+        "Zai-Yue Yang"
+      ],
+      "abstract": "In this article, we present adaptive Gaussian splatting–simultaneous localization and mapping (AGS-SLAM), an red-green-blue-depth (RGB-D) Gaussian-based SLAM framework that injects uncertainty-aware and robust optimization into tracking, mapping, and loop closure. Unlike prior Gaussian SLAM pipelines that rely on deterministic updates and uniform residual weighting, AGS-SLAM renders per-pixel uncertainty from the Gaussian map and uses it to downweight unreliable regions during pose estimation, combined with a Tukey biweight objective whose scale is estimated automatically via median absolute deviation (MAD) for principled outlier suppression. On the mapping side, we introduce a multicue seeding strategy that fuses alpha holes, depth inconsistency, Sobel edges, and projected high-uncertainty Gaussians, and we optimize submaps with uncertainty-weighted photometric losses, uncertainty regularization, and scheduled pruning to stabilize geometry while preserving rendering fidelity. Finally, we add a lightweight submap-level loop-closure module using a training-free multicue hash descriptor, dynamic acceptance thresholds with contrastive margins and voting, followed by pose-graph optimization for global drift correction. Experiments on public RGB-D benchmarks and real-world sequences demonstrate that AGS-SLAM improves robustness and produces high-quality reconstructions under challenging sensing conditions.",
+      "date": "2026-11-15",
+      "source": "Semantic Scholar",
+      "source_detail": "robust optimization uncertainty",
+      "url": "https://doi.org/10.1109/JIOT.2026.3727283",
+      "tags": [
+        "network-optimization",
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1109/JIOT.2026.3727283",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "openalex-W7214635673",
+      "title": "Gradient affinity from a shared encoder guides multitask grouping of ADMET endpoints measured on largely disjoint compounds",
+      "authors": [
+        "Seoyoon Koo",
+        "Sungmin Ko",
+        "Seung‐Yong Seong"
+      ],
+      "abstract": "Source code for TAG-lite, a gradient-based task affinity grouping method for multi-task ADMET property prediction, accompanying the manuscript submitted to Scientific Reports. This archive is a snapshot of the GitHub repository at commit 3e4fc32. See README.md for installation and instructions to reproduce the results reported in the paper.",
+      "date": "2026-11-15",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23005238",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23005238",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "s2-7eaf68b84fa1",
+      "title": "Communication-Aware Task Planning for Heterogeneous UUV Swarms in the Internet of Underwater Things",
+      "authors": [
+        "Zhi-Yu Cui",
+        "Jin-Ping Sui",
+        "Lu Liu",
+        "Shuo Zhang",
+        "Ying Li",
+        "Jin-Liang Ding",
+        "Jun-Zhi Yu",
+        "Xiao-Meng Zhang"
+      ],
+      "abstract": "The Internet of Underwater Things (IoUT) extends distributed sensing to marine environments, where unmanned underwater vehicles (UUVs) serve as mobile nodes for flexible underwater operations. This article investigates the heterogeneous UUV multitype task planning problem (HUMTTP) for a collaborative system comprising autonomous underwater vehicles (AUVs), underwater gliders (UGs), and bionic manta-ray underwater vehicles (BMUVs). Existing methods generally prioritize execution efficiency but often overlook platform heterogeneity and acoustic communication limitations. To address these issues, this article proposes a hierarchical task planning framework called REASOM-UCLNS. In the task allocation layer, the reward- and energy-aware self-organizing map (REASOM) algorithm incorporates a novel neuron-based reward estimation strategy into winner selection. By integrating the estimated platform-specific task rewards with current-aware energy evaluation, REASOM assesses the execution suitability of heterogeneous UUVs and facilitates the efficient allocation of multitype tasks. In the route planning layer, the underwater cooperative large neighborhood search (UCLNS) algorithm converts the generated task sets into feasible routes for individual UUVs. UCLNS develops two constraint-specific operators to restore route feasibility when communication connectivity or energy balance violations occur. By integrating targeted constraint handling into the destroy-repair process, UCLNS improves route quality while satisfying operational constraints. Numerical results demonstrate the superior performance of the proposed framework. Finally, a lake experiment involving four heterogeneous AUVs further confirms its practical applicability.",
+      "date": "2026-11-15",
+      "source": "Semantic Scholar",
+      "source_detail": "vehicle routing problem",
+      "url": "https://doi.org/10.1109/JIOT.2026.3730948",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1109/JIOT.2026.3730948",
+      "arxiv_id": "",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1080-01605682.2026.2754334",
+      "title": "Dynamic re-scheduling of technician routes: a case study in the B2B e-mobility sector",
+      "authors": [
+        "Vermeire, R.",
+        "Bakker, S.",
+        "Maenhout, B."
+      ],
+      "abstract": "",
+      "date": "2026-11-14",
+      "source": "Journal of the Operational Research Society",
+      "source_detail": "Journal of the Operational Research Society",
+      "url": "https://doi.org/10.1080/01605682.2026.2754334",
+      "tags": [
+        "scheduling"
+      ],
+      "type": "publication",
+      "doi": "10.1080/01605682.2026.2754334",
+      "score": 45.0
+    },
+    {
+      "id": "optim-online-14495b45575f",
+      "title": "Intersection Cuts for Mixed-Integer Nonlinear Programs via Decision-Diagram-Free Sets",
+      "authors": [],
+      "abstract": "We introduce a novel decision-diagram-based framework for generating intersection cuts to strengthen polyhedral relaxations of bounded mixed-integer nonlinear programs (MINLPs) with general nonlinear constraints. Building on decision diagrams (DDs) that provide outer approximations of MINLP feasible regions, we propose the concept of DD-free sets, which are convex regions whose interiors do not intersect the sets ... Read more",
+      "date": "2026-11-14",
+      "source": "Optimization Online",
+      "url": "https://optimization-online.org/2026/11/intersection-cuts-for-mixed-integer-nonlinear-programs-via-decision-diagram-free-sets/?utm_source=rss&utm_medium=rss&utm_campaign=intersection-cuts-for-mixed-integer-nonlinear-programs-via-decision-diagram-free-sets",
+      "tags": [
+        "integer-programming"
+      ],
+      "type": "publication",
+      "score": 45.0
+    },
+    {
+      "id": "openalex-W7225983447",
+      "title": "具身智能动作决策的最小证据边界 / Minimal Evidence Boundaries for Action Decisions in Embodied Agents",
+      "authors": [
+        "YANGZHOU"
+      ],
+      "abstract": "本稿为中文方法与理论研究草稿,提出以当前动作是否可被证据确认,作为进一步获取观测的停止条件。稿件区分静态离线最短证书与在线自适应查询代价,并给出基本推导、动态失效反例与后续比较实验方案。研究仍处于探索阶段,新颖性与实际工程收益尚未建立;本文不是经同行评审的期刊论文。 Minimal Evidence Boundaries for Action Decisions in Embodied Agents. This Chinese-language methods and theory draft studies action-specific evidence acquisition, distinguishing offline certificates from online adaptive query costs. It includes elementary propositions, a dynamic invalidation counterexample, and a falsifiable evaluation plan. Novelty and practical benefits remain to be established. This is an exploratory preprint, not a peer-reviewed journal article. Validation is limited to a four-bit static logical model: 16 worlds, 81 partial-evidence states and 256 compatible world/evidence pairs. The included standard-library Python program and actual JSON output reproduce these checks. There are no physical robot experiments, learned-model benchmarks or claims of real-world safety. Query-count comparisons apply only to the stated toy model and uniform distribution. Files: six-page Chinese manuscript PDF, editable DOCX, Python checker, actual enumeration results and reproduction instructions. Manuscript version completed on 2026-11-13; repository publication date is 2026-11-14. The manuscript's statement that it had not yet been submitted describes its status when written. AI assistance was used for ideation, literature discovery, drafting, formalization, coding and typesetting. Related work and limitations are explicitly discussed. The listed author and affiliation follow author-provided information: YANGZHOU, 梗必爆具身交互AI研究院 (Genbibao Embodied AI Research Institute), ORCID 0009-0005-4736-2097. This record does not assert journal acceptance or indexing by CNKI or Scopus.",
+      "date": "2026-11-14",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24201766",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.24201766",
+      "citation_count": 0,
+      "score": 45.0
+    },
+    {
+      "id": "openalex-W7226023408",
+      "title": "TRBio 1.0: de-identified co-authorship network, aggregate results and analysis code for \"Mapping Bioinformatics in Türkiye\" and \"TRBio\"",
+      "authors": [
+        "Mustafa Eren Koç",
+        "Ali Cakmak"
+      ],
+      "abstract": "Data and code release for two manuscripts built on trbio.info, the curated portal of bioinformatics researchers in Türkiye: (1) Koç ME, Çakmak A. Mapping Bioinformatics in Türkiye: A Network-Based Review of Researchers, Institutions, and Research Themes (submitted to Briefings in Bioinformatics); (2) Koç ME, Çakmak A. TRBio: A Curated Knowledge Base and Network Resource for the Bioinformatics Research Community in Türkiye (submitted to Database). Both describe TRBio version 1.0, the catalogue snapshot of 1 November 2026 (264 researchers at 99 universities, drawn from 1,079 scored records). Contents. coauthorship_nodes.csv and coauthorship_edges.csv: the co-authorship network of the catalogue members. Researchers are pseudonymous (keyed HMAC of the national identifier; not reversible without the authors' secret). The only node attribute is the department culture of appointment (Computational / Hybrid / Life sciences & medicine / Other). Edge weight = number of co-authored articles and proceedings papers. University, city, rank and gender are left out on purpose, so that no person can be singled out. mapping-bioinformatics-turkiye-v1.0.zip: the analysis code (Python), unit tests on synthetic data, the LaTeX sources of both manuscripts and all aggregate result tables and figures of the snapshot; every number in the manuscripts is generated from these results. No individual is named or ranked in the released data (Turkish data-protection law, KVKK). The live portal and its API (https://trbio.info, https://trbio.info/api/v1) serve the current version; its version history is on the portal's About page. Data: CC BY 4.0. Code: MIT.",
+      "date": "2026-11-14",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24208633",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.24208633",
+      "citation_count": 0,
+      "score": 45.0
+    },
+    {
+      "id": "openalex-W7227953613",
+      "title": "Supporting files for “Generative AI in Genre- and Discourse-Based ESP: A Scoping Review\"",
+      "authors": [
+        "Wiam Hadji",
+        "Mohamed Naoua"
+      ],
+      "abstract": "Supporting files for the scoping review “Generative AI in Genre- and Discourse-Based ESP: A Scoping Review” (Journal of Language and Education, submission 42494). The deposit contains the PRISMA-ScR checklist; the record-level audit workbook (1,267 search results with source, title, DOI, duplicate group and screening decision; 78 included studies and 31 full-text exclusions); the second author’s verification worksheet; and Figure 1, the PRISMA-ScR flow diagram, in SVG and PDF. The raw Scopus and ScienceDirect exports and the saved Google Scholar result pages are not included because the providers’ terms restrict their public redistribution; they are available from the authors on request. The search expressions are in Supplementary Part 3 of the manuscript.",
+      "date": "2026-11-14",
+      "source": "OpenAlex",
+      "source_detail": "Figshare",
+      "url": "https://doi.org/10.6084/m9.figshare.35010727",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.6084/m9.figshare.35010727",
+      "citation_count": 0,
+      "score": 45.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "openalex-W7228825648",
+      "title": "ParhamShabani/eBPF-Stack-Unwinding-Systematic-Review: v1.0.0 - Replication Package & PRISMA Artifacts",
+      "authors": [
+        "Parham Shabani"
+      ],
+      "abstract": "Overview This release provides the complete replication package, systematic literature review (SLR) protocol, search queries, screening logs, and validation scripts for the research paper: \"A Systematic Review of Stack Unwinding Mitigations for eBPF-Based Telemetry Under -fomit-frame-pointer Optimization\" Contents of this Release PRISMA/screening_log.csv: Archival database search and screening metrics across IEEE Xplore, ACM Digital Library, USENIX Association, Scopus, and Web of Science. prisma_check.py: Automated Python validation script ensuring mathematical consistency across PRISMA flow totals. README.md: Comprehensive documentation detailing search query strings, research questions ($RQ_1$–$RQ_4$), and database statistics. Compliance Methodology: Executed in strict accordance with PRISMA 2020 guidelines. Archival DOI: Linked and permanently archived via Zenodo to ensure full reproducibility for peer review.",
+      "date": "2026-11-14",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24235280",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.24235280",
+      "citation_count": 0,
+      "score": 45.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 3,
+    "conferences": 0,
+    "opportunities": 3,
+    "total": 13
+  }
+}

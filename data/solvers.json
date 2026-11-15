@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T14:02:24.523558+00:00",
+  "generated_at": "2026-11-15T14:39:34.591695+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1926,
+      "github_stars": 1927,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlights of v1.16 are the use of parallelism by default in the\r\nMIP solver, a rewritten LP file reader, a Hessian oracle for QP,\r\nsupport for AMD GPUs in HiPDLP, Windows ARM64 Python wheels and ",
-      "github_open_issues": 154,
+      "github_open_issues": 161,
       "github_recent_prs": [
+        "Fix MIP start whose image in the reduced space is infeasible (#3642)",
+        "Fix 3679 cupdlp infeas",
         "Fix loss of precision in `HighsCDouble` division ",
         "check/TestHipo.cpp: replace ints with HighsInts",
-        "extern/rcm/rcm.h: include <cstdint> for int64_t and uint64_t",
-        "Fix timeout on `mining`",
-        "Add linux-arm (32-bit ARMv7) to the Highs.Native NuGet package"
+        "extern/rcm/rcm.h: include <cstdint> for int64_t and uint64_t"
       ],
       "pypi_monthly_downloads": -93
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 677,
+      "github_stars": 678,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -458,13 +458,13 @@
         }
       ],
       "recent_changes": "Features\r\n--------\r\n\r\n- added command line option `-t` to specify the number of threads, which triggers concurrent solving via `SCIPsolveConcurrent()`\r\n\r\nPerformance improvements\r\n--------------------",
-      "github_open_issues": 83,
+      "github_open_issues": 85,
       "github_recent_prs": [
+        "messagePrintInfo passes file output to the dialog callback instead of the info callback",
+        "Fix copy-paste errors in error messages and documentation",
         "Fix integer log overestimator for reference points below one",
         "Add CMake option CUSTOMIO to route stdout/stderr, exit and abort to the program that links SCIP",
-        "Portability fixes for 10.1.1: strerror_r on macOS, (void) in tpi_openmp.c, <cstdlib> in multiprecision.hpp",
-        "Fix original objective offset in exact solution conversion",
-        "fix loss of explicit upper bounds in MPS reader"
+        "Portability fixes for 10.1.1: strerror_r on macOS, (void) in tpi_openmp.c, <cstdlib> in multiprecision.hpp"
       ],
       "pypi_monthly_downloads": -46
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14377,
+      "github_stars": 14380,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 141,
+      "github_open_issues": 140,
       "github_recent_prs": [
+        "cmake: bump highs to v1.16.0",
+        "docs: add Simplified Chinese translation (README.zh.md)",
         "[CBC interface] Support interrupting CBC",
         "cmake: bump re2 to 2025-11-05",
-        "cleanup deps version + add changelog",
-        "routing: Fix potential OOB writes in open-source parsers.",
-        "sat: update"
+        "cleanup deps version + add changelog"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1132,13 +1132,13 @@
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
       "github_stars": 6394,
-      "github_open_issues": 184,
+      "github_open_issues": 188,
       "github_recent_prs": [
+        "Keep matrix properties only when transpose preserves the matrix axes",
+        "Fix batched trace of matrix products",
         "Fix NaN bounds from dense matmul turning into fixed auxiliary-variable bounds",
         "Fix 2-norm with keepdims=True and no axis",
-        "Fix post-solve problem serialization (Fixes #1438)",
-        "Fix matrix_frac for sparse arguments",
-        "Evaluate norm1, norm_inf and pnorm of sparse values"
+        "Fix post-solve problem serialization (Fixes #1438)"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1320,13 +1320,13 @@
       ],
       "recent_changes": "Indictments are back, and better than before! One of the frequent comments we have received with Timefold Solver 2.0 was that we should not have removed indictments - we listened, and they are now bac",
       "github_stars": 1872,
-      "github_open_issues": 110,
+      "github_open_issues": 111,
       "github_recent_prs": [
+        "fix: resolve SonarCloud reliability and new-code issues",
         "perf(core): index reachable values by value range",
         "perf(neighborhoods): draw list candidates from the datasets without copying",
         "perf: refactor list compaction for simpler neighborhoods",
-        "docs: match the license management page to the License Manager",
-        "chore: throw the correct exception when inheriting list variables"
+        "docs: match the license management page to the License Manager"
       ]
     },
     {
@@ -1385,7 +1385,7 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2565,
-      "github_open_issues": 391,
+      "github_open_issues": 393,
       "github_recent_prs": [
         "(Temporarily) Disable MINLP support for Gurobi 14",
         "Use the configurable version timeout in the CBC shell plugin",
