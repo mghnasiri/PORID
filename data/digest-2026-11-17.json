@@ -1,0 +1,346 @@
+{
+  "date": "2026-11-17",
+  "generated_at": "2026-11-17T16:50:00.103449+00:00",
+  "publications": [
+    {
+      "id": "openalex-W7233559526",
+      "title": "Supplementary materials for Toward Trustworthy Synthetic Media Forensics: A Review of Detection, Provenance, and Investigation Workflows",
+      "authors": [
+        "Anfal Tariq",
+        "Muhammad Hamid",
+        "Ali Sufyan"
+      ],
+      "abstract": "Supplementary materials for the narrative integrative review \"Toward Trustworthy Synthetic Media Forensics: A Review of Detection, Provenance, and Investigation Workflows\" by Anfal Tariq, Muhammad Hamid, and Ali Sufyan, The Islamia University of Bahawalpur, Pakistan. S1 contains the 123-record cited-source ledger, logged discovery captures, and primary-source, DOI, date, and version verification records. The IEEE Xplore and Springer Nature Link updates are documented discovery searches; their captured records are distinguished from purposive author selection. The literature cutoff is October 9, 2026. Selected version, date, and numerical-result checks were completed on November 15, 2026. S2 contains descriptive source extraction, three supporting comparison tables, and source-reported numerical results with their training/test conditions and exact primary-table locators. S3 contains the proposed twenty-group reporting checklist, pinpoint source support, seven consistently named interface requirements, and future-evaluation mappings. S4 contains illustrative local exchange mappings, synthetic fixtures, deterministic outputs, and reproduction code. The archive also supplies the manuscript's six native LaTeX figure fragments and a SHA-256 file manifest. The checklist and omission scenarios remain proposed. No independent-coder audit, inter-rater agreement statistic, practitioner study, new detector evaluation, or real-consumer exchange benchmark is claimed. The related conceptual system design and unused human-audit forms are excluded from this release. Original review annotations and original illustrative code are offered under CC BY 4.0. Third-party metadata, specification captures, and vendored schema files retain their respective rights and licenses. Version 1.0.0; archive finalized November 15, 2026.",
+      "date": "2026-11-16",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.23280555",
+      "tags": [
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.23280555",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2022.0205",
+      "title": "Exploration Optimization for Dynamic Assortment Personalization under Linear Preferences",
+      "authors": [
+        "Bernstein, F.",
+        "Modaresi, S.",
+        "Saure, D."
+      ],
+      "abstract": "We study dynamic assortment personalization, where an online retailer adaptively selects assortments based on customer attributes to learn preferences and maximize revenue. We assume that product utilities depend linearly on customer attributes through an unknown coefficient matrix, leading to an exploration–exploitation trade-off. We identify price-driven and linearity-driven exploration efficiencies, showing that not all products need to be offered to all customer profiles to recover optimal assortments. We establish an instance-dependent regret lower bound characterized by a linear program, which we call the Regret Lower Bound (RLB) problem. Because the RLB has a complex structure and depends non-trivially on unknown parameters, we introduce an alternative formulation, called the Exploration-Optimization problem, that yields an interpretable exploration structure and can be formulated as a tractable mixed-integer linear program. We develop learning policies that select efficient exploration sets by solving either problem and establish a regret upper bound for the Exploration-Optimization policy. Using data from a large Chilean retailer, we demonstrate that our policies substantially outperform Thompson sampling in terms of both regret and computational efficiency, while remaining scalable in practice.",
+      "date": "2026-11-16",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2022.0205",
+      "tags": [
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2022.0205",
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7233591320",
+      "title": "Capstone Sponsor Onboarding Ontology (CSO), version 0.2.1: OWL ontology, competency-question SPARQL queries and results",
+      "authors": [
+        "Michael Robbeloth"
+      ],
+      "abstract": "Version 0.2.1 of the Capstone Sponsor Onboarding Ontology (CSO), an OWL 2 ontology for the onboarding of capstone design project sponsors: the interval between a sponsor's commitment and a student team's first productive week. It names actors, artifacts, activities, phases, decision gates, risks, adjustment constructs from organizational socialization theory, outcome measures, sponsor types and practices, and gives every practice an evidence level. Version 0.2.0 was frozen on 14 November 2026 as the codebook of a rapid systematic review of sponsor onboarding practices in capstone design; version 0.2.1 re-froze it on 15 November 2026, after the author's check of its coding calls and before any report was coded. The record also holds the ontology's 18 competency questions as SPARQL 1.1 queries, a Python script that runs them with rdflib, two synthetic test programs and the results (14 pass, 4 partial, 0 fail). Each evidence level carries a weight for a proposed readiness rubric, which has not been validated. License: CC BY 4.0.",
+      "date": "2026-11-16",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24264613",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.24264613",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2611.20795",
+      "title": "Speed-Robust Scheduling for Total Completion Time",
+      "authors": [
+        "Moritz Buchem",
+        "Nicole Megow",
+        "Morten Weber"
+      ],
+      "abstract": "We study two-stage speed-robust scheduling for minimizing total completion time. Jobs must be partitioned into $M$ bags before an adversary reveals the speeds of at most $M$ machines. Each bag is then assigned to one available machine, and the jobs on each machine may be processed in any order independent of the bags. We compare with an optimal schedule that knows the speeds in advance and assigns jobs individually. This model has been studied for makespan minimization. We initiate its study for total completion time, as suggested by Stein and Zhong (TALG 2020).   For an unknown number of identical machines, we show that the optimal deterministic robustness factor is exactly~$13/12$, both for unit-size jobs and for arbitrary processing times. For infinitesimally small jobs, the factor lies between $31/30\\approx1.0333$ and $28/27\\approx1.0370$, well below the optimal makespan factor of about $1.2071$. General speeds make the problem strictly harder: no deterministic algorithm is better than $1.2669$-robust, already for infinitesimally small jobs. We give a $25/16$-robust algorithm for arbitrary processing times and improve the guarantee to $1681/1152\\approx1.4592$ for infinitesimally small jobs. Our main tools are a layer decomposition that extends guarantees from unit-size jobs to arbitrary processing times when one assignment satisfies them for every prefix in non-increasing processing-time order, and a threshold analysis of the bag counts produced by greedy assignment rules.",
+      "date": "2026-11-16",
+      "source": "arXiv",
+      "source_detail": "cs.DS",
+      "url": "http://arxiv.org/abs/2611.20795v1",
+      "tags": [
+        "cs.DS",
+        "scheduling",
+        "stochastic",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.20795",
+      "arxiv_id": "2611.20795v1",
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7233707081",
+      "title": "Perth AI Search Study 2026: AI Recommendations of Local Businesses Across Four AI Systems (Research Summary)",
+      "authors": [
+        "Dorian Menard"
+      ],
+      "abstract": "Research summary of 2,400 answers from Google AI Overviews, Google AI Mode, ChatGPT and Gemini to 200 commercial questions about 20 Perth industries, asked three times between 8 and 10 September 2026. Most recommended businesses sat outside the Google Maps top 20, recommendations changed from day to day, and the businesses recommended repeatedly tended to rank in Google's organic top 10 and carry more Google reviews. Full study and dataset: https://aiseoperth.net.au/research/perth-ai-search-study-2026/ . Research by Search Scope, Perth: https://searchscope.com.au/ Methodology v2.0. Observations collected 8 to 10 September 2026. Published by AI SEO Perth; research conducted by Search Scope, Perth, Western Australia.",
+      "date": "2026-11-17",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24294871",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.24294871",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7233716380",
+      "title": "Metric Reconciliation in AI-Enabled Marketing Operations: A Descriptive Audit of Two Business Reports",
+      "authors": [
+        "YANGZHOU"
+      ],
+      "abstract": "Descriptive report / 描述性报告. Not peer reviewed; no intervention experiment; no claim of journal acceptance or CNKI/Scopus indexing. This report audits author-supplied commercial presentation summaries for a beverage livestream campaign and an industrial-equipment promotion project. Twelve selected retrospective arithmetic checks are reproduced: nine agree under the stated rounding rules; three payment-share comparisons remain unresolved if the campaign total is assumed as their denominator. Conditional calculations are diagnostic, not corrected business shares or evidence of fabricated source data. Source limitations: original backend exports, transaction records, model execution logs and randomized comparisons were unavailable. The manuscript does not establish AI sales uplift, persistent search leadership or a new algorithm. It discloses the author's involvement in the related business and use of AI assistance. The source slides and client images are not redistributed. The accompanying JSON is a transcription of report summaries, not raw backend or experimental data; the Python script reproduces arithmetic only. 本报告围绕作者正在开展的智能营销业务,对两份业务复盘材料进行描述性核查。内容为报告转录、算术复算、统计范围差异与后续测量建议,不冒充已开展的现场实验,不保证期刊录用、知网或Scopus收录。文中披露作者相关商业任职及AI辅助情况。请勿把数据整理或公开存档视为实证效果已验证。",
+      "date": "2026-11-17",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24288807",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.24288807",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7234484174",
+      "title": "Research Data on Player Experiences and Meaning Construction in Heritage-Themed Games",
+      "authors": [
+        "Yu-Yi Zheng",
+        "Wen-Xi Jiang",
+        "Xiao-Qi Zhan",
+        "Hongfeng Zhang",
+        "Lei Xiong",
+        "Bo-Wei Zhu"
+      ],
+      "abstract": "This dataset contains the game-event catalogue and aggregated analytical results supporting research on player experiences and meaning construction in heritage-themed games. It includes aggregated factor analysis results, factor arrays, distinguishing events, factor correlations, factor-retention comparisons, and BERTopic topic summaries and statistics. Participant-level raw data, original player reviews, interview recordings, and full interview transcripts are not publicly available due to privacy and confidentiality considerations.",
+      "date": "2026-11-17",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24285196",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.24285196",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7234609101",
+      "title": "Building a single classroom for app development: Peer video review as process evidence in a hybrid app development curriculum",
+      "authors": [
+        "Michael Cowling",
+        "Joshua Newn"
+      ],
+      "abstract": "Hybrid classes that split face-to-face and online students across separate rooms, timetables and (often) separate expectations risk becoming two separate classrooms within one class, rather than a single cohort. This paper reports the conceptual framing, literature context, intervention design and methodology of a study examining whether an intentionally designed, video-centred hybrid model can knit a dispersed cohort back into a single classroom, and whether the evidence it generates can say something more useful about learning than a finished app ever could. The study is set in an app development class at a university, where on-campus and online students learn iOS app development side by side. Building on an existing model for merging cohorts through the deliberate use of technology, the intervention layers a new practice onto shared lecture capture: students record and upload short videos of their app prototypes and code walkthroughs for structured peer review. The activity is designed both to strengthen interaction across the hybrid cohort and to foreground students’ thinking and development process, since every student contributes and reviews the same form of evidence regardless of study mode. Where a submitted app file is a product, a video walkthrough of how it was built and why is closer to a process, and in an era in which generative AI can produce a plausible product on demand, process is where the more trustworthy evidence of learning now sits. This concise paper sets out the problem, research questions, literature context, intervention design and methodology; findings will be reported once data collection is complete.",
+      "date": "2026-11-17",
+      "source": "OpenAlex",
+      "source_detail": "ASCILITE Publications",
+      "url": "https://doi.org/10.65106/apubs.2026.3301",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.65106/apubs.2026.3301",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7233542418",
+      "title": "Kompass: An Agentic Retrieval-Augmented Generation System for Personalized German University Admissions",
+      "authors": [
+        "Ujjwal Bisht"
+      ],
+      "abstract": "The German higher education system offers tuition-free, world-class education, yet Indian students face a labyrinth of bureaucratic complexity—including the APS certificate, Uni-Assist, Blocked Accounts, and Anabin degree recognition—that is poorly served by generic Large Language Models. This paper presents Kompass, a public-facing Agentic Retrieval-Augmented Generation (RAG) system designed as an expert advisor for German admissions. Kompass employs a Hybrid Database Architecture (relational SQL + pgvector) to ground its responses in 6,000+ university programs and 100+ verified policy documents. A deterministic ”Pre-Flight Execution” router classifies user queries and invokes specialized Python tools for math, SQL filtering, OCR-based document parsing, and live web search, eliminating LLM hallucinations. Evaluation under adversarial testing demonstrates a 0% hallucination rate on fabricated universities and a 0% UI crash rate under API stress, with end-to-end response latency under 3.5 seconds. This work serves as a proof-of-concept for low-cost, domain-specific Agentic RAG systems across sectors. Index Terms—Agentic RAG, Large Language Models, German Admissions, Hybrid Database, Hallucination Mitigation.",
+      "date": "2026-11-16",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24265011",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.24265011",
+      "citation_count": 0,
+      "score": 50.0
+    },
+    {
+      "id": "openalex-W7233573406",
+      "title": "A Study on the Impact of Social Media Data Mining from the Douban Platform on Book Topic Planning",
+      "authors": [
+        "Bo Zhang",
+        "Xue Bi"
+      ],
+      "abstract": "Against the backdrop of “Internet Plus,” this study analyzes reader needs using data from Douban’s Top 250 books. Through Python-based data collection, text mining, and statistical analysis, it identifies two themes: individual life narratives and emotional resonance, and social structure and reality reflection. Findings reveal differences in emotional responses across book types, but no significant correlation between immediate emotions and ratings. The study demonstrates the value of user-generated content in informing publishing decisions and book selection.",
+      "date": "2026-11-16",
+      "source": "OpenAlex",
+      "source_detail": "Economics & Business Management",
+      "url": "https://doi.org/10.63313/ebm.9245",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.63313/ebm.9245",
+      "citation_count": 0,
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 3,
+    "conferences": 0,
+    "opportunities": 3,
+    "total": 13
+  }
+}

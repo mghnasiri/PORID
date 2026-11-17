@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T16:55:22.019683+00:00",
+  "generated_at": "2026-11-17T16:49:59.547231+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1929,
+      "github_stars": 1930,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlights of v1.16 are the use of parallelism by default in the\r\nMIP solver, a rewritten LP file reader, a Hessian oracle for QP,\r\nsupport for AMD GPUs in HiPDLP, Windows ARM64 Python wheels and ",
-      "github_open_issues": 157,
+      "github_open_issues": 160,
       "github_recent_prs": [
-        "Speed up `HPresolve::dominatedColumns`",
-        "Write the log header once per instance, and not when setting callbacks",
-        "fix cast for extending fixingQueue",
-        "do not print the log header passing in or starting callbacks",
-        "Fix MIP start whose image in the reduced space is infeasible (#3642)"
+        "HiPDLP: use primal and dual feasibility tolerances in termination test",
+        "Fix inconsistencies from clique table updates",
+        "Redirect substitute to fixedCol if scale is 0",
+        "Improve license notices",
+        "Speed up `HPresolve::dominatedColumns`"
       ],
       "pypi_monthly_downloads": -93
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 678,
+      "github_stars": 679,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Features\r\n--------\r\n\r\n- added command line option `-t` to specify the number of threads, which triggers concurrent solving via `SCIPsolveConcurrent()`\r\n\r\nPerformance improvements\r\n--------------------",
-      "github_open_issues": 84,
+      "github_open_issues": 85,
       "github_recent_prs": [
         "messagePrintInfo passes file output to the dialog callback instead of the info callback",
         "Fix copy-paste errors in error messages and documentation",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14383,
+      "github_stars": 14392,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 144,
+      "github_open_issues": 142,
       "github_recent_prs": [
-        "bazel: Update github.com/golang/glog dependency to v1.2.5 in OR-Tools.",
-        "util: Add QuotientBounds() to full_precision_inequalities.",
-        "routing: dump vars in log in few tests",
-        "g3 export (base, bitset, sat/python)",
-        "sat: make interleaved feasibility jump tasks deterministic"
+        "sat: Fix integral LP solutions that violate model assumptions",
+        "python setup and base recordio fix",
+        "ci: test Python 3.15 in CMake Python workflows",
+        "Keep -inf lower bounds of continuous variables in LP export",
+        "bazel: Update github.com/golang/glog dependency to v1.2.5 in OR-Tools."
       ],
       "pypi_monthly_downloads": -34
     },
@@ -1131,7 +1131,7 @@
         "python"
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
-      "github_stars": 6394,
+      "github_stars": 6396,
       "github_open_issues": 195,
       "github_recent_prs": [
         "Document warm_start in Problem.solve",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Indictments are back, and better than before! One of the frequent comments we have received with Timefold Solver 2.0 was that we should not have removed indictments - we listened, and they are now bac",
-      "github_stars": 1872,
-      "github_open_issues": 110,
+      "github_stars": 1873,
+      "github_open_issues": 117,
       "github_recent_prs": [
+        "fix: give a from-patch dataset the name and the tags of config.run",
+        "fix: return the config of a from-patch request in its model-request",
+        "fix: read config.model.overrides in a from-patch request",
         "deps: various version upgrades",
-        "deps: upgrade Quarkus to 3.40.1.2",
-        "deps: bump version.io.quarkus from 3.40.1 to 3.40.1.2",
-        "deps: bump io.smallrye:jandex-maven-plugin from 3.6.0 to 3.6.1 in the patch group",
-        "deps: bump the minor group with 8 updates"
+        "deps: upgrade Quarkus to 3.40.1.2"
       ]
     },
     {
@@ -1385,13 +1385,13 @@
       ],
       "recent_changes": "## Highlights of the 6.10 release series\r\n\r\n- Removed support for Python 3.9\r\n- Removed hard dependency on `ply`\r\n- New Model Observer package\r\n- New `initialization` module for nonconvex, nonlinear p",
       "github_stars": 2565,
-      "github_open_issues": 388,
+      "github_open_issues": 386,
       "github_recent_prs": [
+        "Fix dae collocation name conflict",
+        "Fix dae collocation name conflict",
         "Baron writer: resolve bug for x^y when both variable",
         "(Temporarily) Disable MINLP support for Gurobi 14",
-        "Use the configurable version timeout in the CBC shell plugin",
-        "PyROS: pause the GC so it doesn't impact timing tests",
-        "Fix `Param` default/initialize receiving the `Param` instead of the block"
+        "Use the configurable version timeout in the CBC shell plugin"
       ],
       "pypi_monthly_downloads": -28
     },
