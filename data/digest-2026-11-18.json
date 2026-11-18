@@ -1,0 +1,364 @@
+{
+  "date": "2026-11-18",
+  "generated_at": "2026-11-18T16:20:55.355726+00:00",
+  "publications": [
+    {
+      "id": "arxiv-2611.23076",
+      "title": "Pareto-Informed Smart \"Predict, then Optimize\" for Multi-Objective Combinatorial Problems",
+      "authors": [
+        "Aabhash Dhakal",
+        "Tim Lachner"
+      ],
+      "abstract": "Many real-world planning applications, from logistics, routing to resource allocation, give rise to optimization problems that need to balance multiple, conflicting objectives. While machine learning is often used to predict the unknown parameters or costs of these problems, standard models trained on prediction accuracy can lead to suboptimal plans. Decision-Focused Learning (DFL) addresses this by integrating the downstream optimization task into the training objective. However, existing DFL methods for multi-objective problems rely on simple scalarization, which fails to capture the rich trade-offs of the Pareto Frontier. To address this gap, we propose a Pareto-aware extension to single-objective Smart \"Predict, then Optimize\" (SPO+) for multi-objective combinatorial optimization problems. Our loss function leverages the true Pareto Frontier, forming a target decision that aligns with a sampled preference vector, and minimizes regret against this target. Experiments on multi-objective shortest path and multi-objective knapsack problems show that our approach outperforms traditional two-stage Mean Squared Error (MSE) baselines. It also surpasses scalarization-based SPO+ approaches.",
+      "date": "2026-11-17",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2611.23076v1",
+      "tags": [
+        "cs.LG",
+        "network-optimization",
+        "stochastic",
+        "ml-for-or",
+        "supply-chain",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.23076",
+      "arxiv_id": "2611.23076v1",
+      "score": 65.0
+    },
+    {
+      "id": "arxiv-2611.23042",
+      "title": "Uncovering the Invisible in Routine Radiology: Cross-Modal Detection of MRI-Verified Soft-Tissue Pathologies from CBCT via Physics-Guided 3D Self-Supervised Learning",
+      "authors": [
+        "Evgeny Alves Limarenko"
+      ],
+      "abstract": "Routine X-ray modalities like cone-beam computed tomography (CBCT) are optimized for high-contrast mineralized tissues, leaving soft-tissue abnormalities buried beneath photon noise and below human visual perception. Thus, detecting non-calcified pathologies requires secondary magnetic resonance imaging (MRI). We demonstrate that sub-visual radiographic signatures of soft-tissue pathology are physically preserved within routine CBCT scans and can be extracted for opportunistic screening using a targeted, physics-guided deep learning pipeline, even under extreme paired-data scarcity. Using the temporomandibular joint (TMJ) as a model system (N = 212 paired CBCT-MRI joints), we address the severe overfitting of high-capacity 3D networks through a two-stage framework. First, we employ a frozen full-grid 3D masked autoencoder (BertsWin) pre-trained on 6,550 unlabeled CBCT volumes via the GradientConductor (GCond) optimizer and an anatomy-aware objective (PhysLoss) redirecting gradient flow into the [-300, 300] HU soft-tissue window. Second, automated localization of the condylar zenith drives a deterministic 3D cropping that eliminates 81% of background osseous variance. Evaluated via a patient-isolated 3x10-fold stratified cross-validation protocol, a statistically robust sub-visual signal for MRI-verified synovial effusion (ROC AUC = 0.793) emerges exclusively from representations pre-trained with the PhysLoss and GCond regime. Crucially, only this setup captures true 3D anatomical chirality (p < 0.001) and high intra-patient structural consistency (0.791) over inter-patient noise; conversely, identical architectures pre-trained with standard L2 loss or unmasked variance decomposition (MVC) collapse to random guessing. These findings establish a generalizable paradigm for repurposing routine, low-contrast radiographic scans into opportunistic screening tools for occult soft-tissue disease.",
+      "date": "2026-11-17",
+      "source": "arXiv",
+      "source_detail": "eess.IV",
+      "url": "http://arxiv.org/abs/2611.23042v1",
+      "tags": [
+        "eess.IV",
+        "stochastic",
+        "ml-for-or",
+        "healthcare-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.23042",
+      "arxiv_id": "2611.23042v1",
+      "score": 60.0
+    },
+    {
+      "id": "openalex-W7234993967",
+      "title": "Unit 3 Study Notes: Securing Networks, for AP® Cybersecurity",
+      "authors": [
+        "Abdullah Rehman"
+      ],
+      "abstract": "Printable study notes for Unit 3 (Securing Networks) of AP® Cybersecurity, written in College Board course vocabulary and designed to print in black and white (24 A4 pages, including the answer key). What is inside Exam overview: how Unit 3 is assessed (multiple choice and the Device Security Analysis free-response question) class time per topic, the skill category each topic builds, and the learning objectives used in the CED sample free-response question. \"Networking you need for this unit\": MAC and IP addresses, /24 ranges, broadcast address, ports, TCP, UDP and ICMP, switches, routers and the default gateway, each with a small diagram. \"How to prepare for Unit 3\": a one-page study plan (learn, recall, apply) with the practice questions, free-response part and CED unit scenario for each topic, and a spaced-review timeline. A summary of the three CED unit scenarios, linked to the figures and questions in the notes, and a guide to the labels used in the notes (exam tips, evidence clues, CED wording, memory hooks). Notes on Topics 3.1 to 3.5: network attacks (ARP poisoning, MAC flooding, DNS poisoning, smurf attack), network vulnerabilities and risk levels, network security policies and wireless security, segmentation (screened subnet, subnetting, VLANs), firewalls and access control lists, and detecting network attacks (NIDS, NIPS, SIEM, AI thresholds, signature-based, anomaly-based and hybrid detection, reading logs). Black-and-white \"anatomy\" diagrams, including ARP poisoning, a smurf attack, a screened subnet, an ACL rule, firewall placement and an AI alert threshold. Worked examples: turning firewall requirements into ordered ACL rules, and reading gateway, switch and router log lines. \"Unit 3 by the numbers\": a recall table of every list in the unit (33 lists). A vocabulary table. References to the official Course and Exam Description sample questions for this unit (multiple-choice questions 1, 4, 13, 14 and 22, and the free-response question), with a link and QR code to the CED. 28 original AP-style multiple-choice questions covering all 16 Unit 3 learning objectives, including data-based sets (vulnerability scanner report, firewall ACL, network logs). A 10-point free-response question in the Device Security Analysis style, with sources, answer space, a scoring guide and model answers. Answer key, a link to Kahoot quizzes, a feedback form for students and teachers, and a citation. Every link and QR code in the PDF is clickable. Suitable for classroom use, school exams and AP Exam review. AP® is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this product. CED sample questions are © College Board and are not reproduced here.",
+      "date": "2026-11-18",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24280645",
+      "tags": [
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.24280645",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "openalex-W7233707081",
+      "title": "Perth AI Search Study 2026: AI Recommendations of Local Businesses Across Four AI Systems (Research Summary)",
+      "authors": [
+        "Dorian Menard"
+      ],
+      "abstract": "Research summary of 2,400 answers from Google AI Overviews, Google AI Mode, ChatGPT and Gemini to 200 commercial questions about 20 Perth industries, asked three times between 8 and 10 September 2026. Most recommended businesses sat outside the Google Maps top 20, recommendations changed from day to day, and the businesses recommended repeatedly tended to rank in Google's organic top 10 and carry more Google reviews. Full study and dataset: https://aiseoperth.net.au/research/perth-ai-search-study-2026/ . Research by Search Scope, Perth: https://searchscope.com.au/ Methodology v2.0. Observations collected 8 to 10 September 2026. Published by AI SEO Perth; research conducted by Search Scope, Perth, Western Australia.",
+      "date": "2026-11-17",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24294871",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.24294871",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7233716380",
+      "title": "Metric Reconciliation in AI-Enabled Marketing Operations: A Descriptive Audit of Two Business Reports",
+      "authors": [
+        "YANGZHOU"
+      ],
+      "abstract": "Descriptive report / 描述性报告. Not peer reviewed; no intervention experiment; no claim of journal acceptance or CNKI/Scopus indexing. This report audits author-supplied commercial presentation summaries for a beverage livestream campaign and an industrial-equipment promotion project. Twelve selected retrospective arithmetic checks are reproduced: nine agree under the stated rounding rules; three payment-share comparisons remain unresolved if the campaign total is assumed as their denominator. Conditional calculations are diagnostic, not corrected business shares or evidence of fabricated source data. Source limitations: original backend exports, transaction records, model execution logs and randomized comparisons were unavailable. The manuscript does not establish AI sales uplift, persistent search leadership or a new algorithm. It discloses the author's involvement in the related business and use of AI assistance. The source slides and client images are not redistributed. The accompanying JSON is a transcription of report summaries, not raw backend or experimental data; the Python script reproduces arithmetic only. 本报告围绕作者正在开展的智能营销业务,对两份业务复盘材料进行描述性核查。内容为报告转录、算术复算、统计范围差异与后续测量建议,不冒充已开展的现场实验,不保证期刊录用、知网或Scopus收录。文中披露作者相关商业任职及AI辅助情况。请勿把数据整理或公开存档视为实证效果已验证。",
+      "date": "2026-11-17",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24288807",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.24288807",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7234484174",
+      "title": "Research Data on Player Experiences and Meaning Construction in Heritage-Themed Games",
+      "authors": [
+        "Yu-Yi Zheng",
+        "Wen-Xi Jiang",
+        "Xiao-Qi Zhan",
+        "Hongfeng Zhang",
+        "Lei Xiong",
+        "Bo-Wei Zhu"
+      ],
+      "abstract": "This dataset contains the game-event catalogue and aggregated analytical results supporting research on player experiences and meaning construction in heritage-themed games. It includes aggregated factor analysis results, factor arrays, distinguishing events, factor correlations, factor-retention comparisons, and BERTopic topic summaries and statistics. Participant-level raw data, original player reviews, interview recordings, and full interview transcripts are not publicly available due to privacy and confidentiality considerations.",
+      "date": "2026-11-17",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24285196",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.24285196",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7234609101",
+      "title": "Building a single classroom for app development: Peer video review as process evidence in a hybrid app development curriculum",
+      "authors": [
+        "Michael Cowling",
+        "Joshua Newn"
+      ],
+      "abstract": "Hybrid classes that split face-to-face and online students across separate rooms, timetables and (often) separate expectations risk becoming two separate classrooms within one class, rather than a single cohort. This paper reports the conceptual framing, literature context, intervention design and methodology of a study examining whether an intentionally designed, video-centred hybrid model can knit a dispersed cohort back into a single classroom, and whether the evidence it generates can say something more useful about learning than a finished app ever could. The study is set in an app development class at a university, where on-campus and online students learn iOS app development side by side. Building on an existing model for merging cohorts through the deliberate use of technology, the intervention layers a new practice onto shared lecture capture: students record and upload short videos of their app prototypes and code walkthroughs for structured peer review. The activity is designed both to strengthen interaction across the hybrid cohort and to foreground students’ thinking and development process, since every student contributes and reviews the same form of evidence regardless of study mode. Where a submitted app file is a product, a video walkthrough of how it was built and why is closer to a process, and in an era in which generative AI can produce a plausible product on demand, process is where the more trustworthy evidence of learning now sits. This concise paper sets out the problem, research questions, literature context, intervention design and methodology; findings will be reported once data collection is complete.",
+      "date": "2026-11-17",
+      "source": "OpenAlex",
+      "source_detail": "ASCILITE Publications",
+      "url": "https://doi.org/10.65106/apubs.2026.3301",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.65106/apubs.2026.3301",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2611.22557",
+      "title": "Balancing Exploration and Exploitation in Constrained Combinatorial Optimization with U(1)-Symmetric Tensor Trains",
+      "authors": [
+        "Sergei Iudin",
+        "Mikhail Podobrii",
+        "Dmitry Zheltkov",
+        "Stanislav Moiseev"
+      ],
+      "abstract": "Tensor Train (TT) decomposition has emerged as a powerful tool for mitigating the curse of dimensionality in a variety of machine learning and combinatorial optimization tasks. Recent advances show that TT-based generative models can efficiently represent and explore high-dimensional discrete spaces, even when the cost function structure is unknown. However, incorporating hard linear constraints into TT-based optimization remains challenging, as existing interpolation and sampling approaches often fail when feasible points are rare. In this work, we develop a general TT-based framework for constrained combinatorial optimization built upon U(1)-symmetric tensor networks. Our method introduces an expressibility-enhancement mechanism for constructing sparse symmetric tensors and a graph-based diversity measure that guides sample selection during training. On assignment benchmarks, expressibility enhancement and diversity-aware selection improve mean solution quality over their respective baselines. The assignment-selected diversifying strategy also extends to nonpolynomial Set Partitioning, with larger relative gains observed in the higher-tensor-rank data families. Separate runtime benchmarks show substantial speedups over ConstrainTNet and PROTES on non-degenerate assignment workloads; comparisons with simulated annealing depend on constraint information and computational budget, but, overall, support the practicality of the current implementation.",
+      "date": "2026-11-17",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2611.22557v1",
+      "tags": [
+        "math.OC",
+        "metaheuristics",
+        "ml-for-or",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.22557",
+      "arxiv_id": "2611.22557v1",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "arxiv-2611.23021",
+      "title": "Satisfiability Modulo Theories for Robust Synthesis of Signal Temporal Logic Specifications",
+      "authors": [
+        "Philip Smith",
+        "Kevin Leahy"
+      ],
+      "abstract": "Signal Temporal Logic is a popular framework for describing a robotic system's goals. Once described using a temporal logic framework, synthesis turns the goals into actual steps for the robots to follow. Currently, the state of the art for sound and complete synthesis is using Mixed-Integer Linear Programming (MILP), which struggles on long time horizons and large environments, preventing the construction of guaranteed safe plans for long deployments. This paper introduces a new synthesis method using Satisfiability Modulo Theories (SMT) which scales better for long deployments and adapts to environmental changes more quickly. We do this by introducing an encoding method for STL into SMT constraints, and an encoding method for discrete-time dynamical systems modeled as a transition system. We then conduct an empirical comparison of our SMT based methods against the state of the art MILP based methods. Results show that for this class of problems, SMT is an effective encoding strategy that performs the best on long time horizon tasks.",
+      "date": "2026-11-17",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2611.23021v1",
+      "tags": [
+        "eess.SY",
+        "linear-programming",
+        "integer-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.23021",
+      "arxiv_id": "2611.23021v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2611.22455",
+      "title": "MARS: Feature-guided physics-informed deep learning for real-time battery health and lifetime prediction",
+      "authors": [
+        "Innocent Izabayo",
+        "Haiquan Zhao"
+      ],
+      "abstract": "Accurate and robust estimation of battery state-of-health (SOH) and remaining useful life (RUL) is essential for safe and cost-effective operation of electrified transportation systems, yet it remains challenging under operating variability, non-stationary aging, and non-Gaussian measurement disturbances. This paper proposes Multi-scale Adaptive Robust State Estimation (MARS), a multi-scale adaptive robust state-estimation framework that couples a dual-branch temporal encoder with an equivalent-circuit-model-constrained differentiable generalized-correntropy adaptive Kalman filter. The encoder disentangles fast intra-cycle voltage-current-temperature dynamics from slow inter-cycle degradation, and the fused degradation context adaptively parameterizes the cycle-level process covariance, measurement covariance, and correntropy bandwidth. Through the unrolled robust filtering recursion, MARS performs physics-consistent state propagation and generalized-correntropy-based innovation correction, while uncertainty decomposition and Monte Carlo dropout provide calibrated prediction intervals for SOH estimation and conditional RUL prediction. Experiments on the NASA and CALCE benchmarks demonstrate improved SOH accuracy, achieving mean absolute error/root mean square error values of 0.72%/0.92% and 0.63%/0.80%, respectively, together with competitive conditional RUL performance against representative data-driven and hybrid baselines. The resulting conditional-RUL prediction intervals achieve coverage probabilities of 100.00% and 99.24% on NASA and CALCE, respectively. Ablation, disturbance-sensitivity, near-end-of-life, and runtime analyses further verify the contribution of each module and the practical inference cost for online battery management.",
+      "date": "2026-11-17",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2611.22455v1",
+      "tags": [
+        "eess.SY",
+        "ml-for-or",
+        "decomposition",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1109/TTE.2026.3734031",
+      "arxiv_id": "2611.22455v1",
+      "score": 55.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 3,
+    "conferences": 0,
+    "opportunities": 3,
+    "total": 13
+  }
+}
