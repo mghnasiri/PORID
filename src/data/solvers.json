@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T16:20:54.906023+00:00",
+  "generated_at": "2026-11-19T16:29:28.021274+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1932,
+      "github_stars": 1935,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlights of v1.16 are the use of parallelism by default in the\r\nMIP solver, a rewritten LP file reader, a Hessian oracle for QP,\r\nsupport for AMD GPUs in HiPDLP, Windows ARM64 Python wheels and ",
-      "github_open_issues": 156,
+      "github_open_issues": 161,
       "github_recent_prs": [
+        "Fix 3715",
+        "Fix #3708",
+        "Ensure exact IEEE double arithmetic for `HighsCDouble`",
         "Fix 3694",
-        "`objective_bound` option now interpreted for maximization LPs",
-        "print in hipo fetch arm",
-        "Fix 3710",
-        "Uno test fix"
+        "`objective_bound` option now interpreted for maximization LPs"
       ],
       "pypi_monthly_downloads": -93
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 679,
+      "github_stars": 680,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Features\r\n--------\r\n\r\n- added command line option `-t` to specify the number of threads, which triggers concurrent solving via `SCIPsolveConcurrent()`\r\n\r\nPerformance improvements\r\n--------------------",
-      "github_open_issues": 83,
+      "github_open_issues": 84,
       "github_recent_prs": [
         "messagePrintInfo passes file output to the dialog callback instead of the info callback",
         "Fix copy-paste errors in error messages and documentation",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14398,
+      "github_stars": 14408,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -571,11 +571,11 @@
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
       "github_open_issues": 142,
       "github_recent_prs": [
+        "Fix/alldiff usage cache",
+        "google3 export (cleanup, sat)",
         "cleanup export from google3 (algorithms, graph, service)",
         "sat: export from google3",
-        "flatzinc: Replace Flex/Bison with a C++ recursive-descent parser.",
-        "g3 export (base, util, routing)",
-        "build(deps): bump bazel-contrib/setup-bazel from 0.19.1 to 0.19.2 in the github-actions group"
+        "flatzinc: Replace Flex/Bison with a C++ recursive-descent parser."
       ],
       "pypi_monthly_downloads": -34
     },
@@ -666,13 +666,13 @@
         }
       ],
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_open_issues": 190,
+      "github_open_issues": 191,
       "github_recent_prs": [
+        "Backport fixes from master to stable/2.10: branching crash, memory errors, overflows, crash guards, SC variables, MIP start",
         "Use four supported exceptions for sequential root-LP auto selection",
         "Don't abort on -rootCutFilterScore 0",
         "Restore `-unitTest` (MIPLIB 3 and the sample problems)",
-        "Fix `-probingCuts root`/`on` and `-cutsOnOff off`, and show cut generator totals for the tree",
-        "Fix four small output and command problems"
+        "Fix `-probingCuts root`/`on` and `-cutsOnOff off`, and show cut generator totals for the tree"
       ]
     },
     {
@@ -1132,13 +1132,13 @@
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
       "github_stars": 6396,
-      "github_open_issues": 197,
+      "github_open_issues": 198,
       "github_recent_prs": [
+        "Bump macos version in optional solvers workflow",
+        "Remove nonexistent Moreau presolve setting from test",
         "DOC: fix dead NumPy indexing and PIQP settings links",
         "Document warm_start in Problem.solve",
-        "Enforce positive-definite domain in log-det numeric evaluation",
-        "Require matrix-specific rules for affine semidefinite inference",
-        "Fix N-D sparse constant vectorization in the COO backend"
+        "Enforce positive-definite domain in log-det numeric evaluation"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Indictments are back, and better than before! One of the frequent comments we have received with Timefold Solver 2.0 was that we should not have removed indictments - we listened, and they are now bac",
-      "github_stars": 1874,
-      "github_open_issues": 117,
+      "github_stars": 1877,
+      "github_open_issues": 119,
       "github_recent_prs": [
-        "Use new automation category",
-        "fix: give a from-patch dataset the name and the tags of config.run",
-        "fix: return the config of a from-patch request in its model-request",
-        "fix: read config.model.overrides in a from-patch request",
-        "deps: various version upgrades"
+        "docs: name licenses and use several licenses in the License Manager",
+        "chore: fix SonarCloud reliability concern",
+        "feat: let a nearby distance meter declare several distance matrices",
+        "fix: address possible selector size overflows",
+        "fix: update quarkus extensions metadata"
       ]
     },
     {
@@ -1387,11 +1387,11 @@
       "github_stars": 2565,
       "github_open_issues": 393,
       "github_recent_prs": [
-        "BUG FIX: Several legacy solver termination conditions",
-        "Transfer private data in BlockData.transfer_attributes_from",
-        "Fix standard repn reduction for products with a constant-valued factor",
-        "Fix IndexedVar.domain setter to update the domain rule",
-        "Fix latex_printer handling of NumPy scalar constants"
+        "Fix license and notice files",
+        "NFC: Fix typo in semibatch.py comment",
+        "Remove CWD from `Executable` and `Library` search paths",
+        "ParmEst: Support solver object inputs",
+        "gdp.mbigm: add workaround option to skip writing References if you know the writer is fine with it"
       ],
       "pypi_monthly_downloads": -28
     },

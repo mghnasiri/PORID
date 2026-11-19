@@ -1,0 +1,362 @@
+{
+  "date": "2026-11-19",
+  "generated_at": "2026-11-19T16:29:28.488674+00:00",
+  "publications": [
+    {
+      "id": "openalex-W7234993967",
+      "title": "Unit 3 Study Notes: Securing Networks, for AP® Cybersecurity",
+      "authors": [
+        "Abdullah Rehman"
+      ],
+      "abstract": "Printable study notes for Unit 3 (Securing Networks) of AP® Cybersecurity, written in College Board course vocabulary and designed to print in black and white (24 A4 pages, including the answer key). What is inside Exam overview: how Unit 3 is assessed (multiple choice and the Device Security Analysis free-response question) class time per topic, the skill category each topic builds, and the learning objectives used in the CED sample free-response question. \"Networking you need for this unit\": MAC and IP addresses, /24 ranges, broadcast address, ports, TCP, UDP and ICMP, switches, routers and the default gateway, each with a small diagram. \"How to prepare for Unit 3\": a one-page study plan (learn, recall, apply) with the practice questions, free-response part and CED unit scenario for each topic, and a spaced-review timeline. A summary of the three CED unit scenarios, linked to the figures and questions in the notes, and a guide to the labels used in the notes (exam tips, evidence clues, CED wording, memory hooks). Notes on Topics 3.1 to 3.5: network attacks (ARP poisoning, MAC flooding, DNS poisoning, smurf attack), network vulnerabilities and risk levels, network security policies and wireless security, segmentation (screened subnet, subnetting, VLANs), firewalls and access control lists, and detecting network attacks (NIDS, NIPS, SIEM, AI thresholds, signature-based, anomaly-based and hybrid detection, reading logs). Black-and-white \"anatomy\" diagrams, including ARP poisoning, a smurf attack, a screened subnet, an ACL rule, firewall placement and an AI alert threshold. Worked examples: turning firewall requirements into ordered ACL rules, and reading gateway, switch and router log lines. \"Unit 3 by the numbers\": a recall table of every list in the unit (33 lists). A vocabulary table. References to the official Course and Exam Description sample questions for this unit (multiple-choice questions 1, 4, 13, 14 and 22, and the free-response question), with a link and QR code to the CED. 28 original AP-style multiple-choice questions covering all 16 Unit 3 learning objectives, including data-based sets (vulnerability scanner report, firewall ACL, network logs). A 10-point free-response question in the Device Security Analysis style, with sources, answer space, a scoring guide and model answers. Answer key, a link to Kahoot quizzes, a feedback form for students and teachers, and a citation. Every link and QR code in the PDF is clickable. Suitable for classroom use, school exams and AP Exam review. AP® is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this product. CED sample questions are © College Board and are not reproduced here.",
+      "date": "2026-11-18",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24280645",
+      "tags": [
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.24280645",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1002-net.70090",
+      "title": "Stochastic Corridor–Time Network Capacity Planning for Low‐Altitude Airspace Systems",
+      "authors": [
+        "Yao, Y.",
+        "Ding, L.",
+        "Zhao, Y."
+      ],
+      "abstract": "ABSTRACT\n                  Regulators in China, the United States, and the European Union now provide low‐altitude airspace access as priced, time‐windowed corridor authorizations, booked in advance and forfeited if unused. We ask how much capacity a UAV logistics planner should reserve on each corridor–time unit before demand is realized, to maximize expected profit net of reservation cost. Reserved capacity cannot be transferred across corridors or time windows and is consumed jointly along time‐respecting paths, so reservations are coupled through the network in ways that models with exogenous airspace capacity cannot capture. We formulate a two‐stage stochastic program whose recourse selects and routes accepted requests on a time‐expanded network, prove its arc‐based and path‐packing forms equivalent, and solve it by Benders decomposition with column‐generated subproblems. The decomposition operates on the LP relaxation, and all reported reservation and routing decisions are recovered as integer plans. Computational experiments achieve single‐digit LP‐Benders gaps on moderate‐sized networks and extend to much larger instances through a truncated‐path approach. A Shenzhen case study shows reservations concentrating on structurally central corridors, with demand level and reservation price having more influence on the quantity of capacity reserved than the selection of corridors.",
+      "date": "2026-11-18",
+      "source": "Networks",
+      "source_detail": "Networks",
+      "url": "https://doi.org/10.1002/net.70090",
+      "tags": [
+        "linear-programming",
+        "stochastic",
+        "supply-chain",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1002/net.70090",
+      "score": 60.0
+    },
+    {
+      "id": "openalex-W7235893659",
+      "title": "AAE-Desk: Accountable Agentic Evidence Preparation for National Cyber Resilience Governance (Software Prototype, v0.1.0)",
+      "authors": [
+        "Dmytro Prokopovych-Tkachenko"
+      ],
+      "abstract": "AAE-Desk is a research software prototype that implements the Accountable Agentic Evidence (AAE) model for public administration bodies that prepare decisions on national cyber resilience. It lets software agents discover sources and verify their metadata, while full-text verification, decision making and ex post review remain with named human actors. The software implements: four evidence-preparation functions executed by agents on metadata only: source discovery (F1), provenance verification (F2), appraisal of currency and applicability (F3), and drafting of analytical briefs (F4); three human gates: full-text verification of every claim by an analyst (G1), the decision and its rationale by the accountable official (G2), and ex post review by an oversight forum (G3); an append-only, hash-chained decision record that links each decision back through the brief, claim, verified passage and source record to the original query; a role allocation (RACI) for ten tasks and five actors, in which agents may execute tasks but are never accountable; graduated autonomy zones Z1–Z4 that depend on decision consequence and evidence uncertainty, with escalation triggers; interagency evidence bundles that allow verified evidence to be reused by another agency; indicators from the proposed evaluation design (traceability rate, recall, precision, override patterns, reconstructability); the coding of seven cyber resilience and AI governance frameworks against eight accountability design elements. The deposit contains the Python package (standard library only, Python 3.10+), a web interface and command line, two demonstration scenarios, 30 automated tests, a self-contained Google Colab notebook, and the project description (DOCX). The user interface and documentation are in Ukrainian. Limitations: the agents are deterministic rule-based components, not language models; candidate claims come from a scripted file; discovery uses a local metadata snapshot of 22 records, one of which is synthetic and labelled as such; there is no user authentication. Names of persons and the agency in the demonstration scenarios are fictitious. Demonstration indicators are illustrative and do not constitute empirical evidence for the propositions of the underlying study.",
+      "date": "2026-11-19",
+      "source": "OpenAlex",
+      "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
+      "url": "https://doi.org/10.5281/zenodo.24355847",
+      "tags": [
+        "stochastic",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.5281/zenodo.24355847",
+      "citation_count": 0,
+      "score": 60.0
+    },
+    {
+      "id": "openalex-W7234826385",
+      "title": "Beyond the tool: what a course-aligned AI assistant reveals about student learning in microbiology",
+      "authors": [
+        "Angela Sun",
+        "Sebastian Kobler",
+        "Jonathan K. Kummerfeld"
+      ],
+      "abstract": "Course-aligned artificial intelligence (AI) tutors are increasingly offered as learning support in higher education. Beyond providing practice and feedback, they may also help teachers identify gaps in understanding across a cohort. In a second-year medical microbiology and immunology unit of 500 to 800 students, a course-aligned AI assistant built on The University of Sydney’s Cogniti platform gave students scenario-based short-answer practice with rubric-referenced feedback. Its conversation logs turned out to be a diagnostic instrument. Across more than 1300 conversations, the logs revealed cohort-level knowledge gaps and recurring terminology errors mid-semester. An exploratory analysis also found small positive correlations between practice-oriented use of the assistant and final short-answer marks, although these findings should be interpreted cautiously. The gaps were fed back to the class through an interactive revision resource used in lectures. These insights could be obtained through three approaches requiring different levels of technical expertise: the platform’s own no-code summaries, method-led coding with basic programming, and specialist computational analysis. We also discuss how the approach can be adapted where no equivalent platform exists. The project highlights that a course-aligned AI assistant can provide valuable insight into cohort-level understanding of the subject.",
+      "date": "2026-11-18",
+      "source": "OpenAlex",
+      "source_detail": "Microbiology Australia",
+      "url": "https://doi.org/10.1071/ma26055",
+      "tags": [
+        "stochastic"
+      ],
+      "type": "publication",
+      "doi": "10.1071/ma26055",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W4390718430",
+      "title": "Discrepancy-Aware Clustered Federated Learning",
+      "authors": [
+        "Peifeng Zhang",
+        "Wensheng Gan",
+        "Chen Jiahui"
+      ],
+      "abstract": "Federated Learning (FL) is a privacy-preserving distributed machine learning paradigm, yet heterogeneous data often degrades the performance of shared global models. Clustered FL methods, which group clients with similar data distributions and train separate models, help mitigate this issue. However, existing clustered FL algorithms typically rely on local model-related information, leading to computational and communication overhead, and require pre-specifying the number of clusters, which is impractical in real-world scenarios. To overcome these limitations, this work explores an affinity propagation-based clustered FL framework, DACFL, which is directly aware of data discrepancies and infers cluster structures without prior knowledge. It incorporates a set of metrics to characterize feature distribution shift, label distribution shift, and their cooccurrence, aiming to improve the clustering process. Additionally, to protect label-related information during clustering, DACFL includes a novel scheme using fully homomorphic encryption to ensure secure use of label information. Experiments on public datasets suggest that the proposed approach performs favorably compared with several recent FL methods under heterogeneous settings.",
+      "date": "2026-11-18",
+      "source": "OpenAlex",
+      "source_detail": "International Journal of Interactive Multimedia and Artificial Intelligence",
+      "url": "https://doi.org/10.9781/ijimai.2026.6494",
+      "tags": [
+        "stochastic",
+        "ml-for-or",
+        "constraint-programming"
+      ],
+      "type": "publication",
+      "doi": "10.9781/ijimai.2026.6494",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "openalex-W7225312503",
+      "title": "The Structural and Thematic Landscape of Software Supply Chain Security: A Narrative Review Guided by Synthetic Knowledge Synthesis",
+      "authors": [
+        "Peter Kokol",
+        "Marko Kokol"
+      ],
+      "abstract": "The software industry is confronting a critical crisis driven by systemic vulnerabilities within the software supply chain and the ubiquitous reliance on third-party dependencies. While individual exploits and localized compliance frameworks have been heavily studied, this highly fragmented academic discourse creates a critical barrier to organizational readiness and proactive incident preparedness. To address this gap and enhance digital resilience, this study maps the conceptual, knowledge and structural landscape of the software supply chain literature using Synthetic Knowledge Synthesis. The findings provide actionable threat intelligence designed to primarily benefit enterprise security teams, DevSecOps practitioners, and cybersecurity policymakers. Analyzing publications from 2021 to 2026, the research reveals an exponential growth in output, heavily dominated by conference proceedings and driven primarily by institutional and state-funded efforts in the United States and China. Thematic mapping identifies five core clusters defining the current ecosystem: software composition analysis, Advanced Vulnerability Detection, AI-Driven Threat Intelligence, deep learning, and DevSecOps. The study highlights critical unresolved gaps, notably the prevalence of false positives in static software bill of materials tools due to a lack of execution context, and a pronounced disconnect between theoretical models and practical enterprise application. Future research directions emphasize the integration of large language models for automated patch generation, the development of execution-aware vulnerability triage, and the evolution of dynamic, AI-driven artifacts to secure complex dependency networks.",
+      "date": "2026-11-18",
+      "source": "OpenAlex",
+      "source_detail": "Information",
+      "url": "https://doi.org/10.3390/info17111171",
+      "tags": [
+        "ml-for-or",
+        "supply-chain",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.3390/info17111171",
+      "citation_count": 0,
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2611.24245",
+      "title": "Mixed-integer programming formulations for the quadratic bin packing problem: linearization, hybridization, and enhancements",
+      "authors": [
+        "Fatih Burak Akçay",
+        "Maxence Delorme",
+        "Renata Sotirov"
+      ],
+      "abstract": "The quadratic bin packing problem (QBPP) extends the classical bin packing problem by incorporating pairwise dissimilarity values between items assigned to the same bin. The objective is to minimize the total cost, composed of the cost associated with the number of bins used and the sum of pairwise dissimilarity values for items assigned to the same bin, subject to the bin-capacity constraints. We study the quadratic programming formulation together with a broad family of equivalent mixed-integer linear programming (MILP) formulations for the QBPP based on classical linearization techniques. We analyze the relationships among the linear programming relaxations of the MILP formulations and strengthen several of these relaxations by exploiting the structure of the QBPP. We further introduce the first hybrid exact formulation for the QBPP that combines elements of two distinct modeling approaches. In particular, we show that the combination of explicit bin patterns and assignment-based representation performs particularly well. For the hybrid formulation, we investigate the effect of item selection, and for both the hybrid and non-hybrid formulations, we study the impact of item ordering on formulation size, relaxation strength and computational performance. Although a recently introduced tailored branch-and-price algorithm remains the state-of-the-art for the QBPP, we show that the proposed ordering-based non-hybrid and hybrid formulations substantially improve computational performance over the best MILP formulation known to the literature, in addition of solving 33 new benchmark instances to optimality.",
+      "date": "2026-11-18",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2611.24245v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "integer-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.24245",
+      "arxiv_id": "2611.24245v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2611.24179",
+      "title": "Linear Duality and Its Nonlinear Extension via Topological Covering Theorems",
+      "authors": [
+        "Mikhail V. Bludov"
+      ],
+      "abstract": "Linear programming duality and core existence theorems in cooperative game theory are closely related. For example, in the 1960s, Bondareva used linear duality to characterize when the core of a game with transferable utility is nonempty. Scarf later established a core existence theorem for balanced games with non-transferable utility. Shapley derived this result from his KKMS covering theorem, demonstrating how topological covering theorems yield core existence results.   In this note we give a new KKM-type covering proof of linear duality. We then extend the argument to inequalities with continuous perturbations. Under some asymptotic growth assumptions on perturbations, we obtain a feasible point and balancing coefficients satisfying complementary slackness, a Lagrangian lower bound, and a Scarf-type feasibility criterion. The latter yields Scarf's theorem for normalized cooperative games with non-transferable utility.   Using Musin's 2017 KKM-type theorems with boundary conditions and the author's 2026 results on cover degrees relative to point configurations, we also obtain a complementary slackness theorem for continuous functions on compact connected oriented manifolds with nonempty boundary.",
+      "date": "2026-11-18",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2611.24179v1",
+      "tags": [
+        "math.OC",
+        "linear-programming",
+        "decomposition",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.24179",
+      "arxiv_id": "2611.24179v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2611.23699",
+      "title": "Optimal Production Scheduling for Multi-Product Mineral Manufacturing",
+      "authors": [
+        "Stefan Mazzadi",
+        "Joshua L. Pulsipher"
+      ],
+      "abstract": "Short-term scheduling in multi-product mineral manufacturing requires coordinating material movement and production across interconnected processing stages while addressing confirmed customer orders and longer-term production requirements. This work develops a generalized network-based, lexicographic multi-objective optimization (MOO) scheduling framework for these systems. The formulation represents the progression of material from raw-material supply through production and inventory to customer fulfillment. A sequential objective hierarchy first prioritizes fulfillment of confirmed customer orders and then progressively directs feasible production capacity toward cumulative targets supplied by the facility's demand-planning process. This approach ensures that the performance achieved for each higher-priority objective is preserved before subsequent targets are considered. Selected product-line activation decisions are represented using generalized disjunctive programming (GDP). An industrial mineral-manufacturing case study demonstrates the proposed framework's ability to generate feasible shift-level schedules and preserve the intended operational priorities with practical computational performance.",
+      "date": "2026-11-18",
+      "source": "arXiv",
+      "source_detail": "math.OC",
+      "url": "http://arxiv.org/abs/2611.23699v1",
+      "tags": [
+        "math.OC",
+        "scheduling",
+        "supply-chain",
+        "multi-objective"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.23699",
+      "arxiv_id": "2611.23699v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2611.24637",
+      "title": "Hypnos: A Dual-Phase End-to-End Platform for Scalable Continual Learning at the Edge",
+      "authors": [
+        "Guilherme Guedes",
+        "Marco Apolinario Lainez",
+        "Charlotte Frenkel"
+      ],
+      "abstract": "Continual learning (CL) enables neural networks to adapt to non-stationary data streams by mitigating catastrophic forgetting, offering a path to robust, private, and adaptable edge devices. Yet, porting CL to real-world edge devices remains challenging for two reasons: (i) online operation, where sensor data arrives one sample at a time and the device must adapt on-the-fly, and (ii) the low footprint of edge devices, which makes traditional error backpropagation training prohibitive. Inspired by the brain's wake and sleep cycles, the former for rapid adaptation with minimal resources and the latter for long-term consolidation, we introduce Hypnos, an open-source dual-phase platform for efficient CL at the edge. In the wake phase (e.g., daily operation), Hypnos relies on a low-footprint system-on-chip with a RISC-V microcontroller unit (MCU) targeting efficient inference and supporting lightweight gradient-free prototype updates. In the sleep phase (e.g., night-time charging), where wall-plug energy and larger memory budgets are available, a smart charger performs rehearsal-based gradient updates for consolidation. Deployed on a ZCU104 field-programmable gate array (FPGA) and synthesized in a 28-nm process, Hypnos is benchmarked on the CORe50 NICv2-391 protocol. It sets a new state-of-the-art accuracy of 78.6%-81.6% for edge CL systems, with an on-device latency of 7.79s-10.54s per sample depending on activation precision, and requires $3.8\\times$ fewer learning steps and $22\\times$ less learning compute than quantized latent replay at higher accuracy and comparable latency.",
+      "date": "2026-11-18",
+      "source": "arXiv",
+      "source_detail": "cs.AR",
+      "url": "http://arxiv.org/abs/2611.24637v1",
+      "tags": [
+        "cs.AR",
+        "ml-for-or",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.24637",
+      "arxiv_id": "2611.24637v1",
+      "score": 55.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "manual-horizon-europe-msca-dn-2026",
+      "title": "MSCA Doctoral Networks 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Commission",
+      "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+      "deadline": "2026-11-20",
+      "location": "EU (multi-partner)",
+      "tags": [
+        "funding",
+        "phd",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Fund a network of PhD positions across multiple European institutions. Typically 10-15 PhD positions per network.",
+      "score": 10.0
+    },
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 3,
+    "conferences": 0,
+    "opportunities": 3,
+    "total": 13
+  }
+}
