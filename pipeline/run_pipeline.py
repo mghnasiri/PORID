@@ -403,6 +403,14 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     # Opportunities are merged incrementally
     opportunities, opps_added = merge_items(existing_opps, opportunities)
 
+    # ── Redact credentials leaked in third-party text ────────────────
+    # Runs after the merge so it also cleans items already on disk,
+    # and before the stale drop so archived items are clean too.
+    publications = redact_secrets(publications)
+    software = redact_secrets(software)
+    conferences = redact_secrets(conferences)
+    opportunities = redact_secrets(opportunities)
+
     # ── Drop stale items (>90 days) ──────────────────────────────────
     all_dropped: list[dict] = []
 
@@ -441,13 +449,6 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     )
     if not degraded_sources:
         print("  All sources within normal yield range.")
-
-    # ── Redact credentials leaked in third-party text ────────────────
-    # Runs after the merge so it also cleans items already on disk.
-    publications = redact_secrets(publications)
-    software = redact_secrets(software)
-    conferences = redact_secrets(conferences)
-    opportunities = redact_secrets(opportunities)
 
     # ── Sort ──────────────────────────────────────────────────────────
     publications.sort(key=lambda x: x.get("date", ""), reverse=True)
