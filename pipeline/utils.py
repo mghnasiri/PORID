@@ -6,6 +6,7 @@ Shared helpers used across fetcher modules.
 
 from __future__ import annotations
 
+import re
 import sys
 import time
 
@@ -61,3 +62,30 @@ def fetch_with_retry(
                 )
 
     return None
+
+
+# Credentials that third-party records sometimes carry in their text
+# (e.g. a server log uploaded to Zenodo and indexed by OpenAlex).
+# The site is public, so never republish them.
+_SECRET_PATTERNS = [
+    re.compile(r"(?<!\d)\d{8,10}:[A-Za-z0-9_-]{35}(?![A-Za-z0-9_-])"),  # Telegram bot token (often after "bot")
+    re.compile(r"\bgh[pousr]_[A-Za-z0-9]{36,}\b"),            # GitHub token
+    re.compile(r"\bgithub_pat_[A-Za-z0-9_]{60,}\b"),          # GitHub fine-grained PAT
+    re.compile(r"\bAKIA[0-9A-Z]{16}\b"),                      # AWS access key id
+    re.compile(r"\bsk-(?:ant-|proj-)?[A-Za-z0-9_-]{20,}\b"),  # OpenAI / Anthropic keys
+    re.compile(r"\bAIza[0-9A-Za-z_-]{35}\b"),                 # Google API key
+    re.compile(r"\bxox[abprs]-[A-Za-z0-9-]{10,}\b"),          # Slack token
+]
+
+
+def redact_secrets(value):
+    """Recursively replace credential-looking substrings with ``[REDACTED]``."""
+    if isinstance(value, str):
+        for pat in _SECRET_PATTERNS:
+            value = pat.sub("[REDACTED]", value)
+        return value
+    if isinstance(value, list):
+        return [redact_secrets(v) for v in value]
+    if isinstance(value, dict):
+        return {k: redact_secrets(v) for k, v in value.items()}
+    return value

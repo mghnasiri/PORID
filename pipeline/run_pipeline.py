@@ -43,6 +43,7 @@ from fetch_opportunities import fetch_all_feeds
 from classify import classify_items
 from deduplicate import deduplicate
 from validate import validate_items
+from utils import redact_secrets
 
 
 # ── Constants ────────────────────────────────────────────────────────
@@ -440,6 +441,13 @@ def run_pipeline(config_path: str = "config.yaml", output_dir: str = "../data") 
     )
     if not degraded_sources:
         print("  All sources within normal yield range.")
+
+    # ── Redact credentials leaked in third-party text ────────────────
+    # Runs after the merge so it also cleans items already on disk.
+    publications = redact_secrets(publications)
+    software = redact_secrets(software)
+    conferences = redact_secrets(conferences)
+    opportunities = redact_secrets(opportunities)
 
     # ── Sort ──────────────────────────────────────────────────────────
     publications.sort(key=lambda x: x.get("date", ""), reverse=True)
