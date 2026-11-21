@@ -5320,6 +5320,53 @@
     "score": 40.0
   },
   {
+    "id": "s2-17d2bef8bfb8",
+    "title": "Approximation Algorithms for Asymmetric Multi-Path TSP",
+    "authors": [
+      "Manuel Christalla",
+      "Vera Traub"
+    ],
+    "abstract": "Asymmetric Multi-Path TSP is the generalization of the Asymmetric Traveling Salesperson Problem where we are looking for $k$ walks, each with prescribed start $s_i$ and prescribed end $t_i$, such that every vertex is visited by at least one of the walks. The objective is to minimize the total length of all walks. In general, it is NP-hard to find any approximation for this problem in polynomial time (even if the approximation factor is allowed to depend on the number of vertices). We show that one can obtain an $O(k)$-approximation in time $n^{O(k)}$, answering an open question by Friggstad [2013]. For the special case where all tour start vertices $s_i$ are identical and all end vertices $t_i$ are identical, we obtain an $O(k)$-approximation in polynomial time, as well as an $(O(\\frac{1}{\\epsilon}), 1+\\epsilon)$-bicriteria approximation. For the multi-depot setting, where $s_i =t_i$ for all $i$, we obtain a constant-factor approximation in polynomial time. Finally, our results imply improved constant-factor approximation algorithms for Asymmetric Regret-Bounded Vehicle Routing and unit-weight Path ATSP.",
+    "date": "2026-11-19",
+    "source": "Semantic Scholar",
+    "source_detail": "vehicle routing problem",
+    "url": "https://www.semanticscholar.org/paper/17d2bef8bfb87ac19427c8d59d2e049184a6d1df",
+    "tags": [
+      "vehicle-routing"
+    ],
+    "type": "publication",
+    "doi": "",
+    "arxiv_id": "2611.26188",
+    "citation_count": 0,
+    "score": 35.0
+  },
+  {
+    "id": "s2-628a0f4d04f9",
+    "title": "Modeling network equilibrium in integrated land-air mobility system with driver anxiety",
+    "authors": [
+      "Meng-Yu Jiang",
+      "Qi Liu",
+      "Xin-Yan Lu",
+      "Yun-Chi Wu",
+      "Zhiyuan Liu",
+      "Hong-Gang Zhang"
+    ],
+    "abstract": "Urban air mobility (UAM) is emerging as a promising solution to urban traffic congestion, yet its effective deployment hinges on seamless integration with ground transportation systems. With the increasing adoption of battery-powered electric vertical take-off and landing (eVTOL) vehicles in UAM systems, travel choices are no longer governed solely by conventional objective factors such as travel time, but are increasingly shaped by perception-driven range-related constraints. However, these constraints are rarely considered in existing UAM network equilibrium studies. To address these challenges, this paper develops an integrated land-air mobility network equilibrium model that incorporates travelers’ range anxiety and battery anxiety (ILAM-NE-RBA). These behavioral factors capture travelers’ subjective perceptions of path-level energy consumption and flight-stage risks, respectively, and are characterized by continuously distributed perceived weight limits of path weight and flight-stage weight. We further prove that the proposed ILAM-NE-RBA formulation constitutes a convex programming problem and that its Karush-Kuhn-Tucker (KKT) conditions characterize an anxiety-constrained generalized user equilibrium. To solve the model effectively, we develop a subdemand decomposition-based improved gradient projection algorithm with three-dimensional Pareto (SD-IGP-TDP) guidance, which transforms conventional shortest-path search into a three-dimensional Pareto-optimal path search considering travel time, path weight, and flight-stage weight, thereby ensuring sufficient coverage of paths under dual-anxiety constraints. Meanwhile, sub-demand decomposition is introduced to address the inconsistency of feasible path sets across different anxiety intervals, enabling interval-based flow updates under heterogeneous perception constraints. Numerical results demonstrate that incorporating dual-anxiety mechanisms yields equilibrium flow patterns that differ significantly from those of conventional models; perception-driven constraints discourage travelers from selecting energy-intensive or high-risk paths, thereby inducing flow redistribution across the network. This study provides a unified behavioral perspective on the coupling between traveler route choice and network performance, and offers theoretical insights for the planning and operation of future integrated land-air mobility systems.",
+    "date": "2026-11-19",
+    "source": "Semantic Scholar",
+    "source_detail": "vehicle routing problem",
+    "url": "https://doi.org/10.1007/s42524-026-6169-0",
+    "tags": [
+      "multi-objective",
+      "decomposition"
+    ],
+    "type": "publication",
+    "doi": "10.1007/s42524-026-6169-0",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 50.0
+  },
+  {
     "id": "openalex-W7234806621",
     "title": "Dataset da malha rodoviária brasileira.",
     "authors": [
@@ -10781,6 +10828,71 @@
     "arxiv_id": "2611.24466",
     "citation_count": 0,
     "score": 45.0
+  },
+  {
+    "id": "s2-73c1fbd5ae6e",
+    "title": "Implementation of Heuristic Dispatching Rule in Monte Carlo Tree Search: Scheduling Machines",
+    "authors": [
+      "Alwan Maulana Firdaus",
+      "W. Uriawan",
+      "Hasnatul Hidayah"
+    ],
+    "abstract": "The Job Shop Scheduling Problem (JSSP) is a classical NP-hard combinatorial optimization problem in which minimizing makespan becomes increasingly challenging as problem size increases. Monte Carlo Tree Search (MCTS) has emerged as a promising optimization approach; however, its reliance on random rollouts can produce suboptimal schedules characterized by substantial machine idle time. This study aimed to integrate heuristic dispatching rules into MCTS to improve scheduling performance on the Taillard ta20 benchmark instance, comprising 20 jobs and 15 machines. Two heuristic-guided variants, MCTS + EDD and MCTS + LDD, were developed by incorporating the Giffler–Thompson conflict-set procedure and an ?-greedy selection strategy (? = 0.1). Their performance was compared with that of baseline MCTS using 1,000, 2,000, and 3,000 rollouts, with 10 independent runs per configuration. Performance was evaluated based on average makespan, best makespan, standard deviation, computation time, and schedule feasibility. At 3,000 rollouts, MCTS + EDD and MCTS + LDD reduced average makespan by 15.78% and 20.20%, respectively, relative to the baseline MCTS average of 2,369.40. Both heuristic-guided variants also exhibited lower variability, with standard deviations ranging from 15.12 to 36.91, compared with 41.86 to 58.07 for baseline MCTS. Furthermore, the heuristic-guided methods achieved higher machine utilization rates of 51.39% (EDD) and 54.53% (LDD), compared with 44.40% for baseline MCTS. All best-performing schedules satisfied the evaluated scheduling constraints. These findings demonstrated that incorporating heuristic dispatching rules improved scheduling performance and consistency within the tested configurations. Notably, MCTS + LDD with 1,000 rollouts achieved a lower makespan than baseline MCTS with 3,000 rollouts while requiring less computation time, suggesting that heuristic guidance offered greater performance benefits than increasing the rollout budget alone under the experimental conditions.",
+    "date": "2026-11-18",
+    "source": "Semantic Scholar",
+    "source_detail": "combinatorial optimization heuristic",
+    "url": "https://doi.org/10.55324/josr.v5i12.3542",
+    "tags": [
+      "scheduling"
+    ],
+    "type": "publication",
+    "doi": "10.55324/josr.v5i12.3542",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 40.0
+  },
+  {
+    "id": "s2-8fe00b1e1c8e",
+    "title": "Self-Driving Universities: An Autonomous, Formally Verified Multi-Agent Framework for Dynamic Curriculum and Resource Optimization",
+    "authors": [
+      "Ashraf Ali"
+    ],
+    "abstract": "University timetabling and resource allocation automation has historically relied on rigid operations research models that scale poorly during sudden operational disruptions. While recent advances in multi-agent systems (MASs) and large language models (LLMs) offer dynamic semantic adaptability, these purely probabilistic architectures fail to satisfy strict, NP-hard combinatorial constraints, rendering them unsafe for independent administrative execution. This research introduces a hybrid agentic-symbolic framework that bridges this evaluation gap by decoupling neural reasoning from deterministic execution. The architecture utilizes a network of specialized LLM agents to negotiate institutional demand. Meanwhile, a Z3 formal verification engine acts as an immutable gatekeeper, mathematically blocking any physically impossible schedule from executing. To evaluate hardware feasibility, the framework underwent an 8-semester longitudinal simulation across two distinct institutional topologies (totaling 16 simulated semesters) across heterogeneous computing environments, incorporating stochastic structural and personnel shocks. Empirical telemetry indicates a critical failure mode within constrained 23 Edge CPU infrastructure, which we characterize as autoregressive token explosion, in which 24 generative model’s attention mechanism collapses during the production of large schemas, paralyzing the system. To address this, the architecture substitutes conventional substantial solvers with a sub-millisecond greedy heuristic fallback. The results demonstrate that this deterministic safety mechanism intercepts catastrophic neural failures and resolves the scheduling matrix in under 1.0 millisecond. Ultimately, this study demonstrates that formally verified multi-agent systems can attain zero-violation compliance and uninterrupted institutional continuity when supported by lightweight, hardware-aware heuristic overrides.",
+    "date": "2026-11-18",
+    "source": "Semantic Scholar",
+    "source_detail": "combinatorial optimization heuristic",
+    "url": "https://doi.org/10.3390/app162211408",
+    "tags": [
+      "scheduling"
+    ],
+    "type": "publication",
+    "doi": "10.3390/app162211408",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 40.0
+  },
+  {
+    "id": "s2-b656a5c635f2",
+    "title": "A Graph-Theoretic Optimization Framework for Underground Parking Lot Layout Planning",
+    "authors": [
+      "Yang-Fan Sun",
+      "Kai Wu",
+      "Hong-Yao Shen",
+      "Xin-Hua Yao"
+    ],
+    "abstract": "Underground parking layout design is challenged by irregular spatial configurations, dense structural obstacles, and the low efficiency of manual planning. This paper proposes a CAD-based optimization framework for underground parking layout under structural constraints. First, structural elements such as walls, columns, and equipment rooms are extracted from CAD drawings to identify feasible layout regions. The parking space–aisle co-layout problem is then formulated as a minimum connected dominating set problem, aiming to maximize parking-region count while ensuring topological accessibility and traffic connectivity. To address instances of different sizes, exact, tabu search, and hybrid optimization methods are developed to balance solution quality and computational efficiency. Experimental results show that the proposed framework reports BILP solutions for the smaller tested instances, returns heuristic solutions for the larger tested cases, whose optimality gaps remain unknown, and yields more stalls in the illustrative manual comparison. Evaluated on 10 engineering drawings, the framework yielded 12 additional stalls in one illustrative manual comparison, subject to engineering verification. The results demonstrate that complex underground parking layout can be effectively transformed into a tractable combinatorial optimization problem, providing an approach evaluated on ten drawings for constrained parking facility planning.",
+    "date": "2026-11-18",
+    "source": "Semantic Scholar",
+    "source_detail": "combinatorial optimization heuristic",
+    "url": "https://doi.org/10.3390/a19111012",
+    "tags": [
+      "metaheuristics"
+    ],
+    "type": "publication",
+    "doi": "10.3390/a19111012",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 40.0
   },
   {
     "id": "openalex-W7225523838",
@@ -22783,6 +22895,56 @@
     "score": 45.0
   },
   {
+    "id": "s2-0027faa4a86d",
+    "title": "Route Optimization in Cold Chain Logistics from a Green Perspective: A Literature Review",
+    "authors": [
+      "Zhuang Shu"
+    ],
+    "abstract": "Rapid global economic development and growing environmental concerns have made green logistics and cold chain logistics optimization prominent research topics in management science and engineering. Although cold chain logistics safeguards the quality and safety of perishable products, its high energy consumption and emissions create substantial environmental pressures. This review synthesizes recent domestic and international research on green logistics and low-carbon principles, vehicle routing problems incorporating carbon emissions, cold chain distribution routing, integrated inventory and distribution optimization in cold chains, and solution algorithms. Drawing on 45 representative studies, it summarizes major findings and areas of agreement in carbon emission modeling, multi-objective optimization, time-dependent traffic constraints, deterioration modeling, and algorithm design. It identifies gaps in multi-temperature joint distribution, vendor-managed inventory, deterioration modeling using the three-parameter Weibull distribution, and carbon emission estimation based on total vehicle energy consumption. Future research directions are proposed in four areas: research scope, modeling methods, algorithm design, and practical implementation. The review provides a theoretical foundation and practical guidance for subsequent research in green cold chain distribution routing.",
+    "date": "2026-11-16",
+    "source": "Semantic Scholar",
+    "source_detail": "vehicle routing problem",
+    "url": "https://doi.org/10.54097/8r4yss64",
+    "tags": [
+      "vehicle-routing",
+      "supply-chain",
+      "multi-objective",
+      "survey"
+    ],
+    "type": "publication",
+    "doi": "10.54097/8r4yss64",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 55.0
+  },
+  {
+    "id": "s2-0c88337b75c3",
+    "title": "Proactive–Reactive Dispatch–Routing of Heterogeneous Emergency Vehicle Fleets: A Mixed-Integer Programming and Rolling-Horizon Approach",
+    "authors": [
+      "Zheng-Yan Huo",
+      "Xia Luo",
+      "Hao Tian",
+      "Zhi-Hong Yao"
+    ],
+    "abstract": "Urban multi-disaster response requires emergency vehicle (EV) dispatch and routing that are prepared in advance and adaptable in real time. This paper proposes a two-stage proactive–reactive framework for EV dispatch–routing. The proactive stage formulates a static multi-depot, multi-response, heterogeneous-fleet vehicle routing problem that minimizes the overall composite makespan, and builds a scenario-based strategy pool providing warm-start solutions, in which an elastic reservation strategy reserves part of each emergency depot’s fleet capacity for subsequent events. The reactive stage deploys a rolling horizon scheme with periodic and event-driven triggers to re-optimize coupled re-dispatch and re-routing subproblems under real-time demand and traffic uncertainties. A diversification search evolutionary algorithm (DSEA) and a dynamic capacity-constrained route search algorithm (DC-RSA) are developed for (re-)dispatch and re-routing, respectively. Simulations on real-world instances show that DSEA and DC-RSA outperform conventional heuristics in solution quality and efficiency, with average computation times of 1.08 and 4.38 s, and that a three-event sequence is re-optimized in under 3.5 s. The elastic reservation strategy preserves redundant capacity for secondary disasters, while enroute diversion shortens the start time of on-site disposal by 1.93 min on average where it takes effect. These findings offer managerial insights for bridging pre-disaster preparedness and in-disaster response.",
+    "date": "2026-11-16",
+    "source": "Semantic Scholar",
+    "source_detail": "vehicle routing problem",
+    "url": "https://doi.org/10.3390/math14224208",
+    "tags": [
+      "integer-programming",
+      "metaheuristics",
+      "scheduling",
+      "vehicle-routing",
+      "stochastic"
+    ],
+    "type": "publication",
+    "doi": "10.3390/math14224208",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 60.0
+  },
+  {
     "id": "openalex-W7214635673",
     "title": "Gradient affinity from a shared encoder guides multitask grouping of ADMET endpoints measured on largely disjoint compounds",
     "authors": [
@@ -24471,6 +24633,33 @@
     "score": 40.0
   },
   {
+    "id": "s2-2f572f8d4780",
+    "title": "A Case Study on Heterogeneous Fleet Multi-Product Multi-Depot Green Vehicle Routing Problem",
+    "authors": [
+      "Hakan Ayhan Dağıstanlı",
+      "Alpaslan Atmanlı",
+      "Aygun Altundas",
+      "Nadir Yilmaz"
+    ],
+    "abstract": "Logistics costs are among the most significant expense items for businesses. Small and medium-sized enterprises (SMEs), in particular, continuously seek to optimize their operational costs to remain competitive under economic constraints. In modern distribution operations, the simultaneous consideration of heterogeneous vehicle capacities and fuel consumption characteristics, multiple products, and multiple distribution centers creates a complex decision-making problem involving cost efficiency and resource utilization. This study addresses the Heterogeneous Fleet Multi-Product Multi-Depot Green Vehicle Routing Problem (HF-MP-MD-GVRP) in the context of an SME operating in the food sector. A mixed-integer linear programming model is developed to minimize total distribution costs, comprising vehicle fuel costs and depot rental costs. The model incorporates customer-specific product demands, depot-to-customer and inter-customer distances, vehicle capacities, vehicle-specific fuel consumption rates, fuel prices, and depot rental expenses as input parameters. Based on these inputs, the model determines depot selection, customer assignments, vehicle utilization, and distribution routes. Its performance is examined under different operational scenarios. The scenario analysis further illustrates how changes in depot availability and fleet composition influence depot selection, vehicle utilization, routing decisions, and total distribution costs. In addition, the CO2 emissions associated with the resulting distribution configurations are evaluated separately to assess their environmental implications. The findings reveal that the economically optimal distribution configuration does not necessarily correspond to the environmentally preferable alternative. In particular, the two-depot configuration achieves an approximately 13.05% reduction in CO2 emissions compared with the single-depot economic optimum, highlighting a potential trade-off between economic efficiency and environmental performance. The study demonstrates that sustainable distribution planning in SMEs requires not only efficient routing decisions but also careful consideration of depot configuration, fleet utilization, and the financial constraints of the enterprise.",
+    "date": "2026-11-15",
+    "source": "Semantic Scholar",
+    "source_detail": "vehicle routing problem",
+    "url": "https://doi.org/10.3390/app162211314",
+    "tags": [
+      "linear-programming",
+      "integer-programming",
+      "vehicle-routing",
+      "stochastic",
+      "supply-chain"
+    ],
+    "type": "publication",
+    "doi": "10.3390/app162211314",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 60.0
+  },
+  {
     "id": "crossref-10.1007-s10479-026-07477-3",
     "title": "An embedded boosting approach incorporating instance valuation and adaptive cleaning for imbalanced credit classification with label noise",
     "authors": [
@@ -25237,6 +25426,32 @@
     "type": "publication",
     "doi": "10.48550/arXiv.2611.19515",
     "arxiv_id": "2611.19515v1",
+    "score": 40.0
+  },
+  {
+    "id": "s2-948684f123d2",
+    "title": "Multi-Agent Deep-Reinforcement-Learning-Driven Energy-Aware Geographic Routing Protocol for UAV Ad Hoc Networks",
+    "authors": [
+      "Ya-Nan Zhang",
+      "Bo Ouyang",
+      "Hai-Bo Huang",
+      "Kun Zou",
+      "Zhao Huang",
+      "Rui Hu"
+    ],
+    "abstract": "Unmanned aerial vehicle ad hoc networks (UANETs) are a key enabler of air–ground integrated information networks, yet their deployment is hindered by dynamic topologies with relative speeds often exceeding 30 m/s, stringent onboard energy constraints, and harsh propagation environments. Existing geographic routing protocols reduce control overhead but base forwarding decisions on position alone, and reinforcement-learning-based variants adopt single-agent architectures in which nodes learn independently; neither the fairness of energy distribution among neighboring nodes nor dense hop-by-hop feedback is considered. This paper proposes a Multi-Agent Deep-Reinforcement-Learning-Driven Energy-Aware Geographic Routing Protocol for UAV Ad Hoc Networks (MA-EAGP). Each node acts as an independent agent within the centralized-training-with-decentralized-execution framework, and all nodes share a single Actor network. A neighborhood energy fairness (NEF) index based on Jain’s fairness index extends energy awareness from a single next hop to its forwarding region, while a comprehensive link quality (LQ) score fusing SINR, RSSI and ETX characterizes instantaneous link reliability. A dense distance-progress reward supplies immediate directional feedback, mitigating the sparse-reward problem and suppressing detours. Simulations across node densities and speeds show that, in most of the evaluated scenarios, MA-EAGP improves the packet delivery ratio and network lifetime, yielding lower end-to-end delay and fewer dead nodes than GPSR, QNGPSR and DDQN-MTGPSR.",
+    "date": "2026-11-14",
+    "source": "Semantic Scholar",
+    "source_detail": "vehicle routing problem",
+    "url": "https://doi.org/10.3390/eng7110646",
+    "tags": [
+      "stochastic",
+      "constraint-programming"
+    ],
+    "type": "publication",
+    "doi": "10.3390/eng7110646",
+    "arxiv_id": "",
+    "citation_count": 0,
     "score": 40.0
   },
   {
@@ -84764,6 +84979,69 @@
     "type": "publication",
     "doi": "10.1007/s10479-026-07202-0",
     "score": 30.0
+  },
+  {
+    "id": "crossref-10.1016-j.cor.2026.107731",
+    "title": "Dynamic heterogeneous team orienteering with time windows: A cross-attention-driven deep reinforcement learning framework",
+    "authors": [
+      "Shen, S.",
+      "Lei, Q.",
+      "Tao, Z.",
+      "Wu, Z."
+    ],
+    "abstract": "",
+    "date": "2026-11-01",
+    "source": "Computers & Operations Research",
+    "source_detail": "Computers & Operations Research",
+    "url": "https://doi.org/10.1016/j.cor.2026.107731",
+    "tags": [
+      "ml-for-or"
+    ],
+    "type": "publication",
+    "doi": "10.1016/j.cor.2026.107731",
+    "score": 25.0
+  },
+  {
+    "id": "crossref-10.1016-j.ijpe.2026.110296",
+    "title": "Integrated Multi-Period Aircraft Engine Maintenance Planning Using a hybrid Branch-and-Price and ALNS Framework",
+    "authors": [
+      "Cui, Y.",
+      "Xu, H.",
+      "Han, S.",
+      "Gupta, S."
+    ],
+    "abstract": "",
+    "date": "2026-11-01",
+    "source": "Int. J. Production Economics",
+    "source_detail": "Int. J. Production Economics",
+    "url": "https://doi.org/10.1016/j.ijpe.2026.110296",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1016/j.ijpe.2026.110296",
+    "score": 20.0
+  },
+  {
+    "id": "crossref-10.1007-s10479-026-07201-1",
+    "title": "Quantum bridge analytics: a QUBO approach to the uncapacitated facility location problem",
+    "authors": [
+      "Li, H.",
+      "Hennig, R.",
+      "Kochenberger, G.",
+      "Glover, F."
+    ],
+    "abstract": "",
+    "date": "2026-11-01",
+    "source": "Annals of Operations Research",
+    "source_detail": "Annals of Operations Research",
+    "url": "https://doi.org/10.1007/s10479-026-07201-1",
+    "tags": [
+      "facility-location"
+    ],
+    "type": "publication",
+    "doi": "10.1007/s10479-026-07201-1",
+    "score": 25.0
   },
   {
     "id": "crossref-10.1007-s11590-026-02345-2",
@@ -322419,680 +322697,5 @@
     "arxiv_id": "2608.22557",
     "citation_count": 0,
     "score": 30.0
-  },
-  {
-    "id": "openalex-W7203922275",
-    "title": "Meta-repository for data and code associated with the Mongird et al. 2026 submission to Nature Communications",
-    "authors": [
-      "Kendall Mongird",
-      "Jennie Rice",
-      "Emily Graham"
-    ],
-    "abstract": "Full Changelog: https://github.com/IMMM-SFA/mongird-etal_2026_nature_comms/commits/v1.0",
-    "date": "2026-08-22",
-    "source": "OpenAlex",
-    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
-    "url": "https://doi.org/10.5281/zenodo.22051201",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.5281/zenodo.22051201",
-    "citation_count": 0,
-    "score": 35.0
-  },
-  {
-    "id": "openalex-W7162214417",
-    "title": "pubchem-mcp-server",
-    "authors": [
-      "Casey Hand"
-    ],
-    "abstract": "Model Context Protocol (MCP) server for the PubChem chemical database, providing compound search (name, SMILES, InChIKey, formula, substructure, 2D similarity), physicochemical and pharmacological properties, GHS safety data, bioactivity profiles, cross-references, and entity summaries for assays, genes, proteins, and taxa.",
-    "date": "2026-08-22",
-    "source": "OpenAlex",
-    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
-    "url": "https://doi.org/10.5281/zenodo.20355439",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.5281/zenodo.20355439",
-    "citation_count": 0,
-    "score": 40.0
-  },
-  {
-    "id": "openalex-W7162205137",
-    "title": "pubmed-mcp-server",
-    "authors": [
-      "Casey Hand"
-    ],
-    "abstract": "Model Context Protocol (MCP) server for NCBI E-utilities, providing PubMed article search, full-text retrieval via PubMed Central and Unpaywall, citation formatting (APA, MLA, BibTeX, RIS), MeSH vocabulary lookup, and related-article discovery.",
-    "date": "2026-08-22",
-    "source": "OpenAlex",
-    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
-    "url": "https://doi.org/10.5281/zenodo.20351184",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.5281/zenodo.20351184",
-    "citation_count": 0,
-    "score": 40.0
-  },
-  {
-    "id": "openalex-W7203910064",
-    "title": "mdcx: verified conversion of document collections to queryable Markdown",
-    "authors": [
-      "Jorge Ellena"
-    ],
-    "abstract": "Converts complete document collections to Markdown, checking each file against the text the original actually exposes, packages the resulting corpus with its index and provenance into a single encrypted file, and exposes it to agents through the Model Context Protocol. Over a collection of 99 documents, answering one query through the package costs 435 model tokens against the 2,265,488 required to read the originals.",
-    "date": "2026-08-22",
-    "source": "OpenAlex",
-    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
-    "url": "https://doi.org/10.5281/zenodo.22051391",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.5281/zenodo.22051391",
-    "citation_count": 0,
-    "score": 40.0
-  },
-  {
-    "id": "openalex-W7203883756",
-    "title": "RearAccess.com: An Independently Maintained Access Guide to NARA Record Group 615 (Project Blue Book and Related UAP Records)",
-    "authors": [
-      "RearAccess.com"
-    ],
-    "abstract": "RearAccess.com (https://rearaccess.com/) is an independent, non-governmental research site that mirrors and indexes the U.S. National Archives' Record Group 615 bulk releases relating to Project Blue Book (1947-1969) and later Unidentified Anomalous Phenomena (UAP) record transfers. The underlying archival records are U.S. federal public-domain material; the site's contribution is a parsed, searchable index and finding aids across 10,743 archival descriptions, 117,168 digital objects, and 10,276 individual Project Blue Book case files, indexed by U.S. state/territory and by year (1947-1969), plus 375 additional unsealed federal records and 122 sub-collections spanning textual/microfilm records, still photographs, moving images and sound, presidential library correspondence, and born-digital electronic records. Notably, the busiest single month across the full case-file run is November 1957 (364 files), not the famous \"flap\" of summer 1952, and roughly 480 case files describe sightings over open water identified only by latitude/longitude. This upload is a short access guide/finding aid summarizing that index and its methodology for researchers, with links to the case-file index, collections overview, and bulk dataset export. RearAccess.com is not affiliated with, or endorsed by, NARA or any government agency.",
-    "date": "2026-08-22",
-    "source": "OpenAlex",
-    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
-    "url": "https://doi.org/10.5281/zenodo.22051221",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.5281/zenodo.22051221",
-    "citation_count": 0,
-    "score": 40.0
-  },
-  {
-    "id": "openalex-W7163376912",
-    "title": "Deliberate: An open-source Python toolkit for AI-assisted public deliberation analysis",
-    "authors": [
-      "George Domalis",
-      "Athanasios Koursaris",
-      "Alexandra Apostolopoulou",
-      "Konstantinos Kanaris",
-      "George Fiotakis",
-      "Dimitris Tsakalidis",
-      "Ioannis Livieris",
-      "Nikos Karacapilidis"
-    ],
-    "abstract": "Public deliberation platforms generate large volumes of unstructured citizen contributions requiring systematic analysis to support evidence-based policymaking. Existing solutions typically offer isolated functionalities, lacking integrated workflows that transform raw text into structured analytical outputs. This paper presents DELIBERATE, an open-source Python toolkit for AI-assisted deliberation analysis. It provides three composable services: Trend Discovery, which clusters contributions using unsupervised learning and LLM-based semantic enrichment; Argument Analysis, which performs argumentation mining and argument classification; and Content Quality, which automates content moderation by identifying unsuitable contributions. DELIBERATE produces structured outputs for downstream policy analysis and supports reproducible experimentation.",
-    "date": "2026-08-22",
-    "source": "OpenAlex",
-    "source_detail": "SoftwareX",
-    "url": "https://doi.org/10.1016/j.softx.2026.102960",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.1016/j.softx.2026.102960",
-    "citation_count": 0,
-    "score": 40.0
-  },
-  {
-    "id": "openalex-W7203637062",
-    "title": "OpenBrowse: Self-hosted AI browser agents",
-    "authors": [
-      "Lucas Johnston Kurilov"
-    ],
-    "abstract": "OpenBrowse is an open-source, self-hosted alternative to Browser Use Cloud: AI browser agents that run on your own hardware, driven through the v3 REST API, with schema-validated structured output, anti-hallucination grounding guards, and a live visual dashboard.",
-    "date": "2026-08-22",
-    "source": "OpenAlex",
-    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
-    "url": "https://doi.org/10.5281/zenodo.21986248",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.5281/zenodo.21986248",
-    "citation_count": 0,
-    "score": 40.0
-  },
-  {
-    "id": "crossref-10.1007-s10479-026-07376-7",
-    "title": "Smart and sustainable production, logistics, and supply chain: trends, challenges, methods, and best practices II, part 2",
-    "authors": [
-      "Mrugalska, B.",
-      "Golinska-Dawson, P.",
-      "Shin, Y.",
-      "Weber, G."
-    ],
-    "abstract": "",
-    "date": "2026-08-22",
-    "source": "Annals of Operations Research",
-    "source_detail": "Annals of Operations Research",
-    "url": "https://doi.org/10.1007/s10479-026-07376-7",
-    "tags": [
-      "supply-chain"
-    ],
-    "type": "publication",
-    "doi": "10.1007/s10479-026-07376-7",
-    "score": 35.0
-  },
-  {
-    "id": "crossref-10.1007-s10479-026-07280-0",
-    "title": "A two-stage stochastic approach to fixed-income multi-portfolio optimization with deep-learning scenario generation: an investment bank case study",
-    "authors": [
-      "Azizian, M.",
-      "Izadi, M.",
-      "Ardestani, M.",
-      "Jobeiri, S.",
-      "Ghoreishi, S.",
-      "Siamak, M."
-    ],
-    "abstract": "",
-    "date": "2026-08-22",
-    "source": "Annals of Operations Research",
-    "source_detail": "Annals of Operations Research",
-    "url": "https://doi.org/10.1007/s10479-026-07280-0",
-    "tags": [
-      "stochastic"
-    ],
-    "type": "publication",
-    "doi": "10.1007/s10479-026-07280-0",
-    "score": 35.0
-  },
-  {
-    "id": "crossref-10.1007-s10479-026-07364-x",
-    "title": "A multi-objective stochastic home health care routing and scheduling problem under demand and service time uncertainty",
-    "authors": [
-      "Besbes, K.",
-      "Alaya, H.",
-      "Ben Abdelaziz, F."
-    ],
-    "abstract": "",
-    "date": "2026-08-22",
-    "source": "Annals of Operations Research",
-    "source_detail": "Annals of Operations Research",
-    "url": "https://doi.org/10.1007/s10479-026-07364-x",
-    "tags": [
-      "scheduling",
-      "multi-objective"
-    ],
-    "type": "publication",
-    "doi": "10.1007/s10479-026-07364-x",
-    "score": 40.0
-  },
-  {
-    "id": "crossref-10.1007-s11081-026-10123-3",
-    "title": "Probabilistic robustness for compressor controls in transient pipeline networks",
-    "authors": [
-      "Schuster, M.",
-      "Strauch, E.",
-      "Wilka, H.",
-      "Lang, J.",
-      "Gugat, M."
-    ],
-    "abstract": "Abstract\n                  Uncertainty plays a crucial role in modeling and optimization of complex systems across various applications. In this paper, uncertain gas transport through pipeline networks is considered and a novel strategy to measure the robustness of deterministically computed compressor and valve controls, the probabilistic robustness, is presented. Initially, an optimal control for a deterministic gas network problem is computed such that the total control cost is minimized with respect to box constraints for the pressure. Subsequently, the model is perturbed by uncertain gas demands. The probability, that the uncertain gas pressures- based on the a priori deterministic optimal control- satisfy the box constraints, is evaluated. Moreover, buffer zones are introduced in order to tighten the pressure bounds in the deterministic scenario. Optimal controls for the deterministic scenario with buffer zones are also applied to the uncertain scenario, allowing to analyze the impact of the buffer zones on the probabilistic robustness of the optimal controls. For the computation of the probability, we apply a kernel density estimator based on samples of the uncertain pressure at chosen locations. In order to reduce the computational effort of generating the samples, we combine the kernel density estimator approach with a stochastic collocation method which approximates the pressure at the chosen locations in the stochastic space. Finally, we discuss generalizations of the probabilistic robustness check and we present numerical results for a gas network taken from the public gas library.",
-    "date": "2026-08-22",
-    "source": "Optimization and Engineering",
-    "source_detail": "Optimization and Engineering",
-    "url": "https://doi.org/10.1007/s11081-026-10123-3",
-    "tags": [
-      "stochastic"
-    ],
-    "type": "publication",
-    "doi": "10.1007/s11081-026-10123-3",
-    "score": 45.0
-  },
-  {
-    "id": "openalex-W7134235577",
-    "title": "A Collection of Real-World R Scripts",
-    "authors": [
-      "Florian Sihler",
-      "Julian Schubert",
-      "Matthias Tichy"
-    ],
-    "abstract": "A large dataset of real-world R scripts used by the flowR ecosystem for testing and benchmarking. This dataset contains partially annotated scripts, please consult the main README for more information!",
-    "date": "2026-08-22",
-    "source": "OpenAlex",
-    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
-    "url": "https://doi.org/10.5281/zenodo.18927873",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.5281/zenodo.18927873",
-    "citation_count": 0,
-    "score": 40.0
-  },
-  {
-    "id": "openalex-W7203989195",
-    "title": "Judging AI-Native Work: Gates, Evidence, and the Limits of the Machine",
-    "authors": [
-      "Mark Sendo"
-    ],
-    "abstract": "A new category of creative and technical work has arrived faster than the means to judge it. This working paper argues that credible recognition of AI-native work rests on three commitments that must hold together: admissibility before merit, evidence before claim, and permanently human recognition authority. It explains the five admissibility gates, the role of versioned workflow evidence, the Film-domain measurement architecture, and the institutional firewall that permits computational assistance to organize information while prohibiting machine systems from exercising recognition authority. Institutional disclosure: The Orchestrator Institute and Orchestrator Awards are sibling institutions under Celestial Technologies LLC. The author holds an institutional interest, stated so readers can weigh it. The paper was drafted with AI assistance under the author's direction and final authority. All claims, positions, and errors remain the author's. Non-activation statement: Publication does not activate scoring, evaluation, judging, submissions, payments, nominations, juries, voting, or recognition. Doctrine: Publish first. Be cited second. Recognize third. Series: Orchestrator Awards Working Papers · Issue 003. Review status: Working paper — not peer-reviewed.",
-    "date": "2026-08-22",
-    "source": "OpenAlex",
-    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
-    "url": "https://doi.org/10.5281/zenodo.22049565",
-    "tags": [
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.5281/zenodo.22049565",
-    "citation_count": 0,
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2608.22107",
-    "title": "Virtual element approximations for distributed or Neumann boundary optimal control problems governed by poroelasticity equation",
-    "authors": [
-      "Thirupathi Gudi",
-      "David Mora",
-      "Nitesh Verma"
-    ],
-    "abstract": "This paper investigate the conforming virtual element method for the optimal control problem governed by the linear poroelasticity equation. Both distributed control and Neumann boundary controls are considered with the optimize-then-discretize approach. We establish the well-posedness of the discrete state and adjoint problems in three-field formulation by deriving the first-order optimality condition. The optimal a priori error estimates are developed through a novel poroelastic projection for both control problems, and these estimates are uniform with respect to the relevant physical parameters of the model problem. Moreover, the numerical experiments are carried out using the primal dual active set strategy, and demonstrate the support for the derived theoretical results.",
-    "date": "2026-08-22",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2608.22107v1",
-    "tags": [
-      "math.OC",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.22107",
-    "arxiv_id": "2608.22107v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.22088",
-    "title": "On $φ$-Best Proximity Points and Proximal-type Algorithms in Banach Spaces",
-    "authors": [
-      "Priyanka Priyadarshini Behera",
-      "C. Nahak"
-    ],
-    "abstract": "The purpose of this paper is to study the existence and convergence of $φ$-best proximity points in Banach spaces. A strong convergence theorem is established by employing a shrinking projection algorithm designed to compute common $φ$-best proximity points of a proximally weakly suppressive mapping. Finally, we address a projection scheme to solve split $φ$-best proximity point and variational problem in a Banach space. These contributions provide new tools for solving nonlinear problems involving non-self mappings.",
-    "date": "2026-08-22",
-    "source": "arXiv",
-    "source_detail": "math.FA",
-    "url": "http://arxiv.org/abs/2608.22088v1",
-    "tags": [
-      "math.FA",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.22088",
-    "arxiv_id": "2608.22088v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.21933",
-    "title": "Hautus criteria for exact controllability and stabilizability of discrete-time backward-structured stochastic linear systems",
-    "authors": [
-      "Xurun Zuo"
-    ],
-    "abstract": "This paper studies exact controllability and L2-stabilizability of discrete-time backward-structured stochastic linear systems. For each prescribed finite horizon, equivalent characterizations of exact controllability are established in terms of the controllability Gramian, a Kalman-type rank condition, and the reachable subspace. Exact null controllability without a prescribed horizon is then characterized by a finite-dimensional rank condition, and a Hautus-type criterion is derived using positive semidefinite eigenmatrices of a positive operator. For L2-stabilizability, we establish a stabilizability decomposition and obtain a corresponding Hautus-type spectral criterion. As a byproduct, we show that exact null controllability implies L2-stabilizability. These results provide algebraic and spectral tests for the controllability and stabilizability of the considered systems.",
-    "date": "2026-08-22",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2608.21933v1",
-    "tags": [
-      "math.OC",
-      "decomposition"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.21933",
-    "arxiv_id": "2608.21933v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2608.21862",
-    "title": "Centered Weak Discrete Riemannian Gradients: A Unified Framework for Riemannian Optimization",
-    "authors": [
-      "Derun Zhou"
-    ],
-    "abstract": "We introduce the centered weak discrete Riemannian gradient (c-wDRG) framework for the unified analysis of optimization methods on Riemannian manifolds. The framework uses a center point to represent the relevant logarithmic differences in a common tangent space and covers Riemannian steepest descent, proximal point, proximal gradient, implicit midpoint, geodesic average-vector-field, Gonzalez, and Itoh--Abe methods. We derive c-wDRG certificates for these schemes and establish curvature-aware convergence results using explicit metric distortion bounds. The framework yields sublinear and linear convergence for nonaccelerated methods in the geodesically convex and strongly convex settings, respectively. We further develop accelerated c-wDRG schemes, obtaining accelerated sublinear convergence in the convex case and accelerated linear convergence in the strongly convex case. Our results provide explicit curvature-dependent stepsize conditions and convergence rates within a common framework for Riemannian first-order and discrete-gradient methods.",
-    "date": "2026-08-22",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2608.21862v1",
-    "tags": [
-      "math.OC",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.21862",
-    "arxiv_id": "2608.21862v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.21987",
-    "title": "True Work-Efficiency in Parallel Derandomization",
-    "authors": [
-      "Mohsen Ghaffari",
-      "Cheng Jiang"
-    ],
-    "abstract": "A longstanding limitation of known techniques for parallel derandomization was that they incurred at least polylogarithmic overhead in work. For instance, for fundamental and frequently used problems such as maximal independent set, maximal matching, and $(Δ+1)$-coloring, where $Δ$ denotes the maximum degree of the graph, the best-known deterministic parallel algorithms with polylogarithmic depth used $Ω((m+n)\\mathrm{poly}(\\log n))$ work on $n$-vertex, $m$-edge graphs; see, e.g., Luby [FOCS '88]. Consequently, at least $\\mathrm{poly}(\\log n)$ processors were needed for these algorithms to outperform straightforward single-processor algorithms. Recently, Ghaffari and Grunau [FOCS '25] introduced a new parallel derandomization method that substantially reduced the overhead from $\\mathrm{poly}(\\log n)$ to $\\mathrm{poly}(\\log\\log n)$, achieving work bounds of $O((m+n)\\mathrm{poly}(\\log\\log n))$. In this paper, we settle this line of research by obtaining linear work bounds of $O(m+n)$, thereby achieving truly work-efficient parallel derandomization.",
-    "date": "2026-08-22",
-    "source": "arXiv",
-    "source_detail": "cs.DS",
-    "url": "http://arxiv.org/abs/2608.21987v1",
-    "tags": [
-      "cs.DS",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.21987",
-    "arxiv_id": "2608.21987v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.21932",
-    "title": "Computing the Determinant via the Generalized Euclidean Algorithm",
-    "authors": [
-      "Janina Reuter"
-    ],
-    "abstract": "We present an algorithm with a natural geometric interpretation for computing the determinant of a matrix $B\\in\\mathbb{Z}^{d\\times d}$. It improves upon the current fastest deterministic algorithms by a factor of $d^{ω(1)+1-ω(2)}\\approx d^{0.1213}$, where $ω(k)$ denotes the exponent required for multiplying a $d\\times d$ matrix with a $d\\times d^k$ matrix. Our approach builds on a recent result of Klein and Reuter (STOC 2025), who introduced a novel algorithmic idea for lattice basis computation that can be viewed as extending the Euclidean algorithm from $\\mathbb{Z}$ to $\\mathbb{Z}^d$. By adapting their techniques, we compute the determinant with the same bit complexity as applying the generalized Euclidean algorithm to an input matrix $A\\in\\mathbb{Z}^{d\\times 2d}$ with $\\|A\\| = \\|B\\|$, namely $\\tilde{O}(d^{ω(2)}\\log\\|B\\|)$. Prior to this work, the fastest deterministic algorithm for computing the determinant required $\\tilde{O}(d^{ω(1)+1}\\log\\|B\\|)$ bit operations.",
-    "date": "2026-08-22",
-    "source": "arXiv",
-    "source_detail": "cs.DS",
-    "url": "http://arxiv.org/abs/2608.21932v1",
-    "tags": [
-      "cs.DS",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.21932",
-    "arxiv_id": "2608.21932v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.21912",
-    "title": "The Parameterized Periodicity Lemma",
-    "authors": [
-      "Rikuya Hamai",
-      "Yuto Nakashima",
-      "Shunsuke Inenaga"
-    ],
-    "abstract": "Fine and Wilf [Proc. Amer. Math. Soc. 1965] showed that any string of length at least $p+q-d$ with periods $p$ and $q$ also has period $d=\\gcd(p,q)$. For parameterized strings, Apostolico and Giancarlo [Discrete Appl. Math. 2008] proved an analogue with length bound $p+q$, assuming that the two induced bijections commute. Ideguchi et al. [SPIRE 2023] removed this assumption and gave the bound $p+q+\\min(p,q)(σ-1)$, where $σ$ is the number of distinct letters. This was later improved by Hamai et al. [SPIRE 2024] to $p+q+\\min(p,q)(σ-2)$, which was used to bound the number of non-equivalent parameterized squares. In this paper, we establish the optimal Fine--Wilf type bound for parameterized strings. Namely, if a string $s$ containing $σ$ distinct letters has parameterized periods $p$ and $q$ and satisfies $|s| \\ge p+q+(σ-3)d+1$, where $d=\\gcd(p,q)$, then $d$ is also a parameterized period of $s$. We also give matching lower-bound instances, proving that our bound is optimal for any $σ\\geq 2$.",
-    "date": "2026-08-22",
-    "source": "arXiv",
-    "source_detail": "cs.DS",
-    "url": "http://arxiv.org/abs/2608.21912v1",
-    "tags": [
-      "cs.DS",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.21912",
-    "arxiv_id": "2608.21912v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.22112",
-    "title": "Symbolic Neural ODEs: Learning interpretable models from time-series data",
-    "authors": [
-      "Nibodh Boddupalli",
-      "Jeff Moehlis"
-    ],
-    "abstract": "We present a machine learning framework for identifying sparse, interpretable models of dynamical systems directly from time-series data. Our approach parameterizes the underlying vector field using a neural architecture and trains it by minimizing a multi-step prediction loss over a finite horizon. To ensure numerical tractability, we optimize a mean absolute error objective averaged across prediction steps, and progressively increase the horizon during training. A key feature of this formulation is that it enforces consistency under repeated composition of the learned dynamics. As a result, the identified models exhibit significantly improved stability compared with approaches based on one-step regression of the vector field. When combined with sparsity-promoting regularization, this leads to parsimonious models that generalize beyond the training data. We demonstrate accurate recovery of systems exhibiting a wide range of behaviors, including stable and unstable fixed points, periodic orbits, and chaotic attractors. For chaotic systems, while long-term trajectory prediction is inherently limited by sensitivity to initial conditions, we show that multi-step training yields models with accurate short-term dynamics and strong agreement in long-time statistical properties, including mean, variance, and Lyapunov exponents. Moreover, we establish theoretical bounds linking trajectory error to statistical accuracy, providing a step toward a principled explanation for this behavior.",
-    "date": "2026-08-22",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2608.22112v1",
-    "tags": [
-      "cs.LG",
-      "ml-for-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.22112",
-    "arxiv_id": "2608.22112v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2608.22044",
-    "title": "Structured Learning on Mapper Representations",
-    "authors": [
-      "George Babus",
-      "Farzana Nasrin"
-    ],
-    "abstract": "Modern machine learning (ML) methods are highly effective for prediction tasks, but many commonly used representations reduce complex data to fixed dimensional embeddings that may suppress multiscale structural organization. The Mapper algorithm from topological data analysis (TDA) provides a different perspective by decomposing data into overlapping local regions connected through a nerve construction, producing a structured representation that captures geometric organization, local statistical behavior, and relational connectivity simultaneously. In this work, we develop a framework for learning over Mapper induced structured representations. Rather than treating Mapper as a preprocessing step that produces a graph for downstream learning, we treat the full Mapper construction as part of the representation itself. We study mathematical properties of these representations, including invariance under relabeling, a distance functional on the space of Mapper representations, structural complexity of multiscale decompositions, and learning oriented stability under representation perturbations. Experiments on time series and graph classification datasets validate the proposed framework through controlled studies of representation ablation, Mapper parameter sensitivity, and the geometry of the induced representation space. Together, these results demonstrate how the proposed mathematical framework enables systematic comparison, interpretation, and analysis of Mapper representations, providing practical tools for studying representation geometry, structural complexity, and learning stability in learning tasks.",
-    "date": "2026-08-22",
-    "source": "arXiv",
-    "source_detail": "stat.ML",
-    "url": "http://arxiv.org/abs/2608.22044v1",
-    "tags": [
-      "stat.ML",
-      "ml-for-or",
-      "decomposition"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.22044",
-    "arxiv_id": "2608.22044v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2608.22024",
-    "title": "Barycentric Fused Gromov-Wasserstein Balancing for Causal Inference under Multiple Treatments",
-    "authors": [
-      "Yuki Murakami",
-      "Takumi Hattori",
-      "Kohsuke Kubota"
-    ],
-    "abstract": "Estimating heterogeneous single and interaction treatment effects from observational data under multiple simultaneous treatments is crucial for decision-making. To mitigate estimation variance, previous studies balance representation distributions between every pair of treatment patterns. However, such pairwise balancing scales quadratically with the number of treatment patterns and fails to preserve consistent local proximity structures across patterns, which degrades counterfactual estimation. To address these challenges, we propose the Causal Inference for Heterogeneous Single and Interaction Treatment Effects Network (CIHSI-Net), a deep learning framework built on a novel Barycentric Fused Gromov-Wasserstein Balancing (BFG-WB) objective. BFG-WB aligns the representation distribution of each treatment pattern with a shared Wasserstein barycenter, achieving global alignment while reducing the computational complexity from quadratic to linear, and its Fused Gromov-Wasserstein discrepancy preserves the local proximity structures essential for reliable heterogeneous effect estimation. Simulation studies show that CIHSI-Net consistently outperforms state-of-the-art baselines, and an application to real-world marketing data demonstrates its practical utility in complex multi-treatment scenarios.",
-    "date": "2026-08-22",
-    "source": "arXiv",
-    "source_detail": "stat.ME",
-    "url": "http://arxiv.org/abs/2608.22024v1",
-    "tags": [
-      "stat.ME",
-      "stochastic",
-      "ml-for-or",
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.22024",
-    "arxiv_id": "2608.22024v1",
-    "score": 50.0
-  },
-  {
-    "id": "arxiv-2608.21995",
-    "title": "Variance Driven Exploration: A Provable and Efficient Methodology for Pure Exploration in Highly Stochastic Environments",
-    "authors": [
-      "Khang Luong",
-      "Nam Nguyen",
-      "Hoang Ta",
-      "Hung The Tran",
-      "Tuan Dam"
-    ],
-    "abstract": "We propose Variance Driven Exploration (VarDE), a principled approach for pure exploration in highly stochastic environments, where the exploration process is dominated by stochastic variance. VarDE is built on a fundamental principle: sampling effort should be allocated to minimize the uncertainty of the final decision. We formalize the uncertainty of the final decision through a smooth decision function and derive allocation rules that explicitly capture how stochastic noise in individual components affects the reliability of the final output. We apply this methodology to three core problems of pure exploration -- Best Arm Identification (BAI), Monte Carlo Tree Search (MCTS), and Best-Policy Identification (BPI) -- with theoretical guarantees on variance decay and simple regret. Empirically, we demonstrate consistent and significant improvements of VarDE over existing methods, with especially strong gains in highly stochastic environments.",
-    "date": "2026-08-22",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2608.21995v1",
-    "tags": [
-      "cs.LG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.21995",
-    "arxiv_id": "2608.21995v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.21972",
-    "title": "Improved denoising diffusion probabilistic models with efficient non-diagonal covariance modeling",
-    "authors": [
-      "Rui Xia",
-      "Ayan Das",
-      "Artem Artemev",
-      "Andi Zhang",
-      "Guillaume Hennequin",
-      "Alberto Bernacchia"
-    ],
-    "abstract": "The sampling process of Denoising Diffusion Probabilistic Models (DDPMs) can be accelerated by leveraging second-order information in the form of approximations to the denoising posterior covariance -- allowing samples of acceptable quality to be produced in fewer but larger sampling steps. Previous attempts at using such information have used drastic (e.g.\\ diagonal) simplifications of the covariance. These do not do justice to the peculiar statistical structure of natural images, which exhibit strong non-diagonal correlations between pixels and color channels, and a slow-decaying power-law frequency spectrum. Here, we develop a novel covariance model that captures these features. Our Kronecker-DCT (K-DCT) model uses a Kronecker-factored decomposition of inter-color covariances and spatial covariances modeled in the frequency domain using the Discrete Cosine Transform (DCT). The use of the DCT reduces the computational complexity from quadratic to log-linear, resulting in negligible computational and memory overhead in each denoising step. By learning K-DCT-structured amortizations of the denoising posterior covariance using pre-trained score models on CIFAR-10, Celeb-A, ImageNet and LSUN datasets, we show improved performance compared to previous SOTA denoising samplers, both in terms of FID and likelihoods, especially in the regime of few denoising steps.",
-    "date": "2026-08-22",
-    "source": "arXiv",
-    "source_detail": "cs.CV",
-    "url": "http://arxiv.org/abs/2608.21972v1",
-    "tags": [
-      "cs.CV",
-      "decomposition"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.21972",
-    "arxiv_id": "2608.21972v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2608.22123",
-    "title": "A Lightweight and Post-Quantum Secure Framework for IEC 61869-9 Sampled Value Communication",
-    "authors": [
-      "S. M. Suhail Hussain",
-      "Arman Ahmad",
-      "Mohammad Tayyab",
-      "Shaik Mullapathi Farooq"
-    ],
-    "abstract": "Securing IEC 61869-9 Sampled Values (SV) is challenging because process-bus communication must satisfy stringent real-time constraints while supporting standardized high-rate publication profiles. This paper presents an experimentally validated security framework that combines lightweight per-frame authentication for operational SV traffic with post-quantum-capable key establishment protocol. For message integrity, the proposed method applies field-selective authentication employing optimized Chaskey-12 to reduce per-packet computational overhead. For trust establishment, the paper introduces an ML-KEM-based pairwise authentication and key-establishment procedure. The pairwise protocol is analyzed in the Quantum Random Oracle Model and is also verified with AVISPA tool under the Dolev-Yao adversarial model. A C-based publisher/subscriber prototype is implemented on a two-node process-bus testbed. Performance is evaluated across the eight IEC 61869-9 SV packet profiles using HMAC-256, AES-GMAC-128, Blake-2s, Chaskey-12, and a compiler-optimized Chaskey-12 implementations. These results indicate that optimized Chaskey-12 achieves ~90% lower latency than HMAC on SV packets. The proposed security framework is a practical and scalable candidate for protecting IEC 61869-9 SV traffic on resource-constrained digital-substation devices.",
-    "date": "2026-08-22",
-    "source": "arXiv",
-    "source_detail": "cs.CR",
-    "url": "http://arxiv.org/abs/2608.22123v1",
-    "tags": [
-      "cs.CR",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.22123",
-    "arxiv_id": "2608.22123v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.22104",
-    "title": "Opinion-Guided Layered Strategies for Decentralized Coordination",
-    "authors": [
-      "Shuhao Qi",
-      "Zhiyong Sun",
-      "Siep Weiland",
-      "Sofie Haesaert"
-    ],
-    "abstract": "Autonomous agents increasingly interact with other independent agents, and such interactions typically admit multiple joint behaviors. When two agents prefer different ones, their independent strategies may be mutually incompatible and fail to reach a coordinated outcome; when they are identical, neither can differentiate its role when needed. Ideally, an agent should coordinate with any agent it encounters, regardless of which admissible joint behavior that agent aims to realize. We therefore propose a new form of strategy, the opinion-guided strategy, which keeps all the admissible joint behaviors available and postpones the selection to execution time, when the other agent's behavior reveals which one to realize. To realize this, nonlinear opinion dynamics are leveraged in a layered realization to guide the agent to a common admissible joint behavior in response to the other agent's evolving behavior, even without communication. We formally establish the conditions under which the strategy remains robust to every preference the other agent may hold. This robustness has an important implication: two agents running identical strategies can break symmetry when needed, a capability that conventional strategies lack. Three case studies across different applications show that the opinion-guided strategy coordinates with every randomly encountered agent, as long as it is willing to realize one of the admissible joint behaviors. One of them corresponds to a general-sum game: unlike conventional approaches devoted to finding a unique Nash equilibrium in advance, the opinion-guided strategy keeps every equilibrium open and guarantees the agents reach one, decided by their runtime interaction.",
-    "date": "2026-08-22",
-    "source": "arXiv",
-    "source_detail": "cs.MA",
-    "url": "http://arxiv.org/abs/2608.22104v1",
-    "tags": [
-      "cs.MA",
-      "game-theory"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.22104",
-    "arxiv_id": "2608.22104v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2608.21984",
-    "title": "Impacts of Heterogeneous Grid-Forming Devices on Power System Dynamics Quantified by DW Shells",
-    "authors": [
-      "Liangxiao Luo",
-      "Linbin Huang",
-      "Hangyu Chen",
-      "Ruohan Leng",
-      "Zhixian Hou",
-      "Kehao Zhuang",
-      "Huanhai Xin"
-    ],
-    "abstract": "The concept of grid-forming (GFM) converters has gained great attention in the past years. However, it remains challenging to analyze and quantify the impacts of heterogeneous GFM devices (e.g., GFM energy storage systems, GFM wind turbines, GFM HVDC stations) on power system dynamics, especially when taking into account the complex interaction between GFM converters and grid-following (GFL) converters. To this end, this paper focuses on the decentralized and scalable stability analysis of power systems containing both GFM and GFL converters, where we use Davis-Wielandt (DW) shells to characterize the dynamics of the converters and the power grid. In particular, we analytically derive how integrating heterogeneous GFM converters affects the DW shell of the power grid and therefore the system stability. Our approach does not require the detailed parameters or control schemes of the GFM converters; instead, we define the local passivity and imaginary-axis indices of GFM converters to compactly describe their characteristics. These two indices can be conveniently obtained by testing a GFM converter and greatly simplify the stability analysis and computation when handling large-scale power systems.",
-    "date": "2026-08-22",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2608.21984v1",
-    "tags": [
-      "eess.SY",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.21984",
-    "arxiv_id": "2608.21984v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.21886",
-    "title": "Real-Time Transient Response Optimization",
-    "authors": [
-      "Anahida Kanade",
-      "Djan Tanova",
-      "Steve Conner",
-      "Taner Dosluoglu"
-    ],
-    "abstract": "Use of artificial intelligence in motor control applications that can be deployed within the microcontrollers need to comply with real-time demands of motor control systems. A supplementary controller approach that can be integrated within existing microcontrollers is presented. The proposed approach is implemented on a weeteq motor control integrated circuit and tested in the lab. A complete unsupervised motor control deployment solution was developed, and the real-time system response correction demonstrated under dynamic loads measured with and without the supplementary controller. The solution provides 100% coverage of real-time data at control loop sample rate and model inference period between 100usec and 1msec. The importance of latency for reduction of dynamic regulation margin during transient response is demonstrated with up to 68% reduction of the system response error. A novel key performance indicator based on principal components transform is introduced that provides a quantitative figure of merit for improvement of the transient response, in terms of the dynamic regulation margin, stability considerations and iterative improvements of consecutive regression model outputs. The significant events related to dynamic changes in the equipment and external operating conditions are detected at milliseconds resolution and recorded as highly compressed vectors representing deviation of the system response from linear steady state conditions. The resolution in time and accuracy of this vector data will enable a new level of system level optimisation that has not been possible using the time series data from IoT sensors in current equipment health monitoring solutions.",
-    "date": "2026-08-22",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2608.21886v1",
-    "tags": [
-      "eess.SY",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.21886",
-    "arxiv_id": "2608.21886v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.21858",
-    "title": "LLMs are Few-Shot Decision-Makers: Generalized Context-Aware Microgrid Frequency Control through Prompt Decision Transformer",
-    "authors": [
-      "Xu Yang",
-      "Chenhui Lin",
-      "Haotian Liu",
-      "Kaihang Deng",
-      "Yunhe Li",
-      "Wenchuan Wu"
-    ],
-    "abstract": "The rapid evolution of energy structures has positioned microgrids as pivotal components of next-generation power systems, offering enhanced resilience and renewable energy integration. However, the inherent low inertia, complex dynamics, and poor model conditions of microgrids necessitate advanced data-driven frequency control strategies. Although reinforcement learning (RL) has demonstrated certain potential and advantages, existing RL methods often struggle with generalization across diverse microgrid configurations and lack adaptability to unseen environments, particularly when explicit system parameters are unavailable. To address these challenges, in this paper, we introduce a novel prompt decision transformer (Prompt-DT) architecture for microgrid frequency control. Unlike traditional approaches that rely on hard-to-obtain environmental characteristic parameters, the proposed method leverages few-shot expert historical trajectories as prompts to guide autonomous perception and adaptive decision-making. In addition, we propose a context-aware training and execution mechanism utilizing self-supervised contrastive learning to enhance environment recognition and prompt utilization efficiency. In addition, a physics-informed prompt design technique that filters prompts based on cumulative reward and frequency volatility is proposed, ensuring high-quality physical guidance during online execution. Finally, to ensure generalization in unseen environments with limited data, we develop a lightweight finetuning approach that achieves performance comparable to full-parameter finetuning with minimal adjustments.",
-    "date": "2026-08-22",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2608.21858v1",
-    "tags": [
-      "eess.SY",
-      "ml-for-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.21858",
-    "arxiv_id": "2608.21858v1",
-    "score": 40.0
-  },
-  {
-    "id": "s2-968598d18f53",
-    "title": "Evolutionary Local Search in Vehicle Scheduling: Cost Architecture, Constraint Modeling, and the Divide Among Theory and Enterprise Practice",
-    "authors": [
-      "Ajay Bhaktharahalli Nagesh Hemambika",
-      "Rajashiva Ramalingam"
-    ],
-    "abstract": "Freight routing at enterprise scale is a combinatorial decision problem whose solution space is too large for human planners to search manually and too complex for simple heuristics to navigate reliably. This paper studies Vehicle Scheduling and Routing (VSR) optimization, an algorithm-based approach used in modern ERP-integrated transportation systems to automate the search for optimal solutions. The paper traces the problem from its roots in the Vehicle Routing Problem with Time Windows (VRPTW) through the mechanics of evolutionary local search, paying particular attention to how cost functions are constructed, how hard and soft constraints interact, and how the semantics of distance-cost calculation differ between route-based and destination-based models. The paper draws on operations research literature for theoretical grounding while concentrating on practical questions: why does the optimizer behave as it does, how does configuration drive that behavior, and what does a logistics professional need to understand to deploy VSR optimization effectively? Field observations show that miscalibrated cost parameters are the leading cause of suboptimal optimizer output in production deployments.",
-    "date": "2026-08-22",
-    "source": "Semantic Scholar",
-    "source_detail": "vehicle routing problem",
-    "url": "https://doi.org/10.14445/22312803/ijctt-v74i7p104",
-    "tags": [
-      "metaheuristics",
-      "scheduling",
-      "vehicle-routing",
-      "supply-chain"
-    ],
-    "type": "publication",
-    "doi": "10.14445/22312803/ijctt-v74i7p104",
-    "arxiv_id": "",
-    "citation_count": 0,
-    "score": 55.0
   }
 ]

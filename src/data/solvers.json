@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T16:00:59.053686+00:00",
+  "generated_at": "2026-11-21T15:15:04.905351+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlights of v1.16 are the use of parallelism by default in the\r\nMIP solver, a rewritten LP file reader, a Hessian oracle for QP,\r\nsupport for AMD GPUs in HiPDLP, Windows ARM64 Python wheels and ",
-      "github_open_issues": 160,
+      "github_open_issues": 159,
       "github_recent_prs": [
-        "speed up valgrind tests",
-        "Fix 3756",
-        "Fix 3749",
-        "Fix 3715",
-        "Fix #3708"
+        "Hipdlp interrupt",
+        "Nuget hipo",
+        "Fix 3751",
+        "Add HIGHS_TEST_EXACT_ITERATIONS for distribution builds",
+        "speed up valgrind tests"
       ],
       "pypi_monthly_downloads": -93
     },
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Features\r\n--------\r\n\r\n- added command line option `-t` to specify the number of threads, which triggers concurrent solving via `SCIPsolveConcurrent()`\r\n\r\nPerformance improvements\r\n--------------------",
-      "github_open_issues": 85,
+      "github_open_issues": 86,
       "github_recent_prs": [
         "messagePrintInfo passes file output to the dialog callback instead of the info callback",
         "Fix copy-paste errors in error messages and documentation",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14415,
+      "github_stars": 14421,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 141,
+      "github_open_issues": 143,
       "github_recent_prs": [
+        "build(deps): bump the pip group across 1 directory with 9 updates",
         "g3 export (set_cover, util)",
         "cmake(ci): fix Alpine and Fedora dotnet setup",
         "google3 export (routing, sat)",
-        "linear_solver: restore SCIP bounds when relaxing integrality",
-        "Fix/alldiff usage cache"
+        "linear_solver: restore SCIP bounds when relaxing integrality"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -666,13 +666,13 @@
         }
       ],
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_open_issues": 191,
+      "github_open_issues": 192,
       "github_recent_prs": [
+        "Preserve original LP duals in default continuous solves",
+        "Compile research-only LP reoptimization timing out by default",
         "Reduce memory-limit polling overhead in branch-and-bound",
         "Backport fixes from master to stable/2.10: branching crash, memory errors, overflows, crash guards, SC variables, MIP start",
-        "Use four supported exceptions for sequential root-LP auto selection",
-        "Don't abort on -rootCutFilterScore 0",
-        "Restore `-unitTest` (MIPLIB 3 and the sample problems)"
+        "Use four supported exceptions for sequential root-LP auto selection"
       ]
     },
     {
@@ -1132,13 +1132,13 @@
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
       "github_stars": 6399,
-      "github_open_issues": 200,
+      "github_open_issues": 199,
       "github_recent_prs": [
+        "Fix copying gmatmul expressions",
         "Expose CVXOPT iteration counts and native solver statistics",
         "Preserve solver statistics when a solve fails",
         "Bump macos version in optional solvers workflow",
-        "Remove nonexistent Moreau presolve setting from test",
-        "DOC: fix dead NumPy indexing and PIQP settings links"
+        "Remove nonexistent Moreau presolve setting from test"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1320,13 +1320,13 @@
       ],
       "recent_changes": "Indictments are back, and better than before! One of the frequent comments we have received with Timefold Solver 2.0 was that we should not have removed indictments - we listened, and they are now bac",
       "github_stars": 1877,
-      "github_open_issues": 117,
+      "github_open_issues": 118,
       "github_recent_prs": [
+        "chore: add javadoc for non-disruptive replanning and model conversion",
         "fix: repair selector iterator and cache contracts",
         "feat: support custom comparators in comparison joiners",
         "fix: correct score arithmetic edge cases",
-        "docs: name licenses and use several licenses in the License Manager",
-        "chore: fix SonarCloud reliability concern"
+        "docs: name licenses and use several licenses in the License Manager"
       ]
     },
     {
@@ -1387,11 +1387,11 @@
       "github_stars": 2563,
       "github_open_issues": 368,
       "github_recent_prs": [
+        "Drop support for Python 3.10",
         "Reset main for development",
         "Finalize Pyomo 6.11.0 Release",
         "Remove unused development file accidentally included in repo",
-        "Fix license and notice files",
-        "NFC: Fix typo in semibatch.py comment"
+        "Fix license and notice files"
       ],
       "pypi_monthly_downloads": -36
     },

@@ -1,0 +1,328 @@
+{
+  "date": "2026-11-21",
+  "generated_at": "2026-11-21T15:15:05.358764+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1287-opre.2025.1639",
+      "title": "Statistical Efficiency of Distributional Temporal Difference Learning and Freedman’s Inequality in Hilbert Spaces",
+      "authors": [
+        "Peng, Y.",
+        "Zhang, L.",
+        "Zhang, Z."
+      ],
+      "abstract": "Distributional reinforcement learning (DRL) has achieved empirical success in various domains. One core task in DRL is distributional policy evaluation, which involves estimating the return distribution η\n                    π\n                    for a given policy π. Distributional temporal difference (TD) learning has been accordingly proposed, which extends the classic TD learning in RL. In this paper, we focus on the non-asymptotic statistical rates of distributional TD learning. To facilitate theoretical analysis, we propose non-parametric distributional TD learning (NTD). For a γ-discounted tabular Markov decision process, we show that for NTD with a fixed-distribution generative model (at time t ∈ ℕ, sample one state s\n                    t\n                    ~ μ with μ\n                    min\n                    := min\n                    s∈S\n                    μ(s) &gt; 0 and observe a single transition from s\n                    t\n                    ), we need Õ(ε\n                    −2\n                    μ\n                    min\n                    −1\n                    (1−γ)\n                    −3\n                    ) interactions with the environment to achieve an ε-optimal estimator with high probability when the estimation error is measured by the supremum 1-Wasserstein distance. This sample complexity bound is minimax optimal up to logarithmic factors. In addition, we revisit categorical distributional TD learning (CTD), showing that the same non-asymptotic convergence bounds hold for CTD. We also extend our analysis to the more general setting where the data-generating process is Markovian. In the Markovian setting, we propose variance-reduced variants of NTD and CTD and show that both can achieve a sample complexity bound matching the state-of-the-art statistical results for classic policy evaluation. We validate our theoretical results through numerical experiments on an inventory management problem, illustrating the practical utility of distributional policy evaluation in risk-sensitive decision-making. To achieve the sharp statistical rates, we establish a novel Freedman’s inequality in Hilbert spaces. This new Freedman’s inequality would be of independent interest for statistical analysis of various infinite-dimensional online learning problems.",
+      "date": "2026-11-20",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2025.1639",
+      "tags": [
+        "ml-for-or",
+        "supply-chain",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2025.1639",
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261511722",
+      "title": "EXPRESS: Crossing platforms, connecting modalities: A multisource and multimodal interactive neural network for enhanced revenue prediction in service operations",
+      "authors": [
+        "Mu, J.",
+        "Xu, J.",
+        "Li, H.",
+        "Qiu, L.",
+        "Mei, X."
+      ],
+      "abstract": "Demand and revenue prediction is critical in the hotel industry, where fixed capacity and perishable inventory make profitability highly dependent on the effective alignment of pricing, staffing, and procurement decisions with expected market demand and financial outcomes. Accurate forecasts, therefore, serve as a foundation for service operations, enabling managers to balance cost efficiency with service quality. Online reviews have become a valuable source of information for revenue prediction, as they capture customer perceptions of service quality and influence booking intentions. Beyond numerical ratings, reviews often combine textual narratives and visual content, offering rich multimodal signals about customers’ service experiences. Together, these cues provide more comprehensive insights into consumer evaluations than either modality alone. Yet most existing approaches still rely primarily on numerical indicators or text, overlooking both the visual dimension of reviews and the complementary perspectives available across platforms. This narrow focus reduces predictive accuracy and weakens the operational relevance of current models. To address this gap, this paper uses consumer multimodal reviews as the primary data source and examines hotel revenue prediction through the lens of the consumer purchase decision process. We propose a theoretical framework based on this process to guide the design of our prediction model, thereby enhancing the accuracy of RevPAR predictions. The resulting model, termed the multisource and multimodal interactive neural network (MMINN), leverages cross-platform multimodal reviews to predict hotel RevPAR with greater precision. Our findings show that integrating textual and visual information and capturing their interactions improves prediction accuracy. Incorporating cross-platform reviews further enhances predictive power by using a cross-attention mechanism to fuse multisource features. Moreover, focusing on multigranular customer attention-related factors at both the review and platform levels allows the model to capture differences in the informational contributions of different reviews and platforms, which further strengthens revenue prediction. This research provides actionable insights for hotels by supporting revenue management, staffing, marketing, and investment strategies while enhancing competitiveness and customer satisfaction, thereby generating potential economic value for hotels. It also contributes to the service operations and revenue management literature by demonstrating the value of multisource multimodal data integration for advancing revenue prediction.",
+      "date": "2026-11-20",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261511722",
+      "tags": [
+        "ml-for-or",
+        "supply-chain",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261511722",
+      "score": 65.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1287-opre.2024.1404",
+      "title": "Column Elimination: An Iterative Approach to Solving Arc-Flow Formulations",
+      "authors": [
+        "Karahalios, A.",
+        "Van Hoeve, W."
+      ],
+      "abstract": "We present column elimination as a general framework for solving problems whose solutions can be represented as a collection of decision sequences. We show how such problems can be modeled as arc-flow formulations, using a dynamic program to represent the set of feasible decision sequences and their costs, and an integer linear program over the corresponding state-transition graph. Because the exact arc-flow formulation can be exponentially large, we introduce relaxed dynamic programs to compactly represent a superset of the feasible decision sequences. Column elimination solves the exact model by starting with a relaxed dynamic program, which induces a relaxed arc-flow formulation, and iteratively refining the relaxation by eliminating infeasible sequences in optimal solutions. Doing so, we generalize earlier approaches that were developed for decision-diagram based network models. We apply our general column elimination framework to three new applications: the vehicle routing problem with time windows, the pickup-and-delivery problem with time windows, and the graph multicoloring problem. The computational results show that column elimination is competitive with or outperforms state-of-the-art methods, closing several previously open benchmark instances across these domains, including one vehicle routing problem with time windows on 1,000 locations.",
+      "date": "2026-11-20",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2024.1404",
+      "tags": [
+        "vehicle-routing",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2024.1404",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2025.1837",
+      "title": "Dual Active Learning for Reinforcement Learning from Human Feedback",
+      "authors": [
+        "Liu, P.",
+        "Shi, C.",
+        "Sun, W."
+      ],
+      "abstract": "Aligning large language models (LLMs) with human preferences is critical to recent advances in generative artificial intelligence. Reinforcement learning from human feedback (RLHF) is widely applied to achieve this objective. A key step in RLHF is to learn the reward function from human feedback. However, human feedback is costly and time-consuming, making it essential to collect high-quality conversation data for human teachers to label. Additionally, different human teachers have different levels of expertise. It is thus critical to query the most appropriate teacher for their opinions. In this paper, we use offline reinforcement learning (RL) to formulate the alignment problem. Motivated by the idea of $D$-optimal design, we first propose a dual active reward learning algorithm for the simultaneous selection of conversations and teachers. Next, we apply pessimistic RL to solve the alignment problem, based on the learned reward estimator. Theoretically, we show that the reward estimator obtained through our proposed adaptive selection strategy achieves minimal generalized variance asymptotically, and prove that the sub-optimality of our pessimistic policy scales as $O(1/\\sqrt{T})$ with a given sample budget $T$. Through simulations and experiments on LLMs, we demonstrate the effectiveness of our algorithm and its superiority over state-of-the-art.",
+      "date": "2026-11-20",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2025.1837",
+      "tags": [
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2025.1837",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261511699",
+      "title": "EXPRESS: A Framework Addressing Supply Chain Carbon Emissions: Measurement, Reporting, and Reduction",
+      "authors": [
+        "Wu, J.",
+        "Shi, Y.",
+        "Liao, Y."
+      ],
+      "abstract": "This paper honors Professor Christopher S. Tang’s seminal contributions to sustainable operations management by examining the pivotal yet underappreciated role of supply chains in global carbon emissions. Despite the critical importance of supply chains in contributing to overall carbon footprints, current efforts to address these emissions are often overshadowed by more visible direct emissions (Scope 1) and energy-related emissions (Scope 2). To bridge this gap, we propose an integrated measurement-reporting-reduction framework for managing supply chain carbon emissions (upstream Scope 3). Drawing on the literature, we introduce methodologies for carbon measurement (e.g., EEIO models, LCA, machine learning, and blockchain), determinants and consequences of disclosure, and strategies for reduction. In addition, we present case studies of two industrial firms, Tongwei (a Chinese photovoltaic leader) and Siemens (a German multinational technology firm), to illustrate how firms with distinct institutional contexts implement the framework in practice, highlighting the strengths, challenges, and implications. We conclude with research questions on whether disclosure mandates and carbon border measures lead to real abatement or merely shift emissions across suppliers and borders.",
+      "date": "2026-11-20",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261511699",
+      "tags": [
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261511699",
+      "score": 60.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1287-opre.2023.0247",
+      "title": "Adaptive Preference Elicitation in Preference Robust CPT-Based Shortfall",
+      "authors": [
+        "Zhang, S.",
+        "Delage, E.",
+        "Xu, H."
+      ],
+      "abstract": "This paper investigates the cumulative prospect theory (CPT)-based shortfall risk measure where the value (utility) function and the distortion (probability weighting) functions are ambiguous. We propose a worst-case CPT-based shortfall risk measure where the capital requirement is based on the worst-case value function and distortion functions from an ambiguity set constructed with user-specific information (e.g., preference between risky and certain lotteries) and well-known general information such as the S-shape of the value functions. When the underlying random loss is discretely distributed and parameters in pairs of lotteries remain undetermined, we demonstrate that the worst-case value function and the distortion functions have a piecewise linear structure. Based on this observation, we develop an adaptive preference elicitation approach extended from the well-known polyhedral method to simultaneously elicit the distortion functions and the positive and negative parts of the value function by solving a sequence of mixed-integer linear programs. Based on the elicited distortion, we design new queries to construct a feasible set of the holistic value functions. The proposed framework iteratively shrinks the ambiguity set through designed queries, yielding a computationally implementable robust CPT-based shortfall risk measure. To examine the in-sample and out-of-sample performance of the elicited CPT-based preference functions and the resulting preference robust shortfall risk measure, we conduct numerical experiments under an S-shaped value function and inverse S-shaped distortion functions and report the corresponding results.",
+      "date": "2026-11-20",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2023.0247",
+      "tags": [
+        "integer-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2023.0247",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261511731",
+      "title": "EXPRESS: Estimating censored demand in family planning supply chains: forecast accuracy, inventory implications, and public health outcomes",
+      "authors": [
+        "Hewage, H.",
+        "Rostami-Tabar, B.",
+        "Syntetos, A.",
+        "Liberatore, F.",
+        "Milano, G."
+      ],
+      "abstract": "Lost sales due to stockouts and service interruptions create a major challenge for demand forecasting in family planning supply chains. When demand is censored, forecasts become biased, reinforcing cycles of understocking and unmet need. Existing models often ignore this distortion or treat all censoring mechanisms uniformly, limiting their decision relevance in operational settings. We propose the Truncated Conformal Kalman Filter (TCKF), a novel forecasting framework that integrates a Tobit Kalman Filter with conformal prediction. Unlike existing approaches, TCKF explicitly distinguishes between partial censoring (stockouts) and full censoring (interruptions or no-stock-received periods), enabling context-sensitive state updates. It also adapts to prolonged uncertainty through dynamic process-noise inflation and generates distribution-free prediction intervals, avoiding restrictive assumptions about error distributions. We evaluate performance using both synthetic and real-world data from the family planning program in Côte d’Ivoire, and we assess the impact on public health outcomes. Across both settings, TCKF consistently outperforms benchmark methods in forecast accuracy, considering both point and probabilistic forecasts, as well as in downstream inventory performance. Moreover, our results show how improvements in forecast accuracy can translate into better product availability and enhanced public health outcomes. This work bridges a critical gap between forecasting and inventory control and offers a scalable solution for supply chains facing censored demand.",
+      "date": "2026-11-20",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261511731",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261511731",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1177-10591478261511680",
+      "title": "EXPRESS: Financing Selection Under Procurement Decentralization with a Quality-Uncertain Supplier",
+      "authors": [
+        "Lin, Z.",
+        "Zhang, Q.",
+        "Xu, D.",
+        "Shi, R.",
+        "Cai, G."
+      ],
+      "abstract": "This article investigates how financing choice interacts with outsourcing structure and endogenous quality when a capital-constrained supplier exerts unobservable effort to improve component quality. We consider two common outsourcing structures: consignment, in which the OEM contracts directly with the supplier while outsourcing assembly to a contract manufacturer (CM), and turnkey (i.e., procurement decentralization), in which the CM intermediates component procurement. In each structure, the supplier can be financed either by a bank (bank finance) or by its downstream buyer (buyer finance). Our analysis delivers several main insights. First, we identify a\n                    Supplier’s Collateral Paradox\n                    : a higher collateral value can reduce the supplier’s equilibrium profit even as it improves product quality and increases total supply chain profit, because downstream firms exploit the supplier’s improved reliability to extract surplus. Second, we establish a\n                    Financier’s Advantage\n                    : the downstream firm always prefers to provide buyer finance itself (the OEM under consignment and the CM under turnkey), whereas the supplier always prefers bank finance. Third, the performance implications of buyer finance depend critically on the outsourcing structure: under consignment, buyer finance strictly dominates bank finance by yielding higher equilibrium quality and greater supply chain efficiency, and the OEM fully extracts the CM’s surplus, while under turnkey, buyer finance improves quality and efficiency only when the supplier’s collateral is sufficiently high, whereas when collateral is low, bank finance can deliver higher quality and greater supply chain efficiency, reflecting the CM’s intermediary role and the resulting amplification of triple marginalization. Fourth, compared with the case without capital constraints, capital constraints alter the extent of firms’ relative procurement preferences between consignment and turnkey. We further demonstrate the robustness of these findings under five extensions—financing of effort cost, imperfect inspection, stochastic market demand, CM pricing power, and quality-dependent production cost. Overall, the results highlight that financing authority and outsourcing structure jointly shape incentives, surplus allocation, and quality outcomes in outsourced supply chains.",
+      "date": "2026-11-20",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261511680",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261511680",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1007-s10479-026-07484-4",
+      "title": "A data-driven machine learning approach to typhoon evacuation decision-making and system reliability evaluation of stochastic evacuation networks",
+      "authors": [
+        "Huang, D.",
+        "Huang, K.",
+        "Lin, Y."
+      ],
+      "abstract": "Abstract\n                  With the increasing frequency and intensity of typhoon disasters, developing effective evacuation decision-making systems is critical for ensuring public safety. This paper proposes a data-driven approach that integrates machine learning (ML) classification models with system reliability evaluation to support typhoon evacuation operations. We address three key challenges: (1) predicting evacuation necessity based on meteorological data, (2) modeling uncertainty in evacuation networks, and (3) quantifying evacuation feasibility under resource constraints. First, the Synthetic Minority Oversampling Technique (SMOTE) is applied to handle class imbalance in historical typhoon evacuation data, and a Random Forest classifier is trained to automatically predict evacuation requirements. Second, the evacuation operation is modeled as a stochastic evacuation network (SEN) with multistate travel times reflecting road damage uncertainty. Third, system reliability is adopted as a quantitative performance indicator defined as the probability of successfully evacuating all affected residents within time and resource constraints. The methodology is demonstrated using Typhoon Gaemi, which struck Taiwan in 2024, in Dongshi district, Chiayi County. Evacuation commanders can dynamically adjust decisions regarding announcement timing, vehicle allocation, and route selection based on real-time meteorological data and reliability assessments. The integrated approach enables more comprehensive and data-informed evacuation planning to enhance response effectiveness.",
+      "date": "2026-11-20",
+      "source": "Annals of Operations Research",
+      "source_detail": "Annals of Operations Research",
+      "url": "https://doi.org/10.1007/s10479-026-07484-4",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s10479-026-07484-4",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2026.2633",
+      "title": "A Continuous-Knapsack-Based Framework for Constrained Static Assortment Optimization",
+      "authors": [
+        "Zhang, H.",
+        "Li, Y.",
+        "Huh, W."
+      ],
+      "abstract": "We consider the constrained static assortment optimization problem under the Multinomial Logit (MNL) model and its extensions, including the Customized Assortment Problem (CAP) and the joint assortment and pricing problem. Building on the knapsack formulation of MNL assortment planning, we introduce a novel concept, termed the modified reduced profit, defined as the maximum attainable value of the knapsack model for a given item set under a fixed no-purchase probability. We show that this modified reduced profit is a continuous-knapsack value function and is monotone and submodular. This structural property leads to a general approximation framework. In particular, if maximizing the continuous-knapsack value function over a downward-closed family L admits an α-approximation algorithm, then our MNL-THR algorithm achieves an α(1 − ϵ)-approximation through a geometric search over the no-purchase probability. As important special cases, cardinality, budget, and matroid constraints yield a (1 − 1/e)(1 − ϵ) guarantee. We further extend the framework to the CAP and the joint pricing and assortment problem, showing that the underlying submodularity structure is preserved. Finally, we develop faster approximation algorithms that avoid the geometric search and achieve a (1 − 1/e)/2 guarantee under the three commonly studied constraint families, providing a trade-off between computational efficiency and solution quality",
+      "date": "2026-11-20",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2026.2633",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2026.2633",
+      "score": 50.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 2,
+    "conferences": 0,
+    "opportunities": 2,
+    "total": 12
+  }
+}
