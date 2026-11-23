@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T15:11:52.200804+00:00",
+  "generated_at": "2026-11-23T19:16:23.982900+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1941,
+      "github_stars": 1946,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlights of v1.16 are the use of parallelism by default in the\r\nMIP solver, a rewritten LP file reader, a Hessian oracle for QP,\r\nsupport for AMD GPUs in HiPDLP, Windows ARM64 Python wheels and ",
-      "github_open_issues": 161,
+      "github_open_issues": 162,
       "github_recent_prs": [
+        "Add missing `return`",
+        "update actions' versions",
         "Study nothrow use",
         "No longer fixing variables by rounding in `checkColBounds` and logging objective bound and MIP rel gap in `writeSolution` whenever a primal solution is available",
-        "Refactor optimize model",
-        "Hipdlp interrupt",
-        "Nuget hipo"
+        "Refactor optimize model"
       ],
       "pypi_monthly_downloads": -93
     },
@@ -382,7 +382,7 @@
       ],
       "pypi_package": "PySCIPOpt",
       "github_repo": "scipopt/scip",
-      "github_stars": 681,
+      "github_stars": 682,
       "description": "Non-commercial solver for MIP, MINLP, and Constraint Integer Programming. Part of the SCIP Optimization Suite (includes SoPlex LP solver, ZIMPL modeling language, GCG decomposition framework). Strong on MINLP. Extensible via plugins.",
       "when_to_use": [
         "MINLP or nonlinear integer programming",
@@ -458,7 +458,7 @@
         }
       ],
       "recent_changes": "Features\r\n--------\r\n\r\n- added command line option `-t` to specify the number of threads, which triggers concurrent solving via `SCIPsolveConcurrent()`\r\n\r\nPerformance improvements\r\n--------------------",
-      "github_open_issues": 87,
+      "github_open_issues": 92,
       "github_recent_prs": [
         "messagePrintInfo passes file output to the dialog callback instead of the info callback",
         "Fix copy-paste errors in error messages and documentation",
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14429,
+      "github_stars": 14435,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -569,13 +569,13 @@
         }
       ],
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
-      "github_open_issues": 145,
+      "github_open_issues": 143,
       "github_recent_prs": [
+        "fixup (base, sat, constraint_solver)",
+        "sat: fixup",
+        "google3 export (glop, recordio, sat)",
         "linear_solver: avoid generated export name collisions",
-        "build(deps): bump the pip group across 1 directory with 9 updates",
-        "g3 export (set_cover, util)",
-        "cmake(ci): fix Alpine and Fedora dotnet setup",
-        "google3 export (routing, sat)"
+        "build(deps): bump the pip group across 1 directory with 9 updates"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -666,13 +666,13 @@
         }
       ],
       "recent_changes": "## What's Changed\r\n* Fix compiler warnings by @svigerske in https://github.com/coin-or/Cbc/pull/503\r\n* Fix SOS2 branching by @svigerske in https://github.com/coin-or/Cbc/pull/504\r\n* Fix clang warnings",
-      "github_open_issues": 191,
+      "github_open_issues": 194,
       "github_recent_prs": [
+        "Fix legacy node selection and dive scheduling",
+        "Fix threaded RINS/VND scheduling and enable noimprove by default",
+        "Fix Cbc_savedSolutionObj returning negated cost when maximizing",
         "Preserve original LP duals in default continuous solves",
-        "Compile research-only LP reoptimization timing out by default",
-        "Reduce memory-limit polling overhead in branch-and-bound",
-        "Backport fixes from master to stable/2.10: branching crash, memory errors, overflows, crash guards, SC variables, MIP start",
-        "Use four supported exceptions for sequential root-LP auto selection"
+        "Compile research-only LP reoptimization timing out by default"
       ]
     },
     {
@@ -1132,13 +1132,13 @@
       ],
       "recent_changes": "This new release totaled 29 PRs from 12 contributors.\r\n\r\n- @curious7-web | #3238, #3342, #3460, #3496\r\n- @cvanaret | #3461\r\n- @dhru189 | #3287\r\n- @enzo-boulin | #3466\r\n- @HugoDelatte | #3467\r\n- @mamei",
       "github_stars": 6400,
-      "github_open_issues": 194,
+      "github_open_issues": 197,
       "github_recent_prs": [
-        "Fix eigenvalue atoms returning wrong values for non-Hermitian input",
-        "Fix scalar promotion in elementwise gradients",
-        "Fold scalar broadcasts before full vector sums",
-        "Require explicit affine atom monotonicity rules",
-        "Avoid repeated stacks for constant scaling in the SciPy DPP backend"
+        "Reject sparse PSD inputs with a strict negative diagonal witness",
+        "Stabilize log-sum-exp gradients for large finite scores",
+        "Format the get_matrix_from_tensor parameter documentation",
+        "Format the bound extraction parameter documentation",
+        "Document object substitutions when copying canonical objects"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1256,8 +1256,8 @@
         "interior-point"
       ],
       "recent_changes": "- Fixed issue where Ipopt exceptions could not been caught from other libraries on macOS with clang when Ipopt or the other library was build with `-fvisibility=hidden`.\r\n- Call `MPI_Init()` with NULL",
-      "github_stars": 1803,
-      "github_open_issues": 15,
+      "github_stars": 1804,
+      "github_open_issues": 16,
       "github_recent_prs": [
         "Refresh constant Hessians when reoptimizing with the same structure",
         "Fix scaling of initial bound multipliers in a warm start with scaled variables",
@@ -1319,14 +1319,14 @@
         "metaheuristic"
       ],
       "recent_changes": "Indictments are back, and better than before! One of the frequent comments we have received with Timefold Solver 2.0 was that we should not have removed indictments - we listened, and they are now bac",
-      "github_stars": 1878,
-      "github_open_issues": 118,
+      "github_stars": 1880,
+      "github_open_issues": 120,
       "github_recent_prs": [
-        "chore: add javadoc for non-disruptive replanning and model conversion",
-        "fix: repair selector iterator and cache contracts",
-        "feat: support custom comparators in comparison joiners",
-        "fix: correct score arithmetic edge cases",
-        "docs: name licenses and use several licenses in the License Manager"
+        "deps: bump version.org.springframework.boot from 4.1.2 to 4.2.0",
+        "deps: bump the patch group with 5 updates",
+        "deps: bump org.sonarsource.scanner.maven:sonar-maven-plugin from 5.8.0.7211 to 5.9.0.7382 in the minor group",
+        "deps: bump the actions group with 2 updates",
+        "chore: add javadoc for non-disruptive replanning and model conversion"
       ]
     },
     {
@@ -1387,11 +1387,11 @@
       "github_stars": 2563,
       "github_open_issues": 368,
       "github_recent_prs": [
+        "Update PyROS coefficient matching conditions and decision rule variable fixing heuristics",
         "Drop support for Python 3.10",
         "Reset main for development",
         "Finalize Pyomo 6.11.0 Release",
-        "Remove unused development file accidentally included in repo",
-        "Fix license and notice files"
+        "Remove unused development file accidentally included in repo"
       ],
       "pypi_monthly_downloads": -36
     },
@@ -1449,14 +1449,14 @@
         "algebraic"
       ],
       "recent_changes": "## JuMP v1.32.1\n\n[Diff since v1.32.0](https://github.com/jump-dev/JuMP.jl/compare/v1.32.0...v1.32.1)\n\n\n**Merged pull requests:**\n- Fix performance of flatten! for large summations (#4264) (@odow)\n- Ad",
-      "github_stars": 2490,
-      "github_open_issues": 12,
+      "github_stars": 2491,
+      "github_open_issues": 13,
       "github_recent_prs": [
+        "Fix LP objective sensitivity for free nonbasic variables",
         "Add a battery complementarity tutorial for HiGHS, Ipopt, and CCOpt",
         "Fix a type instability in VariableInfo",
         "Set result counts when populating mock solutions in tests",
-        "Add MFAOA.jl to solver list",
-        "Copy constraint shapes in copy_model"
+        "Add MFAOA.jl to solver list"
       ]
     },
     {

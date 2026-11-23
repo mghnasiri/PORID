@@ -1,0 +1,318 @@
+{
+  "date": "2026-11-23",
+  "generated_at": "2026-11-23T19:16:24.383461+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1287-mnsc.2024.08073",
+      "title": "Learning from a Biased Sample",
+      "authors": [
+        "Sahoo, R.",
+        "Lei, L.",
+        "Wager, S."
+      ],
+      "abstract": "The empirical risk minimization approach to data-driven decision making requires access to training data drawn under the same conditions as those that will be faced when the decision rule is deployed. However, we may be concerned that our training sample is biased in the sense that some groups (characterized by either observable or unobservable attributes) may be under- or over-represented relative to the general population; and in this setting, empirical risk minimization over the training set may fail to yield rules that perform well at deployment. We propose a model of sampling bias called conditional [Formula: see text]-biased sampling, where observed covariates can affect the probability of sample selection arbitrarily much but the amount of unexplained variation in the probability of sample selection is bounded by a constant factor. Applying the distributionally robust optimization framework, we propose a method for learning a decision rule that minimizes the worst-case risk incurred under a family of test distributions that can generate the training distribution under conditional [Formula: see text]-biased sampling. We apply a result of Rockafellar and Uryasev to show that this problem is equivalent to an augmented convex risk minimization problem. We give statistical guarantees for learning a model that is robust to sampling bias via the method of sieves, and propose a deep learning algorithm whose loss function captures our robust learning target. We empirically validate our proposed method in a case study on prediction of mental health scores from health survey data and a case study on intensive care unit length-of-stay prediction.\n                  This paper was accepted by Vivek Farias, data science.\n                  Funding: This research was supported by NSF grant SES-2242876. RS is further supported by a NSF GRFP under grant DGE-1656518, a Stanford Data Science PhD Fellowship, and a Stanford Diversifying Academia Recruiting Excellence (DARE) Fellowship.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.08073 .",
+      "date": "2026-11-23",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2024.08073",
+      "tags": [
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2024.08073",
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2025.01346",
+      "title": "Optimal Incentive Design for Decentralized Dynamic Matching Markets",
+      "authors": [
+        "Chen, C.",
+        "Qian, P.",
+        "Zhang, J."
+      ],
+      "abstract": "In decentralized dynamic matching markets, agents can benefit from sharing resources, but they will collaborate only if properly incentivized. Motivated by applications such as multihospital kidney exchanges and job-hunting markets, this paper proposes novel monetary and nonmonetary mechanisms to incentivize collaboration in such decentralized dynamic markets. We study a model in which multiple self-interested agents manage local multiway dynamic matching problems. Jobs of different types arrive stochastically at each agent, expire after a limited time, and yield rewards when matched. An agent’s job backlog and actions are the agent’s private information, and each agent aims to maximize its long-run average matching reward. We design simple mechanisms that incentivize agents to submit all jobs upon arrival, thereby enabling centralized matching. Our first mechanism, the marginal-value (MV) mechanism, reimburses agents based on the MV of their submitted jobs. This can be implemented in a nonmonetary way by randomly selecting an agent (with a specified probability) to perform a match and collect the associated matching reward. We show that under the MV mechanism, full job submission constitutes an approximate Nash equilibrium—that is, the gain from unilateral deviation vanishes as the number of agents grows. To further eliminate incentives for deviation, we propose a refined mechanism, the MV-plus-credit (MVC) mechanism, and show that, when the number of agents exceeds a constant threshold, full job submission constitutes a stronger oblivious equilibrium. Numerical experiments based on kidney exchange data demonstrate that the gains from deviation under our mechanisms are small even in moderately sized markets.\n                  This paper was accepted by Peng Sun, optimization and decision analytics.\n                  Funding: J. Zhang is partly supported by the National Natural Science Foundation of China (NSFC) [Grant 72394361] and the Guangdong Provincial Key Laboratory of Mathematical Foundations for Artificial Intelligence [2023B1212010001].\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2025.01346 .",
+      "date": "2026-11-23",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2025.01346",
+      "tags": [
+        "healthcare-or",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2025.01346",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2023.02602",
+      "title": "Stockouts and the Success of New Products",
+      "authors": [
+        "Aparicio, D.",
+        "Simester, D."
+      ],
+      "abstract": "We investigate how stockouts of existing products influence the success of new product introductions. Our findings reveal that stockouts on incumbent items at the time a new product is launched are associated with higher sales of the new product for at least six months. This positive spillover is specific to new products and is most potent at the start of the product life cycle. To establish causality, we use instrumental variables based on historical stockouts and contemporaneous stockouts in other stores. Analysis of individual-level transaction data corroborates a trial-and-adoption mechanism: Stockouts of existing items prompt consumers to trial the new product, leading to increased repeat purchasing. By identifying inventory as a driver of product trial, this research highlights the importance of strategically timing new product launches and documents a previously unrecognized tradeoff for inventory policies.\n                  This paper was accepted by David Simchi-Levi, marketing.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2023.02602 .",
+      "date": "2026-11-23",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2023.02602",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2023.02602",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2023.03136",
+      "title": "Deep Tangency Portfolio",
+      "authors": [
+        "Feng, G.",
+        "Jiang, L.",
+        "Li, J.",
+        "Song, Y.",
+        "Wang, Y."
+      ],
+      "abstract": "We develop a deep learning framework to directly estimate tangency portfolio weights by augmenting benchmark factors with a long-short deep factor derived from high-dimensional characteristics. Guided by a Sharpe ratio maximization objective, the deep factor plays two key roles: (i) providing a natural hedge against benchmark risks and (ii) capturing multimarket signals to enhance the performance of the benchmark. In an empirical application to U.S. corporate bonds using 132 firm-level bond, equity, and option characteristics, the deep factor achieves an out-of-sample Sharpe ratio exceeding one, and the deep tangency portfolio benchmarked against the market factor yields a Sharpe ratio over two, outperforming portfolios spanned by common observable or latent factors. These results demonstrate that bond risk signals are fundamentally dense, requiring the nonlinear integration of multimarket information to span the efficient frontier.\n                  This paper was accepted by Agostino Capponi, finance.\n                  Funding: G. Feng acknowledges financial support from the Hong Kong Research Grants Council [Grant GRF11502023] and the National Natural Science Foundation of China [Grant 72203190]. G. Feng is partially supported by the InnoHK Initiative of the Innovation and Technology Commission of the Hong Kong SAR and the Laboratory for AI-Powered Financial Technologies. L. Jiang acknowledges financial support from the National Natural Science Foundation of China [Grant 72473027]. J. Li acknowledges financial support from the National Natural Science Foundation of China [Grant 72473026].\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2023.03136 .",
+      "date": "2026-11-23",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2023.03136",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2023.03136",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-trsc.2025.0533",
+      "title": "Commuters’ Periodic Travel Behavior in a Credit-Based System with Stop-Making Activities: Equilibrium and Dynamics",
+      "authors": [
+        "Ding, H.",
+        "Wu, M.",
+        "Yin, Y.",
+        "Yang, H."
+      ],
+      "abstract": "This study investigates periodic travel behavior in a bimodal system under a credit charge-cum-reward scheme, a periodic mobility management system. Our model integrates routine daily commuting with uncertain stop-making activities, which introduce day-level uncertainty. We formulate the interactions among commuters’ intraperiod sequential decision making as a sequential congestion game and analyze it using mean-field game theory. We define the concept of periodic user equilibrium (PUE), where the system-wide periodic traffic flow generated by commuters’ optimal periodic policies is self-consistent with the flow that they anticipated when making their decisions. After establishing the existence of PUE, we develop a period-to-period dynamic model to capture commuters’ interperiod and intraperiod policy adaptation behavior as well as the flow dynamics. We introduce period-based cost learning and policy adaptation mechanisms and derive stability conditions for the system convergence. Numerical analysis examines the impact of stop-making activities, revealing that commuters use credits strategically in response to uncertain stop-making activities. This strategic behavior leads to significant intraperiod, day-to-day flow variations, even at equilibrium.\n                  Funding: This research was supported by the Hong Kong Research Grants Council [Grants HKUST16205224 and HKUST16205123]. M. Wu and Y. Yin were supported by the National Science Foundation, United States [Grants CMMI-2233057 and 2240981].\n                  Supplemental Material: The online appendix is available at https://doi.org/10.1287/trsc.2025.0533 .",
+      "date": "2026-11-23",
+      "source": "Transportation Science",
+      "source_detail": "Transportation Science",
+      "url": "https://doi.org/10.1287/trsc.2025.0533",
+      "tags": [
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.1287/trsc.2025.0533",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2025.1563",
+      "title": "Alternating Direction Method of Multipliers-Based Distributed Optimal Power Flow with Fixed- and Finite-Time Update Rules",
+      "authors": [
+        "Hasanzadeh, M.",
+        "Kargarian, A."
+      ],
+      "abstract": "This paper proposes two categories of fixed- and finite-time update rules to enhance the convergence of distributed optimal power flow (OPF) solved using the alternating direction method of multipliers (ADMM). The first category formulates an update rule for OPF primal variables, starting with an asymptotic update rule, followed by finite-time and fixed-time update rules. These update rules adjust the primal variables using a weighted approach that accelerates the agreement between neighboring OPF subproblems. Stability and convergence are analyzed to guarantee reliable performance. The second category modifies the update rule for dual variables (Lagrangian multipliers) by introducing finite-time and fixed-time update rules, with stability analysis conducted to ensure convergence. These modifications improve the rate at which consensus is achieved among subproblems while maintaining the consistency of dual updates across the network. Case studies confirm that the proposed methods reduce iteration counts and improve ADMM OPF performance, making them effective solutions for accelerating distributed computations.\n                  History: Accepted by Russell Bent, Area Editor for Network Optimization: Algorithms and Applications.\n                  Funding: This work was supported by the National Science Foundation [Grants ECCS-1944752 and EECS-2312086].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2025.1563 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2025.1563 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-11-23",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2025.1563",
+      "tags": [
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2025.1563",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2025.00524",
+      "title": "Information Design with Supplemental Investment",
+      "authors": [
+        "Nan, L.",
+        "Qiu, L.",
+        "Wen, X.",
+        "Zheng, R."
+      ],
+      "abstract": "This paper features a setting with two-dimensional information asymmetry on a firm’s fundamental (good or bad type) and the nature of its supplemental investment (improving upside potential, or mitigating downside risk). We examine the firm’s optimal design of the information system when the system can only address the dimension of fundamental. We show that, with only single-dimensional information asymmetry regarding the firm’s fundamental, greater informativeness on the firm’s fundamental type always improves efficiency. However, with two-dimensional information asymmetry, increasing informativeness about firm fundamental no longer guarantees higher efficiency and can be detrimental. The optimal information system trades off reducing information asymmetry and preserving firms’ incentives to invest, and it could be uninformative or optimistically biased, depending on the level of credit risk, which in our setting is higher when supplemental investment is more likely to improve upside rather than protect downside.\n                  This paper was accepted by Ranjani Krishnan, accounting.\n                  Supplemental Material: The online appendix is available at https://doi.org/10.1287/mnsc.2025.00524 .",
+      "date": "2026-11-23",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2025.00524",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2025.00524",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2025.02206",
+      "title": "Proximity-Based Delivery Policies: Efficiency, Coverage, and Fairness",
+      "authors": [
+        "Wang, Z.",
+        "Cui, S.",
+        "Li, Y.",
+        "Zhang, Q."
+      ],
+      "abstract": "The growing demand for rapid food and grocery delivery has prompted many restaurants and retailers to develop their own on-demand delivery services. Although hiring additional couriers can expand delivery capacity, it is often prohibitively costly. As a cost-effective alternative, we propose a proximity-based delivery (PBD) policy that prioritizes the delivery of orders from customers located closer to the vendor, in contrast to the traditional first-come-first-served (FCFS) approach. We show that PBD can substantially reduce average delivery delays without requiring additional couriers; however, it may raise fairness concerns, because distant customers experience longer wait times, potentially shrinking market coverage and exacerbating service disparities. To address this issue, we introduce an incentive-compatible PBD (IP) policy, where nearby customers are incentivized to pay for priority, whereas distant customers receive compensation to offset longer delays. We demonstrate that this mechanism can restore fairness to levels comparable to FCFS while preserving efficiency, expanding market demand, and enhancing consumer surplus, particularly in moderately dense markets with moderately delay-sensitive customers. We further show that vendors can enhance these benefits through optimal pricing and benefit from less extreme staffing adjustments due to a “pull-to-center” effect. Our findings highlight the operational, economic, and ethical dimensions of proximity-based delivery, and offer a practical framework for balancing speed, profitability, consumer welfare, and equity. Finally, we conduct a mini case study using empirical data to demonstrate the real-world applicability of our approach.\n                  This paper was accepted by Jeannette Song, operations management.\n                  Funding: Z. Wang acknowledges support from the National Natural Science Foundation of China [Grant 72322017]. Y. Li acknowledges support from the National Natural Science Foundation of China [Grant 72132007]. Q. Zhang acknowledges support from the National Natural Science Foundation of China [Grant 724B2024].\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2025.02206 .",
+      "date": "2026-11-23",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2025.02206",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2025.02206",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1177-10591478261512635",
+      "title": "EXPRESS: The Role of Consumer Fairness Seeking in Live-Stream E-Commerce",
+      "authors": [
+        "Niu, B.",
+        "Zhang, J.",
+        "Li, Q.",
+        "Yu, X.",
+        "Wang, Y."
+      ],
+      "abstract": "As live-stream e-commerce rapidly expands and gains popularity among consumers, many brand owners have supplemented their self-owned direct-selling channels with live-stream selling channels to utilize social network effects of key opinion leaders (KOLs). This dual-channel structure creates price discrepancy issues, prompting consumers to raise concerns about price fairness. Therefore, brand owners are motivated to coordinate pricing strategies, balancing cooperation and competition across channels. We build a game-theoretical model to investigate how consumers' peer-induced fairness seeking influences the price decisions of a brand owner (in the direct-selling channel) and the KOL (in the live-stream selling channel). Interestingly, we find that consumers' increased fairness concerns may paradoxically lead to increased prices in both channels, challenging the conventional expectation of price-cutting competition. We further demonstrate that consumers' fairness seeking may either benefit or harm both sellers, depending on the strength of network effects and various factors related to competition intensity. The non-monotonic impacts of consumer fairness seeking are driven by the brand owner's dueling strategic incentives to secure (or relinquish) its direct-selling business to compete with (or favor) the live-stream selling under different situations. Finally, we identify “win-win”, “lose-lose”, and “lose-win” outcomes that consumer fairness seeking can cause for the brand owner and KOL.",
+      "date": "2026-11-23",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261512635",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261512635",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    },
+    {
+      "id": "crossref-10.1177-10591478261510216",
+      "title": "EXPRESS: Supercharging the Confidence Trap: Too-Big-to-Fail and Man-Made Disasters",
+      "authors": [
+        "Bhardwaj, A.",
+        "Akkermans, H.",
+        "Van Wassenhove, L."
+      ],
+      "abstract": "Man-made disasters are always shocking, especially when they involve loss of life. The shock is even greater when such disasters are attributed to failures in highly regulated organizations like Boeing, long known for engineering excellence and safety. In the spirit of pragmatic inquiry that considers attenuating the likelihood of disasters an urgent and important problem, we explore the underlying dynamics that can lead to such outcomes. We draw on an agent-based modelling approach within a system dynamics framework. We argue that operational and organizational complexity creates barriers to identifying failures that contribute to disasters. A key contributor to this dynamic is the weakening of regulatory oversight, as both regulators and operators fall into a “confidence trap” – a mistaken belief that past risk-taking success justifies continued risk-taking. This dynamic is exacerbated when the organization in question is perceived as “too big to fail,” which shields it from market selection mechanisms. To mitigate these factors, we propose two policy levers. First, we propose financial clawbacks that require executives to return part of their compensation in the event of a disaster. This aligns incentives of the regulator and executives by injecting the latter’s “skin in the game,” and attenuates the moral hazard problem. Second, we propose third-party monitoring and auditing that serve to mitigate regulatory oversight and better utilize expertise. Simulations indicate these levers significantly reduce the likelihood and impact of failures that lead to disasters, offering a robust logic of pursuit.",
+      "date": "2026-11-23",
+      "source": "M&SOM",
+      "source_detail": "M&SOM",
+      "url": "https://doi.org/10.1177/10591478261510216",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1177/10591478261510216",
+      "score": 50.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 2,
+    "conferences": 0,
+    "opportunities": 2,
+    "total": 12
+  }
+}
