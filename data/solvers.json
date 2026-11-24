@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T19:16:23.982900+00:00",
+  "generated_at": "2026-11-24T18:54:53.832425+00:00",
   "solvers": [
     {
       "id": "gurobi",
@@ -264,7 +264,7 @@
       ],
       "pypi_package": "highspy",
       "github_repo": "ERGO-Code/HiGHS",
-      "github_stars": 1946,
+      "github_stars": 1948,
       "description": "High-performance open-source solver for LP, MIP, and QP. Fastest open-source LP solver. Actively developed with frequent releases. Interior point method (HiPO) added in 2026.",
       "when_to_use": [
         "Need a free solver with no licensing restrictions",
@@ -345,13 +345,13 @@
         }
       ],
       "recent_changes": "The highlights of v1.16 are the use of parallelism by default in the\r\nMIP solver, a rewritten LP file reader, a Hessian oracle for QP,\r\nsupport for AMD GPUs in HiPDLP, Windows ARM64 Python wheels and ",
-      "github_open_issues": 162,
+      "github_open_issues": 165,
       "github_recent_prs": [
-        "Add missing `return`",
-        "update actions' versions",
-        "Study nothrow use",
-        "No longer fixing variables by rounding in `checkColBounds` and logging objective bound and MIP rel gap in `writeSolution` whenever a primal solution is available",
-        "Refactor optimize model"
+        "highspy: expose basis status as numpy arrays",
+        "Fix MPS writer placing empty zero-cost columns in wrong integer section",
+        "Fix issue 3686",
+        "proposal for AI text",
+        "Avoid double scaleAndShift in HessianOracle::product() when x_index is null"
       ],
       "pypi_monthly_downloads": -93
     },
@@ -498,7 +498,7 @@
       ],
       "pypi_package": "ortools",
       "github_repo": "google/or-tools",
-      "github_stars": 14435,
+      "github_stars": 14444,
       "description": "Google's OR toolkit. Excellent CP-SAT solver for constraint programming. Includes specialized solvers for vehicle routing (routing library), scheduling, and assignment. GLOP for LP. MIP via PDLP or external solvers.",
       "when_to_use": [
         "Constraint programming problems (CP-SAT is excellent)",
@@ -571,11 +571,11 @@
       "recent_changes": "# What's Changed\r\n## Platforms\r\n* Add Python 3.14 support.\r\n\r\n## Dependencies\r\n### C++\r\n* abseil-cpp=20250814.1\r\n* Protobuf=v33.1\r\n* HiGHS=v1.12.0\r\n* SCIP=v10.0.0\r\n* **NEW** XPressMP is supported in M",
       "github_open_issues": 143,
       "github_recent_prs": [
+        "linear_solver: fix add_enforced(False, ...) making the model infeasible",
         "fixup (base, sat, constraint_solver)",
         "sat: fixup",
         "google3 export (glop, recordio, sat)",
-        "linear_solver: avoid generated export name collisions",
-        "build(deps): bump the pip group across 1 directory with 9 updates"
+        "linear_solver: avoid generated export name collisions"
       ],
       "pypi_monthly_downloads": -34
     },
@@ -604,7 +604,7 @@
       ],
       "pypi_package": null,
       "github_repo": "coin-or/Cbc",
-      "github_stars": 1026,
+      "github_stars": 1027,
       "description": "Mature open-source MIP solver from the COIN-OR project. Default solver in PuLP. Stable but development has slowed significantly. Being overtaken by HiGHS in performance.",
       "when_to_use": [
         "Default solver in PuLP (no extra install needed)",
@@ -1134,11 +1134,11 @@
       "github_stars": 6400,
       "github_open_issues": 197,
       "github_recent_prs": [
+        "Repair the Marimo example links",
+        "Fix CUCLARABEL ignoring the verbose flag",
         "Reject sparse PSD inputs with a strict negative diagonal witness",
         "Stabilize log-sum-exp gradients for large finite scores",
-        "Format the get_matrix_from_tensor parameter documentation",
-        "Format the bound extraction parameter documentation",
-        "Document object substitutions when copying canonical objects"
+        "Format the get_matrix_from_tensor parameter documentation"
       ],
       "pypi_monthly_downloads": -25
     },
@@ -1320,13 +1320,13 @@
       ],
       "recent_changes": "Indictments are back, and better than before! One of the frequent comments we have received with Timefold Solver 2.0 was that we should not have removed indictments - we listened, and they are now bac",
       "github_stars": 1880,
-      "github_open_issues": 120,
+      "github_open_issues": 117,
       "github_recent_prs": [
+        "chore: added handling in configure mojo of maven plugin to support va…",
         "deps: bump version.org.springframework.boot from 4.1.2 to 4.2.0",
         "deps: bump the patch group with 5 updates",
         "deps: bump org.sonarsource.scanner.maven:sonar-maven-plugin from 5.8.0.7211 to 5.9.0.7382 in the minor group",
-        "deps: bump the actions group with 2 updates",
-        "chore: add javadoc for non-disruptive replanning and model conversion"
+        "deps: bump the actions group with 2 updates"
       ]
     },
     {
@@ -1385,13 +1385,13 @@
       ],
       "recent_changes": "## Highlights of the 6.11 release series\r\n\r\n- Add support for Python 3.15\r\n- Updates to support new solver versions including XPRESS 10.0,\r\n  Gurobi 14.0, and HiGHS 1.16\r\n- Significant improvement in ",
       "github_stars": 2563,
-      "github_open_issues": 368,
+      "github_open_issues": 371,
       "github_recent_prs": [
-        "Update PyROS coefficient matching conditions and decision rule variable fixing heuristics",
-        "Drop support for Python 3.10",
-        "Reset main for development",
-        "Finalize Pyomo 6.11.0 Release",
-        "Remove unused development file accidentally included in repo"
+        "Fix typo in PyROS method `UncertaintySet._is_coordinate_fixed()`",
+        "Enhance PyROS solver treatment of problems with scenario-based uncertainty sets",
+        "Compute collocation nodes with symmetric eigensolvers",
+        "Link selected values in induced linearity reformulation",
+        "Update PyROS coefficient matching conditions and decision rule variable fixing heuristics"
       ],
       "pypi_monthly_downloads": -36
     },
@@ -1450,7 +1450,7 @@
       ],
       "recent_changes": "## JuMP v1.32.1\n\n[Diff since v1.32.0](https://github.com/jump-dev/JuMP.jl/compare/v1.32.0...v1.32.1)\n\n\n**Merged pull requests:**\n- Fix performance of flatten! for large summations (#4264) (@odow)\n- Ad",
       "github_stars": 2491,
-      "github_open_issues": 13,
+      "github_open_issues": 14,
       "github_recent_prs": [
         "Fix LP objective sensitivity for free nonbasic variables",
         "Add a battery complementarity tutorial for HiGHS, Ipopt, and CCOpt",

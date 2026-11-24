@@ -1,0 +1,325 @@
+{
+  "date": "2026-11-24",
+  "generated_at": "2026-11-24T18:54:54.413096+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1287-mnsc.2024.08073",
+      "title": "Learning from a Biased Sample",
+      "authors": [
+        "Sahoo, R.",
+        "Lei, L.",
+        "Wager, S."
+      ],
+      "abstract": "The empirical risk minimization approach to data-driven decision making requires access to training data drawn under the same conditions as those that will be faced when the decision rule is deployed. However, we may be concerned that our training sample is biased in the sense that some groups (characterized by either observable or unobservable attributes) may be under- or over-represented relative to the general population; and in this setting, empirical risk minimization over the training set may fail to yield rules that perform well at deployment. We propose a model of sampling bias called conditional [Formula: see text]-biased sampling, where observed covariates can affect the probability of sample selection arbitrarily much but the amount of unexplained variation in the probability of sample selection is bounded by a constant factor. Applying the distributionally robust optimization framework, we propose a method for learning a decision rule that minimizes the worst-case risk incurred under a family of test distributions that can generate the training distribution under conditional [Formula: see text]-biased sampling. We apply a result of Rockafellar and Uryasev to show that this problem is equivalent to an augmented convex risk minimization problem. We give statistical guarantees for learning a model that is robust to sampling bias via the method of sieves, and propose a deep learning algorithm whose loss function captures our robust learning target. We empirically validate our proposed method in a case study on prediction of mental health scores from health survey data and a case study on intensive care unit length-of-stay prediction.\n                  This paper was accepted by Vivek Farias, data science.\n                  Funding: This research was supported by NSF grant SES-2242876. RS is further supported by a NSF GRFP under grant DGE-1656518, a Stanford Data Science PhD Fellowship, and a Stanford Diversifying Academia Recruiting Excellence (DARE) Fellowship.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.08073 .",
+      "date": "2026-11-23",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2024.08073",
+      "tags": [
+        "stochastic",
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2024.08073",
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2025.01346",
+      "title": "Optimal Incentive Design for Decentralized Dynamic Matching Markets",
+      "authors": [
+        "Chen, C.",
+        "Qian, P.",
+        "Zhang, J."
+      ],
+      "abstract": "In decentralized dynamic matching markets, agents can benefit from sharing resources, but they will collaborate only if properly incentivized. Motivated by applications such as multihospital kidney exchanges and job-hunting markets, this paper proposes novel monetary and nonmonetary mechanisms to incentivize collaboration in such decentralized dynamic markets. We study a model in which multiple self-interested agents manage local multiway dynamic matching problems. Jobs of different types arrive stochastically at each agent, expire after a limited time, and yield rewards when matched. An agent’s job backlog and actions are the agent’s private information, and each agent aims to maximize its long-run average matching reward. We design simple mechanisms that incentivize agents to submit all jobs upon arrival, thereby enabling centralized matching. Our first mechanism, the marginal-value (MV) mechanism, reimburses agents based on the MV of their submitted jobs. This can be implemented in a nonmonetary way by randomly selecting an agent (with a specified probability) to perform a match and collect the associated matching reward. We show that under the MV mechanism, full job submission constitutes an approximate Nash equilibrium—that is, the gain from unilateral deviation vanishes as the number of agents grows. To further eliminate incentives for deviation, we propose a refined mechanism, the MV-plus-credit (MVC) mechanism, and show that, when the number of agents exceeds a constant threshold, full job submission constitutes a stronger oblivious equilibrium. Numerical experiments based on kidney exchange data demonstrate that the gains from deviation under our mechanisms are small even in moderately sized markets.\n                  This paper was accepted by Peng Sun, optimization and decision analytics.\n                  Funding: J. Zhang is partly supported by the National Natural Science Foundation of China (NSFC) [Grant 72394361] and the Guangdong Provincial Key Laboratory of Mathematical Foundations for Artificial Intelligence [2023B1212010001].\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2025.01346 .",
+      "date": "2026-11-23",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2025.01346",
+      "tags": [
+        "healthcare-or",
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2025.01346",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2023.02602",
+      "title": "Stockouts and the Success of New Products",
+      "authors": [
+        "Aparicio, D.",
+        "Simester, D."
+      ],
+      "abstract": "We investigate how stockouts of existing products influence the success of new product introductions. Our findings reveal that stockouts on incumbent items at the time a new product is launched are associated with higher sales of the new product for at least six months. This positive spillover is specific to new products and is most potent at the start of the product life cycle. To establish causality, we use instrumental variables based on historical stockouts and contemporaneous stockouts in other stores. Analysis of individual-level transaction data corroborates a trial-and-adoption mechanism: Stockouts of existing items prompt consumers to trial the new product, leading to increased repeat purchasing. By identifying inventory as a driver of product trial, this research highlights the importance of strategically timing new product launches and documents a previously unrecognized tradeoff for inventory policies.\n                  This paper was accepted by David Simchi-Levi, marketing.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2023.02602 .",
+      "date": "2026-11-23",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2023.02602",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2023.02602",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2023.03136",
+      "title": "Deep Tangency Portfolio",
+      "authors": [
+        "Feng, G.",
+        "Jiang, L.",
+        "Li, J.",
+        "Song, Y.",
+        "Wang, Y."
+      ],
+      "abstract": "We develop a deep learning framework to directly estimate tangency portfolio weights by augmenting benchmark factors with a long-short deep factor derived from high-dimensional characteristics. Guided by a Sharpe ratio maximization objective, the deep factor plays two key roles: (i) providing a natural hedge against benchmark risks and (ii) capturing multimarket signals to enhance the performance of the benchmark. In an empirical application to U.S. corporate bonds using 132 firm-level bond, equity, and option characteristics, the deep factor achieves an out-of-sample Sharpe ratio exceeding one, and the deep tangency portfolio benchmarked against the market factor yields a Sharpe ratio over two, outperforming portfolios spanned by common observable or latent factors. These results demonstrate that bond risk signals are fundamentally dense, requiring the nonlinear integration of multimarket information to span the efficient frontier.\n                  This paper was accepted by Agostino Capponi, finance.\n                  Funding: G. Feng acknowledges financial support from the Hong Kong Research Grants Council [Grant GRF11502023] and the National Natural Science Foundation of China [Grant 72203190]. G. Feng is partially supported by the InnoHK Initiative of the Innovation and Technology Commission of the Hong Kong SAR and the Laboratory for AI-Powered Financial Technologies. L. Jiang acknowledges financial support from the National Natural Science Foundation of China [Grant 72473027]. J. Li acknowledges financial support from the National Natural Science Foundation of China [Grant 72473026].\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2023.03136 .",
+      "date": "2026-11-23",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2023.03136",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2023.03136",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-trsc.2025.0533",
+      "title": "Commuters’ Periodic Travel Behavior in a Credit-Based System with Stop-Making Activities: Equilibrium and Dynamics",
+      "authors": [
+        "Ding, H.",
+        "Wu, M.",
+        "Yin, Y.",
+        "Yang, H."
+      ],
+      "abstract": "This study investigates periodic travel behavior in a bimodal system under a credit charge-cum-reward scheme, a periodic mobility management system. Our model integrates routine daily commuting with uncertain stop-making activities, which introduce day-level uncertainty. We formulate the interactions among commuters’ intraperiod sequential decision making as a sequential congestion game and analyze it using mean-field game theory. We define the concept of periodic user equilibrium (PUE), where the system-wide periodic traffic flow generated by commuters’ optimal periodic policies is self-consistent with the flow that they anticipated when making their decisions. After establishing the existence of PUE, we develop a period-to-period dynamic model to capture commuters’ interperiod and intraperiod policy adaptation behavior as well as the flow dynamics. We introduce period-based cost learning and policy adaptation mechanisms and derive stability conditions for the system convergence. Numerical analysis examines the impact of stop-making activities, revealing that commuters use credits strategically in response to uncertain stop-making activities. This strategic behavior leads to significant intraperiod, day-to-day flow variations, even at equilibrium.\n                  Funding: This research was supported by the Hong Kong Research Grants Council [Grants HKUST16205224 and HKUST16205123]. M. Wu and Y. Yin were supported by the National Science Foundation, United States [Grants CMMI-2233057 and 2240981].\n                  Supplemental Material: The online appendix is available at https://doi.org/10.1287/trsc.2025.0533 .",
+      "date": "2026-11-23",
+      "source": "Transportation Science",
+      "source_detail": "Transportation Science",
+      "url": "https://doi.org/10.1287/trsc.2025.0533",
+      "tags": [
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.1287/trsc.2025.0533",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2025.1563",
+      "title": "Alternating Direction Method of Multipliers-Based Distributed Optimal Power Flow with Fixed- and Finite-Time Update Rules",
+      "authors": [
+        "Hasanzadeh, M.",
+        "Kargarian, A."
+      ],
+      "abstract": "This paper proposes two categories of fixed- and finite-time update rules to enhance the convergence of distributed optimal power flow (OPF) solved using the alternating direction method of multipliers (ADMM). The first category formulates an update rule for OPF primal variables, starting with an asymptotic update rule, followed by finite-time and fixed-time update rules. These update rules adjust the primal variables using a weighted approach that accelerates the agreement between neighboring OPF subproblems. Stability and convergence are analyzed to guarantee reliable performance. The second category modifies the update rule for dual variables (Lagrangian multipliers) by introducing finite-time and fixed-time update rules, with stability analysis conducted to ensure convergence. These modifications improve the rate at which consensus is achieved among subproblems while maintaining the consistency of dual updates across the network. Case studies confirm that the proposed methods reduce iteration counts and improve ADMM OPF performance, making them effective solutions for accelerating distributed computations.\n                  History: Accepted by Russell Bent, Area Editor for Network Optimization: Algorithms and Applications.\n                  Funding: This work was supported by the National Science Foundation [Grants ECCS-1944752 and EECS-2312086].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2025.1563 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2025.1563 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-11-23",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2025.1563",
+      "tags": [
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2025.1563",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2611.31090",
+      "title": "Revisiting Learning to Delegate: LLM Discovered Heuristics for Large-Scale Vehicle Routing",
+      "authors": [
+        "Zhengyang Wang",
+        "Renfei Tan",
+        "Shuze Daniel Liu",
+        "David Simchi-Levi"
+      ],
+      "abstract": "Efficient vehicle routing is critical to logistics and transportation, yet solving large-scale capacitated vehicle routing problems (CVRP) remains computationally challenging due to their combinatorial complexity. One approach to solve large-scale vehicle routing optimization is to identify promising subproblems and then optimize them using solvers. In this paper, we propose a framework of automatic heuristic design (AHD) in which a large language model (LLM) autonomously refines heuristics for selecting subproblems, enabling effective optimization of large-scale CVRP instances. Compared to prior approaches that train task-specific neural networks to select among heuristically constructed subproblems, our method discovers generalizable, interpretable LLM-generated heuristics to directly construct subproblems. Experiments show that our approach achieves comparable in-distribution performance while outperforming neural network-based policies on out-of-distribution instances with large-scale problems.",
+      "date": "2026-11-23",
+      "source": "arXiv",
+      "source_detail": "cs.AI",
+      "url": "http://arxiv.org/abs/2611.31090v1",
+      "tags": [
+        "cs.AI",
+        "vehicle-routing",
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.31090",
+      "arxiv_id": "2611.31090v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2611.30986",
+      "title": "Reinforcing Diffusion Models by Instantaneous Trajectory Distribution Matching",
+      "authors": [
+        "Yihong Luo"
+      ],
+      "abstract": "Forward diffusion reinforcement learning (RL)---enabling deterministic ODE sampling without trajectory backpropagation---has grown increasingly popular for efficiently aligning diffusion models. However, we reveal that existing methods essentially rely on signed reward-weighted regression (RWR), regressing the \\emph{trainable policy} velocity onto rollouts from a \\emph{behavior distribution}. Unbiased baseline subtraction implicitly assumes that the policy velocity equals the behavior marginal velocity---an idealized assumption violated under classifier-free guidance (CFG) rollouts, offline/off-policy updates, and imperfect online self-consistency. This \\emph{behavior--policy mismatch} breaks baseline invariance and injects \\emph{baseline-induced gradient drift}, destabilizing training. To resolve this issue, we propose \\textbf{I}nstantaneous \\textbf{T}rajectory \\textbf{D}istribution \\textbf{M}atching (\\textbf{iTDM}), taking the infinitesimal limit of Trajectory Distribution Matching toward a time-local reward-guided target via the posterior-score identity to yield a sample-level gradient anchored at the behavior velocity without learning an additional reward-tilted target score. Tracking this velocity with an online auxiliary denoiser guarantees exact baseline invariance at the auxiliary optimum, effectively suppressing baseline drift across both online and offline RL. Extensive experiments across compositional generation, text rendering, and preference alignment show that iTDM achieves state-of-the-art in-domain and out-of-domain performance. Notably, on the challenging GenEval2 benchmark, iTDM converges nearly $3\\times$ faster than competing methods while scaling smoothly to $0.87$ without collapse. Code is available at https://github.com/Luo-Yihong/iTDM",
+      "date": "2026-11-23",
+      "source": "arXiv",
+      "source_detail": "cs.LG",
+      "url": "http://arxiv.org/abs/2611.30986v1",
+      "tags": [
+        "cs.LG",
+        "ml-for-or",
+        "constraint-programming",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.30986",
+      "arxiv_id": "2611.30986v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2611.30956",
+      "title": "Leveraging Fast Healthcare Interoperability Resources (FHIR) for the Exchange of Wearable Inertial Sensor Data: Design and Development Study",
+      "authors": [
+        "Gabriela Ciortuz",
+        "Joshua Wiedekopf",
+        "Hannes Ulrich",
+        "Hawzhin Hozhabr Pour",
+        "Sebastian Fudickar"
+      ],
+      "abstract": "Continuous monitoring with wearables can support the assessment of frailty, functional decline, and movement disorders, but raw inertial measurement unit (IMU) recordings are typically stored in proprietary files that electronic health records cannot exchange or interpret. HL7 Fast Healthcare Interoperability Resources (FHIR) standardizes health data exchange, yet existing FHIR profiles for personal health devices target spot measurements and short waveforms, not long multichannel motion recordings with their recording context and activity labels. We present WHIR (Wearable Health Interoperable Recordings), a FHIR R5-based information model and implementation guide for wearable IMU recordings. Metadata requirements were derived from a review of 23 published human activity recognition datasets and formalized in a FHIR-independent information model, which was then mapped to FHIR R5 and authored in FHIR Shorthand. Raw signals are kept in files referenced through DocumentReference resources, so that FHIR holds the metadata and activity labels. Terminology reuses SNOMED CT, LOINC, and ISO/IEEE 11073 concepts wherever available. The implementation guide defines 9 profiles, 4 extensions, 10 code systems, and 15 value sets; all artifacts and 67 example instances passed the conformance checks of the HL7 FHIR IG Publisher without errors. Two use cases, machine learning training data and automated home-based geriatric assessment, were implemented as conformant example instances, and we compare the model with the HL7 Personal Health Device Implementation Guide. WHIR provides a FHIR R5-conformant representation of wearable IMU recordings together with device metadata, sensor placement, and time-aligned activity labels, covering concepts that the Personal Health Device Implementation Guide does not address. The implementation guide and its sources are openly available for reuse and extension.",
+      "date": "2026-11-23",
+      "source": "arXiv",
+      "source_detail": "cs.CY",
+      "url": "http://arxiv.org/abs/2611.30956v1",
+      "tags": [
+        "cs.CY",
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.30956",
+      "arxiv_id": "2611.30956v1",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2611.31085",
+      "title": "Marginal-Cost Clustering for Courier Dispatch: A Parallel Decomposition for Pickup and Delivery with Time Windows and Fleet Sizing",
+      "authors": [
+        "SangWoo Park",
+        "Elson Cibaku",
+        "Sanchoy Das"
+      ],
+      "abstract": "Courier dispatch poses a pickup and delivery problem with time windows in which requests are batched, windows are soft, couriers start where they are and take open routes, and a fixed dispatch charge makes fleet size a decision. We contribute to the cluster-first, route-second family a grouping criterion that scores a request by its marginal cost, the travel and lateness it adds to the route a courier already plans, rather than by its distance to a centroid, one point standing for a whole workload in space and time. The marginal cost instead knows where a courier is, when it becomes free and what it already carries. Each pass, we hold the marginal costs fixed while we solve one integer program that assigns every request to a courier and chooses which to open, then improve its solution by a descent that relocates and swaps requests between couriers. We then route each dispatched courier exactly. That subproblem is naturally a mixed-integer program, and we solve it by label setting over visited sets, which we prove optimal and cheap enough to run every pass. On instances we generate and on adapted Li & Lim benchmark batches, we beat the best of six published clustering rules by 29% as published and by 12% once those rules carry the same descent. Against an adaptive large neighbourhood search at matched wall-clock we are ahead on the generated instances and level on the benchmark, and we handle 1000 requests and 300 couriers in about a minute.",
+      "date": "2026-11-23",
+      "source": "arXiv",
+      "source_detail": "eess.SY",
+      "url": "http://arxiv.org/abs/2611.31085v1",
+      "tags": [
+        "eess.SY",
+        "integer-programming",
+        "vehicle-routing",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.31085",
+      "arxiv_id": "2611.31085v1",
+      "score": 55.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 2,
+    "conferences": 0,
+    "opportunities": 2,
+    "total": 12
+  }
+}
