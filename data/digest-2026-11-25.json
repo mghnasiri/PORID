@@ -1,0 +1,312 @@
+{
+  "date": "2026-11-25",
+  "generated_at": "2026-11-25T17:54:49.791973+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1287-trsc.2025.0518",
+      "title": "Integrated Planning of Drone-Based Disaster Relief: Facility Location, Inventory Prepositioning, and Fleet Operations Under Uncertainty",
+      "authors": [
+        "Ma, Y.",
+        "Shehadeh, K.",
+        "Tsang, M."
+      ],
+      "abstract": "We introduce a two-stage robust optimization (RO) framework for the integrated planning of a drone-based disaster relief operations problem. Given sets of demand points, candidate locations for establishing drone-supported relief facilities, facility types, drone types, and relief item types, our first-stage problem solves the following problems simultaneously: (i) a location problem that determines the number of facilities to establish and where to establish them, (ii) an inventory prepositioning problem that decides the quantity of relief items to store at each established facility, (iii) a fleet sizing problem that decides the number of drones to deploy, and (iv) an assignment problem that assigns drones to established facilities and demand points. In the second stage, the model determines a relief distribution plan and enables the reassignment of drones to demand nodes. We equip the RO model with an uncertainty set that captures the relationship among facility disruptions, demand for relief items, drone operational status, and the remaining usable fraction of prepositioned supplies after the disaster. Additionally, we explicitly model the dependency of postdisaster drone functionality on the predisaster assignment decisions. To address the challenges of integer recourse, we derive a K-adaptability approximation of the RO model and develop a column-and-constraint generation (C&amp;CG) algorithm to solve it. Moreover, we introduce several strategies to enhance the computational performance of C&amp;CG, including an efficient warm-start mechanism, symmetry-breaking constraints, and valid inequalities. We present extensive numerical experiments that demonstrate the computational efficiency of our framework and provide valuable insights.\n                  Funding: Y. Ma and K. S. Shehadeh are supported by the Air Force Office of Scientific Research [Grant FA9550-25-1-0253].\n                  Supplemental Material: The online appendix is available at https://doi.org/10.1287/trsc.2025.0518 .",
+      "date": "2026-11-25",
+      "source": "Transportation Science",
+      "source_detail": "Transportation Science",
+      "url": "https://doi.org/10.1287/trsc.2025.0518",
+      "tags": [
+        "stochastic",
+        "supply-chain",
+        "facility-location"
+      ],
+      "type": "publication",
+      "doi": "10.1287/trsc.2025.0518",
+      "score": 65.0
+    },
+    {
+      "id": "crossref-10.1007-s00291-026-00883-w",
+      "title": "Large-scale freight dispatching in rail-based intermodal freight networks",
+      "authors": [
+        "Bossong, P.",
+        "Elbert, R."
+      ],
+      "abstract": "Abstract\n                  Rail-based intermodal freight transport (IFT) is characterized by the transport of goods in standardized load units that are transshipped between scheduled freight trains in an intermodal freight network. Dispatching orders in such networks is highly complex, as schedules, delivery deadlines, and layered capacity restrictions, at both the wagon and train level, need to be satisfied simultaneously. While existing literature addresses either network-level or train-level dispatching, there is a lack of models that capture both dimensions jointly, limiting their applicability to real-world operations. We address this gap by formulating a multi-commodity network flow (MCNF) model that captures IFT-specific temporal, spatial, and capacity constraints. To efficiently solve large-scale real-world instances, we develop an algorithmic solving framework comprising a heuristic opening procedure, a column generation (CG) algorithm, and a dive-and-repair heuristic. We also evaluate the impact of acceleration strategies on column generation convergence. Our computational study, based on test instances derived from publicly available real-world data, shows that for the largest instances with 10,000–15,000 orders, our solving framework achieves 24–32% higher objective values than direct solving with a commercial solver while requiring 63–77% of the total computation time. Real-world case studies show that ignoring layered capacity constraints leads to significant capacity overestimation and partially infeasible load plans. Moreover, the case studies demonstrate how moderate operational mitigation strategies can improve network resilience under disruptions, while an analysis of rejected orders reveals how order characteristics and network structure affect order acceptance.",
+      "date": "2026-11-25",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00883-w",
+      "tags": [
+        "network-optimization",
+        "decomposition"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00883-w",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1007-s00291-026-00880-z",
+      "title": "Deep reinforcement learning for dynamic capacity control in sequential zone picking systems",
+      "authors": [
+        "Debold, S.",
+        "Gönsch, J."
+      ],
+      "abstract": "Abstract\n                  \n                    Sequential zone picking systems provide high throughput and flexibility. Under heavy load they are vulnerable to congestion and blocking when conveyor merges, staffing fluctuations, heterogeneous picking speeds, and inventory shortfalls interact. This is especially the case if operations have changing conditions such as changing staffing levels based on throughput targets. Capacity of zone picking systems is commonly regulated using a static pull-based workload mechanism, also referred to as a\n                    carton limit\n                    that caps the number of boxes in the system. Because this signal is updated only when boxes depart, it can induce oscillatory release behavior and increased recirculation. In this paper we formalize the order release as a binary control problem and introduce a straight forward extension that constrains the number of open picks in the system instead, providing an immediately updated workload measure. Further, we propose a deep reinforcement learning algorithm to control workload mechanisms in zone picking systems dynamically based on the current system state. Our algorithm considers factors such as staffing level, picking speed, and inventory level. We evaluate our static and dynamic approaches in a simulation, where we model a zone picking system from our industry partner HelloFresh, using real-world customer data. Under static, optimal control, the pick limit control increases throughput by up to 2%. A complementary analysis of four months of real-world operational data from a large zone picking system of our industry partner (&gt;100 zones) shows a 6% increase in hourly picks and a 7% reduction in recirculations when pick limit control is applied instead of carton limit control. Our proposed deep reinforcement learning approach achieves an average throughput improvement of approximately 7% relative to a static benchmark. Moreover, in about 8% of the validation instances, it delivers throughput gains of 20% or more.",
+      "date": "2026-11-25",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00880-z",
+      "tags": [
+        "ml-for-or",
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00880-z",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2025.1889",
+      "title": "Spoofing and Manipulating Order Books with Learning Algorithms",
+      "authors": [
+        "Cartea, A.",
+        "Chang, P.",
+        "Garcia Arenas, G."
+      ],
+      "abstract": "We propose a dynamic model of the limit order book to derive conditions to test whether it is optimal to manipulate the order book. Our results show that as a market maker becomes more tolerant to bearing inventory risk, optimal strategies that manipulate the book occur more frequently. Manipulation helps to revert inventory to an optimal level and to execute round-trip trades with limit orders at a higher probability than was otherwise likely to occur. Spoofing is a special case of quote-based manipulation where the market maker prefers that the manipulative limit orders are not filled. Overall, if certain conditions hold, then the optimal trading strategy is to manipulate the limit order book. We use high-frequency data to check our conditions and show that the conditions for manipulation hold in Nasdaq’s limit order book.",
+      "date": "2026-11-24",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2025.1889",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2025.1889",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2025.03354",
+      "title": "Gatekeepers and Kingmakers: Do Superplatforms Distort Digital Competition?",
+      "authors": [
+        "Gurun, U.",
+        "Liu, Z.",
+        "Xiao, S."
+      ],
+      "abstract": "The rising dominance of superplatforms raises concerns about conflicts of interest and externalities on innovation, because they act as both marketplace gatekeepers and strategic investors. Studying Google’s dual role via Google Ventures (GV) and the Android marketplace, we find Google-backed startups receive 115% more reviews, 12% higher ratings, and 77% fewer bug complaints than their iOS counterparts—despite no major app updates. These gains are consistent with selective review removal and platform promotion. Using a difference-in-differences approach with iOS versions as controls, we isolate treatment from selection effects. Our findings challenge platform neutrality and highlight subtle mechanisms of competitive distortion.\n                  This paper was accepted by D. J. Wu, information systems.\n                  Supplemental Material: The Online Appendix and data files are available at https://doi.org/10.1287/mnsc.2025.03354 .",
+      "date": "2026-11-24",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2025.03354",
+      "tags": [
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2025.03354",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-ijoc.2024.0877",
+      "title": "Efficient and Flexible Large Language Model–Generated Content Detection",
+      "authors": [
+        "Tian, W.",
+        "Qin, Z.",
+        "Peng, Y."
+      ],
+      "abstract": "We propose an efficient content detection method generated by large language models (LLMs), referred to as Mahalanobis distance–based confidence score (MDCS)–based detection (MDCSD), that fully harnesses the universality of LLMs across multiple splits. Its essence lies in utilizing the MDCS of the text as the ultimate discriminative feature. The prerequisite for computing the MDCS is the efficient joint estimation of the precision matrices corresponding to multiple splits. We provide regularization techniques for constructing the joint estimator and offer corresponding computationally feasible optimization algorithms. The sparsity and consistency of the joint estimator are demonstrated. Based on offset Rademacher complexity, we further derive the optimal excess risk bound for the detection problem. Superiority of MDCSD is validated on the recently released Human ChatGPT Comparison Corpus data set.\n                  History: Accepted by Ram Ramesh, Area Editor for Data Science and Machine Learning.\n                  Funding: This work was supported by the National Natural Science Foundation of China [Grants W2511079, 72471010, 72250065, and 72325007], the Xiangjiang Laboratory Key Project [Grant 23XJ02004], and the Science and Technology Innovation Program of Hunan Province [Grant 2024RC7003].\n                  Supplemental Material: The software that supports the findings of this study is available within the paper and its Supplemental Information ( https://pubsonline.informs.org/doi/suppl/10.1287/ijoc.2024.0877 ) as well as from the IJOC GitHub software repository ( https://github.com/INFORMSJoC/2024.0877 ). The complete IJOC Software and Data Repository is available at https://informsjoc.github.io/ .",
+      "date": "2026-11-24",
+      "source": "INFORMS Journal on Computing",
+      "source_detail": "INFORMS Journal on Computing",
+      "url": "https://doi.org/10.1287/ijoc.2024.0877",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/ijoc.2024.0877",
+      "score": 55.0
+    },
+    {
+      "id": "arxiv-2611.33088",
+      "title": "The Radar-based Activities of Daily Living (R-ADL) Dataset",
+      "authors": [
+        "Dominique Regli",
+        "Brian C. Williams"
+      ],
+      "abstract": "Monitoring Activities of Daily Living (ADLs) supports safety and well-being for people living at home, especially older adults, and radar sensing is gaining increasing attention in the field of activity recognition for its ability to ensure privacy in the home while also surpassing technical limitations of other sensing modalities. However, radar-based activity recognition remains constrained by the limited availability of large-scale datasets. We introduce the Radar-based Activities of Daily Living (R-ADL) dataset to addresses the gaps identified in existing work: 1) it expands the scale of available data by providing over eight hours of annotated recordings in which a person performs eight distinct activities; 2) it overcomes room configuration limitations by recording from five different locations in a two-bedroom, two-bathroom apartment; and 3) it extends beyond primitive actions to focus on high-level ADLs. In addition to the dataset, this paper introduces practical guidance for future ADL dataset construction. We conducted a detailed analysis of how ADLs are prioritized across academic research, health survey tools, and clinical trials to identify clinically significant ADLs. Furthermore, we provide our experimental design, data collection and annotation strategies, post-processing pipeline for forming the R-ADL dataset from raw data, and baseline results on standard machine learning architectures. The R-ADL dataset serves as a valuable resource for advancing ADL recognition systems as we continue building larger and more diverse datasets.",
+      "date": "2026-11-24",
+      "source": "arXiv",
+      "source_detail": "cs.CV",
+      "url": "http://arxiv.org/abs/2611.33088v1",
+      "tags": [
+        "cs.CV",
+        "ml-for-or",
+        "healthcare-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.48550/arXiv.2611.33088",
+      "arxiv_id": "2611.33088v1",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2024.09109",
+      "title": "Online Job Selection: Reward Rate vs. Remaining Value",
+      "authors": [
+        "Aminian, M.",
+        "Ma, W.",
+        "Xin, L."
+      ],
+      "abstract": "High-throughput systems, such as cloud spot markets, adaptive large language model inference, and order consolidation in logistics, operate under capacity constraints. In these settings, decision makers must allocate fixed resources among a stream of requests with heterogeneous reward rates and service durations. A critical tension arises when capacity is saturated; the system must decide whether to continue serving an active job to harvest its remaining value or to preempt it in favor of a new arrival. This trade-off is especially subtle when a new job offers a lower immediate reward rate but a longer service duration, potentially outweighing a high-rate job near completion. To address this challenge, we introduce a general and parsimonious online allocation framework for capacity-constrained resources, where preemption is nonresumable and yields partial rewards. This abstraction captures the essential dynamics of modern resource management problems, including but not limited to those discussed earlier. We derive intuitive index-based policies and provide constant-factor competitive-ratio guarantees for their performance without requiring any forecasts of future demand. In particular, we show that two naive index-based policies have competitive ratios of 1/2 and [Formula: see text]. Our main methodological contribution is to develop a flexible framework for defining “quasiutilities” that couples the states of an online algorithm versus an offline algorithm, which reduces the design of online index-based policies to an offline geometrical problem. The framework allows us to optimize the index function, leading to an exponential-index-based policy that has an improved competitive ratio of 0.68. We also consider various extensions and prove that most of our analyses are tight. Finally, we conduct a concise numerical study to demonstrate the strong empirical performance of the proposed policies under nonworst-case stochastic demand sequences.\n                  This paper was accepted by Jeannette Song, operations management.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.09109 .",
+      "date": "2026-11-25",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2024.09109",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2024.09109",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2024.08930",
+      "title": "Machine Learning Vast Dynamic Conditional Covariance Matrices: The Spirit of “Divide and Conquer”",
+      "authors": [
+        "Zhu, Z.",
+        "Zhu, K."
+      ],
+      "abstract": "Large-scale portfolio selection requires accurate forecasts of high-dimensional dynamic conditional covariance matrices (CCMs). This task is challenging because the number of covariance elements grows quickly with the number of assets, whereas the available time-series observations are limited and noisy. In this paper, we propose a novel graph-based quantiled (GRAND) CCM estimator in the spirit of “divide and conquer.” By extracting information from the extensive asset features, the GRAND method leverages a new graph-based deep learning network, called the self-grouping autoencoder (SGA), to learn the conditional quantiles of returns. Using those learned conditional quantiles, the GRAND method further learns (co)variances of CCM element-wisely via the quantiled conditional moment (QCM) method, and finally, it makes the resulting assembled CCM estimator positive semidefinite through a projection. Because of the use of the SGA network and the QCM method in an element-wise way, the GRAND method is blessing dimensionality in learning the CCM of a large-scale portfolio, while keeping the computation manageable and maintaining causal semantics. From an extensive empirical analysis of the Chinese stock market, we show that the GRAND method can produce much better tangency portfolios than its competitors, and provide dynamic causal graphs to study variance and quantile connectedness of all stocks for interpreting systemic risk and forecasting the business cycle.\n                  This paper was accepted by Kay Giesecke, finance.\n                  Funding: This work was supported by the National Natural Science Foundation of China [Grants 72503203 and 72573142]; the Natural Science Foundation of Fujian Province [Grants 2025J01036 and 2025J08009]; the Fundamental Research Funds for the Central Universities [Grant 20720251053]; and the Research Grants Council, University Grants Committee [Grants 17302424, 17304421, 17304723, and 17312622].\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.08930 .",
+      "date": "2026-11-25",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2024.08930",
+      "tags": [
+        "ml-for-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2024.08930",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s11590-026-02348-z",
+      "title": "Representing maximum expressions by smooth systems",
+      "authors": [
+        "Fischer, A.",
+        "Litvinchev, I.",
+        "Romanova, T.",
+        "Stetsyuk, P."
+      ],
+      "abstract": "Abstract\n                  Many optimization problems involve operators such as maximum or minimum of a finite number of terms in the objective function or constraints. Various approaches have been suggested to transform such nonsmooth operators equivalently into systems of constraints. In this short note, we propose a simple transformation of maximum expressions into smooth system of constraints. The approach is based on linear programming duality and does not require binary variables. We apply the transformation to absolute values, infinity and composite norms, and indicator variables. Directions for future research and possible applications are discussed.",
+      "date": "2026-11-25",
+      "source": "Optimization Letters",
+      "source_detail": "Optimization Letters",
+      "url": "https://doi.org/10.1007/s11590-026-02348-z",
+      "tags": [
+        "linear-programming"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s11590-026-02348-z",
+      "score": 55.0,
+      "mentions_solvers": [
+        "Xpress"
+      ]
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 10,
+    "software": 0,
+    "deadlines": 2,
+    "conferences": 0,
+    "opportunities": 2,
+    "total": 12
+  }
+}
