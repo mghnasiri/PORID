@@ -1,5 +1,23 @@
 [
   {
+    "id": "crossref-10.1007-s00291-026-00885-8",
+    "title": "Improving the expected profit of the data-driven newsvendor problem for lognormal demand: a statistical decision-theoretic approach",
+    "authors": [
+      "Kashima, H."
+    ],
+    "abstract": "Abstract\n                  Data-driven inventory management faces a critical challenge: standard “plug-in” methods that substitute point estimates into optimal rules often ignore parameter uncertainty. This practice is particularly risky under heavy-tailed lognormal demand, where it leads to severe overstocking and potential financial losses due to estimation bias. To resolve this, we formulate the parametric newsvendor problem within a unified statistical decision-theoretic framework that integrates estimation and profit maximization. We derive a closed-form Adjusted Plug-in MLE (APM) and prove that it analytically dominates the classical plug-in rule. The APM order quantity coincides with the rule obtained by specializing the operational statistics framework to this case, so that, when the shape parameter is known, it is optimal among all scale-equivariant policies. What the present analysis adds is the expected profit itself: we obtain it in closed form at a fixed sample size, for the plug-in rule and for the APM rule alike, and hence the exact fraction of the full-information expected profit that no equivariant policy can recover. From a managerial perspective, the proposed method acts as a robust safeguard against optimism bias, simultaneously reducing inventory waste (e.g., food loss) and improving expected profit. Monte Carlo simulations further confirm that these dominance results hold even when the shape parameter must be estimated, offering a simple, implementable prescriptive tool for high-uncertainty environments.",
+    "date": "2026-11-27",
+    "source": "OR Spectrum",
+    "source_detail": "OR Spectrum",
+    "url": "https://doi.org/10.1007/s00291-026-00885-8",
+    "tags": [
+      "supply-chain"
+    ],
+    "type": "publication",
+    "doi": "10.1007/s00291-026-00885-8",
+    "score": 55.0
+  },
+  {
     "id": "crossref-10.1287-opre.2023.0008",
     "title": "Throttling Equilibria in Auction Markets",
     "authors": [
@@ -4601,6 +4619,50 @@
     "doi": "10.48550/arXiv.2611.33631",
     "arxiv_id": "2611.33631v1",
     "score": 40.0
+  },
+  {
+    "id": "s2-7a7244f39075",
+    "title": "An Exact Branch-Price-and-Cut Algorithm for the Vehicle Routing Problem with Floating Targets",
+    "authors": [
+      "Michał B. Paradowski",
+      "Anoop Bhat",
+      "Zhong-Qiang Ren",
+      "H. Choset"
+    ],
+    "abstract": "The Vehicle Routing Problem with Floating Targets (VRPFT) is a generalization of the capacitated vehicle routing problem where targets may actively move to locations''convenient''for the vehicles. In particular, each target may leave its home location at a bounded speed. A solution to the VRPFT is a sequence of targets for each vehicle to visit and a meeting point in space-time for each target. In this paper, we solve the VRPFT exactly with a branch-price-and-cut algorithm. Our key contribution is a dominance criterion for the pricing labeling algorithm that utilizes closed-form lower and upper bounds on a vehicle's trajectory cost given a fixed sequence of targets. We prove that the criterion preserves optimality, and the algorithm has smaller computation time than the exact dynamic program of prior work on identical hardware. We also provide a relaxed criterion that prunes more aggressively; the resulting heuristic is faster than our exact algorithm and matched every certified optimum on the benchmark.",
+    "date": "2026-11-25",
+    "source": "Semantic Scholar",
+    "source_detail": "vehicle routing problem",
+    "url": "https://www.semanticscholar.org/paper/7a7244f39075eabeebd258334402f1e8b31616e8",
+    "tags": [
+      "vehicle-routing"
+    ],
+    "type": "publication",
+    "doi": "",
+    "arxiv_id": "2611.34490",
+    "citation_count": 0,
+    "score": 35.0
+  },
+  {
+    "id": "s2-abc8da4ba70e",
+    "title": "A Global Solver for Minimum-Time Connectivity Restoration in UAV Networks",
+    "authors": [
+      "Huan Lin",
+      "Liang-Hui Ding"
+    ],
+    "abstract": "Node failures can split an unmanned aerial vehicle (UAV) network into disconnected groups. Restoring communication requires moving the surviving aircraft, and the operator needs both an executable movement plan and an assessment of how much shorter the recovery could be. We develop Connectivity Restoration Branch-and-Bound (CR-BB), which returns a feasible plan and numerical displacement bounds; dividing these bounds by the common speed gives the corresponding time interval. Exact-arithmetic guarantees are established by the theorems. When the gap is not closed, the plan is feasible but not certified optimal. A fixed-tree subproblem is a second-order cone program. CR-BB searches over spanning trees and uses a Joint Mandatory-Link Bound (JMLB) to remove tree families that cannot improve the incumbent; Progress-based Adaptive Stopping (PAS) controls the search budget. On 200 matched cases, enabling the JMLB in the branch bound raised the number of cases meeting the prescribed displacement gap from 182 to 200 and reduced mean expanded nodes from 49.6 to 0.7. On a 60-case exact comparison, CR-BB met the gap in 90.0% of cases, compared with 55.0% for a spanning-tree mixed-integer conic formulation and 37.5% of the eight runs completed by an independent optimizer. On 1,000 paired recovery cases, CR-BB planned first restored connectivity in 72.35 steps on average, compared with 124.32 for an edge-augmentation baseline with conic refinement, a 41.8% reduction; on the common 50% subset the reduction was 28.1%. Across 2,466 cases, PAS reduced cumulative solver time by 20.9% and expanded nodes by 31.1% relative to a fixed search budget, with a 0.36-step mean increase in planned steps; most of the saving came from cases where neither configuration met the gap, and 60 plans became longer.",
+    "date": "2026-11-25",
+    "source": "Semantic Scholar",
+    "source_detail": "integer programming branch and bound",
+    "url": "https://www.semanticscholar.org/paper/abc8da4ba70e228e655e38bb3627bb53bc34aad3",
+    "tags": [
+      "integer-programming"
+    ],
+    "type": "publication",
+    "doi": "",
+    "arxiv_id": "2611.33855",
+    "citation_count": 0,
+    "score": 35.0
   },
   {
     "id": "crossref-10.1287-opre.2025.1889",
@@ -9430,6 +9492,49 @@
     "doi": "10.48550/arXiv.2611.33227",
     "arxiv_id": "2611.33227v1",
     "score": 40.0
+  },
+  {
+    "id": "s2-688e36da77b3",
+    "title": "Modeling Restrictions in the Russian Airspace to Calculate the Optimal Flight Route for Unmanned Aerial Vehicles",
+    "authors": [
+      "S. Maksimova"
+    ],
+    "abstract": "To date, an important task of automated construction of optimal routes for unmanned aerial vehicles has not been solved. To solve this problem, it is necessary to build a correct model of the structure of the corresponding airspace segment taking into account the principles and rules for its use and organization of movement of material objects established by regulatory documents. To create this model for the purpose of applying tools for constructing optimal routes, the use of geographic information systems is relevant. Existing models of the airspace structure of the Russian Federation do not provide the ability to automatically construct an optimal UAV flight route from the take-off point to the landing point.\n During the analysis of the air legislation of the Russian Federation, the main categories of restrictions for flights of unmanned aerial vehicles were identified. A description of restrictions in the airspace using formulas was made, and a comparison with graphic elements was made. Exceptions may be provided for a specific UAV. The final formula describes the airspace available for modeling the optimal flight route of a specific UAV. Modeling the optimal route is individual in nature.",
+    "date": "2026-11-24",
+    "source": "Semantic Scholar",
+    "source_detail": "vehicle routing problem",
+    "url": "https://doi.org/10.30932/1992-3252-2024-22-6-12",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.30932/1992-3252-2024-22-6-12",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 35.0
+  },
+  {
+    "id": "s2-68aa7a8dd310",
+    "title": "Coverage path planning of heterogeneous UAVs for crop remote sensing monitoring in irregular farmlands",
+    "authors": [
+      "De-Ming Zhang",
+      "Yu-Xin He",
+      "Hai-Chao Zhang"
+    ],
+    "abstract": "Multirotor unmanned aerial vehicles (UAVs) equipped with gimbal imaging systems can acquire multi-angle and high-resolution farmland imagery, thereby providing essential data for precision crop monitoring. Single UAV is limited by endurance and imaging swath width, cooperative operation with heterogeneous UAVs has become an important solution for improving the remote-sensing data acquisition efficiency over large and complex farmland. This study addresses the problems of unbalanced workload and coverage path planning in cooperative data acquisition by heterogeneous UAVs over complex concave farmland. A two-step coverage path-planning method based on width-sum-guided convex decomposition and adaptive neighborhood assignment is proposed. Firstly, a bi-level optimization model is established, where heterogeneous UAV fleet makespan minimization is used as the global objective and single-sortie full-route distance minimization is used as the local objective. For irregular farmland boundaries, a width-sum-guided and direction-oriented convex decomposition strategy is then developed to divide complex regions into convex subregions suitable for boustrophedon image acquisition. On this basis, heterogeneous UAVs region assignment, multi-sortie splitting, and imaging-swath-matched path generation are performed by jointly considering the imaging acquisition performance index, task-duration coefficient of variation, and full-route endurance verification. Finally, comparative simulations implemented in Python 3.12 show that the proposed method effectively decomposes complex irregular concave farmland and allocates workloads according to both subregion geometry and UAV heterogeneity.",
+    "date": "2026-11-24",
+    "source": "Semantic Scholar",
+    "source_detail": "vehicle routing problem",
+    "url": "https://doi.org/10.3389/fpls.2026.1976463",
+    "tags": [
+      "scheduling",
+      "decomposition"
+    ],
+    "type": "publication",
+    "doi": "10.3389/fpls.2026.1976463",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 45.0
   },
   {
     "id": "crossref-10.1287-mnsc.2025.00524",
@@ -16501,6 +16606,32 @@
     "arxiv_id": "",
     "citation_count": 0,
     "score": 40.0
+  },
+  {
+    "id": "s2-351e117813b5",
+    "title": "INTEGRATED MULTI-DEPOT LOCATION AND VEHICLE ROUTING MODEL WITH TIME WINDOWS IN DISASTER MANAGEMENT",
+    "authors": [
+      "Nemanja Golubović",
+      "Branislava Ratković",
+      "Nenad Bjelić"
+    ],
+    "abstract": "Natural disasters are becoming increasingly frequent and severe due to climate change, population growth, and rapid urbanization, creating significant challenges for humanitarian logistics systems. Efficient planning of relief distribution activities is therefore essential for reducing disaster impacts and improving the responsiveness of emergency operations. This paper presents an integrated Multi-Depot Location and Vehicle Routing Problem with Time Windows (MDLVRPTW) model designed for post-disaster logistics. The main contribution of the research is the development of a unified optimization framework that integrates the minimal covering problem and vehicle routing decisions, enabling the simultaneous determination of depot locations, customer coverage, and distribution routes. In addition, the proposed model incorporates transit nodes, customer priorities, vehicle capacity and range limitations, and soft time windows with delay penalization, providing a more realistic representation of post-disaster distribution networks. The objective is to minimize total system costs, including depot opening costs, transportation costs, customer service delay penalties, and penalties associated with unserved demand. The model was implemented in the Python programming language using the Gurobi optimization solver and tested on a numerical example. The obtained results demonstrate that the proposed approach successfully determines optimal depot locations and feasible vehicle routes while satisfying operational constraints and maintaining a high level of customer service. The proposed framework represents a methodological extension of existing disaster relief location-routing models and provides a basis for future research on large-scale humanitarian logistics problems.",
+    "date": "2026-11-20",
+    "source": "Semantic Scholar",
+    "source_detail": "vehicle routing problem",
+    "url": "https://doi.org/10.37528/ftte/9788673955254/symopis.2026.en.41",
+    "tags": [
+      "vehicle-routing",
+      "supply-chain"
+    ],
+    "type": "publication",
+    "doi": "10.37528/ftte/9788673955254/symopis.2026.en.41",
+    "arxiv_id": "",
+    "citation_count": 0,
+    "score": 40.0,
+    "mentions_solvers": [
+      "Gurobi"
+    ]
   },
   {
     "id": "crossref-10.1007-s10479-026-07416-2",
@@ -102390,6 +102521,74 @@
     "type": "publication",
     "doi": "10.1007/s10957-026-03122-y",
     "score": 20.0
+  },
+  {
+    "id": "crossref-10.1016-j.ejor.2026.11.021",
+    "title": "An enhanced zeroth-order stochastic Frank-Wolfe framework for constrained finite-sum optimization",
+    "authors": [
+      "Ye, H.",
+      "Huang, Y.",
+      "Di, H.",
+      "Chang, X."
+    ],
+    "abstract": "",
+    "date": "2026-11-01",
+    "source": "EJOR",
+    "source_detail": "EJOR",
+    "url": "https://doi.org/10.1016/j.ejor.2026.11.021",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1016/j.ejor.2026.11.021",
+    "score": 20.0
+  },
+  {
+    "id": "crossref-10.1007-s10479-026-07281-z",
+    "title": "Solution of a bilevel optimistic scheduling problem on parallel machines",
+    "authors": [
+      "Schau, Q.",
+      "Ploton, O.",
+      "T’kindt, V.",
+      "Hoogeveen, H.",
+      "Croce, F.",
+      "Hoogeveen, J."
+    ],
+    "abstract": "Abstract\n                  \n                    We consider the uniform parallel machines scheduling problem in the context of optimistic bilevel optimization, where two speed options are considered. In this scenario, the leader selects and assigns a subset of jobs to the follower to minimize the weighted number of tardy jobs, while the follower schedules these jobs on a set of uniform machines to minimize the total completion time. This problem has practical applications in Industry 4.0. We show that this problem is\n                    \n                      \n                        $$\\mathcal NP$$\n                        \n                          \n                            N\n                            P\n                          \n                        \n                      \n                    \n                    -hard in the strong sense by providing a reduction from the Numerical 3-Dimensional Matching problem and we provide a moderately exponential-time dynamic programming algorithm. The problem is solved by means of a concise MIP formulation and a branch-and-bound algorithm that embeds a column generation approach for the lower bound computation. Computational experiments are presented for instances with up to 100 jobs and 4 machines while larger problems are out of reach for the proposed approaches.",
+    "date": "2026-11-01",
+    "source": "Annals of Operations Research",
+    "source_detail": "Annals of Operations Research",
+    "url": "https://doi.org/10.1007/s10479-026-07281-z",
+    "tags": [
+      "integer-programming",
+      "scheduling",
+      "stochastic",
+      "decomposition"
+    ],
+    "type": "publication",
+    "doi": "10.1007/s10479-026-07281-z",
+    "score": 50.0
+  },
+  {
+    "id": "crossref-10.1007-s10479-026-07252-4",
+    "title": "Quantitative risk prioritization. A new risk-based approach to prioritize project risks",
+    "authors": [
+      "Acebes, F.",
+      "González-Varona, J.",
+      "López-Paredes, A.",
+      "Pajares, J."
+    ],
+    "abstract": "Abstract\n                  Several techniques have been proposed to prioritize risks identified in projects. In academia and business, the most standard use is the probability-impact matrix, also known as the risk matrix. Although widespread, this tool has specific limitations, as demonstrated in numerous studies. This article introduces a quantitative method based on Monte Carlo simulation to enhance project risk prioritization. Our proposed method quantifies the impact of each risk on both duration and total cost objectives, enabling us to determine each risk’s relative importance based on these values. In contrast to previous work, this paper proposes a methodology that integrates the effects of risk interactions and the structure of the project-defining network. We conducted two simulation studies, which are detailed in this article. The first study uses fictitious projects to examine the influence of project network structure on the effectiveness of the risk matrix, compared with our proposed methodology. In the second study, we apply our method to two distinct real-world projects and compare these findings with results from simulations of fictitious projects. The conclusions indicate that the traditional risk matrix method produces results that diverge from those generated by our proposed approach, which quantifies impacts. Moreover, it was observed that the risk matrix provides more reliable results when a project’s structure approximates a serial configuration. However, its accuracy in risk prioritization declines for projects with a more parallel structure.",
+    "date": "2026-11-01",
+    "source": "Annals of Operations Research",
+    "source_detail": "Annals of Operations Research",
+    "url": "https://doi.org/10.1007/s10479-026-07252-4",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1007/s10479-026-07252-4",
+    "score": 30.0
   },
   {
     "id": "crossref-10.1007-s11590-026-02345-2",
@@ -201522,6 +201721,165 @@
     "arxiv_id": "",
     "citation_count": 0,
     "score": 45.0
+  },
+  {
+    "id": "crossref-10.1080-03155986.2026.2759525",
+    "title": "Special Issue on Energy, Environment, and Sustainability",
+    "authors": [
+      "Nasiri, F.",
+      "Bahn, O.",
+      "Anjos, M."
+    ],
+    "abstract": "",
+    "date": "2026-10-02",
+    "source": "INFOR",
+    "source_detail": "INFOR",
+    "url": "https://doi.org/10.1080/03155986.2026.2759525",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1080/03155986.2026.2759525",
+    "score": 20.0
+  },
+  {
+    "id": "crossref-10.1080-03155986.2026.2717954",
+    "title": "Global sensitivity analysis for nuclear hybrid energy systems",
+    "authors": [
+      "Tohidi, M.",
+      "Sanongboon, P."
+    ],
+    "abstract": "",
+    "date": "2026-10-02",
+    "source": "INFOR",
+    "source_detail": "INFOR",
+    "url": "https://doi.org/10.1080/03155986.2026.2717954",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1080/03155986.2026.2717954",
+    "score": 20.0
+  },
+  {
+    "id": "crossref-10.1080-03155986.2026.2700095",
+    "title": "Demand flexibility and electrification of transportation sector in energy transition",
+    "authors": [
+      "Sanongboon, P.",
+      "Tohidi, M."
+    ],
+    "abstract": "",
+    "date": "2026-10-02",
+    "source": "INFOR",
+    "source_detail": "INFOR",
+    "url": "https://doi.org/10.1080/03155986.2026.2700095",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1080/03155986.2026.2700095",
+    "score": 20.0
+  },
+  {
+    "id": "crossref-10.1080-03155986.2026.2657126",
+    "title": "SDDP-based co-optimization of wind and solar capacity expansion in hydro-dominated systems",
+    "authors": [
+      "Sabaei, S.",
+      "Denault, M.",
+      "Pineau, P."
+    ],
+    "abstract": "",
+    "date": "2026-10-02",
+    "source": "INFOR",
+    "source_detail": "INFOR",
+    "url": "https://doi.org/10.1080/03155986.2026.2657126",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1080/03155986.2026.2657126",
+    "score": 20.0
+  },
+  {
+    "id": "crossref-10.1080-03155986.2026.2657103",
+    "title": "Can an EV storage system exercise market power in an electricity market? A comparison of bi-level and single-level models",
+    "authors": [
+      "Feng, T.",
+      "Conejo, A."
+    ],
+    "abstract": "",
+    "date": "2026-10-02",
+    "source": "INFOR",
+    "source_detail": "INFOR",
+    "url": "https://doi.org/10.1080/03155986.2026.2657103",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1080/03155986.2026.2657103",
+    "score": 20.0
+  },
+  {
+    "id": "crossref-10.1080-03155986.2026.2629182",
+    "title": "Coordinating environmental policy and transmission planning in decentralised electricity industries",
+    "authors": [
+      "Siddiqui, A.",
+      "Tanaka, M.",
+      "Chen, Y."
+    ],
+    "abstract": "",
+    "date": "2026-10-02",
+    "source": "INFOR",
+    "source_detail": "INFOR",
+    "url": "https://doi.org/10.1080/03155986.2026.2629182",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1080/03155986.2026.2629182",
+    "score": 20.0
+  },
+  {
+    "id": "crossref-10.1080-03155986.2026.2614806",
+    "title": "Power decarbonation in Northeastern America: the benefits of multi-stage planning and regional cooperation",
+    "authors": [
+      "Mitjana, F.",
+      "Denault, M.",
+      "Pineau, P."
+    ],
+    "abstract": "",
+    "date": "2026-10-02",
+    "source": "INFOR",
+    "source_detail": "INFOR",
+    "url": "https://doi.org/10.1080/03155986.2026.2614806",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1080/03155986.2026.2614806",
+    "score": 20.0
+  },
+  {
+    "id": "crossref-10.1080-03155986.2025.2598137",
+    "title": "CO\n                    <sub>2</sub>\n                    emission efficiency evaluation and improvement from the perspective of non-uniqueness of equilibrium efficient frontier: evidence from China",
+    "authors": [
+      "Wei, F.",
+      "Xi, L.",
+      "Song, J.",
+      "Xia, Q.",
+      "Zhang, X."
+    ],
+    "abstract": "",
+    "date": "2026-10-02",
+    "source": "INFOR",
+    "source_detail": "INFOR",
+    "url": "https://doi.org/10.1080/03155986.2025.2598137",
+    "tags": [
+      "general-or"
+    ],
+    "type": "publication",
+    "doi": "10.1080/03155986.2025.2598137",
+    "score": 20.0
   },
   {
     "id": "crossref-10.1016-j.ejor.2026.04.039",
@@ -320375,1480 +320733,5 @@
       "HiGHS",
       "SCIP"
     ]
-  },
-  {
-    "id": "crossref-10.1287-mnsc.2024.05042",
-    "title": "Public Enforcement and Initial Public Offering Reporting Quality in Weak Institutional Environments: Evidence from a Random Experiment in China",
-    "authors": [
-      "Fan, M.",
-      "Guo, K.",
-      "Ke, B."
-    ],
-    "abstract": "Using China’s randomized pre-initial public offering on-site inspection program, we examine the causal effects of proactive public enforcement on the financial reporting quality of initial public offering applicants. Our analysis shows that the program enhances the reporting quality of selected applicants by screening out firms with questionable financial disclosures. More importantly, it generates a significant deterrence effect, discouraging future applicants from submitting low-quality financial reports. However, we also find that public enforcement can lead to the rejection of some firms that may otherwise merit approval. These findings highlight both the benefits and costs of employing public enforcement to improve financial reporting in settings with weak institutional oversight.\n                  This paper was accepted by Eric So, accounting.\n                  Funding: K. Guo acknowledges financial support from the National Natural Science Foundation of China [Grants 72302146 and 72132006], the Shanghai Pujiang Program, and the National Social Science Fund of China [Grant 22AZD034].\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.05042 .",
-    "date": "2026-08-28",
-    "source": "Management Science",
-    "source_detail": "Management Science",
-    "url": "https://doi.org/10.1287/mnsc.2024.05042",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.1287/mnsc.2024.05042",
-    "score": 50.0
-  },
-  {
-    "id": "crossref-10.1287-mnsc.2024.06477",
-    "title": "Harmonizing Safety and Speed: A Human-Algorithm Approach to Enhance the FDA’s Medical Device Clearance Policy",
-    "authors": [
-      "Zhalechian, M.",
-      "Saghafian, S.",
-      "Robles, O."
-    ],
-    "abstract": "The United States Food and Drug Administration (FDA)’s 510(k) pathway allows manufacturers to gain medical device approval by demonstrating substantial equivalence to a legally marketed device. However, the inherent ambiguity of this regulatory procedure has been associated with high recall among many devices cleared through this pathway, raising significant safety concerns. In this paper, we develop a combined human-algorithm approach to assist the FDA in improving its 510(k) medical device clearance process by reducing recall risk and regulatory workload. We first develop machine learning methods to estimate the risk of recall of 510(k) medical devices based on the information available at the time of submission. We then propose a data-driven clearance policy that recommends acceptance, rejection, or deferral to FDA’s committees for in-depth evaluation. We conduct an empirical study using a unique data set of over 31,000 submissions that we assembled based on data sources from the FDA and Centers for Medicare and Medicaid Services. Compared to the FDA’s current practice, which has a recall rate of 10.3% and a normalized workload measure of 100%, a conservative evaluation of our policy shows a 32.9% improvement in the recall rate and a 40.5% reduction in the workload. Our analyses further suggest annual cost savings of approximately $1.7 billion for the healthcare system driven by avoided replacement costs, which is equivalent to 1.1% of the entire United States annual medical device expenditure. Our findings highlight the value of a holistic and data-driven approach to improve the FDA’s current 510(k) pathway.\n                  This paper was accepted by Stefan Scholtes, healthcare management.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.06477 .",
-    "date": "2026-08-28",
-    "source": "Management Science",
-    "source_detail": "Management Science",
-    "url": "https://doi.org/10.1287/mnsc.2024.06477",
-    "tags": [
-      "ml-for-or",
-      "healthcare-or"
-    ],
-    "type": "publication",
-    "doi": "10.1287/mnsc.2024.06477",
-    "score": 60.0
-  },
-  {
-    "id": "crossref-10.1287-trsc.2025.0017",
-    "title": "Can Information Design Resolve Electric Vehicle Charging Chaos?",
-    "authors": [
-      "Wang, Q.",
-      "Sun, X.",
-      "Nie, Y.",
-      "Li, J."
-    ],
-    "abstract": "Charging remains an obstacle to the mass adoption of electric vehicles (EVs), especially for long-distance travel. If many EV drivers take to the road around the same time, their “range anxiety” may create a self-fulfilling prophecy. As drivers anticipate uncertainty and congestion at charging stations, they tend to make decisions about when and where to charge that could collectively lead to chaos and inefficiency. Here, we show that information design can persuade drivers to adopt decisions that are better for the system while being consistent with their self-interest as defined by the Bayesian Nash equilibrium. Our stylized model incorporates a congestion effect into drivers’ payoffs and assumes that the information designer can leverage its private knowledge about the charging condition to influence heterogeneous drivers whose type is defined by their vehicle’s remaining range. We consider both public and private information designs. The former does not depend on the driver type, whereas the latter does. For the private design problem, we propose a novel cutoff structure that enables us to reformulate an infinite-dimensional problem as a finite one. Our analysis shows that, in a one-station, two-state model equipped with a linear cost function, the optimal public design reduces to full information revelation. Moreover, the optimal private design within the proposed cutoff-based class yields significantly better outcomes and, in some cases, can even attain the system optimum. The model is further extended to a corridor setting to examine the impact of different information release schedules. Numerical results show that the private design with sequential release consistently yields the best performance. Under public design, however, the relative effectiveness of different release schedules depends on the spatial configuration of the corridor, among other factors.\n                  Funding: This research is supported by the U.S. National Science Foundation’s Civil Infrastructure System (CIS) Program [Grant CMMI #2225087]. J. Li is supported by the National Natural Science Foundation of China [Grant 72501242].\n                  Supplemental Material: The online appendix is available at https://doi.org/10.1287/trsc.2025.0017 .",
-    "date": "2026-08-28",
-    "source": "Transportation Science",
-    "source_detail": "Transportation Science",
-    "url": "https://doi.org/10.1287/trsc.2025.0017",
-    "tags": [
-      "game-theory"
-    ],
-    "type": "publication",
-    "doi": "10.1287/trsc.2025.0017",
-    "score": 55.0
-  },
-  {
-    "id": "crossref-10.1287-trsc.2024.0871",
-    "title": "Dynamic Demand Management for Parcel Lockers",
-    "authors": [
-      "Sailer, D.",
-      "Klein, R.",
-      "Steinhardt, C."
-    ],
-    "abstract": "In pursuit of a more environmentally sustainable and cost-efficient last mile, parcel lockers have gained a firm foothold in the parcel delivery landscape. To fully exploit their potential and ensure customer satisfaction, successful management of the locker’s limited capacity is crucial. This is challenging as future delivery requests and pickup times are stochastic from the provider’s perspective. In response, we propose to dynamically control whether the locker is presented as an available delivery option to each incoming customer with the goal of maximizing the number of served requests. We take compartment sizes into account, which entails a second type of decision as parcels scheduled for delivery must be allocated. As an extension, we balance rejected requests and failed deliveries through a careful use of overbooking. We formalize the problem as an infinite-horizon sequential decision problem and find that exact methods are intractable for realistic instances. In light of this, we develop a solution framework that orchestrates multiple algorithmic techniques from sequential decision analytics and reinforcement learning in an innovative way, namely cost function approximation and value function approximation (VFA). As a general methodological contribution, we enhance the training of our VFA with a modified version of experience replay. Our computational study shows that our method outperforms a myopic benchmark by 3.4% and an industry-inspired policy by 2.8%.\n                  Supplemental Material: The online appendices are available at https://doi.org/10.1287/trsc.2024.0871 .",
-    "date": "2026-08-28",
-    "source": "Transportation Science",
-    "source_detail": "Transportation Science",
-    "url": "https://doi.org/10.1287/trsc.2024.0871",
-    "tags": [
-      "ml-for-or"
-    ],
-    "type": "publication",
-    "doi": "10.1287/trsc.2024.0871",
-    "score": 55.0
-  },
-  {
-    "id": "optim-online-1f22f01cc21a",
-    "title": "An Asymptotic Framework for the Integrality Gap of the Traveling Salesman Problem",
-    "authors": [],
-    "abstract": "The integrality gap of the subtour elimination relaxation for the Traveling Salesman Problem is a longstanding open problem, epitomized by the \\(\\frac{4}{3}\\)-conjecture. Understanding this gap requires a detailed analysis of the extreme points of the subtour elimination polytope. In this work, we introduce a new perspective for studying the integrality gap through what we call ... Read more",
-    "date": "2026-08-28",
-    "source": "Optimization Online",
-    "url": "https://optimization-online.org/2026/08/an-asymptotic-framework-for-the-integrality-gap-of-the-traveling-salesman-problem/?utm_source=rss&utm_medium=rss&utm_campaign=an-asymptotic-framework-for-the-integrality-gap-of-the-traveling-salesman-problem",
-    "tags": [
-      "vehicle-routing"
-    ],
-    "type": "publication",
-    "score": 45.0
-  },
-  {
-    "id": "optim-online-ad4d18faaedb",
-    "title": "The Integrality Gap of the Traveling Salesman Problem is 4/3 if the LP Solution Has at Most n+8 Non-Zero Components",
-    "authors": [],
-    "abstract": "We address the classical Dantzig &#8211; Fulkerson &#8211; Johnson formulation of the symmetric metric Traveling Salesman Problem and study the integrality gap of its linear relaxation, namely the Subtour Elimination Problem (SEP). This integrality gap is conjectured to be 4/3. We prove that, when solving a problem on n nodes, if the optimal SEP solution ... Read more",
-    "date": "2026-08-28",
-    "source": "Optimization Online",
-    "url": "https://optimization-online.org/2026/08/the-integrality-gap-of-the-traveling-salesman-problem-is-4-3-if-the-lp-solution-has-at-most-n8-non-zero-components/?utm_source=rss&utm_medium=rss&utm_campaign=the-integrality-gap-of-the-traveling-salesman-problem-is-4-3-if-the-lp-solution-has-at-most-n8-non-zero-components",
-    "tags": [
-      "vehicle-routing"
-    ],
-    "type": "publication",
-    "score": 45.0
-  },
-  {
-    "id": "optim-online-fe995a73db5e",
-    "title": "Column Enumeration via Strategic Row Aggregation for Split Delivery Vehicle Routing with Time Windows",
-    "authors": [],
-    "abstract": "ArticleDownload View PDF",
-    "date": "2026-08-28",
-    "source": "Optimization Online",
-    "url": "https://optimization-online.org/2026/08/column-enumeration-via-strategic-row-aggregation-for-split-delivery-vehicle-routing-with-time-windows/?utm_source=rss&utm_medium=rss&utm_campaign=column-enumeration-via-strategic-row-aggregation-for-split-delivery-vehicle-routing-with-time-windows",
-    "tags": [
-      "vehicle-routing"
-    ],
-    "type": "publication",
-    "score": 37.0
-  },
-  {
-    "id": "openalex-W7159795976",
-    "title": "Qualis: An open-source platform for Q-methodology research",
-    "authors": [
-      "Julien Vastenaekels",
-      "Clémence Dedinger"
-    ],
-    "abstract": "Qualis is a self-hosted, open-source web application that integrates the complete Q-methodology workflow — study design, recruitment, online data collection, factor analysis, and export — into a single platform. It supports any device, multilingual studies, and exports to PQMethod, Ken-Q Analysis, and the R qmethod package.",
-    "date": "2026-08-28",
-    "source": "OpenAlex",
-    "source_detail": "Open MIND",
-    "url": "https://doi.org/10.5281/zenodo.19985835",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.5281/zenodo.19985835",
-    "citation_count": 0,
-    "score": 50.0
-  },
-  {
-    "id": "openalex-W7162643414",
-    "title": "Independent controlled-grid replication data and code for PIM-2026-0032",
-    "authors": [
-      "Byungwoong Yoo"
-    ],
-    "abstract": "This version contains the independently rerun controlled-grid replication supporting the major revision of manuscript PIM-2026-0032. It includes 440/440 valid Uni-Dock top-pose results (11 ligands × 4 OPTN–TBK1 receptor systems × 10 seeds), prepared inputs, run manifests, raw and summarized docking/contact metrics, seed-pair RMSD analysis, corrected publication tables, final figures, scripts, and machine-readable QA and hash manifests. Uni-Dock v1.1.3 was run with Vina scoring, fast search mode, 20 output modes, and 26 Å cubic boxes centered at AC (3.2636, 15.0388, −40.3993) or BD (3.7261, 15.0095, −41.1321), as applicable. The release supports transparent reproducibility of the independent controlled-grid rerun. It is not an exact reconstruction of any historical run and does not establish binding affinity, protein–protein interaction disruption, mutation selectivity, biological activity, safety, or clinical efficacy. See the README and QA reports for methods and limitations.",
-    "date": "2026-08-28",
-    "source": "OpenAlex",
-    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
-    "url": "https://doi.org/10.5281/zenodo.20425562",
-    "tags": [
-      "healthcare-or"
-    ],
-    "type": "publication",
-    "doi": "10.5281/zenodo.20425562",
-    "citation_count": 0,
-    "score": 55.0
-  },
-  {
-    "id": "openalex-W7204434650",
-    "title": "v-ops Verifiable SBOM Publication Record for thingsboard/thingsboard-gateway @ 31c8ee6",
-    "authors": [
-      "Bikash Shah",
-      "L. Jean Camp"
-    ],
-    "abstract": "Automated SBOM publication record. Source: https://github.com/thingsboard/thingsboard-gateway. Commit: 31c8ee6348f08f88b21a87fc6bac76a853f35864. SBOM generator: syft. Artifacts: publication-record.json.",
-    "date": "2026-08-28",
-    "source": "OpenAlex",
-    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
-    "url": "https://doi.org/10.5281/zenodo.22134692",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.5281/zenodo.22134692",
-    "citation_count": 0,
-    "score": 50.0
-  },
-  {
-    "id": "openalex-W7204438419",
-    "title": "v-ops Verifiable SBOM Publication Record for Koenkk/zigbee2mqtt @ fcbb7ff",
-    "authors": [
-      "Bikash Shah",
-      "L. Jean Camp"
-    ],
-    "abstract": "Automated SBOM publication record. Source: https://github.com/Koenkk/zigbee2mqtt. Commit: fcbb7ff44bdc05a16e95d3472a81d110646cc17b. SBOM generator: syft. Artifacts: github.com_Koenkk_zigbee2mqtt.spdx-json.json, github.com_Koenkk_zigbee2mqtt.swid.xml, publication-record.json.",
-    "date": "2026-08-28",
-    "source": "OpenAlex",
-    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
-    "url": "https://doi.org/10.5281/zenodo.22134606",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.5281/zenodo.22134606",
-    "citation_count": 0,
-    "score": 50.0
-  },
-  {
-    "id": "openalex-W7204442058",
-    "title": "Entrepreneurial Mentors: YouTube in Building Digital Communities",
-    "authors": [
-      "Grethel Marisol Sarrio Zárate",
-      "Rosalía Del Pilar Caramutti De La Piedra"
-    ],
-    "abstract": "",
-    "date": "2026-08-28",
-    "source": "OpenAlex",
-    "source_detail": "Lecture notes in networks and systems",
-    "url": "https://doi.org/10.1007/978-3-032-27541-7_27",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.1007/978-3-032-27541-7_27",
-    "citation_count": 0,
-    "score": 40.0
-  },
-  {
-    "id": "openalex-W7204459407",
-    "title": "Development and Evaluation of an Authentication-Based Access Control Framework for Secure Web-Based Ebook Distribution",
-    "authors": [
-      "Lingga Kurnia Ramadhani",
-      "Bajeng Nurul Widyaningrum",
-      "Wahyu Wijaya Widiyanto"
-    ],
-    "abstract": "The increasing use of digital learning resources has created a growing demand for secure ebook distribution systems. However, many existing ebook platforms remain vulnerable to unauthorized access, credential sharing, and uncontrolled digital content distribution. This study proposes an Authentication-Based Access Control Framework for secure web-based ebook distribution by integrating authentication, role-based authorization, session management, transaction validation, and ebook access protection within a unified security architecture.The research employed the Waterfall software development model consisting of requirement analysis, system design, implementation, testing, and deployment. The proposed framework was implemented using PHP and MySQL and evaluated through functional and security testing.The implementation results demonstrate that the developed system successfully manages 153 registered users, 151 ebook transactions, and six published ebook collections while maintaining controlled access to digital content. Functional testing achieved a 100% success rate across authentication, authorization, session validation, and ebook protection scenarios. The session management mechanism effectively prevented concurrent account usage and unauthorized access attempts.The novelty of this study lies in the integration of authentication, authorization, session validation, and ebook access protection within a dedicated framework specifically designed for ebook distribution. The proposed framework provides a practical, scalable, and cost-effective alternative for educational institutions and digital content providers seeking secure digital resource distribution without relying on complex Digital Rights Management (DRM) infrastructures.",
-    "date": "2026-08-28",
-    "source": "OpenAlex",
-    "source_detail": "Jurnal Inotera",
-    "url": "https://doi.org/10.31572/inotera.vol11.iss2.2026.id714",
-    "tags": [
-      "stochastic"
-    ],
-    "type": "publication",
-    "doi": "10.31572/inotera.vol11.iss2.2026.id714",
-    "citation_count": 0,
-    "score": 55.0
-  },
-  {
-    "id": "openalex-W7204460029",
-    "title": "Behind the hype: a closer look at voice assistant skills, product control strategy and user evaluations",
-    "authors": [
-      "Yazhen Xiao",
-      "Haisu Zhang"
-    ],
-    "abstract": "Purpose Drawing on the assemblage framework and signaling theory, this research examines how a voice skill's product control strategy, specifically controllability variety and complexity, shapes perceived intelligence and user evaluations. It also explores the invocation strategy (licensing vs. co-branding) as a boundary condition for these relationships. Design/methodology/approach A multi-source, multi-method approach is adopted, using field data from 481 Amazon Alexa skills, over 47,000 user reviews, two user surveys and expert-coded data. Hypotheses are tested using multiple analyses in SPSS. Findings Controllability variety functions as a competence signal and is positively associated with perceived intelligence. Controllability complexity serves as a friction signal and penalizes perceived intelligence. In turn, perceived intelligence acts as a primary driver of user evaluations. Moreover, an invocation license intensifies the negative complexity–perceived intelligence relationship more than co-branding invocation does. Originality/value This study shifts the research focus from platform-level voice assistants to their micro-level skills. It integrates signaling theory with the assemblage framework, establishing that voice skills function as a critical entity within a triadic user–AI–product assemblage. By introducing and empirically contrasting the invocation strategy, it provides a novel perspective on how the locus of artificial intelligence identity governs attribution within the assemblage and shapes user perceptions of intelligence.",
-    "date": "2026-08-28",
-    "source": "OpenAlex",
-    "source_detail": "Marketing Intelligence & Planning",
-    "url": "https://doi.org/10.1108/mip-10-2025-0782",
-    "tags": [
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.1108/mip-10-2025-0782",
-    "citation_count": 0,
-    "score": 55.0
-  },
-  {
-    "id": "openalex-W7204461656",
-    "title": "Analisis Efesiensi dan Efektivitas Aplikasi Lazada dari Sisi Pengguna : Pendekatan Kualitatif",
-    "authors": [
-      "Chaerull Raflie",
-      "Sri Bekti Handayani",
-      "Leni Nurhayati"
-    ],
-    "abstract": "Digital change has spurred rapid growth in the e-commerce sector in Indonesia, with Lazada becoming one of the most widely used platforms. However, the growing number of users and the complexity of services present challenges related to system efficiency and usability. This study aims to assess the efficiency and effectiveness of the Lazada app from a user perspective using a qualitative approach. Data were collected through in-depth interviews, participant observation, and documentation from 15 active Lazada users. The findings indicate that the app's navigation and interface are quite efficient, but system speed remains problematic during high traffic volumes. Meanwhile, the app's effectiveness is hampered by a lack of accuracy and completeness of product information, although the tracking and review features are considered useful. This imbalance between technical efficiency and information quality impacts user satisfaction and loyalty. This study recommends improving system performance during high load times and standardizing product information to enhance the overall user experience.",
-    "date": "2026-08-28",
-    "source": "OpenAlex",
-    "source_detail": "Bridge",
-    "url": "https://doi.org/10.62951/bridge.v4i3.981",
-    "tags": [
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.62951/bridge.v4i3.981",
-    "citation_count": 0,
-    "score": 55.0
-  },
-  {
-    "id": "openalex-W7204477035",
-    "title": "IT Systems Analysis in 103 Current Vacancies: Process, Data, Interfaces and Solution Validation",
-    "authors": [
-      "MTF Institute Research Team"
-    ],
-    "abstract": "This MTF Institute Research Team report analyses a bounded purposive corpus of 103 unique current direct public vacancies accepted from evidence retrieved on 27 August 2026. It examines requirements, stakeholder discovery, process and system modelling, data and interface analysis, testing, user acceptance, implementation, traceability, controls and solution evaluation. The public archive contains a searchable professional research PDF, a rights-reviewed 103-row factual vacancy dataset, aggregate coding and corpus-QA summaries, a methods appendix, a public data dictionary, pre-deposit metadata and a checksum manifest. It excludes vacancy bodies, screening excerpts, private row identities, deduplication keys, personal contact data, employer logos and proprietary frameworks. The study is a dated purposive public-web sample, not a census or representative labour-market estimate. Counts are non-exclusive. The evidence does not establish occupational prevalence, causation, compensation, appointment outcomes, employer endorsement or guaranteed learning, employment or business results.",
-    "date": "2026-08-28",
-    "source": "OpenAlex",
-    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
-    "url": "https://doi.org/10.5281/zenodo.22135110",
-    "tags": [
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.5281/zenodo.22135110",
-    "citation_count": 0,
-    "score": 55.0
-  },
-  {
-    "id": "openalex-W7204481834",
-    "title": "ABCD Data Documentation",
-    "authors": [
-      "ABCD Consortium"
-    ],
-    "abstract": "Data documentation website for the Adolescent Brain Cognitive Development℠ (ABCD) Study: https://docs.abcdstudy.org.",
-    "date": "2026-08-28",
-    "source": "OpenAlex",
-    "source_detail": "Zenodo (CERN European Organization for Nuclear Research)",
-    "url": "https://doi.org/10.5281/zenodo.22134953",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.5281/zenodo.22134953",
-    "citation_count": 0,
-    "score": 45.0
-  },
-  {
-    "id": "openalex-W7204481893",
-    "title": "Adversarial Commercial Vehicle Datasets with Protocol Aware Annotation for Cybersecurity Research",
-    "authors": [
-      "Chandrima Ghatak",
-      "Rik Chatterjee",
-      "Jeremy Daily"
-    ],
-    "abstract": "",
-    "date": "2026-08-28",
-    "source": "OpenAlex",
-    "source_detail": "Lecture notes of the Institute for Computer Sciences, Social Informatics and Telecommunications Engineering",
-    "url": "https://doi.org/10.1007/978-3-032-33701-6_18",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.1007/978-3-032-33701-6_18",
-    "citation_count": 0,
-    "score": 40.0
-  },
-  {
-    "id": "optim-online-46b40bf285af",
-    "title": "The subtle behavior of the facial distance",
-    "authors": [],
-    "abstract": "We give a simple example that disproves the following 2015 conjecture of Lacoste-Julien and Jaggi concerning the pyramidal width (aka facial distance): The pyramidal width of a set of vertices is non-increasing when another vertex is added (assuming that all previous points remain vertices). In contrast to the recent example by Zhao (arXiv:2607.29555), our counterexample ... Read more",
-    "date": "2026-08-28",
-    "source": "Optimization Online",
-    "url": "https://optimization-online.org/2026/08/the-subtle-behavior-of-the-facial-distance/?utm_source=rss&utm_medium=rss&utm_campaign=the-subtle-behavior-of-the-facial-distance",
-    "tags": [
-      "general-or"
-    ],
-    "type": "publication",
-    "score": 30.0
-  },
-  {
-    "id": "s2-bb24bc05f54d",
-    "title": "A hybrid adaptive large neighborhood search algorithm for two-echelon electric vehicle routing problem",
-    "authors": [
-      "Dian Huang",
-      "Hu-Gang Wang",
-      "Wen-Lei Wang",
-      "Li Zhang"
-    ],
-    "abstract": "",
-    "date": "2026-08-28",
-    "source": "Semantic Scholar",
-    "source_detail": "vehicle routing problem",
-    "url": "https://doi.org/10.1038/s41598-026-68348-2",
-    "tags": [
-      "vehicle-routing"
-    ],
-    "type": "publication",
-    "doi": "10.1038/s41598-026-68348-2",
-    "arxiv_id": "",
-    "citation_count": 0,
-    "score": 30.0
-  },
-  {
-    "id": "arxiv-2608.28582",
-    "title": "Some quartic control results for scalar-input systems",
-    "authors": [
-      "Karine Beauchard",
-      "Frédéric Marbach"
-    ],
-    "abstract": "We investigate the role of quartic terms in the small-time local controllability of scalar-input systems. First, we prove a new sufficient condition for controllability, which exploits simultaneously more good quartic Lie brackets than previous results. Second, we identify a family of quartic obstructions to controllability, relying on Lie brackets whose coordinates of the second kind are positive-definite functionals of the control. Third, we show that the complementarity of these results can be seen as an answer to Kawski's 1987 open problem concerning the construction of a Hall basis which somehow separates good and bad quartic brackets. We give examples and remarks illustrating some of the intricacies of these notions.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2608.28582v1",
-    "tags": [
-      "math.OC",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28582",
-    "arxiv_id": "2608.28582v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28566",
-    "title": "On two proofs of $d^2$ mixing of weighted Dikin walks",
-    "authors": [
-      "Yuansi Chen",
-      "Yunbum Kook"
-    ],
-    "abstract": "We study the mixing time of weighted Dikin walks for sampling from exponential distributions on polytopes and truncated positive-semidefinite (PSD) cones. Our first result gives a general total-variation mixing bound under strong self-concordance, $\\barν$-symmetry, and mixed-trace regularity on the local metric. The key idea is to control the Metropolis--Hastings acceptance probability on a high-probability region rather than at every point. Applying this framework to the Lee--Sidford, Lewis-weight, and John metrics yields an $\\widetilde O(d^2)$ mixing bound for sampling from polytopes, while applying it to a hybrid barrier yields an $\\widetilde O(d^4)$ mixing bound for sampling from truncated PSD cones. Our second result establishes stronger $χ^2$-divergence guarantees and pointwise acceptance control using a new fourth-order bootstrap condition. For a suitably scaled Lee--Sidford metric, this yields an $\\widetilde O(d^2)$ mixing bound in $χ^2$-divergence, improving on the previous $\\widetilde O(d^{9/4})$ bound.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.DS",
-    "url": "http://arxiv.org/abs/2608.28566v1",
-    "tags": [
-      "cs.DS",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28566",
-    "arxiv_id": "2608.28566v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28530",
-    "title": "On Nonsmooth and Relatively Weakly Convex Minimization",
-    "authors": [
-      "Chen Jiang",
-      "Jiawen Bi",
-      "Shuzhong Zhang"
-    ],
-    "abstract": "Composite optimization plays a central role in modern machine learning and signal processing, as it offers a natural balance between data fidelity and structural properties. In this paper, we study composite optimization in the setting where both components are nonsmooth and nonconvex. We start with a deterministic Bregman proximal subgradient method that converges under subgradient upper-bound conditions. This approach relaxes the standard requirement on the convexity of the regularization term, thus accommodating a broader range of applications. To extend this to the stochastic regime, we develop a model-based minimization method under a relative Lipschitz condition and establish a convergence rate of $\\mathcal{O}(\\varepsilon^{-4})$. We also extend the framework with convergence guarantees to the setting where the distance generating function and its gradient are accessible only through a stochastic oracle.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "math.OC",
-    "url": "http://arxiv.org/abs/2608.28530v1",
-    "tags": [
-      "math.OC",
-      "ml-for-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28530",
-    "arxiv_id": "2608.28530v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2608.28578",
-    "title": "Aero Hand Open: A Simulation-Ready Tendon-Driven Hand for Dexterous Manipulation Learning",
-    "authors": [
-      "Nan Wang",
-      "Mohit Yadav",
-      "Jonathan Wulff",
-      "Aidan Rosenbaum",
-      "Kezhou Chen",
-      "Yuvan Sharma",
-      "Xu Dong",
-      "Yiwei Tao"
-    ],
-    "abstract": "Tendon-driven hands are anthropomorphic, and moving the actuators off the joints is what makes a hand of this capability affordable to build. Two effects produce that saving. Routing force through a cable removes the requirement that a motor fit inside the joint it drives, so smaller and cheaper motors suffice, and one motor can drive several joints through a single cable, so fewer motors are needed. They are also harder to learn on than a direct-drive hand. The underactuated transmission that produces the saving is itself difficult to represent in a simulator, and the joints one cable drives are not independently commandable. We present Aero Hand Open, a tendon-driven anthropomorphic hand that is released simulation-ready. Three things ship with it. A simulation model reproduces the cable transmission itself. An identified actuation map connects that model to the motor commands in both directions, including the three-way coupling of the thumb. A reinforcement learning package trains policies for the hand. Together they let a policy be trained entirely in simulation and run on the hand with no fine-tuning and no state estimation. We release the mechanical design, the simulation model, the identified mapping, the training environment and the deployment stack.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.RO",
-    "url": "http://arxiv.org/abs/2608.28578v1",
-    "tags": [
-      "cs.RO",
-      "ml-for-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28578",
-    "arxiv_id": "2608.28578v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2608.28576",
-    "title": "Learning a Size-Weight Frontier for Synthetic-Augmented Inference",
-    "authors": [
-      "Chengpiao Huang",
-      "Kaizheng Wang"
-    ],
-    "abstract": "Synthetic data can improve statistical inference when real data are scarce, but naively treating synthetic samples as real data can introduce bias and lead to unreliable inference. We develop a general framework for synthetic-augmented inference across a population of related tasks. It characterizes synthetic augmentation by the number of synthetic observations and their weight. Central to our framework is a size-weight frontier that specifies, for each weight, the largest synthetic sample size for which all smaller sizes attain the target task-marginal coverage. We estimate this frontier from historical tasks, and establish a finite-sample coverage guarantee simultaneously for all size-weight configurations on or below the estimated frontier. In experiments using large language model responses to augment opinion survey data, our procedure achieves target coverage and substantially narrows confidence intervals.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "stat.ME",
-    "url": "http://arxiv.org/abs/2608.28576v1",
-    "tags": [
-      "stat.ME",
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28576",
-    "arxiv_id": "2608.28576v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2608.28557",
-    "title": "Blog: Survey of Optimizers",
-    "authors": [
-      "Ruoran Xu"
-    ],
-    "abstract": "Neural-network optimization in 2025-2026 is no longer well described as a succession of new Adam variants. The design space has expanded from coordinates to matrices and layers, from fixed training horizons to policies over time, and from mathematical update rules to state representations that must survive sharding and low-precision computation. This survey organizes recent optimizers and training optimization methods along four largely independent axes: temporal estimation, update geometry, horizon management, and representation and systems. It connects the spectral normalization of Muon, the historical matrix statistics of Shampoo and SOAP, adaptive and hybrid matrix methods, memory-efficient optimizers, schedule-free training, small-batch corrections, and quantized optimizer states. The central empirical conclusion is deliberately non-triumphal: matrix-aware methods represent a genuine advance, but there is no context-independent replacement for AdamW. Rankings change with model scale, data-to-parameter ratio, batch size, schedule, parameter partition, tuning budget, and whether the target metric is tokens, FLOPs, wall-clock time, or memory. The practical consequence is a compositional view of optimizer design and a stricter protocol for evaluating optimizer claims.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2608.28557v1",
-    "tags": [
-      "cs.LG",
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28557",
-    "arxiv_id": "2608.28557v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2608.28553",
-    "title": "Logos: An Agent Harness on a Cross-Process Bus",
-    "authors": [
-      "Hanzhang Jia",
-      "Liheng Zeng",
-      "Hao Cheng",
-      "Yi Gao",
-      "Bo Ma"
-    ],
-    "abstract": "Modern agent systems assemble capabilities at runtime, and this dynamic composition has recently received a complete formal treat ment in the spatiotemporal-composability calculus, in which a capability is a component carrying a tracked inverse, and agents are assembled as plugins. This plugin form is carried by a single process sharing one context, a carrier that places all components in one physical failure domain, a fault suspends every component at once, and process death interrupts every session the process hosts. This paper shows that neither the modeling nor the calculus binds an agent to one process, the statelessness of the language model keeps all cross-step state outside the model, and the soundness invariant is defined on the state space alone. These observations condense into four lemmas whose premises are the hypotheses of the calculus and the statelessness of language-model inference. On these lemmas this paper constructs Logos, a ROS-like cross process agent harness in which a plugin is a process and the only shared state is an append-only transcript. Eighty sessions resume with no repeated effect after kills placed at the four boundaries of the tool-call cycle, and a same-fault comparison with a single process reference configuration shows one fault interrupting every co-resident session while under the peer-process construction one fault ends at one node.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.AI",
-    "url": "http://arxiv.org/abs/2608.28553v1",
-    "tags": [
-      "cs.AI",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28553",
-    "arxiv_id": "2608.28553v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28549",
-    "title": "Video Generative Models as Geometry Learner",
-    "authors": [
-      "Haosen Yang",
-      "Jifei Song",
-      "Zhensong Zhang",
-      "Xiatian Zhu",
-      "Jiankang Deng"
-    ],
-    "abstract": "Recent generative approaches to geometry estimation adapt pretrained image diffusion models and treat the task as image-conditioned generation. Leveraging off-the-shelf image diffusion models, they either (i) train task-specific geometry models (for depth and surface normal estimation) independently, losing the opportunity of exploring the intrinsic correlation of these geometric targets, or (ii) jointly fine-tune modified image diffusion backbones (e.g., altered self-attention), which typically demands substantial labeled data. To overcome these limitations in a principled fashion, we repurpose pretrained video generative models as a unified and data-efficient framework for geometry estimation, formulated innovatively as a next-frames prediction task. Our method, GeoNeXt, inherits naturally structured knowledge and richer priors from the video model, while further adapting them for joint modeling of images and geometry targets (image <-> geometry), enabling more data efficient and effective learning of geometry. Extensive experiments validate our method for zero-shot monocular depth and surface normal estimation across diverse datasets, outperforming both previous task-specific and unified generative competitors while using substantially less training data. Notably, our method rivals discriminative state-of-the-art approaches trained on over 100x more data and even standouts on several benchmarks.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.CV",
-    "url": "http://arxiv.org/abs/2608.28549v1",
-    "tags": [
-      "cs.CV",
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28549",
-    "arxiv_id": "2608.28549v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2608.28541",
-    "title": "An Enclosed Mode Is a Gauge Choice: Topology Relative to Reach in Certified Code World Models",
-    "authors": [
-      "Javier Aguilar Martín"
-    ],
-    "abstract": "A code world model accepted by a sampling gate can be exactly right on everything the gate can see and arbitrarily wrong beyond it. We characterize what a certified model can know, and what its errors can cost, when the omission is an annular freeze mode enclosing an unreachable interior. The gate quotient makes the question precise: acceptance-with-certainty determines the model exactly on the reachable query set; beyond reach is gauge. On a minimal ring instrument we prove the extreme case (a wrong-topology filled-disc artifact unfalsifiable by any sampling gate and bitwise harmless at play) and measure, with LLM synthesis across three model families, how one knob (a channel of width gamma) walks the same artifact through three regimes: unfalsifiable-and-harmless, falsifiable-and-costly, and instantly falsified. Three principles organize the empirics. First, danger is topology relative to reach: a channel the planner can use collapses the blind model's exploitation (play cost 1.09 to ~0 over a knee at gamma ~ 0.1), while a hidden channel with the same first Betti number keeps it at full strength (1.12). Second, repair is parameter-bound and sensor-bound: no family recovers the region from outside evidence; from inside, models pose the right topology but cannot pin its parameters, and the posed topology tracks the guiding persistent-homology summary's wrong beta_1 (a sensor with a measured geometric resolution limit), not the truth. Third, mitigation must match the error's dimension and direction: point fences fail against the one-dimensional boundary, a dimension-matched persisted fence collapses exploitation to a two-lesson transient (0.999 to 0.058), and the dual freedom certificate collapses the invented-mode failure symmetrically (1.769 to 0.029). In n dimensions the shell makes misidentification near-certain while the danger stays fully exploitable: the two axes are independent.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2608.28541v1",
-    "tags": [
-      "cs.LG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28541",
-    "arxiv_id": "2608.28541v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28534",
-    "title": "InstructMesh: Selective Refinement of Generative 3D Models for Fabrication",
-    "authors": [
-      "Faraz Faruqi",
-      "Ahmed Katary",
-      "Demircan Tas",
-      "Theresa Hradilak",
-      "Ning Zhang",
-      "Jiaji Li",
-      "Fabian Manhardt",
-      "Martin Nisser",
-      "Vrushank Phadnis",
-      "Ruofei Du",
-      "Federico Tombari",
-      "Megan Hofmann",
-      "Stefanie Mueller"
-    ],
-    "abstract": "Recent advances in generative AI allow users to create 3D models from text or images. However, these models prioritize visual plausibility over geometric accuracy, often generating results with flaws that compromise their intended use post-fabrication. We present InstructMesh, an interactive post-generation refinement tool that enables selective repair of generative 3D models through region selection and targeted operations, such as opening or sealing voids, or adjusting local thickness. Users can invoke edit operations via natural language prompts or slider controls. By operating directly on the intermediate latent representation, InstructMesh allows users to apply robust geometric corrections without requiring expert modeling skills. To inform our design, we first analyze common fabrication-related failure modes in outputs from state-of-the-art generative tools. We then conduct two user studies, demonstrating that novices can identify and perform fabrication-relevant repairs on generative outputs using InstructMesh, and revealing user preference for hybrid interfaces that combine slider controls with natural language input.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.AI",
-    "url": "http://arxiv.org/abs/2608.28534v1",
-    "tags": [
-      "cs.AI",
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.1145/3830398.3830647",
-    "arxiv_id": "2608.28534v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2608.28524",
-    "title": "Texture Image Classification Using DWT AlexNet Feature Fusion and Deep Neural Networks",
-    "authors": [
-      "Arun D. Kulkarni"
-    ],
-    "abstract": "Texture image classification plays a significant role in computer vision applications, including industrial inspection, medical image analysis, remote sensing, and object recognition. Handcrafted features can capture local texture characteristics but may have limited capability to represent complex visual patterns. In contrast, deep learning models automatically learn discriminative representations but may not fully exploit the multiscale spatial-frequency information inherent in texture images. This paper proposes a hybrid feature fusion framework, termed DWT_AlexNet_DNN, which combines Discrete Wavelet Transform (DWT) features with deep features extracted using AlexNet for texture image classification.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.CV",
-    "url": "http://arxiv.org/abs/2608.28524v1",
-    "tags": [
-      "cs.CV",
-      "ml-for-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28524",
-    "arxiv_id": "2608.28524v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2608.28518",
-    "title": "When Robots Mishear Us: Mapping the Safety Risks of Voice-Controlled Embodied AI",
-    "authors": [
-      "Sihan Jia",
-      "Oliver Lemon"
-    ],
-    "abstract": "We investigate whether automatic speech recognition (ASR) errors in user input can lead to unsafe outputs from Embodied AI (EAI) models. We find that ASR errors can lead to harmful instructions being accepted and executed by EAI models, thereby reducing safety. We simulate ASR errors and combine them with existing safety benchmarks (SafeAgentBench and POEX) to evaluate how different errors affect embodied AI safety. We find that some of them preserve semantic structure but increase harmful ambiguity, while others weaken the model refusal behaviour and allow unsafe plans to be generated and executed. We show that in some cases automatic correction of ASR errors can reduce the risk, but this is not always effective. Overall, we show that ASR errors lead to significant safety risks for embodied AI.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.AI",
-    "url": "http://arxiv.org/abs/2608.28518v1",
-    "tags": [
-      "cs.AI",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28518",
-    "arxiv_id": "2608.28518v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28515",
-    "title": "Conformal Uncertainty Quantification Guarantees for Neural Operators",
-    "authors": [
-      "Tom Stent",
-      "Nicolas Boullé"
-    ],
-    "abstract": "Neural operators provide fast surrogate models for approximating operators between function spaces, but their predictions often lack uncertainty quantification. We develop a split conformal framework to guarantee that a calibrated pointwise band around the neural operator output contains the true solution on at least a $1-γ$ fraction of the evaluation domain, with probability at least $1-α$ over test and calibration inputs, where $α,γ\\in(0,1)$. Our method reduces a normalized residual field to its spatial $(1-γ)$-quantile and computes a scaling factor using a held-out calibration dataset. We prove marginal coverage guarantees for measurable residual fields defined on arbitrary probability spaces, covering both continuum domains and fixed discretizations. Under mild assumptions on the data distribution, we show that the coverage conditional on the calibration set follows a Beta distribution, which we verify with numerical experiments on Darcy flow and Navier--Stokes equations, where our calibration yields bands consistently tighter than existing corrections while retaining the target coverage.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "math.NA",
-    "url": "http://arxiv.org/abs/2608.28515v1",
-    "tags": [
-      "math.NA",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28515",
-    "arxiv_id": "2608.28515v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28511",
-    "title": "Training Communication-Efficient Mixture-of-Experts Language Models with Layer Re-Configuration",
-    "authors": [
-      "Simeng Sun",
-      "Roger Waleffe"
-    ],
-    "abstract": "When training Mixture-of-Experts (MoE) language models with expert parallelism, all-to-all token dispatch and combine collectives can consume a substantial fraction of end-to-end training time. In this work, we study communication-efficient MoE models (CE-MoE), in which we adopt a heterogeneous layer pattern that decouples token-mixing and channel-mixing depth. Compared to conventional models which interleave MoE layers after each token-mixing layer (e.g., attention, Mamba-2), CE-MoE models concentrate expert capacity in a select few routed MoE layers, while maintaining depth by adding additional token-mixing and dense-FFN layers. Across a scaling ladder from 2B to 31.5B total parameters, under matched total and activated parameters, CE-MoE models consistently reduce training cost while matching validation loss and downstream benchmarks with full-MoE baselines. At the 31.5B scale, CE-MoE uses 33.3\\% fewer GPU-hours while improving average downstream score and inference throughput.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.AI",
-    "url": "http://arxiv.org/abs/2608.28511v1",
-    "tags": [
-      "cs.AI",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28511",
-    "arxiv_id": "2608.28511v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28497",
-    "title": "On the Maintenance and Co-evolution of Agent Plugins: An Empirical Study of Claude Code Plugin Marketplaces",
-    "authors": [
-      "Ahmed Hereiz",
-      "Yingzhe Lyu",
-      "Hao Li",
-      "Bram Adams",
-      "Ahmed E. Hassan"
-    ],
-    "abstract": "AI coding agents, software tools that automate development tasks through reasoning and tool use, are increasingly extended through plugin marketplaces, yet the structure, maintenance, and co-evolution dynamics of these emerging repositories remain empirically unexplored. Unlike traditional software packages that deliver functionality through source code, agent plugins deliver functionality through a combination of natural-language instruction files, scripts, and configuration files, raising the question of whether these plugins are maintained artifacts that co-evolve across components, or one-off artifacts that developers write once and do not need to revisit. To study the maintenance and co-evolution of agent plugins, we conduct an empirical study of 1,926 repositories hosting Claude Code plugin marketplaces, analyzing 8,351 plugins and 77,773 commits across 2,018 marketplaces. We find that the marketplace is expanding rapidly, plugin-touching commit activity growing 8.8x over six months after the October 2025 launch, and plugins targeting Software Engineering tasks accounting for 61.3% of all plugins. Plugin development is predominantly feature-driven, with feature commits occurring at more than twice the rate of conventional open-source software (OSS) (39.6% vs. 17.2%). Claude co-authors 34.9% of all commits, and four commit types (docs, perf, style, and refactor) carry substantially different meanings in plugin repositories than in traditional software. Most component types evolve independently, but within skills directories, natural-language instruction files and implementation scripts co-evolve at above-chance rates, with 78% of co-changes being functionally coupled, representing a new class of maintenance dependency not observed in traditional software engineering.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.SE",
-    "url": "http://arxiv.org/abs/2608.28497v1",
-    "tags": [
-      "cs.SE",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28497",
-    "arxiv_id": "2608.28497v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28491",
-    "title": "AcrossVAM1.0: Particle World Modeling for Text-Assisted Robot Video Prediction",
-    "authors": [
-      "Yafei Zhang",
-      "Nan Wu"
-    ],
-    "abstract": "Predicting robot videos requires both precise motion reasoning and preservation of high-frequency appearance, yet monolithic pixel models entangle these objectives and often conceal their progress behind a strong last-frame baseline. We present AcrossVAM1.0, a lightweight, text-assisted video action model that factorizes future prediction into object-centric motion and dense appearance. A frozen SAM3-DLP codec decomposes four context frames into semantic particles for the robot, arm, and gripper, together with a background latent. A 0.28M-parameter spatio-temporal Transformer aligns particle identities, rolls their states forward, and is modulated by a frozen OpenCLIP instruction embedding through FiLM. A causal dual-stream decoder combines particle-rendered motion with appearance encoded exclusively from the last observed frame; a residual refiner and learned delivery mask produce five future frames without access to future appearance. On our VRS benchmark constructed from diverse real-robot trajectories, particle dynamics reduce trajectory error by 21.0\\% over persistence. Across three delivery-mask seeds, AcrossVAM1.0 improves future-frame PSNR/SSIM from 19.97/0.796 to 20.573/0.8004, while raw particle generation improves motion-region PSNR from 11.89 to 13.23. The delivered model does not yet beat persistence in LPIPS, and correct-versus- shuffled language changes trajectory error by only 2.8--3.1%. We report these limitations alongside oracle, negative-control, multi-seed, and per-robot analyses. The results show that explicit particle dynamics are a promising low-dimensional interface for robot video prediction, while robust language grounding and appearance delivery remain the principal open challenges.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.AI",
-    "url": "http://arxiv.org/abs/2608.28491v1",
-    "tags": [
-      "cs.AI",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28491",
-    "arxiv_id": "2608.28491v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28490",
-    "title": "LLM-Based Agents for Software and Systems Security: Approaches, Applications, and Assessment",
-    "authors": [
-      "Jingjing Nie",
-      "Jiawei Guo",
-      "Krishna Meda",
-      "Haipeng Cai"
-    ],
-    "abstract": "Software and systems security workflows are typically procedural: analysts inspect heterogeneous artifacts, form hypotheses, invoke tools, interpret outputs, and revise plans. Large language model (LLM)-based agents, which can plan, use tools, retain state, and revise actions across multi-step workflows, are being rapidly adopted to automate this work. Given the consequences of delegating security decisions to autonomous systems, understanding how such agents are built, used, and assessed is crucial. Yet to this date, there remains a lack of systematic understanding of what has been done and how far we are in this field: the term \"agent\" is applied inconsistently, applications differ sharply in risk, and assessment protocols are often incomparable. To gain a comprehensive and coherent view of this area hence inform relevant future research, this paper provides a systematic literature review of the (1) technical approaches, including agent architecture, perception, memory, reasoning and planning, action space, orchestration, and self-improvement, (2) applications, with respect to the security tasks served, and (3) assessment, including the datasets, outcome and trajectory metrics, safety measures, and baselines considered, over the peer-reviewed literature spanning the emergence of this area (2023--2026). Our synthesis reveals a field that has built agents able to act but not yet agents whose authority is bounded or whose behavior is auditable. In addition to knowledge systematization, we also extend our insights into the limitations of and challenges faced by current approach, application, and assessment designs, which shed light on potentially promising future research directions.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.CR",
-    "url": "http://arxiv.org/abs/2608.28490v1",
-    "tags": [
-      "cs.CR",
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28490",
-    "arxiv_id": "2608.28490v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2608.28482",
-    "title": "How Proper Scoring Rules Shape LLM Forecasting",
-    "authors": [
-      "Benjamin Turtel",
-      "Paul Wilczewski",
-      "Kris Skotheim",
-      "Ville A. Satopää",
-      "Philip E. Tetlock"
-    ],
-    "abstract": "This paper evaluates how reward function choice shapes the performance and behavior of LLM forecasters. We compare five proper scoring rules as training objectives for binary forecasts of resolved real-world events. Although the rules share the same theoretical incentive for truthful probability reporting, the resulting models differ in calibration, probability use, and estimated profiles of bias, information, and noise, with smaller differences in aggregate accuracy and discrimination. The Brier-trained model has the lowest observed Brier score and highest AUC-ROC, while the log-trained model has the highest observed log score and lowest calibration error. Models with similar aggregate performance also reach that performance through different combinations of bias, information, and noise. Proper scoring rules therefore need not behave interchangeably as training objectives. Reward choice may shape not only how well an LLM forecasts, but how its forecasting errors are structured. Each condition uses a single seed, so some differences may reflect training stochasticity.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2608.28482v1",
-    "tags": [
-      "cs.LG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28482",
-    "arxiv_id": "2608.28482v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28481",
-    "title": "NL2AGBench: Benchmarking LLM Auto-Formalization for AlphaGeometry",
-    "authors": [
-      "Samuel Xiao",
-      "Judy Song",
-      "Rory Hu",
-      "Ziliang Zong"
-    ],
-    "abstract": "Recent advances in large language models (LLMs) have demonstrated strong capabilities in natural language understanding and mathematical reasoning. However, their ability to translate informal mathematical problems into formal representations remains underexplored. This limitation is particularly important for neuro-symbolic geometry systems such as AlphaGeometry, whose theorem-proving engine requires inputs in a specialized domain-specific language (DSL). Although AlphaGeometry achieves near-IMO gold-medalist performance, manually converting natural-language problems into its formal syntax remains a significant usability bottleneck. To address this challenge, we introduce the Natural Language to AlphaGeometry Benchmark (NL2AGBench), which evaluates LLMs in translating English geometry problems into AlphaGeometry-compatible formal representations. NL2AGBench uses execution-based verification within AlphaGeometry to assess translation quality rather than relying solely on textual similarity. We evaluate ten state-of-the-art open- and closed-source LLMs across multiple parameter scales and analyze executable translation accuracy, syntactic correctness, and error characteristics. Our experiments reveal a substantial performance gap between closed- and open-source models: leading closed-source models achieve executable translation rates above 80%, while even the largest open-source models struggle to consistently preserve geometric constraints and produce valid formalizations. We introduce an error taxonomy distinguishing syntax and logic errors and investigate mitigation strategies, including few-shot prompting, fine-tuning, and human-guided hinting, which yield measurable improvements across multiple model families.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.CL",
-    "url": "http://arxiv.org/abs/2608.28481v1",
-    "tags": [
-      "cs.CL",
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28481",
-    "arxiv_id": "2608.28481v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2608.28475",
-    "title": "COVER: Identifiable Evaluation of Coalition Routing",
-    "authors": [
-      "Raghul Sugumar",
-      "Amrit Gopinath"
-    ],
-    "abstract": "When a multi-agent system changes its team, it also changes the messages and final answer it produces, so an end-to-end accuracy gap does not by itself identify a routing effect. We introduce method, an evaluation contract that fixes a public information boundary, downstream stack G, and finite legal team family before outcomes are generated. Complete coverage identifies exact finite-benchmark oracle regret conditional on that stack. For any finite collection of frozen policies, executing the union of their distinct selected teams is the minimal assumption-free support for every pairwise policy contrast, though not for absolute oracle regret. Two controlled tables with source-ID-disjoint splits test the instrument. On MuSiQue-12, a pre-specified privileged positive control improves regret from 0.532 to 0.402; a later public-interface control reaches 0.424 versus 0.554 but is retrospective. On HotpotQA-4, a pre-specified public direct scorer improves regret from 0.313 to 0.110. In fixed-stack Llama execution, verified route regret improves by 0.190, while the raw-answer gain is 0.010 with an interval crossing zero. A five-family ToolSandbox variant-shift validation exhaustively evaluates 16 declared teams on 14 untouched task variants (224/224 valid rows): the declared-family oracle reaches 0.768 safe-evidence completion, while the prospectively frozen router gets 0.637 (regret 0.131), failing the predeclared 0.10 criterion. A later retrospective comparator reaches 0.655, matching all-workers with 4.57 versus 5.00 workers on average. Thus COVER exposes selection headroom without manufacturing a routing win. A crossed-stack diagnostic shows absolute scores depend on G but finds no detectable router-by-finalizer interaction. COVER is an auditable measurement methodology, not a claim of stack-invariant or universal agent-routing superiority.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.AI",
-    "url": "http://arxiv.org/abs/2608.28475v1",
-    "tags": [
-      "cs.AI",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28475",
-    "arxiv_id": "2608.28475v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28468",
-    "title": "Real-time virtual circuits for plasma shape control via neural network emulators: experimental demonstration on MAST Upgrade",
-    "authors": [
-      "Nicola C. Amorisco",
-      "Kamran Pentland",
-      "Adriano Agnello",
-      "George K. Holt",
-      "Alasdair Ross",
-      "Matthew J. Marshall",
-      "Edward Jones",
-      "Graham J. McArdle",
-      "Charles Vincent",
-      "Timothy Nunn",
-      "Martin Kochan",
-      "Pedro Cavestany",
-      "Aran Garrod",
-      "Stanislas Pamela",
-      "James Buchanan"
-    ],
-    "abstract": "Conventional plasma shape control in tokamaks relies on virtual circuits (VCs) that are computed offline from linearisations around a small, tailored number of reference equilibria, and deployed as expertly prepared schedules during the discharge. Here, we report on the first experimental deployment of real-time VCs. We replace pre-set look up tables with VCs updated in real time using surrogates of the plasma response. Both the existing control architecture and the interpretability of VC-based control are retained. Previous work showed that neural network emulators can produce accurate VCs, and validated their performance in closed-loop shape control simulations. Here, we report their first experimental validation on MAST Upgrade (MAST-U). Dedicated experiments spanning different scenarios, including prescribed shape perturbations, feedback-driven divertor-leg motion, and strongly evolving plasma configurations, show that real-time VCs can realise plasma shape control tasks within the MAST-U plasma control system. These results establish the experimental feasibility of real-time linearisations as a practical extension of conventional plasma shape control in tokamaks. The present implementation demonstrates a central step towards a simpler control workflow, in which manually constructed, phased VC schedules are replaced by VCs generated automatically online from a trained surrogate model, without scenario-specific retraining.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "physics.plasm-ph",
-    "url": "http://arxiv.org/abs/2608.28468v1",
-    "tags": [
-      "physics.plasm-ph",
-      "stochastic",
-      "ml-for-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28468",
-    "arxiv_id": "2608.28468v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2608.28461",
-    "title": "Anatomy-Aware Promptable Segmentation with Online Interactive Training for AUTOPET V",
-    "authors": [
-      "Pablo Lozano-Jimenez",
-      "Sergio Romero-Tapiador",
-      "Ruben Tolosana"
-    ],
-    "abstract": "We present an anatomy-aware, promptable model for whole-body lesion segmentation in FDG and PSMA PET/CT, developed for the AUTOPET V challenge. The proposed method is built as family of nnU-Net-based models and trained in two stages: i) a pre-training stage that produces a strong initial segmentation, and ii) an online interactive stage that learns to exploit scribble prompts, refining the prediction over successive interactions. Anatomical context is incorporated through organ supervision using a single shared head that predicts lesions and organs from the same features, which reduces false positives arising from physiological uptake. Also as the tracer (i.e., FDG/PSMA) is not provided at inference, we add a tracer classifier based on image processing and a random forest over coronal MIP features, routing each study to a combined FDG+PSMA model or to a PSMA-specific model. Across four-fold cross-validation the organ-supervised model achieves the best and most stable performance, the interactive stage improves the Dice score monotonically with each prompt, and PSMA-specific training yields the strongest tracer-wise results.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.CV",
-    "url": "http://arxiv.org/abs/2608.28461v1",
-    "tags": [
-      "cs.CV",
-      "integer-programming"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28461",
-    "arxiv_id": "2608.28461v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2608.28455",
-    "title": "ARC-CT: Anatomy-Routed Contrastive Vision-Language Learning for 3D Chest CT",
-    "authors": [
-      "Huseyin Umut Isik",
-      "Mehmet Alp Ozaydin",
-      "Sila Kurugol",
-      "Şeyda Ertekin"
-    ],
-    "abstract": "Contrastive vision-language learning uses paired chest CT volumes and radiology reports to learn abnormality classifiers without manually annotated labels. However, two characteristics of chest CT challenge conventional global contrastive learning. First, many critical abnormalities are small or anatomically localized, and pooling an en- tire volume into a single embedding may dilute their visual evidence. Second, the standard contrastive objective treats every other scan in a batch as a negative. Because many chest CTs share abnormalities, this objective incorrectly pushes co-positive pairs apart. We propose Anatomy-Routed Contrastive Learning for 3D Chest CT (ARC-CT), a region-aware framework that addresses these limitations using only la- bels extracted from reports by an LLM, with no manual annotations or bounding boxes. ARC-CT combines three components: (1) an Anato- myQFormer localizing evidence via queries constrained by automatically generated organ masks; (2) a label-Jaccard soft InfoNCE objective in- tegrating the standard one-hot target with the label-set overlap of each pair, which reduces false-negative penalties between studies that share clinical findings; and (3) an organ-level alignment loss connecting mask- pooled visual features to organ-specific report text extracted offline with a large language model. ARC-CT achieves a 0.86 mask-free macro AUC across 18 abnormalities using a compact 3D ResNet-18 backbone. Over- all, ARC-CT outperforms both comparable efficient baselines and sev- eral larger transformer models. Our code and weights are available at https://github.com/arc-ct/arc-ct.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.CV",
-    "url": "http://arxiv.org/abs/2608.28455v1",
-    "tags": [
-      "cs.CV",
-      "healthcare-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28455",
-    "arxiv_id": "2608.28455v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2608.28447",
-    "title": "Learning to Use Tools: Reinforcement Learning for Tool-Integrated Mathematical Reasoning",
-    "authors": [
-      "Minghui Xu",
-      "Zi Wang"
-    ],
-    "abstract": "Current large language models (LLMs) increasingly benefit from external tool integration, especially for tasks requiring reliable computation and verification. Motivated by this, we study calculator tool calling for improving mathematical reasoning on the Countdown task. We first analyze reasoning failures and find that calculation errors account for a substantial portion of incorrect responses. We then construct supervised fine-tuning datasets to teach the model useful tool-use patterns and how to interpret returned outputs. Building on this tool-formatted policy, we apply several on-policy reinforcement learning methods, including RLOO, RLOO++, GRPO, and DAPO, using automatically verifiable final-answer rewards. To enable a more reliable evaluation, we construct a fresh 1,024-problem held-out Countdown benchmark with no exact overlap with the training data. Our results show that calculator tool integration consistently improves both SFT and RL baselines, yielding roughly 10 percentage-point gains across pass@k. Among the RL methods, Tool-DAPO achieves the strongest performance, improving pass@1 from 35.8% for Tool-SFT to 66.0%. Further analysis shows that RL encourages more effective tool use even when only final-answer rewards are provided. These findings suggest that tool integration reduces arithmetic and verification errors, while RL increases the probability of correct reasoning traces.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.AI",
-    "url": "http://arxiv.org/abs/2608.28447v1",
-    "tags": [
-      "cs.AI",
-      "ml-for-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28447",
-    "arxiv_id": "2608.28447v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2608.28439",
-    "title": "Fidelity Is Not Enough: Dispatch-Level Instrumentation for Agentic Datasheet Extraction",
-    "authors": [
-      "Qing Ye",
-      "Meng-Hsuan Lin"
-    ],
-    "abstract": "One model passed our fidelity check without ever opening the datasheet. We found it while qualifying models for an internal extraction service: a structured-output constraint had silently disabled tool use, and the model answered anyway, with fabricated source text. Only the per-tool trace exposed it. Fidelity -- whether an extracted value matches the source -- is the standard measure for agentic document extraction, and it scores that run a success. We therefore log every tool call in an agentic benchmark of 25 hand-curated claims over three components, with 12 more on a fourth, 37 in all. From that dispatch record we build two instruments: a rule-based failure-attribution classifier, and a silent-failure detector whose two rules check only which tools were called, never the extracted value. The detector raises no flag on 207 clean fidelity-passing extractions across three model families, and recovers all 50 planted faults that withhold exactly the tools its rules check. The two results are not symmetric: the first bounds the false-positive rate, the second is recall by construction, and detection power against runs that call their tools and still answer wrongly is unmeasured. A second, independent oracle, a causal chamber that tests whether the datasheet's claims hold under physical measurement, is intentionally partial: it confirms only what the apparatus can exercise, a verifiable envelope of 2 of those 37 claims, and we give a taxonomy of why the rest are not physically gradable. Under a controlled perturbation, fidelity passes throughout while the chamber verdict flips exactly at the measurement uncertainty. Across three deployed model stacks (one destabilised by its serving stack, not by any capability gap) the tool layer buys portability and observability rather than accuracy, and earns its premium only once a document outgrows the context window.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.CL",
-    "url": "http://arxiv.org/abs/2608.28439v1",
-    "tags": [
-      "cs.CL",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28439",
-    "arxiv_id": "2608.28439v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28433",
-    "title": "Prove2Me: An Open Collaborative Platform for Scaling Math Formalization",
-    "authors": [
-      "Shuze Chen",
-      "Kunal Marwaha",
-      "Xiaoyang Lu",
-      "Henry Yuen",
-      "Tianyi Peng"
-    ],
-    "abstract": "Proof assistants such as Lean 4 promise the paradigm of formally verified mathematics, but large-scale formalization projects have faced major barriers to entry, including the need for expertise in formal verification (as well as the underlying mathematics) and the significant time required for writing formal proofs. AI coding agents have dramatically reduced these barriers; human users can now use natural language to prompt agents to write complex proofs in Lean. This opens up the intriguing possibility of internet-scale mathematical collaboration involving both humans and AI agents, where correctness is machine-checked.   To realize this possibility, we introduce Prove2Me (https://prove2.me), an open collaborative platform for formalizing mathematics. Users launch formalization \"missions\", to which AI agents contribute formal proofs toward completion. We designed mechanisms and a specialized harness in Prove2Me that enable large-scale collaboration so that agents can build on one another's work and freely reuse existing results. In doing so, Prove2Me aims to turn math formalization into a scalable, crowd-sourced effort open to anyone with an agent.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.AI",
-    "url": "http://arxiv.org/abs/2608.28433v1",
-    "tags": [
-      "cs.AI",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28433",
-    "arxiv_id": "2608.28433v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28432",
-    "title": "Are These Modules Worth Their Cost? A Paradigm-Level Accuracy-Cost Analysis of In-context Learning Text-to-SQL",
-    "authors": [
-      "Jiayan Lin",
-      "Yujia Liu",
-      "Zijin Hong",
-      "Zheng Yuan",
-      "Yilin Xiao",
-      "Hao Chen",
-      "Qinggang Zhang",
-      "Xiao Huang",
-      "Feiran Huang"
-    ],
-    "abstract": "Recent advances in in-context learning (ICL) text-to-SQL have substantially improved execution accuracy on public benchmarks by assembling increasingly elaborate pipelines around the base generator, yet existing studies typically report aggregate end-to-end accuracy, without quantifying the marginal accuracy-cost contribution of individual design choices. Consequently, providing a unified, paradigm-level cost-accuracy quantification remains a critical challenge for understanding and configuring modern text-to-SQL. To address this, we instantiate 17 paradigm-level configurations across five recurring modules of the ICL text-to-SQL pipeline under a single controlled implementation, and attribute each paradigm's marginal contribution and incurred cost across all four backbones spanning diverse capability levels and reasoning styles. Our analysis reveals that execution-feedback refinement is the only paradigm whose benefit holds universally at consistently low cost, while most other modules help only under backbone-dependent conditions. Token accounting shows that input demand is more closely tied to pipeline structure, whereas output demand is more sensitive to backbone generation behavior. Cross-module analysis further shows that stacking improves accuracy on most backbones, although how the gains compose varies with backbone capability. We also find that a fixed budget is often better spent engineering a more elaborate pipeline over a mid-tier backbone than upgrading to a frontier model with a lean pipeline. These findings distill into an actionable, cost-aware tiered guideline that transfers to five additional backbones without per-paradigm search.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.CL",
-    "url": "http://arxiv.org/abs/2608.28432v1",
-    "tags": [
-      "cs.CL",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28432",
-    "arxiv_id": "2608.28432v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28421",
-    "title": "Program Learning with Verifiable Rewards: Symbolic Backpropagation for Post-Training LLMs",
-    "authors": [
-      "Vishvesh Bhat"
-    ],
-    "abstract": "Post training a language model to reason means updating its weights. Supervised finetuning and reinforcement learning both place the acquired capability inside the model where it cannot be inspected cannot be checked step by step and cannot be moved to another model. We argue that for tasks whose intermediate steps admit verification, reasoning is better placed outside the base models weights as an explicit program composed from deterministic and neural primitives. We introduce PLVR (Program Learning with Verifiable Rewards): a post training method that learns such programs directly from input-output examples. Its mechanism is symbolic backpropagation: each program layer carries a typed ontology a loss is computed at the output against ground truth and required input ontologies are propagated backward by type inference over primitive signatures: an analogue of the chain rule in which credit assignment is a derivation rather than an estimate. Where RLVR verifies a terminal outcome, PLVRs reward is a per step contract verdict dense over program structure. On LiveCodeBench v6 and Tau2Bench, 30B base models with PLVR outperform RL at matched budget by 27.8 points on average and frontier models an order of magnitude larger by 13.6 points. A single primitive library serves two benchmarks, so the marginal cost of a new task is 100 examples of program search and no new finetuning data. Replacing the loss guided search with uniform sampling over the same type admissible space at equal budget collapses the median program from 65.6 to 17.5, identifying the backward pass rather than the type system as the source of the advantage. We release the symbolic backpropagation library and a conformance checker so the method can be applied to primitive libraries other than our own.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.AI",
-    "url": "http://arxiv.org/abs/2608.28421v1",
-    "tags": [
-      "cs.AI",
-      "ml-for-or",
-      "constraint-programming"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28421",
-    "arxiv_id": "2608.28421v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2608.28411",
-    "title": "LongPIBench: A Long-Context Benchmark for Prompt Injection",
-    "authors": [
-      "Yupei Liu",
-      "Yuqi Jia",
-      "Neil Zhenqiang Gong",
-      "Jinyuan Jia"
-    ],
-    "abstract": "Prompt injection attacks pose a serious security risk to large language models in real-world applications. However, existing prompt injection benchmarks primarily focus on short-context inputs, leaving the attacks and defenses in long-context settings largely unexplored. This gap leads to a substantial overestimation of the effectiveness of current defenses. In this paper, we bridge the gap by introducing LongPIBench, a long-context benchmark for prompt injection covering 4 realistic application scenarios: paper peer review, resume screening, code review, and email summary. For each scenario, we construct a synthetic dataset and a real-world dataset, with context lengths ranging from thousands to tens of thousands of tokens. The evaluation results on LongPIBench reveal significant vulnerabilities of prompt injection defenses under long-context settings: even simple heuristic prompt injection attacks achieve high success rates and frequently bypass state-of-the-art defenses. We hope LongPIBench can serve as a practical benchmark for systematically evaluating prompt injection defenses in realistic long-context scenarios.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.CR",
-    "url": "http://arxiv.org/abs/2608.28411v1",
-    "tags": [
-      "cs.CR",
-      "stochastic",
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28411",
-    "arxiv_id": "2608.28411v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2608.28539",
-    "title": "Analysis of Polynomial Threshold Functions on Random Regular Graphs: Computational Complexity of Detecting Noisy Random Lift",
-    "authors": [
-      "Xifan Yu"
-    ],
-    "abstract": "In this work, we present the first analysis of low degree polynomial threshold functions for the natural hypothesis testing problem of detecting the noisy random lift of a base $d$-regular graph from a uniformly random $d$-regular graph. Along the way, we obtain a new result for the distribution of short cycle counts in noisy random lift up to logarithmic lengths, which generalizes results by McKay, Wormald, and Wysocka and by Johnson in the case of random regular graphs, and the result by Fortin and Rudinsky in the case of random lift.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "math.CO",
-    "url": "http://arxiv.org/abs/2608.28539v1",
-    "tags": [
-      "math.CO",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28539",
-    "arxiv_id": "2608.28539v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28512",
-    "title": "Quadratic Probing Insertions Are $ε^{-(1+o(1))}$",
-    "authors": [
-      "Yang Hu",
-      "William Kuszmaul",
-      "Jingxun Liang",
-      "Stefan Walzer",
-      "Huacheng Yu",
-      "Renfei Zhou"
-    ],
-    "abstract": "First proposed in 1968, quadratic probing has stood for more than half a century as one of the simplest and most widely used hash-table designs in computer science. It is conjectured that, at load factor $1 - ε$, the hash table achieves $O(ε^{-1})$ expected insertion time. But even proving a bound of the form $f(ε^{-1})$ for any function $f$ has remained open.   In this paper, we prove that the expected insertion time is $ε^{-(1 + o(1))}$. This settles the complexity of the data structure up to sub-polynomial factors in $ε^{-1}$.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.DS",
-    "url": "http://arxiv.org/abs/2608.28512v1",
-    "tags": [
-      "cs.DS",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28512",
-    "arxiv_id": "2608.28512v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28462",
-    "title": "Tight Bounds for Memory Allocation With and Without Request Fragmentation",
-    "authors": [
-      "Michael A. Bender",
-      "Alex Conway",
-      "Martín Farach-Colton",
-      "Hanna Komlós",
-      "William Kuszmaul",
-      "Nicole Wein"
-    ],
-    "abstract": "The classical memory-allocation problem captures the task of placing objects of different sizes in memory, while minimizing the so-called memory high-water mark. It has been known since the early 1970s that the optimal competitive ratio for any deterministic online allocator is $Θ(\\log M)$, where $M$ is the volume high-water mark of the underlying request sequence.   This paper begins with a simple observation: many real-world allocators seem to bypass the 1971 lower bound by adopting a slightly different model for memory allocation. These allocators use what we call $k$-aggregate request fragmentation, meaning that the memory allocator is permitted to break requests into multiple fragments, so long as the all-time maximum number of simultaneous fragments is at most $k$ times the all-time maximum number of simultaneous requests.   We consider the following basic question: Does request fragmentation fundamentally change the problem of memory allocation, and if so, how? Our results come with several surprises. Among these, we find that even using $k = 1 + o(1)$ request fragmentation, the optimal competitive ratio---which was $Θ(\\log M)$ in the classical setting---collapses to $Θ(\\log \\log M)$. This result is shown to be tight with matching upper and lower bounds, applying to both deterministic and randomized algorithms.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.DS",
-    "url": "http://arxiv.org/abs/2608.28462v1",
-    "tags": [
-      "cs.DS",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28462",
-    "arxiv_id": "2608.28462v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28452",
-    "title": "An Exposition of the $\\widetilde{O}(\\log^{1/4} n)$ Bound for the Komlós Problem",
-    "authors": [
-      "Nikhil Bansal",
-      "Haotian Jiang"
-    ],
-    "abstract": "A conjecture of Komlós states that the combinatorial discrepancy of any matrix $A\\in\\mathbb R^{m\\times n}$ whose columns have Euclidean norm at most one is bounded by a universal constant. We prove that the combinatorial discrepancy of every such matrix is at most $O((\\log n)^{1/4}(\\log\\log n)^{7/4})$. This is the first asymptotic improvement over the $O(\\sqrt{\\log n})$ bound established by Banaszczyk [Banaszczyk, Random Struct.\\ Algorithms, 1998], and it refutes a conjecture of Hajela [Hajela, European J.\\ Combin., 1988] that a lower bound of order $Ω(\\sqrt{\\log n})$ should hold.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "math.CO",
-    "url": "http://arxiv.org/abs/2608.28452v1",
-    "tags": [
-      "math.CO",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28452",
-    "arxiv_id": "2608.28452v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28564",
-    "title": "Learning between the peaks: sharp asymptotics for kernel ridge regression under power-law anisotropy",
-    "authors": [
-      "Lorenzo Rizzi",
-      "Arie Wortsman Zurich",
-      "Bruno Loureiro"
-    ],
-    "abstract": "We study kernel ridge regression under anisotropic Gaussian data, where the input covariance decays as a power law with exponent $α\\geq 0$ for polynomial inner-product kernels. We derive asymptotically sharp expressions for the kernel spectrum and the generalization error in the polynomial high-dimensional regime $n=Θ(d^κ)$, revealing how anisotropy reshapes the learning curves. For weak anisotropy ($0<α<1$), the problem remains effectively high-dimensional and retains some features of the isotropic case, while departing from it in others: the variance still peaks at integer sample complexities $κ\\in\\mathbb{N}$, but these peaks are progressively damped as $α$ grows; meanwhile, for targets strongly aligned with the data's principal directions, the bias drops at fractional sample complexities, decoupling the bias transitions from the interpolation peaks. For strong anisotropy ($α> 1$), the effective dimension of the problem is constant, and the variance stops depending on sample size altogether, plateauing under ridgeless interpolation or vanishing at an explicit rate under fixed ridge penalty. The bias undergoes a sharp transition governed by the target's decay rate: below a threshold, learning is abrupt rather than gradual; above it, the bias decays as a power law that recovers the classical source and capacity rates. We finally specialize these results to single-index targets, showing how the alignment of the index with the data's principal directions determines the effect of anisotropy on learning. Together, our results clarify how the input geometry shapes the kernel features and fundamentally impacts its generalization properties.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "stat.ML",
-    "url": "http://arxiv.org/abs/2608.28564v1",
-    "tags": [
-      "stat.ML",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28564",
-    "arxiv_id": "2608.28564v1",
-    "score": 35.0,
-    "mentions_solvers": [
-      "Xpress"
-    ]
-  },
-  {
-    "id": "arxiv-2608.28446",
-    "title": "Generalized Splines and Gaussian Processes",
-    "authors": [
-      "Michael Unser"
-    ],
-    "abstract": "For finite-dimensional linear inverse problems where the variables are Gaussian, it is well-known that the minimum-mean-square error estimator takes the form of a regularized least-squares data fit. In this chapter, we show that this equivalence extends to a much broader infinite-dimensional setting where generalized splines take the role of linear regressors and generalized Gaussian processes on a nuclear space $S$ are the counterpart of Gaussian random vectors. The scope of this extension is of the same nature as the switch from the classic notion of function to that of a distribution, also known as a \"generalized function.\" Our formalism involves a whitening/regularization operator $L: S\\to S'$ whose continuous extension induces a native Hilbert space $H\\subset S'$ that plays a central role in our characterization. The presentation is self-contained for the most part and remarkably general and powerful. It allows for the recovery of all known instances of such equivalences; in particular, the methods involving innovations and reproducing-kernel Hilbert spaces developed by Kailath and his students, and the mathematical correspondence between fractional splines and Mandelbrot's fractional Brownian motion (fractals), with the former being the optimal estimators of the latter. It also covers general Bayesian methods for the resolution of infinite-dimensional inverse problems.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "math.ST",
-    "url": "http://arxiv.org/abs/2608.28446v1",
-    "tags": [
-      "math.ST",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28446",
-    "arxiv_id": "2608.28446v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28589",
-    "title": "QGPINNs: A Physics-Informed Neural Network Framework for Nonlocal Differential Equations on Quantum Graphs",
-    "authors": [
-      "Vaibhav Mehandiratta",
-      "Saket Ramchandra"
-    ],
-    "abstract": "We propose QGPINNs, a physics-informed neural network framework developed in PyTorch for the numerical solution of nonlocal differential equations on quantum graphs. The framework is designed as a general computational implementation in which the solution on each edge of the graph is approximated by a neural network, while a unified graph-based loss function enforces the governing equations together with initial, boundary, and vertex transmission conditions. In particular, the formulation incorporates standard continuity and Kirchhoff-Neumann vertex conditions and Dirichlet boundary conditions into the learning process to couple the local edge-wise neural approximations into a global solution on the graph. The framework is developed for two representative classes of nonlinear models: multi-order fractional elliptic problems and time-fractional evolution equations on quantum graphs. To improve accuracy and training stability, QGPINNs integrates several graph-adapted learning strategies, including soft and hard constraint enforcement, dynamic loss balancing, Fourier feature embeddings, and a learnable singularity-capturing feature for weakly singular solutions arising in the considered problems. The framework also extends naturally to inverse problems, including the identification of the orders of fractional operators and physical parameters from noisy observational data. We validate the accuracy, computational efficiency, and physical consistency of the proposed framework through numerical experiments on benchmark graph structures and real-world networks, including the IEEE 14-bus system and an open-channel agricultural drainage network.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2608.28589v1",
-    "tags": [
-      "cs.LG",
-      "ml-for-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28589",
-    "arxiv_id": "2608.28589v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2608.28552",
-    "title": "Advancing Interaction-Sensitive Feature Selection: Novel Relief-Based Algorithms, Expanded Comparisons, and Recommendations for Biomedical Data Mining",
-    "authors": [
-      "Kia Kazemi-Nia",
-      "Harsh Bandhey",
-      "Philip J. Freda",
-      "Ryan J. Urbanowicz"
-    ],
-    "abstract": "As a precursor to high-dimensional biomedical data modeling, reliable feature selection can reduce computational expense, improve modeling performance, and yield simpler, more interpretable models. However, most filter-based feature selection methods struggle to detect feature interactions, while wrapper or embedded feature selection methods are computationally expensive. Relief-based algorithms (RBAs) are filter methods that are sensitive to feature interactions while mitigating these other limitations. This study (1) refactors, optimizes, and expands the scikit-rebate Python package with existing and newly proposed RBA variants and (2) conducts rigorous RBA benchmark comparisons across diverse genomic simulations. We expand scikit-rebate to include SWRF*, mu-Relief, and 5 novel RBA variants implementing alternative strategies for neighbor selection and feature scoring. All RBAs were evaluated to compare predictive feature ranking and runtime across simulated genomic datasets varying in sample size, number of features, heritability, and underlying association type (e.g. main effects and interactions). All RBAs, except mu-Relief, were proficient in detecting 2-way interactions in noisy data. RBAs utilizing 'far' scoring were best at detecting 2-way interactions - with MultiSWRFDB* top-performing - but were far less sensitive to main effects. SWRF, MultiSWRF, MultiSURF, and MultiSWRFDB yielded top performance across main effect and 2-way interaction datasets with MultiSWRFDB performing best when also considering 3-way interactions. Refactoring of scikit-rebate resulted in 10 to 35-fold reductions in RBA runtimes. The newly introduced RBAs were among the strongest performing, and by robustly retaining both main effects and 2-way epistatic interactions, these algorithms preserve predictive signals for downstream modeling.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2608.28552v1",
-    "tags": [
-      "cs.LG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28552",
-    "arxiv_id": "2608.28552v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28547",
-    "title": "DARTS: Decoder-Aware Representation Tuning via Surgery for Model Merging",
-    "authors": [
-      "Aaryan Ajay Sharma",
-      "Sai Nishanth Padala",
-      "Seganrasan Subramanian"
-    ],
-    "abstract": "Model merging combines multiple task-specific fine-tuned LLMs into a single multi-task model without additional training. However, merged models are known to suffer from representation bias: systematic drift between the merged model's hidden states and those of each individual source model. Prior work (Yang et al., 2024a) study and mitigate this bias for encoder-based vision models using a lightweight correction module trained with L1 loss. However, such bias is not studied for decoder models due to their autoregressive nature. We analyze the problem of representation bias in decoder models, and show two challenges absent in encoders: (1) the causal attention mask causes bias to accumulate across token positions, requiring position-dependent correction; and (2) not all token positions are equally important, i.e., high-entropy (decision-critical) positions matter far more than low-entropy ones. To address these challenges, we propose Decoder-Aware Representation Tuning via Surgery (DARTS). DARTS employs a novel entropy-weighted L1 loss to upweight correction at high-entropy positions where errors most affect generation quality, and a per-position additive bias that captures position-dependent error without overparameterization. We perform extensive evaluation on three domains: code generation (HumanEval), mathematical reasoning (GSM8K), and instruction following (AlpacaEval) on Llama-2-7B models, and show DARTS achieves significant improvement over the standard surgery approach while adding negligible parameters ($0.1\\%$ of total parameters).",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2608.28547v1",
-    "tags": [
-      "cs.LG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28547",
-    "arxiv_id": "2608.28547v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28499",
-    "title": "REPLICANT: Learning Policies for Evading and Hardening Malware Detectors",
-    "authors": [
-      "Shae McFadden",
-      "Ilias Tsingenopoulos",
-      "Mario D'Onghia",
-      "Alexander Herzog",
-      "Myles Foley",
-      "Chris Hicks",
-      "Lorenzo Cavallaro",
-      "Fabio Pierazzi"
-    ],
-    "abstract": "To determine the real-world effectiveness of machine learning based malware detection, it is vital to evaluate its robustness against highly capable adversaries. However, state-of-the-art attacks do not effectively model realistic adversaries, as they often assume access to privileged information such as the training data, feature space, or confidence scores of the target. In this work, we present Replicant, a deep reinforcement learning framework that learns the realistic task of evasion under a strict label-only black-box threat model. Replicant learns a reusable policy on how to modify a malware sample and when to query the target, which transfers across samples, detectors, and feature spaces. Across seven Android malware detectors and three feature spaces, Replicant is the strongest and most query-efficient approach achieving a mean attack success rate of 78.8%, a relative improvement of 20.9%-39.2% over the state-of-the-art. Furthermore, when used for adversarial training, Replicant also outperforms the state-of-the art by producing detectors with more generalizable robustness. With Replicant we demonstrate that learning the task of evasion not only results in stronger attack performance but, crucially, provides a better signal for hardening malware detectors.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2608.28499v1",
-    "tags": [
-      "cs.LG",
-      "ml-for-or",
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28499",
-    "arxiv_id": "2608.28499v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2608.28458",
-    "title": "Acquire, Repair, Preserve: A Diagnosis-Guided Post-Training Recipe for Small-Model Dialogue Game Agents",
-    "authors": [
-      "Nan Li"
-    ],
-    "abstract": "Interactive dialogue games test a capability that static benchmarks largely leave implicit: a model must carry state across turns, interpret feedback, and choose valid actions under changing constraints. We study this setting in the LM Playschool Challenge with a 2B open-weight model, and find that many failures are not only broad knowledge failures but also local decision failures: repeated guesses, malformed actions, and violations of feedback that the model has just seen. These diagnostics motivate a training recipe organized around three steps: acquire broad game participation through supervised fine-tuning, repair mechanically verifiable failures within one targeted dialogue-game family using turn-local preference pairs, and preserve general capabilities beyond these dialogue games. In the official final evaluation, our submission improves public clemscore from 10.67 to 38.92 and closed in-domain score from 13.41 to 41.17, while approximately preserving aggregate static performance (44.14 vs. 44.24 for the baseline). Out-of-domain clemscore remains low at 7.88, with the largest gains concentrated in unseen variants of the targeted family. Our results suggest that broad SFT brings most of the model's capability improvement; turn-local supervision can be effective when failure detection is precise, with observed transfer concentrated primarily within-family.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.CL",
-    "url": "http://arxiv.org/abs/2608.28458v1",
-    "tags": [
-      "cs.CL",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28458",
-    "arxiv_id": "2608.28458v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28444",
-    "title": "Sliding-window beats linear attention",
-    "authors": [
-      "Alexia Jolicoeur-Martineau",
-      "Rhea Sanjay Sukthanker",
-      "Pashmina Cameron",
-      "Emy Gervais"
-    ],
-    "abstract": "Due to the nature of quadratic attention, Large Language Models (LLMs) consume a lot of memory and energy. Every new token costs more than the previous one. For each additional token, the keys and values must be stored in memory indefinitely, which is unsustainable.   Several alternatives have been proposed to fix the quadratic scaling problem, one of which is retrofitting LLMs to use Linear Attention. This idea has attracted a lot of attention, given its promise to solve the quadratic scaling problem with state-of-the-art performance at low cost. However, this line of research has not been properly compared to simpler baselines.   In this work, we show that Sliding Window Attention (SWA) with sinks performs as well or better than post-trained Linear Attention models. We observe this across multiple LLMs on various downstream tasks. For long-context reasoning tasks (Needle-in-a-Haystack and BABILong), SWA achieves massively higher performance (2 to 10 times higher than linear attention). SWA requires no post-training, is extremely fast, and requires low memory; therefore, making it an extremely cheap and reliable solution.   To reduce inference memory cost, we strongly recommend switching to SWA instead of post-training linear models. Linear attention models may have shown some promise, but they likely require to be trained from scratch or extensive post-training in order to even match SWA.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.CL",
-    "url": "http://arxiv.org/abs/2608.28444v1",
-    "tags": [
-      "cs.CL",
-      "survey"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28444",
-    "arxiv_id": "2608.28444v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2608.28442",
-    "title": "Curvature-Conditioned Multiscale Momentum with Sphere Constraints for LLM Pretraining",
-    "authors": [
-      "Shuchen Zhu",
-      "Yuxin Fang",
-      "Mingze Wang",
-      "Kun Yuan"
-    ],
-    "abstract": "Pretraining accounts for a large fraction of the total computational cost in LLM training. However, noise-dominant gradients and the highly ill-conditioned loss landscape bring severe challenges. Although modern adaptive optimizers such as AdamW and Muon have achieved great success in large-scale pretraining, their reliance on gradient normalization offers limited mitigation of the ill-conditioned curvature. The progress along flat directions (eigen-directions of small eigenvalues), which dominates the final loss reduction, remains relatively slow. To enhance training dynamics along flat directions, we propose a curvature-conditioned multiscale momentum method with sphere constraints, delivering steady acceleration in LLM pretraining. This multiscale momentum, applied only along flat directions, pairs a slow-decay component for noise reduction with a fast-decay component for rapid curvature adaptation, harnessing their complementary strengths. Crucially, we employ a sphere constraint technique to prevent parameter inflation and excessively rapid effective learning rate decay that would otherwise arise from a naive combination. Extensive experiments show that the proposed method significantly accelerates Muon across diverse architectures (dense, MoE) and model sizes (0.12B--2.3B parameters). Theoretically, we verify the acceleration effect and provide insight into the design principles underlying the flat-direction multiscale momentum.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2608.28442v1",
-    "tags": [
-      "cs.LG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28442",
-    "arxiv_id": "2608.28442v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28425",
-    "title": "Euclidean Fourier Neural Operators",
-    "authors": [
-      "Nathanael Bosch",
-      "Niklas Frederik Schmitz",
-      "Michael F. Herbst"
-    ],
-    "abstract": "Fourier neural operators (FNOs) provide an efficient framework for learning mappings between function spaces as they are, by construction, independent of the grid resolution at which they are trained and evaluated. However, FNOs are not independent of the periodic domain they are applied to: their discrete spectral weights are indexed by integer Fourier mode numbers, which correspond to physical wavevectors. When applied to a different domain, the same trained weights act at different wavevectors, and the FNO silently represents a different operator. This makes FNOs unsuitable for tasks where transfer across domains is crucial. We propose Euclidean Fourier neural operators~(EFNOs) as a domain-independent alternative to FNOs. By parameterizing the spectral kernel as a continuous function of the physical wavevector, the EFNO can learn operators that act consistently across periodic domains of varying shape and size. We evaluate the EFNO on a simple heat equation and on a practically relevant materials science task of learning exchange-correlation potentials across different crystal structures, and demonstrate that the EFNO is able to generalize to unseen grid sizes and domains.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.LG",
-    "url": "http://arxiv.org/abs/2608.28425v1",
-    "tags": [
-      "cs.LG",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28425",
-    "arxiv_id": "2608.28425v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28533",
-    "title": "Targeted Power System Frequency Attack via the Selection of Maliciously Controlled Inverters",
-    "authors": [
-      "Xiangyu Zou",
-      "Betelihem Ashebo",
-      "Daniel K. Molzahn"
-    ],
-    "abstract": "This paper studies how an adversary can execute a power system frequency attack by choosing the most effective subset of inverter-based resources (IBRs) as malicious control nodes. During the attack, the adversary controls the attacking devices to destabilize a group of designated target generators. The attack is designed by introducing an unstable oscillatory mode whose eigenvector has large components at the target generators and small components at the compromised IBRs. We formalize the optimal attacker selection problem and present an equivalent mixed-integer quadratically constrained program (MIQCP). To address this combinatorial nonconvex problem, we develop two heuristic algorithms by introducing a ranking metric. The attack process is demonstrated on a modified WSCC 179-bus system, with results verified through nonlinear dynamic simulations. We show that the proposed heuristics find optimal attacking sets in a majority of evaluated scenarios while significantly reducing the required computational time. Scenarios from the ACTIVSg500 system are used to further support our results. Finally, we discuss how selecting different eigenvalues, targets, and numbers of compromised devices impact the attack's severity.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2608.28533v1",
-    "tags": [
-      "eess.SY",
-      "integer-programming",
-      "stochastic"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28533",
-    "arxiv_id": "2608.28533v1",
-    "score": 45.0
-  },
-  {
-    "id": "arxiv-2608.28532",
-    "title": "xTRUCE: A Provably Safe Arbiter for Multi-xApp Conflict Mitigation in Agentic O-RAN",
-    "authors": [
-      "Le Xia",
-      "Rose Qingyang Hu",
-      "Paul S. Kudyba",
-      "Zhenlin An",
-      "Haijian Sun"
-    ],
-    "abstract": "The open radio access network (O-RAN) is evolving toward agentic operation, where large language model (LLM)-driven xApps/rApps generate control proposals under operator intents. However, such proposals may be conflicting, infeasible, or hallucinated, and no existing system jointly provides proposal-independent safety, priority-aware reconciliation, and traceable feedback. To this end, we propose a provably safe arbiter, namely xTRUCE, in the near-real-time (Near-RT) RAN intelligent controller for mitigating multi-xApp conflicts in gNB control. We first develop a structured xApp proposal interface and a three-layer constraint hierarchy that places physical limits and operator-defined rules above relaxable performance targets, alongside a dual-timescale control action space. A two-stage arbitration mechanism then minimizes target shortfalls in the operator-priority order to finalize safe E2 actions within the Near-RT latency budget, while returning conflict certificates to xApps and the operator for renegotiation. Finally, we implement xTRUCE in a multi-cell O-RAN use case, and evaluate its multi-process prototype through simulations with live API-backed LLM xApps and over-the-air experiments on OpenAirInterface/FlexRIC-based O-RAN stacks. Results show that xTRUCE ensures gNB control safety with $100\\%$ protected services despite severe proposal hallucinations, achieves priority-consistent performance satisfaction under overload, efficiently guides LLM intent renegotiation via certificates, and keeps a delay-safe E2 control loop.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "cs.NI",
-    "url": "http://arxiv.org/abs/2608.28532v1",
-    "tags": [
-      "cs.NI",
-      "stochastic"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28532",
-    "arxiv_id": "2608.28532v1",
-    "score": 40.0
-  },
-  {
-    "id": "arxiv-2608.28519",
-    "title": "Beyond sensitivity: mechanism-resolved error budgets for designing quantum sensors",
-    "authors": [
-      "Nima Leclerc",
-      "Marco Capelli",
-      "Kevin James Rietwyk",
-      "Mark Dong",
-      "Dmitry Lyakh",
-      "Geoffrey Iwata",
-      "Brandon Rodenburg",
-      "Sean Oliver",
-      "Benedikt Kloss",
-      "Jin-Sung Kim",
-      "Stefan Bogdanovic",
-      "Yunheng Chen",
-      "Meysam Sharifzadeh Mirshekarloo",
-      "Cedric Weber",
-      "Marcus Doherty",
-      "Ethan Pratt",
-      "Joseph Hagmann"
-    ],
-    "abstract": "Quantum sensors are specified by a headline sensitivity, yet applications also demand accuracy and reliability. The dominant limiter of one metric is often known, but no method resolves how interacting mechanisms combine into a signed, per-mechanism budget for each metric. We introduce a framework that computes a sensor's sensitivity, accuracy, and robustness from one open-system simulation and attributes each to its limiting mechanism. For a nitrogen-vacancy diamond ensemble the attribution inverts across metrics: dephasing limits sensitivity, the thermal ground-state shift limits accuracy, and optical leakage limits robustness. At identical sensitivity the recovered-field bias spans $8$ to $1500$\\,nT, so tuning to sensitivity alone can miss the accuracy target by two orders of magnitude. The same modeling transfers to a cesium optically pumped magnetometer recording a human magnetocardiogram. As a digital twin, it predicts the gain from addressing each limiter, so sensors can be designed to the required metrics.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "quant-ph",
-    "url": "http://arxiv.org/abs/2608.28519v1",
-    "tags": [
-      "quant-ph",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28519",
-    "arxiv_id": "2608.28519v1",
-    "score": 35.0
-  },
-  {
-    "id": "arxiv-2608.28437",
-    "title": "LUCID: An Agentic AI Framework on Digital-Twin in the Loop for QoS-Guaranteeing Robotic Control",
-    "authors": [
-      "Hyeonsu Lyu",
-      "Minwoo Kim",
-      "Sehyun Ryu",
-      "Hyun Jong Yang"
-    ],
-    "abstract": "Cloud robotics relies on the timely uplink of high-volume sensing streams, yet dynamic environments continually shift the feasible combinations of trajectories, active-robot count, and per-robot QoS. Because existing approaches formulate trajectory planning (TP) and radio resource management (RRM) as a single fixed optimization problem, they cannot reconfigure these coupled decisions as conditions evolve, resulting in transient QoS violations. However, evolving operator intents change which quantities-such as the active-robot count and per-robot QoS-are fixed, optimized, or relaxed. Furthermore, the computational cost of evaluating trajectory-dependent wireless conflicts has made it difficult to build large-scale Digital-Twin-in-the-Loop (DITL) testbeds responsive enough for such dynamic orchestration. We present LUCID, an LLM-agent--orchestrated, uplink-aware cloud-robotics pipeline that moves TP--RRM from solving a fixed formulation to dynamically orchestrating optimization problem schemas within a DITL environment. Driven by the operator's high-level intent, LUCID treats the TP--RRM formulation as a bounded template whose variables, objectives, and constraints are dynamically configured, while SimBridge enables repeated ray-tracing evaluation by converting large-scale robotics scenes into wireless-ready DTs. By integrating collision-free path planning with a spectral-radius RRM validator, LUCID identifies wireless bottlenecks and restructures the problem schema on the fly to efficiently find the verified feasible state. Experiments confirm that LUCID robustly adapts to changing intents, active-robot counts, and scenes, while a multimodal surrogate model, FastConfigNet, reduces planning latency.",
-    "date": "2026-08-28",
-    "source": "arXiv",
-    "source_detail": "eess.SY",
-    "url": "http://arxiv.org/abs/2608.28437v1",
-    "tags": [
-      "eess.SY",
-      "general-or"
-    ],
-    "type": "publication",
-    "doi": "10.48550/arXiv.2608.28437",
-    "arxiv_id": "2608.28437v1",
-    "score": 35.0
   }
 ]

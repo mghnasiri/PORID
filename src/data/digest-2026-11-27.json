@@ -1,0 +1,240 @@
+{
+  "date": "2026-11-27",
+  "generated_at": "2026-11-27T17:22:41.333905+00:00",
+  "publications": [
+    {
+      "id": "crossref-10.1287-mnsc.2024.04758",
+      "title": "Correcting the Unobserved Textual Confounding Factors in Regression by BERT and Partially Linear Regression",
+      "authors": [
+        "Qiao, M.",
+        "Huang, K."
+      ],
+      "abstract": "In the last decade, there has been a surge of text-mining applications in the information systems literature. In these applications, researchers typically construct independent variables from documents by various text-mining techniques. The most prominent example could be using online review sentiments to investigate online word-of-mouth issues. Typically, most documents contain information richer than the independent variable, and researchers may construct control variables from the same documents to alleviate endogeneity issues. However, researchers need to manually craft these variables, and this process may not guarantee that all the important confounding factors are extracted and included in the regression model with a correct functional form. If useful textual information is overlooked and a valid identification strategy is not available, the omitted variable bias may occur. To solve this challenge, we propose a novel model that utilizes text embedding based on the state-of-the-art neural network language model (i.e., bidirectional encoder representations from transformers (BERT)) to automatically create a new control variable vector for controlling latent confounding factors in the absence of a valid identification strategy. Moreover, our approach can be considered a semiparametric approach in that our model contains a linear term of the key independent variable and an unknown functional term of the textual control variables. Our approach extends the semiparametric framework, double machine learning, by introducing a novel Neyman-orthogonal loss function in an integrated deep neural network to minimize the estimation bias. Our experiments demonstrate the effectiveness of controlling textual control variables by text embedding and improving the estimation performance by the novel loss function.\n                  This paper was accepted by Anindya Ghose, information systems.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2024.04758 .",
+      "date": "2026-11-26",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2024.04758",
+      "tags": [
+        "ml-for-or",
+        "survey"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2024.04758",
+      "score": 60.0
+    },
+    {
+      "id": "crossref-10.1287-opre.2023.0008",
+      "title": "Throttling Equilibria in Auction Markets",
+      "authors": [
+        "Chen, X.",
+        "Kroer, C.",
+        "Kumar, R."
+      ],
+      "abstract": "Throttling is a popular method of budget management for online ad auctions in which the platform modulates the participation probability of an advertiser in order to smoothly spend her budget across many auctions. In this work, we investigate the setting in which all of the advertisers simultaneously employ throttling to manage their budgets, and we do so for both first-price and second-price auctions. We analyze the structural and computational properties of the resulting equilibria. For first-price auctions, we show that a unique equilibrium always exists, is well-behaved and can be computed efficiently via tatonnement-style decentralized dynamics. In contrast, for second-price auctions, we prove that even though an equilibrium always exists, the problem of finding even an approximate equilibrium is PPAD-complete, there can be multiple equilibria, and it is NP-hard to find the revenue maximizing one. We also compare the equilibrium outcomes of throttling to those of multiplicative pacing, which is the other most popular and well-studied method of budget management. Finally, we characterize the Price of Anarchy of these equilibria for liquid welfare by showing that it is at most 2 for both first-price and second-price auctions, and demonstrating that our bound is tight.",
+      "date": "2026-11-26",
+      "source": "Operations Research",
+      "source_detail": "Operations Research",
+      "url": "https://doi.org/10.1287/opre.2023.0008",
+      "tags": [
+        "game-theory"
+      ],
+      "type": "publication",
+      "doi": "10.1287/opre.2023.0008",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1007-s00291-026-00885-8",
+      "title": "Improving the expected profit of the data-driven newsvendor problem for lognormal demand: a statistical decision-theoretic approach",
+      "authors": [
+        "Kashima, H."
+      ],
+      "abstract": "Abstract\n                  Data-driven inventory management faces a critical challenge: standard “plug-in” methods that substitute point estimates into optimal rules often ignore parameter uncertainty. This practice is particularly risky under heavy-tailed lognormal demand, where it leads to severe overstocking and potential financial losses due to estimation bias. To resolve this, we formulate the parametric newsvendor problem within a unified statistical decision-theoretic framework that integrates estimation and profit maximization. We derive a closed-form Adjusted Plug-in MLE (APM) and prove that it analytically dominates the classical plug-in rule. The APM order quantity coincides with the rule obtained by specializing the operational statistics framework to this case, so that, when the shape parameter is known, it is optimal among all scale-equivariant policies. What the present analysis adds is the expected profit itself: we obtain it in closed form at a fixed sample size, for the plug-in rule and for the APM rule alike, and hence the exact fraction of the full-information expected profit that no equivariant policy can recover. From a managerial perspective, the proposed method acts as a robust safeguard against optimism bias, simultaneously reducing inventory waste (e.g., food loss) and improving expected profit. Monte Carlo simulations further confirm that these dominance results hold even when the shape parameter must be estimated, offering a simple, implementable prescriptive tool for high-uncertainty environments.",
+      "date": "2026-11-27",
+      "source": "OR Spectrum",
+      "source_detail": "OR Spectrum",
+      "url": "https://doi.org/10.1007/s00291-026-00885-8",
+      "tags": [
+        "supply-chain"
+      ],
+      "type": "publication",
+      "doi": "10.1007/s00291-026-00885-8",
+      "score": 55.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2025.03142",
+      "title": "Reducing Risk Through Trade Credit: Theory and Evidence from Dual-Channel Suppliers",
+      "authors": [
+        "Ning, J.",
+        "Tang, S.",
+        "Wu, J.",
+        "Zhu, J."
+      ],
+      "abstract": "Trade credit is traditionally viewed as increasing supplier risk, because delayed payments expose suppliers to buyer uncertainties. Using a stylized game-theoretic model, we show that this conventional wisdom can be overturned when a supplier is dual channel: operating a direct channel that sells to end customers in addition to an indirect channel that sells to an industry peer who serves the same market. Compared with zero trade credit provision where the supplier requires cash on delivery (COD), we observe empirically that high trade credit provision can lead to lower risk for the dual-channel supplier. We propose a possible mechanism for this risk mitigation effect—pooling: When the market overlap between the supplier and its peer buyer is sufficiently high, the random split of the overlapping market creates negative association between the supplier’s direct channel sales and the buyer’s trade credit payment. Trade credit does not always mitigate risk for dual-channel suppliers. If the supplier’s debt level is high, our theory predicts that trade credit exacerbates risk. We find empirical evidence consistent with our theoretical predictions using data on U.S. manufacturing firms that sell to their industry peers. The positive association between trade credit provision and bankruptcy risk is dampened or even reversed once a supplier begins selling to peer firms. This risk mitigation effect is stronger among suppliers with lower leverage and greater market overlap with their buyers. For highly financially constrained suppliers, trade credit provision is associated with an increase in bankruptcy risk after the supplier becomes dual channel.\n                  This paper was accepted by Jayashankar Swaminathan, operations management.\n                  Supplemental Material: The online appendices and data files are available at https://doi.org/10.1287/mnsc.2025.03142 .",
+      "date": "2026-11-26",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2025.03142",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2025.03142",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2025.04971",
+      "title": "Inferential Theory for Pricing Errors with Latent Factors and Firm Characteristics",
+      "authors": [
+        "Choi, J.",
+        "Yuan, M."
+      ],
+      "abstract": "We study factor models that combine latent factors with firm characteristics and propose a new framework for modeling, estimating, and inferring pricing errors. Following Zhang (2024), our approach decomposes mispricing into two distinct components: inside alpha, explained by firm characteristics but orthogonal to factor exposures, and outside alpha, orthogonal to both factors and characteristics. Our model generalizes those developed recently such as Kelly et al. (2019) and Zhang (2024), resolving issues of orthogonality, basis dependence, and unit sensitivity. Methodologically, we develop estimators grounded in low-rank methods with explicit debiasing, providing closed-form solutions and a rigorous inferential theory that accommodates a growing number of characteristics and relaxes standard assumptions on sample dimensions. Empirically, using U.S. stock returns from 2000 to 2019, we document strong evidence of both inside and outside alphas, with the former showing industry-level comovements and the latter reflecting idiosyncratic shocks beyond firm fundamentals. Our framework thus unifies statistical and characteristic-based approaches to factor modeling, offering both theoretical advances and new insights into the structure of pricing errors.\n                  This paper was accepted by Lukas Schmid, finance.\n                  Funding: This research was supported by the National Science Foundation [Grant DMS-2052955].\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2025.04971 .",
+      "date": "2026-11-26",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2025.04971",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2025.04971",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1287-mnsc.2025.04559",
+      "title": "Echoes of Discord: The Effects of Global Conflicts and Disputes on Entrepreneurship",
+      "authors": [
+        "Marinoni, A."
+      ],
+      "abstract": "Mixed-nationality founding teams bring together heterogeneous, hard-to-replicate bundles of human capital and country-specific ties through their cross-national networks, providing a distinctive foundation for building successful ventures. Yet these connections may be vulnerable to nonmarket shocks. This study examines whether geopolitical conflicts and disputes between the countries of origin of immigrant founders affect the formation of new ventures. Leveraging data on the founders of start-ups established in Great Britain and global information on conflicts and disputes, I find that such tensions reduce the likelihood that nationals of hostile countries cofound firms together. The evidence is more consistent with social mechanisms and, particularly, the erosion of interpersonal relationships than with diminished access to cross-country resources or the loss of entrepreneurial opportunities. Start-ups of both low and high quality are affected, including in sectors that depend heavily on skilled human capital, such as high-tech and business services. The negative effect is substantially attenuated for nationality pairs that are heavily colocated across local areas and for founders with prior social exposure to individuals from the opposing nationality, indicating that interpersonal ties can buffer against geopolitical shocks. Conflicts do not affect the exit of existing firms, and the decline in mixed-nationality entrepreneurship is not offset by alternative team configurations such as solo ventures or those formed with conationals, natives, or individuals from third-party countries.\n                  This paper was accepted by Alfonso Gambardella, business strategy.\n                  Funding: I gratefully acknowledge funding from the Institute for Leadership and Social Impact at Georgia Institute of Technology.\n                  Supplemental Material: The online appendix and data files are available at https://doi.org/10.1287/mnsc.2025.04559 .",
+      "date": "2026-11-26",
+      "source": "Management Science",
+      "source_detail": "Management Science",
+      "url": "https://doi.org/10.1287/mnsc.2025.04559",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1287/mnsc.2025.04559",
+      "score": 50.0
+    },
+    {
+      "id": "crossref-10.1080-02331934.2026.2765388",
+      "title": "The gradient projection method: is the Polyak adaptive stepsize rule optimal?",
+      "authors": [
+        "Huong, V.",
+        "Koch, T.",
+        "Xu, H."
+      ],
+      "abstract": "",
+      "date": "2026-11-26",
+      "source": "Optimization",
+      "source_detail": "Optimization",
+      "url": "https://doi.org/10.1080/02331934.2026.2765388",
+      "tags": [
+        "general-or"
+      ],
+      "type": "publication",
+      "doi": "10.1080/02331934.2026.2765388",
+      "score": 40.0
+    }
+  ],
+  "software": [],
+  "deadlines": [
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "conferences": [],
+  "opportunities": [
+    {
+      "id": "nsf-2624250",
+      "title": "NSF Award: 2026 I-Sim Workshop - Simulation in the Age of Digital Twins and AI; Raleigh, North Carolina; 31 July to 3 August 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "North Carolina State University",
+      "location": "USA",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2624250",
+      "deadline": "2026-11-30",
+      "date": "2026-08-29",
+      "award_start": "2026-06-01",
+      "source": "NSF",
+      "tags": [
+        "funding",
+        "nsf",
+        "general-or"
+      ],
+      "description": "This grant provides support for the 2026 INFORMS Simulation Society (I-Sim) Research Workshop, to be held at North Carolina State University, Raleigh, North Carolina, 31 July to 3 August 2026, centered on the theme “Simulation in the Age of Digital Twins and AI.” The workshop will convene leading researchers in stochastic simulation, artificial intelligence, optimization, applied probability, and statistics to address emerging theoretical challenges arising from the integration of simulation wit",
+      "funding_amount": "$35,638",
+      "pi": "Hong Wan",
+      "program": "OE Operations Engineering",
+      "end_date": "2026-11-30",
+      "score": 30.0
+    },
+    {
+      "id": "manual-erc-consolidator-2026",
+      "title": "ERC Consolidator Grant 2026",
+      "type": "opportunity",
+      "subtype": "funding",
+      "institution": "European Research Council",
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "deadline": "2026-12-01",
+      "location": "EU",
+      "tags": [
+        "funding",
+        "faculty",
+        "general-or"
+      ],
+      "source": "manual",
+      "description": "Up to 2M EUR for 5 years. For researchers 7-12 years after PhD.",
+      "score": 10.0
+    }
+  ],
+  "stats": {
+    "publications": 7,
+    "software": 0,
+    "deadlines": 2,
+    "conferences": 0,
+    "opportunities": 2,
+    "total": 9
+  }
+}
